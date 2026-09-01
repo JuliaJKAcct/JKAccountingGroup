@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-31
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -206,7 +206,14 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   last modified 2026-04-28 — the same day Julia emailed *"2025 Ecoorganic USA LLC"* to the Ukrainian
   affiliate's accountant. **Not opened** (it is the year under preparation, outside the document
   rule's scope). **Ask Julia what it is** before the return is prepared.
-- **Open blocker — the Turo documents (2026-08-04):** we need the **Earnings Report and any 1099-K for 2025** from **Turo**. The Turo account **has been closed**, so nobody can log in and download them, and **Turo will only release them to the account holder** — not to us, and not even by email to the address already on the account. _(That the 1120-S is specifically waiting on these is a reasonable read, not something recorded: the 2026-07-30 entry in §6 says only "waiting on information from the client" without itemising it. Confirm with Lilian.)_
+- ✅ **CLOSED 2026-09-01 — the Turo 2025 earnings answer arrived**, by email from Turo Executive
+  Support to the client, supplied by Lilian. **No Form 1099-K was issued for 2025.** Figures are in
+  the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 blocker D, not here.
+  🔴 **Two things it created:** ① **none of that income is in the 2025 books** — checked three ways
+  (a ledger search on Turo, the whole `Sales` account, and income by customer), and the only Turo
+  activity in QuickBooks is the company **paying** Turo to rent cars; ② **the ownership question is
+  now the whole blocker**, and the 1099-K route to answering it no longer exists (§5).
+- **The original blocker as it stood — kept as history (2026-08-04):** we needed the **Earnings Report and any 1099-K for 2025** from **Turo**. The Turo account **has been closed**, so nobody can log in and download them, and **Turo will only release them to the account holder** — not to us, and not even by email to the address already on the account. _(That the 1120-S is specifically waiting on these is a reasonable read, not something recorded: the 2026-07-30 entry in §6 says only "waiting on information from the client" without itemising it. Confirm with Lilian.)_
   - **How we first tried it — SUPERSEDED, don't send him off alone:** the owner calls Turo himself at the support number in §3, works through the voice menu, and asks for the **Earnings Report** and **1099-K for 2025**. That route is no longer the plan; read the two bullets below before doing anything.
   - **Status (2026-08-04, second call):** Lilian and the owner called Turo **together**. Turo said **they cannot access the account themselves** and are **escalating** the case. The answer will come **by email to the account's address within 1–2 business days**. **We do not call again — we wait for that email**, and only call back if it doesn't arrive.
   - 🔑 **Any call to Turo has to be made WITH the owner on the line.** Turo gives us nothing without him — it's their security check. Don't plan a Turo call the firm can make alone; schedule it with him. _(Learned 2026-08-04: the first attempt, with Lilian alone, went nowhere; the joint call is what got the case escalated.)_
@@ -249,12 +256,30 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   three items **at cost with accumulated depreciation at zero**. **Action:** the prior-year Form 4562
   detail is required before any 1120-S can be finished, and it was not found in Double or in a
   bounded Drive search *(title `depreciation`/`4562`/`asset` × fullText `Ecoorganic`, 2026-08-31)*.
-- 🔑 **TURO IS A COST AS WELL AS AN INCOME — this was recorded here as income only.** In 2025 the
-  company **paid** Turo, sitting in `Taxi or shared rides`; Julia's own read (Ping, 2026-07-23) is
-  that it belongs in a new *auto rental* account. So the open Turo matter has **two halves**, and the
-  earnings report settles only one of them.
+- ✅ **TURO — THE 2025 EARNINGS ANSWER ARRIVED 2026-09-01** (Turo Executive Support emailed the
+  client; Lilian supplied it). **What it settles:** the 2025 host-earnings breakdown exists in full,
+  and **no Form 1099-K was issued for 2025**. **Figures live in the return's working paper, never
+  here.** 🔴 **What it COSTS us, and this is the part to carry:** the firm's plan for proving whose
+  account it is — *read the name and TIN on the 1099-K* — **is now permanently dead, because there is
+  no 1099-K.** Ownership can only be settled by asking the client, or from the account registration.
+  ⚠️ Turo's email quotes the **older** federal 1099-K threshold, which has changed and been postponed
+  several times; **do not repeat a threshold from memory** — it did not matter here, but check it
+  against irs.gov before it ever does.
+- 🔑 **TURO IS A COST AS WELL AS AN INCOME — this file used to record it as income only.** In 2025 the
+  company also **paid** Turo, sitting in `Taxi or shared rides`; Julia's read (Ping, 2026-07-23) is
+  that it belongs in a new *auto rental* account. ⚠️ **And the two halves point opposite ways:** the
+  charges are the company **renting** cars as a guest, while the earnings are someone **letting** cars
+  out as a host.
 - 🔑 **Turo will not deal with the firm unless the owner is on the call.** Every Turo call is scheduled with him — a call the firm makes alone gets nowhere _(2026-08-04)_.
-- **Any Turo income is the company's**, not an owner's personally _(per Lilian, 2026-08-04 — §4)_. Whether the account actually produced income, and in which years, is **still unknown** — the platform account is **closed** and its 2025 earnings report / 1099-K have not been obtained (§4). **Not yet checked** whether Turo payouts appear in the Chase feed or in QuickBooks, so don't conclude anything in either direction until someone looks — and note that company income can still have been paid into a personal account (a distribution), so absence from the Chase feed would not disprove company ownership.
+- 🔴 **WHOSE TURO ACCOUNT IS IT? — still unresolved, and now HARDER to resolve, not easier.** Lilian
+  stated on 2026-08-04 that it is the **company's** _(her statement; the basis was never recorded)_.
+  **The 2025 earnings answer of 2026-09-01 does not settle it** — Turo addressed the client personally
+  and said "your host earnings", which is how a platform addresses any account holder. **And the
+  planned corroboration is gone: no 1099-K was issued, so there is no name or TIN to read.**
+  🔑 **Why it is worth the chase:** it decides whether the income belongs on the company's return at
+  all, **and** whether the German-marque vehicle costs sitting in the company's auto accounts are a
+  business expense or an owner distribution — the two answers move money in opposite directions.
+- **Any Turo income is the company's**, not an owner's personally _(per Lilian, 2026-08-04 — §4; see the bullet above, which is now the live version of this question)_. Whether the account actually produced income, and in which years, is **answered for 2025 as of 2026-09-01** — the platform account is **closed** and its 2025 earnings report / 1099-K have not been obtained (§4). **Not yet checked** whether Turo payouts appear in the Chase feed or in QuickBooks, so don't conclude anything in either direction until someone looks — and note that company income can still have been paid into a personal account (a distribution), so absence from the Chase feed would not disprove company ownership.
 - **A QuickBooks primary admin who has lost the phone on the account cannot hand the role over in-product.** The transfer fires a verification code to that phone, so it dead-ends. What support tells you to do instead is an **identity check**: change the phone on the account, then the **current primary admin scans a QR code and uploads a photo of his ID** — a step it appears only he can do. **Treat this as the route support gave us, not a proven fix: as of 2026-08-06 no handover had completed this way**, and "the firm can't do it for him" is read from support's instructions rather than tested. Budget for the client's own delay _(this client, 2026-08-06 — §3)_.
 - **Adding a second QuickBooks user can force a plan upgrade.** This client's plan allowed only one user, so a second user meant paying for a bigger plan. When the upgrade exists only to carry out a handover, **write the downgrade down as a task** — it is the step that gets forgotten once the visible problem is solved _(2026-08-06 — §3)_.
 - Check- and cash-heavy business; many Zelle payments to subcontractors (W-9 / 1099 tracking matters).
@@ -497,6 +522,28 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   is 2026-09-15)*, and where the prior returns live *(both in Double; never ask the client)*.
   _(Worked by Lilian.)_
 
+- 2026-09-01 — ✅ **THE TURO ANSWER ARRIVED — and it moved the 2025 return forward by one blocker
+  while making a different question harder (Lilian).** Lilian supplied the email Turo Executive
+  Support sent the client: the **full 2025 host-earnings breakdown**, and the statement that **no Form
+  1099-K was issued for 2025**. ⚠️ **This was genuinely new to the repo** — every Turo record here
+  stopped on 2026-08-04, and a session on 2026-08-31 had searched Gmail unbounded and found nothing.
+  **What the session then established from the books, three independent ways** (a ledger search on
+  Turo across 2025, the entire `Sales` account, and income by customer): 🔴 **not one dollar of that
+  income is in the 2025 books.** The only Turo activity in QuickBooks is a run of card charges reading
+  `TURO INC.* TRIP …` posted to `Taxi or shared rides` — **the company renting cars as a guest**, the
+  opposite side of the platform from host earnings. `Sales` is 28 transactions, every one an
+  insulation invoice, receipt or job deposit; income by customer is 18 customers, all insulation.
+  🔑 **So the blocker changed shape rather than closing:** it is no longer *"we are waiting on a
+  document"* — it is **one question, answerable today: is the Turo account the LLC's or Artem's
+  personally?** That single fact decides whether the income belongs on the company's return **and**
+  whether the German-marque vehicle costs in the company's auto accounts are a business expense or an
+  owner distribution. 🔴 **And the corroboration the firm had planned for it is gone permanently** —
+  the plan was to read the name and TIN on the 1099-K, and no 1099-K exists. **Also found while
+  looking:** income by customer does not tie to `Sales`, because several deposits were posted straight
+  to `Sales` carrying a **vendor** dimension instead of a customer — none of them Turo, checked rather
+  than assumed. Figures are in the
+  [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md), never here. _(Worked by Lilian.)_
+
 ### Tax year 2025 — the review
 
 - **What gates the return:** the five blockers in the log entry above. Two of them are **ours**, not
@@ -530,9 +577,12 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   owner's **Form 7203 from their own 2024 personal return** — that form is filed with the 1040, never
   with the company's return, so the firm may simply not hold it. If it does not exist, opening basis
   must be **reconstructed**, which is separate work and must be scoped, not absorbed.
-- 🔴 **Turo — 27 days with no escalation email** (promised 1–2 business days from 2026-08-04). Next
-  contact must also capture the registered account name and the name/TIN on any 1099-K. **And ask
-  about the payment TO Turo**, which is new and was not part of the original question.
+- 🔴 **TURO — the earnings answer is IN (2026-09-01); what is now blocking is ONE question: is the
+  Turo account the LLC's or Artem's personally?** ⛔ **Do not plan to settle it from a 1099-K — none
+  was issued for 2025, so the name-and-TIN route the firm was relying on does not exist.** Ask the
+  client, or get the account registration. **The same conversation should cover the payments the
+  company MADE to Turo, and which vehicles the company actually owns and used** — that answer decides
+  whether the German-marque vehicle costs are a business expense or an owner distribution.
 - ✅ **CLOSED 2026-08-26 — the largest 2026 labor payee is an individual subcontractor →
   `Contract labor`** (SOP decisions row 9). Kept as a note because of *how* it closed: the question
   had to be put **by name**, not by role. Asking by role is right for the repo and wrong for a
@@ -581,8 +631,14 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - [ ] **When and why did DRS move this client from QUARTERLY to MONTHLY sales-tax filing?** The
       change is visible in the filings from 10.2025 but is recorded nowhere (§4)
 - [ ] Fiscal year-end _(primary language answered 2026-08-04: Russian)_
-- [ ] Whether the Turo account produced income at all, and for which years _(whose account it is: answered 2026-08-04 — the company's, per Lilian)_
-- [ ] Whether a **1099-K was actually issued** for 2025
+- [x] Whether the Turo account produced income at all — **answered for 2025 on 2026-09-01: yes**, a
+      full host-earnings breakdown exists (figures in the working paper). **Other years remain
+      unknown.** 🔴 **Still open and now the live blocker: WHOSE account it is** — Lilian said the
+      company's on 2026-08-04, the basis was never recorded, and the 1099-K that would have
+      corroborated it does not exist (§5)
+- [x] Whether a **1099-K was actually issued** for 2025 — **answered 2026-09-01: NO**, per Turo
+      Executive Support direct to the client. ⚠️ **Consequence, not just an answer:** the firm's plan
+      to prove account ownership from the name/TIN on that form is dead — see §5
 - [x] Payroll — **answered 2026-08-08: applies, via Gusto** _(sales tax still pending; income tax answered 2026-08-04: 1120-S, prepared by the firm)_
 - [x] Business licenses / annual filings — **partial answer 2026-08-08: a Form 8822-B and a CT SOS filing were processed around Apr 2026 (§4); whether either recurs annually is unconfirmed**
 - [x] Where credentials live (Drive vault link) — **found, 2026-08-08** (§7)
