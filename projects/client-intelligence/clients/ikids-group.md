@@ -1,6 +1,6 @@
 # iKids Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -102,6 +102,20 @@ the actual details.
   covering bookkeeper looks for them. _(Lilian, 2026-08-11.)_
 - This sits **alongside** the hands-on AP work in §5 (the vendors the firm actively *pays* from
   the client's account) — the same mailbox serves both.
+- 🔴 **The monthly payments to the build-out subcontractors are NOT scheduled anywhere — they
+  are sent by hand, at the bank, in batches.** Three payees carry a standing monthly commitment
+  while the park is being built: **two individuals** booked to `CIP - Labor` and **one company**
+  booked to `CIP - Architectural`, each a flat unchanging amount. Every one of them reaches the
+  books as a **bank-originated online ACH** — the bank's own payment descriptor — so **QuickBooks
+  is recording these payments, never making them**: the books carry no A/P and have never used
+  Bills (§5), and the only Intuit charge on the account is the QuickBooks subscription itself, so
+  **neither QuickBooks Bill Pay nor Contractor Payments is switched on.** Two things follow that
+  matter more than the mechanics. The payees **move on identical dates**, which is the signature of
+  one person sending a batch rather than of three separate standing orders. And one batch went out
+  **the same day a large owner funding landed**, after a month in which two of the three do not
+  appear in the books at all _(a gap the unconfirmed bank-feed status could equally explain —
+  §6 outstanding)_. **The payment run waits on the account being funded**, which is the reason not
+  to put these on a fixed automatic date. _(QuickBooks ledger via Double, read 2026-09-01.)_
 - ⚠️ **The QuickBooks bank feed disconnected on 2026-07-20** _(Lilian, 2026-08-14)_, and **whether
   it is live again has never been confirmed** — so **step 1 of the runbook is to check the banking
   screen before working any close.** The danger is unchanged and is why this cannot be skipped: a
@@ -154,7 +168,7 @@ the actual details.
   **Bank Charges**. Pinning the operations-commencement date is a live judgment call tied to the
   opening. _(Gmail — Julia's bookkeeping instructions; framework reverse-engineered from the ledger
   2026-08-14 and written up in the runbook.)_
-- **Heavier than standard bookkeeping — hands-on AP, run out of the client's own mailbox:** the firm **pays vendors** from the client's account (insurance, environmental report, city permits) and sends confirmations. The **water bill is the exception — it is on autopay**, so it needs no payment action at all, only its paperwork. Everything, paid by us or paid automatically, arrives at the **client's AP mailbox** (§3), which the firm works **monthly** to download the bills and attach them to their transactions (§4). Whether any of the *other* recurring vendors are also on autopay is **not established** _(to verify)_.
+- **Heavier than standard bookkeeping — hands-on AP, run out of the client's own mailbox:** the firm **pays vendors** from the client's account (insurance, environmental report, city permits) and sends confirmations. The **water bill is the exception — it is on autopay**, so it needs no payment action at all, only its paperwork. Everything, paid by us or paid automatically, arrives at the **client's AP mailbox** (§3), which the firm works **monthly** to download the bills and attach them to their transactions (§4). ✅ **Partly settled 2026-09-01:** the three standing **monthly build-out payees** (§4) are **not** on autopay — each is a manually-initiated bank ACH, and none of them is paid through QuickBooks at all. What is still open is narrower than it was: the **QuickBooks subscription** bills itself to the card, the **electric account** is paid by hand by the firm _(the recurring watchlist in Drive)_, and nobody has checked whether a **recurring template** exists inside QuickBooks itself — the Double connector cannot see those, so it takes someone opening the QuickBooks settings.
 - **Ownership & signing authority — exactly THREE members, and only ONE of them can bind the company:** the **Manager holds 33.4%** and the other two **33.3%** each (near-thirds, not exact — the odd 0.1% sits with the Manager). The LLC is **manager-managed with a single Manager** (himself a member) who alone has authority to bind it; the other two members have no day-to-day management or voting role. The **CFO is neither a member nor the Manager** — he does not appear in the agreement at all, so treat that title as a **group/functional role**, not a Florida-LLC office, and route anything needing a company-binding signature to the **Manager**. _(Operating Agreement dated 2025-04-18, Drive → `4-Corporate` — supersedes the earlier "likely 3–4 partners" estimate.)_
 - **How the project is funded — two routes, and they are not interchangeable.** There is no
   revenue, so every dollar in comes from the owners. As the books stand, the **Manager's funding
@@ -379,6 +393,17 @@ the actual details.
   admitting members or raising their capital is permanently non-deductible for a partnership —
   neither §195 nor §709 — and three members have contributed capital. Review what is already in
   `SC - Legal & Licensing`, then decide with Julia whether to open a separate account.
+- **Decide the payment rail for the monthly subcontractor payments — and check QuickBooks'
+  recurring templates while you are in there.** Nothing is scheduled today (§4); the question
+  Lilian raised on 2026-09-01 is whether it should be. ⚠️ **Do not put these on a fixed automatic
+  date as things stand:** the account is funded by owner transfers that arrive when they arrive,
+  and a batch has already gone out the same day a funding landed — a fixed date against an account
+  funded on demand is an overdraft waiting to happen. If it is ever automated the two routes are
+  **QuickBooks Bill Pay** (a recurring bill set to pay automatically) and **QuickBooks Contractor
+  Payments** (direct deposit to 1099 contractors, which also collects the W-9 and files the 1099 —
+  see the item below, which it would close at the same time). The one thing nobody has verified:
+  whether a **recurring template** already exists in QuickBooks — the Double connector cannot see
+  them.
 - **W-9 sweep is overdue.** Individuals working the site pass the $2,000 threshold within months,
   and the firm pays them directly — so a missing W-9 is our gap. Sweep the labour *and* contractor
   accounts, not just one.
@@ -439,6 +464,29 @@ the actual details.
 
 - 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29; most of the window was already logged through 2026-08-27 above).** Double: `list_projects` re-confirms the "2025 Taxes" project is still `notStarted` with `filedAt: null` — no change, the 1065-extension question remains genuinely unconfirmed either way. `list_notes` unchanged (still the single 2026-08-13 meeting note). Google Drive (`fullText contains 'iKids', modifiedTime > 2026-08-27`, `excludeContentSnippets: true`) surfaced a **new document**: `KaTomCreditApplicationiKidsGroupLLC (1).pdf`, uploaded to the client's Drive folder 2026-08-28 — a vendor credit application with **KaTom**, a restaurant/food-service equipment supplier. Consistent with the pre-opening build-out and the staffing plans discussed 2026-08-13 (kitchen/bar leads); not folded into §5 pending confirmation of what it's for — flagged as an outstanding item below rather than asserted as a settled fact, since the application's outcome is not known and its content was not opened. Gmail (business names + Balasiuk/Matiukha/Yalansky, after:2026/08/22) and Ping (org-wide, "iKids Group Balasiuk Matiukha loan agreement Manager wire") both returned nothing legible/on-topic in the window (per the standing note, Ping was not separately re-checked for pre-Jun-2025 content). **Chase pass:** the 1065-extension question, both members' ITIN applications, and the third member's US tax status remain open with no new evidence either way (ages below). The Manager's loan-allocation question (asked via WhatsApp 2026-08-27) is **too recent to expect an answer** — 2 days pending. Not chased this run (budget): the W-9 sweep; the five decisions waiting on Julia; whether the proposed engagement expansion has been signed.
 
+- 2026-09-01 — **Asked whether recurring payments to subcontractors are scheduled anywhere, and
+  whether QuickBooks can make them at all.** _(Lilian's question.)_ **Nothing is scheduled.** The
+  ledger read (accounts `CIP - Labor`, `CIP - Architectural` and `Contract Labor`, plus per-payee
+  searches over 2024-01-01 → 2026-09-01) shows three payees on a flat monthly amount, all paid by
+  **bank-originated ACH**, two of them on **identical dates** month after month — a hand-sent batch,
+  not a standing order. Corroborating structure: no A/P and no Bills in the chart (§5), and the only
+  Intuit charge is the subscription, so neither **QuickBooks Bill Pay** nor **QuickBooks Contractor
+  Payments** is switched on. ⚠️ **The boundary of that search, stated so it is not read as more than
+  it is:** Double's connector exposes **posted transactions only** — it cannot see QuickBooks'
+  **recurring-transaction templates** — so "nothing is scheduled" rests on the ledger and on the
+  absent services, not on anyone having opened the QuickBooks settings screen. **On the capability
+  question:** QuickBooks on its own does **not** move money — a recurring template only creates the
+  bill or cheque record in the books. Paying *from* QuickBooks needs an add-on (**Bill Pay**, which
+  can put a recurring bill on automatic payment; or **Contractor Payments**, which pays 1099
+  contractors by direct deposit and carries the W-9 and the 1099 with it); without one it stays at
+  the bank, which is where it is today. 🔗 **Why this is not merely a convenience question:** the
+  firm prepares this client's 1099s and pays these people directly, and the **W-9 sweep is already
+  an overdue item above** — Contractor Payments is the one route that closes both at once. It also
+  meets the **unsigned engagement expansion** (§6): Julia committed at the 2026-08-13 meeting to
+  evaluate Bill Pay / QuickBooks Pay and propose an AP workflow, and this is the same decision
+  reaching us from the other side. Full answer delivered in chat; payee names and figures stay out
+  of the repo (two-data-homes). _(Worked by Lilian.)_
+
 ### Information still needed
 - [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_
 - [x] The third member's email address, so he can be registered in Double — **⏸ PAUSED INDEFINITELY by Lilian (2026-08-10): do NOT chase this**, in the weekend sweep or anywhere else. No email for him exists in Gmail, Drive or Double; every thread runs through Julia or the outside CAA. To reopen: get it from the client or the CFO, then register him in Double as a contact record with **no portal access**, exactly as was done for the CFO. This is the **contact record only** — the third member's **tax status** is a separate question and is still live (§4, §6 outstanding).
@@ -446,7 +494,9 @@ the actual details.
 - [ ] Credentials Drive link; the "operations begin" date once known
 - [ ] **Which other recurring vendors are on autopay** — only the water bill is confirmed. The rest
       are believed to be paid by us on request, but nobody has listed them (§5, and the runbook's
-      open-decisions log)
+      open-decisions log). ⓘ **Narrowed 2026-09-01:** the three monthly build-out payees are
+      confirmed **not** on autopay (§4). What is left is the small recurring charges — and
+      QuickBooks' own recurring templates, which nobody has opened
 - [x] **Where the downloaded bills are filed** — **answered 2026-08-11 (Lilian):** Julia's Drive →
       the client's folder → `Bookkeeping` → a folder per month, **and** attached to the transaction
 
