@@ -609,6 +609,27 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   Figures in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 blocker D.
   _(Worked by Lilian.)_
 
+- 2026-09-01 — 📗 **Julia's 2025 P&L review workbook READ, with Lilian's authorisation.** It is a
+  firm working paper rather than a filed return, so it needed her say-so; she gave it. **What it is:**
+  a transaction-by-transaction review of the whole 2025 P&L with a **traffic-light flag** per row —
+  red = likely personal or miscategorised, yellow = confirm/reclassify, green = fine or a refund —
+  plus the current account, vendor, date and a suggested action, and a summary by account.
+  ✅ **It confirms independently what this file had reached from the ledger**, including the year-end
+  adjusting entry, which it describes in the same terms and reads the same way: *"this confirms
+  significant personal-auto activity."* **So that entry was Julia's and deliberate.**
+  🔴 **And it carries the biggest finding on this return, which had surfaced nowhere else and is not
+  about vehicles at all: `Outside services` is DIRECT INSTALL LABOUR, and moving it into cost of
+  goods sold would drop gross margin from roughly 70% to roughly 48%.** It does **not** change net
+  income — it moves cost between COGS and operating expense — but it changes **Form 1125-A**, gross
+  profit, and every margin the client is ever shown. ⚠️ **A decision, not a computation**, and the
+  prior-year return is the authority on which convention this client already used — which is still
+  unread. ⚠️ **The workbook also says two large accounts are NOT yet scrubbed:** meals and hotels.
+  ⚠️ **One figure in it does not tie** to the P&L pulled six weeks later; the likely reading is
+  simply that transactions were posted in between, but it is **not established** — check before
+  either is used. Detail in the
+  [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 blocker D.
+  _(Worked by Lilian.)_
+
 ### Tax year 2025 — the review
 
 - **What gates the return:** the five blockers in the log entry above. Two of them are **ours**, not
