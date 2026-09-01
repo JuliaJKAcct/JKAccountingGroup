@@ -707,6 +707,10 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   closed 2025 books · §179/bonus on the 2025 asset additions · the reasonable-compensation position
   *(run the [`reasonable-compensation`](../../../.claude/skills/reasonable-compensation/) skill — do
   not build it by hand)* · and what the unidentified `2025 ECOORGANICUSALLC_1.pdf` actually is.
+- ✅ **DEPRECIATION IS NO LONGER A BLOCKER — 2026-09-02.** Lilian confirmed **ATX holds the 2024
+  return**, so the asset register rolls forward and she writes the book entry, as with Kolo Florida.
+  **What remains is the §179 / bonus election on the 2025 additions** — a decision for her or Julia,
+  not a missing source.
 - ✅ **ANSWERED 2026-09-01 — questions ① and ② above, as far as the sources reach.** The people added
   to Gusto were **three third parties, not the owners**, onboarded with a first day of 2025-09-15 and
   **left awaiting an approval that never came**, so **no payroll ever ran through Gusto**. See the
@@ -732,14 +736,26 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - **Deadline:** **2026-09-15**, extension filed. The review ran on 2026-08-31 — fifteen days.
 
 ### Outstanding items (CI-only — never in the SOP)
-- 🔴 **THE 2024 FILED RETURN HAS NOT BEEN READ, AND FOUR FIGURES DEPEND ON IT** — opening AAA, the
-  depreciation schedule, whether 2024 ran contributions through Schedule M-2 line 3, and the mapping
-  conventions. The file **is** in Double (`Tax Return Filed > 2024 > ECOORGANICUSALLC.pdf`).
-  🛠️ **Why it failed, and it will fail again the same way:** `tools/redact-doc/redact.py` needs
-  `pypdf`, and **a cloud session whose network policy blocks PyPI and npm cannot install it** — both
-  returned `403` on 2026-08-31. ✅ **The fix is the environment, not the tool: re-run in a session
-  with package access.** ⛔ **Never open the PDF by another route** — that is the one thing the
-  redactor exists to prevent.
+- 🟡 **THE 2024 FILED RETURN HAS NOT BEEN READ BY A SESSION — but 2026-09-02 that stopped being a
+  gate.** ✅ **Lilian confirmed ATX HAS the 2024 return.** So the four figures that were waiting on it
+  — **opening AAA** (2024 Schedule M-2 line 8), the **depreciation schedule** (Form 4562), **whether
+  2024 ran contributions through Schedule M-2 line 3**, and the **mapping conventions** (page 1 and
+  Form 1125-A read against the 2024 books) — **are all inside ATX and can be read off directly.**
+  🔑 **The blocker is now that a SESSION cannot see them, not that the firm cannot.** The PDF route
+  still matters, because it lets a session do the reproduce-last-year comparison itself instead of
+  asking for four figures to be transcribed — but nothing waits on it.
+  🛠️ **What that route needs, and it is now exactly one line:** add
+  **`keeper-attachable.s3-accelerate.amazonaws.com`** to the tax-return environment's allowed domains.
+  **That is the host Double serves its files from** — not `doublehq.com`. *(An earlier version of this
+  bullet said the blocker was PyPI. That was only the first wall: `pypdf` is solved, and the download
+  host is what is left. Full detail in [`tools/redact-doc/README.md`](../../../tools/redact-doc/README.md).)*
+  ⛔ **Never open the PDF by another route** — that is the one thing the redactor exists to prevent.
+- 🛠️ **TWO BOOK CORRECTIONS ARE WRITTEN AND WAITING TO BE MADE** *(step by step in the working paper,
+  D-4 §5b)*: a **dealership refund coded against the wrong expense account** — an error, fixed on the
+  transaction itself, and 🛑 **it must be done BEFORE the vehicle reclassification or the credit is
+  stranded** — and a **European-marque parts-catalogue subscription filed under `Software`** — a
+  judgement, which follows Julia's decision on the vehicle block and goes in the same year-end journal
+  entry. ⚠️ **Confirm what the subscription is before moving it.**
 - 🔴 **Settle the 2025 payroll question in Gusto and myconneCT** — did any payroll run, and has a
   single CT-941 ever been filed? It gates the 1120-S and it is a live state matter in its own right
   (six past-due or due-soon notices between 2026-01-27 and 2026-08-18 — roughly every six weeks, not quarterly — still unactioned).

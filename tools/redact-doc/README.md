@@ -178,6 +178,23 @@ solve a reading problem by sending the document somewhere else to be read.
 | **0** | + `glyph-name token(s) were decoded` | Recovered from a broken font | Fine to use, but **layout came through worse than usual.** Read column alignment with suspicion and prefer figures you can corroborate arithmetically (on a return: does line 8 equal line 6 minus line 7?) |
 | **0** | + `barely extracted: [n, m]` | Those pages gave nothing up | **An absence is not evidence.** Name the pages instead of reporting "X is not on the return" |
 
+### ✅ What a restricted environment has to allow, in full
+
+_(The firm now runs tax-return sessions in a deliberately restricted environment. This is the whole
+list — it was assembled by hitting each wall in turn, 2026-09-01/02.)_
+
+| Add to the environment's allowed domains | Why |
+|---|---|
+| **`keeper-attachable.s3-accelerate.amazonaws.com`** | 🔴 **The one that blocks reading a return.** Double does **not** serve files from `doublehq.com` — `get_file` returns a presigned URL on this S3 host, and without it the redactor dies at the download with `curl exit 22` |
+| `keeper-attachable.s3.us-east-2.amazonaws.com` | belt and braces — the regional endpoint the accelerate host can redirect to. Harmless if unused |
+| `www.irs.gov` and `*.irs.gov` | reading a current-year form at source instead of from memory — a standing firm rule |
+
+**Nothing else is needed.** In particular: **the MCP connectors (Double, Gmail, Drive, QuickBooks) do
+not use the container's network at all** and work in any environment, however restricted — which is why
+a session can read every record on a client and still fail to download one PDF.
+
+⛔ **And one thing an allowlist CANNOT fix:** the package registries. See below.
+
 ### 🔒 A locked-down environment — installing pypdf with no package registry
 
 _(Established 2026-09-01, in the `odoo-api`-style restricted environment the firm now uses for tax
