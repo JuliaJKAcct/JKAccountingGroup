@@ -26,7 +26,7 @@
 
 ## 1. Snapshot
 
-- **Business name:** **M5 STUDIO MIAMI LLC** — confirmed 2026-08-27 from the Florida DOS filing acknowledgement in Julia's mailbox (Articles of Organization **filed 2026-08-07, effective 2026-08-03**, tracking number 400479530504). ⚠️ The **Sunbiz document number itself has not been read off the filed Articles** — the pre-filing acknowledgement carried a temporary `W…` tracking number, which is not it.
+- **Business name:** **M5 STUDIO MIAMI LLC** · **Sunbiz document number `L26000418311`** — both from the Florida DOS filing email of **2026-08-11** in Julia's mailbox, read into this file on 2026-08-27 (Articles of Organization **filed 2026-08-07, effective 2026-08-03**; state tracking number 400479530504). ⚠️ **The name was rejected once, on the name itself** — see §5.
 - **Entity type:** **Florida LLC** (Articles of Organization). Number of members not confirmed here; **two investors** are involved (§2), so single- vs multi-member is still open and it drives the return type.
 - **Home state:** Florida (Miami) — confirmed against the state filing above.
 - **Industry / what they do:** Design services and retail sale of decorative wall plaster and related materials _(wording agreed with Lilian for the EIN application — see §5)_
@@ -58,8 +58,8 @@ link). Never write the credential itself here.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| Sunbiz | Entity formation / status | n/a (public) | Articles of Organization filed **2026-08-07**, effective **2026-08-03**; state tracking number 400479530504. The filed **document number** still has to be read off the Articles PDF |
-| IRS | EIN application | n/a | **SS-4 faxed 2026-08-18 to 855-641-6935** (the domestic fax — the entity operates from Florida), **and faxed again 2026-08-27 as a "second attempt"**. _(EIN pending — write it here, hyphenated, once assigned)_ |
+| Sunbiz | Entity formation / status | n/a (public) | **Document number `L26000418311`.** Articles of Organization filed **2026-08-07**, effective **2026-08-03**; state tracking number 400479530504 (and `W26000112020`, the document number the state gave the **rejected** first submission — §5) |
+| IRS | EIN application | n/a | **SS-4 faxed 2026-08-18 to 855-641-6935** (the domestic fax — chosen on where the *entity* is; ⚠️ assumed, see §5), **and faxed again 2026-08-27 as a "second attempt"**. _(EIN pending — write it here, hyphenated, once assigned)_ |
 | Google Drive | The client's document folder — Articles, the SS-4, the Form 2848 draft | _(pending — link the folder here)_ | Folder **"M5 Studio Miami"**, created 2026-08-03 |
 
 ## 4. Obligations & recurring processes
@@ -120,7 +120,7 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- 🔴 **THE SS-4 WENT BY FAX, NOT ONLINE — because the owners are foreign investors with no SSN or ITIN, and the online tool refuses that.** The IRS EIN Assistant requires the **responsible party** to hold an SSN, ITIN or EIN; both investors are **Ukrainian nationals whose E-2 investor visas were still being filed** through Julia's referral counsel in August 2026 (Julia's own introduction, 2026-07-13: *"international investors looking to open a business in the US for E2 visa purposes"*), so there was no number to enter. That is the go/no-go fork in [EIN SOP §1](../../sops/ein-application-irs.md) → **Path B: Form SS-4 by fax, `Foreign` on line 7b.** ⚠️ **Where it was sent is a SECOND, separate test:** it went to **855-641-6935**, the **domestic** fax, because *the entity* operates from Florida — the owner living abroad does not make it an international filing. **Faxed 2026-08-18, 3 pages**, and **FAXED AGAIN on 2026-08-27, 8 pages, subject `… - Second attempt`** — both to the same number, both confirmed sent by MyFax in Julia's mailbox. ⏳ **The ~4-business-day clock runs from the SECOND attempt: due about 2026-09-03**, and as of **2026-09-01** no EIN had been recorded as arriving. ❓ **Why it was re-sent is not recorded anywhere** — no delivery failure was found; the page count went from 3 to 8, which suggests something was added (the Form 2848?), not that the first was rejected. **Ask Lilian before assuming either.** It comes back to the **designee's fax, (786) 866-6298**, not to the client. ⓘ Confirming the reason on the form itself takes one look: **line 7b of the filed SS-4 in the client's Drive folder should read `Foreign`.**
+- 🔴 **THE SS-4 WENT BY FAX, NOT ONLINE — because the owners are foreign investors with no SSN or ITIN, and the online tool refuses that.** The IRS EIN Assistant requires the **responsible party** to hold an SSN, ITIN or EIN; both investors are **foreign investors whose E-2 visa cases were still being filed** through Julia's referral counsel in August 2026 _(nationality is not stated in any source the firm holds — do not assume it from the names)_ (Julia's own introduction, 2026-07-13: *"international investors looking to open a business in the US for E2 visa purposes"*), so **on the firm's understanding there was no number to enter — and that understanding has NOT been checked against the filed form.** That is the go/no-go fork in [EIN SOP §1](../../sops/ein-application-irs.md) → **Path B: Form SS-4 by fax, `Foreign` on line 7b.** ⚠️ **Where it was sent is a SECOND, separate test:** it went to **855-641-6935**, the **domestic** fax, because the test is where *the entity* is, and this is a Florida company — the owner living abroad does not make it an international filing. ⚠️ **Applied on an assumption, because this client's own address is recorded NOWHERE** (§4, and the checklist below): [EIN SOP §3](../../sops/ein-application-irs.md) names the exception — *a Sunbiz registration whose only US address is the registered agent's, with the office and operations abroad* — which would have been the other fax. **Settle the address and this stops being an assumption.** **Faxed 2026-08-18, 3 pages**, and **FAXED AGAIN on 2026-08-27, 8 pages, subject `… - Second attempt`** — both to the same number, both confirmed sent by MyFax in Julia's mailbox. ⏳ **The ~4-business-day clock runs from the SECOND attempt: due about 2026-09-02**, and as of **2026-09-01** no EIN had been recorded as arriving. ❓ **Why it was re-sent is not recorded anywhere** — no delivery failure was found; the page count went from 3 to 8, which suggests something was added (the Form 2848?), not that the first was rejected. **Ask Lilian before assuming either.** It comes back to the **designee's fax, (786) 866-6298**, not to the client. ⓘ Confirming the reason on the form itself takes one look: **line 7b of the filed SS-4 in the client's Drive folder should read `Foreign`.**
 - **Calling the IRS about this EIN — the only authorization that works right now is the SS-4
   designee block**, and it dies on assignment (_"terminates at the time the EIN is assigned and
   released to the designee"_). ⚠️ **After that, do NOT reach for a Form 2848 in Lilian's name** —
@@ -129,11 +129,17 @@ watch-outs, one-off arrangements, history that affects the work.
   **Form 8821**, which Lilian _can_ be named on. **Neither works while the EIN is still pending**
   — both want a TIN this entity does not have. Full rule in
   [`firm-identity.md` §4](../../sops/firm-identity.md).
-  ⚠️ **A Form 2848 for this client already exists as a draft** — `M5 Studio Miami LLC - Form 2848 -
-  2026-08-12` in the client's Drive folder, prepared the same day as the SS-4 and **modified again on
-  2026-08-27**. It was drafted **two days before** the eligibility rule above was established (the
-  2026-08-14 log entry), so **whose name is on it has not been verified.** If it names Lilian it is
-  invalid and the equivalent **Form 8821** is what she needs; a 2848 has to name **Julia (EA)**.
+  🔴 **AND A FORM 2848 FOR THIS CLIENT IS SITTING IN A FOLDER CALLED "SIGNED".**
+  `M5 Studio Miami LLC - Form 2848 - 2026-08-12 .pdf` lives in Drive at **Tax information
+  authorization - form 2848 IRS → SIGNED** — **not** in the client's own folder — **created
+  2026-08-27 17:08 GMT and modified 19:44 GMT**, the afternoon of the second SS-4 fax. _(The
+  `- for signature` draft Lilian emailed Julia on 08-12 is a different file, an email attachment.)_
+  ⚠️ **So the question is not "check the draft before relying on it" — it is whether a 2848 was
+  SIGNED AND SENT on 2026-08-27, and whose name is on it.** It was prepared **two days before** the
+  eligibility rule above was established (the 2026-08-14 log entry). **If it names Lilian it is not a
+  valid authorization** — hers is the **Form 8821**; a 2848 must name **Julia (EA)** — and an invalid
+  one already in the IRS's hands is a different problem from a draft nobody sent. 🛑 **Established:
+  the file is in SIGNED. NOT established: that it was faxed, or whose name it carries.**
 - ✅ **M5 Studio does NOT install anything — it designs and sells.** _(Lilian, 2026-08-14.)_
   That **rules out Construction** on SS-4 **line 16**, which was the big fork: applying
   material on a customer's property would have made this a special trade contractor. What
@@ -147,20 +153,21 @@ watch-outs, one-off arrangements, history that affects the work.
   **expectation**, not a measurement. The old instruction here — *do not file line 16 until question (2) is answered* — is
   **overtaken by events: the SS-4 went out on 2026-08-18** and nobody has read back **what was
   actually written on line 16**, nor was question (2) ever put to the client. See
-  [EIN SOP §4F](../../sops/ein-application-irs.md). ⚠️ **If it is wrong it is not fatal** — the
-  principal-activity line is corrected by letter to the IRS, not by a new EIN — but the answer
-  should be established and written here rather than left unknown.
+  [EIN SOP §4F](../../sops/ein-application-irs.md). ⚠️ **Do not treat a wrong answer as cosmetic** — [EIN SOP §4F](../../sops/ein-application-irs.md)
+  is explicit that line 16 *"establishes the activity on the IRS's record of the account. It is not a
+  cosmetic field."* **How it is corrected once filed is not written down anywhere in our SOPs** —
+  establish that before promising the client it can be fixed.
+- ✅ **The legal name is `M5 STUDIO MIAMI LLC`** — the state's own filing email of 2026-08-11 (read into this file on 2026-08-27).
+  The IRS name **must match Sunbiz character for character** (including the `LLC`), and a
+  punctuation difference causes downstream trouble ([EIN SOP §6](../../sops/ein-application-irs.md)).
+  ⚠️ **Nobody has checked the faxed SS-4 against it** — if the EIN comes back on a name that
+  differs, that is where to look first.
 - **The SS-4 wording the firm settled on**, so the three lines tell one story:
   **line 10** (Started new business → type) = `Design services and retail of decorative wall
   materials` (short — the form's space is one small line); **line 17** (detail, an entry is
   required) = `Design services and retail sale of decorative wall plaster and related
   materials`; **line 16** = **still open** — Retail, Wholesale–other or Other, per the two
   questions in the bullet above.
-- ✅ **The legal name is `M5 STUDIO MIAMI LLC`** — the state's own filing acknowledgement, 2026-08-11.
-  The IRS name **must match Sunbiz character for character** (including the `LLC`), and a
-  punctuation difference causes downstream trouble ([EIN SOP §6](../../sops/ein-application-irs.md)).
-  ⚠️ **Nobody has checked the faxed SS-4 against it** — if the EIN comes back on a name that
-  differs, that is where to look first.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -235,8 +242,14 @@ A running, dated record as we build this profile.
   earlier. What the sources show:
   - **The company exists.** Florida DOS emailed Julia the filing acknowledgement — *"The Articles of
     Organization for **M5 STUDIO MIAMI LLC** were filed electronically on **August 07, 2026**,
-    effective **August 03, 2026**"* (tracking 400479530504). An earlier mail on 08-07 was the
-    *not-yet-filed* acknowledgement, carrying only a temporary `W…` tracking number.
+    effective **August 03, 2026** … and were assigned document number **L26000418311**"* (tracking
+    400479530504). 🔑 **And the filing was REJECTED first, on 2026-08-07, over the name itself:**
+    *"the document has not been filed for the following: The name of a limited liability company must
+    contain the words 'Limited Liability Company,' the abbreviation 'L.L.C.,' or the designation
+    'LLC.'"* — the name submitted was **`M5 STUDIO MIAMI`**, with no LLC (that submission holds
+    document number `W26000112020`). It explains the 08-03 → 08-07 → 08-11 sequence, and it is the
+    concrete precedent for the character-for-character name risk §5 flags: this company's name has
+    already failed one filing once.
   - **The owners are foreign investors with E-2 visas in progress**, which is what closed the online
     route. Julia introduced them to immigration counsel on **2026-07-13**: *"They are international
     investors looking to open a business in the US for E2 visa purposes."* Through August the same
@@ -254,7 +267,8 @@ A running, dated record as we build this profile.
     correct one: the routing test is where **the entity** is (Florida), not where its owners live.
   - ⏳ **The EIN is overdue.** Fax-back runs ~4 business days → due about **2026-08-24**. Six
     business days on, **nothing showing the EIN arrived was found**; see the negative below for what
-    that search actually covered.
+    that search actually covered. 🛑 **SUPERSEDED by the 2026-09-01 entry below** — the SS-4 was sent
+    a second time on 27 August, so the clock restarted and it was never overdue.
   - ⚠️ **A negative, stated honestly** (method rule 1b): the searches were **Julia's Gmail**
     (`M5`, `SS-4`, the owners' names, `fax`, last 25–60 days), **Google Drive** (title/full-text
     `M5 Studio Miami`) and **Ping** (meetings + email). **Double was not searched in this session**,
@@ -273,13 +287,20 @@ A running, dated record as we build this profile.
   - ❓ **Why it was re-sent is not established.** No IRS rejection or MyFax failure notice was found,
     and **the page count went from 3 to 8** — consistent with documents being *added* rather than the
     first attempt failing. ⚠️ Do not write either version into this file as fact; **ask Lilian**.
-  - ⓘ **A separate 2-page fax went to `855-772-3148` the same afternoon** (19:01 GMT), subject
-    *"UNKNOWN"*, an hour before the SS-4 re-send — and the **Form 2848 draft in Drive was modified
-    that same afternoon** (17:08 GMT). Recorded as an observation, not a conclusion: nothing found
-    says what that fax was.
+  - 🔴 **Three things happened that afternoon, and the order matters.** `M5 Studio Miami LLC - Form
+    2848 - 2026-08-12 .pdf` was **created at 17:08 GMT inside Drive's `Tax information authorization -
+    form 2848 IRS → SIGNED` folder** (not the client's folder); a **2-page** fax went to
+    `855-772-3148` at **19:01 GMT**, subject *"UNKNOWN"*; the 2848 was **modified at 19:44 GMT**; and
+    the 8-page SS-4 re-send went at **20:08 GMT**. ⚠️ **Recorded as sequence, not as cause** — nothing
+    found says what the 2-page fax was. But the file landing in **SIGNED** raises a question the
+    earlier entry did not: **was a Form 2848 signed and sent for this client, and does it name
+    Lilian?** — which would be an invalid authorization already with the IRS ([`firm-identity.md`
+    §4](../../sops/firm-identity.md)). **Ask Lilian; do not open the PDF to find out.**
   - ⚠️ **Searches behind these negatives** (rule 1b): **Julia's Gmail** (`M5`, `EIN`, `SS-4`, `myfax`,
     `147C`, `CP 575`, last 7 days) and **Google Drive** (`M5*`, modified since 2026-08-26). The EIN
-    fax-back arrives at the firm's fax **(786) 866-6298**, which neither search can see.
+    fax-back arrives at the firm's fax **(786) 866-6298**; MyFax delivers the firm's *outbound*
+    confirmations to Julia's mailbox, but **whether INBOUND faxes land there too was not checked** —
+    so the Gmail silence may mean nothing, or may be real. **Check the fax inbox itself.**
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
@@ -307,10 +328,8 @@ it here; these never go into the client SOP.
   answered (no → not Construction). Left: **(1)** materials or design fees (→ Other if design);
   **(2)** if materials, **who buys them** — the general public (**Retail**) or contractors and
   trade buyers (**Wholesale–other**). Nobody has asked (2).
-- **Get the Sunbiz document number** off the filed Articles (the `W…` number in the first email is
-  only a tracking number). Name and dates are now confirmed — §1.
 - 🔴 **CHASE THE EIN.** Path B was decided and executed — **faxed 2026-08-18, re-faxed 2026-08-27**;
-  what is open now is the **result**. On the second attempt the fax-back is due about **2026-09-03**,
+  what is open now is the **result**. On the second attempt the fax-back is due about **2026-09-02**,
   and as of 2026-09-01 nothing was found confirming it arrived (§6 says exactly which searches that
   covers). ❓ **And ask Lilian why the second fax was needed** — it is unrecorded, and the answer
   decides whether the first attempt failed (so the clock is 27 August) or simply carried fewer pages. **First look at the firm's fax
@@ -319,10 +338,12 @@ it here; these never go into the client SOP.
   because the EIN has not been assigned. **The moment it is assigned: write it here hyphenated and
   save the confirmation letter** in the client's system — the CP 575 equivalent is only replaceable
   by a phone-only 147C.
-- ⚠️ **Check whose name is on the Form 2848 draft** (`…Form 2848 - 2026-08-12`, in the client's Drive
-  folder, modified again 2026-08-27). It predates the 2026-08-14 finding that a 2848 may only name
-  someone eligible to practice before the IRS. **Lilian → invalid, use Form 8821; a 2848 must name
-  Julia.** And neither works until the EIN exists.
+- 🔴 **Ask Lilian whether a Form 2848 was SIGNED AND SENT for this client on 2026-08-27** — the file
+  sits in Drive's `Tax information authorization - form 2848 IRS → SIGNED` folder, created 17:08 and
+  modified 19:44 GMT that afternoon (§5, §6). It was prepared before the 2026-08-14 finding that a
+  2848 may only name someone eligible to practice before the IRS. **Lilian → invalid, and hers is the
+  Form 8821; a 2848 must name Julia.** And neither form works until the EIN exists — while the
+  application is pending, the SS-4 designee block is the authorization that works.
 - **Read back what was actually filed** — line 16, and which investor signed as responsible party —
   off the final SS-4 in Drive, and record both here.
 
@@ -332,9 +353,9 @@ reports for this client.
 
 - [x] Does M5 Studio install the plaster, or only design and sell it? — **answered: no install, design and sell only** (Lilian, 2026-08-14)
 - [ ] Line 16: does the revenue come mainly from the materials or the design fees? — **and, separately, what was actually entered on the SS-4 that was filed on 2026-08-18**
-- [x] Exact legal name (`M5 STUDIO MIAMI LLC`) and formation/effective dates — **confirmed 2026-08-27** from the state filing email; **[ ] the Sunbiz document number is still not captured**
+- [x] Exact legal name (`M5 STUDIO MIAMI LLC`), **document number `L26000418311`** and formation/effective dates — all three from the 2026-08-11 state filing email
 - [x] Entity type — **Florida LLC**; **[ ] single- or multi-member is still open** (two investors), and whether an S-election is planned
-- [x] Whether the responsible party holds an SSN/ITIN — **neither** (foreign investors, E-2 pending); that is why the SS-4 went by fax. **[ ] WHICH of the two investors signed as responsible party is still not recorded** — read it off the filed SS-4
+- [ ] Whether the responsible party holds an SSN/ITIN — **understood to be neither** (foreign investors, E-2 pending), which is why the SS-4 went by fax, but **nobody has confirmed it against line 7b of the filed form**. **[ ] WHICH of the two investors signed as responsible party is still not recorded** — read it off the filed SS-4
 - [ ] Mailing and physical addresses, with county
 - [x] Whether the firm goes in the SS-4 Third Party Designee block — **yes, done** (Lilian's name, the FIRM's address, her work line, the JK fax; now the firm's standing pattern — [EIN SOP §4D](../../sops/ein-application-irs.md))
 - [ ] Does the client have a Double account? (link it here if so)
