@@ -544,6 +544,43 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   than assumed. Figures are in the
   [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md), never here. _(Worked by Lilian.)_
 
+- 2026-09-01 — ⚖️ **JULIA RULED: ALL Turo activity — income AND expenses — is ARTEM'S, so it goes on
+  his individual return, not the company's** _(relayed by Lilian)_. Lilian is reclassifying the Turo
+  costs in the company's books as **owner distributions**, and asked what else must move. **What the
+  ledger review found, and the first item changes the plan:**
+  🛑 ① **PART OF IT IS ALREADY DONE.** A year-end adjusting journal entry dated 2025-12-31 and
+  labelled **`2025-ADJ`** *(one of only two journal entries in all of 2025)* has **already moved a
+  substantial block of vehicle costs to `Owner's distribution`** — the whole of the Hyundai vehicle
+  finance payments, plus a large slice of `Vehicles repair, supplies and others`, plus an
+  `Opening Balance Equity` amount. **Reclassifying those again double-counts the distribution.**
+  **Read that entry before touching anything.** It also explains why the P&L's vehicle-repair figure
+  looks modest: it is already net of that removal.
+  ② **The real "what else" is not called Turo.** It is the **German-marque spend** still sitting in
+  `Vehicles repair, supplies and others` — FCP Euro, UroTuning, Audi Greenwich, Audi Fairfield,
+  **Audi Jacksonville and Audi North Miami (Florida)**, Audi Parts Store, BMW Service Miami, and a
+  **vehicle wrap**. 🔑 **The Florida dealers are the tell** for a Connecticut contractor.
+  ③ ⛔ **In the same account and NOT Turo:** the **H.O. Penn** charges are a **Caterpillar** dealer —
+  the forklift. Autozone / NAPA / Valvoline / tyres and the Zelle payments to mechanics need
+  per-item judgement, because the vendor name does not say which vehicle.
+  ④ **`Taxi or shared rides` also holds Uber, Metro-North, OMNY and a trailer rental — none of those
+  moves.** ⚠️ The Turo rows carry heavy rebills and credits, so the vendor total and the account
+  detail do **not** agree; tie it out in QuickBooks before booking a reclass.
+  ⑤ ✅ **The fixed assets are clean:** the capitalised fleet is two trucks and a forklift — **no Audi
+  or BMW is on the balance sheet**, so no asset comes off and no depreciation unwinds.
+  ⑥ ✅ **Nothing to remove on the income side** — there was never any Turo income in these books.
+  ⚠️ **Still unexamined line by line:** fuel, auto insurance, tolls, parking and car wash — plus two
+  vendors whose account is unknown, a vehicle-registration renewal and **a salvage-auction charge**,
+  which is a vehicle purchase-or-disposal signal.
+  🔑 **And a rule worth keeping, from a PARALLEL session on a different Turo client the same day:**
+  Turo **reimbursements** *(what guests repay for fuel, tolls, tickets)* are, in Turo's own words,
+  **"neither gross earnings nor deductible expenses"** — so they stay out of income **and** the
+  reimbursed part must come out of the fuel expense, or the same fuel is deducted twice.
+  ⛔ **This corrected an earlier statement in this matter that reimbursements were income.**
+  ⚠️ **One consequence for Julia, not for a preparer:** the 2025 P&L already went to the
+  workers'-comp / GL premium auditor in mid-2026, so changing 2025 changes a statement a third party
+  holds. Detail and figures in the
+  [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 blocker D. _(Worked by Lilian.)_
+
 ### Tax year 2025 — the review
 
 - **What gates the return:** the five blockers in the log entry above. Two of them are **ours**, not
@@ -555,6 +592,12 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   company, and what were they used for? — **answers to be recorded here as they come in.**
 - **What the prior-year return established:** ⛔ **nothing — it was not opened.** ⚠️ Do not read this
   as "the prior year is clean": it is an unexamined source, and §3's whole comparison rests on it.
+- ✅ **DECIDED 2026-09-01 by Julia:** all Turo activity — income and expenses — is **Artem's**, and
+  belongs on his individual return. The company's Turo-related costs become **owner distributions**.
+  ⚠️ **One edge the ruling does not obviously reach and that should be asked, not assumed:** the
+  company's card charges to Turo are the **guest** side — paying to *rent* a car — which is the
+  opposite of hosting. If any of those rentals were for a job, moving them to distributions throws
+  away a real deduction.
 - **Decisions left open, all four for Lilian or Julia:** whether the meals policy applies to the
   closed 2025 books · §179/bonus on the 2025 asset additions · the reasonable-compensation position
   *(run the [`reasonable-compensation`](../../../.claude/skills/reasonable-compensation/) skill — do
