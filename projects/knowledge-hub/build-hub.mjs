@@ -606,11 +606,17 @@ function ecoCoaConventions(body){
     // [chart-of-accounts-standard.md](…)" rode into the last chip as raw markdown and a repo
     // path — in a team view where repo links are forbidden.
     let seg = lines[gi].replace(/\*+/g, '');
-    const start = seg.search(/\b\d{3}(?:s|\/\d{3})*\s+[A-Za-z]/);
+    // Anchor on the first range itself — the sequence always opens at 100s assets — so prose
+    // that happens to mention an account code ("never post to 650 Legal") can't hijack the slice.
+    const start = seg.search(/\b100s?\s+assets/i);
     if(start > 0) seg = seg.slice(start);
     const chips = seg.split('·').map((s) => s.trim()).filter(Boolean).map((s) => {
-      const m = s.match(/^([\d/]+s?)\s+([A-Za-z][A-Za-z &/-]*)/);
-      return m ? `<span class="rgchip"><b>${esc(m[1])}</b> ${esc(m[2].trim())}</span>` : '';
+      const m = s.match(/^([\d/]+s?)\s*[—–-]?\s*(.+)$/);
+      if(!m) return '';
+      // Keep the label, drop whatever the author wrote after it: a following sentence, or a
+      // cross-reference link (which must never reach a team view as a repo path).
+      const label = m[2].replace(/\[.*$/, '').split(/\.(?:\s|$)/)[0].trim().replace(/[.,;:]$/, '');
+      return label ? `<span class="rgchip"><b>${esc(m[1])}</b> ${esc(label)}</span>` : '';
     }).join('');
     strip = `<p class="rglabel">Number-prefix grammar (the target)</p><div class="rgstrip">${chips}</div>`;
     lines.splice(gi, 1);
@@ -787,7 +793,7 @@ function closePrintFrontMatter(name, sub, sections, owner, updated, flowToc, sta
     + `<p class="pc-sub">${esc(sub)}</p>`
     + `<p class="pc-meta">Owner ${esc(owner)}${updated ? ' · Updated ' + esc(updated) : ''}${status ? ' · Status ' + esc(status) : ''}<br>JK Accounting Group — internal reference</p></div>`
     + `<div class="pbook ptoc"><h2>Contents</h2>`
-    + `<ol class="ptoc-l"><li><span class="ptoc-n">·</span><span class="ptoc-t">The one thing &amp; ${esc(flowToc || 'the monthly flow')}</span></li>${toc}</ol></div>`;
+    + `<ol class="ptoc-l"><li><span class="ptoc-n">·</span><span class="ptoc-t">The one thing${flowToc ? ' &amp; ' + esc(flowToc) : ''}</span></li>${toc}</ol></div>`;
 }
 // The ONE reusable close-process reader. cfg = { name, loc, lede, oneRule, flow, dl } from
 // the SOP catalog's `close` field; every section renders generically from the .md.
@@ -798,7 +804,8 @@ function closeProcessReader(cfg, md, owner, updated){
   // runbook would otherwise read as settled procedure on screen, in the PDF and in the .txt.
   const status = headerVal(md, 'Status') || 'Active';
   const flowToc = cfg.flowToc != null ? cfg.flowToc
-    : (cfg.flowTitle ? cfg.flowTitle.charAt(0).toLowerCase() + cfg.flowTitle.slice(1) : undefined);
+    : cfg.flowTitle != null ? (cfg.flowTitle && cfg.flowTitle.charAt(0).toLowerCase() + cfg.flowTitle.slice(1))
+    : 'the monthly flow';
   const runbookHref = 'data:text/plain;charset=utf-8,' + encodeURIComponent(
     (/^active/i.test(status) ? '' : `STATUS: ${status}\n\n`) + ecoRunbookText(md));
   const actions = `<div class="eco-actions">`
@@ -1554,7 +1561,7 @@ const SOP_GROUPS = [
             { t: 'Name the payee', d: 'Every charge gets a vendor — except owner moves &amp; transfers' },
             { t: 'Owner-bound?', d: 'Accountable-plan reimbursement is NOT equity · otherwise in = contribution, out = distribution' },
             { t: 'One job?', d: 'Incurred for one project → tag that project' },
-            { t: 'The retainer', d: 'Spans clients → Legal &amp; Professional Fees, no project' },
+            { t: 'The retainer', d: 'Spans clients → the Legal &amp; Professional <i>sub</i>-account, no project' },
             { t: '1099 watch', d: 'Flag outside professionals as you go — the sweep itself is year-end' },
             { t: 'Triage → $0', d: 'The close gate', k: 'gate' },
           ],
@@ -1790,10 +1797,6 @@ function renderSopItem(it, grpName) {
 
   // build the reader doc: BTR uses its premium hand-laid render; Ecoorganic uses the
   // dynamic bookkeeping pilot layout; the rest auto-render (curated) from Markdown.
-  // The card's status pill used to be the literal word "Active" for every SOP, so a runbook
-  // deliberately marked In review advertised itself as settled procedure in the one place the
-  // team browses. Read it from the document.
-  const docStatus = headerVal(md, 'Status') || 'Active';
   let inner;
   if (it.coa) {
     inner = coaReaderInner(owner, updated);
@@ -1850,7 +1853,7 @@ function renderSopItem(it, grpName) {
         ${IC.arrow}
         <div class="khead">
           <span class="kkick">${esc(it.kicker || 'SOP')}${it.tag ? ' · ' + esc(it.tag) : ''}</span>
-          <span class="stat ${/^active/i.test(docStatus) ? 'active' : 'soon'}"><span class="d"></span>${esc(docStatus)}</span>
+          <span class="stat active"><span class="d"></span>Active</span>
         </div>
         <div class="ttl">${esc(it.title)}</div>
         <p class="blurb">${esc(it.blurb)}</p>

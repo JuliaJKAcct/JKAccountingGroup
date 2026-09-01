@@ -79,11 +79,13 @@ shape is what makes the visual view work automatically:
 - **`## Chart of accounts conventions`** — bullets, and **include the number-range grammar
   line** (`… 100s assets · 200s liabilities · 300s equity · 400s income · 500s COGS · 600s
   opex · 800s other income · 901 depreciation · 997/998/999 triage`). The Hub lifts that
-  line into a colored **range strip** — **any phrasing works**, because the parser reads from the
-  first range token and takes only the range words. *(Fixed 2026-09-01: it used to strip a fixed
-  `…name — ` prefix that only Ecoorganic's phrasing had, so every other runbook silently lost
-  `100s assets`, and iKids' trailing "See the firm standard, [link]" rode into the last chip as
-  raw markdown and a repo path — in a view where repo links are forbidden.)*
+  line into a colored **range strip**. **The prose around it is free** — the parser anchors on
+  `100s assets` and takes each label up to a sentence end or a link. 🛑 **But the whole bullet is
+  consumed by the strip, so put nothing else on it**: a cross-reference written on the same bullet
+  is dropped, not rendered (give it its own bullet). *(Fixed 2026-09-01: the parser used to strip a
+  fixed `…name — ` prefix that only Ecoorganic's phrasing had, so every other runbook silently lost
+  `100s assets`, and iKids' trailing "See the firm standard, [link]" rode into the last chip as raw
+  markdown and a repo path — in a view where repo links are forbidden.)*
 - **`## Monthly review checklist (what the reviewer verifies)`** — a **numbered list**; the
   Hub renders **check items**.
 - **`## Open decisions log`** — a Markdown **table with a `Status` column**. The Hub renders
@@ -342,9 +344,12 @@ same pass every month"* — **use them for any client that is not monthly**, or 
 quarterly client's bookkeeper something false. Both accept **`''`** to mean *omit this*, and the
 print book's contents line is **derived from `flowTitle`** so the PDF cannot keep saying "the
 monthly flow" while the screen says something else (`flowToc` overrides the derived wording).
-🔵 **The reader's status chip, the card's pill, the print cover and the `.txt` export all read the
-`.md`'s own `**Status:**` header** — so a runbook marked *In review* cannot circulate as approved
-procedure. That is what makes shipping an unapproved runbook honest rather than misleading.
+🔵 **Inside this reader, the status chip, the print cover and the `.txt` export read the `.md`'s
+own `**Status:**` header** — so a runbook marked *In review* cannot circulate as approved procedure.
+⚠️ **The Hub CARD is not wired to it** — every SOP card still shows a hard-coded *Active* pill, and
+six of the eight runbooks say `Status: Active` in the header while the line below says *In review*.
+Making the cards honest is a firm-wide Hub change and a labelling question for Lilian, not something
+to slip into a client's PR ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 66).
 Do all Hub work through the
 [`knowledge-hub`](../knowledge-hub/) skill and its **verify-before-publish gate**.
 

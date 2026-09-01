@@ -13,8 +13,9 @@
 > and 2 are Lilian's own instruction of 2026-09-01 and are settled. Everything else — the
 > snapshot, the borrowed firm-wide rules, the checklist, the cadence — was assembled by a
 > session from the client file and **awaits her approval**, which is the standing gate on any
-> SOP. Remove this note once she signs it off; until then the Hub card, the reader's status
-> chip, the printed cover and the text export all say **In review**.
+> SOP. Remove this note once she signs it off; until then the Hub page's status chip, its
+> printed cover and its text export all say **In review** — the card in the Hub grid still says
+> *Active*, like every SOP card, which is a firm-wide Hub question rather than this runbook's.
 >
 > The `.md` is the source of truth (maximum detail). Client figures, **vendor names**,
 > account numbers and logins live in the firm's client systems (Google Drive / Double /
