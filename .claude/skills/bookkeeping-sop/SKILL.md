@@ -229,11 +229,13 @@ runbook, adapt the specifics):
   subcontractors (1099 exposure).
 - **Parents never receive postings** — post to sub-accounts only. ⚠️ **But "is it a parent?"
   is a question about THIS CLIENT'S chart, never about the firm standard.**
-  [`chart-of-accounts-standard.md`](../../../projects/sops/chart-of-accounts-standard.md) is
-  the **template every client is adapted from**, not a description of any one of them: an
-  account that is a parent there (`650 Legal & Professional Fees`, with `650.1 Accountant` and
-  `650.2 Legal`) can be a plain **posting account** in a client's chart that never took those
-  children. **Look at the client's chart before you invoke this rule** — and check whether the
+  the firm standard is the **template every client is adapted from**, not a description of any
+  one of them: an account that is a parent there can be a plain **posting account** in a client's
+  chart that never took those children. ⓘ **And check it in the right place** — the prose page
+  [`chart-of-accounts-standard.md`](../../../projects/sops/chart-of-accounts-standard.md) carries
+  the ranges and the rules but **no account numbers at all**; the 125-account list, with the
+  `parent` flag on each, is `projects/sops/assets/S-Corp-COA-master.xlsx` and its derived
+  `projects/knowledge-hub/coa-standard.json`. **Look at the client's chart before you invoke this rule** — and check whether the
   chart says so itself: some of them carry the parent's marker in the account description
   (Masciave's reads *"THIS IS A PARENT CATEGORY, ONLY USE SUBACCOUNTS"*, and those accounts are
   locked). _(2026-09-01: a review round read the firm standard as if it were the client's
@@ -260,13 +262,6 @@ runbook, adapt the specifics):
   online retailer, a truck-rental chain, a freelance marketplace). They share the reason: a covering
   bookkeeper cannot identify a *category of merchant* any other way, and none of them is one of the
   client's own people.
-  ✅ **And Lilian grants exceptions ONE VENDOR AT A TIME, when asked.** On **2026-09-01** she
-  told a session to name `Permit Cleaners` in the Masciave runbook — *"ponlo con nombre en el
-  SOP"* — because the whole rule is about that one payee and a role would have made it
-  unusable. **That is a ruling for that vendor in that runbook**; the rule above still governs
-  every other payee, there and everywhere else. The pattern to copy is the asking: **write it
-  by role, register the question, and let her answer** — a permission is widened by asking,
-  never by reasoning (CLAUDE.md).
   ⚠️ **This is a SESSION'S GENERALISATION, not a firm ruling.** On 2026-08-26 Lilian allowed it for
   the **Ecoorganic runbook only** — *"el runbook puede nombrar cadenas retail sin problema"*. The
   firm-wide wording here was widened by a session so the two files stop contradicting each other,
@@ -275,6 +270,15 @@ runbook, adapt the specifics):
   confirmation. **What does NOT move is the client's
   own payees — subcontractors, individuals, the small local suppliers — which stay by role.** Say the choice out loud in the runbook, or the next session will
   "helpfully" fill the names back in.
+  ✅ **Lilian also grants exceptions ONE PAYEE AT A TIME, when asked — and that route is the
+  point.** On **2026-09-01** she told a session to name a client's permitting vendor in that
+  client's runbook — *"ponlo con nombre en el SOP"* — because the whole rule was about that one
+  payee and a role would have made it unusable. ⓘ **That was a ruling for one payee in one
+  runbook, and it is written down there, not here** — a client's payee name has no business in
+  a firm-wide file, and a reader who found one would take it as this rule loosening. **The
+  reusable part is the asking:** write it by role, **register the question in the runbook's
+  decisions log**, and let her answer — a permission is widened by asking, never by reasoning
+  (CLAUDE.md). The name may then travel through the documents *about that client*; nowhere else.
 - **A project/customer tag records a cost that belongs to ONE job — a cost that spans several
   carries NONE.** For any client whose work runs as jobs or projects (a design studio, a
   contractor), the rule has two halves and the second is the one that gets improvised: a cost
@@ -286,14 +290,18 @@ runbook, adapt the specifics):
   same payee can be tagged on one charge and untagged on another. ⚠️ It matters most where the
   client has **no timesheet integration**: then the tag is the only project-level data the books
   hold, and an untagged job cost is not recoverable from anywhere else.
-  🛑 **And do NOT build a "count the occurrences" check on top of it.** A fee that spans jobs
-  usually has **no fixed amount and no fixed rhythm** — it follows what the client agrees with
-  that vendor — so a period with more, fewer or none of them is **not** a finding, and a
-  reviewer told to expect a number will raise false alarms or, worse, explain a real gap away.
-  Check the **coding of the charges that exist**. _(Lilian, 2026-09-01, on Masciave: the
-  untagged case is `Permit Cleaners`, who work permits across the studio's clients — and she
-  declined to record either figure, on purpose: "eso depende de las necesidades de nuestra
-  clienta y lo que acuerde con esa compañía." **A deliberate absence is not a gap to fill.**)_
+  🛑 **Before writing a "count the occurrences" check on such a fee, ASK whether it is fixed —
+  and take "we don't know" for an answer.** Some spanning fees are a fixed monthly retainer, and
+  a missed one is exactly what [`recurring-expense-monitoring`](../recurring-expense-monitoring/)
+  exists to catch; others follow whatever the client and the vendor agree, month to month. **The
+  runbook has to say which**, because a reviewer told to expect a number on an unfixed fee will
+  raise false alarms or explain a real gap away. Where neither figure can be stated, write **no
+  expected count and no expected amount**, check the **coding of the charges that exist** — and
+  keep the completeness question somewhere else in the checklist (*did the period import at
+  all?*), so "nothing there" can still never mean "nothing imported". _(Lilian, 2026-09-01, on
+  Masciave's permitting vendor: she declined to record either figure, on purpose — "eso depende
+  de las necesidades de nuestra clienta y lo que acuerde con esa compañía." **A deliberate
+  absence is not a gap to fill** — but it is not a licence to stop checking the feed either.)_
 - **Where a client's statements have a KNOWN SHAPE, make that the self-check.** A pre-operational
   client's P&L should be empty; a client with one revenue stream should show one. Write the
   expected shape as a rule and as a checklist line — one report then tests the whole month's

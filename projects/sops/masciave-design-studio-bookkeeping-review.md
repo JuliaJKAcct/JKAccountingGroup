@@ -3,7 +3,7 @@
 > **Status:** In review (new — started 2026-09-01) · **Client:** MASCIAVE DESIGN STUDIO LLC (QBO via Double) · **Owner of SOP:** Lilian · **Last updated:** 2026-09-01
 >
 > **This file starts from ONE rule and is expected to grow.** Lilian gave the first
-> categorization rule on 2026-09-01 — the recurring outside-service retainer that carries
+> categorization rule on 2026-09-01 — the regular payment to an outside company that carries
 > **no** project (rule 2 below) — and this runbook was created to hold it rather than let it
 > die with the session. Everything else here is the operational context carried over from
 > the client's Client Intelligence file so the rule reads in context. **It is not yet a
@@ -18,10 +18,12 @@
 > printed cover and its text export all say **In review** — the card in the Hub grid still says
 > *Active*, like every SOP card, which is a firm-wide Hub question rather than this runbook's.
 >
-> The `.md` is the source of truth (maximum detail). Client figures, account numbers and
-> logins live in the firm's client systems (Google Drive / Double / QuickBooks) — never in
-> this repo. **Vendor names too, with ONE named exception Lilian ruled on** — see the 🔒 note
-> in the snapshot. Internal provenance — **stripped from the team-facing Hub view.**
+> The `.md` is the source of truth (maximum detail). Client figures, **bank and card account
+> numbers** and logins live in the firm's client systems (Google Drive / Double / QuickBooks) —
+> never in this repo. **Vendor names too, with ONE named exception Lilian ruled on** — see the
+> 🔒 note in the snapshot. ⓘ **A chart-of-accounts code like `650` is not one of those
+> numbers**: it is the procedure — which account the money goes to — and it belongs here.
+> Internal provenance — **stripped from the team-facing Hub view.**
 
 ## Client snapshot (operational, non-financial)
 
@@ -68,6 +70,10 @@
   the rule above still governs every other payee, here and in every other client's runbook.
   _(Same shape as the Ecoorganic retail-chain permission of 2026-08-26 — she grants these one
   at a time, and a session may rely on one that is written down, never widen it by reasoning.)_
+  **Where the name may travel:** this runbook, its Hub page, and the client's own Client
+  Intelligence file and index rows — the documents *about this client*. ⛔ **Not into a
+  firm-wide skill or a general procedure**, where a client's payee has no business being and
+  where the next reader would take it as the general rule loosening.
 
 ## Categorization rules
 
@@ -87,11 +93,11 @@ These override any QuickBooks auto-suggestion.
    - ⚠️ **Ask the owner question FIRST (rules 3 and 5).** An accountable-plan mileage
      reimbursement for a trip to one job site looks exactly like a rule-1 cost and is not one:
      tag it and a reimbursement ends up sitting in that project's job costs.
-2. **Money sent to `Permit Cleaners` → `650 Legal & Professional Fees`, and NO project.**
+2. **Money sent to `Permit Cleaners` → `650.Legal & Professional Fees`, and NO project.**
    *(Lilian, 2026-09-01 — settled, both halves.)* **Permit Cleaners** is a permitting company
    the studio pays **regularly** so that it works permits **across the studio's different
    clients**. That one payment buys work on **several projects at once**, so there is **no
-   single project it belongs to** — post it to **`650 Legal & Professional Fees`** and leave
+   single project it belongs to** — post it to **`650.Legal & Professional Fees`** and leave
    the customer/project field **empty**.
    - **Why this is the exception and rule 1 is the rule:** rule 1 tags a cost because it can
      be traced to one job. This payment cannot — splitting it across projects would be an
@@ -129,11 +135,11 @@ These override any QuickBooks auto-suggestion.
 
 - The studio pays **outside professionals** (engineers, permitting, design subcontractors), so
   1099 exposure is real — and it is **not confined to one account.** Most of it sits in the
-  **project-tagged** subcontract and professional accounts of rule 1; the retainer of rule 2
-  adds one more account to sweep, it does not replace them.
+  **project-tagged** subcontract and professional accounts of rule 1; rule 2 adds one more
+  account to sweep, it does not replace them.
 - Track every payee crossing the **$2,000** threshold (2026), collect a **W-9**, and sweep
-  **across every labor / outside-services account** at year-end — including **650 Legal &
-  Professional Fees**, which is where Permit Cleaners lands. A regular vendor is the easiest
+  **across every labor / outside-services account** at year-end — including
+  **`650.Legal & Professional Fees`**, which is where Permit Cleaners lands. A regular vendor is the easiest
   one to miss precisely because nobody re-reads it.
 - Use **Double**, which flags missing payees and 1099 readiness. The client already has a
   dedicated contractors/1099 folder in Drive.
@@ -159,29 +165,38 @@ These override any QuickBooks auto-suggestion.
 
 1. **Triage reads $0** — *Ask My Accountant* / Uncategorized is empty before the period is
    called closed. (Necessary, not sufficient — $0 does not mean the categories are right.)
-2. **Every job cost carries its project** (rule 1) — spot-check the period's subcontracted
+2. **The period actually imported.** Every connected feed carries transactions running to the
+   end of the period. ⚠️ **A stopped feed reads exactly like a quiet month**, and this client
+   has an open question about its Double bank-feed connection (a June 2026 support ticket).
+   This is the check that makes *"no expected count"* in item 4 safe: nothing there is never
+   allowed to mean *nothing imported*.
+3. **Every job cost carries its project** (rule 1) — spot-check the period's subcontracted
    design/engineering costs for an empty customer/project field.
-3. **Every `Permit Cleaners` charge in the period sits in `650 Legal & Professional Fees`
-   with no customer/project** (rule 2). ⛔ **Do not check the count or the amount** — neither
-   is fixed, both follow what the client agrees with that company, and a period with more,
-   fewer or none of them is not a finding. What is checked is the **coding of the ones that
-   are there**.
-4. **Owner-personal items sit in the equity sub-accounts**, not in expenses.
-5. **Payroll** — the Gusto debits (including any off-cycle run) are all accounted for.
-6. **1099 payees** — every vendor at **$2,000 or more** (**≥**, not over) has a W-9 recorded in Double.
-7. **Accrual vs cash** — client-facing reporting is on the accrual basis; nothing has been
+4. **Every `Permit Cleaners` charge in the period sits in `650.Legal & Professional Fees`
+   with no customer/project** (rule 2). ⛔ **There is no expected count and no expected
+   amount** — both follow what the client agrees with that company, so a period holding more,
+   fewer or none of these charges is **not, by itself, a finding**. What this item checks is
+   the **coding of the ones that are there**. ⓘ Two things it does *not* excuse: the period's
+   feeds still have to be complete (item 2), and the **year's total to this vendor is still
+   read against the 1099 threshold** (item 7) — that is a different question from expecting a
+   rhythm.
+5. **Owner-personal items sit in the equity sub-accounts**, not in expenses.
+6. **Payroll** — the Gusto debits (including any off-cycle run) are all accounted for.
+7. **1099 payees** — every vendor at **$2,000 or more** (**≥**, not over) has a W-9 recorded in Double.
+8. **Accrual vs cash** — client-facing reporting is on the accrual basis; nothing has been
    "corrected" toward the cash-basis tax view.
 
 ## Open decisions log
 
 | Item | Status |
 |---|---|
-| ~~Name the vendor, or keep it by role?~~ — **Resolved 2026-09-01, Lilian: name it.** `Permit Cleaners`, in this runbook. A ruling for this vendor, not a general licence (see the 🔒 note) | Resolved |
-| ~~Which sub-account the charge posts to?~~ — **Resolved 2026-09-01, Lilian, from the client's own chart: `650.Legal & Professional Fees` has NO sub-accounts**, so it is posted to directly. The firm standard's `650.1` / `650.2` do not exist here | Resolved |
-| ~~How often is it charged, and how much?~~ — **Closed 2026-09-01, Lilian: deliberately not recorded.** Both follow what the client agrees with Permit Cleaners. The reviewer checks the coding, never the count | Resolved |
+| **Name the vendor, or keep it by role?** → **RESOLVED 2026-09-01, Lilian: name it.** `Permit Cleaners`, in this runbook. A ruling for this vendor, not a general licence (see the 🔒 note) | Resolved |
+| **Which sub-account the charge posts to?** → **RESOLVED 2026-09-01, Lilian, from the client's own chart: `650.Legal & Professional Fees` has NO sub-accounts**, so it is posted to directly. The firm standard's `650.1` / `650.2` do not exist here | Resolved |
+| **How often is it charged, and how much?** → **CLOSED 2026-09-01, Lilian: deliberately not recorded.** Both follow what the client agrees with Permit Cleaners. The reviewer checks the coding, never the count | Resolved |
+| **Confirm the exact string `Permit Cleaners` against the QBO vendor list** before anyone relies on it as a search key. It arrived in a message, and Lilian's dictation is not always faithful; the checklist and the 1099 sweep are both keyed on it, so a wrong string makes both silently unrunnable | To verify |
 | **Lilian's sign-off on this runbook** — rules 1 and 2 are hers, and she settled the name and the account; the rest was assembled by a session and is unapproved. Header stays *In review* until she rules | Pending |
 | **The review cadence** — Double's property says quarterly, the client's own close tasks in Double have run monthly. Both recorded in the snapshot; Lilian settles it | Pending |
-| Does the retainer vendor ever issue a **project-specific** invoice outside the recurring fee? If so it is a rule-1 cost (rule 2, *to verify*) | To verify |
+| Does **Permit Cleaners** ever issue a **project-specific** invoice, outside the regular arrangement? If so it is a rule-1 cost and carries the project (rule 2, *to verify*) | To verify |
 | The **account an accountable-plan reimbursement posts to** is not recorded here | To verify |
 | Whether project-tagged costs are also marked **Billable** in QBO, or tagged for cost tracking only | To verify |
 | The rest of the monthly/quarterly close (feeds reconciled, reporting pack, sales-tax hand-off) is **not yet written** — this runbook is one round old | Pending |
