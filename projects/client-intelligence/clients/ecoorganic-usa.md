@@ -685,6 +685,96 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   ⛔ **The Knowledge Hub was deliberately NOT rebuilt this session** — Lilian's instruction, until the
   work is finished. _(Worked by Lilian.)_
 
+- 2026-09-02 — 🔓 **THE 2024 FILED RETURN WAS READ, and it is the biggest single change to what the
+  firm knows about this client.** Lilian added the one host Double serves its files from
+  (`keeper-attachable.s3-accelerate.amazonaws.com`) to the tax-return environment's allowed domains,
+  and the redactor went through on the first try — 15 pages, identity block masked, EINs kept, **one
+  page of fifteen did not extract**. ⚠️ **The PDF's fonts carry no usable Unicode map**, so every figure
+  taken from it was **corroborated arithmetically before being written down; eight independent checks
+  tie to the dollar.** 🔴 **What it changed:** 2024 had **one** shareholder at 100% — **Ishkhan, not
+  Artem** — which turns the "split 2025 between two owners" problem into a prior question about **when
+  and how Artem became a shareholder**; the **opening accumulated-adjustments balance is negative**
+  against material 2025 distributions, which is now the largest exposure on the return; **the client's
+  own convention on outside labour is settled** (not in COGS — so Julia's reclassification would be a
+  change, not a fix); the **2024 asset register is empty at year end**, which closes depreciation; a
+  **negative QBI carryforward** comes in that nobody had; and the return **contradicts itself on the
+  company vehicle** — 100% business use claimed, all miles reported personal, no written evidence.
+  ⛔ **Recorded, not characterised.** Detail in the section below and every figure in the
+  [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 E. **The redacted text
+  was written to the session scratchpad, never the repo, and deleted after.** _(Worked by Lilian.)_
+
+### 🔴 What the 2024 filed return turned out to say — read 2026-09-02
+
+**This is the single biggest change to what the firm knows about this client. No figures here; they are
+in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 E.**
+
+- 🛑 **2024 HAD ONE SHAREHOLDER, AND IT WAS NOT THE OWNER WE CORRESPOND WITH.** The return reports **one**
+  shareholder, one K-1, **100%**, the same share count at both ends of the year — and the name on it is
+  **Ishkhan Markarian**, the owner who **exits effective 2026-01-01**. **Artem was not a shareholder in
+  2024 at all.** ⛔ **So the firm's working assumption that 2025 is simply "two owners to split" was
+  wrong at the front end.** 🛠️ **The question to put to the client: on what date, and how, did Artem
+  become a shareholder — new shares issued, bought from Ishkhan, or given?** **If it was mid-year, the
+  2025 allocation is a per-day / per-share computation, not a percentage**, and both K-1s turn on it.
+  ⚠️ **And his shares came from somewhere:** Ishkhan held all of them at 2024 year end — so **if Artem
+  bought them or was given them, that is also a transaction on Ishkhan's own return**; if the company
+  issued new shares instead, it is not, and only Ishkhan's percentage moves.
+  🔴 **AND A PRIOR QUESTION NOBODY HAS PUT.** This file records that the ownership changed because **a
+  nonresident shareholder is disqualifying for an S corporation**. The person who had to leave is
+  **Ishkhan** — and he was the **sole 100% shareholder for all of 2024**. **So: on what date did his
+  status change?** If he held the stock while a nonresident, **the S election itself is in question for
+  that period**, and both the 2024 and 2025 Forms 1120-S would be the wrong return. 🛑 **Establish the
+  date before anything is computed.**
+- 🔴 **THE BIG EXPOSURE IS A BASIS QUESTION, NOT AN AAA QUESTION.** With **no accumulated earnings and
+  profits**, the **whole** of 2025's distributions reduces each shareholder's **stock basis**, and
+  anything beyond a shareholder's basis is **capital gain to them**. ⛔ **Not "the excess over the
+  accumulated-adjustments account"** — that ordering only applies where there IS accumulated E&P, and
+  there is none. *(The firm's own SOP names this as the classic error: the AAA decides presentation,
+  basis decides tax.)* **It cannot be computed until the shareholder question above and each owner's
+  basis form exist.**
+  ⚠️ **What the negative accumulated-adjustments balance DOES do is presentation** — it will make the
+  2025 Schedule M-2 distributions line report at or near zero while the K-1s carry the full gross.
+  🛑 **That is not the netted presentation the firm rejected; it must not be read as one.**
+  ⚠️ **And the "no accumulated E&P" reading is corroboration, not proof** — the column is blank, but
+  what settles it is the Schedule B question about C-corporation history, which is unread.
+- ✅ **THE CLIENT'S OWN CONVENTION IS SETTLED, and it answers Julia's biggest structural question.**
+  In 2024 **outside labour was NOT in cost of goods sold** — Form 1125-A's cost-of-labor line is zero
+  and COGS is entirely purchases, while outside labour sat in *Other deductions*. 🛑 **So moving it into
+  COGS in 2025 is a CHANGE OF CONVENTION, not a correction.** Defensible, but it has to be decided as
+  one, by Julia, knowing that is what it is. **It does not change net income either way.**
+- ✅ **Only three deduction lines were used on page 1** — rents, depreciation and *other deductions* —
+  with everything else itemised in the attached statement. **Storage was its own line; auto was split
+  two ways; meals ran the 50% disallowance properly, with the disallowed half as the Schedule M-1
+  addback.** **The 2025 return has a worked precedent for all of it.**
+- 🟢 **The 2024 asset register LOOKS EMPTY at year end** — the one depreciable asset was **disposed of
+  during 2024**, so **nothing rolls into 2025** and the three 2025 additions are the whole schedule.
+  ⚠️ **That reading comes from the book balance sheet plus one listing, not from the tax asset register
+  itself — the ATX register print is what confirms it**, and it is worth printing for a second reason
+  too: the two years appear to be depreciated off different bases.
+- 🔴 **A CONTRADICTION ON THE FACE OF THE FILED 2024 RETURN, and it is not an extraction artifact** —
+  two independent places on the return agree. The company's one vehicle was claimed at **100% business
+  use** and carried a full year of depreciation, while the same return reports its mileage as **zero
+  business miles and all personal**, with **no written evidence** for the business-use claim.
+  ⚠️ *(The two places are the same software input printed twice, so what they corroborate is the
+  **extraction** — this is not a column-misalignment. They are not two independent sources for the
+  fact.)* ⛔ **Recorded, not characterised — it is Julia's to look at.** ⚠️ **And it bears on 2025 directly:** the
+  three 2025 additions are vehicles, they are **listed property**, the same questions get asked, and
+  **no mileage log has been seen for them either.**
+- 🔴 **A negative qualified-business-income carryforward comes out of 2024 — and it is ISHKHAN'S
+  ALONE**, because he was the only shareholder that year. **Artem cannot inherit one from a year in
+  which he held no stock.** ⚠️ **And it is a shareholder-level attribute**: it travels on **Ishkhan's own**
+  Form 8995/8995-A, not on the company's return and **not on any 2025 K-1**. **It is not in the books
+  and nobody had it.**
+- ✅ **No shareholder loans** at either end of 2024 → **stock basis only, no debt basis.**
+- ✅ **The RAM 2500 / RAM 1500 naming mismatch is INHERITED, not a 2025 bookkeeping slip** — the same
+  wrong loan name is on the filed 2024 return. **Fix the label; the truck is not in doubt.**
+- ⚠️ **One page of fifteen did not extract.** Nothing may be reported as *"not on the 2024 return"* —
+  only as not in the fourteen pages that came through.
+- ⚠️ **And one thing on the 2024 return does not tie**: retained earnings did not roll forward by the
+  book loss, and the accumulated-adjustments account was opened at zero although 2024 was **not** the
+  first S-corporation year. **2025's opening balance is that figure**, so it is worth settling against
+  the 2023 return — ⛔ **which is a different year and outside the document permission; that one is
+  Lilian's to open in ATX.**
+
 ### Tax year 2025 — the review
 
 - **What gates the return:** the five blockers in the log entry above — **Turo is now settled, the
@@ -738,8 +828,13 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - **Deadline:** **2026-09-15**, extension filed. The review ran on 2026-08-31 — fifteen days.
 
 ### Outstanding items (CI-only — never in the SOP)
-- 🟡 **THE 2024 FILED RETURN HAS NOT BEEN READ BY A SESSION — but 2026-09-02 that stopped being a
-  gate.** ✅ **Lilian confirmed ATX HAS the 2024 return.** So the four figures that were waiting on it
+- ✅ **THE 2024 FILED RETURN HAS BEEN READ — 2026-09-02.** Lilian added the Double file host to the
+  tax-return environment's allowed domains and the redactor went through on the first try. **It changed
+  more than it closed** — see the log entry for that date and the working paper §6 E. **What follows is
+  the superseded version of this item, kept because it records what the block actually was.**
+<details><summary>The superseded version of this item — what the block actually was, before the environment was opened. ⛔ Nothing in it is current.</summary>
+
+🟡 **THE 2024 FILED RETURN HAS NOT BEEN READ BY A SESSION — but 2026-09-02 that stopped being a gate.** ✅ **Lilian confirmed ATX HAS the 2024 return.** So the four figures that were waiting on it
   — **opening AAA** (2024 Schedule M-2 line 8), the **depreciation schedule** (Form 4562), **whether
   2024 ran contributions through Schedule M-2 line 3**, and the **mapping conventions** (page 1 and
   Form 1125-A read against the 2024 books) — **are all inside ATX and can be read off directly.**
@@ -752,6 +847,8 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   bullet said the blocker was PyPI. That was only the first wall: `pypdf` is solved, and the download
   host is what is left. Full detail in [`tools/redact-doc/README.md`](../../../tools/redact-doc/README.md).)*
   ⛔ **Never open the PDF by another route** — that is the one thing the redactor exists to prevent.
+</details>
+
 - 🛠️ **TWO BOOK CORRECTIONS ARE WRITTEN AND WAITING TO BE MADE** *(step by step in the working paper,
   D-4 §5b)*: a **dealership refund coded against the wrong expense account** — an error, fixed on the
   transaction itself, and 🛑 **it must be done BEFORE the vehicle reclassification or the credit is
