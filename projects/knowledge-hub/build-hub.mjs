@@ -1540,11 +1540,13 @@ const SOP_GROUPS = [
           ],
         } },
       { file: 'masciave-design-studio-bookkeeping-review.md', title: 'Masciave Design Studio — Bookkeeping Runbook', perClient: true, client: { slug: 'masciave-design-studio', name: 'Masciave Design Studio' },
-        blurb: 'Masciave’s bookkeeping rules — an interior-design studio whose costs are read by project. What carries a project tag, and the one recurring outside retainer that deliberately carries none because it buys work across several clients at once. Plus the chart-of-accounts conventions, the reviewer checklist and the open decisions. New and IN REVIEW: the two rules are Lilian’s own instruction, the runbook assembled around them awaits her sign-off.',
+        blurb: 'Masciave’s bookkeeping rules — an interior-design studio whose costs are read by project. What carries a project tag, and the one regular payment that deliberately carries none: Permit Cleaners, who work permits across several of the studio’s clients at once. Plus the chart-of-accounts conventions, the reviewer checklist and the open decisions. New and IN REVIEW: the rules are Lilian’s own instruction, the runbook assembled around them awaits her sign-off.',
         close: {
           // A RULES-shape runbook (like Ecoorganic), rendered through the reusable close reader:
           // there is no close process to show yet, so the ribbon is the costing DECISION and the
-          // sections carry the weight. Cadence is QUARTERLY — hence the flowTitle/flowLede override.
+          // sections carry the weight. The cadence is NOT monthly and NOT settled (Double says
+          // quarterly, the client's own close tasks look monthly) — hence the flowTitle/flowLede
+          // override: the default ribbon asserts a monthly rhythm this client has not got.
           name: 'Masciave Design Studio', loc: 'Bookkeeping runbook · interior design studio (Fort Lauderdale)', dl: 'Masciave-bookkeeping-runbook',
           kind: 'Categorization rules & reviewer checks',
           slede: 'The authoritative detail — the client snapshot, the categorization rules, the 1099 process, the chart-of-accounts conventions, the reviewer checklist, and the open decisions. Open a section.',
@@ -1552,16 +1554,20 @@ const SOP_GROUPS = [
           // ⚠️ oneRule + flow are HAND-AUTHORED and mirror rules 1, 2, 4 and 5 of
           // masciave-design-studio-bookkeeping-review.md — nothing links them, and the ribbon
           // is the half the team actually reads. Change a rule there → change it here in the
-          // same pass. Deliberately carries NO threshold figures or account codes: those move,
-          // and a stale number in a chip is worse than a stale paragraph.
-          oneRule: "A cost incurred for <b>one</b> job carries that job’s project tag — that is the only project-level data these books hold, because there is no timesheet integration. The <b>recurring permit-expediting retainer is the exception</b>: it is one regular fee that buys work across <b>several</b> clients at once, so it goes to <b>Legal &amp; Professional Fees</b> — the sub-account this client’s chart uses for it, never the parent — with the <b>project field empty</b>. Empty is the accurate answer, not a missing one.",
+          // same pass. Deliberately carries no 1099 threshold figure: that moves, and a stale
+          // number in a chip is worse than a stale paragraph. The chart code 650 and the payee
+          // name ARE here — both settled by Lilian on 2026-09-01 and both are the point of the
+          // rule; naming the payee is her ruling for this client, not a general licence, so it
+          // travels no further than this client's own documents.
+          oneRule: "A cost incurred for <b>one</b> job carries that job’s project tag — that is the only project-level data these books hold, because there is no timesheet integration. <b>Permit Cleaners is the exception</b>: the studio pays them regularly to work permits across <b>several</b> of its clients at once, so every charge goes to <b>650.Legal &amp; Professional Fees</b> with the <b>project field empty</b>. Empty is the accurate answer, not a missing one — and there is <b>no fixed amount and no fixed rhythm</b>, so a period with more, fewer or none of them is not a finding <i>once you have confirmed the period actually imported</i>. <b>Nothing there must never be allowed to mean nothing imported.</b>",
           flowTitle: 'How each charge is decided',
-          flowLede: 'The first four questions are asked of <b>every charge</b>, in this order — the owner question comes <b>before</b> the project question, because a reimbursement is not a job cost. The last two are period checks. ⚠️ <b>The review cadence is unsettled</b>: Double’s property says quarterly, the client’s own close tasks have run monthly (see the open decisions), so <b>work the period you are given and count what it should contain</b> rather than assuming a number. The last move is a hard gate: triage must read <b>$0</b> before the period is closed.',
+          flowLede: 'Step 1 is asked of the <b>period</b>; the next four of <b>every charge</b>, in this order — the owner question comes <b>before</b> the project question, because a reimbursement is not a job cost. The last two close the period. ⚠️ <b>The review cadence is unsettled</b>: Double’s property says quarterly, the client’s own close tasks have run monthly (see the open decisions), so <b>work the period you are handed</b> and infer nothing else from it. The last move is a hard gate: triage must read <b>$0</b> before the period is closed.',
           flow: [
+            { t: 'Feed complete?', d: 'Transactions run to the end of the period — a stopped feed reads like a quiet one' },
             { t: 'Name the payee', d: 'Every charge gets a vendor — except owner moves &amp; transfers' },
             { t: 'Owner-bound?', d: 'Accountable-plan reimbursement is NOT equity · otherwise in = contribution, out = distribution' },
             { t: 'One job?', d: 'Incurred for one project → tag that project' },
-            { t: 'The retainer', d: 'Spans clients → the Legal &amp; Professional <i>sub</i>-account, no project' },
+            { t: 'Permit Cleaners', d: 'Spans clients → 650.Legal &amp; Professional Fees, no project' },
             { t: '1099 watch', d: 'Flag outside professionals as you go — the sweep itself is year-end' },
             { t: 'Triage → $0', d: 'The close gate', k: 'gate' },
           ],
