@@ -161,16 +161,36 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   from the filings, not established.
 
 ### Payroll
-- ⚠️ **Applies — but "runs payroll" is NOT established, and this section used to assert it.** Gusto
-  was onboarded **Sept 2025** and multiple employees were hired/I-9'd that month, alongside the
-  1099-tracked subcontractor labor already documented in the SOP. **What the sources actually show is
-  that the first payroll was missed and no payroll appears in the 2025 books at all** — see the first
-  bullet of §5, which carries the evidence and the searches behind it. **Treat the employer
-  obligations below as OPEN rather than as running smoothly**, and settle the question in Gusto
-  before relying on either reading. Connecticut
-  employer obligations recur: **CT-941** (quarterly withholding reconciliation),
-  **W-2s/CT-W3** (annual reconciliation of withholding), and a **CTDOL /
-  ReEmployCT** (unemployment) account *(Gmail, Sept 2025–Jul 2026)*.
+- 🔴 **SETTLED 2026-09-01: THE COMPANY HAS EMPLOYEES ON PAPER AND HAS NEVER RUN A PAYROLL.** Earlier
+  versions of this section asserted that it "runs payroll"; that was wrong, and the corrected reading
+  is now evidenced rather than hedged.
+  - **Three individuals** — not the owners — were onboarded into **Gusto in September 2025**, each
+    approved through Gusto's own flow and each with a **first day of Monday 2025-09-15**, with **Form
+    I-9 requests issued the same day**. *(Names are in Gusto and in Julia's Gmail; they are kept out of
+    this file under the two-data-homes rule, and are recorded in the 2025 working paper.)*
+  - ⛔ **No payroll was ever run.** The **only** `Gusto` movement in the entire 2025 ledger is the pair
+    of **bank-account verification micro-amounts**, debited 2025-09-06 and reversed 2025-09-11, netting
+    to zero. No payroll debit, no payroll-tax debit, no subscription fee. Gusto's own mail confirms it:
+    *"You missed your first payroll with Gusto, which was scheduled for September 26th"* (2025-09-27),
+    and Gusto was still chasing onboarding on 2025-10-20.
+  - 🔑 **Why it stalled, and it is not carelessness:** every firm reply in that window is Julia's
+    **maternity-leave auto-responder** (out from September, back 2025-11-03), and a colleague wrote on
+    2025-09-10 that **only Julia could send the approval**.
+  - **The Gusto account still exists** — 2026-07-15, an admin was removed from it. It was never closed,
+    only never used.
+  - ⚠️ **"No payroll ran" is not "nobody worked."** Whether those three worked and were paid outside
+    Gusto is **not answered by any source read**. A Zelle search of the 2025 ledger finds no payment to
+    any of the three *(that is the search, not the world — cash withdrawals carry no payee)*.
+  - 🔴 **A WORKERS' COMPENSATION POLICY WAS IN FORCE FOR THE SAME PERIOD** — the broker confirmed
+    2026-07-01 that it was new business to their agency **2025-04-16 → 2026-04-16** and that
+    **Ecoorganic was not insured in 2024** — and a **remote physical audit** was carried out in **June
+    2026**. A comp audit is priced on **payroll plus uninsured subcontractors**, so whatever was
+    declared there for 2025 is a statement already made to a third party. **See §3 for the broker and
+    carrier.**
+  - **Connecticut is still expecting returns.** **CT DRS has sent six CT-941 notices** between
+    2026-01-27 and 2026-08-18 — roughly every six weeks — none actioned. The **CT withholding
+    registration is open.** Employer obligations that recur: **CT-941**, **W-2s / CT-W3**, and a
+    **CTDOL / ReEmployCT** unemployment account *(Gmail, Sept 2025–Jul 2026)*.
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — this is the core engagement.
@@ -636,6 +656,30 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 blocker D.
   _(Worked by Lilian.)_
 
+- 2026-09-01 — 🔍 **SECOND PASS on the 2025 return: the payroll question answered, the vehicle
+  analysis built, and one of our own claims withdrawn.** Lilian asked seven questions and each answer
+  is filed rather than left in a reply.
+  🔴 **PAYROLL — the biggest change.** Three individuals (not the owners) were onboarded into **Gusto
+  in September 2025** with a first day of **2025-09-15** and I-9 requests issued; **no payroll was ever
+  run** — the only Gusto movement in the whole 2025 ledger is a pair of bank-verification micro-amounts
+  that reversed themselves. The stall has an explanation: **Julia was on maternity leave** and only she
+  could approve. **The Gusto account is still open in 2026 and Connecticut is still sending CT-941
+  notices.** And **a workers' compensation policy was in force 2025-04-16 → 2026-04-16 with a physical
+  audit in June 2026** — a comp audit is priced on payroll and uninsured subcontractors, so a statement
+  about 2025 has already been made to a third party. Full evidence chain in §4 → Payroll.
+  🚗 **THE VEHICLE ANALYSIS** Lilian asked for was built and **reconciles to Julia's own workbook
+  figure exactly** — see the review section below for its shape, and the working paper for every figure.
+  🛑 **A CLAIM OF OURS WAS WITHDRAWN.** Three individuals paid by Zelle had been called "mechanics"
+  when the **only** basis was the account the bookkeeper chose. Lilian challenged it and was right.
+  🆕 **Two book errors found on the way**, both recorded in the working paper: a **refund credited to
+  the wrong expense account**, and a **European-parts-catalogue subscription filed under `Software`**
+  where no vehicle review would find it.
+  📌 **Artem Markarian now has his own Double case note** (`510952`, cid 710623) carrying **Turo's reply
+  verbatim** and the client's own answer on which cars were hosted — the documentation his 2025
+  individual return will be built from.
+  ⛔ **The Knowledge Hub was deliberately NOT rebuilt this session** — Lilian's instruction, until the
+  work is finished. _(Worked by Lilian.)_
+
 ### Tax year 2025 — the review
 
 - **What gates the return:** the five blockers in the log entry above. Two of them are **ours**, not
@@ -657,6 +701,26 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   closed 2025 books · §179/bonus on the 2025 asset additions · the reasonable-compensation position
   *(run the [`reasonable-compensation`](../../../.claude/skills/reasonable-compensation/) skill — do
   not build it by hand)* · and what the unidentified `2025 ECOORGANICUSALLC_1.pdf` actually is.
+- ✅ **ANSWERED 2026-09-01 — questions ① and ② above.** The people added to Gusto were **three third
+  parties, not the owners**, each with a first day of 2025-09-15, and **no payroll was ever run**. See
+  the Payroll block in §4, which now carries the whole evidence chain. **What remains open is whether
+  they actually worked and how they were paid**, which only the client can answer.
+- ✅ **THE VEHICLE-EXPENSE ANALYSIS WAS BUILT 2026-09-01**, at Lilian's request, so Julia can decide
+  personal vs business — and because whatever leaves this return arrives on **Artem's Schedule C**. It
+  rebuilds the vehicle repair/supplies account **charge by charge** and **reconciles exactly** to the
+  figure in Julia's own review workbook. The shape of it: the great majority of the account is
+  **European passenger-car** spend against a small amount for the working fleet, and **a substantial
+  part of it was incurred in Florida** while the company operates from **Darien, Connecticut**. ⛔ **The
+  analysis identifies and measures; it does not decide.** Figures are in the working paper only.
+- 🆕 **A useful standing quirk this turned up:** on this client's feed, **debit-card charges on the
+  Chase operating account carry the merchant's city and state in the descriptor; credit-card charges do
+  not.** So "which state was this spent in" is answerable for some transactions and, for a card charge
+  or an online order, only from the merchant's own receipt.
+- 🛑 **A correction worth keeping.** An earlier reading called three individuals paid by Zelle
+  "mechanics". **The only basis was the account the bookkeeper posted them to.** Lilian challenged it
+  and was right; one of the three appears under a second vendor record in the **subcontractor labour**
+  account, which makes it a **Form 1099-NEC** question rather than a vehicle one. **Ask the client who
+  they are.**
 - **Deadline:** **2026-09-15**, extension filed. The review ran on 2026-08-31 — fifteen days.
 
 ### Outstanding items (CI-only — never in the SOP)
