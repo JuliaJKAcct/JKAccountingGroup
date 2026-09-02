@@ -880,6 +880,27 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   more-than-2% shareholder's premiums are deductible only if the company includes them in his wages, and this
   company ran no payroll. **It is chained to the reasonable-compensation decision.** A marketplace policy also
   means a Form 1095-A should exist for the household, which is a 1040 matter. _(Worked by Lilian.)_
+- 2026-09-02 (evening, later) — 🔄 **The Turo in-and-out explained, the parts-catalogue subscription
+  verified, and the report register for Julia built (Lilian).** 🔑 **She asked why Turo money leaves and comes
+  back in the same amount, and the answer is a method worth keeping: read the TRIP, not the row.** Every Turo
+  card row carries the trip it belongs to inside its own descriptor, and grouped that way the year's rows
+  resolve into **five rentals that actually cost money, two bookings charged and refunded the next day
+  (cancellations), one same-day billing retry that collected nothing, and one partial refund.** 🛑 **The
+  practical rule that came out of it: move the TRIP, never the row** — the charges alone are more than twice
+  the net, so anyone reclassifying charges without their credits overstates the reclassification by more than
+  its own value. ✅ **No second journal entry is needed; the entry already moves the net.**
+  ✅ **The parts-catalogue subscription is now VERIFIED rather than inferred** — Lilian opened the vendor's
+  site and it carries 24 marques, **none of which is any of the three vehicles this company owns.** The
+  argument got stronger and no longer depends on the word "European": the catalogue cannot look up a part for
+  anything on the balance sheet. **It stays in the entry.**
+  🔴 **One thing the client's banking screen showed that the 2025 ledger cannot: the company also rented cars
+  on that platform in 2024.** ⚖️ **Recorded once and NOT pursued** — that year is filed and closed, per her
+  standing scope rule — **but it is noted honestly, because it weakens the "one personal trip" reading and
+  supports a plainer one: this company rents cars from time to time.**
+  📝 **And she set the shape of the hand-off to Julia**, which is now a running register in two parts: what
+  the firm changed and why, and what stayed doubtful for Julia to decide. **The fuel, parking and insurance
+  premiums the firm questioned stay exactly as Julia categorised them** — the exclusion is now a recorded
+  decision rather than an omission, with the one document that would settle it named. _(Worked by Lilian.)_
 
 ### ✅ The shareholder question — answered 2026-09-02, and what the search for evidence found
 
@@ -1086,6 +1107,10 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   owner contributions; and the health-insurance premiums. ⚠️ **The first one moves the return in the OPPOSITE
   direction from every other finding — it would be a deduction the company is not taking — and it carries a
   Form 1099 question.** **They travel WITH the return, not after it.**
+- 📋 **THE REPORT TO JULIA IS A RUNNING REGISTER NOW, IN TWO PARTS** *(working paper §D-9)*: **① what the
+  firm changed and why** — the year-end entry, every line with its evidence — and **② what stayed doubtful**,
+  five named items with which way each would move the return if she changes it. **It is built as the return
+  is prepared, not written afterwards**, which is the point: *"para que no se nos olvide nada."*
 - 🧾 **ONE DOCUMENT WOULD SETTLE THE LARGEST REMAINING QUESTION: the insurance declaration pages** for the two
   auto policies. They name the insured vehicles, and would settle both the premiums that were left in the
   company and the ones that were questioned.
