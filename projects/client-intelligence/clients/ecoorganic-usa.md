@@ -829,6 +829,30 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   **her method** instead: the Turo total inside the account, less that lump, less the misposted refund.
   Every row of the vehicle account was classified for that purpose *(working paper §D-6d)*. _(Worked by
   Lilian.)_
+- 2026-09-02 (evening) — 📗 **The 2025 GENERAL LEDGER arrived, the reconciliation is done, and the
+  reclassification entry is finished (Lilian).** She supplied the client's own General Ledger, P&L and
+  Balance Sheet and asked for the reconciliation of the discrepancies this firm had flagged. **All 51
+  accounts tie to the cent**; the bank accounts roll forward; the expense accounts equal the P&L.
+  🔑 **The six discrepancies between Julia's July review workbook and the P&L have ONE cause: her review
+  starts in March, and each gap is exactly that account's January and February activity** — nothing was
+  miscounted and nothing posted late, but **those two months have never been reviewed by anyone**, which is
+  the part worth keeping. ⚠️ **The P&L and Balance Sheet she sent are CASH basis while the firm's analysis
+  is accrual** — one number differs (the year-end receivable) and it moves sales, net income, total assets
+  and equity by that amount; every expense account is identical. **The return's method has to be read off
+  the prior-year return before preparation starts.** 🛑 **Two figures the firm had been carrying were wrong
+  and are corrected from the ledger** — the vehicle-repair account's gross charges (a January oil change the
+  practice-platform API never returned, which also removes a "two bases" caveat that had been quoted for a
+  week) and the company's own car-rental charges (five February rows the API never returned; the vendor
+  report had been right all along). ⛔ **A related claim is withdrawn: the rental trips are February AND
+  March, not one March trip.** 🔑 **The cause of the missing rows is a row cap in the platform's transaction
+  API, not a filter** — it stops at roughly 100 rows per account, so the shortfall lands wherever an account
+  is busiest. **Any figure taken from that API for a busy account is a floor.** ✅ **Lilian then closed the
+  open equity question by instruction — everything in both owner accounts is the shareholder's — and named
+  the debit account, so the year-end entry is written with its full memo and every figure sourced.**
+  🆕 **Five new findings from the ledger**, two of which move a figure on the return: labour-looking payments
+  to two people who each have their own contract-labour account sitting in the owner-draw account, and money
+  going out netted inside the contribution account, which understates both gross equity figures.
+  _(Worked by Lilian.)_
 
 ### ✅ The shareholder question — answered 2026-09-02, and what the search for evidence found
 
@@ -1028,6 +1052,21 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   what her own year-end entry's repair lump covered** — the ledger cannot say, and **her answer sets the
   amount to post** *(the worklist's figure is a floor)*; the ending-balance check only confirms the
   posting went through.
+- ✅ **CLOSED 2026-09-02 (evening) — the reconciliation is DONE and the entry is written.** The General
+  Ledger settled every discrepancy; see the log entry for that date. **What is left before the return can be
+  prepared: post the two book corrections, read the return's METHOD off the prior-year return, and Julia's
+  yes/no on the second tier of the reclassification.**
+- 🆕 **FIVE LEDGER FINDINGS NOBODY HAS DECIDED** *(figures in the working paper §D-7 ⑧)*: **labour-looking
+  payments sitting in the owner-draw account** — two payees who each have their own contract-labour
+  sub-account, so this is a deduction the company may not be taking and a Form 1099 question, and it moves
+  income the **other** way from every other finding here; **money going OUT netted inside the CONTRIBUTION
+  account**, which understates both gross equity figures and the gross split the firm's own netting policy
+  tests; **credit-card statement credits booked as owner contributions** *(a card reward is not capital)*;
+  **money received by Zelle from two third parties booked as contributions** — one is the shareholder's
+  spouse, the other appears elsewhere in the year as a payee, so **ask whether it was a customer payment**;
+  and **the shareholder's health-insurance premiums sitting in distributions**, which for a more-than-2%
+  shareholder would normally be a company deduction reported on his W-2 — there is no payroll and no W-2, so
+  it stays where it is and belongs with the reasonable-compensation decision.
 - ✅ **CLOSED 2026-09-02 by Lilian — the three Outside-services / COGS lines are NOT asked:** Julia's
   categorisations stand as correct, the Ukraine wire stays in COGS, the three Zelle payees stay as auto
   expense. **Still worth asking when the client is next spoken to:** the trips the vehicle accounts show —
