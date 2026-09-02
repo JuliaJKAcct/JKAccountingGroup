@@ -44,9 +44,10 @@
   EBITDA / quality of earnings, sales-tax and employment-tax compliance, the real-estate
   component (incl. property-tax reassessment and a cost-segregation feasibility read),
   hidden operating costs and impact/tap fees, a financial review of UCC/equipment
-  financing, and a written findings report. **Hourly with an initial not-to-exceed budget
-  and a deposit credited to the final bill** (figures in the delivered proposal, not
-  here); work beyond the budget requires his written approval. The document carries a
+  financing, and a written findings report. **Fixed-fee, billed on three milestones**
+  (figures in the delivered proposal, not here) — the client declined hourly rates
+  (2026-09-02), so the hour estimate stayed as the price rationale and the overrun risk
+  is explicitly the firm's. The document carries a
   dedicated **"Work for Other Specialists" page** (Julia, 2026-08-29) drawing the line
   between our financial/tax review and the specialist work we do not perform — see §5
 - **Fiscal year-end:** n/a (no engagement entity yet)
@@ -156,16 +157,18 @@ the actual details.
   deposits, and **tax data comes straight from the IRS on a seller-signed Form 4506-C,
   never from the seller's own copies** — the offering memorandum must match what was filed
   with the government
-- **Fee protection is the structure Julia chose — exactly TWO price parts, never a
-  per-phase menu** (her ruling, 2026-08-30: "не разбивать это по стоимости… эта фаза
-  стоит столько-то" is what to avoid): **Part 1**, the due diligence, hourly — an
-  estimate stated as a **minimum** of hours with a range above it (2026-08-29: never
-  present the top of the range as the target), a not-to-exceed budget at the top of the
-  range, a deposit credited in full, balance billed on report delivery, written approval
-  before exceeding; **Part 2**, acquisition structuring + tax planning, one **fixed
-  package** invoiced when that phase begins. Everything the client asked for is inside
-  the one scope, before and after the purchase, so he can never hear "that wasn't
-  included". Reuse this two-part shape for future due-diligence quotes
+- **The fee shape is FIXED, milestone-billed — the client refused hourly rates**
+  (2026-09-02, the final structure after three iterations): **Part 1**, the due
+  diligence, one fixed fee paid in **three equal milestone installments** — on signing;
+  when ALL records are in (from the seller AND the third-party inspections) and the
+  financial review begins; on completion of Part 1 before Part 2. **Part 2**, acquisition
+  structuring + tax planning, one **fixed package** invoiced when that phase begins.
+  The hour estimate (a stated minimum with a range) stays in the document as the price
+  rationale, with overrun risk explicitly the firm's — a selling point, not a concession.
+  Julia's standing sub-rules kept: exactly two price parts, never a per-phase menu
+  (2026-08-30), and everything the client asked for inside the one scope so he can never
+  hear "that wasn't included". ⚠️ Remember for future quotes: this buyer dislikes
+  hourly billing — lead with fixed milestone pricing
 - **The structuring phase is inside this engagement, sequenced after the analysis** (Julia,
   2026-08-29, reversing the earlier separate-agreement framing): acquisition-entity choice
   (LLC / S-corp / C-corp), the RE/business split across companies, the Form 8594
@@ -281,6 +284,17 @@ the actual details.
   was 10 hours for one iteration; the arithmetic flag was raised in chat and Julia set
   it to 20 — so: deposit at start, second installment near hour 20, third near hour 40
   reaching the cap, reconciliation at the end
+- 2026-09-02 — **The client refused hourly rates; Part 1 became a fixed fee on three
+  milestones (v13 delivered).** Julia's instruction after the client's response: same
+  total for both parts, but no hourly anywhere — equal installments at signing, at
+  "all records in (seller + inspections) and the financial review begins", and at
+  completion of Part 1 before Part 2. The hourly rate, the budget-cap/checkpoint
+  machinery and the per-20-hours installments all left the document; the hours page
+  stays as the price rationale ("if it takes more, that risk is ours"); T&C clause 6
+  renamed Payment and Termination, termination basis now work-performed. Artifact
+  updated. ⚠️ The Gmail draft created 2026-08-31 still carries the OLD hourly pricing —
+  updating it needed an approval that was not available; the corrected text was handed
+  to Julia in chat, the old draft must not be sent as is
 - 2026-08-30 — **Two-part pricing (Julia's decision) + the client message on excluded
   work; v8 then v9 delivered, artifact updated.** She asked for the latest version (v8
   republished to the same link), then a ready-to-send client message listing the work
@@ -300,9 +314,8 @@ the actual details.
   search that day did not find it
 - ~~Whose name signs~~ **Resolved 2026-08-30:** Julia set the client name to **Anton &
   Olga Stenin** — now on the cover, the agreement block and the T&C party line (v11)
-- **Julia to confirm — the deposit amount:** she offered two figures ("say $3,500 or
-  $4,000" — amounts named in her instruction, not client data); the draft uses the lower
-  one. Swapping to the higher is a one-pass change
+- ~~The deposit amount ($3,500 vs $4,000)~~ **Moot 2026-09-02:** billing became fixed
+  milestone installments; there is no deposit any more
 - **Julia to confirm — the unit count:** her brief says four cash points + two card points
   (six); the offering memorandum lists five locations plus the delivery business. The
   document uses her 4 + 2 framing — confirm the counting before signing
