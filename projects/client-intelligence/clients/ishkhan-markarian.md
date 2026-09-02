@@ -63,6 +63,7 @@ the actual details.
   - **The negative §199A / QBI carryforward from 2024** — 100% his, travelling on **his own Form 8995/8995-A**. ⛔ **None of it carries to his son.**
   - **Any 2024 suspended loss** — §1366(d)(2) makes it **personal to him**; it does not pass to a transferee, and if he disposed of his entire interest it may be permanently disallowed.
 - 🔴 **THE 2025 TRANSFER IS ALSO A TRANSACTION ON HIS SIDE — and which one depends on how it happened.** A **sale** is gain or loss on his 2025 return; a **gift** may raise a **Form 709**; **newly issued shares** touch him not at all, only his percentage. 🛠️ **The same single question to the client settles both his side and his son's.**
+- 📅 **WORKING ASSUMPTION, 2026-09-02 (Lilian): the transfer was effective at the CLOSE of 2024-12-31.** So he is **not a shareholder for any day of 2025 and receives NO 2025 K-1.** ⚠️ **If it was in fact executed ON 1 January 2025, the regulations treat him as owning the stock on the day of disposition — a one-day K-1 at 1/365** — and the company's return is recomputed. **Recorded as an assumption, to be confirmed with Julia, not as a fact.**
 - ⚠️ **The reason the ownership changed, as the firm recorded it:** the **S-corporation shareholder rule — a nonresident shareholder is disqualifying** — so he left ownership. 🔑 **Lilian's instruction, 2026-09-02: the S-corporation status was NOT lost and everything is in order in that respect.** ⛔ **Recorded as her assurance about the outcome; the residency dates were not checked and are not being pursued.**
 - ⚠️ **He is the primary admin on the company's QuickBooks and the handover is stuck on a step only he can do.**
 - ⚠️ **He signed the 2025 engagement letter for the company on 2025-01-11** — ten days after the date on which his son is said to have become the 100% owner. **Recorded as an observation; engagement paperwork routinely lags reality.**
@@ -72,11 +73,14 @@ the actual details.
 ### Log
 
 - 2026-09-02 — 📄 **FILE CREATED, from what the two prior-year returns turned out to say.** Preparing the company's FY2025 return, the firm read the 2024 and (with Lilian's authorisation) the 2023 filed returns. **Both show him as the sole 100% shareholder** — which had not been established before and which reassigned several 2024 attributes from "both owners" to him alone. **He had no Client Intelligence file despite having his own individual client account, being the transferor in the 2025 ownership change, and holding the only prior-year basis form this company has.** _(Worked by Lilian.)_
+- 2026-09-02 — 📅 **Lilian set the working assumption that the transfer was effective at the close of
+  2024-12-31** — no 2025 K-1 to him — and **is putting the "how" of the transfer to Julia herself.** (§5.)
+  _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **Look up and record his Double client id**, and settle whether the firm prepares his 1040.
-- 🔴 **How did the 2025 stock transfer happen — sale, gift, or newly issued shares?** It decides his own 2025 reporting **and** his son's opening basis. **One question, two returns.**
+- 🔴 **How did the 2025 stock transfer happen — sale, gift, or newly issued shares?** It decides his own 2025 reporting **and** his son's opening basis. **One question, two returns.** 🛠️ **Lilian is taking it to Julia herself (2026-09-02).**
 - 🔴 **Does his 2024 Form 7203 exist, and does the firm hold it?** It is the only prior-year basis form for this company.
 - ⚠️ **The QuickBooks primary-admin handover is waiting on him personally.**
 

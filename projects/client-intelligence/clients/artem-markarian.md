@@ -1,6 +1,6 @@
 # Artem Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-01
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-02
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -108,6 +108,15 @@ the actual details.
 - **A per-car earnings breakdown has been requested from Turo.** Julia asked him on 2026-09-01 to reply
   to Turo by email and ask for the 2025 earnings **broken down by car** — as audit backup, and because
   it is the only thing that splits the total across three vehicles. **Pending.**
+- 🔑 **THE COMPANY'S 2025 BOOKS SHOW A SOUTH-FLORIDA STAY IN MARCH 2025 — AND EVERY ONE OF THE COMPANY'S
+  TURO *GUEST* RENTALS FALLS INSIDE IT** *(read off the ledger dates, 2026-09-02)*: fuel in Fort
+  Lauderdale, parking at Bal Harbour and Sunny Isles, Florida-only fuel brands, rental-car insurance the
+  day of a Turo rental, the Audi and a BMW serviced in Miami, then a drive north on I-95. A second Miami
+  visit in July, and a Florida/Alabama auto insurer's premiums starting that week. **So the Turo rentals
+  the company paid for look like his trips, not jobs** — they are recommended as distributions to him in
+  the company's worklist *(working paper §D-6, tier 2 — Julia decides)*, and **on his side they are only
+  Schedule C costs if the trips were for the Turo cars.** ❓ **Ask him what the March and July trips
+  were** — and the April trip to the Chicago area the same ledger shows.
 
 ## 6. History & open questions
 
@@ -124,17 +133,24 @@ the actual details.
   documents rather than from memory. ✅ **The threshold Turo quoted was checked against irs.gov** and
   matches what the IRS publishes. **This file was created in the same pass** — he had none until now,
   despite being a named client with his own Double account. _(Worked by Lilian.)_
+- 2026-09-02 — 📅 **Two working assumptions set by Lilian for the company's return, both his:** the
+  transfer is taken as **effective at the close of 2024-12-31**, so he is the shareholder for every day
+  of 2025 and receives the **one** K-1; and **how he got the shares stays open until she speaks to
+  Julia** — it creates his opening basis and is the one item still open on his Form 7203. 🔑 **And the
+  company's ledger, read date by date, placed the Turo guest rentals and a cluster of Florida charges in
+  one March 2025 trip** (§5). _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **His 1040 cannot be completed until the company's FY2025 Form 1120-S is** — the K-1 comes from it,
-  and that return is **still blocked** — of the five things it was waiting on, Turo is settled and the
-  other four are not — with a **2026-09-15** deadline.
+  and that return is **cleared to be prepared as of 2026-09-02** — Lilian took the decisions it was
+  waiting on and the book-change worklist is written; **what stands between it and phase 2 is executing
+  that worklist in QuickBooks** — with a **2026-09-15** deadline.
 - 🔴 **The per-car earnings breakdown from Turo** — requested 2026-09-01, not yet received.
 - 🔴 **Whose Turo account is it?** Not confirmed from the registration. With no 1099-K there is no
   name-and-TIN to read.
 - 🔴 **The Kona:** what he received, what he paid the friend, and whether a Form 1099-NEC was owed.
-- 🔴 **Form 7203 opening basis** — does his 2024 return carry one? If not, it must be reconstructed.
+- 🔴 **Form 7203 opening basis — created by the 2025 transfer (§4); no 2024 form exists or can.** How the transfer happened is the question, and **Lilian is putting it to Julia herself (2026-09-02)**. Not urgent for the company's return: no capital gain on any reading.
 - ⚠️ **Turo account access** — he cannot log in. Restore it before the next season.
 - ⚠️ **His residence / state** is not recorded here and has not been established.
 
@@ -143,7 +159,8 @@ the actual details.
 - His mileage records for the Turo cars, per vehicle, for 2025 — **business, commuting and other**.
 - Whether any of the company's Turo **guest** rentals (the company paying to rent a car) were for a job
   — that is the opposite side of the platform from his hosting, and moving them wrongly throws away a
-  real deduction.
+  real deduction. 🔑 **2026-09-02: all of them are dated inside the March 2025 Florida stay (§5) — a job
+  is now the less likely reading, but it is still his to say.**
 
 ## 7. Links
 

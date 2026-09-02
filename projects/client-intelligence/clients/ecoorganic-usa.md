@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-01
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-02
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -229,7 +229,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md).
 
 ### Income tax
-- **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). 🛑 **It issues ONE K-1** — Lilian confirmed 2026-09-02 that Artem is the 100% shareholder from 2025-01-01. ⚠️ *(This line used to say two, one per owner. §2 carries the one-year contradiction that is the last gate before filing.)*
+- **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). 🛑 **It issues ONE K-1** — Lilian confirmed 2026-09-02 that Artem is the 100% shareholder from 2025-01-01. ⚠️ *(This line used to say two, one per owner. §2 carries the one-year contradiction that is the last gate before filing.)* 📌 **Working assumptions set by Lilian 2026-09-02, for the computation:** the transfer is taken as effective at the **close of 2024-12-31** *(so no one-day K-1 to the outgoing owner)*; **no employees in 2025** *(the three onboarded people stay a question for later)*; the **opening AAA is the figure the 2024 return filed**, kept for year-to-year consistency even though the 2023 return shows it understated *(the SOP default)*; and **`Outside services` stays out of COGS** — Julia's meeting rule, which the books already follow. **How the ownership transfer happened is deliberately left open until Lilian speaks to Julia.** Figures and reasoning in the working paper §4 and §6.
 - 🔴 **PRE-RETURN REVIEW RUN 2026-08-31 — VERDICT: THE RETURN CANNOT BE PREPARED YET.** Five things
   the return needed had no source: **payroll** (§5) · the **per-shareholder split of the capital
   accounts** (§5) · the **depreciation schedule** (§5) · **Turo** · and **the 2024 filed return, which
@@ -747,6 +747,36 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   goods sold, while in the meeting she categorised **material to COGS and labour to outside labour**,
   which is also what the 2024 return did. **Both are hers, eight months apart, and nobody has reconciled
   them.** _(Worked by Lilian.)_
+- 2026-09-02 — 🛠️ **Fifth pass on the FY2025 1120-S: Lilian took the decisions the review had been
+  waiting on, and asked for the book-change worklist (Lilian).** Her decisions, each recorded in the
+  working paper §4 with the alternative not taken: **① the opening AAA stays at the figure the 2024
+  return filed** — she asked *where in the books* the understatement could be seen, and the answer is
+  *nowhere*: the AAA is a return figure, not a book figure, and the evidence is the 2023 and 2024
+  returns side by side (the books corroborate only that a deficit of that size existed before 2024);
+  keeping it is also the SOP default; **② for the computation, nobody was employed in 2025** — the
+  three onboarded people are a question for later, not answered; **③ the ownership transfer is taken
+  as effective at the close of 2024-12-31**, so one K-1 and no one-day K-1 to the father — recomputed if
+  Julia says it was executed on 1 January; **④ HOW the transfer happened is left open** until she
+  speaks to Julia; **⑤ the assets' details stay pending**, not blocking. **On `Outside services` she
+  reversed the parked decision — apply Julia's meeting rule, materials to COGS and labour to outside
+  labour — and reading COGS, Outside services and Supplies & Materials line by line showed the books
+  ALREADY do that: nothing moves.** Three lines to ask about instead: an international wire to Ukraine
+  sitting in COGS, three people paid by Zelle into the vehicle-repair account who may be labour (and
+  then 1099-NEC payees), and two small supply items that might be job material. **The Turo / personal
+  worklist is written (working paper §D-6):** the dealership-refund fix first, then one year-end entry
+  in three tiers — the European-car block still in the repair account after Julia's own year-end entry
+  *(which is one lump; what it covered is a question for her, and the worklist carries the check that
+  catches a double count)*, the parts-catalogue subscription, and a **Florida tier the dates made
+  visible**: read in order, the ledger shows a South-Florida stay in March 2025 — Fort Lauderdale fuel,
+  Bal Harbour and Sunny Isles parking, Florida-only fuel brands, rental-car insurance, the Audi and a BMW
+  serviced in Miami, a drive north on I-95 — **and every one of the company's Turo GUEST rentals falls
+  inside that window**, with a second Miami visit in July and a Florida/Alabama auto insurer's premiums
+  starting the same week. Recommended as distributions to Artem under Lilian's own out-of-state test;
+  Julia decides. A third tier (tolls, car washes, the rest of the fuel, a Chicago-area trip in April) is
+  not separable from the ledger and stays with the company unless someone says otherwise. **One
+  correction of the firm's own earlier warning:** moving expense to distribution is basis-neutral, so the
+  no-capital-gain conclusion survives the whole worklist. Nothing was written to QuickBooks; Lilian
+  executes it by hand. _(Worked by Lilian.)_
 
 ### ✅ The shareholder question — answered 2026-09-02, and what the search for evidence found
 
@@ -931,25 +961,34 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   ⛔ **Never open the PDF by another route** — that is the one thing the redactor exists to prevent.
 </details>
 
-- 🛠️ **TWO BOOK CORRECTIONS ARE WRITTEN AND WAITING TO BE MADE** *(step by step in the working paper,
-  D-4 §5b)*: a **dealership refund coded against the wrong expense account** — an error, fixed on the
-  transaction itself, and 🛑 **it must be done BEFORE the vehicle reclassification or the credit is
-  stranded** — and a **European-marque parts-catalogue subscription filed under `Software`** — a
-  judgement, which follows Julia's decision on the vehicle block and goes in the same year-end journal
-  entry. ⚠️ **Confirm what the subscription is before moving it.**
+- 🛠️ **THE BOOK-CHANGE WORKLIST IS WRITTEN — working paper §D-6 (2026-09-02) — and it is Lilian's to
+  execute in QuickBooks, in order:** the dealership-refund recategorisation first *(an error — on the
+  transaction itself, BEFORE anything else or the credit is stranded)*, then **one year-end journal entry
+  to `Owner's distribution` naming Artem**, in three tiers: **sure** *(the European-car block still in the
+  repair account after Julia's own year-end entry, and the parts-catalogue subscription — confirm what it
+  is first)*; **Florida** *(the Turo guest rentals, rental-car and a Florida insurer's premiums, Miami
+  parking and Florida-brand fuel — recommended, Julia confirms)*; and **not separable** *(tolls, car
+  washes, the rest of the fuel — stays unless someone rules otherwise)*. 🛑 **Before posting: ask Julia
+  what her own year-end entry's repair lump covered** — the ledger cannot say — and use the worklist's
+  ending-balance check, which catches a double count whatever the answer.
+- ❓ **Three lines to ask the client about, from the Outside-services read (nothing to move):** the
+  **international wire to Ukraine sitting in COGS** *(a foreign payee — a W-8BEN-E question, and possibly
+  the affiliated Ukrainian company)*; **who the three people paid by Zelle into the vehicle-repair account
+  are** *(if labour → `Outside services` and 1099-NEC)*; and **two small supply items that may be job
+  material**. Plus the trips the vehicle accounts show: **Florida in March and July, the Chicago area in
+  April**, and four Newark-airport long-term parkings — what were they?
 - 🔴 **Settle the 2025 payroll question in Gusto and myconneCT** — did any payroll run, and has a
   single CT-941 ever been filed? It gates the 1120-S and it is a live state matter in its own right
-  (six past-due or due-soon notices between 2026-01-27 and 2026-08-18 — roughly every six weeks, not quarterly — still unactioned).
-- 🔴 **Get the per-shareholder split of the 2025 owner-account movements from the client**, and each
-  owner's **Form 7203 from their own 2024 personal return** — that form is filed with the 1040, never
-  with the company's return, so the firm may simply not hold it. If it does not exist, opening basis
-  must be **reconstructed**, which is separate work and must be scoped, not absorbed.
-- 🔴 **TURO — the earnings answer is IN (2026-09-01); what is now blocking is ONE question: is the
-  Turo account the LLC's or Artem's personally?** ⛔ **Do not plan to settle it from a 1099-K — none
-  was issued for 2025, so the name-and-TIN route the firm was relying on does not exist.** Ask the
-  client, or get the account registration. **The same conversation should cover the payments the
-  company MADE to Turo, and which vehicles the company actually owns and used** — that answer decides
-  whether the German-marque vehicle costs are a business expense or an owner distribution.
+  (six past-due or due-soon notices between 2026-01-27 and 2026-08-18 — roughly every six weeks, not quarterly — still unactioned). 🧮 **For the return, Lilian ruled 2026-09-02 to compute as if nobody was employed — this item is DEFERRED, not answered.**
+- 🛑 **SUPERSEDED 2026-09-02 — there is no per-shareholder split to get: 2025 has ONE shareholder** (§2,
+  §4). What remains is **Artem's opening basis, which the transfer itself creates** — sale, gift or new
+  issue — and **Lilian is putting that question to Julia herself.** The father's 2024 Form 7203 matters
+  only if it was a gift (carryover basis). ⚠️ **It is not urgent for this return: the working paper shows
+  no capital gain even on a zero opening basis, and the reclassification worklist does not change that.**
+- ✅ **TURO — RULED 2026-09-01 by Julia: the activity is ARTEM'S** (§5), which closed the "whose
+  account" question this item used to carry. *(No 1099-K was issued for 2025, so the name-and-TIN route
+  never existed.)* **What is left is the worklist above** — and the payments the company MADE to Turo
+  turned out to sit inside the March 2025 Florida window, so they are tier 2 of it.
 - ✅ **CLOSED 2026-08-26 — the largest 2026 labor payee is an individual subcontractor →
   `Contract labor`** (SOP decisions row 9). Kept as a note because of *how* it closed: the question
   had to be put **by name**, not by role. Asking by role is right for the repo and wrong for a
@@ -1000,9 +1039,9 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
 - [ ] Fiscal year-end _(primary language answered 2026-08-04: Russian)_
 - [x] Whether the Turo account produced income at all — **answered for 2025 on 2026-09-01: yes**, a
       full host-earnings breakdown exists (figures in the working paper). **Other years remain
-      unknown.** 🔴 **Still open and now the live blocker: WHOSE account it is** — Lilian said the
-      company's on 2026-08-04, the basis was never recorded, and the 1099-K that would have
-      corroborated it does not exist (§5)
+      unknown.** ✅ **Whose account — ruled Artem's by Julia, 2026-09-01** (§5); Lilian's 2026-08-04
+      statement that it was the company's is superseded, and the 1099-K that would have corroborated
+      it does not exist
 - [x] Whether a **1099-K was actually issued** for 2025 — **answered 2026-09-01: NO**, per Turo
       Executive Support direct to the client. ⚠️ **Consequence, not just an answer:** the firm's plan
       to prove account ownership from the name/TIN on that form is dead — see §5
@@ -1012,8 +1051,8 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
 - [ ] **Whether the firm has its own QuickBooks access to this client independent of the owners' users** — the primary-admin handover in §3 shows the access picture was never written down. Worth settling while someone is in the account.
 - [ ] Identify the QBO-connected bank account the reviewer didn't recognize
       (2026-07-22 meeting) — confirm whose account it is
-- [ ] Confirm Turo/personal-vehicle expense scope once Turo earnings/1099
-      access is restored (see §5) and reclassify if needed
+- [x] Confirm Turo/personal-vehicle expense scope — **scoped 2026-09-02, working paper §D-6**;
+      execution is Lilian's, in QuickBooks
 - [ ] Confirm current headcount/status of the Gusto W-2 employees (still active
       as of this sweep; admin access changed 2026-07-15)
 - [ ] Scope of the affiliated Ukrainian entity relationship (any US
