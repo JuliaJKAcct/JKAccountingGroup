@@ -44,9 +44,16 @@ the actual details.
 | Role | Where to find them |
 |---|---|
 | Owner / primary contact | Double client (link below) — **the owner we correspond with**, in Russian (see §5) |
-| Second owner | Double client — **there are two owner contacts**, each with their own individual (1040) client account. 🔴 **THE "two K-1s for FY2025" PART IS CONTRADICTED — see the ⚠️ note below.** Two owner *contacts* is not two *shareholders* _(row written 2026-07-30)_ |
+| Second owner | ✅ **[Double cid 710638](https://app.doublehq.com/close?cid=710638) — `Ishkhan Markarian & Oksana Markaryan`, a JOINT individual record** *(found 2026-09-02)*. **There are two owner contacts**, each with their own individual (1040) client account. 🔴 **THE "two K-1s for FY2025" PART IS CONTRADICTED — see the ⚠️ note below.** Two owner *contacts* is not two *shareholders* _(row written 2026-07-30)_ |
 
-- 🔴 **⚠️ TWO SOURCES DISAGREE ON THE OWNERSHIP DATE BY EXACTLY ONE YEAR, AND IT DECIDES THE SHAPE OF THE 2025 RETURN. Unsettled — do not act on either without confirming.**
+- ✅ **SETTLED 2026-09-02 (evening) BY JULIA, AND THE TRANSCRIPT VERSION WON.** *"La fecha en la que
+  Ishkhan dejó la compañía fue al final del 31 de diciembre del 2025"* (Julia, relayed by Lilian). So:
+  **ISHKHAN MARKARIAN is the sole 100% shareholder for the whole of 2025** — his third year and his **final**
+  K-1 — and **Artem's first shareholder year is 2026.** ⛔ **The 2025-01-01 date the firm worked on for one
+  day is withdrawn.** 🔑 **The lesson worth keeping: the meeting transcript was right and the date given
+  deliberately was wrong** — which is the reverse of what the firm's own rule assumes, and it is why both
+  versions were kept with their sources until someone could confirm. **The table below is the record of the
+  contradiction, now closed.**
 
   | Source | Says |
   |---|---|
@@ -62,8 +69,8 @@ the actual details.
   ⚠️ **The driver is not in dispute:** the S-corporation shareholder rule — **a nonresident shareholder
   is disqualifying** — so the outgoing owner left ownership. **Lilian's instruction 2026-09-02 is that
   the S-corporation status was NOT lost and everything is in order in that respect.**
-  🛠️ **The 2025 return is being prepared on Lilian's date (one shareholder, one K-1), per her
-  instruction. Confirming it is the last gate before filing.**
+  ✅ **CLOSED — Julia confirmed the transcript's version on 2026-09-02 (evening). The return is prepared
+  with ISHKHAN as the 2025 shareholder.**
 
 Both owner contacts are on file in **Ping** as well as Double, with no recent meetings
 indexed _(2026-08-04)_.
@@ -229,7 +236,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md).
 
 ### Income tax
-- **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). 🛑 **It issues ONE K-1** — Lilian confirmed 2026-09-02 that Artem is the 100% shareholder from 2025-01-01. ⚠️ *(This line used to say two, one per owner. §2 carries the one-year contradiction that is the last gate before filing.)* 📌 **Working assumptions set by Lilian 2026-09-02, for the computation:** the transfer is taken as effective at the **close of 2024-12-31** *(so no one-day K-1 to the outgoing owner)*; **no employees in 2025** *(the three onboarded people stay a question for later)*; the **opening AAA is the figure the 2024 return filed**, kept for year-to-year consistency even though the 2023 return shows it understated *(the SOP default)*; and **`Outside services` stays out of COGS** — Julia's meeting rule, which the books already follow. **How the ownership transfer happened is deliberately left open until Lilian speaks to Julia.** Figures and reasoning in the working paper §4 and §6.
+- **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). 🛑 **It issues ONE K-1 — to ISHKHAN MARKARIAN**, the sole 100% shareholder for all of 2025 *(Julia, 2026-09-02 evening)*, and **it is marked FINAL**: he leaves at the close of 2025-12-31 and Artem's first shareholder year is 2026. ⚠️ *(This line used to say two, one per owner. §2 carries the one-year contradiction that is the last gate before filing.)* 📌 **Working assumptions for the computation:** 🛑 *(the shareholder assumption below was replaced the same evening — the transfer is at the close of **2025**-12-31 and the K-1 is Ishkhan's)*; ~~the transfer is taken as effective at the close of 2024-12-31~~; **no employees in 2025** *(the three onboarded people stay a question for later)*; the **opening AAA is the figure the 2024 return filed**, kept for year-to-year consistency even though the 2023 return shows it understated *(the SOP default)*; and **`Outside services` stays out of COGS** — Julia's meeting rule, which the books already follow. **How the ownership transfer happened is deliberately left open until Lilian speaks to Julia.** Figures and reasoning in the working paper §4 and §6.
 - 🔴 **PRE-RETURN REVIEW RUN 2026-08-31 — VERDICT: THE RETURN CANNOT BE PREPARED YET.** 📌 **2026-09-02: the five things are now answered or assumed on Lilian's instruction; the gate is executing the book worklist in QuickBooks (working paper §D-6), then phase 2.** Five things
   the return needed had no source: **payroll** (§5) · the **per-shareholder split of the capital
   accounts** (§5) · the **depreciation schedule** (§5) · **Turo** · and **the 2024 filed return, which
@@ -799,13 +806,34 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   and M-1 only, the AAA is zero only on the first day of the first S year, and 2024's M-2 was in fact
   completed, so the hypothesis does not hold; the theory of the schedule is written in plain words
   (§E-8f) and her decision to keep the filed figure stands. _(Worked by Lilian.)_
+- 2026-09-02 (evening) — 🔴 **JULIA SETTLED THE SHAREHOLDER, AND IT REVERSED THE DAY'S WORK (Lilian).**
+  Her answer: Ishkhan left the company at the **end of 31 December 2025**, so **he is the sole shareholder
+  for all of 2025, the one K-1 is his and it is final, and Artem's first shareholder year is 2026.** The
+  firm had spent the day preparing on the opposite date; **the meeting transcript in this file was right.**
+  The working paper was rebuilt around it *(blocker B: what changes, the new question, and what the
+  "how did he acquire it" question now decides)*. 🔑 **The new question, and it is the biggest one left:**
+  reading the owner accounts row by row shows money arriving from and returning to the **same two personal
+  checking accounts**, a **monthly apartment rent** paid by the company, substantial **cash withdrawals**
+  (one naming Artem), and **personal card spending** including a sports club, health-insurance premiums and
+  a Florida department store during the July trip. **Whose money that is decides whether it is the
+  shareholder's basis and distributions or a non-shareholder's loan/compensation** — Julia's call, one
+  question to the client. **A second finding on the way:** neither owner account reconciles between Double's
+  ledger and the balance sheet *(entries of a type the connector does not return)*, so **QuickBooks'
+  Transaction Detail by Account must be run on both before either figure goes on the return**; and three
+  kinds of row sit in the contribution account that are not contributions on their face (card statement
+  credits, a third-party Zelle, and personal tax payments in the distribution account). **Lilian also
+  supplied QuickBooks' audit history for the year-end adjusting entry: Julia posted it herself on
+  2026-04-27 with no memo and does not know what she summed** — so the vehicle reclassification now uses
+  **her method** instead: the Turo total inside the account, less that lump, less the misposted refund.
+  Every row of the vehicle account was classified for that purpose *(working paper §D-6d)*. _(Worked by
+  Lilian.)_
 
 ### ✅ The shareholder question — answered 2026-09-02, and what the search for evidence found
 
-- ✅ **Lilian settled it by instruction: Artem is the 100% shareholder from 2025-01-01.** The firm is
-  preparing 2025 on that basis: **one shareholder, one K-1, no split of the capital accounts, and no
-  part-year allocation.** ⚠️ **The one-year contradiction in §2 stands and is the last gate before
-  filing.**
+- 🛑 **WITHDRAWN THE SAME DAY.** ~~Lilian settled it by instruction: Artem is the 100% shareholder from
+  2025-01-01~~ — **Julia corrected it that evening: ISHKHAN is the 2025 shareholder and Artem starts
+  2026-01-01.** ✅ **Still true either way: one shareholder, one K-1, no split, no part-year allocation.**
+  ✅ **The one-year contradiction in §2 is CLOSED, in the transcript's favour.**
 - 🛠️ **She also asked for a search for anything corroborating it. Here is exactly what was searched and
   exactly what came back** — bounded, because a negative belongs to its search:
 
@@ -1003,11 +1031,15 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
 - 🔴 **Settle the 2025 payroll question in Gusto and myconneCT** — did any payroll run, and has a
   single CT-941 ever been filed? It gates the 1120-S and it is a live state matter in its own right
   (six past-due or due-soon notices between 2026-01-27 and 2026-08-18 — roughly every six weeks, not quarterly — still unactioned). 🧮 **For the return, Lilian ruled 2026-09-02 to compute as if nobody was employed — this item is DEFERRED, not answered.**
-- 🛑 **SUPERSEDED 2026-09-02 — there is no per-shareholder split to get: 2025 has ONE shareholder** (§2,
-  §4). What remains is **Artem's opening basis, which the transfer itself creates** — sale, gift or new
-  issue — and **Lilian is putting that question to Julia herself.** The father's 2024 Form 7203 matters
-  only if it was a gift (carryover basis). ⚠️ **It is not urgent for this return: the working paper shows
-  no capital gain even on a zero opening basis, and the reclassification worklist does not change that.**
+- 🔴 **REWRITTEN 2026-09-02 (evening), and it is now the biggest open item on the return.** There is no
+  per-shareholder split *(one shareholder)*, but with **ISHKHAN** as that shareholder two things change:
+  ① **his 2024 Form 7203 line 15 is the opening basis and is on the critical path** — get it from his own
+  2024 return; ② 🛑 **whose money ran through the owner accounts in 2025 must be decided before the equity
+  section can be built.** The ledger shows the same two personal accounts on both sides, plus a monthly
+  apartment rent, cash withdrawals and personal card spending. **If it is the shareholder's, it is basis and
+  distributions; if it is his son's — a non-shareholder in 2025 — it is a loan, or compensation, or a
+  constructive distribution plus a gift.** **Julia decides; the client answers whose accounts they are.**
+  *(Working paper §6 B-1; the same decision sets the debit side of the reclassification entry.)*
 - ✅ **TURO — RULED 2026-09-01 by Julia: the activity is ARTEM'S** (§5), which closed the "whose
   account" question this item used to carry. *(No 1099-K was issued for 2025, so the name-and-TIN route
   never existed.)* **What is left is the worklist above** — and the payments the company MADE to Turo

@@ -27,7 +27,7 @@
 ## 1. Snapshot
 
 - **Business name:** Artem Markarian — an **individual** client record _(Double `Account Type: Individual`, 2026-09-01)_
-- **Entity type:** n/a — individual taxpayer. **A shareholder of [ECOORGANIC USA LLC](./ecoorganic-usa.md)**, an S corporation, and **the owner the firm actually corresponds with**
+- **Entity type:** n/a — individual taxpayer. 🔴 **NOT a shareholder of [ECOORGANIC USA LLC](./ecoorganic-usa.md) during 2025 — he becomes one on 2026-01-01** *(Julia, 2026-09-02 evening: his father left at the end of 31 December 2025)*. He is **the person who runs the business and the one the firm corresponds with**, which is not the same thing as owning it
 - **Home state:** not recorded here. The company operates from **Darien, Connecticut**; his own residence has not been established in this file
 - **Industry / what they do:** his business activity reaches the 1040 through the S corporation — **plus a second, separate activity: he hosted cars on Turo during 2025** (§5), which Julia has ruled belongs on his individual return
 - **Primary language:** **Russian** — the firm's correspondence with him is in Russian
@@ -45,7 +45,7 @@ the actual details.
 |---|---|
 | The client himself | Double client (link below) |
 | **His company** — an S corporation, and the source of his K-1 | [`ecoorganic-usa.md`](./ecoorganic-usa.md) · [Double cid 719473](https://app.doublehq.com/close?cid=719473) |
-| **Ishkhan Markarian — his father, and the company's SOLE shareholder in 2023 and 2024** | [`ishkhan-markarian.md`](./ishkhan-markarian.md) · the company's Double record and [`ecoorganic-usa.md`](./ecoorganic-usa.md) §2. 🛑 **SUPERSEDED 2026-09-02:** this row used to say 2025 was a two-shareholder year with that owner exiting 2026-01-01. **Lilian states Artem is the 100% shareholder from 2025-01-01** — so **2025 is a ONE-shareholder year with ONE K-1.** ⚠️ **The company file still carries the 2026-01-01 version from a meeting transcript; the two differ by a year and it is the last gate before filing** |
+| **Ishkhan Markarian — his father, and the company's SOLE shareholder in 2023, 2024 AND 2025** | [`ishkhan-markarian.md`](./ishkhan-markarian.md) · the company's Double record and [`ecoorganic-usa.md`](./ecoorganic-usa.md) §2. 🛑 **SUPERSEDED 2026-09-02:** this row used to say 2025 was a two-shareholder year with that owner exiting 2026-01-01. **Lilian states Artem is the 100% shareholder from 2025-01-01** — so **2025 is a ONE-shareholder year with ONE K-1.** ⚠️ **The company file still carries the 2026-01-01 version from a meeting transcript; the two differ by a year and it is the last gate before filing** |
 
 - **Double client:** [app.doublehq.com/close?cid=710623](https://app.doublehq.com/close?cid=710623)
 - **Double case note:** **`510952` — `CASE · 2025 Turo host activity`**, opened 2026-09-01. It carries **Turo's reply verbatim** and the client's own answer on which cars were hosted. ⛔ **One note per case — update that note, never open a second one.**
@@ -63,7 +63,12 @@ the actual details.
 ### Income tax
 - **Applies?** Yes — **Form 1040**, prepared by this firm, assigned to Lilian.
 - **What feeds it:**
-  - 🔴 **A Schedule K-1 from [ECOORGANIC USA LLC](./ecoorganic-usa.md)** — and that company's FY2025 return is **not yet prepared** (deadline **2026-09-15**, extension filed). **His 1040 cannot be finished before it.**
+  - 🛑 **NO K-1 FOR 2025 — corrected 2026-09-02 (evening).** ~~A Schedule K-1 from the company~~: Julia
+    settled that his father was the sole shareholder for the whole of 2025, so **the FY2025 K-1 is his
+    father's and Artem receives none.** ✅ **His 1040 no longer waits on the company's return** — his
+    **first** K-1 year is **2026**. ⚠️ **One thing does still connect them:** if the company's 2025 payments
+    for his benefit are characterised as compensation or as a loan from him rather than as distributions to
+    his father, that lands on his 2025 return — Julia decides *(company working paper §6 B-1)*.
   - 🔴 **A Schedule C for the 2025 Turo activity** — Julia's ruling, 2026-09-01 (§5).
   - 🔴 **Form 7203 basis — and this is now the one real open item on his 2025 return.** 🛑 **He has NO 2024 or 2023 Form 7203 and cannot have one: he held no stock in either year** (both filed returns show his father at 100%). ⛔ **Do not send anyone hunting for one.** **His opening basis is CREATED by the 2025-01-01 transfer**, and how it happened decides it: **bought → what he paid · a gift → his father's basis carries over (§1015, with its dual-basis rule for loss) · newly issued shares → what he contributed.** 🛠️ **One question to the client.** ✅ **Reassuringly, it does not decide whether he owes tax on the 2025 distributions** — the company's working paper shows there is basis left even on the worst-case assumption — **but Form 7203 is required whenever there are distributions, and 2026 opens where 2025 ends.**
 - **Organizer:** `Organizer Status: Sent`. ⚠️ **A company return runs off its books, not its owner's organizer** — the organizer gates *his* return, not the company's.
@@ -135,24 +140,34 @@ the actual details.
   documents rather than from memory. ✅ **The threshold Turo quoted was checked against irs.gov** and
   matches what the IRS publishes. **This file was created in the same pass** — he had none until now,
   despite being a named client with his own Double account. _(Worked by Lilian.)_
+- 2026-09-02 (evening) — 🔴 **CORRECTED BY JULIA: he was NOT a shareholder in 2025.** His father left the
+  company at the **end of 31 December 2025**, so the FY2025 K-1 is his father's and Artem's first
+  shareholder year is **2026**. **His 2025 individual return is the Turo Schedule C and no K-1**, and it no
+  longer waits on the company's 1120-S. ⚠️ **What did not go away:** the company paid a large amount in 2025
+  that may have been for his benefit — a monthly apartment rent, cash, personal card spending — and whether
+  that is a distribution to his father, compensation to him, or repayment of money he lent the company is
+  **Julia's decision**, with real consequences for his own return *(company working paper §6 B-1)*.
+  _(Worked by Lilian.)_
 - 2026-09-02 — 📅 **Two working assumptions set by Lilian for the company's return, both his:** the
   transfer is taken as **effective at the close of 2024-12-31**, so he is the shareholder for every day
-  of 2025 and receives the **one** K-1; and **how he got the shares stays open until she speaks to
-  Julia** — it creates his opening basis and is the one item still open on his Form 7203. 🔑 **And the
+  of 2025 and receives the **one** K-1 — 🛑 **WITHDRAWN the same evening, see above** — and **how he got the
+  shares stays open until she speaks to Julia** — it creates his opening basis and is the one item still open on his Form 7203. 🔑 **And the
   company's ledger, read date by date, placed the Turo guest rentals and a cluster of Florida charges in
   one March 2025 trip** (§5). _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **His 1040 cannot be completed until the company's FY2025 Form 1120-S is** — the K-1 comes from it,
-  and that return is **past the review's blockers as of 2026-09-02** — Lilian answered or assumed each,
-  and the book-change worklist is written; **the gate now is executing that worklist in QuickBooks,
-  then phase 2** — with a **2026-09-15** deadline.
+  🛑 **SUPERSEDED 2026-09-02 (evening): his 1040 does NOT wait on the company's return — he has no 2025
+  K-1** *(the K-1 is his father's)*. **What may still reach his return is the characterisation question in
+  §5 / the company's §6 B-1.** ~~his 1040 cannot be completed until the company's FY2025 Form 1120-S is~~ —
+  the company's return is past the review's blockers and its gate is the QuickBooks worklist, with a
+  **2026-09-15** deadline.
 - 🔴 **The per-car earnings breakdown from Turo** — requested 2026-09-01, not yet received.
 - 🔴 **Whose Turo account is it?** Not confirmed from the registration. With no 1099-K there is no
   name-and-TIN to read.
 - 🔴 **The Kona:** what he received, what he paid the friend, and whether a Form 1099-NEC was owed.
-- 🔴 **Form 7203 opening basis — created by the 2025 transfer (§4); no 2024 form exists or can.** How the transfer happened is the question, and **Lilian is putting it to Julia herself (2026-09-02)**. Not urgent for the company's return: no capital gain on any reading.
+- 🔴 **Form 7203 — a 2026 matter now, not 2025.** His opening basis is created by the transfer at the **close of 2025-12-31**, so the first Form 7203 he files is with his **2026** return. How the transfer happened is the question, and **Lilian is putting it to Julia herself (2026-09-02)**. Not urgent for the company's return: no capital gain on any reading.
 - ⚠️ **Turo account access** — he cannot log in. Restore it before the next season.
 - ⚠️ **His residence / state** is not recorded here and has not been established.
 
