@@ -230,7 +230,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 
 ### Income tax
 - **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). 🛑 **It issues ONE K-1** — Lilian confirmed 2026-09-02 that Artem is the 100% shareholder from 2025-01-01. ⚠️ *(This line used to say two, one per owner. §2 carries the one-year contradiction that is the last gate before filing.)* 📌 **Working assumptions set by Lilian 2026-09-02, for the computation:** the transfer is taken as effective at the **close of 2024-12-31** *(so no one-day K-1 to the outgoing owner)*; **no employees in 2025** *(the three onboarded people stay a question for later)*; the **opening AAA is the figure the 2024 return filed**, kept for year-to-year consistency even though the 2023 return shows it understated *(the SOP default)*; and **`Outside services` stays out of COGS** — Julia's meeting rule, which the books already follow. **How the ownership transfer happened is deliberately left open until Lilian speaks to Julia.** Figures and reasoning in the working paper §4 and §6.
-- 🔴 **PRE-RETURN REVIEW RUN 2026-08-31 — VERDICT: THE RETURN CANNOT BE PREPARED YET.** Five things
+- 🔴 **PRE-RETURN REVIEW RUN 2026-08-31 — VERDICT: THE RETURN CANNOT BE PREPARED YET.** 📌 **2026-09-02: the five things are now answered or assumed on Lilian's instruction; the gate is executing the book worklist in QuickBooks (working paper §D-6), then phase 2.** Five things
   the return needed had no source: **payroll** (§5) · the **per-shareholder split of the capital
   accounts** (§5) · the **depreciation schedule** (§5) · **Turo** · and **the 2024 filed return, which
   the firm HAS in Double but could not open in that session**. ✅ **Turo was answered on 2026-09-01 and
@@ -765,13 +765,15 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   then 1099-NEC payees), and two small supply items that might be job material. **The Turo / personal
   worklist is written (working paper §D-6):** the dealership-refund fix first, then one year-end entry
   in three tiers — the European-car block still in the repair account after Julia's own year-end entry
-  *(which is one lump; what it covered is a question for her, and the worklist carries the check that
-  catches a double count)*, the parts-catalogue subscription, and a **Florida tier the dates made
+  *(which is one lump; what it covered is a question for her — her answer sets the amount to post, and
+  the balance check only confirms the posting)*, the parts-catalogue subscription, and a **Florida tier the dates made
   visible**: read in order, the ledger shows a South-Florida stay in March 2025 — Fort Lauderdale fuel,
-  Bal Harbour and Sunny Isles parking, Florida-only fuel brands, rental-car insurance, the Audi and a BMW
-  serviced in Miami, a drive north on I-95 — **and every one of the company's Turo GUEST rentals falls
-  inside that window**, with a second Miami visit in July and a Florida/Alabama auto insurer's premiums
-  starting the same week. Recommended as distributions to Artem under Lilian's own out-of-state test;
+  Bal Harbour parking and a mall read as Sunny Isles, fuel brands that do not operate in Connecticut
+  *(an inference from the brands)*, what reads as rental-car insurance *(from the vendor name and the
+  date)*, the Audi and a BMW serviced in Miami, what looks like a drive north *(truck-stop fuel on
+  consecutive days)* — **and every Turo GUEST rental that cost the company anything carries a March trip
+  date**, with a second Miami visit in July and premiums from an insurer the paper reads as a
+  Florida/Alabama one *(labelled as general knowledge)* starting the same week. Recommended as distributions to Artem under Lilian's own out-of-state test;
   Julia decides. A third tier (tolls, car washes, the rest of the fuel, a Chicago-area trip in April) is
   not separable from the ledger and stays with the company unless someone says otherwise. **One
   correction of the firm's own earlier warning:** moving expense to distribution is basis-neutral, so the
@@ -966,11 +968,12 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   transaction itself, BEFORE anything else or the credit is stranded)*, then **one year-end journal entry
   to `Owner's distribution` naming Artem**, in three tiers: **sure** *(the European-car block still in the
   repair account after Julia's own year-end entry, and the parts-catalogue subscription — confirm what it
-  is first)*; **Florida** *(the Turo guest rentals, rental-car and a Florida insurer's premiums, Miami
-  parking and Florida-brand fuel — recommended, Julia confirms)*; and **not separable** *(tolls, car
+  is first)*; **Florida** *(the Turo guest rentals, what reads as rental-car cover and a Florida-read insurer's
+  premiums, Miami parking and out-of-state-brand fuel — recommended, Julia confirms)*; and **not separable** *(tolls, car
   washes, the rest of the fuel — stays unless someone rules otherwise)*. 🛑 **Before posting: ask Julia
-  what her own year-end entry's repair lump covered** — the ledger cannot say — and use the worklist's
-  ending-balance check, which catches a double count whatever the answer.
+  what her own year-end entry's repair lump covered** — the ledger cannot say, and **her answer sets the
+  amount to post** *(the worklist's figure is a floor)*; the ending-balance check only confirms the
+  posting went through.
 - ❓ **Three lines to ask the client about, from the Outside-services read (nothing to move):** the
   **international wire to Ukraine sitting in COGS** *(a foreign payee — a W-8BEN-E question, and possibly
   the affiliated Ukrainian company)*; **who the three people paid by Zelle into the vehicle-repair account

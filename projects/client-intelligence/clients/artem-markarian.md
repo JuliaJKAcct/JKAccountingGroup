@@ -108,11 +108,13 @@ the actual details.
 - **A per-car earnings breakdown has been requested from Turo.** Julia asked him on 2026-09-01 to reply
   to Turo by email and ask for the 2025 earnings **broken down by car** — as audit backup, and because
   it is the only thing that splits the total across three vehicles. **Pending.**
-- 🔑 **THE COMPANY'S 2025 BOOKS SHOW A SOUTH-FLORIDA STAY IN MARCH 2025 — AND EVERY ONE OF THE COMPANY'S
-  TURO *GUEST* RENTALS FALLS INSIDE IT** *(read off the ledger dates, 2026-09-02)*: fuel in Fort
-  Lauderdale, parking at Bal Harbour and Sunny Isles, Florida-only fuel brands, rental-car insurance the
-  day of a Turo rental, the Audi and a BMW serviced in Miami, then a drive north on I-95. A second Miami
-  visit in July, and a Florida/Alabama auto insurer's premiums starting that week. **So the Turo rentals
+- 🔑 **THE COMPANY'S 2025 BOOKS SHOW A SOUTH-FLORIDA STAY IN MARCH 2025 — AND EVERY TURO *GUEST* RENTAL
+  THAT COST THE COMPANY ANYTHING CARRIES A MARCH TRIP DATE** *(read off the ledger dates, 2026-09-02)*:
+  fuel in Fort Lauderdale, parking at Bal Harbour and at a mall read as Sunny Isles, fuel brands that do
+  not operate in Connecticut *(inferred from the brands)*, what reads as rental-car insurance the day of
+  a Turo rental, the Audi and a BMW serviced in Miami, then what looks like a drive north *(truck-stop
+  fuel on consecutive days)*. A second Miami visit in July, and premiums from an insurer the paper reads
+  as a Florida/Alabama one starting that week. **So the Turo rentals
   the company paid for look like his trips, not jobs** — they are recommended as distributions to him in
   the company's worklist *(working paper §D-6, tier 2 — Julia decides)*, and **on his side they are only
   Schedule C costs if the trips were for the Turo cars.** ❓ **Ask him what the March and July trips
@@ -143,9 +145,9 @@ the actual details.
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **His 1040 cannot be completed until the company's FY2025 Form 1120-S is** — the K-1 comes from it,
-  and that return is **cleared to be prepared as of 2026-09-02** — Lilian took the decisions it was
-  waiting on and the book-change worklist is written; **what stands between it and phase 2 is executing
-  that worklist in QuickBooks** — with a **2026-09-15** deadline.
+  and that return is **past the review's blockers as of 2026-09-02** — Lilian answered or assumed each,
+  and the book-change worklist is written; **the gate now is executing that worklist in QuickBooks,
+  then phase 2** — with a **2026-09-15** deadline.
 - 🔴 **The per-car earnings breakdown from Turo** — requested 2026-09-01, not yet received.
 - 🔴 **Whose Turo account is it?** Not confirmed from the registration. With no 1099-K there is no
   name-and-TIN to read.
@@ -159,8 +161,8 @@ the actual details.
 - His mileage records for the Turo cars, per vehicle, for 2025 — **business, commuting and other**.
 - Whether any of the company's Turo **guest** rentals (the company paying to rent a car) were for a job
   — that is the opposite side of the platform from his hosting, and moving them wrongly throws away a
-  real deduction. 🔑 **2026-09-02: all of them are dated inside the March 2025 Florida stay (§5) — a job
-  is now the less likely reading, but it is still his to say.**
+  real deduction. 🔑 **2026-09-02: all that cost anything carry March 2025 trip dates, inside the Florida stay (§5) — a
+  job is now the less likely reading, but it is still his to say.**
 
 ## 7. Links
 
