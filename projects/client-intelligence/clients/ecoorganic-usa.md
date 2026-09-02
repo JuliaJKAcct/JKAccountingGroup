@@ -1114,6 +1114,28 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
 - 🧾 **ONE DOCUMENT WOULD SETTLE THE LARGEST REMAINING QUESTION: the insurance declaration pages** for the two
   auto policies. They name the insured vehicles, and would settle both the premiums that were left in the
   company and the ones that were questioned.
+- 🧮 **2026-09-02 (night) — THE FY2025 RETURN IS BUILT, and four things stop it being transmitted.** The
+  working paper now carries the year-end reclassification **exactly as it is typed into QuickBooks** — five
+  lines, each with its own short description saying where that amount came from, plus the header memo — and
+  the **complete form-by-form tables for ATX**: every line with its page, its formula, the reason behind it,
+  and where the figure is actually keyed *(which for a §179 election is **not** the depreciation line on page
+  one, but Schedule K)*. Receipts put the company over the small-entity threshold, so **Schedules L and M-1
+  are both required**; the AAA opens negative, so **the distributions line on Schedule M-2 reports zero** and
+  whether any distribution is taxable is decided by **the shareholder's basis**, not by that schedule.
+  ⛔ **What blocks filing:** **DEPRECIATION** — the three 2025 assets have no placed-in-service dates and no
+  election, and 🔴 **expensing the whole cost could push the year's distributions past the outgoing owner's
+  basis and put a capital gain on his final personal return**, which nothing in the software would flag;
+  **the two Form 1099 questions on Schedule B**, which assert a fact and cannot be answered until Julia says
+  which of the thirteen unissued payees were paid for services rather than for goods; 🔴 **THE STATE RETURN**,
+  which an extension was filed for and which these tables do not prepare — the work is in Connecticut and the
+  firm already has an open CT withholding registration; and **whether the share transfer was a redemption**,
+  which would reach this return through the balance sheet and the AAA.
+- 🔒 **STANDING RULE SET BY LILIAN, 2026-09-02 (night), for the rest of this return:** *"no quiero tocar
+  prácticamente nada de lo que ella hizo, a menos que sea necesario… Sin embargo, quiero hacer una nota al
+  final con las cosas que encontramos sospechosas o raras."* **Nothing Julia categorised is moved unless it is
+  NECESSARY or an OBVIOUS error; everything else becomes a row in the two-part hand-off register rather than
+  an edit.** The labour-looking payments in the owner-draw account were re-affirmed under it — **they stay
+  where she put them.**
 - ✅ **CLOSED 2026-09-02 (evening) — the reconciliation is DONE and the entry is written.** The General
   Ledger settled every discrepancy; see the log entry for that date. **What is left before the return can be
   prepared: post the two book corrections, read the return's METHOD off the prior-year return, and Julia's
