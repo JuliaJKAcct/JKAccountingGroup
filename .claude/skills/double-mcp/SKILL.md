@@ -526,7 +526,8 @@ on the latest return, that is a finding to report — not a licence to open the 
 > 🔧 **A WORKED EXAMPLE OF THAT LAST SENTENCE — Ecoorganic, 2026-09-02, and it went exactly as the rule
 > intends.** Preparing FY2025, the 2024 return was read under the ordinary permission. Its **Schedule
 > M-2 opened at ZERO** while its own Schedule L opened retained earnings at a non-zero deficit — a
-> **self-contradiction on the latest return**, and 2025's opening AAA is that very figure.
+> **self-contradiction on the latest return** — and **2025's opening AAA is that return's M-2 line 8**,
+> which the zero opening had made 14,210 too small.
 > ⛔ **The session did NOT open 2023.** It wrote the contradiction up as a finding, named the document
 > that would settle it, and said in terms that **that is a different year, outside the permission —
 > Lilian's to open in ATX, not a session's to request.** **She then authorised it in writing, with her

@@ -45,7 +45,7 @@ the actual details.
 |---|---|
 | The client himself | Double client (link below) |
 | **His company** — an S corporation, and the source of his K-1 | [`ecoorganic-usa.md`](./ecoorganic-usa.md) · [Double cid 719473](https://app.doublehq.com/close?cid=719473) |
-| **The second shareholder** of that company — 2025 is a **two-shareholder** year; that owner **exited effective 2026-01-01** | the company's own Double record and [`ecoorganic-usa.md`](./ecoorganic-usa.md) §2 |
+| **Ishkhan Markarian — his father, and the company's SOLE shareholder in 2023 and 2024** | [`ishkhan-markarian.md`](./ishkhan-markarian.md) · the company's Double record and [`ecoorganic-usa.md`](./ecoorganic-usa.md) §2. 🛑 **SUPERSEDED 2026-09-02:** this row used to say 2025 was a two-shareholder year with that owner exiting 2026-01-01. **Lilian states Artem is the 100% shareholder from 2025-01-01** — so **2025 is a ONE-shareholder year with ONE K-1.** ⚠️ **The company file still carries the 2026-01-01 version from a meeting transcript; the two differ by a year and it is the last gate before filing** |
 
 - **Double client:** [app.doublehq.com/close?cid=710623](https://app.doublehq.com/close?cid=710623)
 - **Double case note:** **`510952` — `CASE · 2025 Turo host activity`**, opened 2026-09-01. It carries **Turo's reply verbatim** and the client's own answer on which cars were hosted. ⛔ **One note per case — update that note, never open a second one.**
@@ -65,7 +65,7 @@ the actual details.
 - **What feeds it:**
   - 🔴 **A Schedule K-1 from [ECOORGANIC USA LLC](./ecoorganic-usa.md)** — and that company's FY2025 return is **not yet prepared** (deadline **2026-09-15**, extension filed). **His 1040 cannot be finished before it.**
   - 🔴 **A Schedule C for the 2025 Turo activity** — Julia's ruling, 2026-09-01 (§5).
-  - ⚠️ **Form 7203 basis.** The company's books hold **no per-shareholder split** of contributions and distributions, and **no prior Form 7203 is held by the firm**. His **opening stock basis is line 15 of his own 2024 Form 7203**, which lives with his 2024 personal return, not the company's. **If it does not exist it has to be reconstructed** — separate, scoped work.
+  - 🔴 **Form 7203 basis — and this is now the one real open item on his 2025 return.** 🛑 **He has NO 2024 or 2023 Form 7203 and cannot have one: he held no stock in either year** (both filed returns show his father at 100%). ⛔ **Do not send anyone hunting for one.** **His opening basis is CREATED by the 2025-01-01 transfer**, and how it happened decides it: **bought → what he paid · a gift → his father's basis carries over (§1015, with its dual-basis rule for loss) · newly issued shares → what he contributed.** 🛠️ **One question to the client.** ✅ **Reassuringly, it does not decide whether he owes tax on the 2025 distributions** — the company's working paper shows there is basis left even on the worst-case assumption — **but Form 7203 is required whenever there are distributions, and 2026 opens where 2025 ends.**
 - **Organizer:** `Organizer Status: Sent`. ⚠️ **A company return runs off its books, not its owner's organizer** — the organizer gates *his* return, not the company's.
 
 ### 1099 filings
@@ -100,10 +100,11 @@ the actual details.
   **out** of the fuel deduction, or the same fuel is deducted twice.
 - ⚠️ **Turo vehicles are LISTED PROPERTY.** Form 4562 Part V wants **business / commuting / other
   mileage per vehicle**, and **no mileage log has been seen**.
-- ⚠️ **His name appears on some of the company's vehicle finance payments, and the other shareholder's
-  on the rest.** That is the firm's **first hard evidence** toward splitting the company's pooled
-  owner-capital account between the two shareholders — **evidence, not proof**: the name on an ACH is
-  the name on the loan, not necessarily who benefited. **Ask.** Detail in the company's working paper.
+- 🛑 **WITHDRAWN 2026-09-02.** This bullet said the two names on the company's vehicle-finance payments
+  were evidence toward **splitting the pooled owner-capital account between two shareholders.**
+  ⛔ **There is nothing to split** — 2025 has one shareholder. **The names still show who benefited from
+  which payment**, which matters for the personal-vs-business analysis; they say nothing about
+  shareholding. Detail in the company's working paper.
 - **A per-car earnings breakdown has been requested from Turo.** Julia asked him on 2026-09-01 to reply
   to Turo by email and ask for the 2025 earnings **broken down by car** — as audit backup, and because
   it is the only thing that splits the total across three vehicles. **Pending.**

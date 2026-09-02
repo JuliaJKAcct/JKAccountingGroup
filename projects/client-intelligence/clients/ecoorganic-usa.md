@@ -229,7 +229,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md).
 
 ### Income tax
-- **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). It issues **two K-1s**, one per owner.
+- **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). 🛑 **It issues ONE K-1** — Lilian confirmed 2026-09-02 that Artem is the 100% shareholder from 2025-01-01. ⚠️ *(This line used to say two, one per owner. §2 carries the one-year contradiction that is the last gate before filing.)*
 - 🔴 **PRE-RETURN REVIEW RUN 2026-08-31 — VERDICT: THE RETURN CANNOT BE PREPARED YET.** Five things
   the return needed had no source: **payroll** (§5) · the **per-shareholder split of the capital
   accounts** (§5) · the **depreciation schedule** (§5) · **Turo** · and **the 2024 filed return, which
@@ -288,9 +288,13 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   weeks, not quarterly. **Action:** open Gusto and myconneCT
   before any 2025 return is prepared, and ask the client whether those people worked and how they
   were paid.
-- 🔴 **Two shareholders in 2025, but the books carry ONE pooled owner-contribution account and ONE
-  pooled owner-distribution account.** The per-owner split exists nowhere in the ledger, so it cannot
-  be derived — it has to be asked. **This blocks both K-1s and both Forms 7203.** Related: **the
+- 🛑 **SUPERSEDED 2026-09-02 — there is nothing to split.** This bullet said 2025 had **two**
+  shareholders against **one** pooled contribution account and **one** pooled distribution account, and
+  that it blocked both K-1s and both basis forms. **Lilian confirmed Artem is the 100% shareholder from
+  2025-01-01**, so the pooled accounts are all his and **no split is needed.** ✅ **The blocker it
+  described is gone.** ⚠️ *(§2 carries the one-year contradiction that has to be confirmed before
+  filing; the pooled accounts still matter for prior years and for attribution in the memo of any
+  reclassification entry.)* Related: **the
   firm's netting policy does not apply to 2025** — its first gate requires a shareholder's
   contributions to exceed their distributions, and for 2025 the movement runs the other way, so the
   return is presented **gross**. *(Established 2026-08-31 from the 2025/2024 balance sheets.)*
@@ -758,6 +762,12 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   | **Julia's Gmail** — one broad query on the owners' names, the company names, and *shareholder / stock / 2553 / S-corp / resident / ownership / transfer / membership* | ⛔ **No stock-transfer document, no amended operating agreement, no Form 2553 correspondence, nothing dated around the change** |
   | **Google Drive** — one query across titles and full text for the company plus *shareholder / owner names* | ⛔ **20 files, none of them a transfer, a resolution or an ownership document** |
   | **Ping meeting transcripts** — two semantic searches on the ownership change and the S-corporation status | ⛔ **nothing beyond the 2026-07-23 meeting already recorded above** |
+  | 🔴 **NOT SEARCHED — and these are where the answer most plausibly is** | **Double's file library** *(where this firm keeps filed returns, entity documents and notes — an amended operating agreement or a Form 2553/8832 would plausibly be there)* · **Sunbiz** *(the Florida annual report is public, free and dated, and names the managers/members — the single best corroboration of a father→son change on a stated date; the environment cannot reach it, so it is a person's job)* |
+  | ⚠️ **Bound on the Gmail row** | **Julia's mailbox only.** The firm's own record ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 13) establishes that mail also lands in Lilian's, and that searching Julia's alone proves nothing |
+
+  🔑 **So the honest statement is: no transfer document was found in Julia's Gmail, in Drive, or in the
+  meeting transcripts. It is NOT "no transfer document exists"** — and **Sunbiz would probably settle it
+  in two minutes without asking the client anything.**
 
 - ✅ **What the search DID turn up, and it corroborates the direction if not the date:**
   - **2026-07-01, to a customer's accounts team, copying Julia:** *"**Ishkhan Markarian initially filed
@@ -781,11 +791,12 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
 
 - 🛑 **2024 HAD ONE SHAREHOLDER, AND IT WAS NOT THE OWNER WE CORRESPOND WITH.** The return reports **one**
   shareholder, one K-1, **100%**, the same share count at both ends of the year — and the name on it is
-  **Ishkhan Markarian**, the owner who **exits effective 2026-01-01**. **Artem was not a shareholder in
-  2024 at all.** ⛔ **So the firm's working assumption that 2025 is simply "two owners to split" was
-  wrong at the front end.** 🛠️ **The question to put to the client: on what date, and how, did Artem
-  become a shareholder — new shares issued, bought from Ishkhan, or given?** **If it was mid-year, the
-  2025 allocation is a per-day / per-share computation, not a percentage**, and both K-1s turn on it.
+  **Ishkhan Markarian** — see [`ishkhan-markarian.md`](./ishkhan-markarian.md). **Artem was not a
+  shareholder in 2024 at all.** ⛔ **So the firm's working assumption that 2025 is simply "two owners to
+  split" was wrong at the front end.** ✅ **The DATE has since been answered by Lilian — 2025-01-01 —
+  so the "when" is settled (subject to §2's contradiction) and the per-day worry does not arise.**
+  🛠️ **What is still open is the HOW: new shares issued, bought from Ishkhan, or given?** **It creates
+  Artem's opening basis and it is also a transaction on Ishkhan's side.**
   ⚠️ **And his shares came from somewhere:** Ishkhan held all of them at 2024 year end — so **if Artem
   bought them or was given them, that is also a transaction on Ishkhan's own return**; if the company
   issued new shares instead, it is not, and only Ishkhan's percentage moves.
@@ -853,7 +864,7 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   the client's — the unread 2024 return, and pulling the depreciation schedule.
 - **Questions put to the client (2026-08-31, drafted in Russian, formal):** ① did the people added to
   Gusto in September 2025 actually work during 2025? ② if so, how were they paid? ③ how do the
-  owner-account movements split between the two owners, and in what percentage? ④ has anything
+  ~~owner-account movements split between the two owners, and in what percentage?~~ 🛑 **STRIKE ③ — do NOT ask it.** There is **one** shareholder in 2025 (Lilian, 2026-09-02); nothing to split. *(Asking for what we already know is worse than not reviewing at all — `method.md` rule 1.)* **Replace it with: HOW did Artem get the shares — bought, gift, or newly issued?** ④ has anything
   arrived from Turo? ⑤ what was the 2025 payment **to** Turo for? ⑥ which vehicles belong to the
   company, and what were they used for? — **answers to be recorded here as they come in.**
 - **What the prior-year return established:** ⛔ **nothing — it was not opened.** ⚠️ Do not read this

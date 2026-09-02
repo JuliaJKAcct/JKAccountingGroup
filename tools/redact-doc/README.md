@@ -33,6 +33,15 @@ job, so nothing depends on someone remembering.
 | Driver's licence / state ID, where labelled | **City, state and ZIP** |
 | **The street line** — number, name, suffix, apartment | |
 
+> 🔴 **A CONFIRMED GAP IN THE STREET-LINE PATTERN — found 2026-09-02, on a real filed 1120-S.** Reading a
+> 2023 return, the redactor reported **`0 street lines`** and the Schedule K-1's mailing address came
+> through **in full**. The 2024 return of the same client, read the same day, masked **2 street lines**
+> correctly. The one that escaped has the shape `<number> <directional> <ordinal> <STREET-WORD> STE <n>`
+> — a **suite** line. ⛔ **Nothing was written anywhere**, but the control did not work, and a
+> suite-style address on a K-1 is exactly what it exists to catch. 🛠️ **Add a case for it, and add a
+> test.** ⚠️ **Until then: a `0 street lines` count on a return that carries a K-1 is a reason to look,
+> not a clean result** — the same lesson as *"0 masked can mean BLIND rather than clean"* above.
+
 **Why the street line but not the city.** Lilian's identity block does not name a home address, so
 this was not covered by her ruling either way; it is masked because losing it costs nothing and it
 is the one field on a return that points at where a person actually sleeps. The **city and state
