@@ -119,7 +119,9 @@ the actual details.
   not operate in Connecticut *(inferred from the brands)*, what reads as rental-car insurance the day of
   a Turo rental, the Audi and a BMW serviced in Miami, then what looks like a drive north *(truck-stop
   fuel on consecutive days)*. A second Miami visit in July, and premiums from an insurer the paper reads
-  as a Florida/Alabama one starting that week. **So the Turo rentals
+  as a Florida/Alabama one starting that week. 🛑 **NARROWED 2026-09-02 (evening) by the full General
+  Ledger: the rentals are NOT all inside that trip** — there are February rentals too, and February's fuel
+  is all Connecticut, so those look local. **The March cluster still reads as one Florida stay.** **So the Turo rentals
   the company paid for look like his trips, not jobs** — they are recommended as distributions to him in
   the company's worklist *(working paper §D-6, tier 2 — Julia decides)*, and **on his side they are only
   Schedule C costs if the trips were for the Turo cars.** ❓ **Ask him what the March and July trips
@@ -148,6 +150,14 @@ the actual details.
   that is a distribution to his father, compensation to him, or repayment of money he lent the company is
   **Julia's decision**, with real consequences for his own return *(company working paper §6 B-1)*.
   _(Worked by Lilian.)_
+- 2026-09-02 (evening) — ⛔ **NOTHING IN THE COMPANY'S OWNER ACCOUNTS IS HIS.** Lilian ruled that the whole
+  of both accounts is his father's, *"aunque veas cosas que van hacia Artyom"* — including payments that
+  visibly went to or for him, which are his father's money spent for him and are **not** re-characterised as
+  his loan, his pay, or a gift to be reported. **So he takes nothing from the company's equity section into
+  his 2025 return.** ✅ **What he does still take is the Turo Schedule C (§5) — unchanged.** 🔑 **And one
+  correction from the company's General Ledger: the company's own Turo rental charges run from FEBRUARY, not
+  March**, and February's fuel is all Connecticut — so the "one Florida trip" reading of them is withdrawn.
+  **It changes nothing about what belongs to whom.** _(Worked by Lilian.)_
 - 2026-09-02 — 📅 **Two working assumptions set by Lilian for the company's return, both his:** the
   transfer is taken as **effective at the close of 2024-12-31**, so he is the shareholder for every day
   of 2025 and receives the **one** K-1 — 🛑 **WITHDRAWN the same evening, see above** — and **how he got the

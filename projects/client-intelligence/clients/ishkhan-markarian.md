@@ -93,6 +93,19 @@ the actual details.
 ### Log
 
 - 2026-09-02 — 📄 **FILE CREATED, from what the two prior-year returns turned out to say.** Preparing the company's FY2025 return, the firm read the 2024 and (with Lilian's authorisation) the 2023 filed returns. **Both show him as the sole 100% shareholder** — which had not been established before and which reassigned several 2024 attributes from "both owners" to him alone. **He had no Client Intelligence file despite having his own individual client account, being the transferor in the 2025 ownership change, and holding the only prior-year basis form this company has.** _(Worked by Lilian.)_
+- 2026-09-02 (evening) — 💰 **EVERY DOLLAR IN THE COMPANY'S TWO OWNER ACCOUNTS IS HIS — Lilian settled it
+  by instruction, and the ledger corroborates it.** *"Todo es de Ishkhan. Todo es de él, aunque veas cosas
+  que van hacia Artyom. Ignora eso. En el 2025, Artyom no tenía ninguna participación en el negocio. Las
+  cuentas, la renta, todo es de Ishkhan."* So the year's contributions are **his stock basis** and the
+  year's distributions are **his**, box 16D on his K-1 and on his Form 7203 — **payments that visibly went
+  to or for his son are his own money spent for his son, and are NOT re-characterised.** 🔑 **Reading the
+  92 distribution lines in the General Ledger bears it out from the other side:** they are one household's
+  living expenses — rent, health insurance, immigration filing fees for a family, a sports club, department
+  stores, and two personal tax payments. ⚠️ **Corroboration, not proof — a ledger cannot name a person;
+  her instruction is what settles it.** 🔴 **Two things in those accounts still need a decision from Julia**
+  *(figures in the company's working paper)*: labour-looking payments to two people who each have their own
+  contract-labour account, sitting in his draw account; and money going out netted inside the contribution
+  account, which understates both gross figures. _(Worked by Lilian.)_
 - 2026-09-02 — 📅 **Lilian set the working assumption that the transfer was effective at the close of
   2024-12-31** — no 2025 K-1 to him — and **is putting the "how" of the transfer to Julia herself.** (§5.)
   🛑 **WITHDRAWN the same evening — see the next entry.** _(Worked by Lilian.)_
