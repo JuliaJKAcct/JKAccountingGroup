@@ -1,6 +1,6 @@
 # Anton & Olga Stenin — laundry portfolio buyers
 
-> **Status:** Prospect — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-08-30 · **Owner:** Julia · **Last updated:** 2026-08-30
+> **Status:** Prospect — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02 · **Owner:** Julia · **Last updated:** 2026-09-02
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -44,7 +44,7 @@
   EBITDA / quality of earnings, sales-tax and employment-tax compliance, the real-estate
   component (incl. property-tax reassessment and a cost-segregation feasibility read),
   hidden operating costs and impact/tap fees, a financial review of UCC/equipment
-  financing, and a written findings report. **Fixed-fee, billed on three milestones**
+  financing, and a written findings report. **Fixed-fee, billed on two milestones**
   (figures in the delivered proposal, not here) — the client declined hourly rates
   (2026-09-02), so the hour estimate stayed as the price rationale and the overrun risk
   is explicitly the firm's. The document carries a
@@ -159,9 +159,10 @@ the actual details.
   with the government
 - **The fee shape is FIXED, milestone-billed — the client refused hourly rates**
   (2026-09-02, the final structure after three iterations): **Part 1**, the due
-  diligence, one fixed fee paid in **three equal milestone installments** — on signing;
-  when ALL records are in (from the seller AND the third-party inspections) and the
-  financial review begins; on completion of Part 1 before Part 2. **Part 2**, acquisition
+  diligence, one fixed fee paid in **two equal milestone installments** (Julia,
+  2026-09-02, second pass — total lowered, third milestone dropped) — on signing, and
+  when the IRS transcripts and the third-party inspection results are in and the
+  financial analysis begins. **Part 2**, acquisition
   structuring + tax planning, one **fixed package** invoiced when that phase begins.
   The hour estimate (a stated minimum with a range) stays in the document as the price
   rationale, with overrun risk explicitly the firm's — a selling point, not a concession.
@@ -295,6 +296,15 @@ the actual details.
   updated. ⚠️ The Gmail draft created 2026-08-31 still carries the OLD hourly pricing —
   updating it needed an approval that was not available; the corrected text was handed
   to Julia in chat, the old draft must not be sent as is
+- 2026-09-02 (second pass) — **Fee finalized at the lower total, two milestones (v14).**
+  Julia reset Part 1 to a lower fixed total in two equal installments: at signing, and
+  when the IRS transcripts and the inspection results are in and the financial analysis
+  begins (the completion milestone dropped; T&C clause 6 restated). She also asked for a
+  fresh Gmail draft WITHOUT the Form 4506-C bullet — the email now names IRS transcripts
+  only in the payment milestone; the document keeps its 4506-C language unchanged. Gmail
+  writes kept requiring an approval the session could not obtain, so the ready-to-send
+  text was handed over in chat instead; the two older drafts in Gmail carry outdated
+  pricing and must not be sent
 - 2026-08-30 — **Two-part pricing (Julia's decision) + the client message on excluded
   work; v8 then v9 delivered, artifact updated.** She asked for the latest version (v8
   republished to the same link), then a ready-to-send client message listing the work
