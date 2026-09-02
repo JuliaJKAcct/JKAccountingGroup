@@ -354,9 +354,14 @@ that the sort is RUN.**
 
 ##### 🔑 The principle, in one line
 
-**A REFUND IS NOT INCOME AND A REVERSAL IS NOT AN EXPENSE.** The ledger shows two rows; **there is
-one transaction, and its amount is the net.** Whatever you do with one row, you must do with its
-mirror.
+**A REFUND OF A COST DEDUCTED IN THE SAME YEAR IS NOT INCOME — IT REDUCES THE COST; AND A REVERSAL IS
+NOT AN EXPENSE.** The ledger shows two rows; **there is one transaction, and its amount is the net.**
+Whatever you do with one row, you must do with its mirror.
+⚠️ **The same-year part is not decoration.** A refund arriving in a **later** year of something deducted
+in an earlier one is a different question — under the **tax benefit rule (§111)** it is generally
+**income**, not a reduction of this year's cost. **So establish which year the deduction was taken in
+before you net anything**, and read the table of mechanisms below with that in mind: several of them
+(a chargeback, a deposit returned, a third-party reimbursement) routinely cross a year end.
 
 ##### ⏱️ WHEN IT RUNS — three triggers, and none of them is "if it looks odd"
 
@@ -415,13 +420,17 @@ what went wrong: **nothing in the delivery said the account had never been exami
 the delivery carries one line per scanned account, **including the empty ones**:
 
 ```
-Taxi or shared rides   19 rows = 14 out 3,418.80 - 5 in 1,971.12 -> NET 1,447.68   (5 rentals; 3 sets wash)
-Software                5 rows = 5 out, 0 in -> NET 175.00                          (no mirrors)
+Freight and delivery   31 rows = 24 out 812.55 - 7 in 96.40 -> NET 716.15   (2 redeliveries; 1 claim paid)
+Trade subscriptions     6 rows = 6 out, 0 in -> NET 288.00                  (no mirrors)
 ```
 
 ⚠️ **Two lines of output for an account with no mirrors is the price of never missing one again**,
-and it is cheap. **The figures above are invented** — a real one belongs in the client's working
-paper (§5).
+and it is cheap.
+⛔ **Those account names and every figure in them are INVENTED, like every example in this skill** — a
+real client's figures belong in that client's working paper *(§5)* and **nowhere else in the repo**,
+this file included. 🛑 **And "the example is close enough to the real one to be useful" is exactly how a
+client's ledger ends up in a firm-wide file** — an illustration must share **no digits** with the return
+that prompted it.
 
 ##### 💥 WHAT IT COSTS WHEN IT IS SKIPPED
 

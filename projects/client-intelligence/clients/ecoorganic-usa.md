@@ -1123,8 +1123,13 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   are both required**; the AAA opens negative, so **the distributions line on Schedule M-2 reports zero** and
   whether any distribution is taxable is decided by **the shareholder's basis**, not by that schedule.
   ⛔ **What blocks filing:** **DEPRECIATION** — the three 2025 assets have no placed-in-service dates and no
-  election, and 🔴 **expensing the whole cost could push the year's distributions past the outgoing owner's
-  basis and put a capital gain on his final personal return**, which nothing in the software would flag;
+  election, and 🔴 **the two ways of writing a large first-year deduction hurt the outgoing owner
+  differently, which is the sort of thing no software flags**: an ordinary or bonus write-off shrinks the
+  income his basis is built from and can push the year's distributions past it, producing a **capital
+  gain** on his final personal return; a §179 election cannot do that — it sits behind the distributions
+  in the statutory order — but the part his basis cannot absorb is **suspended and, because his is a
+  final K-1, permanently lost**. **Either way a big first-year write-off is the expensive choice for this
+  shareholder in this year, and Julia should decide it knowing that;**
   **the two Form 1099 questions on Schedule B**, which assert a fact and cannot be answered until Julia says
   which of the thirteen unissued payees were paid for services rather than for goods; 🔴 **THE STATE RETURN**,
   which an extension was filed for and which these tables do not prepare — the work is in Connecticut and the
