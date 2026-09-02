@@ -667,7 +667,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   plus the current account, vendor, date and a suggested action, and a summary by account.
   ✅ **It confirms independently what this file had reached from the ledger**, including the year-end
   adjusting entry, which it describes in the same terms and reads the same way: *"this confirms
-  significant personal-auto activity."* **So that entry was Julia's and deliberate.**
+  significant personal-auto activity."* **So that entry was Julia's and deliberate.** 🛑 **CORRECTED 2026-09-02 — the workbook's words are that "the accountant" had already posted it; it was known to Julia, and who posted it is not recorded (see the sixth-pass entry below).**
   🔴 **And it carries the biggest finding on this return, which had surfaced nowhere else and is not
   about vehicles at all: `Outside services` is DIRECT INSTALL LABOUR, and moving it into cost of
   goods sold would drop the reported gross margin by more than twenty percentage points.** It does
@@ -958,7 +958,8 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   "mechanics". **The only basis was the account the bookkeeper posted them to.** Lilian challenged it
   and was right; one of the three appears under a second vendor record in the **subcontractor labour**
   account, which makes it a **Form 1099-NEC** question rather than a vehicle one. **Ask the client who
-  they are.**
+  they are.** ⚖️ **2026-09-02: the account question is closed by Lilian — they stay as auto expense; what
+  remains is only the 1099-NEC / Schedule B 14a question.**
 - **Deadline:** **2026-09-15**, extension filed. The review ran on 2026-08-31 — fifteen days.
 
 ### Outstanding items (CI-only — never in the SOP)
