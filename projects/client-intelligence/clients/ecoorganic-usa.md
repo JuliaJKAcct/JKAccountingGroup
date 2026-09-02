@@ -853,6 +853,33 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   to two people who each have their own contract-labour account sitting in the owner-draw account, and money
   going out netted inside the contribution account, which understates both gross equity figures.
   _(Worked by Lilian.)_
+- 2026-09-02 (evening, later) — 🎯 **CASH BASIS confirmed, the reclassification entry re-cut on EVIDENCE
+  rather than suspicion, and four bookkeeping questions written up for Julia instead of being fixed
+  (Lilian).** ✅ **The 2025 return is prepared on the CASH basis, because the 2024 return was filed that way**
+  — so the client's own cash-basis P&L and balance sheet are the return's source, and the accrual figures
+  this firm had been working from move only on income *(the difference is the year-end receivable)*.
+  ⚠️ **Receipts are over the small-company threshold, so Schedules L and M-1 are both required.**
+  🔑 **She then reset the standard for the year-end entry: only what is EVIDENT goes in it.** The analysis was
+  re-graded item by item, and the framing changed for the better — **the test is no longer "is this a Turo
+  expense?" but "does the company own a vehicle these parts could go on?"** Against a fleet of a box truck, a
+  van and a forklift, every European-marque parts and service vendor fails that test on the fixed-asset
+  register alone, with no inference about trips or platforms. **The entry shrank: fuel at out-of-state
+  brands, Miami-area parking and two premiums from an unverified insurer all came OUT**, because each needs a
+  chain of inferences. **What would settle them is one document — the insurance declaration pages, which name
+  the insured vehicles and would settle the other auto policy at the same time.**
+  🧭 **Her ceiling test — that the platform's own report caps Turo-related costs — was answered honestly:** it
+  caps the HOST side *(the platform's commission)* and does not reach either the company's own rentals as a
+  guest or the costs paid to dealers off the platform. **What it does give is the size of the activity.**
+  📝 **And four things stay exactly as Julia posted them, by Lilian's decision, written up with names, dates
+  and amounts so Julia can settle them in one pass:** payments to named individuals sitting in the owner-draw
+  account *(two of whom have their own contract-labour sub-accounts in this very chart of accounts, and one
+  is already paid as a subcontractor elsewhere in the year)*; money going out netted inside the contribution
+  account; card statement credits and third-party receipts booked as contributions; and the health-insurance
+  premiums. 🩺 **On the health insurance:** the insurer is a health-marketplace carrier, the premiums are
+  monthly and **stop after April**, and the **above-the-line deduction is blocked by the missing W-2** — a
+  more-than-2% shareholder's premiums are deductible only if the company includes them in his wages, and this
+  company ran no payroll. **It is chained to the reasonable-compensation decision.** A marketplace policy also
+  means a Form 1095-A should exist for the household, which is a 1040 matter. _(Worked by Lilian.)_
 
 ### ✅ The shareholder question — answered 2026-09-02, and what the search for evidence found
 
@@ -1052,6 +1079,16 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   what her own year-end entry's repair lump covered** — the ledger cannot say, and **her answer sets the
   amount to post** *(the worklist's figure is a floor)*; the ending-balance check only confirms the
   posting went through.
+- 📝 **FOUR ITEMS ARE PARKED FOR JULIA, DELIBERATELY — the return goes forward on the books as they stand**
+  *(Lilian, 2026-09-02 evening; full detail with names, dates and amounts in the working paper §D-9)*:
+  payments to named individuals in the owner-draw account that look like subcontractor labour; money going
+  out netted inside the contribution account; card statement credits and a third-party receipt booked as
+  owner contributions; and the health-insurance premiums. ⚠️ **The first one moves the return in the OPPOSITE
+  direction from every other finding — it would be a deduction the company is not taking — and it carries a
+  Form 1099 question.** **They travel WITH the return, not after it.**
+- 🧾 **ONE DOCUMENT WOULD SETTLE THE LARGEST REMAINING QUESTION: the insurance declaration pages** for the two
+  auto policies. They name the insured vehicles, and would settle both the premiums that were left in the
+  company and the ones that were questioned.
 - ✅ **CLOSED 2026-09-02 (evening) — the reconciliation is DONE and the entry is written.** The General
   Ledger settled every discrepancy; see the log entry for that date. **What is left before the return can be
   prepared: post the two book corrections, read the return's METHOD off the prior-year return, and Julia's
