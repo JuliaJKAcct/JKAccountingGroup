@@ -44,7 +44,7 @@ the actual details.
 | Role | Where to find them |
 |---|---|
 | Owner / primary contact | Double client (link below) — **the owner we correspond with**, in Russian (see §5) |
-| Second owner | ✅ **[Double cid 710638](https://app.doublehq.com/close?cid=710638) — `Ishkhan Markarian & Oksana Markaryan`, a JOINT individual record** *(found 2026-09-02)*. **There are two owner contacts**, each with their own individual (1040) client account. 🔴 **THE "two K-1s for FY2025" PART IS CONTRADICTED — see the ⚠️ note below.** Two owner *contacts* is not two *shareholders* _(row written 2026-07-30)_ |
+| Second owner | ✅ **[Double cid 710638](https://app.doublehq.com/close?cid=710638) — `Ishkhan Markarian & Oksana Markaryan`, a JOINT individual record** *(found 2026-09-02)*. **There are two owner contacts**, each with their own individual (1040) client account. 🔴 **THE "two K-1s for FY2025" PART IS WRONG — FY2025 issues ONE K-1, to Ishkhan; see the ✅ SETTLED note below.** Two owner *contacts* is not two *shareholders* _(row written 2026-07-30)_ |
 
 - ✅ **SETTLED 2026-09-02 (evening) BY JULIA, AND THE TRANSCRIPT VERSION WON.** *"La fecha en la que
   Ishkhan dejó la compañía fue al final del 31 de diciembre del 2025"* (Julia, relayed by Lilian). So:
@@ -60,9 +60,11 @@ the actual details.
   | **Lilian, stated 2026-09-02** | *"Artem pasa a ser accionista total de la compañía el primero de enero del 2025."* → **2025 is a ONE-shareholder year, ONE K-1** |
   | **Ping meeting "Ecoorganic tax prep", 2026-07-23** *(read by the 2026-08-01 sweep, recorded as "legible, direct")* | ownership changed effective **2026-01-01**; **"FY2025 still reflects the two-owner split and two K-1s"**; single K-1 from FY2026 |
 
-  **Both fit the filed returns** — the 2023 and 2024 returns each show **one shareholder, Ishkhan
-  Markarian, at 100%** — because they differ only in **when Artem came in**: at 2025-01-01 (Lilian), or
-  during 2025 with Ishkhan leaving at 2026-01-01 (the transcript).
+  🛑 **NEITHER ROW IS THE ANSWER — Julia's is a THIRD option** *(added 2026-09-02 evening)*: Ishkhan sole
+  100% for all of 2025, ONE K-1 to him, Artem from 2026-01-01. **The transcript got the EXIT DATE right and
+  its "two K-1s" wrong; Lilian's date was a year early.** ~~Both fit the filed returns… they differ only in
+  when Artem came in~~ — the 2023 and 2024 returns each show one shareholder, Ishkhan at 100%, which is
+  consistent with all three.
   🔑 **A transcript is exactly where "twenty twenty-five" and "twenty twenty-six" get confused**, and a
   date said once in a meeting is weaker than a person stating it deliberately — **but the consequence is
   one K-1 versus two on a filed return**, so it is confirmed, not assumed.
@@ -236,7 +238,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md).
 
 ### Income tax
-- **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). 🛑 **It issues ONE K-1 — to ISHKHAN MARKARIAN**, the sole 100% shareholder for all of 2025 *(Julia, 2026-09-02 evening)*, and **it is marked FINAL**: he leaves at the close of 2025-12-31 and Artem's first shareholder year is 2026. ⚠️ *(This line used to say two, one per owner. §2 carries the one-year contradiction that is the last gate before filing.)* 📌 **Working assumptions for the computation:** 🛑 *(the shareholder assumption below was replaced the same evening — the transfer is at the close of **2025**-12-31 and the K-1 is Ishkhan's)*; ~~the transfer is taken as effective at the close of 2024-12-31~~; **no employees in 2025** *(the three onboarded people stay a question for later)*; the **opening AAA is the figure the 2024 return filed**, kept for year-to-year consistency even though the 2023 return shows it understated *(the SOP default)*; and **`Outside services` stays out of COGS** — Julia's meeting rule, which the books already follow. **How the ownership transfer happened is deliberately left open until Lilian speaks to Julia.** Figures and reasoning in the working paper §4 and §6.
+- **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). 🛑 **It issues ONE K-1 — to ISHKHAN MARKARIAN**, the sole 100% shareholder for all of 2025 *(Julia, 2026-09-02 evening)*, and **it is marked FINAL**: he leaves at the close of 2025-12-31 and Artem's first shareholder year is 2026. ⚠️ *(This line used to say two, one per owner.)* ✅ **The one-year contradiction in §2 is CLOSED** — Julia settled it on 2026-09-02. 📌 **Working assumptions for the computation:** 🛑 *(the shareholder assumption below was replaced the same evening — the transfer is at the close of **2025**-12-31 and the K-1 is Ishkhan's)*; ~~the transfer is taken as effective at the close of 2024-12-31~~; **no employees in 2025** *(the three onboarded people stay a question for later)*; the **opening AAA is the figure the 2024 return filed**, kept for year-to-year consistency even though the 2023 return shows it understated *(the SOP default)*; and **`Outside services` stays out of COGS** — Julia's meeting rule, which the books already follow. **How the ownership transfer happened is deliberately left open until Lilian speaks to Julia.** Figures and reasoning in the working paper §4 and §6.
 - 🔴 **PRE-RETURN REVIEW RUN 2026-08-31 — VERDICT: THE RETURN CANNOT BE PREPARED YET.** 📌 **2026-09-02: the five things are now answered or assumed on Lilian's instruction; the gate is executing the book worklist in QuickBooks (working paper §D-6), then phase 2.** Five things
   the return needed had no source: **payroll** (§5) · the **per-shareholder split of the capital
   accounts** (§5) · the **depreciation schedule** (§5) · **Turo** · and **the 2024 filed return, which
@@ -855,8 +857,10 @@ note** on this client (§7) — same matter, written to be read; it is **updated
     from the client's side, and it confirms the father→son direction.
   - **2024-03-07, the client's office to Julia (Russian):** *"Ishkhan has 2 LLCs, **he is the sole owner
     now**"* — consistent with the 2023 and 2024 returns.
-  - ⚠️ **A mild counter-signal, recorded rather than resolved:** the **2025 proposal (2025-01-09) and the
-    signed engagement letter (2025-01-11) are both in ISHKHAN's name** — i.e. days after the date Lilian
+  - ✅ **CORROBORATION, not a counter-signal — re-read 2026-09-02 (evening).** On Julia's settled date
+    *(he is the 2025 shareholder)*, the **2025 proposal (2025-01-09) and the signed engagement letter
+    (2025-01-11) in ISHKHAN's name** are exactly what one expects. ~~a mild counter-signal~~ — that reading
+    belonged to the withdrawn 2025-01-01 date. **They are both in ISHKHAN's name** — i.e. days after the date Lilian
     gives. **Engagement paperwork routinely lags reality**, so it is not evidence against, but it is the
     only dated artefact anywhere near the transition.
   - ⚠️ **BOI reports were filed for this company in December 2024 naming the outgoing owner.** **If
@@ -873,10 +877,11 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   shareholder, one K-1, **100%**, the same share count at both ends of the year — and the name on it is
   **Ishkhan Markarian** — see [`ishkhan-markarian.md`](./ishkhan-markarian.md). **Artem was not a
   shareholder in 2024 at all.** ⛔ **So the firm's working assumption that 2025 is simply "two owners to
-  split" was wrong at the front end.** ✅ **The DATE has since been answered by Lilian — 2025-01-01 —
-  so the "when" is settled (subject to §2's contradiction) and the per-day worry does not arise.**
+  split" was wrong at the front end.** 🛑 **CORRECTED 2026-09-02 (evening): the date is JULIA's — the close of 31 December 2025 — so ISHKHAN is
+  the 2025 shareholder and Artem starts 2026-01-01.** ~~answered by Lilian — 2025-01-01~~ *(withdrawn)*.
+  The per-day worry does not arise either way.
   🛠️ **What is still open is the HOW: new shares issued, bought from Ishkhan, or given?** **It creates
-  Artem's opening basis and it is also a transaction on Ishkhan's side.**
+  Artem's **2026** opening basis and it is also a **2025** transaction on Ishkhan's own return — a sale, a gift, a bargain sale, or a redemption by the company.**
   ⚠️ **And his shares came from somewhere:** Ishkhan held all of them at 2024 year end — so **if Artem
   bought them or was given them, that is also a transaction on Ishkhan's own return**; if the company
   issued new shares instead, it is not, and only Ishkhan's percentage moves.

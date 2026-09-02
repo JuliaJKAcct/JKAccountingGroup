@@ -28,7 +28,7 @@
 ## 1. Snapshot
 
 - **Business name:** Ishkhan Markarian — an **individual** client record. ✅ **Double client found 2026-09-02: `Ishkhan Markarian & Oksana Markaryan`, [cid 710638](https://app.doublehq.com/close?cid=710638)** — a **joint** individual record with his wife; `platform: none`, not archived. ⚠️ *(Superseded note: his id was not looked up in the session that created this file* — the company file §2 records that both owner contacts have their own individual (1040) client accounts. **Confirm the id and add the link below.**
-- **Entity type:** n/a — individual taxpayer. 🔑 **He was the SOLE 100% shareholder of [ECOORGANIC USA LLC](./ecoorganic-usa.md) in both 2023 and 2024** *(read off both filed returns, 2026-09-02)*, and **his son [Artem](./artem-markarian.md) is the 100% shareholder from 2025-01-01** _(Lilian, 2026-09-02)_.
+- **Entity type:** n/a — individual taxpayer. 🔴 **He is the SOLE 100% shareholder of [ECOORGANIC USA LLC](./ecoorganic-usa.md) in 2023, 2024 AND 2025** *(2023 and 2024 read off the filed returns; 2025 settled by Julia on 2026-09-02 — he left at the end of 31 December 2025)*. **His son [Artem](./artem-markarian.md) becomes the shareholder on 2026-01-01.** ⛔ *(A line here said the son was the 100% shareholder from 2025-01-01 — that was a working assumption of one day and it is withdrawn.)*
 - **Relationship to the firm:** he is **the founder of the company the firm does the bookkeeping and tax work for**, and the person the 2023 and 2024 returns were prepared for. **The 2025 engagement letter (2025-01-11) is still in his name.**
 - **Primary language:** **Russian**.
 - **Our engagement:** ⚠️ **not established in this file.** He has an individual client account; whether the firm prepares his 1040 is unconfirmed.
@@ -62,8 +62,9 @@ the actual details.
   third consecutive year at 100%, and his FY2025 K-1 is his LAST — it is marked final.** His son becomes
   the shareholder on **2026-01-01**. ⚠️ **This reverses a working assumption that stood for one day** (that
   the son took over on 2025-01-01), and it **matches what the firm's own meeting transcript said all
-  along.** 🔑 **Three consequences for his own 2025 return:** the K-1's income **restores basis and can
-  free a 2024 loss suspended for want of it**; the **negative QBI carryforward from 2024 meets this year's
+  along.** 🔑 **Three consequences for his own 2025 return:** the K-1's income **increases his basis — but the
+  distributions come off BEFORE the losses** *(Form 7203's own order; Reg. §1.1367-1(f))*, so a 2024 loss
+  suspended for want of basis is freed only to the extent basis survives 2025's large distributions; the **negative QBI carryforward from 2024 meets this year's
   QBI** on his Form 8995; and **whatever remains suspended at the transfer dies with it** — §1366(d)(2)
   losses do not pass to a transferee.
 - 🔴 **HIS 2024 FORM 7203 IS NOW LOAD-BEARING, NOT OPTIONAL.** It carries the opening basis for the 2025
@@ -82,7 +83,7 @@ the actual details.
   - **The negative §199A / QBI carryforward from 2024** — 100% his, travelling on **his own Form 8995/8995-A**. ⛔ **None of it carries to his son.**
   - **Any 2024 suspended loss** — §1366(d)(2) makes it **personal to him**; it does not pass to a transferee, and if he disposed of his entire interest it may be permanently disallowed.
 - 🔴 **THE 2025 TRANSFER IS ALSO A TRANSACTION ON HIS SIDE — and which one depends on how it happened.** A **sale** is gain or loss on his 2025 return; a **gift** may raise a **Form 709**; **newly issued shares** touch him not at all, only his percentage. 🛠️ **The same single question to the client settles both his side and his son's.**
-- 🛑 **WITHDRAWN — the working assumption of 2026-09-02 (morning) was wrong by a year.** ~~the transfer was effective at the CLOSE of 2024-12-31, so he is not a shareholder for any day of 2025 and receives NO 2025 K-1~~ ⚠️ **If it was in fact executed ON 1 January 2025, the regulations treat him as owning the stock on the day of disposition — a one-day K-1 at 1/365** — and the company's return is recomputed. **Recorded as an assumption, to be confirmed with Julia, not as a fact.**
+- 🛑 **WITHDRAWN — the working assumption of 2026-09-02 (morning) was wrong by a year.** ~~the transfer was effective at the CLOSE of 2024-12-31, so he is not a shareholder for any day of 2025 and receives NO 2025 K-1~~ ⛔ ~~If it was executed ON 1 January 2025… a one-day K-1 at 1/365~~ — **that scenario no longer exists: Julia's date is the close of 31 December 2025, so he holds the stock for all 365 days of 2025 and the one-day question does not arise.**
 - ⚠️ **The reason the ownership changed, as the firm recorded it:** the **S-corporation shareholder rule — a nonresident shareholder is disqualifying** — so he left ownership. 🔑 **Lilian's instruction, 2026-09-02: the S-corporation status was NOT lost and everything is in order in that respect.** ⛔ **Recorded as her assurance about the outcome; the residency dates were not checked and are not being pursued.**
 - ⚠️ **He is the primary admin on the company's QuickBooks and the handover is stuck on a step only he can do.**
 - ⚠️ **He signed the 2025 engagement letter for the company on 2025-01-11** — ten days after the date on which his son is said to have become the 100% owner. **Recorded as an observation; engagement paperwork routinely lags reality.**
