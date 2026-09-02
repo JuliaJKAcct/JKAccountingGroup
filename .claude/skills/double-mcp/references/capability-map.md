@@ -371,6 +371,16 @@ transaction in this client's history is X" from it — that is the [`method.md`]
 rule-1b failure, and it was caught in review on exactly this client. Where the gap matters, ask for
 a QuickBooks-side report instead.
 
+**Second observation, 2026-09-02, Mobilesource Corp (QBO, connected, `transactionReads: ready`):
+whole MONTHS can be missing, not just types.** `get_transactions_count` per month for 2025 returned
+0 for ten months and rows only for May (1,429), October (1,126) and one December entry — while the
+P&L, balance sheet, agings and the vendor/customer summaries were complete for the year. So an
+empty search is not "no such transaction"; **run `get_transactions_count` by month first** and say
+which months the store actually holds. ⚠️ **In the same session the `dimensions` (vendor) filter on
+`get_profit_loss_report` was silently ignored** — every filtered call returned the unfiltered
+report — so a vendor's split by account cannot be reached that way for a QBO client; use
+`get_expenses_by_vendor_report` for the total and the synced transactions for the split.
+
 **One inference that *is* safe, and its exact edge:** if `get_transaction_accounts` (which includes
 inactive accounts) shows **no `Accounts Payable`**, no **Bill** has ever been entered — QuickBooks
 creates A/P by itself on the first one. It says **nothing** about journal entries, which never
