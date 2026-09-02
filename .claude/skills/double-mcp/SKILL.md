@@ -523,6 +523,21 @@ carries beginning **and** ending basis, and Form 8582 carries suspended losses f
 return is a summary of every year before it. **If those figures are missing or self-contradictory
 on the latest return, that is a finding to report — not a licence to open the year before.** Ask.
 
+> 🔧 **A WORKED EXAMPLE OF THAT LAST SENTENCE — Ecoorganic, 2026-09-02, and it went exactly as the rule
+> intends.** Preparing FY2025, the 2024 return was read under the ordinary permission. Its **Schedule
+> M-2 opened at ZERO** while its own Schedule L opened retained earnings at a non-zero deficit — a
+> **self-contradiction on the latest return** — and **2025's opening AAA is that return's M-2 line 8**,
+> which the zero opening had made 14,210 too small.
+> ⛔ **The session did NOT open 2023.** It wrote the contradiction up as a finding, named the document
+> that would settle it, and said in terms that **that is a different year, outside the permission —
+> Lilian's to open in ATX, not a session's to request.** **She then authorised it in writing, with her
+> own scope attached:** *"si necesitas entrar y revisarla, puedes hacerlo… Tratemos de no buscar errores
+> en esta declaración, a menos que nos influya para la de 2025, porque ya está cerrada."* **2023 turned
+> out to hold the answer** — its closing AAA is what 2024 should have opened at.
+> 🔑 **The transferable part is the shape, not the outcome: report the contradiction, name the document
+> that would settle it, say plainly that it is out of scope, and STOP.** ⛔ **The permission was widened
+> by her answer, not by the session's reasoning — and her scope came with it.**
+
 #### The route — never the raw document
 
 ```
