@@ -779,6 +779,26 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   correction of the firm's own earlier warning:** moving expense to distribution is basis-neutral, so the
   no-capital-gain conclusion survives the whole worklist. Nothing was written to QuickBooks; Lilian
   executes it by hand. _(Worked by Lilian.)_
+- 2026-09-02 — 📘 **Sixth pass, later the same day: Part A closed by Lilian, the year-end entry
+  explained, and the Schedule M-2 theory written down (Lilian).** She moved nothing in COGS / Outside
+  services / Supplies and instructed that Julia's categorisations there be taken as correct; the three
+  people paid by Zelle into the vehicle-repair account stay as auto expense; the Ukraine wire stays in
+  COGS. All three former questions are closed and not asked *(the working paper notes once that a
+  mechanic paid over the threshold for services is still a 1099-NEC payee whatever account he sits in —
+  Schedule B 14a, already recorded there)*. She asked what the lump in Julia's own year-end entry was and
+  what the Drive workbook has to do with it: **the workbook was re-read** (same authorisation as
+  2026-09-01) and it records that entry as something *"the accountant"* had already posted before the
+  review, at its full amount, with no breakdown — so the paper's earlier line that the entry "was
+  Julia's" is corrected to "known to Julia; who posted it is not recorded", and the two routes to the
+  answer are QuickBooks' audit history on the entry and Julia herself. **The journal entry she will post
+  is now written account by account** with which side each goes on and why (working paper §D-6c), and
+  its objective: take Artem's car costs out of the company's expenses and record them as a distribution
+  to him, so the company deducts only its own costs and the Turo part becomes his Schedule C deduction.
+  On the AAA she asked whether the 2024 zero could simply mean the schedule was not required that year:
+  **the 2025 IRS instructions were fetched and read** — the small-company exemption covers Schedules L
+  and M-1 only, the AAA is zero only on the first day of the first S year, and 2024's M-2 was in fact
+  completed, so the hypothesis does not hold; the theory of the schedule is written in plain words
+  (§E-8f) and her decision to keep the filed figure stands. _(Worked by Lilian.)_
 
 ### ✅ The shareholder question — answered 2026-09-02, and what the search for evidence found
 
@@ -974,12 +994,11 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   what her own year-end entry's repair lump covered** — the ledger cannot say, and **her answer sets the
   amount to post** *(the worklist's figure is a floor)*; the ending-balance check only confirms the
   posting went through.
-- ❓ **Three lines to ask the client about, from the Outside-services read (nothing to move):** the
-  **international wire to Ukraine sitting in COGS** *(a foreign payee — a W-8BEN-E question, and possibly
-  the affiliated Ukrainian company)*; **who the three people paid by Zelle into the vehicle-repair account
-  are** *(if labour → `Outside services` and 1099-NEC)*; and **two small supply items that may be job
-  material**. Plus the trips the vehicle accounts show: **Florida in March and July, the Chicago area in
-  April**, and four Newark-airport long-term parkings — what were they?
+- ✅ **CLOSED 2026-09-02 by Lilian — the three Outside-services / COGS lines are NOT asked:** Julia's
+  categorisations stand as correct, the Ukraine wire stays in COGS, the three Zelle payees stay as auto
+  expense. **Still worth asking when the client is next spoken to:** the trips the vehicle accounts show —
+  **Florida in March and July, the Chicago area in April**, and four Newark-airport long-term parkings —
+  and which car the Florida-read insurance policy covers.
 - 🔴 **Settle the 2025 payroll question in Gusto and myconneCT** — did any payroll run, and has a
   single CT-941 ever been filed? It gates the 1120-S and it is a live state matter in its own right
   (six past-due or due-soon notices between 2026-01-27 and 2026-08-18 — roughly every six weeks, not quarterly — still unactioned). 🧮 **For the return, Lilian ruled 2026-09-02 to compute as if nobody was employed — this item is DEFERRED, not answered.**
