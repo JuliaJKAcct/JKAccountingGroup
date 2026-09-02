@@ -1024,6 +1024,16 @@ say the figure is understated and by roughly how much, rather than presenting it
 wants to see separately**. Line 20 is **everything left over**. So you work **top down** — place
 each expense that has its own line, then group the remainder.
 
+> 🔄 **BEFORE you take a total off any expense account, run the MIRROR SCAN** —
+> [`tax-return-sop` §4A-M](../../.claude/skills/tax-return-sop/SKILL.md). An expense account that
+> holds **credits as well as debits** is not one number: a cancelled purchase, a billing retry, a
+> partial refund or a third-party reimbursement each look identical in the amount and mean something
+> different on the return. **Split the account into debits and credits, total each side, and report
+> gross out · gross in · net** — never the net alone, and **never the gross into a journal entry.**
+> ⛔ **This applies with most force to §5C-iii and §5C-iv**, where a capital account is read for
+> distributions: contributions and draws sit in the same account and **netting them by accident is
+> exactly the failure this scan exists to catch.**
+
 | Line | Category | Typical QuickBooks accounts |
 |---|---|---|
 | **7** | Compensation of officers | Salaries paid to **officers** — not to every shareholder-employee (§5C-i). Form 1125-E is required at **$500,000 or more** of total receipts |
