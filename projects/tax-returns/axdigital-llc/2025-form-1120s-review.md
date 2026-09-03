@@ -42,8 +42,8 @@ owner's 1040 preparer would otherwise rely on.
 | 6 | **Payroll journal entries, account 111 (Wages), 2025** | Double `get_transactions` | 🔑 **one employee only** — cleared a suspected officer/employee split error |
 | 7 | **Double file library** | `list_files` (77 files) | ⭐ **`2025 7004 EXT.pdf`** — the extension gate |
 | 8 | **Double client properties + tax project** | `list_client_properties`, `list_projects` | project now `readyForReview`; Tax Return Type 1120-S |
-| 9 | **Julia's Gmail** | `search_threads` — Turo, extension, 2025 tax return | ⭐ **Turo is the OWNER's activity, not the company's** |
-| 10 | **Client Intelligence file** | [`axdigital.md`](../../client-intelligence/clients/axdigital.md) | context; its "Turo = company activity" line is now corrected |
+| 9 | **Julia's Gmail** | `search_threads` — the extension, the 2025 return, the owner's return preview | the extension practice; the Jan-2026 preview of the owner's own return; the scope question in §8A |
+| 10 | **Client Intelligence file** | [`axdigital.md`](../../client-intelligence/clients/axdigital.md) | context; one business-line entry there was corrected as a result |
 | 11 | **2025 Form 1120-S + instructions** | `irs.gov/pub/irs-pdf/f1120s.pdf`, `i1120s.pdf` | item G wording · line 14b wording · the Nonstore-Retailer PBA rule |
 
 ⛔ **NOT opened: the filed 2024 Form 1120-S.** It was not needed — the 2024 *books* reproduce the
@@ -413,8 +413,7 @@ estimate on a partial year; the final books say 53,077. **The 1040 must use the 
   absence and makes the 100% claim the first thing an examiner looks at.
 - **Section B lines 34, 35 and 36 are blank** — was the vehicle available for personal use off
   duty? was it used primarily by a more-than-5% owner? is another vehicle available for personal
-  use? **Line 35 is plainly Yes**, and 36 is answerable (the owner personally runs several Turo
-  vehicles — §4-J).
+  use? **Line 35 is plainly Yes**, and 36 is answerable from the owner's own vehicles.
 - 🛠️ **The fix:** ask the client for the 2025 mileage log **before transmitting**; if one exists,
   change 24b to **Yes**; answer 34/35/36 from the facts. If no written log exists, 24b stays No
   and **the 100%/zero-personal split should be revisited with the client rather than filed as is.**
@@ -447,21 +446,6 @@ possible mechanisms have opposite consequences on the owner's 1040:**
 🛠️ **Ask which it is, and get the answer in writing.** Do not change the presentation on your own
 initiative — the prior year did the same thing. **But whichever it is, §8 must say so**, because
 if it is rent the owner has 13,130 of income his 1040 must pick up.
-
-### J · ✅ Turo — asked, and answered: it is **NOT** this company's
-
-Raised because the Client Intelligence file recorded Turo as an AXDIGITAL business line, and the
-2026-08-26 document request asks for *"the mileage details for every Turo vehicle"* — while the
-2025 books hold **no Turo income account, no Turo vehicle, and one fixed asset**.
-
-**Resolved from Gmail:** the request itself distinguishes *"every **Turo vehicle**"* from *"the
-Dodge listed on **the AX Digital**"*; the tracking spreadsheet is titled *"Доходы_Расходы Turo
-**Oleksiy**"*; the 2024 mileage thread asks the owner personally, per car (Mercedes GLE 350,
-Toyota Avalon); and on 2026-01-12, against Julia's **1040** preview, he replies *"As for Turo —
-yes, we had big losses in 2025."*
-
-✅ **Turo is Oleksiy's personal activity and belongs on his 1040, not on this 1120-S.** Nothing
-is missing from this return. **The client file has been corrected.** → §8.
 
 ---
 
@@ -566,7 +550,11 @@ on a separate day. This section exists so that day does not repeat this work.
   capital-account balance is **not** a substitute. If no 7203 exists — which is the *ordinary* case,
   not an edge one — it must be **reconstructed**, and that is **separate work with its own time,
   scoped rather than absorbed silently.**
-- **His Turo activity** (§4-J) — his own books, and he told Julia there were **big losses in 2025**.
+- **A vehicle-rental activity he runs personally**, which is his own books and not on this return
+  at all. ⓘ **It was checked and is correctly absent here** — the 2025 company books hold no such
+  income account and no such vehicle. He told Julia it ran at a loss for 2025. ⛔ **Named only here,
+  in the 1040 handoff, on Julia's instruction (2026-09-03) that it is personal-return scope and
+  does not belong in the company's findings.**
 - **Form 1095-A / premium tax credit** — a `Form1095a_2024.pdf` exists in Double; the 2025 one will
   be needed.
 - **His 2025 estimated payments** — `2025 EST Tax Payment Beneznyak.pdf` in Double.
