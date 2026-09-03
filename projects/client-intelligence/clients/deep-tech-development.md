@@ -1,6 +1,6 @@
 # Deep Tech Development Group LLC
 
-> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-29
+> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-09-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -55,7 +55,7 @@ the actual details.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double — **disconnected 2026-07-21 as part of the bookkeeping pause** (§4). Not a fault: reconnect when the client resumes _(explained by Lilian, 2026-08-11)_ |
-| Shopify — store **"Deep Tech Development"**, domain **gorobots.us** (the "Go Robots" brand) | E-commerce sales platform | _(pending)_ | 🔴 **Registered under Julia, not the client — the transfer to the owner is IN PROGRESS and blocked** (§5, and Double case note `503544`). Plan downgraded from **Grow** to **Basic** (both paid monthly) effective **2026-08-02**, and it still bills monthly to Julia's inbox _(Gmail, 2026-07-28 / 2026-08-02)_ |
+| Shopify — store **"Deep Tech Development"**, domain **gorobots.us** (the "Go Robots" brand) | E-commerce sales platform | _(pending)_ | 🔴 **Registered under Julia, not the client — the transfer to the owner is IN PROGRESS and blocked** (§5, and Double case note `503544`). Plan downgraded from **Grow** to **Basic** (both paid monthly) effective **2026-08-02**, and it still bills monthly to Julia's inbox _(Gmail, 2026-07-28 / 2026-08-02; $49.00 CAD on 2026-09-01)_. **Support conversations are NOT readable by email** — they live in the **Shopify Support Inbox**, `help.shopify.com/en/inbox/14006272` |
 | Sales-tax portal | Filing sales tax (quarterly) | [Client password vault (Google Doc)](https://docs.google.com/document/d/1dR6glVFYIu9k8bs4DPUzCcx1AnMq-d_-HoJWcTmJNug/edit) | _(jurisdiction pending)_ |
 | Penn Credit (collection-agency portal) | Paying the FDOT toll debts that are in collection | [Client password vault (Google Doc)](https://docs.google.com/document/d/1dR6glVFYIu9k8bs4DPUzCcx1AnMq-d_-HoJWcTmJNug/edit) | Portal: [account.penncredit.com/myaccount](https://account.penncredit.com/myaccount) · login is **not** user/password — it asks for the **account/ID number + ZIP code** (both in the vault) |
 
@@ -120,7 +120,7 @@ the actual details.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- 🔴 **THE SHOPIFY STORE IS REGISTERED UNDER JULIA, NOT THE CLIENT — AND MOVING IT TO THE OWNER IS BLOCKED.** The store **Deep Tech Development** (**gorobots.us**) has Julia as its store owner and `julia@jkaccountinggroup.com` as its email of record; the real owner is **Vitalii Ivanov**. Adding him as a staff user **errors**, and *Transfer ownership* refuses and sends us to support. Shopify's diagnosis (2026-08-25) is that the store's **Shopify Balance account is active and is the blocker, even at $0**, and it has to be **closed permanently** first — a closure Shopify has now **requested, with no ETA and no ticket number yet**. **Full trail, options and next actions: Double note `503544`.** _(Shopify support chat transcript, 2026-08-25, via Lilian.)_
+- 🔴 **THE SHOPIFY STORE IS REGISTERED UNDER JULIA, NOT THE CLIENT — AND MOVING IT TO THE OWNER IS BLOCKED.** The store **Deep Tech Development** (**gorobots.us**) has Julia as its store owner and `julia@jkaccountinggroup.com` as its email of record; the real owner is **Vitalii Ivanov**. Adding him as a staff user **errors**, and *Transfer ownership* refuses and sends us to support. Shopify's diagnosis (2026-08-25) is that the store's **Shopify Balance account is active and is the blocker, even at $0**, and it has to be **closed permanently** first — a closure Shopify **requested on 2026-08-25, with no ETA and no ticket number**. ⚠️ **As at 2026-09-03 the closure has NOT been processed** — Shopify issued the store's **August 2026 Balance statements** that day, and no closure confirmation has ever reached Julia's mailbox (searched in full, spam and trash included). ⚠️ **Shopify's substantive replies do NOT arrive by email** — the notification is a bare *"you have a new message"* and the text lives only in the **Shopify Support Inbox** (`help.shopify.com/en/inbox/14006272`), which is why a reply of **2026-08-27** sat unread for a week. **Full trail, options and next actions: Double note `503544`.** _(Shopify support chat transcript, 2026-08-25, via Lilian; Gmail sweep 2026-09-03.)_
 - ⏸ **The client is paused while the owner pursues a US visa** — the business restarts when he has
   what he needs, and bookkeeping restarts with it. Until then the firm does **administrative work
   only**, and the QuickBooks disconnection of 2026-07-21 is part of the pause rather than a fault to
@@ -180,17 +180,42 @@ the actual details.
   a **new "Deep Tech" folder created 2026-08-10** distinct from the one linked in §7 — flagged below,
   same pattern as the duplicate-folder finding on Masciave.
 
+- 2026-09-03 — **Shopify transfer chased (Lilian).** Question asked: what exactly did Shopify tell us, and has
+  the promised confirmation email arrived and been missed? **Answer: no email was missed — none was ever sent,
+  and the closure has not happened.** Julia's mailbox was searched exhaustively (`in:anywhere` plus trash, all
+  senders, 2026-08-15 onward; **spam was completely empty**) and holds **no** Balance-closure confirmation.
+  What it does hold is the opposite evidence: Shopify's **2026-09-03** *"Shopify Balance statements are ready"*
+  for **August 2026** on this store, so the Balance account is still open **9 days** after the request, plus the
+  normal **2026-09-01** bill of $49.00 CAD. The one thing nobody has read is Shopify's **2026-08-27** reply from
+  agent **"Alex L"**, which is unread in the Support Inbox because the email notification carries no content.
+  Also noted, without a cause established: Julia's out-of-office auto-reply went back into the Shopify support
+  thread twice on 2026-08-25. **Double note `503544` rewritten in place the same day** with the new status,
+  timeline and next action. _(Worked by Lilian.)_
+
 ### Outstanding items (CI-only — never in the SOP)
-- 🔴 **SHOPIFY — the store ownership transfer to the owner is blocked, and the unblocking step is IRREVERSIBLE.**
-  Shopify has **requested closure of the store's Shopify Balance account** (2026-08-25) because it is what blocks
-  the transfer; closure is **permanent**, takes the Balance statements with it, and has **no ETA**. Waiting on Shopify's confirmation email to `julia@jkaccountinggroup.com`, then *Settings → Users →
-  transfer ownership*. If it goes quiet, the **chat transcript is on file** in Julia's Shopify Support Inbox —
-  that is the reference to reopen the request with. Full trail: Double note **503544**. _(Shopify chat
-  transcript, 2026-08-25, via Lilian.)_ ⓘ **Still open, 4 days later:** a further reply from Shopify Support
-  (agent "Alex L") landed in Julia's inbox **2026-08-27**, but its content sits inside Shopify's own Help
-  Center message thread, not in the email body itself — the email is a bare notification. **Not yet read;
-  someone needs to open the Shopify Support inbox directly to see whether it moves the closure forward.**
-  _(Gmail, 2026-08-27, checked 2026-08-29.)_
+- 🔴 **SHOPIFY — the ownership transfer is blocked, and 9 days on the unblocking step has NOT happened.**
+  Shopify **requested closure of the store's Shopify Balance account** on **2026-08-25**, because the active
+  Balance account is what blocks the transfer; closure is **permanent**, takes the Balance statements with it,
+  and Shopify gave **no ETA**. Once it is done: *Settings → Users → transfer ownership*. Full trail: Double
+  note **503544**. _(Shopify chat transcript, 2026-08-25, via Lilian.)_
+  🔴 **CHECKED 2026-09-03 — the confirmation email does not exist, and the Balance account is still open.**
+  Julia's mailbox was searched end to end — inbox, **spam**, **trash** and every Gmail category, all senders and
+  not only `@shopify.com`: **no Balance-closure confirmation has ever arrived.** The evidence runs the other
+  way. On **2026-09-03** Shopify issued the store's **August 2026 Shopify Balance statements**
+  (`do-not-reply@shopify.com`, *"Shopify Balance statements are ready"*), and a closed account does not produce
+  monthly statements — so the closure has not been processed. The **2026-09-01** monthly bill ($49.00 CAD) also
+  charged as normal.
+  ➡️ **NEXT ACTION — open the Shopify Support Inbox and read the 2026-08-27 reply from agent "Alex L"**
+  (`help.shopify.com/en/inbox/14006272`). It is the **only** answer Shopify has sent since the request and it is
+  **still unread**; Shopify's email is a bare *"you have a new message"* notification carrying none of the
+  content, so the reply exists nowhere but inside that inbox. Then chase the closure on the same conversation,
+  quoting the 2026-08-25 chat — advisors **Aditi Panchal** and **Song Song**, transcript logged under
+  **Marson** — and ask for a status and a completion date in writing.
+  ⓘ **One mechanical detail to know before chasing — cause NOT established.** Julia's out-of-office
+  auto-reply (*"I'm currently out of the office until August 25th"*) fired back into the Shopify support thread
+  **twice** on 2026-08-25, to `mailer3.shopify.com`. Whether that changed how the ticket was handled is
+  **unknown and untested** — recorded because it is the kind of thing that quietly re-queues a support ticket,
+  **not** as a diagnosis of what went wrong. _(Gmail, searched 2026-09-03 — Lilian.)_
 - ⚠️ **USPS mail forwarding for this company (and for 1701 N M ST LLC, Universal Trading Technology
   LLC, and the owner individually) ends 2026-09-18** — confirm whether it needs renewing or whether
   a permanent address change should be filed instead, before mail starts bouncing. STILL OPEN, **20 days
