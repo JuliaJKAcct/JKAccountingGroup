@@ -244,19 +244,20 @@ the actual details.
   gets **no repo checkout**, so it cannot read this file either.
   ⓘ **What closure costs, in Shopify's words:** the current owner loses that Balance account and any
   Balance features or cards connected to it — required, they say, so the store transfers cleanly and the
-  new owner sets up financial services under his own information. ⓘ **This does not contradict the settled
-  item below** that Deep Tech's bank account is unaffected: Balance is a Shopify-held account sitting under
-  **Julia's** store login, not the company's bank.
+  new owner sets up financial services under his own information. ⓘ **This does not contradict the separate
+  finding that Deep Tech's own bank account is unaffected:** Balance is a Shopify-held account sitting under
+  **Julia's** store login, not the company's bank — **inferred from the store being registered to Julia, not
+  confirmed by Shopify.**
   _(Shopify support conversation, read and answered 2026-09-03 — Lilian and Julia.)_
 - ⚠️ **USPS mail forwarding for this company (and for 1701 N M ST LLC, Universal Trading Technology
   LLC, and the owner individually) ends 2026-09-18** — confirm whether it needs renewing or whether
   a permanent address change should be filed instead, before mail starts bouncing. STILL OPEN — **15 days out
-  as at 2026-09-03** (the "20 days out" below was counted on 2026-08-29); no evidence found that a decision has
+  as at 2026-09-03** (it read "20 days out" when counted on 2026-08-29); no evidence found that a decision has
   been made. _(Gmail, 2026-08-14; re-chased 2026-08-29 — a
   search of Gmail bounded `after:2026/08/22` for USPS forwarding on this company or its related entities
   found nothing new.)_
 - ⚠️ **CONFIRM THE FDOR WITHDREW ITS Q2 2025 REEMPLOYMENT-TAX DEMAND** (its letter to the client is dated
-  **2025-10-22**) — STILL OPEN, **17 days pending as at 2026-08-29** (21 on 2026-09-03), since first flagged 2026-08-13, no deadline, and **an
+  **2025-10-22**) — STILL OPEN, **21 days pending as at 2026-09-03**, since first flagged 2026-08-13, no deadline, and **an
   uncancelled FDOR bill escalates on its own**. With the effective date now 1 July 2025 that quarter
   should not be due, but nothing on record shows the bill cancelled. A targeted Gmail search bounded
   `after:2026/08/22`, on 2026-08-29, for FDOR/reemployment-tax correspondence on this client found
