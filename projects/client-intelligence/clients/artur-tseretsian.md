@@ -1,6 +1,6 @@
 # Artur Tseretsian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -196,10 +196,26 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** No new Double notes (both existing notes' `updatedAt` predate baseline), no new contacts, zero activity-log entries, no new Gmail correspondence, no new/modified Drive files under "Rewhip". Ping `resolve_person` for this name still returns no match, consistent with prior sweeps. Chase pass on all three outstanding items — ages above, no arrivals found.
 - 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: both notes' `updatedAt` unchanged from 2026-08-22 (no re-read needed beyond metadata check); zero activity-log entries since baseline; no new contacts. Gmail (`after:2026/08/22`, name + Rewhip + CS Float + Stripe) found nothing beyond the internal weekly-sweep digest — no client correspondence in the window, including no confirmation of the QuickBooks recurring-payment setup. Ping org-wide semantic search returned only unrelated pre-2026-08-22 noise; `resolve_person` still no match. Chase pass on all three outstanding items — ages below; none arrived. No SOP exists yet for this client; no SOP-proposal candidates queued.
+- _(2026-09-03, Lilian — human-initiated status check)_ — Lilian asked what remains
+  pending on this client and, specifically, **the result of the older son's Social
+  Security number** (she recalled the client saying he had gone to apply). Ran a live
+  sweep to close the gap since the 2026-08-29 baseline: **Gmail** (name + "Social
+  Security"/SSN queries) — nothing beyond the internal weekly-sweep digest; **Double**
+  — both notes unchanged since 2026-07-31 (still "SSN pending"), `list_files` empty,
+  `get_questions` shows no portal thread for this client, `list_activity_log` shows only
+  the July 2026 organizer open/publish events; **Google Drive** — recent-files review
+  shows nothing new for this client since the baseline. Ping unavailable this session.
+  **Result: no update to Artur Jr.'s SSN in any reachable source — the last recorded
+  status stands (SS card lost; client resolving at the SSA; will send the number).**
+  ⚠️ **Method caveat worth keeping:** the client delivers sensitive items to the firm by
+  **WhatsApp** (that is how the spouse's driver's license and Michael's SSN arrived) —
+  a channel **outside** the digital sweep. So the absence of an SSN update in
+  Gmail/Double/Drive is **not** evidence the number hasn't been obtained; confirm on
+  WhatsApp / with Lilian directly before treating it as still-missing.
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
-- **The older child's SSN** — card lost; client resolving at the SSA and will send the number. Not chased this run (budget).
+- **The older child's (Artur Jr.'s) SSN** — card lost; client resolving at the SSA and will send the number. **Chased 2026-09-03 (Gmail/Double/Drive) — no update; still open.** The client sends such items by **WhatsApp** (outside the digital sweep), so check there / with Lilian before assuming it hasn't arrived.
 - **Year-end 2024 & 2025 addresses** — not chased this run (budget).
 - January 2026 statements (both accounts) to complete Dec 2025 — not chased this run (budget).
 - CS Float purchases/expense report — not chased this run (budget).
