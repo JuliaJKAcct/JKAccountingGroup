@@ -55,7 +55,7 @@ journal entry is in both. An edit is in neither.**
 
 ⚠️ **The corollary, and it is the reason this SOP exists at all:** a correcting entry that is
 **balanced and unexplained is no better than the edit it replaced.** The firm has a worked example —
-a five-figure year-end journal entry on a client's books with an **empty memo**. Its audit history
+a year-end journal entry on a client's books with an **empty memo**. Its audit history
 was complete: who posted it, when, every line. It told nobody what the amount contained, and
 reconstructing it took days. **Visibility without explanation is not traceability.**
 
@@ -103,7 +103,13 @@ Prepared by JK Accounting Group, <date>.
 🔑 **Write it for someone who has never seen the transaction and cannot ask you.** That is the whole
 test.
 
-### ③ Tick `Is Adjusting Journal Entry?`
+### ③ Tick `Is Adjusting Journal Entry?` — where the checkbox exists
+
+⚠️ **It is a QuickBooks Online ACCOUNTANT feature.** The checkbox, and the *Adjusting Journal Entries*
+and *Adjusted Trial Balance* reports it feeds, appear when you are signed in to the client's books
+**through QBOA**. **Working in a plain QBO company, there is no box to tick** — in that case the memo
+and the journal number carry the whole load, so **write the memo as if nobody will ever pull an
+adjustments report**, because they cannot.
 
 **It changes no figure.** What it does is put every adjustment the firm made into **one report** —
 *Adjusting Journal Entries*, and the *Adjusted Trial Balance*. 🔑 **That gives the next person
@@ -120,8 +126,9 @@ somewhere to look without knowing to look**, which is the point of the whole pro
   it is **necessary** or an **obvious** error.
 - ⛔ **It does not fix a broken reconciliation.** If the original transaction's amount, date or bank
   account is wrong, that is a different problem and the reconciliation has to be re-checked.
-  *(Changing only the expense category never affects a bank or card reconciliation — the bank side
-  of the transaction is untouched.)*
+  *(Changing only the expense category never affects a bank or card reconciliation — the bank side of
+  the transaction is untouched.* ⚠️ *But if the category you are changing is ITSELF a bank, credit-card
+  or other reconciled balance-sheet account, that account's reconciliation IS affected — check it.)*
 
 ---
 
@@ -132,8 +139,10 @@ dealership had been categorised to fuel when it was a refund of repair work. The
 proposed; Lilian asked for the journal-entry route instead, for traceability, and set the rule above.
 The same session posted a second, separate entry for the substantive reclassification — which is
 where **one decision per entry** comes from. ⛔ **The amounts are deliberately not here** — client
-figures live in [`projects/tax-returns/`](../tax-returns/) only, and this file publishes to the
-Knowledge Hub.
+figures live in [`projects/tax-returns/`](../tax-returns/) only, and **an SOP is team-facing and
+Hub-eligible.** ⓘ **This file is not yet in the Hub's curated catalogue** *(`build-hub.mjs` lists SOPs
+by hand)*; **adding it is part of finishing this SOP** and is queued behind Lilian's standing *"no
+actualices el hub hasta que terminemos."*
 
 **Related:** [`form-1120s-preparation.md`](./form-1120s-preparation.md) ·
 the [`bookkeeping-sop` skill](../../.claude/skills/bookkeeping-sop/) ·
