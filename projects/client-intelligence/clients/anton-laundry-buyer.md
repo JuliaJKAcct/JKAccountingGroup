@@ -1,6 +1,6 @@
 # Anton & Olga Stenin — laundry portfolio buyers
 
-> **Status:** Prospect — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02 · **Owner:** Julia · **Last updated:** 2026-09-02
+> **Status:** Engaged in practice — proposal sent 2026-08-30, fixed fee finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen (not in Gmail or Drive as of 2026-09-03 — it may have come by WhatsApp or the portal). **Seller document request list drafted 2026-09-03 (v1, awaiting Julia's edits)** · **Owner:** Julia · **Last updated:** 2026-09-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -34,7 +34,7 @@
   estate and a laundry-delivery business (broker: Merritt Realty; the seller's offering
   memorandum is in the firm's hands, held outside the repo)
 - **Primary language:** Russian-speaking — the proposal is bilingual RU/EN (English governs)
-- **Our engagement (services we provide):** **PROSPECT.** A **Financial Due Diligence &
+- **Our engagement (services we provide):** **ENGAGED in practice (first milestone invoiced 2026-09-02 — status line).** A **Financial Due Diligence &
   Purchase Analysis** proposal drafted 2026-08-28 — the firm's first consulting-type
   (non-tax, non-monthly) engagement — and **expanded the same day to Julia's full
   methodology brief**: three years of financials and tax data (IRS transcripts via a
@@ -49,7 +49,12 @@
   (2026-09-02), so the hour estimate stayed as the price rationale and the overrun risk
   is explicitly the firm's. The document carries a
   dedicated **"Work for Other Specialists" page** (Julia, 2026-08-29) drawing the line
-  between our financial/tax review and the specialist work we do not perform — see §5
+  between our financial/tax review and the specialist work we do not perform — see §5.
+  **The seller document request list exists as of 2026-09-03 (draft v1):** 112 items in 13
+  sections mirroring the scope one workstream at a time, each item tagged per company / per
+  location / per account and by when it is needed (Start · Round 2 · Pre-closing); a private
+  working page and an editable Word draft — links in §7. It goes to the seller's broker only
+  after the kick-off call (§6, the 2026-08-30 sequence)
 - **Fiscal year-end:** n/a (no engagement entity yet)
 - **Accounting platform:** n/a
 
@@ -64,7 +69,7 @@ the actual details.
 | Buyers / decision-makers | **Anton & Olga Stenin** (Julia, 2026-08-30 — the joint name on the cover, agreement and T&C; Anton's own first-vs-family name still unconfirmed). Email received — lives in the delivered proposal and Double, not here |
 | Client's own real-estate side | **Олеся** (last name, role title and contacts pending) — per Anton's letter 2026-08-30, she handles everything about the real estate and land as objects: re-registration, building/land inspections, property taxes and fines, leases, and drafting the purchase agreements. Coordinate with her, do not duplicate her |
 
-- **Double client:** _(pending — not in Double yet)_
+- **Double client:** _(pending — still not in Double as of 2026-09-03; create it once the signed agreement is confirmed)_
 
 ## 3. Systems & access
 
@@ -184,6 +189,53 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-03 — **Seller document request list drafted (v1) — Julia: "I need to start drafting a
+  detailed list of documents to request from seller."** Built from the v14 proposal's scope (read
+  from the private proposal artifact), the three-seller-company structure and Anton's own technical
+  asks (§5), and the three revenue tests on the coin-laundry benchmark page
+  (`projects/acquisition-diligence/`, still on its unmerged branch). **112 items in 13 sections**,
+  one per workstream: authorizations and access (the IRS transcript authorization per company, the
+  Florida DOR clearance in its two moments, utility release letters per account, card-system and
+  QuickBooks access, the seller's accountant as the contact); the three companies and what each
+  owns; financial statements and books (monthly P&L **by location**, the GL, the fixed-asset
+  register, the working papers behind the offering memorandum); tax returns and filings (federal
+  as filed, DR-15 by account, DR-405 per location, TRIM notices, the 1099-Ks from the processors);
+  payroll and staff (roster vs 941/940/W-2/RT-6, workers'-comp audits, owner involvement, I-9s
+  pre-closing); revenue records (card-system reports and **the unused stored value on customer
+  cards — a liability that transfers**, coin logs, deposit detail, the equipment list with
+  make/model/vend prices, gallons-per-cycle specs, **machine cycle counters**, vend-price history,
+  the delivery platform's reports); banking and debt (every account monthly, loans and payoffs,
+  PPP/EIDL/**ERC**, leases, the seller's UCC list, guarantees); real estate on the financial side
+  only (Олеся's list is not duplicated); utilities per meter with consumption; contracts, insurance
+  and licenses; add-backs taken to source; legal matters; and one short "collected once for the
+  specialists" section. Tags: **Start (64) · Round 2 (44) · Pre-closing (4)**. Delivered as a
+  private working page (status tracking, filters, print view, a "notes for Julia" panel) and an
+  editable seller-facing Word draft without the internal notes — links in §7; nothing else
+  committed. **Eight notes for Julia before it goes out:** Form 4506-C is an **IVES** form — if the
+  firm is not an IVES participant, Form 8821 + e-Services reaches the same transcripts (item 1.1
+  names both; the proposal's wording is unchanged); the Florida clearance letter is an early online
+  request while **Form DR-842 (Seller's Application for Transferee Liability Certificate) needs the
+  signed sales agreement**, and the DOR page was unreachable from the session, so the form's name
+  comes from search results and must be confirmed on floridarevenue.com before it is quoted to the
+  seller; stored value on cards; ERC/PPP money inside 2023–24 income; the October-2025 rent-tax
+  repeal on intercompany rent; **the unit count (4 cash + 2 card vs. five locations) is still
+  unconfirmed**; and the route — the kick-off call with Олеся first, the broker introduction, then
+  the list, ideally straight to the seller's accountant. **Gap since the last sweep closed the same
+  day:** Gmail (Stenin / laundry / Bradenton / Palmetto / Ruskin / Merritt, after 2026-08-27) found
+  the two entries below and nothing else; Ping meeting search (laundry / Stenin) — nothing; Drive
+  (laundromat / Stenin / Merritt Realty, modified since 2026-08-20) — nothing; no Double account, so
+  Double was not searched
+- 2026-09-02 — **First-milestone invoice issued** (found 2026-09-03 in Gmail): QuickBooks invoice
+  2291, "New payment request from JK Accounting Group", sent to Olga; the amount (in QuickBooks, not
+  here) matches the Part 1 first installment of v14. Read as the engagement being accepted — **the
+  signed agreement itself was not found** in Gmail or Drive; Julia to confirm and, once confirmed,
+  create the Double client (outstanding item below)
+- 2026-08-30 — **The proposal went out** (found 2026-09-03 in Gmail's sent folder): Julia emailed
+  Anton and Olga in Russian with `Financial-Due-Diligence-Laundry-Portfolio-FINAL.pdf` attached and
+  the kick-off sequence in the body (sign page 17 → the call with Олеся → the broker introduction →
+  ask about a direct line to the seller's accountant). ⚠️ The body carried **that day's hourly
+  pricing** (Part 1 hourly with a budget cap and a deposit), superseded on 2026-09-02 by v13/v14 —
+  the client's written record of the fee is the later exchange, not this email
 - 2026-08-29 — **Bounded prospect sweep (Gmail in:inbox+in:sent + Google Drive, since
   2026-08-28; no Double/Ping — no Double account exists).** Searched Gmail for "Anton"
   combined with "laundry"/"Bradenton"/"Palmetto"/"Ruskin"/"Merritt Realty" (to disambiguate
@@ -318,10 +370,16 @@ the actual details.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- **From Julia:** Anton's last name (the cover now deliberately shows "Anton" alone, no
-  email field — her instruction); then create the Double client and complete §1/§2 here.
-  **Still pending as of 2026-08-29** (1 day since the file was created) — a bounded Gmail
-  search that day did not find it
+- ~~Anton's last name~~ **Resolved 2026-08-30** (the joint name Anton & Olga Stenin). **Still
+  open: create the Double client** — the engagement is invoiced (2026-09-02) and there is still no
+  Double account, so nothing about this matter can be tracked there; then complete §1/§2 here
+- **Julia to edit and release the seller document request list (v1, 2026-09-03)** — after the
+  kick-off call with the buyers and Олеся and the broker introduction (her 2026-08-30 sequence).
+  Before it goes: settle the IRS-authorization route (**Form 4506-C needs an IVES participant;
+  otherwise Form 8821**), confirm the DR-842 name on floridarevenue.com, and confirm the unit
+  count. Tracked as FOLLOW-UPS row 72
+- **Julia to confirm the agreement is signed** — invoice 2291 says yes in practice; the signed PDF
+  was not found in Gmail or Drive (2026-09-03)
 - ~~Whose name signs~~ **Resolved 2026-08-30:** Julia set the client name to **Anton &
   Olga Stenin** — now on the cover, the agreement block and the T&C party line (v11)
 - ~~The deposit amount ($3,500 vs $4,000)~~ **Moot 2026-09-02:** billing became fixed
@@ -334,11 +392,19 @@ the actual details.
 
 ### Information still needed
 
-- [ ] Anton's last name, email, and whether he buys personally or through an entity
+- [x] ~~Anton's last name and email~~ — resolved 2026-08-30 (joint name Anton & Olga Stenin; the
+      email lives in the proposal and in Gmail, not here)
+- [ ] Whether they buy personally or through an entity (decides the acquisition-entity work in Part 2)
 - [ ] Whether a lender is involved (the report's third-party restriction will come up)
-- [ ] Timing: when the seller's full financial package becomes available
+- [ ] When the seller's records start arriving — the request list (v1) is drafted; the date it goes
+      to the broker and the seller's turnaround are still unknown
+- [ ] Whether the firm is an IVES participant (decides Form 4506-C vs Form 8821 for item 1.1)
 
 ## 7. Links
 
-- **Double client:** _(pending)_
+- **Double client:** _(pending — still no account as of 2026-09-03; create it once the signed agreement is confirmed)_
+- **Seller document request list (draft v1, 2026-09-03):** private working page —
+  https://claude.ai/code/artifact/f45c0b6f-5051-4883-825f-6e0d605df4a7 (status tracking, filters, print view,
+  and the notes-for-Julia panel); the editable seller-facing Word draft was delivered in chat the
+  same day and is not stored in the repo
 - **Related SOPs:** _(none — first consulting engagement)_
