@@ -155,6 +155,10 @@ code,kbd{font-family:var(--mono); font-size:0.88em;}
   color:var(--bronze-200); margin-top:12px; letter-spacing:-0.01em;}
 .mast .lede{margin-top:22px; max-width:60ch; font-size:clamp(15.5px,2vw,18px); line-height:1.6;
   color:#D7E1E1;}
+/* The global `strong,b{color:var(--ink)}` is a DARK ink — on the teal masthead that renders
+   bold text invisible, on screen and on paper alike. The masthead is a dark panel, so it
+   needs its own ivory emphasis colour. */
+.mast .lede b,.mast .lede strong{color:#F3EEE4;}
 .mast .meta{margin-top:clamp(26px,4vw,34px); padding-top:22px;
   border-top:1px solid rgba(236,230,218,0.16);
   display:flex; flex-wrap:wrap; gap:10px 12px; align-items:center;}
