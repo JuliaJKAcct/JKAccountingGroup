@@ -337,6 +337,122 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
   file, and any open action in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md). **The session will be
   deleted; those three are what survive it.**
 
+#### 🔄 4A-M · THE MIRROR SCAN — money that goes out and comes back, and why nobody spots it by reading
+
+> 🔑 **Lilian, 2026-09-02, after she — not the session — noticed it in a card feed:** *"hay
+> transacciones entrantes y salientes… Algunas de ellas son por el mismo monto, es decir, el mismo
+> dinero que se pagó luego volvió a entrar… si yo no me doy cuenta, tú no lo hubieses notado y
+> hubiésemos pasado esto por alto. ¿Hay alguna forma de que podamos evitar que esto suceda en el
+> futuro?"*
+
+🛑 **THIS IS THE ANSWER TO THAT QUESTION, AND IT IS A SCAN, NOT AN INSTINCT.** The reason it was
+missed is not carelessness: **a ledger read top to bottom hides it by construction.** The charge and
+its credit sit weeks apart, under different dates, sometimes in different months, and **each row on
+its own is perfectly ordinary.** Only *sorting* shows the pair. ⛔ **So "look out for it" is not a
+rule — a session cannot look out for something that is invisible until it is sorted. The rule is
+that the sort is RUN.**
+
+##### 🔑 The principle, in one line
+
+**A REFUND OF A COST DEDUCTED IN THE SAME YEAR IS NOT INCOME — IT REDUCES THE COST; AND A REVERSAL IS
+NOT AN EXPENSE.** The ledger shows two rows; **there is one transaction, and its amount is the net.**
+Whatever you do with one row, you must do with its mirror.
+⚠️ **The same-year part is not decoration.** A refund arriving in a **later** year of something deducted
+in an earlier one is a different question — under the **tax benefit rule (§111)** it is generally
+**income**, not a reduction of this year's cost. **So establish which year the deduction was taken in
+before you net anything**, and read the table of mechanisms below with that in mind: several of them
+(a chargeback, a deposit returned, a third-party reimbursement) routinely cross a year end.
+
+##### ⏱️ WHEN IT RUNS — three triggers, and none of them is "if it looks odd"
+
+**1 · 🔴 BEFORE ANY JOURNAL ENTRY MOVES AN AMOUNT OUT OF AN ACCOUNT.** This is the one that costs
+money. Reclassify the charges, miss the credits, and **the entry moves the GROSS when the truth is
+the NET** — the distribution, the disallowance or the owner's income is overstated by the whole of
+the credits, and **an orphan credit is left behind in the original account**, where next year it
+reads as negative expense.
+**2 · Whenever a figure is taken from an account that holds BOTH debits and credits** — any expense
+account with credits in it, any income account with debits, any capital account.
+**3 · Whenever a single vendor, platform or processor has many rows** — a marketplace, a card
+processor, an insurer, a payroll service, a fuel network, a rental platform.
+
+##### 🛠️ HOW IT IS RUN — five steps, mechanical, on the ledger not on the report
+
+**A summary report cannot answer this — it has already netted, or already dropped the credits. Run
+it on the transaction-level ledger for the year.**
+
+1. **Split the account into debits and credits and TOTAL EACH SIDE SEPARATELY.** ⛔ Never start from
+   the net. **Report all three numbers — gross out, gross in, net** — because the net alone conceals
+   how much traffic produced it, and the gross alone is what gets moved by mistake.
+2. **Match on AMOUNT first, to find the candidates.** Every credit whose absolute value equals a
+   debit in the same account or from the same payee is a candidate pair. This is a cheap sort and it
+   is what a human eye cannot do.
+3. **🔑 THEN RE-GROUP ON THE REFERENCE THE DESCRIPTOR CARRIES — and that, not the amount, is the
+   real unit.** Bank and card descriptors usually carry the thing the money was for: a trip, an
+   order, an invoice, a policy, a ticket, a booking, a claim. **Group by it and the chaos resolves.**
+   ⚠️ **Amount-matching alone finds only the exact reversals**; the reference finds the **partial**
+   ones, which never match on amount and are the ones that carry a real cost.
+   ⚠️ **Descriptors truncate.** When a reference is cut short, say so and match on amount as a
+   fallback — and check whether the ambiguity changes anything before spending time on it.
+4. **Name the MECHANISM for every pair.** *"They cancel"* is not an explanation; it is the
+   observation that starts one. The common ones, and each means something different for the return:
+
+   | Mechanism | What it looks like | What it means |
+   |---|---|---|
+   | **Cancelled / voided purchase** | charge, then a credit for **exactly the same amount**, days apart, same reference | **net 0.00** — nothing happened; neither row belongs anywhere |
+   | **Billing retry after a decline** | charge and credit **the same day**, often with `REBILL` / `CREDIT` written in by the processor; may post out of order | **net 0.00** — the vendor tried and collected nothing |
+   | **Partial refund** | a credit for **less** than the charge | **a real cost — the remainder stays.** This is the one amount-matching misses |
+   | **Chargeback / dispute** | a credit long after the charge, often round | the cost may return again later — check the following months |
+   | **Duplicate posting** | two identical debits, one reversed | a feed artifact, not a transaction |
+   | **A deposit paid and returned** | out early, back later, same counterparty | **never an expense** — it was an asset while it was out *(see the form SOP's "a refundable deposit that disappears")* |
+   | **A cost reimbursed by a third party** | out to a vendor, in from someone else | ⚠️ **not a reversal.** Two transactions, and the reimbursement may be **income** |
+   | **Money routed through for somebody else** | in and out, roughly equal, all year | a **pass-through**, and it is neither income nor expense — but it changes what the top line is |
+
+   🔑 **The last two are why this scan is not only about netting.** A pair that nets to zero can
+   still be **two** taxable events. **Establish which before you cancel anything.**
+5. **⛔ NEVER MOVE A ROW — MOVE THE GROUP.** The unit of the reclassification is the reference, not
+   the line. **And state the post-entry check as a BALANCE, not as a count of rows**: *"the account
+   must land on X"*, because a reader who moved the wrong rows still moved the right number of them.
+
+##### 🛑 THE PART THAT ACTUALLY STOPS IT HAPPENING AGAIN: THE SCAN IS REPORTED EVEN WHEN IT FINDS NOTHING
+
+🔑 **A silent session is indistinguishable from a session that did not look**, and that is precisely
+what went wrong: **nothing in the delivery said the account had never been examined for this.** So
+the delivery carries one line per scanned account, **including the empty ones**:
+
+```
+Freight and delivery   31 rows = 24 out 812.55 - 7 in 96.40 -> NET 716.15   (2 redeliveries; 1 claim paid)
+Trade subscriptions     6 rows = 6 out, 0 in -> NET 288.00                  (no mirrors)
+```
+
+⚠️ **Two lines of output for an account with no mirrors is the price of never missing one again**,
+and it is cheap.
+⛔ **Those account names and every figure in them are INVENTED, like every example in this skill** — a
+real client's figures belong in that client's working paper *(§5)* and **nowhere else in the repo**,
+this file included. 🛑 **And "the example is close enough to the real one to be useful" is exactly how a
+client's ledger ends up in a firm-wide file** — an illustration must share **no digits** with the return
+that prompted it.
+
+##### 💥 WHAT IT COSTS WHEN IT IS SKIPPED
+
+**Three separate failures, and only the first is arithmetic:**
+- **The reclassification is overstated by the credits.** On the return that is a wrong deduction, a
+  wrong distribution, and — where basis or AAA is tight — **a wrong figure on somebody else's 1040.**
+- **The orphan credit stays behind** and turns the account negative next year, where a different
+  person has to explain it with none of this context.
+- 🔑 **And the one Lilian named as the reason for the rule:** *"que se mueve dinero de una cuenta a
+  otra y luego no sabemos esos totales de dónde salen y no podemos entender ese dinero."* **A total
+  nobody can decompose is not a small problem — it is a figure that cannot be defended, and it
+  outlives everyone who could have explained it.** *(The client that produced this rule had a
+  five-figure year-end entry with an empty memo. It cost days.)*
+
+##### 📌 AND THE HABIT THAT PREVENTS THE NEXT ONE: EVERY LINE OF EVERY ENTRY CARRIES ITS OWN NOTE
+
+**Whatever the accounting software calls the per-line field — Description, Memo, Name — it gets a
+short sentence saying WHERE THAT AMOUNT CAME FROM**, on **every** debit and **every** credit, and the
+entry header gets the *why*. ⛔ **An entry whose amount cannot be reproduced from its own note is
+unfinished, however correct the number is.** *(Lilian, 2026-09-02: "una nota junto a cada débito y
+crédito… para no volver a cometer el mismo error que hemos visto en estos libros.")*
+
 ---
 
 ### 4B · The delivery format
@@ -975,6 +1091,11 @@ is how an SOP becomes confidently wrong.**
   — first that the tables never located Form 8829, then that she needs the flow, the explanations
   and the checkboxes as well. **Her corrections ARE the standard; write them in rather than
   remembering them.**
+- 🔄 **A SESSION MISSES SOMETHING THE PERSON ASKING CAUGHT BY EYE.** ⛔ **That is a missing SCAN, not
+  an attention failure** — and the fix is never "be more careful", which cannot be executed. Work out
+  what sort would have made it visible, write the sort down as a step that RUNS, and require it to be
+  **reported even when it finds nothing**, because a silent session and a session that never looked
+  read identically. **§4A-M is the first of these; there will be others.**
 - **Someone reports how the SOFTWARE behaves** — which worksheet feeds which form, which screen an
   entry has to be made on, which error it throws. That is knowledge no IRS document carries, and
   rule 9 says to record it.
