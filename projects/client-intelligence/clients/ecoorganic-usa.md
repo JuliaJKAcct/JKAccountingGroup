@@ -1114,6 +1114,28 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
 - 🧾 **ONE DOCUMENT WOULD SETTLE THE LARGEST REMAINING QUESTION: the insurance declaration pages** for the two
   auto policies. They name the insured vehicles, and would settle both the premiums that were left in the
   company and the ones that were questioned.
+- 🧾 **2026-09-03 — THE BOOK CHANGES BEHIND THE RETURN ARE POSTED, and Lilian set a firm rule doing
+  it.** Two corrections went into the client's books, both dated at year end and both flagged as
+  adjusting entries so they land in one report the reviewer can pull. **The first** moved a dealership
+  refund out of the fuel account and into the repair account where the charge it refunds sits — **and
+  it was done as a visible journal entry rather than by editing the original transaction**, at
+  Lilian's insistence: *"si una persona viene después y mira estos libros, especialmente Julia,
+  entienda qué pasó, porque si simplemente la recategorizo, no va a quedar evidencia."* ⚠️ **One
+  premise there needed correcting and it strengthened her case: the accounting software DOES log every
+  edit — the problem is that the log sits where nobody thinks to look.** 📌 **Now a firm procedure, not
+  a client decision:** [`correcting-entries.md`](../../sops/correcting-entries.md). **The second**
+  moved a payment that had gone OUT of the company for the owner from the contributions account, where
+  it sat as the only negative row among fifty-one, into distributions — so **the equity figures are now
+  gross rather than netted**, which lets the firm's own netting policy be tested against them for the
+  first time *(it still fails, so the return's presentation does not change)*. 🔴 **On the return this
+  moves exactly two boxes — the distributions line on Schedule K and the matching K-1 code** — and
+  nothing else, because both equity sides rose together. **The basis room the depreciation election is
+  measured against is unchanged.**
+- 🔤 **And a delivery rule, from the same session:** a per-line description on a journal entry that
+  **the person pasting it has to ask about has failed, however accurate it is** — she asked what one
+  of the English terms meant, and it was rewritten to show the arithmetic instead of labelling it.
+  **In Spanish the columns are `débito` and `crédito`, never *debe* and *haber*** — recorded in
+  `CLAUDE.md` so no future session reintroduces it.
 - 🧮 **2026-09-02 (night) — THE FY2025 RETURN IS BUILT, and four things stop it being transmitted.** The
   working paper now carries the year-end reclassification **exactly as it is typed into QuickBooks** — five
   lines, each with its own short description saying where that amount came from, plus the header memo — and

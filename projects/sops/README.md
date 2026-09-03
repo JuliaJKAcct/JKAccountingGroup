@@ -31,6 +31,7 @@ sops/
 ├── florida-company-formation-sunbiz.md          ← Part 1: form the company on Sunbiz (Articles of Incorporation / Organization)
 ├── ein-application-irs.md                       ← Part 2: Federal EIN (IRS Form SS-4) after the entity is Active on Sunbiz
 ├── chart-of-accounts-standard.md                ← firm COA standard: number ranges + rules + how to adapt per niche
+├── correcting-entries.md                        ← re-categorise, or post a journal entry? the rule, and how to write a correcting entry someone can retrace
 ├── form-1040-preparation.md                     ← Tax Return: the MODULAR individual-return procedure — an intake selector plus one module per form
 ├── form-1120s-preparation.md                    ← Tax Return: prepare an S-corporation return from QuickBooks — for a FIRST-TIME preparer
 │   form-1120s-preparation.html                  ← Atlas render of the above

@@ -227,6 +227,13 @@ in that folder.
   Russian — and keep using it until they switch or explicitly ask for another
   language. This governs the *chat* only; committed repo artifacts stay in English
   per the rule above.
+  ⚠️ **In SPANISH, a journal entry's columns are `DÉBITO` and `CRÉDITO` — never *debe* and *haber*.**
+  _(Lilian, 2026-09-03: "en español no se distinguen una de la otra" — said aloud or skimmed on a
+  screen the two are too close, and she reads these tables while typing into accounting software.)_
+  🔑 **The text that goes INTO the client's books stays in English** *(the accounts are in English and
+  Julia reads it)* — this governs the table we hand her, not the description she pastes.
+  ⛔ **And a description she has to ask about has failed, however accurate it is:** when she asks what
+  a word in one means, that is the signal to rewrite it, not to explain it and move on.
 - **Lilian is practicing her English — support it, don't guess.** Lilian sometimes
   runs her sessions in English on purpose, to improve it (she has little day-to-day
   practice). Her English is still developing, so she may make mistakes or phrase a
