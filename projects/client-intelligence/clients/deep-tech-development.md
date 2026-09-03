@@ -200,35 +200,46 @@ the actual details.
   downloaded the rest on 2026-08-25**, so it must be downloaded **before** the closure is confirmed or it is
   lost with the account. **Double note `503544` rewritten in place** with the corrected status, the ordered
   next actions and the ticket number. _(Worked by Lilian.)_
+- 2026-09-03, 5:27 pm — **Julia gave Shopify the express written permission to close the Balance
+  account**, inside the support conversation: *"Yes, please, go ahead and close the Shopify Balance
+  account. I understand that that's the only way we can transfer the ownership since an alternative
+  would be to change the bank account, but the business have only one bank account. So, yes, you can go
+  ahead."* The case therefore passes back to Shopify for the first time since 2026-08-27. **Double note
+  `503544` updated in place** with her wording and the new status, and a **one-shot chase Routine armed
+  for 2026-09-08** (`trig_014ZK9ZhX4su7hJ8DpaWh4xa`) at Lilian's request — *"si detectas que no se
+  responden, por favor me dejes saber"*. ⚠️ **That Routine is a reminder, not a detector**: created from a
+  session, it holds no connectors and cannot open Julia's mailbox on its own. **The August 2026 Balance
+  statement is still not confirmed as downloaded** and remains the one thing that cannot be recovered
+  once Shopify acts. _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
-- 🔴 **SHOPIFY — the ownership transfer is blocked, and the case has been sitting on OUR desk, not Shopify's.**
-  The active **Shopify Balance account** is what blocks the transfer; it has to be **closed permanently** first,
-  and closure takes the Balance statements with it. Ticket **`#69851505`**. Full trail: Double note **503544**.
-  🔴 **ESTABLISHED 2026-09-03, and it corrects the earlier reading.** Shopify's reply of **2026-08-27**
-  (advisor "Alex L") confirms the account shows **$0** and that they can proceed — and then asks for Julia's
-  **express permission in writing, inside the support conversation**, before they act: *"We'll wait for your
-  confirmation before taking the next step."* **Nobody read it for seven days**, so there was never a
-  confirmation email pending: Shopify was waiting on us. Corroborating: the store's **August 2026 Balance
-  statements** were issued **2026-09-03** (the account is still open) and the **2026-09-01** bill charged
-  normally ($49.00 CAD).
-  ➡️ **NEXT ACTIONS, in this order:**
-  1. ⚠️ **Download the AUGUST 2026 Balance statement first** and file it in the client's Drive folder. Julia
-     downloaded every statement on **2026-08-25**; the August one was only issued on **2026-09-03**, so it is
-     the one statement not on file, and the closure removes access permanently.
-     Route: `nrtr06-xk.myshopify.com/admin/shopify-balance/account/6786369/statements`.
-  2. **Reply inside the conversation** (`help.shopify.com/en/inbox/14006272`, button *"Continue conversation"*)
-     giving express permission to close Balance, quoting ticket `#69851505`.
-     🛑 **Alex writes "please reply to this email" — do not.** That address is `no-reply@shopify.com` and Shopify
-     does not monitor it; the reply only counts inside the conversation.
-  3. Wait for Shopify to confirm the closure **in that conversation** — check it directly, no notice will come.
-  4. Then *Settings → Users → transfer ownership* to Vitalii Ivanov.
-  ⓘ **What closure costs, in Shopify's words:** the current owner loses that Balance account and any Balance
-  features or cards connected to it — required, they say, so the store transfers cleanly and the new owner sets
-  up financial services under his own information.
-  ⓘ **Noted, cause NOT established:** Julia's out-of-office auto-reply fired back into the Shopify support
-  thread **twice** on 2026-08-25, to `mailer3.shopify.com`. Whether it affected anything is unknown — recorded,
-  not diagnosed. _(Shopify support conversation read 2026-09-03; Gmail searched the same day — Lilian.)_
+- 🟡 **SHOPIFY — Julia has given the permission; we are now genuinely waiting on Shopify.**
+  The active **Shopify Balance account** blocks the ownership transfer and has to be **closed
+  permanently** first. Shopify asked on **2026-08-27** for Julia's express written permission; she gave
+  it **2026-09-03 at 5:27 pm**, inside the support conversation. Ticket **`#69851505`**. Full trail:
+  Double note **503544**.
+  🔴 **URGENT AND UNCONFIRMED — the AUGUST 2026 Balance statement.** Julia downloaded every statement on
+  **2026-08-25**; the August one was only issued on **2026-09-03**, and **nothing records it being
+  downloaded before the permission was given.** Shopify may close the account at any moment and closure
+  destroys access to the statements permanently, so this is a same-day item:
+  `nrtr06-xk.myshopify.com/admin/shopify-balance/account/6786369/statements` → file it in the client's
+  Drive folder with the others.
+  ➡️ **Then:** watch for Shopify's confirmation **inside the conversation**
+  (`help.shopify.com/en/inbox/14006272`) — 🛑 **it will not arrive by email**, the notification from
+  `no-reply@shopify.com` carries no text and that address is not monitored. If nothing by about
+  **2026-09-10**, chase inside the conversation quoting the ticket. Then
+  *Settings → Users → transfer ownership* to Vitalii Ivanov.
+  ⏰ **A one-shot chase Routine is armed for 2026-09-08 09:00 ET** — `trig_014ZK9ZhX4su7hJ8DpaWh4xa`,
+  *"Deep Tech Shopify — chase the Balance closure (ticket #69851505)"*. ⚠️ **It was created from a
+  session, so it carries NO connectors and cannot read Gmail or Double by itself** — it is a reminder
+  that fires into a session and says what it could not reach, not an automated detector. To make it a
+  real check, a person must recreate it at claude.ai/code/routines with the Gmail + Double connectors
+  attached (see the [`automated-email-reports`](../../../.claude/skills/automated-email-reports/) skill,
+  the `created_via` table).
+  ⓘ **What closure costs, in Shopify's words:** the current owner loses that Balance account and any
+  Balance features or cards connected to it — required, they say, so the store transfers cleanly and the
+  new owner sets up financial services under his own information.
+  _(Shopify support conversation, read and answered 2026-09-03 — Lilian and Julia.)_
 - ⚠️ **USPS mail forwarding for this company (and for 1701 N M ST LLC, Universal Trading Technology
   LLC, and the owner individually) ends 2026-09-18** — confirm whether it needs renewing or whether
   a permanent address change should be filed instead, before mail starts bouncing. STILL OPEN, **20 days
