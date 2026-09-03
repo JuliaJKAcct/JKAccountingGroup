@@ -1114,6 +1114,30 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
 - 🧾 **ONE DOCUMENT WOULD SETTLE THE LARGEST REMAINING QUESTION: the insurance declaration pages** for the two
   auto policies. They name the insured vehicles, and would settle both the premiums that were left in the
   company and the ones that were questioned.
+- 🔴 **2026-09-03 (night) — THE 2025 OWNERSHIP IS SETTLED AND IT IS NOT WHAT THE FIRM HAD BEEN WORKING
+  ON: TWO shareholders at 50% each, the father and the son.** Lilian found it in Julia's notes. ✅ **The
+  prior year genuinely had ONE owner** — that reading, taken off the filed prior-year return, was right —
+  **it is the current year that changes.** 🧮 **What it rebuilds on the return:** the shareholder count,
+  **two K-1s instead of one** *(the father's marked final, the son's not)*, the income and the
+  nondeductible items split in half, **two §199A statements**, and **two separate basis computations
+  instead of one**. ⚖️ **Nothing above that level moves** — the company's income, deductions and balance
+  sheet do not depend on how many people own it.
+- ⚠️ **TWO THINGS RIDE ON IT AND NEITHER IS SETTLED — both go to Julia.** ① **WHEN the son was
+  admitted.** The prior year closed with the father holding every share, so if the admission happened
+  **during** the current year the law forces a **per-day** allocation and a flat half misstates **both**
+  K-1s. ② **The real split of the distributions.** Half-and-half is Lilian's working assumption to get
+  moving, not a finding — *"luego que Julia determine cómo lo vamos a resolver"*. 🔴 **The exposure is
+  real: at the extreme, one shareholder's headroom before a distribution becomes taxable falls by an
+  order of magnitude, and that is what decides how much depreciation can safely be elected.** ⛔ **So the
+  depreciation election waits on it.**
+- 🛠️ **AND THE BOOKS CANNOT HOLD THE ANSWER AS THEY STAND.** There is one contribution account and one
+  distribution account for two people. The fix is **a sub-account per shareholder** under each — ⛔ **not
+  the name field on a journal entry**, which in QuickBooks only accepts a customer, vendor or employee,
+  so it files a shareholder as a **vendor** and feeds the 1099 workflow this return already has an open
+  question about. **A method for splitting the rows for real is written into the working paper:** the
+  rows that carry a name settle themselves, then the ones paying an identifiable obligation, then the
+  cards, then the cash withdrawals — and 🔑 **the one the ledger can never answer and somebody has to
+  ask: whose are the two personal checking accounts the money leaves from and returns to.**
 - 🧾 **2026-09-03 — THE BOOK CHANGES BEHIND THE RETURN ARE POSTED, and Lilian set a firm rule doing
   it.** Two corrections went into the client's books, both dated at year end and both flagged as
   adjusting entries so they land in one report the reviewer can pull. **The first** moved a dealership
