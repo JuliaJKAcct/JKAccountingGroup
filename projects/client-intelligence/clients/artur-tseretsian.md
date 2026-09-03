@@ -212,10 +212,18 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   a channel **outside** the digital sweep. So the absence of an SSN update in
   Gmail/Double/Drive is **not** evidence the number hasn't been obtained; confirm on
   WhatsApp / with Lilian directly before treating it as still-missing.
+- _(2026-09-03, Lilian — fact from the client's WhatsApp message of 2026-07-31)_ — Lilian
+  confirmed the missing piece: on **2026-07-31** the client wrote her (by WhatsApp) that he
+  had gone to the **Social Security office**, and they told him the son's replacement Social
+  Security card would be **sent by postal mail**, allowing **about a month** — so the card was
+  expected around **late August 2026**. This explains the channel gap the sweep hit: the update
+  lived in WhatsApp, not in Gmail/Double/Drive. Status stays **open** pending the number; the
+  expected-arrival window has now passed, so the next step is to **confirm receipt with the
+  client**. (No SSN value recorded — identity block.)
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
-- **The older child's (Artur Jr.'s) SSN** — card lost; client resolving at the SSA and will send the number. **Chased 2026-09-03 (Gmail/Double/Drive) — no update; still open.** The client sends such items by **WhatsApp** (outside the digital sweep), so check there / with Lilian before assuming it hasn't arrived.
+- **The older child's (Artur Jr.'s) SSN** — SS card was lost. On **2026-07-31** the client went to the SSA office and was told the replacement card would be **mailed by post** (allow ~1 month), so it was expected around **late August 2026**. As of **2026-09-03** we still don't have the number. The client sends such items by **WhatsApp** (outside the digital sweep). **Next step:** confirm with the client that the card arrived and get the number — entered into Double, never the repo.
 - **Year-end 2024 & 2025 addresses** — not chased this run (budget).
 - January 2026 statements (both accounts) to complete Dec 2025 — not chased this run (budget).
 - CS Float purchases/expense report — not chased this run (budget).
