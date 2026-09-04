@@ -3,7 +3,7 @@
 > **Status:** 🟡 **DRAFT — in review with Lilian.** Written 2026-08-14 while preparing the
 > firm's first 1120-S with a session assisting, and shaped by what a first-time preparer
 > actually needed to be told. **Remove this note when Lilian signs it off.** ·
-> **Owner:** Lilian · **Last updated:** 2026-08-23
+> **Owner:** Lilian · **Last updated:** 2026-09-04
 >
 > 🔵 **One part of this DRAFT is already FIRM POLICY and is not waiting on the sign-off: §5C-v**,
 > Julia's rule on netting a shareholder's contributions against their distributions. **Read it
@@ -1065,6 +1065,28 @@ total expenses per the P&L
 Then **itemise** it in the attached statement. If your line 20 does not equal that subtraction,
 you have either double-counted or dropped an account.
 
+#### 🧭 The subsections of §5C, in the order they appear
+
+⚠️ **The numbers are NOT the reading order, and that is deliberate.** Each one was added the first
+time the firm hit the problem it describes, and **the number never changes afterwards** so that every
+cross-reference in this SOP — and in the working papers that cite it — keeps pointing at the same
+place. Read down this table, not up the numbers.
+
+| | Subsection | What it is for |
+|---|---|---|
+| **1** | **5C-vi** · 🔴 Money the entity collects for somebody else | tips, gratuities and pass-throughs — money that runs through the company and is not its income |
+| **2** | **5C-iii** · 🛑 Distributions hide inside ONE capital account per shareholder | 🔑 **the entry point to the equity block.** Why the balance sheet cannot give you the two figures the return needs |
+| **3** | **5C-vii** · 🛠️ How to pull the two totals out of QuickBooks | the click-path for 2, the **balance-vs-movement** trap, and what the rows hold that the account name does not say |
+| **4** | **5C-iv** · ⚠️ A debit in a capital account is not automatically a distribution | how to classify what 3 puts in front of you |
+| **5** | **5C-v** · 🔵 **FIRM POLICY** — net the account, report distributions at zero | 🔵 **the one part of this draft that is already firm policy**, and its five gates |
+| **6** | **5C-ii** · ⚠️ Line 12 is tax the COMPANY bears | sales tax collected is not one |
+| **7** | **5C-viii** · 🔴 No payroll and big distributions | the reasonable-compensation exposure, and how to raise it with the client |
+| **8** | **5C-i** · ⚠️ Line 8 is WAGES | not the "payroll" accounts — the officer/staff/platform-fee split |
+
+🔑 **Items 2 → 3 → 4 → 5 are one chain and are meant to be read in that order.** 2 says what the
+return needs, 3 is how to get it out of the software, 4 is how to read what comes back, and 5 is how
+the firm then presents it.
+
 ### 5C-vi · 🔴 MONEY THE ENTITY COLLECTS FOR SOMEBODY ELSE — tips, gratuities, pass-throughs
 
 > 🛑 **FIRST, READ WHAT THIS SECTION DOES AND DOES NOT REOPEN, because §5B-i part 3 looks like it
@@ -1187,6 +1209,222 @@ apply the firm's netting policy without it — its own test is *"are the contrib
 distributions?"*, which is unanswerable from a net figure. **Split first. Decide the presentation
 second.**
 
+🛠️ **And "open the ledger and total them separately" is easier said than done if nobody has shown you
+which report to run. §5C-vii, immediately below, is the four reports — which THREE of them can give
+you both totals and which one can only ever confirm a net — and the one distinction that decides
+whether the number you get is even the right one.**
+
+### 5C-vii · 🛠️ HOW TO PULL THE TWO TOTALS OUT OF QUICKBOOKS — and the balance/movement trap
+
+**Nobody should have to add up a hundred ledger rows by hand, and nobody should have to ask.** This
+section is the click-path.
+
+🛑 **TWO THINGS TO FIX IN YOUR HEAD BEFORE THE ROUTES, OR THE REPORT WILL HAND YOU THE WRONG NUMBER.**
+
+**① You need TWO totals, and "the total at the bottom" is only ONE.** §5C's opening rule is *gross out
+· gross in · net — **never the net alone***. ⛔ **A report's own total is the NET.** The two figures the
+return needs come from **totalling the debit side and the credit side separately** (§5C-iii) — which
+means **reading the rows**, not reading a footer.
+
+**② A route can only give you the two totals if it gives you the ROWS.** That is the whole test, and
+it splits the four routes cleanly:
+
+| | Rows? | So it can give you |
+|---|---|---|
+| **ⓐ ⓑ ⓓ** | ✅ **yes** — each one lists the transactions | **both totals**, once you total the two sides yourself. *(Their own footers are still nets — ignore the footer, read the rows.)* |
+| **ⓒ** | ⛔ **no** — a change column and nothing behind it | **the NET only. Never the split.** It is a cross-check, not a source |
+
+**And how the client's chart is laid out decides how much work that is:**
+
+| The chart looks like | What it means for you |
+|---|---|
+| 🔴 **ONE pooled capital account per shareholder** *(§5C-iii says this is the usual case)* | the **per-shareholder** split already exists; the **contributions-vs-distributions** split does not. **You get it by totalling the two sides of that account's rows** — so ⓐ, ⓑ or ⓓ, and ⓐ is fine here because it is one account at a time anyway |
+| **A separate contributions account and a separate distributions account** *(less common)* | the **type** split already exists, so each account's net movement is a fast cross-check — ⛔ **but each account can still hold rows going the other way** *(see the six below)*, so the rows still have to be read before either figure is final. **And if there is more than one owner, the per-shareholder split does not exist at all** |
+
+🔑 **So: ⓑ is the one to run and keep, ⓐ is the quick one for a single account, ⓓ is ⓑ in another
+layout — and ⓒ can only ever confirm a net somebody else produced.**
+
+#### 🛑 FIRST — the distinction that decides whether your number is right at all
+
+| | What it is | Where you see it |
+|---|---|---|
+| **The BALANCE** | the account's total **since the company existed** — every year added together | the Balance Sheet |
+| 🔴 **The MOVEMENT** | only what happened **this year** | ⛔ **nowhere on a SINGLE-DATE Balance Sheet** — the **comparative** one has it, in its change column (route ⓒ) |
+
+🔴 **Schedule K line 16d asks for distributions MADE DURING THE YEAR. That is the MOVEMENT.**
+
+⛔ **Taking the balance off the Balance Sheet and typing it into 16d reports every distribution the
+company has ever made, in one year.** ⚠️ **And nothing in the tax software flags it** — the return
+comes out clean and wrong. **Same trap on the contributions side of Form 7203.**
+
+🔑 **Every route below gives the MOVEMENT rather than the balance. That is why they are the routes** —
+but see ① and ② above for which of them can give you the two totals rather than one net.
+
+#### The four routes, fastest first
+
+| | Route | Where | What you get |
+|---|---|---|---|
+| **ⓐ** | 🟢 **The account's own report** — *the fastest* | **Chart of accounts → find the account → the dropdown at its right → `Run report`** | set the dates to the tax year. **You get the account's transactions for the year, one account at a time** — about ten seconds each. ⛔ **Ignore the footer: that total is the NET.** ⚠️ **And this report prints an OPENING BALANCE and a CLOSING BALANCE around the rows** — in a section about the balance/movement trap, those are the two lines you must not pick up. **The year's rows are the answer; the balances are not.** ⚠️ **Check whether it gives you a debit/credit PAIR or one signed `Amount` column** — if it is a single signed column, the ⓓ warning below applies here too |
+| **ⓑ** | 🔵 **General Ledger, filtered** — 🟢 **THE ONE THAT ANSWERS THE QUESTION** | **Reports → `General Ledger` → set the year → `Customize` → `Filter` → `Distribution Account` → tick the equity account(s)** ⚠️ **`Distribution Account` is QuickBooks' own name for *the account a transaction line is distributed to* — it has nothing to do with shareholder distributions.** Do not read it as a shortcut | **every row** with its date, type, payee and description, and each account section closing with **`Total for <account>`** *(again, a net)*. 🔑 **Total the debits and the credits separately from the rows** — this is the report that lets you. **And it is the one to save with the working papers: both figures AND the evidence behind them, in one document** |
+| **ⓒ** | ⚖️ **Balance Sheet comparative** — *cross-check only* | **Reports → `Balance Sheet` → `Customize` → `Rows/Columns` → compare with the previous year**, and tick the change column ⚠️ *(the compare control has moved between QuickBooks versions — if you do not see it on the report bar, it is inside `Customize`)* | the **change column IS the movement** — but only ever the **net**. ✅ **Use it to confirm the NET from ⓐ, ⓑ or ⓓ by a different route** — two routes agreeing is what makes the figure safe to sign. ⛔ **It can never give you the gross split** |
+| **ⓓ** | ◻︎ **Transaction Detail by Account**, filtered to the equity account(s) | **Reports → `Transaction Detail by Account`** | the same row detail as ⓑ in a different layout — **so it answers the question too** — and it is the friendlier one to hand to someone else. ⚠️ **It shows ONE signed `Amount` column rather than a debit/credit pair**, so you split it by sign instead of by column — and **an equity account's normal side is CREDIT**, so get the sign convention straight on a row you already understand before trusting the totals |
+
+⛔ **What NOT to use as the source: the Statement of Cash Flows.** Its *Financing Activities* section
+does show owner money, but the software nets and reclassifies there in ways that do not always mirror
+the account. **For a figure that goes on a signed return, use the ledger — not something derived from it.**
+
+#### 🔴 The total is the START of the work, not the end
+
+**Run the report, then READ it.** The name of an account is not the nature of a transaction, and both
+accounts routinely hold rows that are not what the account is called:
+
+1. 🔴 **Money going OUT sitting inside the CONTRIBUTIONS account** — a debit in an account whose
+   normal side is credit. It is a distribution wearing the wrong label, and while it sits there it
+   **understates both figures at once.**
+2. 🔴 **Money coming BACK sitting inside the DISTRIBUTIONS account** — a credit in an account whose
+   normal side is debit. ⚠️ **Do NOT net it on sight.** 📌 **§5C-iv item 1 is the test**: it may be
+   netted only when it is an identifiable **ROUND TRIP** *(out and straight back, similar size, days
+   apart)*. **A capital contribution misposted into the distributions account is NOT a round trip** —
+   netting it understates **both** gross figures, so **Schedule K 16d, every K-1 box 16D, M-2 line 7
+   and Form 7203 lines 2 and 6 all come out short** *(line 7 subject to §10A's cap — where gross
+   distributions already exceed the AAA, line 7 is capped and may not move at all)*. ⛔ **And M-2 line 3 ONLY on a client that runs
+   contributions through it** — 📌 **on the textbook convention a capital contribution never touches
+   Schedule M-2 at all** *(§10.1 rule 6: it increases **basis**, not the AAA)*, and putting one on
+   line 3 to "fix" this overstates the AAA. **Check what the prior return did before you touch line
+   3** — §5C-v's **gate 4** exists for exactly this split. ⓘ *This also does not by itself flip §5C-v
+   gate 1 for a single shareholder: moving an amount from one side of that shareholder's account to
+   the other leaves the comparison unchanged. **Where it does break gate 1 is a SHARED
+   contributions/distributions account**, because there the netting can offset one owner's
+   contribution against another owner's distribution, which gate 1 exists to forbid.*
+3. ⚠️ **Owner health-insurance premiums** inside distributions — **potentially a deduction the company
+   is not taking, and it is chained to the payroll question.** A more-than-2% shareholder's premiums
+   are deductible by the corporation **only if they are included in that shareholder's Form W-2 box
+   1** — so where §5C-viii's no-payroll position is being taken, **there is no company deduction and no
+   self-employed-health-insurance deduction on the 1040 either.** ⚠️ **This SOP does not yet carry the
+   full treatment** *(the W-2 mechanics, the >2% test, the 1040 side)* — **say so rather than implying
+   it is covered**, and write it up the first time the firm actually takes the deduction.
+4. ⚠️ **Payments to a THIRD PARTY that look like labour**, paid out of the draw account — a
+   **Form 1099-NEC** question (§6B), whatever account they sit in.
+   ⛔ **NOT the same thing as payments to the SHAREHOLDER for services** — that is **not a 1099
+   question you settle here.** 📌 **§5C-viii is explicit: never write that a 1099 was owed to a
+   shareholder-employee**, because under the position being argued it was not. **It is the
+   reasonable-compensation question, and it goes there** — §5C-viii is also where the other branch
+   lives *(if the contractor characterisation were to stand, a 1099-NEC WAS owed and Schedule B 14a/14b
+   moves)*, which is exactly why it is decided there and not in a list of ledger rows.
+5. ⚠️ **Personal tax payments** inside distributions — usually correctly a distribution, and worth
+   naming in the hand-off so nobody re-deducts them. ⛔ **But check WHOSE tax it is, and there are
+   THREE answers, not two.** §5C-ii's test is the one that decides it: **not the account's name — who
+   the tax belonged to.**
+   - **The owner's personal federal or state income tax**, paid out of the company account →
+     🔴 **the owner's tax** → ✅ **a distribution.** Never a company deduction.
+   - **A state PTE tax borne by the ENTITY ITSELF** — usually an election the company makes, ⚠️ **but
+     not always: some states impose the entity-level tax without any election.** The label does not
+     decide it; **whose liability it was** does → ✅ **the COMPANY's own** → **line 12.** *(§5C-ii's
+     row reads "State income or PTE tax **on the corporation**" — that qualifier is the whole row.)*
+   - **A COMPOSITE-return payment, or nonresident-shareholder WITHHOLDING**, that the company remits
+     **on the owners' behalf** → 🔴 **the OWNERS' tax** → ⛔ **NOT a company deduction. It stays a
+     DISTRIBUTION.** ⚠️ **The two are not the same thing downstream, so do not describe them as one:**
+     **withholding** is credited on the owner's own state return, while a **composite return** is
+     generally filed **INSTEAD OF** that owner filing in that state at all. **Which one this client is
+     in changes what the owner does next — find out before you write it in the hand-off.**
+
+   🛑 **The trap is that the last two are often the same state, the same portal and sometimes the same
+   account name.** *"The company paid the state"* is not the test; **"whose liability was it"** is.
+   📌 **§5C-v carries the same pair, under a heading that calls them THREE CASES THE POLICY DOES NOT
+   COVER — though its own bullet only says "check the state before netting".** ⚠️ *The heading and the
+   bullet do not say quite the same thing; take the heading.* The mechanics differ state to state, so
+   **confirm it against the state's own rules rather than off this list.** ⛔ **Moving a composite
+   payment onto line 12 understates ordinary income, 16d, every K-1 box 16D, M-2 line 7 and every
+   Form 7203 line 6 at once** — and nothing in the software flags any of it.
+
+6. ⚠️ **A year-end entry closing the PRIOR year's draws or contributions to Retained Earnings**, dated
+   inside the year you are working. Not every bookkeeper does it, but where one does, **every route's
+   TOTAL folds it into "the movement", and ⓒ gives you nothing else** — so its figure is not this
+   year's activity at all. ⓐ, ⓑ and ⓓ show it as a **readable row** you can pull back out.
+   🔑 **One more instance of the same rule: read the rows, not the footer.**
+
+🔑 **A total from a report is a starting point. The row-by-row read is what turns it into a figure you
+can put your name on.** 📌 §5C-iv is how to classify what you find.
+
+#### ✅ The cross-check that proves it
+
+**Do it in whole numbers, on EACH equity account you read:**
+
+```
+closing balance (Balance Sheet, this year)
+  minus opening balance (Balance Sheet, prior year)
+  =  the movement    <- must equal the NET from route (a), (b) or (d)
+                        i.e. your gross credits minus your gross debits
+```
+
+⛔ **Know what this proves and what it does not: it proves the NET, never the SPLIT.** Two offsetting
+mistakes — a debit you missed and a credit you missed — cancel and the check still passes. **It
+catches a dropped or double-counted row; it cannot catch a misclassified one.** That is what the
+row-by-row read above is for.
+
+⚠️ **And check the opening balance against the PRIOR-YEAR RETURN'S Schedule L too.** If the books and
+the filed return do not start on the same figure, **something has to be explained before you go
+further** — §3 (build the map from the prior year), §8A (how the shareholder accounts were mapped)
+and §14 (the tie-out checks).
+
+#### 🛠️ THE STRUCTURAL FIX — where the answer should live when there is MORE THAN ONE shareholder
+
+**No report can tell you whose money a row is** — and **which fix you need depends on which chart
+shape ② put you in:**
+
+| You have | What is missing | The fix |
+|---|---|---|
+| **ONE pooled capital account per shareholder** *(the usual case)* | nothing structural — **the per-shareholder split is already there.** The type split comes out of totalling the two sides of the rows | ✅ **leave the chart alone.** ⓐ/ⓑ/ⓓ and a careful read are the whole job |
+| **One contributions account and one distributions account, shared by two or more owners** | 🔴 **the per-shareholder split does not exist anywhere in the books** — and it is exactly what Schedule K-1 box 16D and each Form 7203 need | **build a sub-account per shareholder under each parent**, below |
+
+**Where the second row applies:**
+
+```
+Owner's contribution                       (parent - left empty from here on)
+  |- Owner's contribution - <SHAREHOLDER 1>
+  |- Owner's contribution - <SHAREHOLDER 2>
+Owner's distribution                       (parent - left empty from here on)
+  |- Owner's distribution - <SHAREHOLDER 1>
+  |- Owner's distribution - <SHAREHOLDER 2>
+```
+
+✅ **Then the Balance Sheet gives you the split directly, and each Form 7203 reads off a line instead
+of being reconstructed.**
+
+⛔ **DO NOT use the `NAME` column on a journal entry for this.** **QuickBooks ONLINE** accepts only a
+**Customer, Vendor or Employee** there — **there is no shareholder type** — so tagging an owner files
+them in the **Vendor list**. ⚠️ *(QuickBooks **Desktop** has an "Other Names" list, which exists for
+exactly this; the constraint below is an Online one.)*
+
+🔑 **Two reasons that matters, and the second is the stronger one:**
+1. **It produces no balance.** You cannot read "distributions by shareholder" off the Balance Sheet
+   from a name tag. **Sub-accounts can — that is the whole point.**
+2. 🔴 **It puts the owner in the VENDOR LIST.** ⓘ *A vendor record does not by itself enter anyone into
+   1099 reporting — that needs the 1099 flag and a mapped account.* **But §6B's method is to run the
+   1099 review BY PAYEE off the ledger**, and an owner sitting in the vendor list is exactly what that
+   sweep picks up — into a question §5C-viii says must never be answered that way.
+
+⚖️ **Contrast with wages, where sub-accounts are NOT needed:** a salary's split between people is
+recorded on each **Form W-2**, so one `Compensation of Officers` account is enough. **Equity has no
+such second record — which is the whole reason the sub-accounts are worth building.**
+
+#### ⛔ And the one thing no report will ever answer
+
+> ⚠️ **A word of warning about the word "pooled", because this SOP uses it for two OPPOSITE shapes.**
+> Above, *"one **pooled** capital account per shareholder"* means **one account each** — the
+> per-shareholder split already exists. Elsewhere *(§10B, §11B, §12C)* **"pooled" means the other
+> thing: ONE account SHARED by all the owners** — where the split does not exist and cannot be
+> guessed. 🔑 **Whenever you meet the word, ask which one, and count the accounts before you believe
+> either.** *(§12C's "never assume half each" is about the SHARED shape.)*
+
+**Whose money it is.** Where **one account is SHARED by two or more owners**, that fact is not in the
+books at all —
+🛠️ **it is read row by row** *(names on transfers, whose obligation a payment settles, whose card,
+whose personal bank account the money leaves from and returns to)* **and what is left after that is
+a question for the client, not a calculation.** 📌 **§10B shows what an uneven split DOES** — each
+shareholder's basis test turns on it — **and says to settle it. ⚠️ It does not carry a method for
+determining whose money a row is; the passes above are it.**
+
 ### 5C-iv · ⚠️ A debit in a capital account is not automatically a distribution
 
 Total the debits, then **look at them**. They divide into three kinds, and only the last two are
@@ -1228,11 +1466,21 @@ wrong.
 > 🔑 **Julia's decision, 2026-08-20, and it is firm policy rather than a per-return judgement:**
 > **where a shareholder's contributions for the year EXCEED their distributions, net the two and
 > report distributions as ZERO.** **"At least"** for the case that prompted it — **S-corporation
-> owners who took no reasonable salary.** _(Relayed by Lilian; the pilot is the **Gossip
-> Miami LLC** 2025 return, recorded in its working paper at **§4 decision 5**. ⚠️ **An earlier version
-> of this line said "decision 8" and named no client — in that paper decision 8 is the undeposited cash
-> sales, not the distributions presentation. Corrected 2026-08-27, and the client is now named so the
-> reference can be checked.)_
+> owners who took no reasonable salary.** _(Relayed by Lilian; the pilot is the **Kolo Florida Inc**
+> 2025 return, recorded in its working paper at **§4 decision 8** — which says so in terms: *"this
+> return is the pilot"*, and *"CONTRIBUTIONS AND DISTRIBUTIONS: NETTED — and it is now FIRM POLICY"*.)_
+>
+> ⚠️ **This pointer has been wrong twice, in opposite ways, so here is the whole history.** It first
+> said **"decision 8"** and named **no client** — the decision number was RIGHT and the missing name is
+> what broke it. On **2026-08-27** a session supplied a name, guessed **Gossip Miami LLC**, found that
+> that paper's decision 8 is the undeposited cash sales, and "corrected" the number to **decision 5**.
+> ⛔ **That made it worse: Gossip Miami §4 decision 5 records the policy being TESTED AND FAILING**
+> — *"the firm's netting policy was tested and fails gate 1 in both branches… netting was never
+> available here."* **So the SOP's own firm-policy section pointed at a return that did not net.**
+> ✅ **Restored 2026-09-04 to Kolo §4 decision 8, checked against both working papers rather than
+> inferred.** 🔑 **The lesson, because it is the reason this note is long: a reference is repaired by
+> OPENING THE THING IT POINTS AT.** The 08-27 session corrected the half it could see from the SOP
+> alone and never opened either paper. _(Flagged by the independent review of PR #333.)_
 
 #### 🛑 THE SCOPE GATE — all five, checked BEFORE netting, on the GROSS figures
 
@@ -1403,6 +1651,7 @@ The test is not the account's name — it is **who the tax belonged to**.
 | Business licences, local occupational taxes, state franchise tax | ✅ yes |
 | Sales tax **collected from customers and remitted** | ❌ **no — it was never the company's** |
 | **State** income or PTE tax on the corporation | ✅ yes |
+| A **composite-return** payment, or **nonresident-shareholder withholding**, the company remits **on the owners' behalf** | ❌ **no — it was the OWNERS'.** It is a **distribution** (§5C-vii item 5) |
 | **Federal** income tax | ❌ no |
 
 **Why sales tax is different: the company is a collection agent, not a taxpayer.** The money
@@ -2700,6 +2949,10 @@ then accumulated E&P, then the OAA. **§10A qualifies it.**
 
 **Schedule M-2 is that pool's bank statement. That is all it is:** what was in it, what went in, what
 came out, what is left. Everything below follows from that one idea.
+
+🛠️ **Line 7 needs the year's DISTRIBUTIONS — the movement, not the account balance. §5C-vii is the
+four QuickBooks reports that give it, which of them can give the GROSS figure this line needs, and
+why a single-date Balance Sheet is the one place that will not.**
 
 | Line | What it does to the pool | Where the figure comes from |
 |---|---|---|
@@ -4024,6 +4277,10 @@ TIE-OUT CHECKS (§14)        [ ] all pass        date: ______
 
 The quick reference. **Confirm it against the prior year (§3) before you rely on it** — the
 right-hand column is the firm's usual convention, not a rule of the form.
+
+🛠️ **Where the equity figures come from is its own question, and it has its own section:
+§5C-vii — the four QuickBooks reports, which of them can give you both totals rather than one net,
+and the balance-vs-movement trap that makes the wrong figure look right.**
 
 | QuickBooks account (typical name) | Goes to |
 |---|---|
