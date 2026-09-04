@@ -1286,7 +1286,8 @@ accounts routinely hold rows that are not what the account is called:
    netted only when it is an identifiable **ROUND TRIP** *(out and straight back, similar size, days
    apart)*. **A capital contribution misposted into the distributions account is NOT a round trip** —
    netting it understates **both** gross figures, so **Schedule K 16d, every K-1 box 16D, M-2 line 7
-   and Form 7203 lines 2 and 6 all come out short.** ⛔ **And M-2 line 3 ONLY on a client that runs
+   and Form 7203 lines 2 and 6 all come out short** *(line 7 subject to §10A's cap — where gross
+   distributions already exceed the AAA, line 7 is capped and may not move at all)*. ⛔ **And M-2 line 3 ONLY on a client that runs
    contributions through it** — 📌 **on the textbook convention a capital contribution never touches
    Schedule M-2 at all** *(§10.1 rule 6: it increases **basis**, not the AAA)*, and putting one on
    line 3 to "fix" this overstates the AAA. **Check what the prior return did before you touch line
@@ -1329,11 +1330,12 @@ accounts routinely hold rows that are not what the account is called:
 
    🛑 **The trap is that the last two are often the same state, the same portal and sometimes the same
    account name.** *"The company paid the state"* is not the test; **"whose liability was it"** is.
-   📌 **§5C-v goes further than "check it": it lists this same pair among the THREE CASES THE NETTING
-   POLICY DOES NOT COVER, and says none of them may be inferred.** The mechanics differ state to
-   state, so **confirm it against the state's own rules rather than off this list.** ⛔ **Moving a composite payment onto line 12 understates
-   ordinary income, 16d, every K-1 box 16D, M-2 line 7 and every Form 7203 line 6 at once** — and
-   nothing in the software flags any of it.
+   📌 **§5C-v carries the same pair, under a heading that calls them THREE CASES THE POLICY DOES NOT
+   COVER — though its own bullet only says "check the state before netting".** ⚠️ *The heading and the
+   bullet do not say quite the same thing; take the heading.* The mechanics differ state to state, so
+   **confirm it against the state's own rules rather than off this list.** ⛔ **Moving a composite
+   payment onto line 12 understates ordinary income, 16d, every K-1 box 16D, M-2 line 7 and every
+   Form 7203 line 6 at once** — and nothing in the software flags any of it.
 
 6. ⚠️ **A year-end entry closing the PRIOR year's draws or contributions to Retained Earnings**, dated
    inside the year you are working. Not every bookkeeper does it, but where one does, **every route's
@@ -1408,7 +1410,15 @@ such second record — which is the whole reason the sub-accounts are worth buil
 
 #### ⛔ And the one thing no report will ever answer
 
-**Whose money it is.** Where the accounts are pooled, that fact is not in the books at all —
+> ⚠️ **A word of warning about the word "pooled", because this SOP uses it for two OPPOSITE shapes.**
+> Above, *"one **pooled** capital account per shareholder"* means **one account each** — the
+> per-shareholder split already exists. Elsewhere *(§10B, §11B, §12C)* **"pooled" means the other
+> thing: ONE account SHARED by all the owners** — where the split does not exist and cannot be
+> guessed. 🔑 **Whenever you meet the word, ask which one, and count the accounts before you believe
+> either.** *(§12C's "never assume half each" is about the SHARED shape.)*
+
+**Whose money it is.** Where **one account is SHARED by two or more owners**, that fact is not in the
+books at all —
 🛠️ **it is read row by row** *(names on transfers, whose obligation a payment settles, whose card,
 whose personal bank account the money leaves from and returns to)* **and what is left after that is
 a question for the client, not a calculation.** 📌 **§10B shows what an uneven split DOES** — each
@@ -1456,11 +1466,21 @@ wrong.
 > 🔑 **Julia's decision, 2026-08-20, and it is firm policy rather than a per-return judgement:**
 > **where a shareholder's contributions for the year EXCEED their distributions, net the two and
 > report distributions as ZERO.** **"At least"** for the case that prompted it — **S-corporation
-> owners who took no reasonable salary.** _(Relayed by Lilian; the pilot is the **Gossip
-> Miami LLC** 2025 return, recorded in its working paper at **§4 decision 5**. ⚠️ **An earlier version
-> of this line said "decision 8" and named no client — in that paper decision 8 is the undeposited cash
-> sales, not the distributions presentation. Corrected 2026-08-27, and the client is now named so the
-> reference can be checked.)_
+> owners who took no reasonable salary.** _(Relayed by Lilian; the pilot is the **Kolo Florida Inc**
+> 2025 return, recorded in its working paper at **§4 decision 8** — which says so in terms: *"this
+> return is the pilot"*, and *"CONTRIBUTIONS AND DISTRIBUTIONS: NETTED — and it is now FIRM POLICY"*.)_
+>
+> ⚠️ **This pointer has been wrong twice, in opposite ways, so here is the whole history.** It first
+> said **"decision 8"** and named **no client** — the decision number was RIGHT and the missing name is
+> what broke it. On **2026-08-27** a session supplied a name, guessed **Gossip Miami LLC**, found that
+> that paper's decision 8 is the undeposited cash sales, and "corrected" the number to **decision 5**.
+> ⛔ **That made it worse: Gossip Miami §4 decision 5 records the policy being TESTED AND FAILING**
+> — *"the firm's netting policy was tested and fails gate 1 in both branches… netting was never
+> available here."* **So the SOP's own firm-policy section pointed at a return that did not net.**
+> ✅ **Restored 2026-09-04 to Kolo §4 decision 8, checked against both working papers rather than
+> inferred.** 🔑 **The lesson, because it is the reason this note is long: a reference is repaired by
+> OPENING THE THING IT POINTS AT.** The 08-27 session corrected the half it could see from the SOP
+> alone and never opened either paper. _(Flagged by the independent review of PR #333.)_
 
 #### 🛑 THE SCOPE GATE — all five, checked BEFORE netting, on the GROSS figures
 
