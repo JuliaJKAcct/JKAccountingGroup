@@ -23,6 +23,7 @@ collateral/
 ├── starter-prompts.md              ← ready-made prompts for common assets
 ├── social-post-workflow.md         ← process for social posts (Gemini / NotebookLM / Claude)
 └── assets/                         ← finished, versioned pieces
+    ├── business-card/              ← Julia's business card (HTML source + JPEG exports)
     └── facebook-cover/             ← Facebook Page cover (HTML source + PNG exports)
 ```
 

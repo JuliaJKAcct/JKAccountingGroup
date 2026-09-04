@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JK Accounting Group — Business card · Julia Kononova</title>
+
+<!--
+  ===========================================================================
+  JK ACCOUNTING GROUP — BUSINESS CARD  ·  Julia Kononova
+  ---------------------------------------------------------------------------
+  US trim size 3.5 x 2 in — 1050 x 600 px at 300 dpi (brand guide §8).
+  Rendered to JPEG by ./build.mjs at deviceScaleFactor 2 (2100 x 1200), which
+  is 600 dpi at trim: crisp on a phone screen and safe to print.
+
+  FRONT  — the brand's deep-teal "moment panel" (guide §7). Medallion reversed
+           at left, the details at right: the same mark-left / details-right
+           grammar as the firm email signature, so the card and the footer read
+           as one object.
+  BACK   — ivory. The horizontal lock-up over the firm's positioning line in
+           Russian and English. The card speaking Russian IS the proof of the
+           bicultural promise, so no claim about it is printed.
+
+  Sources of truth — nothing here is invented:
+    • details  ../../../../../projects/sops/firm-identity.md  §1, §2
+    • title    "CEO · Chief Accountant" is the EMAIL-SIGNATURE title. Proposals
+               and engagement letters say "Chief Accountant" only; firm-identity
+               §2 says both are correct in their own place. A card is the
+               signature's twin, so it carries the signature's title.
+    • RU/EN    ../../../positioning.md — "we become their finance department" /
+               «мы становимся их финансовым отделом»
+    • NO booking URL: both booking links currently 500 (positioning.md).
+       A printed card cannot be corrected later, so it carries the website only.
+
+  Assets are referenced from brand/ — never copied here (CLAUDE.md: brand is
+  shared and central). Fonts come from the committed Cyrillic-subset embed, so
+  the render needs no network and is deterministic.
+  ===========================================================================
+-->
+
+<link rel="stylesheet" href="../../../../../brand/design-system/fonts-cyrillic-embedded.css">
+<style>
+  :root{
+    /* brand/JK-Brand-Guide.md §3 — nothing off-palette */
+    --teal:#123841; --teal-deep:#0D2A31;
+    --bronze:#9C6A39; --bronze-light:#CFA268;
+    --ivory-bg:#F6F3EC; --paper:#FBF8F2;
+    --ivory:#ECE6DA; --ivory-muted:#9FB3B6;
+    --ink:#22201A; --ink-head:#0D2A31; --ink-muted:#6F6857;
+    --teal-mid:#245C66; --hair-light:#DAD4C6;
+
+    --serif:'Source Serif 4', Georgia, serif;
+    --sans:'IBM Plex Sans', system-ui, sans-serif;
+    --mono:'IBM Plex Mono', ui-monospace, monospace;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{background:var(--teal-deep); padding:66px; display:flex; flex-direction:column; gap:56px; align-items:flex-start}
+  .frame{box-shadow:0 0 0 1px rgba(236,230,218,.14), 0 18px 44px rgba(9,31,36,.45); border-radius:2px; overflow:hidden}
+
+  /* 3.5 x 2 in at 300 dpi. 1 pt = 4.1667 px here, so 50px ≈ 12 pt. */
+  .card{
+    width:1050px; height:600px; position:relative; overflow:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ================================ FRONT ================================ */
+  .front{
+    background:var(--teal);
+    display:flex; align-items:center; gap:50px;
+    padding:66px 68px;
+  }
+  /* The medallion PNG is baked on #123841, so on this panel it is seamless —
+     a round seal on a teal field, never a tile (guide §5 "never boxed"). */
+  .seal{width:252px; height:252px; flex:0 0 252px; display:block}
+
+  .rule-v{width:1px; align-self:stretch; background:rgba(236,230,218,.17); flex:0 0 1px}
+
+  .details{flex:1 1 auto; min-width:0}
+
+  .name{
+    font-family:var(--serif); font-weight:600; font-size:54px; line-height:1.05;
+    letter-spacing:-.014em; color:var(--ivory); white-space:nowrap;
+  }
+  .name .creds{font-size:26px; font-weight:400; letter-spacing:0; color:var(--ivory-muted)}
+  /* the one bronze element on the front — same diamond the signature carries */
+  .name .diamond{font-size:15px; color:var(--bronze-light); padding-left:11px; vertical-align:.34em}
+
+  .role{
+    font-family:var(--mono); font-weight:500; font-size:21px; line-height:1;
+    letter-spacing:.155em; text-transform:uppercase; color:var(--ivory-muted);
+    margin-top:17px;
+  }
+
+  .rule-h{height:1px; background:rgba(236,230,218,.15); margin:34px 0 32px}
+
+  .contacts{display:grid; grid-template-columns:auto 1fr; column-gap:28px; row-gap:20px; align-items:baseline}
+  .lbl{
+    font-family:var(--mono); font-weight:500; font-size:17px; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--ivory-muted); white-space:nowrap;
+  }
+  .val{font-family:var(--sans); font-weight:400; font-size:29px; line-height:1.1; color:var(--ivory); white-space:nowrap}
+  .val .tel{font-weight:500; letter-spacing:.005em}
+
+  /* ================================= BACK ================================= */
+  .back{
+    background:var(--ivory-bg);
+    display:flex; flex-direction:column;
+    padding:56px 68px 50px;
+  }
+  /* lock-up + promise read as one block, optically centred over the footer */
+  .back-main{flex:1 1 auto; display:flex; flex-direction:column; justify-content:center; gap:50px}
+  /* The lock-up PNG is baked on white; multiply drops the white into the ivory
+     so the mark sits on the field directly, never in a tile. */
+  .lockup{width:560px; display:block; mix-blend-mode:multiply; margin:0 auto}
+
+  .promise{text-align:center; padding:0 8px}
+  .ru{
+    font-family:var(--serif); font-weight:600; font-size:46px; line-height:1.15;
+    letter-spacing:-.012em; color:var(--ink-head);
+  }
+  .en{
+    font-family:var(--sans); font-weight:400; font-size:25px; line-height:1.3;
+    color:var(--ink-muted); margin-top:13px;
+  }
+
+  .foot{border-top:1px solid var(--hair-light); padding-top:22px; display:flex; justify-content:space-between; align-items:baseline}
+  .foot span{
+    font-family:var(--mono); font-weight:500; font-size:19px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--teal-mid);
+  }
+  .foot .web{color:var(--teal); letter-spacing:.06em; text-transform:none; font-size:21px}
+</style>
+</head>
+<body>
+
+<!-- ------------------------------- FRONT -------------------------------- -->
+<div class="frame"><div class="card front" id="front">
+  <img class="seal" src="../../../../../brand/logo/png/JK-medallion-reversed-1024.png" alt="JK Accounting Group">
+
+  <div class="rule-v"></div>
+
+  <div class="details">
+    <div class="name">Julia&nbsp;Kononova<span class="creds">,&nbsp;MBA,&nbsp;EA</span><span class="diamond">&#9670;</span></div>
+    <div class="role">CEO &middot; Chief Accountant</div>
+
+    <div class="rule-h"></div>
+
+    <div class="contacts">
+      <div class="lbl">Direct</div><div class="val"><span class="tel">(786) 318-1505</span></div>
+      <div class="lbl">Email</div><div class="val">julia@jkaccountinggroup.com</div>
+      <div class="lbl">Web</div><div class="val">www.jkaccountinggroup.com</div>
+    </div>
+  </div>
+</div></div>
+
+<!-- -------------------------------- BACK -------------------------------- -->
+<div class="frame"><div class="card back" id="back">
+  <div class="back-main">
+    <img class="lockup" src="../../../../../brand/logo/png/JK-lockup-horizontal-2048.png" alt="JK Accounting Group — Tax · Bookkeeping · CFO">
+
+    <div class="promise">
+      <div class="ru">Ваш финансовый отдел в США</div>
+      <div class="en">Your finance department in the United States</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span class="web">www.jkaccountinggroup.com</span>
+    <span>Pembroke Pines &middot; Florida</span>
+  </div>
+</div></div>
+
+</body>
+</html>
