@@ -313,6 +313,31 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   three items **at cost with accumulated depreciation at zero**. **Action:** the prior-year Form 4562
   detail is required before any 1120-S can be finished, and it was not found in Double or in a
   bounded Drive search *(title `depreciation`/`4562`/`asset` × fullText `Ecoorganic`, 2026-08-31)*.
+- 🟢 **DEPRECIATION IS SETTLED FOR 2025 — 2026-09-04.** The tax software's own asset register was read
+  and reconciled to the ledger: **three assets, all placed in service in the second and third quarters
+  of 2025, no §179, and the 100% special allowance on each — so the whole cost is deducted in the first
+  year.** ⚠️ **This closes what had been the last blocking figure on the return.** Two consequences the
+  next person needs: **the books had no depreciation accounts at all** *(a 51-account chart with none
+  containing the word)*, so `Depreciation Expense` and `Accumulated Depreciation` are being created and
+  a year-end adjusting entry posts the charge — **which keeps the books on the same basis as the return
+  and leaves no book/tax depreciation difference**, as the prior year also did; and **the deduction
+  pushes each shareholder's distributions past their stock basis, creating a capital gain on each
+  owner's own personal return that nothing on the company return will flag.** 🔑 **The trade is still
+  clearly worth taking** — the ordinary income given up is several times the capital gain created —
+  **but it has to be told to both owners, and the prior-year basis figure for the outgoing owner
+  reduces his side of it and is still not in hand.** *(Figures live only in the return's working paper.)*
+- 🔴 **THREE ASSET-SIDE QUESTIONS THE REGISTER DID NOT ANSWER, found 2026-09-04 reading the ledger
+  against the software.** ① **The `Small tools and equipment` account holds ONE payment for the whole
+  year, to a technology vendor** — if it bought a single piece of equipment it probably belongs on the
+  depreciation schedule rather than in expense, and if it is properly expensed the return needs the
+  de minimis safe-harbor election statement attached. **Ask for the invoice; it moves figures either
+  way.** ② **A fourth vehicle account exists in the chart with a zero balance and no transaction
+  anywhere in the year** *(searched by account, by VIN and by name)* — **either a dead account, or a
+  truck the company owns that was never put on the books and has never been depreciated.** ③ **The
+  forklift's date in service in the software matches neither of the two payments in the ledger** — it
+  changes nothing on the return *(same quarter, same convention, full write-off)* but the register
+  should be right. ④ **All three assets are flagged "new" in the software and all three are used
+  vehicles/equipment** — used property can still qualify, but the flag asserts something they are not.
 - ✅ **TURO — THE 2025 EARNINGS ANSWER ARRIVED 2026-09-01** (Turo Executive Support emailed the
   client; Lilian supplied it). **What it settles:** the 2025 host-earnings breakdown exists in full,
   and **no Form 1099-K was issued for 2025**. **Figures live in the return's working paper, never
@@ -901,6 +926,38 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   the firm changed and why, and what stayed doubtful for Julia to decide. **The fuel, parking and insurance
   premiums the firm questioned stay exactly as Julia categorised them** — the exclusion is now a recorded
   decision rather than an omission, with the one document that would settle it named. _(Worked by Lilian.)_
+
+- 2026-09-04 — 🟢 **DEPRECIATION CLOSED, AND THE ENTRY TO POST IT WAS WRITTEN (Lilian).** She sent the
+  tax software's three asset screens and asked for the journal entry. **What they answered:** all three
+  dates in service *(none in the fourth quarter, so no mid-quarter convention)*, **no §179 and the full
+  special allowance on each** — so the entire cost of all three is deducted in 2025 — and the recovery
+  periods, which turn out not to matter this year because a full write-off ignores them. **Every cost
+  agreed to the ledger transaction by transaction**, which also closed an older open question about
+  whether one vehicle's book cost was the whole price *(it was: part cash, part financed against the
+  loan account already on the balance sheet)*.
+  🔴 **What the entry needed first: the books have NO depreciation accounts at all.** The 51-account
+  chart contains nothing with the word in it, so both an expense account and a contra-asset account are
+  being created — **and the contra-asset one is the trap**, because creating it as an expense would put
+  the charge through the profit and loss twice.
+  🔑 **The consequence that matters and that nothing in the software flags:** the deduction pushes each
+  shareholder's distributions past their stock basis, **so each owner has a capital gain on their own
+  personal return.** The company return will look perfectly clean. **It is still the right trade** — the
+  ordinary income given up is several times the gain created, and part of what remains is taxed at a
+  better rate — **but the outgoing owner's prior-year basis figure would reduce his side of it and is
+  still not in hand**, and **the younger owner's holding period is not established**, which decides
+  whether his gain is long or short term.
+  🔴 **Three new questions came out of reading the ledger against the software** — a single technology
+  payment sitting in a tools-and-equipment account that may be a fourth depreciable asset, a fourth
+  vehicle account with no balance and no transactions anywhere, and a date in service matching neither
+  payment. **Only the first moves figures.** All three are in §5 above and in the working paper.
+  📊 **She also asked for the whole basis-and-distributions mechanism explained step by step so she can
+  take it to Julia** — why large distributions are only a problem when they approach the basis ceiling,
+  why the company-level accumulated-adjustments account does not answer the question when there is no
+  C-corporation history, and what the available levers actually are. **Delivered in chat.** 🔑 **The
+  most valuable lever is not a tax election: it is establishing the REAL split of the contributions and
+  distributions between the two owners**, because the pooled accounts mean the working half-and-half
+  assumption could be hiding a five-figure gain for one of them. _(Worked by Lilian.)_
+
 
 ### ✅ The shareholder question — answered 2026-09-02, and what the search for evidence found
 
