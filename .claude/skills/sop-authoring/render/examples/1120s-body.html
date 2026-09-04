@@ -666,6 +666,55 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
       <p class="reveal">🔑 <b>So you cannot prepare an S-corp return from the balance sheet.</b> Open the shareholder&#8217;s ledger and <b>total the debits and the credits separately.</b> A movement of <code>+50,000</code> is equally consistent with <em>contributed 50,000, took nothing</em> and with <em>contributed 90,000, took 40,000</em> — and those two produce a different Form 7203, a different M-2 and a different K-1.</p>
     </div>
 
+
+    <div class="subbar reveal"><span class="tag">5C-vii</span><h3>&#128736;&#65039; How to pull the two totals out of QuickBooks &mdash; and the balance/movement trap</h3></div>
+    <div class="indent">
+      <p class="reveal">Nobody should have to add up a hundred ledger rows by hand, and nobody should have to ask. <b>This is the click-path.</b></p>
+    <div class="callout err reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">First &mdash; the distinction that decides whether your number is right at all</div>
+        <p>The <b>BALANCE</b> is the account&#8217;s total <b>since the company existed</b> &mdash; every year added together. That is what the Balance Sheet shows. The <b>MOVEMENT</b> is only what happened <b>this year</b>, and it is <b>nowhere on the Balance Sheet</b>.</p><p>&#128308; <b>Schedule K line 16d asks for distributions MADE DURING THE YEAR &mdash; the MOVEMENT.</b> Taking the balance and typing it into 16d reports every distribution the company has ever made, in one year &mdash; and <b>nothing in the tax software flags it.</b> Same trap on the contributions side of Form 7203.</p>
+      </div>
+    </div>
+      <div class="tablewrap reveal">
+        <table class="links">
+          <thead><tr><th>Route</th><th>Where</th><th>What you get</th></tr></thead>
+          <tbody>
+            <tr><td><b>&#9312; The account&#8217;s own report</b> &mdash; <em>fastest</em></td><td>Chart of accounts &rarr; the account &rarr; its dropdown &rarr; <b>Run report</b></td><td>set the dates to the tax year; <b>the total is at the bottom.</b> About ten seconds per account</td></tr>
+            <tr><td><b>&#9313; General Ledger, filtered</b> &mdash; <em>the one to keep</em></td><td>Reports &rarr; <b>General Ledger</b> &rarr; the year &rarr; Customize &rarr; Filter &rarr; <b>Distribution Account</b> &rarr; tick the two equity accounts</td><td>every row with its date, type, payee and description, each account closing with <b>Total for &lt;account&gt;</b>. &#128273; <b>The total AND its evidence in one document &mdash; save this with the working papers</b></td></tr>
+            <tr><td><b>&#9314; Balance Sheet comparative</b> &mdash; <em>the cross-check</em></td><td>Reports &rarr; Balance Sheet &rarr; <b>Compare another period</b> &rarr; Previous year, with the change column</td><td>the <b>change column IS the movement</b>. Two routes agreeing is what makes the figure safe to sign</td></tr>
+            <tr><td><b>&#9315; Transaction Detail by Account</b></td><td>Reports &rarr; Transaction Detail by Account, filtered to the two accounts</td><td>the same content as &#9313; in another layout &mdash; useful when handing the detail to someone else</td></tr>
+          </tbody>
+        </table>
+      </div>
+    <div class="callout warn reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">What NOT to use as the source</div>
+        <p>The <b>Statement of Cash Flows</b>. Its Financing Activities section does show owner money, but the software nets and reclassifies there in ways that do not always mirror the account. <b>For a figure that goes on a signed return, use the ledger &mdash; not something derived from it.</b></p>
+      </div>
+    </div>
+      <p class="reveal">&#128308; <b>The total is the START of the work, not the end.</b> Run the report, then <b>read it</b> &mdash; the name of an account is not the nature of a transaction, and both accounts routinely hold rows that are not what the account is called:</p>
+      <ul class="reveal">
+        <li>&#128308; <b>Money going OUT inside the CONTRIBUTIONS account</b>, posted as a negative &mdash; a distribution wearing the wrong label, and while it sits there it <b>understates both figures at once</b>.</li>
+        <li>&#128308; <b>Money coming BACK inside the DISTRIBUTIONS account</b>, posted as a positive &mdash; usually right to keep (it is why the figure is <b>net</b>), but you have to see it to know it is there.</li>
+        <li>&#9888;&#65039; <b>Owner health-insurance premiums</b> inside distributions &mdash; potentially a deduction the company is not taking (5C-viii, &#167;13A).</li>
+        <li>&#9888;&#65039; <b>Payments that look like labour</b> inside the draw account &mdash; a <b>Form 1099-NEC</b> question (6B), whatever account they sit in.</li>
+        <li>&#9888;&#65039; <b>Personal tax payments</b> inside distributions &mdash; correctly a distribution, but name it in the hand-off so nobody re-deducts it.</li>
+      </ul>
+      <p class="reveal">&#128273; <b>A total from a report is a starting point. The row-by-row read is what turns it into a figure you can put your name on.</b> 5C-iv is how to classify what you find.</p>
+      <p class="reveal"><b>The cross-check that proves it:</b> closing balance <em>minus</em> opening balance <b>=</b> the movement &mdash; which must equal the report total from route &#9312; or &#9313;. &#9888;&#65039; <b>And check the opening balance against the prior-year return&#8217;s Schedule L too</b> &mdash; if the books and the filed return do not start on the same figure, something has to be explained before you go further (&#167;3, 10.0b).</p>
+    <div class="callout err reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">The structural fix &mdash; where the answer should live with MORE THAN ONE shareholder</div>
+        <p><b>No report can tell you whose money a row is.</b> With one contribution account and one distribution account for two or more owners, <b>the split does not exist anywhere in the books</b> &mdash; and it is exactly what K-1 box 16D and each Form 7203 need. <b>Build a sub-account per shareholder under each parent</b>, and the Balance Sheet gives you the split directly.</p><p>&#9940; <b>Do NOT use the NAME column on a journal entry for this.</b> QuickBooks accepts only a <b>Customer, Vendor or Employee</b> there &mdash; there is no shareholder type &mdash; so tagging an owner files them as a <b>VENDOR</b>, which feeds the 1099 workflow (6B) with a name that does not belong in it. <b>And it produces no balance:</b> you cannot read &ldquo;distributions by shareholder&rdquo; off the Balance Sheet from a name tag. Sub-accounts can.</p><p>&#9878;&#65039; <b>Contrast with wages, where sub-accounts are NOT needed:</b> a salary&#8217;s split between people is recorded on each <b>Form W-2</b>. Equity has no such second record &mdash; which is the whole reason the sub-accounts are worth building.</p>
+      </div>
+    </div>
+      <p class="reveal">&#9940; <b>And the one thing no report will ever answer: whose money it is.</b> Where the accounts are pooled that fact is not in the books at all &mdash; it is read row by row (names on transfers, whose obligation a payment settles, whose card, whose personal account the money leaves from and returns to), and what is left after that is <b>a question for the client, not a calculation</b>. 10B carries the method and shows what an uneven split does to each shareholder&#8217;s basis.</p>
+    </div>
+
     <div class="subbar reveal"><span class="tag">5C-iv</span><h3>⚠️ A debit in a capital account is not automatically a distribution</h3></div>
     <div class="indent">
       <p class="reveal">Total the debits, then <b>look at them</b>. They divide into three kinds, and only the last two are distributions:</p>

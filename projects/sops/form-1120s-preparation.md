@@ -3,7 +3,7 @@
 > **Status:** 🟡 **DRAFT — in review with Lilian.** Written 2026-08-14 while preparing the
 > firm's first 1120-S with a session assisting, and shaped by what a first-time preparer
 > actually needed to be told. **Remove this note when Lilian signs it off.** ·
-> **Owner:** Lilian · **Last updated:** 2026-08-23
+> **Owner:** Lilian · **Last updated:** 2026-09-04
 >
 > 🔵 **One part of this DRAFT is already FIRM POLICY and is not waiting on the sign-off: §5C-v**,
 > Julia's rule on netting a shareholder's contributions against their distributions. **Read it
@@ -1186,6 +1186,116 @@ produce a different Form 7203, a different M-2, and a different K-1.
 apply the firm's netting policy without it — its own test is *"are the contributions larger than the
 distributions?"*, which is unanswerable from a net figure. **Split first. Decide the presentation
 second.**
+
+🛠️ **And "open the ledger and total them separately" is easier said than done if nobody has shown you
+which report to run. §5C-vii, immediately below, is the four ways to get those two totals out of
+QuickBooks — and the one distinction that decides whether the number you get is even the right one.**
+
+### 5C-vii · 🛠️ HOW TO PULL THE TWO TOTALS OUT OF QUICKBOOKS — and the balance/movement trap
+
+**Nobody should have to add up a hundred ledger rows by hand, and nobody should have to ask.** This
+section is the click-path.
+
+#### 🛑 FIRST — the distinction that decides whether your number is right at all
+
+| | What it is | Where you see it |
+|---|---|---|
+| **The BALANCE** | the account's total **since the company existed** — every year added together | the Balance Sheet |
+| 🔴 **The MOVEMENT** | only what happened **this year** | ⛔ **nowhere on the Balance Sheet** |
+
+🔴 **Schedule K line 16d asks for distributions MADE DURING THE YEAR. That is the MOVEMENT.**
+
+⛔ **Taking the balance off the Balance Sheet and typing it into 16d reports every distribution the
+company has ever made, in one year.** ⚠️ **And nothing in the tax software flags it** — the return
+comes out clean and wrong. **Same trap on the contributions side of Form 7203.**
+
+🔑 **Every route below gives the MOVEMENT. That is why they are the routes.**
+
+#### The four routes, fastest first
+
+| | Route | Where | What you get |
+|---|---|---|---|
+| **ⓐ** | 🟢 **The account's own report** — *the fastest* | **Chart of accounts → find the account → the dropdown at its right → `Run report`** | set the dates to the tax year; **the total is at the bottom.** One account at a time, about ten seconds each |
+| **ⓑ** | 🔵 **General Ledger, filtered** — *the one to keep* | **Reports → `General Ledger` → set the year → `Customize` → `Filter` → `Distribution Account` → tick the contribution and distribution accounts** | **every row** with its date, type, payee and description, and each account section closing with **`Total for <account>`**. 🔑 **This is the one to save with the working papers: the total AND the evidence behind it, in one document** |
+| **ⓒ** | ⚖️ **Balance Sheet comparative** — *the independent cross-check* | **Reports → `Balance Sheet` → `Compare another period` → `Previous year`**, and tick the change column | the **change column IS the movement**. ✅ **Use it to confirm ⓐ or ⓑ by a different route** — two routes agreeing is what makes the figure safe to sign |
+| **ⓓ** | ◻︎ **Transaction Detail by Account**, filtered to the two accounts | **Reports → `Transaction Detail by Account`** | the same content as ⓑ in a different layout — useful when handing the detail to someone else |
+
+⛔ **What NOT to use as the source: the Statement of Cash Flows.** Its *Financing Activities* section
+does show owner money, but the software nets and reclassifies there in ways that do not always mirror
+the account. **For a figure that goes on a signed return, use the ledger — not something derived from it.**
+
+#### 🔴 The total is the START of the work, not the end
+
+**Run the report, then READ it.** The name of an account is not the nature of a transaction, and both
+accounts routinely hold rows that are not what the account is called:
+
+1. 🔴 **Money going OUT sitting inside the CONTRIBUTIONS account**, posted as a negative. It is a
+   distribution wearing the wrong label, and while it sits there it **understates both figures at
+   once.**
+2. 🔴 **Money coming BACK sitting inside the DISTRIBUTIONS account**, posted as a positive. That one
+   is usually right to keep — it is why the distributions figure is **net** — but you have to see it
+   to know it is there.
+3. ⚠️ **Owner health-insurance premiums** inside distributions — potentially a deduction the company
+   is not taking (§5C-viii and the 1040 handoff, §13A).
+4. ⚠️ **Payments that look like labour** inside the draw account — a **Form 1099-NEC** question
+   (§6B), whatever account they sit in.
+5. ⚠️ **Personal tax payments** inside distributions — correctly a distribution, but worth naming in
+   the hand-off so nobody re-deducts them.
+
+🔑 **A total from a report is a starting point. The row-by-row read is what turns it into a figure you
+can put your name on.** 📌 §5C-iv is how to classify what you find.
+
+#### ✅ The cross-check that proves it
+
+**Do it in whole numbers, on the two accounts:**
+
+```
+closing balance (Balance Sheet, this year)
+  minus opening balance (Balance Sheet, prior year)
+  =  the movement          <- must equal the report total from route (a) or (b)
+```
+
+⚠️ **And check the opening balance against the PRIOR-YEAR RETURN'S Schedule L too.** If the books and
+the filed return do not start on the same figure, **something has to be explained before you go
+further** — §3 and §10.0b.
+
+#### 🛠️ THE STRUCTURAL FIX — where the answer should live when there is MORE THAN ONE shareholder
+
+**No report can tell you whose money a row is.** With one contribution account and one distribution
+account for two or more owners, **the split does not exist anywhere in the books** — and it is
+exactly what Schedule K-1 box 16D and each Form 7203 need.
+
+**Build a sub-account per shareholder under each parent:**
+
+```
+Owner's contribution                       (parent - left empty from here on)
+  |- Owner's contribution - <SHAREHOLDER 1>
+  |- Owner's contribution - <SHAREHOLDER 2>
+Owner's distribution                       (parent - left empty from here on)
+  |- Owner's distribution - <SHAREHOLDER 1>
+  |- Owner's distribution - <SHAREHOLDER 2>
+```
+
+✅ **Then the Balance Sheet gives you the split directly, and each Form 7203 reads off a line instead
+of being reconstructed.**
+
+⛔ **DO NOT use the `NAME` column on a journal entry for this.** QuickBooks accepts only a **Customer,
+Vendor or Employee** there — **there is no shareholder type** — so tagging an owner files them as a
+**VENDOR**, which feeds the 1099 workflow (§6B) with a name that does not belong in it. **And it
+produces no balance:** you cannot read "distributions by shareholder" off the Balance Sheet from a
+name tag. **Sub-accounts can.**
+
+⚖️ **Contrast with wages, where sub-accounts are NOT needed:** a salary's split between people is
+recorded on each **Form W-2**, so one `Compensation of Officers` account is enough. **Equity has no
+such second record — which is the whole reason the sub-accounts are worth building.**
+
+#### ⛔ And the one thing no report will ever answer
+
+**Whose money it is.** Where the accounts are pooled, that fact is not in the books at all —
+🛠️ **it is read row by row** *(names on transfers, whose obligation a payment settles, whose card,
+whose personal bank account the money leaves from and returns to)* **and what is left after that is
+a question for the client, not a calculation.** 📌 §10B carries the method and shows what an uneven
+split does to each shareholder's basis.
 
 ### 5C-iv · ⚠️ A debit in a capital account is not automatically a distribution
 
@@ -2701,6 +2811,9 @@ then accumulated E&P, then the OAA. **§10A qualifies it.**
 **Schedule M-2 is that pool's bank statement. That is all it is:** what was in it, what went in, what
 came out, what is left. Everything below follows from that one idea.
 
+🛠️ **Line 7 needs the year's DISTRIBUTIONS — the movement, not the account balance. §5C-vii is the
+four QuickBooks reports that give it, and why the Balance Sheet is the one place that will not.**
+
 | Line | What it does to the pool | Where the figure comes from |
 |---|---|---|
 | **1** Balance at beginning | what was in it on day one | 🔒 **last year's FILED return, its own line 8.** Copied, never recalculated. ⓘ **It can be negative** — losses do drive the AAA below zero |
@@ -4024,6 +4137,10 @@ TIE-OUT CHECKS (§14)        [ ] all pass        date: ______
 
 The quick reference. **Confirm it against the prior year (§3) before you rely on it** — the
 right-hand column is the firm's usual convention, not a rule of the form.
+
+🛠️ **Where the equity figures come from is its own question, and it has its own section:
+§5C-vii — the four QuickBooks reports that give the year's contributions and distributions, and
+the balance-vs-movement trap that makes the wrong one look right.**
 
 | QuickBooks account (typical name) | Goes to |
 |---|---|
