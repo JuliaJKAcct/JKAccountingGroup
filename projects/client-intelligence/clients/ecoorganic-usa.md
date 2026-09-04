@@ -994,14 +994,25 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   first:** one moved the cost sideways inside the balance sheet and never touched the profit and loss
   at all; the second got the expense side right but still emptied the cost account, which would have
   made the three assets vanish from the books with no record of what they cost. 🔑 **The two rules that
-  prevent both: the debit of a depreciation entry is never an asset account, and the original-cost
-  account never appears in a depreciation entry at all** — it moves the day the asset is bought and the
-  day it is sold, and nothing else. ⚠️ **The mechanical trap underneath it is the account dropdown**,
+  prevent both: on a client like this one the debit of a depreciation entry is never an asset account,
+  and the original-cost account never appears in a DEPRECIATION entry at all.** ⚠️ **Neither is an
+  absolute and the firm should not carry them as one** *(corrected in review the same day)*: where
+  depreciation is on assets used in **production** it is capitalised into inventory or
+  work-in-progress, and depreciation on an asset used to **build another asset** is capitalised into
+  it — **the debit is then an asset account, correctly.** That does not arise here — no inventory, a
+  service trade — **but it would at a manufacturer or a contractor carrying work-in-progress.** And
+  the original-cost account does move for a capital improvement, a price correction, a trade-in or an
+  impairment; **what it never does is appear in a depreciation entry.** ⚠️ **The mechanical trap underneath it is the account dropdown**,
   which offers the expense account and one same-named sub-account per asset; **the sub-accounts show
   the parent's name first, and the path is what tells them apart.**
   ✅ **A confirmation worth recording:** the expense account **already existed and was reactivated, not
-  recreated** — and the re-exported profit and loss puts it in the same section the prior year did,
-  which is what proves it is the original account rather than a duplicate.
+  recreated.** ⚖️ **The re-exported profit and loss puts it in the same section the prior year did,
+  which is CONSISTENT with that but does not prove it** — where an account lands is decided by its
+  type, and a new account of the same type would render identically *(corrected in review)*. **The
+  reactivation is what establishes identity.**
+  ⚠️ **And a related correction: the account's type is "other expense", not "expense".** That is why
+  it sits below net operating income, on this return and on the prior year's — **and it is the type,
+  not the name, that decides where it lands on the profit and loss.**
   🛠️ **Two loose ends on the entry, neither of which moves a figure:** the per-line descriptions were
   left empty *(the firm's own rule requires one beside every debit and every credit)*, and the
   adjusting-entry flag was unticked. _(Worked by Lilian.)_
