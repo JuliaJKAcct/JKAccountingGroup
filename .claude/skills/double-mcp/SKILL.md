@@ -511,7 +511,7 @@ another year, and anything that is not part of a filed return.**
 > and **no other year**, **nothing that is not part of a filed return**, **never from a subagent**,
 > **never from a scheduled or unattended session**.
 > ✅ **And it is THAT CLIENT'S OWN prior year** — preparing the company does not open the owner's, or
-> the reverse; **each is its own request** (limit 3 below, unchanged).
+> the reverse; **each is its own request** — that is the DEFAULT. 🔓 *(Limit 3 is no longer absolute: since 2026-09-04 Lilian or Julia asking opens it — "The THIRD hole" below. It still takes an ASK.)*
 > 🔑 **Why it was ASKED and not assumed, which is the part to carry forward:** a session had written
 > this permission into a skill on its own reasoning, and the reasoning was sound. **A permission
 > worded *"only when I ask"* is not widened by a session deciding that it has been asked** — it is
@@ -629,6 +629,12 @@ relying on it.**
   exactly what it crossed and what it would bring into the conversation**, and she authorised it:
   *"si te doy permiso para abrir los tax returns de Masciave y Alejandra, ayúdame con eso, por favor.
   Es importante."* **The next day she generalised it into the rule above.**
+  ⚠️ **One honesty note about that quote, raised in review 2026-09-04.** Read literally *"si te doy
+  permiso… ayúdame con eso"* is **conditional** — *"if I give you permission, help me"* — not a grant,
+  and Lilian dictates, so a conditional read as a grant is exactly the failure CLAUDE.md's
+  ask-don't-guess rule warns about. 🔑 **The rule does NOT rest on this sentence.** The authority is
+  **the next day's unprompted generalisation**, which is unambiguous. **The precedent is recorded here
+  with its ambiguity showing**, rather than smoothed over, so the next reader can judge it.
 
 **What it means, stated flatly:** 🔓 **limits 1, 2, 3 and 4 are opened by an explicit request from
 Lilian or Julia** — another year, a document that is not part of a filed return, another client, and

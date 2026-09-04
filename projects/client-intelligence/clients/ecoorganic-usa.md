@@ -317,27 +317,46 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   and reconciled to the ledger: **three assets, all placed in service in the second and third quarters
   of 2025, no §179, and the 100% special allowance on each — so the whole cost is deducted in the first
   year.** ⚠️ **This closes what had been the last blocking figure on the return.** Two consequences the
-  next person needs: **the books had no depreciation accounts at all** *(a 51-account chart with none
-  containing the word)*, so `Depreciation Expense` and `Accumulated Depreciation` are being created and
-  a year-end adjusting entry posts the charge — **which keeps the books on the same basis as the return
+  next person needs: **a year-end adjusting entry posts the charge to the books** — to the firm's
+  **existing** `Depreciation Expense` account *(dormant in 2025, but it carried a balance the prior
+  year)*, against **three NEW per-asset accumulated-depreciation accounts**, which is the convention
+  the chart already follows for an earlier vehicle. ⚠️ **A first draft of that entry said the books had
+  no depreciation accounts at all and told her to create two.** It was wrong, and the reason is worth
+  keeping: **the check was run against the year's General Ledger, which lists only accounts that
+  CARRIED A TRANSACTION that year.** 🔑 **A chart-of-accounts question is answered from the chart,
+  never from a ledger.** *(Caught in review, same day.)* The entry — **which keeps the books on the same basis as the return
   and leaves no book/tax depreciation difference**, as the prior year also did; and **the deduction
   pushes each shareholder's distributions past their stock basis, creating a capital gain on each
-  owner's own personal return that nothing on the company return will flag.** 🔑 **The trade is still
+  owner's own personal return that nothing on the company return will flag.** ⚠️ **That last statement
+  rests on two working assumptions and both are stated in the working paper:** an **opening basis of
+  zero** for each owner *(neither established — whatever either actually had reduces his gain dollar
+  for dollar)*, and the **half-and-half split** of the pooled contribution and distribution accounts. 🔑 **The trade is still
   clearly worth taking** — the ordinary income given up is several times the capital gain created —
   **but it has to be told to both owners, and the prior-year basis figure for the outgoing owner
   reduces his side of it and is still not in hand.** *(Figures live only in the return's working paper.)*
-- 🔴 **THREE ASSET-SIDE QUESTIONS THE REGISTER DID NOT ANSWER, found 2026-09-04 reading the ledger
-  against the software.** ① **The `Small tools and equipment` account holds ONE payment for the whole
+- 🔴 **THREE ASSET-SIDE QUESTIONS LEFT, found 2026-09-04 reading the ledger against the software** —
+  a fourth was raised and **withdrawn the same day** because this firm already had the answer. ① **The `Small tools and equipment` account holds ONE payment for the whole
   year, to a technology vendor** — if it bought a single piece of equipment it probably belongs on the
   depreciation schedule rather than in expense, and if it is properly expensed the return needs the
   de minimis safe-harbor election statement attached. **Ask for the invoice; it moves figures either
-  way.** ② **A fourth vehicle account exists in the chart with a zero balance and no transaction
-  anywhere in the year** *(searched by account, by VIN and by name)* — **either a dead account, or a
-  truck the company owns that was never put on the books and has never been depreciated.** ③ **The
+  way.** ② 🛑 **WITHDRAWN, and the withdrawal is the lesson.** A fourth vehicle account with a zero
+  balance and no transaction all year was about to be put to Julia as *"does the company own this
+  truck?"* — **but the firm already knew: that vehicle was disposed of in the prior year and written
+  off entirely**, which is recorded in two places in the return's own working paper, and is also why an
+  accumulated-depreciation account for it still sits in the chart. 🔑 **Asking would have been the
+  look-before-you-ask failure the firm's own method rule 1 exists to stop** — the answer was two
+  sections away. ③ **The
   forklift's date in service in the software matches neither of the two payments in the ledger** — it
   changes nothing on the return *(same quarter, same convention, full write-off)* but the register
-  should be right. ④ **All three assets are flagged "new" in the software and all three are used
-  vehicles/equipment** — used property can still qualify, but the flag asserts something they are not.
+  should be right. ③b 🔴 **LISTED PROPERTY is not closed, and the prior year shows it is live for this client.**
+  The prior-year filed return put its only vehicle on the depreciation form's **listed-property
+  section** at 100% business use — a section that asks, as two signed Yes/No boxes, whether evidence
+  for that use exists and whether it is written. ⛔ **No mileage log has ever been seen for this
+  client.** A box truck, a cargo van and a forklift are all strong candidates for the exception that
+  takes a work vehicle out of listed property entirely — **but the exception has to be tested and the
+  conclusion recorded, not assumed from a percentage someone keyed.** ④ **All three assets are flagged
+  "new" in the software and all three are used vehicles/equipment** — used property can still qualify,
+  but the flag asserts something they are not.
 - ✅ **TURO — THE 2025 EARNINGS ANSWER ARRIVED 2026-09-01** (Turo Executive Support emailed the
   client; Lilian supplied it). **What it settles:** the 2025 host-earnings breakdown exists in full,
   and **no Form 1099-K was issued for 2025**. **Figures live in the return's working paper, never
