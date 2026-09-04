@@ -978,6 +978,34 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   assumption could be hiding a five-figure gain for one of them. _(Worked by Lilian.)_
 
 
+- 2026-09-04 (later) — ✅ **THE DEPRECIATION IS POSTED AND THE BOOKS VERIFY (Lilian).** She built the
+  accounts, posted the entry, and re-exported all three reports; every check passes and the return's
+  figures are now supported by the client's own books.
+  🔑 **She improved on what the firm proposed, and the better structure is now the client's:** under
+  **each** asset she created the two sub-accounts the accounting software's own fixed-asset tool uses —
+  **original cost** and **accumulated depreciation** — instead of the flat separate accounts this firm
+  suggested. The parent then shows the asset's net book value on one line, cost and wear sit together,
+  and a future disposal reads off two lines. **It also matches the convention the chart already used
+  for a vehicle disposed of in a prior year.**
+  🛑 **AND THE LESSON THAT COST THREE ATTEMPTS, worth carrying to every client with fixed assets:**
+  **the expense account CANNOT be a sub-account of the asset** — the software requires a sub-account to
+  share its parent's type, and that is correct rather than a limitation, because an expense belongs to
+  the profit and loss while the asset belongs to the balance sheet. **Two wrong versions were posted
+  first:** one moved the cost sideways inside the balance sheet and never touched the profit and loss
+  at all; the second got the expense side right but still emptied the cost account, which would have
+  made the three assets vanish from the books with no record of what they cost. 🔑 **The two rules that
+  prevent both: the debit of a depreciation entry is never an asset account, and the original-cost
+  account never appears in a depreciation entry at all** — it moves the day the asset is bought and the
+  day it is sold, and nothing else. ⚠️ **The mechanical trap underneath it is the account dropdown**,
+  which offers the expense account and one same-named sub-account per asset; **the sub-accounts show
+  the parent's name first, and the path is what tells them apart.**
+  ✅ **A confirmation worth recording:** the expense account **already existed and was reactivated, not
+  recreated** — and the re-exported profit and loss puts it in the same section the prior year did,
+  which is what proves it is the original account rather than a duplicate.
+  🛠️ **Two loose ends on the entry, neither of which moves a figure:** the per-line descriptions were
+  left empty *(the firm's own rule requires one beside every debit and every credit)*, and the
+  adjusting-entry flag was unticked. _(Worked by Lilian.)_
+
 ### ✅ The shareholder question — answered 2026-09-02, and what the search for evidence found
 
 - 🛑 **WITHDRAWN THE SAME DAY.** ~~Lilian settled it by instruction: Artem is the 100% shareholder from
