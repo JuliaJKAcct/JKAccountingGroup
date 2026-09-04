@@ -1,6 +1,6 @@
 # Anton & Olga Stenin — laundry portfolio buyers
 
-> **Status:** Engaged in practice — proposal sent 2026-08-30, fixed fee finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen (not in Gmail or Drive as of 2026-09-03 — it may have come by WhatsApp or the portal). **Seller document request list at v2 (2026-09-04) — everything asked of the seller; awaiting Julia's edits before it goes out** · **Owner:** Julia · **Last updated:** 2026-09-04
+> **Status:** Engaged in practice — proposal sent 2026-08-30, fixed fee finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen (not in Gmail or Drive as of 2026-09-03 — it may have come by WhatsApp or the portal). **Seller document request list at v3 (2026-09-04) — split by who produces each record: a 109-item broker packet, plus 6 items nobody asks the seller for; awaiting Julia's edits before it goes out** · **Owner:** Julia · **Last updated:** 2026-09-04
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -50,10 +50,16 @@
   is explicitly the firm's. The document carries a
   dedicated **"Work for Other Specialists" page** (Julia, 2026-08-29) drawing the line
   between our financial/tax review and the specialist work we do not perform — see §5.
-  **The seller document request list exists (draft v2, 2026-09-04):** 111 items in 13 sections
+  **The seller document request list exists (draft v3, 2026-09-04):** 115 items in 13 sections
   mirroring the scope one workstream at a time, each item tagged per company / per location /
-  per account and by when it is needed (Start 62 · Round 2 45 · Pre-closing 4); a private
-  working page and an editable Word draft — links in §7. 🔑 **Julia's sourcing rule
+  per account and by when it is needed (Start 60 · Round 2 51 · Pre-closing 4). 🔑 **Every item
+  also carries WHO PRODUCES IT** (Julia, 2026-09-04), because the seller cannot supply several of
+  them: **109 items are the broker packet**; **3 come from the inspection** (cycle counters,
+  machine condition and remaining life, building-systems capacity); **1 we obtain ourselves**
+  (water and energy per cycle, from the manufacturers' published specifications once the models
+  are known); **2 are the buyer's attorney's** (the UCC/lien work and the formal appraisal). Four
+  more are marked *ask but do not chase*, the equipment list among them. Three deliverables — a
+  private working page, the broker-packet Word file, and an internal companion — links in §7. 🔑 **Julia's sourcing rule
   (2026-09-04): every record is asked of the SELLER. The firm approaches no utility, no
   municipality and no vendor** — the only two things obtained directly are the **IRS
   transcripts** (on the seller's signed authorization) and the **physical inspections** by the
@@ -71,7 +77,9 @@ the actual details.
 | Role | Where to find them |
 |---|---|
 | Buyers / decision-makers | **Anton & Olga Stenin** (Julia, 2026-08-30 — the joint name on the cover, agreement and T&C; Anton's own first-vs-family name still unconfirmed). Email received — lives in the delivered proposal and Double, not here |
-| Client's own real-estate side | **Олеся** (last name, role title and contacts pending) — per Anton's letter 2026-08-30, she handles everything about the real estate and land as objects: re-registration, building/land inspections, property taxes and fines, leases, and drafting the purchase agreements. Coordinate with her, do not duplicate her |
+| Client's own real-estate side | **Олеся** (last name, role title and contacts pending) — per Anton's letter 2026-08-30, she handles everything about the real estate and land as objects: re-registration, building/land inspections, property taxes and fines, leases, and drafting the purchase agreements. Coordinate with her, do not duplicate her. Julia's 2026-08-30 send email calls her *«Олеся (адвокатом)»* — the attorney |
+| Buyer's attorney — the appraisal and the liens | **Alicia**, an attorney: the property appraisal and the UCC financing-statement / lien work are hers (Julia, 2026-09-04). Items 13.5 and 13.6 of the request list |
+| ⚠️ **UNSETTLED — are Alicia and Олеся the same person?** | Both are described as the buyers' attorney doing the same two jobs (the real estate as an object, and the legal/lien side), a week apart and by different routes: **Олеся** from Anton's letter of 2026-08-30 and from Julia's own send email; **Alicia** from Julia in session on 2026-09-04. **Neither has been written as the other.** Ask at the point of use and settle this row from the answer. ⓘ An appraisal itself is a **Florida Certified General Real Estate Appraiser's** work, so what an attorney does with it is engage and hold it |
 
 - **Double client:** _(pending — still not in Double as of 2026-09-03; create it once the signed agreement is confirmed)_
 
@@ -193,6 +201,33 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-04 (later) — **The list is split by WHO PRODUCES each record (v3), and Alicia enters the
+  picture.** Julia: *"certain things we're going to be receiving based on the inspection… the
+  equipment list, I doubt they have it. What is the energy use per cycle? How would they have it?
+  This is where the inspection is going to come from. Separate for me specifically what we need to
+  send to the seller's broker."* Every item now carries a **source**, and only the exceptions are
+  marked, so the default reads clean. **The broker packet is 109 of 115 items.** 🔑 **Her two
+  examples drove the design:** the **equipment list** stays in the packet but marked *ask, do not
+  chase* — whatever they have helps, and the technician builds the authoritative one; **water and
+  energy use per cycle LEFT the packet entirely** — it is manufacturer specification data we take
+  from the published sheets once the makes and models are known, so asking a seller for it produces
+  a delay and an apology, not a document. **The machines group was rebuilt around that**: cycle
+  counters, and a new *machine condition and remaining life* (the technician's per-machine defect
+  list, which is what the equipment-replacement reserve is computed from), are now inspection items.
+  A new **13.4 building-systems capacity and condition** was added, which reaches the analysis twice
+  — as capital expenditure the buyer inherits, and as the physical limit on how much washing the
+  stores can do, the same question the water test asks from the billing side. **Section 13 was
+  retitled *The specialists' side*** and now carries the whole map. 🆕 **Alicia** — Julia, the same
+  day: *"the property appraisal will be done by Alicia, and liens UCC financing statements also will
+  be done by Alicia, who is an attorney."* Added as **13.5** (UCC searches, lease review, releases at
+  closing) and **13.6** (formal appraisal and title work), both marked the attorney's and neither
+  asked of the seller by us; our half stays the financial picture that feeds her (7.5, 7.6, Section
+  8). ⚠️ **Recorded as UNSETTLED in §2, not merged: Alicia and Олеся are described doing the same two
+  jobs** — Олеся from Anton's 2026-08-30 letter and from Julia's own send email
+  (*«Олеся (адвокатом)»*), Alicia from Julia today. Neither was written as the other; ask at the
+  point of use. **Deliverables are now three:** the working page (a source filter that defaults to
+  the broker packet), the **broker packet** Word file, and an **internal companion** — the six items
+  nobody asks the seller for, which doubles as the brief for the technician once one is engaged
 - 2026-09-04 — **Julia's sourcing rule: everything from the seller (list v2).** *"We will be
   requesting from seller all utility docs etc, no reason directly reaching out. The only thing we
   want to get directly is transcripts tax and of course doing inspections."* **Two items deleted**
