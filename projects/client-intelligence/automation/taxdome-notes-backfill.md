@@ -48,13 +48,23 @@ not fetch client documents in order to read them"*, and its limits are explicit:
 
 - **Limit 2** — *"never a document that is not part of that year's filed return"*
 - **Limit 3** — *"never across clients. No loop, no sweep, no 'while I'm here.'"*
-- and: *"Limits 1 and 2 are the only two Lilian can waive… **Everything from 3 down is
-  absolute** and nobody waives it in a session."*
+- ⚠️ **This page used to quote a third sentence — *"Limits 1 and 2 are the only two Lilian can
+  waive… Everything from 3 down is absolute"* — as the rule in force. 🛑 THAT SENTENCE NO LONGER
+  EXISTS.** The limits were amended twice by Lilian herself: **2026-08-13** *(the TaxDome `Notes`
+  carve-out — this backfill)* and **2026-09-04** *(her ask is itself the permission, opening limits
+  1–4)*. ⛔ **Read the limits in [`double-mcp`](../../../.claude/skills/double-mcp/SKILL.md) — do not
+  work from the quotations on this page**, which are kept only to show what the question was when it
+  was asked.
 
-A backfill that reads a `Notes` folder for many clients is **a cross-client sweep of
-non-return documents** — squarely what limit 3 rules out. Lilian asking for this work in
-conversation is not the same as ruling on that limit: the whole point of "nobody waives it in
-a session" is that a session must not talk itself into the waiver.
+A backfill that reads a `Notes` folder for many clients was **a cross-client sweep of
+non-return documents** — squarely what limit 3 ruled out at the time. **Lilian asking for this work
+in conversation is not the same as ruling on that limit**, and that distinction is what made this
+page right to stop and ask.
+✅ **She DID rule, on 2026-08-13, and the carve-out is written into the skill** *("The SECOND hole")*.
+🔓 **And on 2026-09-04 she went further:** *"está permitido hacerlo bajo solicitud mía o de Julia"* —
+so **her ask now opens limits 1–4 generally.** 🔑 **The lesson this page was written to teach survives
+intact and is now firm-wide policy:** a session must not talk itself into a waiver — **it asks, and
+the answer gets written into the rule.**
 
 **So, before any note content is read:**
 

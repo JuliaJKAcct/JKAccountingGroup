@@ -44,11 +44,11 @@ the actual details.
 | Role | Where to find them |
 |---|---|
 | Owner / primary contact | Double client (link below) — **the owner we correspond with**, in Russian (see §5) |
-| Second owner | ✅ **[Double cid 710638](https://app.doublehq.com/close?cid=710638) — `Ishkhan Markarian & Oksana Markaryan`, a JOINT individual record** *(found 2026-09-02)*. **There are two owner contacts**, each with their own individual (1040) client account. 🔴 **THE "two K-1s for FY2025" PART IS WRONG — FY2025 issues ONE K-1, to Ishkhan; see the ✅ SETTLED note below.** Two owner *contacts* is not two *shareholders* _(row written 2026-07-30)_ |
+| Second owner | ✅ **[Double cid 710638](https://app.doublehq.com/close?cid=710638) — `Ishkhan Markarian & Oksana Markaryan`, a JOINT individual record** *(found 2026-09-02)*. **There are two owner contacts**, each with their own individual (1040) client account. ✅ **AND THE "two K-1s for FY2025" PART IS RIGHT AFTER ALL** — it was declared wrong on 2026-09-02 and **Lilian reversed that on 2026-09-03 from Julia's notes: FY2025 has TWO shareholders at 50% each and issues TWO K-1s.** ⚠️ **Two owner *contacts* is still not the same fact as two *shareholders*; the two happen to agree here** _(row written 2026-07-30)_ |
 
 - ✅ **SETTLED 2026-09-02 (evening) BY JULIA, AND THE TRANSCRIPT VERSION WON.** *"La fecha en la que
   Ishkhan dejó la compañía fue al final del 31 de diciembre del 2025"* (Julia, relayed by Lilian). So:
-  **ISHKHAN MARKARIAN is the sole 100% shareholder for the whole of 2025** — his third year and his **final**
+  🛑 **SUPERSEDED 2026-09-03 — read the next block: TWO shareholders at 50% each.** ~~**ISHKHAN MARKARIAN is the sole 100% shareholder for the whole of 2025** — his third year and his **final**
   K-1 — and **Artem's first shareholder year is 2026.** ⛔ **The 2025-01-01 date the firm worked on for one
   day is withdrawn.** 🔑 **The lesson worth keeping: the meeting transcript was right and the date given
   deliberately was wrong** — which is the reverse of what the firm's own rule assumes, and it is why both
@@ -238,7 +238,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md).
 
 ### Income tax
-- **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). 🛑 **It issues ONE K-1 — to ISHKHAN MARKARIAN**, the sole 100% shareholder for all of 2025 *(Julia, 2026-09-02 evening)*, and **it is marked FINAL**: he leaves at the close of 2025-12-31 and Artem's first shareholder year is 2026. ⚠️ *(This line used to say two, one per owner.)* ✅ **The one-year contradiction in §2 is CLOSED** — Julia settled it on 2026-09-02. 📌 **Working assumptions for the computation:** 🛑 *(the shareholder assumption below was replaced the same evening — the transfer is at the close of **2025**-12-31 and the K-1 is Ishkhan's)*; ~~the transfer is taken as effective at the close of 2024-12-31~~; **no employees in 2025** *(the three onboarded people stay a question for later)*; the **opening AAA is the figure the 2024 return filed**, kept for year-to-year consistency even though the 2023 return shows it understated *(the SOP default)*; and **`Outside services` stays out of COGS** — Julia's meeting rule, which the books already follow. **How the ownership transfer happened is deliberately left open until Lilian speaks to Julia.** Figures and reasoning in the working paper §4 and §6.
+- **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). 🔴 **It issues TWO K-1s — one to each owner, 50% each** *(Lilian, relaying Julia's notes, 2026-09-03)*. **The father's is marked FINAL** — he leaves at the close of 2025-12-31 — **the son's is not**, and the son is already a 2025 shareholder rather than starting in 2026. 🛑 **SUPERSEDED:** ~~it issues ONE K-1, to the father, the sole 100% shareholder for all of 2025 (2026-09-02 evening)~~. ⚠️ **The 50/50 split of the DISTRIBUTIONS is a working assumption until Julia settles it, and so is the split of the contributions** — 🔴 **one owner whose real share of the distributions exceeds about 59% has a taxable gain on his personal return with no other change made.** ⚠️ **Two things are open and both go to Julia: WHEN the son was admitted** *(mid-year forces a per-day allocation and a flat half misstates both K-1s)* **and whether he is an ELIGIBLE S-corporation shareholder at all** — that is the rule that drove the ownership change in the first place, and an ineligible shareholder terminates the election. 📌 **Working assumptions for the computation:** 🛑 *(the shareholder assumption below was replaced the same evening — the transfer is at the close of **2025**-12-31 and the K-1 is Ishkhan's)*; ~~the transfer is taken as effective at the close of 2024-12-31~~; **no employees in 2025** *(the three onboarded people stay a question for later)*; the **opening AAA is the figure the 2024 return filed**, kept for year-to-year consistency even though the 2023 return shows it understated *(the SOP default)*; and **`Outside services` stays out of COGS** — Julia's meeting rule, which the books already follow. **How the ownership transfer happened is deliberately left open until Lilian speaks to Julia.** Figures and reasoning in the working paper §4 and §6.
 - 🔴 **PRE-RETURN REVIEW RUN 2026-08-31 — VERDICT: THE RETURN CANNOT BE PREPARED YET.** 📌 **2026-09-02: the five things are now answered or assumed on Lilian's instruction; the gate is executing the book worklist in QuickBooks (working paper §D-6), then phase 2.** Five things
   the return needed had no source: **payroll** (§5) · the **per-shareholder split of the capital
   accounts** (§5) · the **depreciation schedule** (§5) · **Turo** · and **the 2024 filed return, which
@@ -313,6 +313,50 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   three items **at cost with accumulated depreciation at zero**. **Action:** the prior-year Form 4562
   detail is required before any 1120-S can be finished, and it was not found in Double or in a
   bounded Drive search *(title `depreciation`/`4562`/`asset` × fullText `Ecoorganic`, 2026-08-31)*.
+- 🟢 **DEPRECIATION IS SETTLED FOR 2025 — 2026-09-04.** The tax software's own asset register was read
+  and reconciled to the ledger: **three assets, all placed in service in the second and third quarters
+  of 2025, no §179, and the 100% special allowance on each — so the whole cost is deducted in the first
+  year.** ⚠️ **This closes what had been the last blocking figure on the return.** Two consequences the
+  next person needs: **a year-end adjusting entry posts the charge to the books** — to the firm's
+  **existing** `Depreciation Expense` account *(dormant in 2025, but it carried a balance the prior
+  year)*, against **three NEW per-asset accumulated-depreciation accounts**, which is the convention
+  the chart already follows for an earlier vehicle. ⚠️ **A first draft of that entry said the books had
+  no depreciation accounts at all and told her to create two.** It was wrong, and the reason is worth
+  keeping: **the check was run against the year's General Ledger, which lists only accounts that
+  CARRIED A TRANSACTION that year.** 🔑 **A chart-of-accounts question is answered from the chart,
+  never from a ledger.** *(Caught in review, same day.)* The entry — **which keeps the books on the same basis as the return
+  and leaves no book/tax depreciation difference**, as the prior year also did; and **the deduction
+  pushes each shareholder's distributions past their stock basis, creating a capital gain on each
+  owner's own personal return that nothing on the company return will flag.** ⚠️ **That last statement
+  rests on two working assumptions and both are stated in the working paper:** an **opening basis of
+  zero** for each owner *(neither established — whatever either actually had reduces his gain dollar
+  for dollar)*, and the **half-and-half split** of the pooled contribution and distribution accounts. 🔑 **The trade is still
+  clearly worth taking** — the ordinary income given up is several times the capital gain created —
+  **but it has to be told to both owners, and the prior-year basis figure for the outgoing owner
+  reduces his side of it and is still not in hand.** *(Figures live only in the return's working paper.)*
+- 🔴 **THREE ASSET-SIDE QUESTIONS LEFT, found 2026-09-04 reading the ledger against the software** —
+  a fourth was raised and **withdrawn the same day** because this firm already had the answer. ① **The `Small tools and equipment` account holds ONE payment for the whole
+  year, to a technology vendor** — if it bought a single piece of equipment it probably belongs on the
+  depreciation schedule rather than in expense, and if it is properly expensed the return needs the
+  de minimis safe-harbor election statement attached. **Ask for the invoice; it moves figures either
+  way.** ② 🛑 **WITHDRAWN, and the withdrawal is the lesson.** A fourth vehicle account with a zero
+  balance and no transaction all year was about to be put to Julia as *"does the company own this
+  truck?"* — **but the firm already knew: that vehicle was disposed of in the prior year and written
+  off entirely**, which is recorded in two places in the return's own working paper, and is also why an
+  accumulated-depreciation account for it still sits in the chart. 🔑 **Asking would have been the
+  look-before-you-ask failure the firm's own method rule 1 exists to stop** — the answer was two
+  sections away. ③ **The
+  forklift's date in service in the software matches neither of the two payments in the ledger** — it
+  changes nothing on the return *(same quarter, same convention, full write-off)* but the register
+  should be right. ③b 🔴 **LISTED PROPERTY is not closed, and the prior year shows it is live for this client.**
+  The prior-year filed return put its only vehicle on the depreciation form's **listed-property
+  section** at 100% business use — a section that asks, as two signed Yes/No boxes, whether evidence
+  for that use exists and whether it is written. ⛔ **No mileage log has ever been seen for this
+  client.** A box truck, a cargo van and a forklift are all strong candidates for the exception that
+  takes a work vehicle out of listed property entirely — **but the exception has to be tested and the
+  conclusion recorded, not assumed from a percentage someone keyed.** ④ **All three assets are flagged
+  "new" in the software and all three are used vehicles/equipment** — used property can still qualify,
+  but the flag asserts something they are not.
 - ✅ **TURO — THE 2025 EARNINGS ANSWER ARRIVED 2026-09-01** (Turo Executive Support emailed the
   client; Lilian supplied it). **What it settles:** the 2025 host-earnings breakdown exists in full,
   and **no Form 1099-K was issued for 2025**. **Figures live in the return's working paper, never
@@ -902,6 +946,38 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   premiums the firm questioned stay exactly as Julia categorised them** — the exclusion is now a recorded
   decision rather than an omission, with the one document that would settle it named. _(Worked by Lilian.)_
 
+- 2026-09-04 — 🟢 **DEPRECIATION CLOSED, AND THE ENTRY TO POST IT WAS WRITTEN (Lilian).** She sent the
+  tax software's three asset screens and asked for the journal entry. **What they answered:** all three
+  dates in service *(none in the fourth quarter, so no mid-quarter convention)*, **no §179 and the full
+  special allowance on each** — so the entire cost of all three is deducted in 2025 — and the recovery
+  periods, which turn out not to matter this year because a full write-off ignores them. **Every cost
+  agreed to the ledger transaction by transaction**, which also closed an older open question about
+  whether one vehicle's book cost was the whole price *(it was: part cash, part financed against the
+  loan account already on the balance sheet)*.
+  🔴 **What the entry needed first: the books have NO depreciation accounts at all.** The 51-account
+  chart contains nothing with the word in it, so both an expense account and a contra-asset account are
+  being created — **and the contra-asset one is the trap**, because creating it as an expense would put
+  the charge through the profit and loss twice.
+  🔑 **The consequence that matters and that nothing in the software flags:** the deduction pushes each
+  shareholder's distributions past their stock basis, **so each owner has a capital gain on their own
+  personal return.** The company return will look perfectly clean. **It is still the right trade** — the
+  ordinary income given up is several times the gain created, and part of what remains is taxed at a
+  better rate — **but the outgoing owner's prior-year basis figure would reduce his side of it and is
+  still not in hand**, and **the younger owner's holding period is not established**, which decides
+  whether his gain is long or short term.
+  🔴 **Three new questions came out of reading the ledger against the software** — a single technology
+  payment sitting in a tools-and-equipment account that may be a fourth depreciable asset, a fourth
+  vehicle account with no balance and no transactions anywhere, and a date in service matching neither
+  payment. **Only the first moves figures.** All three are in §5 above and in the working paper.
+  📊 **She also asked for the whole basis-and-distributions mechanism explained step by step so she can
+  take it to Julia** — why large distributions are only a problem when they approach the basis ceiling,
+  why the company-level accumulated-adjustments account does not answer the question when there is no
+  C-corporation history, and what the available levers actually are. **Delivered in chat.** 🔑 **The
+  most valuable lever is not a tax election: it is establishing the REAL split of the contributions and
+  distributions between the two owners**, because the pooled accounts mean the working half-and-half
+  assumption could be hiding a five-figure gain for one of them. _(Worked by Lilian.)_
+
+
 ### ✅ The shareholder question — answered 2026-09-02, and what the search for evidence found
 
 - 🛑 **WITHDRAWN THE SAME DAY.** ~~Lilian settled it by instruction: Artem is the 100% shareholder from
@@ -1114,6 +1190,52 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
 - 🧾 **ONE DOCUMENT WOULD SETTLE THE LARGEST REMAINING QUESTION: the insurance declaration pages** for the two
   auto policies. They name the insured vehicles, and would settle both the premiums that were left in the
   company and the ones that were questioned.
+- 🔴 **2026-09-03 (night) — THE 2025 OWNERSHIP IS SETTLED AND IT IS NOT WHAT THE FIRM HAD BEEN WORKING
+  ON: TWO shareholders at 50% each, the father and the son.** Lilian found it in Julia's notes. ✅ **The
+  prior year genuinely had ONE owner** — that reading, taken off the filed prior-year return, was right —
+  **it is the current year that changes.** 🧮 **What it rebuilds on the return:** the shareholder count,
+  **two K-1s instead of one** *(the father's marked final, the son's not)*, the income and the
+  nondeductible items split in half, **two §199A statements**, and **two separate basis computations
+  instead of one**. ⚖️ **Nothing above that level moves** — the company's income, deductions and balance
+  sheet do not depend on how many people own it.
+- ⚠️ **TWO THINGS RIDE ON IT AND NEITHER IS SETTLED — both go to Julia.** ① **WHEN the son was
+  admitted.** The prior year closed with the father holding every share, so if the admission happened
+  **during** the current year the law forces a **per-day** allocation and a flat half misstates **both**
+  K-1s. ② **The real split of the distributions.** Half-and-half is Lilian's working assumption to get
+  moving, not a finding — *"luego que Julia determine cómo lo vamos a resolver"*. 🔴 **The exposure is
+  real: at the extreme, one shareholder's headroom before a distribution becomes taxable falls by an
+  order of magnitude, and that is what decides how much depreciation can safely be elected.** ⛔ **So the
+  depreciation election waits on it.**
+- 🛠️ **AND THE BOOKS CANNOT HOLD THE ANSWER AS THEY STAND.** There is one contribution account and one
+  distribution account for two people. The fix is **a sub-account per shareholder** under each — ⛔ **not
+  the name field on a journal entry**, which in QuickBooks only accepts a customer, vendor or employee,
+  so it files a shareholder as a **vendor** and feeds the 1099 workflow this return already has an open
+  question about. **A method for splitting the rows for real is written into the working paper:** the
+  rows that carry a name settle themselves, then the ones paying an identifiable obligation, then the
+  cards, then the cash withdrawals — and 🔑 **the one the ledger can never answer and somebody has to
+  ask: whose are the two personal checking accounts the money leaves from and returns to.**
+- 🧾 **2026-09-03 — THE BOOK CHANGES BEHIND THE RETURN ARE POSTED, and Lilian set a firm rule doing
+  it.** Two corrections went into the client's books, both dated at year end and both flagged as
+  adjusting entries so they land in one report the reviewer can pull. **The first** moved a dealership
+  refund out of the fuel account and into the repair account where the charge it refunds sits — **and
+  it was done as a visible journal entry rather than by editing the original transaction**, at
+  Lilian's insistence: *"si una persona viene después y mira estos libros, especialmente Julia,
+  entienda qué pasó, porque si simplemente la recategorizo, no va a quedar evidencia."* ⚠️ **One
+  premise there needed correcting and it strengthened her case: the accounting software DOES log every
+  edit — the problem is that the log sits where nobody thinks to look.** 📌 **Now a firm procedure, not
+  a client decision:** [`correcting-entries.md`](../../sops/correcting-entries.md). **The second**
+  moved a payment that had gone OUT of the company for the owner from the contributions account, where
+  it sat as the only negative row among fifty-one, into distributions — so **the equity figures are now
+  gross rather than netted**, which lets the firm's own netting policy be tested against them for the
+  first time *(it still fails, so the return's presentation does not change)*. 🔴 **On the return this
+  moves exactly two boxes — the distributions line on Schedule K and the matching K-1 code** — and
+  nothing else, because both equity sides rose together. **The basis room the depreciation election is
+  measured against is unchanged.**
+- 🔤 **And a delivery rule, from the same session:** a per-line description on a journal entry that
+  **the person pasting it has to ask about has failed, however accurate it is** — she asked what one
+  of the English terms meant, and it was rewritten to show the arithmetic instead of labelling it.
+  **In Spanish the columns are `débito` and `crédito`, never *debe* and *haber*** — recorded in
+  `CLAUDE.md` so no future session reintroduces it.
 - 🧮 **2026-09-02 (night) — THE FY2025 RETURN IS BUILT, and four things stop it being transmitted.** The
   working paper now carries the year-end reclassification **exactly as it is typed into QuickBooks** — five
   lines, each with its own short description saying where that amount came from, plus the header memo — and

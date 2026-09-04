@@ -242,6 +242,13 @@ return, delete the identifiers by hand and re-upload it — *"eso me ralentiza m
 🔵 **AND SINCE 2026-08-20, A REQUEST FROM LILIAN OR JULIA TO PREPARE A RETURN CARRIES THE SAME
 PERMISSION** — *"prepárame el Tax Return de X cliente"* asks for this review too, because it is now
 [phase 1](../tax-return-sop/) of every preparation _(put to her as a question and answered)_.
+
+🔓 **AND SINCE 2026-09-04 THE RULE BELOW IS THE DEFAULT, NOT THE CEILING.** Lilian ruled that **her ask
+or Julia's is itself the permission** — *"está permitido hacerlo bajo solicitud mía o de Julia"* — which
+opens another year, a non-return document, another client and another purpose. ⛔ **A session still may
+not decide it has been asked**, and the never-from-a-subagent / never-from-a-scheduled-session limits
+stay absolute. 🔑 **Everything in this section remains exactly right as the DEFAULT scope**; the
+authority is [`double-mcp`](../double-mcp/SKILL.md) *("The THIRD hole")* — read it there.
 ⛔ **Nothing else moves — every limit in this section stands**, including *that client's own* prior
 year: preparing the company does not open the owner's, **each is its own request.**
 
