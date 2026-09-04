@@ -1,6 +1,6 @@
 # Anton & Olga Stenin — laundry portfolio buyers
 
-> **Status:** Engaged in practice — proposal sent 2026-08-30, fixed fee finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen (not in Gmail or Drive as of 2026-09-03 — it may have come by WhatsApp or the portal). **Seller document request list drafted 2026-09-03 (v1, awaiting Julia's edits)** · **Owner:** Julia · **Last updated:** 2026-09-03
+> **Status:** Engaged in practice — proposal sent 2026-08-30, fixed fee finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen (not in Gmail or Drive as of 2026-09-03 — it may have come by WhatsApp or the portal). **Seller document request list at v2 (2026-09-04) — everything asked of the seller; awaiting Julia's edits before it goes out** · **Owner:** Julia · **Last updated:** 2026-09-04
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -50,11 +50,15 @@
   is explicitly the firm's. The document carries a
   dedicated **"Work for Other Specialists" page** (Julia, 2026-08-29) drawing the line
   between our financial/tax review and the specialist work we do not perform — see §5.
-  **The seller document request list exists as of 2026-09-03 (draft v1):** 112 items in 13
-  sections mirroring the scope one workstream at a time, each item tagged per company / per
-  location / per account and by when it is needed (Start · Round 2 · Pre-closing); a private
-  working page and an editable Word draft — links in §7. It goes to the seller's broker only
-  after the kick-off call (§6, the 2026-08-30 sequence)
+  **The seller document request list exists (draft v2, 2026-09-04):** 111 items in 13 sections
+  mirroring the scope one workstream at a time, each item tagged per company / per location /
+  per account and by when it is needed (Start 62 · Round 2 45 · Pre-closing 4); a private
+  working page and an editable Word draft — links in §7. 🔑 **Julia's sourcing rule
+  (2026-09-04): every record is asked of the SELLER. The firm approaches no utility, no
+  municipality and no vendor** — the only two things obtained directly are the **IRS
+  transcripts** (on the seller's signed authorization) and the **physical inspections** by the
+  specialists we coordinate. The Florida clearance stays because the **seller** requests it. It
+  goes to the seller's broker only after the kick-off call (§6, the 2026-08-30 sequence)
 - **Fiscal year-end:** n/a (no engagement entity yet)
 - **Accounting platform:** n/a
 
@@ -189,6 +193,31 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-04 — **Julia's sourcing rule: everything from the seller (list v2).** *"We will be
+  requesting from seller all utility docs etc, no reason directly reaching out. The only thing we
+  want to get directly is transcripts tax and of course doing inspections."* **Two items deleted**
+  from §1 of the list: the per-account **utility release authorization** and the **consent to
+  municipal inquiries**. What survives as ours to obtain: **1.1 the IRS transcripts** and **1.7 site
+  access for the inspections**; the Florida clearance (1.2/1.3) stays because the *seller* files it.
+  Section 1's remaining access items were recast as the seller's own exports with read-only access
+  offered as the easier alternative, never a vendor consent form. **Section 9 was rebuilt around
+  the consequence:** a new **9.1 complete account-and-meter inventory with a completeness
+  confirmation** (a meter nobody mentions is one the analysis cannot see), the bills demanded **as
+  the utility issued them** — original PDFs or the portal's billing-history download, never retyped
+  summaries (9.2–9.4) — a new **9.6 ledger cross-check** (what the books paid each utility, so a
+  utility being paid with no matching bills exposes a missing account), and 9.7 restated so the
+  impact/tap fees come from the seller's own municipal correspondence. ⚠️ **The cost was stated to
+  Julia, not argued:** the water method works *because* a third party meters and bills the water,
+  so a bill arriving through the seller is weaker evidence — those three checks narrow it, and if
+  the bills still come back short the **report grades those figures as indicative rather than firm
+  and names the meters never seen** (the benchmark page's Firm / Directional / Not obtained
+  discipline, and method.md rule 1b — a gap is recorded with the search that produced it). ⓘ **Two
+  things worth remembering:** the signed proposal's Next Steps page *does* carry the seller's
+  consent to utility and municipal inquiries, so asking for less than the document allows costs
+  nothing and the consent is there if the bills disappoint; and **public records are not outreach**
+  — the county property appraiser and tax collector, Sunbiz and the BTR search keep an independent
+  check on the real-estate side that the utility side no longer has. List now **111 items**;
+  working page republished to the same link, Word draft v2 delivered in chat
 - 2026-09-03 — **Seller document request list drafted (v1) — Julia: "I need to start drafting a
   detailed list of documents to request from seller."** Built from the v14 proposal's scope (read
   from the private proposal artifact), the three-seller-company structure and Anton's own technical
@@ -373,7 +402,7 @@ the actual details.
 - ~~Anton's last name~~ **Resolved 2026-08-30** (the joint name Anton & Olga Stenin). **Still
   open: create the Double client** — the engagement is invoiced (2026-09-02) and there is still no
   Double account, so nothing about this matter can be tracked there; then complete §1/§2 here
-- **Julia to edit and release the seller document request list (v1, 2026-09-03)** — after the
+- **Julia to edit and release the seller document request list (v2, 2026-09-04)** — after the
   kick-off call with the buyers and Олеся and the broker introduction (her 2026-08-30 sequence).
   Before it goes: settle the IRS-authorization route (**Form 4506-C needs an IVES participant;
   otherwise Form 8821**), confirm the DR-842 name on floridarevenue.com, and confirm the unit
