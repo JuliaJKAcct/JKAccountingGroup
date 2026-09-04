@@ -77,9 +77,7 @@ the actual details.
 | Role | Where to find them |
 |---|---|
 | Buyers / decision-makers | **Anton & Olga Stenin** (Julia, 2026-08-30 — the joint name on the cover, agreement and T&C; Anton's own first-vs-family name still unconfirmed). Email received — lives in the delivered proposal and Double, not here |
-| Client's own real-estate side | **Олеся** (last name, role title and contacts pending) — per Anton's letter 2026-08-30, she handles everything about the real estate and land as objects: re-registration, building/land inspections, property taxes and fines, leases, and drafting the purchase agreements. Coordinate with her, do not duplicate her. Julia's 2026-08-30 send email calls her *«Олеся (адвокатом)»* — the attorney |
-| Buyer's attorney — the appraisal and the liens | **Alicia**, an attorney: the property appraisal and the UCC financing-statement / lien work are hers (Julia, 2026-09-04). Items 13.5 and 13.6 of the request list |
-| ⚠️ **UNSETTLED — are Alicia and Олеся the same person?** | Both are described as the buyers' attorney doing the same two jobs (the real estate as an object, and the legal/lien side), a week apart and by different routes: **Олеся** from Anton's letter of 2026-08-30 and from Julia's own send email; **Alicia** from Julia in session on 2026-09-04. **Neither has been written as the other.** Ask at the point of use and settle this row from the answer. ⓘ An appraisal itself is a **Florida Certified General Real Estate Appraiser's** work, so what an attorney does with it is engage and hold it |
+| Buyers' own attorney — **the whole real-estate and legal side** | **Olesya / Олеся — the buyers' REAL ESTATE ATTORNEY** *(one person; last name and contacts pending)*. Per Anton's letter 2026-08-30 she handles everything about the real estate and land as objects: re-registration, building/land inspections, property taxes and fines, leases, and drafting the purchase agreements. Julia added 2026-09-04 that **the property appraisal and the UCC financing-statement / lien work are also hers** — items 13.5 and 13.6 of the request list. Coordinate with her, do not duplicate her; she is on the kick-off call. ⓘ **The name "Alicia" in Julia's 2026-09-04 message is this same person** — settled by her the same day, recorded so an old note reading "Alicia" is not mistaken for a second advisor. ⓘ The appraisal itself is a **Florida Certified General Real Estate Appraiser's** work, which she engages and holds |
 
 - **Double client:** _(pending — still not in Double as of 2026-09-03; create it once the signed agreement is confirmed)_
 
@@ -222,10 +220,13 @@ the actual details.
   be done by Alicia, who is an attorney."* Added as **13.5** (UCC searches, lease review, releases at
   closing) and **13.6** (formal appraisal and title work), both marked the attorney's and neither
   asked of the seller by us; our half stays the financial picture that feeds her (7.5, 7.6, Section
-  8). ⚠️ **Recorded as UNSETTLED in §2, not merged: Alicia and Олеся are described doing the same two
-  jobs** — Олеся from Anton's 2026-08-30 letter and from Julia's own send email
-  (*«Олеся (адвокатом)»*), Alicia from Julia today. Neither was written as the other; ask at the
-  point of use. **Deliverables are now three:** the working page (a source filter that defaults to
+  8). ✅ **Asked and settled the same day: "Olesya it is one person real estate attorney"** — so
+  **Alicia and Олеся are ONE person, the buyers' real-estate attorney**, and §2 is now a single row
+  naming her scope in full (the real estate as an object, the purchase agreements, the appraisal and
+  the UCC work). The two names had come by different routes a week apart — Олеся from Anton's
+  2026-08-30 letter and from Julia's own send email (*«Олеся (адвокатом)»*), Alicia from Julia on
+  2026-09-04 — and were held apart rather than merged until she answered. **The alias is kept on
+  the record** so a later note reading "Alicia" is not read as a second advisor. **Deliverables are now three:** the working page (a source filter that defaults to
   the broker packet), the **broker packet** Word file, and an **internal companion** — the six items
   nobody asks the seller for, which doubles as the brief for the technician once one is engaged
 - 2026-09-04 — **Julia's sourcing rule: everything from the seller (list v2).** *"We will be
