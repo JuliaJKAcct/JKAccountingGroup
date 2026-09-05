@@ -1016,6 +1016,31 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   🛠️ **Two loose ends on the entry, neither of which moves a figure:** the per-line descriptions were
   left empty *(the firm's own rule requires one beside every debit and every credit)*, and the
   adjusting-entry flag was unticked. _(Worked by Lilian.)_
+- 2026-09-05 — 🔴 **PART OF THE 2025 DISTRIBUTIONS WAS RECLASSIFIED TO OFFICER'S COMPENSATION, THE BOOKS
+  VERIFY, AND THE COMPANY'S 2025 RETURN IS NOW A LOSS (Lilian).** She posted a second year-end entry on
+  2026-09-04 — a new `Officer's compensation` expense account against `Owner's distribution` — and
+  re-exported all three reports; **a row-by-row comparison with the previous export shows exactly the two
+  new lines and nothing else moved**, and the depreciation entry's four lines now carry the descriptions
+  they lacked. **The amount reclassified is exactly the excess of the year's distributions over the
+  year's contributions, so after it the two are equal.** 🔑 **What that does, and it is what the firm's
+  own earlier analysis said it would do:** the company reports an **ordinary loss** instead of a profit;
+  each owner's K-1 carries **a loss neither can deduct in 2025** — basis after distributions is zero, so
+  it is suspended, and **the departing owner's share is lost for good on his final K-1** while the
+  continuing owner's carries into 2026; **the capital gain each owner would have had on the distributions
+  disappears**; and the same amount per head reaches each owner's own return as **compensation**, which
+  carries employment tax and removes the continuing owner's QBI deduction. 🛑 **Three things the entry
+  does not settle, all recorded for Julia:** ① **who decided it** — the firm's SOP says reclassifying
+  distributions to salary is the signer's decision and must be recorded, and that is not established;
+  ② **how the compensation is reported** — late 2025 payroll *(W-2s, 941s, 940, Connecticut
+  withholding — the company's half of FICA then becomes a deduction and a liability)* or each owner
+  reporting his share on a Schedule C with self-employment tax *(the return tables are built on this
+  route, because it is what the books as posted say)*; ③ **whose compensation it is** — the entry credited
+  the pooled owner account, so the split is the same working assumption as everything else, **and if it
+  is one person's, the other owner's capital gain comes back larger than before.** 📌 **Also recorded as
+  a fact for the file, not as a criticism:** the figure was derived from the equity accounts, not from a
+  valuation of the work; the firm's reasonable-compensation skill is the tool that produces a defensible
+  one. **The chart of accounts gained one account:** `Officer's compensation` *(type Expenses)*.
+  _(Figures in the working paper only. Worked by Lilian.)_
 
 ### ✅ The shareholder question — answered 2026-09-02, and what the search for evidence found
 

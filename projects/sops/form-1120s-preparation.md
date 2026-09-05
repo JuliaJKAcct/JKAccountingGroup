@@ -3,7 +3,7 @@
 > **Status:** 🟡 **DRAFT — in review with Lilian.** Written 2026-08-14 while preparing the
 > firm's first 1120-S with a session assisting, and shaped by what a first-time preparer
 > actually needed to be told. **Remove this note when Lilian signs it off.** ·
-> **Owner:** Lilian · **Last updated:** 2026-09-04
+> **Owner:** Lilian · **Last updated:** 2026-09-05
 >
 > 🔵 **One part of this DRAFT is already FIRM POLICY and is not waiting on the sign-off: §5C-v**,
 > Julia's rule on netting a shareholder's contributions against their distributions. **Read it
@@ -1036,7 +1036,7 @@ each expense that has its own line, then group the remainder.
 
 | Line | Category | Typical QuickBooks accounts |
 |---|---|---|
-| **7** | Compensation of officers | Salaries paid to **officers** — not to every shareholder-employee (§5C-i). Form 1125-E is required at **$500,000 or more** of total receipts |
+| **7** | Compensation of officers | Salaries paid to **officers** — not to every shareholder-employee (§5C-i). Form 1125-E is required at **$500,000 or more** of total receipts. 🛠️ **YOU CANNOT TYPE THIS LINE — the entry route is §5C-i** |
 | **8** | Salaries and wages | Everyone else's wages — **and only actual wages**. See 5C-i |
 | **9** | Repairs and maintenance | |
 | **10** | Bad debts | |
@@ -1081,7 +1081,7 @@ place. Read down this table, not up the numbers.
 | **5** | **5C-v** · 🔵 **FIRM POLICY** — net the account, report distributions at zero | 🔵 **the one part of this draft that is already firm policy**, and its five gates |
 | **6** | **5C-ii** · ⚠️ Line 12 is tax the COMPANY bears | sales tax collected is not one |
 | **7** | **5C-viii** · 🔴 No payroll and big distributions | the reasonable-compensation exposure, and how to raise it with the client |
-| **8** | **5C-i** · ⚠️ Line 8 is WAGES | not the "payroll" accounts — the officer/staff/platform-fee split |
+| **8** | **5C-i** · ⚠️ Line 8 is WAGES — **and the ENTRY ROUTE for line 7** | not the "payroll" accounts — the officer/staff/platform-fee split; **plus how officer compensation is actually keyed in ATX**, which is not on line 7 |
 
 🔑 **Items 2 → 3 → 4 → 5 are one chain and are meant to be read in that order.** 2 says what the
 return needs, 3 is how to get it out of the software, 4 is how to read what comes back, and 5 is how
@@ -1482,6 +1482,47 @@ wrong.
 > OPENING THE THING IT POINTS AT.** The 08-27 session corrected the half it could see from the SOP
 > alone and never opened either paper. _(Flagged by the independent review of PR #333.)_
 
+#### 🟢 THE FIRM APPROACH WHEN THE GATES FAIL BUT THE SIGNER STILL WANTS IT NETTED — and the note is not optional
+
+_(**Lilian, 2026-09-05**, relaying **Julia's approval** on a live return: *"tratamos de netear estas
+contribuciones contra estas distribuciones para no levantar red flags sin sentido… siempre que hagas
+esto, haces la explicación en una nota para que nosotros sepamos qué sucedió… en caso de que no
+queramos hacerlo así, nos demos cuenta de qué approach se tomó y lo corrijamos."*)_
+
+🔑 **The shape of it, and it is a THREE-step move, not one:**
+
+| Step | What you do |
+|---|---|
+| **1** | **Compute the excess** of the year's gross distributions over the year's gross contributions — per §5C-iii and §5C-vii, **reading the rows, never a net** |
+| **2** | **Book that excess as OFFICER COMPENSATION** *(page 1 line 7 — the entry route is §5C-i)*. ⚠️ This is a **book entry the client posts**, not a presentation choice |
+| **3** | **Net what remains and report distributions at ZERO** on Schedule K line 16d and every K-1 box 16D |
+
+🛑 **AND STEP 4, WHICH IS NOT OPTIONAL: WRITE THE NOTE.** It goes in the return's working paper, and it
+says — in this order — **what the gross figures were · which of §5C-v's five gates FAIL · what the
+policy as written would have produced · what was reported instead · and who approved it.**
+🔑 **Its purpose is stated by the person who asked for it: so that the firm can find the approach later
+and change it.** ⛔ **A netted return with no note is the failure this rule exists to prevent** — the
+figures reconcile to nothing and nobody remembers why.
+
+⚠️ **THREE THINGS THE NETTING DOES NOT DO, and each has caught somebody:**
+
+1. 🔴 **It does not change anyone's BASIS, and it does not remove a capital gain.** §1368(b)(2) works
+   on **actual** distributions against **actual** basis. **A shareholder whose real distributions
+   exceeded his real basis still has a gain on his own Form 1040**, and the netted return will not
+   mention it. **§5C-iii still governs the analysis: gross, always.**
+2. 🔴 **Entity-level netting is NOT the same as gate 1**, and this is the one to watch with more than
+   one owner. **Gate 1 is per shareholder** — *"one owner's contributions never offset another's
+   distributions."* Netting at the **entity** level does exactly that, and it can report zero while one
+   owner is over and the other under. **Say which level was used.**
+3. ⚠️ **It removes the marker for a non-pro-rata distribution** — the visible evidence of a possible
+   **second class of stock** (§1361(b)(1)(D)). Two K-1s both reading zero look identical when the
+   underlying draws were not.
+
+📌 **And the standing warning above still applies in full:** netting does **not** reduce
+reasonable-compensation exposure, and a later study that reads distributions off a filed **K-1 box
+16D** will read **zero**. 🔑 **On a netted client, distributions come from the capital-account ledger,
+never from the return.**
+
 #### 🛑 THE SCOPE GATE — all five, checked BEFORE netting, on the GROSS figures
 
 **Netting is not available because the owner also contributed. It is available when every one of
@@ -1787,6 +1828,68 @@ What actually lands where:
 Salary` child**; the payroll tax goes to line 12. **Taking the parent's `Total for…` line puts
 the payroll taxes on the wages line and empties line 12.** Reproducing the prior year (§3) shows
 you which one that client's return used.
+
+#### 🛠️ THE ENTRY ROUTE FOR LINE 7 IN ATX — you cannot type on the line, and the form you are sent to is usually not even filed
+
+_(Observed at the keyboard by **Lilian, 2026-09-05**, preparing a real 1120-S in ATX 2025, and
+recorded as **her observation of one software version** rather than as vendor documentation.)_
+
+🛑 **Click page 1 line 7 and you cannot type — ATX opens Form 1125-E instead.**
+
+| Step | What you do | What you see |
+|---|---|---|
+| **1** | Click **page 1, line 7** *(`Compensation of officers`)* | ATX opens **Form 1125-E**, `Compensation of Officers`. ⛔ **The grid on the face of 1125-E is not where you type either** |
+| **2** | On Form 1125-E, click **line 2** — *"Total compensation of officers"* | a **detail tab** opens, headed `Compensation of Officers`. **That is where the figure is keyed** |
+| **3** | Add a record and fill the row | `Name` · `First Name` · `M.I.` · `Last Name` · `Suffix` · address block · `Soc. Sec. Num.` · `Check if Officer is a Shareholder` · `Percent of time devoted to business` · `Percent of corporation stock owned — Common / Preferred` · `Officer Title` · 🔴 `Amount of compensation` |
+| **4** | Close the detail tab | the total reaches page 1 line 7 **through line 4, not line 2** — see the line-3 warning below |
+
+🔑 **ATX's own on-screen note, and it is the part that decides how you use the detail tab:**
+> *"If form 1125-E is not required, enter the sum of officer compensation on the detail tab on the
+> first row. **The form will not be e-filed or printed with the return.**"*
+
+**Read both halves of that, because each one catches somebody:**
+
+✅ **Below $500,000 of total receipts you still go through 1125-E to get the number in — and ATX then
+suppresses the form.** ⛔ **Do not conclude the entry failed because 1125-E is missing from the printed
+return. Check page 1 line 7.**
+
+🛑 **AND THE SECOND HALF, WHICH IS THE ONE THAT MISLEADS: where the form is not required, ATX tells you
+to put THE SUM ON THE FIRST ROW.** So a single detail row is **the software's instruction being
+followed**, not a statement about who was paid. ⛔ **The suppressed form transmits nothing** — the IRS
+receives one total on page 1 line 7, with no officer name, no per-officer amount and no percentage.
+**A one-row detail tab therefore asserts NOTHING about the split**, and reading it as an attribution is
+a mistake this SOP has already made once.
+
+⚠️ **The row's fields become assertions ONLY where the form IS filed** *(receipts ≥ $500,000)*. There,
+four of them are facts somebody signs for:
+1. 🔴 **`Amount of compensation` is per officer, so a filed 1125-E states WHO was paid WHAT.**
+2. **`Percent of time devoted to business`** — a number somebody has to stand behind.
+3. **`Check if Officer is a Shareholder`** — it links the person to the stock percentages.
+4. **`Percent of corporation stock owned`** must agree with the shares behind each **Schedule K-1 item
+   G**, *"current year allocation percentage"* (§11B). ⛔ **NOT page 1 item I**, which is the **number**
+   of shareholders, and ⛔ **not K-1 item F**, which is the shareholder's name and address.
+
+🔑 **Either way — filed or suppressed — DECIDE THE SPLIT BEFORE YOU KEY IT.** Not because the return
+states it, but because **who was paid what drives each shareholder's distributions, stock basis and
+Form 7203** (§12), and those do leave the firm on the K-1s.
+
+⛔ **The flow is line 2 MINUS line 3, not line 2 straight to page 1.** Line 3 is *"Compensation of
+officers claimed on Form 1125-A or elsewhere on return"*, and line 4 subtracts it. **Where officer
+compensation sits in cost of labor (1125-A line 3), page 1 line 7 receives LESS than what you keyed** —
+which is the same reconciliation §5C-i opens with.
+
+⚠️ **And the destination wording on the form contradicts itself for an 1120-S.** Line 4 reads *"Enter
+the result here and on **Form 1120, page 1, line 12** or the appropriate line of your tax return"* —
+1125-E is shared across the 1120 family. **On an 1120-S "the appropriate line" is page 1 line 7.**
+🛑 **Read the current-year form before relying on either caption** — this SOP's standing rule.
+
+ⓘ **A checkbox on the form truncates officers' SSNs** — `Check ("X") to truncate officers' SSNs`.
+Worth ticking where the form *is* filed; irrelevant where it is suppressed.
+
+⚠️ **ATX carries page 1 in whole dollars.** *(Invented illustration — the shape, not any client's
+figures: a book figure of `80,000.15` is keyed and page 1 displays `80,000`.)* **Tie out in cents
+against the books and in dollars against the screen**, and see §9A for the tolerance.
+
 
 _(Worked example: a client's 2024 return took the `Wages & Salary` child to line 8 and the
 `Payroll Tax` child to line 12 — never the parent subtotal. In 2025 the same client had stopped
@@ -2237,6 +2340,58 @@ Two columns: **beginning of year** and **end of year**.
 4. **Equity mapping is a convention, not a calculation.** How the client's capital accounts are
    split between *capital stock*, *additional paid-in capital* and *retained earnings* on the
    form is whatever the prior return did. **Repeat it**, or the two years cannot be compared.
+
+### 8-R · 🛑 THE SOFTWARE ROUNDS BEFORE IT ADDS — and line 23 is the line that absorbs it
+
+_(**Lilian, 2026-09-05**, at the keyboard: she keyed a return whose Schedule L came out **2 apart**,
+with every input matching the working paper. Neither number was wrong.)_
+
+🔑 **A tax return is filed in WHOLE DOLLARS, and the software rounds EACH LINE and then totals the
+rounded lines. A working paper computes in cents and rounds at the end. The two disagree by a dollar
+or two, every time, and the disagreement COMPOUNDS down the return.**
+
+**How it compounds, and it is worth seeing once:**
+
+| | Working paper *(cents, rounded last)* | 🔴 **Software** *(rounds first, then adds)* |
+|---|---|---|
+| **Gross profit** | receipts minus COGS **in cents** | ƒ **rounded receipts − rounded COGS** — up to 1 apart |
+| **Total deductions** | the cents summed, then rounded | ƒ the **rounded lines** summed — up to 1 apart the other way |
+| 🔴 **Ordinary income (line 22)** | one rounding | ƒ **carries BOTH** — so it can be 1–2 from the paper's |
+| **M-1, M-2 and Schedule L line 24** | | ƒ **each recomputes from the rounded line above it** |
+
+⛔ **So a working paper's Schedule L equity figures are NOT keying instructions.** Key them and the
+balance sheet misses by the accumulated drift — which is exactly what the software's own
+*"End of year balance sheet out of balance by …"* line is telling you.
+
+#### ✅ THE RULE: derive line 23, never compute it
+
+**On Schedule L, line 24 (retained earnings) is normally COMPUTED by the software from Schedule M-2,
+and line 23 (additional paid-in capital) is TYPED.** So **line 23 is the line that absorbs the
+rounding**, and it is derived from the other three:
+
+```
+line 23  =  line 15 (total assets)  −  total liabilities  −  line 24 (AS THE SOFTWARE SHOWS IT)
+```
+
+🔑 **Read line 24 off the screen. Do not substitute the working paper's version of it** — the paper's
+figure came from a different rounding order and will not tie.
+
+⚠️ **Two things that follow, and both have bitten:**
+1. **The equity ROLL-FORWARD is still the analysis** — *opening + contributions − distributions ±
+   anything else that moved in the equity block* — and it is what proves the figure is right in
+   substance. ⛔ **It is not what you type.** Keep both: the roll-forward in the paper, the derived
+   figure on the form.
+2. 🔴 **Item F on page 1 is TOTAL ASSETS — Schedule L line 15, never line 27.** When the balance
+   sheet is out, some versions carry line 27 into item F, so item F goes wrong in sympathy and
+   "corrects itself" when line 23 does. **Check it afterwards rather than trusting it.**
+
+#### ⚠️ And the M-1's first line can end up a plug
+
+Where the software's line 22 differs from the books by a dollar or two, **Schedule M-1 line 1 (net
+income per books) is what gets adjusted to make the M-1 tie** — it becomes *"whatever makes line 4
+equal line 22"*, not the P&L's figure. **That is acceptable on a whole-dollar return and it is what
+the software does**, but ⛔ **say so in the working paper**, because the next person who compares
+Schedule M-1 line 1 against the client's P&L will find the difference and think something is broken.
 
 ### 8A · ⚠️ The named shareholder accounts do NOT map to the line their name suggests
 

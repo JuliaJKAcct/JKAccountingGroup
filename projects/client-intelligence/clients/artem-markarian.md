@@ -164,6 +164,23 @@ the actual details.
   shares stays open until she speaks to Julia** — it creates his opening basis and is the one item still open on his Form 7203. 🔑 **And the
   company's ledger, read date by date, placed the Turo guest rentals and a cluster of Florida charges in
   one March 2025 trip** (§5). _(Worked by Lilian.)_
+- 2026-09-05 — 🔴 **WHAT THE COMPANY'S RECLASSIFICATION ENTRY DOES TO HIS OWN 2025 RETURN (Lilian).** The
+  company moved part of the year's owner distributions into **officer's compensation** *(the company file
+  and its working paper carry the mechanics)*. On the firm's working assumptions — 50/50 with his father,
+  and an opening basis of zero — **for him it is a trade:** ✅ **the capital gain he would have had on the
+  2025 distributions disappears**; 🔴 **his 2025 K-1 now carries an ordinary LOSS he cannot deduct in
+  2025** — basis is zero after the distributions, so it is **suspended and carries into 2026** on his Form
+  7203, along with **a §199A loss on his own Form 8995** *(so his 2025 QBI deduction is gone)*; 🔴 **half
+  of the reclassified amount reaches his 2025 Form 1040 as COMPENSATION**, by a route the K-1 does not
+  carry — **a W-2 if the company late-files 2025 payroll, or a Schedule C with self-employment tax on the
+  alternative route** — **and both the route and whether the compensation is his rather than his
+  father's are Julia's decisions, not settled.** 🛑 **The one that bites him: if the compensation is
+  attributed entirely to his father, Artem's own distributions are unchanged and he has a capital gain
+  LARGER than the one the entry was meant to remove.** ⚠️ **He now has two things on his 2025 1040 from
+  this family of returns** — the company's K-1 *(and possibly compensation)* and the Turo Schedule C —
+  and they are separate requests on separate days. 🔗 **Whoever prepares his 1040 must be told the
+  compensation figure and its route by the person asking — nothing on the K-1 will say it.**
+  _(Figures in the company's working paper only. Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 
