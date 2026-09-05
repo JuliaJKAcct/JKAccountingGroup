@@ -2341,6 +2341,58 @@ Two columns: **beginning of year** and **end of year**.
    split between *capital stock*, *additional paid-in capital* and *retained earnings* on the
    form is whatever the prior return did. **Repeat it**, or the two years cannot be compared.
 
+### 8-R · 🛑 THE SOFTWARE ROUNDS BEFORE IT ADDS — and line 23 is the line that absorbs it
+
+_(**Lilian, 2026-09-05**, at the keyboard: she keyed a return whose Schedule L came out **2 apart**,
+with every input matching the working paper. Neither number was wrong.)_
+
+🔑 **A tax return is filed in WHOLE DOLLARS, and the software rounds EACH LINE and then totals the
+rounded lines. A working paper computes in cents and rounds at the end. The two disagree by a dollar
+or two, every time, and the disagreement COMPOUNDS down the return.**
+
+**How it compounds, and it is worth seeing once:**
+
+| | Working paper *(cents, rounded last)* | 🔴 **Software** *(rounds first, then adds)* |
+|---|---|---|
+| **Gross profit** | receipts minus COGS **in cents** | ƒ **rounded receipts − rounded COGS** — up to 1 apart |
+| **Total deductions** | the cents summed, then rounded | ƒ the **rounded lines** summed — up to 1 apart the other way |
+| 🔴 **Ordinary income (line 22)** | one rounding | ƒ **carries BOTH** — so it can be 1–2 from the paper's |
+| **M-1, M-2 and Schedule L line 24** | | ƒ **each recomputes from the rounded line above it** |
+
+⛔ **So a working paper's Schedule L equity figures are NOT keying instructions.** Key them and the
+balance sheet misses by the accumulated drift — which is exactly what the software's own
+*"End of year balance sheet out of balance by …"* line is telling you.
+
+#### ✅ THE RULE: derive line 23, never compute it
+
+**On Schedule L, line 24 (retained earnings) is normally COMPUTED by the software from Schedule M-2,
+and line 23 (additional paid-in capital) is TYPED.** So **line 23 is the line that absorbs the
+rounding**, and it is derived from the other three:
+
+```
+line 23  =  line 15 (total assets)  −  total liabilities  −  line 24 (AS THE SOFTWARE SHOWS IT)
+```
+
+🔑 **Read line 24 off the screen. Do not substitute the working paper's version of it** — the paper's
+figure came from a different rounding order and will not tie.
+
+⚠️ **Two things that follow, and both have bitten:**
+1. **The equity ROLL-FORWARD is still the analysis** — *opening + contributions − distributions ±
+   anything else that moved in the equity block* — and it is what proves the figure is right in
+   substance. ⛔ **It is not what you type.** Keep both: the roll-forward in the paper, the derived
+   figure on the form.
+2. 🔴 **Item F on page 1 is TOTAL ASSETS — Schedule L line 15, never line 27.** When the balance
+   sheet is out, some versions carry line 27 into item F, so item F goes wrong in sympathy and
+   "corrects itself" when line 23 does. **Check it afterwards rather than trusting it.**
+
+#### ⚠️ And the M-1's first line can end up a plug
+
+Where the software's line 22 differs from the books by a dollar or two, **Schedule M-1 line 1 (net
+income per books) is what gets adjusted to make the M-1 tie** — it becomes *"whatever makes line 4
+equal line 22"*, not the P&L's figure. **That is acceptable on a whole-dollar return and it is what
+the software does**, but ⛔ **say so in the working paper**, because the next person who compares
+Schedule M-1 line 1 against the client's P&L will find the difference and think something is broken.
+
 ### 8A · ⚠️ The named shareholder accounts do NOT map to the line their name suggests
 
 The books usually carry **one equity account per shareholder, under that person's name**. The
