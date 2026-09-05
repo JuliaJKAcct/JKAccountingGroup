@@ -174,15 +174,21 @@
 
 ### Tax year 2025 — the review
 
-- **In preparation, blocked on the client.** The four questions that gate it are below. The
+- **In preparation, blocked on the client.** The five questions that gate it are below. The
   return itself, its tie-outs and its decisions are in the working paper.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- **Ask the client the four questions in one message** — working paper §6A. Everything else on
-  the return either can be entered now or is ours to look up (§6B).
+- **Ask the client the FIVE questions in one message** — working paper §6A. ⚠️ **Five, not four:**
+  the fifth (his country of tax residence and whether he has a tax number there) fills four fields
+  on the form and nothing on file answers it, so it rides in the same message. Everything else on
+  the return can either be entered now or is ours to look up (§6B).
 - **Raise the `Tax Return Type` mismatch** with Lilian (`1040` for a nonresident) — read-only
   column, hers to change.
+- 🔴 **TELL him he must keep records** — §1.6038A-3 applies with **no relief available** and
+  carries the same **$25,000** penalty as the filing itself. He has no accounting system at all,
+  so the bank statements plus the receipts behind Q2 are the entire record. This is a *tell*, not
+  an ask (working paper §6C).
 - **Ping has never been searched for this client** — `search_client_meetings` needs a Ping client
   id and could not run. **Google Drive has not been searched either.** Neither is a "nothing
   found"; both are searches that have not happened.
@@ -199,18 +205,19 @@
       5472 are filed**, not just a line.
 - [ ] 🟠 **Did the company pay anything that was really his personally?** Each one is a
       distribution, even when the money went to an unrelated payee.
-- [ ] ⏸ **In which country does he file a tax return as a resident?** Two lines on the 5472 ask
-      for it and nothing on file answers it.
+- [ ] ⏸ **In which country does he file a tax return as a resident — and does he have a tax
+      identification number there?** **Four** fields on the 5472 depend on those two facts, and
+      nothing on file answers either.
 
 **Ours to settle, without asking him** _(§6B)_:
 
 - [ ] 🔴 Confirm by eye that Parts II and III of the prepared 5472 really are blank.
-- [ ] 🔴 **The dissolution date** — in the Sunbiz PDF in Double.
+- [ ] 🔴 **The dissolution date** — on **sunbiz.org**, where it is public and readable; the Sunbiz PDF in Double is one of the six unreadable scans, so it is only the fallback.
 - [ ] 🔍 **His country of citizenship — on his own Form 8843 in Double.** Do not ask him for it.
 - [ ] 🔍 Whether he holds an ITIN.
 - [ ] 🟠 **Who owns the LUMARI trademark** — public on USPTO TSDR.
 - [ ] 🟠 Whether the Form 7004 actually went, and by which route.
-- [ ] 🟠 Text-based PDFs of the six image-only documents, or read them by eye.
+- [ ] 🟠 **Read the six image-only documents by eye.** _(Asking him for text-based PDFs is a fallback, and that half would go in a later message — not the one carrying the five questions.)_
 
 ## 7. Links
 
