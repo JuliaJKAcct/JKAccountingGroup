@@ -1484,6 +1484,14 @@ wrong.
 
 #### 🟢 THE FIRM APPROACH WHEN THE GATES FAIL BUT THE SIGNER STILL WANTS IT NETTED — and the note is not optional
 
+> 🛑 **READ THE SCOPE GATE BELOW FIRST.** This block is the **exception**, and it sits above the rule only
+> because it is the newest addition to this section. ⛔ **You cannot know the gates have failed until you
+> have worked them**, and *"which gates fail"* is a required part of the note this block demands. 🔑 **The
+> order to work in is: the five gates → they pass, net under the policy → they fail, come back here.**
+> ⚠️ **And this exception is NOT covered by the header's carve-out**, which exempts the ORIGINAL netting
+> policy from Lilian's sign-off. **This block was recorded from one live return on 2026-09-05 and is
+> Draft like the rest of the section.**
+
 _(**Lilian, 2026-09-05**, relaying **Julia's approval** on a live return: *"tratamos de netear estas
 contribuciones contra estas distribuciones para no levantar red flags sin sentido… siempre que hagas
 esto, haces la explicación en una nota para que nosotros sepamos qué sucedió… en caso de que no
@@ -1494,7 +1502,7 @@ queramos hacerlo así, nos demos cuenta de qué approach se tomó y lo corrijamo
 | Step | What you do |
 |---|---|
 | **1** | **Compute the excess** of the year's gross distributions over the year's gross contributions — per §5C-iii and §5C-vii, **reading the rows, never a net** |
-| **2** | **Book that excess as OFFICER COMPENSATION** *(page 1 line 7 — the entry route is §5C-i)*. ⚠️ This is a **book entry the client posts**, not a presentation choice |
+| **2** | **Book that excess as OFFICER COMPENSATION** *(page 1 line 7 — the entry route is §5C-i)*. ⚠️ This is a **book entry the client posts**, not a presentation choice. ⛔ **AND IT IS THE SIGNER'S DECISION, NEVER THE PREPARER'S — §5C-viii**, which says in terms that a preparer does not reclassify distributions to salary unilaterally and that whoever decided it gets recorded. **Steps 1, 3 and 4 are preparation; step 2 is an instruction you must already have** |
 | **3** | **Net what remains and report distributions at ZERO** on Schedule K line 16d and every K-1 box 16D |
 
 🛑 **AND STEP 4, WHICH IS NOT OPTIONAL: WRITE THE NOTE.** It goes in the return's working paper, and it
