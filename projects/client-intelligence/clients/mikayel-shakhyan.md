@@ -144,6 +144,17 @@
 
 ### Log
 
+- _(2026-09-05, later the same day)_ — **The return can largely be prepared while we wait.** The
+  working paper now carries a **fill-ahead sheet (§3E)**: field by field, what can be entered
+  today, what is a firm-side lookup, and the **five** fields that genuinely depend on the client —
+  plus a **drafted Part V attached statement (§3F)** with the blanks named. **Most of both forms
+  is answerable now**, Part VII included. The open items were split into **what only he can
+  answer (§6A)**, **what we settle ourselves (§6B)** — his citizenship is on his own Form 8843 in
+  Double, the dissolution date is in the Sunbiz PDF, the trademark owner is public on USPTO TSDR —
+  and **what we simply tell him (§6C)**, which is that he must keep records. 🔑 **One question
+  gained a second half that changes the form:** whether the money he put in was **capital or a
+  loan** — capital goes on the Part V statement, a loan goes on **Part IV line 17** and makes
+  Part VII line 42 a real question.
 - _(2026-09-05)_ — **File created, then the documents were read.** Lilian asked the session to
   find the client, confirm what a reportable transaction is for this entity, and **analyse every
   document in Double** including the bank statements. She confirmed the LLC is **single-member**
@@ -163,33 +174,50 @@
 
 ### Tax year 2025 — the review
 
-- **In preparation, blocked on the client.** The four questions that gate it are below. The
+- **In preparation, blocked on the client.** The five questions that gate it are below. The
   return itself, its tie-outs and its decisions are in the working paper.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- **Ask the client four things** (§*Information still needed*) — one message, and it unblocks the
-  return.
+- **Ask the client the FIVE questions in one message** — working paper §6A. ⚠️ **Five, not four:**
+  the fifth (his country of tax residence and whether he has a tax number there) fills four fields
+  on the form and nothing on file answers it, so it rides in the same message. Everything else on
+  the return can either be entered now or is ours to look up (§6B).
 - **Raise the `Tax Return Type` mismatch** with Lilian (`1040` for a nonresident) — read-only
   column, hers to change.
+- 🔴 **TELL him he must keep records** — §1.6038A-3 applies with **no relief available** and
+  carries the same **$25,000** penalty as the filing itself. He has no accounting system at all,
+  so the bank statements plus the receipts behind Q2 are the entire record. This is a *tell*, not
+  an ask (working paper §6C).
 - **Ping has never been searched for this client** — `search_client_meetings` needs a Ping client
   id and could not run. **Google Drive has not been searched either.** Neither is a "nothing
   found"; both are searches that have not happened.
 
 ### Information still needed
 
-- [ ] 🔴 **Confirm the counter deposits were his own money**, not a customer paying cash.
-- [ ] 🔴 **What he paid personally between 8 Aug and 27 Oct 2025** — Sunbiz, registered agent,
-      EIN, trademark. Without it the Part V figure is understated.
-- [ ] 🔴 **Are AXY Company LLC and Oxana Martox LLC connected to him or his family?** Two payments
-      went to them; whether they are reportable turns entirely on this.
-- [ ] 🟠 **Who owns the LUMARI trademark — him or the LLC?** If it is his, the company paid a
-      personal cost, which is a distribution. Public on the USPTO TSDR database.
-- [ ] 🔴 **The dissolution date** — decides the final-return box and whether 2026 owes a filing.
-- [ ] 🟠 **Was the Form 7004 actually transmitted by 15 Apr 2026, and to the Ogden fax/address?**
-      The officer signed it on the due date; the preparer signed ten weeks later; the confirmation
-      is an unreadable scan.
-- [ ] Text-based PDFs of the six image-only documents.
+**Only he can answer these** _(working paper §6A)_:
+
+- [ ] 🔴 **Were the counter deposits his own money — and did he put them in as CAPITAL or as a
+      LOAN?** The second half decides which half of the form they go on.
+- [ ] 🔴 **What he paid personally between 8 Aug and 27 Oct 2025**, the 80 days before the company
+      had an account — and whether any of it was property rather than money.
+- [ ] 🔴 **Who are AXY Company LLC and Oxana Martox LLC to him?** This decides **how many Forms
+      5472 are filed**, not just a line.
+- [ ] 🟠 **Did the company pay anything that was really his personally?** Each one is a
+      distribution, even when the money went to an unrelated payee.
+- [ ] ⏸ **In which country does he file a tax return as a resident — and does he have a tax
+      identification number there?** **Four** fields on the 5472 depend on those two facts, and
+      nothing on file answers either.
+
+**Ours to settle, without asking him** _(§6B)_:
+
+- [ ] 🔴 Confirm by eye that Parts II and III of the prepared 5472 really are blank.
+- [ ] 🔴 **The dissolution date** — on **sunbiz.org**, where it is public and readable; the Sunbiz PDF in Double is one of the six unreadable scans, so it is only the fallback.
+- [ ] 🔍 **His country of citizenship — on his own Form 8843 in Double.** Do not ask him for it.
+- [ ] 🔍 Whether he holds an ITIN.
+- [ ] 🟠 **Who owns the LUMARI trademark** — public on USPTO TSDR.
+- [ ] 🟠 Whether the Form 7004 actually went, and by which route.
+- [ ] 🟠 **Read the six image-only documents by eye.** _(Asking him for text-based PDFs is a fallback, and that half would go in a later message — not the one carrying the five questions.)_
 
 ## 7. Links
 
