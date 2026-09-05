@@ -362,8 +362,7 @@ ordinary sale of the business there is nothing to elect, nothing to sign, and no
 a buyer nobody has spoken to.**
 
 > 🔑 **WHY THIS MATTERS SO MUCH, IN ONE LINE:** under method A the return reports a **per-day fraction of
-> a full year**, which is not a real result of anything. **On the pilot the two methods gave 36,990 and
-> 51,452 for the same line 22.** ⛔ **Getting this wrong is not a presentation error.**
+> a full year**, which is not a real result of anything. **On the pilot the two methods gave figures roughly 40% apart for the same line 22.** ⛔ **Getting this wrong is not a presentation error.**
 >
 > 🛑 **AND DO NOT REASON YOUR WAY TO THE RIGHT ANSWER BY THE WRONG ROAD.** A session on the pilot argued
 > *"nobody made a §1362(e)(3) election, so the books cannot be closed"* — and that argument **fails**,
@@ -2413,7 +2412,7 @@ The three candidates, and what choosing each one *asserts*:
 |---|---|
 | **Line 19** — *Loans from shareholders* | The money is **debt**. It supports losses through **debt basis**, and it is a liability the company owes back |
 | **Line 23** — *Additional paid-in capital* | The money is **contributed capital**, shown as its own equity line |
-| **Line 24** — *Retained earnings* | The named accounts are **swept in with accumulated earnings**, and the form shows no separate contribution line at all |
+| **Line 24** — *Retained earnings* — ⚠️ **see §8-R: on a live return the SOFTWARE computes line 24 from Schedule M-2 and LINE 23 is the residual you type; the roll-forward here is the ANALYSIS, not the keying instruction** | The named accounts are **swept in with accumulated earnings**, and the form shows no separate contribution line at all |
 
 🔑 **Read the prior return's lines 19, 22, 23 and 24 before you fill in any of them** — and read
 the prior year's **K-1 box for *Loans from shareholder*** as the cross-check. A blank line 19
