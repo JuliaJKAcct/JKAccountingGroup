@@ -904,10 +904,12 @@ opens the following year, so both would have travelled.)_
 >
 > 🔴 **The failure this fixes is NOT a missing rule — the rule is right here, and the working paper
 > obeyed it.** What happened is that the session **re-delivered the tables in chat in a compressed
-> form and dropped the `Where it came from` column on the way.** The paper said
-> *"line 18 = 54.72 Chase card (sub) + 13,773.73 Chase card (main)"*; what reached the preparer was
-> *"line 18 = 13,828.45"*. **She then had to ask what the number was** — which is the cost this whole
-> section exists to avoid, paid twice.
+> form and dropped the `Where it came from` column on the way.** The working paper's balance-sheet
+> line carried its full derivation — *"= <this card's balance> + <that card's balance>"*, each account
+> named; what reached the preparer was **the subtotal alone**. **She then had to ask what the number
+> was** — which is the cost this whole section exists to avoid, paid twice.
+> ⓘ *(No figures here on purpose: this is a firm-wide file and client amounts live only in
+> `projects/tax-returns/`. The worked instance is in that return's own working paper.)*
 >
 > **So the rule has a second half:**
 >
