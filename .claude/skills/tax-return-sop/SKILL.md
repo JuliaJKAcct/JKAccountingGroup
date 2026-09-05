@@ -896,6 +896,36 @@ opens the following year, so both would have travelled.)_
 |---|---|---|---|---|
 | … | … | … | *(the IRS source — form, line, or the books)* | *(the actual screen and field, or **"computed — do not type"**)* |
 
+> ### 🛑 THE SOURCE COLUMN IS NOT A WORKING-PAPER FEATURE — IT TRAVELS WITH THE TABLE, EVERY TIME
+>
+> _(**Lilian, 2026-09-05**, and she had asked before: *"prefiero que hicieras, cuando sea necesario,
+> otra columna que diga de dónde salen los números. Eso te lo he pedido un millón de veces… algo
+> tenemos que corregir en este SOP para que esto no vuelva a suceder."*)_
+>
+> 🔴 **The failure this fixes is NOT a missing rule — the rule is right here, and the working paper
+> obeyed it.** What happened is that the session **re-delivered the tables in chat in a compressed
+> form and dropped the `Where it came from` column on the way.** The paper said
+> *"line 18 = 54.72 Chase card (sub) + 13,773.73 Chase card (main)"*; what reached the preparer was
+> *"line 18 = 13,828.45"*. **She then had to ask what the number was** — which is the cost this whole
+> section exists to avoid, paid twice.
+>
+> **So the rule has a second half:**
+>
+> 1. ⛔ **NEVER compress the source column out of a re-delivery.** *"Give me the tables again"* means
+>    the **same** tables. A shorter table is not a favour: the figures are the part someone can read
+>    off the software anyway; **the source is the part only this analysis has.**
+> 2. 🔑 **For a BALANCE-SHEET line, "where it came from" means WHICH ACCOUNTS SUM TO IT — named, with
+>    each amount** — not *"the balance sheet"*. A balance-sheet line is almost always a subtotal of
+>    several accounts, and the preparer cannot check a subtotal they cannot see.
+> 3. ⚠️ **Where the books' own CLASSIFICATION and the form's line disagree, say so in that column.**
+>    *(A vehicle loan sitting in the client's `Other Current Liabilities` while the return puts it on
+>    the ≥ 1 year line is a return assertion about the TERM that the books contradict — and the term
+>    is usually nobody's confirmed fact.)*
+> 4. ✅ **SELF-CHECK BEFORE SENDING, and it takes one pass:** go down every table you are about to
+>    deliver and confirm **every row carrying a figure has a non-empty source cell.** A row whose
+>    source is *"it is on the balance sheet"* has failed the check. **If a table will not fit with
+>    the column, split the table — never drop the column.**
+
 **Three rules for that last column:**
 
 1. ⚠️ **Mark it as the SOFTWARE's, not the IRS's.** A screen name is a vendor fact and next year's
