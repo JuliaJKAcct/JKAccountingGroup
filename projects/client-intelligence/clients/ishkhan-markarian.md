@@ -118,6 +118,22 @@ the actual details.
   dies at the transfer. **It also opens the question of whose money ran through the company's owner
   accounts in 2025** (§5) — the first thing Julia has to decide before the return's equity section can be
   built. _(Worked by Lilian.)_
+- 2026-09-05 — 🔴 **WHAT THE COMPANY'S RECLASSIFICATION ENTRY DOES TO HIS OWN 2025 RETURN (Lilian).** The
+  company moved part of the year's owner distributions into **officer's compensation** *(the company file
+  and its working paper carry the mechanics)*. On the firm's working assumptions — 50/50 with Artem, and an
+  opening basis of zero — **three things change for him, and only one is good:** ✅ **the capital gain he
+  would have had on the 2025 distributions disappears** *(distributions now equal his basis exactly)*;
+  🔴 **his 2025 K-1 now carries an ordinary LOSS that he cannot deduct** — his basis is zero after the
+  distributions, the loss is suspended, **and because this is his FINAL K-1 the suspended loss is LOST**,
+  not carried; 🔴 **half of the reclassified amount reaches his 2025 Form 1040 as COMPENSATION**, by a route
+  the K-1 does not carry — **a W-2 if the company late-files 2025 payroll, or a Schedule C with
+  self-employment tax on the alternative route** — and **which route, and whether the compensation is his
+  at all rather than his son's, is Julia's decision and is not settled.** ⚠️ **If the compensation is
+  attributed entirely to the other owner, his own distributions are unchanged and he still has the
+  capital gain.** His 2024 §199A carryforward already wiped out his QBI deduction, so that part is
+  unchanged. 🔗 **Whoever prepares his 1040 must be told the compensation figure and its route by the
+  person asking — nothing on the K-1 will say it.** _(Figures in the company's working paper only. Worked
+  by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 
