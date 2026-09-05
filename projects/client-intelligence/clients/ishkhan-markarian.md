@@ -130,7 +130,7 @@ the actual details.
   🔴 **2026-09-05 — SETTLED BY LILIAN, AND IT GOES THE BAD WAY FOR HIM: the compensation is ALL HIS SON'S**
   *(company working paper §4 decision 24)*. ⛔ **So NONE of it is his** — and because the compensation comes
   out of the pooled distribution account, **his own distributions RISE by the whole of it.** 🛑 **The
-  consequences, and none of them appear anywhere on his K-1:** ① **he has a five-figure CAPITAL GAIN on his
+  consequences, and none of them appear anywhere on his K-1:** ① **he has a CAPITAL GAIN on his
   own 2025 Schedule D** — his distributions now exceed his stock basis, and §1368(b)(2) works on actual
   distributions against actual basis; ② **his ending stock basis is zero**; ③ **his 2025 ordinary loss is
   suspended and, because this is his FINAL K-1, it is LOST for good**; ④ **no compensation income reaches
@@ -146,12 +146,21 @@ the actual details.
   shareholder, so whatever is not used in 2025 is LOST PERMANENTLY** — the post-termination transition
   period does not help him, because that runs when the *corporation's* S election ends, not when one
   shareholder disposes of his stock.
-  🛑 **WHY IT MATTERS MORE THAN THE GAIN: the netting decision on the company return now moves a
-  five-figure amount of his personal taxable income, not a presentation detail.** His K-1's distribution
-  code reads nil, but the basis rules run on the distributions actually made — **and depending on which
-  figure goes on line 6 of HIS OWN Form 7203, he either takes a capital gain and loses every suspended
-  loss, or deducts most of them.** ⛔ **His 1040 must not be prepared until that is decided in writing**;
-  the firm's own policy, applied per shareholder as it is written, gives the middle answer.
+  🛑 **WHAT THIS MEANS FOR HIS 1040, corrected in review the same day.** ⛔ **An earlier version of this
+  entry said the netting decision moved a five-figure amount of his taxable income and recommended a
+  middle course. That was WRONG** — it combined a netted distribution with a gross contribution, using the
+  same contribution twice. 🔑 **Netting applied consistently is a wash, so his answer is the same either
+  way: the capital gain stands, his basis ends at zero, and EVERY suspended loss dies.** ⛔ **The firm's
+  own netting policy gives him nothing either** — its first gate fails for him precisely because his
+  distributions exceed his contributions, and a failed gate means gross.
+  🛑 **The live risk is a HYBRID computation:** his K-1's distribution code reads nil while his
+  contributions are real, and a preparer combining the two would deduct a five-figure amount the gross
+  facts do not support. **His own basis form must be prepared GROSS, and whoever does his 1040 has to be
+  told so in writing** — nothing on the K-1 says it.
+  🔑 **The one thing that WOULD change his answer is a fact, not a presentation: the real split of the
+  pooled owner account**, which is still a working assumption. **If his real distributions are at or below
+  his real contributions there is no gain and the suspended losses become usable** — which is why the
+  split now belongs in front of Julia rather than at the 1040.
   🛠️ **One document is still missing: his 2024 Form 8995** — ask for it the same way. The working paper
   had been carrying the gross 2024 losses as his §199A carryforward, and the 7203 shows part of them was
   suspended rather than allowed, so that figure is probably overstated.

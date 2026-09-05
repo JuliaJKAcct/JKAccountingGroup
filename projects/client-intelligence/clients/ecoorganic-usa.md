@@ -1036,10 +1036,14 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   reporting his share on a Schedule C with self-employment tax *(the return tables are built on this
   route, because it is what the books as posted say)*; ③ ~~**whose compensation it is**~~ — 🟢 **SETTLED
   2026-09-05 by Lilian: the WHOLE of it is the CONTINUING owner's** *(working paper §4 decision 24)*, so
-  the outgoing owner's distributions rise by the same amount and **he takes the five-figure capital gain
-  on his own final-year return, while the continuing owner's loss becomes fully deductible and he carries
-  basis into 2026.** ⚠️ **The gain still rests on an opening basis of zero for him, which the paper says
-  is false and which one never-requested document would settle.**
+  the outgoing owner's distributions rise by the same amount and **he takes a capital gain on his own
+  final-year return, while the continuing owner's loss becomes fully deductible and he carries basis into
+  2026.** 🟢 **2026-09-05 — his 2024 Form 7203 arrived and CONFIRMS the zero opening basis the paper had
+  been doubting, so the gain stands.** 🔴 **It also revealed a block of suspended losses from 2024 that
+  nobody knew about, which die on his final K-1 and which his basis cannot absorb on any presentation** —
+  **so the netting decision does not move his tax at all.** 🛑 **The live risk is on HIS return, not this
+  one:** his K-1's distribution code reads nil while his contributions are real, and combining the two
+  produces a deduction the gross facts do not support. **His own basis form is prepared GROSS.**
   🆕 **TWO MORE DECISIONS OF JULIA'S REACHED THE RETURN THE SAME DAY** *(working paper §4 decisions 25–27)*:
   ① **contributions and distributions are NETTED OUT on the face of the return** — the Schedule K
   distributions line and both K-1 distribution codes report nil. ⛔ **Presentation only: every basis
