@@ -3,7 +3,7 @@
 > **Status:** 🟡 **DRAFT — in review with Lilian.** Written 2026-08-14 while preparing the
 > firm's first 1120-S with a session assisting, and shaped by what a first-time preparer
 > actually needed to be told. **Remove this note when Lilian signs it off.** ·
-> **Owner:** Lilian · **Last updated:** 2026-09-04
+> **Owner:** Lilian · **Last updated:** 2026-09-05
 >
 > 🔵 **One part of this DRAFT is already FIRM POLICY and is not waiting on the sign-off: §5C-v**,
 > Julia's rule on netting a shareholder's contributions against their distributions. **Read it
@@ -1036,7 +1036,7 @@ each expense that has its own line, then group the remainder.
 
 | Line | Category | Typical QuickBooks accounts |
 |---|---|---|
-| **7** | Compensation of officers | Salaries paid to **officers** — not to every shareholder-employee (§5C-i). Form 1125-E is required at **$500,000 or more** of total receipts |
+| **7** | Compensation of officers | Salaries paid to **officers** — not to every shareholder-employee (§5C-i). Form 1125-E is required at **$500,000 or more** of total receipts. 🛠️ **YOU CANNOT TYPE THIS LINE — the entry route is §5C-i** |
 | **8** | Salaries and wages | Everyone else's wages — **and only actual wages**. See 5C-i |
 | **9** | Repairs and maintenance | |
 | **10** | Bad debts | |
@@ -1787,6 +1787,45 @@ What actually lands where:
 Salary` child**; the payroll tax goes to line 12. **Taking the parent's `Total for…` line puts
 the payroll taxes on the wages line and empties line 12.** Reproducing the prior year (§3) shows
 you which one that client's return used.
+
+#### 🛠️ THE ENTRY ROUTE FOR LINE 7 IN ATX — you cannot type on the line, and the form you are sent to is usually not even filed
+
+_(Established at the keyboard by **Lilian, 2026-09-05**, preparing a real 1120-S. This is the kind of
+thing that costs twenty minutes the first time and nothing ever again.)_
+
+🛑 **Click page 1 line 7 and nothing happens — ATX jumps you to Form 1125-E instead.** That is correct
+behaviour, not a fault, and it happens **even when Form 1125-E is not required.**
+
+| Step | What you do | What you see |
+|---|---|---|
+| **1** | Click **page 1, line 7** *(`Compensation of officers`)* | ATX opens **Form 1125-E**, `Compensation of Officers`. ⛔ **The grid on the face of 1125-E is not where you type either** |
+| **2** | On Form 1125-E, click **line 2** — *"Total compensation of officers"* | a **detail tab** opens, headed `Compensation of Officers`. **This is the only place the figure can be entered** |
+| **3** | Add a record and fill the row **per officer** | `Name` · `First Name` · `M.I.` · `Last Name` · address block *(all optional when the form is not filed)* · `Soc. Sec. Num.` · ✅ **`Check if Officer is a Shareholder`** · **`Percent of time devoted to business`** · **`Percent of corporation stock owned — Common / Preferred`** · `Officer Title` · 🔴 **`Amount of compensation`** |
+| **4** | Close the detail tab | the total flows **1125-E line 2 → line 4 → page 1 line 7** |
+
+🔑 **ATX's own on-screen note, and it is the part nobody expects:**
+> *"If form 1125-E is not required, enter the sum of officer compensation on the detail tab on the
+> first row. **The form will not be e-filed or printed with the return.**"*
+
+✅ **So below $500,000 of total receipts you still go through 1125-E to get the number in — and ATX
+then suppresses the form itself.** ⛔ **Do not conclude the entry failed because 1125-E does not appear
+in the printed return. Check page 1 line 7.**
+
+⚠️ **Four things on that detail row that are ASSERTIONS on a signed return, not formatting:**
+1. 🔴 **`Amount of compensation` is PER OFFICER, and the return therefore states WHO was paid WHAT.**
+   **If two shareholders are officers and only one is listed, the return says the other was paid
+   nothing** — which is a fact about the year, and it drives each shareholder's distributions,
+   basis and Form 7203. **Decide the split before you key it, not after.**
+2. **`Percent of time devoted to business`** — a number somebody has to stand behind.
+3. **`Check if Officer is a Shareholder`** — ticking it links the person to the stock percentages.
+4. **`Percent of corporation stock owned`** must agree with page 1 item I and the K-1s' item F.
+
+ⓘ **A checkbox at the head of the form truncates officers' SSNs on the printed copy** — worth ticking
+where the form *is* filed.
+
+⚠️ **ATX carries page 1 in WHOLE DOLLARS.** A book figure of `18,986.63` is keyed and displays as
+**`18,987`**. **Expect every page-1 line to round, and do the tie-outs in cents against the books but
+in dollars against the screen.**
 
 _(Worked example: a client's 2024 return took the `Wages & Salary` child to line 8 and the
 `Payroll Tax` child to line 12 — never the parent subtotal. In 2025 the same client had stopped
