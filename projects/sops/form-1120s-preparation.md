@@ -1081,7 +1081,7 @@ place. Read down this table, not up the numbers.
 | **5** | **5C-v** · 🔵 **FIRM POLICY** — net the account, report distributions at zero | 🔵 **the one part of this draft that is already firm policy**, and its five gates |
 | **6** | **5C-ii** · ⚠️ Line 12 is tax the COMPANY bears | sales tax collected is not one |
 | **7** | **5C-viii** · 🔴 No payroll and big distributions | the reasonable-compensation exposure, and how to raise it with the client |
-| **8** | **5C-i** · ⚠️ Line 8 is WAGES | not the "payroll" accounts — the officer/staff/platform-fee split |
+| **8** | **5C-i** · ⚠️ Line 8 is WAGES — **and the ENTRY ROUTE for line 7** | not the "payroll" accounts — the officer/staff/platform-fee split; **plus how officer compensation is actually keyed in ATX**, which is not on line 7 |
 
 🔑 **Items 2 → 3 → 4 → 5 are one chain and are meant to be read in that order.** 2 says what the
 return needs, 3 is how to get it out of the software, 4 is how to read what comes back, and 5 is how
@@ -1790,42 +1790,65 @@ you which one that client's return used.
 
 #### 🛠️ THE ENTRY ROUTE FOR LINE 7 IN ATX — you cannot type on the line, and the form you are sent to is usually not even filed
 
-_(Established at the keyboard by **Lilian, 2026-09-05**, preparing a real 1120-S. This is the kind of
-thing that costs twenty minutes the first time and nothing ever again.)_
+_(Observed at the keyboard by **Lilian, 2026-09-05**, preparing a real 1120-S in ATX 2025, and
+recorded as **her observation of one software version** rather than as vendor documentation.)_
 
-🛑 **Click page 1 line 7 and nothing happens — ATX jumps you to Form 1125-E instead.** That is correct
-behaviour, not a fault, and it happens **even when Form 1125-E is not required.**
+🛑 **Click page 1 line 7 and you cannot type — ATX opens Form 1125-E instead.**
 
 | Step | What you do | What you see |
 |---|---|---|
 | **1** | Click **page 1, line 7** *(`Compensation of officers`)* | ATX opens **Form 1125-E**, `Compensation of Officers`. ⛔ **The grid on the face of 1125-E is not where you type either** |
-| **2** | On Form 1125-E, click **line 2** — *"Total compensation of officers"* | a **detail tab** opens, headed `Compensation of Officers`. **This is the only place the figure can be entered** |
-| **3** | Add a record and fill the row **per officer** | `Name` · `First Name` · `M.I.` · `Last Name` · address block *(all optional when the form is not filed)* · `Soc. Sec. Num.` · ✅ **`Check if Officer is a Shareholder`** · **`Percent of time devoted to business`** · **`Percent of corporation stock owned — Common / Preferred`** · `Officer Title` · 🔴 **`Amount of compensation`** |
-| **4** | Close the detail tab | the total flows **1125-E line 2 → line 4 → page 1 line 7** |
+| **2** | On Form 1125-E, click **line 2** — *"Total compensation of officers"* | a **detail tab** opens, headed `Compensation of Officers`. **That is where the figure is keyed** |
+| **3** | Add a record and fill the row | `Name` · `First Name` · `M.I.` · `Last Name` · `Suffix` · address block · `Soc. Sec. Num.` · `Check if Officer is a Shareholder` · `Percent of time devoted to business` · `Percent of corporation stock owned — Common / Preferred` · `Officer Title` · 🔴 `Amount of compensation` |
+| **4** | Close the detail tab | the total reaches page 1 line 7 **through line 4, not line 2** — see the line-3 warning below |
 
-🔑 **ATX's own on-screen note, and it is the part nobody expects:**
+🔑 **ATX's own on-screen note, and it is the part that decides how you use the detail tab:**
 > *"If form 1125-E is not required, enter the sum of officer compensation on the detail tab on the
 > first row. **The form will not be e-filed or printed with the return.**"*
 
-✅ **So below $500,000 of total receipts you still go through 1125-E to get the number in — and ATX
-then suppresses the form itself.** ⛔ **Do not conclude the entry failed because 1125-E does not appear
-in the printed return. Check page 1 line 7.**
+**Read both halves of that, because each one catches somebody:**
 
-⚠️ **Four things on that detail row that are ASSERTIONS on a signed return, not formatting:**
-1. 🔴 **`Amount of compensation` is PER OFFICER, and the return therefore states WHO was paid WHAT.**
-   **If two shareholders are officers and only one is listed, the return says the other was paid
-   nothing** — which is a fact about the year, and it drives each shareholder's distributions,
-   basis and Form 7203. **Decide the split before you key it, not after.**
+✅ **Below $500,000 of total receipts you still go through 1125-E to get the number in — and ATX then
+suppresses the form.** ⛔ **Do not conclude the entry failed because 1125-E is missing from the printed
+return. Check page 1 line 7.**
+
+🛑 **AND THE SECOND HALF, WHICH IS THE ONE THAT MISLEADS: where the form is not required, ATX tells you
+to put THE SUM ON THE FIRST ROW.** So a single detail row is **the software's instruction being
+followed**, not a statement about who was paid. ⛔ **The suppressed form transmits nothing** — the IRS
+receives one total on page 1 line 7, with no officer name, no per-officer amount and no percentage.
+**A one-row detail tab therefore asserts NOTHING about the split**, and reading it as an attribution is
+a mistake this SOP has already made once.
+
+⚠️ **The row's fields become assertions ONLY where the form IS filed** *(receipts ≥ $500,000)*. There,
+four of them are facts somebody signs for:
+1. 🔴 **`Amount of compensation` is per officer, so a filed 1125-E states WHO was paid WHAT.**
 2. **`Percent of time devoted to business`** — a number somebody has to stand behind.
-3. **`Check if Officer is a Shareholder`** — ticking it links the person to the stock percentages.
-4. **`Percent of corporation stock owned`** must agree with page 1 item I and the K-1s' item F.
+3. **`Check if Officer is a Shareholder`** — it links the person to the stock percentages.
+4. **`Percent of corporation stock owned`** must agree with the shares behind each **Schedule K-1 item
+   G**, *"current year allocation percentage"* (§11B). ⛔ **NOT page 1 item I**, which is the **number**
+   of shareholders, and ⛔ **not K-1 item F**, which is the shareholder's name and address.
 
-ⓘ **A checkbox at the head of the form truncates officers' SSNs on the printed copy** — worth ticking
-where the form *is* filed.
+🔑 **Either way — filed or suppressed — DECIDE THE SPLIT BEFORE YOU KEY IT.** Not because the return
+states it, but because **who was paid what drives each shareholder's distributions, stock basis and
+Form 7203** (§12), and those do leave the firm on the K-1s.
 
-⚠️ **ATX carries page 1 in WHOLE DOLLARS.** A book figure of `18,986.63` is keyed and displays as
-**`18,987`**. **Expect every page-1 line to round, and do the tie-outs in cents against the books but
-in dollars against the screen.**
+⛔ **The flow is line 2 MINUS line 3, not line 2 straight to page 1.** Line 3 is *"Compensation of
+officers claimed on Form 1125-A or elsewhere on return"*, and line 4 subtracts it. **Where officer
+compensation sits in cost of labor (1125-A line 3), page 1 line 7 receives LESS than what you keyed** —
+which is the same reconciliation §5C-i opens with.
+
+⚠️ **And the destination wording on the form contradicts itself for an 1120-S.** Line 4 reads *"Enter
+the result here and on **Form 1120, page 1, line 12** or the appropriate line of your tax return"* —
+1125-E is shared across the 1120 family. **On an 1120-S "the appropriate line" is page 1 line 7.**
+🛑 **Read the current-year form before relying on either caption** — this SOP's standing rule.
+
+ⓘ **A checkbox on the form truncates officers' SSNs** — `Check ("X") to truncate officers' SSNs`.
+Worth ticking where the form *is* filed; irrelevant where it is suppressed.
+
+⚠️ **ATX carries page 1 in whole dollars.** *(Invented illustration — the shape, not any client's
+figures: a book figure of `80,000.15` is keyed and page 1 displays `80,000`.)* **Tie out in cents
+against the books and in dollars against the screen**, and see §9A for the tolerance.
+
 
 _(Worked example: a client's 2024 return took the `Wages & Salary` child to line 8 and the
 `Payroll Tax` child to line 12 — never the parent subtotal. In 2025 the same client had stopped
