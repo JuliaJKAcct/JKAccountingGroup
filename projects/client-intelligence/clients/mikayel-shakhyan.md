@@ -28,8 +28,8 @@
   Register) was filed with **Pivniak Law** as the correspondent. ⚠️ **Whether the mark is owned by
   Mikayel personally or by the LLC is unsettled** and it changes the return — §6.
 - **Primary language:** RU — Double's `Preferred language` reads **"Only Russian"**
-- **Our engagement:** Income tax only. Double: `Income Tax` ✔ · `Bookkeeping` **N/A** ·
-  `1099 Preparation` ✘ · `Annual Report` ✘
+- **Our engagement:** Income tax only. Double: `Income Tax: true` · `Bookkeeping: N/A` ·
+  `1099 Preparation: false` · `Annual Report: false`
 - **Fiscal year-end:** Calendar. 2025 is a **short first year, 8 Aug → 31 Dec 2025**.
 - **Accounting platform:** None — Double `platform: none`, no QuickBooks. **There are no books.**
   The bank account is the only ledger.
@@ -38,7 +38,7 @@
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact | Double client 710648 — one portal contact, full admin/tax/financial/files access, MFA **not** enabled |
+| Owner / primary contact | Double client 710648 — one portal contact, with full admin/tax/financial/files access |
 | The company's attorney | **Pivniak Law** — correspondent on the LUMARI trademark application, and paid out of the LLC's account in Nov 2025 |
 
 - **Double client:** https://app.doublehq.com/clients/710648/info/properties
@@ -48,7 +48,7 @@
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| Bank of America (the LLC's account) | The only record of the company's activity | _(pending)_ | Statements in Double: `TaxDome > Mikayel Shakhyan > Client uploaded documents > Bank statements` — `eStmt_2025-10-31/11-28/12-31.pdf` and `eStmt_2026-01-30.pdf`. ⭐ **Account opened 27 Oct 2025** and the four statements are continuous to 31 Jan 2026, so this is its **whole life** — the Jan–Sep 2025 "gap" flagged before the documents were read **does not exist**: the account did not |
+| Bank of America (the LLC's account) | The only record of the company's activity | _(pending)_ | Statements in Double: `TaxDome > Mikayel Shakhyan > Client uploaded documents > Bank statements` — `eStmt_2025-10-31/11-28/12-31.pdf` and `eStmt_2026-01-30.pdf`. ⭐ **Account opened 27 Oct 2025**, and the four statements run continuously to 31 Jan 2026 — so they are the account's **whole life**, not a fragment. ⛔ **RETRACTED:** an earlier note here said the Jan–Sep 2025 statements were **missing**. They are not missing — **the account did not exist yet** |
 | Double client portal | Document exchange | n/a | Activated by the client 2026-04-15 |
 
 ## 4. Obligations & recurring processes
@@ -64,7 +64,8 @@
 ### Bookkeeping & monthly close
 - **Applies?** No — Double `Bookkeeping` reads **N/A**, and there is no accounting system.
 
-### Income tax — TWO separate filings, and they are not the same taxpayer
+### Income tax
+- **Applies?** Yes. 🔴 **TWO separate filings, and they are not the same taxpayer.**
 1. 🔴 **The LLC — pro forma Form 1120 with Form 5472 attached.** A domestic entity wholly owned by
    one foreign person is a corporation **for the limited purposes of §6038A**
    (Reg. §301.7701-2(c)(2)(vi); §1.6038A-1(c)(1), added by **TD 9796**). No income-tax return of
@@ -88,28 +89,31 @@
 - **Forms 8843 — four, one per household member** (`JK Accounting Group > Others > 2025 >
   Forms 8843`), mailed **certified 25 Jun 2026** with the receipt and envelope on file.
   Mikayel's shows **F-2 status**, entered the U.S. **27 Feb 2025** having changed from B, and
-  names a language academy in Hallandale Beach. That is what makes him an **exempt individual**,
+  names the language academy he attends. That is what makes him an **exempt individual**,
   hence a nonresident, hence the LLC foreign-owned.
 - `2025 4868-mailed by his own.pdf` — he mailed his own individual extension.
 - The **LUMARI trademark application** with the USPTO is live and will need watching.
 
 ## 5. Key facts & quirks
 
-- 🔴 **THE FORM 5472 SITTING IN DOUBLE IS A SHELL — DO NOT FILE IT.** Part I names the entity, but
-  **Part II (the 25% foreign shareholder — i.e. the owner) and Part III (related party) are
-  completely empty**: the owner's name appears nowhere in the document. **Part V is unchecked
+- 🔴 **THE FORM 5472 SITTING IN DOUBLE LOOKS LIKE A SHELL — DO NOT FILE IT UNTIL IT IS CHECKED BY
+  EYE.** Part I names the entity, but on the extracted text of **both** copies **Part II (the 25%
+  foreign shareholder — i.e. the owner) and Part III (related party) carry no values**, and the
+  owner's name appears nowhere in either document. ⚠️ **That is an absence in a text extraction
+  from a PDF with an unreadable font, which is exactly the reading `redact-doc` warns against** —
+  so confirm it on screen before rebuilding anything. **Part V is unchecked
   with no attached statement**, lines 1f/1g/1h are blank, and Part VII is unanswered. A 5472 that
   never names the foreign owner is not a 5472 — and filed like this it would look done while
   exposing the client to the **$25,000** penalty for a return not filed *"in the manner
   prescribed"*. It has to be rebuilt before it goes anywhere.
-- 🔴 **THIS COMPANY HAS REPORTABLE TRANSACTIONS, AND THEY ARE THE OWNER'S OWN MONEY.** The account
-  took in three over-the-counter deposits and spent every cent of them, closing the year at zero.
-  There is **no revenue anywhere** — no customer, no card settlement, no invoice — and each
-  deposit lands a day or less before the payment it funds. That is the owner feeding his own
-  company, which Part V captures as *contributions to the entity*. **The escape route does not
-  exist here:** TD 9796 removes foreign-owned DEs from **both** size exceptions
-  (§1.6038A-1(h) and §1.6038A-1(i)(1)), so the only way out is having no reportable transaction
-  at all.
+- 🔴 **THIS COMPANY HAS REPORTABLE TRANSACTIONS, AND THEY LOOK LIKE THE OWNER'S OWN MONEY.** The
+  account took in three over-the-counter deposits and spent every cent of them, closing the year
+  at zero. There is **no revenue anywhere** — no customer, no card settlement, no invoice — and
+  each deposit lands a day or less before the payment it funds. That reads as the owner feeding
+  his own company, which Part V captures as *contributions to the entity*. ⚠️ **A "Counter Credit"
+  names no payer, so this is an inference to confirm with him**, not something read off the
+  statement — the working paper sets out the evidence and the alternative. **And there is no way out:** the only exception to *filing* is having **no** reportable
+  transaction in Parts IV, V and VI at all, which §4B alone rules out.
 - 🔴 **THE MOST CERTAIN REPORTABLE TRANSACTIONS ARE NOT IN THE BANK STATEMENTS.** The LLC existed
   from **8 Aug 2025** and had no bank account until **27 Oct 2025** — eighty days in which the
   Sunbiz fee, the registered agent, the EIN and probably the trademark filing were paid by
@@ -119,7 +123,14 @@
   **TD 9796 Example 1** holds that the liquidation year is itself a reporting year. So if the
   dissolution falls in 2026, a **second** pro forma 1120 + 5472 is due for 2026 — a year whose
   account is dormant at zero, which is exactly when a filing gets skipped.
-- **The caption is in the wrong field on every form.** *"Lum and Ari LLC/Foreign-Owned U.S. DE –
+- 🔴 **HE OWES RECORDS TOO, AND HE HAS NONE.** §1.6038A-3 record maintenance carries **the same
+  $25,000 penalty** as the filing failure, and TD 9796 removes a foreign-owned DE from the two
+  reliefs that would otherwise excuse it — §1.6038A-1(h) (under $10M gross receipts) and
+  §1.6038A-1(i)(1) (the $5M / 10% de minimis). ⚠️ **Those two relieve RECORDS, never filing** — a
+  distinction this file got wrong on 2026-09-05 and corrected the same day. There is no accounting
+  system here at all: the bank statements are the only record that exists. **Tell him to keep
+  them, and the receipts for what he paid personally.**
+- **The caption is in the wrong field on every form.** *"Lum and Ari LLC/Foreign-Owned U.S. DE -
   Pro Forma"* was typed into the **name** box of the 1120, the 7004 and the 5472. The instruction
   is that the entity's legal name goes there and **"Foreign-owned U.S. DE" is written across the
   top** of the 1120 and the 7004.
@@ -144,9 +155,10 @@
   funding and all of it went straight back out on legal fees and two vendor payments; the
   reportable transactions are the owner's contributions, plus whatever he paid before the account
   existed; and the prepared 5472 is unusable as it stands.
-- _(2026-04-23)_ — Invoice #2142 to **Lum and Ari LLC** paid _(QuickBooks notification to Julia;
-  Gmail search of her mailbox for "Shakhyan OR Lum and Ari OR Lumari" on 2026-09-05 returned this
-  and the portal activation, and nothing else — that is what that one search found)_.
+- _(2026-04-23)_ — Invoice #2142 to **Lum and Ari LLC** paid — an invoice-paid notification from
+  **the firm's own** billing system to Julia, not from anything of the client's _(Gmail search of
+  her mailbox for "Shakhyan OR Lum and Ari OR Lumari" on 2026-09-05 returned this and the portal
+  activation, and nothing else — that is what that one search found)_.
 - _(2026-04-15)_ — The client activated his Double portal account.
 
 ### Tax year 2025 — the review
@@ -161,7 +173,8 @@
 - **Raise the `Tax Return Type` mismatch** with Lilian (`1040` for a nonresident) — read-only
   column, hers to change.
 - **Ping has never been searched for this client** — `search_client_meetings` needs a Ping client
-  id and could not run.
+  id and could not run. **Google Drive has not been searched either.** Neither is a "nothing
+  found"; both are searches that have not happened.
 
 ### Information still needed
 
