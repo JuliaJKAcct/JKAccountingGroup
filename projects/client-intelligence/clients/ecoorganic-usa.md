@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-02
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-05
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -53,7 +53,7 @@ the actual details.
   day is withdrawn.** 🔑 **The lesson worth keeping: the meeting transcript was right and the date given
   deliberately was wrong** — which is the reverse of what the firm's own rule assumes, and it is why both
   versions were kept with their sources until someone could confirm. **The table below is the record of the
-  contradiction, now closed.**
+  contradiction, now closed.**~~
 
   | Source | Says |
   |---|---|
@@ -1034,9 +1034,25 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   ② **how the compensation is reported** — late 2025 payroll *(W-2s, 941s, 940, Connecticut
   withholding — the company's half of FICA then becomes a deduction and a liability)* or each owner
   reporting his share on a Schedule C with self-employment tax *(the return tables are built on this
-  route, because it is what the books as posted say)*; ③ **whose compensation it is** — the entry credited
-  the pooled owner account, so the split is the same working assumption as everything else, **and if it
-  is one person's, the other owner's capital gain comes back larger than before.** 📌 **Also recorded as
+  route, because it is what the books as posted say)*; ③ ~~**whose compensation it is**~~ — 🟢 **SETTLED
+  2026-09-05 by Lilian: the WHOLE of it is the CONTINUING owner's** *(working paper §4 decision 24)*, so
+  the outgoing owner's distributions rise by the same amount and **he takes the five-figure capital gain
+  on his own final-year return, while the continuing owner's loss becomes fully deductible and he carries
+  basis into 2026.** ⚠️ **The gain still rests on an opening basis of zero for him, which the paper says
+  is false and which one never-requested document would settle.**
+  🆕 **TWO MORE DECISIONS OF JULIA'S REACHED THE RETURN THE SAME DAY** *(working paper §4 decisions 25–27)*:
+  ① **contributions and distributions are NETTED OUT on the face of the return** — the Schedule K
+  distributions line and both K-1 distribution codes report nil. ⛔ **Presentation only: every basis
+  computation and both Forms 7203 run on the GROSS ledger figures**, and the working paper carries the
+  mandatory note saying what was done, which of the firm policy's five gates fail *(three do)* and how to
+  undo it in one step. 🔑 **The practical consequence for this client, worth carrying: a later
+  reasonable-compensation study that reads distributions off the K-1 will read nil — on this client
+  distributions come from the capital-account ledger, never from the return.** ② **the vehicle loan sits
+  inside other current liabilities rather than long-term**, which closes the term question by decision
+  rather than by evidence; and **the paid-in-capital line is DERIVED from the other balance-sheet lines,
+  never rolled forward**, because the software rounds each line before it adds them — the roll-forward
+  instruction the paper had been carrying left the balance sheet two dollars out. 📌 **Now a firm rule**
+  ([`form-1120s-preparation.md`](../../sops/form-1120s-preparation.md) §8-R). 📌 **Also recorded as
   a fact for the file, not as a criticism:** the figure was derived from the equity accounts, not from a
   valuation of the work; the firm's reasonable-compensation skill is the tool that produces a defensible
   one. **The chart of accounts gained one account:** `Officer's compensation` *(type Expenses)*.
