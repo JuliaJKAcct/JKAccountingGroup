@@ -1482,6 +1482,47 @@ wrong.
 > OPENING THE THING IT POINTS AT.** The 08-27 session corrected the half it could see from the SOP
 > alone and never opened either paper. _(Flagged by the independent review of PR #333.)_
 
+#### 🟢 THE FIRM APPROACH WHEN THE GATES FAIL BUT THE SIGNER STILL WANTS IT NETTED — and the note is not optional
+
+_(**Lilian, 2026-09-05**, relaying **Julia's approval** on a live return: *"tratamos de netear estas
+contribuciones contra estas distribuciones para no levantar red flags sin sentido… siempre que hagas
+esto, haces la explicación en una nota para que nosotros sepamos qué sucedió… en caso de que no
+queramos hacerlo así, nos demos cuenta de qué approach se tomó y lo corrijamos."*)_
+
+🔑 **The shape of it, and it is a THREE-step move, not one:**
+
+| Step | What you do |
+|---|---|
+| **1** | **Compute the excess** of the year's gross distributions over the year's gross contributions — per §5C-iii and §5C-vii, **reading the rows, never a net** |
+| **2** | **Book that excess as OFFICER COMPENSATION** *(page 1 line 7 — the entry route is §5C-i)*. ⚠️ This is a **book entry the client posts**, not a presentation choice |
+| **3** | **Net what remains and report distributions at ZERO** on Schedule K line 16d and every K-1 box 16D |
+
+🛑 **AND STEP 4, WHICH IS NOT OPTIONAL: WRITE THE NOTE.** It goes in the return's working paper, and it
+says — in this order — **what the gross figures were · which of §5C-v's five gates FAIL · what the
+policy as written would have produced · what was reported instead · and who approved it.**
+🔑 **Its purpose is stated by the person who asked for it: so that the firm can find the approach later
+and change it.** ⛔ **A netted return with no note is the failure this rule exists to prevent** — the
+figures reconcile to nothing and nobody remembers why.
+
+⚠️ **THREE THINGS THE NETTING DOES NOT DO, and each has caught somebody:**
+
+1. 🔴 **It does not change anyone's BASIS, and it does not remove a capital gain.** §1368(b)(2) works
+   on **actual** distributions against **actual** basis. **A shareholder whose real distributions
+   exceeded his real basis still has a gain on his own Form 1040**, and the netted return will not
+   mention it. **§5C-iii still governs the analysis: gross, always.**
+2. 🔴 **Entity-level netting is NOT the same as gate 1**, and this is the one to watch with more than
+   one owner. **Gate 1 is per shareholder** — *"one owner's contributions never offset another's
+   distributions."* Netting at the **entity** level does exactly that, and it can report zero while one
+   owner is over and the other under. **Say which level was used.**
+3. ⚠️ **It removes the marker for a non-pro-rata distribution** — the visible evidence of a possible
+   **second class of stock** (§1361(b)(1)(D)). Two K-1s both reading zero look identical when the
+   underlying draws were not.
+
+📌 **And the standing warning above still applies in full:** netting does **not** reduce
+reasonable-compensation exposure, and a later study that reads distributions off a filed **K-1 box
+16D** will read **zero**. 🔑 **On a netted client, distributions come from the capital-account ledger,
+never from the return.**
+
 #### 🛑 THE SCOPE GATE — all five, checked BEFORE netting, on the GROSS figures
 
 **Netting is not available because the owner also contributed. It is available when every one of
