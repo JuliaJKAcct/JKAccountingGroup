@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-02
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-05
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -53,7 +53,7 @@ the actual details.
   day is withdrawn.** 🔑 **The lesson worth keeping: the meeting transcript was right and the date given
   deliberately was wrong** — which is the reverse of what the firm's own rule assumes, and it is why both
   versions were kept with their sources until someone could confirm. **The table below is the record of the
-  contradiction, now closed.**
+  contradiction, now closed.**~~
 
   | Source | Says |
   |---|---|
@@ -469,11 +469,12 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   account**; the business expenses are re-entered in QuickBooks manually later, as a separate piece
   of work. Until that happens, leave it alone.
   ✅ **WHICH account, settled 2026-08-26 by Lilian when asked:** the personal one is the account
-  QuickBooks names **`Artem Personal`** — the Chase checking ending **…2935** that appears in the
-  transfer descriptors, which is what the SOP already recorded as the owner's personal account.
-  **`Checking Chase 8310` is the BUSINESS operating account** and is cleaned normally. Worth keeping
-  because it nearly went the other way: Lilian named *"la que dice Chase 8310"* in the session, the
-  live chart carries **both as separate bank accounts**, and treating 8310 as personal would have
+  QuickBooks names **`Artem Personal`**, which is what the SOP already recorded as the owner's
+  personal account. **The OTHER Chase checking is the BUSINESS operating account** and is cleaned
+  normally. ⛔ **The two are distinguished by ROLE here, never by their descriptors** — the account
+  identifiers live in QuickBooks and Double, and this file is rendered on a shared page. Worth keeping
+  because it nearly went the other way: Lilian named the business account by its descriptor in the
+  session, the live chart carries **both as separate bank accounts**, and treating it as personal would have
   stranded the entire company ledger — it is the feed the July 2026 review worked through and the one
   carrying customer deposits, vendor payments and the subcontractor Zelles. **Asked, not inferred.**
 - 🔴 **QuickBooks' "pair" suggestions are actively producing false transfers on this client, and
@@ -494,7 +495,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - 2026-07-20 — Profile started from the existing Ecoorganic bookkeeping SOP and the Double record (ECOORGANIC USA LLC, QBO). This client already has a full bookkeeping SOP; the profile mainly points to it.
 - 2026-07-20 — Sweep: no Double notes yet; Ping has the client + contacts on file but **no indexed meetings**. Nothing new beyond the bookkeeping SOP.
 - 2026-07-21 — Firm recently took this client over (from the prior bookkeeper); active cleanup in progress. Working session refined the SOP as understanding builds: gas-station threshold moved $30 → **$25** with small charges now → distributions (not meals holding); cash-out withdrawals changed from blanket owner-draws to an **investigate-first** procedure (ATM vs transfer; known contractor vs personal account; 1099 exposure); COGS-vs-opex rule flagged **to verify** (provenance unconfirmed); Double noted as the vendor/1099/W-9 tracking tool; COA renumbering reframed as a later, incremental step (classify first). SOP rules now tagged provisional until validated against the client's history.
-- 2026-07-21 — Reviewed the only connected feed (Chase checking 8310), Apr–Jul 2026 (357 transactions), to learn the client's actual keeping. Findings reported to Lilian (client figures kept out of the repo). Confirmed business type (spray-foam/insulation contractor). Corrected the SOP's account names to the real QBO chart (the personal/draws account is **Owner's distribution**, not "Owner's Pay & Personal Expenses"; there is a single **Cost of Goods Sold** account with no Materials/Sub-labor/Job-disposal sub-accounts). Key issues surfaced: subcontractor labor (incl. several payees ≥ $2,000) parked in **Outside services** with no W-9/1099 tracking; small gas/convenience charges coded to **Meals**; some …2935 owner transfers hitting **COGS**; owner transfers lumped in the **Owner's Equity** parent instead of contribution/distribution; frequent overdraft fees; triage sits at ~$0 but many categories are still wrong. Judgment calls (meals policy, COGS-vs-opex intent, which payees are 1099 subs) pending Lilian/client.
+- 2026-07-21 — Reviewed the only connected feed (the business Chase checking), Apr–Jul 2026 (357 transactions), to learn the client's actual keeping. Findings reported to Lilian (client figures kept out of the repo). Confirmed business type (spray-foam/insulation contractor). Corrected the SOP's account names to the real QBO chart (the personal/draws account is **Owner's distribution**, not "Owner's Pay & Personal Expenses"; there is a single **Cost of Goods Sold** account with no Materials/Sub-labor/Job-disposal sub-accounts). Key issues surfaced: subcontractor labor (incl. several payees ≥ $2,000) parked in **Outside services** with no W-9/1099 tracking; small gas/convenience charges coded to **Meals**; some owner transfers from the personal account hitting **COGS**; owner transfers lumped in the **Owner's Equity** parent instead of contribution/distribution; frequent overdraft fees; triage sits at ~$0 but many categories are still wrong. Judgment calls (meals policy, COGS-vs-opex intent, which payees are 1099 subs) pending Lilian/client.
 - 2026-07-21 — Decisions from Lilian: **meals policy resolved** (per Julia) — no client/crew/personal split; all food/restaurant/fast-food/convenience → distributions (non-deductible for now), gas ≥ $25 → fuel, < $25 → distributions (so the Meals account should trend to ~$0). **1099s deferred** — Lilian will resolve payee-by-payee over time; tracked via Double for now, no repo worklist needed. Grocery/food stores → distributions, **except** supply/materials stores (Home Depot, hardware, work-parts, rental/supply houses) → Supplies & Materials/COGS. Vehicle financing left as an **open question** (SOP's "Hyundai/Ally" doesn't match the actual RAM truck loans — to reconcile later). Lilian notes she's "flying blind" on this new client and will study it piece by piece.
 - 2026-07-25 — Coverage-gap sweep: full historical Gmail pass. Filled in sales tax/payroll/income tax/1099/annual-report obligations (all confirmed applicable), primary language, fiscal year-end, and several key-facts quirks. Found the Google Drive folder (§7, filed as "Ecoorganic USA INC"). Flagged a new categorization rule (U-Haul/vehicle-rental → Shipping and deliveries) as an SOP-proposal candidate, and a possible Turo car-rental topic to follow up once its meeting transcript is indexed.
 - 2026-07-30 — **2025 tax return (1120-S) is in progress**, waiting on information from the client
@@ -1016,6 +1017,51 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   🛠️ **Two loose ends on the entry, neither of which moves a figure:** the per-line descriptions were
   left empty *(the firm's own rule requires one beside every debit and every credit)*, and the
   adjusting-entry flag was unticked. _(Worked by Lilian.)_
+- 2026-09-05 — 🔴 **PART OF THE 2025 DISTRIBUTIONS WAS RECLASSIFIED TO OFFICER'S COMPENSATION, THE BOOKS
+  VERIFY, AND THE COMPANY'S 2025 RETURN IS NOW A LOSS (Lilian).** She posted a second year-end entry on
+  2026-09-04 — a new `Officer's compensation` expense account against `Owner's distribution` — and
+  re-exported all three reports; **a row-by-row comparison with the previous export shows exactly the two
+  new lines and nothing else moved**, and the depreciation entry's four lines now carry the descriptions
+  they lacked. **The amount reclassified is exactly the excess of the year's distributions over the
+  year's contributions, so after it the two are equal.** 🔑 **What that does, and it is what the firm's
+  own earlier analysis said it would do:** the company reports an **ordinary loss** instead of a profit;
+  each owner's K-1 carries **a loss neither can deduct in 2025** — basis after distributions is zero, so
+  it is suspended, and **the departing owner's share is lost for good on his final K-1** while the
+  continuing owner's carries into 2026; **the capital gain each owner would have had on the distributions
+  disappears**; and the same amount per head reaches each owner's own return as **compensation**, which
+  carries employment tax and removes the continuing owner's QBI deduction. 🛑 **Three things the entry
+  does not settle, all recorded for Julia:** ① **who decided it** — the firm's SOP says reclassifying
+  distributions to salary is the signer's decision and must be recorded, and that is not established;
+  ② **how the compensation is reported** — late 2025 payroll *(W-2s, 941s, 940, Connecticut
+  withholding — the company's half of FICA then becomes a deduction and a liability)* or each owner
+  reporting his share on a Schedule C with self-employment tax *(the return tables are built on this
+  route, because it is what the books as posted say)*; ③ ~~**whose compensation it is**~~ — 🟢 **SETTLED
+  2026-09-05 by Lilian: the WHOLE of it is the CONTINUING owner's** *(working paper §4 decision 24)*, so
+  the outgoing owner's distributions rise by the same amount and **he takes a capital gain on his own
+  final-year return, while the continuing owner's loss becomes fully deductible and he carries basis into
+  2026.** 🟢 **2026-09-05 — his 2024 Form 7203 arrived and CONFIRMS the zero opening basis the paper had
+  been doubting, so the gain stands.** 🔴 **It also revealed a block of suspended losses from 2024 that
+  nobody knew about, which die on his final K-1 and which his basis cannot absorb on any presentation** —
+  **so the netting decision does not move his tax at all.** 🛑 **The live risk is on HIS return, not this
+  one:** his K-1's distribution code reads nil while his contributions are real, and combining the two
+  produces a deduction the gross facts do not support. **His own basis form is prepared GROSS.**
+  🆕 **TWO MORE DECISIONS OF JULIA'S REACHED THE RETURN THE SAME DAY** *(working paper §4 decisions 25–27)*:
+  ① **contributions and distributions are NETTED OUT on the face of the return** — the Schedule K
+  distributions line and both K-1 distribution codes report nil. ⛔ **Presentation only: every basis
+  computation and both Forms 7203 run on the GROSS ledger figures**, and the working paper carries the
+  mandatory note saying what was done, which of the firm policy's five gates fail *(three do)* and how to
+  undo it in one step. 🔑 **The practical consequence for this client, worth carrying: a later
+  reasonable-compensation study that reads distributions off the K-1 will read nil — on this client
+  distributions come from the capital-account ledger, never from the return.** ② **the vehicle loan sits
+  inside other current liabilities rather than long-term**, which closes the term question by decision
+  rather than by evidence; and **the paid-in-capital line is DERIVED from the other balance-sheet lines,
+  never rolled forward**, because the software rounds each line before it adds them — the roll-forward
+  instruction the paper had been carrying left the balance sheet two dollars out. 📌 **Now a firm rule**
+  ([`form-1120s-preparation.md`](../../sops/form-1120s-preparation.md) §8-R). 📌 **Also recorded as
+  a fact for the file, not as a criticism:** the figure was derived from the equity accounts, not from a
+  valuation of the work; the firm's reasonable-compensation skill is the tool that produces a defensible
+  one. **The chart of accounts gained one account:** `Officer's compensation` *(type Expenses)*.
+  _(Figures in the working paper only. Worked by Lilian.)_
 
 ### ✅ The shareholder question — answered 2026-09-02, and what the search for evidence found
 

@@ -1,6 +1,6 @@
 # Ishkhan Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-02
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-05
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -118,6 +118,63 @@ the actual details.
   dies at the transfer. **It also opens the question of whose money ran through the company's owner
   accounts in 2025** (§5) — the first thing Julia has to decide before the return's equity section can be
   built. _(Worked by Lilian.)_
+- 2026-09-05 — 🔴 **WHAT THE COMPANY'S RECLASSIFICATION ENTRY DOES TO HIS OWN 2025 RETURN (Lilian).** The
+  company moved part of the year's owner distributions into **officer's compensation** *(the company file
+  and its working paper carry the mechanics)*. On the firm's working assumptions — 50/50 with Artem, and an
+  opening basis of zero — **three things change for him, and only one is good:** ✅ **the capital gain he
+  would have had on the 2025 distributions disappears** *(distributions now equal his basis exactly)*;
+  🔴 **his 2025 K-1 now carries an ordinary LOSS that he cannot deduct** — his basis is zero after the
+  distributions, the loss is suspended, **and because this is his FINAL K-1 the suspended loss is LOST**,
+  not carried; 🔴 **part of the reclassified amount was expected to reach his 2025 Form 1040 as
+  COMPENSATION**, by a route the K-1 does not carry.
+  🔴 **2026-09-05 — SETTLED BY LILIAN, AND IT GOES THE BAD WAY FOR HIM: the compensation is ALL HIS SON'S**
+  *(company working paper §4 decision 24)*. ⛔ **So NONE of it is his** — and because the compensation comes
+  out of the pooled distribution account, **his own distributions RISE by the whole of it.** 🛑 **The
+  consequences, and none of them appear anywhere on his K-1:** ① **he has a CAPITAL GAIN on his
+  own 2025 Schedule D** — his distributions now exceed his stock basis, and §1368(b)(2) works on actual
+  distributions against actual basis; ② **his ending stock basis is zero**; ③ **his 2025 ordinary loss is
+  suspended and, because this is his FINAL K-1, it is LOST for good**; ④ **no compensation income reaches
+  his 1040 at all.**
+  🟢 **2026-09-05 — HIS 2024 FORM 7203 IS IN HAND** *(Lilian sent the filed copy, regular and AMT)*, and it
+  settles the question the file had been carrying the other way round. ⛔ **The paper's guess that his
+  opening basis "is not zero" was WRONG: his stock basis at the end of 2024 is ZERO**, so the capital gain
+  above is **not contingent — it is the answer.** ✅ **Two things it also corroborates:** he is recorded as
+  the **original shareholder**, and he has **no shareholder debt basis at all** *(no loans, either
+  direction — which is the same conclusion the company's books reached from their side)*.
+  🔴 **AND IT REVEALED SOMETHING NOBODY KNEW: he carries a substantial block of SUSPENDED LOSSES from 2024
+  into 2025** — losses his 2024 basis was too small to absorb. 🛑 **This is his FINAL year as a
+  shareholder, so whatever is not used in 2025 is LOST PERMANENTLY** — the post-termination transition
+  period does not help him, because that runs when the *corporation's* S election ends, not when one
+  shareholder disposes of his stock.
+  🛑 **WHAT THIS MEANS FOR HIS 1040, corrected in review the same day.** ⛔ **An earlier version of this
+  entry said the netting decision moved a five-figure amount of his taxable income and recommended a
+  middle course. That was WRONG** — it combined a netted distribution with a gross contribution, using the
+  same contribution twice. 🔑 **Netting applied consistently is a wash, so his answer is the same either
+  way: the capital gain stands, his basis ends at zero, and EVERY suspended loss dies.** ⛔ **The firm's
+  own netting policy gives him nothing either** — its first gate fails for him precisely because his
+  distributions exceed his contributions, and a failed gate means gross.
+  🛑 **The live risk is a HYBRID computation:** his K-1's distribution code reads nil while his
+  contributions are real, and a preparer combining the two would deduct a five-figure amount the gross
+  facts do not support. **His own basis form must be prepared GROSS, and whoever does his 1040 has to be
+  told so in writing** — nothing on the K-1 says it.
+  🔑 **The one thing that WOULD change his answer is a fact, not a presentation: the real split of the
+  pooled owner account**, which is still a working assumption. **If his real distributions are at or below
+  his real contributions there is no gain and the suspended losses become usable** — which is why the
+  split now belongs in front of Julia rather than at the 1040.
+  🛠️ **One document is still missing: his 2024 Form 8995** — ask for it the same way. The working paper
+  had been carrying the gross 2024 losses as his §199A carryforward, and the 7203 shows part of them was
+  suspended rather than allowed, so that figure is probably overstated.
+  ⛔ **The 7203 carries his SSN. It is referenced here by existence only and no identifier from it is
+  written in this file, the working paper, any note or any artifact.** _(Figures in the company's working
+  paper only. Worked by Lilian.)_
+  🔑 **Julia also decided that contributions and distributions are NETTED OUT on the face of the company's
+  return** — so **his K-1's distribution code reports nil and mentions none of the above.** ⛔ **The netting
+  is PRESENTATION ONLY: his Form 7203 and his basis run on the GROSS ledger figures**, which is where the
+  gain comes from. 🛑 **Whoever prepares his 1040 must be told this by the person asking — the K-1 reads
+  as though nothing happened.** His 2024 §199A carryforward already wiped out his QBI deduction, so that part is
+  unchanged. 🔗 **Whoever prepares his 1040 must be told the compensation figure and its route by the
+  person asking — nothing on the K-1 will say it.** _(Figures in the company's working paper only. Worked
+  by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 

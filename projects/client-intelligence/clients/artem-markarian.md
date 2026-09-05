@@ -1,6 +1,6 @@
 # Artem Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-02
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-05
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -27,7 +27,7 @@
 ## 1. Snapshot
 
 - **Business name:** Artem Markarian — an **individual** client record _(Double `Account Type: Individual`, 2026-09-01)_
-- **Entity type:** n/a — individual taxpayer. 🔴 **NOT a shareholder of [ECOORGANIC USA LLC](./ecoorganic-usa.md) during 2025 — he becomes one on 2026-01-01** *(Julia, 2026-09-02 evening: his father left at the end of 31 December 2025)*. He is **the person who runs the business and the one the firm corresponds with**, which is not the same thing as owning it
+- **Entity type:** n/a — individual taxpayer. 🔴 **A 50% SHAREHOLDER of [ECOORGANIC USA LLC](./ecoorganic-usa.md) FOR 2025** — he and his father each hold 50%, and **he gets a 2025 K-1** *(Julia's notes, relayed by Lilian 2026-09-03)*. ~~**NOT a shareholder during 2025 — he becomes one on 2026-01-01**~~ ⛔ **That reading stood for one day and is WITHDRAWN**; it came from the departure date *(his father leaves at the end of 31 December 2025)*, which says when the father STOPS, not when the son STARTS. 🔴 **Still open, and it decides his K-1: WHEN in 2025 he was admitted** — a mid-year admission forces a per-day allocation under §1377(a)(1) and a flat half misstates both K-1s — **and whether he is an eligible S-corporation shareholder under §1361 on that date**, which nobody has asked. He is also **the person who runs the business and the one the firm corresponds with**, which is a separate fact from owning it *(and the 2026-04-07 Connecticut annual report removed his father and added him as principal agent — §6)*
 - **Home state:** not recorded here. The company operates from **Darien, Connecticut**; his own residence has not been established in this file
 - **Industry / what they do:** his business activity reaches the 1040 through the S corporation — **plus a second, separate activity: he hosted cars on Turo during 2025** (§5), which Julia has ruled belongs on his individual return
 - **Primary language:** **Russian** — the firm's correspondence with him is in Russian
@@ -164,6 +164,35 @@ the actual details.
   shares stays open until she speaks to Julia** — it creates his opening basis and is the one item still open on his Form 7203. 🔑 **And the
   company's ledger, read date by date, placed the Turo guest rentals and a cluster of Florida charges in
   one March 2025 trip** (§5). _(Worked by Lilian.)_
+- 2026-09-05 — 🔴 **WHAT THE COMPANY'S RECLASSIFICATION ENTRY DOES TO HIS OWN 2025 RETURN (Lilian).** The
+  company moved part of the year's owner distributions into **officer's compensation** *(the company file
+  and its working paper carry the mechanics)*. On the firm's working assumptions — 50/50 with his father,
+  and an opening basis of zero — **for him it is a trade:** ✅ **the capital gain he would have had on the
+  2025 distributions disappears**; 🔴 **his 2025 K-1 now carries an ordinary LOSS he cannot deduct in
+  2025** — basis is zero after the distributions, so it is **suspended and carries into 2026** on his Form
+  7203, along with **a §199A loss on his own Form 8995** *(so his 2025 QBI deduction is gone)*; 🔴 **the
+  reclassified amount reaches his 2025 Form 1040 as COMPENSATION**, by a route the K-1 does not
+  carry — **a W-2 if the company late-files 2025 payroll, or a Schedule C with self-employment tax on the
+  alternative route** — **the route is still Julia's decision.**
+  🟢 **2026-09-05 — THE ATTRIBUTION IS SETTLED, BY LILIAN: the WHOLE of the reclassified compensation is
+  ARTEM'S** *(company working paper §4 decision 24, confirmed in her own words)*. ⛔ **This replaces the
+  half-and-half reading above and it goes the GOOD way for him:** because the compensation comes out of
+  the pooled distributions, **his own distributions fall by the whole of it** — so **he has NO capital
+  gain**, his nondeductible expenses are absorbed, **his 2025 ordinary loss becomes FULLY DEDUCTIBLE in
+  2025 instead of suspended**, and he carries stock basis into 2026 rather than nothing. 🔴 **The cost
+  lands on his father instead**, whose distributions rise by the same amount — see that file.
+  ⚠️ **AND ONE THING GOT BIGGER, not smaller: the compensation on Artem's own 1040 is now the WHOLE
+  amount, not half** — with the employment tax that goes with it, on whichever route Julia picks.
+  🔑 **Two more decisions of hers reached the return the same day and neither changes his tax:**
+  **contributions and distributions are NETTED OUT on the face of the return** *(so his K-1's
+  distribution code reports nil)* — ⛔ **presentation only: his Form 7203 and his basis still run on the
+  GROSS ledger figures, which is exactly where the result above comes from** — and **the company's
+  paid-in-capital line is derived rather than rolled forward** *(a balance-sheet keying rule, no effect
+  on him)*. ⚠️ **He now has two things on his 2025 1040 from
+  this family of returns** — the company's K-1 *(and possibly compensation)* and the Turo Schedule C —
+  and they are separate requests on separate days. 🔗 **Whoever prepares his 1040 must be told the
+  compensation figure and its route by the person asking — nothing on the K-1 will say it.**
+  _(Figures in the company's working paper only. Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 
