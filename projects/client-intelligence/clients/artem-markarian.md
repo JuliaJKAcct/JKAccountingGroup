@@ -131,6 +131,35 @@ the actual details.
 
 ### Log
 
+- 2026-09-06 (third pass) — 🟢 **THE BIGGEST OPEN ITEM ON HIS RETURN CLOSED, AND THE COMPANY'S RETURN
+  MOVED UNDER HIM ON THE SAME DAY.**
+  🟢 **① HE HAD NO HEALTH INSURANCE IN 2025.** Lilian, relaying him: *"Artem dijo que no tenía seguro
+  médico en 2025. Por tanto, descartamos que exista un documento 1095-A."* ✅ **So there is no Marketplace
+  statement, no premium-tax-credit reconciliation form, and the electronic-filing rejection that would
+  otherwise have held the return cannot arise.** ⚠️ **The 2024 facts recorded above stay true and stay
+  recorded** — he *was* enrolled all twelve months of 2024 with advance credit paid on his behalf and
+  nothing repaid — **which is exactly why this had to be ASKED rather than assumed in either direction.**
+  🔴 **② THE COMPANY ELECTED OUT OF BONUS DEPRECIATION, SO HIS SHARE OF IT FLIPS FROM A LOSS TO INCOME.**
+  Julia's decision on the company's 2025 return *(recorded on that client's file)*. **What it does to
+  him:** his share is now **income, not a deductible loss**; that income **builds his basis**, so what he
+  carries into 2026 is several times what it was; and — the practical consequence — **his adjusted gross
+  income rises enough to decide whether he qualifies for the earned income credit at all.**
+  ⚠️ **Which way it goes depends on an answer still owed by him**: whether the year's vehicle running
+  costs are established as his. On one reading the credit is **foreclosed on income alone**; on the other
+  it is **in play and has to be computed.** 🛑 **Two traps recorded in the working paper so nobody gets
+  this wrong: an S-corporation shareholder's share of company income is NOT earned income for that credit
+  — it only raises the income that can disqualify him, so it hurts twice and helps never — and the
+  credit's phase-out runs on the higher of earned income and adjusted gross income.**
+  🟡 **③ THE HYUNDAI SANTA FE IS PROVISIONALLY OUT.** Julia, relayed by Lilian: it will **not** be added
+  to the car-rental activity nor put on his return as a depreciable asset. ⚠️ **NOT FINAL — she gives the
+  definitive answer on Tuesday 2026-09-08**, and Lilian's own wording was *"lo más probable"*. 🛠️ **The
+  intake questions are being HELD, not deleted**, in the working paper: if the car comes back in, the
+  first question is not whose name is on the title but **whether the car is really his** — who paid for
+  it, who insures it, who bears the loss if it is wrecked — and the mileage split is not optional,
+  because a car is listed property.
+  📄 **Everything above is folded into his working paper and republished to the same live page.** ⛔ **The
+  figures stay there, never here.**
+
 - 2026-09-06 (later) — 🔴 **HIS FILED 2024 RETURN WAS READ, AND IT FOUND THE THING THAT BLOCKS HIS 2025
   RETURN: HE HAS MARKETPLACE HEALTH INSURANCE.** Lilian asked for his Double documents to be reviewed and
   **discarded the 2025 organizer** — he did not complete one and, in her words, nothing has changed.
@@ -185,7 +214,7 @@ the actual details.
   him on a Schedule C rather than a W-2.
   🔴 **Still blocking, and three of them are his to answer:** the **per-car Turo breakdown** *(asked
   2026-09-01, still pending)*, **mileage per car** *(the cars are listed property and no log has been
-  seen)*, **the friend's Kona** *(what he received, what he paid, whether a 1099-NEC was needed)*, and —
+  seen)*, **the friend's Kona** *(what he received, what he paid, and whether an information return was owed — 🔑 **Form 1099-MISC box 1, because paying for the USE of a car is RENT**, not a 1099-NEC, which is for services)*, and —
   for Julia — **when he was admitted as a shareholder** *(a mid-year admission breaks both K-1s)* and
   **his Connecticut residency for 2025**.
 
