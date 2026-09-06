@@ -799,7 +799,7 @@ shortcut is the special case of it.**
 
 | What the preparer does | line 1a | line 1c | Caught? |
 |---|---|---|---|
-| Subtracts refunds inside 1a **and leaves 1b blank** | **understated** by the refunds | ✅ **correct** — because `1c = 1a` and the refunds came off already | 🔴 **Only ONE check catches it, and it exists because of this.** §14's check on these lines is **internal** — `1a − 1b = 1c` — and it passes identically whether or not the refunds were taken out of 1a, because both sides move together; every other tie-out runs off **1c or below**. **So §14 now carries a check that compares line 1a to the books account by account** *(and line 1b to the refunds account)*. ⛔ **Skip that one and the return foots, the P&L agrees, and line 1a is understated with nothing to surface it.** ✅ **The Schedule B question that asks whether receipts AND assets were both under $250,000 is measured on it** *(question 11 on the 2025 form — ⚠️ find it by its wording, §6)*: the instructions define *total receipts* as starting from *"Gross receipts or sales (page 1, line 1a)"*. ⚠️ **Whether the §448(c) / §163(j) gross-receipts test is measured on 1a or on 1c (net of returns) is NOT settled here** — the 1120-S instructions only cross-refer to §448(c), and the regulation could not be read. **Check it before relying on either** |
+| Subtracts refunds inside 1a **and leaves 1b blank** | **understated** by the refunds | ✅ **correct** — because `1c = 1a` and the refunds came off already | 🔴 **Only ONE check catches it, and it exists because of this.** §14's check on these lines is **internal** — `1a − 1b = 1c` — and it passes identically whether or not the refunds were taken out of 1a, because both sides move together; every other tie-out runs off **1c or below**. **So §14 now carries a check that compares line 1a to the books account by account** *(and line 1b to the refunds account)*. ⛔ **Skip that one and the return foots, the P&L agrees, and line 1a is understated with nothing to surface it.** ✅ **The Schedule B question that asks whether receipts AND assets were both under $250,000 is measured on it** *(question 11 on the 2025 form — ⚠️ find it by its wording, §6)*: the instructions define *total receipts* as starting from *"Gross receipts or sales (page 1, line 1a)"*. 🟢 **SETTLED — it is measured on 1c, NET of returns and allowances.** 📄 **Instructions for Form 8990 (Rev. 12-2025), verbatim:** *"Gross receipts for any tax year must be reduced by returns and allowances made during the year."* 🔗 **§11F ④ has the full build.** ⓘ *This row previously read "NOT settled here"; the 8990 instructions state it outright.* |
 | Subtracts refunds inside 1a **and also puts them on 1b** | understated | **understated** too — deducted twice | 🟡 usually, because 1c stops agreeing with the books |
 
 🔑 **So the rule is not "don't double count" — it is `refunds NEVER touch line 1a`, full stop.**
@@ -2309,7 +2309,7 @@ one owner's slice of it.
 | **14a/14b** | **Schedules K-2 / K-3** | Attach K-2 if there is any foreign activity — or tick the exception box. ⚠️ **This is what §1's foreign-accounts question is for.** Omitting them carries per-shareholder penalties, so do not skip it because the client "has nothing foreign" without confirming |
 | **16d** | Distributions | Money paid out to shareholders during the year — 🔵 **or ZERO under the firm's netting policy, but ONLY where all five of §5C-v's gates pass.** ⛔ A year with distributions and no contributions fails gate 1: the zero is never available on its own |
 | **17d** | **§199A / QBI information** — Schedule K line 17d *Other items and amounts*; on the K-1 it is **box 17, code V** | Attach the statement. **A loss year still produces QBI information** — a negative amount that carries forward for the owner |
-| **17d** | **Gross receipts for §448(c)** — also line 17d, and on the K-1 it is **box 17, code AC** | ƒ **page 1 line 1c.** 🔴 **A SECOND item that lives under the same line 17d**, which is why the line needs an itemised statement. ⚠️ **Reproduce the prior return's convention** — if last year reported it, this year must. 🛠️ **On screen it is usually not "17d" at all:** software expands line 17 into the **K-1 code letters**, so look for the row reading `AC Gross receipts for section 448(c)` — ⛔ **`D Basis of energy property` is a different item; the form's sub-line "d" and the code letter "D" are unrelated** (§11A) |
+| **17d** | **Gross receipts for §448(c)** — also line 17d, and on the K-1 it is **box 17, code AC** | ƒ **page 1 line 1c + lines 4 and 5 + the Schedule K portfolio items — see §11F ④.** ⛔ **NOT line 1c alone**: on any client with a Form 4797 gain, other income, interest, dividends, rents, royalties or capital gains, line 1c alone understates it. 🔴 **A SECOND item that lives under the same line 17d**, which is why the line needs an itemised statement. ⚠️ **Reproduce the prior return's convention** — if last year reported it, this year must. 🛠️ **On screen it is usually not "17d" at all:** software expands line 17 into the **K-1 code letters**, so look for the row reading `AC Gross receipts for section 448(c)` — ⛔ **`D Basis of energy property` is a different item; the form's sub-line "d" and the code letter "D" are unrelated** (§11A) |
 | **18** | **Income (loss) reconciliation** | ƒ `= lines 1 through 10, less lines 11 through 12e and 16f`. **This is what Schedule M-1 reconciles to** — not page 1's ordinary income (§9) |
 
 > 🛠️ **HOW LINE 17d IS ENTERED, because the box on the form face is often greyed out.** 17d is not one
@@ -3606,16 +3606,21 @@ without first settling the *purpose*. **Read this section in its order.**
 | ⛔ **It is NOT** | income · a deduction · a basis item · anything the shareholder pays tax on · anything that enters ANY computation on the 1120-S |
 | ✅ **It IS** | a **disclosure**. Box 17 is literally titled **"Other information"** — a place where the company hands the shareholder a fact only the company knows |
 
-📄 **Instructions for Form 1120-S, code AC:** *"Provide information shareholders need to complete the
-gross receipts test for section 448(c) purposes."*
-📄 **Shareholder's Instructions for Schedule K-1, code AC:** *"Use the gross receipts amount to figure
-the business interest expense you can deduct, if applicable. See section 163(j)."*
+📄 **Instructions for Form 1120-S (2025), code AC — the WHOLE entry, and the last sentence is the
+useful one:** *"Gross receipts for section 448(c) (code AC). Provide information shareholders need to
+complete the gross receipts test for section 448(c) purposes. **See the Instructions for Form 8990 for
+details.**"*
+📄 **Shareholder's Instructions for Schedule K-1 (2025), code AC:** *"Code AC. Gross receipts for
+section 448(c). Use the gross receipts amount to figure the business interest expense you can deduct, if
+applicable. See section 163(j) **and the Instructions for Form 8990** for details."*
+
+🔑 **Both entries end by pointing at the Form 8990 instructions. That cross-reference is the IRS's own,
+and it is why §11F ③ reasons from that form rather than from an outside source.**
 
 #### ② Why the shareholder needs it — the §448(c) test, in plain terms
 
 The shareholder runs the test **on his own return**, on **all** his businesses together. If his **average
-annual gross receipts for the 3 preceding tax years** — his own, **plus his pro-rata share of every
-pass-through he owns** — exceed the threshold *(**$31,000,000** for tax years beginning in 2025; indexed
+annual gross receipts for the 3 preceding tax years** exceed the threshold *(**$31,000,000** for tax years beginning in 2025; indexed
 annually — read the year's figure, never this one)*, he loses three exemptions at once:
 
 | Exemption lost above the threshold | What that means for him |
@@ -3623,6 +3628,14 @@ annually — read the year's figure, never this one)*, he loses three exemptions
 | **§163(j)** | his business interest deduction is limited → **Form 8990** |
 | **§263A** | he must capitalise indirect costs into inventory (UNICAP) |
 | **§448(a) / §471** | he may no longer use the **cash method**, nor the small-taxpayer inventory rules |
+
+⚠️ **WHOSE receipts get added to his own is NOT one rule, and the SOP used to state it as one.**
+📄 **The pro-rata inclusion of a pass-through's receipts is introduced by the 8990 instructions with the
+words "For section 163(j), a taxpayer with an ownership interest in a partnership or S corporation must
+include a share…"** — 🛑 **so it is scoped to §163(j).** For **§263A** and **§448(a) / §471** the
+aggregation that applies is the **single-employer** rule — controlled groups under §52(a), businesses
+under common control under §52(b), affiliated service groups under §414(m) and (o) — which is a
+different question with a different answer. ⛔ **Do not carry the pro-rata sentence across all three.**
 
 🔑 **The S corporation is the only party that knows its own gross receipts, so it discloses them. That
 is the entire function of the box.**
@@ -3633,18 +3646,21 @@ is the entire function of the box.**
 **so the answer comes from the worksheet the shareholder actually fills in** — the
 `Average Annual Gross Receipts Worksheet Per Section 448(c)` in the Instructions for Form 8990:
 
-| | Column A | Column B | Column C |
-|---|---|---|---|
-| | **1st preceding tax year** | **2nd preceding tax year** | **3rd preceding tax year** |
-| **1** | Annual gross receipts | $ | $ |
-| **2** | Plus annual gross receipts of related entities per aggregate rules | $ | $ |
-| **3** | Total annual gross receipts | $ | $ |
-| **4** | **Average annual gross receipts** *(line 3, columns A + B + C, **divided by 3**)* | | $ |
+| Line | | **Column A**<br>1st preceding tax year | **Column B**<br>2nd preceding tax year | **Column C**<br>3rd preceding tax year |
+|---|---|---|---|---|
+| **1** | Annual gross receipts | $ | $ | $ |
+| **2** | Plus annual gross receipts of related entities per aggregate rules | $ | $ | $ |
+| **3** | Total annual gross receipts | $ | $ | $ |
+| **4** | **Average annual gross receipts** *(line 3, columns A + B + C, **divided by 3**)* | | | $ |
 
-🔑 **He computes the average HIMSELF, at line 4, from three separate ANNUAL figures — one per year.**
-⛔ **An average handed to him on a single K-1 has no row to go in.** ✅ **What he needs from the entity is
-ONE year's gross receipts: the year that K-1 covers.** He builds the three columns from **three
-consecutive K-1s** — which is also why every other figure on that K-1 is a figure for the same year.
+⛔ **Note what is NOT in that table: a column for the CURRENT year.** All three are *preceding* years.
+
+**🛑 SPLIT THE CLAIM, BECAUSE THE EVIDENCE PROVES ONE HALF AND NOT THE OTHER:**
+
+| The claim | How well the sources support it |
+|---|---|
+| ✅ **It is ONE ANNUAL FIGURE, not an average** | **PROVED by the worksheet's shape.** He computes the average himself at line 4, from three separate annual figures. **An average handed to him on a single K-1 has no row to go in** |
+| ⚠️ **And that figure is the CURRENT year** | **NOT quoted anywhere. It is an inference** — from the convention that **every** Schedule K and K-1 amount is a current-year amount, and from the fact that the three columns are all *preceding* years, so he assembles them from **three consecutive K-1s**. 🔑 **A strong inference, and the one the firm follows. Not a rule anyone can cite** |
 
 ⚠️ **THE TRAP THAT PRODUCES THE WRONG ANSWER, and it is a good one:** the ENTITY's own §448(c)
 small-business test **is** a three-year average *(Schedule B question 10's $31,000,000 test)*, while the
@@ -3662,10 +3678,32 @@ return, both called "gross receipts for section 448(c)".
 | Schedule K — **interest, dividends, rents, royalties, capital gains** | ✅ |
 | ⛔ minus cost of goods sold | **NO** |
 
-📄 **Then each K-1 carries that shareholder's SHARE, not the whole:** *"a taxpayer with an ownership
-interest in a partnership or S corporation must include a share of the … S corporation's shareholder's
-**pro rata share of gross receipts**"* (Instructions for Form 8990). ✅ **The software splits the entity
-figure by ownership percentage — you enter it ONCE, at the entity.**
+**Then each K-1 carries that shareholder's SHARE, not the whole** — ⚠️ **a convention, not a quoted rule.
+Read the next block before treating it as settled.**
+
+📄 **The sentence usually cited for it, in full** *(Instructions for Form 8990, Rev. 12-2025 — quoted
+whole, because an abbreviated version of it misleads)*:
+
+> *"For section 163(j), a taxpayer with an ownership interest in a partnership or S corporation must
+> include **a share of the partnership's or S corporation's gross receipts, in proportion to** the
+> partner's distributive share of items of gross income or S corporation's shareholder's pro rata share
+> of gross receipts, **unless** the partner and partnership, or S corporation shareholder and S
+> corporation, **are treated as a single person**."*
+
+⚠️ **THREE THINGS THAT CUT THE OTHER WAY, and an SOP that hides them is not worth having:**
+
+1. 🔴 **For codes AA and AB the IRS says explicitly *"Report the shareholder's pro rata share in box 17
+   of Schedule K-1."* For code AC, in the very next paragraph, it does NOT.** That omission is evidence.
+2. **The sentence above tells the SHAREHOLDER what to include on HIS return.** It says nothing about what
+   the S corporation prints on the K-1.
+3. **Its "unless … single person" clause points the opposite way.** A shareholder aggregated with the
+   entity must *"aggregate the … S corporation's gross receipts with your gross receipts"* and **not**
+   duplicate by adding a share — **and a K-1 carrying only his 50% share cannot serve him.**
+
+✅ **The firm's practice: enter it ONCE at the entity and let the software split it by ownership
+percentage** — because that is what the software produces and what the shareholder rule implies.
+🛑 **It is a convention, and it should be described as one.** ⓘ *On any client near the threshold, where
+the difference would matter, get the shareholder's own preparer to say which he needs.*
 
 #### ⑤ 🛠️ WHERE IT IS TYPED — line 17d has no dollar box
 
@@ -4325,6 +4363,9 @@ return** — so the shareholder's own history is invisible from here:
 **Do not file until every one of these passes.** A check that fails is a mapping error, not a
 rounding difference.
 
+- [ ] 🔴 **Box 17 code AC is THIS year's figure, not the one that rolled over.** The software cannot
+      compute it, so a rolled file arrives holding **last year's** number looking like a default — and
+      **every K-1 must carry the same basis for it** (§11F ⑤, ⑥)
 - [ ] 1125-A: **line 6 − line 7 = line 8**
 - [ ] 1125-A line 8 **equals** page 1 line 2
 - [ ] Page 1: **1a − 1b = 1c**. ⚠️ **This one is INTERNAL — it passes even when line 1a is wrong**,

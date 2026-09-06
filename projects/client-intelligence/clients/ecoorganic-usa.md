@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-05
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-06
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1227,6 +1227,36 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   they are.** ⚖️ **2026-09-02: the account question is closed by Lilian — they stay as auto expense; what
   remains is only the 1099-NEC / Schedule B 14a question.**
 - **Deadline:** **2026-09-15**, extension filed. The review ran on 2026-08-31 — fifteen days.
+
+- 2026-09-06 — 🔵 **THE 2025 RETURN'S §448(c) DISCLOSURE ON BOTH K-1s WAS SETTLED, AND THE FIRM TOOK THE
+  MINIMAL ROUTE.** Box 17 code AC on the two K-1s carried **two different figures** — one rolled over by
+  the software, one typed over by hand — which is a visible defect on a 50/50 pair even though the box
+  feeds nobody's tax *(the §448(c) threshold is thirty-one million dollars; this company is nowhere near
+  it, so no tax on the return or on either shareholder's 1040 moves on any figure)*. ⚖️ **Lilian's
+  decision: leave the software's rolled-over figure and remove the hand-typed override, so BOTH K-1s
+  agree** *(working paper §4 decision 29 — "route A")*. 🔁 **EXPLICITLY PROVISIONAL: she asked that Julia
+  be told, and will relay it if Julia wants this year's own figure keyed instead** *(route B, one field)*.
+  📌 **The general lesson went into the firm's 1120-S SOP as §11F** — what that box is for, which figure
+  it carries, and that it is a **manual field that rolls forward holding last year's number**, so it must
+  be checked every year on every client.
+- 2026-09-06 — 📮 **CONNECTICUT: a post-transmission step nobody knew about, and three questions for
+  Julia.** ① **The CT package instructs that the Schedule CT K-1s are NOT filed with the return** — they
+  go to DRS separately, attached to a transmittal the instruction names as Form CT-1T. ⚠️ **What that form
+  is could not be verified — portal.ct.gov is blocked from the firm's Claude sessions** — and the printed
+  instruction refers to the *composite* return, which this entity may not file at all, so **whether it
+  binds this filing is itself unconfirmed.** 🛠️ **On the transmit checklist either way: sending them
+  needlessly costs a stamp; not sending them if required costs a notice.** ② 🔴 **Both members are coded
+  Connecticut RESIDENT individual on the state return and nobody has verified either.** 🛑 **It sits
+  against this file's own record that the CONTINUING owner replaced the departing one because a
+  non-resident shareholder would disqualify the S election** — but the departure is dated at the very
+  close of the year, so 2025 itself may still be fine. **Genuinely unsettled; it is the entry that decides
+  whether the state return has anything to pay.** ③ **The return says Connecticut business began
+  01/01/2025**, against a company incorporated in 2022 that apportions 100% to Connecticut — **so: was a
+  CT pass-through return ever filed for 2023 or 2024?** Nobody has checked, and **CT DRS has been writing
+  about withholding since January** *(§6 above)*. ④ **The optional Connecticut pass-through-entity tax
+  election is IRREVOCABLE and has not been made or recorded as a decision** — Julia's, in writing, before
+  transmitting. 🔗 **All four are set out item by item, with what to type and how to know it worked, in
+  the working paper's §CT-FIX.**
 
 ### Outstanding items (CI-only — never in the SOP)
 - ✅ **THE 2024 FILED RETURN HAS BEEN READ — 2026-09-02.** Lilian added the Double file host to the

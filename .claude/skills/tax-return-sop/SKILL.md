@@ -166,9 +166,12 @@ notices. **Two rules, in this order:**
 - **① Read what the box is FOR before deciding what goes in it.** The form's own instruction is usually
   one vague sentence; the answer is in **the form the RECIPIENT fills in**, whose shape says what he
   needs. _(Worked example: 1120-S Schedule K-1 box 17 code AC — the 1120-S instruction says only
-  "provide information shareholders need", while the Form 8990 worksheet the shareholder fills has **one
-  column per preceding tax year** and computes the average itself. That shape is what settles that the
-  K-1 carries **one year's** receipts, not an average. [1120-S SOP §11F](../../../projects/sops/form-1120s-preparation.md).)_
+  "provide information shareholders need", **and then points at the Instructions for Form 8990**, whose
+  worksheet has **one column per preceding tax year** and computes the average itself at line 4. That
+  shape settles that the K-1 carries **one annual figure, not an average**. ⚠️ **It does NOT settle which
+  year** — that it is the current one is an inference from Schedule K convention, and §11F says so rather
+  than dressing it as a rule. 🔑 **Separating what a source PROVES from what the firm INFERS is half the
+  value of writing it down.** [1120-S SOP §11F](../../../projects/sops/form-1120s-preparation.md).)_
 - **② When one value appears in two places, CHANGE ONE AND LOOK.** Do not build an explanation for the
   match. 🔑 **A one-click experiment beats three rounds of reasoning**, and it is available in every
   forms-based program: untick the optional worksheet, or clear the field, and see whether the other
