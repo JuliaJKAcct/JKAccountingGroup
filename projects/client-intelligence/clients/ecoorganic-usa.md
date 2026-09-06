@@ -1335,6 +1335,56 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   state extension acknowledgement.** ⛔ **The firm had been about to do the opposite of the rule** *(an earlier note said
   to mail them to the agency anyway, "it costs a stamp")*.
 
+- 2026-09-06 (fourth pass) — 🔴 **JULIA TOOK THE BONUS DEPRECIATION OFF THE 2025 RETURN, AND IT TURNS A
+  LOSS YEAR INTO AN INCOME YEAR.** The two vehicles and the forklift bought in 2025 — **three assets in all** — had been written off
+  in full in their first year under the special first-year allowance; they now run on ordinary depreciation
+  spread over five and seven years. 🔑 **The company's 2025 ordinary result flips from a loss to income**,
+  and with it **every shareholder's share flips from a loss to income too.**
+  ⛔ **It is an ELECTION, not a setting.** Electing out of the first-year allowance has to be attached to
+  the return as a written statement, **is made class of property by class of property**, must be on a
+  **timely filed** return, and **cannot be undone without the IRS's permission.** 🟢 **The software produced
+  the statements correctly** — one per class of property, which is broader than the firm had drafted and
+  right whichever way the open question below goes.
+  ✅ **WHAT IT BUYS, and it is not one-sided.** The company gives up a large deduction this year, but:
+  **the departing shareholder's capital gain shrinks sharply** *(he was the only one who had one, once the
+  officer's compensation was attributed whole to the continuing shareholder)*; the continuing
+  shareholder's share of the year now **builds** his basis instead of consuming it; and **there is
+  depreciation left to deduct in 2026**, where the old method had used it all up. ⚠️ **What it does NOT
+  fix: the departing shareholder's suspended losses carried in from 2024 still die on his final K-1** —
+  his distributions still outrun his basis. *(A first version of this analysis said nothing was lost;
+  that was wrong and is withdrawn.)*
+  🟢 **CONNECTICUT GETS SIMPLER.** The state's bonus-depreciation add-back is worded as *"the amount
+  **allowed** for federal purposes"* — none was allowed, so **the add-back disappears entirely** and the
+  state schedule that carried it is correctly zero. 🔑 **But the state's pass-through-entity tax election is now priced on a different number**, and it is
+  the irrevocable one that must be decided before the return is transmitted. ⚠️ **That price is not firm.**
+  The RATE was read off the form and never confirmed with the state; and — the one that decides whether
+  the election is cheap either way — **nobody has established whether the members' credit EQUALS the
+  entity tax or is only a percentage of it.** ⛔ **Both have to be confirmed before the number is relied
+  on, because the election cannot be undone.**
+  🔴 **ONE QUESTION IS OPEN AND ONLY JULIA CAN CLOSE IT: WHAT CLASS THE FORKLIFT IS.** The firm's own
+  earlier analysis, run twice, puts a forklift used by a **spray-foam insulation contractor** in the
+  five-year class rather than the seven-year one — the company's own business activity code is a special
+  trade contractor. **The return as generated is internally consistent at seven years**, so this is a
+  choice between two coherent returns, not a defect. ⚠️ **It moves the company's income, the balance
+  sheet, the state election's price, and it means the depreciation journal entry is posted a second
+  time.** ⓘ *While the whole cost was written off in year one the class made no difference at all, which
+  is exactly why it was never settled — removing the allowance is what made it matter.*
+  🟢 **THE REGENERATED RETURN WAS READ PAGE BY PAGE ON 2026-09-06 AND EVERY CHANGE KEYED WENT IN** —
+  including the state schedules, the depreciation form and the election statements. ⛔ **Read that as
+  "as generated on that date", never as a standing fact** *(the working paper's own warning: a status
+  column is the first thing to rot)*. ⛔ **And it is NOT a ruling on the forklift's class** — the return is
+  internally consistent whichever way that goes.
+  🔴 **AND SOMETHING IS PROBABLY WRONG IN THE BOOKS, NOT THE RETURN — narrowed to what was actually
+  checked.** The 2025 depreciation journal entry carries the new amount, and **its consolidated expense
+  line still carries the old description**, which says the whole cost was written off in the first year.
+  **A note that contradicts its own amount is worse than no note, because the next reader believes the
+  note.** ⚠️ **Two honest limits: the three credit lines were re-read and are FINE** *(they say only
+  "accumulated depreciation, first year, no prior depreciation")*, **and the entry's HEADER MEMO has never
+  been opened** — so it is unverified rather than known to be wrong. 🛠️ **Read the entry first, then
+  replace only what carries the old wording.** 🛠️ **Replacement text — the line notes and the header memo, in English, ready to paste — is in the
+  [return's working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md).** ⛔ **Do not write it until
+  the forklift's class is settled**, or it will contradict the amount again.
+
 ### Outstanding items (CI-only — never in the SOP)
 - ✅ **THE 2024 FILED RETURN HAS BEEN READ — 2026-09-02.** Lilian added the Double file host to the
   tax-return environment's allowed domains and the redactor went through on the first try. **It changed

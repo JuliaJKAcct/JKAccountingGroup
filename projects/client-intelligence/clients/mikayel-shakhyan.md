@@ -158,9 +158,12 @@
   has NOT yet reached her.** Lilian asked for a written summary in English so Julia — who has no
   prior context on this client — could see the situation, take the decisions that are hers, and ask
   what she needs to. **The memo was produced and handed to Lilian to forward** *(not committed: it
-  carries client figures)*: the eight bank transactions, what is **established** versus **inferred**,
-  the formation-window costs no statement shows, the five client questions, where the filing stands,
-  and the two signer positions with their options. ⛔ **Nothing here should be read as saying Julia
+  carries client figures)*. 🔑 **Lilian rejected a first, much longer version and cut it to three
+  things: the bank transactions explained, which ones we SUSPECT may be reportable, and what was paid
+  before the account existed.** ⚠️ **Two documents are therefore in her inbox and only the short one
+  is current.** *(The scope, the hedging rule, why the cut material was not "padding", and how the
+  lesson sits beside the opposite rule for ATX worksheets are written out once in the working paper
+  **§6D**. ⛔ **Deliberately not restated here.**)* ⛔ **Nothing here should be read as saying Julia
   has seen it** — forwarding it is an open action, [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 85.
   ⚠️ **No copy is stored anywhere**; it is reproducible from the working paper.
   🔴 **What the write-up crystallised: two of the open items are POSITIONS reserved for the signer,
