@@ -1257,6 +1257,27 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   election is IRREVOCABLE and has not been made or recorded as a decision** — Julia's, in writing, before
   transmitting. 🔗 **All four are set out item by item, with what to type and how to know it worked, in
   the working paper's §CT-FIX.**
+- 2026-09-06 — 🔴 **NO CONNECTICUT RETURN CAN BE FOUND FOR 2023 OR 2024, AND THIS COMPANY HAS BEEN IN
+  CONNECTICUT SINCE IT WAS FORMED.** 🛑 **Lilian raised it from the return itself** — she went looking for
+  the prior year's state form and it is not there. **The search, so the negative belongs to it rather
+  than to the world:** the client's **entire Double file library** *(49 entries)* and the extracted text
+  of **both** the 2023 and 2024 returns — **no Connecticut document of any kind for either year.**
+  ⛔ **Not proof of a non-filing** *(a state return can be prepared in a separate file and filed straight
+  on the DRS portal without ever being saved back)*, ✅ **but it is a bounded search that comes back empty
+  twice.** 🔑 **The sharpest internal evidence is that a Connecticut EXTENSION was filed for 2025 and is
+  saved in the library — nobody extends a return they believe does not exist.** 🧭 **The most likely
+  explanation, and it is not carelessness:** Connecticut's pass-through-entity **TAX** went from
+  mandatory to **optional** for years beginning in **2024**, and *"the tax is optional"* reads almost
+  exactly like *"the filing is optional"* — ⚠️ **the tax became elective, the return did not** *(unverified;
+  the CT portal is blocked from these sessions)*. **That explains 2024, the first year of the change, and
+  not 2023.** 🚨 **Why it is urgent rather than historic:** the 2025 return currently says Connecticut
+  business began **01/01/2025**, which is what the software writes when there is **no prior state return
+  to roll a date from** — transmitted, it becomes a written statement to the state that reads as the
+  explanation for the missing years. ⚠️ **And a state return with nothing to pay can still carry a
+  per-member, per-month late-filing penalty** *(unverified — must be priced before anything is filed)*.
+  🛠️ **Next: ask Julia whether it was a decision or an omission, and check the DRS portal, which holds
+  the entity's real filing history and would also explain the withholding notices arriving since
+  January.** ⛔ **Do not transmit the 2025 state return until this is answered.**
 
 ### Outstanding items (CI-only — never in the SOP)
 - ✅ **THE 2024 FILED RETURN HAS BEEN READ — 2026-09-02.** Lilian added the Double file host to the
