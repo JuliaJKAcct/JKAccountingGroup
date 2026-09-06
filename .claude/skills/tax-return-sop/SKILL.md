@@ -1,6 +1,6 @@
 ---
 name: tax-return-sop
-description: 🔴 PREPARE A CLIENT'S TAX RETURN — load this the moment anyone says "prepare X's tax return", "prepárame el Tax Return de X cliente", "hazme la declaración de X", "do X's 1120-S / 1040 / 1065", or asks for a return's figures as line-by-line tables. §4A is the entry point and it runs TWO PHASES from one sentence: PHASE 1 · LA REVISIÓN — call the `organizer-review` skill in full, ALWAYS and without being asked separately, to check the prior-year return against this year and find missing documents, contradictions and anything that raises an alarm; its Block A verdict is THE GATE. PHASE 2 · LA PREPARACIÓN — only if the gate says yes, deliver the line-by-line tables. Along the way: go to Double and gather it yourself — the client's BOOKS, the completed tax organizer, every file the client uploaded, the prior-year return through the redactor — and report what was found before computing anything. ALSO: write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
+description: 🔴 PREPARE A CLIENT'S TAX RETURN — load this the moment anyone says "prepare X's tax return", "prepárame el Tax Return de X cliente", "hazme la declaración de X", "do X's 1120-S / 1040 / 1065", or asks for a return's figures as line-by-line tables. §4A is the entry point and it runs TWO PHASES from one sentence: PHASE 1 · LA REVISIÓN — call the `organizer-review` skill in full, ALWAYS and without being asked separately, to check the prior-year return against this year and find missing documents, contradictions and anything that raises an alarm; its Block A verdict is THE GATE. PHASE 2 · LA PREPARACIÓN — only if the gate says yes, deliver the line-by-line tables. Along the way: go to Double and gather it yourself — the client's BOOKS, the completed tax organizer, every file the client uploaded, the prior-year return through the redactor — and report what was found before computing anything. ALSO: write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. 🔵 AND WHEN A PREPARED RETURN COMES BACK FOR REVIEW — someone uploads a copy of a return the firm prepared, plus the financial statements behind it, and starts asking why a line is what it is: that is §4C, and the job is to BRIEF the reviewer from the working paper before reading the PDF (the reasoning behind each decision, who made it, where every figure came from) rather than to audit her. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, when a return the firm prepared comes back to be reviewed or signed, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
 ---
 
 # Tax-return SOPs — and preparing a return from one
@@ -647,8 +647,8 @@ reviewer, and an examiner, actually sees.
 🛑 **So when a keyed return comes back with a different figure, THREE things happen and the third is
 the one that gets skipped:**
 
-1. **Find out WHY it differs, and say so in cause terms** — *"the software split the meals 1,267 / 1,266
-   so the halves add back to the gross; ours had 1,267 twice, which exceeds it"* — ⛔ **never
+1. **Find out WHY it differs, and say so in cause terms** — *"the software split the meals 2,441 / 2,440
+   so the halves add back to the gross; ours had 2,441 twice, which exceeds it"* *(invented figures)* — ⛔ **never
    *"rounding"* as a bare word.** If the cause cannot be found, **it is not rounding, it is an input
    error**, and the tie-out that surfaced it stays open.
 2. **Say which one is filed**, and put the rule down once so the next session does not re-litigate it.
@@ -1113,9 +1113,7 @@ substitute for phase 1.**
 return is unprepared: **the K-1 does not exist yet.** That is a Block A *"No, blocked on X"* — say
 which return has to come first.
 
----
-
-## §4C · 🔴 WHEN THE RETURN COMES BACK FOR **REVIEW** — brief the reviewer, do not audit her
+### 4C · 🔴 WHEN THE RETURN COMES BACK FOR **REVIEW** — brief the reviewer, do not audit her
 
 🛑 **A return this firm prepared will come back, and the person reviewing it was NOT in the room when
 it was built.** 🔑 **This section is what a session does then, and it is not the same job as preparing.**
@@ -1142,9 +1140,18 @@ figure came from.** 🔑 **It was written for exactly this moment.** ⓘ *Also r
 ⚠️ **If no working paper exists, say so plainly before answering.** Then the session is reasoning from
 the PDF like anyone else, and the reviewer is entitled to know that.
 
+🔑 **AND §3 STILL BINDS HERE.** The working paper says what *was* decided; it is not authority for
+what is *correct*. ⛔ **Any answer that would change a figure or move a line is read off the current-year
+PDF from irs.gov**, never from the paper and never from memory — the form the return was prepared on may
+not be the form in front of her.
+
+⛔ **The return PDF carries the identity block.** The briefing restates figures and reasoning; **it never
+restates an SSN/ITIN, a bank or card number, a home address, a date of birth or a PTIN** — by existence
+if at all — and nothing from it is written outside [`projects/tax-returns/`](../../../projects/tax-returns/).
+
 ### ② 🛑 LEAD WITH THE REASON, NOT THE FINDING
 
-⛔ **"Line 7 carries 18,987"** is useless to a reviewer. ⛔ **"Line 7 looks wrong"** is worse — it invites
+⛔ **"Line 12 carries 4,300"** *(invented, like every figure in this skill)* **is useless to a reviewer.** ⛔ **"Line 7 looks wrong"** is worse — it invites
 her to re-decide something that was already decided, by her.
 
 ✅ **The shape that works, every time:**
@@ -1170,28 +1177,40 @@ because they read identically on the return and need completely different respon
 |---|---|---|
 | ✅ **A DECISION** | someone chose this, deliberately | **confirm or overturn** — and it is recorded either way |
 | 🟡 **AN OPEN ITEM** | known, unresolved, usually waiting on a fact or on her | **answer it**, or say it can wait |
-| 🔴 **A DEFECT** | nobody chose it and nobody knows about it | **fix it** |
+| 🔴 **A DEFECT** | **the return is WRONG here** — whether or not anybody chose it | **fix it** |
 
-⛔ **Never present a decision as a defect.** ⛔ **And never let a defect hide inside a list of decisions.**
+⛔ **Never dress a decision up as a defect** *(it invites her to re-decide her own call)*. ⛔ **And never let a defect hide inside a list of decisions.**
+
+🔑 **THE LABEL FOLLOWS THE CORRECTNESS, NOT THE AUTHORSHIP — and this is the half a session gets backwards.** ⚠️ **A decision that makes the return WRONG is a DEFECT and is raised as one**, naming the decision, who made it and when. ⛔ **"Someone chose it" is not what moves a finding out of the red row** — the return is signed under penalties of perjury by the person reading the briefing, and an error nobody may call an error is the one thing this section must never produce.
 
 ### ④ What she is owed without asking
 
 1. 🔑 **The decisions table for that return**, in her own words where they were hers — the working
    paper's §4.
 2. **Every figure with its source**, at the level of detail she would need to re-derive it.
-3. 🔴 **What is still waiting on HER, named** — the open items with her name on them, and what each
-   one moves if she answers it one way or the other.
+3. 🔴 **What is still waiting on HER, named** — the working paper's **§6 (*Open at filing*)**, filtered
+   to the rows with her name on them, and what each one moves if she answers it one way or the other.
 4. **What was assumed**, and what happens if the assumption is wrong.
 5. ⚠️ **Where the paper corrected ITSELF.** A figure that changed during preparation, and why, is
    exactly what a reviewer would otherwise re-discover from scratch.
+   🔑 **There is no section for this — it is a CONVENTION, and a session has to go looking:** a
+   superseded figure is kept as `~~struck~~` with a **`SUPERSEDED BY §4 decision N (who, date)`** line
+   beside it, wherever it sits. **Grep the paper for `SUPERSEDED` and for `~~` before briefing**, and
+   carry what you find; ⛔ **a correction the paper made and the briefing omits reads to the reviewer as
+   a figure nobody ever questioned.**
 6. **What is NOT in this return** because it belongs to another one — the §8 handoff.
 
 ### ⑤ 🛑 Two things a session must not do here
 
 - ⛔ **Do not re-litigate a settled decision because a session would have chosen differently.** Say what
   it costs, once, in the row where it lives — **then move on.** 🔑 **The signer decides; the session
-  informs.** *(This is the [CLAUDE.md](../../../CLAUDE.md) rule that a permission is widened by asking and
-  never by reasoning, applied to judgement instead of access.)*
+  informs.**
+  🛑 **BUT ⑤ GOVERNS PREFERENCE, NEVER CORRECTNESS.** A decision the session merely *disagrees*
+  with: once, then move on. A decision the session believes makes the return **wrong**: raise it in
+  full, as a defect, every time — ⑤ is not a reason to soften it.
+  ⚠️ **And a decision the PREPARER settled is NOT settled for the SIGNER.** Where the working paper
+  records that an objection was raised and overruled, **the objection and its reasoning travel to the
+  reviewer WITH the decision** — she was not in that conversation either, and she is the one who signs.
 - ⛔ **Do not make the preparer the messenger.** If a question can be answered from the working paper,
   **answer it** — the whole point of this section is that she should not have to be found and asked.
 
@@ -1201,6 +1220,8 @@ because they read identically on the return and need completely different respon
 like every repo artifact, and the briefing is delivered in the language of the person asking** — the
 [CLAUDE.md](../../../CLAUDE.md) reply-in-kind rule. ⓘ *Which is also why the paper carries the reasoning
 in full: it has to survive being read by someone who was not in the conversation that produced it.*
+
+---
 
 ## §5 · Every prepared return leaves a working paper
 
