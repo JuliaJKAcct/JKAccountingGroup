@@ -1127,10 +1127,11 @@ it was built.** 🔑 **This section is what a session does then, and it is not t
 > 📌 **The point in one line: the session was the only witness to the whole build. It owes the reviewer
 > the reasoning, unprompted — so that the preparer does not have to narrate it from the beginning.**
 
-### ① Recognise it, and read before you answer
+#### ① Recognise it, and read before you answer
 
-**The shape is unmistakable: someone uploads a copy of a return and the financial statements behind it,
-and asks for help with it.** ⛔ **Do not start reading the PDF.**
+**The shape is unmistakable: someone brings a return this firm prepared and starts asking about it** —
+the financial statements, **or** a copy of the return, **or** just a question about a line. ⚠️ **Any ONE of
+those is the trigger; it does not wait for all three.** ⛔ **Do not start reading the PDF.**
 
 🛠️ **Open the working paper for that return FIRST** — [`projects/tax-returns/`](../../../projects/tax-returns/),
 one per return. **It holds the decisions, who made each one, what the alternative was, and where every
@@ -1141,15 +1142,25 @@ figure came from.** 🔑 **It was written for exactly this moment.** ⓘ *Also r
 the PDF like anyone else, and the reviewer is entitled to know that.
 
 🔑 **AND §3 STILL BINDS HERE.** The working paper says what *was* decided; it is not authority for
-what is *correct*. ⛔ **Any answer that would change a figure or move a line is read off the current-year
-PDF from irs.gov**, never from the paper and never from memory — the form the return was prepared on may
-not be the form in front of her.
+what is *correct*. ⛔ **Any answer that would change a figure or move a line is read off the IRS PDF for THAT RETURN'S
+tax year**, never from the paper and never from memory. ⚠️ **A return under review is usually a PRIOR
+year**, so it is `irs.gov/pub/irs-prior/f<form>--<year>.pdf`, not the current form — the IRS renumbers,
+and answering off this year's form about last year's return is the §3 trap in its most likely shape.
 
-⛔ **The return PDF carries the identity block.** The briefing restates figures and reasoning; **it never
-restates an SSN/ITIN, a bank or card number, a home address, a date of birth or a PTIN** — by existence
-if at all — and nothing from it is written outside [`projects/tax-returns/`](../../../projects/tax-returns/).
+⛔ **The return PDF carries the identity block, and TWO SEPARATE RULES govern what leaves it.**
 
-### ② 🛑 LEAD WITH THE REASON, NOT THE FINDING
+1. ⛔ **The identity block never gets restated — ANYWHERE, chat and repo alike.** An **SSN or ITIN**
+   *(including an entity's tax ID when it is one)* · a **bank, card, routing or account number** · a
+   **home street address** · a **date of birth** · a **login, password, PTIN, EFIN or signature PIN**.
+   Name one **by existence if at all** — *"the spouse's SSN is missing"*, never the digits.
+   🛑 **This limit does NOT stop at the repo boundary, and `projects/tax-returns/` is not an exception to
+   it** — that folder's [README](../../../projects/tax-returns/README.md) is the authority and its table
+   reads *"NEVER — no exception, and no 'just this once'."*
+2. ✅ **FIGURES are the opposite case: the briefing exists to restate them**, in the chat, in whatever
+   detail she needs. 🔑 **In the REPO they go in one place only** — that return's own working paper —
+   **never into a skill, an SOP, a client-intelligence file, `CLAUDE.md` or an artifact.**
+
+#### ② 🛑 LEAD WITH THE REASON, NOT THE FINDING
 
 ⛔ **"Line 12 carries 4,300"** *(invented, like every figure in this skill)* **is useless to a reviewer.** ⛔ **"Line 7 looks wrong"** is worse — it invites
 her to re-decide something that was already decided, by her.
@@ -1168,7 +1179,7 @@ her to re-decide something that was already decided, by her.
 date and the reason, checks it in seconds. **The same ruling presented as an anomaly costs an hour and
 some trust.**
 
-### ③ Sort everything into three buckets, and label which one
+#### ③ Sort everything into three buckets, and label which one
 
 🛑 **The single most useful thing a session can do for a reviewer is say which of these a thing is** —
 because they read identically on the return and need completely different responses.
@@ -1179,11 +1190,11 @@ because they read identically on the return and need completely different respon
 | 🟡 **AN OPEN ITEM** | known, unresolved, usually waiting on a fact or on her | **answer it**, or say it can wait |
 | 🔴 **A DEFECT** | **the return is WRONG here** — whether or not anybody chose it | **fix it** |
 
-⛔ **Never dress a decision up as a defect** *(it invites her to re-decide her own call)*. ⛔ **And never let a defect hide inside a list of decisions.**
+⛔ **Never dress a SOUND decision up as a defect** *(it invites her to re-decide her own call)*. ⛔ **And never let a defect hide inside a list of decisions.**
 
 🔑 **THE LABEL FOLLOWS THE CORRECTNESS, NOT THE AUTHORSHIP — and this is the half a session gets backwards.** ⚠️ **A decision that makes the return WRONG is a DEFECT and is raised as one**, naming the decision, who made it and when. ⛔ **"Someone chose it" is not what moves a finding out of the red row** — the return is signed under penalties of perjury by the person reading the briefing, and an error nobody may call an error is the one thing this section must never produce.
 
-### ④ What she is owed without asking
+#### ④ What she is owed without asking
 
 1. 🔑 **The decisions table for that return**, in her own words where they were hers — the working
    paper's §4.
@@ -1200,7 +1211,7 @@ because they read identically on the return and need completely different respon
    a figure nobody ever questioned.**
 6. **What is NOT in this return** because it belongs to another one — the §8 handoff.
 
-### ⑤ 🛑 Two things a session must not do here
+#### ⑤ 🛑 Two things a session must not do here
 
 - ⛔ **Do not re-litigate a settled decision because a session would have chosen differently.** Say what
   it costs, once, in the row where it lives — **then move on.** 🔑 **The signer decides; the session
@@ -1211,10 +1222,13 @@ because they read identically on the return and need completely different respon
   ⚠️ **And a decision the PREPARER settled is NOT settled for the SIGNER.** Where the working paper
   records that an objection was raised and overruled, **the objection and its reasoning travel to the
   reviewer WITH the decision** — she was not in that conversation either, and she is the one who signs.
+  🛠️ **Where to find them:** §4's ***"the alternative that was NOT taken"*** column, which is where the
+  papers actually record an overruled objection — ⚠️ **and note ④.5's grep will NOT catch these**, because
+  an objection can be overruled without any figure changing.
 - ⛔ **Do not make the preparer the messenger.** If a question can be answered from the working paper,
   **answer it** — the whole point of this section is that she should not have to be found and asked.
 
-### ⑥ And it runs in whatever language she writes in
+#### ⑥ And it runs in whatever language she writes in
 
 **Julia does not speak Spanish; Lilian usually writes in it.** 🔑 **The working paper is in English
 like every repo artifact, and the briefing is delivered in the language of the person asking** — the
@@ -1235,7 +1249,11 @@ the file, next year starts from a blank page.
 **Write it AS you go.** Sourcing reconstructed a week later is exactly what it exists to replace.
 
 ⛔ **It is the only place in the repo that holds client dollar figures, and the limit is absolute:**
-never an SSN/ITIN, bank or card number, home address, date of birth or login. Read its README first.
+never an **SSN/ITIN** *(including an entity's tax ID when it is one)*, a **bank, card, routing or account
+number**, a **home street address**, a **date of birth**, or a **login, password, PTIN, EFIN or signature
+PIN**. 🛑 **Being the folder for figures makes it no kind of exception to that list** — its
+[README](../../../projects/tax-returns/README.md) is the authority and reads *"NEVER — no exception, and
+no 'just this once'."* Read it first.
 
 ---
 
@@ -1264,6 +1282,10 @@ is how an SOP becomes confidently wrong.**
   — first that the tables never located Form 8829, then that she needs the flow, the explanations
   and the checkboxes as well. **Her corrections ARE the standard; write them in rather than
   remembering them.**
+- 🔵 **JULIA TELLS YOU A BRIEFING MISSED SOMETHING SHE NEEDED IN ORDER TO REVIEW.** §4C is written
+  from Lilian's side of the handover — what the *preparer* thinks a reviewer needs. **Only Julia knows
+  what she actually reached for and did not find. Her corrections are the standard for §4C exactly as
+  Lilian's are for §4B**, and they go into ④ *(what she is owed without asking)*.
 - 🔄 **A SESSION MISSES SOMETHING THE PERSON ASKING CAUGHT BY EYE.** ⛔ **That is a missing SCAN, not
   an attention failure** — and the fix is never "be more careful", which cannot be executed. Work out
   what sort would have made it visible, write the sort down as a step that RUNS, and require it to be
