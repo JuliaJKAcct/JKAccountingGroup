@@ -86,7 +86,7 @@
 - **Current status (2026-09-05):** 🟠 **NOT FILED.** Lilian confirmed the 5472 has not gone in.
   Double's tax project *"2025 Taxes"* reads `notStarted`, `filedAt` null. A complete package was
   prepared (7004 + pro forma 1120 + 5472, in `JK Accounting Group > Tax Return Filed > 2025`,
-  file `2025 7004 Ext LumandAriLLC.pdf`) but **the 5472 in it is a shell** — §5.
+  file `2025 7004 Ext LumandAriLLC.pdf`) — ⚠️ **but the 5472 in it MAY be a shell, and may equally be complete; nobody has looked at it on screen** — §5.
 
 ### Licenses & other filings
 - **Forms 8843 — four, one per household member** (`JK Accounting Group > Others > 2025 >
@@ -99,8 +99,8 @@
 
 ## 5. Key facts & quirks
 
-- 🔴 **THE FORM 5472 SITTING IN DOUBLE LOOKS LIKE A SHELL — DO NOT FILE IT UNTIL IT IS CHECKED BY
-  EYE.** Part I names the entity, but on the extracted text of **both** copies **Part II (the 25%
+- 🔴 **THE FORM 5472 SITTING IN DOUBLE MAY BE A SHELL — DO NOT FILE IT *OR REBUILD IT* UNTIL IT IS
+  CHECKED BY EYE. THE TWO POSSIBLE MISTAKES ARE OPPOSITE.** Part I names the entity, but on the extracted text of **both** copies **Part II (the 25%
   foreign shareholder — i.e. the owner) and Part III (related party) carry no values**, and the
   owner's name appears nowhere in either document. ⚠️ **That is an absence in a text extraction
   from a PDF with an unreadable font, which is exactly the reading `redact-doc` warns against** —
@@ -154,15 +154,18 @@
 
 ### Log
 
-- _(2026-09-06, later)_ — **Julia was briefed on the transactions.** Lilian asked for a written
-  summary in English so Julia — who had no prior context on this client — could see the situation,
-  take the decisions that are hers, and ask what she needs to. **A three-page memo was produced and
-  delivered to her directly** *(not committed: it carries client figures)*: the eight bank
-  transactions, what is **established** versus **inferred**, the formation-window costs no statement
-  shows, the five client questions, and where the filing stands. ⚠️ **No copy is stored anywhere** —
-  it carries figures, so it went to her directly; it is reproducible from the working paper.
+- _(2026-09-06, later)_ — **A transaction summary for Julia was prepared — and as at this entry it
+  has NOT yet reached her.** Lilian asked for a written summary in English so Julia — who has no
+  prior context on this client — could see the situation, take the decisions that are hers, and ask
+  what she needs to. **The memo was produced and handed to Lilian to forward** *(not committed: it
+  carries client figures)*: the eight bank transactions, what is **established** versus **inferred**,
+  the formation-window costs no statement shows, the five client questions, where the filing stands,
+  and the two signer positions with their options. ⛔ **Nothing here should be read as saying Julia
+  has seen it** — forwarding it is an open action, [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 85.
+  ⚠️ **No copy is stored anywhere**; it is reproducible from the working paper.
   🔴 **What the write-up crystallised: two of the open items are POSITIONS reserved for the signer,
-  not facts to look up — and Lilian routed both to Julia.** *(The options for each, and the
+  and Lilian routed both to Julia.** ⓘ **Both are conditional — they only arise if the CLIENT does
+  not answer**, so chasing him is the cheaper route and neither is live yet. *(The options for each, and the
   correction of a first version that mis-cited the firm's own rule, are written out once in the
   working paper **§6D**. ⛔ **Deliberately not restated here.**)* 📌 Whether the rule itself should
   name a signer is [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 83 — Lilian's to settle.
@@ -214,12 +217,12 @@
 
 ### Tax year 2025 — the review
 
-- **In preparation, blocked on TWO things, not one.** The five client questions below — **and two positions reserved for the signer, routed to Julia** (working paper §6D). ⛔ *Answering the five does not on its own unblock the return.* The
+- **In preparation, blocked on the client's five questions below.** 🔴 **And if those answers do not come, two positions fall to Julia** (working paper §6D) — ⓘ *conditional, not parallel: answer the five and they mostly dissolve.* The
   return itself, its tie-outs and its decisions are in the working paper.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Put the TWO signer positions to Julia and get her ruling** — working paper §6D. *(She was briefed on 2026-09-06; nothing has come back yet.)*
+- 🔴 **Forward the transaction summary to Julia** — prepared 2026-09-06 and **still with Lilian**; then put the two signer positions to her **only if the client's answers do not come** (working paper §6D). `FOLLOW-UPS.md` row 85.
 - **Ask the client the FIVE questions in one message** — working paper §6A. ⚠️ **Five, not four:**
   the fifth (his country of tax residence and whether he has a tax number there) fills four fields
   on the form and nothing on file answers it, so it rides in the same message. Everything else on
