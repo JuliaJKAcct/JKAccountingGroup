@@ -297,17 +297,23 @@ masking. Then a welded identifier still is not masked — but the job **aborts a
 is the outcome the guard exists to produce.
 
 🔴 **AND WHICH PATTERN IS NOT A DETAIL — it is the difference between a working guard and one
-somebody switches off.** ⚠️ **A reviewer measured three candidates on 600 invented figures:**
+somebody switches off.** ⚠️ **A reviewer measured three candidates on invented figures. ⛔ Read the corpus
+column — the three cells are NOT one denominator**, because the two loose patterns only diverge once a row
+carries more than one amount:
 
-| Anchor-free candidate | Catches the welded TIN | False aborts on a column of amounts |
-|---|---|---|
-| ✅ `\d{3}-\d{2}-\d{4}` *(hyphen only)* | **yes** | **0**, on every corpus tried |
-| 🟡 `\d{3}[-\s.]\d{2}[-\s.]\d{4}` *(single separator)* | yes | **200 / 600** on a no-comma decimal column |
-| ⛔ `SSN_LOOSE` minus its anchors | yes | **60 of 60 rows** on a right-aligned amount page |
+| Anchor-free candidate | Catches the welded TIN | False aborts | On what |
+|---|---|---:|---|
+| ✅ `\d{3}-\d{2}-\d{4}` *(hyphen only)* | **yes** | **0** | every amount corpus tried — and clean on phone numbers, ISO dates and ZIP+4 |
+| 🟡 `\d{3}[-\s.]\d{2}[-\s.]\d{4}` *(single separator)* | yes | **~200 / 600** | 600 figures, no thousands separators, integer widths 1–8 |
+| ⛔ `SSN_LOOSE` minus its anchors | yes | **60 of 60 rows** | a 60-row page carrying **two** amounts per row *(a single column gives 30)* |
+
+🔑 **And the caveat that governs all three: every one of them scores ZERO once the amounts carry
+thousands separators.** The costs above are what a **no-comma extraction** does — which is exactly what a
+PDF text layer tends to produce, and therefore the case that matters.
 
 🔑 **START HYPHEN-ONLY.** ⛔ **Never `SSN_LOOSE` with the anchors stripped** — it is the obvious
 implementation *(the guard already calls `SSN_LOOSE`)* and it aborts on essentially every amount column,
-which is precisely the pressure `:636-638` warns produces a weakened guard.
+which is precisely the pressure `:633-634` warns produces a weakened guard *("a false alarm here is cheap … a miss is not recoverable")*.
 ⓘ *The hyphen-only shape is what this README's own manual-check bullet below already tells the operator to
 grep with — it was safe there for the same reason.*
 
@@ -316,7 +322,7 @@ An abort costs the whole document and sends the operator to edit the tool mid-jo
 false positives the hyphen-only shape produces — `INV-2024-01-0001`, `Case 2024-01-1234` — costs a value
 no analysis needs.
 
-⛔ **What will NOT work, so nobody re-tries it: extending `SSN_LABELLED` (`:309`).** Its gap class is
+⛔ **What will NOT work, so nobody re-tries it: extending `SSN_LABELLED` (`:310`).** Its gap class is
 `([^\n\d]{0,40})`, which forbids **digits and newlines**, so a column *header* can never reach a value on
 the row below, and the welded index breaks it even on the same line. Widening the gap to allow both
 re-opens the amount collision it exists to prevent. *(Tested; it fails both ways.)* ⓘ *A separate, still-unexcluded candidate for the masker:
