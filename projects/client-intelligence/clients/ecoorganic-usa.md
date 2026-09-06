@@ -1309,8 +1309,12 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   is filed electronically**, and the software's warning about mailing them separately with a transmittal
   form is **not supported by the state's current instructions**, where that form appears nowhere at all.
   🔑 **What IS required, regardless of how the return is filed, is that each member be ISSUED their
-  K-1** — and because the extension was filed, that deadline moves from March to **the fifteenth day of
-  the ninth month**. ⛔ **The firm had been about to do the opposite of the rule** *(an earlier note said
+  K-1** — and **IF** the state extension was validly filed, that deadline moves from March to **the
+  fifteenth day of the ninth month**. ⚠️ **That "if" is real and the firm has not closed it:** the state's
+  condition is a **timely, electronically filed** state extension, and what the file actually holds is a
+  federal extension form, a document named as a state one, and the state extension form present in the
+  software. 🛑 **If it does not hold, the deadline was March and is six months past.** 🛠️ **Confirm the
+  state extension acknowledgement.** ⛔ **The firm had been about to do the opposite of the rule** *(an earlier note said
   to mail them to the agency anyway, "it costs a stamp")*.
 
 ### Outstanding items (CI-only — never in the SOP)
