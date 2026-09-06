@@ -3640,14 +3640,15 @@ different question with a different answer. ⛔ **Do not carry the pro-rata sent
 🔑 **The S corporation is the only party that knows its own gross receipts, so it discloses them. That
 is the entire function of the box.**
 
-#### ③ 🔴 WHICH FIGURE — the current year, not an average
+#### ③ 🔴 WHICH FIGURE — **one annual figure, not an average; and the firm reads it as the CURRENT year**
 
 📄 **The instruction never says it in one sentence** *(it says only "information shareholders need")*,
 **so the answer comes from the worksheet the shareholder actually fills in** — the
 `Average Annual Gross Receipts Worksheet Per Section 448(c)` in the Instructions for Form 8990:
 
-| Line | | **Column A**<br>1st preceding tax year | **Column B**<br>2nd preceding tax year | **Column C**<br>3rd preceding tax year |
+| Line | | **Column A** | **Column B** | **Column C** |
 |---|---|---|---|---|
+| | | *1st preceding tax year* | *2nd preceding tax year* | *3rd preceding tax year* |
 | **1** | Annual gross receipts | $ | $ | $ |
 | **2** | Plus annual gross receipts of related entities per aggregate rules | $ | $ | $ |
 | **3** | Total annual gross receipts | $ | $ | $ |
