@@ -1317,6 +1317,45 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   state extension acknowledgement.** ⛔ **The firm had been about to do the opposite of the rule** *(an earlier note said
   to mail them to the agency anyway, "it costs a stamp")*.
 
+- 2026-09-06 (fourth pass) — 🔴 **JULIA TOOK THE BONUS DEPRECIATION OFF THE 2025 RETURN, AND IT TURNS A
+  LOSS YEAR INTO AN INCOME YEAR.** The three vehicles and the forklift bought in 2025 had been written off
+  in full in their first year under the special first-year allowance; they now run on ordinary depreciation
+  spread over five and seven years. 🔑 **The company's 2025 ordinary result flips from a loss to income**,
+  and with it **every shareholder's share flips from a loss to income too.**
+  ⛔ **It is an ELECTION, not a setting.** Electing out of the first-year allowance has to be attached to
+  the return as a written statement, **is made class of property by class of property**, must be on a
+  **timely filed** return, and **cannot be undone without the IRS's permission.** 🟢 **The software produced
+  the statements correctly** — one per class of property, which is broader than the firm had drafted and
+  right whichever way the open question below goes.
+  ✅ **WHAT IT BUYS, and it is not one-sided.** The company gives up a large deduction this year, but:
+  **the capital gain each shareholder was going to take disappears or shrinks sharply**; the continuing
+  shareholder's share of the year now **builds** his basis instead of consuming it; and **there is
+  depreciation left to deduct in 2026**, where the old method had used it all up. ⚠️ **What it does NOT
+  fix: the departing shareholder's suspended losses carried in from 2024 still die on his final K-1** —
+  his distributions still outrun his basis. *(A first version of this analysis said nothing was lost;
+  that was wrong and is withdrawn.)*
+  🟢 **CONNECTICUT GETS SIMPLER.** The state's bonus-depreciation add-back is worded as *"the amount
+  **allowed** for federal purposes"* — none was allowed, so **the add-back disappears entirely** and the
+  state schedule that carried it is correctly zero. 🔑 **But the state's pass-through-entity tax election
+  is now priced on a different number**, and it is the irrevocable one that must be decided before the
+  return is transmitted.
+  🔴 **ONE QUESTION IS OPEN AND ONLY JULIA CAN CLOSE IT: WHAT CLASS THE FORKLIFT IS.** The firm's own
+  earlier analysis, run twice, puts a forklift used by a **spray-foam insulation contractor** in the
+  five-year class rather than the seven-year one — the company's own business activity code is a special
+  trade contractor. **The return as generated is internally consistent at seven years**, so this is a
+  choice between two coherent returns, not a defect. ⚠️ **It moves the company's income, the balance
+  sheet, the state election's price, and it means the depreciation journal entry is posted a second
+  time.** ⓘ *While the whole cost was written off in year one the class made no difference at all, which
+  is exactly why it was never settled — removing the allowance is what made it matter.*
+  🟢 **THE REGENERATED RETURN WAS READ PAGE BY PAGE AND IS CORRECT** — every change keyed went in,
+  including the state schedules and the election statements.
+  🔴 **AND ONE DEFECT IS IN THE BOOKS, NOT THE RETURN: the 2025 depreciation journal entry now carries the
+  new amount but still carries its OLD description**, which says the whole cost was written off in the
+  first year. **The note contradicts its own entry**, and a note that contradicts its amount is worse than
+  no note, because the next reader believes the note. 🛠️ **Replacement text — the four line notes and the
+  header memo, in English, ready to paste — is in the return's working paper.** ⛔ **Do not write it until
+  the forklift's class is settled**, or it will contradict the amount again.
+
 ### Outstanding items (CI-only — never in the SOP)
 - ✅ **THE 2024 FILED RETURN HAS BEEN READ — 2026-09-02.** Lilian added the Double file host to the
   tax-return environment's allowed domains and the redactor went through on the first try. **It changed
