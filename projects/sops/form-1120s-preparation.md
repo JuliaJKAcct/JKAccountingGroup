@@ -4372,6 +4372,13 @@ return** — so the shareholder's own history is invisible from here:
 **Do not file until every one of these passes.** A check that fails is a mapping error, not a
 rounding difference.
 
+- [ ] 🔴 **NO FORM 8990 IS IN THE PACKAGE when Schedule B question 10 is answered `No`.** 📄 *"A small
+      business taxpayer isn't subject to the business interest expense limitation and **isn't required to
+      file Form 8990**."* 🛑 **Answering question 10 correctly does NOT detach a Form 8990 the software
+      already attached** — working on line 13 is enough to pull it in, and it then transmits, blank,
+      asserting a limitation the corporation is exempt from. **Read the FORM LIST, not just the lines**
+      (§6A, and the skill's §3A check 3). ⓘ *Caught on a real return in Sep 2026, after line 13 had been
+      opened repeatedly for a different reason.*
 - [ ] 🔴 **Box 17 code AC is THIS year's figure, not the one that rolled over.** The software cannot
       compute it, so a rolled file arrives holding **last year's** number looking like a default — and
       **every K-1 must carry the same basis for it** (§11F ⑤, ⑥)
