@@ -256,6 +256,50 @@ the very first real run: a probe described as printing "form titles only" printe
 street address, because those pages had no titles on them. The tool did its job; the operator
 around it did not.)*
 
+## 🔴 A REAL MISS, 2026-09-06 — an SSN-shaped TIN survived on a Form 8995
+
+**Reading an individual's filed 2024 Form 1040, the tool reported `22 SSN/ITIN masked` — and then a
+23rd, in the identical `NNN-NN-NNNN` shape, came through unmasked** in the *"Taxpayer identification
+number"* column of **Form 8995 line 1(b)**, the per-business QBI table.
+
+🔑 **THE CAUSE IS ESTABLISHED, AND IT IS NOT WHAT THE FIRST VERSION OF THIS SECTION SAID.**
+⛔ ~~"the most likely cause is the glyph-name decoding … if that decoding runs AFTER the masking pass,
+anything it reconstitutes is never scanned"~~ and ⛔ ~~"the fix is to mask AFTER glyph decoding"~~ —
+🛑 **both were wrong, and the code four files away refutes them:** `decode_glyph_names` runs at
+**`redact.py:566`**, `raw` is assembled at **569**, and `redact(raw)` is not called until **606**.
+**Decoding already runs first.** The proposed "fix" was already implemented, and so was its second half —
+`counts["leaks"]` at **`:488`** already scans the **final** redacted text.
+
+🔴 **WHAT ACTUALLY HAPPENED: A DIGIT FROM THE ADJACENT COLUMN WAS WELDED TO THE FRONT OF THE RUN.**
+The identifier sat in a table whose left-hand cell ended in digits *(a two-character activity index)*, and
+the flattened text ran the two together with no separator — `NN` immediately followed by
+`NNN-NN-NNNN`. 🔑 **`SSN_LOOSE` (`:306`) and `SSN` (`:301`) both open with `(?<!\d)`. The lookbehind sees
+the welded digit and correctly refuses to match.** ⛔ **So the masker missed it AND the refuse-to-write
+guard at `:639` stayed silent — the same lookbehind gates both**, which is why a file was written at all.
+
+⚠️ **This is a real trade-off, not a bug to swat.** The `(?<!\d)` / `(?!\d)` guards exist so long numeric
+runs are not shredded into false SSNs. **Removing them trades a silent miss for a flood of false
+positives.** 🛠️ **The candidate fix is to ALSO scan a whitespace-normalised variant** — where the
+column boundary is restored — **rather than to loosen the anchors on the raw text.** ⓘ *A second,
+unexcluded candidate: a separator outside `[-\s.]` that `normalise()`'s dash/invisible tables do not fold.*
+
+🧪 **Reproduce it before changing anything** — two fixtures settle it: an SSN with a digit welded to
+its front, and one with a non-ASCII separator.
+
+🛠️ **Until that lands:**
+
+- 🔴 **The printed counts are a hint, not a clearance.** *"22 masked"* means 22 were found.
+- 🔴 **On any document that reports glyph-name decoding, re-scan the output yourself** — and use a
+  pattern **without** the digit anchors: `grep -nE '[0-9]{3}-[0-9]{2}-[0-9]{4}'` finds exactly the case
+  the tool's own guards are built to skip.
+- 🔑 **The value that escaped was never written anywhere** — not the working paper, not the client file,
+  not the artifact, not the chat — and the output file was deleted. **The control that held was the human
+  rule, not the tool.**
+
+_(Found 2026-09-06 while reading a shareholder's own prior-year return during a return preparation. Same
+family as the street-line miss on the 2023 return, found 2026-09-02: the tool reported `0 street lines
+masked` on a document that carried one.)_
+
 ## Known limits — read these before trusting it
 
 - **Passport and other foreign ID numbers are not caught unlabelled.** The formats vary too
