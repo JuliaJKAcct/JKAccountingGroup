@@ -1,6 +1,6 @@
 # Mikayel Shakhyan
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-05
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-06
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -25,8 +25,11 @@
 - **Industry / what they do:** Cosmetics retail — the return carries activity code **456120**
   (Cosmetics, Beauty Supplies & Perfume Retailers) and product *"Cosmetics"*. The brand is
   **LUMARI**; a USPTO trademark application for it (stylised wording + a flower design, Principal
-  Register) was filed with **Pivniak Law** as the correspondent. ⚠️ **Whether the mark is owned by
-  Mikayel personally or by the LLC is unsettled** and it changes the return — §6.
+  Register) was filed with **Pivniak Law** as the correspondent. ✅ **The mark is owned by Mikayel
+  PERSONALLY, not by the LLC** _(established 2026-09-06 from the USPTO receipt already in Double;
+  confirm by eye next time it is open)_. **It matters on the return twice over**: the mark is not
+  an asset of the company, and a legal fee the company paid for it would be a **distribution to
+  him** rather than a company cost — §6.
 - **Primary language:** RU — Double's `Preferred language` reads **"Only Russian"**
 - **Our engagement:** Income tax only. Double: `Income Tax: true` · `Bookkeeping: N/A` ·
   `1099 Preparation: false` · `Annual Report: false`
@@ -101,7 +104,12 @@
   foreign shareholder — i.e. the owner) and Part III (related party) carry no values**, and the
   owner's name appears nowhere in either document. ⚠️ **That is an absence in a text extraction
   from a PDF with an unreadable font, which is exactly the reading `redact-doc` warns against** —
-  so confirm it on screen before rebuilding anything. **Part V is unchecked
+  so confirm it on screen before rebuilding anything. 🔴 **And as of 2026-09-06 trust that finding
+  LESS, not more:** on the USPTO receipt — same client, same day — a search for the literal word
+  `OWNER` came back **absent from a document that names the owner in full**, because the font
+  shifts its characters. **That is the same test this finding rests on**, so we genuinely do not
+  know whether those parts are blank. ⛔ **Neither rebuild nor file until someone has looked at the
+  PDF on screen** — the two possible errors are opposite. **Part V is unchecked
   with no attached statement**, lines 1f/1g/1h are blank, and Part VII is unanswered. A 5472 that
   never names the foreign owner is not a 5472 — and filed like this it would look done while
   exposing the client to the **$25,000** penalty for a return not filed *"in the manner
@@ -116,9 +124,11 @@
   transaction in Parts IV, V and VI at all, which §4B alone rules out.
 - 🔴 **THE MOST CERTAIN REPORTABLE TRANSACTIONS ARE NOT IN THE BANK STATEMENTS.** The LLC existed
   from **8 Aug 2025** and had no bank account until **27 Oct 2025** — eighty days in which the
-  Sunbiz fee, the registered agent, the EIN and probably the trademark filing were paid by
-  somebody, and it was not the company. Those are formation costs and owner contributions, and
-  **no statement will ever show them.** They have to be asked for.
+  Sunbiz fee, the registered agent and the EIN were paid by somebody, and it was not the company.
+  Those are formation costs and owner contributions, and **no statement will ever show them.** They
+  have to be asked for. ⓘ **The trademark filing came OFF this list on 2026-09-06:** the mark is his
+  personally, and paying for his own asset is not a contribution to the company — it is now asked
+  about as a possible **distribution** instead.
 - 🟠 **THE COMPANY MAY BE DISSOLVED, AND THAT DOES NOT END THE OBLIGATION — IT CREATES ONE.**
   **TD 9796 Example 1** holds that the liquidation year is itself a reporting year. So if the
   dissolution falls in 2026, a **second** pro forma 1120 + 5472 is due for 2026 — a year whose
@@ -144,13 +154,31 @@
 
 ### Log
 
+- _(2026-09-06)_ — **Second pass over the same documents, and it moved one thing that changes the
+  return.** Lilian asked again to go into Double, read everything on the client and analyse him for
+  reportable transactions. **Nothing new had arrived** — the same 23 documents, the last uploaded
+  25 Jun 2026, no Double notes, the 2025 tax project still `notStarted`; so the five questions in
+  the working paper's §6A are still the gate. ✅ **What DID move: the LUMARI trademark is owned by
+  Mikayel PERSONALLY, not by the LLC.** The USPTO receipt names him as owner — the previous session
+  recorded that field as *"did not survive extraction"*, which was wrong: **the PDF's font shifts every
+  character, so a plain-text search for a word simply cannot find it** — a probe for `OWNER` reported
+  absent on a document that names him in full. *(The mechanism, and the two wrong versions of it that
+  review caught, are written out once in the working paper §1 and
+  [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 81. ⛔ Deliberately not restated here.)* **Two consequences:** the mark is **not an asset of
+  the LLC**, which closes one of the two branches that could have moved total assets off zero; and
+  the legal fee the company paid becomes a strong candidate for a **distribution to him** rather
+  than a company cost — narrowing the fourth client question rather than closing it. ⚠️ **Also
+  established as a limit, not a finding:** Sunbiz, USPTO/TSDR and the Florida DOS site are **all
+  blocked by the cloud session's network policy**, so the dissolution date and the trademark's
+  serial number **were not looked up** — that is a search that never ran, not an absence. Both are
+  one click from an ordinary browser. Full detail and every figure in the working paper.
 - _(2026-09-05, later the same day)_ — **The return can largely be prepared while we wait.** The
   working paper now carries a **fill-ahead sheet (§3E)**: field by field, what can be entered
   today, what is a firm-side lookup, and the **five** fields that genuinely depend on the client —
   plus a **drafted Part V attached statement (§3F)** with the blanks named. **Most of both forms
   is answerable now**, Part VII included. The open items were split into **what only he can
   answer (§6A)**, **what we settle ourselves (§6B)** — his citizenship is on his own Form 8843 in
-  Double, the dissolution date is in the Sunbiz PDF, the trademark owner is public on USPTO TSDR —
+  Double, the dissolution date is in the Sunbiz PDF, the trademark owner was settled from the receipt already in Double —
   and **what we simply tell him (§6C)**, which is that he must keep records. 🔑 **One question
   gained a second half that changes the form:** whether the money he put in was **capital or a
   loan** — capital goes on the Part V statement, a loan goes on **Part IV line 17** and makes
@@ -215,7 +243,8 @@
 - [ ] 🔴 **The dissolution date** — on **sunbiz.org**, where it is public and readable; the Sunbiz PDF in Double is one of the six unreadable scans, so it is only the fallback.
 - [ ] 🔍 **His country of citizenship — on his own Form 8843 in Double.** Do not ask him for it.
 - [ ] 🔍 Whether he holds an ITIN.
-- [ ] 🟠 **Who owns the LUMARI trademark** — public on USPTO TSDR.
+- [x] ✅ **Who owns the LUMARI trademark — ANSWERED 2026-09-06: Mikayel personally, not the LLC.**
+      Read off the receipt already in Double; confirm by eye next time it is open.
 - [ ] 🟠 Whether the Form 7004 actually went, and by which route.
 - [ ] 🟠 **Read the six image-only documents by eye.** _(Asking him for text-based PDFs is a fallback, and that half would go in a later message — not the one carrying the five questions.)_
 
@@ -224,6 +253,9 @@
 - **Double client:** https://app.doublehq.com/clients/710648/info/properties
 - **Double tax project (2025):** https://app.doublehq.com/tax-return?cid=710648&projectId=219335
 - **Working paper (all figures):** [`projects/tax-returns/lum-and-ari-llc/2025-form-1120-proforma-5472.md`](../../tax-returns/lum-and-ari-llc/2025-form-1120-proforma-5472.md)
+- **ATX capture sheet (artifact, 2026-09-06):** https://claude.ai/code/artifact/d2baf00b-08d2-49c5-a09b-e7d61b22ca21
+  — the page Lilian types the return into ATX from. ⚠️ **The working paper is the master**; republish that page to
+  the **same URL** after any change, or the link she holds goes stale.
 - **Double case note:** none yet.
 - **Google Drive folder (sensitive vault):** _(pending)_
 - **Related SOPs:** none — the firm has **no SOP** for the foreign-owned-DE pro forma 1120 /
