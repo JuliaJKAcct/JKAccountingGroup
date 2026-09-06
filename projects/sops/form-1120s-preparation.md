@@ -3,7 +3,7 @@
 > **Status:** 🟡 **DRAFT — in review with Lilian.** Written 2026-08-14 while preparing the
 > firm's first 1120-S with a session assisting, and shaped by what a first-time preparer
 > actually needed to be told. **Remove this note when Lilian signs it off.** ·
-> **Owner:** Lilian · **Last updated:** 2026-09-05
+> **Owner:** Lilian · **Last updated:** 2026-09-06
 >
 > 🔵 **One part of this DRAFT is already FIRM POLICY and is not waiting on the sign-off: §5C-v**,
 > Julia's rule on netting a shareholder's contributions against their distributions. **Read it
@@ -3590,6 +3590,122 @@ apply and the zeros cost nothing.**
 
 🛑 **Never leave the SSTB question unanswered**, and reproduce the prior return's answer: it is the
 switch that can remove the shareholder's deduction entirely above the income threshold.
+
+---
+
+### 11F · 🔵 **BOX 17 CODE AC — `Gross receipts for section 448(c)`.** What it is FOR, before what goes in it
+
+🛑 **ESTABLISH WHAT A BOX IS FOR BEFORE DECIDING WHAT VALUE GOES IN IT.** This one cost a firm session
+two days and four contradictory answers, and every wrong turn came from reasoning about the *number*
+without first settling the *purpose*. **Read this section in its order.**
+
+#### ① What it is — and what it is NOT
+
+| | |
+|---|---|
+| ⛔ **It is NOT** | income · a deduction · a basis item · anything the shareholder pays tax on · anything that enters ANY computation on the 1120-S |
+| ✅ **It IS** | a **disclosure**. Box 17 is literally titled **"Other information"** — a place where the company hands the shareholder a fact only the company knows |
+
+📄 **Instructions for Form 1120-S, code AC:** *"Provide information shareholders need to complete the
+gross receipts test for section 448(c) purposes."*
+📄 **Shareholder's Instructions for Schedule K-1, code AC:** *"Use the gross receipts amount to figure
+the business interest expense you can deduct, if applicable. See section 163(j)."*
+
+#### ② Why the shareholder needs it — the §448(c) test, in plain terms
+
+The shareholder runs the test **on his own return**, on **all** his businesses together. If his **average
+annual gross receipts for the 3 preceding tax years** — his own, **plus his pro-rata share of every
+pass-through he owns** — exceed the threshold *(**$31,000,000** for tax years beginning in 2025; indexed
+annually — read the year's figure, never this one)*, he loses three exemptions at once:
+
+| Exemption lost above the threshold | What that means for him |
+|---|---|
+| **§163(j)** | his business interest deduction is limited → **Form 8990** |
+| **§263A** | he must capitalise indirect costs into inventory (UNICAP) |
+| **§448(a) / §471** | he may no longer use the **cash method**, nor the small-taxpayer inventory rules |
+
+🔑 **The S corporation is the only party that knows its own gross receipts, so it discloses them. That
+is the entire function of the box.**
+
+#### ③ 🔴 WHICH FIGURE — the current year, not an average
+
+📄 **The instruction never says it in one sentence** *(it says only "information shareholders need")*,
+**so the answer comes from the worksheet the shareholder actually fills in** — the
+`Average Annual Gross Receipts Worksheet Per Section 448(c)` in the Instructions for Form 8990:
+
+| | Column A | Column B | Column C |
+|---|---|---|---|
+| | **1st preceding tax year** | **2nd preceding tax year** | **3rd preceding tax year** |
+| **1** | Annual gross receipts | $ | $ |
+| **2** | Plus annual gross receipts of related entities per aggregate rules | $ | $ |
+| **3** | Total annual gross receipts | $ | $ |
+| **4** | **Average annual gross receipts** *(line 3, columns A + B + C, **divided by 3**)* | | $ |
+
+🔑 **He computes the average HIMSELF, at line 4, from three separate ANNUAL figures — one per year.**
+⛔ **An average handed to him on a single K-1 has no row to go in.** ✅ **What he needs from the entity is
+ONE year's gross receipts: the year that K-1 covers.** He builds the three columns from **three
+consecutive K-1s** — which is also why every other figure on that K-1 is a figure for the same year.
+
+⚠️ **THE TRAP THAT PRODUCES THE WRONG ANSWER, and it is a good one:** the ENTITY's own §448(c)
+small-business test **is** a three-year average *(Schedule B question 10's $31,000,000 test)*, while the
+K-1 disclosure is **one year's receipts**. **Two different things wearing the same words**, on the same
+return, both called "gross receipts for section 448(c)".
+
+#### ④ How to compute the entity figure, and how it reaches each K-1
+
+**§448(c) gross receipts are ALL gross receipts and are NOT reduced by cost of goods sold:**
+
+| Include | |
+|---|---|
+| Page 1 **line 1c** — gross receipts or sales, net of returns and allowances | ✅ |
+| Page 1 **lines 4 and 5** — Form 4797 gain and other income | ✅ |
+| Schedule K — **interest, dividends, rents, royalties, capital gains** | ✅ |
+| ⛔ minus cost of goods sold | **NO** |
+
+📄 **Then each K-1 carries that shareholder's SHARE, not the whole:** *"a taxpayer with an ownership
+interest in a partnership or S corporation must include a share of the … S corporation's shareholder's
+**pro rata share of gross receipts**"* (Instructions for Form 8990). ✅ **The software splits the entity
+figure by ownership percentage — you enter it ONCE, at the entity.**
+
+#### ⑤ 🛠️ WHERE IT IS TYPED — line 17d has no dollar box
+
+**Same shape as §9C's M-1 line 3, and it catches people the same way.**
+
+| Step | |
+|---|---|
+| **1** | **Schedule K, line 17d** is **greyed — you cannot type there.** It is a printed output |
+| **2** | **Click the greyed line anyway** → the worksheet **`Ln 17d, Sch K - Oth Items`** opens, with **`Code AC - Gross receipts for section 448(c)`** in an editable box. **That is the entry point** |
+| **3** | ⛔ **Do NOT type it on each K-1.** Two per-K-1 overrides is the failure mode — they stop agreeing with the entity and with each other |
+
+🔴 **IT IS A MANUAL FIELD THAT ROLLS FORWARD, AND ROLLOVER DOES NOT UPDATE IT.** The software cannot
+compute it, because §448(c) can require **aggregating a related entity's receipts** (§52(a)/(b),
+§414(m)/(o)) — which no return knows about. 🛑 **So on a rolled-over file it arrives holding LAST
+YEAR's number, looking exactly like a computed default. Check it every year.**
+
+⚠️ **A separate, OPTIONAL worksheet is easy to mistake for the source.** The `Line 13 (1120S) - Interest
+Expense` worksheet has a checkbox — *"Check to use Gross Receipts Test worksheet to determine status as
+a Small Business Taxpayer"* — which opens a three-prior-year grid with an `Average Gross Receipts` line.
+⛔ **That grid serves Schedule B question 10 ONLY** *(is the ENTITY over the threshold — see §6A)*. **It
+does not feed box 17 code AC.** ✅ **Proof, and the way to prove it in any software: uncheck the box and
+watch whether the code AC value changes. If it does not, they are not connected.**
+
+#### ⑥ ⚖️ HOW MUCH IT MATTERS — say this out loud to whoever is signing
+
+🔑 **For almost every client this firm has, the figure decides NOTHING.** The threshold is **$31 million**;
+a client at a few hundred thousand passes the test on any figure anyone could type. **No tax on the
+1120-S moves, no tax on any 1040 moves, and Form 8990 is not filed either way.**
+
+🛑 **That is a reason to fix it in one field, not a reason to escalate it — and equally not a reason to
+leave a prior-year figure on this year's K-1.** ✅ **What is NOT optional, whatever value is chosen: every
+K-1 must carry the SAME basis for it** — a 50/50 pair showing two unrelated numbers is a visible defect
+on a signed return even when the tax is identical. **If you are leaving the software's rolled-over
+figure, leave it on BOTH; if you are correcting it, correct it at the entity so both recompute.**
+
+📌 **AND THE REUSABLE LESSON, which is not about §448(c) at all: A FIGURE THAT MATCHES IS NOT A FIGURE
+THAT IS CAUSED.** When one value appears in two places, **change one and look** — do not build an
+explanation for the match. *(In the session this section came from, the same number appearing in an
+optional worksheet and in the disclosure field was read as a mechanism three times running. One
+unchecked checkbox settled what three rounds of reasoning could not.)*
 
 ---
 

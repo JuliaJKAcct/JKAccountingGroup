@@ -124,7 +124,7 @@ was never allowed, and stays invisible until next year's opening figures.
 
 ---
 
-### §3A · Three checks that belong to EVERY form's SOP
+### §3A · Four checks that belong to EVERY form's SOP
 
 **These are not 1120-S facts — write the equivalent into each new form's SOP.**
 
@@ -155,6 +155,36 @@ bathroom-fixture retailer's return, still attached after the figure was correcte
 carried a blank Form 4797 and a blank Schedule D; **seven of twenty pages were empty forms.**)_
 **Deleting them changes no figure.** Leaving them in invites a question you have no reason to
 answer.
+
+**4 · 🔵 AN INFORMATIONAL BOX GETS ITS *PURPOSE* SETTLED BEFORE ITS *VALUE* — and a figure that
+matches is not a figure that is caused.**
+Every return has boxes that feed **nobody's tax**: disclosures the entity hands its owners so they can
+run a test on **their own** return. 🛑 **They are the boxes a session is most likely to get wrong, because
+they look like every other figure and nothing checks them** — no diagnostic, no tie-out, no client who
+notices. **Two rules, in this order:**
+
+- **① Read what the box is FOR before deciding what goes in it.** The form's own instruction is usually
+  one vague sentence; the answer is in **the form the RECIPIENT fills in**, whose shape says what he
+  needs. _(Worked example: 1120-S Schedule K-1 box 17 code AC — the 1120-S instruction says only
+  "provide information shareholders need", while the Form 8990 worksheet the shareholder fills has **one
+  column per preceding tax year** and computes the average itself. That shape is what settles that the
+  K-1 carries **one year's** receipts, not an average. [1120-S SOP §11F](../../../projects/sops/form-1120s-preparation.md).)_
+- **② When one value appears in two places, CHANGE ONE AND LOOK.** Do not build an explanation for the
+  match. 🔑 **A one-click experiment beats three rounds of reasoning**, and it is available in every
+  forms-based program: untick the optional worksheet, or clear the field, and see whether the other
+  value moves. _(In the session this came from, the same number sitting in an optional worksheet and in
+  the disclosure field was read as a mechanism **three times running**. The client's own preparer settled
+  it by unchecking one box.)_
+
+⚠️ **And whatever value such a box ends up carrying, EVERY owner's copy must carry the same basis for
+it.** A 50/50 pair showing two unrelated numbers for one entity-level item is a visible defect on a
+signed return even when the tax is identical — and it is exactly what per-owner overrides produce.
+🛠️ **Enter it once at the entity and let the software split it.**
+
+⚠️ **These fields are often MANUAL and ROLL FORWARD.** Where the software cannot compute a figure — code
+AC cannot be computed, because §448(c) can require aggregating a related entity's receipts — **a rolled
+file arrives holding LAST YEAR's number, looking exactly like a computed default.** 🛑 **Add a tie-out row
+for every such field, and check it every year.**
 
 ## §4 · Driving a REAL return
 
