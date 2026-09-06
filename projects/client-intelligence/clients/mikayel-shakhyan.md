@@ -158,15 +158,14 @@
   summary in English so Julia — who had no prior context on this client — could see the situation,
   take the decisions that are hers, and ask what she needs to. **A three-page memo was produced and
   delivered to her directly** *(not committed: it carries client figures)*: the eight bank
-  transactions in two tables, money in and money out, each with what is **established** versus what
-  is **inferred** and the one thing we must find out; the formation-window costs that **no statement
-  will ever show**; the five client questions; and where the filing stands. 🔴 **What the write-up
-  crystallised, and it is now recorded in the working paper as §6D: exactly two of the open items
-  are JULIA'S to decide rather than facts to look up** — what position to take if the client cannot
-  say whether his money was **capital or a loan**, and what to do if a payee turns out to be
-  **connected to him**, since that changes **how many Forms 5472 the firm files**, not one line.
-  ⓘ *A third item went to her as context only: the F-2 visa and running a U.S. business is a question
-  for his immigration attorney, and is not to be raised with the client unprompted.*
+  transactions, what is **established** versus **inferred**, the formation-window costs no statement
+  shows, the five client questions, and where the filing stands. ⚠️ **No copy is stored anywhere** —
+  it carries figures, so it went to her directly; it is reproducible from the working paper.
+  🔴 **What the write-up crystallised: two of the open items are POSITIONS reserved for the signer,
+  not facts to look up — and Lilian routed both to Julia.** *(The options for each, and the
+  correction of a first version that mis-cited the firm's own rule, are written out once in the
+  working paper **§6D**. ⛔ **Deliberately not restated here.**)* 📌 Whether the rule itself should
+  name a signer is [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 83 — Lilian's to settle.
 - _(2026-09-06)_ — **Second pass over the same documents, and it moved one thing that changes the
   return.** Lilian asked again to go into Double, read everything on the client and analyse him for
   reportable transactions. **Nothing new had arrived** — the same 23 documents, the last uploaded
@@ -215,11 +214,12 @@
 
 ### Tax year 2025 — the review
 
-- **In preparation, blocked on the client.** The five questions that gate it are below. The
+- **In preparation, blocked on TWO things, not one.** The five client questions below — **and two positions reserved for the signer, routed to Julia** (working paper §6D). ⛔ *Answering the five does not on its own unblock the return.* The
   return itself, its tie-outs and its decisions are in the working paper.
 
 ### Outstanding items (CI-only — never in the SOP)
 
+- 🔴 **Put the TWO signer positions to Julia and get her ruling** — working paper §6D. *(She was briefed on 2026-09-06; nothing has come back yet.)*
 - **Ask the client the FIVE questions in one message** — working paper §6A. ⚠️ **Five, not four:**
   the fifth (his country of tax residence and whether he has a tax number there) fills four fields
   on the form and nothing on file answers it, so it rides in the same message. Everything else on
@@ -239,11 +239,15 @@
 **Only he can answer these** _(working paper §6A)_:
 
 - [ ] 🔴 **Were the counter deposits his own money — and did he put them in as CAPITAL or as a
-      LOAN?** The second half decides which half of the form they go on.
+      LOAN?** The second half decides which half of the form they go on. ⚠️ **And it carries a
+      decision behind it:** if he cannot say, the position is **Julia's** to take, with three options
+      set out in working paper §6D ①.
 - [ ] 🔴 **What he paid personally between 8 Aug and 27 Oct 2025**, the 80 days before the company
       had an account — and whether any of it was property rather than money.
 - [ ] 🔴 **Who are AXY Company LLC and Oxana Martox LLC to him?** This decides **how many Forms
-      5472 are filed**, not just a line.
+      5472 are filed**, not just a line. ⚠️ **And if no answer comes, what to do about it is
+      Julia's** — working paper §6D ②. ⓘ *The separate-form rule covers a **foreign or U.S.**
+      related party, not only a U.S. one.*
 - [ ] 🟠 **Did the company pay anything that was really his personally?** Each one is a
       distribution, even when the money went to an unrelated payee.
 - [ ] ⏸ **In which country does he file a tax return as a resident — and does he have a tax
