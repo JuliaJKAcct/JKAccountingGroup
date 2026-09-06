@@ -256,6 +256,34 @@ the very first real run: a probe described as printing "form titles only" printe
 street address, because those pages had no titles on them. The tool did its job; the operator
 around it did not.)*
 
+## 🔴 A REAL MISS, 2026-09-06 — an SSN-shaped TIN survived on a Form 8995
+
+**Reading an individual's filed 2024 Form 1040, the tool reported `22 SSN/ITIN masked` — and then a
+23rd, in the identical `NNN-NN-NNNN` shape, came through unmasked** in the *"Taxpayer identification
+number"* column of **Form 8995 line 1(b)**, the per-business QBI table.
+
+🛑 **This is not a false negative on an exotic format. It is the ordinary hyphenated shape the tool
+masks everywhere else on the same document**, and the most likely cause is the **glyph-name decoding**:
+this PDF carried no usable Unicode map, so ~89,000 `/uniXXXX` tokens were decoded back to text — and if
+that decoding runs **after** the masking pass, anything it reconstitutes is never scanned.
+
+🛠️ **What to do until it is fixed:**
+
+- 🔴 **On any document that reports glyph-name decoding, re-scan the output yourself** before relying
+  on the masking counts. One `grep -nE '[0-9]{3}-[0-9]{2}-[0-9]{4}'` over the output file is enough.
+- ⛔ **Do not treat the printed count as a clearance.** *"22 masked"* means 22 were found, not that 22
+  existed.
+- 🔑 **The value that escaped was never written anywhere** — not into the working paper, not the client
+  file, not the artifact, not the chat reply — and the output file was deleted. **The control that
+  actually held was the human rule, not the tool.**
+
+📌 **The fix is to mask AFTER glyph decoding, not before** — and then to re-run the identifier scan on
+the final text rather than on the intermediate. **Until that lands, the counts are a hint.**
+
+_(Found while reading a shareholder's own prior-year return during a return preparation. Same family as
+the 2023 street-line miss recorded below: the tool reported `0 street lines masked` on a document that
+carried one.)_
+
 ## Known limits — read these before trusting it
 
 - **Passport and other foreign ID numbers are not caught unlabelled.** The formats vary too
