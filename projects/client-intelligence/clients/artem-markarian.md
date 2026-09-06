@@ -131,6 +131,20 @@ the actual details.
 
 ### Log
 
+- 2026-09-06 (fourth pass) — 🛠️ **THREE THINGS ON HIS RETURN WERE REWORKED BECAUSE LILIAN COULD NOT WORK
+  FROM THEM, AND ONE OF THEM THE FIRM HAD WRONG.**
+  🔴 **① The rental-platform's service fee goes in the return's OTHER EXPENSES section, not on the named
+  commissions line** — Lilian's instruction, *"porque así fue como lo hizo [el preparador] en 2024 y quise
+  ser consecuente con eso"*. ✅ **His 2024 return corroborates it**: everything it deducted beyond
+  depreciation sat in *other expenses*, nothing on a named line. 🔑 **Following the prior year's mapping is
+  the firm's method**, so this is a convention to record, not a preference. ⚠️ **She named the 2024
+  preparer as "Julian"** — ⛔ **not written into the file as a name, because it may be the dictation; the
+  evidence is the return itself.** 🛠️ **Ask her for the name so the provenance is right.**
+  🔑 **② and ③ were failures of the DELIVERY, not of the figures** — the K-1's landing place and the basis
+  form were described in a way she could not act on. Both are rebuilt in his working paper and on his live
+  page, and **the general lessons went into the firm's rules** so the next return does not repeat them.
+  ⛔ **No figures here — they stay in the working paper.**
+
 - 2026-09-06 (third pass) — 🟢 **THE BIGGEST OPEN ITEM ON HIS RETURN CLOSED, AND THE COMPANY'S RETURN
   MOVED UNDER HIM ON THE SAME DAY.**
   🟢 **① HE HAD NO HEALTH INSURANCE IN 2025.** Lilian, relaying him: *"Artem dijo que no tenía seguro
