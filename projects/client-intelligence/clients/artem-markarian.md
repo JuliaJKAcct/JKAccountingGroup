@@ -131,6 +131,28 @@ the actual details.
 
 ### Log
 
+- 2026-09-06 — 📐 **HIS 2025 INDIVIDUAL RETURN NOW HAS ITS OWN WORKING PAPER, AND A LIVE PAGE LILIAN
+  CAN WORK FROM.** Preparing the company's return produced everything his own return receives, so it was
+  written up as
+  [`projects/tax-returns/artem-markarian/2025-form-1040.md`](../../tax-returns/artem-markarian/2025-form-1040.md)
+  — **the master; figures live there, never here** — and delivered to Lilian as an **artifact at a stable
+  link** *(her request: "un artefacto que sea un link vivo que podamos modificar")*. **The page carries no
+  identifier of any kind.**
+  🛑 **THE ONE THING ANYONE OPENING EITHER MUST KNOW: THE REVIEW HAS NOT RUN FOR HIS RETURN.** It is
+  phase-2 material only — the company-side handoff plus what follows from it arithmetically. **His
+  organizer, his prior year and his own documents have not been read**, so filing status, dependants,
+  other income, health coverage, withholding and state residency are all unknown. ⛔ **Nothing in either
+  can be filed.**
+  ✅ **What IS settled and good for him:** his share of the company's loss is **fully deductible in 2025**
+  and he carries basis into 2026 — a direct consequence of Julia's ruling that the whole officer's
+  compensation is his. ⚠️ **He pays for it in self-employment tax**, because that compensation reaches
+  him on a Schedule C rather than a W-2.
+  🔴 **Still blocking, and three of them are his to answer:** the **per-car Turo breakdown** *(asked
+  2026-09-01, still pending)*, **mileage per car** *(the cars are listed property and no log has been
+  seen)*, **the friend's Kona** *(what he received, what he paid, whether a 1099-NEC was needed)*, and —
+  for Julia — **when he was admitted as a shareholder** *(a mid-year admission breaks both K-1s)* and
+  **his Connecticut residency for 2025**.
+
 - 2026-09-01 — 🚗 **Turo established as his, and the documentation captured.** Working on the company's
   FY2025 return, the firm reached Turo's own answer on his 2025 host earnings — obtained by the client
   from Turo Executive Support after Julia asked him to write to them, because **he cannot log in to his
