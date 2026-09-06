@@ -154,6 +154,19 @@
 
 ### Log
 
+- _(2026-09-06, later)_ — **Julia was briefed on the transactions.** Lilian asked for a written
+  summary in English so Julia — who had no prior context on this client — could see the situation,
+  take the decisions that are hers, and ask what she needs to. **A three-page memo was produced and
+  delivered to her directly** *(not committed: it carries client figures)*: the eight bank
+  transactions in two tables, money in and money out, each with what is **established** versus what
+  is **inferred** and the one thing we must find out; the formation-window costs that **no statement
+  will ever show**; the five client questions; and where the filing stands. 🔴 **What the write-up
+  crystallised, and it is now recorded in the working paper as §6D: exactly two of the open items
+  are JULIA'S to decide rather than facts to look up** — what position to take if the client cannot
+  say whether his money was **capital or a loan**, and what to do if a payee turns out to be
+  **connected to him**, since that changes **how many Forms 5472 the firm files**, not one line.
+  ⓘ *A third item went to her as context only: the F-2 visa and running a U.S. business is a question
+  for his immigration attorney, and is not to be raised with the client unprompted.*
 - _(2026-09-06)_ — **Second pass over the same documents, and it moved one thing that changes the
   return.** Lilian asked again to go into Double, read everything on the client and analyse him for
   reportable transactions. **Nothing new had arrived** — the same 23 documents, the last uploaded
