@@ -1,6 +1,6 @@
 # Artem Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-05
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-06
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -45,7 +45,7 @@ the actual details.
 |---|---|
 | The client himself | Double client (link below) |
 | **His company** — an S corporation, and the source of his K-1 | [`ecoorganic-usa.md`](./ecoorganic-usa.md) · [Double cid 719473](https://app.doublehq.com/close?cid=719473) |
-| **Ishkhan Markarian — his father, and the company's SOLE shareholder in 2023, 2024 AND 2025** | [`ishkhan-markarian.md`](./ishkhan-markarian.md) · the company's Double record and [`ecoorganic-usa.md`](./ecoorganic-usa.md) §2. ✅ **SETTLED 2026-09-02 (evening) by Julia: his father is the sole shareholder for ALL of 2025 and leaves at the END of 31 December 2025, so Artem's first shareholder year is 2026 and he has NO 2025 K-1.** ⛔ *(Two earlier versions of this row are withdrawn: that 2025 was a two-shareholder year, and that Artem was the 100% shareholder from 2025-01-01.)* |
+| **Ishkhan Markarian — his father, and the company's SOLE shareholder in 2023, 2024 AND 2025** | [`ishkhan-markarian.md`](./ishkhan-markarian.md) · the company's Double record and [`ecoorganic-usa.md`](./ecoorganic-usa.md) §2. ⛔ ~~**SETTLED 2026-09-02 (evening) by Julia: his father is the sole shareholder for ALL of 2025 … Artem has NO 2025 K-1.**~~ 🛑 **SUPERSEDED THE NEXT DAY — 2026-09-03, Julia's notes relayed by Lilian:** he IS a **50% shareholder for 2025** and **does** get a 2025 K-1. ⛔ **The 09-02 reading came from the departure date, which says when the FATHER stops, not when the SON starts.** *(§2 "Entity type" carries the live position; the 2026-09-05 work runs on 50/50.)* 🔴 **What stays open is WHEN in 2025 he was admitted** — a mid-year admission forces a §1377(a)(1) per-day allocation.  ⓘ *This fact has now moved THREE times — a two-shareholder year, then 100% Artem from 2025-01-01, then the 09-02 no-K-1 reading — and the current position is 50/50 with a K-1.* |
 
 - **Double client:** [app.doublehq.com/close?cid=710623](https://app.doublehq.com/close?cid=710623)
 - **Double case note:** **`510952` — `CASE · 2025 Turo host activity`**, opened 2026-09-01. It carries **Turo's reply verbatim** and the client's own answer on which cars were hosted. ⛔ **One note per case — update that note, never open a second one.**
@@ -63,10 +63,10 @@ the actual details.
 ### Income tax
 - **Applies?** Yes — **Form 1040**, prepared by this firm, assigned to Lilian.
 - **What feeds it:**
-  - 🛑 **NO K-1 FOR 2025 — corrected 2026-09-02 (evening).** ~~A Schedule K-1 from the company~~: Julia
-    settled that his father was the sole shareholder for the whole of 2025, so **the FY2025 K-1 is his
-    father's and Artem receives none.** ✅ **His 1040 no longer waits on the company's return** — his
-    **first** K-1 year is **2026**. ⚠️ **One thing does still connect them:** if the company's 2025 payments
+  - 🔴 **A SCHEDULE K-1 FROM THE COMPANY, at 50%** *(Julia's notes relayed by Lilian, 2026-09-03)*.
+    ⛔ ~~**NO K-1 FOR 2025 — corrected 2026-09-02 (evening):** his father was the sole shareholder for the
+    whole of 2025, so the FY2025 K-1 is his father's and Artem receives none; his 1040 no longer waits on
+    the company's return~~ — 🛑 **SUPERSEDED THE NEXT DAY — 2026-09-03, Julia's notes relayed by Lilian:** he IS a **50% shareholder for 2025** and **does** get a 2025 K-1. ⛔ **The 09-02 reading came from the departure date, which says when the FATHER stops, not when the SON starts.** *(§2 "Entity type" carries the live position; the 2026-09-05 work runs on 50/50.)* 🔴 **What stays open is WHEN in 2025 he was admitted** — a mid-year admission forces a §1377(a)(1) per-day allocation. ⚠️ **So his 1040 DOES wait on the company's FY2025 Form 1120-S.** ⚠️ **One thing does still connect them:** if the company's 2025 payments
     for his benefit are characterised as compensation or as a loan from him rather than as distributions to
     his father, that lands on his 2025 return — Julia decides *(company working paper §6 B-1)*.
   - 🔴 **A Schedule C for the 2025 Turo activity** — Julia's ruling, 2026-09-01 (§5).
@@ -74,7 +74,7 @@ the actual details.
 - **Organizer:** `Organizer Status: Sent`. ⚠️ **A company return runs off its books, not its owner's organizer** — the organizer gates *his* return, not the company's.
 
 ### 1099 filings
-- **Applies?** `1099 Preparation: false` on his own record. ⚠️ **But see §5 — the Turo activity may itself have created a 1099-NEC question** if he paid the owner of the third car.
+- **Applies?** `1099 Preparation: false` on his own record. ⚠️ **But see §5 — the Turo activity may itself have created a **Form 1099-MISC box 1** question — 🔑 **paying for the USE of a car is RENT**, not services; 1099-NEC only for a service element *(an operator, cleaning, detailing)*, prorated out. **$600 threshold for 2025** — ⚠️ *OBBBA raises §6041 to **$2,000** for payments made after 31 Dec 2025*** if he paid the owner of the third car.
 
 ### Annual report / other filings
 - **Applies?** `Annual Report: false` on this record. The company's filings sit on the company's record.
@@ -99,7 +99,7 @@ the actual details.
   out through his account a couple of times.
   🔴 **The Kona is the one that creates work.** He **cannot depreciate a car he does not own**, and its
   costs are not his. **What he received for it, what (if anything) he paid the friend, and whether that
-  payment needed a Form 1099-NEC** are all open.
+  payment needed a **Form 1099-MISC box 1** question — 🔑 **paying for the USE of a car is RENT**, not services; 1099-NEC only for a service element *(an operator, cleaning, detailing)*, prorated out. **$600 threshold for 2025** — ⚠️ *OBBBA raises §6041 to **$2,000** for payments made after 31 Dec 2025*** are all open.
 - ⚠️ **Turo's "reimbursements" are neither income nor a deductible expense** — Turo's own tax
   documentation says so. They stay **out** of gross receipts **and** the reimbursed portion has to come
   **out** of the fuel deduction, or the same fuel is deducted twice.
@@ -107,7 +107,7 @@ the actual details.
   mileage per vehicle**, and **no mileage log has been seen**.
 - 🛑 **WITHDRAWN 2026-09-02.** This bullet said the two names on the company's vehicle-finance payments
   were evidence toward **splitting the pooled owner-capital account between two shareholders.**
-  ⛔ **There is nothing to split** — 2025 has one shareholder. **The names still show who benefited from
+  ⛔ ~~**There is nothing to split** — 2025 has one shareholder.~~ 🛑 **SUPERSEDED 2026-09-03** — that ground was the no-K-1 reading, withdrawn the next day *(§2 "Entity type")*. ✅ **The pooled owner-capital account IS being split 50/50** as a documented working assumption — the working paper's **Form 7203 line 2** runs on it, so it feeds his stock basis. ⚠️ **Still unevidenced per shareholder:** the contributions and distributions each sit in ONE account with nothing allocating them. **The names still show who benefited from
   which payment**, which matters for the personal-vs-business analysis; they say nothing about
   shareholding. Detail in the company's working paper.
 - **A per-car earnings breakdown has been requested from Turo.** Julia asked him on 2026-09-01 to reply
@@ -130,6 +130,38 @@ the actual details.
 ## 6. History & open questions
 
 ### Log
+
+- 2026-09-06 (third pass) — 🟢 **THE BIGGEST OPEN ITEM ON HIS RETURN CLOSED, AND THE COMPANY'S RETURN
+  MOVED UNDER HIM ON THE SAME DAY.**
+  🟢 **① HE HAD NO HEALTH INSURANCE IN 2025.** Lilian, relaying him: *"Artem dijo que no tenía seguro
+  médico en 2025. Por tanto, descartamos que exista un documento 1095-A."* ✅ **So there is no Marketplace
+  statement, no premium-tax-credit reconciliation form, and the electronic-filing rejection that would
+  otherwise have held the return cannot arise.** ⚠️ **The 2024 facts recorded above stay true and stay
+  recorded** — he *was* enrolled all twelve months of 2024 with advance credit paid on his behalf and
+  nothing repaid — **which is exactly why this had to be ASKED rather than assumed in either direction.**
+  🔴 **② THE COMPANY ELECTED OUT OF BONUS DEPRECIATION, SO HIS SHARE OF IT FLIPS FROM A LOSS TO INCOME.**
+  Julia's decision on the company's 2025 return *(recorded on that client's file)*. **What it does to
+  him:** his share is now **income, not a deductible loss**; that income **builds his basis**, so what he
+  carries into 2026 is several times what it was; and — the practical consequence — **his adjusted gross
+  income rises enough to decide whether he qualifies for the earned income credit at all.**
+  ⚠️ **Which way it goes depends on an answer still owed by him**: whether the year's vehicle running
+  costs are established as his. On one reading the credit is **foreclosed on income alone**; on the other
+  it is **in play and has to be computed.** 🛑 **Two traps recorded in the working paper so nobody gets
+  this wrong: an S-corporation shareholder's share of company income is NOT earned income for that credit
+  — it only raises the income that can disqualify him, so it hurts twice and helps never — and the
+  credit's phase-out runs on the higher of earned income and adjusted gross income.**
+  🟡 **③ THE HYUNDAI SANTA FE IS PROVISIONALLY OUT.** Julia, relayed by Lilian: it will **not** be added
+  to the car-rental activity nor put on his return as a depreciable asset. ⚠️ **NOT FINAL — she gives the
+  definitive answer on Tuesday 2026-09-08**, and Lilian's own wording was *"lo más probable"*. 🛠️ **The
+  intake questions are being HELD, not deleted**, in the working paper: if the car comes back in, the
+  first question is not whose name is on the title but **whether the car is really his** — who paid for
+  it, who insures it, who bears the loss if it is wrecked — and the mileage split is not optional,
+  because a car is listed property.
+  📄 **Everything above is folded into his working paper and republished to the same live page.** ⛔ **The
+  figures stay there, never here.**
+  ⓘ *This entry ABSORBS an earlier same-day note filed out of order lower down the log, which said the
+  working paper "needs redoing". It has been redone; the duplicate was removed rather than left to be
+  read as still-open work.*
 
 - 2026-09-06 (later) — 🔴 **HIS FILED 2024 RETURN WAS READ, AND IT FOUND THE THING THAT BLOCKS HIS 2025
   RETURN: HE HAS MARKETPLACE HEALTH INSURANCE.** Lilian asked for his Double documents to be reviewed and
@@ -185,7 +217,7 @@ the actual details.
   him on a Schedule C rather than a W-2.
   🔴 **Still blocking, and three of them are his to answer:** the **per-car Turo breakdown** *(asked
   2026-09-01, still pending)*, **mileage per car** *(the cars are listed property and no log has been
-  seen)*, **the friend's Kona** *(what he received, what he paid, whether a 1099-NEC was needed)*, and —
+  seen)*, **the friend's Kona** *(what he received, what he paid, and whether an information return was owed — 🔑 **Form 1099-MISC box 1, because paying for the USE of a car is RENT**, not a 1099-NEC, which is for services)*, and —
   for Julia — **when he was admitted as a shareholder** *(a mid-year admission breaks both K-1s)* and
   **his Connecticut residency for 2025**.
 
@@ -200,10 +232,10 @@ the actual details.
   documents rather than from memory. ✅ **The threshold Turo quoted was checked against irs.gov** and
   matches what the IRS publishes. **This file was created in the same pass** — he had none until now,
   despite being a named client with his own Double account. _(Worked by Lilian.)_
-- 2026-09-02 (evening) — 🔴 **CORRECTED BY JULIA: he was NOT a shareholder in 2025.** His father left the
+- 2026-09-02 (evening) — ⛔ ~~**CORRECTED BY JULIA: he was NOT a shareholder in 2025.** His father left the
   company at the **end of 31 December 2025**, so the FY2025 K-1 is his father's and Artem's first
-  shareholder year is **2026**. **His 2025 individual return is the Turo Schedule C and no K-1**, and it no
-  longer waits on the company's 1120-S. ⚠️ **What did not go away:** the company paid a large amount in 2025
+  shareholder year is **2026**; his 2025 individual return is the Turo Schedule C and no K-1, and it no
+  longer waits on the company's 1120-S.~~ 🛑 **SUPERSEDED THE NEXT DAY — 2026-09-03, Julia's notes relayed by Lilian:** he IS a **50% shareholder for 2025** and **does** get a 2025 K-1. ⛔ **The 09-02 reading came from the departure date, which says when the FATHER stops, not when the SON starts.** *(§2 "Entity type" carries the live position; the 2026-09-05 work runs on 50/50.)* 🔴 **What stays open is WHEN in 2025 he was admitted** — a mid-year admission forces a §1377(a)(1) per-day allocation.  ⚠️ **What did not go away:** the company paid a large amount in 2025
   that may have been for his benefit — a monthly apartment rent, cash, personal card spending — and whether
   that is a distribution to his father, compensation to him, or repayment of money he lent the company is
   **Julia's decision**, with real consequences for his own return *(company working paper §6 B-1)*.
@@ -255,15 +287,15 @@ the actual details.
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **His 1040 cannot be completed until the company's FY2025 Form 1120-S is** — the K-1 comes from it,
-  🛑 **SUPERSEDED 2026-09-02 (evening): his 1040 does NOT wait on the company's return — he has no 2025
-  K-1** *(the K-1 is his father's)*. **What may still reach his return is the characterisation question in
+  ⛔ ~~**SUPERSEDED 2026-09-02 (evening): his 1040 does NOT wait on the company's return — he has no 2025
+  K-1** *(the K-1 is his father's)*.~~ 🛑 **SUPERSEDED THE NEXT DAY — 2026-09-03, Julia's notes relayed by Lilian:** he IS a **50% shareholder for 2025** and **does** get a 2025 K-1. ⛔ **The 09-02 reading came from the departure date, which says when the FATHER stops, not when the SON starts.** *(§2 "Entity type" carries the live position; the 2026-09-05 work runs on 50/50.)* 🔴 **What stays open is WHEN in 2025 he was admitted** — a mid-year admission forces a §1377(a)(1) per-day allocation. ✅ **So the ORIGINAL bullet stands again: his 1040 waits on the company's FY2025 1120-S.** **What may still reach his return is the characterisation question in
   §5 / the company's §6 B-1.** ~~his 1040 cannot be completed until the company's FY2025 Form 1120-S is~~ —
   the company's return is past the review's blockers and its gate is the QuickBooks worklist, with a
   **2026-09-15** deadline.
 - 🔴 **The per-car earnings breakdown from Turo** — requested 2026-09-01, not yet received.
 - 🔴 **Whose Turo account is it?** Not confirmed from the registration. With no 1099-K there is no
   name-and-TIN to read.
-- 🔴 **The Kona:** what he received, what he paid the friend, and whether a Form 1099-NEC was owed.
+- 🔴 **The Kona:** what he received, what he paid the friend, and whether a **Form 1099-MISC box 1** question — 🔑 **paying for the USE of a car is RENT**, not services; 1099-NEC only for a service element *(an operator, cleaning, detailing)*, prorated out. **$600 threshold for 2025** — ⚠️ *OBBBA raises §6041 to **$2,000** for payments made after 31 Dec 2025* was owed. ⚠️ **And he cannot depreciate a car that is not his** — *"his" is benefits and burdens, not the title (Pub 946 incidents of ownership; Helvering v. Lazarus, 308 U.S. 252; Grodt & McKay, 77 T.C. 1221)*.
 - 🔴 **Form 7203 — a 2026 matter now, not 2025.** His opening basis is created by the transfer at the **close of 2025-12-31**, so the first Form 7203 he files is with his **2026** return. How the transfer happened is the question, and **Lilian is putting it to Julia herself (2026-09-02)**. Not urgent for the company's return: no capital gain on any reading.
 - ⚠️ **Turo account access** — he cannot log in. Restore it before the next season.
 - ⚠️ **His residence / state** is not recorded here and has not been established.

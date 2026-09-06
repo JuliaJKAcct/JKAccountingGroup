@@ -277,14 +277,61 @@ the flattened text ran the two together with no separator — `NN` immediately f
 the welded digit and correctly refuses to match.** ⛔ **So the masker missed it AND the refuse-to-write
 guard at `:639` stayed silent — the same lookbehind gates both**, which is why a file was written at all.
 
-⚠️ **This is a real trade-off, not a bug to swat.** The `(?<!\d)` / `(?!\d)` guards exist so long numeric
-runs are not shredded into false SSNs. **Removing them trades a silent miss for a flood of false
-positives.** 🛠️ **The candidate fix is to ALSO scan a whitespace-normalised variant** — where the
-column boundary is restored — **rather than to loosen the anchors on the raw text.** ⓘ *A second,
-unexcluded candidate: a separator outside `[-\s.]` that `normalise()`'s dash/invisible tables do not fold.*
+⚠️ **This is a real trade-off, not a bug to swat.** The `(?<!\d)` / `(?!\d)` anchors exist so long numeric
+runs are not shredded into false SSNs. **Removing them from the MASKER trades a silent miss for a flood of
+false positives**, which is why they are there.
 
-🧪 **Reproduce it before changing anything** — two fixtures settle it: an SSN with a digit welded to
-its front, and one with a non-ASCII separator.
+🛑 **AND ONE CANDIDATE FIX IS ALREADY RULED OUT — the first version of this section proposed it.**
+⛔ ~~"ALSO scan a whitespace-normalised variant, where the column boundary is restored"~~ — **it cannot
+work, and a reviewer proved it by running the code.** *Normalising whitespace can only fold a separator
+that EXISTS.* Here the two runs are joined with **no separator at all**, so there is nothing to normalise;
+the welded string is identical before and after, and the lookbehind refuses to match either way.
+
+🔑 **THE FIX IS IN THE GUARD, NOT THE MASKER — and the code's own comments already say so.**
+`redact.py:628-638` describes the refuse-to-write guard as *"the last line of defence, and it is
+DELIBERATELY STRICTER than the redactor"*, where *"a false alarm here is cheap … a miss is not
+recoverable."* ⛔ **It is not currently stricter in the way that matters**: its leak scan at **`:488`**
+is `SSN_LOOSE.findall(text) + LONG_DIGITS.findall(text)`, and `SSN_LOOSE` (`:306`) carries the same `(?<!\d)` lookbehind as the masker *(the `LONG_DIGITS` half cannot help — it never sees a hyphenated run)* — so the one pattern that is supposed to fail loudly inherits the exact blind spot of the one
+that is allowed to be conservative. 🛠️ **Give the guard its own anchor-free pattern**, leaving `SSN` and `SSN_LOOSE` untouched for
+masking. Then a welded identifier still is not masked — but the job **aborts and writes nothing**, which
+is the outcome the guard exists to produce.
+
+🔴 **AND WHICH PATTERN IS NOT A DETAIL — it is the difference between a working guard and one
+somebody switches off.** ⚠️ **A reviewer measured three candidates on invented figures. ⛔ Read the corpus
+column — the three cells are NOT one denominator**, because the two loose patterns only diverge once a row
+carries more than one amount:
+
+| Anchor-free candidate | Catches the welded TIN | False aborts | On what |
+|---|---|---:|---|
+| ✅ `\d{3}-\d{2}-\d{4}` *(hyphen only)* | **yes** | **0** | every amount corpus tried — and clean on phone numbers, ISO dates and ZIP+4 |
+| 🟡 `\d{3}[-\s.]\d{2}[-\s.]\d{4}` *(single separator)* | yes | **~200 / 600** | 600 figures, no thousands separators, integer widths 1–8 |
+| ⛔ `SSN_LOOSE` minus its anchors | yes | **60 of 60 rows** | a 60-row page carrying **two** amounts per row *(a single column gives 30)* |
+
+🔑 **And the caveat that governs all three: every one of them scores ZERO once the amounts carry
+thousands separators.** The costs above are what a **no-comma extraction** does — which is exactly what a
+PDF text layer tends to produce, and therefore the case that matters.
+
+🔑 **START HYPHEN-ONLY.** ⛔ **Never `SSN_LOOSE` with the anchors stripped** — it is the obvious
+implementation *(the guard already calls `SSN_LOOSE`)* and it aborts on essentially every amount column,
+which is precisely the pressure `:633-634` warns produces a weakened guard *("a false alarm here is cheap … a miss is not recoverable")*.
+ⓘ *The hyphen-only shape is what this README's own manual-check bullet below already tells the operator to
+grep with — it was safe there for the same reason.*
+
+🔵 **AND THE BETTER END STATE, once the guard is proven: MASK with that pattern rather than abort.**
+An abort costs the whole document and sends the operator to edit the tool mid-job; over-masking the only
+false positives the hyphen-only shape produces — `INV-2024-01-0001`, `Case 2024-01-1234` — costs a value
+no analysis needs.
+
+⛔ **What will NOT work, so nobody re-tries it: extending `SSN_LABELLED` (`:310`).** Its gap class is
+`([^\n\d]{0,40})`, which forbids **digits and newlines**, so a column *header* can never reach a value on
+the row below, and the welded index breaks it even on the same line. Widening the gap to allow both
+re-opens the amount collision it exists to prevent. *(Tested; it fails both ways.)* ⓘ *A separate, still-unexcluded candidate for the masker:
+a separator outside `[-\s.]` that `normalise()`'s dash/invisible tables do not fold.*
+
+🧪 **Reproduce it before changing anything** — three fixtures settle it: an SSN with a digit welded to
+its front *(the observed case — it must abort)*, one with a non-ASCII separator, and a legitimate column of
+amounts that must **not** abort, so the false-positive cost of the looser guard is measured rather than
+assumed.
 
 🛠️ **Until that lands:**
 
