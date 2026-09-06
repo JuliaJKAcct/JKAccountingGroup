@@ -249,6 +249,9 @@
 - **Double client:** https://app.doublehq.com/clients/710648/info/properties
 - **Double tax project (2025):** https://app.doublehq.com/tax-return?cid=710648&projectId=219335
 - **Working paper (all figures):** [`projects/tax-returns/lum-and-ari-llc/2025-form-1120-proforma-5472.md`](../../tax-returns/lum-and-ari-llc/2025-form-1120-proforma-5472.md)
+- **ATX capture sheet (artifact, 2026-09-06):** https://claude.ai/code/artifact/d2baf00b-08d2-49c5-a09b-e7d61b22ca21
+  — the page Lilian types the return into ATX from. ⚠️ **The working paper is the master**; republish that page to
+  the **same URL** after any change, or the link she holds goes stale.
 - **Double case note:** none yet.
 - **Google Drive folder (sensitive vault):** _(pending)_
 - **Related SOPs:** none — the firm has **no SOP** for the foreign-owned-DE pro forma 1120 /
