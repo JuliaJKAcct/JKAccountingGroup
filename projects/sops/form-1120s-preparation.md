@@ -4372,6 +4372,20 @@ return** — so the shareholder's own history is invisible from here:
 **Do not file until every one of these passes.** A check that fails is a mapping error, not a
 rounding difference.
 
+- [ ] 🔴 **NO FORM 8990 IS IN THE PACKAGE — but it is a TWO-STEP check, and step 1 is the one that
+      matters.** ⛔ **"Small business taxpayer, so delete the 8990" is NOT the rule and is false for a real
+      case.** 📄 **The operative sentence is the EXCLUSION:** *"A taxpayer isn't required to file Form 8990
+      if the taxpayer is a small business taxpayer **and doesn't have excess business interest expense
+      from a partnership**."* 🔑 **① First confirm Schedule B question 10 is answered correctly against all
+      three of its legs** — (a) owns a pass-through with current or prior-year carryover **excess business
+      interest expense**, (b) receipts over the threshold **with** business interest expense, (c) tax
+      shelter with business interest expense. **An S corporation that IS a small business taxpayer still
+      files Form 8990 if leg (a) is true.** 🔑 **② Only once `No` is right does the form's absence follow.**
+      ⛔ **A wrongly-answered question 10 turns this check into a second error.** 🛑 **Answering question 10 correctly does NOT detach a Form 8990 the software
+      already attached** — working on line 13 is enough to pull it in, and it then transmits, blank,
+      asserting a limitation the corporation is exempt from. **Read the FORM LIST, not just the lines**
+      (§6A, and the skill's §3A check 3). ⓘ *Caught on a real return in Sep 2026, after line 13 had been
+      opened repeatedly for a different reason.*
 - [ ] 🔴 **Box 17 code AC is THIS year's figure, not the one that rolled over.** The software cannot
       compute it, so a rolled file arrives holding **last year's** number looking like a default — and
       **every K-1 must carry the same basis for it** (§11F ⑤, ⑥)
