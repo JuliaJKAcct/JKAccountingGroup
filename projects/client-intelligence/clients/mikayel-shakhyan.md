@@ -86,7 +86,7 @@
 - **Current status (2026-09-05):** 🟠 **NOT FILED.** Lilian confirmed the 5472 has not gone in.
   Double's tax project *"2025 Taxes"* reads `notStarted`, `filedAt` null. A complete package was
   prepared (7004 + pro forma 1120 + 5472, in `JK Accounting Group > Tax Return Filed > 2025`,
-  file `2025 7004 Ext LumandAriLLC.pdf`) but **the 5472 in it is a shell** — §5.
+  file `2025 7004 Ext LumandAriLLC.pdf`) — ⚠️ **but the 5472 in it MAY be a shell, and may equally be complete; nobody has looked at it on screen** — §5.
 
 ### Licenses & other filings
 - **Forms 8843 — four, one per household member** (`JK Accounting Group > Others > 2025 >
@@ -99,8 +99,8 @@
 
 ## 5. Key facts & quirks
 
-- 🔴 **THE FORM 5472 SITTING IN DOUBLE LOOKS LIKE A SHELL — DO NOT FILE IT UNTIL IT IS CHECKED BY
-  EYE.** Part I names the entity, but on the extracted text of **both** copies **Part II (the 25%
+- 🔴 **THE FORM 5472 SITTING IN DOUBLE MAY BE A SHELL — DO NOT FILE IT *OR REBUILD IT* UNTIL IT IS
+  CHECKED BY EYE. THE TWO POSSIBLE MISTAKES ARE OPPOSITE.** Part I names the entity, but on the extracted text of **both** copies **Part II (the 25%
   foreign shareholder — i.e. the owner) and Part III (related party) carry no values**, and the
   owner's name appears nowhere in either document. ⚠️ **That is an absence in a text extraction
   from a PDF with an unreadable font, which is exactly the reading `redact-doc` warns against** —
@@ -154,6 +154,21 @@
 
 ### Log
 
+- _(2026-09-06, later)_ — **A transaction summary for Julia was prepared — and as at this entry it
+  has NOT yet reached her.** Lilian asked for a written summary in English so Julia — who has no
+  prior context on this client — could see the situation, take the decisions that are hers, and ask
+  what she needs to. **The memo was produced and handed to Lilian to forward** *(not committed: it
+  carries client figures)*: the eight bank transactions, what is **established** versus **inferred**,
+  the formation-window costs no statement shows, the five client questions, where the filing stands,
+  and the two signer positions with their options. ⛔ **Nothing here should be read as saying Julia
+  has seen it** — forwarding it is an open action, [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 85.
+  ⚠️ **No copy is stored anywhere**; it is reproducible from the working paper.
+  🔴 **What the write-up crystallised: two of the open items are POSITIONS reserved for the signer,
+  and Lilian routed both to Julia.** ⓘ **Both are conditional — they only arise if the CLIENT does
+  not answer**, so chasing him is the cheaper route and neither is live yet. *(The options for each, and the
+  correction of a first version that mis-cited the firm's own rule, are written out once in the
+  working paper **§6D**. ⛔ **Deliberately not restated here.**)* 📌 Whether the rule itself should
+  name a signer is [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 83 — Lilian's to settle.
 - _(2026-09-06)_ — **Second pass over the same documents, and it moved one thing that changes the
   return.** Lilian asked again to go into Double, read everything on the client and analyse him for
   reportable transactions. **Nothing new had arrived** — the same 23 documents, the last uploaded
@@ -202,11 +217,12 @@
 
 ### Tax year 2025 — the review
 
-- **In preparation, blocked on the client.** The five questions that gate it are below. The
+- **In preparation, blocked on the client's five questions below.** 🔴 **And if those answers do not come, two positions fall to Julia** (working paper §6D) — ⓘ *conditional, not parallel: answer the five and they mostly dissolve.* The
   return itself, its tie-outs and its decisions are in the working paper.
 
 ### Outstanding items (CI-only — never in the SOP)
 
+- 🔴 **Forward the transaction summary to Julia** — prepared 2026-09-06 and **still with Lilian**; then put the two signer positions to her **only if the client's answers do not come** (working paper §6D). `FOLLOW-UPS.md` row 85.
 - **Ask the client the FIVE questions in one message** — working paper §6A. ⚠️ **Five, not four:**
   the fifth (his country of tax residence and whether he has a tax number there) fills four fields
   on the form and nothing on file answers it, so it rides in the same message. Everything else on
@@ -226,11 +242,15 @@
 **Only he can answer these** _(working paper §6A)_:
 
 - [ ] 🔴 **Were the counter deposits his own money — and did he put them in as CAPITAL or as a
-      LOAN?** The second half decides which half of the form they go on.
+      LOAN?** The second half decides which half of the form they go on. ⚠️ **And it carries a
+      decision behind it:** if he cannot say, the position is **Julia's** to take, with three options
+      set out in working paper §6D ①.
 - [ ] 🔴 **What he paid personally between 8 Aug and 27 Oct 2025**, the 80 days before the company
       had an account — and whether any of it was property rather than money.
 - [ ] 🔴 **Who are AXY Company LLC and Oxana Martox LLC to him?** This decides **how many Forms
-      5472 are filed**, not just a line.
+      5472 are filed**, not just a line. ⚠️ **And if no answer comes, what to do about it is
+      Julia's** — working paper §6D ②. ⓘ *The separate-form rule covers a **foreign or U.S.**
+      related party, not only a U.S. one.*
 - [ ] 🟠 **Did the company pay anything that was really his personally?** Each one is a
       distribution, even when the money went to an unrelated payee.
 - [ ] ⏸ **In which country does he file a tax return as a resident — and does he have a tax

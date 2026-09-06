@@ -17,6 +17,21 @@ conservarlo. Es lo que nos permite volver atrás, revisar y ver por qué se hizo
 hours of reasoning that is worth more than the finished PDF — the derivations, the traps, the
 judgement calls. Without this folder, all of it dies when the session is closed.
 
+## 🔴 Its SECOND audience: the reviewer
+
+**These were written so a future session could pick a return back up. They now have a second reader, and
+she matters more.**
+
+🔑 **Lilian prepares a return with a session; Julia reviews it afterwards and was not in the room.**
+Without this folder she gets a finished PDF and no reasoning, and Lilian has to explain every choice from
+the beginning. **With it, the session briefs her directly.**
+
+🛠️ **So when a return comes back for review, the working paper is opened BEFORE the PDF** — it holds
+the decisions, who made each one, the alternative that was not taken, and where every figure came from.
+📌 **Write them for someone who was not in the conversation**: a decision with no name and no date on it
+is a decision the reviewer has to re-make. The procedure is
+[`tax-return-sop`](../../.claude/skills/tax-return-sop/) **§4C**.
+
 ## What this is NOT
 
 - ❌ **Not the return.** The filed PDF lives in Double (`Tax Return Filed > <year>`). This is the
@@ -25,8 +40,10 @@ judgement calls. Without this folder, all of it dies when the session is closed.
   what the firm *knows about a client* — obligations, systems, history. It holds **no dollar
   figures** and that rule does not change. This folder holds the **figures for one return**.
 - ❌ **Not published.** The Knowledge Hub renders `client-intelligence/clients/` and `sops/`.
-  **It does not read this folder, and it must not be made to.** These are working papers, not
-  team-facing documents.
+  **It does not read this folder, and it must not be made to.** ⚠️ **"Not published" is the rule; "not
+  team-facing" is no longer true and the clause is struck** — ⛔ ~~These are working papers, not
+  team-facing documents.~~ 🔑 **The `.md` is a working paper; the ONE rendered briefing beside it
+  (below) is handed to the reviewer.** **Handed over, never hosted.**
 
 ## 🛑 The line: what may be written here, and what never may
 
@@ -73,7 +90,8 @@ projects/tax-returns/
 ├── README.md                     ← you are here
 ├── _workpaper-template.md        copy this to start a new return
 └── <client-slug>/                same slug as in client-intelligence/clients/
-    └── <year>-<form>.md          e.g. 2025-form-1120s.md
+    ├── <year>-<form>.md          e.g. 2025-form-1120s.md    ← the working paper
+    └── <year>-briefing-<topic>.html / .pdf                  ← OPTIONAL, see below
 ```
 
 One file per **return**, not per client — a client with a 1120-S and an owner 1040 gets one file
@@ -92,8 +110,21 @@ each, and next year gets its own.
 
 ## Brand & design
 
-**Not applicable.** These are plain-Markdown working papers, read in the repo. They are not
-rendered, not published, and not team-facing — see *What this is NOT*.
+**Mostly not applicable — with ONE deliberate exception.** The working papers themselves are
+plain Markdown, read in the repo: not rendered, not published, not team-facing.
+
+🔵 **The exception is a REVIEWER BRIEFING**, rendered from a working paper and living beside it in the
+same folder. **It exists because the firm already produces one**, and this section used to deny it:
+[`gossip-miami-llc/2025-briefing-open-items.html`](./gossip-miami-llc/2025-briefing-open-items.html) /
+`.pdf`, the nine-point briefing produced for **Julia** on 2026-08-27 on the Atlas template. **Its rules:**
+
+- **One per return, in that return's own folder**, rendered from that return's working paper. ⓘ *The `<topic>` in the filename above names what the briefing covers, so it reads as a title — **not** a licence for several briefings on one return: a second pass **supersedes the file in place**, as the Gossip one does.*
+- **Built with [`impeccable`](../../.claude/skills/impeccable/) and the Design System**, like everything the firm renders.
+- 🔴 **Marked `Internal briefing · client-confidential` in its header** — as the Gossip one is.
+- ⛔ **Still NOT published**: never the Knowledge Hub, never sent to a client. **A hosted URL is a separate
+  question** and goes to [`tax-return-sop`](../../.claude/skills/tax-return-sop/) §4C — *ask, do not reason*.
+- ⛔ **The ⛔ list below binds it exactly as it binds the `.md`** — and a rendered file needs the identity
+  check run **on the rendered output**, not only on its source.
 
 ## Skills & tooling
 
@@ -102,8 +133,10 @@ rendered, not published, and not team-facing — see *What this is NOT*.
 
 ## Outputs
 
-**Committed Markdown, one file per return, private to the repo.** Nothing here is published, sent
-to a client, or rendered into the Knowledge Hub. ⚠️ **There is no automated gate on this folder** —
+**Committed Markdown, one file per return, private to the repo** — plus, optionally, **one rendered
+reviewer briefing beside it** *(Brand & design, above)*. ⛔ **Nothing here is published, sent to a
+client, or rendered into the Knowledge Hub** — the briefing included; it is a file handed to a
+reviewer, not a link. ⚠️ **There is no automated gate on this folder** —
 `assertNoSensitiveData()` scans `client-intelligence/clients/` only. The ⛔ list above is enforced
 by whoever writes the file.
 
