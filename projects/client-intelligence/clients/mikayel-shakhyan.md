@@ -124,9 +124,11 @@
   transaction in Parts IV, V and VI at all, which §4B alone rules out.
 - 🔴 **THE MOST CERTAIN REPORTABLE TRANSACTIONS ARE NOT IN THE BANK STATEMENTS.** The LLC existed
   from **8 Aug 2025** and had no bank account until **27 Oct 2025** — eighty days in which the
-  Sunbiz fee, the registered agent, the EIN and probably the trademark filing were paid by
-  somebody, and it was not the company. Those are formation costs and owner contributions, and
-  **no statement will ever show them.** They have to be asked for.
+  Sunbiz fee, the registered agent and the EIN were paid by somebody, and it was not the company.
+  Those are formation costs and owner contributions, and **no statement will ever show them.** They
+  have to be asked for. ⓘ **The trademark filing came OFF this list on 2026-09-06:** the mark is his
+  personally, and paying for his own asset is not a contribution to the company — it is now asked
+  about as a possible **distribution** instead.
 - 🟠 **THE COMPANY MAY BE DISSOLVED, AND THAT DOES NOT END THE OBLIGATION — IT CREATES ONE.**
   **TD 9796 Example 1** holds that the liquidation year is itself a reporting year. So if the
   dissolution falls in 2026, a **second** pro forma 1120 + 5472 is due for 2026 — a year whose
@@ -158,9 +160,11 @@
   25 Jun 2026, no Double notes, the 2025 tax project still `notStarted`; so the five questions in
   the working paper's §6A are still the gate. ✅ **What DID move: the LUMARI trademark is owned by
   Mikayel PERSONALLY, not by the LLC.** The USPTO receipt names him as owner — the previous session
-  recorded that field as *"did not survive extraction"*, which was wrong: the PDF's font applies
-  **two** different shifts and only one had been undone, so a probe for the word `OWNER` reported
-  absent on a document that names him in full. **Two consequences:** the mark is **not an asset of
+  recorded that field as *"did not survive extraction"*, which was wrong: **the PDF's font shifts every
+  character, so a plain-text search for a word simply cannot find it** — a probe for `OWNER` reported
+  absent on a document that names him in full. *(The mechanism, and the two wrong versions of it that
+  review caught, are written out once in the working paper §1 and
+  [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 81. ⛔ Deliberately not restated here.)* **Two consequences:** the mark is **not an asset of
   the LLC**, which closes one of the two branches that could have moved total assets off zero; and
   the legal fee the company paid becomes a strong candidate for a **distribution to him** rather
   than a company cost — narrowing the fourth client question rather than closing it. ⚠️ **Also
@@ -174,7 +178,7 @@
   plus a **drafted Part V attached statement (§3F)** with the blanks named. **Most of both forms
   is answerable now**, Part VII included. The open items were split into **what only he can
   answer (§6A)**, **what we settle ourselves (§6B)** — his citizenship is on his own Form 8843 in
-  Double, the dissolution date is in the Sunbiz PDF, the trademark owner is public on USPTO TSDR —
+  Double, the dissolution date is in the Sunbiz PDF, the trademark owner was settled from the receipt already in Double —
   and **what we simply tell him (§6C)**, which is that he must keep records. 🔑 **One question
   gained a second half that changes the form:** whether the money he put in was **capital or a
   loan** — capital goes on the Part V statement, a loan goes on **Part IV line 17** and makes
