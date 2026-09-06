@@ -1338,8 +1338,8 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   🟢 **CONNECTICUT GETS SIMPLER.** The state's bonus-depreciation add-back is worded as *"the amount
   **allowed** for federal purposes"* — none was allowed, so **the add-back disappears entirely** and the
   state schedule that carried it is correctly zero. 🔑 **But the state's pass-through-entity tax election is now priced on a different number**, and it is
-  the irrevocable one that must be decided before the return is transmitted. ⚠️ **That price is not firm:
-  the RATE was read off the form and never confirmed with the state, and — the one that decides whether
+  the irrevocable one that must be decided before the return is transmitted. ⚠️ **That price is not firm.**
+  The RATE was read off the form and never confirmed with the state; and — the one that decides whether
   the election is cheap either way — **nobody has established whether the members' credit EQUALS the
   entity tax or is only a percentage of it.** ⛔ **Both have to be confirmed before the number is relied
   on, because the election cannot be undone.**
