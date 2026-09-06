@@ -296,8 +296,9 @@ in that folder.
   2026-09-06: "yo trabajo contigo en los returns… pero luego no tengo un espacio para hablar con ella y
   explicarle todo lo que he hecho… ya que tú sabes todo el contexto… puedas darle todas las herramientas
   y las explicaciones que necesita")*.
-  **So when someone uploads a return this firm prepared and asks for help with it** — financial
-  statements, a copy of the return, a question about a line — **read the
+  **So when someone brings back a return this firm prepared and starts asking about it** — the financial
+  statements, **or** a copy of the return, **or** just a question about a line; **any ONE of those is the
+  trigger** — **read the
   [working paper](./projects/tax-returns/) FIRST, before the PDF**, and answer with **the reason before
   the finding**: what is on the line · **the decision, who made it and when, in their own words** · the
   alternative that was not taken · **where the figure came from** · what it still depends on.
