@@ -5,6 +5,13 @@
 > actually needed to be told. **Remove this note when Lilian signs it off.** ·
 > **Owner:** Lilian · **Last updated:** 2026-09-06
 >
+> ⚠️ **The Atlas render beside this file (`.html`) is a CURATED view and is dated 2026-09-05 — it does
+> NOT yet carry §11F.** 🛑 **Its date is deliberately left behind rather than bumped**, because a generated
+> page that asserts a currency it does not have is worse than one honestly dated. 🛠️ **Re-curate it when
+> the Knowledge Hub build is unblocked** — [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) row 80 — **so both views
+> are redone in one pass.** ⓘ *The Hub renders this file in full and is the team-facing view; that render
+> is a selective summary.*
+>
 > 🔵 **One part of this DRAFT is already FIRM POLICY and is not waiting on the sign-off: §5C-v**,
 > Julia's rule on netting a shareholder's contributions against their distributions. **Read it
 > before presenting any shareholder account** — it carries five gates, and three of them are
