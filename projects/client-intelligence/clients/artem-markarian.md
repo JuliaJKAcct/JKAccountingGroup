@@ -136,15 +136,21 @@ the actual details.
   **discarded the 2025 organizer** — he did not complete one and, in her words, nothing has changed.
   🛑 **That decision is exactly why the prior year had to be read: the coverage is on no list the firm
   keeps, and only the 2024 return shows it.** He was enrolled **all twelve months**, with an advance
-  premium credit paid on his behalf and **nothing repaid**, because his income that year was **34% of the
-  federal poverty line**. 🚨 **In 2025 his income is roughly five times that, the credit is reconciled
-  against actual income, and a substantial repayment is possible — potentially larger than every other
-  tax on the return.** 🔴 **His 2025 Form 1095-A is not in hand, and a return that omits the
-  reconciliation is rejected outright.** 🛠️ **Ask him for it, whether he was enrolled in 2025 at all and
+  premium credit paid on his behalf and **nothing repaid**, because his income that year was **far below the federal
+  poverty line**. 🟢 **AND THE 2025 EXPOSURE IS SMALL — a first version of this entry said it could be
+  larger than every other tax on the return, which was wrong and came from an income figure this session
+  had already withdrawn.** On the corrected figures he stays **under 150% of the poverty line**, where the
+  required contribution is zero and there is nothing to repay; **the worst case, if that is wrong, is a
+  capped repayment of a few hundred dollars.** 🛠️ **His 2025 Form 1095-A is still needed** — if advance
+  credit was paid for him, the electronic filing is rejected until the reconciliation form is attached —
+  **and so is what the Marketplace had on record as his income when he enrolled**, which is the rule that
+  keeps him eligible at all when his income lands below the poverty line. 🛠️ **Ask him for it, whether he was enrolled in 2025 at all and
   for which months, and whether he told the Marketplace his income had changed.**
   ✅ **What the same read CLOSED:** he files **Single**, has **no dependants**, his address is unchanged
   *(it is the company's address)*, he had **no W-2**, and he carries **no capital-loss, NOL or QBI
-  carryforward** into 2025.
+  carryforward** into 2025 *(read off the pages that extracted cleanly — one page of the return did not)*.
+  🟢 **He is also probably owed a small refundable earned-income credit again**, which an earlier draft
+  of this entry would have had the preparer skip.
   🔑 **And it made 2025 computable.** His **car-rental activity is not new** — it was already a Schedule C
   in 2024 with material participation, and **one car** sits on its depreciation schedule, placed in
   service in September 2024 at **90% business use** evidenced by a real mileage split. **2025 is simply

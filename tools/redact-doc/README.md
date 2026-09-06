@@ -262,27 +262,43 @@ around it did not.)*
 23rd, in the identical `NNN-NN-NNNN` shape, came through unmasked** in the *"Taxpayer identification
 number"* column of **Form 8995 line 1(b)**, the per-business QBI table.
 
-🛑 **This is not a false negative on an exotic format. It is the ordinary hyphenated shape the tool
-masks everywhere else on the same document**, and the most likely cause is the **glyph-name decoding**:
-this PDF carried no usable Unicode map, so ~89,000 `/uniXXXX` tokens were decoded back to text — and if
-that decoding runs **after** the masking pass, anything it reconstitutes is never scanned.
+🔑 **THE CAUSE IS ESTABLISHED, AND IT IS NOT WHAT THE FIRST VERSION OF THIS SECTION SAID.**
+⛔ ~~"the most likely cause is the glyph-name decoding … if that decoding runs AFTER the masking pass,
+anything it reconstitutes is never scanned"~~ and ⛔ ~~"the fix is to mask AFTER glyph decoding"~~ —
+🛑 **both were wrong, and the code four files away refutes them:** `decode_glyph_names` runs at
+**`redact.py:566`**, `raw` is assembled at **569**, and `redact(raw)` is not called until **606**.
+**Decoding already runs first.** The proposed "fix" was already implemented, and so was its second half —
+`counts["leaks"]` at **`:488`** already scans the **final** redacted text.
 
-🛠️ **What to do until it is fixed:**
+🔴 **WHAT ACTUALLY HAPPENED: A DIGIT FROM THE ADJACENT COLUMN WAS WELDED TO THE FRONT OF THE RUN.**
+The identifier sat in a table whose left-hand cell ended in digits *(a two-character activity index)*, and
+the flattened text ran the two together with no separator — `NN` immediately followed by
+`NNN-NN-NNNN`. 🔑 **`SSN_LOOSE` (`:306`) and `SSN` (`:301`) both open with `(?<!\d)`. The lookbehind sees
+the welded digit and correctly refuses to match.** ⛔ **So the masker missed it AND the refuse-to-write
+guard at `:639` stayed silent — the same lookbehind gates both**, which is why a file was written at all.
 
-- 🔴 **On any document that reports glyph-name decoding, re-scan the output yourself** before relying
-  on the masking counts. One `grep -nE '[0-9]{3}-[0-9]{2}-[0-9]{4}'` over the output file is enough.
-- ⛔ **Do not treat the printed count as a clearance.** *"22 masked"* means 22 were found, not that 22
-  existed.
-- 🔑 **The value that escaped was never written anywhere** — not into the working paper, not the client
-  file, not the artifact, not the chat reply — and the output file was deleted. **The control that
-  actually held was the human rule, not the tool.**
+⚠️ **This is a real trade-off, not a bug to swat.** The `(?<!\d)` / `(?!\d)` guards exist so long numeric
+runs are not shredded into false SSNs. **Removing them trades a silent miss for a flood of false
+positives.** 🛠️ **The candidate fix is to ALSO scan a whitespace-normalised variant** — where the
+column boundary is restored — **rather than to loosen the anchors on the raw text.** ⓘ *A second,
+unexcluded candidate: a separator outside `[-\s.]` that `normalise()`'s dash/invisible tables do not fold.*
 
-📌 **The fix is to mask AFTER glyph decoding, not before** — and then to re-run the identifier scan on
-the final text rather than on the intermediate. **Until that lands, the counts are a hint.**
+🧪 **Reproduce it before changing anything** — two fixtures settle it: an SSN with a digit welded to
+its front, and one with a non-ASCII separator.
 
-_(Found while reading a shareholder's own prior-year return during a return preparation. Same family as
-the 2023 street-line miss recorded below: the tool reported `0 street lines masked` on a document that
-carried one.)_
+🛠️ **Until that lands:**
+
+- 🔴 **The printed counts are a hint, not a clearance.** *"22 masked"* means 22 were found.
+- 🔴 **On any document that reports glyph-name decoding, re-scan the output yourself** — and use a
+  pattern **without** the digit anchors: `grep -nE '[0-9]{3}-[0-9]{2}-[0-9]{4}'` finds exactly the case
+  the tool's own guards are built to skip.
+- 🔑 **The value that escaped was never written anywhere** — not the working paper, not the client file,
+  not the artifact, not the chat — and the output file was deleted. **The control that held was the human
+  rule, not the tool.**
+
+_(Found 2026-09-06 while reading a shareholder's own prior-year return during a return preparation. Same
+family as the street-line miss on the 2023 return, found 2026-09-02: the tool reported `0 street lines
+masked` on a document that carried one.)_
 
 ## Known limits — read these before trusting it
 
