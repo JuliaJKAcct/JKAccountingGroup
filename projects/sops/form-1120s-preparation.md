@@ -7,9 +7,10 @@
 >
 > ⚠️ **The Atlas render beside this file (`.html`) is a CURATED view and is dated 2026-09-05 — it does
 > NOT yet carry §11F.** 🛑 **Its date is deliberately left behind rather than bumped**, because a generated
-> page that asserts a currency it does not have is worse than one honestly dated. 🛠️ **Re-curate it when
-> the Knowledge Hub build is unblocked** — [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) row 80 — **so both views
-> are redone in one pass.** ⓘ *The Hub renders this file in full and is the team-facing view; that render
+> page that asserts a currency it does not have is worse than one honestly dated. 🛠️ **Re-curating it is an OPEN CURATION DECISION, not a chore** —
+> [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) **row 78**, which already asks the same question about §5C-v,
+> §5C-vi and §5C-viii: *what does the team-facing artifact carry?* ⛔ **Not a session's call.** ⓘ *Row 80
+> is the separate Hub-build blocker; this render is built from its own body file and does not depend on it.* ⓘ *The Hub renders this file in full and is the team-facing view; that render
 > is a selective summary.*
 >
 > 🔵 **One part of this DRAFT is already FIRM POLICY and is not waiting on the sign-off: §5C-v**,
