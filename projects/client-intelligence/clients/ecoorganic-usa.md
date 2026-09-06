@@ -625,6 +625,24 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   is 2026-09-15)*, and where the prior returns live *(both in Double; never ask the client)*.
   _(Worked by Lilian.)_
 
+- 2026-09-06 (evening) — 🔴 **JULIA REMOVED THE BONUS DEPRECIATION, AND THE RETURN SWINGS FROM A LOSS
+  TO INCOME.** She re-ran the three 2025 vehicle additions on **ordinary MACRS half-year** instead of the 100%
+  first-year allowance. **Twelve lines of the return move by one single amount**, and the two owners' K-1s change
+  sign — the year is no longer a loss that neither of them could deduct, which also means **nothing dies on the
+  departing shareholder's final K-1** any more.
+  🔴 **Connecticut follows:** the state's §168(k) addback existed only because the federal bonus did, so it
+  **disappears entirely** from Part 5 and from both Schedule CT K-1s.
+  🛑 **Removing the bonus is an ELECTION, not a setting** — §168(k)(7), attached to the return and made **by
+  class of property**, irrevocable without IRS consent. There are **two** classes here, and a statement naming
+  only one would leave the bonus applying to the other. Drafted and handed over.
+  ⚠️ **A defect found in the books while checking:** the depreciation journal entry now carries the new amount
+  but **still carries its old description saying "100% bonus depreciation, entire cost deducted in the first
+  year"**. Replacement wording handed over; until it is applied, the books misdescribe themselves.
+  ✅ **Contributions and distributions did not move at all** — Lilian asked which exceeded which, and for 2025
+  they are **exactly equal**, so the netting the return already applies leaves both at zero. The excess visible
+  on the balance sheet is entirely the opening balance from prior years, not this year's activity.
+  📄 Delivered as a live worksheet Lilian works from while keying. _(Worked by Lilian.)_
+
 - 2026-09-01 — ✅ **THE TURO ANSWER ARRIVED — and it moved the 2025 return forward by one blocker
   while making a different question harder (Lilian).** Lilian supplied the email Turo Executive
   Support sent the client: the **full 2025 host-earnings breakdown**, and the statement that **no Form

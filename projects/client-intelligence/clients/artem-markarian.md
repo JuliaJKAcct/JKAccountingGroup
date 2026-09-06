@@ -200,6 +200,19 @@ the actual details.
   documents rather than from memory. ✅ **The threshold Turo quoted was checked against irs.gov** and
   matches what the IRS publishes. **This file was created in the same pass** — he had none until now,
   despite being a named client with his own Double account. _(Worked by Lilian.)_
+- 2026-09-06 (evening) — 🟢 **TWO ANSWERS CLOSED THE TWO BIGGEST OPEN ITEMS ON HIS 2025 RETURN.**
+  🟢 **He had NO health insurance in 2025** *(the client, relayed by Lilian)*, so **there is no Form 1095-A
+  and no Form 8962** — and the e-file rejection that would have blocked the filing cannot arise. ⚠️ **His 2024
+  Marketplace coverage remains a fact and stays recorded**; the point is that the question had to be ASKED, and
+  the answer went the other way from what the prior year suggested.
+  🟡 **And the Hyundai Santa Fe is provisionally NOT going on the return as an asset** *(Julia, relayed by
+  Lilian)* — so his return carries **one** depreciable vehicle, the Audi already on the 2024 schedule. ⛔ **Not
+  final: Julia gives the definitive answer on Tuesday 2026-09-08**, and the intake list for the car is held in
+  the working paper rather than deleted.
+  🔗 **Separately, his K-1 changes:** Ecoorganic removed its bonus depreciation on the same day, so the
+  company swings from a loss to income and **his box 1 goes from a loss to a gain**. His working paper and his
+  live worksheet both need redoing — recorded here so it is not lost.
+
 - 2026-09-02 (evening) — ⛔ ~~**CORRECTED BY JULIA: he was NOT a shareholder in 2025.** His father left the
   company at the **end of 31 December 2025**, so the FY2025 K-1 is his father's and Artem's first
   shareholder year is **2026**; his 2025 individual return is the Turo Schedule C and no K-1, and it no
