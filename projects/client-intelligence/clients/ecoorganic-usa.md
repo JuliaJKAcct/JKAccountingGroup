@@ -1274,7 +1274,7 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   business began **01/01/2025**, which is what the software writes when there is **no prior state return
   to roll a date from** — transmitted, it becomes a written statement to the state that reads as the
   explanation for the missing years. ⚠️ **And a state return with nothing to pay can still carry a
-  per-member, per-month late-filing penalty** *(unverified — must be priced before anything is filed)*.
+  per-member, per-month late-filing penalty** *(unverified)*. 🟢 **CORRECTED 2026-09-06 from the state's own instructions: where no tax is due it is a SINGLE DISCRETIONARY $50 per return** — the per-member per-month shape was the **federal** one, imported without checking. 🛑 **But the state return is MANDATORY for any entity doing business there "regardless of the amount of its income (loss)", so the exposure is the unfiled YEAR, not the fine.**
   🛠️ **Next: ask Julia whether it was a decision or an omission, and check the DRS portal, which holds
   the entity's real filing history and would also explain the withholding notices arriving since
   January.** ⛔ **Do not transmit the 2025 state return until this is answered.**
@@ -1287,9 +1287,12 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   entirely in-state, so that schedule should be **blank**, and it had been filled in on the firm's earlier
   (wrong) advice; ② the late-filing penalty where no tax is due is **a single discretionary fifty-dollar
   penalty per return**, not the per-member per-month figure previously recorded *(that shape was the
-  federal one, imported without checking)*; ③ the pass-through-entity tax election is **not a checkbox** —
-  the box merely states that a **separate return** has been filed, so electing means preparing and filing
-  a second Connecticut return. ✅ **What the instructions CONFIRM:** because both members are resident
+  federal one, imported without checking)*; ③ **the pass-through-entity tax election is made BY CHECKING THE BOX on the
+  return AND filing a second Connecticut return — and it must happen on a TIMELY FILED ORIGINAL.** The
+  state says in terms that an entity which does not elect on that return **cannot elect on an amended
+  one**, so transmitting without the box closes the year's election permanently. ⛔ **A first version of
+  this entry said the box "merely states that a separate return has been filed" — wrong, caught in review
+  the same day, and it mattered because it made a deadline look like paperwork.** ✅ **What the instructions CONFIRM:** because both members are resident
   individuals, the composite-tax schedules and the Connecticut-sourced-income schedule are correctly
   empty — **there is nothing to pay by rule, not by luck** — and the bonus-depreciation add-back schedule
   is correctly completed. 🔴 **What is still open and unchanged:** both members carry the **company's**
@@ -1299,6 +1302,16 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   corporation is a small-business taxpayer and exempt, and the software had attached the form while line
   13 was being worked on. ⓘ **Also: the transmittal form the software names for the state K-1s does not
   appear anywhere in the state's 2025 instructions** — to be settled with the agency.
+
+- 2026-09-06 (third pass) — 📮 **A DATED OBLIGATION NOBODY HAD: the state K-1s must be IN THE
+  SHAREHOLDERS' HANDS BY 15 SEPTEMBER 2026** — the same day as the return. The state's own guidance
+  settles what had been an open question: **the state K-1s are NOT filed with the agency when the return
+  is filed electronically**, and the software's warning about mailing them separately with a transmittal
+  form is **not supported by the state's current instructions**, where that form appears nowhere at all.
+  🔑 **What IS required, regardless of how the return is filed, is that each member be ISSUED their
+  K-1** — and because the extension was filed, that deadline moves from March to **the fifteenth day of
+  the ninth month**. ⛔ **The firm had been about to do the opposite of the rule** *(an earlier note said
+  to mail them to the agency anyway, "it costs a stamp")*.
 
 ### Outstanding items (CI-only — never in the SOP)
 - ✅ **THE 2024 FILED RETURN HAS BEEN READ — 2026-09-02.** Lilian added the Double file host to the
