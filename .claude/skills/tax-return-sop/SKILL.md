@@ -498,7 +498,7 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 > a table of values without a route through the forms does not help her. In English: *the tables per
 > form, the flow of the figures between the forms, the explanations, and the boxes I have to tick.*
 > **Deliver all four, every time, unprompted — plus part 5, which is what makes the flow readable,
-> and parts 1b, 1c and 6 to 10 below, which are what she has had to ask for since.**
+> and parts 1b to 1e, 6 to 10 and 8b below, which are what she has had to ask for since.**
 
 > 🛑 **THE CALIBRATION, and it governs all fifteen parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
 > tiene que hacerlo una persona que no sabe prácticamente nada de taxes, ni de formularios, ni de
@@ -1141,6 +1141,29 @@ figure came from.** 🔑 **It was written for exactly this moment.** ⓘ *Also r
 ⚠️ **If no working paper exists, say so plainly before answering.** Then the session is reasoning from
 the PDF like anyone else, and the reviewer is entitled to know that.
 
+> ### 🔒 The rules that ride along — because this trigger puts you in front of a CLIENT'S RETURN
+>
+> 🛑 **§4A states these for its own trigger and §4C is a NEW way to reach the same document, so they are
+> restated here rather than left 800 lines away.**
+>
+> 1. 🔴 **The PDF is opened through [`tools/redact-doc/`](../../../tools/redact-doc/), never downloaded and
+>    read directly.** It writes redacted text to a file and prints only counts, so the identity block cannot
+>    reach the chat by accident. ⛔ **Never into the repo working tree, never committed.**
+> 2. **Say WHICH document, WHICH year and WHY before the call** — the same obligation §4A carries.
+> 3. ⛔ **NEVER from a subagent. NEVER from a scheduled or unattended session.** Both bans are absolute in
+>    every version of this rule.
+> 4. **Remind them to delete the session when the work is done** — calmly, as the routine last step.
+>
+> 🔑 **AND ONE THING IS NOT WRITTEN ANYWHERE, SO IT IS ASKED, NOT REASONED.** Lilian's 2026-08-20 extension
+> named **preparing** a return; her 2026-09-04 widening made **the ask itself the permission** when she or
+> Julia asks. ⚠️ **Neither says in terms that *"review this return with me"* opens the prior-year document
+> the way *"prepare it"* does** — ⓘ *the 2026-09-04 wording is broad enough that it very probably does, since
+> the reviewer asking IS Julia.* ⛔ **But [CLAUDE.md](../../../CLAUDE.md)'s standing rule is that a permission
+> is widened by ASKING, never by reasoning, and that a session may never decide it has been asked.** 🛠️ **So
+> put the question the first time it arises and write the answer in here.** ✅ **What needs no permission at
+> all, and is the whole point of §4C: the WORKING PAPER.** It is repo content — read it first, and most
+> briefings never need the PDF.
+
 🔑 **AND §3 STILL BINDS HERE.** The working paper says what *was* decided; it is not authority for
 what is *correct*. ⛔ **Any answer that would change a figure or move a line is read off the IRS PDF for THAT RETURN'S
 tax year**, never from the paper and never from memory. ⚠️ **The invariant is the RETURN'S year, not
@@ -1165,7 +1188,7 @@ answering off this year's form about last year's return is how it bites.
    [`projects/tax-returns/`](../../../projects/tax-returns/)** — the working paper, **and a briefing
    rendered from it.** ⛔ **Never into a skill, an SOP, a client-intelligence file or `CLAUDE.md`.**
    📄 **A rendered briefing is not hypothetical — it is what this firm already does, and the worked
-   precedent is `gossip-miami-llc/2025-briefing-open-items.html` / `.pdf`** *(2026-08-27: nine open items
+   precedent is `gossip-miami-llc/2025-briefing-open-items.html` / `.pdf`** — 🔑 **the FORMAT; that briefing is itself marked SUPERSEDED and must not be acted on** *(2026-08-27: nine open items
    ordered by what blocks filing, on the Atlas template, produced for Julia — and Lilian caught that one
    item was in the working paper and missing from the first draft)*. **So when she asks for the briefing
    as something she can read or print, the answer is yes**, beside the paper it came from — 🔴 **headed
@@ -1217,8 +1240,7 @@ because they read identically on the return and need completely different respon
 1. 🔑 **The decisions table for that return**, in her own words where they were hers — the working
    paper's §4.
 2. **Every figure with its source**, at the level of detail she would need to re-derive it.
-3. 🔴 **What is still waiting on HER, named** — the working paper's **open-items section** *(§6 *Open at
-   filing* in the template)*, and what each one moves if she answers it one way or the other.
+3. 🔴 **What is still waiting on HER, named** — the working paper's **open-items section** *(§6 `Open at filing` in the template)*, and what each one moves if she answers it one way or the other.
    ⚠️ **There is no owner column to filter on** — §6 is a checkbox list — **so read it and pick out hers.**
    ⓘ *And not every paper follows the template's numbering: some number their own sections. **Find the
    section by its TITLE, not its number**, and the same goes for the §4 and §8 references above.*

@@ -40,8 +40,10 @@ is a decision the reviewer has to re-make. The procedure is
   what the firm *knows about a client* — obligations, systems, history. It holds **no dollar
   figures** and that rule does not change. This folder holds the **figures for one return**.
 - ❌ **Not published.** The Knowledge Hub renders `client-intelligence/clients/` and `sops/`.
-  **It does not read this folder, and it must not be made to.** These are working papers, not
-  team-facing documents.
+  **It does not read this folder, and it must not be made to.** ⚠️ **"Not published" is the rule; "not
+  team-facing" is no longer true and the clause is struck** — ⛔ ~~These are working papers, not
+  team-facing documents.~~ 🔑 **The `.md` is a working paper; the ONE rendered briefing beside it
+  (below) is handed to the reviewer.** **Handed over, never hosted.**
 
 ## 🛑 The line: what may be written here, and what never may
 
@@ -116,7 +118,7 @@ same folder. **It exists because the firm already produces one**, and this secti
 [`gossip-miami-llc/2025-briefing-open-items.html`](./gossip-miami-llc/2025-briefing-open-items.html) /
 `.pdf`, the nine-point briefing produced for **Julia** on 2026-08-27 on the Atlas template. **Its rules:**
 
-- **One per return, in that return's own folder**, rendered from that return's working paper.
+- **One per return, in that return's own folder**, rendered from that return's working paper. ⓘ *The `<topic>` in the filename above names what the briefing covers, so it reads as a title — **not** a licence for several briefings on one return: a second pass **supersedes the file in place**, as the Gossip one does.*
 - **Built with [`impeccable`](../../.claude/skills/impeccable/) and the Design System**, like everything the firm renders.
 - 🔴 **Marked `Internal briefing · client-confidential` in its header** — as the Gossip one is.
 - ⛔ **Still NOT published**: never the Knowledge Hub, never sent to a client. **A hosted URL is a separate
