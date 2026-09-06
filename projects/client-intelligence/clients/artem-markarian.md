@@ -45,7 +45,7 @@ the actual details.
 |---|---|
 | The client himself | Double client (link below) |
 | **His company** — an S corporation, and the source of his K-1 | [`ecoorganic-usa.md`](./ecoorganic-usa.md) · [Double cid 719473](https://app.doublehq.com/close?cid=719473) |
-| **Ishkhan Markarian — his father, and the company's SOLE shareholder in 2023, 2024 AND 2025** | [`ishkhan-markarian.md`](./ishkhan-markarian.md) · the company's Double record and [`ecoorganic-usa.md`](./ecoorganic-usa.md) §2. ✅ **SETTLED 2026-09-02 (evening) by Julia: his father is the sole shareholder for ALL of 2025 and leaves at the END of 31 December 2025, so Artem's first shareholder year is 2026 and he has NO 2025 K-1.** ⛔ *(Two earlier versions of this row are withdrawn: that 2025 was a two-shareholder year, and that Artem was the 100% shareholder from 2025-01-01.)* |
+| **Ishkhan Markarian — his father, and the company's SOLE shareholder in 2023, 2024 AND 2025** | [`ishkhan-markarian.md`](./ishkhan-markarian.md) · the company's Double record and [`ecoorganic-usa.md`](./ecoorganic-usa.md) §2. ⛔ ~~**SETTLED 2026-09-02 (evening) by Julia: his father is the sole shareholder for ALL of 2025 … Artem has NO 2025 K-1.**~~ 🛑 **SUPERSEDED THE NEXT DAY — 2026-09-03, Julia's notes relayed by Lilian:** he IS a **50% shareholder for 2025** and **does** get a 2025 K-1. ⛔ **The 09-02 reading came from the departure date, which says when the FATHER stops, not when the SON starts.** *(§2 "Entity type" carries the live position; the 2026-09-05 work runs on 50/50.)* 🔴 **What stays open is WHEN in 2025 he was admitted** — a mid-year admission forces a §1377(a)(1) per-day allocation.  ⓘ *This fact has now moved THREE times — a two-shareholder year, then 100% Artem from 2025-01-01, then the 09-02 no-K-1 reading — and the current position is 50/50 with a K-1.* |
 
 - **Double client:** [app.doublehq.com/close?cid=710623](https://app.doublehq.com/close?cid=710623)
 - **Double case note:** **`510952` — `CASE · 2025 Turo host activity`**, opened 2026-09-01. It carries **Turo's reply verbatim** and the client's own answer on which cars were hosted. ⛔ **One note per case — update that note, never open a second one.**
@@ -63,10 +63,10 @@ the actual details.
 ### Income tax
 - **Applies?** Yes — **Form 1040**, prepared by this firm, assigned to Lilian.
 - **What feeds it:**
-  - 🛑 **NO K-1 FOR 2025 — corrected 2026-09-02 (evening).** ~~A Schedule K-1 from the company~~: Julia
-    settled that his father was the sole shareholder for the whole of 2025, so **the FY2025 K-1 is his
-    father's and Artem receives none.** ✅ **His 1040 no longer waits on the company's return** — his
-    **first** K-1 year is **2026**. ⚠️ **One thing does still connect them:** if the company's 2025 payments
+  - 🔴 **A SCHEDULE K-1 FROM THE COMPANY, at 50%** *(Julia's notes relayed by Lilian, 2026-09-03)*.
+    ⛔ ~~**NO K-1 FOR 2025 — corrected 2026-09-02 (evening):** his father was the sole shareholder for the
+    whole of 2025, so the FY2025 K-1 is his father's and Artem receives none; his 1040 no longer waits on
+    the company's return~~ — 🛑 **SUPERSEDED THE NEXT DAY — 2026-09-03, Julia's notes relayed by Lilian:** he IS a **50% shareholder for 2025** and **does** get a 2025 K-1. ⛔ **The 09-02 reading came from the departure date, which says when the FATHER stops, not when the SON starts.** *(§2 "Entity type" carries the live position; the 2026-09-05 work runs on 50/50.)* 🔴 **What stays open is WHEN in 2025 he was admitted** — a mid-year admission forces a §1377(a)(1) per-day allocation. ⚠️ **So his 1040 DOES wait on the company's FY2025 Form 1120-S.** ⚠️ **One thing does still connect them:** if the company's 2025 payments
     for his benefit are characterised as compensation or as a loan from him rather than as distributions to
     his father, that lands on his 2025 return — Julia decides *(company working paper §6 B-1)*.
   - 🔴 **A Schedule C for the 2025 Turo activity** — Julia's ruling, 2026-09-01 (§5).
@@ -200,10 +200,10 @@ the actual details.
   documents rather than from memory. ✅ **The threshold Turo quoted was checked against irs.gov** and
   matches what the IRS publishes. **This file was created in the same pass** — he had none until now,
   despite being a named client with his own Double account. _(Worked by Lilian.)_
-- 2026-09-02 (evening) — 🔴 **CORRECTED BY JULIA: he was NOT a shareholder in 2025.** His father left the
+- 2026-09-02 (evening) — ⛔ ~~**CORRECTED BY JULIA: he was NOT a shareholder in 2025.** His father left the
   company at the **end of 31 December 2025**, so the FY2025 K-1 is his father's and Artem's first
-  shareholder year is **2026**. **His 2025 individual return is the Turo Schedule C and no K-1**, and it no
-  longer waits on the company's 1120-S. ⚠️ **What did not go away:** the company paid a large amount in 2025
+  shareholder year is **2026**; his 2025 individual return is the Turo Schedule C and no K-1, and it no
+  longer waits on the company's 1120-S.~~ 🛑 **SUPERSEDED THE NEXT DAY — 2026-09-03, Julia's notes relayed by Lilian:** he IS a **50% shareholder for 2025** and **does** get a 2025 K-1. ⛔ **The 09-02 reading came from the departure date, which says when the FATHER stops, not when the SON starts.** *(§2 "Entity type" carries the live position; the 2026-09-05 work runs on 50/50.)* 🔴 **What stays open is WHEN in 2025 he was admitted** — a mid-year admission forces a §1377(a)(1) per-day allocation.  ⚠️ **What did not go away:** the company paid a large amount in 2025
   that may have been for his benefit — a monthly apartment rent, cash, personal card spending — and whether
   that is a distribution to his father, compensation to him, or repayment of money he lent the company is
   **Julia's decision**, with real consequences for his own return *(company working paper §6 B-1)*.
@@ -255,8 +255,8 @@ the actual details.
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **His 1040 cannot be completed until the company's FY2025 Form 1120-S is** — the K-1 comes from it,
-  🛑 **SUPERSEDED 2026-09-02 (evening): his 1040 does NOT wait on the company's return — he has no 2025
-  K-1** *(the K-1 is his father's)*. **What may still reach his return is the characterisation question in
+  ⛔ ~~**SUPERSEDED 2026-09-02 (evening): his 1040 does NOT wait on the company's return — he has no 2025
+  K-1** *(the K-1 is his father's)*.~~ 🛑 **SUPERSEDED THE NEXT DAY — 2026-09-03, Julia's notes relayed by Lilian:** he IS a **50% shareholder for 2025** and **does** get a 2025 K-1. ⛔ **The 09-02 reading came from the departure date, which says when the FATHER stops, not when the SON starts.** *(§2 "Entity type" carries the live position; the 2026-09-05 work runs on 50/50.)* 🔴 **What stays open is WHEN in 2025 he was admitted** — a mid-year admission forces a §1377(a)(1) per-day allocation. ✅ **So the ORIGINAL bullet stands again: his 1040 waits on the company's FY2025 1120-S.** **What may still reach his return is the characterisation question in
   §5 / the company's §6 B-1.** ~~his 1040 cannot be completed until the company's FY2025 Form 1120-S is~~ —
   the company's return is past the review's blockers and its gate is the QuickBooks worklist, with a
   **2026-09-15** deadline.
