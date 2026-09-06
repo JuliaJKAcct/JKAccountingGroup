@@ -74,7 +74,7 @@ the actual details.
 - **Organizer:** `Organizer Status: Sent`. ⚠️ **A company return runs off its books, not its owner's organizer** — the organizer gates *his* return, not the company's.
 
 ### 1099 filings
-- **Applies?** `1099 Preparation: false` on his own record. ⚠️ **But see §5 — the Turo activity may itself have created a 1099-NEC question** if he paid the owner of the third car.
+- **Applies?** `1099 Preparation: false` on his own record. ⚠️ **But see §5 — the Turo activity may itself have created a **Form 1099-MISC box 1** question — 🔑 **paying for the USE of a car is RENT**, not services; 1099-NEC only for a service element *(an operator, cleaning, detailing)*, prorated out. **$600 threshold for 2025** — ⚠️ *OBBBA raises §6041 to **$2,000** for payments made after 31 Dec 2025*** if he paid the owner of the third car.
 
 ### Annual report / other filings
 - **Applies?** `Annual Report: false` on this record. The company's filings sit on the company's record.
@@ -99,7 +99,7 @@ the actual details.
   out through his account a couple of times.
   🔴 **The Kona is the one that creates work.** He **cannot depreciate a car he does not own**, and its
   costs are not his. **What he received for it, what (if anything) he paid the friend, and whether that
-  payment needed a Form 1099-NEC** are all open.
+  payment needed a **Form 1099-MISC box 1** question — 🔑 **paying for the USE of a car is RENT**, not services; 1099-NEC only for a service element *(an operator, cleaning, detailing)*, prorated out. **$600 threshold for 2025** — ⚠️ *OBBBA raises §6041 to **$2,000** for payments made after 31 Dec 2025*** are all open.
 - ⚠️ **Turo's "reimbursements" are neither income nor a deductible expense** — Turo's own tax
   documentation says so. They stay **out** of gross receipts **and** the reimbursed portion has to come
   **out** of the fuel deduction, or the same fuel is deducted twice.
@@ -107,7 +107,7 @@ the actual details.
   mileage per vehicle**, and **no mileage log has been seen**.
 - 🛑 **WITHDRAWN 2026-09-02.** This bullet said the two names on the company's vehicle-finance payments
   were evidence toward **splitting the pooled owner-capital account between two shareholders.**
-  ⛔ **There is nothing to split** — 2025 has one shareholder. **The names still show who benefited from
+  ⛔ ~~**There is nothing to split** — 2025 has one shareholder.~~ 🛑 **SUPERSEDED 2026-09-03** — that ground was the no-K-1 reading, withdrawn the next day *(§2 "Entity type")*. ✅ **The pooled owner-capital account IS being split 50/50** as a documented working assumption — the working paper's **Form 7203 line 2** runs on it, so it feeds his stock basis. ⚠️ **Still unevidenced per shareholder:** the contributions and distributions each sit in ONE account with nothing allocating them. **The names still show who benefited from
   which payment**, which matters for the personal-vs-business analysis; they say nothing about
   shareholding. Detail in the company's working paper.
 - **A per-car earnings breakdown has been requested from Turo.** Julia asked him on 2026-09-01 to reply
@@ -263,7 +263,7 @@ the actual details.
 - 🔴 **The per-car earnings breakdown from Turo** — requested 2026-09-01, not yet received.
 - 🔴 **Whose Turo account is it?** Not confirmed from the registration. With no 1099-K there is no
   name-and-TIN to read.
-- 🔴 **The Kona:** what he received, what he paid the friend, and whether a Form 1099-NEC was owed.
+- 🔴 **The Kona:** what he received, what he paid the friend, and whether a **Form 1099-MISC box 1** question — 🔑 **paying for the USE of a car is RENT**, not services; 1099-NEC only for a service element *(an operator, cleaning, detailing)*, prorated out. **$600 threshold for 2025** — ⚠️ *OBBBA raises §6041 to **$2,000** for payments made after 31 Dec 2025* was owed. ⚠️ **And he cannot depreciate a car that is not his** — *"his" is benefits and burdens, not the title (Pub 946 incidents of ownership; Helvering v. Lazarus, 308 U.S. 252; Grodt & McKay, 77 T.C. 1221)*.
 - 🔴 **Form 7203 — a 2026 matter now, not 2025.** His opening basis is created by the transfer at the **close of 2025-12-31**, so the first Form 7203 he files is with his **2026** return. How the transfer happened is the question, and **Lilian is putting it to Julia herself (2026-09-02)**. Not urgent for the company's return: no capital gain on any reading.
 - ⚠️ **Turo account access** — he cannot log in. Restore it before the next season.
 - ⚠️ **His residence / state** is not recorded here and has not been established.
