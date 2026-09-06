@@ -277,14 +277,32 @@ the flattened text ran the two together with no separator — `NN` immediately f
 the welded digit and correctly refuses to match.** ⛔ **So the masker missed it AND the refuse-to-write
 guard at `:639` stayed silent — the same lookbehind gates both**, which is why a file was written at all.
 
-⚠️ **This is a real trade-off, not a bug to swat.** The `(?<!\d)` / `(?!\d)` guards exist so long numeric
-runs are not shredded into false SSNs. **Removing them trades a silent miss for a flood of false
-positives.** 🛠️ **The candidate fix is to ALSO scan a whitespace-normalised variant** — where the
-column boundary is restored — **rather than to loosen the anchors on the raw text.** ⓘ *A second,
-unexcluded candidate: a separator outside `[-\s.]` that `normalise()`'s dash/invisible tables do not fold.*
+⚠️ **This is a real trade-off, not a bug to swat.** The `(?<!\d)` / `(?!\d)` anchors exist so long numeric
+runs are not shredded into false SSNs. **Removing them from the MASKER trades a silent miss for a flood of
+false positives**, which is why they are there.
 
-🧪 **Reproduce it before changing anything** — two fixtures settle it: an SSN with a digit welded to
-its front, and one with a non-ASCII separator.
+🛑 **AND ONE CANDIDATE FIX IS ALREADY RULED OUT — the first version of this section proposed it.**
+⛔ ~~"ALSO scan a whitespace-normalised variant, where the column boundary is restored"~~ — **it cannot
+work, and a reviewer proved it by running the code.** *Normalising whitespace can only fold a separator
+that EXISTS.* Here the two runs are joined with **no separator at all**, so there is nothing to normalise;
+the welded string is identical before and after, and the lookbehind refuses to match either way.
+
+🔑 **THE FIX IS IN THE GUARD, NOT THE MASKER — and the code's own comments already say so.**
+`redact.py:625-638` describes the refuse-to-write guard as *"the last line of defence, and it is
+DELIBERATELY STRICTER than the redactor"*, where *"a false alarm here is cheap … a miss is not
+recoverable."* ⛔ **It is not currently stricter in the way that matters**: its leak scan at **`:488`**
+is `SSN_LOOSE.findall(text)`, and `SSN_LOOSE` (`:306`) carries the same `(?<!\d)` lookbehind as the
+masker — so the one pattern that is supposed to fail loudly inherits the exact blind spot of the one
+that is allowed to be conservative. 🛠️ **Give the guard its own anchor-free pattern** (the
+`NNN[-\s.]NN[-\s.]NNNN` shape with the lookarounds dropped), leaving `SSN` and `SSN_LOOSE` untouched for
+masking. Then a welded identifier still is not masked — but the job **aborts and writes nothing**, which
+is the outcome the guard exists to produce. ⓘ *A separate, still-unexcluded candidate for the masker:
+a separator outside `[-\s.]` that `normalise()`'s dash/invisible tables do not fold.*
+
+🧪 **Reproduce it before changing anything** — three fixtures settle it: an SSN with a digit welded to
+its front *(the observed case — it must abort)*, one with a non-ASCII separator, and a legitimate column of
+amounts that must **not** abort, so the false-positive cost of the looser guard is measured rather than
+assumed.
 
 🛠️ **Until that lands:**
 

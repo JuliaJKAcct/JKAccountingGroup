@@ -1,6 +1,6 @@
 # Artem Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-05
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-06
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
