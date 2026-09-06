@@ -1,6 +1,6 @@
 ---
 name: tax-return-sop
-description: 🔴 PREPARE A CLIENT'S TAX RETURN — load this the moment anyone says "prepare X's tax return", "prepárame el Tax Return de X cliente", "hazme la declaración de X", "do X's 1120-S / 1040 / 1065", or asks for a return's figures as line-by-line tables. §4A is the entry point and it runs TWO PHASES from one sentence: PHASE 1 · LA REVISIÓN — call the `organizer-review` skill in full, ALWAYS and without being asked separately, to check the prior-year return against this year and find missing documents, contradictions and anything that raises an alarm; its Block A verdict is THE GATE. PHASE 2 · LA PREPARACIÓN — only if the gate says yes, deliver the line-by-line tables. Along the way: go to Double and gather it yourself — the client's BOOKS, the completed tax organizer, every file the client uploaded, the prior-year return through the redactor — and report what was found before computing anything. ALSO: write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. 🔵 AND WHEN A PREPARED RETURN COMES BACK FOR REVIEW — someone brings back a return the firm prepared and starts asking why a line is what it is — the financial statements, OR a copy of the return, OR just the question; any ONE of those is the trigger: that is §4C, and the job is to BRIEF the reviewer from the working paper before reading the PDF (the reasoning behind each decision, who made it, where every figure came from) rather than to audit her. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, when a return the firm prepared comes back to be reviewed or signed, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
+description: 🔴 PREPARE A CLIENT'S TAX RETURN — load this the moment anyone says "prepare X's tax return", "prepárame el Tax Return de X cliente", "hazme la declaración de X", "do X's 1120-S / 1040 / 1065", or asks for a return's figures as line-by-line tables. §4A is the entry point and it runs TWO PHASES from one sentence: PHASE 1 · LA REVISIÓN — call the `organizer-review` skill in full, ALWAYS and without being asked separately, to check the prior-year return against this year and find missing documents, contradictions and anything that raises an alarm; its Block A verdict is THE GATE. PHASE 2 · LA PREPARACIÓN — only if the gate says yes, deliver the line-by-line tables. Along the way: go to Double and gather it yourself — the client's BOOKS, the completed tax organizer, every file the client uploaded, the prior-year return through the redactor — and report what was found before computing anything. ALSO: write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. 🔵 AND WHEN A PREPARED RETURN COMES BACK FOR REVIEW — someone brings back a return the firm prepared and starts asking why a line is what it is — the financial statements, OR a copy of the return, OR just the question; any ONE of those is the trigger: that is §4C, and the job is to BRIEF the reviewer from the working paper before reading the PDF (the reasoning behind each decision, who made it, where every figure came from) rather than to audit her. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, when a return the firm prepared comes back to be reviewed or signed, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear — and it is DELIVERED AS AN ARTIFACT by default, a page carrying MORE detail than the chat did rather than less, with anything destined to be typed into the return written in ENGLISH ready to paste, and any list of changes shipped as tickable CHECKBOXES so she can see what is left), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
 ---
 
 # Tax-return SOPs — and preparing a return from one
@@ -459,11 +459,14 @@ Trade subscriptions     6 rows = 6 out, 0 in -> NET 288.00                  (no 
 
 ⚠️ **Two lines of output for an account with no mirrors is the price of never missing one again**,
 and it is cheap.
-⛔ **Those account names and every figure in them are INVENTED, like every example in this skill** — a
+⛔ **Those account names and every figure in them are INVENTED, like every example in this skill** *(and after the 2026-09-06 clarification below, "every figure" means every CLIENT-SPECIFIC figure — a statutory rate is not one)* — a
 real client's figures belong in that client's working paper *(§5)* and **nowhere else in the repo**,
 this file included. 🛑 **And "the example is close enough to the real one to be useful" is exactly how a
-client's ledger ends up in a firm-wide file** — an illustration must share **no digits** with the return
-that prompted it.
+client's ledger ends up in a firm-wide file** — an illustration must share **no CLIENT-SPECIFIC digits** with the return
+that prompted it. ⓘ *A statutory rate, a MACRS table percentage or a published threshold is **not** client
+data and may be reused; a basis, an amount, a business-use percentage or anything derived from the client's
+own facts **is**.* 🔑 **Added 2026-09-06, replacing a bare "no digits"** that could not be met literally: the ban is on
+what identifies the client, not on arithmetic that belongs to the tax code.
 
 ##### 💥 WHAT IT COSTS WHEN IT IS SKIPPED
 
@@ -497,10 +500,10 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 > little experience with returns and **gets lost between the forms, the pages and the numbers** — so
 > a table of values without a route through the forms does not help her. In English: *the tables per
 > form, the flow of the figures between the forms, the explanations, and the boxes I have to tick.*
-> **Deliver all four, every time, unprompted — plus part 5, which is what makes the flow readable,
-> and parts 1b to 1e, 6 to 10 and 8b below, which are what she has had to ask for since.**
+> **Deliver all four, every time, unprompted — plus part 2, which is what makes the flow readable,
+> and parts 1b to 1e, 6 to 13 and 8b below, which are what she has had to ask for since.**
 
-> 🛑 **THE CALIBRATION, and it governs all fifteen parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
+> 🛑 **THE CALIBRATION, and it governs all eighteen parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
 > tiene que hacerlo una persona que no sabe prácticamente nada de taxes, ni de formularios, ni de
 > cómo fluyen las cosas en los formularios, ni las fórmulas detrás de cada número. Este es el nivel
 > de detalle que necesitamos."*
@@ -515,7 +518,7 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 > **statement the return could not e-file without**; the other was **a K-1 explained only as the two
 > boxes that carried numbers.** Parts 6 and 7 exist because of them.
 
-### The FIFTEEN things every delivery carries
+### The EIGHTEEN things every delivery carries
 
 **1 · ONE TABLE PER FORM, in the order the forms are actually prepared** — every table with the same
 columns, and **the FORM, the PAGE, the PART and the LINE NUMBER named**:
@@ -961,7 +964,7 @@ opens the following year, so both would have travelled.)_
 >    source is *"it is on the balance sheet"* has failed the check. **If a table will not fit with
 >    the column, split the table — never drop the column.**
 
-**Three rules for that last column:**
+**Four rules for that last column:**
 
 1. ⚠️ **Mark it as the SOFTWARE's, not the IRS's.** A screen name is a vendor fact and next year's
    version may move it. **The source line is the tax fact; the entry route is a convenience** —
@@ -970,6 +973,13 @@ opens the following year, so both would have travelled.)_
    reads as *unknown*, and a preparer will hunt for a field that does not exist.
 3. 🔑 **Name the FEEDER form and box, not just the screen.** *"K-1 input, box 16 code D"* survives a
    software update; *"the third field on the second tab"* does not.
+4. 🔴 **MARK THE ROUTE AS ESTABLISHED OR NOT — and ⛔ NEVER present a guessed click path as a fact.**
+   ✅ Established: **name the program, the version and the date somebody saw it** *("ATX 2025, seen
+   2026-08-24")*. ⚠️ Not established: **say so, and say HOW TO ESTABLISH IT** — open the form, try the
+   field, and report back what the screen was called. 🔑 ***"I don't know this screen, here is how to
+   find it"* is a usable answer; an invented one costs more than silence**, because it is followed
+   confidently and fails in a way that looks like the software's fault. ⓘ *And when she reports the real
+   screen back, write it into the SOP so the next session does not guess either.*
 
 _(Lilian, 2026-08-19, on Form 7203: **"la línea 2 no es algo que yo podía llenar en la misma forma
 7203. Lo correcto era ir al K1 y buscar dónde colocar las distribuciones, que de hecho se colocan en
@@ -1113,6 +1123,134 @@ substitute for phase 1.**
 return is unprepared: **the K-1 does not exist yet.** That is a Block A *"No, blocked on X"* — say
 which return has to come first.
 
+
+**11 · 🔴 THE CONTAINER DOES NOT CHANGE THE STANDARD — AN ARTIFACT CARRIES *MORE* THAN THE CHAT, NEVER LESS.**
+
+🔑 **From 2026-09-06, Lilian asks for return analyses AS ARTIFACTS** — *"todos los análisis de esos
+tax returns te lo voy a pedir en forma de artefacto, porque me es mucho más fácil utilizar esto para
+llenar las tablas en ATX."* **She is typing into the software from the page.** ⛔ **So the page is a
+WORKSHEET, not a summary.**
+
+> ### ⛔ SCOPE — TWO LIMITS, and a session may not widen either
+>
+> 🔑 **A session may not WIDEN these. Lilian or Julia can** — and each changes in **its own home**, never
+> here. ✅ **A session MAY hold a narrower line while a question is open** *(`double-mcp` §2.2 point 2 does
+> exactly that)*, which is what the second limit is.
+>
+> **① 🔴 PHASE 1's REVIEW OUTPUT IS NEVER AN ARTIFACT.** [`organizer-review`](../organizer-review/)
+> **§0 rule 4** bars it, and that ban is load-bearing for the delete-the-session control. 🔑 **The
+> discriminator is not "it survives the conversation"** — a PDF does too — ⛔ **it is that a URL TRAVELS
+> ONWARD with no further act by the firm.**
+> ✅ **The sanctioned container for the review is a PDF**, on **§0 rule 4's own conditions** *(read them;
+> the one most easily broken here is that it is written to the session scratchpad and **never to a path
+> `git add` can reach**)*.
+> ⚠️ **And in a TWO-PHASE run the PDF is DEFERRED:** `organizer-review` **§5 step 4** — **one PDF at the
+> END covering the review AND the tables**, because *"two PDFs for one job is how a discipline gets
+> skipped"*. 🔑 **The artifact is IN ADDITION to that PDF, never instead of its second half**, and ⛔
+> nobody is told to delete the conversation mid-return. ⚠️ **So when §4A sends both phases in one reply:
+> the review goes in the CHAT, the tables go on the PAGE.**
+>
+> **② 🔴 AN ORGANIZER-SOURCED VALUE DOES NOT GO ON THE PAGE — interim, until Lilian rules.**
+> `double-mcp` **§2.2 point 1** bars organizer data from an artifact without narrowing itself to
+> identifiers the way point 2 does, and phase 2 reads the organizer as a required source. ⛔ **A session
+> may not decide which reading is right.** 📌 **The question, with BOTH readings and the evidence for
+> each, is [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 87** — and the answer, when it comes, goes into
+> `double-mcp` §2.2 point 1, not here.
+>
+> 🔑 **"Organizer-sourced" means: read from `get_organizer_responses`, OR from a completed organizer
+> held as a TaxDome-era file** *(§4A's checklist — older clients' organizers are PDFs in
+> `TaxDome/[Client]/1. Completed Tax organizers/`, and a limit keyed only on the MCP call would switch
+> itself off for exactly those clients)* — **and NOT independently established** from a document that is
+> not itself an organizer, from the books, or from the prior-year return. ✅ **Where it IS independently
+> established, cite THAT source and the value goes on the page.**
+>
+> 🔴 **AND THE VALUE MUST HAVE A DURABLE HOME — this is a requirement, not a cross-reference.**
+> ⛔ **"Keep it in the chat" alone is WRONG**: the chat is what she is told to delete at the end of the
+> job, so the limit would destroy the very figures she has to type. ✅ **The values go in the chat AND in
+> a PDF handed over at the end of the return** — when phase 1 ran, that is `organizer-review` §5 step 4's
+> single PDF; ⚠️ **when phase 1 was SKIPPED on her instruction** *("salta la Revisión")*, **produce the
+> same PDF for the tables alone**, on §0 rule 4's conditions. 🛠️ **And SAY ON THE PAGE which rows are
+> held back and where their values are** — ⚠️ **a worksheet that is silently incomplete is worse than one
+> that is visibly incomplete**, and this is the one place item 11's *"never less than the chat"* is
+> suspended.
+>
+> ✅ **Unaffected: the BOOKS, the prior-year return** *(⚠️ `double-mcp` document limit 7 bars the REDACTED
+> TEXT from an artifact, **not a figure reported as a finding** — which is why every working paper may carry
+> prior-year figures at all.* 🔑 **And a client FIGURE on a hosted page is permitted by two WRITTEN rules,
+> not by this reading:** Lilian's 2026-09-06 instruction that *"todos los análisis de esos tax returns te lo
+> voy a pedir en forma de artefacto"*, and the standing [`bookkeeping-kpis`](../bookkeeping-kpis/) rule that
+> **a real client's figures ship as an artifact, never in the repo.** ⛔ **What is NOT written anywhere is
+> whether the redacted TEXT could go on a page — and nothing needs it to, so the question stays unopened
+> rather than answered by a session.**)*, **a platform, the working paper** — which is most of an
+> entity return *(an entity return has no organizer at all)*, and was all of the first artifact — ⓘ *which was a **1040**, and clean for a different reason: that client's organizer had been discarded.*
+
+🛑 **THE FAILURE THIS EXISTS TO STOP, and it is the one that actually happened:** the first artifact
+looked better than the chat and **carried less.** The *"where does this go"* and the *"where does this
+come from"* — items **8** and the whole *where each number comes from* spine — **were in the chat and
+silently dropped when the delivery moved to a page.** Her words: *"no me queda claro aquí qué línea, qué
+celda es la que tengo que llenar, qué forma… no me queda claro la página, que eso antes me lo ponías en
+el chat y, en el artefacto, no lo veo."*
+
+**So every figure carries FOUR things — in every delivery, on the page or in the chat — and a figure missing any of them is not delivered:**
+
+| | | |
+|---|---|---|
+| **①** | 📍 **WHERE IT GOES** | the **form**, the **page**, the **part** and the **line** — all four, named, not "on the Schedule C" |
+| **②** | 🧮 **HOW IT WAS CALCULATED** | ⛔ **not the source, the ARITHMETIC.** The operands, the rate, the result — *"24,000 × 20% × 75% = 3,600"* **(invented, like every figure in this skill)** — so she can re-derive it without asking. **A figure with a source and no formula is half-delivered** |
+| **③** | 🛠️ **WHERE IT IS TYPED** | the entry route, to the precision item **8b** demands, **marked established or not per item 8 rule 4** — ⛔ **which is where that rule lives; do not restate it here, or the two copies drift** |
+| **④** | 🗣️ **WHAT IT DEPENDS ON** | the assumption underneath it, where one exists, so a changed answer visibly moves the figure |
+
+⛔ **AND NEVER THE IDENTITY BLOCK ON THE PAGE** — by existence, never by value *(`double-mcp` §2.2)*. ⚠️ **A 1040's entry-route column reaches the taxpayer-information screen, so this is not hypothetical.** ⓘ *A business EIN is not in that block; an SSN used as an entity's tax ID is.*
+
+🎨 **The page is built with [`impeccable`](../impeccable/) and the Design System**, like every other page the firm publishes — that is the standing rule, not a preference.
+
+**12 · 🔴 THE LANGUAGE SPLIT: ANYTHING SHE WILL TYPE INTO THE RETURN IS IN ENGLISH — THE EXPLANATION AROUND IT IS IN HERS.**
+
+⛔ **A field value written in Spanish is a defect, however correct it is**, because the delivery exists to
+be **copied and pasted**. _(Lilian, 2026-09-06: **"si hay algún campo de texto que haya que escribir en
+ATX, obviamente tiene que ser en inglés… lo que quiero hacer es copiar y pegar de las cosas que me das."**
+The Schedule C principal-business description had been given in Spanish.)_
+
+🔑 **The test is not "is this document in Spanish?" — it is "will this string be TYPED INTO THE
+RETURN?"** If yes: **English, plain ASCII, exactly as it must appear**, and set apart visually so it is
+obvious what to copy. If no — the reasoning, the warnings, the derivation — **the language of the person
+asking**, per [CLAUDE.md](../../../CLAUDE.md).
+
+ⓘ *This is the same rule the repo already runs for journal entries — the table is explained in Spanish
+and the description that goes into the books stays in English. This extends it from the books to the
+return.*
+
+---
+
+**13 · 🔴 A LIST OF CHANGES SHIPS AS CHECKBOXES — she is going to WORK THROUGH it, not read it.**
+
+🔑 **Lilian asked for this on 2026-09-06, and the reason is the shape of the work, not a preference about
+formatting:** *"quiero que guardes como una regla que, cuando haya cosas que tengo que cambiar — como
+esta, que es una lista de cambios que tengo que hacer — añadas como un checkbox para que yo pueda ir
+marcando las cosas que ya hice y ver lo que me va quedando pendiente por modificar."*
+
+⛔ **A list of edits delivered as prose, or as a plain table, is not delivered.** She is at the keyboard in
+the tax software, going down the list one item at a time, and what she needs to see is **what is LEFT** —
+not to re-read the whole thing to find her place. 🛑 **Every time she loses her place, the risk is not
+annoyance: it is a change that gets skipped and nothing catches.**
+
+| | |
+|---|---|
+| **①** | ☐ **Everything she must DO gets a box** — a figure to key, a field to clear, a box to tick, a statement to attach, a question to ask the client, a decision to put to Julia. ⛔ **NOT items that are only information** — a box beside something un-doable is noise, and noise is what makes the column stop working |
+| **②** | **The box is the FIRST thing on the row**, before the description, so a column of them reads as a column and the eye finds the unticked ones without reading |
+| **③** | 🔑 **It has to be tickable WHERE SHE ACTUALLY IS.** In an artifact that means a real `<input type="checkbox">` that **remembers itself across a reload** — she closes the page, keys for an hour, comes back. In chat or Markdown, `- [ ]` |
+| **④** | **A running count per group — *"3 de 11 hechos"*** — so progress is visible without counting |
+| **⑤** | **Group by WHERE she is working** *(this form, then that form, then the state return; or: ask the client · decide · key it)* — **not by importance.** She is not going to jump between screens to follow a priority order |
+
+⚠️ **THE TICKS ARE NOT A RECORD, and this is the limit that matters.** The state lives in **that
+browser's `localStorage`** — per person, per device, invisible to everyone else and to us. ⛔ **Never
+treat a ticked box as evidence that something was done**, and never build a later step on one. **The
+durable record is the working paper in [`projects/tax-returns/`](../../../projects/tax-returns/)**, which
+is where "this was keyed and verified" is written down.
+
+📌 **The same shape serves the review side.** A §4C briefing that ends in *"here is what to change"*
+is a list of changes like any other — it gets boxes too.
+
 ### 4C · 🔴 WHEN THE RETURN COMES BACK FOR **REVIEW** — brief the reviewer, do not audit her
 
 🛑 **A return this firm prepared will come back, and the person reviewing it was NOT in the room when
@@ -1195,9 +1333,10 @@ answering off this year's form about last year's return is how it bites.
    `Internal briefing · client-confidential`, as the Gossip one is**, and built with
    [`impeccable`](../impeccable/) and the Design System. ⛔ **And the identity check runs on the RENDERED
    file, not only on its source.**
-   ⚠️ **A published page is a separate question and is NOT settled by this rule** — an artifact is a hosted
-   URL, not a repo file, and whether a return's figures may go on one has its own rules. **Ask, do not
-   reason.**
+   📄 **A published page is a different thing from that file:** for **phase 2's preparation tables**,
+   item **11** settles it — Lilian asked for them as artifacts on 2026-09-06 and that is the default.
+   ⛔ **For anything else a return's figures might be published on — phase 1's review, a page for someone
+   outside the firm, a link that leaves it — ask, do not reason.**
 
 #### ② 🛑 LEAD WITH THE REASON, NOT THE FINDING
 
