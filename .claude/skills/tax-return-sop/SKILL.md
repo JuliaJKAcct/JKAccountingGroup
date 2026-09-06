@@ -500,7 +500,7 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 > **Deliver all four, every time, unprompted — plus part 5, which is what makes the flow readable,
 > and parts 1b, 1c and 6 to 10 below, which are what she has had to ask for since.**
 
-> 🛑 **THE CALIBRATION, and it governs all twelve parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
+> 🛑 **THE CALIBRATION, and it governs all fifteen parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
 > tiene que hacerlo una persona que no sabe prácticamente nada de taxes, ni de formularios, ni de
 > cómo fluyen las cosas en los formularios, ni las fórmulas detrás de cada número. Este es el nivel
 > de detalle que necesitamos."*
@@ -1155,6 +1155,8 @@ answering off this year's form about last year's return is how it bites.
    *(including an entity's tax ID when it is one)* · a **bank, card, routing or account number** · a
    **home street address** · a **date of birth** · a **login, password, PTIN, EFIN or signature PIN**.
    Name one **by existence if at all** — *"the spouse's SSN is missing"*, never the digits.
+   ✅ **A business EIN is NOT in this block** and is written out, hyphenated — it is public on Sunbiz.
+   ⛔ **An SSN or ITIN used as an entity's tax ID still is.**
    🛑 **This limit does NOT stop at the repo boundary, and `projects/tax-returns/` is not an exception to
    it** — that folder's [README](../../../projects/tax-returns/README.md) is the authority and its table
    reads *"NEVER — no exception, and no 'just this once'."*
@@ -1166,7 +1168,10 @@ answering off this year's form about last year's return is how it bites.
    precedent is `gossip-miami-llc/2025-briefing-open-items.html` / `.pdf`** *(2026-08-27: nine open items
    ordered by what blocks filing, on the Atlas template, produced for Julia — and Lilian caught that one
    item was in the working paper and missing from the first draft)*. **So when she asks for the briefing
-   as something she can read or print, the answer is yes**, beside the paper it came from.
+   as something she can read or print, the answer is yes**, beside the paper it came from — 🔴 **headed
+   `Internal briefing · client-confidential`, as the Gossip one is**, and built with
+   [`impeccable`](../impeccable/) and the Design System. ⛔ **And the identity check runs on the RENDERED
+   file, not only on its source.**
    ⚠️ **A published page is a separate question and is NOT settled by this rule** — an artifact is a hosted
    URL, not a repo file, and whether a return's figures may go on one has its own rules. **Ask, do not
    reason.**
@@ -1212,8 +1217,11 @@ because they read identically on the return and need completely different respon
 1. 🔑 **The decisions table for that return**, in her own words where they were hers — the working
    paper's §4.
 2. **Every figure with its source**, at the level of detail she would need to re-derive it.
-3. 🔴 **What is still waiting on HER, named** — the working paper's **§6 (*Open at filing*)**, filtered
-   to the rows with her name on them, and what each one moves if she answers it one way or the other.
+3. 🔴 **What is still waiting on HER, named** — the working paper's **open-items section** *(§6 *Open at
+   filing* in the template)*, and what each one moves if she answers it one way or the other.
+   ⚠️ **There is no owner column to filter on** — §6 is a checkbox list — **so read it and pick out hers.**
+   ⓘ *And not every paper follows the template's numbering: some number their own sections. **Find the
+   section by its TITLE, not its number**, and the same goes for the §4 and §8 references above.*
 4. **What was assumed**, and what happens if the assumption is wrong.
 5. ⚠️ **Where the paper corrected ITSELF.** A figure that changed during preparation, and why, is
    exactly what a reviewer would otherwise re-discover from scratch.
