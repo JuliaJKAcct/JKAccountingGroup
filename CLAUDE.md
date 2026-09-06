@@ -289,6 +289,25 @@ in that folder.
   so a maintained field beats a guess from prose, and **an empty field may be corroboration rather than a
   gap — but never a conclusion on its own.** The purpose behind all of it is
   [`projects/pre-return-review/README.md`](./projects/pre-return-review/README.md).
+- 🔴 **A RETURN COMING BACK FOR REVIEW IS A BRIEFING JOB, NOT AN AUDIT — and the session is the only
+  witness to how it was built.** Lilian and a session prepare a return together; **Julia reviews it
+  afterwards, and was not in the room.** Today she gets the finished PDF and no reasoning, and Lilian has
+  to narrate the whole thing from the beginning. **That is the gap this rule closes** *(Lilian,
+  2026-09-06: "yo trabajo contigo en los returns… pero luego no tengo un espacio para hablar con ella y
+  explicarle todo lo que he hecho… ya que tú sabes todo el contexto… puedas darle todas las herramientas
+  y las explicaciones que necesita")*.
+  **So when someone uploads a return this firm prepared and asks for help with it** — financial
+  statements, a copy of the return, a question about a line — **read the
+  [working paper](./projects/tax-returns/) FIRST, before the PDF**, and answer with **the reason before
+  the finding**: what is on the line · **the decision, who made it and when, in their own words** · the
+  alternative that was not taken · **where the figure came from** · what it still depends on.
+  🛑 **And label which of three things each item is** — a **decision** someone made *(confirm or
+  overturn)*, an **open item** *(answer it)*, or a **defect** *(fix it)*. **They look identical on the
+  return and need completely different responses.** ⛔ **Never present a decision as a defect** — many of
+  them are the reviewer's own, and her own ruling handed back with its date checks in seconds while the
+  same ruling flagged as an anomaly costs an hour. ⛔ **And never make the preparer the messenger:** if
+  the working paper answers it, answer it.
+  The full procedure is [`tax-return-sop`](./.claude/skills/tax-return-sop/) **§4C**.
 - **Client data is sensitive.** Reports and anything with client-specific
   figures are committed/pushed only when the user explicitly asks. Client watchlists,
   vendor lists, and dollar figures live in the firm's client systems (Drive / Double /

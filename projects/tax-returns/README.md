@@ -17,6 +17,21 @@ conservarlo. Es lo que nos permite volver atrás, revisar y ver por qué se hizo
 hours of reasoning that is worth more than the finished PDF — the derivations, the traps, the
 judgement calls. Without this folder, all of it dies when the session is closed.
 
+## 🔴 Its SECOND audience: the reviewer
+
+**These were written so a future session could pick a return back up. They now have a second reader, and
+she matters more.**
+
+🔑 **Lilian prepares a return with a session; Julia reviews it afterwards and was not in the room.**
+Without this folder she gets a finished PDF and no reasoning, and Lilian has to explain every choice from
+the beginning. **With it, the session briefs her directly.**
+
+🛠️ **So when a return comes back for review, the working paper is opened BEFORE the PDF** — it holds
+the decisions, who made each one, the alternative that was not taken, and where every figure came from.
+📌 **Write them for someone who was not in the conversation**: a decision with no name and no date on it
+is a decision the reviewer has to re-make. The procedure is
+[`tax-return-sop`](../../.claude/skills/tax-return-sop/) **§4C**.
+
 ## What this is NOT
 
 - ❌ **Not the return.** The filed PDF lives in Double (`Tax Return Filed > <year>`). This is the

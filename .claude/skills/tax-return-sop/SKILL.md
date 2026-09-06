@@ -1115,6 +1115,93 @@ which return has to come first.
 
 ---
 
+## §4C · 🔴 WHEN THE RETURN COMES BACK FOR **REVIEW** — brief the reviewer, do not audit her
+
+🛑 **A return this firm prepared will come back, and the person reviewing it was NOT in the room when
+it was built.** 🔑 **This section is what a session does then, and it is not the same job as preparing.**
+
+> **Lilian set it, 2026-09-06, and named the gap it closes:** *"yo trabajo contigo en los returns… pero
+> luego no tengo un espacio para hablar con ella y explicarle todo lo que he hecho. Luego de eso, ella va
+> a revisar mi trabajo junto contigo… ya que tú sabes todo el contexto, cuando ella te pida ayuda con
+> estos impuestos que hemos preparado nosotros, puedas darle todas las herramientas y las explicaciones
+> que necesita."*
+>
+> 📌 **The point in one line: the session was the only witness to the whole build. It owes the reviewer
+> the reasoning, unprompted — so that the preparer does not have to narrate it from the beginning.**
+
+### ① Recognise it, and read before you answer
+
+**The shape is unmistakable: someone uploads a copy of a return and the financial statements behind it,
+and asks for help with it.** ⛔ **Do not start reading the PDF.**
+
+🛠️ **Open the working paper for that return FIRST** — [`projects/tax-returns/`](../../../projects/tax-returns/),
+one per return. **It holds the decisions, who made each one, what the alternative was, and where every
+figure came from.** 🔑 **It was written for exactly this moment.** ⓘ *Also read the client's
+[Client Intelligence](../../../projects/client-intelligence/) file — the two together are the whole record.*
+
+⚠️ **If no working paper exists, say so plainly before answering.** Then the session is reasoning from
+the PDF like anyone else, and the reviewer is entitled to know that.
+
+### ② 🛑 LEAD WITH THE REASON, NOT THE FINDING
+
+⛔ **"Line 7 carries 18,987"** is useless to a reviewer. ⛔ **"Line 7 looks wrong"** is worse — it invites
+her to re-decide something that was already decided, by her.
+
+✅ **The shape that works, every time:**
+
+| | |
+|---|---|
+| **What is on the line** | the figure, and where it prints |
+| **Why it is that figure** | 🔑 **the DECISION, WHO made it, WHEN, and in their own words where they exist** |
+| **What the alternative was** | ⚖️ what was not done, and what it would have cost |
+| **Where the number came from** | 📖 the account, the statement, the document — **the "¿de dónde salen los números?" column, which is not optional** |
+| **What it still depends on** | ⚠️ the assumption underneath it, if there is one |
+
+📌 **Many of the decisions are HERS.** A reviewer meeting her own ruling stated back to her, with the
+date and the reason, checks it in seconds. **The same ruling presented as an anomaly costs an hour and
+some trust.**
+
+### ③ Sort everything into three buckets, and label which one
+
+🛑 **The single most useful thing a session can do for a reviewer is say which of these a thing is** —
+because they read identically on the return and need completely different responses.
+
+| | | What she does with it |
+|---|---|---|
+| ✅ **A DECISION** | someone chose this, deliberately | **confirm or overturn** — and it is recorded either way |
+| 🟡 **AN OPEN ITEM** | known, unresolved, usually waiting on a fact or on her | **answer it**, or say it can wait |
+| 🔴 **A DEFECT** | nobody chose it and nobody knows about it | **fix it** |
+
+⛔ **Never present a decision as a defect.** ⛔ **And never let a defect hide inside a list of decisions.**
+
+### ④ What she is owed without asking
+
+1. 🔑 **The decisions table for that return**, in her own words where they were hers — the working
+   paper's §4.
+2. **Every figure with its source**, at the level of detail she would need to re-derive it.
+3. 🔴 **What is still waiting on HER, named** — the open items with her name on them, and what each
+   one moves if she answers it one way or the other.
+4. **What was assumed**, and what happens if the assumption is wrong.
+5. ⚠️ **Where the paper corrected ITSELF.** A figure that changed during preparation, and why, is
+   exactly what a reviewer would otherwise re-discover from scratch.
+6. **What is NOT in this return** because it belongs to another one — the §8 handoff.
+
+### ⑤ 🛑 Two things a session must not do here
+
+- ⛔ **Do not re-litigate a settled decision because a session would have chosen differently.** Say what
+  it costs, once, in the row where it lives — **then move on.** 🔑 **The signer decides; the session
+  informs.** *(This is the [CLAUDE.md](../../../CLAUDE.md) rule that a permission is widened by asking and
+  never by reasoning, applied to judgement instead of access.)*
+- ⛔ **Do not make the preparer the messenger.** If a question can be answered from the working paper,
+  **answer it** — the whole point of this section is that she should not have to be found and asked.
+
+### ⑥ And it runs in whatever language she writes in
+
+**Julia does not speak Spanish; Lilian usually writes in it.** 🔑 **The working paper is in English
+like every repo artifact, and the briefing is delivered in the language of the person asking** — the
+[CLAUDE.md](../../../CLAUDE.md) reply-in-kind rule. ⓘ *Which is also why the paper carries the reasoning
+in full: it has to survive being read by someone who was not in the conversation that produced it.*
+
 ## §5 · Every prepared return leaves a working paper
 
 **Writing it is part of preparing the return** — [`projects/tax-returns/`](../../../projects/tax-returns/),
