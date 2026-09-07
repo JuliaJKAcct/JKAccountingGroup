@@ -2,7 +2,8 @@
 
 > **Status:** 🟡 **DRAFT — pending Lilian's sign-off.** 🔴 **Extended 2026-09-07 AT HER REQUEST** — 🛠️ **the
 > ATX ENTRY ROUTE for a K-1: the money is keyed on the K-1's OWN form, which feeds Schedule E, Form 7203 and
-> Form 8995 at once, while line 27 and the (e)/(f) ticks stay the preparer's** — with the "it did not flow"
+> Form 8995 at once, while line 27 and the (e)/(f) ticks stay the preparer's** — 🔴 **with the input sheet
+> addressed by ITS OWN labels (it has no "Part III") and its CHECKBOXES treated as part of the route** — with the "it did not flow"
 > table *(whose first question is WHICH COLUMN, since line 30 adds (h) and (k) and a misclassified K-1 gives
 > an identical line 32)* and the note that the vendor's documentation is unreachable from the firm's
 > environment (M3). 🔴 **Extended
@@ -670,6 +671,35 @@ ruling it is.**
 > 🛑 **AND THE TELL, for someone who cannot remember which is which: an ISSUING K-1 asks for
 > `Allocation Percentage`, `Profits`, `Capital`.** ⛔ **A recipient never allocates anything** — those
 > columns mean you are on the payer's form.
+>
+> ### 🔴 THE INPUT SHEET HAS NO "PART III" — address it by ITS OWN labels
+>
+> 🗣️ *"Parte 3, casilla 1: ¿dónde está eso?"* ⛔ **Nowhere.** The sheet renumbers the K-1's boxes 1-19
+> **without the Part heading**, in a block headed **`Shareholder's share of current year income,
+> deductions, credits`**, and rewords them: the IRS's *"Ordinary **business** income (loss)"* is the
+> sheet's **`1 Ordinary income (loss)`**. 🔑 **Give the screen's heading, the screen's line number and the
+> screen's wording — and flag where it differs from the IRS's.** *(Observed on the ATX 2025 `K1 Input
+> (1120S)` sheet, from Lilian's screenshot, 2026-09-07.)*
+>
+> ### 🔴 AND THE CHECKBOXES ARE PART OF THE ENTRY ROUTE
+>
+> ⛔ **A figure keyed correctly on a sheet whose checkboxes are wrong gives a wrong return with no error
+> and often no changed total.** ✅ **List them with their consequence, and say which stay EMPTY.**
+>
+> | Checkbox on the K-1 input sheet | Consequence if wrong |
+> |---|---|
+> | 🔴 **`Calculate basis limitation`** | ⛔ **Form 7203 is not generated at all** — and the sheet's own header says to mark **every** 1120S record |
+> | 🔴 **`Passive activity`** — ✅ **left EMPTY = nonpassive** | the figure lands in Schedule E's **passive** column instead of the nonpassive one, and **line 32 is identical**, so no total reveals it |
+> | 🔴 **`Check ("X") if a Qualified Business`** | ⛔ box 17V never reaches **Form 8995** and the §199A deduction is silently lost |
+> | `Check ("X") if a Specified Service Trade or Business` | ticking it on a non-SSTB limits the deduction for no reason |
+> | `more-than-2% shareholder` · `Final K-1` · `Amended K-1` · `Calculate at-risk limitation` | ordinary facts — but each is a **statement**, so set them deliberately rather than leaving the default |
+>
+> 🔑 **AND READ THE SCREEN'S OWN INSTRUCTION TEXT.** Input sheets carry it, and it settles questions a
+> session would otherwise guess at. *(The ATX sheet's header states the import route — **"To Import K-1s
+> from a S Corporation return, select Returns / Import Data / K-1 Data"** — and where the basis section
+> lives: **"Scroll down to the 'Basis Limitation' section on this tab."** Both had been carried as
+> unverified leads until the screenshot arrived.)*
+> 🛑 **ONE SCREENSHOT OUTRANKS EVERY SEARCH RESULT. ASK FOR IT EARLY.**
 >
 > ⛔ **And not `SCH E (1040) PAGE 1`** — *Supplemental Income and Loss Page 1* is **the RENTAL sheet**
 > *(Property Type · Fair rental days · Rent income · Royalties)*, a different form with no K-1 on it.

@@ -677,6 +677,35 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > 🛑 **Two rounds earlier the same delivery had sent her to `SCH E (1040) PAGE 1`, the RENTAL sheet.**
 > **Both times the name alone was the whole delivery, and both times she landed on a plausible neighbour.**)_
 >
+> ### 🔴 **AND THE FOURTH ROUND: ADDRESS THE SCREEN BY ITS OWN LABELS, NOT THE IRS FORM'S GEOGRAPHY**
+>
+> 🗣️ **"Parte 3, casilla 1: ¿dónde está eso?"** ⛔ **Because there is no Part III on the screen.** The
+> software's input sheet renumbers the K-1's boxes 1-19 **without the Part heading**, and gives them
+> **its own wording** — the IRS's *"Ordinary business income (loss)"* is the sheet's
+> *"**Ordinary income (loss)**"*. 🛑 **An address built out of the FORM's geography — part, box, column —
+> is unfindable on a screen that does not carry it.**
+>
+> ✅ **So an entry route is written in the SOFTWARE's vocabulary:** the **section heading as printed on the
+> screen**, the **line number as the screen numbers it**, and **the field's label verbatim**. ⚠️ **Say when
+> the label differs from the IRS's**, because the person is looking at one and you are quoting the other.
+>
+> 🔴 **AND THE CHECKBOXES ARE PART OF THE ENTRY ROUTE, NOT A FOOTNOTE.** ⛔ **A figure keyed correctly on a
+> screen whose checkboxes are wrong produces a wrong return with no error and, often, no changed total.**
+> **List them with their consequence, and say which stay EMPTY** — an unticked box is an instruction too.
+> _(The worked case: on the K-1 input sheet, `Calculate basis limitation` is what generates **Form 7203**
+> at all; `Qualified Business` is what carries §199A to **Form 8995**; and **`Passive activity`, left
+> UNCHECKED, is what makes the activity nonpassive** — the control three rounds of delivery had described
+> in the abstract without knowing where it lived.)_
+>
+> 🔑 **AND READ WHAT THE SCREEN ITSELF SAYS.** Input sheets carry instruction text, and it answers
+> questions a session would otherwise mark `not established`. _(Her screenshot's header settled two of
+> them outright: the import route — **"To Import K-1s from a S Corporation return, select Returns / Import
+> Data / K-1 Data"** — and where the basis section lives: **"Scroll down to the 'Basis Limitation' section
+> on this tab."** Both had been carried as unverified search-result leads for a day.)_
+> 🛑 **ONE SCREENSHOT OUTRANKS EVERY SEARCH RESULT, AND IT IS ONE MESSAGE AWAY.** ✅ **Ask for it early
+> rather than delivering a third guess** — and when the person sends one, **transcribe what it shows**
+> *(sections in order, every field label, every checkbox)* **before adding anything of your own.**
+>
 > ✅ **So a form's NAME is now checkable at source** — `K1 INPUT (1120S)` *(Federal K-1 (1120S) Input
 > Worksheet)*, `SCH E (1040) PAGE 2`, `7203, BASIS WKST` were all read off that list, not inferred.
 > ⛔ **What is still NOT checkable is what a screen LOOKS LIKE** — its tabs, its field positions, its

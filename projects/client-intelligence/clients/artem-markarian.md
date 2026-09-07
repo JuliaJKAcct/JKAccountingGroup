@@ -173,6 +173,18 @@ the actual details.
   that works without remembering any of it**: an issuing K-1 asks you to allocate percentages between
   owners, which a recipient never does.
   🛑 **Twice in one day a delivery gave a name and no way to tell it from its neighbours.**
+  🟢 **FOURTH ROUND — she found the sheet herself and sent a screenshot, which closed it.** 🗣️ *"Parte 3,
+  casilla 1: ¿dónde está eso?"* ⛔ **Nowhere — the software's input sheet carries no "Part III" and renames
+  the boxes.** 🔑 **Every route the firm had given her was written in the IRS FORM's geography while she
+  was reading a SCREEN**, which is now the rule: an entry route is written in the software's own words —
+  its section heading, its line number, its label — and says where those differ from the IRS's.
+  🔴 **The screenshot also settled three things nobody had asked the right question about:** the sheet's
+  **checkboxes** are where the passive/nonpassive position, the basis form and the QBI form are actually
+  decided *(and one of them works by being left EMPTY)*; the sheet's **own printed instructions** state the
+  import route and where the basis section sits, both of which had been carried as unverified leads; and
+  the boxes are **reworded** from the IRS's.
+  🛑 **The standing lesson: one screenshot outranks every search result, and it is one message away —
+  ask for it early instead of delivering a third guess.**
   ⛔ **No figures here — they stay in the working paper.**
 
 - 2026-09-06 (fourth pass) — 🛠️ **THREE THINGS ON HIS RETURN WERE REWORKED BECAUSE LILIAN COULD NOT WORK
