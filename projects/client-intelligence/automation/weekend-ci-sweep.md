@@ -279,9 +279,23 @@ was said). Better a sourced, low-confidence note than nothing.
 | Grigoriy & Margarita Melomed | 710633 |
 | M5 Studio Miami | *(none — no Double account confirmed; search Double by name first, then sweep by name)* |
 | Kompozit USA | *(none — PROSPECT, no Double account yet; Gmail + Drive only, and no `sweep-state.md` row until it signs)* |
+| Vitaliy Vasyutyk (10-company group) | 710668 |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
+
+> ⓘ **Vitaliy Vasyutyk is ONE row for TEN companies, and that is deliberate.** He holds ten
+> Florida LLCs, all reached by one portal contact, and the firm bills them through six
+> QuickBooks customer records that do **not** map one-to-one onto the companies — so a fact about
+> one company routinely arrives under another. Sweep him **by owner** (`710668`) and route each
+> fact to the company it belongs to, per the skill's "sweep by owner, assign by company" rule.
+> The companies: Nika Realty `710583` · 2 Romans Realty `710561` · Sunshine Renovations 1 `710599`
+> · SYS 1 Realty `710600` · Remodel Master Realty `710590` · Fastighet `710573` · Tropical Coast 1
+> `710603` _(dissolved 2026-03-31)_ · Zumfi 1 `710613` · Zumfi 2 `710614` · Fizum 1 `710574`.
+> ⚠️ Only the **owner-level** file [`clients/vitaliy-vasyutyk.md`](../clients/vitaliy-vasyutyk.md)
+> exists so far (created 2026-09-07); the per-company files are still owed, so a run that learns
+> something company-specific writes it into that file and says which company it belongs to.
+> **No `sweep-state.md` row until the first full historical pass has run.**
 
 > ⓘ **M5 Studio Miami has no Double id, and that is not an oversight.** It is a **company set-up**
 > client (EIN application in flight, 2026-08-14) and nobody has established whether it exists in

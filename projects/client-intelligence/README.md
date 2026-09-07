@@ -190,7 +190,7 @@ client-intelligence/
 │   ├── email-template.html  ← the on-brand, email-safe report template the routine fills
 │   └── sweep-health-review.md ← post-run checklist for a Saturday report, + the standing
 │                                diagnosis of how this sweep fails (and two retracted findings)
-└── clients/               ← one file per client (54 so far — see the Clients index below)
+└── clients/               ← one file per client (55 so far — see the Clients index below)
 ```
 
 ## Clients
@@ -251,6 +251,7 @@ client-intelligence/
 | Maria Contreras | [`clients/maria-contreras.md`](./clients/maria-contreras.md) | Firm | ⚠️ **Backfill seed (2026-08-14)** — owes a full first sweep; **the thinnest file in the set**. 2025 filed. 🔴 **She claims vehicle, internet and car-repair deductions and nothing on file says what against** — open for two seasons |
 | Grigoriy & Margarita Melomed | [`clients/grigoriy-margarita-melomed.md`](./clients/grigoriy-margarita-melomed.md) | Firm | ⚠️ **Created 2026-08-14** — never swept, **no TaxDome note**, invisible to the backfill. 🔴 **He owns [R & G Friendly Inc / "Lucky Pawn & Jewelry"](./clients/rg-friendly.md) and takes a W-2 from it** — his 1040 and that 1120-S are one piece of work. 2025 filed. ⚠️ A vehicle was sold mid-year and the mileage figures crossed over |
 | Tsminibears LLC | [`clients/tsminibears.md`](./clients/tsminibears.md) | Maria | **Former** — archived in Double 2026-06-08; Florida RT penalty matter **open**. Closing the account is dead; the plan is to ask the DOR to **move the effective date** — **on the call**, since a third agent said it can be done and asked for no documentation; a written request (with a **reasonable-cause penalty waiver** as its alternative ask) is only the fallback. **⏳ 2026-08-24: the named DOR officer agreed to lodge the effective-date request with Tallahassee — no timeline, nothing in writing. MONITORING (scheduled Routine, first check ~2026-09-15); the POA is still unprocessed and a new penalty notice is NOT a refusal** |
+| Vitaliy Vasyutyk (10-company group) | [`clients/vitaliy-vasyutyk.md`](./clients/vitaliy-vasyutyk.md) | Firm | ⚠️ **Created 2026-09-07** — the group had **no Client Intelligence at all**: ten Florida LLCs, one owner, one portal contact, and **only an owner-level file so far** (nine companies still owe their own). 🔴 **An invoice's customer is not the company the work was for** — six QuickBooks records bill ten entities, so "has this been billed?" is answered on **line descriptions**, not customer names. **Tropical Coast 1 LLC dissolved 2026-03-31**; **Zumfi 1 is to be closed**; SYS 1 and Remodel Master had **no activity in 2025**. Three 2026-03-25 invoices are unpaid after six reminders — the charges were verified clean on 2026-09-07, so it is a collection question |
 
 ## Brand & design
 
