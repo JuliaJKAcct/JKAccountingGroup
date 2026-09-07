@@ -107,7 +107,8 @@
   blocks uspto.gov)*. And the status line is **"as of 10 Jun 2026"**, so it was already three months old
   when it was read. 🔑 **A suspension letter is not a refusal** — it means the examiner has paused the
   application — but **nobody at the firm knows whether the client is aware of it**, which is why it went
-  into the message to him on 2026-09-07.
+  into the message **drafted** for him on 2026-09-07 — ⚠️ **drafted, not sent**; see the log entry for
+  that date.
 
 ## 5. Key facts & quirks
 
@@ -254,10 +255,13 @@
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **Forward the transaction summary to Julia** — prepared 2026-09-06 and **still with Lilian**; then put the two signer positions to her **only if the client's answers do not come** (working paper §6D). `FOLLOW-UPS.md` row 85.
-- **Ask the client the FIVE questions in one message** — working paper §6A. ⚠️ **Five, not four:**
-  the fifth (his country of tax residence and whether he has a tax number there) fills four fields
-  on the form and nothing on file answers it, so it rides in the same message. Everything else on
-  the return can either be entered now or is ours to look up (§6B).
+- **Ask the client the FOUR still-outstanding questions in one message — Q1, Q3, Q4 and Q5** (working
+  paper §6A). ⚠️ **Q2 is already in the Russian message drafted 2026-09-07 and sitting with Lilian —
+  do not re-ask its money half.** ⛔ **But Q2 is only HALF covered:** the message asks what he paid, and
+  **not** whether he contributed anything that was not money, which is the half that would open Part VI.
+  That half still has to go. ⚠️ **And do not drop Q5** — his country of tax residence and whether he has a
+  tax number there fills four fields on the form and nothing on file answers it, so it rides in the same
+  message. Everything else on the return can either be entered now or is ours to look up (§6B).
 - **Raise the `Tax Return Type` mismatch** with Lilian (`1040` for a nonresident) — read-only
   column, hers to change.
 - 🔴 **TELL him he must keep records** — §1.6038A-3 applies with **no relief available** and

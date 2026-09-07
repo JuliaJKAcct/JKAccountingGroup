@@ -288,9 +288,13 @@ in that folder.
   already answers it in the ordinary case — a Spanish session is Lilian's, an unidentified non-Spanish
   session is Julia/firm. ⚠️ **Ask only when the REQUEST itself is ambiguous about the sender** *(a firm
   session saying "write this for Lilian to send")*; ⛔ **this does not loosen that default.**
-  ⓘ **English system labels stay in English inside Russian copy** — that convention, and the
-  «guillemets» that go round them, is [`client-portal-guides`](./.claude/skills/client-portal-guides/) §3.
-  ⛔ **Not restated here.**
+  ⓘ **And proper nouns and system words stay in English inside the Russian** — `Sunbiz`, `EIN`,
+  `registered agent`, a form name, a serial number, a status string like `SUSPENSION LETTER – MAILED`.
+  **She uses them in English anyway, and so does the client's own paperwork.** ⚠️ **This is WIDER than the
+  portal-guide rule and does not live there:** [`client-portal-guides`](./.claude/skills/client-portal-guides/) §3
+  covers **Double's own on-screen labels** *(`Qs for us`, `Submit`)*, because a client has to find that
+  button — it says nothing about a registry, an agency or a form. 🔑 **What §3 DOES govern for both: wrap
+  them in «guillemets» in Russian prose.**
 - **Analytical work follows the firm's method — it is not organizer-specific, and it always applies.**
   When a session **reviews, reconciles, or works out what to ask** — a client before their return, a
   bookkeeping cleanup, a matter with an agency, books that disagree with a bank —
