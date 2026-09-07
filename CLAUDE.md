@@ -241,6 +241,23 @@ in that folder.
   INTO THE RETURN?"** The reasoning around it stays in her language.
   ⛔ **And a description she has to ask about has failed, however accurate it is:** when she asks what
   a word in one of those descriptions means — a journal-entry line or a field value on a return — that is the signal to rewrite it, not to explain it and move on.
+  🔴 **A RUSSIAN MESSAGE GOING OUT UNDER LILIAN'S NAME IS WRITTEN IN SIMPLE RUSSIAN. UNDER JULIA'S IT IS NOT.**
+  _(Lilian, 2026-09-07: **"quisiera hacerle un ruso más sencillo, de mi nivel, que es básico… para que suene
+  natural, que suene a mí… pero no confundas el caso mío con el de Yulia."**)_
+  **Her Russian is basic**, and a client message sent over her name has to sound like her. ⛔ **Polished
+  native-level Russian under her name is a defect, not a bonus** — and **the cost is not cosmetic: the
+  client answers at the level he was written to**, and she is then holding a conversation she cannot read.
+  ✅ **So when LILIAN asks for a message in Russian:** short sentences, **active voice**, everyday words,
+  **no participles, no verbal adverbs, no stacked subordinate clauses** — correct Russian, simply built.
+  **Keep proper nouns and system words in English** (`Sunbiz`, `EIN`, `registered agent`, a form name, a
+  serial number): she uses them in English anyway and translating them helps nobody.
+  ⛔ **JULIA IS THE OPPOSITE CASE AND MUST NOT BE COLLAPSED INTO IT.** She is a **native speaker**; what
+  she asks for is written at **full native register**, and simplifying it would read as talking down to
+  her own clients.
+  🔑 **The test is WHOSE NAME THE MESSAGE GOES OUT UNDER — not which language the session is in.** A
+  Spanish session is always Lilian's, but she also works in English on purpose; **if the sender is not
+  clear from the request, ask.** ⓘ *This governs the message itself. The explanation around it stays in
+  the language of the chat, per the rule above.*
 - **Lilian is practicing her English — support it, don't guess.** Lilian sometimes
   runs her sessions in English on purpose, to improve it (she has little day-to-day
   practice). Her English is still developing, so she may make mistakes or phrase a

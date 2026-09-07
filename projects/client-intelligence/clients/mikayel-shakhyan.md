@@ -1,6 +1,6 @@
 # Mikayel Shakhyan
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-06
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-07
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -26,8 +26,9 @@
   (Cosmetics, Beauty Supplies & Perfume Retailers) and product *"Cosmetics"*. The brand is
   **LUMARI**; a USPTO trademark application for it (stylised wording + a flower design, Principal
   Register) was filed with **Pivniak Law** as the correspondent. ✅ **The mark is owned by Mikayel
-  PERSONALLY, not by the LLC** _(established 2026-09-06 from the USPTO receipt already in Double;
-  confirm by eye next time it is open)_. **It matters on the return twice over**: the mark is not
+  PERSONALLY, not by the LLC** _(established 2026-09-06 from the USPTO receipt in Double, and
+  **independently confirmed 2026-09-07** from the public record — §4 Licenses carries the serial number,
+  the filing date and the status)_. **It matters on the return twice over**: the mark is not
   an asset of the company, and a legal fee the company paid for it would be a **distribution to
   him** rather than a company cost — §6.
 - **Primary language:** RU — Double's `Preferred language` reads **"Only Russian"**
@@ -95,7 +96,23 @@
   names the language academy he attends. That is what makes him an **exempt individual**,
   hence a nonresident, hence the LLC foreign-owned.
 - `2025 4868-mailed by his own.pdf` — he mailed his own individual extension.
-- The **LUMARI trademark application** with the USPTO is live and will need watching.
+- The **LUMARI trademark application** with the USPTO — ⭐ **the public record, read 2026-09-07 from a
+  Trademarkia listing Lilian found:**
+  | | |
+  |---|---|
+  | **Owner** | **Mikayel Shakhyan** — ✅ **independent confirmation** that the mark is his personally, not the LLC's |
+  | **Serial number** | **99406730** |
+  | **Filed** | **22 September 2025** |
+  | **Class** | Cosmetics and Cleaning Products |
+  | **Use in commerce** | **Not yet in use** |
+  | **Status** *(as at 10 Jun 2026)* | **Live / Pending — `SUSPENSION LETTER – MAILED`** |
+  | **Attorney** | **Denys Pivniak**, Pivniak Law, P.A. |
+  ⚠️ **Two limits on that row.** Trademarkia is a **third-party mirror, not the register** — the
+  authority is USPTO **TSDR** on serial 99406730 *(unreachable from a cloud session; the network policy
+  blocks uspto.gov)*. And the status line is **"as of 10 Jun 2026"**, so it was already three months old
+  when it was read. 🔑 **A suspension letter is not a refusal** — it means the examiner has paused the
+  application — but **nobody at the firm knows whether the client is aware of it**, which is why it went
+  into the message to him on 2026-09-07.
 
 ## 5. Key facts & quirks
 
@@ -154,6 +171,19 @@
 
 ### Log
 
+- _(2026-09-07)_ — **The trademark's public record, and it moves the analysis.** Lilian found a
+  Trademarkia listing for LUMARI and sent it in. ✅ **It confirms independently that the owner is Mikayel
+  personally** — until now that rested on decoding a PDF whose font defeats text search, and the working
+  paper carried a "confirm by eye" caveat. **That caveat is discharged**, though the authority is still
+  USPTO TSDR rather than a third-party mirror. 🔑 **It also supplies three things the receipt's own
+  extraction had lost:** the **serial number**, the **filing date of 22 Sep 2025**, and a **status of
+  `SUSPENSION LETTER – MAILED`** as at 10 Jun 2026 — plus the attorney's name, **Denys Pivniak**, who is
+  the same firm the company paid in Nov 2025. 🔴 **The filing date is the part that matters for the
+  return:** 22 Sep falls **inside the eighty days when the company had no bank account**, so the filing
+  was paid personally, and the company later paid that same attorney — which sharpens the open question
+  about what that invoice covered rather than answering it (working paper §4D). **A client message was
+  drafted the same day** asking why the mark is in his name, whether he knows about the suspension, and
+  for the personally-paid formation costs.
 - _(2026-09-06, later)_ — **A transaction summary for Julia was prepared — and as at this entry it
   has NOT yet reached her.** Lilian asked for a written summary in English so Julia — who has no
   prior context on this client — could see the situation, take the decisions that are hers, and ask
