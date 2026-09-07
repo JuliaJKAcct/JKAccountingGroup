@@ -729,6 +729,51 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > rather than delivering a third guess** — and when the person sends one, **transcribe what it shows**
 > *(sections in order, every field label, every checkbox)* **before adding anything of your own.**
 >
+> ### 🔴 **SAY WHETHER THE ENTRY MOVES THE TAX — before they type it, not after**
+>
+> 🛑 **Many required entries change no figure on the return**, because a cap or a threshold elsewhere is
+> already binding. ⛔ **A delivery that says "type this" and nothing else sends the person hunting for a
+> change that was never going to appear**, and the hunt ends in them doubting the instruction.
+> ✅ **State it in the same breath: what it fixes, and that the number at the bottom will not move.**
+> _(Worked case: a K-1's §199A information was missing from a 1040 — Form 8995 line 1 carried the
+> S corporation at zero. Entering it raised **line 10**, the deduction before the limitation, and left
+> **line 15** — the deduction itself — unchanged, because **line 14** — 20% of **line 13**, taxable income
+> *less net capital gain, qualified dividends included* — already bound; the wage and property figures never bite below the §199A threshold either.
+> **It is a correctness fix, not a money fix, and saying so is part of the delivery.**)_
+> ⚠️ **AND SAY WHAT THE CLAIM DEPENDS ON, because a cap that binds today can stop binding.** ⛔ **"It does
+> not move the tax" is true of the return AS IT STANDS**, not of the return after an open position is
+> settled. _(In that same case an unresolved question — whether officer compensation is qualified business
+> income at all — would, if answered the other way, drop total QBI far enough that the cap releases and the
+> entry moves the deduction from nothing to a real figure.)_
+> 🔑 **The general form: name the CAP or THRESHOLD that swallows it, so the person can see why.**
+>
+> ### 🔴 **A NETTING PRESENTATION MOVES BOTH SIDES — and a DIFFERENCE is not proof of an error**
+>
+> ⛔ **Where a firm policy nets two figures against each other and reports one at zero, the OTHER one
+> becomes the NET.** **Zeroing one side and leaving the other gross is not a presentation choice — it is a
+> wrong number**, and it is wrong in whichever direction the delivery forgot. _(Both halves of that error
+> appeared on one live return: the paper's own instruction had given the gross on both lines, and the
+> draft in the software had zero on one and nothing on the other.)_
+>
+> 🛑 **BUT DO NOT TURN "THE TWO PRESENTATIONS MUST AGREE" INTO A TEST. It is only true where netting was
+> AVAILABLE**, and a first version of this rule stated it unconditionally.
+> ⛔ **Where the policy's own gates fail, the two presentations genuinely differ — and the difference is the
+> thing the netted version would ERASE.** _(The live counter-example was one shareholder away: on the same
+> company, the other owner's **distributions exceed his CONTRIBUTIONS** — which is the policy's own first
+> gate — so netting is not available to him at all and his form must carry the gross. **Separately, his
+> distributions also exceed his BASIS**, and that is what creates a §1368(b)(2) capital gain. A preparer
+> applying "they must agree, so one side was missed" would have deleted it.)_
+> ⛔ **DO NOT COLLAPSE THOSE TWO TESTS — a first version of this rule did.** **The GATE is contributions
+> vs distributions; the GAIN is distributions vs basis.** ⚠️ **A failed gate does NOT imply a gain**, and
+> reading the gate as the gain test lets someone net a case the policy forbids: contribute a little, draw
+> a lot, against a large opening basis — no gain anywhere, and the net contribution is *negative*.
+> ✅ **So the order is: check the POLICY'S GATES first, per person; only then compare the two
+> presentations.** 🔑 **Where the gates pass, agreement is a useful arithmetic check. Where they fail, a
+> difference is the correct answer.**
+> ⛔ **And do not restate the policy here** — [`form-1120s-preparation.md` §5C-v](../../../projects/sops/form-1120s-preparation.md)
+> already carries it — **§5C-v, "the five gates"** — with its *"plus any stock ACQUIRED during the year"*
+> clause, which a restatement drops. **Point at it and add only what is new on this side of the return.**
+>
 > ✅ **So a form's NAME is now checkable at source** — `K1 INPUT (1120S)` *(Federal K-1 (1120S) Input
 > Worksheet)*, `SCH E (1040) PAGE 2`, `7203, BASIS WKST` were all read off that list, not inferred.
 > 🛑 **AND SO IS WHICH PACKAGE IT IS IN, which is half the answer** — a form in another package is not a
