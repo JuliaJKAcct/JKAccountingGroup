@@ -228,16 +228,16 @@ and `FOLLOW-UPS.md` row 33 too, but editing those falls outside this sweep's no-
 from this run's diff and flagged in the email for a normal reviewed follow-up instead of being
 self-merged._
 
-_**2026-09-05 run — ⛔ IT NEVER RAN TO COMPLETION, AND NO BASELINE BELOW REFLECTS IT.** The Routine
+_**2026-09-05 run — ⛔ IT NEVER RAN TO COMPLETION, AND NO BASELINE IN THE TABLE ABOVE REFLECTS IT.** The Routine
 (`trig_015LaKrto6FDKyUwHmZywqjS`, `0 7 * * 6`) **fired on time — 2026-09-05 07:10:26 UTC — and its
 run ended `ROUTINE_RUN_STATUS_ABANDONED` with no `finished_at`** (session `cse_016V9wPPT4JCLDTca28ck2UQ`).
 Confirmed a second, independent way: **no weekly report email exists for 2026-09-05.** Gmail holds
 the 2026-08-22 and 2026-08-29 reports and then stops. Nothing was committed, nothing was emailed,
-and no client file records that date. ⚠️ **The Routine itself is healthy and still enabled** — next
+and **no client file records a SWEEP on that date.** ⚠️ **Say it that way and not "no file mentions 09-05":** seven client files do carry 2026-09-05 — Lilian's own interactive work, plus three PRs that merged to `main` that day — so a reader checking the obvious way finds hits and concludes the run landed. **The absence is of sweep output specifically** (no `Weekend sweep (incremental, baseline …)` log line, no advanced baseline, no report email), not of the date. ⚠️ **The Routine itself is healthy and still enabled** — next
 fire **2026-09-12 07:08 UTC** — so there is nothing to re-arm; what failed is the run, not the
 schedule. **Every baseline above therefore still reads 2026-08-29, which is correct and must stay
 that way**: the gap 2026-08-29 → 2026-09-12 is real, and a baseline advanced to paper over it would
-erase two weeks of history for ~40 clients exactly as rule 3's box describes.
+erase two weeks of history for ~40 clients exactly as rule 3's box describes._
 
 _**2026-09-07 — the bounded manual catch-up that followed, and WHY IT IS NOT A SWEEP.** Lilian asked
 that day whether the sweep is actually working. The review found the failure above and then ran a

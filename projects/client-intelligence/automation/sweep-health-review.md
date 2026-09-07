@@ -6,7 +6,9 @@
 > 🔴 **YES — and it is new as of 2026-09-07. THE 2026-09-05 RUN FIRED AND DIED.**
 > `trig_015LaKrto6FDKyUwHmZywqjS` fired on schedule at **07:10:26 UTC** and ended
 > **`ROUTINE_RUN_STATUS_ABANDONED`** with no `finished_at` (session `cse_016V9wPPT4JCLDTca28ck2UQ`).
-> **No report email was sent, nothing was committed, no client file records that date** — confirmed
+> **No report email was sent, nothing was committed, and no client file records a SWEEP on that date**
+> — ⚠️ **not** "no file mentions 09-05": seven do, from Lilian's interactive work that day. What is
+> missing is sweep output — a `Weekend sweep` log line, an advanced baseline, the report — confirmed
 > independently in Gmail, which holds the 08-22 and 08-29 reports and then stops.
 > ⚠️ **Nothing is wrong with the Routine or the prompt.** It is still enabled and fires again
 > **2026-09-12 07:08 UTC**; there is nothing to re-arm and nothing to paste. **What failed is one
@@ -32,7 +34,7 @@
 > **Magnum 152 caught and reversed its OWN prior week's wrong conclusion** on the Comcast/FPL
 > credentials, keeping both versions. The chase pass prints ages in days and names what it did not
 > reach. **The defect is availability, not quality.**
-
+>
 > ### What happens on its own, and when
 > | When | What | Anyone needed? |
 > |---|---|---|
@@ -52,20 +54,31 @@
 > **A dead run and a clean run are indistinguishable in that number.** Never let it be counted
 > without first checking that the run actually completed.
 >
-> 🔵 **And the abandonment is itself the evidence §3 was waiting for.** §3's prediction was that the
-> run does not fit in one context and *"does not fail loudly — it thins out."* **It has now failed
-> loudly.** That is the same root cause reaching its end state, and it is a stronger signal than any
-> row count: a run that dies delivers **zero** clients, not thin ones. 🔑 **So the honest reading is
-> that the structural case for subagents is made — but it rests on ONE abandoned run**, and nobody
-> has yet confirmed *why* the session ended (context exhaustion is the leading hypothesis, not an
-> established fact — the run's own session `cse_016V9wPPT4JCLDTca28ck2UQ` has not been opened).
-> **Open that session before deciding**; it is the one place the actual cause is recorded.
+> ⚖️ **The evidence is SPLIT, and an earlier draft of this box hid half of it.** That draft said
+> *"the structural case for subagents is made."* ⛔ **It is not made, and saying so omitted the one
+> valid data point we have.**
+> - **Against splitting:** the 2026-08-29 run **ran to completion** and contributed **0** new
+>   `⚠️ CATCH-UP OWED` rows ([`sweep-state.md`](./sweep-state.md), 2c) — and §3's own gate reads
+>   *near zero → the ceiling was the first-pass backlog, and it has drained.* **That is the only
+>   reading taken from a run that actually finished**, and it argues for closing the row.
+> - **For splitting:** §3 predicted the run does not fit in one context and *"does not fail loudly —
+>   it thins out."* It has now failed **loudly**, which is the same cause at its end state and worse
+>   than thinning: a dead run delivers **zero** clients, not thin ones.
+>
+> 🛑 **Neither side wins on this evidence, and the tie is not broken by argument — it is broken by
+> ONE fact nobody has looked up: WHY the 2026-09-05 session ended.** Context exhaustion is the
+> hypothesis §3 predicted; it is **not** established. If the session ran out of context, §3 is
+> confirmed and the split is the answer. If it died of something else — an infrastructure fault, a
+> connector timeout — then the 08-29 zero stands and the answer is a **retry**, not a redesign.
+> 🔑 **Open `cse_016V9wPPT4JCLDTca28ck2UQ` before deciding.** ⓘ **Until then §7's standing
+> recommendation — *2026-08-24: STILL NOT YET* — is NOT overturned**; this box narrows what would
+> overturn it.
 >
 > ⚠️ **Whatever is decided about subagents, one thing is now independent of it:** a run can fail
 > completely and **nothing anywhere notices**. The failure was found nine days later, by hand,
 > because Lilian happened to ask. **A missing Saturday report is the cheapest possible alarm and it
 > does not exist.**
-
+>
 > ### Where the real record is
 > ⓘ **The firm's open loops live in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) — row 48 is this
 > matter, and it is the authority.** This box is a summary for whoever opens *this file*; if the two
