@@ -285,7 +285,7 @@ _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
 
 > ⓘ **Vitaliy Vasyutyk is ONE row for TEN companies, and that is deliberate.** He holds ten
-> Florida LLCs, all reached by one portal contact, and the firm bills them through six
+> LLCs — **nine Florida and one TENNESSEE (Zumfi 2)** — all reached by one portal contact, and the firm bills them through six
 > QuickBooks customer records that do **not** map one-to-one onto the companies — so a fact about
 > one company routinely arrives under another. Sweep him **by owner** (`710668`) and route each
 > fact to the company it belongs to, per the skill's "sweep by owner, assign by company" rule.
