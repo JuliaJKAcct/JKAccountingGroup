@@ -1,0 +1,378 @@
+Date,Transaction Type,Ref/Num,Name,Memo,Account Number,Account Name,Debit,Credit
+06/01/2026,Expense,,Palm Ridge Commercial,June yard & office rent,6500,Rent & Lease,4500.00,
+06/01/2026,Expense,,Palm Ridge Commercial,June yard & office rent,1000,Checking - Coastal First Bank 4471,,4500.00
+06/02/2026,Credit Card Expense,,Meta / Google Ads,June ad spend,6000,Advertising & Marketing,1200.00,
+06/02/2026,Credit Card Expense,,Meta / Google Ads,June ad spend,2100,Coastal First Visa 2210,,1200.00
+06/03/2026,Expense,,Southern Lumber & Truss,Truss package - Coral Bay,5000,Job Materials,8400.00,
+06/03/2026,Expense,,Southern Lumber & Truss,Truss package - Coral Bay,1000,Checking - Coastal First Bank 4471,,8400.00
+06/03/2026,Payment,,Harbor Point Development,ACH - inv 1836,1050,Undeposited Funds,58000.00,
+06/03/2026,Payment,,Harbor Point Development,ACH - inv 1836,1200,Accounts Receivable (A/R),,58000.00
+06/04/2026,Credit Card Expense,,Amazon Business,Office supplies,6300,Office Supplies & Software,480.00,
+06/04/2026,Credit Card Expense,,Amazon Business,Office supplies,2100,Coastal First Visa 2210,,480.00
+06/04/2026,Deposit,,Harbor Point Development,Bank deposit,1000,Checking - Coastal First Bank 4471,58000.00,
+06/04/2026,Deposit,,Harbor Point Development,Bank deposit,1050,Undeposited Funds,,58000.00
+06/05/2026,Bill Payment (Check),2101,Rivera Concrete LLC,Pay bill RC-2214,2000,Accounts Payable (A/P),22000.00,
+06/05/2026,Bill Payment (Check),2101,Rivera Concrete LLC,Pay bill RC-2214,1000,Checking - Coastal First Bank 4471,,22000.00
+06/05/2026,Credit Card Expense,,Comcast Business,Internet & phone,6700,Telephone & Internet,685.00,
+06/05/2026,Credit Card Expense,,Comcast Business,Internet & phone,2100,Coastal First Visa 2210,,685.00
+06/05/2026,Invoice,1841,Harbor Point Development,Progress billing #4 - Harbor Point Phase II,1200,Accounts Receivable (A/R),68000.00,
+06/05/2026,Invoice,1841,Harbor Point Development,Progress billing #4 - Harbor Point Phase II,4000,Construction Income,,68000.00
+06/06/2026,Credit Card Expense,,Home Depot Pro,"Job supplies - blades, fasteners",5900,Job Supplies,1450.00,
+06/06/2026,Credit Card Expense,,Home Depot Pro,"Job supplies - blades, fasteners",2100,Coastal First Visa 2210,,1450.00
+06/08/2026,Bill,RC-2261,Rivera Concrete LLC,Foundation & flatwork - Harbor Point,5100,Subcontractors,16800.00,
+06/08/2026,Bill,RC-2261,Rivera Concrete LLC,Foundation & flatwork - Harbor Point,2000,Accounts Payable (A/P),,16800.00
+06/08/2026,Expense,,Florida Power & Light,Yard & office electric,6800,Utilities,1240.00,
+06/08/2026,Expense,,Florida Power & Light,Yard & office electric,1000,Checking - Coastal First Bank 4471,,1240.00
+06/09/2026,Expense,,United Rentals,Excavator rental - 2 weeks,5300,Equipment Rental,2700.00,
+06/09/2026,Expense,,United Rentals,Excavator rental - 2 weeks,1000,Checking - Coastal First Bank 4471,,2700.00
+06/09/2026,Payment,,Coral Bay Homes,Check 8907 - inv 1837,1050,Undeposited Funds,47500.00,
+06/09/2026,Payment,,Coral Bay Homes,Check 8907 - inv 1837,1200,Accounts Receivable (A/R),,47500.00
+06/10/2026,Check,2105,Sunshine CPA Group,Monthly accounting,6400,Professional Fees,950.00,
+06/10/2026,Check,2105,Sunshine CPA Group,Monthly accounting,1000,Checking - Coastal First Bank 4471,,950.00
+06/10/2026,Deposit,,Coral Bay Homes,Bank deposit,1000,Checking - Coastal First Bank 4471,47500.00,
+06/10/2026,Deposit,,Coral Bay Homes,Bank deposit,1050,Undeposited Funds,,47500.00
+06/10/2026,Invoice,1842,Coral Bay Homes,Progress billing #3 - Coral Bay Lot 14,1200,Accounts Receivable (A/R),52000.00,
+06/10/2026,Invoice,1842,Coral Bay Homes,Progress billing #3 - Coral Bay Lot 14,4000,Construction Income,,52000.00
+06/11/2026,Expense,,Bayview Concrete Products,Ready-mix - Harbor Point,5000,Job Materials,6200.00,
+06/11/2026,Expense,,Bayview Concrete Products,Ready-mix - Harbor Point,1000,Checking - Coastal First Bank 4471,,6200.00
+06/12/2026,Bill Payment (Check),2102,Gulf Coast Building Supply,Pay bill GC-76988,2000,Accounts Payable (A/P),28500.00,
+06/12/2026,Bill Payment (Check),2102,Gulf Coast Building Supply,Pay bill GC-76988,1000,Checking - Coastal First Bank 4471,,28500.00
+06/12/2026,Credit Card Expense,,Tri County Diesel,Service - F-550 #3,6600,Repairs & Maintenance,1600.00,
+06/12/2026,Credit Card Expense,,Tri County Diesel,Service - F-550 #3,2100,Coastal First Visa 2210,,1600.00
+06/12/2026,Deposit,,Meridian Property Group,Bank deposit,1000,Checking - Coastal First Bank 4471,36000.00,
+06/12/2026,Deposit,,Meridian Property Group,Bank deposit,1050,Undeposited Funds,,36000.00
+06/12/2026,Payment,,Meridian Property Group,ACH - inv 1838,1050,Undeposited Funds,36000.00,
+06/12/2026,Payment,,Meridian Property Group,ACH - inv 1838,1200,Accounts Receivable (A/R),,36000.00
+06/15/2026,Bill,PS-1140,Peninsula Sitework LLC,Excavation - Coral Bay Lot 14,5100,Subcontractors,14500.00,
+06/15/2026,Bill,PS-1140,Peninsula Sitework LLC,Excavation - Coral Bay Lot 14,2000,Accounts Payable (A/P),,14500.00
+06/15/2026,Expense,,"Coastal First Bank, N.A.",Equipment loan payment,2600,Equipment Loan - Coastal First Bank,3850.00,
+06/15/2026,Expense,,"Coastal First Bank, N.A.",Equipment loan payment,1000,Checking - Coastal First Bank 4471,,3850.00
+06/15/2026,Expense,,EFTPS,May payroll tax deposit,2200,Payroll Liabilities,3900.00,
+06/15/2026,Expense,,EFTPS,May payroll tax deposit,1000,Checking - Coastal First Bank 4471,,3900.00
+06/16/2026,Credit Card Expense,,Intuit / Microsoft 365,Software subscriptions,6300,Office Supplies & Software,670.00,
+06/16/2026,Credit Card Expense,,Intuit / Microsoft 365,Software subscriptions,2100,Coastal First Visa 2210,,670.00
+06/17/2026,Credit Card Expense,,Gulf Coast Building Supply LLC,Misc materials - card,5000,Job Materials,4100.00,
+06/17/2026,Credit Card Expense,,Gulf Coast Building Supply LLC,Misc materials - card,2100,Coastal First Visa 2210,,4100.00
+06/17/2026,Invoice,1843,Seaside Renovations,Progress billing #2 - Seaside Clubhouse,1200,Accounts Receivable (A/R),45000.00,
+06/17/2026,Invoice,1843,Seaside Renovations,Progress billing #2 - Seaside Clubhouse,4000,Construction Income,,45000.00
+06/18/2026,Credit Card Expense,,Various - job site meals,Crew meals,7500,Meals & Entertainment,540.00,
+06/18/2026,Credit Card Expense,,Various - job site meals,Crew meals,2100,Coastal First Visa 2210,,540.00
+06/18/2026,Payment,,Seaside Renovations,Check 4412 - inv 1839,1050,Undeposited Funds,9800.00,
+06/18/2026,Payment,,Seaside Renovations,Check 4412 - inv 1839,1200,Accounts Receivable (A/R),,9800.00
+06/19/2026,Bill Payment (Check),2103,Peninsula Sitework LLC,Pay bill PS-1102,2000,Accounts Payable (A/P),18700.00,
+06/19/2026,Bill Payment (Check),2103,Peninsula Sitework LLC,Pay bill PS-1102,1000,Checking - Coastal First Bank 4471,,18700.00
+06/19/2026,Deposit,,Palmetto Partners LLC,Bank deposit,1000,Checking - Coastal First Bank 4471,41700.00,
+06/19/2026,Deposit,,Palmetto Partners LLC,Bank deposit,1050,Undeposited Funds,,41700.00
+06/19/2026,Payment,,Palmetto Partners LLC,ACH - inv 1840,1050,Undeposited Funds,41700.00,
+06/19/2026,Payment,,Palmetto Partners LLC,ACH - inv 1840,1200,Accounts Receivable (A/R),,41700.00
+06/20/2026,Credit Card Expense,,Lowe's Pro,Job supplies - safety & consumables,5900,Job Supplies,1550.00,
+06/20/2026,Credit Card Expense,,Lowe's Pro,Job supplies - safety & consumables,2100,Coastal First Visa 2210,,1550.00
+06/20/2026,Expense,,Coastal First Visa 2210,Credit card payment,2100,Coastal First Visa 2210,14280.00,
+06/20/2026,Expense,,Coastal First Visa 2210,Credit card payment,1000,Checking - Coastal First Bank 4471,,14280.00
+06/22/2026,Bill,DF-3078,Delgado Framing Inc,Framing labor - Seaside Clubhouse,5100,Subcontractors,10000.00,
+06/22/2026,Bill,DF-3078,Delgado Framing Inc,Framing labor - Seaside Clubhouse,2000,Accounts Payable (A/P),,10000.00
+06/23/2026,Expense,,Sunbelt Rentals,Lift rental,5300,Equipment Rental,1800.00,
+06/23/2026,Expense,,Sunbelt Rentals,Lift rental,1000,Checking - Coastal First Bank 4471,,1800.00
+06/23/2026,Payment,,Harbor Point Development,ACH - inv 1841 partial,1050,Undeposited Funds,39000.00,
+06/23/2026,Payment,,Harbor Point Development,ACH - inv 1841 partial,1200,Accounts Receivable (A/R),,39000.00
+06/24/2026,Check,2106,Ace Mobile Truck Repair,Brake service - dump truck,6600,Repairs & Maintenance,1150.00,
+06/24/2026,Check,2106,Ace Mobile Truck Repair,Brake service - dump truck,1000,Checking - Coastal First Bank 4471,,1150.00
+06/24/2026,Deposit,,Harbor Point Development,Bank deposit,1000,Checking - Coastal First Bank 4471,39000.00,
+06/24/2026,Deposit,,Harbor Point Development,Bank deposit,1050,Undeposited Funds,,39000.00
+06/24/2026,Invoice,1844,Palmetto Partners LLC,Progress billing #1 - Palmetto Bay sitework,1200,Accounts Receivable (A/R),30000.00,
+06/24/2026,Invoice,1844,Palmetto Partners LLC,Progress billing #1 - Palmetto Bay sitework,4000,Construction Income,,30000.00
+06/25/2026,Expense,,Tri-County Steel,Rebar & mesh,5000,Job Materials,3300.00,
+06/25/2026,Expense,,Tri-County Steel,Rebar & mesh,1000,Checking - Coastal First Bank 4471,,3300.00
+06/26/2026,Bill,GC-77412,Gulf Coast Building Supply,Lumber & fasteners - June account,5000,Job Materials,30000.00,
+06/26/2026,Bill,GC-77412,Gulf Coast Building Supply,Lumber & fasteners - June account,2000,Accounts Payable (A/P),,30000.00
+06/26/2026,Bill Payment (Check),2104,Delgado Framing Inc,Pay bill DF-2990,2000,Accounts Payable (A/P),12800.00,
+06/26/2026,Bill Payment (Check),2104,Delgado Framing Inc,Pay bill DF-2990,1000,Checking - Coastal First Bank 4471,,12800.00
+06/26/2026,Deposit,,Coral Bay Homes,Bank deposit,1000,Checking - Coastal First Bank 4471,30000.00,
+06/26/2026,Deposit,,Coral Bay Homes,Bank deposit,1050,Undeposited Funds,,30000.00
+06/26/2026,Payment,,Coral Bay Homes,Check 8955 - inv 1842 partial,1050,Undeposited Funds,30000.00,
+06/26/2026,Payment,,Coral Bay Homes,Check 8955 - inv 1842 partial,1200,Accounts Receivable (A/R),,30000.00
+06/28/2026,Expense,,Owner,Owner distribution,3100,Owner's Draw,12000.00,
+06/28/2026,Expense,,Owner,Owner distribution,1000,Checking - Coastal First Bank 4471,,12000.00
+06/29/2026,Invoice,1845,Meridian Property Group,June service & repair calls,1200,Accounts Receivable (A/R),15000.00,
+06/29/2026,Invoice,1845,Meridian Property Group,June service & repair calls,4100,Service & Repair Income,,15000.00
+06/30/2026,Bill Payment (Check),,Gulf Coast Building Supply,ACH on account,2000,Accounts Payable (A/P),10000.00,
+06/30/2026,Bill Payment (Check),,Gulf Coast Building Supply,ACH on account,1000,Checking - Coastal First Bank 4471,,10000.00
+06/30/2026,Credit Card Expense,,WEX Fleet,Fuel - June,6900,Vehicle & Fuel,2820.00,
+06/30/2026,Credit Card Expense,,WEX Fleet,Fuel - June,2100,Coastal First Visa 2210,,2820.00
+06/30/2026,Expense,,"Coastal First Bank, N.A.",Account analysis fee,6100,Bank Charges & Fees,95.00,
+06/30/2026,Expense,,"Coastal First Bank, N.A.",Account analysis fee,1000,Checking - Coastal First Bank 4471,,95.00
+06/30/2026,Expense,,Unknown,Unidentified ACH - needs review,1300,Ask My Accountant,2400.00,
+06/30/2026,Expense,,Unknown,Unidentified ACH - needs review,1000,Checking - Coastal First Bank 4471,,2400.00
+06/30/2026,Journal Entry,JE-0601,Gusto Payroll,June payroll,5200,Direct Labor,21000.00,
+06/30/2026,Journal Entry,JE-0601,Gusto Payroll,June payroll,7000,Office Wages,12000.00,
+06/30/2026,Journal Entry,JE-0601,Gusto Payroll,June payroll,7100,Payroll Taxes,3900.00,
+06/30/2026,Journal Entry,JE-0601,Gusto Payroll,June payroll,1000,Checking - Coastal First Bank 4471,,33000.00
+06/30/2026,Journal Entry,JE-0601,Gusto Payroll,June payroll,2200,Payroll Liabilities,,3900.00
+07/01/2026,Expense,,Palm Ridge Commercial,July yard & office rent,6500,Rent & Lease,4500.00,
+07/01/2026,Expense,,Palm Ridge Commercial,July yard & office rent,1000,Checking - Coastal First Bank 4471,,4500.00
+07/02/2026,Credit Card Expense,,Meta / Google Ads,July ad spend,6000,Advertising & Marketing,1200.00,
+07/02/2026,Credit Card Expense,,Meta / Google Ads,July ad spend,2100,Coastal First Visa 2210,,1200.00
+07/02/2026,Deposit,,Harbor Point Development,Bank deposit,1000,Checking - Coastal First Bank 4471,61000.00,
+07/02/2026,Deposit,,Harbor Point Development,Bank deposit,1050,Undeposited Funds,,61000.00
+07/02/2026,Payment,,Harbor Point Development,ACH - inv 1841 balance,1050,Undeposited Funds,61000.00,
+07/02/2026,Payment,,Harbor Point Development,ACH - inv 1841 balance,1200,Accounts Receivable (A/R),,61000.00
+07/06/2026,Credit Card Expense,,Amazon Business,Office supplies,6300,Office Supplies & Software,545.00,
+07/06/2026,Credit Card Expense,,Amazon Business,Office supplies,2100,Coastal First Visa 2210,,545.00
+07/06/2026,Credit Card Expense,,Comcast Business,Internet & phone,6700,Telephone & Internet,685.00,
+07/06/2026,Credit Card Expense,,Comcast Business,Internet & phone,2100,Coastal First Visa 2210,,685.00
+07/06/2026,Expense,,Southern Lumber & Truss,Truss & panel package,5000,Job Materials,9100.00,
+07/06/2026,Expense,,Southern Lumber & Truss,Truss & panel package,1000,Checking - Coastal First Bank 4471,,9100.00
+07/06/2026,Invoice,1846,Harbor Point Development,Progress billing #5 - Harbor Point Phase II,1200,Accounts Receivable (A/R),72000.00,
+07/06/2026,Invoice,1846,Harbor Point Development,Progress billing #5 - Harbor Point Phase II,4000,Construction Income,,72000.00
+07/07/2026,Bill Payment (Check),2110,Gulf Coast Building Supply,Pay bill GC-77412 partial,2000,Accounts Payable (A/P),24000.00,
+07/07/2026,Bill Payment (Check),2110,Gulf Coast Building Supply,Pay bill GC-77412 partial,1000,Checking - Coastal First Bank 4471,,24000.00
+07/07/2026,Credit Card Expense,,Home Depot Pro,Job supplies,5900,Job Supplies,1600.00,
+07/07/2026,Credit Card Expense,,Home Depot Pro,Job supplies,2100,Coastal First Visa 2210,,1600.00
+07/08/2026,Expense,,Florida Power & Light,Yard & office electric,6800,Utilities,1390.00,
+07/08/2026,Expense,,Florida Power & Light,Yard & office electric,1000,Checking - Coastal First Bank 4471,,1390.00
+07/08/2026,Payment,,Coral Bay Homes,Check 9012 - inv 1842 balance,1050,Undeposited Funds,44000.00,
+07/08/2026,Payment,,Coral Bay Homes,Check 9012 - inv 1842 balance,1200,Accounts Receivable (A/R),,44000.00
+07/09/2026,Bill,RC-2318,Rivera Concrete LLC,Slab & curbs - Meridian,5100,Subcontractors,18200.00,
+07/09/2026,Bill,RC-2318,Rivera Concrete LLC,Slab & curbs - Meridian,2000,Accounts Payable (A/P),,18200.00
+07/09/2026,Deposit,,Coral Bay Homes,Bank deposit,1000,Checking - Coastal First Bank 4471,44000.00,
+07/09/2026,Deposit,,Coral Bay Homes,Bank deposit,1050,Undeposited Funds,,44000.00
+07/10/2026,Check,2115,Sunshine CPA Group,Monthly accounting,6400,Professional Fees,1100.00,
+07/10/2026,Check,2115,Sunshine CPA Group,Monthly accounting,1000,Checking - Coastal First Bank 4471,,1100.00
+07/10/2026,Expense,,United Rentals,Excavator & compactor,5300,Equipment Rental,3200.00,
+07/10/2026,Expense,,United Rentals,Excavator & compactor,1000,Checking - Coastal First Bank 4471,,3200.00
+07/11/2026,Credit Card Expense,,Tri-County Diesel,Hydraulic hose & service - excavator,6600,Repairs & Maintenance,2150.00,
+07/11/2026,Credit Card Expense,,Tri-County Diesel,Hydraulic hose & service - excavator,2100,Coastal First Visa 2210,,2150.00
+07/13/2026,Expense,,Bayview Concrete Products,Ready-mix - Meridian,5000,Job Materials,6800.00,
+07/13/2026,Expense,,Bayview Concrete Products,Ready-mix - Meridian,1000,Checking - Coastal First Bank 4471,,6800.00
+07/13/2026,Invoice,1847,Coral Bay Homes,Progress billing #4 - Coral Bay Lot 14,1200,Accounts Receivable (A/R),48000.00,
+07/13/2026,Invoice,1847,Coral Bay Homes,Progress billing #4 - Coral Bay Lot 14,4000,Construction Income,,48000.00
+07/14/2026,Bill Payment (Check),2111,Rivera Concrete LLC,Pay bill RC-2261,2000,Accounts Payable (A/P),16800.00,
+07/14/2026,Bill Payment (Check),2111,Rivera Concrete LLC,Pay bill RC-2261,1000,Checking - Coastal First Bank 4471,,16800.00
+07/14/2026,Payment,,Seaside Renovations,ACH - inv 1843,1050,Undeposited Funds,52500.00,
+07/14/2026,Payment,,Seaside Renovations,ACH - inv 1843,1200,Accounts Receivable (A/R),,52500.00
+07/15/2026,Deposit,,Seaside Renovations,Bank deposit,1000,Checking - Coastal First Bank 4471,52500.00,
+07/15/2026,Deposit,,Seaside Renovations,Bank deposit,1050,Undeposited Funds,,52500.00
+07/15/2026,Expense,,"Coastal First Bank, N.A.",Equipment loan payment,2600,Equipment Loan - Coastal First Bank,3850.00,
+07/15/2026,Expense,,"Coastal First Bank, N.A.",Equipment loan payment,1000,Checking - Coastal First Bank 4471,,3850.00
+07/15/2026,Expense,,EFTPS,June payroll tax deposit,2200,Payroll Liabilities,3900.00,
+07/15/2026,Expense,,EFTPS,June payroll tax deposit,1000,Checking - Coastal First Bank 4471,,3900.00
+07/16/2026,Bill,PS-1188,Peninsula Sitework LLC,Site clearing - Palmetto Bay,5100,Subcontractors,15400.00,
+07/16/2026,Bill,PS-1188,Peninsula Sitework LLC,Site clearing - Palmetto Bay,2000,Accounts Payable (A/P),,15400.00
+07/16/2026,Credit Card Expense,,Intuit / Microsoft 365,Software subscriptions,6300,Office Supplies & Software,695.00,
+07/16/2026,Credit Card Expense,,Intuit / Microsoft 365,Software subscriptions,2100,Coastal First Visa 2210,,695.00
+07/17/2026,Credit Card Expense,,Various - job site meals,Crew meals,7500,Meals & Entertainment,615.00,
+07/17/2026,Credit Card Expense,,Various - job site meals,Crew meals,2100,Coastal First Visa 2210,,615.00
+07/17/2026,Deposit,,Meridian Property Group,Bank deposit,1000,Checking - Coastal First Bank 4471,38000.00,
+07/17/2026,Deposit,,Meridian Property Group,Bank deposit,1050,Undeposited Funds,,38000.00
+07/17/2026,Payment,,Meridian Property Group,ACH - inv 1845,1050,Undeposited Funds,38000.00,
+07/17/2026,Payment,,Meridian Property Group,ACH - inv 1845,1200,Accounts Receivable (A/R),,38000.00
+07/20/2026,Credit Card Expense,,Gulf Coast Building Supply LLC,Misc materials - card,5000,Job Materials,4200.00,
+07/20/2026,Credit Card Expense,,Gulf Coast Building Supply LLC,Misc materials - card,2100,Coastal First Visa 2210,,4200.00
+07/20/2026,Expense,,Coastal First Visa 2210,Credit card payment,2100,Coastal First Visa 2210,15095.00,
+07/20/2026,Expense,,Coastal First Visa 2210,Credit card payment,1000,Checking - Coastal First Bank 4471,,15095.00
+07/20/2026,Invoice,1848,Meridian Property Group,Progress billing #1 - Meridian warehouse,1200,Accounts Receivable (A/R),46000.00,
+07/20/2026,Invoice,1848,Meridian Property Group,Progress billing #1 - Meridian warehouse,4000,Construction Income,,46000.00
+07/21/2026,Bill Payment (Check),2112,Peninsula Sitework LLC,Pay bill PS-1140,2000,Accounts Payable (A/P),14500.00,
+07/21/2026,Bill Payment (Check),2112,Peninsula Sitework LLC,Pay bill PS-1140,1000,Checking - Coastal First Bank 4471,,14500.00
+07/21/2026,Credit Card Expense,,Lowe's Pro,Job supplies,5900,Job Supplies,1400.00,
+07/21/2026,Credit Card Expense,,Lowe's Pro,Job supplies,2100,Coastal First Visa 2210,,1400.00
+07/22/2026,Expense,,SRE Holdings,Outgoing wire - purpose unknown,1300,Ask My Accountant,5600.00,
+07/22/2026,Expense,,SRE Holdings,Outgoing wire - purpose unknown,1000,Checking - Coastal First Bank 4471,,5600.00
+07/22/2026,Payment,,Palmetto Partners LLC,ACH - inv 1844,1050,Undeposited Funds,34800.00,
+07/22/2026,Payment,,Palmetto Partners LLC,ACH - inv 1844,1200,Accounts Receivable (A/R),,34800.00
+07/23/2026,Bill,DF-3141,Delgado Framing Inc,Framing labor - Coral Bay,5100,Subcontractors,10000.00,
+07/23/2026,Bill,DF-3141,Delgado Framing Inc,Framing labor - Coral Bay,2000,Accounts Payable (A/P),,10000.00
+07/23/2026,Deposit,,Palmetto Partners LLC,Bank deposit,1000,Checking - Coastal First Bank 4471,34800.00,
+07/23/2026,Deposit,,Palmetto Partners LLC,Bank deposit,1050,Undeposited Funds,,34800.00
+07/24/2026,Bill Payment (Check),2113,Rivera Concrete LLC,Pay bill RC-2318 partial,2000,Accounts Payable (A/P),4800.00,
+07/24/2026,Bill Payment (Check),2113,Rivera Concrete LLC,Pay bill RC-2318 partial,1000,Checking - Coastal First Bank 4471,,4800.00
+07/24/2026,Expense,,Sunbelt Rentals,Lift rental,5300,Equipment Rental,1800.00,
+07/24/2026,Expense,,Sunbelt Rentals,Lift rental,1000,Checking - Coastal First Bank 4471,,1800.00
+07/25/2026,Check,2116,Ace Mobile Truck Repair,Tires - service truck,6600,Repairs & Maintenance,1250.00,
+07/25/2026,Check,2116,Ace Mobile Truck Repair,Tires - service truck,1000,Checking - Coastal First Bank 4471,,1250.00
+07/26/2026,Expense,,Owner,Owner distribution,3100,Owner's Draw,12000.00,
+07/26/2026,Expense,,Owner,Owner distribution,1000,Checking - Coastal First Bank 4471,,12000.00
+07/27/2026,Expense,,Tri-County Steel,Rebar,5000,Job Materials,3300.00,
+07/27/2026,Expense,,Tri-County Steel,Rebar,1000,Checking - Coastal First Bank 4471,,3300.00
+07/27/2026,Invoice,1849,Palmetto Partners LLC,Progress billing #2 - Palmetto Bay sitework,1200,Accounts Receivable (A/R),32000.00,
+07/27/2026,Invoice,1849,Palmetto Partners LLC,Progress billing #2 - Palmetto Bay sitework,4000,Construction Income,,32000.00
+07/28/2026,Bill,GC-78033,Gulf Coast Building Supply,Lumber & hardware - July account,5000,Job Materials,32000.00,
+07/28/2026,Bill,GC-78033,Gulf Coast Building Supply,Lumber & hardware - July account,2000,Accounts Payable (A/P),,32000.00
+07/28/2026,Bill Payment (Check),2114,Delgado Framing Inc,Pay bill DF-3078,2000,Accounts Payable (A/P),12900.00,
+07/28/2026,Bill Payment (Check),2114,Delgado Framing Inc,Pay bill DF-3078,1000,Checking - Coastal First Bank 4471,,12900.00
+07/29/2026,Payment,,Palmetto Partners LLC,Check 2207 - inv 1849 deposit,1050,Undeposited Funds,6700.00,
+07/29/2026,Payment,,Palmetto Partners LLC,Check 2207 - inv 1849 deposit,1200,Accounts Receivable (A/R),,6700.00
+07/30/2026,Payment,,Harbor Point Development,ACH - inv 1846 partial,1050,Undeposited Funds,31000.00,
+07/30/2026,Payment,,Harbor Point Development,ACH - inv 1846 partial,1200,Accounts Receivable (A/R),,31000.00
+07/31/2026,Bill Payment (Check),,Gulf Coast Building Supply,ACH on account,2000,Accounts Payable (A/P),15000.00,
+07/31/2026,Bill Payment (Check),,Gulf Coast Building Supply,ACH on account,1000,Checking - Coastal First Bank 4471,,15000.00
+07/31/2026,Credit Card Expense,,WEX Fleet,Fuel - July,6900,Vehicle & Fuel,2960.00,
+07/31/2026,Credit Card Expense,,WEX Fleet,Fuel - July,2100,Coastal First Visa 2210,,2960.00
+07/31/2026,Deposit,,Harbor Point Development,Bank deposit,1000,Checking - Coastal First Bank 4471,31000.00,
+07/31/2026,Deposit,,Harbor Point Development,Bank deposit,1050,Undeposited Funds,,31000.00
+07/31/2026,Expense,,"Coastal First Bank, N.A.",Account analysis fee,6100,Bank Charges & Fees,110.00,
+07/31/2026,Expense,,"Coastal First Bank, N.A.",Account analysis fee,1000,Checking - Coastal First Bank 4471,,110.00
+07/31/2026,Invoice,1850,Seaside Renovations,July service & repair calls,1200,Accounts Receivable (A/R),17000.00,
+07/31/2026,Invoice,1850,Seaside Renovations,July service & repair calls,4100,Service & Repair Income,,17000.00
+07/31/2026,Journal Entry,JE-0701,Gusto Payroll,July payroll,5200,Direct Labor,22000.00,
+07/31/2026,Journal Entry,JE-0701,Gusto Payroll,July payroll,7000,Office Wages,12000.00,
+07/31/2026,Journal Entry,JE-0701,Gusto Payroll,July payroll,7100,Payroll Taxes,3900.00,
+07/31/2026,Journal Entry,JE-0701,Gusto Payroll,July payroll,1000,Checking - Coastal First Bank 4471,,34000.00
+07/31/2026,Journal Entry,JE-0701,Gusto Payroll,July payroll,2200,Payroll Liabilities,,3900.00
+08/03/2026,Credit Card Expense,,Meta / Google Ads,August ad spend,6000,Advertising & Marketing,1200.00,
+08/03/2026,Credit Card Expense,,Meta / Google Ads,August ad spend,2100,Coastal First Visa 2210,,1200.00
+08/03/2026,Expense,,Palm Ridge Commercial,August yard & office rent,6500,Rent & Lease,4500.00,
+08/03/2026,Expense,,Palm Ridge Commercial,August yard & office rent,1000,Checking - Coastal First Bank 4471,,4500.00
+08/04/2026,Deposit,,Coral Bay Homes,Bank deposit,1000,Checking - Coastal First Bank 4471,47000.00,
+08/04/2026,Deposit,,Coral Bay Homes,Bank deposit,1050,Undeposited Funds,,47000.00
+08/04/2026,Payment,,Coral Bay Homes,ACH - inv 1847,1050,Undeposited Funds,47000.00,
+08/04/2026,Payment,,Coral Bay Homes,ACH - inv 1847,1200,Accounts Receivable (A/R),,47000.00
+08/05/2026,Bill Payment (Check),2120,Gulf Coast Building Supply,Pay bill GC-78033,2000,Accounts Payable (A/P),32000.00,
+08/05/2026,Bill Payment (Check),2120,Gulf Coast Building Supply,Pay bill GC-78033,1000,Checking - Coastal First Bank 4471,,32000.00
+08/05/2026,Check,2126,Marlin & Associates PA,Entity restructuring & loan covenant review,6400,Professional Fees,14500.00,
+08/05/2026,Check,2126,Marlin & Associates PA,Entity restructuring & loan covenant review,1000,Checking - Coastal First Bank 4471,,14500.00
+08/05/2026,Credit Card Expense,,Amazon Business,Office supplies,6300,Office Supplies & Software,520.00,
+08/05/2026,Credit Card Expense,,Amazon Business,Office supplies,2100,Coastal First Visa 2210,,520.00
+08/05/2026,Credit Card Expense,,Comcast Business,Internet & phone,6700,Telephone & Internet,710.00,
+08/05/2026,Credit Card Expense,,Comcast Business,Internet & phone,2100,Coastal First Visa 2210,,710.00
+08/05/2026,Invoice,1851,Harbor Point Development,Progress billing #6 - Harbor Point Phase II,1200,Accounts Receivable (A/R),76000.00,
+08/05/2026,Invoice,1851,Harbor Point Development,Progress billing #6 - Harbor Point Phase II,4000,Construction Income,,76000.00
+08/06/2026,Check,2131,,Payee not recorded - needs review,1300,Ask My Accountant,3500.00,
+08/06/2026,Check,2131,,Payee not recorded - needs review,1000,Checking - Coastal First Bank 4471,,3500.00
+08/06/2026,Credit Card Expense,,Home Depot Pro,Job supplies,5900,Job Supplies,1700.00,
+08/06/2026,Credit Card Expense,,Home Depot Pro,Job supplies,2100,Coastal First Visa 2210,,1700.00
+08/06/2026,Expense,,Southern Lumber & Truss,Truss package - Meridian,5000,Job Materials,12400.00,
+08/06/2026,Expense,,Southern Lumber & Truss,Truss package - Meridian,1000,Checking - Coastal First Bank 4471,,12400.00
+08/07/2026,Bill,GC-78390,Gulf Coast Building Supply,Lumber - Coral Bay,5000,Job Materials,12500.00,
+08/07/2026,Bill,GC-78390,Gulf Coast Building Supply,Lumber - Coral Bay,2000,Accounts Payable (A/P),,12500.00
+08/07/2026,Check,2129,Gulf Coast Equipment Co,Bobcat S76 skid steer loader - serial A3W512,6600,Repairs & Maintenance,28000.00,
+08/07/2026,Check,2129,Gulf Coast Equipment Co,Bobcat S76 skid steer loader - serial A3W512,1000,Checking - Coastal First Bank 4471,,28000.00
+08/07/2026,Expense,,Florida Power & Light,Yard & office electric,6800,Utilities,1455.00,
+08/07/2026,Expense,,Florida Power & Light,Yard & office electric,1000,Checking - Coastal First Bank 4471,,1455.00
+08/07/2026,Expense,,United Rentals,Compactor rental,5300,Equipment Rental,2400.00,
+08/07/2026,Expense,,United Rentals,Compactor rental,1000,Checking - Coastal First Bank 4471,,2400.00
+08/08/2026,Deposit,,Harbor Point Development,Bank deposit,1000,Checking - Coastal First Bank 4471,18500.00,
+08/08/2026,Deposit,,Harbor Point Development,Bank deposit,1050,Undeposited Funds,,18500.00
+08/08/2026,Payment,,Harbor Point Development,Check 5521 - inv 1846 balance,1050,Undeposited Funds,18500.00,
+08/08/2026,Payment,,Harbor Point Development,Check 5521 - inv 1846 balance,1200,Accounts Receivable (A/R),,18500.00
+08/09/2026,Credit Card Expense,,Nordstrom - Aventura,Supplies,6300,Office Supplies & Software,1340.00,
+08/09/2026,Credit Card Expense,,Nordstrom - Aventura,Supplies,2100,Coastal First Visa 2210,,1340.00
+08/10/2026,Bill,RC-2402,Rivera Concrete LLC,Slab - Meridian warehouse,5100,Subcontractors,19000.00,
+08/10/2026,Bill,RC-2402,Rivera Concrete LLC,Slab - Meridian warehouse,2000,Accounts Payable (A/P),,19000.00
+08/10/2026,Expense,,,,8000,Uncategorized Expense,1250.00,
+08/10/2026,Expense,,,,1000,Checking - Coastal First Bank 4471,,1250.00
+08/11/2026,Deposit,,Harbor Point Development,Bank deposit,1000,Checking - Coastal First Bank 4471,18500.00,
+08/11/2026,Deposit,,Harbor Point Development,Bank deposit,1050,Undeposited Funds,,18500.00
+08/11/2026,Payment,,Harbor Point Development,Check 5521 - inv 1846 balance,1050,Undeposited Funds,18500.00,
+08/11/2026,Payment,,Harbor Point Development,Check 5521 - inv 1846 balance,1200,Accounts Receivable (A/R),,18500.00
+08/12/2026,Bill Payment (Check),,Gulf Coast Building Supply,ACH - invoice GC-78390 partial,2000,Accounts Payable (A/P),4820.00,
+08/12/2026,Bill Payment (Check),,Gulf Coast Building Supply,ACH - invoice GC-78390 partial,1000,Checking - Coastal First Bank 4471,,4820.00
+08/12/2026,Invoice,1852,Coral Bay Homes,Progress billing #5 - Coral Bay Lot 14,1200,Accounts Receivable (A/R),54000.00,
+08/12/2026,Invoice,1852,Coral Bay Homes,Progress billing #5 - Coral Bay Lot 14,4000,Construction Income,,54000.00
+08/13/2026,Bill Payment (Check),,Gulf Coast Building Supply,ACH - invoice GC-78390 partial,2000,Accounts Payable (A/P),4820.00,
+08/13/2026,Bill Payment (Check),,Gulf Coast Building Supply,ACH - invoice GC-78390 partial,1000,Checking - Coastal First Bank 4471,,4820.00
+08/13/2026,Deposit,,Harbor Point Development,Bank deposit,1000,Checking - Coastal First Bank 4471,42000.00,
+08/13/2026,Deposit,,Harbor Point Development,Bank deposit,1050,Undeposited Funds,,42000.00
+08/13/2026,Expense,,Bayview Concrete Products,Ready-mix - Meridian slab,5000,Job Materials,9850.00,
+08/13/2026,Expense,,Bayview Concrete Products,Ready-mix - Meridian slab,1000,Checking - Coastal First Bank 4471,,9850.00
+08/13/2026,Payment,,Harbor Point Development,ACH - inv 1851 partial,1050,Undeposited Funds,42000.00,
+08/13/2026,Payment,,Harbor Point Development,ACH - inv 1851 partial,1200,Accounts Receivable (A/R),,42000.00
+08/14/2026,Bill Payment (Check),2121,Rivera Concrete LLC,Pay bill RC-2318 balance,2000,Accounts Payable (A/P),18200.00,
+08/14/2026,Bill Payment (Check),2121,Rivera Concrete LLC,Pay bill RC-2318 balance,1000,Checking - Coastal First Bank 4471,,18200.00
+08/14/2026,Credit Card Expense,,Tri-County Diesel,Hydraulic pump replacement - excavator,6600,Repairs & Maintenance,5900.00,
+08/14/2026,Credit Card Expense,,Tri-County Diesel,Hydraulic pump replacement - excavator,2100,Coastal First Visa 2210,,5900.00
+08/14/2026,Deposit,,,Unmatched bank deposit,1000,Checking - Coastal First Bank 4471,2600.00,
+08/14/2026,Deposit,,,Unmatched bank deposit,8100,Uncategorized Income,,2600.00
+08/14/2026,Expense,,"Coastal First Bank, N.A.",Equipment loan payment,2600,Equipment Loan - Coastal First Bank,3850.00,
+08/14/2026,Expense,,"Coastal First Bank, N.A.",Equipment loan payment,1000,Checking - Coastal First Bank 4471,,3850.00
+08/14/2026,Expense,,EFTPS,July payroll tax deposit,2200,Payroll Liabilities,3900.00,
+08/14/2026,Expense,,EFTPS,July payroll tax deposit,1000,Checking - Coastal First Bank 4471,,3900.00
+08/16/2026,Credit Card Expense,,Royal Palm Yacht Club,Annual membership,7500,Meals & Entertainment,4800.00,
+08/16/2026,Credit Card Expense,,Royal Palm Yacht Club,Annual membership,2100,Coastal First Visa 2210,,4800.00
+08/17/2026,Bill,PS-1231,Peninsula Sitework LLC,Grading - Palmetto Bay,5100,Subcontractors,16000.00,
+08/17/2026,Bill,PS-1231,Peninsula Sitework LLC,Grading - Palmetto Bay,2000,Accounts Payable (A/P),,16000.00
+08/17/2026,Credit Card Expense,,Intuit / Microsoft 365,Software subscriptions,6300,Office Supplies & Software,680.00,
+08/17/2026,Credit Card Expense,,Intuit / Microsoft 365,Software subscriptions,2100,Coastal First Visa 2210,,680.00
+08/18/2026,Check,2127,Sunshine CPA Group,2025 tax return preparation,6400,Professional Fees,2750.00,
+08/18/2026,Check,2127,Sunshine CPA Group,2025 tax return preparation,1000,Checking - Coastal First Bank 4471,,2750.00
+08/18/2026,Credit Card Expense,,Gulf Coast Building Supply LLC,Misc materials - card,5000,Job Materials,5600.00,
+08/18/2026,Credit Card Expense,,Gulf Coast Building Supply LLC,Misc materials - card,2100,Coastal First Visa 2210,,5600.00
+08/18/2026,Deposit,,Seaside Renovations,Bank deposit,1000,Checking - Coastal First Bank 4471,34700.00,
+08/18/2026,Deposit,,Seaside Renovations,Bank deposit,1050,Undeposited Funds,,34700.00
+08/18/2026,Payment,,Seaside Renovations,ACH - inv 1850 + advance,1050,Undeposited Funds,34700.00,
+08/18/2026,Payment,,Seaside Renovations,ACH - inv 1850 + advance,1200,Accounts Receivable (A/R),,34700.00
+08/19/2026,Bill Payment (Check),2122,Peninsula Sitework LLC,Pay bill PS-1188 partial,2000,Accounts Payable (A/P),6570.00,
+08/19/2026,Bill Payment (Check),2122,Peninsula Sitework LLC,Pay bill PS-1188 partial,1000,Checking - Coastal First Bank 4471,,6570.00
+08/19/2026,Credit Card Expense,,Various - job site meals,Crew meals,7500,Meals & Entertainment,620.00,
+08/19/2026,Credit Card Expense,,Various - job site meals,Crew meals,2100,Coastal First Visa 2210,,620.00
+08/19/2026,Deposit,,Palmetto Partners LLC,Bank deposit,1000,Checking - Coastal First Bank 4471,30300.00,
+08/19/2026,Deposit,,Palmetto Partners LLC,Bank deposit,1050,Undeposited Funds,,30300.00
+08/19/2026,Expense,,,,8000,Uncategorized Expense,1875.00,
+08/19/2026,Expense,,,,1000,Checking - Coastal First Bank 4471,,1875.00
+08/19/2026,Invoice,1853,Meridian Property Group,Progress billing #2 - Meridian warehouse,1200,Accounts Receivable (A/R),48000.00,
+08/19/2026,Invoice,1853,Meridian Property Group,Progress billing #2 - Meridian warehouse,4000,Construction Income,,48000.00
+08/19/2026,Payment,,Palmetto Partners LLC,ACH - inv 1849 balance,1050,Undeposited Funds,30300.00,
+08/19/2026,Payment,,Palmetto Partners LLC,ACH - inv 1849 balance,1200,Accounts Receivable (A/R),,30300.00
+08/20/2026,Bill,GC-78515,Gulf Coast Building Supply,Material buyout - PALMETTO BAY PHASE II (job starts September),5000,Job Materials,49500.00,
+08/20/2026,Bill,GC-78515,Gulf Coast Building Supply,Material buyout - PALMETTO BAY PHASE II (job starts September),2000,Accounts Payable (A/P),,49500.00
+08/20/2026,Credit Card Expense,,Lowe's Pro,Job supplies,5900,Job Supplies,1300.00,
+08/20/2026,Credit Card Expense,,Lowe's Pro,Job supplies,2100,Coastal First Visa 2210,,1300.00
+08/20/2026,Expense,,Unknown,Unidentified ACH - needs review,1300,Ask My Accountant,4500.00,
+08/20/2026,Expense,,Unknown,Unidentified ACH - needs review,1000,Checking - Coastal First Bank 4471,,4500.00
+08/21/2026,Bill Payment (Check),2123,Delgado Framing Inc,Pay bill DF-3141,2000,Accounts Payable (A/P),11270.00,
+08/21/2026,Bill Payment (Check),2123,Delgado Framing Inc,Pay bill DF-3141,1000,Checking - Coastal First Bank 4471,,11270.00
+08/21/2026,Check,2130,Ace Mobile Truck Repair,Transmission service,6600,Repairs & Maintenance,1850.00,
+08/21/2026,Check,2130,Ace Mobile Truck Repair,Transmission service,1000,Checking - Coastal First Bank 4471,,1850.00
+08/21/2026,Deposit,,Meridian Property Group,Bank deposit,1000,Checking - Coastal First Bank 4471,35250.00,
+08/21/2026,Deposit,,Meridian Property Group,Bank deposit,1050,Undeposited Funds,,35250.00
+08/21/2026,Expense,,Sunbelt Rentals,Lift rental,5300,Equipment Rental,1600.00,
+08/21/2026,Expense,,Sunbelt Rentals,Lift rental,1000,Checking - Coastal First Bank 4471,,1600.00
+08/21/2026,Payment,,Meridian Property Group,ACH - inv 1848,1050,Undeposited Funds,35250.00,
+08/21/2026,Payment,,Meridian Property Group,ACH - inv 1848,1200,Accounts Receivable (A/R),,35250.00
+08/22/2026,Expense,,"Coastal First Bank, N.A.",Transfer,6900,Vehicle & Fuel,12000.00,
+08/22/2026,Expense,,"Coastal First Bank, N.A.",Transfer,1000,Checking - Coastal First Bank 4471,,12000.00
+08/24/2026,Bill,DF-3266,Delgado Framing Inc,Framing labor - Meridian,5100,Subcontractors,10000.00,
+08/24/2026,Bill,DF-3266,Delgado Framing Inc,Framing labor - Meridian,2000,Accounts Payable (A/P),,10000.00
+08/24/2026,Expense,,Tri-County Steel,Structural steel - Meridian,5000,Job Materials,8200.00,
+08/24/2026,Expense,,Tri-County Steel,Structural steel - Meridian,1000,Checking - Coastal First Bank 4471,,8200.00
+08/25/2026,Deposit,,Coral Bay Homes,Bank deposit,1000,Checking - Coastal First Bank 4471,24500.00,
+08/25/2026,Deposit,,Coral Bay Homes,Bank deposit,1050,Undeposited Funds,,24500.00
+08/25/2026,Expense,,Coastal First Visa 2210,Credit card payment,6300,Office Supplies & Software,9340.00,
+08/25/2026,Expense,,Coastal First Visa 2210,Credit card payment,1000,Checking - Coastal First Bank 4471,,9340.00
+08/25/2026,Payment,,Coral Bay Homes,Check 9188 - inv 1852 partial,1050,Undeposited Funds,24500.00,
+08/25/2026,Payment,,Coral Bay Homes,Check 9188 - inv 1852 partial,1200,Accounts Receivable (A/R),,24500.00
+08/26/2026,Bill Payment (Check),,Gulf Coast Building Supply,ACH on account,2000,Accounts Payable (A/P),40680.00,
+08/26/2026,Bill Payment (Check),,Gulf Coast Building Supply,ACH on account,1000,Checking - Coastal First Bank 4471,,40680.00
+08/26/2026,Check,2132,Bayside Welding & Fab,Trailer deck repair,6600,Repairs & Maintenance,1250.00,
+08/26/2026,Check,2132,Bayside Welding & Fab,Trailer deck repair,1000,Checking - Coastal First Bank 4471,,1250.00
+08/26/2026,Invoice,1854,Palmetto Partners LLC,Progress billing #3 - Palmetto Bay sitework,1200,Accounts Receivable (A/R),32000.00,
+08/26/2026,Invoice,1854,Palmetto Partners LLC,Progress billing #3 - Palmetto Bay sitework,4000,Construction Income,,32000.00
+08/27/2026,Check,2128,Baker Legal PLLC,Lien release review,6400,Professional Fees,750.00,
+08/27/2026,Check,2128,Baker Legal PLLC,Lien release review,1000,Checking - Coastal First Bank 4471,,750.00
+08/27/2026,Expense,,,,8000,Uncategorized Expense,1250.00,
+08/27/2026,Expense,,,,1000,Checking - Coastal First Bank 4471,,1250.00
+08/27/2026,Expense,,Owner,Owner distribution,3100,Owner's Draw,12000.00,
+08/27/2026,Expense,,Owner,Owner distribution,1000,Checking - Coastal First Bank 4471,,12000.00
+08/27/2026,Expense,,Southern Lumber & Truss,Framing package - Palmetto Bay,5000,Job Materials,9200.00,
+08/27/2026,Expense,,Southern Lumber & Truss,Framing package - Palmetto Bay,1000,Checking - Coastal First Bank 4471,,9200.00
+08/28/2026,Bill Payment (Check),2124,Rivera Concrete LLC,Pay bill RC-2402 partial,2000,Accounts Payable (A/P),2340.00,
+08/28/2026,Bill Payment (Check),2124,Rivera Concrete LLC,Pay bill RC-2402 partial,1000,Checking - Coastal First Bank 4471,,2340.00
+08/28/2026,Payment,,Harbor Point Development,Check 5560 - inv 1851 partial,1050,Undeposited Funds,14000.00,
+08/28/2026,Payment,,Harbor Point Development,Check 5560 - inv 1851 partial,1200,Accounts Receivable (A/R),,14000.00
+08/29/2026,Bill Payment (Check),2125,Peninsula Sitework LLC,Pay bill PS-1231 partial,2000,Accounts Payable (A/P),1130.00,
+08/29/2026,Bill Payment (Check),2125,Peninsula Sitework LLC,Pay bill PS-1231 partial,1000,Checking - Coastal First Bank 4471,,1130.00
+08/29/2026,Credit Card Expense,,WEX Fleet,Fuel - August,6900,Vehicle & Fuel,3050.00,
+08/29/2026,Credit Card Expense,,WEX Fleet,Fuel - August,2100,Coastal First Visa 2210,,3050.00
+08/31/2026,Deposit,,Meridian Property Group,Bank deposit,1000,Checking - Coastal First Bank 4471,10250.00,
+08/31/2026,Deposit,,Meridian Property Group,Bank deposit,1050,Undeposited Funds,,10250.00
+08/31/2026,Expense,,"Coastal First Bank, N.A.",Account analysis fee,6100,Bank Charges & Fees,85.00,
+08/31/2026,Expense,,"Coastal First Bank, N.A.",Account analysis fee,1000,Checking - Coastal First Bank 4471,,85.00
+08/31/2026,Invoice,1855,Coral Bay Homes,August service & repair calls,1200,Accounts Receivable (A/R),15000.00,
+08/31/2026,Invoice,1855,Coral Bay Homes,August service & repair calls,4100,Service & Repair Income,,15000.00
+08/31/2026,Journal Entry,JE-0801,Gusto Payroll,August payroll,5200,Direct Labor,23000.00,
+08/31/2026,Journal Entry,JE-0801,Gusto Payroll,August payroll,7000,Office Wages,12000.00,
+08/31/2026,Journal Entry,JE-0801,Gusto Payroll,August payroll,7100,Payroll Taxes,3900.00,
+08/31/2026,Journal Entry,JE-0801,Gusto Payroll,August payroll,1000,Checking - Coastal First Bank 4471,,35000.00
+08/31/2026,Journal Entry,JE-0801,Gusto Payroll,August payroll,2200,Payroll Liabilities,,3900.00
+08/31/2026,Payment,,Meridian Property Group,ACH - inv 1853 partial,1050,Undeposited Funds,10250.00,
+08/31/2026,Payment,,Meridian Property Group,ACH - inv 1853 partial,1200,Accounts Receivable (A/R),,10250.00

@@ -1,0 +1,165 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Practical Bookkeeping Assessment — JK Accounting Group</title><style>
+:root{--brand:#123841;--deep:#0D2A31;--dark:#091F24;--accent:#9C6A39;--gold:#7E5430;
+ --goldlt:#CFA268;--page:#F6F3EC;--paper:#FBF8F2;--surf:#fff;--ink:#0D2A31;--body:#22201A;
+ --mut:#6F6857;--bd:#C5BEAD;--bds:#DAD4C6;--err:#B23A3A;--errbg:#F6E3DF;--warn:#B8841C;
+ --warnbg:#F6ECD2;--ok:#2F8F5E;--okbg:#E3F1EA;--info:#2F5E8C;--infobg:#E3EAF3;
+ --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+ --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--body);font:16px/1.65 var(--sans);
+ -webkit-font-smoothing:antialiased}
+.wrap{max-width:930px;margin:0 auto;padding:0 28px 90px}
+header.hero{background:linear-gradient(160deg,var(--deep),var(--brand) 62%,#164450);
+ color:#ECE6DA;padding:52px 0 46px;margin-bottom:38px}
+header.hero .wrap{padding-bottom:0}
+.eyebrow{font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;
+ color:var(--goldlt);margin-bottom:16px}
+h1{font:600 40px/1.12 var(--serif);margin:0 0 12px;letter-spacing:-.015em}
+.hero p.lede{font:400 17px/1.6 var(--sans);color:#B9CDD0;max-width:62ch;margin:0}
+.hero .rule{width:56px;height:3px;background:var(--accent);margin:22px 0 0;border-radius:2px}
+h2{font:600 25px/1.25 var(--serif);color:var(--ink);margin:52px 0 6px;letter-spacing:-.01em}
+h2 .n{color:var(--accent);font-family:var(--mono);font-size:15px;font-weight:600;
+ letter-spacing:.06em;display:block;margin-bottom:8px}
+h3{font:600 17px/1.35 var(--sans);color:var(--brand);margin:30px 0 8px}
+h2+p,h3+p{margin-top:6px}
+p{margin:0 0 14px;max-width:74ch}
+.card{background:var(--surf);border:1px solid var(--bds);border-radius:10px;
+ padding:22px 26px;margin:20px 0;box-shadow:0 1px 2px rgba(9,38,44,.05)}
+.card.tight{padding:16px 20px}
+.quote{border-left:3px solid var(--accent);background:var(--paper);padding:16px 22px;
+ margin:16px 0;font:400 17px/1.6 var(--serif);color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:14px 0}
+th{font:600 11px/1.3 var(--sans);letter-spacing:.09em;text-transform:uppercase;
+ color:var(--mut);text-align:left;padding:10px 10px 8px;border-bottom:1.5px solid var(--bd)}
+td{padding:8px 10px;border-bottom:1px solid #EDE8DC;vertical-align:top}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td{border-top:1.5px solid var(--brand);border-bottom:none;font-weight:600;
+ color:var(--brand);padding-top:10px}
+code,.mono{font-family:var(--mono);font-size:.9em;background:#EFEADF;padding:1px 5px;
+ border-radius:4px;color:var(--gold)}
+ul,ol{margin:0 0 14px;padding-left:22px;max-width:74ch}li{margin:5px 0}
+.tag{display:inline-block;font:600 10.5px/1 var(--sans);letter-spacing:.08em;
+ text-transform:uppercase;padding:5px 9px;border-radius:5px;vertical-align:2px}
+.t-err{background:var(--errbg);color:var(--err)}.t-warn{background:var(--warnbg);color:#8A6111}
+.t-ok{background:var(--okbg);color:#1F7049}.t-info{background:var(--infobg);color:#214668}
+.finding{border:1px solid var(--bds);border-left:4px solid var(--accent);border-radius:8px;
+ background:var(--surf);padding:18px 22px;margin:16px 0}
+.finding h4{font:600 17px/1.35 var(--sans);color:var(--ink);margin:0 0 4px}
+.finding .where{font:400 13.5px/1.5 var(--mono);color:var(--mut);margin:0 0 12px}
+.finding dl{margin:0;display:grid;grid-template-columns:112px 1fr;gap:7px 16px;font-size:14.5px}
+.finding dt{font:600 11px/1.6 var(--sans);letter-spacing:.07em;text-transform:uppercase;
+ color:var(--mut)}
+.finding dd{margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:18px 0}
+.stat{background:var(--surf);border:1px solid var(--bds);border-radius:9px;padding:16px 18px}
+.stat .k{font:600 10.5px/1.4 var(--sans);letter-spacing:.09em;text-transform:uppercase;
+ color:var(--mut);margin-bottom:6px}
+.stat .v{font:600 24px/1.1 var(--serif);color:var(--brand);font-variant-numeric:tabular-nums}
+.stat .s{font-size:12.5px;color:var(--mut);margin-top:5px}
+.panel{background:var(--deep);color:#D9E4E5;border-radius:10px;padding:24px 28px;margin:24px 0}
+.panel h3{color:var(--goldlt);margin-top:0}
+.panel a{color:var(--goldlt)}
+.warnbox{background:var(--warnbg);border:1px solid #E3CF9A;border-radius:9px;
+ padding:16px 20px;margin:20px 0;font-size:15px}
+.warnbox b{color:#8A6111}
+.foot{margin-top:60px;padding-top:20px;border-top:1px solid var(--bd);
+ font-size:13px;color:var(--mut)}
+.mock{background:var(--accent);color:#fff;text-align:center;
+ font:600 11px/2.4 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+@media print{body{background:#fff}.wrap{max-width:none}header.hero{background:var(--deep)}
+ .finding,.card,.stat{break-inside:avoid}h2{break-after:avoid}}
+</style></head><body>
+<div class="mock">Fictional company and data — prepared for an interview exercise</div>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">JK Accounting Group · Practical assessment</div>
+  <h1>Bookkeeping &amp; Month-End Close</h1>
+  <p class="lede">A three-part exercise on a real-shaped set of books. Plan on 45–60 minutes.
+  You may ask questions throughout — how you investigate matters more to us than whether every
+  answer is right.</p>
+  <div class="rule"></div>
+</div></header>
+<div class="wrap">
+
+<h2><span class="n">The client</span>Coastal Ridge Builders LLC</h2>
+<p>A residential and light-commercial general contractor in Fort Lauderdale, Florida. Single
+member LLC, roughly $2.6M of annual revenue, six field crew and one office administrator.
+Payroll runs through Gusto. The books are on the accrual basis in QuickBooks Online.</p>
+<p>The previous bookkeeper left at the end of August. You have been handed the file and asked
+to close August.</p>
+
+<div class="grid">
+  <div class="stat"><div class="k">Period under review</div><div class="v">August 2026</div>
+    <div class="s">June and July are provided for comparison</div></div>
+  <div class="stat"><div class="k">August revenue</div><div class="v">225,000.00</div>
+    <div class="s">as currently reported</div></div>
+  <div class="stat"><div class="k">Bank accounts</div><div class="v">3</div>
+    <div class="s">checking, savings, one business Visa</div></div>
+</div>
+
+<h2><span class="n">Your materials</span>What is in the package</h2>
+<table>
+<tr><th>File</th><th>What it is</th></tr>
+<tr><td class="mono">01_Chart_of_Accounts.csv</td><td>The full chart of accounts</td></tr>
+<tr><td class="mono">02_QuickBooks_Reports_Jun-Aug_2026.xlsx</td>
+    <td>General Ledger, Journal, Trial Balance, Profit &amp; Loss by month, Balance Sheet,
+        A/R and A/P Aging, Undeposited Funds detail, and the July bank reconciliation report</td></tr>
+<tr><td class="mono">03_Bank_Feed_Checking_4471_Aug_2026.csv</td>
+    <td>The August checking activity as the bank exported it</td></tr>
+<tr><td class="mono">04_Bank_Feed_Visa_2210_Aug_2026.csv</td><td>August credit-card activity</td></tr>
+<tr><td class="mono">05_Bank_Statements_Jun-Aug_2026.html</td>
+    <td>Checking statements for June, July and August, the August savings statement,
+        and the August Visa statement</td></tr>
+</table>
+<p>Work in whatever tool you are comfortable with — Excel, Google Sheets, or a QuickBooks
+sandbox if you have one. We are not testing your typing speed in QBO.</p>
+
+<h2><span class="n">Task 1 · 15–20 min</span>Bank reconciliation</h2>
+<div class="quote">“Please reconcile the checking account for August. If you encounter issues,
+investigate them and explain what you would do.”</div>
+<p>Give us the reconciliation itself — beginning balance, cleared items, outstanding items,
+ending balance — and a note on anything that did not behave the way it should have.</p>
+
+<h2><span class="n">Task 2 · 20–25 min</span>Month-end close</h2>
+<div class="quote">“Assume you are responsible for closing August for this client. Review the
+books and tell us whether you are comfortable closing the month. Make any corrections you
+believe you can make independently, and prepare a list of anything you need from the client
+or from a reviewer.”</div>
+<p>We want to see the line you draw: what you would simply fix, what you would fix and document,
+and what you would refuse to touch until somebody answers a question.</p>
+
+<h2><span class="n">Task 3 · 10–15 min</span>Financial statement review</h2>
+<div class="quote">“You are about to send these August financial statements to the client.
+Review them and tell me what catches your attention.”</div>
+<p>Then one follow-up we will ask out loud: <b>what would you do next, before asking us or
+the client?</b></p>
+
+<div class="warnbox">
+<b>Two ground rules.</b> We will not tell you how many issues are in this file, and we are not
+going to confirm your findings as you go — that is the exercise. And a genuine
+“I don’t know, here is how I would find out” scores better with us than a confident guess.
+</div>
+
+<h2><span class="n">Deliverable</span>What to hand back</h2>
+<ol>
+<li>Your August reconciliation, with the reconciling items listed.</li>
+<li>A list of every issue you found: <b>what it is · where it is · what it does to the
+    financials · what you would do about it</b>.</li>
+<li>A separate, short list of questions for the client or the reviewer — the things you would
+    not decide on your own.</li>
+<li>Your read on the August financial statements, in the words you would actually use with
+    a client.</li>
+</ol>
+<p>A spreadsheet, a document, or a clearly written email are all fine. Clarity counts.</p>
+
+<div class="panel">
+<h3>A note on this file</h3>
+<p style="margin:0">Coastal Ridge Builders LLC does not exist. The company, the bank, the
+customers, the vendors and every figure in this package were built for this exercise. No real
+client information appears anywhere in it.</p>
+</div>
+
+<div class="foot">JK Accounting Group · Miami · Fort Lauderdale · Online<br>
+Practical assessment, revision of September 2026.</div>
+</div>
+</body></html>

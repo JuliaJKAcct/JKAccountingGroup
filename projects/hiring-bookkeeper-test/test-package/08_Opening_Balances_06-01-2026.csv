@@ -1,0 +1,16 @@
+Account Number,Account Name,Debit,Credit
+1000,Checking - Coastal First Bank 4471,28745.00,
+1010,Savings - Coastal First Bank 8802,25000.00,
+1050,Undeposited Funds,12500.00,
+1200,Accounts Receivable (A/R),148000.00,
+1400,Prepaid Insurance,9600.00,
+1500,Equipment,186400.00,
+1510,Vehicles,92750.00,
+1590,Accumulated Depreciation,,118300.00
+2000,Accounts Payable (A/P),,46000.00
+2100,Coastal First Visa 2210,,14280.00
+2200,Payroll Liabilities,,27480.00
+2600,Equipment Loan - Coastal First Bank,,196550.00
+3000,Member Equity,,85000.00
+3100,Owner's Draw,60000.00,
+3900,Retained Earnings,,75385.00
