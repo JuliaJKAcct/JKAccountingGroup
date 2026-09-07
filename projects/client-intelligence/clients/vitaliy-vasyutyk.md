@@ -31,7 +31,7 @@
 - **Home state:** Florida — **except ZUMFI 2 LLC, which is registered in TENNESSEE** (TN Secretary of State control number `002 059 868` — ⚠️ **grouped in threes; nine bare digits abort the published-page build** — Articles of Organization approved 2025-10-27). It is the only entity in the group whose state fee differs, which is what makes the anomaly visible on an invoice.
 - **Industry / what they do:** residential real estate and renovation — property-holding LLCs plus renovation entities. Several are single-purpose companies formed one or two at a time as parcels are bought.
 - **Primary language:** RU _(the firm's outbound mail to him is written in Russian — e.g. Lilian's 2026-03-27 annual-report confirmation)_
-- **Our engagement (services we provide):** company formation (Sunbiz + operating agreements), **Florida annual reports**, **1099 filing**, entity elections and dissolutions, income-tax returns for part of the group, and the owner's individual 1040.
+- **Our engagement (services we provide):** company formation (Sunbiz + operating agreements), **annual reports — nine with Sunbiz, one with Tennessee (§4)**, **1099 filing**, entity elections and dissolutions, income-tax returns for part of the group, and the owner's individual 1040.
 - **Fiscal year-end:** _(pending — assume calendar year; not confirmed in writing)_
 - **Accounting platform:** **none.** All ten Double client records read `platform: none` — no QuickBooks connection, and no other ledger either. _(What §3 lists as the firm's own A/R ledger is **ours**, not theirs.)_ This is a **compliance / tax-filing** relationship, not a bookkeeping one.
 
@@ -45,7 +45,7 @@ the actual details (and Claude can pull them live when a task needs them).
 |---|---|
 | Owner / primary contact for all ten companies | Double contact `567527` — **one portal contact is linked to all ten company records and to his own** (`hasClientAdminAccess`, tax + financial + files access) |
 | Related individuals with their own Double client records | **Veronika Vasiutyk** (`710664`) and **Vladyslav Vasiutyk** (`710670`) — same surname, separate records; **the relationship is not confirmed in writing.** What is established: the firm billed a 1040 for Veronika on a **Nika Realty** invoice (Sept 2025), and Vladyslav's 2025 return was e-signed 2026-04-02 |
-| Partner in Zumfi 2 LLC | there **is** one — named in the 2025 organizer; see §6 (2026-09-07) |
+| Partner in Zumfi 2 LLC — **and in Zumfi 1 and Fizum 1** | the same person is a partner in all three _(Lilian, from Vitaliy, 2026-09-07)_; named in the 2025 organizer, and his details are already on the Zumfi 1 and Fizum 1 records — see §6 |
 
 - **Double client (the person):** [Vitaliy Vasyutyk `710668`](https://app.doublehq.com/close?cid=710668)
 - **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ none
@@ -76,7 +76,7 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Applies?** No sign of any. _(pending confirmation)_
 
 ### Bookkeeping & monthly close
-- **Applies?** **No** — not one company in the group has an accounting platform connected (§1).
+- **Applies?** **No** — no company in the group has an accounting platform connected (§1).
 
 ### Income tax
 - **Applies?** Yes, for part of the group.
@@ -116,30 +116,30 @@ watch-outs, one-off arrangements, history that affects the work.
 A running, dated record as we build this profile.
 
 - _(2026-09-07)_ — **File created.** It did not exist before: **ten companies and their owner had no Client Intelligence at all**, and the group is invisible to the weekend sweep. Created out of the accounts-receivable review below; everything here is drawn from the firm's own A/R ledger (invoices and their line descriptions), Double (client records + the portal contact) and Julia's Gmail. _(Source: this session.)_
-- _(2026-09-07)_ — **Lilian asked whether the three still-open invoices for this group double-charge work already billed elsewhere. Answer: no — nothing is billed twice.** Method, named so the negative is not wider than the search _(method rule 1b)_: **the six billing customer records known to hold this group's work** — Nika Realty, 2 Romans Realty, SYS 1 Realty, Zumfi 2, Fastighet, Tropical Coast — every invoice on each, **2019 → 2026, read line by line on 2026-09-07**; each record's total accrual sales for 2023–2026 reconciles **to the cent** with the invoices retrieved, which rules out credit memos and anything else posted against those six. ⚠️ **Billing under a seventh record nobody knows about would be invisible to that reconciliation** — the pre-merge review widened the check to **all 270 invoices the firm issued in 2026** and found none, which is what actually closes that gap for the 2026 cycle. The three open invoices are the **surviving** versions of work that was re-invoiced, not extra copies of it:
+- _(2026-09-07)_ — **Lilian asked whether the three still-open invoices for this group double-charge work already billed elsewhere. Answer: no — nothing is billed twice.** Method, named so the negative is not wider than the search _(method rule 1b)_: **the six billing customer records known to hold this group's work** — Nika Realty, 2 Romans Realty, SYS 1 Realty, Zumfi 2, Fastighet, Tropical Coast — every invoice on each, **2019 → 2026, read line by line on 2026-09-07**; each record's total accrual sales for 2023–2026 reconciles **to the cent** with the invoices retrieved, which rules out credit memos and anything else posted against those six. ⚠️ **Billing under a seventh record nobody knows about would be invisible to that reconciliation** — the independent pre-merge review of PR #354 (2026-09-07) widened the check to **all 270 invoices the firm issued in 2026** and found none, which is what actually closes that gap for the 2026 cycle. The three open invoices are the **surviving** versions of work that was re-invoiced, not extra copies of it:
   - **2026-03-04** — one consolidated 1099 invoice for the whole group was issued on the **Nika Realty** record (`2053`). Reminders went out 03-04 and 03-06; it was never paid.
   - **2026-03-25** — `2053` was **deleted and re-cut per company** as `2097` (2 Romans + Sunshine Renovations 1), `2098` (Fastighet + Tropical Coast 1), `2099` (Zumfi 1 + Zumfi 2 + Fizum 1) and `2100` (Nika Realty). The four replacements sum **exactly** to the deleted invoice — that is what proves it was a re-cut and not an extra charge.
   - **2026-03-25** — the 2026 annual reports went out the same day, one invoice per billing record: `2101` (2 Romans + Sunshine), `2102` (Fastighet + Tropical Coast), `2103` (Nika + Remodel Master), `2104` (SYS 1), `2105` (Zumfi 2 + Zumfi 1 + Fizum 1, dated **2026-03-26** — the only one of the five not dated 03-25). **Each company appears on exactly one of them.**
   - **2026-04-22** — `2098`, `2102` and `2138` (Tropical Coast's dissolution state fee, 04-09) were **deleted and consolidated** into one Fastighet invoice, `2143`, **paid the same day**. Its lines are Fastighet's and Tropical Coast's only — nothing from `2097`, `2101` or `2104`.
-  - **Still open:** `2097`, `2101`, `2104` — all dated 2026-03-25, all reminded repeatedly (04-02, **04-14**, 04-20, 06-03, 06-08, 06-25, 07-27) and **unpaid for over five months**, while every other invoice in the same batch was paid in April. **Paid:** `2099`, `2100`, `2103`, `2105`, `2143`.
+  - **Still open:** `2097`, `2101`, `2104` — all dated 2026-03-25, all reminded repeatedly — 04-02, 04-20, 06-03, 06-08, 06-25 and 07-27 each covered all three, plus a re-send of **2104 alone on 04-14** — and **unpaid for over five months**, while every other invoice in the same batch was paid in April. **Paid:** `2099`, `2100`, `2103`, `2105`, `2143`.
 - _(2026-03-27)_ — Lilian confirmed to him **by email, in Russian**, that the **2026 annual reports were filed** for Nika Realty, Sunshine Renovations 1, 2 Romans Realty, SYS 1 Realty and Remodel Master (and the rest of the list). So the work behind the three open invoices **was delivered**. _(Source: Gmail, 2026-03-27.)_
 - _(2026-04-02)_ — He **completed the 2025 individual Tax Organizer in TaxDome** and uploaded Uber (1099-NEC, 1099-K, annual summary), Lyft and DoorDash P&Ls — his 1040 carries **gig-economy Schedule C income**. The same day, Vladyslav Vasiutyk's 2025 return was e-signed. _(Source: TaxDome notifications to Julia.)_
-- _(2026-09-07)_ — Lilian left **five** comments for Julia on Double the same day this file was created, working the 2025 returns: **Zumfi 1 LLC — "we need to close this company"**; **SYS 1 Realty — Vitaliy says there was no activity in 2025**; **Remodel Master Realty — no activity in 2025 either, and 🔴 "the only thing we need to report is a change of address"** (that is filing work, not just a note); and two on **Zumfi 2 LLC** — **the partner's SSN is missing from the organizer and his email address is wrong**, and **Zumfi 2 bought a parcel of land in November 2025 with no renovation work being done on it**. _(Source: Double comment notifications; the partner's identifiers are NOT recorded here.)_
+- _(2026-09-07)_ — Lilian left **five** comments for Julia on Double the same day this file was created, working the 2025 returns. Read back at source _(`list_comments`, comments 6206475 · 6206486 · 6206564 · 6206764 and the Zumfi 1 one)_: **Zumfi 1 LLC — "we need to close this company"**; 🔴 **SYS 1 Realty AND Remodel Master Realty — "no activity in 2025. The only thing we need to report is a change of address"**, word for word the same on both, and **SYS 1's is the one Lilian flagged 🚨** (that is a filing each company still owes, not just a note); and two on **Zumfi 2 LLC** — **the partner's SSN is missing from the organizer and his email address is wrong, 🔑 and "we can take his info from Zumfi 1 and Fizum — he is also a partner in these 2 companies"** (so the details already exist on those two records, and it explains why all three read `1065`), and **Zumfi 2 bought a parcel of land in November 2025 with no renovation work being done on it**. _(The partner's identifiers are NOT recorded here — the comments carry none either.)_
 
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
-- **In progress, by Lilian, as of 2026-09-07** — see the four Double comments in the log above. Established so far: **no activity in 2025 for SYS 1 Realty and Remodel Master Realty** (Remodel Master still has a **change of address** to report); **Zumfi 2 acquired land in Nov 2025 and is not renovating it**; **Zumfi 1 is to be closed**; the **Zumfi 2 organizer is incomplete** (partner's identifiers). The owner's own 1040 has gig income (Uber / Lyft / DoorDash) on top of the group.
+- **In progress, by Lilian, as of 2026-09-07** — see the five Double comments in the log above. Established so far: **no activity in 2025 for SYS 1 Realty and Remodel Master Realty — and BOTH still have a change of address to report**; **Zumfi 2 acquired land in Nov 2025 and is not renovating it**; **Zumfi 1 is to be closed**; the **Zumfi 2 organizer is incomplete** (partner's identifiers). The owner's own 1040 has gig income (Uber / Lyft / DoorDash) on top of the group.
 
 ### Outstanding items (CI-only — never in the SOP)
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- 🔴 **Three invoices from 2026-03-25 are still unpaid** (`2097`, `2101`, `2104`) after six reminders, while the rest of the same batch was paid in April. The work was delivered and the charges are clean — **so this is a collection question, not a billing question.**
-- ⚠️ **Remodel Master Realty has a CHANGE OF ADDRESS to report** (Lilian → Julia, 2026-09-07) — the one filing the company still needs for 2025.
+- 🔴 **Three invoices from 2026-03-25 are still unpaid** (`2097`, `2101`, `2104`) after six rounds of reminders, while the rest of the same batch was paid in April. The work was delivered and the charges are clean — **so this is a collection question, not a billing question.**
+- ⚠️ **SYS 1 Realty AND Remodel Master Realty each have a CHANGE OF ADDRESS to report** (Lilian → Julia, 2026-09-07) — the one filing each company still needs for 2025; neither had any activity.
 - ⚠️ **Zumfi 1 LLC is to be closed** (Lilian → Julia, 2026-09-07). Nothing filed yet; compare with Tropical Coast 1's dissolution for the route and what it costs.
-- ⚠️ **The Zumfi 2 organizer is missing the partner's identifiers and has a wrong email** — it blocks that return.
+- ⚠️ **The Zumfi 2 organizer is missing the partner's identifiers and has a wrong email** — it blocks that return, **and Vitaliy has already said where to get them: the Zumfi 1 and Fizum 1 records.**
 - **Nine of the ten companies have no file of their own.** This file is the owner-level map; per-company facts still need routing into per-company files (see below).
 
 ### Information still needed
@@ -151,7 +151,7 @@ reports for this client.
 - [ ] **EINs** for the ten companies (public on Sunbiz — and on the TN register for Zumfi 2 — and they may be written here).
 - [ ] **Why Zumfi 2 was formed in Tennessee** when the other nine are Florida, and whether it also owes a Florida foreign-LLC registration for the land it bought.
 - [ ] **How Veronika and Vladyslav Vasiutyk relate to Vitaliy** — surname and shared billing are not a stated relationship.
-- [ ] **Who the Zumfi 2 partner is** (the fact of a partner, not their identifiers) and whether any other company has one — it changes the return type.
+- [x] **Whether any other company has a partner** — **yes: the same person is a partner in Zumfi 2, Zumfi 1 and Fizum 1** _(Lilian, from Vitaliy, 2026-09-07)_. Who he is, by name, is still not recorded here.
 - [ ] Whether any company in the group has **sales tax or payroll** obligations. Nothing has ever been billed for either.
 - [ ] Whether the firm holds a **Google Drive folder** for this group.
 

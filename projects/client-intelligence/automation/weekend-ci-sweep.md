@@ -286,7 +286,7 @@ per-tool call limits._
 
 > ⓘ **Vitaliy Vasyutyk is ONE row for TEN companies, and that is deliberate.** He holds ten
 > LLCs — **nine Florida and one TENNESSEE (Zumfi 2)** — all reached by one portal contact, and the firm bills them through six
-> QuickBooks customer records that do **not** map one-to-one onto the companies — so a fact about
+> customer records in its own A/R ledger that do **not** map one-to-one onto the companies — so a fact about
 > one company routinely arrives under another. Sweep him **by owner** (`710668`) and route each
 > fact to the company it belongs to, per the skill's "sweep by owner, assign by company" rule.
 > The companies: Nika Realty `710583` · 2 Romans Realty `710561` · Sunshine Renovations 1 `710599`
