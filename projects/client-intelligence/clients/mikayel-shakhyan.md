@@ -1,6 +1,6 @@
 # Mikayel Shakhyan
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-06
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-07
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -26,8 +26,9 @@
   (Cosmetics, Beauty Supplies & Perfume Retailers) and product *"Cosmetics"*. The brand is
   **LUMARI**; a USPTO trademark application for it (stylised wording + a flower design, Principal
   Register) was filed with **Pivniak Law** as the correspondent. ✅ **The mark is owned by Mikayel
-  PERSONALLY, not by the LLC** _(established 2026-09-06 from the USPTO receipt already in Double;
-  confirm by eye next time it is open)_. **It matters on the return twice over**: the mark is not
+  PERSONALLY, not by the LLC** _(established 2026-09-06 from the USPTO receipt in Double, and
+  **independently confirmed 2026-09-07** from the public record — §4 Licenses carries the serial number,
+  the filing date and the status)_. **It matters on the return twice over**: the mark is not
   an asset of the company, and a legal fee the company paid for it would be a **distribution to
   him** rather than a company cost — §6.
 - **Primary language:** RU — Double's `Preferred language` reads **"Only Russian"**
@@ -95,7 +96,19 @@
   names the language academy he attends. That is what makes him an **exempt individual**,
   hence a nonresident, hence the LLC foreign-owned.
 - `2025 4868-mailed by his own.pdf` — he mailed his own individual extension.
-- The **LUMARI trademark application** with the USPTO is live and will need watching.
+- The **LUMARI trademark application** with the USPTO — ⭐ **the public record, read 2026-09-07 from a
+  Trademarkia listing Lilian found.** **Owner: Mikayel Shakhyan** — ✅ **independent confirmation that the
+  mark is his personally, not the LLC's.** **Serial number 99406730**, **filed 22 September 2025**, class
+  **Cosmetics and Cleaning Products**, **not yet in use in commerce**, and **Live / Pending** with a
+  **`SUSPENSION LETTER – MAILED`** status *(as at 10 Jun 2026)*. The attorney of record is **Denys
+  Pivniak, Pivniak Law, P.A.**
+  ⚠️ **Two limits on that record.** Trademarkia is a **third-party mirror, not the register** — the
+  authority is USPTO **TSDR** on serial 99406730 *(unreachable from a cloud session; the network policy
+  blocks uspto.gov)*. And the status line is **"as of 10 Jun 2026"**, so it was already three months old
+  when it was read. 🔑 **A suspension letter is not a refusal** — it means the examiner has paused the
+  application — but **nobody at the firm knows whether the client is aware of it**, which is why it went
+  into the message **drafted** for him on 2026-09-07 — ⚠️ **drafted, not sent**; see the log entry for
+  that date.
 
 ## 5. Key facts & quirks
 
@@ -154,6 +167,22 @@
 
 ### Log
 
+- _(2026-09-07)_ — **The trademark's public record, and it moves the analysis.** Lilian found a
+  Trademarkia listing for LUMARI and sent it in. ✅ **It confirms independently that the owner is Mikayel
+  personally** — until now that rested on decoding a PDF whose font defeats text search, and the working
+  paper carried a "confirm by eye" caveat. **That caveat is discharged**, though the authority is still
+  USPTO TSDR rather than a third-party mirror. 🔑 **It also supplies three things the receipt's own
+  extraction had lost:** the **serial number**, the **filing date of 22 Sep 2025**, and a **status of
+  `SUSPENSION LETTER – MAILED`** as at 10 Jun 2026 — plus the attorney's name, **Denys Pivniak**, who is
+  the same firm the company paid in Nov 2025. 🔴 **The filing date is the part that matters for the
+  return:** 22 Sep falls **inside the eighty days when the company had no bank account**, so **the WORK
+  was done while the company had no way to pay for it** — and the company paid that same attorney seven
+  weeks later. ⛔ **A filing date is not a payment date**, so who paid it is still open; what the date
+  does is make the reading in which the attorney billed later **the one that fits the dates**. It
+  **sharpens the open question rather than answering it** (working paper §4D). **A client message was
+  DRAFTED the same day** — in simple Russian, at her request — asking why the mark is in his name,
+  whether he knows about the suspension, and for the personally-paid formation costs (that last is the
+  working paper's Q2). ⚠️ **Drafted and handed to Lilian; nothing here says he has received it.**
 - _(2026-09-06, later)_ — **A transaction summary for Julia was prepared — and as at this entry it
   has NOT yet reached her.** Lilian asked for a written summary in English so Julia — who has no
   prior context on this client — could see the situation, take the decisions that are hers, and ask
@@ -226,10 +255,13 @@
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **Forward the transaction summary to Julia** — prepared 2026-09-06 and **still with Lilian**; then put the two signer positions to her **only if the client's answers do not come** (working paper §6D). `FOLLOW-UPS.md` row 85.
-- **Ask the client the FIVE questions in one message** — working paper §6A. ⚠️ **Five, not four:**
-  the fifth (his country of tax residence and whether he has a tax number there) fills four fields
-  on the form and nothing on file answers it, so it rides in the same message. Everything else on
-  the return can either be entered now or is ours to look up (§6B).
+- **Ask the client the FOUR still-outstanding questions in one message — Q1, Q3, Q4 and Q5** (working
+  paper §6A). ⚠️ **Q2 is already in the Russian message drafted 2026-09-07 and sitting with Lilian —
+  do not re-ask its money half.** ⛔ **But Q2 is only HALF covered:** the message asks what he paid, and
+  **not** whether he contributed anything that was not money, which is the half that would open Part VI.
+  That half still has to go. ⚠️ **And do not drop Q5** — his country of tax residence and whether he has a
+  tax number there fills four fields on the form and nothing on file answers it, so it rides in the same
+  message. Everything else on the return can either be entered now or is ours to look up (§6B).
 - **Raise the `Tax Return Type` mismatch** with Lilian (`1040` for a nonresident) — read-only
   column, hers to change.
 - 🔴 **TELL him he must keep records** — §1.6038A-3 applies with **no relief available** and
@@ -266,8 +298,8 @@
 - [ ] 🔴 **The dissolution date** — on **sunbiz.org**, where it is public and readable; the Sunbiz PDF in Double is one of the six unreadable scans, so it is only the fallback.
 - [ ] 🔍 **His country of citizenship — on his own Form 8843 in Double.** Do not ask him for it.
 - [ ] 🔍 Whether he holds an ITIN.
-- [x] ✅ **Who owns the LUMARI trademark — ANSWERED 2026-09-06: Mikayel personally, not the LLC.**
-      Read off the receipt already in Double; confirm by eye next time it is open.
+- [x] ✅ **Who owns the LUMARI trademark — MIKAYEL PERSONALLY, CONFIRMED 2026-09-07** from the mark's
+      public record, independently of the decoding. ⛔ **The "confirm by eye" step is done.**
 - [ ] 🟠 Whether the Form 7004 actually went, and by which route.
 - [ ] 🟠 **Read the six image-only documents by eye.** _(Asking him for text-based PDFs is a fallback, and that half would go in a later message — not the one carrying the five questions.)_
 
