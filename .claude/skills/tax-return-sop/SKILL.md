@@ -729,6 +729,28 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > rather than delivering a third guess** — and when the person sends one, **transcribe what it shows**
 > *(sections in order, every field label, every checkbox)* **before adding anything of your own.**
 >
+> ### 🔴 **SAY WHETHER THE ENTRY MOVES THE TAX — before they type it, not after**
+>
+> 🛑 **Many required entries change no figure on the return**, because a cap or a threshold elsewhere is
+> already binding. ⛔ **A delivery that says "type this" and nothing else sends the person hunting for a
+> change that was never going to appear**, and the hunt ends in them doubting the instruction.
+> ✅ **State it in the same breath: what it fixes, and that the number at the bottom will not move.**
+> _(Worked case: a K-1's §199A information was missing from a 1040 — the QBI line read zero. Entering it
+> raised the deduction **before** the limitation and left the deduction **after** it unchanged, because the
+> cap at 20% of taxable income already bound; the wage and property figures never bite below the §199A
+> threshold either. **It is a correctness fix, not a money fix, and saying so is part of the delivery.**)_
+> 🔑 **The general form: name the CAP or THRESHOLD that swallows it, so the person can see why.**
+>
+> ### 🔴 **A NETTING PRESENTATION MOVES BOTH SIDES — and the check is that the total does not move**
+>
+> ⛔ **Where a firm policy nets two figures against each other and reports one at zero, the OTHER one
+> becomes the NET.** **Zeroing one side and leaving the other gross is not a presentation choice — it is a
+> wrong number**, and it is wrong in whichever direction the delivery forgot.
+> ✅ **The test, and it is cheap: compute the line the two figures feed BOTH ways. They must agree.** 🔑 **If
+> the gross presentation and the netted one give different answers, the netting was applied to one side
+> only.** _(Both halves of that error appeared on one live return: the paper's own instruction had given the
+> gross on both lines, and the draft in the software had zero on one and nothing on the other.)_
+>
 > ✅ **So a form's NAME is now checkable at source** — `K1 INPUT (1120S)` *(Federal K-1 (1120S) Input
 > Worksheet)*, `SCH E (1040) PAGE 2`, `7203, BASIS WKST` were all read off that list, not inferred.
 > 🛑 **AND SO IS WHICH PACKAGE IT IS IN, which is half the answer** — a form in another package is not a

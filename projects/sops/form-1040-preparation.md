@@ -714,6 +714,43 @@ ruling it is.**
 > 🛑 **AND THE LIMIT: A SCREENSHOT ESTABLISHES LABELS, NOT BEHAVIOUR.** ⛔ **Mark every consequence
 > `inferred` unless the screen states it or someone watched the output change.**
 >
+> ### 🔴 BOX 17 CODE V IS GREYED — §199A is its own BLOCK, split Non-SSTB / SSTB
+>
+> 🛑 **The QBI code is an OUTPUT like every other computed line on this sheet.** ✅ **Scroll to
+> `Section 199A Information`**: two halves — **`Non-SSTB`** and **`SSTB`** — each with `Income Items`,
+> `Deduction Items` and `Additional Information`. 🔑 **Put everything in the half the business actually
+> is, and leave the other half completely empty.** ⛔ **Ticking the sheet's `Specified Service Trade or
+> Business` checkbox and then filling the Non-SSTB half is a contradiction the program will not flag.**
+>
+> | From the company's **Statement A** | Where it goes in the block |
+> |---|---|
+> | **QBI / ordinary income** | `Income Items → Ordinary Income` — ⚠️ **not the same field as box 1**, even when the figures match |
+> | **W-2 wages** | `Additional Information → Section 199A W-2 wages` |
+> | **UBIA of qualified property** | `Additional Information → Section 199A unadjusted basis` |
+> | REIT dividends · PTP income | their own fields in `Additional Information` |
+>
+> ⚠️ **SAY WHETHER IT MOVES THE TAX, because usually it does not.** The §199A deduction is capped at **20%
+> of taxable income before QBI**, and on a small return that cap binds long before the QBI figure does —
+> so the entry can leave line 13a unchanged. 🔑 **And the W-2-wage / UBIA limitation only applies ABOVE the
+> §199A taxable-income threshold**, so on a modest return those two fields never bite at all. ✅ **Enter
+> them anyway** — the return must say what the K-1 says — **but tell the person it is a correctness fix,
+> not a money fix**, or they will hunt for a change that was never going to appear.
+> _(Lilian, 2026-09-07: **"esa casilla en ATX no está disponible para escribir y me remite a esta sección
+> 199A para llenarla, pero no sé cómo llenarla."** On the draft return Form 8995 line 1 carried the
+> S corporation at **0** because the block was empty.)_
+>
+> ### 🔴 NETTING MOVES BOTH SIDES — reporting distributions at zero is only half of it
+>
+> 🛑 **Where [§5C-v](./form-1120s-preparation.md) nets a shareholder's contributions against his
+> distributions, Form 7203 must carry BOTH halves of the netting**: line 6 goes to **zero** *and* line 2
+> becomes the **NET excess of contributions over distributions**.
+> ⛔ **Zero on line 6 with the GROSS contributions on line 2 overstates ending basis by the whole
+> distribution.** ⛔ **Zero on line 6 with NOTHING on line 2 understates it by the whole net.**
+> ✅ **Check it the cheap way: the gross presentation and the netted one must give the SAME line 15.** If
+> they do not, one side of the netting was not applied. 🔑 **That identity is what makes netting a
+> presentation choice rather than a change in substance — and it is the only test worth running.**
+> _(Both errors seen on one live return, 2026-09-07.)_
+>
 > 🔑 **AND READ THE SCREEN'S OWN INSTRUCTION TEXT.** Input sheets carry it, and it settles questions a
 > session would otherwise guess at. *(The ATX sheet's header states the import route — **"To Import K-1s
 > from a S Corporation return, select Returns / Import Data / K-1 Data"** — and where the basis section

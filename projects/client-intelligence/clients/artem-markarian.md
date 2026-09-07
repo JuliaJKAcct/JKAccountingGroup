@@ -131,6 +131,32 @@ the actual details.
 
 ### Log
 
+- 2026-09-07 (sixth pass) — 🔎 **HIS DRAFT RETURN WAS REVIEWED, AND THE SIGNER SETTLED THE
+  DISTRIBUTIONS QUESTION.**
+  🟢 **① The decision:** his share of the company's distributions is **reported at ZERO on his basis
+  form**, matching the K-1 the company issues — the firm's own netting policy applied consistently.
+  🔑 **It costs nothing in substance** *(both presentations reach the same ending basis)* **and it closes
+  an escalation** that had been raised because the alternative would have left his captured K-1
+  disagreeing with the one the company issued. ⚠️ **But netting moves BOTH sides**, and the draft had moved
+  only one — the contributions figure has to become the net, or his basis is understated.
+  🔴 **② A defect the review found, and it is the kind that reaches the IRS:** the draft still carries a
+  **premium-tax-credit form rolled over from 2024**, filled from the return's own figures so that it looks
+  completed — **and he had no health insurance in 2025**, which was established and recorded the day
+  before. **There is nothing for it to reconcile against.** ⛔ **Also present and not his: the paid-preparer
+  due-diligence checklist, which is only required for credits he does not claim.**
+  🔴 **③ The company's QBI information never reached his return** — the software greys the K-1 box and
+  routes it to a separate section, which was empty. **A correctness fix that does not change his tax**,
+  because the deduction is already capped by his taxable income.
+  ✅ **Everything else ties to the working paper to the cent.**
+  ⚠️ **Two things stay open and both are decisions, not calculations:** his **opening basis** *(it depends
+  on how he acquired the stock, which is still unanswered)*, and **whether the cars' running costs belong
+  on the Schedule C** — the scenario without them forecloses a refundable credit that the scenario with
+  them would make live.
+  🛠️ **The draft was read through the firm's own redactor**, after rebuilding the extraction from the
+  file's own font maps — a naive read of that PDF reports "nothing sensitive found" while decoding nothing,
+  which is exactly the blind case the tool refuses.
+  ⛔ **No figures here — they stay in the working paper.**
+
 - 2026-09-07 (fifth pass) — 🔴 **THE K-1 SECTION OF HIS DELIVERY WAS REBUILT AGAIN, BECAUSE THE
   CORRECTION MADE THE DAY BEFORE STILL DID NOT WORK AT THE KEYBOARD.**
   🗣️ **Lilian:** *"Tus instrucciones acerca de cómo llenar el Schedule E no son buenas para seguir en
