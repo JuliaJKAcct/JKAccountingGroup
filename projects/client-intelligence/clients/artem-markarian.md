@@ -142,11 +142,16 @@ the actual details.
   🔴 **② A defect the review found, and it is the kind that reaches the IRS:** the draft still carries a
   **premium-tax-credit form rolled over from 2024**, filled from the return's own figures so that it looks
   completed — **and he had no health insurance in 2025**, which was established and recorded the day
-  before. **There is nothing for it to reconcile against.** ⛔ **Also present and not his: the paid-preparer
-  due-diligence checklist, which is only required for credits he does not claim.**
+  before. **He meets none of the conditions for filing it**, so it is not part of his return — ⓘ *it computes zero
+  either way, so this is a processing defect rather than a money one.* ⛔ **Also present: the paid-preparer
+  due-diligence checklist, required only for credits he does not claim** — 🛑 **but deleting THAT one is
+  conditional**: it comes back, with a preparer penalty attached, if the open scenario below is decided the
+  other way and the refundable credit is claimed.
   🔴 **③ The company's QBI information never reached his return** — the software greys the K-1 box and
-  routes it to a separate section, which was empty. **A correctness fix that does not change his tax**,
-  because the deduction is already capped by his taxable income.
+  routes it to a separate section, which was empty. **A correctness fix that does not change his tax as the
+  return now stands**, because the deduction is already capped by his taxable income. ⚠️ **That last part
+  depends on an open position** — if the officer compensation turns out not to be qualified business income,
+  the cap releases and the same entry becomes worth real money.
   ✅ **Everything else ties to the working paper to the cent.**
   ⚠️ **Two things stay open and both are decisions, not calculations:** his **opening basis** *(it depends
   on how he acquired the stock, which is still unanswered)*, and **whether the cars' running costs belong
@@ -154,7 +159,10 @@ the actual details.
   them would make live.
   🛠️ **The draft was read through the firm's own redactor**, after rebuilding the extraction from the
   file's own font maps — a naive read of that PDF reports "nothing sensitive found" while decoding nothing,
-  which is exactly the blind case the tool refuses.
+  which is exactly the blind case the tool refuses. ⚠️ **But the tool's own front door could not run in this
+  session** *(its PDF library would not install)*, so only its masking was used and the decoded text existed
+  briefly outside it. 🛠️ **The next person hits the same wall** — tracked as a tooling gap alongside the two
+  already open on that tool.
   ⛔ **No figures here — they stay in the working paper.**
 
 - 2026-09-07 (fifth pass) — 🔴 **THE K-1 SECTION OF HIS DELIVERY WAS REBUILT AGAIN, BECAUSE THE

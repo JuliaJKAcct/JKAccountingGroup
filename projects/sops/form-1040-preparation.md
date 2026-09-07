@@ -720,36 +720,52 @@ ruling it is.**
 > `Section 199A Information`**: two halves — **`Non-SSTB`** and **`SSTB`** — each with `Income Items`,
 > `Deduction Items` and `Additional Information`. 🔑 **Put everything in the half the business actually
 > is, and leave the other half completely empty.** ⛔ **Ticking the sheet's `Specified Service Trade or
-> Business` checkbox and then filling the Non-SSTB half is a contradiction the program will not flag.**
+> Business` checkbox and then filling the Non-SSTB half is a contradiction** ⚠️ `inferred — nobody has
+> watched whether the program flags it`.
 >
 > | From the company's **Statement A** | Where it goes in the block |
 > |---|---|
-> | **QBI / ordinary income** | `Income Items → Ordinary Income` — ⚠️ **not the same field as box 1**, even when the figures match |
+> | **QBI / ordinary income** | `Income Items → Ordinary Income` — ⚠️ **a different field from box 1**, even when the figures match ⓘ *(the two labels are observed; that they are independent inputs is `inferred`)* |
 > | **W-2 wages** | `Additional Information → Section 199A W-2 wages` |
 > | **UBIA of qualified property** | `Additional Information → Section 199A unadjusted basis` |
-> | REIT dividends · PTP income | their own fields in `Additional Information` |
+> | REIT dividends · PTP income | ⚠️ `Section 199A REIT dividends` and `Section 199A PTP income` appear in `Additional Information` alongside the wage and UBIA fields — **observed on one screenshot, at one scroll position** |
 >
-> ⚠️ **SAY WHETHER IT MOVES THE TAX, because usually it does not.** The §199A deduction is capped at **20%
-> of taxable income before QBI**, and on a small return that cap binds long before the QBI figure does —
-> so the entry can leave line 13a unchanged. 🔑 **And the W-2-wage / UBIA limitation only applies ABOVE the
+> ⚠️ **SAY WHETHER IT MOVES THE TAX, because usually it does not.** 📄 **Form 8995 line 15 is the smaller
+> of line 10** *(the deduction before the limitation)* **and line 14** *(20% of line 13 — taxable income
+> less net capital gain)*, so on a small return line 14 binds long before the QBI figure does and the
+> entry can leave **Form 8995 line 15 — and so Form 1040 line 13a — unchanged.**
+> ⛔ **And say what that depends on: a cap that binds today can stop binding** once an open QBI position is
+> settled, at which point the same entry becomes a money fix. 🔑 **And the W-2-wage / UBIA limitation only applies ABOVE the
 > §199A taxable-income threshold**, so on a modest return those two fields never bite at all. ✅ **Enter
 > them anyway** — the return must say what the K-1 says — **but tell the person it is a correctness fix,
 > not a money fix**, or they will hunt for a change that was never going to appear.
+> ⚠️ **AND RECONCILE IT WITH THE CHECKBOX ABOVE:** the `Qualified Business` tick and this block are **not
+> alternatives** — the tick is what makes the activity qualified at all, the block is what supplies its
+> figures. ⛔ **Neither alone produces a §199A deduction**, and `how the two combine` is `inferred`.
 > _(Lilian, 2026-09-07: **"esa casilla en ATX no está disponible para escribir y me remite a esta sección
 > 199A para llenarla, pero no sé cómo llenarla."** On the draft return Form 8995 line 1 carried the
 > S corporation at **0** because the block was empty.)_
 >
-> ### 🔴 NETTING MOVES BOTH SIDES — reporting distributions at zero is only half of it
+> ### 🔴 NETTING MOVES BOTH SIDES — and on a 1040 line 2 is keyed on the K-1 screen, not on Form 7203
 >
-> 🛑 **Where [§5C-v](./form-1120s-preparation.md) nets a shareholder's contributions against his
-> distributions, Form 7203 must carry BOTH halves of the netting**: line 6 goes to **zero** *and* line 2
-> becomes the **NET excess of contributions over distributions**.
-> ⛔ **Zero on line 6 with the GROSS contributions on line 2 overstates ending basis by the whole
-> distribution.** ⛔ **Zero on line 6 with NOTHING on line 2 understates it by the whole net.**
-> ✅ **Check it the cheap way: the gross presentation and the netted one must give the SAME line 15.** If
-> they do not, one side of the netting was not applied. 🔑 **That identity is what makes netting a
-> presentation choice rather than a change in substance — and it is the only test worth running.**
-> _(Both errors seen on one live return, 2026-09-07.)_
+> 📌 **The policy itself is [`form-1120s-preparation.md` §5C-v](./form-1120s-preparation.md) — read it
+> there, with its five gates and its *"plus any stock ACQUIRED during the year"* clause.** ⛔ **Do not
+> restate it; a restatement drops the parts that bite.** **What is new on THIS side of the return:**
+>
+> ⛔ **Form 7203 must carry BOTH halves**: line 6 goes to **zero** *and* line 2 becomes the **net**.
+> **Zero on line 6 with the gross on line 2 overstates ending basis by the whole distribution; zero on
+> line 6 with nothing on line 2 understates it by the whole net.** _(Both errors on one live return,
+> 2026-09-07 — one in the working paper's own instruction, one in the software.)_
+> 🛠️ **And neither line is typed on Form 7203** — both arrive from the **K-1 input screen**: line 6 from
+> box 16D, line 2 from the `Basis Limitation` section.
+>
+> 🛑 **THE ARITHMETIC CHECK, AND ITS LIMIT.** ✅ Where the policy's gates pass, the gross and netted
+> presentations give the **same line 15**, and that is a cheap way to catch a half-applied netting.
+> ⛔ **But a DIFFERENCE is not proof of an error, and treating it as one is dangerous:** where the gates
+> fail — distributions above pre-distribution basis — netting was never available, the form must carry the
+> gross, and the difference **is** the §1368(b)(2) capital gain the netted version would erase.
+> 🔑 **Gates first, per shareholder; comparison second.** ⚠️ **Two shareholders of the same company can
+> land on opposite sides of this, and both K-1s print box 16D at zero.**
 >
 > 🔑 **AND READ THE SCREEN'S OWN INSTRUCTION TEXT.** Input sheets carry it, and it settles questions a
 > session would otherwise guess at. *(The ATX sheet's header states the import route — **"To Import K-1s
