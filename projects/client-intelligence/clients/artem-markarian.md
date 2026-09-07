@@ -166,12 +166,17 @@ the actual details.
   🔴 **THIRD ROUND THE SAME DAY, and it is the one worth keeping.** 🗣️ *"Me demoro mucho tratando de
   encontrar dónde introducir la información."* **Given the right form's name, she added a neighbouring one**
   — a K-1 belonging to a **foreign partnership**, and an *issuing* form rather than a receiving one.
-  🔑 **The cause is not carelessness: searching the software for "K1" returns SEVEN near-identical
-  names, six of them wrong, and picking wrong opens a plausible screen instead of an error.**
+  🔑 **The cause is not carelessness: searching an individual return for "K1" returns four
+  near-identical names, and the one wrong-direction form the software offers there is the one for a
+  FOREIGN partnership — one line from the right one. Picking it opens a plausible screen, not an error.**
   ✅ **So the firm's rules now require the DISAMBIGUATION, not just the name** — which of the look-alikes it
-  is *not*, the naming convention that separates a K-1 you **receive** from one you **issue**, and **a tell
-  that works without remembering any of it**: an issuing K-1 asks you to allocate percentages between
-  owners, which a recipient never does.
+  is *not*, **scoped to the return type the person is actually in**, the naming convention that separates a
+  K-1 you **receive** from one you **issue**, and **a tell that works without remembering any of it.**
+  ⛔ **The first version of that tell was wrong and a review caught it before it did harm:** it said an
+  issuing form is the one that asks for allocation percentages — but a **received** K-1 carries its own
+  percentage too, so the test would have condemned the correct form, and the procedure said to delete it.
+  ✅ **The tell is now structural: the wrong screen is a grid with one row per OWNER and asks for the
+  OWNERS' names; the right one asks for the COMPANY's.**
   🛑 **Twice in one day a delivery gave a name and no way to tell it from its neighbours.**
   🟢 **FOURTH ROUND — she found the sheet herself and sent a screenshot, which closed it.** 🗣️ *"Parte 3,
   casilla 1: ¿dónde está eso?"* ⛔ **Nowhere — the software's input sheet carries no "Part III" and renames

@@ -642,7 +642,7 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 >
 > | Host | 2026-09-07 |
 > |---|---|
-> | ✅ **`support.atxinc.com`** | **200 with real content.** 🔴 **`/taxna/software-system-requirements/atx-forms` is the FORMS LIST — every ATX form name and description, by year.** *(2.6 MB; parse it, do not read it.)* |
+> | ✅ **`support.atxinc.com`** | **200 with real content.** 🔴 **`/taxna/software-system-requirements/atx-forms` is the FORMS LIST — every form's name and description, grouped by PACKAGE** *(`id="FederalIndividual"`, `FederalCorporate`, … plus the states)*. ⚠️ **The URL carries no year — it serves the site's current program year**, so say which that was. **2.6 MB; parse it by package, do not eyeball it — a crude grep spills across packages and invents neighbours that are not in the box.** |
 > | ✅ `support.cch.com` | 200, but its KB articles sit behind **`/SingleSignOn/`** — the firm's own ATX customer login. **A session cannot open one; Lilian can.** |
 > | ⛔ `www.atxinc.com` · `taxna.wolterskluwer.com` | refused — the **marketing** sites, which are not what anyone needed |
 > | ✅ `irs.gov` | reachable |
@@ -655,23 +655,39 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > ### 🔴 **AND THE FORM'S NAME IS NOT ENOUGH: SAY WHICH OF THE LOOK-ALIKES IT IS NOT**
 >
 > 🛑 **A search in the program's *Add Forms* box returns a FAMILY, and the names differ by one word.**
-> ⛔ **A delivery that names only the right one leaves the person to pick from six wrong ones**, and the
-> wrong pick does not error — it opens a plausible screen and wastes an hour.
-> ⚠️ **Worked case: typing `K1` in a 1040 returns SEVEN forms** — `K1 INPUT (1041)` · `K1 INPUT (1065)` ·
-> `K1 INPUT (1120S)` · `SCH K1 (1065)` · `SCH K1 (1120S)` · `SCH K1 (8865)` · `8865`.
+> ⛔ **A delivery that names only the right one leaves the person to pick from the rest**, and the wrong
+> pick does not error — it opens a plausible screen and wastes an hour.
+> ✅ **Worked case, read off the vendor's forms list by package:** typing `K1` in a **1040** returns
+> **FOUR** — `K1 INPUT (1041)` · `K1 INPUT (1065)` · **`K1 INPUT (1120S)`** · `SCH K1 (8865)`.
+> 🔑 **Note what is NOT there and why it matters: `SCH K1 (1120S)` and `SCH K1 (1065)` live in the
+> Corporate and Partnership packages**, so on a 1040 they cannot be picked by accident at all — **the only
+> `SCH K1` in the box is the foreign-partnership one, which is exactly the one that was picked.**
+> ⚠️ **And attaching a state adds its own `XX K1 INPUT`** *(57 of them exist)*.
 >
-> ✅ **So give the DISAMBIGUATION, and give the naming RULE that generalises it:**
+> ✅ **So give the DISAMBIGUATION — scoped to the package the person is actually in — and the naming rule:**
 >
 > | | |
 > |---|---|
 > | **`K1 INPUT …`** | the K-1 you **RECEIVE** — a capture worksheet that feeds *your* return |
 > | **`SCH K1 …`** | the K-1 you **ISSUE** — the printed form handed to someone else |
-> | **the number in parentheses** | **the form of the entity that ISSUED it** — `1120S` S corporation · `1065` partnership · `1041` trust · **`8865` FOREIGN partnership** |
+> | **the parenthesised number** | ⚠️ **within the federal K-1 family only**, the **issuing entity's form** — `1120S` S corp · `1065` partnership · `1041` trust · **`8865` FOREIGN partnership**. ⛔ **Elsewhere in the program the parentheses name the PARENT form** *(`SCH E (1040) PAGE 2`, `LUMP-SUM WKST (1040)`)*, so do not state the rule unscoped |
 >
-> 🔑 **AND GIVE THE TELL THAT SAYS YOU ARE ON THE WRONG ONE** — a screen, not a name. *(An issuing
-> K-1 asks for `Allocation Percentage`, `Profits`, `Capital`: those are what a PAYER splits among owners.
-> A recipient never allocates anything.)* ⛔ **A person who cannot name the form can still recognise the
-> screen, which is why the tell is worth more than the name.**
+> 🔑 **AND GIVE THE TELL — but make it STRUCTURAL, not lexical.**
+> ⛔ **"An issuing K-1 asks for a percentage" is FALSE and a first version of this rule said it.** 📄 **A
+> RECEIVED K-1 carries one too**: Schedule K-1 (1120-S) Part II **item G is `Current year allocation
+> percentage`**, and Schedule K-1 (1065) **item J is the partner's own `Profit / Loss / Capital %`**
+> *(read off the 2025 PDFs, 2026-09-07)*. **A capture worksheet mirrors those boxes, so the RIGHT form has
+> percentage fields too** — and on a mid-year change or a §1377(a)(2) election it has *more* of them.
+> ✅ **What actually separates them is the SHAPE and the TITLE:**
+>
+> | | |
+> |---|---|
+> | 🔴 **ISSUING** | a **multi-owner GRID** — one **row per owner**, *Add Record / Delete Record*, and it asks for **the OWNERS' names and addresses**, with percentages split among them to 100% |
+> | ✅ **RECEIVING** | an **Input Sheet for ONE entity** — it asks for **the COMPANY's name, EIN and address**, then that entity's boxes |
+>
+> ⛔ **A percentage field alone proves nothing.** 🔑 **"Whose name and address is this screen asking for?"
+> is the question that always separates them** — and a person who cannot name the form can still answer it,
+> which is why the tell is worth more than the name.
 > _(Lilian, 2026-09-07, third round on the same section: she had added **`SCH K1 (8865)`** — wrong entity
 > type **and** wrong direction — after a delivery that named the right form and nothing else.
 > 🛑 **Two rounds earlier the same delivery had sent her to `SCH E (1040) PAGE 1`, the RENTAL sheet.**
@@ -708,6 +724,8 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 >
 > ✅ **So a form's NAME is now checkable at source** — `K1 INPUT (1120S)` *(Federal K-1 (1120S) Input
 > Worksheet)*, `SCH E (1040) PAGE 2`, `7203, BASIS WKST` were all read off that list, not inferred.
+> 🛑 **AND SO IS WHICH PACKAGE IT IS IN, which is half the answer** — a form in another package is not a
+> wrong choice the person can make.
 > ⛔ **What is still NOT checkable is what a screen LOOKS LIKE** — its tabs, its field positions, its
 > column letters. **For those the authority stays the firm's own two sources:** a **screenshot** from
 > whoever is at the keyboard, and **`projects/tax-returns/`**.
