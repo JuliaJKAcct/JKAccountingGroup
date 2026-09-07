@@ -1,6 +1,6 @@
 # Anton & Olga Stenin — laundry portfolio buyers
 
-> **Status:** Prospect — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02 · **Owner:** Julia · **Last updated:** 2026-09-02
+> **Status:** Engaged (first milestone invoiced 2026-09-02) — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02 · **Owner:** Julia · **Last updated:** 2026-09-07
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -135,10 +135,25 @@ the actual details.
   equipment-replacement CapEx. Reuse this page as the boundary standard for any future
   due-diligence engagement. The engagement still depends on seller cooperation: the
   signed 4506-C and consent for utility and municipal billing inquiries
-- **The seller is THREE companies, and Anton has split the advisors' roles** (his letter,
-  2026-08-30): the real estate sits in one company, the wash/laundromat operation in a
-  second, and the ironing/delivery service in a third — so the due diligence covers up to
-  three sets of books and returns, and a Form 4506-C is needed per company. His division
+- **The seller is THREE companies — the COUNT is confirmed, the buyer's description of the
+  SHAPE is wrong.** Anton's letter (2026-08-30) said the real estate sits in one company, the
+  wash/laundromat operation in a second, and the ironing/delivery service in a third. The
+  **Letter of Intent and the five county TRIM notices** (received from the buyer's attorney
+  2026-09-04, forwarded to Lilian 2026-09-07) say otherwise: **the real estate is split across
+  TWO companies**, not one — **Bayshore Laundromat, Inc.** holds the two Bradenton parcels
+  (15th Street Laundry, Select Coin Laundry) and **Samoset Florida, Inc.** holds the three
+  Palmetto/Ruskin parcels (Palmetto Coin Laundry, Palmetto Wash & Fold, Soap Opera Laundry) —
+  while the third, **Lemon Squeeze Commercial Laundry, LLC**, owns **no real estate at all**
+  and is the wash-dry-fold/delivery business run out of the Select location. Those three, and
+  only those three, sign the LOI as Seller (Bruce R. Nye, Sr. and Sonja L. Nye for each).
+  ⚠️ **What no document yet states is which entity OPERATES which of the six businesses** — the
+  LOI's "Owner of Record" column is record title to the *land*, and it matches the TRIM notices
+  exactly. So the count for **one Form 8821 per taxpayer is three**, but the set is only
+  provably complete once the seller confirms, per entity, the EIN, the federal return filed,
+  and **which entity issues the W-2s** (a fourth, non-selling payroll entity would not appear
+  in the LOI at all). ⛔ **The LOI is not final** — the attorney's own words, 2026-09-04:
+  *"Note that LOI will change."* A **Form 4506-C is needed per company** on the same logic.
+  His division
   of labor: everything about the real estate and land as objects (re-registration,
   inspections, property taxes/fines, purchase agreements) belongs to **Олеся** (§2);
   everything about the business and its results is ours, **with us engaging and
@@ -180,10 +195,71 @@ the actual details.
 - The proposal document is bespoke (no tool template exists yet for consulting engagements);
   if due-diligence work recurs, it should become the third template family
 
+**The seller side, as the documents actually describe it** _(LOI 2026-08-25 + the five 2026
+TRIM notices; the LOI is not final — the attorney flagged it will change)_
+
+| Location (business) | Address | Record owner of the LAND | Sunbiz |
+|---|---|---|---|
+| 15th Street Laundry (a.k.a. Samoset) | 3119 15th St E, Bradenton | **Bayshore Laundromat, Inc.** (FL corp) | P09000016805 |
+| Select Coin Laundry | 105 21st Ave W, Bradenton | **Bayshore Laundromat, Inc.** — the TRIM misspells it *LAUNDRAMAT* | P09000016805 |
+| Palmetto Coin Laundry | 706 (LOI) / 702 (TRIM) 9th St W, Palmetto | **Samoset Florida, Inc.** (FL corp) | P16000101337 _(unconfirmed)_ |
+| Palmetto Wash & Fold | 1527 8th Ave W, Palmetto | **Samoset Florida, Inc.** | P16000101337 _(unconfirmed)_ |
+| Soap Opera Laundry | 329 N US Hwy 41, Ruskin (Hillsborough) | **Samoset Florida, Inc.** | P16000101337 _(unconfirmed)_ |
+| Lemon Squeezy (wash-dry-fold + delivery, run from the Select location) | — no parcel — | **Lemon Squeeze Commercial Laundry, LLC** (FL LLC, formed 2024-04-15) | L24000177802 |
+
+Both corporations use the same mailing address; officers of all three are **Bruce R. Nye, Sr.**
+(President) and **Sonja L. Nye** (Secretary/Treasurer), who sign the LOI for each.
+⚠️ **EINs are public on Sunbiz and belong here once read from Sunbiz itself.** A web-index
+lookup on 2026-09-07 returned `26-4488945` for Bayshore Laundromat and `99-2595540` for Lemon
+Squeeze Commercial Laundry, and found nothing for Samoset Florida — **search.sunbiz.org was
+unreachable from that session, so none of these is confirmed. Read them off the Sunbiz record
+before typing any of them onto a Form 8821.**
+
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-07 — **The seller's entity structure established from primary documents, for the
+  Form 8821 set.** Julia asked Lilian to prepare Forms 8821 for the seller companies and
+  forwarded (16:18 UTC) the package the buyer's attorney Olesya Trayber had sent her
+  2026-09-04: a **Transaction Binder** (contents page, the 25 Aug Letter of Intent, and a
+  proposed asset allocation), **five county TRIM notices** — the 2026 Notice of Proposed
+  Property Taxes, one per parcel, from Manatee and Hillsborough Counties — and the broker's
+  own **"Allocation — Simple Math"** page. Reading them together settles the count Lilian
+  could not get from the TRIM notices alone: **five parcels · six operating businesses ·
+  THREE seller entities**, so **three Forms 8821, one per EIN**. Only two names appear on the
+  TRIM notices because the third company owns no land. Detail and the entity→parcel map are
+  in §5. Also found: the Manatee TRIM for the Select parcel spells the owner **"BAYSHORE
+  LAUNDRAMAT INC"** while the 15th Street one spells it **"BAYSHORE LAUNDROMAT INC"** — a
+  county misspelling, not a second company (the Sunbiz record and the LOI both read
+  LAUNDROMAT); and the LOI puts Palmetto Coin Laundry at **706** 9th St W while the TRIM for
+  that parcel reads **702** 9TH ST W. Neither changes the 8821s; both must be right before
+  the real-estate contract and our RE analysis go out
+- 2026-09-04 — **Two document deliveries landed in Julia's inbox and have NOT been passed on.**
+  (a) The buyer's attorney sent the Transaction Binder + TRIM notices (above). (b) Separately,
+  the seller's broker **Kevin T. Riordan (Merritt Realty)** sent Olga, who forwarded to Julia,
+  a first tranche of due-diligence reports — **Property Schedule and Real Estate Taxes**,
+  **Insurance Schedule by Property**, **Equipment Schedule by Store**, and a **CoStar synopsis**
+  of the five parcels — saying he is *"working on YTD P&Ls"* and holding **five 100-page CoStar
+  underwriting reports** available on request. ⚠️ **Those four PDFs exist only as Gmail
+  attachments — they are not in Drive and Lilian has not been given them.** The numbering
+  ("2b", "3") means the set is partial. The Property Schedule is the document most likely to
+  state the owning entity per property and should be pulled before the 8821 detail is finalised
+- 2026-09-04 — **The broker's allocation page is advocacy, not analysis, and must not be
+  adopted.** `Allocation_Simple_Math.pdf` argues the buyer loses badly in year 1 under the
+  seller's proposed split and should push value into buildings rather than goodwill. It comes
+  from Kevin Riordan, who wrote to Olga: *"The seller needs to talk to his CPA about what's
+  fair… Obviously, I'm not a CPA. It's just some stuff I put together."* The page itself is
+  stamped *ESTIMATES ONLY — NOT TAX ADVICE*. The **RE/business split and the Form 8594
+  allocation are Part 2 of our own engagement** (§4, Income tax) — the firm's figures are the
+  firm's, and the broker's cost-segregation and property-tax assertions are ours to test, not
+  to repeat
+- 2026-09-02/03 — **First milestone invoiced; the client asked for a bank transfer instead of
+  the payment link.** QuickBooks invoice 2291 went to Olga on 2026-09-02 (amount in
+  QuickBooks, not here); she replied 2026-09-03 in Russian that she cannot pay by link and
+  asked for an ordinary invoice with the firm's details for a domestic transfer, and Julia
+  sent the bank letter with the ACH details the same day. Payment itself is not confirmed in
+  the thread — check QuickBooks before treating Part 1 as funded
 - 2026-08-29 — **Bounded prospect sweep (Gmail in:inbox+in:sent + Google Drive, since
   2026-08-28; no Double/Ping — no Double account exists).** Searched Gmail for "Anton"
   combined with "laundry"/"Bradenton"/"Palmetto"/"Ruskin"/"Merritt Realty" (to disambiguate
@@ -326,9 +402,31 @@ the actual details.
   Olga Stenin** — now on the cover, the agreement block and the T&C party line (v11)
 - ~~The deposit amount ($3,500 vs $4,000)~~ **Moot 2026-09-02:** billing became fixed
   milestone installments; there is no deposit any more
-- **Julia to confirm — the unit count:** her brief says four cash points + two card points
-  (six); the offering memorandum lists five locations plus the delivery business. The
-  document uses her 4 + 2 framing — confirm the counting before signing
+- ~~**Julia to confirm — the unit count**~~ **Resolved 2026-09-07 by the LOI:** five parcels
+  and **six** operating businesses (the sixth is Lemon Squeeze, run out of the Select
+  location). Julia's "four cash points + two card points" = the same six. Both framings were
+  right; they were counting different things
+- 🔴 **For Julia, before the three Forms 8821 can be completed — four things no document we
+  hold answers.** (1) Each entity's **EIN** and the **federal return it files** (1120 or
+  1120-S for the two corporations; 1065, 1120-S or disregarded for Lemon Squeeze — if it is a
+  single-member disregarded LLC an 8821 in its own name returns nothing for income tax).
+  (2) **Which entity issues the W-2s**, since employment-tax compliance is in scope and a
+  payroll entity that sells nothing would not appear in the LOI. (3) **Which years** — line 3
+  forbids "all years", and **Lemon Squeeze was only formed 2024-04-15**, so a three-year
+  request cannot be met for it. (4) ⚠️ **The line 4 / line 5 decision:** with line 4 unchecked
+  and line 5 unchecked, the IRS **automatically revokes every prior tax information
+  authorization on file for that taxpayer** — which would knock the seller's own CPA off their
+  own client mid-deal. Decide deliberately, per entity
+- **Is the 8821 replacing the Form 4506-C, or joining it?** The engagement and the delivered
+  proposal are built on seller-signed **4506-Cs** for IRS transcripts; Julia has now asked for
+  **8821s**, which is a different instrument (the 8821 puts us on the seller's CAF and lets us
+  be told things; the 4506-C produces the transcripts). Ask her which she wants signed, and
+  whether the proposal text needs to follow
+- **The firm has no CAF number recorded** ([firm-identity.md §6](../../sops/firm-identity.md)).
+  If none has been assigned, line 2 takes `NONE` and the IRS issues one. **Lilian is eligible
+  as an 8821 designee** (§4 of that sheet) — a 2848 would not be hers to be named on. Existing
+  filled examples and a blank template live in Drive → *Tax information authorization - form
+  8821 IRS* → *Templates - 8821*
 - **Julia to confirm:** whether the bespoke T&C set reads right for a first consulting
   engagement (balance-on-report-delivery was her own instruction and is settled)
 
