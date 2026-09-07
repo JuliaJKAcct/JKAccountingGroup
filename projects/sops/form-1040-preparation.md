@@ -1,9 +1,12 @@
 # Preparing a Form 1040 (individual return) — the modular procedure
 
-> **Status:** 🟡 **DRAFT — pending Lilian's sign-off.** 🔴 **Extended 2026-09-06 AT HER REQUEST** — the
-> Schedule C `Other expenses` line *(27b, not 27a)* and the prior-year-convention rule that decides which
-> expense line at all (M2), and **Schedule E Part II's two stacked grids** with the (i)/(k) column
-> correction (M3). Started 2026-08-18 from the first two 1040s
+> **Status:** 🟡 **DRAFT — pending Lilian's sign-off.** 🔴 **Extended 2026-09-07 AT HER REQUEST** — 🛠️ **the
+> ATX ENTRY ROUTE for a K-1: Schedule E page 2 is an OUTPUT and opens no line; the K-1 is keyed on its own
+> form, which feeds Schedule E, Form 7203 and Form 8995 at once** — with the "it did not flow" list and the
+> note that the vendor's documentation is unreachable from the firm's environment (M3). 🔴 **Extended
+> 2026-09-06** — the Schedule C `Other expenses` line *(27b, not 27a)* and the prior-year-convention rule
+> that decides which expense line at all (M2), and **Schedule E Part II's two stacked grids** with the
+> (i)/(k) column correction (M3). Started 2026-08-18 from the first two 1040s
 > the firm prepared with a session assisting; extended the same day with the **credit mechanics**
 > (§3, M5, M6) and the **Form 1095-A continuation-page trap** (M4), and on **2026-08-19** with the
 > home-office **IN/OUT rule**, the **first-landline** limit, the two **lease** traps, the **Form 8829
@@ -638,6 +641,36 @@ ruling it is.**
 > ⚖️ **Passive or nonpassive is a POSITION, not a lookup.** An S-corporation shareholder who materially
 > participates is nonpassive. **Record the reason** *(officer, the year's compensation, hours)* rather than
 > defaulting — and say plainly when no §469 test has been run.
+
+> ### 🔴 AND IN THE SOFTWARE, NONE OF THAT GRID IS TYPED — Schedule E page 2 is an OUTPUT
+>
+> 🛑 **The block above answers *where on the FORM*. It does not answer *where do I TYPE*, and in ATX the
+> answer is NOWHERE: Schedule E page 2 opens no line.** ✅ **The K-1 is keyed on its own form**, added to
+> the 1040 — and **Schedule E page 2, Form 7203 and Form 8995 are all outputs of that one screen.**
+> 🔑 **Same rule as Form 7203 opening only lines 1 and 13, taken to its limit.**
+>
+> | What is typed on the K-1's own form | Where it surfaces |
+> |---|---|
+> | company **name · EIN** | Schedule E line 28 row A, cols **(a)** and **(d)** |
+> | 🔴 **box 1** | 🔴 **Schedule E, LOWER grid, row A, `Nonpassive income from Schedule K-1`** — income; the nonpassive-LOSS column for a loss |
+> | **box 16 C** · **box 16 D** | Form 7203 **line 8a** · **line 6** |
+> | **capital contributions** *(on no K-1 box — from the books)* | Form 7203 **line 2** |
+> | **box 17 V** | Form 8995 |
+>
+> ⛔ **Only line 27 and the (e)/(f) ticks are the preparer's on Schedule E itself.** ⚠️ *(Whether (e) is
+> ticked on Schedule E or on the K-1 screen is `not established` — ask whoever has it open.)*
+>
+> ✅ **AND ALWAYS GIVE THE "IT DID NOT FLOW" LIST, because a missing input produces NO error message:**
+> ① the `1120S` K-1 form was added, not the `1065` one; ② the amount is in **box 1** and not a neighbour;
+> ③ the activity is marked **nonpassive** — treated as passive it goes to **Form 8582** and never reaches
+> Schedule E at all; ④ only one K-1 tab is in use.
+>
+> ⚠️ **Vendor documentation is unreachable from the firm's environment** *(every ATX/Wolters Kluwer host is
+> refused by the network policy; irs.gov is not — checked 2026-09-07)*. 🔑 **So a screen name is
+> `established` only from a screenshot or from `projects/tax-returns/`, and a delivery steers by a
+> column's TITLE rather than by a screen letter nobody has seen.**
+> _(Lilian, 2026-09-07: **"No encuentro dónde entrar a nada."** The route was already in the repo, on
+> another client's paper, and a delivery gave the form's coordinates without it.)_
 
 **Schedule E page 2 prints it above line 28. Quote it, do not paraphrase:**
 
