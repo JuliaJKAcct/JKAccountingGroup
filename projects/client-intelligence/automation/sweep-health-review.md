@@ -3,39 +3,69 @@
 > ## ⬛ STATUS — read this before anything else
 >
 > ### Does anyone owe something right now?
-> **Nothing is BLOCKING.** The Routine's prompt is correct and live — Lilian pasted it 2026-08-24
-> 18:45 UTC and it was read back and diffed against this repo. **There is nothing to change and
-> nothing to paste.**
-> ⚠️ **But one OPTIONAL thing is worth doing before Monday, and only a person can do it:** the
-> 2026-08-31 review Routine has **no MCP connectors** (`create_trigger` cannot attach them — §8), so
-> it **cannot open the sweep's report email**. It will still do the repo half, which is most of the
-> value. **The cheap fix is the one to take here: open the session it creates on Monday and paste
-> the sweep email into it** — two minutes, nothing to build, and it is what a ONE-SHOT deserves.
-> ⚠️ **Recreating it in the UI would NOT carry forward:** the 08-31 session is told to re-arm the
-> next review with `create_trigger`, from a session, which cannot attach connectors — so the UI
-> setup would buy Gmail for **that one firing** and the 09-07 review would be back where it started.
-> 📋 **If you do want the permanent version, the procedure and its trade-offs are in the
-> [`automated-email-reports`](../../../.claude/skills/automated-email-reports/SKILL.md) skill** —
-> *"It already exists and it has no connectors"*. **Read it there; this box deliberately does not
-> repeat it** (§8: copying these facts around is the failure §4 and §5 document).
-> _(The identical Routine failed exactly this way on 2026-08-24 — §8.)_
+> 🔴 **YES — and it is new as of 2026-09-07. THE 2026-09-05 RUN FIRED AND DIED.**
+> `trig_015LaKrto6FDKyUwHmZywqjS` fired on schedule at **07:10:26 UTC** and ended
+> **`ROUTINE_RUN_STATUS_ABANDONED`** with no `finished_at` (session `cse_016V9wPPT4JCLDTca28ck2UQ`).
+> **No report email was sent, nothing was committed, no client file records that date** — confirmed
+> independently in Gmail, which holds the 08-22 and 08-29 reports and then stops.
+> ⚠️ **Nothing is wrong with the Routine or the prompt.** It is still enabled and fires again
+> **2026-09-12 07:08 UTC**; there is nothing to re-arm and nothing to paste. **What failed is one
+> run, and no alarm exists for that** — it was found nine days later, by hand, only because Lilian
+> asked whether the sweep was working.
 >
+> **The three things a person owes, in order:**
+> 1. 🔴 **Open the dead session** (`cse_016V9wPPT4JCLDTca28ck2UQ`) and find out *why* it ended.
+>    Context exhaustion is the hypothesis §3 predicted, **not an established fact**, and the
+>    subagent decision below now hangs on it.
+> 2. 🟠 **Build the missing alarm.** A Saturday with no report email is the cheapest possible
+>    detector and there is none. Until it exists, the next silent failure is found the same way this
+>    one was — by accident, a week and a half late.
+> 3. 🟡 **Accept the two-week gap rather than hide it.** Every baseline in
+>    [`sweep-state.md`](./sweep-state.md) still reads **2026-08-29** and **must stay there**: the
+>    2026-09-12 run has to search from that date, not from 09-12. A bounded manual catch-up on
+>    2026-09-07 covered **only the deadline-bearing items, Gmail only** — see that file's run note.
+>    ⚠️ **It swept nobody**; ~36 clients have not been looked at since 2026-08-29.
+>
+> ⓘ **What the 2026-08-29 run proves, and it is worth saying plainly: the sweep WORKS when it
+> finishes.** Spot-checked 2026-09-07 — 40 of 54 client files carry that date; Mobilesource's
+> three-way organizer contradiction is recorded in §4 with all three readings and their sources;
+> **Magnum 152 caught and reversed its OWN prior week's wrong conclusion** on the Comcast/FPL
+> credentials, keeping both versions. The chase pass prints ages in days and names what it did not
+> reach. **The defect is availability, not quality.**
+
 > ### What happens on its own, and when
 > | When | What | Anyone needed? |
 > |---|---|---|
 > | **Fri 2026-08-28** | ⚠️ **NOT the sweep** — a separate one-shot chases the **Pro Title BTR** with the City of Hollywood (`trig_01X8wmHqbqHqi5uVGS8pHw7S`). It also has no connectors. **Different matter; see §8, and FOLLOW-UPS row 3** | Possibly — read what it reports |
 > | **Sat 2026-08-29 ~07:08 UTC** | The sweep runs. **First run on the new prompt.** Emails Lilian through the webhook | No |
 > | **Mon 2026-08-31 13:00 UTC** | `trig_01M1FeEQC6TFoUfLRgdQ8RfP` reviews that run. It notifies the **firm's shared Claude account** (push + email) — **it does NOT send Lilian a separate email**, so open the session it creates | No, but open it |
-> | **Sat 2026-09-05** | The sweep runs again — the second of the two runs the decision needs | No |
-> | **Mon 2026-09-07** | 🔵 **The subagent decision**, on both runs together | Yes — Lilian decides |
+> | ~~**Sat 2026-09-05**~~ | ⛔ **IT FIRED AND DIED** — `ROUTINE_RUN_STATUS_ABANDONED`, 07:10:26 UTC, no `finished_at`, no report email, nothing committed. **The second of the two runs the decision needs does not exist** | — |
+> | ~~**Mon 2026-09-07**~~ | 🛑 **THE DECISION CANNOT BE TAKEN AS DESIGNED** — see the rewritten question below. Lilian asked that day whether the sweep works; this box is the answer | Yes — Lilian decides, on different evidence |
+> | **Sat 2026-09-12 07:08 UTC** | The Routine is **healthy and still enabled** and fires again. **Its baseline is still 2026-08-29** — a two-week gap, deliberately not papered over | No |
 >
-> ### The one open question, and the one number that settles it
-> Whether the sweep should split across **subagents**. 🛑 **It is NOT decided on one run.** Count the
-> **NEW `⚠️ CATCH-UP OWED` rows each run CREATES** in [`sweep-state.md`](./sweep-state.md) — ⚠️ **two
-> such rows already exist** (VOICECAPITAL, VOXAGO, converted by hand 2026-08-24), so count what is
-> *added*, never the total. **Near zero across 08-29 and 09-05 → leave it as it is. Two or more per
-> run, on both → split it.**
+> ### 🛑 The open question — REFRAMED 2026-09-07, because the metric it was gated on cannot be read
+> Whether the sweep should split across **subagents**. The gate used to be: count the **NEW
+> `⚠️ CATCH-UP OWED` rows** created across **2026-08-29 and 2026-09-05**; near zero → leave it, two or
+> more per run → split it. ⛔ **That gate is now unreadable, and worse, it silently answers WRONG.**
+> **2026-09-05 produced no rows of any kind, because the run never finished** — and "no new rows"
+> reads on its face as *near zero → close this row*, which is the exact opposite of what happened.
+> **A dead run and a clean run are indistinguishable in that number.** Never let it be counted
+> without first checking that the run actually completed.
 >
+> 🔵 **And the abandonment is itself the evidence §3 was waiting for.** §3's prediction was that the
+> run does not fit in one context and *"does not fail loudly — it thins out."* **It has now failed
+> loudly.** That is the same root cause reaching its end state, and it is a stronger signal than any
+> row count: a run that dies delivers **zero** clients, not thin ones. 🔑 **So the honest reading is
+> that the structural case for subagents is made — but it rests on ONE abandoned run**, and nobody
+> has yet confirmed *why* the session ended (context exhaustion is the leading hypothesis, not an
+> established fact — the run's own session `cse_016V9wPPT4JCLDTca28ck2UQ` has not been opened).
+> **Open that session before deciding**; it is the one place the actual cause is recorded.
+>
+> ⚠️ **Whatever is decided about subagents, one thing is now independent of it:** a run can fail
+> completely and **nothing anywhere notices**. The failure was found nine days later, by hand,
+> because Lilian happened to ask. **A missing Saturday report is the cheapest possible alarm and it
+> does not exist.**
+
 > ### Where the real record is
 > ⓘ **The firm's open loops live in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) — row 48 is this
 > matter, and it is the authority.** This box is a summary for whoever opens *this file*; if the two

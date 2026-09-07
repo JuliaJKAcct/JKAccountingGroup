@@ -121,6 +121,8 @@ the actual details.
   - 🔴 **Form 8822-B (IRS address update) — still unconfirmed as filed.** The task was set 2026-03-14; **168 days pending**, no deadline recorded (an address-update filing has no statutory due date, but leaving it open means the IRS still has the old address on file for this entity).
 - 2026-08-18 (later, same session) — **Leasing chain corrected (Lilian).** The signed Synergy Mood LLC lease she produced for Pro Title's application names **both companies jointly as Tenant**, so this client is a **co-tenant, not the sole master tenant** — §5 corrected. Nothing about this client's own issued BTR changes; its footing with the city was never in question.
 
+- 2026-09-07 — **BTR renewal: no movement, and the window is closing.** A targeted Gmail search bounded `after:2026/08/29` on the business name returned **only** a JK Accounting invoice (#2271, 2026-08-31) — nothing whatever about the **2026-09-30 Business Tax Receipt renewal**, which the 2026-08-29 sweep had already established is **not calendared**. It is now **23 days out**. ⚠️ **That negative belongs to the search that produced it** (Gmail, business name, post-2026-08-29 only): Double, Drive and Google Calendar were **not** re-checked this pass, so this is "nothing found in Gmail", not "nothing happened". ⓘ Found 2026-09-07 by a manual catch-up; the 2026-09-05 sweep never ran.
+
 ### Outstanding items (CI-only — never in the SOP)
 - **City of Hollywood BTR — issued (Approved / Active) 2026-07-23.** One residual remains:
   - ✅ **Certificate saved to Drive 2026-08-18** — see §4 above. Closed.
