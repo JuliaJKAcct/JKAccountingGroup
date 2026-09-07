@@ -591,7 +591,14 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > The build-the-map-from-the-prior-year method decides **which line**, not only which figure. 🔑 **If last
 > year's return deducted something as `Other expenses` rather than on a named line, that is the client's
 > convention** — follow it unless there is a reason to change, and **name it as the convention with its
-> evidence.** ⛔ **The failure this is written from is not "the session did not know": the prior year's mapping was
+> evidence.**
+> 🔴 **AND FIRST ASK WHO PREPARED THAT PRIOR YEAR, because it changes what the convention IS.**
+> **An outside preparer's choice is a client convention** — worth following for consistency, and worth
+> departing from with a reason. 🛑 **THE FIRM'S OWN prior-year return is not that: it is the firm's
+> position, set by the person who signs.** ⛔ **Departing from it on the next year's return is the firm
+> contradicting itself on the same client's same activity in consecutive years** — a position change an
+> examiner reads as one, and one nobody decided to make. _(2026-09-07: the firm had prepared the prior
+> year, and the session did not know it while putting the same expense on a different line.)_ ⛔ **The failure this is written from is not "the session did not know": the prior year's mapping was
 > already quoted in that client's own working paper — its whole Schedule C deduction beyond depreciation
 > sat in `Other expenses`, nothing on a named line — and the 2025 figure went on a named line anyway.**
 > 🛑 **The evidence being in the file is not the same as the evidence being USED.**
