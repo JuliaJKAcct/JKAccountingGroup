@@ -72,10 +72,10 @@ Follow it in this order; a preparer works the document top-down.
 **Head it with the FORM AND ITS PAGE** — *"Form 1125-A, page 1"* — because a schedule's lines do not
 all live on the page its name suggests (§4B):
 
-| Line | What it is | Formula, or where you read it |
-|---|---|---|
-| **7** | Inventory at end of year | 📖 **read** off the balance sheet — but read the trap in §4B |
-| **8** | Cost of goods sold | ƒ `= line 6 − line 7` → carry to **page 1, line 2** |
+| Line | ⌨️ / ƒ | What it is | Formula, or where you read it |
+|---|---|---|---|
+| **7** | **⌨️** | Inventory at end of year | 📖 **read** off the balance sheet — but read the trap in §4B |
+| **8** | **ƒ** | Cost of goods sold | ƒ `= line 6 − line 7` → carry to **page 1, line 2** |
 
 🛑 **And name the lines that are ZERO, with their reason.** A table showing only the lines that carry
 an amount reads as the complete map of the form and is not one — the reader's leftover figure then goes
@@ -521,7 +521,7 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 ### The EIGHTEEN things every delivery carries
 
 **1 · ONE TABLE PER FORM, in the order the forms are actually prepared** — every table with the same
-columns, and **the FORM, the PAGE, the PART and the LINE NUMBER named**:
+columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid form — the COLUMN named**:
 
 > 🗺️ **THE PAGE IS PART OF THE ADDRESS, and leaving it out costs a preparer real time.** A tax form
 > splits its schedules across page breaks in places nobody would guess — on Form 1120-S, Schedule B
@@ -542,10 +542,66 @@ columns, and **the FORM, the PAGE, the PART and the LINE NUMBER named**:
 > a shareholder LOAN — a liability — was keyed there, putting total assets over by the amount. Once
 > both sides are keyed such a misplacement leaves the balance sheet out by exactly **twice** it.)_
 
-| Line | Concept | Value | **Where it came from** | 🛠️ **Where it is ENTERED** |
-|---|---|---|---|---|
-| **7** | Inventory at end of year | **150,000** | 📖 Balance sheet → `Total for Other Current Assets` = `Inventory` **+ the clearing account** | ✅ typed on the form |
-| **8** | Cost of goods sold | **20,000** | ƒ **= line 6 − line 7** → page 1 line 2 | **computed — do not type** |
+> ### ⌨️ **EVERY ROW SAYS WHETHER THE LINE IS TYPED OR COMPUTED. This is a COLUMN, not a note afterwards.**
+>
+> 🔑 **At the keyboard the first question is never "what is the number" — it is "do I type this one".**
+> ⛔ **A running-balance ledger** *(Step · Amount · Running total)* **answers the first and never the
+> second**, and on a basis or reconciliation form most lines are outputs: Form 7203 Part I has **nine
+> computed lines out of fifteen**. **Put `⌨️` or `ƒ` on every row**, and close the table with the two
+> lists — *typed: A, B, C, D, E and 1, 2, 3a, 6, 8a, 13; computed: 4, 5, 7, 9, 10, 11, 14, 15* — so the
+> count is checkable at a glance.
+> ⚠️ **Those lists are THIS return's, not the form's.** 3b–3m and 8b–8c are typed lines that happen to be
+> empty here, and **Form 7203 line 12 is NEITHER** — the form gives it no arithmetic at all, so it is
+> marked as neither rather than guessed. 🔑 **A line blank because this client has nothing there is not a
+> computed line, and a delivery that conflates the two teaches the wrong thing about the form.**
+> 🛑 **AND THE FORM AND THE SOFTWARE ARE TWO DIFFERENT ANSWERS. GIVE BOTH.** A line the IRS form treats as
+> an input can still be closed in the program because it arrives from another screen *(in ATX, Form 7203
+> Part I opens only lines 1 and 13 — the rest come from the K-1 capture screen)*. **Neither answer alone
+> is usable**: give the form's, then the program's, and say which is which.
+> _(Lilian, 2026-09-06: **"tampoco entiendo bien cómo llenar la forma 7203"** — the figures were right and
+> the table's SHAPE was the defect.)_
+>
+> ### 🗺️ **A GRID FORM NEEDS ITS COLUMN, AND SOMETIMES ITS GRID — the part is not an address**
+>
+> 🛑 **Some forms put two grids on one page and reuse the row letters.** Schedule E page 2 Part II is the
+> worked case: **line 28** is identity only *(name · P/S · foreign · EIN · basis-computation box · at-risk
+> box)* and **has no money column at all**; the money grid sits directly below it with **no line number of
+> its own** and the **same row letters**, and the figure goes in **column (k)** for income or **(i)** for a
+> loss. ⛔ **"Schedule E · page 2 · Part II" sends someone to a page with two places to write.** ✅ **Name
+> the grid, the row and the column**, and — when the form's shape is the obstacle — **draw the two grids**,
+> which costs four table rows and removes the question entirely.
+> **The same applies to Form 4562 Part V, Schedule K-1's coded boxes, and any lettered-column schedule.**
+> _(Lilian, 2026-09-06: **"no entendí bien cómo llenar el Schedule E, que es donde van los datos del K1.
+> No entiendo dónde poner eso."**)_
+>
+> ### 🔴 **A LINE NUMBER IS READ OFF THE CURRENT-YEAR PDF EXACTLY LIKE A FIGURE**
+>
+> §3's rule says any answer that **changes a figure** is read off the current-year PDF. ⛔ **A line number,
+> a box letter and a column letter are the same kind of fact and were not obviously covered.** They are now.
+> 🛑 **And most sharply: BEFORE CONTRADICTING THE PERSON WHO HAS THE FORM OPEN.**
+> _(2026-09-06: Lilian said the Turo fee goes on Schedule C **line 27b**, `Other expenses`. A session was
+> about to correct her to 27a from memory. **The 2025 form reads `27a Energy efficient commercial bldgs
+> deduction` and `27b Other expenses (from line 48)` — she was right.** The rule existed and did not name
+> line numbers, so nothing stopped the correction.)_
+> ⚠️ **And a line that reads `(from line 48)` or `Enter the amount from line 47, column (c)` is a TOTAL** —
+> the address to give is the line the amount is actually typed on, not the one it appears on.
+>
+> ### 📌 **WHERE THE PRIOR YEAR'S RETURN PUT IT, THIS YEAR PUTS IT**
+>
+> The build-the-map-from-the-prior-year method decides **which line**, not only which figure. 🔑 **If last
+> year's return deducted something as `Other expenses` rather than on a named line, that is the client's
+> convention** — follow it unless there is a reason to change, and **name it as the convention with its
+> evidence.** ⛔ **The failure this is written from is not "the session did not know": the prior year's mapping was
+> already quoted in that client's own working paper — its whole Schedule C deduction beyond depreciation
+> sat in `Other expenses`, nothing on a named line — and the 2025 figure went on a named line anyway.**
+> 🛑 **The evidence being in the file is not the same as the evidence being USED.**
+
+| Line | ⌨️ / ƒ | Concept | Value | **Where it came from** | 🛠️ **Where it is ENTERED** |
+|---|---|---|---|---|---|
+| **7** | **⌨️** | Inventory at end of year | **150,000** | 📖 Balance sheet → `Total for Other Current Assets` = `Inventory` **+ the clearing account** | ✅ typed on the form |
+| **8** | **ƒ** | Cost of goods sold | **20,000** | ƒ **= line 6 − line 7** → page 1 line 2 | **computed — do not type** |
+
+**⌨️ typed: 7 · ƒ computed: 8** — the closing two lists, even on a table this small.
 
 ⛔ **Those two amounts are invented, and every example in this skill is.** A real figure belongs
 in the client's working paper (§5) and **nowhere else in the repo** — including here. A skill is
@@ -926,11 +982,17 @@ overstated, now by a smaller amount, because the contribution had been typed wit
 transposed — a **wrong** input. Same line, same clean-looking form, twice. And that line
 opens the following year, so both would have travelled.)_
 
-**So every line table carries a column for it**, and the working paper keeps it:
+**So every line table carries a column for it**, and the working paper keeps it. 🔑 **This is the canonical
+template, and it carries item 1's `⌨️ / ƒ` column** — the two are the same table, not two tables:
 
-| Line | Concept | Value | Where it came from | 🛠️ **Where it is ENTERED** |
-|---|---|---|---|---|
-| … | … | … | *(the IRS source — form, line, or the books)* | *(the actual screen and field, or **"computed — do not type"**)* |
+| Line | ⌨️ / ƒ | Concept | Value | Where it came from | 🛠️ **Where it is ENTERED** |
+|---|---|---|---|---|---|
+| … | *(`⌨️` typed · `ƒ` computed · **neither**, where the form gives a line no arithmetic at all)* | … | … | *(the IRS source — form, line, or the books)* | *(the actual screen and field, or **"computed — do not type"**)* |
+
+⚠️ **The `⌨️ / ƒ` column and the `Where it is ENTERED` column are not the same thing.** The first says
+**whether** you type it; the second says **where**. **A line can be typed on the form and still closed in
+the software** because the figure arrives from another screen — that is the split item 1 requires you to
+give both halves of.
 
 > ### 🛑 THE SOURCE COLUMN IS NOT A WORKING-PAPER FEATURE — IT TRAVELS WITH THE TABLE, EVERY TIME
 >

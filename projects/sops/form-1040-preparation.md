@@ -1,6 +1,9 @@
 # Preparing a Form 1040 (individual return) — the modular procedure
 
-> **Status:** 🟡 **DRAFT — pending Lilian's sign-off.** Started 2026-08-18 from the first two 1040s
+> **Status:** 🟡 **DRAFT — pending Lilian's sign-off.** 🔴 **Extended 2026-09-06 AT HER REQUEST** — the
+> Schedule C `Other expenses` line *(27b, not 27a)* and the prior-year-convention rule that decides which
+> expense line at all (M2), and **Schedule E Part II's two stacked grids** with the (i)/(k) column
+> correction (M3). Started 2026-08-18 from the first two 1040s
 > the firm prepared with a session assisting; extended the same day with the **credit mechanics**
 > (§3, M5, M6) and the **Form 1095-A continuation-page trap** (M4), and on **2026-08-19** with the
 > home-office **IN/OUT rule**, the **first-landline** limit, the two **lease** traps, the **Form 8829
@@ -265,6 +268,8 @@ withheld across employers; and the household-employee and statutory-employee cas
 | 8–27 | Expenses | Ordinary and necessary, and **substantiated** |
 | **9** | Car and truck | Mileage log or actual costs. ⚠️ **A driver with zero vehicle expenses is a red flag, not a simple return** _(seen on a real 2024 Uber Schedule C)_ |
 | **25** | Utilities | ⚠️ **Telephone: the business share of the taxpayer's OWN line.** A household account total on a multi-line plan is not deductible as such |
+| 🔴 **27a · 27b** | **The two that are inverted from what everyone assumes** | 📄 **2025 form, verbatim:** `27 a Energy efficient commercial bldgs deduction (attach Form 7205)` · `b Other expenses (from line 48)`. 🛑 **`Other expenses` is 27b, NOT 27a.** 🔑 **AND NEITHER 27b NOR 48 IS WHERE YOU TYPE.** 📄 Part V is headed *"Other Expenses. **List below** business expenses not included on lines 8-27a, or line 30"* and its listing rows are **UNNUMBERED**; **line 48** is *"Total other expenses. Enter here and on line 27b"*. ✅ **So: type each item — description and amount — on a blank listing row in Part V, page 2. The form totals them to 48, and 48 carries to 27b.** ⚠️ **Read all of this off the current-year PDF every year** — these lines have moved before |
+| 🔑 **which expense line at all** | **The prior year's return decides it where one exists** | 🛑 **If last year's return put an expense in `Other expenses` rather than on a named line, this year follows it** unless there is a reason to change, and the delivery **names it as the prior-year convention with its evidence**. ⛔ *(Real: a session put a rental platform's commission on line 10 `Commissions and fees` while the client's own 2024 return — already quoted in that client's working paper — had deducted its expenses as `Other expenses`. The evidence was in the file and the figure went elsewhere anyway.)* |
 | **30** | **Business use of the home** | See below. The **actual** method is computed on **Form 8829**; the simplified method has no form, only a worksheet |
 | **31** | **Net profit or (loss)** | ƒ line 7 − line 28 − line 30 → **Schedule 1 line 3** *and* **Schedule SE** |
 
@@ -601,7 +606,7 @@ ruling it is.**
 
 | From the K-1 | Goes to | Note |
 |---|---|---|
-| **Box 1** ordinary business income (loss) | **Schedule E Part II line 28 col (i)** *(nonpassive)* → line 32 → line 41 → **Schedule 1 line 5** | ⚠️ see the col **(e)** rule below — **four triggers, not one** |
+| **Box 1** ordinary business income (loss) | 🔴 **Schedule E Part II — the LOWER grid, same row letter: col (k) `Nonpassive income from Schedule K-1` for INCOME, col (i) `Nonpassive loss allowed` for a LOSS** → line 32 → line 41 → **Schedule 1 line 5**. ⛔ *(A first version of this row named col (i) unconditionally. (i) is the loss column; a profit keyed there is a loss on the return.)* | ⚠️ see the col **(e)** rule below — **four triggers, not one** |
 | Boxes 2 · 3 rental | Schedule E Part II | |
 | Box 4 interest · 5a/5b dividends | Schedule B | |
 | **Box 6 royalties** | 🔑 **Schedule E line 4 — Part I, not Part II** | easy to file with box 1 and be on the wrong part of the same form |
@@ -617,6 +622,22 @@ ruling it is.**
 | Boxes 18 · 19 more than one activity | the at-risk / passive analysis | ☑ means the single-activity shortcut is unavailable |
 
 #### 🛑 Schedule E column (e) — FOUR triggers, and three of them are not a loss
+
+> ### 🔴 Part II is TWO STACKED GRIDS, and the same row letter appears in both
+>
+> 🛑 **This is the single thing preparers cannot find, and the form gives no clue.** Line **28** is the
+> **identity** grid — `(a) Name · (b) P or S · (c) foreign · (d) EIN · (e) basis computation · (f) not at
+> risk`. ⛔ **It has no money column at all.** Directly below it, with **no line number of its own**, sits
+> the **money** grid — `(g) Passive loss · (h) Passive income · (i) Nonpassive loss · (j) §179 ·
+> (k) Nonpassive income` — and you use **the same row letter** you used above.
+>
+> 🔑 **So "Schedule E page 2 Part II" is not an address.** A delivery must name **the grid, the row letter
+> and the COLUMN**: *"lower grid, row A, column (k)"*. ⚠️ **Naming only the part sends someone to a page
+> with two places to write and no way to choose.**
+>
+> ⚖️ **Passive or nonpassive is a POSITION, not a lookup.** An S-corporation shareholder who materially
+> participates is nonpassive. **Record the reason** *(officer, the year's compensation, hours)* rather than
+> defaulting — and say plainly when no §469 test has been run.
 
 **Schedule E page 2 prints it above line 28. Quote it, do not paraphrase:**
 
@@ -651,7 +672,7 @@ a preparer works from anyway. **Cite the instructions; do not restate a regulati
 > *"1. Basis is increased by (a) all income… 2. Basis is decreased (but not below zero) by (a)
 > property distributions… **3. Basis is decreased (but not below zero) by (a) nondeductible
 > expenses**… **4. Basis is decreased (but not below zero) by all losses and deductions reported on
-> Schedule K-1."*
+> Schedule K-1.**"*
 
 Under that default, nondeductible expenses in excess of basis are **lost**. The election reverses
 steps 3 and 4: *"You may elect to decrease your basis under (4) prior to decreasing your basis under
@@ -735,7 +756,7 @@ one is only the route.**
 | **9** | Add 8a–8c | ƒ | **computed** |
 | **10** | Stock basis before loss items | ƒ 7 − 9 | **computed** |
 | **11** | Allowable loss and deduction items | ƒ **Part III, line 47, column (c)** | 🔴 **Part III**, which fills from the K-1's **loss** boxes |
-| 12 | Debt basis restoration | ƒ Part II line 23 | Part II |
+| ⚠️ **12** | Debt basis restoration | 🛑 **NEITHER typed nor computed on the face of the form** — it carries **no arithmetic and no "Enter the amount from line N"**, only a pointer to the line-23 instructions. **It comes from Part II**, and where the shareholder made no loans Part II is blank and this is **0** either way. ⛔ **Do not label it; say what it is** | Part II |
 | 13 | Other items that decrease stock basis | a stock sale or redemption — **and the (g)-election amounts, with prior-year carryovers** | typed, when it applies |
 | **14** | Add 11, 12 and 13 | ƒ | **computed** |
 | **15** | **Stock basis at END of year** | ƒ 10 − 14 | **computed → next year's line 1** |
