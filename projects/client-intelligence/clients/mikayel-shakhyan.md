@@ -97,17 +97,12 @@
   hence a nonresident, hence the LLC foreign-owned.
 - `2025 4868-mailed by his own.pdf` — he mailed his own individual extension.
 - The **LUMARI trademark application** with the USPTO — ⭐ **the public record, read 2026-09-07 from a
-  Trademarkia listing Lilian found:**
-  | | |
-  |---|---|
-  | **Owner** | **Mikayel Shakhyan** — ✅ **independent confirmation** that the mark is his personally, not the LLC's |
-  | **Serial number** | **99406730** |
-  | **Filed** | **22 September 2025** |
-  | **Class** | Cosmetics and Cleaning Products |
-  | **Use in commerce** | **Not yet in use** |
-  | **Status** *(as at 10 Jun 2026)* | **Live / Pending — `SUSPENSION LETTER – MAILED`** |
-  | **Attorney** | **Denys Pivniak**, Pivniak Law, P.A. |
-  ⚠️ **Two limits on that row.** Trademarkia is a **third-party mirror, not the register** — the
+  Trademarkia listing Lilian found.** **Owner: Mikayel Shakhyan** — ✅ **independent confirmation that the
+  mark is his personally, not the LLC's.** **Serial number 99406730**, **filed 22 September 2025**, class
+  **Cosmetics and Cleaning Products**, **not yet in use in commerce**, and **Live / Pending** with a
+  **`SUSPENSION LETTER – MAILED`** status *(as at 10 Jun 2026)*. The attorney of record is **Denys
+  Pivniak, Pivniak Law, P.A.**
+  ⚠️ **Two limits on that record.** Trademarkia is a **third-party mirror, not the register** — the
   authority is USPTO **TSDR** on serial 99406730 *(unreachable from a cloud session; the network policy
   blocks uspto.gov)*. And the status line is **"as of 10 Jun 2026"**, so it was already three months old
   when it was read. 🔑 **A suspension letter is not a refusal** — it means the examiner has paused the
@@ -179,11 +174,14 @@
   extraction had lost:** the **serial number**, the **filing date of 22 Sep 2025**, and a **status of
   `SUSPENSION LETTER – MAILED`** as at 10 Jun 2026 — plus the attorney's name, **Denys Pivniak**, who is
   the same firm the company paid in Nov 2025. 🔴 **The filing date is the part that matters for the
-  return:** 22 Sep falls **inside the eighty days when the company had no bank account**, so the filing
-  was paid personally, and the company later paid that same attorney — which sharpens the open question
-  about what that invoice covered rather than answering it (working paper §4D). **A client message was
-  drafted the same day** asking why the mark is in his name, whether he knows about the suspension, and
-  for the personally-paid formation costs.
+  return:** 22 Sep falls **inside the eighty days when the company had no bank account**, so **the WORK
+  was done while the company had no way to pay for it** — and the company paid that same attorney seven
+  weeks later. ⛔ **A filing date is not a payment date**, so who paid it is still open; what the date
+  does is make the reading in which the attorney billed later **the one that fits the dates**. It
+  **sharpens the open question rather than answering it** (working paper §4D). **A client message was
+  DRAFTED the same day** — in simple Russian, at her request — asking why the mark is in his name,
+  whether he knows about the suspension, and for the personally-paid formation costs (that last is the
+  working paper's Q2). ⚠️ **Drafted and handed to Lilian; nothing here says he has received it.**
 - _(2026-09-06, later)_ — **A transaction summary for Julia was prepared — and as at this entry it
   has NOT yet reached her.** Lilian asked for a written summary in English so Julia — who has no
   prior context on this client — could see the situation, take the decisions that are hers, and ask
@@ -296,8 +294,8 @@
 - [ ] 🔴 **The dissolution date** — on **sunbiz.org**, where it is public and readable; the Sunbiz PDF in Double is one of the six unreadable scans, so it is only the fallback.
 - [ ] 🔍 **His country of citizenship — on his own Form 8843 in Double.** Do not ask him for it.
 - [ ] 🔍 Whether he holds an ITIN.
-- [x] ✅ **Who owns the LUMARI trademark — ANSWERED 2026-09-06: Mikayel personally, not the LLC.**
-      Read off the receipt already in Double; confirm by eye next time it is open.
+- [x] ✅ **Who owns the LUMARI trademark — MIKAYEL PERSONALLY, CONFIRMED 2026-09-07** from the mark's
+      public record, independently of the decoding. ⛔ **The "confirm by eye" step is done.**
 - [ ] 🟠 Whether the Form 7004 actually went, and by which route.
 - [ ] 🟠 **Read the six image-only documents by eye.** _(Asking him for text-based PDFs is a fallback, and that half would go in a later message — not the one carrying the five questions.)_
 
