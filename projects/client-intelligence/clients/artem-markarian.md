@@ -137,9 +137,10 @@ the actual details.
   commissions line** — Lilian's instruction, *"porque así fue como lo hizo [el preparador] en 2024 y quise
   ser consecuente con eso"*. ✅ **His 2024 return corroborates it**: everything it deducted beyond
   depreciation sat in *other expenses*, nothing on a named line. 🔑 **Following the prior year's mapping is
-  the firm's method**, so this is a convention to record, not a preference. ⚠️ **She named the 2024
-  preparer as "Julian"** — ⛔ **not written into the file as a name, because it may be the dictation; the
-  evidence is the return itself.** 🛠️ **Ask her for the name so the provenance is right.**
+  the firm's method**, so this is a convention to record, not a preference. ⚠️ **Who prepared his 2024 return is
+  NOT recorded here**: the name she gave does not resolve to anyone the firm can place, and it may be the
+  dictation. ⛔ **Nothing depends on it** — the evidence is the return itself. 🛠️ **Ask her, and write the
+  name once it is confirmed.**
   🔑 **② and ③ were failures of the DELIVERY, not of the figures** — the K-1's landing place and the basis
   form were described in a way she could not act on. Both are rebuilt in his working paper and on his live
   page, and **the general lessons went into the firm's rules** so the next return does not repeat them.

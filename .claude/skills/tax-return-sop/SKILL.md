@@ -72,10 +72,10 @@ Follow it in this order; a preparer works the document top-down.
 **Head it with the FORM AND ITS PAGE** — *"Form 1125-A, page 1"* — because a schedule's lines do not
 all live on the page its name suggests (§4B):
 
-| Line | What it is | Formula, or where you read it |
-|---|---|---|
-| **7** | Inventory at end of year | 📖 **read** off the balance sheet — but read the trap in §4B |
-| **8** | Cost of goods sold | ƒ `= line 6 − line 7` → carry to **page 1, line 2** |
+| Line | ⌨️ / ƒ | What it is | Formula, or where you read it |
+|---|---|---|---|
+| **7** | **⌨️** | Inventory at end of year | 📖 **read** off the balance sheet — but read the trap in §4B |
+| **8** | **ƒ** | Cost of goods sold | ƒ `= line 6 − line 7` → carry to **page 1, line 2** |
 
 🛑 **And name the lines that are ZERO, with their reason.** A table showing only the lines that carry
 an amount reads as the complete map of the form and is not one — the reader's leftover figure then goes
@@ -548,8 +548,12 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > ⛔ **A running-balance ledger** *(Step · Amount · Running total)* **answers the first and never the
 > second**, and on a basis or reconciliation form most lines are outputs: Form 7203 Part I has **nine
 > computed lines out of fifteen**. **Put `⌨️` or `ƒ` on every row**, and close the table with the two
-> lists — *typed: A, B, 1, 2, 3a, 6, 8a, 13; computed: 4, 5, 7, 9, 10, 11, 12, 14, 15* — so the count is
-> checkable at a glance.
+> lists — *typed: A, B, C, D, E and 1, 2, 3a, 6, 8a, 13; computed: 4, 5, 7, 9, 10, 11, 14, 15* — so the
+> count is checkable at a glance.
+> ⚠️ **Those lists are THIS return's, not the form's.** 3b–3m and 8b–8c are typed lines that happen to be
+> empty here, and **Form 7203 line 12 is NEITHER** — the form gives it no arithmetic at all, so it is
+> marked as neither rather than guessed. 🔑 **A line blank because this client has nothing there is not a
+> computed line, and a delivery that conflates the two teaches the wrong thing about the form.**
 > 🛑 **AND THE FORM AND THE SOFTWARE ARE TWO DIFFERENT ANSWERS. GIVE BOTH.** A line the IRS form treats as
 > an input can still be closed in the program because it arrives from another screen *(in ATX, Form 7203
 > Part I opens only lines 1 and 13 — the rest come from the K-1 capture screen)*. **Neither answer alone
@@ -587,9 +591,10 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > The build-the-map-from-the-prior-year method decides **which line**, not only which figure. 🔑 **If last
 > year's return deducted something as `Other expenses` rather than on a named line, that is the client's
 > convention** — follow it unless there is a reason to change, and **name it as the convention with its
-> evidence.** ⛔ **The failure this is written from is not "the session did not know": the evidence was
-> already quoted in that client's own working paper** *(2024: depreciation 6,991 and other expenses 829,
-> nothing on a named line)* **and the figure went on a different line anyway.**
+> evidence.** ⛔ **The failure this is written from is not "the session did not know": the prior year's mapping was
+> already quoted in that client's own working paper — its whole Schedule C deduction beyond depreciation
+> sat in `Other expenses`, nothing on a named line — and the 2025 figure went on a named line anyway.**
+> 🛑 **The evidence being in the file is not the same as the evidence being USED.**
 
 | Line | ⌨️ / ƒ | Concept | Value | **Where it came from** | 🛠️ **Where it is ENTERED** |
 |---|---|---|---|---|---|
@@ -977,11 +982,17 @@ overstated, now by a smaller amount, because the contribution had been typed wit
 transposed — a **wrong** input. Same line, same clean-looking form, twice. And that line
 opens the following year, so both would have travelled.)_
 
-**So every line table carries a column for it**, and the working paper keeps it:
+**So every line table carries a column for it**, and the working paper keeps it. 🔑 **This is the canonical
+template, and it carries item 1's `⌨️ / ƒ` column** — the two are the same table, not two tables:
 
-| Line | Concept | Value | Where it came from | 🛠️ **Where it is ENTERED** |
-|---|---|---|---|---|
-| … | … | … | *(the IRS source — form, line, or the books)* | *(the actual screen and field, or **"computed — do not type"**)* |
+| Line | ⌨️ / ƒ | Concept | Value | Where it came from | 🛠️ **Where it is ENTERED** |
+|---|---|---|---|---|---|
+| … | *(`⌨️` typed · `ƒ` computed · **neither**, where the form gives a line no arithmetic at all)* | … | … | *(the IRS source — form, line, or the books)* | *(the actual screen and field, or **"computed — do not type"**)* |
+
+⚠️ **The `⌨️ / ƒ` column and the `Where it is ENTERED` column are not the same thing.** The first says
+**whether** you type it; the second says **where**. **A line can be typed on the form and still closed in
+the software** because the figure arrives from another screen — that is the split item 1 requires you to
+give both halves of.
 
 > ### 🛑 THE SOURCE COLUMN IS NOT A WORKING-PAPER FEATURE — IT TRAVELS WITH THE TABLE, EVERY TIME
 >
