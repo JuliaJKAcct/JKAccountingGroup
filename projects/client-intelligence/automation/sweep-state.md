@@ -227,3 +227,35 @@ and `FOLLOW-UPS.md` row 33 too, but editing those falls outside this sweep's no-
 (`clients/`, this file, and `sop-proposals.md` only per `weekend-ci-sweep.md` step 11) — reverted
 from this run's diff and flagged in the email for a normal reviewed follow-up instead of being
 self-merged._
+
+_**2026-09-05 run — ⛔ IT NEVER RAN TO COMPLETION, AND NO BASELINE IN THE TABLE ABOVE REFLECTS IT.** The Routine
+(`trig_015LaKrto6FDKyUwHmZywqjS`, `0 7 * * 6`) **fired on time — 2026-09-05 07:10:26 UTC — and its
+run ended `ROUTINE_RUN_STATUS_ABANDONED` with no `finished_at`** (session `cse_016V9wPPT4JCLDTca28ck2UQ`).
+Confirmed a second, independent way: **no weekly report email exists for 2026-09-05.** Gmail holds
+the 2026-08-22 and 2026-08-29 reports and then stops. Nothing was committed, nothing was emailed,
+and **no client file records a SWEEP on that date.** ⚠️ **Say it that way and not "no file mentions 09-05":** seven client files do carry 2026-09-05 — Lilian's own interactive work, plus three PRs that merged to `main` that day — so a reader checking the obvious way finds hits and concludes the run landed. **The absence is of sweep output specifically** (no `Weekend sweep (incremental, baseline …)` log line, no advanced baseline, no report email), not of the date. ⚠️ **The Routine itself is healthy and still enabled** — next
+fire **2026-09-12 07:08 UTC** — so there is nothing to re-arm; what failed is the run, not the
+schedule. **Every baseline above therefore still reads 2026-08-29, which is correct and must stay
+that way**: the gap 2026-08-29 → 2026-09-12 is real, and a baseline advanced to paper over it would
+erase two weeks of history for ~40 clients exactly as rule 3's box describes._
+
+_**2026-09-07 — the bounded manual catch-up that followed, and WHY IT IS NOT A SWEEP.** Lilian asked
+that day whether the sweep is actually working. The review found the failure above and then ran a
+**deliberately narrow** catch-up over the gap — **only the items already carrying a DEADLINE or a
+live risk in the 2026-08-29 rows**, on **Gmail only**. ⛔ **No baseline was advanced, and none may be
+on the strength of this pass**: Double, Ping, Drive and QuickBooks were not read, and ~36 clients
+were not looked at at all. **The 2026-09-12 run must still treat 2026-08-29 as its baseline for
+everyone.** What it found, all written into the client files and none of it caught by any automation:
+**Deep Tech** — 🟢 Shopify **closed the Balance account on 2026-09-04**, so the ownership transfer is
+unblocked, but statement access died with it and the never-downloaded **August 2026 statement** must
+now be requested from Shopify Support; the 2026-09-08 chase Routine's premise is obsolete.
+**Ecoorganic** — a **return was submitted through CT myconneCT on 2026-09-02** (which return is
+unstated) and a **third unread DRS correspondence** landed 2026-09-03. **Airtouch** — eight more
+dissolution notices, the countdown down to **9 business days**, all unread; and the sender is
+newly identified as a **commercial filing vendor, not Sunbiz** (it mails Labor Day discounts and
+also mails CT clients), so the clock is a sales instrument — while the real question, whose entity
+it is, is still open. **Best Broker Realty** — the **2026-09-30 BTR renewal** is still uncalendared,
+23 days out. 🚧 **One structural limit, now seen twice:** `search.sunbiz.org` is **refused by the
+network egress proxy** (HTTP 403 at the CONNECT tunnel, 2026-08-29 and again 2026-09-07). **No
+scheduled run will ever settle a Sunbiz question** — those need a person, and the sweep should say
+so rather than re-attempting._
