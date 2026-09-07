@@ -154,10 +154,15 @@ the actual details.
   note claimed that an activity classified the wrong way would never reach the schedule at all. **It does —
   it lands one column over, and the TOTAL IS IDENTICAL.** 🔑 **So the check is *which column*, never
   *did it arrive*** — a distinction no total can make, now written into the firm's rules.
-  🔴 **Also established: the software vendor's documentation is unreachable from the firm's Claude
-  environment** — the IRS site is, every ATX/Wolters Kluwer host is refused. **So a screen route is only
-  ever established from a screenshot or from a prior working paper**, and that is now written into the
-  rules.
+  🟢 **AND LATER THE SAME DAY LILIAN OPENED THE VENDOR'S SUPPORT SITE FOR THE SESSION**, which settled
+  the last of it: **the form to add has an exact name, now read from the vendor's own published forms
+  list rather than inferred.** ⛔ **A rule written that morning saying the vendor's site was unreachable was
+  wrong within hours and has been corrected** — the session had drawn it from one tool failing, without
+  retrying another that works. 🔑 **The vendor's step-by-step articles are still shut** *(they need the
+  firm's own customer login, which Lilian has and a session does not)*, **so what a SCREEN looks like is
+  still established only from a screenshot or a prior working paper.**
+  🔴 **What her screenshot actually showed, and it was the whole answer:** she had the **rental** input
+  sheet open, and **her return contained no K-1 form at all.**
   ⛔ **No figures here — they stay in the working paper.**
 
 - 2026-09-06 (fourth pass) — 🛠️ **THREE THINGS ON HIS RETURN WERE REWORKED BECAUSE LILIAN COULD NOT WORK

@@ -653,13 +653,17 @@ ruling it is.**
 > ATX is a computed output")* and its **Form 1125-E** route for page 1 line 7. **Three instances of one
 > rule.**
 >
+> ✅ **THE FORM'S NAME, from the vendor's own 2025 forms list** *(`support.atxinc.com/taxna/software-system-requirements/atx-forms`, read 2026-09-07)*: **`K1 INPUT (1120S)`** — *Federal K-1 (1120S) Input Worksheet*, in the 1040 package. ⛔ **Not `SCH K1 (1120S)`**, which is the K-1 the *company's* 1120-S issues. ⛔ **And not `SCH E (1040) PAGE 1`**, which is *Supplemental Income and Loss Page 1* — **the RENTAL sheet**, a different form with no K-1 on it. **The K-1 lands on `SCH E (1040) PAGE 2`.**
+>
 > | What is typed on the K-1's own form | Where it surfaces |
 > |---|---|
 > | company **name · EIN** | Schedule E line 28 row A, cols **(a)** and **(d)** |
-> | 🔴 **box 1** | 🔴 **Schedule E, LOWER grid, row A, `Nonpassive income from Schedule K-1`** — income; the nonpassive-LOSS column for a loss |
+> | 🔴 **box 1** | 🔴 **TWO destinations, and the second is the one that gets missed:** Schedule E **LOWER** grid, row A, `Nonpassive income from Schedule K-1` *(the nonpassive-LOSS column for a loss)* — **AND Form 7203 line 3a**, which is how income raises basis |
 > | **box 16 C** · **box 16 D** | Form 7203 **line 8a** · **line 6** |
-> | **capital contributions** *(on no K-1 box — from the books)* | Form 7203 **line 2** |
+> | **capital contributions** *(on no K-1 box — from the books)* | Form 7203 **line 2** — in a **`Basis Limitation`** section further down the same worksheet ⚠️ *(that name is from a search-result summary; the vendor page itself is behind their customer login — `not established`)* |
 > | **box 17 V** | Form 8995 |
+>
+> 💡 **AND THERE MAY BE NO TYPING AT ALL WHEN THE FIRM PREPARED THE COMPANY.** The vendor's KB describes a K-1 **import**: *Returns → Import Data → K-1 Data*, which lists every business return in the same program where this person is a shareholder, and writes the data into the K-1 Input Worksheet. ⚠️ *(Search-result summary of their article 2595 — `not established`.)* 🛑 **Check by hand afterwards anything the PRINTED K-1 does not carry** — a distribution figure the firm reports gross while the K-1 prints net, and the contributions, which are on no K-1 box at all. **An import gets those wrong silently.**
 >
 > ⚠️ **That table is the worked case, not the whole screen** — **every** K-1 box is keyed there, **16A/B
 > and 16E included** *(see the box map above: ⛔ "NOT just C and D")*. **These five are the ones that moved.**
@@ -676,23 +680,28 @@ ruling it is.**
 >
 > | Check | Symptom | 🛠️ Fix |
 > |---|---|---|
-> | 🔴 **① WHICH COLUMN did it land in** — not whether it arrived | 🛑 **NONE.** 📄 **Line 30 adds columns (h) *(passive income)* and (k) *(nonpassive income)*, so a K-1 classified the wrong way lands one column over and LINE 32 IS IDENTICAL.** ⛔ **No total will ever reveal it** | Re-mark the activity **nonpassive** on the K-1 screen and confirm the figure moves from **(h)** to **(k)**. ⚖️ **And record WHY it is nonpassive** — material participation is a position |
-> | ② the amount is in **box 1**, not a neighbouring box | Schedule E blank | move it to box 1 |
-> | ③ the **(b)** column reads **`S`**, not `P` | ⚠️ **Not a blank Schedule E** — a 1065 K-1's ordinary income also lands on line 28, but **no Form 7203 is produced** and the basis limitation never runs | delete it and add the **1120S** K-1 form |
+> | 🔴 **① WHICH COLUMN did it land in** — not whether it arrived | 🛑 **NONE.** 📄 **Line 30 adds columns (h) *(passive income)* and (k) *(nonpassive income)*, so a K-1 classified the wrong way lands one column over and LINE 32 IS IDENTICAL.** ⛔ **No total will ever reveal it.** ⚠️ *(Income-year symmetry only: a misclassified LOSS goes to (g) rather than (i), and (g) carries only what Form 8582 allows, so there line 32 usually does move.)* | ⛔ **Settle the §469 position FIRST** — then set the activity to match and confirm the figure sits in **(h)** if passive, **(k)** if nonpassive. 🛑 **Do NOT default to nonpassive:** on a shareholder who does not materially participate, (h) is the RIGHT answer, and forcing (k) also pulls the income out of the Form 8582 pool *(other suspended passive losses stay suspended)* and out of **net investment income on Form 8960** — a 3.8% swing. ⚖️ **Record the reason either way** |
+> | ② the amount is in a box that does not feed Part II at all *(box 4, box 10…)* | Schedule E blank | move it to box 1. ⚠️ **Boxes 2 and 3 do NOT blank it** — rental and other rental income also land on line 28 and default to **passive**, which is finding ① wearing a different hat |
+> | ③ the **(b)** column reads **`S`**, not `P` | ⚠️ **Not a blank Schedule E** — a 1065 K-1's ordinary income also lands on line 28, but **no Form 7203 is produced** ⓘ *(a partner's loss is still limited, under §704(d) — it is just not computed on that form)* | delete it and add the **1120S** K-1 form |
 > | ④ a **second K-1 tab** for the same company | ⚠️ **DOUBLE-COUNTS; it does not blank** | delete the duplicate and re-check line 32 |
-> | 🔴 **⑤ on a LOSS — the one cause that really does blank it** | the loss is legitimately suspended by **§1366(d) basis** *(Form 7203 Part III)* or **§465 at-risk** *(Form 6198)* | ⛔ **Nothing to fix — it is correct.** Check Form 7203 Part III column (e) carries it forward |
+> | 🔴 **⑤ on a LOSS — the one cause where a BLANK IS CORRECT** | the loss is legitimately suspended by **§1366(d) basis** or **§465 at-risk** — **the first two of the three gates**, in that order | ⛔ **Nothing to fix.** ✅ Check the carryforward is where it belongs: **Form 7203 Part III column (e)** for a basis suspension, **Form 6198** for an at-risk one — ⛔ **they are not the same form, and an at-risk carryover does not live on Form 7203** |
 >
 > ⛔ *(An earlier version of this list said a passive activity **"goes to Form 8582 and never reaches
 > Schedule E at all"**. **That is wrong.** 📄 The 2025 form reads `(g) Passive loss allowed (attach Form
 > 8582 if required)` and `(h) Passive income from Schedule K-1` — **Form 8582 is the passive LOSS form**,
 > and passive **income** goes straight into (h) and on to line 30. Read off the PDF, 2026-09-07.)*
 >
-> ⚠️ **Vendor documentation is unreachable from the firm's environment** — every ATX/Wolters Kluwer host is
-> refused by the network policy; **`irs.gov` is reachable, but only with `curl` through the proxy** *(the
-> WebFetch tool is blocked on it too — checked 2026-09-07)*. 🔑 **So a screen name is `established` only
-> from a screenshot or from `projects/tax-returns/`**, it carries **who observed it, when, and in which
-> version** *(the 1120-S SOP's 🖥️ convention)*, **and a delivery steers by a column's TITLE rather than by
-> a screen letter nobody has seen.**
+> 🟢 **THE VENDOR'S SUPPORT SITE IS REACHABLE** *(Lilian opened it 2026-09-07 — a rule written that
+> morning saying otherwise was wrong within hours)*. ✅ **`support.atxinc.com` serves the FORMS LIST at
+> `/taxna/software-system-requirements/atx-forms`** — every form's exact ATX name and description, by
+> year, and **that is the authority on what a form is CALLED.** ⚠️ **`support.cch.com` answers, but its KB
+> articles sit behind the vendor's customer login** — a session cannot open one; **Lilian can.**
+> 🛑 **AND `WebFetch` IS BLOCKED ON ALL OF THESE WHILE `curl` WORKS** *(irs.gov included)* — ⛔ **never
+> conclude a host is unreachable from a WebFetch failure; retry with `curl -A` and a browser user-agent.**
+> 🔑 **What is still not checkable is what a SCREEN LOOKS LIKE** — its tabs, field positions and column
+> letters. **Those are `established` only from a screenshot or from `projects/tax-returns/`**, carrying
+> **who observed it, when, and in which version** *(the 1120-S SOP's 🖥️ convention)*, **and a delivery
+> steers by a column's TITLE rather than by a screen letter nobody has seen.**
 > _(Lilian, 2026-09-07: **"No encuentro dónde entrar a nada."** The route was already in the repo, on
 > another client's paper, and a delivery gave the form's coordinates without it.)_
 

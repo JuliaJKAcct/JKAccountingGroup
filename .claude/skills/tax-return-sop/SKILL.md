@@ -580,8 +580,8 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > I TYPE*, and the two are routinely different forms.** ✅ **Worked case, established at the keyboard:** a
 > K-1's **money** is not typed on Schedule E page 2 at all — the K-1 is keyed on **its own form**, and
 > **Schedule E page 2, Form 7203 and Form 8995 are outputs of that one screen** *(ATX; the firm's own record
-> is [Kolo Florida's paper](../../../projects/tax-returns/kolo-florida-inc/2025-form-1120s.md) §8A, Aug
-> 2026)*. 🔑 **Same rule as Form 7203 opening only lines 1 and 13.**
+> is [Kolo Florida's paper](../../../projects/tax-returns/kolo-florida-inc/2025-form-1120s.md) §8A row 1,
+> Aug 2026 — ⚠️ **that row carries no read-back stamp, unlike rows 2-3 of the same table**)*. 🔑 **Same rule as Form 7203 opening only lines 1 and 13.**
 >
 > 🛑 **BUT SCOPE THE CLAIM TO WHAT WAS OBSERVED — "that form takes no input" is almost always too strong.**
 > ⛔ **Schedule E page 2 still has preparer entries on it** — line 27's Yes/No and the **(e)** and **(f)**
@@ -608,7 +608,7 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > [`form-1120s-preparation.md`](../../../projects/sops/form-1120s-preparation.md) says the assets are keyed
 > in the **`Fixed Assets`** tab because *"4562 in ATX is a computed output"*, and that page 1 line 7 cannot
 > be typed because ATX routes it through **Form 1125-E**. 🛑 **Two worked instances of one rule that nobody
-> had written as a rule.** ✅ **It is written now, and it applies to every computed form, not to K-1s.**
+> had written as a rule.** ✅ **It is written now, and it applies to every computed form — not just to K-1s.**
 >
 > ✅ **Then add the "it did not flow" list**, because a missing input on a computed form produces **no error
 > message** — the destination simply comes out blank or short, and foots perfectly either way *(the Kolo
@@ -617,7 +617,9 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > 🔴 **AND THE LIST'S FIRST QUESTION IS NOT "DID IT ARRIVE" BUT "WHERE DID IT LAND".** ⛔ **A figure that
 > reaches the right TOTAL by the wrong column is invisible to every check that looks at the total** —
 > Schedule E line 30 adds columns **(h)** *(passive income)* **and (k)** *(nonpassive income)*, so a K-1
-> classified the wrong way lands one column over and **line 32 is identical.** ⚠️ *(An earlier version of
+> classified the wrong way lands one column over and **line 32 is identical.** ⚠️ **That symmetry is an
+> INCOME-year fact** — a misclassified **loss** goes to (g) instead of (i), and (g) carries only what Form
+> 8582 allows, so there line 32 usually *does* move. ⚠️ *(An earlier version of
 > this rule said a passive activity "never reaches Schedule E". **That was wrong** — Form 8582 is the
 > passive **LOSS** form, and passive income goes straight into (h). Read off the 2025 PDF, 2026-09-07.)*
 > 🛑 **Each item gets its FIX, not just its symptom** — §4B's standing rule.
@@ -633,18 +635,31 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > _(Lilian, 2026-09-07: **"Tus instrucciones acerca de cómo llenar el Schedule E no son buenas para seguir
 > en ATX. No encuentro dónde entrar a nada."**)_
 >
-> ### ⚠️ **THE VENDOR'S DOCUMENTATION IS NOT REACHABLE FROM THIS ENVIRONMENT — so a screen name carries its source**
+> ### 🟢 **THE VENDOR'S SUPPORT SITE IS REACHABLE — and the FORMS LIST is the authority on a form's name**
 >
-> 🔴 **Checked 2026-09-07: `support.atxinc.com`, `support.cch.com`, `www.atxinc.com` and
-> `taxna.wolterskluwer.com` are all refused by the network policy (403 at the proxy). `irs.gov` IS
-> reachable — but only with `curl` through the proxy; the WebFetch tool is blocked on it too, so a session
-> that tries only WebFetch will wrongly conclude the form itself cannot be checked.**
-> 🔑 **So the form's own PDF can always be verified and the SOFTWARE's screens cannot.**
-> ✅ **Which makes the firm's own two sources the authority on any entry route:** a **screenshot** from
-> whoever is at the keyboard, and **`projects/tax-returns/`**, where the routes bought that way are
-> written down. ⛔ **A screen name found in a search result is a LEAD, not a route** — label it as
-> unverified with the source, and **steer by the field's TITLE rather than by a column letter or a tab
-> name you have not seen**, since those move between versions and the person has the screen open.
+> 🔴 **Lilian opened it on 2026-09-07, and a rule written that same morning saying it was unreachable
+> was WRONG WITHIN HOURS.** ⛔ **Do not repeat the check from memory — run it.**
+>
+> | Host | 2026-09-07 |
+> |---|---|
+> | ✅ **`support.atxinc.com`** | **200 with real content.** 🔴 **`/taxna/software-system-requirements/atx-forms` is the FORMS LIST — every ATX form name and description, by year.** *(2.6 MB; parse it, do not read it.)* |
+> | ✅ `support.cch.com` | 200, but its KB articles sit behind **`/SingleSignOn/`** — the firm's own ATX customer login. **A session cannot open one; Lilian can.** |
+> | ⛔ `www.atxinc.com` · `taxna.wolterskluwer.com` | refused — the **marketing** sites, which are not what anyone needed |
+> | ✅ `irs.gov` | reachable |
+>
+> 🛑 **AND THE TRAP THAT PRODUCED THE WRONG RULE: `WebFetch` IS BLOCKED ON ALL OF THESE WHILE `curl`
+> WORKS.** ⛔ **Never conclude a host is unreachable from a WebFetch failure — retry with `curl -A` and a
+> browser user-agent.** ⚠️ *(The session had just written that exact warning about `irs.gov`, two clauses
+> earlier, and did not apply it to the vendor hosts. Caught in review.)*
+>
+> ✅ **So a form's NAME is now checkable at source** — `K1 INPUT (1120S)` *(Federal K-1 (1120S) Input
+> Worksheet)*, `SCH E (1040) PAGE 2`, `7203, BASIS WKST` were all read off that list, not inferred.
+> ⛔ **What is still NOT checkable is what a screen LOOKS LIKE** — its tabs, its field positions, its
+> column letters. **For those the authority stays the firm's own two sources:** a **screenshot** from
+> whoever is at the keyboard, and **`projects/tax-returns/`**.
+> ⛔ **A screen detail found in a search-result summary is a LEAD, not a route** — label it with its source,
+> say the page itself could not be opened, and **steer by the field's TITLE rather than by a column letter
+> or a tab name you have not seen**, since those move between versions and the person has the screen open.
 >
 > ### 🔴 **A LINE NUMBER IS READ OFF THE CURRENT-YEAR PDF EXACTLY LIKE A FIGURE**
 >
