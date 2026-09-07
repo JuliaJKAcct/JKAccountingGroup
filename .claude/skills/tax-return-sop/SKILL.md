@@ -589,19 +589,27 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > ### 📌 **WHERE THE PRIOR YEAR'S RETURN PUT IT, THIS YEAR PUTS IT**
 >
 > The build-the-map-from-the-prior-year method decides **which line**, not only which figure. 🔑 **If last
-> year's return deducted something as `Other expenses` rather than on a named line, that is the client's
-> convention** — follow it unless there is a reason to change, and **name it as the convention with its
-> evidence.**
-> 🔴 **AND FIRST ASK WHO PREPARED THAT PRIOR YEAR, because it changes what the convention IS.**
-> **An outside preparer's choice is a client convention** — worth following for consistency, and worth
-> departing from with a reason. 🛑 **THE FIRM'S OWN prior-year return is not that: it is the firm's
-> position, set by the person who signs.** ⛔ **Departing from it on the next year's return is the firm
-> contradicting itself on the same client's same activity in consecutive years** — a position change an
-> examiner reads as one, and one nobody decided to make. _(2026-09-07: the firm had prepared the prior
-> year, and the session did not know it while putting the same expense on a different line.)_ ⛔ **The failure this is written from is not "the session did not know": the prior year's mapping was
+> year's return deducted something as `Other expenses` rather than on a named line, that is a convention** —
+> follow it unless there is a reason to change, and **name it as the convention with its evidence.**
+> ⛔ **The failure this is written from is not "the session did not know": the prior year's mapping was
 > already quoted in that client's own working paper — its whole Schedule C deduction beyond depreciation
 > sat in `Other expenses`, nothing on a named line — and the 2025 figure went on a named line anyway.**
 > 🛑 **The evidence being in the file is not the same as the evidence being USED.**
+>
+> 🔴 **THEN ASK WHO PREPARED THAT PRIOR YEAR, because it changes WHOSE convention it is.**
+> **An outside preparer's choice is a CLIENT convention** — worth following for consistency, and worth
+> departing from with a reason. 🛑 **THE FIRM'S OWN prior-year return is not that: it is the firm's
+> position, set by the person who signs.** ⛔ **Departing from it silently is the firm contradicting itself
+> on the same client's same activity in consecutive years** — not a tax difference *(a host fee on line 10
+> or in `Other expenses` changes no total and no tax)*, but an unexplained year-over-year swing in a return
+> the firm itself built, and a break in the reproduce-the-prior-year method that is the whole way this firm
+> finds a client's conventions.
+> 🔑 **BUT THE LABEL FOLLOWS THE CORRECTNESS, NOT WHO CHOSE IT — unless the prior line was WRONG, in
+> which case it is a DEFECT: correct it, and record what changed, why, and who made the original call.**
+> ⛔ **"The firm did it last year" is a reason to be consistent, never a reason to repeat an error** — that
+> is CLAUDE.md's standing rule on a return coming back for review, and it governs here too.
+> _(2026-09-07: the firm had prepared the prior year, and the session did not know it while putting the
+> same expense on a different line.)_
 
 | Line | ⌨️ / ƒ | Concept | Value | **Where it came from** | 🛠️ **Where it is ENTERED** |
 |---|---|---|---|---|---|
