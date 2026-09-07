@@ -737,8 +737,8 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > ✅ **State it in the same breath: what it fixes, and that the number at the bottom will not move.**
 > _(Worked case: a K-1's §199A information was missing from a 1040 — Form 8995 line 1 carried the
 > S corporation at zero. Entering it raised **line 10**, the deduction before the limitation, and left
-> **line 15** — the deduction itself — unchanged, because **line 14**, twenty per cent of taxable income,
-> already bound; the wage and property figures never bite below the §199A threshold either.
+> **line 15** — the deduction itself — unchanged, because **line 14** — 20% of **line 13**, taxable income
+> *less net capital gain, qualified dividends included* — already bound; the wage and property figures never bite below the §199A threshold either.
 > **It is a correctness fix, not a money fix, and saying so is part of the delivery.**)_
 > ⚠️ **AND SAY WHAT THE CLAIM DEPENDS ON, because a cap that binds today can stop binding.** ⛔ **"It does
 > not move the tax" is true of the return AS IT STANDS**, not of the return after an open position is
@@ -759,15 +759,20 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > AVAILABLE**, and a first version of this rule stated it unconditionally.
 > ⛔ **Where the policy's own gates fail, the two presentations genuinely differ — and the difference is the
 > thing the netted version would ERASE.** _(The live counter-example was one shareholder away: on the same
-> company, the other owner's distributions exceed his pre-distribution basis, so netting is not available
-> to him at all and his form must carry the gross. A preparer applying "they must agree, so one side was
-> missed" would have deleted a real §1368(b)(2) capital gain from his return.)_
+> company, the other owner's **distributions exceed his CONTRIBUTIONS** — which is the policy's own first
+> gate — so netting is not available to him at all and his form must carry the gross. **Separately, his
+> distributions also exceed his BASIS**, and that is what creates a §1368(b)(2) capital gain. A preparer
+> applying "they must agree, so one side was missed" would have deleted it.)_
+> ⛔ **DO NOT COLLAPSE THOSE TWO TESTS — a first version of this rule did.** **The GATE is contributions
+> vs distributions; the GAIN is distributions vs basis.** ⚠️ **A failed gate does NOT imply a gain**, and
+> reading the gate as the gain test lets someone net a case the policy forbids: contribute a little, draw
+> a lot, against a large opening basis — no gain anywhere, and the net contribution is *negative*.
 > ✅ **So the order is: check the POLICY'S GATES first, per person; only then compare the two
 > presentations.** 🔑 **Where the gates pass, agreement is a useful arithmetic check. Where they fail, a
 > difference is the correct answer.**
 > ⛔ **And do not restate the policy here** — [`form-1120s-preparation.md` §5C-v](../../../projects/sops/form-1120s-preparation.md)
-> already carries it with its gates and its *"plus any stock ACQUIRED during the year"* clause, which a
-> restatement drops. **Point at it and add only what is new on this side of the return.**
+> already carries it — **§5C-v, "the five gates"** — with its *"plus any stock ACQUIRED during the year"*
+> clause, which a restatement drops. **Point at it and add only what is new on this side of the return.**
 >
 > ✅ **So a form's NAME is now checkable at source** — `K1 INPUT (1120S)` *(Federal K-1 (1120S) Input
 > Worksheet)*, `SCH E (1040) PAGE 2`, `7203, BASIS WKST` were all read off that list, not inferred.
