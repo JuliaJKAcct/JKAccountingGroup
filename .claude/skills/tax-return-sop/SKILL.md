@@ -643,7 +643,7 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > | Host | 2026-09-07 |
 > |---|---|
 > | ✅ **`support.atxinc.com`** | **200 with real content.** 🔴 **`/taxna/software-system-requirements/atx-forms` is the FORMS LIST — every form's name and description, grouped by PACKAGE** *(`id="FederalIndividual"`, `FederalCorporate`, … plus the states)*. ⚠️ **The URL carries no year — it serves the site's current program year**, so say which that was. **2.6 MB; parse it by package, do not eyeball it — a crude grep spills across packages and invents neighbours that are not in the box.** |
-> | ✅ `support.cch.com` | 200, but its KB articles sit behind **`/SingleSignOn/`** — the firm's own ATX customer login. **A session cannot open one; Lilian can.** |
+> | ✅ `support.cch.com` | 200, but every KB article returns a **"This browser version is not supported" stub** — the content is rendered by a JS app a session cannot run, whatever user-agent it sends. ⚠️ **And `support.atxinc.com/support/atxuserguides` is a LOGIN FORM.** 🔑 **So: a session cannot read the vendor's instructions; Lilian can, with the firm's ATX login and a browser.** |
 > | ⛔ `www.atxinc.com` · `taxna.wolterskluwer.com` | refused — the **marketing** sites, which are not what anyone needed |
 > | ✅ `irs.gov` | reachable |
 >
@@ -662,7 +662,7 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > 🔑 **Note what is NOT there and why it matters: `SCH K1 (1120S)` and `SCH K1 (1065)` live in the
 > Corporate and Partnership packages**, so on a 1040 they cannot be picked by accident at all — **the only
 > `SCH K1` in the box is the foreign-partnership one, which is exactly the one that was picked.**
-> ⚠️ **And attaching a state adds its own `XX K1 INPUT`** *(57 of them exist)*.
+> ⚠️ **And attaching a state adds its own `XX K1 INPUT`** *(most states have one)*.
 >
 > ✅ **So give the DISAMBIGUATION — scoped to the package the person is actually in — and the naming rule:**
 >
@@ -708,10 +708,17 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > 🔴 **AND THE CHECKBOXES ARE PART OF THE ENTRY ROUTE, NOT A FOOTNOTE.** ⛔ **A figure keyed correctly on a
 > screen whose checkboxes are wrong produces a wrong return with no error and, often, no changed total.**
 > **List them with their consequence, and say which stay EMPTY** — an unticked box is an instruction too.
-> _(The worked case: on the K-1 input sheet, `Calculate basis limitation` is what generates **Form 7203**
-> at all; `Qualified Business` is what carries §199A to **Form 8995**; and **`Passive activity`, left
-> UNCHECKED, is what makes the activity nonpassive** — the control three rounds of delivery had described
-> in the abstract without knowing where it lived.)_
+> _(The worked case: on the K-1 input sheet, `Calculate basis limitation`, `Qualified Business` and
+> `Passive activity` each carry a consequence no total reveals — and **`Passive activity` left UNCHECKED**
+> is where the nonpassive position lives, the control three rounds of delivery had described in the
+> abstract without knowing where it was.)_
+> 🛑 **AND HERE IS THE LIMIT A SCREENSHOT CANNOT CROSS: it establishes the LABELS, never what a box
+> DOES.** ⛔ **Write the consequence as `inferred` unless the screen itself states it or someone has
+> watched the output change.** ⚠️ *(Caught in review: three consequences were written inside a block
+> stamped "observed from the screenshot", and one of them — "without `Calculate basis limitation` there is
+> no Form 7203" — was contradicted by the person's own earlier screenshot, where `7203, BASIS WKST` was
+> already in the return before any K-1 form existed. **The screen says the box supports Form 7203; it does
+> not say the form disappears without it.**)_
 >
 > 🔑 **AND READ WHAT THE SCREEN ITSELF SAYS.** Input sheets carry instruction text, and it answers
 > questions a session would otherwise mark `not established`. _(Her screenshot's header settled two of

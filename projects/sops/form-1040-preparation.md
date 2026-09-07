@@ -667,8 +667,8 @@ ruling it is.**
 > 🔑 **AND WHAT IS *NOT* IN THAT BOX IS HALF THE ANSWER: `SCH K1 (1120S)` and `SCH K1 (1065)` are in the
 > CORPORATE and PARTNERSHIP packages**, so on a 1040 they cannot be picked by accident. ⛔ **The only
 > `SCH K1` a 1040 offers is the foreign-partnership one — which is precisely the one that was picked.**
-> ⚠️ **Attach a state and its own `XX K1 INPUT` joins the list** *(57 exist; `CT K1 INPUT` for a
-> Connecticut return)*. ⓘ **`8865` itself is also in the package — but it is the foreign-partnership
+> ⚠️ **Attach a state and its own `XX K1 INPUT` joins the list** *(most states have one — `CT K1 INPUT`
+> for a Connecticut return)*. ⓘ **`8865` itself is also in the package — but it is the foreign-partnership
 > RETURN, not a K-1, and its name contains no `K1`, so a `K1` search never returns it.**
 >
 > 🔑 **THE NAMING RULE:** **`K1 INPUT …` = the K-1 you RECEIVE** *(a capture worksheet feeding your
@@ -705,11 +705,14 @@ ruling it is.**
 >
 > | Checkbox on the K-1 input sheet | Consequence if wrong |
 > |---|---|
-> | 🔴 **`Calculate basis limitation`** | ⛔ **Form 7203 is not generated at all** — and the sheet's own header says to mark **every** 1120S record |
-> | 🔴 **`Passive activity`** — ✅ **left EMPTY = nonpassive** | the figure lands in Schedule E's **passive** column instead of the nonpassive one, and **line 32 is identical**, so no total reveals it |
-> | 🔴 **`Check ("X") if a Qualified Business`** | ⛔ box 17V never reaches **Form 8995** and the §199A deduction is silently lost |
+> | 🔴 **`Calculate basis limitation`** | 📄 **the sheet's own header: mark EVERY 1120S record, "to support Form 7203 and to track beginning and ending stock/loan basis".** Unticked, **the basis limitation is not computed** ⚠️ *(that the form vanishes entirely is `not established` — `7203, BASIS WKST` is a form in its own right)* |
+> | 🔴 **`Passive activity`** — ✅ **left EMPTY = nonpassive** ⚠️ `inferred — not established` | the figure lands in Schedule E's **passive** column instead of the nonpassive one, and **line 32 is identical**, so no total reveals it. 🛑 **Settle the §469 position before relying on the default** |
+> | 🔴 **`Qualified Business`** ⚠️ `inferred — not established` | box 17V is expected to reach **Form 8995** through it; unticked, the §199A deduction is silently lost |
 > | `Check ("X") if a Specified Service Trade or Business` | ticking it on a non-SSTB limits the deduction for no reason |
-> | `more-than-2% shareholder` · `Final K-1` · `Amended K-1` · `Calculate at-risk limitation` | ordinary facts — but each is a **statement**, so set them deliberately rather than leaving the default |
+> | `more-than-2% shareholder` · `Final K-1` · `Amended K-1` · `Calculate at-risk limitation` | ordinary facts — but each is a **statement**, so set them deliberately rather than leaving the default. ⚠️ **What the program DOES with each is `inferred`** |
+>
+> 🛑 **AND THE LIMIT: A SCREENSHOT ESTABLISHES LABELS, NOT BEHAVIOUR.** ⛔ **Mark every consequence
+> `inferred` unless the screen states it or someone watched the output change.**
 >
 > 🔑 **AND READ THE SCREEN'S OWN INSTRUCTION TEXT.** Input sheets carry it, and it settles questions a
 > session would otherwise guess at. *(The ATX sheet's header states the import route — **"To Import K-1s
