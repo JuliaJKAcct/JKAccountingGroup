@@ -26,7 +26,7 @@
 
 ## 1. Snapshot
 
-- **Business name:** **M5 STUDIO MIAMI LLC** · **Sunbiz document number `L26000418311`** — both from the Florida DOS filing email of **2026-08-11** in Julia's mailbox, read into this file on 2026-08-27 (Articles of Organization **filed 2026-08-07, effective 2026-08-03**; state tracking number 400479530504). ⚠️ **The state rejected the first submission on 2026-08-07 because the name omitted "LLC"** — §6.
+- **Business name:** **M5 STUDIO MIAMI LLC** · **Sunbiz document number `L26000418311`** — both from the Florida DOS filing email of **2026-08-11** in Julia's mailbox, read into this file on 2026-08-27 (Articles of Organization **filed 2026-08-07, effective 2026-08-03**; state tracking number `4004 7953 0504`). ⚠️ **The state rejected the first submission on 2026-08-07 because the name omitted "LLC"** — §6.
 - **Entity type:** **Florida LLC** (Articles of Organization). Number of members not confirmed here; **two investors** are involved (§2), so single- vs multi-member is still open and it drives the return type.
 - **Home state:** Florida (Miami) — confirmed against the state filing above.
 - **Industry / what they do:** Design services and retail sale of decorative wall plaster and related materials _(wording agreed with Lilian for the EIN application — see §5)_
@@ -58,7 +58,7 @@ link). Never write the credential itself here.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| Sunbiz | Entity formation / status | n/a (public) | **Document number `L26000418311`.** Articles of Organization filed **2026-08-07**, effective **2026-08-03**; state tracking number 400479530504 (and `W26000112020`, the document number the state gave the **rejected** first submission — §6) |
+| Sunbiz | Entity formation / status | n/a (public) | **Document number `L26000418311`.** Articles of Organization filed **2026-08-07**, effective **2026-08-03**; state tracking number `4004 7953 0504` — ⚠️ **written in groups of four; the state's own email has it unspaced, and twelve bare digits abort the published-page build** (and `W26000112020`, the document number the state gave the **rejected** first submission — §6) |
 | IRS | EIN application | n/a | **SS-4 faxed 2026-08-18 to 855-641-6935** (the domestic fax — chosen on where the *entity* is; ⚠️ assumed, see §5), **and faxed again 2026-08-27 as a "second attempt"**. _(EIN pending — write it here, hyphenated, once assigned)_ |
 | Google Drive | The client's document folder — the Articles and **both** SS-4s | _(pending — link the folder here)_ | Folder **"M5 Studio Miami"**, created 2026-08-03. ⚠️ **The Form 2848 is NOT in it** — it sits in `Tax information authorization - form 2848 IRS → SIGNED` (§5) |
 
@@ -248,7 +248,7 @@ A running, dated record as we build this profile.
   - **The company exists.** Florida DOS emailed Julia the filing acknowledgement — *"The Articles of
     Organization for **M5 STUDIO MIAMI LLC** were filed electronically on **August 07, 2026**,
     effective **August 03, 2026** … and were assigned document number **L26000418311**"* (tracking
-    400479530504). 🔑 **And the filing was REJECTED first, on 2026-08-07, over the name itself:**
+    `4004 7953 0504`). 🔑 **And the filing was REJECTED first, on 2026-08-07, over the name itself:**
     *"the document has not been filed for the following: The name of a limited liability company must
     contain the words 'Limited Liability Company,' the abbreviation 'L.L.C.,' or the designation
     'LLC.'"* — the name submitted was **`M5 STUDIO MIAMI`**, with no LLC (that submission holds
@@ -267,7 +267,7 @@ A running, dated record as we build this profile.
     **2026-08-12** (*"Please take a look at the SS-4 … before sending it for signature"*). Drive
     holds `Form SS-4 - M5 Studio Miami LLC - for signature.pdf` and, from **2026-08-18**, a final
     `Form SS-4 - M5 Studio Miami LLC.pdf`.
-  - **The fax.** MyFax confirmed to Julia: *"Your fax was successfully sent to **18556416935**"* —
+  - **The fax.** MyFax confirmed to Julia: *"Your fax was successfully sent to …"* — **1-855-641-6935**,
     **2026-08-19 01:59 GMT (2026-08-18, 21:59 Miami), 3 pages**, subject *"SS-4 – Application for
     Employer Identification Number"*. `855-641-6935` is the **domestic** SS-4 fax, and the routing
     test is where **the entity** is, not where its owners live _(⚠️ qualified 2026-09-01: this
@@ -287,7 +287,7 @@ A running, dated record as we build this profile.
 
 - _(2026-09-01)_ — ⏳ **A SECOND SS-4 FAX WENT OUT ON 2026-08-27, and no session recorded it either.**
   Found on the five-day gap check before this work was merged. MyFax confirmed to Julia: *"Your fax was
-  successfully sent to **18556416935**"* — **2026-08-27 20:08 GMT (16:08 Miami), 8 pages**, subject
+  successfully sent to …"* — **1-855-641-6935**, **2026-08-27 20:08 GMT (16:08 Miami), 8 pages**, subject
   ***"SS-4 – Application for Employer Identification Number - Second attempt"***. Same number as the
   first, so the Path-B reasoning is unchanged; what changed is **the clock — ~4 business days from
   27 August is about 2 September**, not 24 August.
