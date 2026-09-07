@@ -653,7 +653,27 @@ ruling it is.**
 > ATX is a computed output")* and its **Form 1125-E** route for page 1 line 7. **Three instances of one
 > rule.**
 >
-> ✅ **THE FORM'S NAME, from the vendor's own 2025 forms list** *(`support.atxinc.com/taxna/software-system-requirements/atx-forms`, read 2026-09-07)*: **`K1 INPUT (1120S)`** — *Federal K-1 (1120S) Input Worksheet*, in the 1040 package. ⛔ **Not `SCH K1 (1120S)`**, which is the K-1 the *company's* 1120-S issues. ⛔ **And not `SCH E (1040) PAGE 1`**, which is *Supplemental Income and Loss Page 1* — **the RENTAL sheet**, a different form with no K-1 on it. **The K-1 lands on `SCH E (1040) PAGE 2`.**
+> 🔴 **THE FORM'S NAME IS NOT ENOUGH — typing `K1` in *Add Forms* returns SEVEN, and six are wrong.**
+> ✅ **From the vendor's own 2025 forms list** *(`support.atxinc.com/taxna/software-system-requirements/atx-forms`, read 2026-09-07)*:
+>
+> | Add-Forms result | What it is | |
+> |---|---|---|
+> | ✅ **`K1 INPUT (1120S)`** | *Federal K-1 (1120S) Input Worksheet* | 🔴 **THE ONE** |
+> | `K1 INPUT (1065)` · `K1 INPUT (1041)` | receives from a **partnership** / a **trust** | ⛔ |
+> | `SCH K1 (1120S)` · `SCH K1 (1065)` | the K-1 the **company ISSUES** | ⛔ |
+> | `SCH K1 (8865)` · `8865` | Form 8865 — a **FOREIGN partnership**, and issuing | ⛔ |
+>
+> 🔑 **THE NAMING RULE, so nobody has to memorise the list:** **`K1 INPUT …` = the K-1 you RECEIVE**
+> *(a capture worksheet feeding your return)*; **`SCH K1 …` = the K-1 you ISSUE**; **the number in
+> parentheses is the form of the entity that issued it** — `1120S` S corp · `1065` partnership · `1041`
+> trust · `8865` **foreign** partnership.
+> 🛑 **AND THE TELL, for someone who cannot remember which is which: an ISSUING K-1 asks for
+> `Allocation Percentage`, `Profits`, `Capital`.** ⛔ **A recipient never allocates anything** — those
+> columns mean you are on the payer's form.
+>
+> ⛔ **And not `SCH E (1040) PAGE 1`** — *Supplemental Income and Loss Page 1* is **the RENTAL sheet**
+> *(Property Type · Fair rental days · Rent income · Royalties)*, a different form with no K-1 on it.
+> **The K-1 lands on `SCH E (1040) PAGE 2`.**
 >
 > | What is typed on the K-1's own form | Where it surfaces |
 > |---|---|
@@ -682,6 +702,7 @@ ruling it is.**
 > |---|---|---|
 > | 🔴 **① WHICH COLUMN did it land in** — not whether it arrived | 🛑 **NONE.** 📄 **Line 30 adds columns (h) *(passive income)* and (k) *(nonpassive income)*, so a K-1 classified the wrong way lands one column over and LINE 32 IS IDENTICAL.** ⛔ **No total will ever reveal it.** ⚠️ *(Income-year symmetry only: a misclassified LOSS goes to (g) rather than (i), and (g) carries only what Form 8582 allows, so there line 32 usually does move.)* | ⛔ **Settle the §469 position FIRST** — then set the activity to match and confirm the figure sits in **(h)** if passive, **(k)** if nonpassive. 🛑 **Do NOT default to nonpassive:** on a shareholder who does not materially participate, (h) is the RIGHT answer, and forcing (k) also pulls the income out of the Form 8582 pool *(other suspended passive losses stay suspended)* and out of **net investment income on Form 8960** — a 3.8% swing. ⚖️ **Record the reason either way** |
 > | ② the amount is in a box that does not feed Part II at all *(box 4, box 10…)* | Schedule E blank | move it to box 1. ⚠️ **Boxes 2 and 3 do NOT blank it** — rental and other rental income also land on line 28 and default to **passive**, which is finding ① wearing a different hat |
+> | 🔴 **②b the screen asks for `Allocation Percentage` / `Profits` / `Capital`** | 🛑 **you are on an ISSUING K-1** — the payer's allocation schedule, not a capture worksheet | delete it; the right form starts with **`INPUT`** |
 > | ③ the **(b)** column reads **`S`**, not `P` | ⚠️ **Not a blank Schedule E** — a 1065 K-1's ordinary income also lands on line 28, but **no Form 7203 is produced** ⓘ *(a partner's loss is still limited, under §704(d) — it is just not computed on that form)* | delete it and add the **1120S** K-1 form |
 > | ④ a **second K-1 tab** for the same company | ⚠️ **DOUBLE-COUNTS; it does not blank** | delete the duplicate and re-check line 32 |
 > | 🔴 **⑤ on a LOSS — the one cause where a BLANK IS CORRECT** | the loss is legitimately suspended by **§1366(d) basis** or **§465 at-risk** — **the first two of the three gates**, in that order | ⛔ **Nothing to fix.** ✅ Check the carryforward is where it belongs: **Form 7203 Part III column (e)** for a basis suspension, **Form 6198** for an at-risk one — ⛔ **they are not the same form, and an at-risk carryover does not live on Form 7203** |

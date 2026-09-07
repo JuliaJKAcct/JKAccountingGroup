@@ -652,6 +652,31 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > browser user-agent.** ⚠️ *(The session had just written that exact warning about `irs.gov`, two clauses
 > earlier, and did not apply it to the vendor hosts. Caught in review.)*
 >
+> ### 🔴 **AND THE FORM'S NAME IS NOT ENOUGH: SAY WHICH OF THE LOOK-ALIKES IT IS NOT**
+>
+> 🛑 **A search in the program's *Add Forms* box returns a FAMILY, and the names differ by one word.**
+> ⛔ **A delivery that names only the right one leaves the person to pick from six wrong ones**, and the
+> wrong pick does not error — it opens a plausible screen and wastes an hour.
+> ⚠️ **Worked case: typing `K1` in a 1040 returns SEVEN forms** — `K1 INPUT (1041)` · `K1 INPUT (1065)` ·
+> `K1 INPUT (1120S)` · `SCH K1 (1065)` · `SCH K1 (1120S)` · `SCH K1 (8865)` · `8865`.
+>
+> ✅ **So give the DISAMBIGUATION, and give the naming RULE that generalises it:**
+>
+> | | |
+> |---|---|
+> | **`K1 INPUT …`** | the K-1 you **RECEIVE** — a capture worksheet that feeds *your* return |
+> | **`SCH K1 …`** | the K-1 you **ISSUE** — the printed form handed to someone else |
+> | **the number in parentheses** | **the form of the entity that ISSUED it** — `1120S` S corporation · `1065` partnership · `1041` trust · **`8865` FOREIGN partnership** |
+>
+> 🔑 **AND GIVE THE TELL THAT SAYS YOU ARE ON THE WRONG ONE** — a screen, not a name. *(An issuing
+> K-1 asks for `Allocation Percentage`, `Profits`, `Capital`: those are what a PAYER splits among owners.
+> A recipient never allocates anything.)* ⛔ **A person who cannot name the form can still recognise the
+> screen, which is why the tell is worth more than the name.**
+> _(Lilian, 2026-09-07, third round on the same section: she had added **`SCH K1 (8865)`** — wrong entity
+> type **and** wrong direction — after a delivery that named the right form and nothing else.
+> 🛑 **Two rounds earlier the same delivery had sent her to `SCH E (1040) PAGE 1`, the RENTAL sheet.**
+> **Both times the name alone was the whole delivery, and both times she landed on a plausible neighbour.**)_
+>
 > ✅ **So a form's NAME is now checkable at source** — `K1 INPUT (1120S)` *(Federal K-1 (1120S) Input
 > Worksheet)*, `SCH E (1040) PAGE 2`, `7203, BASIS WKST` were all read off that list, not inferred.
 > ⛔ **What is still NOT checkable is what a screen LOOKS LIKE** — its tabs, its field positions, its
