@@ -1,9 +1,11 @@
 # Preparing a Form 1040 (individual return) — the modular procedure
 
 > **Status:** 🟡 **DRAFT — pending Lilian's sign-off.** 🔴 **Extended 2026-09-07 AT HER REQUEST** — 🛠️ **the
-> ATX ENTRY ROUTE for a K-1: Schedule E page 2 is an OUTPUT and opens no line; the K-1 is keyed on its own
-> form, which feeds Schedule E, Form 7203 and Form 8995 at once** — with the "it did not flow" list and the
-> note that the vendor's documentation is unreachable from the firm's environment (M3). 🔴 **Extended
+> ATX ENTRY ROUTE for a K-1: the money is keyed on the K-1's OWN form, which feeds Schedule E, Form 7203 and
+> Form 8995 at once, while line 27 and the (e)/(f) ticks stay the preparer's** — with the "it did not flow"
+> table *(whose first question is WHICH COLUMN, since line 30 adds (h) and (k) and a misclassified K-1 gives
+> an identical line 32)* and the note that the vendor's documentation is unreachable from the firm's
+> environment (M3). 🔴 **Extended
 > 2026-09-06** — the Schedule C `Other expenses` line *(27b, not 27a)* and the prior-year-convention rule
 > that decides which expense line at all (M2), and **Schedule E Part II's two stacked grids** with the
 > (i)/(k) column correction (M3). Started 2026-08-18 from the first two 1040s
@@ -642,12 +644,14 @@ ruling it is.**
 > participates is nonpassive. **Record the reason** *(officer, the year's compensation, hours)* rather than
 > defaulting — and say plainly when no §469 test has been run.
 
-> ### 🔴 AND IN THE SOFTWARE, NONE OF THAT GRID IS TYPED — Schedule E page 2 is an OUTPUT
+> ### 🔴 AND IN THE SOFTWARE THE MONEY IS NOT TYPED ON THIS PAGE — the K-1 has its own form
 >
-> 🛑 **The block above answers *where on the FORM*. It does not answer *where do I TYPE*, and in ATX the
-> answer is NOWHERE: Schedule E page 2 opens no line.** ✅ **The K-1 is keyed on its own form**, added to
-> the 1040 — and **Schedule E page 2, Form 7203 and Form 8995 are all outputs of that one screen.**
-> 🔑 **Same rule as Form 7203 opening only lines 1 and 13, taken to its limit.**
+> 🛑 **The block above answers *where on the FORM*. It does not answer *where do I TYPE*, and the two are
+> different forms.** ✅ **The K-1 is keyed on its own form**, added to the 1040 — and **Schedule E page 2,
+> Form 7203 and Form 8995 all take their figures from that one screen.** 🔑 **Same rule as Form 7203
+> opening only lines 1 and 13** — and the same rule as the 1120-S SOP's **`Fixed Assets` tab** *("4562 in
+> ATX is a computed output")* and its **Form 1125-E** route for page 1 line 7. **Three instances of one
+> rule.**
 >
 > | What is typed on the K-1's own form | Where it surfaces |
 > |---|---|
@@ -657,18 +661,38 @@ ruling it is.**
 > | **capital contributions** *(on no K-1 box — from the books)* | Form 7203 **line 2** |
 > | **box 17 V** | Form 8995 |
 >
-> ⛔ **Only line 27 and the (e)/(f) ticks are the preparer's on Schedule E itself.** ⚠️ *(Whether (e) is
-> ticked on Schedule E or on the K-1 screen is `not established` — ask whoever has it open.)*
+> ⚠️ **That table is the worked case, not the whole screen** — **every** K-1 box is keyed there, **16A/B
+> and 16E included** *(see the box map above: ⛔ "NOT just C and D")*. **These five are the ones that moved.**
 >
-> ✅ **AND ALWAYS GIVE THE "IT DID NOT FLOW" LIST, because a missing input produces NO error message:**
-> ① the `1120S` K-1 form was added, not the `1065` one; ② the amount is in **box 1** and not a neighbour;
-> ③ the activity is marked **nonpassive** — treated as passive it goes to **Form 8582** and never reaches
-> Schedule E at all; ④ only one K-1 tab is in use.
+> 🛑 **AND DO NOT OVERSTATE IT: Schedule E page 2 still has preparer entries on it.** ⛔ **"That form
+> takes no input" is the wrong lesson and sends someone hunting on the wrong screen a second time.**
+> ✅ **Line 27's Yes/No and the (e) and (f) ticks are the preparer's.** ⚠️ **WHERE they are made is a
+> separate, `not established` question** — [Kolo Florida's paper](../tax-returns/kolo-florida-inc/2025-form-1120s.md)
+> §8A records column **(e)** as entered *"Schedule E page 2"*, and that row was never read back off a
+> screen. **Ask whoever has it open.**
 >
-> ⚠️ **Vendor documentation is unreachable from the firm's environment** *(every ATX/Wolters Kluwer host is
-> refused by the network policy; irs.gov is not — checked 2026-09-07)*. 🔑 **So a screen name is
-> `established` only from a screenshot or from `projects/tax-returns/`, and a delivery steers by a
-> column's TITLE rather than by a screen letter nobody has seen.**
+> ✅ **AND ALWAYS GIVE THE "IT DID NOT FLOW" LIST — WITH ITS FIX — because a missing or misrouted input
+> produces NO error message:**
+>
+> | Check | Symptom | 🛠️ Fix |
+> |---|---|---|
+> | 🔴 **① WHICH COLUMN did it land in** — not whether it arrived | 🛑 **NONE.** 📄 **Line 30 adds columns (h) *(passive income)* and (k) *(nonpassive income)*, so a K-1 classified the wrong way lands one column over and LINE 32 IS IDENTICAL.** ⛔ **No total will ever reveal it** | Re-mark the activity **nonpassive** on the K-1 screen and confirm the figure moves from **(h)** to **(k)**. ⚖️ **And record WHY it is nonpassive** — material participation is a position |
+> | ② the amount is in **box 1**, not a neighbouring box | Schedule E blank | move it to box 1 |
+> | ③ the **(b)** column reads **`S`**, not `P` | ⚠️ **Not a blank Schedule E** — a 1065 K-1's ordinary income also lands on line 28, but **no Form 7203 is produced** and the basis limitation never runs | delete it and add the **1120S** K-1 form |
+> | ④ a **second K-1 tab** for the same company | ⚠️ **DOUBLE-COUNTS; it does not blank** | delete the duplicate and re-check line 32 |
+> | 🔴 **⑤ on a LOSS — the one cause that really does blank it** | the loss is legitimately suspended by **§1366(d) basis** *(Form 7203 Part III)* or **§465 at-risk** *(Form 6198)* | ⛔ **Nothing to fix — it is correct.** Check Form 7203 Part III column (e) carries it forward |
+>
+> ⛔ *(An earlier version of this list said a passive activity **"goes to Form 8582 and never reaches
+> Schedule E at all"**. **That is wrong.** 📄 The 2025 form reads `(g) Passive loss allowed (attach Form
+> 8582 if required)` and `(h) Passive income from Schedule K-1` — **Form 8582 is the passive LOSS form**,
+> and passive **income** goes straight into (h) and on to line 30. Read off the PDF, 2026-09-07.)*
+>
+> ⚠️ **Vendor documentation is unreachable from the firm's environment** — every ATX/Wolters Kluwer host is
+> refused by the network policy; **`irs.gov` is reachable, but only with `curl` through the proxy** *(the
+> WebFetch tool is blocked on it too — checked 2026-09-07)*. 🔑 **So a screen name is `established` only
+> from a screenshot or from `projects/tax-returns/`**, it carries **who observed it, when, and in which
+> version** *(the 1120-S SOP's 🖥️ convention)*, **and a delivery steers by a column's TITLE rather than by
+> a screen letter nobody has seen.**
 > _(Lilian, 2026-09-07: **"No encuentro dónde entrar a nada."** The route was already in the repo, on
 > another client's paper, and a delivery gave the form's coordinates without it.)_
 

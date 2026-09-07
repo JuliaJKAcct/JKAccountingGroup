@@ -135,18 +135,25 @@ the actual details.
   CORRECTION MADE THE DAY BEFORE STILL DID NOT WORK AT THE KEYBOARD.**
   🗣️ **Lilian:** *"Tus instrucciones acerca de cómo llenar el Schedule E no son buenas para seguir en
   ATX. **No encuentro dónde entrar a nada.**"*
-  🔑 **THE CAUSE, and it is worth keeping: there is nowhere to enter it.** In the firm's tax software
-  **Schedule E page 2 opens no line at all** — it is built by the program. **The K-1 is keyed on its own
-  form**, and Schedule E, the basis form and the QBI form are all outputs of that one screen. 🛑 **Both
-  earlier versions gave the coordinates on the IRS FORM and no route through the PROGRAM**, which is
-  unusable for the person typing.
+  🔑 **THE CAUSE, and it is worth keeping: the figure is not entered on the form it appears on.** In the
+  firm's tax software **the K-1 is keyed on its own form**, and Schedule E, the basis form and the QBI form
+  are all built from that one screen. 🛑 **Both earlier versions gave the coordinates on the IRS FORM and
+  no route through the PROGRAM**, which is unusable for the person typing.
+  ⚠️ **AND THE FIRST FIX OVERSHOT, caught by the review before it shipped:** it said the schedule *"opens no
+  line at all"*, which is false — **a few ticks and one Yes/No on it are still the preparer's**, and
+  **where those are entered is a different, unanswered question.** 🔑 **Over-correcting would have sent her
+  hunting on the wrong screen for a third time.**
   ⛔ **AND THE ROUTE WAS ALREADY IN THE FIRM'S OWN FILES** — written down in August from Lilian's keyboard
   while working another client's return. 🔑 **The evidence being on file is not the same as the evidence
   being used**, which is the second time in a week that has been the cause. 🛠️ **A rule now says to search
   the firm's prior working papers for a form's name before delivering any entry route.**
-  ⚠️ **Two things are still unconfirmed and need one look at her screen**: the exact column heading in the
-  program's own grid, and where the *basis computation required* tick actually lives. **Neither changes a
-  figure.**
+  ⚠️ **Two things are still unconfirmed and need one look at her screen**: how the program labels the
+  columns in its own version of that grid, and where the *basis computation required* tick actually lives.
+  **Neither changes a figure.**
+  🔴 **And one real tax error was caught in the same review, before it reached her:** a troubleshooting
+  note claimed that an activity classified the wrong way would never reach the schedule at all. **It does —
+  it lands one column over, and the TOTAL IS IDENTICAL.** 🔑 **So the check is *which column*, never
+  *did it arrive*** — a distinction no total can make, now written into the firm's rules.
   🔴 **Also established: the software vendor's documentation is unreachable from the firm's Claude
   environment** — the IRS site is, every ATX/Wolters Kluwer host is refused. **So a screen route is only
   ever established from a screenshot or from a prior working paper**, and that is now written into the

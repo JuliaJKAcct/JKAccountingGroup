@@ -574,31 +574,53 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > _(Lilian, 2026-09-06: **"no entendí bien cómo llenar el Schedule E, que es donde van los datos del K1.
 > No entiendo dónde poner eso."**)_
 >
-> ### 🔴 **AND THE BLOCK ABOVE WAS STILL NOT ENOUGH: THE DESTINATION FORM MAY TAKE NO INPUT AT ALL**
+> ### 🔴 **AND THE BLOCK ABOVE WAS STILL NOT ENOUGH: THE FIGURE MAY NOT BE TYPED ON ITS OWN FORM AT ALL**
 >
 > 🛑 **Naming the grid, the row and the column answers *where on the FORM*. It does not answer *where do
-> I TYPE*, and on some forms the answer to the second is NOWHERE.** ⛔ **In ATX, Schedule E page 2 is not
-> a capture screen: every line of it is computed.** A K-1 is keyed on **its own form** — added to the
-> return, with its own input tab — and Schedule E page 2, Form 7203 and Form 8995 are all **outputs of that
-> one screen**. 🔑 **It is the same rule as Form 7203 opening only lines 1 and 13, taken to its limit:
-> that form opens two lines, this one opens none.**
+> I TYPE*, and the two are routinely different forms.** ✅ **Worked case, established at the keyboard:** a
+> K-1's **money** is not typed on Schedule E page 2 at all — the K-1 is keyed on **its own form**, and
+> **Schedule E page 2, Form 7203 and Form 8995 are outputs of that one screen** *(ATX; the firm's own record
+> is [Kolo Florida's paper](../../../projects/tax-returns/kolo-florida-inc/2025-form-1120s.md) §8A, Aug
+> 2026)*. 🔑 **Same rule as Form 7203 opening only lines 1 and 13.**
+>
+> 🛑 **BUT SCOPE THE CLAIM TO WHAT WAS OBSERVED — "that form takes no input" is almost always too strong.**
+> ⛔ **Schedule E page 2 still has preparer entries on it** — line 27's Yes/No and the **(e)** and **(f)**
+> ticks — and **where they are made is a separate question from where the money is keyed.** ⚠️ **A delivery
+> that flattens the two sends the person hunting on the wrong screen for the second time**, which is exactly
+> the failure it was written to fix. ✅ **Say which figures arrive and which fields are still theirs.**
 >
 > **So the delivery is TWO layers, in this order, and the first one is the one that was missing:**
 >
-> | | |
+> | Layer | What it carries |
 > |---|---|
 > | 🛠️ **1. THE INPUT FORM** | **Its name, its tab, its fields — and beside each field, WHICH FORM IT SURFACES ON.** One screen typically feeds three or four forms at once |
-> | 📄 **2. THE DESTINATION** | the same grid/row/column coordinates as before, but re-labelled **`ƒ` and headed *what must APPEAR*** — a check on the printed return, never an instruction to type |
+> | 📄 **2. THE DESTINATION** | the same grid/row/column coordinates as before, headed ***what must APPEAR***, and **keeping the `⌨️`/`ƒ` column**: the arriving figures become `ƒ`, and **any field the preparer still enters on that form stays `⌨️`** |
+>
+> ⛔ **Do NOT relabel the whole destination table `ƒ`.** A tick or a Yes/No that is still the preparer's,
+> marked computed, is the same error in the opposite direction.
 >
 > 🛑 **AND SAY IT IN THE SECTION'S FIRST LINE, before any coordinates.** Someone hunting for a field
-> that does not exist does not conclude "this form is computed" — they conclude **the software is broken or
-> they are missing a permission**, and they stop. ⛔ **A wholly-computed form whose delivery opens with its
-> line numbers is a defect however correct those line numbers are.**
+> that does not exist does not conclude "this figure is computed" — they conclude **the software is broken or
+> they are missing a permission**, and they stop. ⛔ **A computed figure whose delivery opens with its
+> line number is a defect however correct that line number is.**
+>
+> 🔑 **AND THE GENERALISATION WAS ALREADY IN THE FIRM'S OWN SOP, TWICE, UNAPPLIED:**
+> [`form-1120s-preparation.md`](../../../projects/sops/form-1120s-preparation.md) says the assets are keyed
+> in the **`Fixed Assets`** tab because *"4562 in ATX is a computed output"*, and that page 1 line 7 cannot
+> be typed because ATX routes it through **Form 1125-E**. 🛑 **Two worked instances of one rule that nobody
+> had written as a rule.** ✅ **It is written now, and it applies to every computed form, not to K-1s.**
 >
 > ✅ **Then add the "it did not flow" list**, because a missing input on a computed form produces **no error
 > message** — the destination simply comes out blank or short, and foots perfectly either way *(the Kolo
 > read-backs: `8a` blank because box 16C never reached the K-1 input, and a transposed contribution — two
 > unrelated causes, one symptom, and the form added up both times)*.
+> 🔴 **AND THE LIST'S FIRST QUESTION IS NOT "DID IT ARRIVE" BUT "WHERE DID IT LAND".** ⛔ **A figure that
+> reaches the right TOTAL by the wrong column is invisible to every check that looks at the total** —
+> Schedule E line 30 adds columns **(h)** *(passive income)* **and (k)** *(nonpassive income)*, so a K-1
+> classified the wrong way lands one column over and **line 32 is identical.** ⚠️ *(An earlier version of
+> this rule said a passive activity "never reaches Schedule E". **That was wrong** — Form 8582 is the
+> passive **LOSS** form, and passive income goes straight into (h). Read off the 2025 PDF, 2026-09-07.)*
+> 🛑 **Each item gets its FIX, not just its symptom** — §4B's standing rule.
 >
 > ⛔ **THE FAILURE THIS IS WRITTEN FROM IS NOT THAT THE ROUTE WAS UNKNOWN. IT WAS IN THE REPO.** Another
 > client's working paper already said it in as many words — *"the K-1 input screen IS Form 7203's data
@@ -614,8 +636,10 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > ### ⚠️ **THE VENDOR'S DOCUMENTATION IS NOT REACHABLE FROM THIS ENVIRONMENT — so a screen name carries its source**
 >
 > 🔴 **Checked 2026-09-07: `support.atxinc.com`, `support.cch.com`, `www.atxinc.com` and
-> `taxna.wolterskluwer.com` are all refused by the network policy (403 at the proxy). `irs.gov` is
-> reachable.** 🔑 **So the form's own PDF can always be verified and the SOFTWARE's screens cannot.**
+> `taxna.wolterskluwer.com` are all refused by the network policy (403 at the proxy). `irs.gov` IS
+> reachable — but only with `curl` through the proxy; the WebFetch tool is blocked on it too, so a session
+> that tries only WebFetch will wrongly conclude the form itself cannot be checked.**
+> 🔑 **So the form's own PDF can always be verified and the SOFTWARE's screens cannot.**
 > ✅ **Which makes the firm's own two sources the authority on any entry route:** a **screenshot** from
 > whoever is at the keyboard, and **`projects/tax-returns/`**, where the routes bought that way are
 > written down. ⛔ **A screen name found in a search result is a LEAD, not a route** — label it as
