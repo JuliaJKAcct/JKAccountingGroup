@@ -574,6 +574,172 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > _(Lilian, 2026-09-06: **"no entendí bien cómo llenar el Schedule E, que es donde van los datos del K1.
 > No entiendo dónde poner eso."**)_
 >
+> ### 🔴 **AND THE BLOCK ABOVE WAS STILL NOT ENOUGH: THE FIGURE MAY NOT BE TYPED ON ITS OWN FORM AT ALL**
+>
+> 🛑 **Naming the grid, the row and the column answers *where on the FORM*. It does not answer *where do
+> I TYPE*, and the two are routinely different forms.** ✅ **Worked case, established at the keyboard:** a
+> K-1's **money** is not typed on Schedule E page 2 at all — the K-1 is keyed on **its own form**, and
+> **Schedule E page 2, Form 7203 and Form 8995 are outputs of that one screen** *(ATX; the firm's own record
+> is [Kolo Florida's paper](../../../projects/tax-returns/kolo-florida-inc/2025-form-1120s.md) §8A row 1,
+> Aug 2026 — ⚠️ **that row carries no read-back stamp, unlike rows 2-3 of the same table**)*. 🔑 **Same rule as Form 7203 opening only lines 1 and 13.**
+>
+> 🛑 **BUT SCOPE THE CLAIM TO WHAT WAS OBSERVED — "that form takes no input" is almost always too strong.**
+> ⛔ **Schedule E page 2 still has preparer entries on it** — line 27's Yes/No and the **(e)** and **(f)**
+> ticks — and **where they are made is a separate question from where the money is keyed.** ⚠️ **A delivery
+> that flattens the two sends the person hunting on the wrong screen for the second time**, which is exactly
+> the failure it was written to fix. ✅ **Say which figures arrive and which fields are still theirs.**
+>
+> **So the delivery is TWO layers, in this order, and the first one is the one that was missing:**
+>
+> | Layer | What it carries |
+> |---|---|
+> | 🛠️ **1. THE INPUT FORM** | **Its name, its tab, its fields — and beside each field, WHICH FORM IT SURFACES ON.** One screen typically feeds three or four forms at once |
+> | 📄 **2. THE DESTINATION** | the same grid/row/column coordinates as before, headed ***what must APPEAR***, and **keeping the `⌨️`/`ƒ` column**: the arriving figures become `ƒ`, and **any field the preparer still enters on that form stays `⌨️`** |
+>
+> ⛔ **Do NOT relabel the whole destination table `ƒ`.** A tick or a Yes/No that is still the preparer's,
+> marked computed, is the same error in the opposite direction.
+>
+> 🛑 **AND SAY IT IN THE SECTION'S FIRST LINE, before any coordinates.** Someone hunting for a field
+> that does not exist does not conclude "this figure is computed" — they conclude **the software is broken or
+> they are missing a permission**, and they stop. ⛔ **A computed figure whose delivery opens with its
+> line number is a defect however correct that line number is.**
+>
+> 🔑 **AND THE GENERALISATION WAS ALREADY IN THE FIRM'S OWN SOP, TWICE, UNAPPLIED:**
+> [`form-1120s-preparation.md`](../../../projects/sops/form-1120s-preparation.md) says the assets are keyed
+> in the **`Fixed Assets`** tab because *"4562 in ATX is a computed output"*, and that page 1 line 7 cannot
+> be typed because ATX routes it through **Form 1125-E**. 🛑 **Two worked instances of one rule that nobody
+> had written as a rule.** ✅ **It is written now, and it applies to every computed form — not just to K-1s.**
+>
+> ✅ **Then add the "it did not flow" list**, because a missing input on a computed form produces **no error
+> message** — the destination simply comes out blank or short, and foots perfectly either way *(the Kolo
+> read-backs: `8a` blank because box 16C never reached the K-1 input, and a transposed contribution — two
+> unrelated causes, one symptom, and the form added up both times)*.
+> 🔴 **AND THE LIST'S FIRST QUESTION IS NOT "DID IT ARRIVE" BUT "WHERE DID IT LAND".** ⛔ **A figure that
+> reaches the right TOTAL by the wrong column is invisible to every check that looks at the total** —
+> Schedule E line 30 adds columns **(h)** *(passive income)* **and (k)** *(nonpassive income)*, so a K-1
+> classified the wrong way lands one column over and **line 32 is identical.** ⚠️ **That symmetry is an
+> INCOME-year fact** — a misclassified **loss** goes to (g) instead of (i), and (g) carries only what Form
+> 8582 allows, so there line 32 usually *does* move. ⚠️ *(An earlier version of
+> this rule said a passive activity "never reaches Schedule E". **That was wrong** — Form 8582 is the
+> passive **LOSS** form, and passive income goes straight into (h). Read off the 2025 PDF, 2026-09-07.)*
+> 🛑 **Each item gets its FIX, not just its symptom** — §4B's standing rule.
+>
+> ⛔ **THE FAILURE THIS IS WRITTEN FROM IS NOT THAT THE ROUTE WAS UNKNOWN. IT WAS IN THE REPO.** Another
+> client's working paper already said it in as many words — *"the K-1 input screen IS Form 7203's data
+> entry... work the K-1 input first; read Form 7203 as a result"*, and *"K-1 input → box 1. **Computed
+> onward** to Schedule E Part II line 28"* — established at the keyboard on a live return in August.
+> 🛑 **A second delivery gave the form's coordinates and no route.** 🔑 **The evidence being in the repo is
+> not the same as the evidence being USED, and this is the second rule on this page written from that
+> exact failure.** 🛠️ **So: before delivering an entry route, grep `projects/tax-returns/` for the form's
+> name — another client's paper has usually already paid for it.**
+> _(Lilian, 2026-09-07: **"Tus instrucciones acerca de cómo llenar el Schedule E no son buenas para seguir
+> en ATX. No encuentro dónde entrar a nada."**)_
+>
+> ### 🟢 **THE VENDOR'S SUPPORT SITE IS REACHABLE — and the FORMS LIST is the authority on a form's name**
+>
+> 🔴 **Lilian opened it on 2026-09-07, and a rule written that same morning saying it was unreachable
+> was WRONG WITHIN HOURS.** ⛔ **Do not repeat the check from memory — run it.**
+>
+> | Host | 2026-09-07 |
+> |---|---|
+> | ✅ **`support.atxinc.com`** | **200 with real content.** 🔴 **`/taxna/software-system-requirements/atx-forms` is the FORMS LIST — every form's name and description, grouped by PACKAGE** *(`id="FederalIndividual"`, `FederalCorporate`, … plus the states)*. ⚠️ **The URL carries no year — it serves the site's current program year**, so say which that was. **2.6 MB; parse it by package, do not eyeball it — a crude grep spills across packages and invents neighbours that are not in the box.** |
+> | ✅ `support.cch.com` | 200, but every KB article returns a **"This browser version is not supported" stub** — the content is rendered by a JS app a session cannot run, whatever user-agent it sends. ⚠️ **And `support.atxinc.com/support/atxuserguides` is a LOGIN FORM.** 🔑 **So: a session cannot read the vendor's instructions; Lilian can, with the firm's ATX login and a browser.** |
+> | ⛔ `www.atxinc.com` · `taxna.wolterskluwer.com` | refused — the **marketing** sites, which are not what anyone needed |
+> | ✅ `irs.gov` | reachable |
+>
+> 🛑 **AND THE TRAP THAT PRODUCED THE WRONG RULE: `WebFetch` IS BLOCKED ON ALL OF THESE WHILE `curl`
+> WORKS.** ⛔ **Never conclude a host is unreachable from a WebFetch failure — retry with `curl -A` and a
+> browser user-agent.** ⚠️ *(The session had just written that exact warning about `irs.gov`, two clauses
+> earlier, and did not apply it to the vendor hosts. Caught in review.)*
+>
+> ### 🔴 **AND THE FORM'S NAME IS NOT ENOUGH: SAY WHICH OF THE LOOK-ALIKES IT IS NOT**
+>
+> 🛑 **A search in the program's *Add Forms* box returns a FAMILY, and the names differ by one word.**
+> ⛔ **A delivery that names only the right one leaves the person to pick from the rest**, and the wrong
+> pick does not error — it opens a plausible screen and wastes an hour.
+> ✅ **Worked case, read off the vendor's forms list by package:** typing `K1` in a **1040** returns
+> **FOUR** — `K1 INPUT (1041)` · `K1 INPUT (1065)` · **`K1 INPUT (1120S)`** · `SCH K1 (8865)`.
+> 🔑 **Note what is NOT there and why it matters: `SCH K1 (1120S)` and `SCH K1 (1065)` live in the
+> Corporate and Partnership packages**, so on a 1040 they cannot be picked by accident at all — **the only
+> `SCH K1` in the box is the foreign-partnership one, which is exactly the one that was picked.**
+> ⚠️ **And attaching a state adds its own `XX K1 INPUT`** *(most states have one)*.
+>
+> ✅ **So give the DISAMBIGUATION — scoped to the package the person is actually in — and the naming rule:**
+>
+> | | |
+> |---|---|
+> | **`K1 INPUT …`** | the K-1 you **RECEIVE** — a capture worksheet that feeds *your* return |
+> | **`SCH K1 …`** | the K-1 you **ISSUE** — the printed form handed to someone else |
+> | **the parenthesised number** | ⚠️ **within the federal K-1 family only**, the **issuing entity's form** — `1120S` S corp · `1065` partnership · `1041` trust · **`8865` FOREIGN partnership**. ⛔ **Elsewhere in the program the parentheses name the PARENT form** *(`SCH E (1040) PAGE 2`, `LUMP-SUM WKST (1040)`)*, so do not state the rule unscoped |
+>
+> 🔑 **AND GIVE THE TELL — but make it STRUCTURAL, not lexical.**
+> ⛔ **"An issuing K-1 asks for a percentage" is FALSE and a first version of this rule said it.** 📄 **A
+> RECEIVED K-1 carries one too**: Schedule K-1 (1120-S) Part II **item G is `Current year allocation
+> percentage`**, and Schedule K-1 (1065) **item J is the partner's own `Profit / Loss / Capital %`**
+> *(read off the 2025 PDFs, 2026-09-07)*. **A capture worksheet mirrors those boxes, so the RIGHT form has
+> percentage fields too** — and on a mid-year change or a §1377(a)(2) election it has *more* of them.
+> ✅ **What actually separates them is the SHAPE and the TITLE:**
+>
+> | | |
+> |---|---|
+> | 🔴 **ISSUING** | a **multi-owner GRID** — one **row per owner**, *Add Record / Delete Record*, and it asks for **the OWNERS' names and addresses**, with percentages split among them to 100% |
+> | ✅ **RECEIVING** | an **Input Sheet for ONE entity** — it asks for **the COMPANY's name, EIN and address**, then that entity's boxes |
+>
+> ⛔ **A percentage field alone proves nothing.** 🔑 **"Whose name and address is this screen asking for?"
+> is the question that always separates them** — and a person who cannot name the form can still answer it,
+> which is why the tell is worth more than the name.
+> _(Lilian, 2026-09-07, third round on the same section: she had added **`SCH K1 (8865)`** — wrong entity
+> type **and** wrong direction — after a delivery that named the right form and nothing else.
+> 🛑 **Two rounds earlier the same delivery had sent her to `SCH E (1040) PAGE 1`, the RENTAL sheet.**
+> **Both times the name alone was the whole delivery, and both times she landed on a plausible neighbour.**)_
+>
+> ### 🔴 **AND THE FOURTH ROUND: ADDRESS THE SCREEN BY ITS OWN LABELS, NOT THE IRS FORM'S GEOGRAPHY**
+>
+> 🗣️ **"Parte 3, casilla 1: ¿dónde está eso?"** ⛔ **Because there is no Part III on the screen.** The
+> software's input sheet renumbers the K-1's boxes 1-19 **without the Part heading**, and gives them
+> **its own wording** — the IRS's *"Ordinary business income (loss)"* is the sheet's
+> *"**Ordinary income (loss)**"*. 🛑 **An address built out of the FORM's geography — part, box, column —
+> is unfindable on a screen that does not carry it.**
+>
+> ✅ **So an entry route is written in the SOFTWARE's vocabulary:** the **section heading as printed on the
+> screen**, the **line number as the screen numbers it**, and **the field's label verbatim**. ⚠️ **Say when
+> the label differs from the IRS's**, because the person is looking at one and you are quoting the other.
+>
+> 🔴 **AND THE CHECKBOXES ARE PART OF THE ENTRY ROUTE, NOT A FOOTNOTE.** ⛔ **A figure keyed correctly on a
+> screen whose checkboxes are wrong produces a wrong return with no error and, often, no changed total.**
+> **List them with their consequence, and say which stay EMPTY** — an unticked box is an instruction too.
+> _(The worked case: on the K-1 input sheet, `Calculate basis limitation`, `Qualified Business` and
+> `Passive activity` each carry a consequence no total reveals — and **`Passive activity` left UNCHECKED**
+> is where the nonpassive position lives, the control three rounds of delivery had described in the
+> abstract without knowing where it was.)_
+> 🛑 **AND HERE IS THE LIMIT A SCREENSHOT CANNOT CROSS: it establishes the LABELS, never what a box
+> DOES.** ⛔ **Write the consequence as `inferred` unless the screen itself states it or someone has
+> watched the output change.** ⚠️ *(Caught in review: three consequences were written inside a block
+> stamped "observed from the screenshot", and one of them — "without `Calculate basis limitation` there is
+> no Form 7203" — was contradicted by the person's own earlier screenshot, where `7203, BASIS WKST` was
+> already in the return before any K-1 form existed. **The screen says the box supports Form 7203; it does
+> not say the form disappears without it.**)_
+>
+> 🔑 **AND READ WHAT THE SCREEN ITSELF SAYS.** Input sheets carry instruction text, and it answers
+> questions a session would otherwise mark `not established`. _(Her screenshot's header settled two of
+> them outright: the import route — **"To Import K-1s from a S Corporation return, select Returns / Import
+> Data / K-1 Data"** — and where the basis section lives: **"Scroll down to the 'Basis Limitation' section
+> on this tab."** Both had been carried as unverified search-result leads for a day.)_
+> 🛑 **ONE SCREENSHOT OUTRANKS EVERY SEARCH RESULT, AND IT IS ONE MESSAGE AWAY.** ✅ **Ask for it early
+> rather than delivering a third guess** — and when the person sends one, **transcribe what it shows**
+> *(sections in order, every field label, every checkbox)* **before adding anything of your own.**
+>
+> ✅ **So a form's NAME is now checkable at source** — `K1 INPUT (1120S)` *(Federal K-1 (1120S) Input
+> Worksheet)*, `SCH E (1040) PAGE 2`, `7203, BASIS WKST` were all read off that list, not inferred.
+> 🛑 **AND SO IS WHICH PACKAGE IT IS IN, which is half the answer** — a form in another package is not a
+> wrong choice the person can make.
+> ⛔ **What is still NOT checkable is what a screen LOOKS LIKE** — its tabs, its field positions, its
+> column letters. **For those the authority stays the firm's own two sources:** a **screenshot** from
+> whoever is at the keyboard, and **`projects/tax-returns/`**.
+> ⛔ **A screen detail found in a search-result summary is a LEAD, not a route** — label it with its source,
+> say the page itself could not be opened, and **steer by the field's TITLE rather than by a column letter
+> or a tab name you have not seen**, since those move between versions and the person has the screen open.
+>
 > ### 🔴 **A LINE NUMBER IS READ OFF THE CURRENT-YEAR PDF EXACTLY LIKE A FIGURE**
 >
 > §3's rule says any answer that **changes a figure** is read off the current-year PDF. ⛔ **A line number,

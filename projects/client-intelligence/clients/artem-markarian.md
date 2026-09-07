@@ -131,6 +131,67 @@ the actual details.
 
 ### Log
 
+- 2026-09-07 (fifth pass) — 🔴 **THE K-1 SECTION OF HIS DELIVERY WAS REBUILT AGAIN, BECAUSE THE
+  CORRECTION MADE THE DAY BEFORE STILL DID NOT WORK AT THE KEYBOARD.**
+  🗣️ **Lilian:** *"Tus instrucciones acerca de cómo llenar el Schedule E no son buenas para seguir en
+  ATX. **No encuentro dónde entrar a nada.**"*
+  🔑 **THE CAUSE, and it is worth keeping: the figure is not entered on the form it appears on.** In the
+  firm's tax software **the K-1 is keyed on its own form**, and Schedule E, the basis form and the QBI form
+  are all built from that one screen. 🛑 **Both earlier versions gave the coordinates on the IRS FORM and
+  no route through the PROGRAM**, which is unusable for the person typing.
+  ⚠️ **AND THE FIRST FIX OVERSHOT, caught by the review before it shipped:** it said the schedule *"opens no
+  line at all"*, which is false — **a few ticks and one Yes/No on it are still the preparer's**, and
+  **where those are entered is a different, unanswered question.** 🔑 **Over-correcting would have sent her
+  hunting on the wrong screen for a third time.**
+  ⛔ **AND THE ROUTE WAS ALREADY IN THE FIRM'S OWN FILES** — written down in August from Lilian's keyboard
+  while working another client's return. 🔑 **The evidence being on file is not the same as the evidence
+  being used**, which is the second time in a week that has been the cause. 🛠️ **A rule now says to search
+  the firm's prior working papers for a form's name before delivering any entry route.**
+  ⚠️ **Two things are still unconfirmed and need one look at her screen**: how the program labels the
+  columns in its own version of that grid, and where the *basis computation required* tick actually lives.
+  **Neither changes a figure.**
+  🔴 **And one real tax error was caught in the same review, before it reached her:** a troubleshooting
+  note claimed that an activity classified the wrong way would never reach the schedule at all. **It does —
+  it lands one column over, and the TOTAL IS IDENTICAL.** 🔑 **So the check is *which column*, never
+  *did it arrive*** — a distinction no total can make, now written into the firm's rules.
+  🟢 **AND LATER THE SAME DAY LILIAN OPENED THE VENDOR'S SUPPORT SITE FOR THE SESSION**, which settled
+  the last of it: **the form to add has an exact name, now read from the vendor's own published forms
+  list rather than inferred.** ⛔ **A rule written that morning saying the vendor's site was unreachable was
+  wrong within hours and has been corrected** — the session had drawn it from one tool failing, without
+  retrying another that works. 🔑 **The vendor's step-by-step articles are still shut** *(they need the
+  firm's own customer login, which Lilian has and a session does not)*, **so what a SCREEN looks like is
+  still established only from a screenshot or a prior working paper.**
+  🔴 **What her screenshot actually showed, and it was the whole answer:** she had the **rental** input
+  sheet open, and **her return contained no K-1 form at all.**
+  🔴 **THIRD ROUND THE SAME DAY, and it is the one worth keeping.** 🗣️ *"Me demoro mucho tratando de
+  encontrar dónde introducir la información."* **Given the right form's name, she added a neighbouring one**
+  — a K-1 belonging to a **foreign partnership**, and an *issuing* form rather than a receiving one.
+  🔑 **The cause is not carelessness: searching an individual return for "K1" returns four
+  near-identical names, and the one wrong-direction form the software offers there is the one for a
+  FOREIGN partnership — one line from the right one. Picking it opens a plausible screen, not an error.**
+  ✅ **So the firm's rules now require the DISAMBIGUATION, not just the name** — which of the look-alikes it
+  is *not*, **scoped to the return type the person is actually in**, the naming convention that separates a
+  K-1 you **receive** from one you **issue**, and **a tell that works without remembering any of it.**
+  ⛔ **The first version of that tell was wrong and a review caught it before it did harm:** it said an
+  issuing form is the one that asks for allocation percentages — but a **received** K-1 carries its own
+  percentage too, so the test would have condemned the correct form, and the procedure said to delete it.
+  ✅ **The tell is now structural: the wrong screen is a grid with one row per OWNER and asks for the
+  OWNERS' names; the right one asks for the COMPANY's.**
+  🛑 **Twice in one day a delivery gave a name and no way to tell it from its neighbours.**
+  🟢 **FOURTH ROUND — she found the sheet herself and sent a screenshot, which closed it.** 🗣️ *"Parte 3,
+  casilla 1: ¿dónde está eso?"* ⛔ **Nowhere — the software's input sheet carries no "Part III" and renames
+  the boxes.** 🔑 **Every route the firm had given her was written in the IRS FORM's geography while she
+  was reading a SCREEN**, which is now the rule: an entry route is written in the software's own words —
+  its section heading, its line number, its label — and says where those differ from the IRS's.
+  🔴 **The screenshot also settled three things nobody had asked the right question about:** the sheet's
+  **checkboxes** are where the passive/nonpassive position, the basis form and the QBI form are actually
+  decided *(and one of them works by being left EMPTY)*; the sheet's **own printed instructions** state the
+  import route and where the basis section sits, both of which had been carried as unverified leads; and
+  the boxes are **reworded** from the IRS's.
+  🛑 **The standing lesson: one screenshot outranks every search result, and it is one message away —
+  ask for it early instead of delivering a third guess.**
+  ⛔ **No figures here — they stay in the working paper.**
+
 - 2026-09-06 (fourth pass) — 🛠️ **THREE THINGS ON HIS RETURN WERE REWORKED BECAUSE LILIAN COULD NOT WORK
   FROM THEM, AND ONE OF THEM THE FIRM HAD WRONG.**
   🔴 **① The rental-platform's service fee goes in the return's OTHER EXPENSES section, not on the named
