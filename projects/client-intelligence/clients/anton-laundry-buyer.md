@@ -1,6 +1,6 @@
 # Anton & Olga Stenin — laundry portfolio buyers
 
-> **Status:** Engaged (first milestone invoiced 2026-09-02) — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02 · **Owner:** Julia · **Last updated:** 2026-09-07
+> **Status:** Engaged (first milestone invoiced 2026-09-02) — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02 · **Owner:** Julia · **Last updated:** 2026-09-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -198,14 +198,24 @@ the actual details.
 **The seller side, as the documents actually describe it** _(LOI 2026-08-25 + the five 2026
 TRIM notices; the LOI is not final — the attorney flagged it will change)_
 
-| Location (business) | Address | Record owner of the LAND | Sunbiz |
-|---|---|---|---|
-| 15th Street Laundry (a.k.a. Samoset) | 3119 15th St E, Bradenton | **Bayshore Laundromat, Inc.** (FL corp) | P09000016805 |
-| Select Coin Laundry | 105 21st Ave W, Bradenton | **Bayshore Laundromat, Inc.** — the TRIM misspells it *LAUNDRAMAT* | P09000016805 |
-| Palmetto Coin Laundry | 706 (LOI) / 702 (TRIM) 9th St W, Palmetto | **Samoset Florida, Inc.** (FL corp) | P16000101337 _(unconfirmed)_ |
-| Palmetto Wash & Fold | 1527 8th Ave W, Palmetto | **Samoset Florida, Inc.** | P16000101337 _(unconfirmed)_ |
-| Soap Opera Laundry | 329 N US Hwy 41, Ruskin (Hillsborough) | **Samoset Florida, Inc.** | P16000101337 _(unconfirmed)_ |
-| Lemon Squeezy (wash-dry-fold + delivery, run from the Select location) | — no parcel — | **Lemon Squeeze Commercial Laundry, LLC** (FL LLC, formed 2024-04-15) | L24000177802 |
+| Business (binder short name) | Address | QuickBooks company name | Owning entity | Files |
+|---|---|---|---|---|
+| Select Coin Laundry (**Select**) | 105 21st Ave W, Bradenton | `SELECT LAUNDRY BRADENTON` | **Bayshore Laundromat, Inc.** (FL corp, Sunbiz P09000016805) | **1120-S** |
+| 15th Street Laundry (**15th Street**) | 3119 15th St E, Bradenton | `15TH STREET LAUNDROMAT` | **Bayshore Laundromat, Inc.** | **1120-S** |
+| Palmetto Coin Laundry (**Palmetto 9th St**) | 702 9th St W, Palmetto | `PALMETTO COIN LAUNDRY 2 / PALMETTO` | **Samoset Florida, Inc.** (FL corp, Sunbiz P16000101337 _unconfirmed_) | **1120-S** |
+| Palmetto Wash & Fold (**Palmetto 8th St**) | 1527 8th Ave W, Palmetto | `PALMETTO SUPER CENTER II` | **Samoset Florida, Inc.** | **1120-S** |
+| Soap Opera Laundry (**Ruskin**) | 329 N US Hwy 41, Ruskin (Hillsborough) | `RUSKIN LAUNDROMAT` | **Samoset Florida, Inc.** | **1120-S** |
+| Lemon Squeezy — wash-dry-fold + pickup/delivery, **housed inside Select** | no parcel | `LEMON SQUEEZE COMMERCIAL LAUNDRY LLC` | **Lemon Squeeze Commercial Laundry, LLC** (FL LLC, Sunbiz L24000177802, formed 2024-04-15) | ⚠️ **unknown — see §6** |
+
+🪤 **The QuickBooks company names do not match the store names, and the two Palmetto stores are
+the trap.** `PALMETTO SUPER CENTER II` is the 8th Ave store, not the 9th St one; `PALMETTO COIN
+LAUNDRY 2` is 9th St. The binder identifies them by street throughout for exactly this reason —
+so should we. ✅ **The 706 vs 702 question is settled at 702** 9th St W: the binder's naming key
+and portfolio overview both say 702, matching the Manatee TRIM notice; the LOI's "706" is the
+outlier and is the one to correct.
+⚠️ **The five stores were tied to their entities by the BROKER**, by reconciling each store's
+sales to gross receipts on the filed returns (his note: *"agrees to the dollar for FY 2024"*).
+That reconciliation is his, on his own store→entity mapping — **re-perform it, do not inherit it.**
 
 Both corporations use the same mailing address; officers of all three are **Bruce R. Nye, Sr.**
 (President) and **Sonja L. Nye** (Secretary/Treasurer), who sign the LOI for each.
@@ -219,6 +229,39 @@ before typing any of them onto a Form 8821.**
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-08 — **The seller's financial binder arrived, and it answers the filing-form question
+  for two of the three companies — and only two.** `Laundry Financials 1.pdf` in Julia's Drive
+  (Merritt Realty *Financial Binder*, **309 pages**, prepared September 2026, seller-provided and
+  **unaudited** on its own disclosure page). Its **Section 5 — Federal Tax Returns (Form 1120-S),
+  2023–2025** holds **six returns and no more**: Bayshore Laundromat, Inc. 2023 / 2024 / 2025
+  (pp. 191, 206, 221) and Samoset Florida, Inc. 2023 / 2024 / 2025 (pp. 238, 261, 286). Samoset's
+  2025 return runs to the binder's last page, so **nothing follows it.** ✅ So both corporations
+  are **S corporations filing Form 1120-S** — settled for the 8821s and the 4506-Cs.
+  🔴 **Lemon Squeeze Commercial Laundry LLC has NO return in the binder**, although the binder
+  says twice that it has one: *"Lemon Squeeze Commercial Laundry LLC operates from within the
+  Select location and **files separately**"* (Store Naming Key, p. 4) and *"Lemon Squeezy was
+  **acquired in 2024** and **files its own return**"* (Portfolio Overview, p. 5). **Filing its own
+  return rules out a disregarded single-member LLC** — that would land on the owner's Schedule C —
+  so it is a **1065 or an 1120-S**, but the binder never says which and does not reproduce it.
+  ⚠️ Its FY 2024 is a **partial first year** (consistent with the 2024-04-15 Sunbiz formation), so
+  a 2023 request is meaningless for it. **Ask the seller for the missing return; it is the third
+  8821's whole basis.** ⓘ Lemon Squeezy is not a footnote to ask about casually — it is the
+  fastest-growing line in the portfolio while the five stores decline (figures in the binder, not
+  here), so its numbers matter to the price
+- 2026-09-08 — 🔑 **The seller's accountant has a name: ALAN STEIN ACCOUNTING.** It appears in the
+  binder's own expense detail and in the add-back schedule (*"business purchase, sale-related
+  accounting fees, reclassification to Lemon Squeezy"*). Two consequences. (1) This is the
+  practitioner the **Form 8821 line 4 / line 5 decision** would knock off his own client: leave
+  line 4 unchecked **and** line 5 unchecked and the IRS revokes every prior authorization on file
+  for that taxpayer. (2) It is the **direct line to the seller's accountant** the kick-off plan
+  wanted (Julia, 2026-08-30, step 3) — the fastest route to the missing return, the EINs and the
+  filing form for Lemon Squeeze
+- 2026-09-08 — ⓘ **The EINs should be read off the returns, not off Sunbiz.** Section 5 reproduces
+  the filed 1120-S returns, so the EIN **and the address the IRS actually has on file** for each
+  corporation are on the first page of each (pp. 191 / 238). That beats the Sunbiz lookup recorded
+  in §5, which was never confirmed. ⚠️ **Read only — no EIN, address or figure from those pages
+  goes into this file or any artifact**; Lemon Squeeze still has neither a return nor a confirmed
+  EIN anywhere
 - 2026-09-07 — **The seller's entity structure established from primary documents, for the
   Form 8821 set.** Julia asked Lilian to prepare Forms 8821 for the seller companies and
   forwarded (16:18 UTC) the package the buyer's attorney Olesya Trayber had sent her
@@ -406,17 +449,18 @@ before typing any of them onto a Form 8821.**
   and **six** operating businesses (the sixth is Lemon Squeeze, run out of the Select
   location). Julia's "four cash points + two card points" = the same six. Both framings were
   right; they were counting different things
-- 🔴 **For Julia, before the three Forms 8821 can be completed — four things no document we
-  hold answers.** (1) Each entity's **EIN** and the **federal return it files** (1120 or
-  1120-S for the two corporations; 1065, 1120-S or disregarded for Lemon Squeeze — if it is a
-  single-member disregarded LLC an 8821 in its own name returns nothing for income tax).
-  (2) **Which entity issues the W-2s**, since employment-tax compliance is in scope and a
-  payroll entity that sells nothing would not appear in the LOI. (3) **Which years** — line 3
-  forbids "all years", and **Lemon Squeeze was only formed 2024-04-15**, so a three-year
-  request cannot be met for it. (4) ⚠️ **The line 4 / line 5 decision:** with line 4 unchecked
-  and line 5 unchecked, the IRS **automatically revokes every prior tax information
-  authorization on file for that taxpayer** — which would knock the seller's own CPA off their
-  own client mid-deal. Decide deliberately, per entity
+- 🔴 **For Julia, before the three Forms 8821 can be completed — what is still open after the
+  binder.** ~~The return type for the two corporations~~ **answered 2026-09-08: both file Form
+  1120-S** (binder Section 5). Still open: (1) 🔴 **Lemon Squeeze's return — which form, and get a
+  copy.** The binder says it files its own but does not include it; that rules out a disregarded
+  single-member LLC and leaves **1065 or 1120-S**. Everything on its 8821 line 3(b) depends on the
+  answer. (2) **Which entity issues the W-2s** — employment-tax compliance is in scope, and a
+  payroll entity that sells nothing would not appear in the LOI at all. (3) **Which years** —
+  line 3 forbids "all years", so list them; and **Lemon Squeeze's first year is a partial 2024**,
+  so a 2023 row for it is meaningless. (4) ⚠️ **The line 4 / line 5 decision:** with line 4
+  unchecked and line 5 unchecked, the IRS **automatically revokes every prior tax information
+  authorization on file for that taxpayer** — which here means knocking **Alan Stein Accounting**,
+  the seller's own accountant, off his own client mid-deal. Decide deliberately, per entity
 - **Is the 8821 replacing the Form 4506-C, or joining it?** The engagement and the delivered
   proposal are built on seller-signed **4506-Cs** for IRS transcripts; Julia has now asked for
   **8821s**, which is a different instrument (the 8821 puts us on the seller's CAF and lets us
