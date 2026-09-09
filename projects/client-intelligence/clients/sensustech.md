@@ -115,11 +115,36 @@ doc guide** in Drive (§7) — never copied here.
   _(2026-09-09)_
 - **Wash sales are present on both accounts' 1099-B**, already reflected in the reported realized
   gain/loss — do not adjust for them again.
+- ✅ **The December statement is the control document, and it PROVES the monthly JE work.** The
+  year-end J.P. Morgan statement is a **single combined document covering BOTH accounts** (its
+  summary pages read `Managed(2)`), so one file answers for the pair. Its **Beginning Account Value
+  and Ending Account Value tie to QuickBooks to the penny at both ends of 2025**, its **Income
+  year-to-date equals the book Dividend Income exactly**, and its **"Change in Investment Value"
+  year-to-date equals the book `Investment Income/Loss` total exactly.** ⭐ **That last line is the
+  one to reach for**: the statement prints, per account and for the year, the combined realized +
+  unrealized movement, so the year-end split does **not** have to be derived — subtract the 1099-B
+  realized figure from it and the remainder is the unrealized. **Ask for the December statement
+  every year; without it the unrealized figure is a plug.** _(2026-09-09)_
+- ✅ **The statement also settles whether cash moved.** Its `Net Deposits / Withdrawals` line is the
+  proof that nothing was funded or withdrawn externally during the year — in 2025 the only movement
+  was an **internal transfer between the two accounts**, which the monthly JE already carried.
+  Check this line before trusting any roll-forward.
+- ⚠️ **The statement and the 1099 will NOT agree, and neither is wrong.** The statement's income is
+  measured on its own statement periods; the 1099 uses **payment date** and the IRS's
+  classifications. The statement's realized gain/loss carries its own printed disclaimers — it
+  **excludes positions with no cost basis** and **omits wash-sale adjustments from the last business
+  day of the period**. 🔑 **The 1099 governs the return; the statement governs the books and the
+  balance-sheet tie.** Expect a small residual between the two and do not chase it to zero.
 - ❓ **Open tax question worth money: the §243 dividends-received deduction.** The …1499 account
   holds **individual US large-cap shares**, whose dividends may be DRD-eligible for this
   C-corporation, while the …1500 account is **mutual funds/ETFs**, where only the §854(b)-reported
   portion qualifies. **The consolidated 1099 does not report the DRD-eligible amount** — it has to
-  be requested from J.P. Morgan or taken from each fund's tax-information letter. _(2026-09-09)_
+  be requested from J.P. Morgan or taken from each fund's tax-information letter. ⓘ **The statement
+  names the two strategies and they explain the split**: …1499 runs *J.P. Morgan U.S. Large Cap
+  Leaders Strategy* (domestic equities — the DRD candidate), …1500 runs *JPMPI Liquidity Management
+  Strategy* (cash and short-duration funds — essentially no DRD). ⚠️ **And check §246(c) before
+  claiming it**: the portfolio was largely **rebuilt in late November 2025**, so dividends received
+  soon after those purchases can fail the 46-day holding-period test. _(2026-09-09)_
 - **Cross-company cash coordination within the tech owner-group:** on 2026-08-21 the Mobilesource GM sent this client's CEO a "USD Funds" pending-deposit position update — beyond the documented Lumetro loan, some cash-position coordination happens across the group's entities. _(Gmail, 2026-08-21)_
 
 ## 6. History & open questions
@@ -172,9 +197,6 @@ doc guide** in Drive (§7) — never copied here.
 - **§243 DRD-eligible dividend amount for 2025** — not on the consolidated 1099; must be requested
   from J.P. Morgan / taken from the funds' tax-information letters before the 1120 is finalized.
   Raised 2026-09-09.
-- **Confirm the 2025 unrealized figure against the December 2025 brokerage statements** — it was
-  *derived* (book investment income less the 1099-B realized amounts), not read off a statement.
-  The statements' cost-basis / unrealized columns are the direct check. Raised 2026-09-09.
 - **External financial audit (mid-2026)** — not chased this run (budget).
 - Reconcile the **crypto/USDT** note against the managed-brokerage statement flow — not chased this run (budget).
 - **Duplicate Drive folders:** a second "SENSUSTECH LLC" folder (2026-05) still exists alongside the original 2023 vault folder — STILL OPEN; a Drive search for files modified after 2026-08-22 found nothing addressing consolidation.
