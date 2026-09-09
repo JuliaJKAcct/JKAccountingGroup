@@ -1,6 +1,6 @@
 # SENSUSTECH LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-09-09
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -90,6 +90,36 @@ doc guide** in Drive (§7) — never copied here.
 - **Sub-CC 4800** is entered **manually** (cannot connect to QBO).
 - **Fast Uncat turnaround** — the owner resolves Uncategorized items quickly; use Uncat rather than mis-categorizing.
 - **Crypto / USDT exposure** noted in prior sweep — confirm against the brokerage/statement flow. _(Gmail — to reconcile)_
+- **The two managed brokerage accounts are at J.P. MORGAN SECURITIES LLC**, and their 2025 tax
+  documents are **two separate Consolidated Forms 1099** (one per account), not one. Both carry
+  **1099-DIV and 1099-B only** — **neither account received a 1099-INT, 1099-OID or 1099-MISC for
+  2025**, so there is no brokerage interest income for the year (the fixed-income holdings are
+  mutual funds/ETFs, whose payouts arrive as **ordinary dividends**, not interest). This is a
+  change of shape from 2024, when the company's investment return came through **interest** on
+  CDs/cash. _(2025 Forms 1099, 2026-09-09)_
+- **The books carry the brokerage accounts at MARKET VALUE, not cost.** The monthly Brokerage JE
+  plugs each account to the statement's ending value, so the balancing line
+  (`Investment Income/Loss`) absorbs **realized and unrealized change together**. Splitting them is
+  therefore a **year-end job, not a monthly one** — and it is required, because for a C-corporation
+  the unrealized half is not taxable and the realized half is a capital item. _(QBO via Double,
+  2026-09-09)_
+- **The firm has already done this split once, for 2024** — the 2024 books carry a separate
+  `Investment Income/Loss:Unrealized Gain/Loss from Investment` amount alongside the realized
+  parent. **That is the precedent to follow each year.** ⚠️ **The 2024 entry itself cannot be read
+  through the Double MCP** — see §6.
+- **Two 1099 mechanics that make the books disagree with the 1099 and are NOT errors:** the
+  brokerage's **monthly statement cutoff does not match the 1099's payment-date reporting** (so a
+  month's booked dividends can differ from the same month on the 1099, and December is the worst
+  case), and the **January advisory fee covers the prior December** yet appears on the current
+  year's 1099. Reconcile dividends **for the year against the 1099 totals**, never month by month.
+  _(2026-09-09)_
+- **Wash sales are present on both accounts' 1099-B**, already reflected in the reported realized
+  gain/loss — do not adjust for them again.
+- ❓ **Open tax question worth money: the §243 dividends-received deduction.** The …1499 account
+  holds **individual US large-cap shares**, whose dividends may be DRD-eligible for this
+  C-corporation, while the …1500 account is **mutual funds/ETFs**, where only the §854(b)-reported
+  portion qualifies. **The consolidated 1099 does not report the DRD-eligible amount** — it has to
+  be requested from J.P. Morgan or taken from each fund's tax-information letter. _(2026-09-09)_
 - **Cross-company cash coordination within the tech owner-group:** on 2026-08-21 the Mobilesource GM sent this client's CEO a "USD Funds" pending-deposit position update — beyond the documented Lumetro loan, some cash-position coordination happens across the group's entities. _(Gmail, 2026-08-21)_
 
 ## 6. History & open questions
@@ -119,8 +149,32 @@ doc guide** in Drive (§7) — never copied here.
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: 0 notes, 0 activity-log entries despite the client `updatedAt` field showing 2026-08-17T16:30:45Z — cause not determined. Gmail: on 2026-08-21 the Mobilesource GM sent this client's CEO a cross-company "USD Funds" pending-deposit position update — indicates operational/cash coordination across the tech owner-group beyond the documented Lumetro loan; folded into §5 as a note, not a new intercompany loan. Chase pass on all six §6 items — results above.
 - 2026-08-29 — **Incremental sweep (baseline 2026-08-22→2026-08-29).** Double: 1 activity-log entry — a client-portal transaction question ("gas station" categorization) resolved 2026-08-28 — routine, not logged further. 0 new notes; properties unchanged. Gmail: a search of `(Sensustech OR "Stanislav Fedorov") after:2026/08/22` returned only routine Gusto AutoPilot payroll confirmations (2026-08-25, 2026-08-26) and the firm's own internal sweep-health email — no update on the Gusto→QBO mapping-sync issue either way. A targeted follow-up search (`(Sensustech) (Gusto OR mapping OR sync) after:2026/08/22`) confirmed no fix or further correspondence. Drive: a title search for `Sensustech`, bounded ≥2026-08-22, returned nothing — cannot confirm or rule out the duplicate-folder consolidation this window. Ping: an org-wide semantic search for Sensustech/Mobilesource/Lumetro/Stanislav Fedorov returned no legible, on-topic results. Chase pass on all six §6 items — results below.
 
+- 2026-09-09 — **Brokerage year-end analysis for the 2025 Form 1120 (Julia's request).** She
+  supplied the **two 2025 J.P. Morgan Consolidated Forms 1099** (one per managed brokerage account)
+  and asked for the year-end adjustment of unrealized gain/loss and of
+  dividend / capital-gain / interest income, using the 2024 entry as the reference. Worked from the
+  1099s plus QuickBooks (via Double). Findings folded into §5. The deliverable — the reconciliation,
+  the proposed 12/31/2025 journal entry and the Form 1120 treatment — was **delivered in chat with
+  the figures; dollar amounts are deliberately not recorded here** (two-data-homes rule). If a
+  working paper is opened for this return it belongs in
+  [`projects/tax-returns/`](../../tax-returns/), which is the only place in the repo that holds
+  client figures.
+  🔴 **A LIMIT OF THE DOUBLE MCP FOUND HERE, and it will bite the next session: Double's
+  TRANSACTION ledger for this client starts in APRIL 2025.** `get_transactions` returns **nothing**
+  before that — no 2024 transactions at all, and no January–March 2025 transactions — so **the 2024
+  year-end journal entry cannot be read through the MCP**, only its effect on the accounts. The
+  **report** tools (`get_profit_loss_report`, `get_balance_sheet_report`) are **not** limited this
+  way and return 2024 correctly, so a prior-year figure is reachable by report and the entry behind
+  it is not. **To see any entry before April 2025, open QuickBooks directly.**
+
 ### Outstanding items (CI-only — never in the SOP)
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.
+- **§243 DRD-eligible dividend amount for 2025** — not on the consolidated 1099; must be requested
+  from J.P. Morgan / taken from the funds' tax-information letters before the 1120 is finalized.
+  Raised 2026-09-09.
+- **Confirm the 2025 unrealized figure against the December 2025 brokerage statements** — it was
+  *derived* (book investment income less the 1099-B realized amounts), not read off a statement.
+  The statements' cost-basis / unrealized columns are the direct check. Raised 2026-09-09.
 - **External financial audit (mid-2026)** — not chased this run (budget).
 - Reconcile the **crypto/USDT** note against the managed-brokerage statement flow — not chased this run (budget).
 - **Duplicate Drive folders:** a second "SENSUSTECH LLC" folder (2026-05) still exists alongside the original 2023 vault folder — STILL OPEN; a Drive search for files modified after 2026-08-22 found nothing addressing consolidation.
