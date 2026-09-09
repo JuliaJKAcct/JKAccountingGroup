@@ -131,6 +131,30 @@ the actual details.
 
 ### Log
 
+- 2026-09-09 (seventh pass) — 🛠️ **HIS RETURN IS ONE ENTRY FROM FINISHED, AND THE DELIVERY HAD TO BE
+  REWRITTEN BEFORE SHE COULD USE IT.**
+  🔴 **① Why the basis form would not come out right:** the contributions line was never filled in, so
+  the form was building his ending basis from the year's income alone. **Everything else on it was already
+  correct.** 🔑 **And the draft itself proved where the distributions line comes from** — it printed zero
+  without anybody typing it, which means the software takes it from the K-1's own box. ⛔ **So the
+  contributions have to go in NET of his distributions**; the gross would overstate his basis by the whole
+  distribution, because nothing subtracts it anywhere.
+  🟢 **② What she had already done right:** the qualified-business-income block is entered and working, the
+  premium-tax-credit form is deleted, and his share of the company's income landed in the correct
+  (non-passive) column of the supplemental-income schedule — **verified by measuring where the figure sits
+  on the printed page**, because in the wrong column the totals come out identical and nothing warns you.
+  🛑 **③ The real finding was about US, not about her.** Her words: *"No sé de qué fila hablas, no sé de qué
+  forma, qué página. No entiendo nada."* **The delivery had been addressing fields the way the IRS FORM is
+  laid out while she was looking at a data-entry SCREEN that uses different words and a different
+  structure.** ✅ **Fixed:** every keyboard instruction now carries **form → tab → section → the literal row
+  label**, and the delivery says openly where nobody has seen the screen yet rather than inventing a field
+  name. ⚠️ **One claim in the firm's own procedure was found to have been INFERRED and was wrong** — it
+  described a form as accepting entries it does not accept at all. **Corrected, with the lesson written
+  down: a statement about a screen has to come from a screen.**
+  🟡 **④ Still open on his return:** how he acquired his shares *(the signer's question, and it sets his
+  opening basis)*; the running costs of the cars, which decide whether a refundable credit comes into
+  play and whether a due-diligence form is required; and one checkbox on the K-1 screen that may be
+  wrongly ticked — it changes no tax this year but it is false data.
 - 2026-09-07 (sixth pass) — 🔎 **HIS DRAFT RETURN WAS REVIEWED, AND THE SIGNER SETTLED THE
   DISTRIBUTIONS QUESTION.**
   🟢 **① The decision:** his share of the company's distributions is **reported at ZERO on his basis
