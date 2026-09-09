@@ -115,6 +115,7 @@ doc guide** in Drive (§7) — never copied here.
   _(2026-09-09)_
 - **Wash sales are present on both accounts' 1099-B**, already reflected in the reported realized
   gain/loss — do not adjust for them again.
+- 📘 **The procedure for all of this is now written down: [`brokerage-investment-accounts.md`](../../sops/brokerage-investment-accounts.md)** — firm-wide, reusable for any client with a brokerage account, and this client is the case it was written from. **The bullets below are why it says what it says; the SOP is what to follow.**
 - ✅ **The December statement is the control document, and it PROVES the monthly JE work.** The
   year-end J.P. Morgan statement is a **single combined document covering BOTH accounts** (its
   summary pages read `Managed(2)`), so one file answers for the pair. Its **Beginning Account Value
@@ -192,11 +193,36 @@ doc guide** in Drive (§7) — never copied here.
   way and return 2024 correctly, so a prior-year figure is reachable by report and the entry behind
   it is not. **To see any entry before April 2025, open QuickBooks directly.**
 
+- 2026-09-09 (later) — **Julia supplied the 2024 FILED Form 1120 and asked for the whole thing to
+  be documented, "because this is an every-year thing", including the tax-return handling.** Two
+  artifacts were written: the firm-wide SOP
+  [`brokerage-investment-accounts.md`](../../sops/brokerage-investment-accounts.md), and this
+  client's working paper
+  [`tax-returns/sensustech-llc/2025-form-1120.md`](../../tax-returns/sensustech-llc/2025-form-1120.md),
+  which holds the figures. **Three things the 2024 return showed, all now recorded in the working
+  paper and generalised in the SOP:** the entire dividend total was reported on **Schedule C's
+  "Other dividends"** line, so **no dividends-received deduction was taken** — for 2025 that is a
+  live and quantified opportunity on the domestic-equity account, gated by eligibility the 1099
+  does not report and by the §246(c) holding period after the late-November 2025 rebuild; the
+  **unrealized loss was itemised on Schedule M-1 line 5**, which was right for a loss and is the
+  **wrong line for 2025's gain** (line 7) — the sign flips and copying the placement is the trap;
+  and the **brokerage accounts sit inside Schedule L "Cash"**, because QuickBooks types them as
+  *Bank*. Also recorded: the 2024 M-1 line 1 does not equal the 2024 book net income, and the 2024
+  return's dividend figure does not equal the 2024 book Dividend Income — both are open items in
+  the working paper, and both matter only because the 2025 Schedule L beginning column is copied
+  from the 2024 return. ⚠️ **The copy of the 2024 return we hold has BLANK supporting-statement
+  pages** — the Other income, Other deductions and M-2 other-decreases statements are not in it;
+  ask Julia for the complete filed PDF.
+
 ### Outstanding items (CI-only — never in the SOP)
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.
 - **§243 DRD-eligible dividend amount for 2025** — not on the consolidated 1099; must be requested
   from J.P. Morgan / taken from the funds' tax-information letters before the 1120 is finalized.
   Raised 2026-09-09.
+- **The 2025 DRD decision** — the §854(b)/§243-eligible amount from J.P. Morgan plus the §246(c)
+  holding-period test. Tracked as O1 in the working paper. **The only item here worth real money.**
+- **The complete 2024 filed Form 1120 PDF** — the copy we hold has blank supporting-statement
+  pages. Raised 2026-09-09.
 - **External financial audit (mid-2026)** — not chased this run (budget).
 - Reconcile the **crypto/USDT** note against the managed-brokerage statement flow — not chased this run (budget).
 - **Duplicate Drive folders:** a second "SENSUSTECH LLC" folder (2026-05) still exists alongside the original 2023 vault folder — STILL OPEN; a Drive search for files modified after 2026-08-22 found nothing addressing consolidation.
@@ -216,3 +242,5 @@ doc guide** in Drive (§7) — never copied here.
 - **Video tutorials (Drive):** [Sensustech Tutorials](https://drive.google.com/drive/folders/1sj_uJXfeHGCT20mGrP36daIXar5JeB0k) — Bookkeeping Part 1, Bookkeeping Part 2 (Brokerage JE)
 - **Related clients:** [`lumetro.md`](./lumetro.md), [`mobilesource-corp.md`](./mobilesource-corp.md) (same tech owner group)
 - **Related SOPs:** [`../../sops/sensustech-bookkeeping-review.md`](../../sops/sensustech-bookkeeping-review.md) — Monthly Bookkeeping & Close runbook (bookkeeping-sop skill; rendered in the Hub; in review)
+  · [`../../sops/brokerage-investment-accounts.md`](../../sops/brokerage-investment-accounts.md) — **the brokerage procedure**: the monthly JE, the year-end split of realized vs unrealized, and the return treatment. **This client is the case it was written from.**
+- **Working paper (figures live here, never in this file):** [`../../tax-returns/sensustech-llc/2025-form-1120.md`](../../tax-returns/sensustech-llc/2025-form-1120.md) — the 2025 investment section, with the 2024 filed return recorded as the reference

@@ -1,6 +1,6 @@
 # SENSUSTECH LLC — Monthly Bookkeeping & Close Runbook
 
-> **Status:** Active · **Client:** SENSUSTECH LLC (QBO via Double) · **Owner of SOP:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Client:** SENSUSTECH LLC (QBO via Double) · **Owner of SOP:** Maria · **Last updated:** 2026-09-09
 >
 > **In review (2026-07-21).** Built from Maria Fernanda's Drive "doc guide" (one of the six
 > Maria-owned clients). **Reviewer: Julia / Maria** — process content will be reviewed by Maria
@@ -36,7 +36,13 @@ subscriptions, travel & meals), **sales**, and **labor**.
    The **sub-credit-card 4800 can't connect to QBO** → **add its transactions manually**. Reference: [Bookkeeping — part 1](https://drive.google.com/file/d/1vrdzDxXuUICisxke-bGpI5qyjwrsIDd-/view) · [Bank statements](https://drive.google.com/drive/folders/1lWvjU8GN0mVwrIRSc-V93o3eYrnjRGkW)
 2. **Monthly Brokerage JE.** At the end of each month, book a **journal entry for the managed
    brokerage accounts from their statements**. JK has **no direct access** to those accounts —
-   **request the statements via TaxDome**. Reference: [Bookkeeping — part 2 (Brokerage JE)](https://drive.google.com/file/d/1R5KTxOsM5Jr-1jqzBdP9XXms1AuKECpa/view)
+   **request the statements via TaxDome**.
+   🔴 **The full procedure — including the YEAR-END work this monthly step does NOT cover — is
+   [`brokerage-investment-accounts.md`](./brokerage-investment-accounts.md).** The monthly entry
+   plugs each account to the statement's ending **market value**, so its balancing line absorbs
+   **realized and unrealized movement together**; only one of those two is taxable, and splitting
+   them is a **December job** that needs the year-end statement and the Forms 1099. **Put the
+   year-end document request in the December close, not in January.** Reference: [Bookkeeping — part 2 (Brokerage JE)](https://drive.google.com/file/d/1R5KTxOsM5Jr-1jqzBdP9XXms1AuKECpa/view)
 3. **Uncategorized workflow.** The owner clears "Uncategorized" quickly, so when you're unsure
    of a transaction, **send it to Uncat** for the owner to resolve rather than guessing.
 4. **Close gate.** The triage / **Uncategorized** accounts must read **$0** before the month
