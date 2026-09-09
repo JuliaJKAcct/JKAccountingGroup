@@ -136,6 +136,20 @@ doc guide** in Drive (§7) — never copied here.
   **excludes positions with no cost basis** and **omits wash-sale adjustments from the last business
   day of the period**. 🔑 **The 1099 governs the return; the statement governs the books and the
   balance-sheet tie.** Expect a small residual between the two and do not chase it to zero.
+- 🔴 **The company DECLARES A FORMAL DIVIDEND to its owner, and 2025 is the second year.** At
+  year-end the owner's distributions for the year are recharacterised into one declared dividend
+  through the `Dividends Paid` equity account, and in 2025 **part of the outstanding shareholder
+  loan was swept into it as well** — so the loan receivable came down. **Two consequences that
+  are easy to miss:** it is an **equity** transaction and does **not** touch the P&L or taxable
+  income *(a C-corporation gets no deduction for a dividend it pays)*; and it creates a **Form
+  1099-DIV obligation** for the shareholder, which this firm handles because it does the client's
+  1099 work. ⚠️ **Do not confuse it with `Dividend Income`** — that is what the portfolio pays the
+  company, it is income, and the two move in opposite directions. _(Julia, 2026-09-09)_
+- ⚠️ **A shareholder loan receivable is still outstanding** after that sweep — it needs an answer
+  on whether it bears interest (§7872 below-market rules), and it is worth revisiting each year.
+- ⓘ **The monthly Brokerage JE now carries line descriptions** (`Income` · `Fees` · `Change in
+  Investment Value`), which is the shape the SOP asks for and makes the year-end ties readable at a
+  glance. The 2026 entries run monthly on that pattern.
 - ❓ **Open tax question worth money: the §243 dividends-received deduction.** The …1499 account
   holds **individual US large-cap shares**, whose dividends may be DRD-eligible for this
   C-corporation, while the …1500 account is **mutual funds/ETFs**, where only the §854(b)-reported
@@ -214,11 +228,29 @@ doc guide** in Drive (§7) — never copied here.
   pages** — the Other income, Other deductions and M-2 other-decreases statements are not in it;
   ask Julia for the complete filed PDF.
 
+- 2026-09-09 (third pass) — **Julia posted two year-end entries and asked for the QuickBooks data to
+  be re-pulled.** Both found and verified against the live P&L and balance sheet. ① The **realized /
+  unrealized split** proposed earlier in the day is **posted** — the books now show the realized
+  figure agreeing with the 1099-B exactly and the unrealized figure agreeing with the derivation
+  exactly. ② A **formal dividend to the shareholder** was declared for 2025, recharacterising the
+  year's owner distributions **plus part of the shareholder loan**; folded into §5 above.
+  🔑 **The second entry changes nothing on page 1, Schedule C, Schedule D or Schedule M-1** — a
+  C-corporation deducts nothing for a dividend it pays — so the whole earlier tax analysis stands;
+  it lands only on **Schedules L and M-2**. ✅ **And it answered a puzzle left open in the morning:**
+  the unexplained gap between the 2024 return's "net income per books" and the 2024 QuickBooks
+  figure is the *same* amount that sits in the 2024 Schedule M-2 as an "other decrease" above the
+  dividends paid — the preparer grossed net income up and took it straight back out. Self-consistent,
+  no effect on tax, and not repeated in 2025. Figures are in the working paper, not here.
+
 ### Outstanding items (CI-only — never in the SOP)
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.
 - **§243 DRD-eligible dividend amount for 2025** — not on the consolidated 1099; must be requested
   from J.P. Morgan / taken from the funds' tax-information letters before the 1120 is finalized.
   Raised 2026-09-09.
+- **Confirm the Form 1099-DIV for the 2025 shareholder dividend was actually filed** — the wording
+  suggests it was reported first and the books were caught up afterwards, but the 2025 deadlines have
+  passed, so it is worth one check. Raised 2026-09-09.
+- **The shareholder loan still outstanding** — does it bear interest? §7872. Raised 2026-09-09.
 - **The 2025 DRD decision** — the §854(b)/§243-eligible amount from J.P. Morgan plus the §246(c)
   holding-period test. Tracked as O1 in the working paper. **The only item here worth real money.**
 - **The complete 2024 filed Form 1120 PDF** — the copy we hold has blank supporting-statement
