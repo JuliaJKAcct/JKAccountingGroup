@@ -1353,10 +1353,16 @@ may be reasoned; a screen fact may not.** ⛔ **And "it must work like this beca
 is reasoning.**
 
 🟢 **The generated return is itself an observation, and an underused one.** A value the software printed
-**without anybody typing it** proves where that line is fed from — *(a Form 7203 line 6 printing `0` on a
-return where nobody touched it establishes that the line comes from K-1 box 16D, and therefore that the
-contributions line must carry the NET)*. 🔑 **Read the draft return as evidence about the SOFTWARE, not
-only about the tax.**
+**without anybody typing it** proves that the line is **not typed** — read the draft return as evidence
+about the SOFTWARE, not only about the tax.
+🛑 **AND THIS ITEM'S OWN WORKED EXAMPLE WAS OVER-READ ON THE DAY IT WAS WRITTEN, WHICH IS WHY IT IS KEPT
+HERE.** The first version said: *a Form 7203 line 6 printing `0` that nobody typed **establishes that the
+line comes from K-1 box 16D**.* ⛔ **It establishes no such thing** — a line left blank and defaulted prints
+`0` identically. ✅ **What it establishes is the weaker, sufficient fact: the line is not typed.**
+🔑 **So state the weakest claim the observation supports, then check whether the DECISION survives it.**
+Here it did — line 6 shows `0` and cannot be typed, so the contributions line must carry the net whichever
+way the wiring goes — **and a decision that survives the weakest reading needs no stronger one.** ⚠️ **A
+decision that needs the stronger reading is a decision that is not yet established.**
 
 🔑 **THE UNDERLYING FACT, and it is worth saying to the preparer in these words: THE INPUT SCREEN AND
 THE PRINTED FORM ARE TWO DIFFERENT VOCABULARIES.** The IRS names things one way and the software names
