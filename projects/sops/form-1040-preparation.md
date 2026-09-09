@@ -650,8 +650,8 @@ ruling it is.**
 >
 > 🛑 **The block above answers *where on the FORM*. It does not answer *where do I TYPE*, and the two are
 > different forms.** ✅ **The K-1 is keyed on its own form**, added to the 1040 — and **Schedule E page 2,
-> Form 7203 and Form 8995 all take their figures from that one screen.** 🔑 **Same rule as Form 7203
-> opening only lines 1 and 13** — and the same rule as the 1120-S SOP's **`Fixed Assets` tab** *("4562 in
+> Form 7203 and Form 8995 all take their figures from that one screen.** 🔑 **Same rule as Form 7203,
+> which opens NO line of Part I at all** — and the same rule as the 1120-S SOP's **`Fixed Assets` tab** *("4562 in
 > ATX is a computed output")* and its **Form 1125-E** route for page 1 line 7. **Three instances of one
 > rule.**
 >
@@ -787,7 +787,7 @@ ruling it is.**
 > | company **name · EIN** | Schedule E line 28 row A, cols **(a)** and **(d)** |
 > | 🔴 **box 1** | 🔴 **TWO destinations, and the second is the one that gets missed:** Schedule E **LOWER** grid, row A, `Nonpassive income from Schedule K-1` *(the nonpassive-LOSS column for a loss)* — **AND Form 7203 line 3a**, which is how income raises basis |
 > | **box 16 C** · **box 16 D** | Form 7203 **line 8a** · **line 6** |
-> | **capital contributions** *(on no K-1 box — from the books)* | Form 7203 **line 2** — in a **`Basis Limitation`** section further down the same worksheet ⚠️ *(that name is from a search-result summary; the vendor page itself is behind their customer login — `not established`)* |
+> | **capital contributions** *(on no K-1 box — from the books)* | Form 7203 **line 2** — in a **`Basis Limitation`** section further down the **`K-1 Detail Schedule`** tab of the same worksheet ✅ *(**established 2026-09-09**: the sheet's own header says **"Scroll down to the 'Basis Limitation' section on this tab to enter/review beginning basis values"**, and Form 7203's banner says **"Basis information is entered on K1 Input (1120S)"**)* ⚠️ **the field labels INSIDE that section are still `not established` — ask for the screenshot** |
 > | **box 17 V** | Form 8995 |
 >
 > 💡 **AND THERE MAY BE NO TYPING AT ALL WHEN THE FIRM PREPARED THE COMPANY.** The vendor's KB describes a K-1 **import**: *Returns → Import Data → K-1 Data*, which lists every business return in the same program where this person is a shareholder, and writes the data into the K-1 Input Worksheet. ⚠️ *(Search-result summary of their article 2595 — `not established`.)* 🛑 **Check by hand afterwards anything the PRINTED K-1 does not carry** — a distribution figure the firm reports gross while the K-1 prints net, and the contributions, which are on no K-1 box at all. **An import gets those wrong silently.**
@@ -926,10 +926,15 @@ explanation is finished work; a warning nobody looked at is a defect waiting.
 
 ### 🛑 Form 7203 — the thing nobody tells you: almost NONE of Part I is typed on it
 
-🔑 **Form 7203 Part I is an OUTPUT.** In **ATX**, only **lines 1 and 13** are typed there; everything
-else arrives from the **K-1 input screen** or is computed. **If a line will not accept a number, you
-are on the wrong screen.**
-ⓘ **Outside Part I the form IS typed** — items C, D and E, and Part II's loan balances (lines 16–20).
+🔑 **Form 7203 Part I is an OUTPUT.** 🔴 **CORRECTED 2026-09-09 — in ATX 2025, NO line of Part I is typed
+on the form.** The form prints its own banner across the top: **`Basis information is entered on K1 Input
+(1120S)`** *(observed on a live return)*. **Lines 1 and 2 are keyed in that worksheet's `Basis Limitation`
+section**, the rest is computed. **If a line will not accept a number, you are on the wrong screen and
+nothing is broken.**
+⛔ **This SOP said "only lines 1 and 13 are typed" until 2026-09-09. That was never observed — it was
+inferred — and it cost a preparer an afternoon hunting for a keyboard inside a form that takes no input.**
+🔑 **The lesson is not the line numbers: it is that a claim about a SCREEN must come from a screen.**
+ⓘ **Outside Part I the form IS typed** — items A, B, C, D and E, and Part II's loan balances (lines 16–20).
 
 ⚠️ **The `Where it is ENTERED` column is ATX's behaviour, not an IRS rule** — screens move between
 versions and other software routes differently. **The middle column is the tax fact; the right-hand
@@ -937,7 +942,7 @@ one is only the route.**
 
 | Line | What it is | Where the FIGURE comes from *(the tax fact)* | 🛠️ **Where it is ENTERED** |
 |---|---|---|---|
-| **1** | Stock basis at the beginning of the year | 🔒 **last year's line 15**, copied. ⛔ **Never recomputed WHERE A PRIOR FORM 7203 EXISTS.** 🛑 **Where none exists — the ordinary case, since the form is only required in four situations — it is RECONSTRUCTED as scoped work and labelled as such** *(1120-S SOP §12A)* | ✅ **the only line typed on Form 7203** — or rolled forward automatically if the prior year was prepared in the same software |
+| **1** | Stock basis at the beginning of the year | 🔒 **last year's line 15**, copied. ⛔ **Never recomputed WHERE A PRIOR FORM 7203 EXISTS.** 🛑 **Where none exists — the ordinary case, since the form is only required in four situations — it is RECONSTRUCTED as scoped work and labelled as such** *(1120-S SOP §12A)* | 🔴 **NOT typed on Form 7203** — in ATX it is keyed in the `Basis Limitation` section of `K1 Input (1120S)`, or rolled forward automatically if the prior year was prepared in the same software |
 | **2** | Basis from capital contributions or additional stock acquired | 📖 the company's books — the shareholder's capital contributions for the year, ➕ **any additional stock he ACQUIRED during the year** (stock bought from another shareholder never touches the company's capital account and is not in that figure). ⚠️ **On NO K-1 box.** 🛑 **The instructions EXCLUDE loans:** *"Don't include any loans to the S corporation"* — so gross credits to the capital account are a **starting point, not the answer**; strip loan reclassifications and income postings. 🔵 **IF THE ISSUING CORPORATION NETTED** its contributions against its distributions under the firm's policy ([1120-S SOP §5C-v](./form-1120s-preparation.md)), line 2 carries the **NET** and box 16D is blank — ⛔ **the gross figure here beside a blank 16D is the mismatch that section warns about.** Confirm the presentation **in writing** with whoever prepared the 1120-S; do not assume it from a blank box | 🔴 **NOT on Form 7203 — the K-1 input screen**, contributions field ⚠️ **ON A CLIENT WHOSE RETURN NETS** *(§5C-v — see **NETTING MOVES BOTH SIDES** above)*: **this line carries the NET excess of contributions over distributions, plus any stock acquired** — ⛔ **not the gross.** |
 | **3a–3m** | Income and other basis-increasing items *(ordinary income · rentals ×2 · interest · dividends · royalties · net capital gains · §1231 · other income · excess depletion · tax-exempt income · **credit recapture** · **other items that increase stock basis**)* | mostly the K-1's income boxes — ⚠️ **3l and 3m are not income boxes, and 3m has no K-1 box at all.** 🛑 **A LOSS NEVER GOES HERE**: line 3a prints *"enter losses in Part III"* | 🔴 **the K-1 input screen** for the K-1-sourced ones |
 | **4** | Add 3a–3m | ƒ | **computed — do not type** |

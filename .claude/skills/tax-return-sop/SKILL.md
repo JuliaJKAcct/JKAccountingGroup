@@ -1299,6 +1299,65 @@ along the bottom of the open form. ⚠️ **A worksheet belonging to the entity 
 while a K-1 is the open form**, which is exactly why a read-only screen on the K-1 looks like a bug.
 **"Which form owns this worksheet" is the question that finds it.**
 
+**8c · 🗺️ EVERY KEYBOARD ADDRESS HAS FOUR LEVELS, AND THE LAST ONE IS THE TEXT PRINTED ON HER SCREEN.**
+
+_(**Lilian, 2026-09-09**, after a delivery she could not use at all: **"No sé de qué fila hablas, no sé
+de qué forma, qué página. No entiendo nada… La forma en que me pones las tablas me deja desorientada
+porque no sé qué página tengo que ir, de qué línea hablas."**)_
+
+🔴 **The defect was not detail — the delivery had every figure, its arithmetic and its IRS line. It was
+that every address was written in the IRS FORM's geography** — *"Schedule K-1, Part III, box 1"* —
+**while she was looking at a data-entry screen that prints no `Part III` anywhere, numbers the boxes
+1–19 straight down, and calls box 1 `Ordinary income (loss)` where the IRS calls it `Ordinary BUSINESS
+income (loss)`.** ⛔ **A correct IRS address is not an address in the software.**
+
+| Level | What it is | ⛔ Not this | ✅ This |
+|---|---|---|---|
+| ① **FORM** | the name in the program's **forms list**, where she clicks to open the screen | *"the K-1"* | `K1 Input (1120S)` |
+| ② **TAB** | the tab inside that form | *(omitted)* | `K-1 Detail Schedule` |
+| ③ **SECTION** | the **titled block** inside the tab, reached by scrolling | *"Part III"* | `Basis Limitation` · `Shareholder's share of current year income, deductions, credits` |
+| ④ **ROW** | the **literal printed label**, quoted, in **English**, exactly as it appears | *"box 1"* | `Ordinary income (loss)` |
+
+**Four rules that follow:**
+
+1. 🔑 **QUOTE THE ROW LABEL, IN ENGLISH, EXACTLY.** She finds a row by reading the screen, so the label
+   must be searchable **by eye**. ⚠️ **Where the software's wording differs from the IRS's, give BOTH and
+   say which is which** — the mismatch is itself the thing that loses her.
+2. ⚖️ **AN IRS ADDRESS IS STILL RIGHT — FOR READING.** A K-1 that arrived on paper is read in Part/box
+   terms. 🛑 **The defect is never labelling which mode a section is in.** ✅ **Say it at the top of the
+   section**: *"this is for READING the K-1 you were handed; to TYPE it, go to <the other section>."*
+3. 🟢 **THE SOFTWARE OFTEN PRINTS THE DESTINATION ITSELF — USE IT AND SAY SO.** ATX prints each row's
+   destination beside it *(`Sch. E, Part II, Ln 28` · `Form 4562` · `Sch D, Ln 5` · `Form 8582`)*.
+   🔑 **That column outranks any table this firm writes, because she can read it while typing.** ⛔ **Where
+   a delivery disagrees with the screen, the screen wins** — say that in the delivery, so she is not left
+   deciding whether to trust us or her eyes.
+4. ⛔ **A LEVEL YOU HAVE NOT SEEN IS NAMED AS UNSEEN, NEVER FILLED IN.** ✅ *"the section is called
+   `Basis Limitation` — the sheet's own header says so — but **I have not seen inside it**, so send me a
+   screenshot and I will name the field"* **is a usable answer.** 🛑 **An invented field label sends her
+   hunting for something that may not exist, and she cannot tell that from her own incompetence.**
+   ⓘ *This is item 8's rule 4 applied one level deeper: established/not-established is per LEVEL, not per
+   route.*
+
+**8d · 🛑 A CLAIM ABOUT A SCREEN MUST COME FROM A SCREEN — an inference about software is not a finding.**
+
+🔴 **The 1040 SOP carried, for weeks, that "in ATX only lines 1 and 13 of Form 7203 are typed."** Nobody
+had seen it. It was **inferred** from the true fact that the form is mostly computed. ⛔ **In ATX 2025 the
+form takes NO Part I entry at all** — it prints its own banner, `Basis information is entered on K1 Input
+(1120S)` — **so the instruction sent a preparer hunting for a keyboard inside a form that has none, and
+she reported the software was refusing her.** 🔑 **The cost is not the wrong line numbers: it is that a
+confident vendor claim is followed, fails, and reads as the preparer's fault.**
+
+✅ **So:** a statement about what a program does is written **only** from an observation — a screenshot, a
+generated PDF, the vendor's own published page — and it **names the source and the date**. ⚠️ **A tax fact
+may be reasoned; a screen fact may not.** ⛔ **And "it must work like this because the form is computed"
+is reasoning.**
+
+🟢 **The generated return is itself an observation, and an underused one.** A value the software printed
+**without anybody typing it** proves where that line is fed from — *(a Form 7203 line 6 printing `0` on a
+return where nobody touched it establishes that the line comes from K-1 box 16D, and therefore that the
+contributions line must carry the NET)*. 🔑 **Read the draft return as evidence about the SOFTWARE, not
+only about the tax.**
+
 🔑 **THE UNDERLYING FACT, and it is worth saying to the preparer in these words: THE INPUT SCREEN AND
 THE PRINTED FORM ARE TWO DIFFERENT VOCABULARIES.** The IRS names things one way and the software names
 them another, and they overlap only partly. ⛔ **So an instruction phrased in IRS vocabulary is not an
