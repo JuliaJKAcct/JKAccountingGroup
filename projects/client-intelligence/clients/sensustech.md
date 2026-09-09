@@ -136,6 +136,20 @@ doc guide** in Drive (§7) — never copied here.
   **excludes positions with no cost basis** and **omits wash-sale adjustments from the last business
   day of the period**. 🔑 **The 1099 governs the return; the statement governs the books and the
   balance-sheet tie.** Expect a small residual between the two and do not chase it to zero.
+- 🔴 **This client EXTENDS its Form 1120 and files in October.** The 2024 return went out on a
+  **Form 7004** with a payment in April and was signed in **October**. So the working deadline is the
+  **extended** one, not 15 April — and anything that has to be settled before filing (the DRD
+  question, the year-end brokerage split) has to be settled by then. _(2024 filed return, 2026-09-09)_
+- ⓘ **Sole shareholder**, 100% owner, who is also the officer on payroll — so the officer
+  compensation, the shareholder loan and the declared dividend all concern the same person.
+- ⚠️ **A one-off in 2024 that is NOT a gap in 2025: a Google Play Developer Settlement Fund receipt**
+  sat in "other income". It does not recur, which is why 2025 shows no other income at all.
+- 🟠 **The fee account's NAME is about to become misleading.** The brokerage advisory fees post to an
+  account the return's statement prints as **"Bank charges"** — which was harmless when the accounts
+  were new and the figure was two digits, and is not once a full year of management fees runs through
+  it. **Describe them as investment management fees on the return** *(deductible either way for a
+  corporation under §162 — the §67(g) bar is an individual rule)*, and consider renaming the
+  QuickBooks account so it is fixed at the source. _(2026-09-09)_
 - 🔴 **The company DECLARES A FORMAL DIVIDEND to its owner, and 2025 is the second year.** At
   year-end the owner's distributions for the year are recharacterised into one declared dividend
   through the `Dividends Paid` equity account, and in 2025 **part of the outstanding shareholder
@@ -241,6 +255,21 @@ doc guide** in Drive (§7) — never copied here.
   figure is the *same* amount that sits in the 2024 Schedule M-2 as an "other decrease" above the
   dividends paid — the preparer grossed net income up and took it straight back out. Self-consistent,
   no effect on tax, and not repeated in 2025. Figures are in the working paper, not here.
+
+- 2026-09-09 (fourth pass) — **Julia supplied the FULL 2024 filed return** (48 pp, with the
+  supporting statements and worksheets that the earlier 24-page copy was missing). Findings folded
+  into §5 above and, with their figures, into the working paper. **The statements settled three
+  things and opened two.** ✅ The 2024 dividends were reported **from the 1099, not from the books** —
+  so "report the 1099" is already the firm's convention, not a new rule. ✅ The capital-loss
+  carryover worksheet confirms the pool carried to 2025 and that **no carryback was claimed**.
+  ✅ The one-off "other income" is identified and will not recur. 🔴 **Newly opened: the extended
+  October filing deadline is close**, and the 2025 estimated-tax position looks short of the plan the
+  2024 return set — both raised as open items on the working paper. ⚠️ **A correction was also made
+  to the working paper**: a claim published earlier in the day about how the 2024 Schedule M-2
+  reconciles had been stated as though read off a statement when it was arithmetic — the statement in
+  question is absent even from the full copy, and the claim is now marked as the inference it is.
+  ⛔ **The full copy carries bank and e-file credentials**; none was recorded and the extract was
+  deleted — treat that PDF as more sensitive than the return itself.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.
