@@ -2047,6 +2047,16 @@ const TEMPLATES = [
     formats: ['In-Hub tool'],
     tool: { id: 'business-tax-engagement-letter-standard', label: 'Open the generator' } },
 
+  { band: 'firm', kind: 'Tax preparation', name: 'Form 1120 — preparation worksheet', owner: 'julia',
+    blurb: 'One workbook per C-corporation, per year: the trial balance mapped to every page-1 line, Schedules C, D, J, K, L, M-1 and M-2, a brokerage tab that splits the year\u2019s investment return into its taxable and non-taxable halves, and a board of twelve tie-outs that must all pass before filing. It is built to stop three things a real filed return got wrong or nearly so \u2014 the dividends-received deduction that is never taken because the whole dividend total went to Schedule C\u2019s catch-all line, the corporate capital loss whose carryforward the return records nowhere, and the Schedule M-1 line that depends on a sign which flips between years. Blank master; a filled copy never comes back to the repo.',
+    formats: ['XLSX'],
+    downloads: [
+      { label: 'Download the worksheet (Excel)', file: 'Form-1120-Preparation-Worksheet.xlsx',
+        mime: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        path: 'projects/sops/assets/Form-1120-Preparation-Worksheet.xlsx', primary: true },
+    ],
+    open: { id: 'brokerage-investment-accounts', label: 'Open the brokerage procedure behind it' } },
+
   { band: 'firm', kind: 'Bookkeeping', name: 'Chart of Accounts — Firm Standard', owner: 'lilian',
     blurb: 'The firm’s one numbering system for every client — the 125-account master. Import it into a new client’s QuickBooks, then activate, rename and add niche sub-accounts within the same ranges.',
     formats: ['XLSX'],

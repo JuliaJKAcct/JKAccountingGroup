@@ -413,6 +413,8 @@ every one of them is expensive to reconstruct.
 
 ## Appendix · Blank year-end worksheet
 
+📗 **There is an Excel version, and it is the better one:** [`assets/Form-1120-Preparation-Worksheet.xlsx`](./assets/Form-1120-Preparation-Worksheet.xlsx) — tab **5 · Investments** is this appendix with the arithmetic live, the ties self-checking, and the split feeding Schedules C, D and M-1 automatically. Use the workbook for a real year; the text below is for reading, for a client whose return is not a 1120, and for when you want the shape without opening Excel.
+
 Copy this into the client's working paper and fill it in. **Do not fill it in here.**
 
 ```
