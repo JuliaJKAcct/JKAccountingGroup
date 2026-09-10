@@ -131,12 +131,15 @@ Anything the team must know to serve this client well.
 > either. So put first whatever would cause the worst mistake if someone didn't know it —
 > **not** the oldest, and **not** whatever was added last.
 
-- 🔴 **THE 2025 RETURN IS BUILT AND ONE BLOCKER REMAINS: THE VEHICLE BUSINESS-USE PERCENTAGE**, for
-  both spouses — two mileage organizers published 2026-09-01, both still unanswered, leaving **four
-  lines with no value**. ✅ **The other two closed on 2026-09-10:** Lilian ruled the **Gossip Miami
-  K-1 figures final** *(the amounts are settled; the sequencing is not — that 1120-S is still
-  unfiled, and a K-1 from an unfiled return can still move, so file it first)*, and she **read the
-  2025 Form 1095-A off the document** after the redactor could not.
+- 🔴 **THE 2025 RETURN IS BUILT AND TWO THINGS STILL BLOCK IT — AND BOTH ARE ANSWERS ONLY THE
+  CLIENT CAN GIVE, SO THEY GO IN ONE MESSAGE.** ① **The vehicle business-use percentage**, for both
+  spouses — two mileage organizers published 2026-09-01, both still unanswered, leaving **four lines
+  with no value**. ② **What Yuliana's business actually IS** — her Schedule C has no
+  principal-business description and no code, and **the return cannot be filed without them**.
+  ✅ **Two other blockers closed on 2026-09-10:** Lilian ruled the **Gossip Miami K-1 figures final**
+  *(the amounts are settled; the sequencing is not — that 1120-S is still unfiled, and a K-1 from an
+  unfiled return can still move, so file it first)*, and she **read the 2025 Form 1095-A off the
+  document** after the redactor could not.
   ⚠️ **And one question that sits behind all of it: was a Form 4868 filed for 2025?** Double carries
   `Ext. Filed` on the company and **no value at all** here, which is not evidence either way.
 - 🔴 **ONE PERCENTAGE IS BEING USED FOR TWO DIFFERENT THINGS, AND IT PRODUCES A WRONG RETURN
@@ -153,7 +156,7 @@ Anything the team must know to serve this client well.
   below **150%** of the federal poverty line the required contribution is **zero**, so the credit is
   capped only by the premium itself; above **400%** the repayment cap disappears and the whole
   advance can come back. ✅ **2025 settled at nil in both directions** — no repayment and no net
-  credit — because household income landed near 86% of the line, and the sale of the salon produced
+  credit — because household income landed well below 150% of the line, and the sale of the salon produced
   a **loss** rather than a gain. ⚠️ **Check the percentage before assuming it, every year.**
   ⓘ **And one consequence that recurs:** when the advance covers the whole premium, **nothing comes
   out of their pocket, so there is no §162(l) self-employed health insurance deduction** — however
@@ -210,8 +213,8 @@ Anything the team must know to serve this client well.
   the salon produces a capital LOSS, not a gain**, which is what keeps the Marketplace exposure
   small. **What it caught:** the double-deducted home-office rent, the house percentage reused on
   the car, gross meals keyed without the 50% haircut, the wrong EIN on the prior year, and a broken
-  Total on the firm's own Home Office template. **Twenty-one open items are listed in the working
-  paper.** _(Lilian)_
+  Total on the firm's own Home Office template. **Twenty-six items are listed in the working
+  paper's §6.** _(Lilian)_
 
 ### Tax year 2025 — the review
 
@@ -252,12 +255,16 @@ Anything the team must know to serve this client well.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Twenty-six open items live in the working paper's §6** and are not duplicated here — the file
-  is [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
-  ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address:** the Gossip K-1
-  (**§6 item 19**), the 1095-A figures (**item 20**), the vehicle percentage (**§3F**, not a §6 item
-  at all), and Yuliana's principal business (**item 2**) — plus the extension question (**item 1**),
-  which is not a blocker but changes what this return IS.
+- 🔴 **Twenty-six items live in the working paper's §6 — 23 still open** — and they are not
+  duplicated here; the file is
+  [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
+  ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address:** the vehicle
+  percentage (**§3F**, not a §6 item at all) and Yuliana's principal-business description and code
+  (**item 2**) — 🔑 **both are answers only the client can give, so they go in ONE message, not two**
+  — plus the extension question (**item 1**), which is not a blocker but changes what this return IS.
+  ✅ **Closed 2026-09-10:** the Gossip K-1 amounts (**item 19**) and the 1095-A figures (**item 20**),
+  which between them also closed §162(l) (**item 23**).
+  ⚠️ **Sequencing is not a figure question: Gossip Miami's 1120-S is still unfiled and goes first.**
 - 🔴 **The two vehicle-mileage organizers are published and unanswered.** _(Client)_
 
 ### Information still needed
