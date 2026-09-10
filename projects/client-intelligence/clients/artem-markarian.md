@@ -139,16 +139,16 @@ the actual details.
   nothing to type.
   🔴 **What we got wrong, and it is worth naming because it is a repeatable shape:** the company posted a
   journal entry that reduced the **pooled** owners'-draw account, and we subtracted that whole entry from
-  **one brother's half** of it, on the correct-but-irrelevant ground that the compensation was his. **The
+  **one shareholder's half** of it, on the correct-but-irrelevant ground that the compensation was his. **The
   adjustment belongs to the account; the split happens after it.** ⛔ **It would have overstated his
   closing basis, and it invented a capital gain for his father that does not exist.**
   🚩 **The warning sign was there and was misread as a nice result:** the wrong figure came out as exactly
   half the journal entry, and that was written up as a memorable shortcut rather than questioned.
-  ✅ **Both brothers now come out the same way** — no capital gain for either, and each carries his own
+  ✅ **Father and son now come out the same way** — no capital gain for either, and each carries his own
   share of the year's income, less his non-deductible half of the meals, into next year.
   ⚠️ **One consequence to put in front of the reviewer:** Artem picks up the whole of the compensation as
   income, with self-employment tax on it, while the reduction in draws that funded it fell on both
-  brothers equally. **Recorded as a consequence of the decision, not argued.**
+  shareholders equally. **Recorded as a consequence of the decision, not argued.**
   🟡 **The company's own working file still carries the overruled split in many places** and is flagged for
   a sweep; the correction itself is recorded at the top of that file and in his.
 - 2026-09-09 (seventh pass) — 🛠️ **HIS RETURN IS ONE ENTRY FROM FINISHED, AND THE DELIVERY HAD TO BE

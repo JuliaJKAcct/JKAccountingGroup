@@ -1374,13 +1374,24 @@ shareholder a capital gain that does not exist.** **It reached a delivery the pr
    **wrote it up as a memorable identity to help the preparer.** ⛔ **The identity was the bug reporting
    itself.** ✅ **When a per-shareholder figure lands on a clean fraction of an entity-level one, stop and
    ask why** — the usual answer is that a whole was subtracted from a half.
+4. ⚖️ **AND NEITHER ANSWER MAY BE PRESENTED AS DERIVED WHILE THE SPLIT ITSELF IS UNESTABLISHED.** Correcting
+   the order does not make the halves facts. Where the owners share one pooled account, **who put in what is
+   recorded nowhere**, and a working 50/50 assumption is exactly that. ✅ **Separate the two claims in the
+   delivery:** the REPORTING position, which usually survives any split because the entity totals are what
+   net; and every PER-OWNER figure, which rides on the assumption and moves if the signer settles it
+   differently. ⛔ **A correction that says "this is the arithmetic" about an assumed split has repeated the
+   error it is correcting, one level up.**
 
-⚠️ **AND CHECK THE PAPER'S OWN MASTHEAD BEFORE BUILDING ON A BURIED PARAGRAPH.** The company's working
-paper said the right thing in its header — *"the 2025 movement is … EXACTLY EQUAL, so netting gives zero
-on both sides"* — while a speculation 100 lines down, **flagged in its own paragraph as one of "THREE
-THINGS IT DOES NOT SETTLE"**, was read as settled and built on. 🔑 **A long working paper is
-layered by construction: the masthead is the current state, the body is the history.** ⛔ **Where they
-disagree, the masthead wins — and a paragraph that says it is unsettled is not a source.**
+⚠️ **AND THE REAL LESSON IS NARROWER THAN "READ THE MASTHEAD" — a first version of this item said that,
+and its own example disproves it.** ⛔ **Both statements were in the masthead.** The company's working
+paper said the right thing there — *"the 2025 movement is … EXACTLY EQUAL, so netting gives zero on both
+sides"* — and the speculation that was built on instead was **also in the masthead**, in an earlier pass's
+banner, **flagged in its own paragraph as one of "THREE THINGS IT DOES NOT SETTLE."**
+🔑 **So the rule is not about WHERE a sentence sits. It is: A PARAGRAPH THAT SAYS IT IS UNSETTLED IS NOT A
+SOURCE** — and a layered paper stacks passes, so **two banners can contradict each other and the later one
+governs.** ✅ **Check the pass date and the hedging words, not the position on the page.**
+⛔ **And when you add a new pass banner, strike what it overturns in the OLDER banners too** — otherwise
+the masthead contradicts itself and the next reader picks whichever they hit first.
 
 **8d · 🛑 A CLAIM ABOUT A SCREEN MUST COME FROM A SCREEN — an inference about software is not a finding.**
 
