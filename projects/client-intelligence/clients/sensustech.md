@@ -362,6 +362,17 @@ doc guide** in Drive (§7) — never copied here.
   cumulative and reads far higher than the year's dividend; and the balance sheet the software
   produced had the year's tax accrued against the tax-prepayment asset, which is wrong on **cash-
   basis** books. _(Julia, session)_
+- 2026-09-11 — **Rechecked the revised 1120 draft.** Schedule L is fixed and now balances at the
+  book figures, and the "Bank charges" label is gone. 🔑 **Julia resolved the foreign-ownership
+  question herself by clearing the country from Schedule K box 7(b) — question 7 is No, so there
+  is no 25% foreign owner and no Form 5472**, and 2024 does not need reopening on that point.
+  ⚠️ **The underlying fact — the sole shareholder's citizenship and tax residency — is STILL not
+  recorded anywhere.** She settled it from knowing the client; ask her once and write it here, or
+  every future return and every agency form re-derives it. ⚠️ Also open: **Schedule K question 4b
+  is still "No" although Form 1125-E in the same return shows one officer at 100%**, so Schedule G
+  is missing; and the Schedule M-2 total was reached by netting a prior-year true-up against the
+  dividend, which puts **55,941 on the return against a 1099-DIV of 56,000**. Detail in the
+  working paper §3M. _(Julia, session)_
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.
