@@ -241,7 +241,7 @@ Anything the team must know to serve this client well.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Twenty-one open items live in the working paper's §6** and are not duplicated here — the file
+- 🔴 **Twenty-six open items live in the working paper's §6** and are not duplicated here — the file
   is [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
   ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address:** the Gossip K-1
   (**§6 item 19**), the 1095-A figures (**item 20**), the vehicle percentage (**§3F**, not a §6 item
