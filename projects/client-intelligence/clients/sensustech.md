@@ -144,12 +144,17 @@ doc guide** in Drive (§7) — never copied here.
   compensation, the shareholder loan and the declared dividend all concern the same person.
 - ⚠️ **A one-off in 2024 that is NOT a gap in 2025: a Google Play Developer Settlement Fund receipt**
   sat in "other income". It does not recur, which is why 2025 shows no other income at all.
-- 🟠 **The fee account's NAME is about to become misleading.** The brokerage advisory fees post to an
-  account the return's statement prints as **"Bank charges"** — which was harmless when the accounts
-  were new and the figure was two digits, and is not once a full year of management fees runs through
-  it. **Describe them as investment management fees on the return** *(deductible either way for a
-  corporation under §162 — the §67(g) bar is an individual rule)*, and consider renaming the
-  QuickBooks account so it is fixed at the source. _(2026-09-09)_
+- ✅ **Brokerage advisory fees now have their OWN account — `Brokerage Fees`** *(Julia, 2026-09-10)*,
+  reclassed out of `Bank Fees & Charges` where a full year of management fees had been printing on the
+  return's statement as "Bank charges". ⓘ **It sits in *Other Expenses* in QuickBooks** — a book
+  presentation choice that moves the operating-income subtotal and **changes neither net income nor
+  the return**: they are an ordinary §162 deduction and land in *other deductions* either way. *(The
+  §67(g) bar that kills this deduction on a 1040 is an individual rule and does not touch a
+  corporation.)*
+- 🔑 **The estimates are managed actively, and a "shortfall" against the prior year's plan is usually
+  deliberate.** For 2025 the firm cancelled the fourth-quarter instalment because projections had come
+  down — and the finished return proved that right, leaving a substantial overpayment even so. **Ask
+  before treating an estimated-tax gap here as an error.** _(Julia, 2026-09-10)_
 - 🔴 **The company DECLARES A FORMAL DIVIDEND to its owner, and 2025 is the second year.** At
   year-end the owner's distributions for the year are recharacterised into one declared dividend
   through the `Dividends Paid` equity account, and in 2025 **part of the outstanding shareholder
@@ -271,6 +276,23 @@ doc guide** in Drive (§7) — never copied here.
   ⛔ **The full copy carries bank and e-file credentials**; none was recorded and the extract was
   deleted — treat that PDF as more sensitive than the return itself.
 
+- 2026-09-10 — **The 2025 Form 1120 was worked end to end in the firm's new worksheet, and it all
+  ties.** Julia had reclassed the brokerage advisory fees into their own account overnight; QuickBooks
+  was re-pulled and the whole return built from the live trial balance. **All twelve tie-outs pass** —
+  Schedule M-1 closes to page 1, Schedule L balances in both columns, Schedule M-2 agrees with
+  QuickBooks exactly, and the brokerage figures agree with the broker's statement. Figures are in the
+  working paper; the **filled worksheet went to Julia and was not committed** (the blank master is).
+  **Two of her answers closed open items:** the filing deadline is under control, and the 2025
+  estimated-tax "shortfall" flagged yesterday was a **deliberate cancellation of the fourth-quarter
+  instalment** on lower projections — which the finished return vindicated. **Three presentation
+  decisions were taken and await her confirmation:** the portfolio moved off Schedule L "Cash" onto
+  *other investments*, a small inherited difference between last year's filed retained earnings and
+  the books was **trued up on Schedule M-2** so the balance sheet balances and 2026 starts clean, and
+  meals are carried at the deductible half on the deductions line with the disallowed half on M-1
+  *(carrying the full amount in both places double-counts — the 2024 return got this right)*.
+  🔴 **One item still gates filing: the dividends-received deduction**, which needs an eligible amount
+  from J.P. Morgan and a §246(c) holding-period test against the late-November purchases.
+
 ### Outstanding items (CI-only — never in the SOP)
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.
 - **§243 DRD-eligible dividend amount for 2025** — not on the consolidated 1099; must be requested
@@ -281,7 +303,11 @@ doc guide** in Drive (§7) — never copied here.
   passed, so it is worth one check. Raised 2026-09-09.
 - **The shareholder loan still outstanding** — does it bear interest? §7872. Raised 2026-09-09.
 - **The 2025 DRD decision** — the §854(b)/§243-eligible amount from J.P. Morgan plus the §246(c)
-  holding-period test. Tracked as O1 in the working paper. **The only item here worth real money.**
+  holding-period test. Tracked as O1 in the working paper. **The one item still gating the filing**,
+  and the only one that changes the tax.
+- **Whether the 2025 overpayment is refunded or credited to 2026** (page 1 line 37). Raised 2026-09-10.
+- **Confirm the federal tax payments figure against EFTPS or the bank** — the worksheet took it from
+  the balance-sheet prepayment account, which is a balance and not a payment record. Raised 2026-09-10.
 - **The complete 2024 filed Form 1120 PDF** — the copy we hold has blank supporting-statement
   pages. Raised 2026-09-09.
 - **External financial audit (mid-2026)** — not chased this run (budget).
