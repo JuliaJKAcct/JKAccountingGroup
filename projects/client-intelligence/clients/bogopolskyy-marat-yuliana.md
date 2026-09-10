@@ -27,16 +27,19 @@
 
 ## 1. Snapshot
 
-- **Who:** a married couple filing a **joint Form 1040**, with **two dependent children** (both
+- **Business name:** BOGOPOLSKYY, MARAT and YULIANA — a married couple filing a **joint Form 1040**, with **two dependent children** (both
   under 17 throughout 2025, both living with them all year).
 - **Entity type:** individuals. **Double `Account Type` = Individual**, **`Tax Return Type` = 1040**.
 - **Home state:** **Florida** — Sunny Isles Beach. ⚠️ The completed 2025 organizer records the
   county as **Broward**; **Sunny Isles Beach is in MIAMI-DADE.** Harmless federally (Florida has no
   personal income tax) but it is a client error and should not be copied forward.
-- **What they do:** **MARAT** runs **Marat Boxing LLC** (EIN `92-2999342`), a boxing and fitness
+- **Industry / what they do:** **MARAT** runs **Marat Boxing LLC** (EIN `92-2999342`), a boxing and fitness
   business reported on **his Schedule C** — a disregarded single-member LLC. **YULIANA** was a **50%
   member of Gossip Miami LLC**, a beauty salon, until it was sold on **30 October 2025**, and from
   2025 also has **her own Schedule C** for personal-services work billed to two payers.
+- **Fiscal year-end:** **31 December — calendar year.** Individuals; there is no election to make.
+- **Accounting platform:** ⛔ **none.** Double's `platform` reads `none`, the household keeps no
+  books, and the Schedule C figures arrive on the firm's Excel P&L template.
 - **Primary language:** **Russian** — Double's `Preferred language` property reads *Only Russian*,
   and all correspondence is in Russian. 🔑 **A message going out under LILIAN's name is written in
   SIMPLE Russian**; one under Julia's is native register *(CLAUDE.md)*.
@@ -71,10 +74,22 @@ the actual details.
 | Double client portal | Organizers, document uploads, signatures | _(n/a — firm platform)_ | The 2025 individual organizer is a **TaxDome-era PDF** in `TaxDome > … > 2. Completed Tax organizers`, not a Double organizer. **90 / 90 complete** |
 | Double organizers (2025) | 🔴 **Two vehicle-mileage organizers, one per spouse** | _(n/a)_ | `JK 2025 vehicle - business miles - MARAT` (**155334**) and `… - YULIANA` (**155333**). Published **2026-09-01**; **both at 0% as at 2026-09-10** |
 | Health insurance | Marketplace (healthcare.gov) | _(not the firm's)_ | **Marketplace coverage in 2024 and 2025.** A Form 1095-A is issued each January and **the return cannot be filed without it** |
-| Personal bank | Refund direct deposit | _(not in the repo)_ | **TD Bank checking, in Marat's name** _(organizer)_. ⛔ Routing and account numbers stay in Double |
-| QuickBooks | — | _(n/a)_ | ⛔ **None.** Double's `platform` reads `none`; the household keeps no books and the Schedule C figures arrive on the firm's Excel P&L template |
+| Personal bank | Refund direct deposit | _(not in the repo)_ | ⛔ **The direct-deposit details are in Double** — institution, holder and numbers. Confirm the account before transmitting: the sale covenant required the *company's* accounts to be closed, and the two are easy to confuse |
+| No QuickBooks | — | _(n/a)_ | ⛔ **None.** Double's `platform` reads `none`; the household keeps no books and the Schedule C figures arrive on the firm's Excel P&L template |
 
 ## 4. Obligations & recurring processes
+
+### Sales tax
+- **Applies?** No — **N/A** at the individual level. The salon's sales-tax obligations belonged to
+  **Gossip Miami LLC** and are in [`gossip-miami.md`](./gossip-miami.md).
+- ⚠️ **Marat Boxing LLC has never been examined for its own sales-tax position.** **Worth one pass.**
+
+### Payroll
+- **Applies?** No — **N/A.** Neither spouse runs payroll; both businesses are Schedule C with no wages
+  (each P&L shows `Contract Labor 0`).
+
+### Bookkeeping & monthly close
+- **Applies?** **No.** The firm is not their bookkeeper and there is no QuickBooks file.
 
 ### Income tax
 
@@ -102,41 +117,54 @@ the actual details.
   [`projects/tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
   ⛔ **That file holds every figure; none is repeated here.**
 
-### Bookkeeping & monthly close
-- **Applies?** **No.** The firm is not their bookkeeper and there is no QuickBooks file.
-
-### Sales tax · Payroll · Licenses
-- **Applies?** **Not at the individual level.** The salon's sales-tax and licence obligations
-  belonged to **Gossip Miami LLC** and are in [`gossip-miami.md`](./gossip-miami.md).
-- ⚠️ **Marat Boxing LLC has never been examined for its own obligations** — no sales-tax, licence or
-  annual-report position is recorded anywhere. **Worth one pass.**
+### Licenses & other filings
+- **Applies?** _(pending)_ — ⚠️ **Marat Boxing LLC has never been examined for its own licence or
+  annual-report obligations.** Nothing is recorded anywhere. **Worth one pass.**
 
 ## 5. Key facts & quirks
 
-- 🔴 **THE 2025 RETURN CANNOT BE TRANSMITTED BEFORE GOSSIP MIAMI'S 1120-S IS FILED AND ACCEPTED.**
-  Yuliana's K-1 does not exist yet, and that company's own working paper lists **nine live open
-  items that still move her box 1 and box 16D**. The 1040 may be built on the provisional figures;
-  it may not be sent on them.
-- 🔴 **THE VEHICLE BUSINESS-USE PERCENTAGE IS THE STANDING GAP, AND THE CLIENT KEEPS SUPPLYING THE
-  WRONG NUMBER.** Both 2025 P&Ls apply **30%** to car costs — **which is the HOME-OFFICE percentage**
-  (the office is 30% of the apartment's floor area), reused on the car. **A vehicle's business use is
-  a ratio of MILES.** It is also applied inconsistently inside one P&L, and fuel and repairs carry no
-  percentage at all. **The two mileage organizers published on 2026-09-01 exist to close this and
-  both are still at zero.**
-- 🔴 **THE HOME-OFFICE COSTS ARRIVE DEDUCTED TWICE.** Yuliana's P&L carries a line for the apartment
-  rent at 30% **and** a separate Home Office worksheet claims the same rent. **Keyed as delivered the
-  rent is deducted twice.** ✅ **The rule for this client: home-office items come OUT of Schedule C
-  and go on Form 8829 at their FULL annual amount, and the form applies the percentage.**
-  ⚠️ **And the firm's own Home Office template has a broken Total** — it sums only the Rent and
-  Utilities rows and silently drops Insurance. **That template goes to every client.**
-- 🟠 **A FILE'S NAME IN DOUBLE IS NOT EVIDENCE OF WHAT IT IS.** `MaratBoxingLLC.pdf` is a **1099-NEC**
-  from an unrelated payer; `1099_2025_553_1099-NEC.pdf` is **Yuliana's**, not Marat's; three
-  `IMG_*.jpeg` files are a driver's licence, a **car finance agreement** and one nobody has
-  identified. **Open before concluding.**
+Anything the team must know to serve this client well.
+
+> ⚠️ **Order these by consequence — only the first FOUR are published.** Both the Knowledge
+> Hub and the client-intelligence review dashboard render **only the first four top-level
+> bullets** of this section (and of §6's "Outstanding items"); a fifth never appears on
+> either. So put first whatever would cause the worst mistake if someone didn't know it —
+> **not** the oldest, and **not** whatever was added last.
+
+- 🔴 **THE 2025 RETURN IS BUILT BUT CANNOT BE TRANSMITTED, AND THERE ARE EXACTLY THREE BLOCKERS.**
+  ① **Gossip Miami's 1120-S is not filed**, so Yuliana's K-1 does not exist and nine live items in
+  that company's working paper still move her figures — **this return must not go first**;
+  ② **the vehicle business-use percentage is unanswered for both spouses** (two mileage organizers
+  published 2026-09-01, both still at 0%), which leaves **four lines with no value**;
+  ③ **the 2025 Form 1095-A tables would not extract** from the PDF and must be keyed by hand.
+  ⚠️ **And one question behind all three: was a Form 4868 filed for 2025?** Double carries
+  `Ext. Filed` on the company and **no value at all** here, which is not evidence either way.
+- 🔴 **ONE PERCENTAGE IS BEING USED FOR TWO DIFFERENT THINGS, AND IT PRODUCES A WRONG RETURN
+  SILENTLY.** The home office is **30% of the apartment's floor area** — and that same 30% appears
+  applied to **both spouses' car insurance and car lease**, inconsistently (one line runs at 33%),
+  while fuel and repairs carry **no percentage at all**. **A vehicle's business use is a ratio of
+  MILES.** ✅ **And the same root cause deducts the apartment rent TWICE:** Yuliana's P&L carries it
+  at 30% inside Schedule C *and* a separate Home Office worksheet claims it again. **The rule for
+  this client: home-office items come OUT of Schedule C and go on Form 8829 at their FULL annual
+  amount, and the form applies the percentage.**
+- 🔴 **MARKETPLACE COVERAGE IS THE BIGGEST CASH ITEM ON THE RETURN AND THE BIGGEST RISK.** In 2024
+  the advance credit was close to the whole premium and household income sat at **32% of the federal
+  poverty line**. 🔑 **The exposure is bounded only while they stay under 400% of that line — above
+  it the repayment cap disappears entirely** and the whole advance comes back. ✅ **2025 stays far
+  below it**, because the sale of the salon produced a **loss**, not a gain — but **check the
+  percentage every year before assuming it.**
+- 🔴 **THE ORGANIZER UNDER-REPORTS THE HOUSEHOLD'S BUSINESSES.** Its business-income section names
+  **only Marat Boxing**. Yuliana's Schedule C exists only because her P&L arrived separately, months
+  later. ⛔ **Do not treat the organizer's business list as complete** — a covering preparer working
+  from it alone would omit an entire Schedule C.
 
 <!-- Everything below the fourth bullet is NOT published to the Hub or the review dashboard.
      Keep the four above ordered by consequence. -->
 
+- 🟠 **A FILE'S NAME IN DOUBLE IS NOT EVIDENCE OF WHAT IT IS.** `MaratBoxingLLC.pdf` is a **1099-NEC**
+  from an unrelated payer; `1099_2025_553_1099-NEC.pdf` is **Yuliana's**, not Marat's; three
+  `IMG_*.jpeg` files are a driver's licence, a **car finance agreement** and one nobody has
+  identified. **Open before concluding.**
 - 🟠 **2024 WAS PREPARED BY AN OUTSIDE FIRM** — the organizer's own answer to *"Did you file your
   last tax return with JK Accounting Group?"* is **No**. So every convention on the 2024 return is a
   **client** convention, worth following for consistency and worth departing from with a reason.
@@ -148,16 +176,10 @@ the actual details.
   §199A/QBI deduction computes to **zero** because it is capped by taxable income; the tax actually
   due is **self-employment tax**; and the refund is driven by the **refundable child credit and the
   earned income credit**, not by withholding.
-- 🟠 **MARKETPLACE COVERAGE IS THE BIGGEST CASH ITEM ON THE RETURN AND THE BIGGEST RISK.** In 2024
-  the advance credit was close to the whole premium and household income sat at **32% of the federal
-  poverty line**. 🔑 **The exposure is bounded as long as they stay under 400% of the poverty line —
-  above it the repayment cap disappears entirely.** ✅ **2025 stays far below it**, because the sale
-  of the salon produced a **loss**, not a gain.
 - 🟠 **NO ESTIMATED TAX IS EVER PAID** — the organizer confirms none federal and none state — and
   there is no withholding once the small 2024 wage stops. **Check Form 2210 every year.**
-- 🟠 **THE ORGANIZER UNDER-REPORTS THE HOUSEHOLD'S BUSINESSES.** Its business-income section names
-  **only Marat Boxing**. Yuliana's Schedule C exists only because her P&L arrived separately.
-  **Do not treat the organizer's business list as complete.**
+- 🟠 **THE FIRM'S OWN HOME OFFICE TEMPLATE HAS A BROKEN TOTAL** — it sums only the Rent and Utilities
+  rows and silently drops Insurance. **That template goes to every client.**
 
 ## 6. History & open questions
 
@@ -201,9 +223,12 @@ the actual details.
   ⛔ **No W-2 is declared for 2025** — ⚠️ **but 2024 carried a small wage and withholding, so ask
   rather than rely on the silence.**
 - **Three K-1s in 2025 where 2024 had one.** Gossip Miami (S corporation, Yuliana's, and her last
-  one); **PEP Hollywood FL LLC** (`99-0480864`, partnership, Marat a **limited partner** at 35% —
-  a retail food-service activity) and **Development Strategies LLC** (`33-2567480`, partnership,
-  Marat a **general partner / member-manager**, admitted during 2025 at 20%). ✅ **Both partnerships
+  one); **PEP Hollywood FL LLC** (partnership, Marat a **limited partner** at 35% —
+  a retail food-service activity) and **Development Strategies LLC** (partnership,
+  Marat a **general partner / member-manager**, admitted during 2025 at 20%).
+  ⛔ **Their EINs are deliberately NOT written here** — the EIN carve-out in this file's banner is
+  scoped to *the entity's own* number, public on Sunbiz, and neither partnership is this client or a
+  firm client. They are in the working paper. ✅ **Both partnerships
   are new — neither appears on the 2024 return**, which is corroborated by their own opening figures.
 - 🔑 **The two partnership losses are treated completely differently, and the reason is one tick:**
   the **limited**-partner loss is limited by basis, at risk and the passive rules and deducts
@@ -218,8 +243,10 @@ the actual details.
 
 - 🔴 **Twenty-one open items live in the working paper's §6** and are not duplicated here — the file
   is [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
-  **The four that block the return:** the extension question, Yuliana's principal business, the
-  1095-A figures, and the Gossip K-1.
+  ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address:** the Gossip K-1
+  (**§6 item 19**), the 1095-A figures (**item 20**), the vehicle percentage (**§3F**, not a §6 item
+  at all), and Yuliana's principal business (**item 2**) — plus the extension question (**item 1**),
+  which is not a blocker but changes what this return IS.
 - 🔴 **The two vehicle-mileage organizers are published and unanswered.** _(Client)_
 
 ### Information still needed
