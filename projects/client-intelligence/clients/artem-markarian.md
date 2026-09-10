@@ -28,7 +28,7 @@
 
 - **Business name:** Artem Markarian — an **individual** client record _(Double `Account Type: Individual`, 2026-09-01)_
 - **Entity type:** n/a — individual taxpayer. 🔴 **A 50% SHAREHOLDER of [ECOORGANIC USA LLC](./ecoorganic-usa.md) FOR 2025** — he and his father each hold 50%, and **he gets a 2025 K-1** *(Julia's notes, relayed by Lilian 2026-09-03)*. ~~**NOT a shareholder during 2025 — he becomes one on 2026-01-01**~~ ⛔ **That reading stood for one day and is WITHDRAWN**; it came from the departure date *(his father leaves at the end of 31 December 2025)*, which says when the father STOPS, not when the son STARTS. 🔴 **Still open, and it decides his K-1: WHEN in 2025 he was admitted** — a mid-year admission forces a per-day allocation under §1377(a)(1) and a flat half misstates both K-1s — **and whether he is an eligible S-corporation shareholder under §1361 on that date**, which nobody has asked. He is also **the person who runs the business and the one the firm corresponds with**, which is a separate fact from owning it *(and the 2026-04-07 Connecticut annual report removed his father and added him as principal agent — §6)*
-- **Home state:** not recorded here. The company operates from **Darien, Connecticut**; his own residence has not been established in this file
+- **Home state:** 🟡 **Connecticut is the working position and it is NOT confirmed.** The company operates from **Darien, Connecticut**; his own federal return carries a **Wilton, CT** address; the company's state return codes him a Connecticut resident. ⛔ **Nobody has established it, and it decides which state form he files** — with Julia (2026-09-10)
 - **Industry / what they do:** his business activity reaches the 1040 through the S corporation — **plus a second, separate activity: he hosted cars on Turo during 2025** (§5), which Julia has ruled belongs on his individual return
 - **Primary language:** **Russian** — the firm's correspondence with him is in Russian
 - **Our engagement (services we provide):** **Income tax only — Form 1040** _(Double: `Income Tax: true`, `Tax Return Type: 1040`, `Bookkeeping: N/A`, `1099 Preparation: false`, `Annual Report: false`, 2026-09-01)_. **Assigned staff: Lilian.** The firm's work for the company is a separate engagement on its own record
@@ -131,6 +131,25 @@ the actual details.
 
 ### Log
 
+- 2026-09-10 (ninth pass) — 🗓️ **HIS SHAREHOLDER START DATE IS SETTLED, AND HIS STATE RETURN IS BUILT.**
+  ✅ **① He was admitted on 1 January 2025** *(Lilian)*. **That closes a real risk**: a mid-year admission
+  would have forced a day-by-day allocation of the company's income, and the flat half we used would have
+  been wrong on **both** shareholders' K-1s. **With 1 January, the half is right.** ⚠️ **It does not settle
+  how he ACQUIRED the shares**, which is a different question and still open — it sets his opening basis.
+  🇺🇸 **② His Connecticut return is prepared**, from the 2025 forms downloaded from the state's own site.
+  **He owes Connecticut very little — and possibly nothing at all**, because a state credit for property
+  tax paid on a home or a car is worth more than his whole state tax.
+  🔴 **③ The thing that gates it: nobody has established that he is a Connecticut resident.** This file has
+  said his residence is unknown since it was created. **The evidence all points one way** — the address on
+  his own federal return, the company's location, where he buys fuel — **and the company's state return
+  already asserts it.** ⛔ **But asserting is not establishing, and if the answer is different, both returns
+  change.** **It is Julia's to confirm.**
+  🛠️ **④ Three things to get from him:** what he paid in state property tax on his home and one car during
+  2025 *(with the dates)*; whether he owes any out-of-state use tax; and whether a state extension was
+  filed in his name.
+  🔑 **⑤ One consequence recorded for the firm, not for him:** the company did not make the state's optional
+  entity-level tax election, so he gets no credit for it and pays the state himself. **The election cannot
+  be undone — it is a decision for next year.**
 - 2026-09-10 (eighth pass) — 🛑 **LILIAN CORRECTED US: HIS RETURN WAS ALREADY FINISHED, AND THE
   "MISSING ENTRY" WAS OUR ERROR.**
   🗣️ Her instruction, which she had given before: **both shareholders report zero contributions and zero
