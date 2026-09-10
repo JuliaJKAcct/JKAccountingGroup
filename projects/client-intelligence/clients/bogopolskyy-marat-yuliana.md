@@ -131,13 +131,13 @@ Anything the team must know to serve this client well.
 > either. So put first whatever would cause the worst mistake if someone didn't know it —
 > **not** the oldest, and **not** whatever was added last.
 
-- 🔴 **THE 2025 RETURN IS BUILT BUT CANNOT BE TRANSMITTED, AND THERE ARE EXACTLY THREE BLOCKERS.**
-  ① **Gossip Miami's 1120-S is not filed**, so Yuliana's K-1 does not exist and nine live items in
-  that company's working paper still move her figures — **this return must not go first**;
-  ② **the vehicle business-use percentage is unanswered for both spouses** (two mileage organizers
-  published 2026-09-01, both still at 0%), which leaves **four lines with no value**;
-  ③ **the 2025 Form 1095-A tables would not extract** from the PDF and must be keyed by hand.
-  ⚠️ **And one question behind all three: was a Form 4868 filed for 2025?** Double carries
+- 🔴 **THE 2025 RETURN IS BUILT AND ONE BLOCKER REMAINS: THE VEHICLE BUSINESS-USE PERCENTAGE**, for
+  both spouses — two mileage organizers published 2026-09-01, both still unanswered, leaving **four
+  lines with no value**. ✅ **The other two closed on 2026-09-10:** Lilian ruled the **Gossip Miami
+  K-1 figures final** *(the amounts are settled; the sequencing is not — that 1120-S is still
+  unfiled, and a K-1 from an unfiled return can still move, so file it first)*, and she **read the
+  2025 Form 1095-A off the document** after the redactor could not.
+  ⚠️ **And one question that sits behind all of it: was a Form 4868 filed for 2025?** Double carries
   `Ext. Filed` on the company and **no value at all** here, which is not evidence either way.
 - 🔴 **ONE PERCENTAGE IS BEING USED FOR TWO DIFFERENT THINGS, AND IT PRODUCES A WRONG RETURN
   SILENTLY.** The home office is **30% of the apartment's floor area** — and that same 30% appears
@@ -147,12 +147,17 @@ Anything the team must know to serve this client well.
   at 30% inside Schedule C *and* a separate Home Office worksheet claims it again. **The rule for
   this client: home-office items come OUT of Schedule C and go on Form 8829 at their FULL annual
   amount, and the form applies the percentage.**
-- 🔴 **MARKETPLACE COVERAGE IS THE BIGGEST CASH ITEM ON THE RETURN AND THE BIGGEST RISK.** In 2024
-  the advance credit was close to the whole premium and household income sat at **32% of the federal
-  poverty line**. 🔑 **The exposure is bounded only while they stay under 400% of that line — above
-  it the repayment cap disappears entirely** and the whole advance comes back. ✅ **2025 stays far
-  below it**, because the sale of the salon produced a **loss**, not a gain — but **check the
-  percentage every year before assuming it.**
+- 🔴 **MARKETPLACE COVERAGE IS THE BIGGEST CASH ITEM ON THE RETURN, AND THE TEST THAT GOVERNS IT
+  RUNS EVERY YEAR.** All four are covered for the whole year and the **advance credit has covered
+  essentially the entire premium** in both 2024 and 2025. 🔑 **Two thresholds decide everything:**
+  below **150%** of the federal poverty line the required contribution is **zero**, so the credit is
+  capped only by the premium itself; above **400%** the repayment cap disappears and the whole
+  advance can come back. ✅ **2025 settled at nil in both directions** — no repayment and no net
+  credit — because household income landed near 86% of the line, and the sale of the salon produced
+  a **loss** rather than a gain. ⚠️ **Check the percentage before assuming it, every year.**
+  ⓘ **And one consequence that recurs:** when the advance covers the whole premium, **nothing comes
+  out of their pocket, so there is no §162(l) self-employed health insurance deduction** — however
+  many Schedule C businesses the household runs.
 - 🔴 **THE ORGANIZER UNDER-REPORTS THE HOUSEHOLD'S BUSINESSES.** Its business-income section names
   **only Marat Boxing**. Yuliana's Schedule C exists only because her P&L arrived separately, months
   later. ⛔ **Do not treat the organizer's business list as complete** — a covering preparer working
@@ -184,6 +189,7 @@ Anything the team must know to serve this client well.
 ## 6. History & open questions
 
 ### Log
+- ✅ **2026-09-10 (later) — the 2025 Form 1095-A arrived and TWO of the three blockers closed.** Lilian read Parts I–III off the document *(the redactor could not — that PDF's tables still do not extract, which is a failed read and not an empty form)* and ruled the **Gossip Miami K-1 figures final**: *"Asume que la información de Gossip Miami que tenemos hasta ahora, los K1 están correctos, y esto es lo que va a fluir al 1040."* **What the 1095-A settled:** all four covered all twelve months at an unchanged premium, so Form 8962 runs on the annual calculation; household income sits below 150% of the poverty line, where the required contribution is **zero**; and the credit allowed comes out **exactly equal to the advance already paid** — so **net credit nil, no repayment, nothing on Schedule 3 line 9 or Schedule 2 line 1a.** ✅ **It also closed the self-employed health insurance question: the advance covered the whole premium, so nothing was paid out of pocket and there is no §162(l) deduction.** 🔴 **What is left: the vehicle business-use percentage** *(both organizers still unanswered)*, and the extension question. _(Lilian)_
 
 - **2026-06-02** — the family's TaxDome material migrates into Double: the completed **2025
   individual organizer**, the **2024 return package**, driver's licences, the blank Home Office
@@ -216,9 +222,14 @@ Anything the team must know to serve this client well.
   for the child tax credit and as EIC qualifying children.**
 - **Main home in the United States for 183 days or more.** Neither spouse is claimable as anyone's
   dependant. **No digital-asset transactions. No non-US income or assets.**
-- **Health coverage: Marketplace (subsidised).** ✅ **A Form 1095-A is on file for 2025 and Form 8962
-  is mandatory** — the return cannot be filed without it. ⚠️ **The PDF's own tables would not
-  extract; the three figures must be keyed off it by hand.**
+- **Health coverage: Marketplace (subsidised), through a Florida issuer.** ✅ **All four family
+  members covered for all twelve months, at an unchanged premium every month** — which is what lets
+  the return use Form 8962's annual calculation instead of the month-by-month grid.
+  ✅ **Settled 2026-09-10: net premium tax credit NIL and no repayment** — the advance matched the
+  entitlement exactly. ⚠️ **The redactor could not read the PDF's Part II/III tables and still
+  cannot; Lilian read them off the document.** 🟠 **One thing remains unconfirmed and it is the only
+  item that can move this: what the Marketplace estimated at enrolment**, which decides whether the
+  below-100%-of-poverty-line exception is met.
 - **Income sources, per the organizer: partnership/S-corporation K-1s and self-employment only.**
   ⛔ **No W-2 is declared for 2025** — ⚠️ **but 2024 carried a small wage and withholding, so ask
   rather than rely on the silence.**
