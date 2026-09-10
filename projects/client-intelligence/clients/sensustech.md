@@ -151,17 +151,23 @@ doc guide** in Drive (§7) — never copied here.
   the return**: they are an ordinary §162 deduction and land in *other deductions* either way. *(The
   §67(g) bar that kills this deduction on a 1040 is an individual rule and does not touch a
   corporation.)*
-- 🔴 **THE TAX EXPENSE IN THESE BOOKS RUNS ONE YEAR BEHIND — or it did until 2025.** Each year's
-  federal tax was expensed in the FOLLOWING year, when it was settled, while the current year's
-  estimated payments sat as an asset until then. So a `Tax expense` figure on any pre-2025 P&L belongs
-  to the **prior** year, and the balance-sheet prepayment is the **current** year's estimates.
-  ✅ **Broken deliberately in 2025** *(Julia, 2026-09-10)*: the prior year's charge was moved to
-  retained earnings and the year's own tax accrued, so from 2026 each year carries its own.
-  🔑 **The reassuring part, and the reason it was safe to change: it never affected a return.**
-  Schedule M-1 lines 1 and 2 always sum to income before tax, so whatever tax figure the books carry,
-  **taxable income is identical.** Only the balance sheet and retained earnings move.
-  ⚠️ **An estimated payment is not an expense** — it is a prepayment until the liability is accrued.
-  That part was always right here.
+- 🔴 **THIS CLIENT IS ON THE CASH BASIS** — box (a) on the filed return, and the balance sheet
+  corroborates it: **no accounts receivable at either year end** on a multi-million-dollar app
+  business, where an accrual taxpayer would carry a December receivable from the app stores. Receipts
+  are far below the §448(c) threshold, so cash is permitted. ⚠️ **Verify it from the prior return
+  rather than assuming** — a session assumed accrual here and reasoned a wrong adjusting entry from
+  it before Julia caught it. _(2026-09-10)_
+- 🔑 **So federal income tax is expensed WHEN PAID, and that is correct — do not "fix" it.** Each
+  year's tax lands in the following year's P&L because that is when it is paid; the current year's
+  estimates sit as an asset until then. On a cash-basis set of books this is the basis working as
+  intended, not a lag to be broken.
+- ⛔ **And the separate point that gets tangled with it: a corporation NEVER deducts its own federal
+  income tax — §275(a)(1).** Not on cash basis, not on accrual, not in any year. The basis decides
+  *when a deductible item is deducted*; it cannot make a non-deductible item deductible. The tax is
+  taken back out on **Schedule M-1 line 2**, which is what that line is for. ⓘ **STATE income tax IS
+  deductible** — that is the distinction people are reaching for; this company is in Wyoming, which
+  has no corporate income tax, so nothing is lost. 🔑 **Whatever tax figure the books carry, taxable
+  income is identical**, because M-1 lines 1 and 2 always sum to income before tax.
 - 🔵 **The dividends-received deduction: declined for 2025, and it is a 2026 ACTION, not a dead end.**
   The equity account holds **shares directly**, not fund units — so **§854(b) is irrelevant to it** and
   no request to the broker is needed; the only gate is the **§246(c) holding period**. It failed to be
@@ -321,6 +327,18 @@ doc guide** in Drive (§7) — never copied here.
   on both halves of what she suspected. The fix changes **no** taxable income — the proof is written
   into the working paper — so it was safe to make. A corrected worksheet was produced and delivered;
   all ten applicable tie-outs pass on it.
+
+- 2026-09-10 (third pass) — **Julia challenged the tax-expense advice and was right.** She asked why
+  the prior year's tax could not simply be expensed in the year paid, "we are cash basis" — and the
+  filed return confirms box (a), **Cash**. A session had **pre-filled "Accrual" on the worksheet
+  without checking the prior return and then reasoned an adjusting entry from that assumption**; the
+  entry was withdrawn the same day and the assumption corrected. §5 now records the basis, the reason
+  the cash treatment is correct, and the separate rule that gets tangled with it — **federal income
+  tax is never deductible whatever the basis**. **No figure on the return moved**: taxable income is
+  the same under every book treatment of the tax, which is written up three ways in the working paper.
+  🔑 **The transferable lesson is the one already in [`method.md`](../../pre-return-review/method.md)
+  rule 10 — ask the record before you infer.** The accounting method is on the prior return; it should
+  never have been a default.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.

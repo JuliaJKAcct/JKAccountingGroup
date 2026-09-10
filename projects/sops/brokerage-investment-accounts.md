@@ -251,6 +251,7 @@ entry. **Chasing it to zero corrupts a set of books that currently ties to the s
 | **Interest** | 1099-INT | page 1 **line 5** | ⚠️ **A portfolio of bond and money-market FUNDS pays DIVIDENDS, not interest.** No 1099-INT is normal and is not a missing document |
 | **Foreign tax withheld** | 1099-DIV **box 7** | Deduct it, **or** credit it on Form 1118 | For a small amount, deduct — Form 1118 is not worth the preparation. **It is often not in the books at all**, having been netted inside the account |
 | **Investment management fees** | The 1099's fee schedule *(ties to the books, §4 check 4)* | An ordinary deduction | ✅ **Deductible for a corporation** under §162. The §67(g) suspension that kills this deduction on a **1040** is an individual rule and does not apply |
+| **The corporation's own federal income tax** | The books | ⛔ **NOWHERE — never deductible, §275(a)(1)** | 🛑 **Not a timing question.** Cash basis does not make it deductible in the year paid, and accrual does not make it deductible in the year owed. It is added back on **Schedule M-1 line 2**, whatever the basis. ⓘ **STATE income tax IS deductible** *(page 1 line 17)* — that is the distinction people reach for |
 | **Unrealized gain or loss** | §5A | 🛑 **Schedule M-1 — and the line depends on the SIGN. See §6D** | This is the single most-likely thing to be copied wrongly from last year |
 
 ### 6B · 🔴 The dividends-received deduction — do not default to "Other dividends"
