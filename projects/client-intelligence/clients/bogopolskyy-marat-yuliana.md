@@ -131,14 +131,18 @@ Anything the team must know to serve this client well.
 > either. So put first whatever would cause the worst mistake if someone didn't know it —
 > **not** the oldest, and **not** whatever was added last.
 
-- 🔴 **THE 2025 RETURN IS BUILT AND TWO THINGS STILL BLOCK IT — AND BOTH ARE ANSWERS ONLY THE
-  CLIENT CAN GIVE, SO THEY GO IN ONE MESSAGE.** ① **The vehicle business-use percentage**, for both
-  spouses — two mileage organizers published 2026-09-01, both still unanswered, leaving **four lines
-  with no value**. ② **What Yuliana's business actually IS** — her Schedule C has no
-  principal-business description and no code, and **the return cannot be filed without them**.
+- 🔴 **THE 2025 RETURN IS BUILT, AND THREE THINGS STAND BETWEEN IT AND TRANSMISSION — TWO ARE
+  ANSWERS ONLY THE CLIENT CAN GIVE, SO THEY GO IN ONE MESSAGE; THE THIRD IS OURS.**
+  ① **The vehicle business-use percentage**, for both spouses — two mileage organizers published
+  2026-09-01, both still unanswered, leaving **four lines with no value**.
+  ② **What Yuliana's business actually IS** — her Schedule C has no principal-business description
+  and no code, and **the return cannot be filed without them**.
+  ③ **File the Gossip Miami 1120-S, then re-check box 1 and box 16D against what was filed** — ours
+  to do, and still open even though the amounts are ruled.
   ✅ **Two other blockers closed on 2026-09-10:** Lilian ruled the **Gossip Miami K-1 figures final**
-  *(the amounts are settled; the sequencing is not — that 1120-S is still unfiled, and a K-1 from an
-  unfiled return can still move, so file it first)*, and she **read the 2025 Form 1095-A off the
+  *(the AMOUNTS only: her ruling says build on what we hold today, and it cannot settle nine open items
+  on a different return — that 1120-S is unfiled, six of those items move box 1 or box 16D, so file it
+  first and re-check both boxes against what was filed before transmitting this one)*, and she **read the 2025 Form 1095-A off the
   document** after the redactor could not.
   ⚠️ **And one question that sits behind all of it: was a Form 4868 filed for 2025?** Double carries
   `Ext. Filed` on the company and **no value at all** here, which is not evidence either way.
@@ -151,16 +155,24 @@ Anything the team must know to serve this client well.
   this client: home-office items come OUT of Schedule C and go on Form 8829 at their FULL annual
   amount, and the form applies the percentage.**
 - 🔴 **MARKETPLACE COVERAGE IS THE BIGGEST CASH ITEM ON THE RETURN, AND THE TEST THAT GOVERNS IT
-  RUNS EVERY YEAR.** All four are covered for the whole year and the **advance credit has covered
-  essentially the entire premium** in both 2024 and 2025. 🔑 **Two thresholds decide everything:**
-  below **150%** of the federal poverty line the required contribution is **zero**, so the credit is
-  capped only by the premium itself; above **400%** the repayment cap disappears and the whole
-  advance can come back. ✅ **2025 settled at nil in both directions** — no repayment and no net
-  credit — because household income landed well below 150% of the line, and the sale of the salon produced
-  a **loss** rather than a gain. ⚠️ **Check the percentage before assuming it, every year.**
-  ⓘ **And one consequence that recurs:** when the advance covers the whole premium, **nothing comes
-  out of their pocket, so there is no §162(l) self-employed health insurance deduction** — however
-  many Schedule C businesses the household runs.
+  CHANGES IN 2026.** All four are covered for the whole year and the **advance credit has covered
+  essentially the entire premium** in both 2024 and 2025. ✅ **2025 settled at nil in both
+  directions** — no repayment and no net credit — because household income landed well below **150%**
+  of the federal poverty line, where **for 2025 and the four years before it** the required
+  contribution was **zero**, and because the sale of the salon produced a **loss** rather than a gain.
+  🔴 **DO NOT CARRY THAT FORWARD. The rule that produced it dies on 31/12/2025.** Read off
+  **Rev. Proc. 2025-25 §3.01** *(2026-09-10)*: for 2026 the applicable-percentage table starts at a
+  **2.10% floor below 133%** of the poverty line and **stops at 400%**, so the **cliff returns** and
+  a household this far below the line has a **required contribution for the first time**.
+  🔑 **The practical consequence for these clients: in 2026 the advance will NOT cover the whole
+  premium**, they will pay something out of pocket, and **a real §162(l) self-employed health
+  insurance deduction opens up** — the one this year's return closes at zero.
+  ⓘ **How that deduction is actually limited, because the obvious shorthand is not the rule:** it is
+  capped at **the enrollment premiums less the premium tax credit ALLOWED** *(Pub 974, Worksheet W
+  and the Step 3 Worksheet, whose subtrahend is the **PTC**, not the advance)*, **and** separately by
+  what was paid out of pocket and by the earned income of the business the plan is established under.
+  **In 2025 both caps are zero**; they come apart the moment the credit allowed differs from the
+  advance.
 - 🔴 **THE ORGANIZER UNDER-REPORTS THE HOUSEHOLD'S BUSINESSES.** Its business-income section names
   **only Marat Boxing**. Yuliana's Schedule C exists only because her P&L arrived separately, months
   later. ⛔ **Do not treat the organizer's business list as complete** — a covering preparer working
@@ -192,7 +204,7 @@ Anything the team must know to serve this client well.
 ## 6. History & open questions
 
 ### Log
-- ✅ **2026-09-10 (later) — the 2025 Form 1095-A arrived and TWO of the three blockers closed.** Lilian read Parts I–III off the document *(the redactor could not — that PDF's tables still do not extract, which is a failed read and not an empty form)* and ruled the **Gossip Miami K-1 figures final**: *"Asume que la información de Gossip Miami que tenemos hasta ahora, los K1 están correctos, y esto es lo que va a fluir al 1040."* **What the 1095-A settled:** all four covered all twelve months at an unchanged premium, so Form 8962 runs on the annual calculation; household income sits below 150% of the poverty line, where the required contribution is **zero**; and the credit allowed comes out **exactly equal to the advance already paid** — so **net credit nil, no repayment, nothing on Schedule 3 line 9 or Schedule 2 line 1a.** ✅ **It also closed the self-employed health insurance question: the advance covered the whole premium, so nothing was paid out of pocket and there is no §162(l) deduction.** 🔴 **What is left: the vehicle business-use percentage** *(both organizers still unanswered)*, and the extension question. _(Lilian)_
+- ✅ **2026-09-10 (later) — the 2025 Form 1095-A arrived and TWO of the three blockers closed.** Lilian read Parts I–III off the document *(the redactor could not — that PDF's tables still do not extract, which is a failed read and not an empty form)* and ruled the **Gossip Miami K-1 figures final**: *"Asume que la información de Gossip Miami que tenemos hasta ahora, los K1 están correctos, y esto es lo que va a fluir al 1040."* **What the 1095-A settled:** all four covered all twelve months at an unchanged premium, so Form 8962 runs on the annual calculation; household income sits below 150% of the poverty line, where the required contribution is **zero**; and the credit allowed comes out **exactly equal to the advance already paid** — so **net credit nil, no repayment, nothing on Schedule 3 line 9 or Schedule 2 line 1a.** ✅ **It also closed the self-employed health insurance question: the advance covered the whole premium, so nothing was paid out of pocket and there is no §162(l) deduction.** 🔴 **What is left: the vehicle business-use percentage** *(both organizers still unanswered)*, **Yuliana's principal-business description**, **filing the Gossip 1120-S and re-checking box 1 and 16D**, and the extension question. ⚠️ **Two things the independent review corrected in the same session, both worth carrying:** ① **Lilian's K-1 ruling authorises BUILDING on today's Gossip figures — it does not FREEZE them**, and six of that return's nine open items still move box 1 or box 16D, so the re-check after filing is not optional. ② **The §162(l) answer is right but the reason had to be restated**: the cap is the enrollment premiums less the credit **ALLOWED** *(Pub 974)*, not less the advance — the two coincide only when they are equal, which will stop being true in **2026**, when the zero-contribution rule expires and the 400% cliff returns *(Rev. Proc. 2025-25 §3.01)*. _(Lilian)_
 
 - **2026-06-02** — the family's TaxDome material migrates into Double: the completed **2025
   individual organizer**, the **2024 return package**, driver's licences, the blank Home Office
@@ -230,9 +242,14 @@ Anything the team must know to serve this client well.
   the return use Form 8962's annual calculation instead of the month-by-month grid.
   ✅ **Settled 2026-09-10: net premium tax credit NIL and no repayment** — the advance matched the
   entitlement exactly. ⚠️ **The redactor could not read the PDF's Part II/III tables and still
-  cannot; Lilian read them off the document.** 🟠 **One thing remains unconfirmed and it is the only
-  item that can move this: what the Marketplace estimated at enrolment**, which decides whether the
-  below-100%-of-poverty-line exception is met.
+  cannot; Lilian read them off the document.** 🟠 **One thing remains unconfirmed: what the
+  Marketplace estimated at enrolment**, which decides whether the below-100%-of-poverty-line
+  exception is met. 🔑 **But it is not the only way that question closes, and the easiest route is a
+  fact about the family, not a document.** The Form 8962 instructions carry a second exception —
+  ***"Alien lawfully present in the United States"*** — for people below 100% of the line who are
+  **barred from Medicaid by their immigration status**. ⛔ **Ask that before chasing the healthcare.gov
+  application.** *(And if Development Strategies turns out passive, household income lands above 100%
+  and the question disappears entirely.)*
 - **Income sources, per the organizer: partnership/S-corporation K-1s and self-employment only.**
   ⛔ **No W-2 is declared for 2025** — ⚠️ **but 2024 carried a small wage and withholding, so ask
   rather than rely on the silence.**
@@ -255,14 +272,18 @@ Anything the team must know to serve this client well.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Twenty-six items live in the working paper's §6 — 23 still open** — and they are not
+- 🔴 **Twenty-six items live in the working paper's §6 — 25 still open** — and they are not
   duplicated here; the file is
   [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
   ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address:** the vehicle
   percentage (**§3F**, not a §6 item at all) and Yuliana's principal-business description and code
   (**item 2**) — 🔑 **both are answers only the client can give, so they go in ONE message, not two**
   — plus the extension question (**item 1**), which is not a blocker but changes what this return IS.
-  ✅ **Closed 2026-09-10:** the Gossip K-1 amounts (**item 19**) and the 1095-A figures (**item 20**),
+  ✅ **Closed 2026-09-10:** the 1095-A figures (**item 20**) — the only one of the twenty-six that has
+  actually closed. ⚠️ **Item 19 stays OPEN** even though Lilian ruled the Gossip K-1 **amounts**,
+  because the action it names *(file the 1120-S, then re-check box 1 and box 16D against what was
+  filed)* has not happened; and **item 23 (§162(l)) is answered but CONDITIONAL on item 25**, so it
+  stays open too. 🔑 **A tick means the work is done, not that the question has an answer.** They
   which between them also closed §162(l) (**item 23**).
   ⚠️ **Sequencing is not a figure question: Gossip Miami's 1120-S is still unfiled and goes first.**
 - 🔴 **The two vehicle-mileage organizers are published and unanswered.** _(Client)_
