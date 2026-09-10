@@ -166,9 +166,19 @@ notices. **Two rules, in this order:**
 - **① Read what the box is FOR before deciding what goes in it.** The form's own instruction is usually
   one vague sentence; the answer is in **the form the RECIPIENT fills in**, whose shape says what he
   needs. _(Worked example: 1120-S Schedule K-1 box 17 code AC — the 1120-S instruction says only
-  "provide information shareholders need", **and then points at the Instructions for Form 8990**. 🆕 ✅ **AND THE REASON NO SOFTWARE CAN COMPUTE IT IS NOW VERIFIED AT SOURCE** *(2025 Instructions for Form 1120-S, pp. 19 and 24, read 2026-09-10)*: *"Gross receipts include the **aggregate gross receipts from all persons treated as a single employer**, such as a controlled group of corporations, commonly controlled partnerships or proprietorships, and affiliated service groups."* 🔑 **The figure can include companies the program has never heard of — which is why it is manual, why it raises no diagnostic when blank, and why it rolls forward.** ⓘ *An earlier version asserted the manual-and-rolls-forward behaviour without this citation; it is the same claim, now checkable*, whose
+  "provide information shareholders need", **and then points at the Instructions for Form 8990**, whose
   worksheet has **one column per preceding tax year** and computes the average itself at line 4. That
-  shape settles that the K-1 carries **one annual figure, not an average**. ⚠️ **It does NOT settle which
+  shape settles that the K-1 carries **one annual figure, not an average**.
+  🆕 ⓘ **AND WHAT THE INSTRUCTIONS DO *NOT* SETTLE, added 2026-09-10 after a session overstated it:**
+  the code AC instruction gives **no formula and names no source line**, and the §448(c) test it feeds is
+  **not a plain single-entity computation** — *"Gross receipts include the aggregate gross receipts from all
+  persons treated as a single employer"* *(2025 Instructions for Form 1120-S, **pp. 19 and 24**, read
+  2026-09-10)*. ⛔ **BUT BOTH OCCURRENCES OF THAT SENTENCE SIT IN THE §163(j) / Schedule B question 10
+  context — the CORPORATION's own small-business-taxpayer test — NOT in the code AC instruction**, and the
+  aggregation belongs to **whoever runs the test**, which for code AC is the shareholder. 🔑 **So it does
+  NOT establish "no software can compute this box"** *(a session wrote exactly that and had to withdraw
+  it)*. ✅ **What DOES stand:** the instruction supplies no formula, and the field is observably left blank
+  and undiagnosed by at least one major package. **That is enough to make it a checked-every-year field.** ⚠️ **It does NOT settle which
   year** — that it is the current one is an inference from Schedule K convention, and §11F says so rather
   than dressing it as a rule. 🔑 **Separating what a source PROVES from what the firm INFERS is half the
   value of writing it down.** [1120-S SOP §11F](../../../projects/sops/form-1120s-preparation.md).)_
