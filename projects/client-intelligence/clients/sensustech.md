@@ -339,6 +339,15 @@ doc guide** in Drive (§7) — never copied here.
   🔑 **The transferable lesson is the one already in [`method.md`](../../pre-return-review/method.md)
   rule 10 — ask the record before you infer.** The accounting method is on the prior return; it should
   never have been a default.
+- 2026-09-10 — **Schedule D presentation corrected on the 2025 Form 1120 prep, after Julia
+  challenged it.** The Schedule D figures were the 1099-B totals and were right, but they had
+  been laid out as *proceeds · basis · gain* with no **Form 8949 column (g)** — so the page did
+  not add up, off by exactly the wash sales disallowed on this client's two brokerage accounts.
+  🔑 **Both accounts carry wash sales every year** (short-term and long-term), so every future
+  return for this client needs the three inputs entered per block and (h) computed. The firm's
+  master 1120 worksheet was fixed the same day — tab `4-SchD` now has a (g) column, a computed
+  (h) and a PASS/CHECK proof block — and the brokerage SOP gained **§6C-i**. **Nothing on the
+  return moved**: it is a presentation fix, not a recalculation. _(Julia, session)_
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.

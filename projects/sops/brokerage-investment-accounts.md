@@ -246,7 +246,7 @@ entry. **Chasing it to zero corrupts a set of books that currently ties to the s
 | **Ordinary dividends** | 1099-DIV **box 1a** | **Schedule C**, then page 1 **line 4** | 🔴 **The DRD — see §6B. This is the one worth money.** |
 | **Capital gain distributions** | 1099-DIV **box 2a** | **Schedule D**, capital gain distributions line | They are **long-term**, always, however long the fund was held. **They are not dividends** — do not leave them in line 4 |
 | **Nondividend distributions** *(return of capital)* | 1099-DIV **box 3** | **Nowhere on the return** | Not income. It **reduces the cost basis** of the position — record it in the carry-forward register (§7) |
-| **Realized gains and losses** | 1099-B totals, per account | **Form 8949 → Schedule D** | Wash sales are **already inside** the reported gain/loss — do not adjust again |
+| **Realized gains and losses** | 1099-B totals, per account | **Form 8949 → Schedule D** | 🛑 **Three figures per block, not one** — proceeds **(d)**, basis **(e)** and **wash sales in column (g)**. The 1099-B's gain column is already net of them, so copying only that one number produces a Schedule D that **does not add up**. See **§6C-i** |
 | **Net capital LOSS** | Schedule D | 🛑 **Not deductible — see §6C** | Schedule D Part III must come out at **0** to page 1 line 8 |
 | **Interest** | 1099-INT | page 1 **line 5** | ⚠️ **A portfolio of bond and money-market FUNDS pays DIVIDENDS, not interest.** No 1099-INT is normal and is not a missing document |
 | **Foreign tax withheld** | 1099-DIV **box 7** | Deduct it, **or** credit it on Form 1118 | For a small amount, deduct — Form 1118 is not worth the preparation. **It is often not in the books at all**, having been netted inside the account |
@@ -297,6 +297,46 @@ dividends; total special deductions came out at zero).
 - ✅ **So it goes in the carry-forward register (§7), with the year it arose and the year it
   expires.** Then on the first return with capital gains, it is entered on Schedule D's unused
   capital-loss-carryover line, oldest year first.
+
+### 6C-i · 🛑 Column (g) — the wash-sale column, and why Schedule D looks like it doesn't add up
+
+**The arithmetic on Form 8949 and Schedule D is:**
+
+```
+(h) gain / (loss)  =  (d) proceeds  −  (e) cost basis  +  (g) adjustments
+```
+
+**Column (g) is where a disallowed wash-sale loss goes, as a POSITIVE number** — it adds the loss
+back — **with code `W` in column (f)**. The consolidated 1099-B reports a gain/loss figure that is
+**already net of** the wash sales, and it reports the disallowed amount separately.
+
+🛑 **So the trap is not the number — it is the presentation.** Copy the broker's *proceeds*,
+*basis* and *gain* into three columns and leave (g) out, and every figure on the page is correct
+while the page itself does not add up:
+
+```
+proceeds 418,088.96  −  basis 437,523.42  =  (19,434.46)
+but the 1099-B's gain reads                  (18,558.37)
+                                 difference       876.09   ← the wash sales
+```
+
+⚠️ **A reviewer is right to stop at that**, and it costs an hour to explain each time. It is also
+exactly what the IRS's own totals check does.
+
+**So:**
+
+1. **Enter all three inputs per block** — (d), (e) and (g) — **and let (h) compute.** Never type (h)
+   over a formula.
+2. **Prove each block:** `(d) − (e) + (g) = (h)`, per account and per box, before totalling.
+3. **Wash sales are not a short-term-only phenomenon** — a Box D block can carry them too.
+4. 🔑 **A wash-sale adjustment never changes the net figure — only where it is shown.** It is a
+   presentation fix, not a recalculation, so finding one late does **not** move the tax.
+
+✅ **[`assets/Form-1120-Preparation-Worksheet.xlsx`](./assets/Form-1120-Preparation-Worksheet.xlsx)
+enforces this in formulas**: tab `4-SchD` has a **(g) Adjustments** input column, **(h) is computed**,
+and a **PROOF block** under each part recomputes `(d) − (e) + (g)` and reads **PASS / CHECK**.
+*(Added 2026-09-10, after Julia caught the missing column on a live return — the figures were right
+and the sheet still would not add up.)*
 
 ### 6D · Schedule M-1 — the two lines, and the sign trap
 
@@ -396,6 +436,8 @@ every one of them is expensive to reconstruct.
 11. **Working from a 1099 without checking whether a CORRECTED one has since arrived.** §3.
 12. **Chasing supporting statements that were never in the PDF you were given.** Blank pages in a
     return copy are usually genuinely blank — ask for the complete file. §3.
+13. **Leaving Form 8949 column (g) out of Schedule D.** Every figure correct, and the page still
+    does not add up: `(d) − (e)` misses the wash sales by exactly the disallowed amount. §6C-i.
 
 ---
 
