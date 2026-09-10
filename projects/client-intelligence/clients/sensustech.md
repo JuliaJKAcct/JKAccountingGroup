@@ -348,6 +348,20 @@ doc guide** in Drive (§7) — never copied here.
   master 1120 worksheet was fixed the same day — tab `4-SchD` now has a (g) column, a computed
   (h) and a PASS/CHECK proof block — and the brokerage SOP gained **§6C-i**. **Nothing on the
   return moved**: it is a presentation fix, not a recalculation. _(Julia, session)_
+- 2026-09-10 — **Reviewed Julia's ATX draft of the 2025 Form 1120** (with the QuickBooks balance
+  sheet and P&L at year end). Four defects, three open items, five presentation fixes; the full
+  list with the arithmetic is in the working paper §3L. 🔴 **The one with real money on it:
+  Schedule K question 7 (a foreign person owning 25%+) is answered NO while the software prints
+  a foreign country in box 7(b) for the owner. If the sole shareholder is a nonresident alien,
+  Form 5472 is required and the failure-to-file penalty is $25,000 per year.** The officer holds
+  a US SSN, which points the other way; **nothing in this file records his citizenship or tax
+  residency, and it needs to be established once and written down** — it also decides whether
+  the 2024 return has the same exposure. ⚠️ **Question 4b is answered No although one individual
+  owns 100%**, so Schedule G is missing. ⓘ Two durable bookkeeping facts confirmed: the
+  `Dividends Paid` equity account has **never been closed to retained earnings**, so it is
+  cumulative and reads far higher than the year's dividend; and the balance sheet the software
+  produced had the year's tax accrued against the tax-prepayment asset, which is wrong on **cash-
+  basis** books. _(Julia, session)_
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.
