@@ -131,17 +131,6 @@ Anything the team must know to serve this client well.
 > either. So put first whatever would cause the worst mistake if someone didn't know it —
 > **not** the oldest, and **not** whatever was added last.
 
-- 🔴 **THE HOUSEHOLD RUNS ON ONE CAR, AND BOTH SPOUSES DEDUCT AGAINST IT — established
-  2026-09-10, and it is the single most useful fact on this file.** Both mileage organizers came
-  back naming the **same finance document** and the **same odometer at both ends**, and the two
-  mileage splits reconcile to the whole car's use **exactly**. **Marat 49.99% business · Yuliana
-  16.67% · genuinely personal 33.35%.**
-  🛑 **Two consequences that recur every year.** ① **Neither spouse passes the more-than-50% test**,
-  so no §179, no bonus and no accelerated depreciation on this car — and the two percentages **do
-  not combine**, because one spouse's driving is not the other's business use. ② **The two P&Ls
-  report the SAME bills twice, at exactly 3 : 1** (insurance and the car payment are both exact
-  multiples), so a single set of costs is being split 75/25 across two Schedule Cs. **Never take
-  either P&L's vehicle block at face value.**
 - 🔴 **WHAT STOPS THE 2025 RETURN BEING TRANSMITTED — two client answers and one filing of ours.**
   ① **What Yuliana's business actually IS** — her Schedule C has no principal-business description
   and no code, and **the return cannot be filed without them**.
@@ -161,14 +150,25 @@ Anything the team must know to serve this client well.
   document** after the redactor could not.
   ⚠️ **And one question that sits behind all of it: was a Form 4868 filed for 2025?** Double carries
   `Ext. Filed` on the company and **no value at all** here, which is not evidence either way.
-- 🔴 **ONE PERCENTAGE IS BEING USED FOR TWO DIFFERENT THINGS, AND IT PRODUCES A WRONG RETURN
-  SILENTLY.** The home office is **30% of the apartment's floor area** — and that same 30% appears
-  applied to **both spouses' car insurance and car lease**, inconsistently (one line runs at 33%),
-  while fuel and repairs carry **no percentage at all**. **A vehicle's business use is a ratio of
-  MILES.** ✅ **And the same root cause deducts the apartment rent TWICE:** Yuliana's P&L carries it
-  at 30% inside Schedule C *and* a separate Home Office worksheet claims it again. **The rule for
-  this client: home-office items come OUT of Schedule C and go on Form 8829 at their FULL annual
-  amount, and the form applies the percentage.**
+- 🔴 **THE HOUSEHOLD RUNS ON ONE CAR, AND BOTH SPOUSES DEDUCT AGAINST IT — established
+  2026-09-10, and it is the single most useful fact on this file.** Both mileage organizers came
+  back naming the **same finance document** and the **same odometer at both ends**, and the two
+  mileage splits reconcile to the whole car's use **exactly**. **Marat 49.99% business · Yuliana
+  16.67% · genuinely personal 33.35%.**
+  🛑 **Two consequences that recur every year.** ① **Neither spouse passes the more-than-50% test**,
+  so no §179, no bonus and no accelerated depreciation on this car — and the two percentages **do
+  not combine**, because one spouse's driving is not the other's business use. ② **The two P&Ls
+  report the SAME bills twice, at exactly 3 : 1** (insurance and the car payment are both exact
+  multiples), so a single set of costs is being split 75/25 across two Schedule Cs. **Never take
+  either P&L's vehicle block at face value** — the percentage on it was the **home office's**
+  floor-area share, applied inconsistently *(one line runs at 33%)*, with fuel and repairs at 100%.
+  🔑 **A vehicle's business use is a ratio of MILES, and now the firm has them.**
+  🔴 **AND THE SAME ROOT CAUSE DEDUCTS THE APARTMENT RENT TWICE:** Yuliana's P&L carries it at the
+  home-office percentage **inside Schedule C** *and* a separate Home Office worksheet claims it
+  **again**. **The rule for this client: home-office items come OUT of Schedule C and go on Form
+  8829 at their FULL annual amount, and the form applies the percentage.** ⚠️ **One percentage,
+  taken from the floor area, was reused wherever a share was needed** — that is the pattern, and it
+  is what to look for first in anything this household hands over.
 - 🔴 **MARKETPLACE COVERAGE IS THE BIGGEST CASH ITEM ON THE RETURN, AND THE TEST THAT GOVERNS IT
   CHANGES IN 2026.** All four are covered for the whole year and the **advance credit has covered
   essentially the entire premium** in both 2024 and 2025. ✅ **2025 settled at nil in both
@@ -283,8 +283,8 @@ Anything the team must know to serve this client well.
   he materially participated — deducts in full. **That question is the largest swing on the return.**
 - **Yuliana sold her interest in Gossip Miami on 30 October 2025** and reports the disposal on her
   own return. **The company's return reports none of it.**
-- **The vehicle business-use percentage is the one input still outstanding**, by Lilian's own
-  instruction to leave it pending.
+- ✅ **The vehicle business-use percentages arrived 2026-09-10** *(they had been left pending on
+  Lilian's own instruction)*. **One car; Marat 49.99%, Yuliana 16.67%.**
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -293,25 +293,29 @@ Anything the team must know to serve this client well.
   [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
   ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address:** Yuliana's
   principal-business description and code (**item 2**) and the 2024 vehicle-use question that decides
-  the mileage method (**item 28**) — 🔑 **both are answers only the client can give, so they go in ONE
+  the mileage method (**item 28**) — plus **item 19**, which is ours rather than theirs: file Gossip
+  Miami's 1120-S and re-check box 1 and box 16D against what was filed — 🔑 **both are answers only the client can give, so they go in ONE
   message, not two** — plus the extension question (**item 1**), which is not a blocker but changes
   what this return IS, and **item 27**, the car contract, which needs Lilian's or Julia's say-so.
   ✅ **Closed 2026-09-10:** the 1095-A figures (**item 20**) — the only one of the thirty that has
   actually closed. ⚠️ **Item 19 stays OPEN** even though Lilian ruled the Gossip K-1 **amounts**,
   because the action it names *(file the 1120-S, then re-check box 1 and box 16D against what was
   filed)* has not happened; and **item 23 (§162(l)) is answered but CONDITIONAL on item 25**, so it
-  stays open too. 🔑 **A tick means the work is done, not that the question has an answer.** They
+  stays open too. 🔑 **A tick means the work is done, not that the question has an answer.** Between them the 1095-A and the K-1 ruling
   which between them also closed §162(l) (**item 23**).
   ⚠️ **Sequencing is not a figure question: Gossip Miami's 1120-S is still unfiled and goes first.**
-- 🔴 **The two vehicle-mileage organizers are published and unanswered.** _(Client)_
+- ✅ **The two vehicle-mileage organizers came back 2026-09-10 and are answered** — one car, Marat
+  **49.99%** business, Yuliana **16.67%**. 🔴 **What is outstanding now is the 2024 vehicle-use
+  question**, which decides whether Marat may use the standard mileage rate at all. _(Client)_
 
 ### Information still needed
 
 - [ ] **What Yuliana's business actually is** — no principal-business description or code exists for
       her Schedule C, and the return cannot be filed without them.
 - [ ] **Marat Boxing LLC's own obligations** — sales tax, local licences, annual report. Never examined.
-- [ ] **Whether the two spouses share one vehicle or have two.** The organizer says there is no
-      second vehicle; both P&Ls claim car costs with different totals.
+- [x] ✅ ~~**Whether the two spouses share one vehicle or have two.**~~ **ANSWERED 2026-09-10: ONE
+      car**, established three ways — the same finance document on both organizers, the same odometer
+      at both ends, and mileage splits that reconcile to the whole car's use exactly.
 - [ ] **Whether Yuliana receives tips** in her personal-services work — a 2025 deduction exists for
       a self-employed person's tips and nobody has asked.
 - [ ] **A Form 8821 or 2848 position for the household**, if the firm ever needs to speak to the IRS
