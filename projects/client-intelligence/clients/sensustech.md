@@ -382,6 +382,15 @@ doc guide** in Drive (§7) — never copied here.
   Schedule G**, which asks the 20%-or-more individual owner's **country of citizenship** — a green
   card holder is a US resident who normally holds a foreign citizenship, and that is a different
   question on a different schedule.
+- 2026-09-11 — ✅ **FORM 5472: SETTLED, NO.** Julia confirmed the sole shareholder is a **US tax
+  resident for the whole year** ("he is tax resident 100%"). The IRS Form 5472 instructions define
+  a *foreign person* to **exclude any US citizen or resident**, so there is no 25% foreign
+  shareholder, the company is **not a "reporting corporation"**, and **no Form 5472 is due — 2025,
+  2024, or any year he stays a US tax resident.** 🔑 **This is the answer; do not re-derive it from
+  a country printed in tax software.** 🔵 Reopen only if he ever ceases to be a US tax resident.
+  ⚠️ **And hold the two apart, because the software keeps merging them:** his **country of
+  citizenship is Grenada**, which is correct on **Schedule G column (iii)**; **Schedule K question
+  7 asks about a FOREIGN PERSON, which is about US RESIDENCE**, and the answer there is **No**.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.
