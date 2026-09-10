@@ -391,6 +391,16 @@ doc guide** in Drive (§7) — never copied here.
   ⚠️ **And hold the two apart, because the software keeps merging them:** his **country of
   citizenship is Grenada**, which is correct on **Schedule G column (iii)**; **Schedule K question
   7 asks about a FOREIGN PERSON, which is about US RESIDENCE**, and the answer there is **No**.
+- 2026-09-11 — ✅ **THE 2025 FORM 1120 IS VERIFIED CORRECT** on every figure and every question,
+  after six drafts. The full record — the review, each defect and how it was fixed, and the final
+  tie-out — is the working paper. ⓘ **Two durable lessons about this client's return, for next
+  year:** the tax software links **Schedule G's country of CITIZENSHIP** to **Schedule K question
+  7's FOREIGN PERSON test** and answered question 7 wrongly because of it — **they are different
+  questions and must be checked separately every year**; and the brokerage 1099-Bs carry **wash
+  sales in both the short-term and long-term blocks**, so Schedule D needs three inputs per block
+  and a computed (h). ⏳ **Still open and outside the return: the federal payments figure is read
+  off a balance-sheet account, not a payment record — confirm it against EFTPS or the bank.**
+  _(Julia, session)_
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.
