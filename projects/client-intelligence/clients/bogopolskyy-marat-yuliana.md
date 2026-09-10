@@ -131,14 +131,29 @@ Anything the team must know to serve this client well.
 > either. So put first whatever would cause the worst mistake if someone didn't know it —
 > **not** the oldest, and **not** whatever was added last.
 
-- 🔴 **THE 2025 RETURN IS BUILT, AND THREE THINGS STAND BETWEEN IT AND TRANSMISSION — TWO ARE
-  ANSWERS ONLY THE CLIENT CAN GIVE, SO THEY GO IN ONE MESSAGE; THE THIRD IS OURS.**
-  ① **The vehicle business-use percentage**, for both spouses — two mileage organizers published
-  2026-09-01, both still unanswered, leaving **four lines with no value**.
-  ② **What Yuliana's business actually IS** — her Schedule C has no principal-business description
+- 🔴 **THE HOUSEHOLD RUNS ON ONE CAR, AND BOTH SPOUSES DEDUCT AGAINST IT — established
+  2026-09-10, and it is the single most useful fact on this file.** Both mileage organizers came
+  back naming the **same finance document** and the **same odometer at both ends**, and the two
+  mileage splits reconcile to the whole car's use **exactly**. **Marat 49.99% business · Yuliana
+  16.67% · genuinely personal 33.35%.**
+  🛑 **Two consequences that recur every year.** ① **Neither spouse passes the more-than-50% test**,
+  so no §179, no bonus and no accelerated depreciation on this car — and the two percentages **do
+  not combine**, because one spouse's driving is not the other's business use. ② **The two P&Ls
+  report the SAME bills twice, at exactly 3 : 1** (insurance and the car payment are both exact
+  multiples), so a single set of costs is being split 75/25 across two Schedule Cs. **Never take
+  either P&L's vehicle block at face value.**
+- 🔴 **WHAT STOPS THE 2025 RETURN BEING TRANSMITTED — two client answers and one filing of ours.**
+  ① **What Yuliana's business actually IS** — her Schedule C has no principal-business description
   and no code, and **the return cannot be filed without them**.
+  ② **Was the car used for Marat Boxing in 2024?** — it decides whether he may use the standard
+  mileage rate at all, and **two records disagree**: the 2024 organizer says the car went into
+  service 29 May 2024 while the 2024 return claimed nothing, and the new organizer says 01/01/2025.
   ③ **File the Gossip Miami 1120-S, then re-check box 1 and box 16D against what was filed** — ours
   to do, and still open even though the amounts are ruled.
+  🔒 **And one document decides more than all three: the car finance/lease contract Marat uploaded
+  on 2026-09-10.** Whether the car is **leased** or **financed** changes the deduction materially and
+  is what the return is currently keyed around. ⛔ **It is not part of a filed return, so preparing
+  the return does not open it** — it needs Lilian or Julia to ask.
   ✅ **Two other blockers closed on 2026-09-10:** Lilian ruled the **Gossip Miami K-1 figures final**
   *(the AMOUNTS only: her ruling says build on what we hold today, and it cannot settle nine open items
   on a different return — that 1120-S is unfiled, six of those items move box 1 or box 16D, so file it
@@ -204,6 +219,7 @@ Anything the team must know to serve this client well.
 ## 6. History & open questions
 
 ### Log
+- ✅ **2026-09-10 (later still) — BOTH MILEAGE ORGANIZERS CAME BACK, and they settled a question the firm had been asking the wrong way.** Marat completed both *(hers as well as his)*. **They describe ONE car**: the same finance document on both, the same odometer at both ends, and each spouse having split *the whole car's* mileage between their own business and everything else — the two splits reconcile to the total **to the mile**. **Marat 49.99% business, Yuliana 16.67%, personal 33.35%.** 🛑 **Marat misses the more-than-50% test by TWO MILES**, so neither spouse may use §179, bonus or accelerated depreciation on it. 🔵 **The return is keyed on the standard mileage rate** *(70¢, Notice 2025-05)*, which deducts **less** than the client's own presentation did — so the refund **fell** and AGI **rose**, which in turn lifted household income a little further up the poverty-line scale — **still well below 150%**, so the premium tax credit is unaffected. ⚠️ **Standard mileage is the interim, not the best answer**: actual expenses is worth more if the car is leased, and **the contract deciding that has not been opened**. 🔴 **Three new questions for the client came out of it**: whether the car was used for the boxing business in 2024 *(it decides the method)*, what the car actually cost for the year *(the 3:1 double-report)*, and whether any of the business miles are commuting *(Schedule C line 44b, which neither organizer asked)*. _(Lilian)_
 - ✅ **2026-09-10 (later) — the 2025 Form 1095-A arrived and TWO of the three blockers closed.** Lilian read Parts I–III off the document *(the redactor could not — that PDF's tables still do not extract, which is a failed read and not an empty form)* and ruled the **Gossip Miami K-1 figures final**: *"Asume que la información de Gossip Miami que tenemos hasta ahora, los K1 están correctos, y esto es lo que va a fluir al 1040."* **What the 1095-A settled:** all four covered all twelve months at an unchanged premium, so Form 8962 runs on the annual calculation; household income sits below 150% of the poverty line, where the required contribution is **zero**; and the credit allowed comes out **exactly equal to the advance already paid** — so **net credit nil, no repayment, nothing on Schedule 3 line 9 or Schedule 2 line 1a.** ✅ **It also closed the self-employed health insurance question: the advance covered the whole premium, so nothing was paid out of pocket and there is no §162(l) deduction.** 🔴 **What is left: the vehicle business-use percentage** *(both organizers still unanswered)*, **Yuliana's principal-business description**, **filing the Gossip 1120-S and re-checking box 1 and 16D**, and the extension question. ⚠️ **Two things the independent review corrected in the same session, both worth carrying:** ① **Lilian's K-1 ruling authorises BUILDING on today's Gossip figures — it does not FREEZE them**, and six of that return's nine open items still move box 1 or box 16D, so the re-check after filing is not optional. ② **The §162(l) answer is right but the reason had to be restated**: the cap is the enrollment premiums less the credit **ALLOWED** *(Pub 974)*, not less the advance — the two coincide only when they are equal, which will stop being true in **2026**, when the zero-contribution rule expires and the 400% cliff returns *(Rev. Proc. 2025-25 §3.01)*. _(Lilian)_
 
 - **2026-06-02** — the family's TaxDome material migrates into Double: the completed **2025
@@ -272,14 +288,15 @@ Anything the team must know to serve this client well.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Twenty-six items live in the working paper's §6 — 25 still open** — and they are not
+- 🔴 **Thirty items live in the working paper's §6 — 29 still open** — and they are not
   duplicated here; the file is
   [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
-  ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address:** the vehicle
-  percentage (**§3F**, not a §6 item at all) and Yuliana's principal-business description and code
-  (**item 2**) — 🔑 **both are answers only the client can give, so they go in ONE message, not two**
-  — plus the extension question (**item 1**), which is not a blocker but changes what this return IS.
-  ✅ **Closed 2026-09-10:** the 1095-A figures (**item 20**) — the only one of the twenty-six that has
+  ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address:** Yuliana's
+  principal-business description and code (**item 2**) and the 2024 vehicle-use question that decides
+  the mileage method (**item 28**) — 🔑 **both are answers only the client can give, so they go in ONE
+  message, not two** — plus the extension question (**item 1**), which is not a blocker but changes
+  what this return IS, and **item 27**, the car contract, which needs Lilian's or Julia's say-so.
+  ✅ **Closed 2026-09-10:** the 1095-A figures (**item 20**) — the only one of the thirty that has
   actually closed. ⚠️ **Item 19 stays OPEN** even though Lilian ruled the Gossip K-1 **amounts**,
   because the action it names *(file the 1120-S, then re-check box 1 and box 16D against what was
   filed)* has not happened; and **item 23 (§162(l)) is answered but CONDITIONAL on item 25**, so it
