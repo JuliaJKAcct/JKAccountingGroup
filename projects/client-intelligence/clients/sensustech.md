@@ -373,6 +373,15 @@ doc guide** in Drive (§7) — never copied here.
   is missing; and the Schedule M-2 total was reached by netting a prior-year true-up against the
   dividend, which puts **55,941 on the return against a 1099-DIV of 56,000**. Detail in the
   working paper §3M. _(Julia, session)_
+- 2026-09-11 — 🔑 **THE SOLE SHAREHOLDER IS A GREEN CARD HOLDER** _(Julia, in session)_ — a lawful
+  permanent resident, so a **US resident alien for tax purposes** under the green card test, **not
+  a foreign person.** ✅ **Schedule K question 7 on Form 1120 is correctly "No" and NO Form 5472 is
+  required** — for 2025 or 2024. **This is the fact that closes the question every year; nobody
+  should re-derive it.** 🔵 **Re-test only if the green card is ever surrendered or abandoned**,
+  which would make Form 5472 a live requirement from that year forward. ⚠️ **It does not answer
+  Schedule G**, which asks the 20%-or-more individual owner's **country of citizenship** — a green
+  card holder is a US resident who normally holds a foreign citizenship, and that is a different
+  question on a different schedule.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.
