@@ -27,7 +27,14 @@
 > spans **Gossip Miami LLC** (the business return), the owners' **joint individual
 > return**, and **Marat Boxing LLC** (reported on a Schedule C of that return, not
 > as a return of its own). They are handled together because they feed each
-> other. Split into separate files if any of them grows its own body of process.
+> other.
+>
+> 🔗 **SPLIT 2026-09-10, on this file's own instruction.** The joint 1040 grew its own
+> body of process — two Schedule Cs, three K-1s, a first-year home office, a Marketplace
+> policy and Yuliana's disposal of her interest — and now lives in
+> [`bogopolskyy-marat-yuliana.md`](./bogopolskyy-marat-yuliana.md). **This file keeps the
+> COMPANY: its return, the sale documents, the FDOR matter and the two case notes.**
+> ⛔ **Do not duplicate between them — cross-reference.**
 
 ## 1. Snapshot
 
@@ -363,6 +370,7 @@ duplicate it here; a request list goes stale, this list doesn't.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 🔗 **2026-09-10 — the OWNERS' joint 1040 was prepared, and it has its own file from today.** Lilian asked for Yuliana's Gossip K-1 to be carried into the couple's individual return and for the rest of their 2025 documents to be reviewed. **What it means for THIS client:** ⛔ **the 1040 cannot be transmitted until this company's 1120-S is filed and accepted** — the K-1 does not exist yet and §8D of its working paper still lists nine live items that move box 1 and box 16D, so every Gossip figure on the 1040 is marked provisional. ✅ **Two things this side supplies were confirmed usable:** Yuliana's **2024 Form 7203 line 15** was located in the couple's filed 2024 package and is her 2025 opening stock basis, and the **sale price and broker fee in note 485291** are what her Schedule D runs on. 🟠 **And one thing this side should know:** her 2024 opening basis on that filed form is materially higher than the purchase price she confirmed paying — the same 4,109 gap §6K already noticed, seen from the other end. **It changes her capital-loss carryforward, not this company's return.** _(Lilian)_
 - 🛠️ **2026-09-10 (fourth read of the keyed return) — the reconciliation defect is FIXED, and the one that "will not calculate" turns out to be a box no software can ever fill.** _(Lilian asked for the two remaining changes and for a full explanation of what was happening.)_
   - ✅ **The reconciliation schedule is corrected on the return itself.** Deleting the leftover accrued-rent row moved *net income per books* to what the books actually say, and the software removed the whole attached statement by itself once a single item remained. **Nothing else in the return moved** — established by diffing the two drafts rather than re-reviewing the whole thing.
   - 🔴 **The gross-receipts disclosure on each member's schedule is not a calculated field, and the IRS instructions say so.** The instruction for that code is one sentence — *provide the information shareholders need* — and the reason it cannot be computed is stated two pages earlier: **the figure may have to aggregate the receipts of other companies under common control**, which the program has never heard of. So it is manual, it raises **no diagnostic** when blank, and 🔴 **it rolls forward carrying the prior year's number in a rolled file** — it has been added to the fields that must be answered every year rather than computed.
