@@ -151,6 +151,24 @@ doc guide** in Drive (§7) — never copied here.
   the return**: they are an ordinary §162 deduction and land in *other deductions* either way. *(The
   §67(g) bar that kills this deduction on a 1040 is an individual rule and does not touch a
   corporation.)*
+- 🔴 **THE TAX EXPENSE IN THESE BOOKS RUNS ONE YEAR BEHIND — or it did until 2025.** Each year's
+  federal tax was expensed in the FOLLOWING year, when it was settled, while the current year's
+  estimated payments sat as an asset until then. So a `Tax expense` figure on any pre-2025 P&L belongs
+  to the **prior** year, and the balance-sheet prepayment is the **current** year's estimates.
+  ✅ **Broken deliberately in 2025** *(Julia, 2026-09-10)*: the prior year's charge was moved to
+  retained earnings and the year's own tax accrued, so from 2026 each year carries its own.
+  🔑 **The reassuring part, and the reason it was safe to change: it never affected a return.**
+  Schedule M-1 lines 1 and 2 always sum to income before tax, so whatever tax figure the books carry,
+  **taxable income is identical.** Only the balance sheet and retained earnings move.
+  ⚠️ **An estimated payment is not an expense** — it is a prepayment until the liability is accrued.
+  That part was always right here.
+- 🔵 **The dividends-received deduction: declined for 2025, and it is a 2026 ACTION, not a dead end.**
+  The equity account holds **shares directly**, not fund units — so **§854(b) is irrelevant to it** and
+  no request to the broker is needed; the only gate is the **§246(c) holding period**. It failed to be
+  worth claiming for 2025 solely because the portfolio was rebuilt late in that year, putting much of
+  the dividend inside the danger window for a modest amount of tax. **From January 2026 those holdings
+  are seasoned, the test passes automatically, and a full year yields more** — so run it off the
+  1099-DIV detail next year. _(2026-09-10)_
 - 🔑 **The estimates are managed actively, and a "shortfall" against the prior year's plan is usually
   deliberate.** For 2025 the firm cancelled the fourth-quarter instalment because projections had come
   down — and the finished return proved that right, leaving a substantial overpayment even so. **Ask
@@ -293,6 +311,17 @@ doc guide** in Drive (§7) — never copied here.
   🔴 **One item still gates filing: the dividends-received deduction**, which needs an eligible amount
   from J.P. Morgan and a §246(c) holding-period test against the late-November purchases.
 
+- 2026-09-10 (second pass) — **Two judgement calls settled, both now standing knowledge (§5).**
+  ① **The DRD is declined for 2025 and becomes a 2026 action.** Julia delegated the decision
+  (*"this won't happen. have to go as you think best"*). ⚠️ **A correction went with it:** the blocker
+  had been described as an amount the broker would not supply, but that rule governs *funds* — the
+  equity account holds shares **directly**, so no broker request was ever needed and the real gate is
+  the holding period, which the late-2025 rebuild spoiled. Next year it does not.
+  ② **The one-year lag in the tax expense was confirmed from the ledger and broken.** Julia was right
+  on both halves of what she suspected. The fix changes **no** taxable income — the proof is written
+  into the working paper — so it was safe to make. A corrected worksheet was produced and delivered;
+  all ten applicable tie-outs pass on it.
+
 ### Outstanding items (CI-only — never in the SOP)
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.
 - **§243 DRD-eligible dividend amount for 2025** — not on the consolidated 1099; must be requested
@@ -302,9 +331,7 @@ doc guide** in Drive (§7) — never copied here.
   suggests it was reported first and the books were caught up afterwards, but the 2025 deadlines have
   passed, so it is worth one check. Raised 2026-09-09.
 - **The shareholder loan still outstanding** — does it bear interest? §7872. Raised 2026-09-09.
-- **The 2025 DRD decision** — the §854(b)/§243-eligible amount from J.P. Morgan plus the §246(c)
-  holding-period test. Tracked as O1 in the working paper. **The one item still gating the filing**,
-  and the only one that changes the tax.
+- ✅ **The 2025 DRD — decided (none taken); carried into 2026 as an action.** See §5.
 - **Whether the 2025 overpayment is refunded or credited to 2026** (page 1 line 37). Raised 2026-09-10.
 - **Confirm the federal tax payments figure against EFTPS or the bank** — the worksheet took it from
   the balance-sheet prepayment account, which is a balance and not a payment record. Raised 2026-09-10.
