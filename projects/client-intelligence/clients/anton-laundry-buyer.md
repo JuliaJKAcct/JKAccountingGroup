@@ -213,6 +213,25 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-11 (later) — **It is an ASSET purchase and the buyers form their own companies** (Julia).
+  The Letter of Intent already said so \u2014 fee simple title to the five parcels plus the assets of
+  the six businesses, sold by bill of sale \u2014 but the request list had been written as though the
+  seller's corporate paperwork mattered to us. **Section 2 is reframed, nothing removed** (her
+  standing instruction): **2.1 formation documents moved to Olesya's side**, since in an asset deal
+  they establish good standing and authority to sign rather than anything about the accounts.
+  **What stays ours, and why each earns its place in an asset deal:** **2.3** is the one she needs
+  right now \u2014 the legal name, **EIN** and IRS mailing address are what **Form 8821** is completed
+  from, so the transcripts cannot be requested without them; **2.4** fictitious names become *more*
+  relevant, because the LOI sells the trade names and each registration must be assigned or
+  refiled by the new companies; **2.5** the asset ownership map is what the purchase-agreement
+  schedules are built from (anything unlisted is not bought, anything listed twice is paid for
+  twice); **2.6** the account inventory is the completeness control on the bank statements;
+  **2.7** the Lemon Squeeze occupancy of Bayshore's Select building has to transfer, terminate or
+  be replaced. 🔑 **Transcript status: two of three 8821s are prepared; only SAMOSET FLORIDA, INC.
+  is outstanding**, and what is missing for it is the **EIN and the IRS address**. Both sit on the
+  front page of that entity's Form 1120-S \u2014 in **Section 5 of the binder, which begins at page
+  190 and has not been read** \u2014 so they may already be in hand rather than owed by the broker.
+  The signing officer is named in the LOI as the President of all three entities
 - 2026-09-11 — **A week of movement, read from Gmail and Drive before Julia's own upload: the deal
   has gone to Letter of Intent and the seller's binder has arrived.** ✅ **Julia's instinct was
   right and the answer is SAMOSET FLORIDA, INC.** — the third seller entity. Lilian had prepared
