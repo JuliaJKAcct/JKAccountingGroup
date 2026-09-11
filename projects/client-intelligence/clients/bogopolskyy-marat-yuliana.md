@@ -150,7 +150,8 @@ Anything the team must know to serve this client well.
   🔴 **AND THE DRAFT IS MISSING MUCH MORE THAN THAT.** The **dependants have never been entered on page
   1 of the 1040**, so the child credit, the earned income credit and the preparer's due-diligence form
   are all absent, and the return currently ends in an **amount due** where it should end in a refund.
-  **Schedule D, Form 8949, Form 7203, Form 6198 and Form 8582 are absent too.** ✅ **The full list,
+  **Schedule D, Form 8949, Form 7203 and Form 8582 are absent too** — ⚠️ **and so is Form 6198, which
+  is CONDITIONAL and on today's facts probably not required at all.** ✅ **The full list,
   with each fix and the order to work them, is the working paper's §3L.**
   🔴 **AND ONE DEFECT THAT MUST BE SETTLED BEFORE FILING — it is not a question for the client.**
   Yuliana's **2024 Form 7203 opens at a stock basis materially higher than what she confirmed
@@ -206,9 +207,16 @@ Anything the team must know to serve this client well.
   AND IT IS NOT A SPLIT.** Marat records the **whole year's** car payments and Yuliana records **a
   third of that same number**; the insurance follows the identical ÷3 pattern. ⛔ **Her vehicle lines
   are DOUBLE COUNTING — the cost base is HIS figures**, and adding the two inflates every vehicle line
-  by a third. ③ **A lease advance payment is spread over the whole term, not deducted when paid** —
-  theirs was never amortised in the first year. **Never take either P&L's vehicle block at face
-  value** — the percentage on it was the **home office's**
+  by a third. ③ 🔵 **THE LEASE'S UP-FRONT PAYMENT IS NOT IN THE 2025 DEDUCTION — LILIAN'S RULING,
+  2026-09-11.** The contract shows an amount paid at signing in **2024**; this paper had been spreading
+  it across the 36-month term and adding a share to 2025. **She removed it:** 2025 deducts the twelve
+  monthly payments and nothing else. *("No vamos a complicar las cosas si no estamos seguros.")*
+  ⚠️ **The ruling was made on an uncertainty that is SMALLER than she was told** — Pub 334 ch. 2 and
+  ch. 8 and Pub 538's 12-month rule, read at source **after** she ruled, foreclose the "all in 2024"
+  alternative for a 36-month term. **The return stays as she ruled**; the question goes back to her,
+  and until she answers it the firm's position for this household is **her ruling, not the rule this
+  bullet used to state.** *(Working paper §4 decision 15 and §6 item 31.)* **Never take either P&L's
+  vehicle block at face value** — the percentage on it was the **home office's**
   floor-area share, applied inconsistently *(one line runs at 33%)*, with fuel and repairs at 100%.
   🔑 **A vehicle's business use is a ratio of MILES, and now the firm has them.**
   🔴 **AND THE SAME ROOT CAUSE DEDUCTS THE APARTMENT RENT TWICE:** Yuliana's P&L carries it at the
@@ -275,6 +283,41 @@ Anything the team must know to serve this client well.
 ## 6. History & open questions
 
 ### Log
+- 🔵 **2026-09-11 (the lease advance) — Lilian asked where a rule had been read, and the answer was that
+  half of it had not been.** She worked through the vehicle treatment line by line and then asked the
+  plain question about the amount paid at signing: *"¿dónde lo leíste, en el documento de renta o
+  dónde?"* ⛔ **The honest answer was that the RULE came from the IRS publication and the CLASSIFICATION
+  came from a session's own reasoning** — the lease document names the payment and the term and never
+  says it is rent paid in advance, and the rival reading *(a cost of entering the lease, deductible when
+  paid)* ~~survives~~ ⛔ **— STRUCK LATER THE SAME DAY; it does not.** ✅ **She ruled it out of the
+  return:** *"No vamos a complicar las cosas si no estamos seguros."*
+  🛑 **AND THE EVIDENCE MOVED AFTER SHE RULED, WHICH SHE HAS NOT YET BEEN ASKED ABOUT.** 🔒 **Pub 334
+  ch. 2 and ch. 8 and Pub 538's 12-month rule, read at source the same day, foreclose the "all in 2024"
+  branch** — a payment at the start of a **36-month** term is spread **whatever it is called**, so both
+  readings give the same answer. ⚠️ **Her ruling was expressly conditional on the uncertainty, and the
+  uncertainty is smaller than she was told.** ⛔ **The return stays as she ruled — a permission is
+  widened by asking, never by reasoning** — and the question goes back to her at §6 item 31.
+  🔑 **Two things worth keeping about this, neither of them about the car.** ① **She found it by asking
+  for the source, not by checking the arithmetic** — the figure was right; the label on it was not.
+  ② **The question does not go away: it returns on every remaining year of the lease**, and on the
+  reading she declined, the household is leaving a real deduction unclaimed across four returns.
+  🛠️ **What is left of the question is recorded in the working paper's §6 item 31** — ⚠️ **no longer an
+  ordered list of routes: the cheapest one has been read and it decides the matter**, so what remains is
+  her call plus two optional corroborations. _(Lilian)_
+- 🔵 **2026-09-11 (the vehicle rule, explained end to end) — she asked to understand which car costs can
+  be POOLED across two Schedule Cs and which cannot, and that turned out to be the organising principle
+  for the whole vehicle block.** ✅ **Two classes of cost:** what it costs to **have and move the car**
+  *(fuel, repairs, insurance, the lease)* cannot be traced to a trip, so it is pooled and then split by
+  each spouse's business-use percentage; a **parking or toll receipt belongs to one trip made by one
+  person**, so it is not pooled and not percentaged. 🔑 **The percentage exists because tracing is
+  impossible — where it IS possible, there is nothing to allocate.**
+  🔑 **And a sub-rule for building the pooled figure when two sets of books both carry the same car:**
+  where one spouse's line is an **exact fraction** of the other's it is the **same bill recorded twice**
+  *(take the larger)*; where it is not, they are **two different payments** *(add them)*. **The test is
+  the pattern, not the size.**
+  ⚠️ **One presentation defect surfaced in the explaining:** the firm's own table showed the arithmetic
+  for one line and only the result for the other, which made a single pooled total look like two
+  different totals. **Fixed — both lines now show `total × percentage`.** _(Lilian)_
 - 🔴 **2026-09-11 (the draft return) — the return as it actually stands in the tax software was read
   end to end for the first time, and the largest problems on it are MISSING FORMS, not disputed
   figures.** 🛑 **The draft ends in an amount DUE; every version of this return ends in a REFUND** —
@@ -345,8 +388,8 @@ Anything the team must know to serve this client well.
   instruction sends lease payments to line 20a, read at source)*. ⚠️ **Also unexplained: the ATX banner
   shows an amount DUE, and every version of this return ends in a refund** — that is a question for her
   screen, not something to reconcile to. _(Lilian)_
-- ✅ **2026-09-11 (the rebase) — every figure on the return was re-derived on the corrected lease base, and TWO of this paper's own errors were found doing it.** ⓘ **① The advance-payment base was wrong.** §3F had amortised the capitalized cost reduction **plus the sales tax shown at signing**, on the assumption the tax was levied on that reduction. ⛔ **The contract's own tax RATE disproves it** — applied to the reduction it gives a different figure entirely, while applied to the **dealer fees** it reproduces the disclosed amount to the cent. **So the tax belongs to the fees**, and bundling it in capitalised tax on fees the paper had deliberately declined to capitalise. **Rebased to the reduction alone.** ⓘ **② The deductible half of self-employment tax was a dollar light** — Yuliana's half rounds **up**, not down, and 🔑 **each Schedule SE rounds on its OWN form**, so Schedule 1 line 15 is the sum of the two halves, not half of the combined tax. ✅ **Neither error moves the refund**, but both moved AGI, earned income and the QBI base — **and a return whose Schedule 1 disagrees with its own attachments invites a question.** ⚠️ **Also corrected: the §280F(c) lease test now measures the CAPITALIZED COST**, per Pub 463 *("If the capitalized cost of a car is specified in the lease agreement, use that amount as the FMV")*, not the agreed value — **still comfortably under the threshold, conclusion unchanged.** 🔴 **And one consequence worth carrying: actual expenses pushes household income FURTHER BELOW 100% of the federal poverty line, so the below-100%-of-FPL question matters MORE, not less** — its exposure is capped by the Form 8962 repayment table, and the method is worth more than that cap** ⛔ **— RETRACTED 2026-09-11: false on the figures, the method is worth less than the cap, and the working paper's §3G says so. *(All figures in the working paper §3F, §3G and §3J.)* _(Lilian)_
-- ✅ **2026-09-11 (later) — the contract is a LEASE, and reading it resolved more than the question it was opened for.** Lilian read page 2 *(the Consumer Leasing Act disclosures)* off the scan the redactor could not extract. **Signed 29 May 2024, a 36-month term with a capped mileage allowance.** 🔑 **The method changes to ACTUAL EXPENSES** — worth more than the standard mileage rate the paper had carried for a day, and it moves earned income further inside the EIC plateau. *(Both figures are in the working paper §3F.)* 🔴 **The decisive find was not the lease itself but what it exposed about the bookkeeping: Marat's P&L carries the WHOLE year's lease payments and Yuliana's carries a THIRD of that same number.** Her vehicle lines were double counting, not a 75/25 split — so the cost base is his figures alone. ✅ **Three other questions closed with it:** the advance payment amortises over the term *(Pub 463)*, there is **no §280F(c) lease inclusion amount**, and the **2024 "placed in service 29 May 2024"** in the old organizer is now **corroborated by the lease date** — which contradicts Marat's new organizer and is worth putting to him. ⚠️ **And one thing for the client that is not about the return at all: the lease has a CAPPED MILEAGE ALLOWANCE and they are on course to exceed it.** 🔒 **The odometer reading in their own organizer already accounts for more than two thirds of the allowance in under two thirds of the term**, and the excess is billed per mile at turn-in on top of a turn-in fee. 🟠 **What it will cost is a RANGE, not a number** — 2025 ran at a markedly lower rate than 2024, so the two projections differ by about half. **The lease runs to roughly May 2027, so there is still time to change it.** *(The miles, the rate and both projections are in the working paper §3F.)* _(Lilian)_
+- ✅ **2026-09-11 (the rebase) — every figure on the return was re-derived on the corrected lease base, and TWO of this paper's own errors were found doing it.** ⓘ **① The advance-payment base was wrong.** §3F had amortised the capitalized cost reduction **plus the sales tax shown at signing**, on the assumption the tax was levied on that reduction. ⛔ **The contract's own tax RATE disproves it** — applied to the reduction it gives a different figure entirely, while applied to the **dealer fees** it reproduces the disclosed amount to the cent. **So the tax belongs to the fees**, and bundling it in capitalised tax on fees the paper had deliberately declined to capitalise. **Rebased to the reduction alone.** ⓘ **② The deductible half of self-employment tax was a dollar light** — Yuliana's half rounds **up**, not down, and 🔑 **each Schedule SE rounds on its OWN form**, so Schedule 1 line 15 is the sum of the two halves, not half of the combined tax. ✅ **Neither error moves the refund**, but both moved AGI, earned income and the QBI base — **and a return whose Schedule 1 disagrees with its own attachments invites a question.** ⚠️ **Also corrected: the §280F(c) lease test now measures the CAPITALIZED COST**, per Pub 463 *("If the capitalized cost of a car is specified in the lease agreement, use that amount as the FMV")*, not the agreed value — **still comfortably under the threshold, conclusion unchanged.** 🔴 **And one consequence worth carrying: actual expenses pushes household income FURTHER BELOW 100% of the federal poverty line, so the below-100%-of-FPL question matters MORE, not less** — its exposure is capped by the Form 8962 repayment table, and the method is worth more than that cap ⛔ **— RETRACTED 2026-09-11: false on the figures, the method is worth LESS than the cap, and the working paper's §3G says so.** *(All figures in the working paper §3F, §3G and §3J.)* _(Lilian)_
+- ✅ **2026-09-11 (later) — the contract is a LEASE, and reading it resolved more than the question it was opened for.** Lilian read page 2 *(the Consumer Leasing Act disclosures)* off the scan the redactor could not extract. **Signed 29 May 2024, a 36-month term with a capped mileage allowance.** 🔑 **The method changes to ACTUAL EXPENSES** — worth more than the standard mileage rate the paper had carried for a day, and it moves earned income further inside the EIC plateau. *(Both figures are in the working paper §3F.)* 🔴 **The decisive find was not the lease itself but what it exposed about the bookkeeping: Marat's P&L carries the WHOLE year's lease payments and Yuliana's carries a THIRD of that same number.** Her vehicle lines were double counting, not a 75/25 split — so the cost base is his figures alone. ✅ **Two other questions closed with it:** there is **no §280F(c) lease inclusion amount**, and the **2024 "placed in service 29 May 2024"** in the old organizer is now **corroborated by the lease date** — which contradicts Marat's new organizer and is worth putting to him. ⚠️ **And one thing for the client that is not about the return at all: the lease has a CAPPED MILEAGE ALLOWANCE and they are on course to exceed it.** 🔒 **The odometer reading in their own organizer already accounts for more than two thirds of the allowance in under two thirds of the term**, and the excess is billed per mile at turn-in on top of a turn-in fee. 🟠 **What it will cost is a RANGE, not a number** — 2025 ran at a markedly lower rate than 2024, so the two projections differ by about half. **The lease runs to roughly May 2027, so there is still time to change it.** *(The miles, the rate and both projections are in the working paper §3F.)* ⛔ **A THIRD item was recorded closed here on the same day and is NOT — struck 2026-09-11 (evening):** *"the advance payment amortises over the term (Pub 463)"*. **Lilian ruled the up-front payment OUT of 2025 altogether** *("no vamos a complicar las cosas si no estamos seguros")*, so the treatment is hers, not Pub 463's — and the uncertainty she ruled on turned out to be smaller than she had been told. *(§5 bullet 2 ③; working paper §4 decision 15 and §6 item 31.)* _(Lilian)_
 - 🔴 **2026-09-11 — the car contract was OPENED with Lilian's authorisation, and it cannot be read here: it is an 11-page SCAN with no text layer.** *("Sí, abre el contrato del auto" — the explicit request the document rule requires.)* ✅ **What the attempt established without reading a word:** the two organizer attachments are **byte-identical** — Marat uploaded **one file twice**. ⚠️ *(That does not identify the older `IMG_7719.jpeg`, which was never fetched; identifying it simply stops mattering.)* ⛔ **The redactor stopped and the session did not work around it** — rendering the pages as images would put the whole contract into the transcript unfiltered, which is exactly what the tool exists to prevent, and OCR is not set up. 🛠️ **So it needs a person's eyes, the way the 1095-A did**, and the working paper's §6 item 27 now carries the one question that decides it *(lease or financed purchase, tellable from the title page)* plus what each branch then needs. ⚠️ **And one thing said early to save a round trip: the INTEREST PAID IN 2025 is not in the contract** — it comes from the lender's year-end statement. _(Lilian)_
 - ✅ **2026-09-10 (the tax review of the vehicle work) — three things closed that had been carried as open, and one argument of ours turned out to be circular.** ✅ **No estimated-tax penalty, and Form 2210 is not filed at all** — its Part I stops before the prior-year safe harbour is ever reached, because the refundable credits go on line 3 and exceed the whole self-employment tax. **Re-test only if those credits fall sharply.** ✅ **No Schedule 1-A vehicle-loan-interest deduction either**, and it closes on facts the firm already holds rather than on the unopened contract: the loan would predate 2025, a lease does not qualify at all, and the car is used **predominantly for business**. ✅ **And the late-filing exposure is not what it looks like** — the failure-to-file penalty is computed on the tax reduced by the credits claimable on the return, and the credits here exceed the tax, so **the penalty base is zero**; the extension question changes what the return IS, not what it costs. 🛑 **The one to carry forward, though, is the argument:** the paper had called the one-car finding settled by three independent proofs, and **the third was circular** — the "personal miles" it reconciled to are *defined* as the total less the two business figures, so the sum was true by construction. ⛔ **And Marat filled in BOTH organizers**, which is the simplest explanation for the same odometer and the same document appearing on both. **The real evidence is the bookkeeping: the two P&Ls report the same bills at exactly 3 : 1.** 🔑 **One car is now the working assumption, not an established fact, and Schedule C line 46 — which the taxpayer signs — needs the question asked.** _(Lilian)_
 - ✅ **2026-09-10 (later still) — BOTH MILEAGE ORGANIZERS CAME BACK, and they settled a question the firm had been asking the wrong way.** Marat completed both *(hers as well as his)*. **They describe ONE car**: the same finance document on both, the same odometer at both ends, and each spouse having split *the whole car's* mileage between their own business and everything else — the two splits reconcile to the total **to the mile**. **Marat 49.99% business, Yuliana 16.67%, personal 33.35%.** 🛑 **Marat misses the more-than-50% test by TWO MILES**, so neither spouse may use §179, bonus or accelerated depreciation on it. 🔵 **The return is keyed on the standard mileage rate** *(70¢, Notice 2025-05)*, which deducts **less** than the client's own presentation did — so the refund **fell** and AGI **rose**, which in turn lifted household income a little further up the poverty-line scale — **still well below 150%**, so the premium tax credit is unaffected. ⚠️ **Standard mileage is the interim, not the best answer**: actual expenses is worth more if the car is leased, and **the contract deciding that has not been opened**. 🔴 **Three new questions for the client came out of it**: whether the car was used for the boxing business in 2024 *(it decides the method)*, what the car actually cost for the year *(the 3:1 double-report)*, and whether any of the business miles are commuting *(Schedule C line 44b, which neither organizer asked)*. _(Lilian)_
@@ -418,7 +461,7 @@ Anything the team must know to serve this client well.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **THIRTY-FIVE items live in the working paper's §6 — 29 still open, 6 closed** — and they are
+- 🔴 **THIRTY-SIX items live in the working paper's §6 — 29 still open, 7 closed** — and they are
   not duplicated here; the file is
   [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
   ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address:**
@@ -432,7 +475,10 @@ Anything the team must know to serve this client well.
   ⚠️ **Also not blockers, but they change what this return IS:** **item 1**, the extension question,
   and **item 25**, the below-100%-of-FPL position, on which **item 23 (§162(l)) is conditional** — so
   item 23 is answered and still open.
-  ✅ **Closed so far:** **item 20** the 1095-A figures and **item 16** the estimated-tax penalty
+  ✅ **Closed so far:** **item 11**, whether the two car-insurance figures are one number reused
+  *(2026-09-11 — the ÷3 pattern IS the answer, and Lilian's rule says what to do with it; what the
+  client still has to state, the actual cost, is asked once, at item 29)*; **item 20** the 1095-A
+  figures and **item 16** the estimated-tax penalty
   *(2026-09-10)*; **item 15** the Schedule 1-A vehicle-loan-interest deduction; **item 27** the
   car contract *(2026-09-11 — it is a lease)*; **item 8**, Yuliana's telephone/utilities line
   *(2026-09-11 — Lilian settled it on the template itself)*; and **item 33**, the software's
@@ -442,8 +488,8 @@ Anything the team must know to serve this client well.
   stays open although Lilian ruled the Gossip K-1 **amounts**: the action it names has not happened.
   ⚠️ **Sequencing is not a figure question: Gossip Miami's 1120-S is still unfiled and goes first.**
 - ✅ **THE VEHICLE METHOD AND COST BASE ARE ANSWERED — organizers 2026-09-10, contract and Lilian's
-  cost-base ruling 2026-09-11.** ⚠️ **The vehicle is NOT closed:** five §6 items are still vehicle
-  questions. One car,
+  cost-base ruling 2026-09-11.** ⚠️ **The vehicle is NOT closed:** **six** §6 items are still vehicle
+  questions *(28, 29, 30, 31, 32, 34)*. One car,
   Marat **49.99%** business, Yuliana **16.67%**, and the car is **LEASED**, so the return runs on
   **actual expenses**. ✅ **The FUEL question closed on 2026-09-11, by Lilian** — the two P&Ls record
   two different payments for the same car, so the car's fuel is the **sum** of them.
@@ -451,6 +497,9 @@ Anything the team must know to serve this client well.
   *(no policy document is in hand — the figure used is an inference from the ÷3 pattern; item 29)*,
   **whose name is on the lease**, and the **commuting miles** neither organizer asked for *(item 30,
   and Schedule C line 44b demands a number)*. _(Client)_
+  ⛔ **Item 31 is NOT in that message — it is LILIAN'S to settle, not the client's:** whether the
+  amount paid at lease signing belongs in 2025 at all. **She ruled it out on 2026-09-11**, and the
+  evidence behind that ruling has since narrowed *(§5 bullet 2 ③)*, so it goes back to her. _(Lilian)_
   🟠 **Plus item 32: is there a WRITTEN mileage record at all?** Schedule C 47a/47b ask it on the face
   of the return and the taxpayer signs it.
   🔴 **AND ONE THAT IS WAITING ON LILIAN HERSELF — item 34, the parking.** Her same-car rule pools both
