@@ -283,6 +283,36 @@ Anything the team must know to serve this client well.
 ## 6. History & open questions
 
 ### Log
+- 🔵 **2026-09-11 (night) — the fourth draft, and the K-1 questions answered from the documents rather
+  than from reasoning.** Lilian asked three things at once: review the whole return, say how the sale of
+  the business is treated, and **find the answers to the "is this a qualified business?" questions the
+  two partnership K-1s raise** — *"vea a Odoo, encuentre estos K1, léelos"*. ⓘ **The K-1s are in DOUBLE,
+  not Odoo** *(Odoo is the firm's own ERP and holds no client tax documents)* — **the three files were
+  read from her Double library through the redactor**, and saying which system was opened is part of the
+  answer.
+  ✅ **What the documents settle, all of it new knowledge about this household's partnership interests:**
+  **PEP Hollywood FL LLC** attached a full §199A statement — the activity is **`RETAIL FOOD SERVICE`**,
+  it is **NOT a specified service trade or business**, not a PTP, not aggregated, and it reports **no
+  W-2 wages and no qualified property**; Marat holds **35%** and is ticked as a **limited partner or
+  other LLC member**, which makes his share **passive**; and **the partnership's own basis worksheet
+  prints its loss split as `allowed / disallowed`**, i.e. the partnership has already decided most of it
+  is not deductible by him this year.
+  🔴 **Development Strategies LLC attached NOTHING on §199A** — no code Z, no statement — and its own
+  box-by-box attachment is **missing the sheet that would carry boxes 15–23**, so the firm should ask for
+  the complete package, not only Statement A. He is a **general partner / LLC member-manager** there,
+  he **joined during 2025** *(his share runs 0% → 20%)*, and he **funded it in cash**.
+  ✅ **Neither K-1 is marked FINAL**, so he still holds both interests at year end.
+  ⛔ **NEITHER PARTNERSHIP APPEARS ANYWHERE IN THE 2024 RETURN** *(searched in full)*. For Development
+  Strategies that is explained — he joined in 2025. 🟠 **For PEP it is not**, because he held 35% at both
+  ends of 2025; that is now an open question on the working paper.
+  🔑 **And the practical answer to her worry: none of it changes 2025 tax.** The household's taxable
+  income before the QBI deduction is **zero**, so the §199A deduction is zero however every one of those
+  questions is answered. **What the answers DO fix is the CHARACTER of a suspended loss in the year it
+  is incurred**, which is what governs the year it is finally allowed.
+  🛠️ **Three keying defects were found and each was delivered with its fix** — a one-dollar break on
+  Form 7203, a transposed figure on Schedule E, and a partnership loss deducted in full that the
+  partnership itself says is mostly disallowed. ⚠️ **None of them moves the refund**, which is exactly
+  why they would survive a bottom-line check. **Figures: the working paper, §3P.**
 - 🔵 **2026-09-11 (the lease advance) — Lilian asked where a rule had been read, and the answer was that
   half of it had not been.** She worked through the vehicle treatment line by line and then asked the
   plain question about the amount paid at signing: *"¿dónde lo leíste, en el documento de renta o
