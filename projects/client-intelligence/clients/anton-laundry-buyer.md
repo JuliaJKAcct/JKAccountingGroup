@@ -1,6 +1,6 @@
 # Anton & Olga Stenin — laundry portfolio buyers
 
-> **Status:** Engaged in practice — proposal sent 2026-08-30, fixed fee finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen (not in Gmail or Drive as of 2026-09-03 — it may have come by WhatsApp or the portal). **Seller document request list at v3 (2026-09-04) — split by who produces each record: a 109-item broker packet, plus 6 items nobody asks the seller for; awaiting Julia's edits before it goes out** · **Owner:** Julia · **Last updated:** 2026-09-04
+> **Status:** Engaged in practice — proposal sent 2026-08-30, fixed fee finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen (not in Gmail or Drive as of 2026-09-03 — it may have come by WhatsApp or the portal). 🔴 **UNDER CONTRACT TRACK — a Letter of Intent is in signature (acceptance date 2026-09-08) and a 30-day due-diligence clock starts on mutual acceptance.** Seller document request list at v4 (2026-09-11); the seller's financial binder and first reports have arrived · **Owner:** Julia · **Last updated:** 2026-09-04
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -77,7 +77,7 @@ the actual details.
 | Role | Where to find them |
 |---|---|
 | Buyers / decision-makers | **Anton & Olga Stenin** (Julia, 2026-08-30 — the joint name on the cover, agreement and T&C; Anton's own first-vs-family name still unconfirmed). Email received — lives in the delivered proposal and Double, not here |
-| Buyers' own attorney — **the whole real-estate and legal side** | **Olesya / Олеся — the buyers' REAL ESTATE ATTORNEY** *(one person; last name and contacts pending)*. Per Anton's letter 2026-08-30 she handles everything about the real estate and land as objects: re-registration, building/land inspections, property taxes and fines, leases, and drafting the purchase agreements. Julia added 2026-09-04 that **the property appraisal and the UCC financing-statement / lien work are also hers** — items 13.5 and 13.6 of the request list. Coordinate with her, do not duplicate her; she is on the kick-off call. ⓘ **The name "Alicia" in Julia's 2026-09-04 message is this same person** — settled by her the same day, recorded so an old note reading "Alicia" is not mistaken for a second advisor. ⓘ The appraisal itself is a **Florida Certified General Real Estate Appraiser's** work, which she engages and holds |
+| Buyers' own attorney — **the whole real-estate and legal side** | **Olesya Trayber, Esq. — Trayber Law Group, P.A.** (Aventura, Florida), the buyers' REAL ESTATE ATTORNEY *(confirmed 2026-09-11 from the broker's threads and the transaction binder; contact details in Gmail, not here)*. Per Anton's letter 2026-08-30 she handles everything about the real estate and land as objects: re-registration, building/land inspections, property taxes and fines, leases, and drafting the purchase agreements. Julia added 2026-09-04 that **the property appraisal and the UCC financing-statement / lien work are also hers** — items 13.5 and 13.6 of the request list. 📌 **Extended 2026-09-11 after a call:** she also **sources the commercial building inspector** (item 13.4), so the only specialist left for the firm to find is the **laundromat technician** for the machines. Coordinate with her, do not duplicate her; she is on the kick-off call. ⓘ **The name "Alicia" in Julia's 2026-09-04 message is this same person** — settled by her the same day, recorded so an old note reading "Alicia" is not mistaken for a second advisor. ⓘ The appraisal itself is a **Florida Certified General Real Estate Appraiser's** work, which she engages and holds |
 
 - **Double client:** _(pending — still not in Double as of 2026-09-03; create it once the signed agreement is confirmed)_
 
@@ -85,7 +85,8 @@ the actual details.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| _(none — prospect)_ | | | |
+| _(none of our own — this is a buy-side consulting engagement)_ | | | |
+| **The seller's QuickBooks** | 🔴 **STILL WANTED AND NOT OBTAINED.** Julia's instruction 2026-09-11: *"I still want live access to QBO"* — the binder's P&Ls are **the seller's own internally prepared QuickBooks records, unaudited** (the binder says so itself), so read-only accountant access is what lets the figures be tested rather than read. **Request-list item 1.5**; it stays open however many PDFs arrive | n/a | Ask through the broker, with the signed engagement |
 
 ## 4. Obligations & recurring processes
 
@@ -150,10 +151,23 @@ the actual details.
   equipment-replacement CapEx. Reuse this page as the boundary standard for any future
   due-diligence engagement. The engagement still depends on seller cooperation: the
   signed 4506-C and consent for utility and municipal billing inquiries
-- **The seller is THREE companies, and Anton has split the advisors' roles** (his letter,
-  2026-08-30): the real estate sits in one company, the wash/laundromat operation in a
-  second, and the ironing/delivery service in a third — so the due diligence covers up to
-  three sets of books and returns, and a Form 4506-C is needed per company. His division
+- 🔑 **THE SELLER ENTITIES ARE NAMED, AND THE STRUCTURE IS NOT WHAT WE ASSUMED** (Letter of Intent
+  in the broker's transaction binder, dated 2026-08-25, read 2026-09-11). **Three S-corporations,
+  all signed by the same two principals (President and Secretary/Treasurer of each):**
+  **Bayshore Laundromat, Inc.** — owns and trades *15th Street / Samoset* and *Select Coin
+  Laundry*, both Bradenton; **Samoset Florida, Inc.** — owns and trades *Palmetto Coin Laundry*,
+  *Palmetto Wash & Fold* and *Soap Opera Laundry (Ruskin)*; **Lemon Squeeze Commercial Laundry,
+  LLC** — the wash-dry-fold and pickup-and-delivery business, which **operates from inside the
+  Select location** and **files separately**. ⛔ **There is NO separate real-estate holding
+  company** — the earlier reading (real estate in one company, laundromats in a second, delivery in
+  a third) came from Anton's letter of 2026-08-30 and is **wrong**: each corporation owns the
+  buildings its own stores trade from. **Six businesses, five properties, three filers.**
+  **All three file Form 1120-S** (the binder's Section 5 is titled *Federal Tax Returns (Form
+  1120-S), 2023–2025*) — which answers the question Julia put to the broker on 2026-09-08.
+  ⓘ Consequences already applied to the request list: the intercompany question is now specifically
+  **how Lemon Squeeze occupies Bayshore's Select building** (item 2.7), and the real-estate work in
+  Section 8 is about buildings held *inside* the operating S-corps, not a property company.
+  Anton's original division of advisers' roles still stands. His division
   of labor: everything about the real estate and land as objects (re-registration,
   inspections, property taxes/fines, purchase agreements) belongs to **Олеся** (§2);
   everything about the business and its results is ours, **with us engaging and
@@ -199,6 +213,50 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-11 — **A week of movement, read from Gmail and Drive before Julia's own upload: the deal
+  has gone to Letter of Intent and the seller's binder has arrived.** ✅ **Julia's instinct was
+  right and the answer is SAMOSET FLORIDA, INC.** — the third seller entity. Lilian had prepared
+  **Form 8821 templates for only two**, Bayshore Laundromat, Inc. (2026-09-08) and Lemon Squeeze
+  Commercial Laundry, LLC (2026-09-07); the third entity, which owns **three of the five
+  properties**, had none. 📌 **The firm chose the Form 8821 route over Form 4506-C** — settling the
+  open IVES question in the request list — and Julia asked the broker on 2026-09-08 for each
+  entity's IRS mailing address and return form, **to be sent for signature once the LOI is signed**.
+  The binder already answers the form question: **all three file Form 1120-S.** 📗 **What arrived:**
+  the broker's **309-page financial binder** (2026 YTD through July, FY2025 with the full add-back
+  schedule, FY2024–25 P&L by store, and Section 5 = the filed federal returns 2023–2025), a
+  **transaction binder** (the LOI, a proposed asset allocation by property, escrow wire
+  instructions), **TRIM notices for all five properties**, an insurance and equipment schedule, and
+  a CoStar underwriting synopsis. ⚠️ **The Drive copy of the binder extracts only through its page
+  80 of 309** — Section 5, the tax returns, begins at page 190 and was **not** in what could be
+  read, so whether the returns are actually in hand is unconfirmed (the file is named
+  *"Laundry Financials 1"*, which suggests a part 1 of several). 🛑 **Two terms of the LOI that
+  change what the diligence is FOR:** the deposit is **non-refundable in all events** except seller
+  default or failure to deliver insurable title — **termination during or after due diligence does
+  not return it** — and there is **no financing contingency**; so our work informs price and
+  allocation, it cannot recover the deposit. **Due diligence runs 30 days from mutual acceptance,
+  closing five days later.** 🧮 **The broker has explicitly put an allocation question to us**
+  ("your accountant can confirm these figures"): seller proposes a real-estate/business split the
+  buyer's side wanted reversed, and his year-one tax comparison sets buildings against goodwill.
+  ⚠️ **It never mentions equipment** — which under §1060 is its own asset class and, for six
+  laundromats, is the fastest write-off of the three. Figures are in the binder and in chat, not
+  here. 🔎 **And a contradiction worth keeping:** the broker's covering email says the add-backs are
+  "owner and family compensation and non-recurring items only" and that the general manager's pay
+  "is in reported payroll", yet the FY2025 add-back detail carries a **manager payroll allocation
+  add-back** at store level. Also, the binder states adjusted net income is struck **before rent on
+  the owned real estate, before a replacement manager, and before property taxes** in the
+  year-to-date figures. 🛠️ **No item was crossed off the request list** — Julia's instruction; what
+  has arrived is recorded as arrivals, and the list stands as the full ask
+- 2026-09-11 — **Advisor roles settled on a call with Olesya (Julia).** **Olesya takes the UCC
+  search, sourcing the appraisal, and sourcing the commercial inspector.** ⛔ That last one moves the
+  building-systems inspection off the firm's plate. **What remains ours to find: the LAUNDROMAT
+  TECHNICIAN** who reads the machines — and until one is engaged, three items in the request list
+  have no producer: the cycle counters, the machine condition and remaining-life assessment, and
+  the confirmation of the equipment list. **Julia is looking for one**
+- 2026-09-11 — **Olesya's identity confirmed in full:** *Olesya Trayber, Esq., Trayber Law Group,
+  P.A.* (Aventura, Florida) — the buyers' real-estate attorney, copied on the broker's threads and
+  named on the transaction binder as the recipient. She pushed the broker on 2026-09-09 for a
+  **30-day due-diligence window on the real-estate contract** rather than three days, expressly so
+  the CPA's work can happen first
 - 2026-09-04 (later) — **The list is split by WHO PRODUCES each record (v3), and Alicia enters the
   picture.** Julia: *"certain things we're going to be receiving based on the inspection… the
   equipment list, I doubt they have it. What is the energy use per cycle? How would they have it?
