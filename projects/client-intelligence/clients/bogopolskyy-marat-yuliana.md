@@ -1,6 +1,6 @@
 # BOGOPOLSKYY, MARAT and YULIANA — the joint individual return
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-10
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-11
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -135,19 +135,25 @@ Anything the team must know to serve this client well.
   ① **What Yuliana's business actually IS** — her Schedule C has no principal-business description
   and no code, and **the return cannot be filed without them**. *(This is the only client answer that
   actually blocks e-file.)*
-  ② **Was the car used for Marat Boxing in 2024? — NOT a blocker any more.** ✅ **It no longer decides the METHOD** *(the
-  contract is a lease, and actual expenses wins either way)*, **but it decides whether 2024 left a
-  real deduction unclaimed**: **two records disagree**, the 2024 organizer saying the car went into
-  service 29 May 2024 while the 2024 return claimed nothing, and the new organizer saying 01/01/2025.
-  ③ **File the Gossip Miami 1120-S, then re-check box 1 and box 16D against what was filed** — ours
+  ⚠️ **AND ONE THAT CHANGES WHAT THE RETURN IS WITHOUT BLOCKING IT — was the car used for Marat
+  Boxing in 2024?** ✅ **It no longer decides the METHOD** *(the contract is a lease, and actual
+  expenses wins either way)*, **but it decides whether 2024 left a real deduction unclaimed**: **two
+  records disagree**, the 2024 organizer saying the car went into service 29 May 2024 while the 2024
+  return claimed nothing, and the new organizer saying 01/01/2025.
+  ② **File the Gossip Miami 1120-S, then re-check box 1 and box 16D against what was filed** — ours
   to do, and still open even though the amounts are ruled.
-  ✅ **THE DOCUMENT THAT DECIDED MORE THAN ALL THREE IS NOW READ.** Lilian authorised opening the car
+  🔴 **AND ONE DEFECT THAT MUST BE SETTLED BEFORE FILING — it is not a question for the client.**
+  Yuliana's **2024 Form 7203 opens at a stock basis materially higher than what she confirmed
+  paying.** ⛔ **Only Lilian or Julia can settle it**, and it swings her loss carryforward into 2026.
+  *(It was inherited from the outside firm that prepared 2024, along with a payer's EIN on Marat's
+  Schedule C instead of Marat Boxing's own.)*
+  ✅ **THE DOCUMENT THAT DECIDED MORE THAN ANY OF THEM IS NOW READ.** Lilian authorised opening the car
   contract on 2026-09-11 and, when the redactor could not read the scan, **read the disclosure page
   herself**: it is a **LEASE**, signed 29 May 2024, on a 36-month term. *(The payment, the signing
   figures and the mileage terms are in the working paper §3F.)*
   ⚠️ **The remaining ten pages are still unread** — the mileage allowance, the excess rate and the
   turn-in fee are known; the wear-and-tear terms and **whose name is on the lease** are not.
-  ✅ **Two other blockers closed on 2026-09-10:** Lilian ruled the **Gossip Miami K-1 figures final**
+  ✅ **Two more closed on 2026-09-10:** Lilian ruled the **Gossip Miami K-1 figures final**
   *(the AMOUNTS only: her ruling says build on what we hold today, and it cannot settle nine open items
   on a different return — that 1120-S is unfiled, six of those items move box 1 or box 16D, so file it
   first and re-check both boxes against what was filed before transmitting this one)*, and she **read the 2025 Form 1095-A off the
@@ -338,8 +344,8 @@ Anything the team must know to serve this client well.
 - ✅ **THE WHOLE VEHICLE QUESTION IS ANSWERED — organizers 2026-09-10, contract 2026-09-11.** One car,
   Marat **49.99%** business, Yuliana **16.67%**, and the car is **LEASED**, so the return runs on
   **actual expenses**. 🟠 **What is left is small and is one message to the client:** whether the fuel
-  on the two P&Ls is each person's own receipts or one of them recorded the whole thing *(item 29,
-  worth about 150 of deduction)*, **what the insurance actually cost** *(no policy document is in
+  on the two P&Ls is each person's own receipts or one of them recorded the whole thing *(item 29 —
+  the working paper prices it)*, **what the insurance actually cost** *(no policy document is in
   hand — the figure used is an inference from the ÷3 pattern)*, **whose name is on the lease**, and the
   **commuting miles** neither organizer asked for *(item 30, and Schedule C line 44b demands a
   number)*. _(Client)_
@@ -349,9 +355,12 @@ Anything the team must know to serve this client well.
 - [ ] **What Yuliana's business actually is** — no principal-business description or code exists for
       her Schedule C, and the return cannot be filed without them.
 - [ ] **Marat Boxing LLC's own obligations** — sales tax, local licences, annual report. Never examined.
-- [x] ✅ ~~**Whether the two spouses share one vehicle or have two.**~~ **ANSWERED 2026-09-10: ONE
-      car**, established three ways — the same finance document on both organizers, the same odometer
-      at both ends, and mileage splits that reconcile to the whole car's use exactly.
+- [ ] 🟠 **Whether the household has ONE vehicle or two.** ⚠️ **One car is the WORKING ASSUMPTION,
+      not an established fact** — the three "proofs" this row once claimed *(the same finance document,
+      the same odometer, splits that reconcile exactly)* were retracted on 2026-09-11: **Marat filled
+      in BOTH organizers**, and the reconciliation is true by construction. ✅ **What supports it is
+      the bookkeeping — the two P&Ls carry the same bills at exactly 3 : 1.** 🔑 **Schedule C line 46
+      asks it and the taxpayer SIGNS it, so ask.**
 - [ ] **Whether Yuliana receives tips** in her personal-services work — a 2025 deduction exists for
       a self-employed person's tips and nobody has asked.
 - [ ] **A Form 8821 or 2848 position for the household**, if the firm ever needs to speak to the IRS
