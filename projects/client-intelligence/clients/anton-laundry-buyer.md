@@ -213,6 +213,39 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-11 — **No registrations are assumed; the point is that nothing is owed** (Julia). The
+  buyers open their own companies and take **no existing certificate** — not the sales-tax
+  registration, not the resale certificate, not the RT account, not the licences. **So the
+  registration items change purpose rather than leave the list:** item 4.4 now asks for the
+  **account numbers**, because those are what the filing history, the clearance letter and the
+  transferee certificate are checked *against* — the certificates themselves are only useful if
+  they happen to be to hand. A **"Nothing owed" view** now cuts across the list: **23 items** in
+  sections 1, 4, 5, 6, 7, 9, 10, 12 and 13 that together establish what would otherwise follow the
+  assets — the state clearances, the filing and payment history, liens and payoffs, guarantees,
+  deposits already taken, and open claims. ⚠️ **Three things a new registration does NOT solve, and
+  she should know before she relies on "nothing owed":** ① **stored value on customer laundry
+  cards** — money already collected for washing not yet done; those customers walk in after closing
+  and spend it at the buyers' cost. It is genuinely owed, to customers, appears on no clearance
+  certificate, and belongs in the price or the closing adjustments (6.2). ② **tangible personal
+  property tax attaches to the equipment itself**, so unpaid TPP tax can follow the machines into an
+  asset purchase regardless of whose registration they sit under (4.7). ③ **a new company does not
+  guarantee a new-employer reemployment rate** — Florida can transfer a predecessor's experience
+  rating to a successor that acquires the business, which carries the seller's claims history into
+  the buyers' forward payroll cost (5.4). The first is a past liability; the third is a future cost;
+  neither is a tax debt, so neither shows up where she is looking
+- 2026-09-11 — **The email format was the actual ask, and the checklist was the wrong answer**
+  (Julia: *"I need to send an email to an accountant"*). Delivered in chat as a ready-to-send email
+  in **her** order and her framing, not the document's: QuickBooks access first — **with the
+  explicit trade that access removes the need for monthly statements, P&Ls, ledgers and trial
+  balances** — then bank statements, merchant and card processing, cash, utilities, revenue
+  verification, payroll, returns, equipment and assets. 🔑 **Her payroll framing is sharper than the
+  list's and is now the list's too:** not the filings alone but *everyone working in the six
+  businesses, what each is paid, what each actually does, and which of them are family or owners* —
+  because what the buyers need is to separate **the payroll that runs these stores** from **the
+  payroll that goes with the current ownership**, which is the same question the add-back schedule
+  turns on. ⛔ **Ownership tables are dropped and the subject is closed** — she has ruled twice that
+  an asset purchase makes them irrelevant, and the one thing they were being kept for (knowing who
+  the family is) is better asked directly, where she put it
 - 2026-09-11 — **The DR-842 question answered, and it turns up a timing problem for Olesya.** Julia
   asked what the transferee liability certificate is. **Section 212.10, Florida Statutes:** on the
   sale of a business or its stock of goods the seller files a final return within 15 days, and the
