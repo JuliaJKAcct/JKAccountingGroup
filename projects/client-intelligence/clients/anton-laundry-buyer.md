@@ -213,6 +213,36 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-11 — **The DR-842 question answered, and it turns up a timing problem for Olesya.** Julia
+  asked what the transferee liability certificate is. **Section 212.10, Florida Statutes:** on the
+  sale of a business or its stock of goods the seller files a final return within 15 days, and the
+  **buyer must withhold enough of the purchase money** to cover the seller's unpaid sales and use
+  tax, interest and penalties **until the seller produces either a receipt showing payment or the
+  Department's certificate that nothing is due**. 🛑 **A buyer who does not withhold becomes
+  personally liable for it.** Form **DR-842** is how the seller starts that process; the lighter,
+  earlier instrument is the Tax Clearance Letter already at item 1.2. 🔴 **Why it bites here:** an
+  asset purchase is normally how a buyer avoids the seller's liabilities, and Florida sales tax is
+  one of the few that follows the assets anyway — across **three entities, five stores and several
+  years**, in a trade where the sales-tax treatment genuinely differs between coin-operated
+  self-service, wash-dry-fold as a service, retail detergent and vending, and commercial accounts.
+  ⏰ **The timing problem:** the Department will not turn a DR-842 around inside a 30-day diligence
+  period with closing five days later, so the protection has to be **a holdback or escrow written
+  into the purchase agreement** — and Olesya is drafting that agreement now (the LOI gives her seven
+  days from acceptance). ⚠️ **The LOI's own lien clause does not cover it:** it clears liens,
+  encumbrances and equipment financing from the seller's proceeds, but unpaid sales tax is not a
+  recorded lien until the Department files a warrant. **Raise it with Olesya before the draft is
+  finished.** 📌 **Verification status:** the form's title and number are now confirmed from
+  independent mirrors (previously unverified) — *Seller's Application for Transferee Liability
+  Certificate*, DR-842 — but **floridarevenue.com and flsenate.gov are both blocked from this
+  session's network**, so the form itself and the statute text have still not been read at source.
+  Confirm both before quoting them to the seller
+- 2026-09-11 — **Accounting-file access restated as a direct ask, not a fallback** (Julia, twice
+  over: *"I still want live access to QBO"*, then *"I want accounting access"*). Item **1.5** is
+  rewritten to ask for the buyer's accountant to be **added to the QuickBooks file for each of the
+  three companies**, with the exports as the failure case rather than the alternative. The binder
+  states its own P&Ls are the seller's unaudited QuickBooks output, which is the argument: the file
+  is the source, the PDFs are a rendering of it. Desktop rather than Online is handled too — an
+  Accountant's Copy or a backup file
 - 2026-09-11 (later still) — **A third packet: the list narrowed to what the SELLER'S ACCOUNTANT can
   produce, to be sent to them directly** (Julia). The seller side splits in two and the split is by
   *who holds the record*, not by subject: the accountant holds the books, the returns, the payroll
