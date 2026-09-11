@@ -275,6 +275,34 @@ Anything the team must know to serve this client well.
 ## 6. History & open questions
 
 ### Log
+- 🔵 **2026-09-11 (the lease advance) — Lilian asked where a rule had been read, and the answer was that
+  half of it had not been.** She worked through the vehicle treatment line by line and then asked the
+  plain question about the amount paid at signing: *"¿dónde lo leíste, en el documento de renta o
+  dónde?"* ⛔ **The honest answer was that the RULE came from the IRS publication and the CLASSIFICATION
+  came from a session's own reasoning** — the lease document names the payment and the term and never
+  says it is rent paid in advance, and the rival reading *(a cost of entering the lease, deductible when
+  paid)* survives. ✅ **She ruled it out of the return:** *"No vamos a complicar las cosas si no estamos
+  seguros."*
+  🔑 **Two things worth keeping about this, neither of them about the car.** ① **She found it by asking
+  for the source, not by checking the arithmetic** — the figure was right; the label on it was not.
+  ② **The question does not go away: it returns on every remaining year of the lease**, and on the
+  reading she declined, the household is leaving a real deduction unclaimed across four returns.
+  🛠️ **What would settle it is recorded in the working paper's §6 item 31, in the order that costs
+  least.** _(Lilian)_
+- 🔵 **2026-09-11 (the vehicle rule, explained end to end) — she asked to understand which car costs can
+  be POOLED across two Schedule Cs and which cannot, and that turned out to be the organising principle
+  for the whole vehicle block.** ✅ **Two classes of cost:** what it costs to **have and move the car**
+  *(fuel, repairs, insurance, the lease)* cannot be traced to a trip, so it is pooled and then split by
+  each spouse's business-use percentage; a **parking or toll receipt belongs to one trip made by one
+  person**, so it is not pooled and not percentaged. 🔑 **The percentage exists because tracing is
+  impossible — where it IS possible, there is nothing to allocate.**
+  🔑 **And a sub-rule for building the pooled figure when two sets of books both carry the same car:**
+  where one spouse's line is an **exact fraction** of the other's it is the **same bill recorded twice**
+  *(take the larger)*; where it is not, they are **two different payments** *(add them)*. **The test is
+  the pattern, not the size.**
+  ⚠️ **One presentation defect surfaced in the explaining:** the firm's own table showed the arithmetic
+  for one line and only the result for the other, which made a single pooled total look like two
+  different totals. **Fixed — both lines now show `total × percentage`.** _(Lilian)_
 - 🔴 **2026-09-11 (the draft return) — the return as it actually stands in the tax software was read
   end to end for the first time, and the largest problems on it are MISSING FORMS, not disputed
   figures.** 🛑 **The draft ends in an amount DUE; every version of this return ends in a REFUND** —
