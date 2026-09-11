@@ -213,6 +213,32 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-11 — **YES, they track by location — and the books are kept PER STORE, not per entity.**
+  Julia asked whether financials are tracked by location, since each entity holds several. The
+  binder's own **Store Naming Key (page 4)** answers it: **six separate QuickBooks company files
+  feeding three tax returns.** `SELECT LAUNDRY BRADENTON` and `15TH STREET LAUNDROMAT` →
+  **Bayshore Laundromat, Inc.**; `PALMETTO COIN LAUNDRY 2` and `PALMETTO SUPER CENTER II` and
+  `RUSKIN LAUNDROMAT` → **Samoset Florida, Inc.**; `LEMON SQUEEZE COMMERCIAL LAUNDRY LLC` → itself.
+  🔑 **Consequences, all now in the list:** the QuickBooks ask is **six file invitations, not
+  three** (item 1.5, rewritten and renamed); and a **new item 3.15** asks for the thing that joins
+  the two levels — the worksheet or mapping that rolls the store files up into each entity's
+  return, with any entry that exists only at entity level. **That consolidation is not in the
+  binder, and it is where a figure can be created or moved without appearing in any store's
+  ledger.** ⚠️ **Three naming hazards to carry forward.** ① The broker says plainly that *"the
+  QuickBooks company names do not match how the stores are known, and the two Palmetto stores are
+  easily confused with one another"* — so every figure has to be pinned to a store by address, not
+  by name. ② **There is a STORE called Samoset and an ENTITY called Samoset Florida, Inc., and they
+  are not related**: the Samoset / 15th Street store belongs to **Bayshore**, while the entity
+  Samoset Florida owns the two Palmetto stores and Ruskin. Binder pages headed `SAMOSET` are the
+  store. ③ The store the LOI calls *Palmetto Wash & Fold* is `PALMETTO SUPER CENTER II` in
+  QuickBooks and *Palmetto 8th St* in the binder — three names for one store. 🔴 **And a genuine
+  conflict to settle on the deed: the LOI puts Palmetto Coin Laundry at 706 9th St W; the binder's
+  naming key puts it at 702 9th St W.** One is wrong, the folio number decides, and the purchase
+  contract has to carry the right one — added to item 8.1 and worth passing to Olesya. 📌 **One
+  more thing the broker admits and nobody should skip past:** the store-to-entity assignment was
+  **derived by him**, by reconciling each store's sales to gross receipts on the filed returns —
+  and he claims it ties *"to the dollar for FY 2024"* only. **Nothing is claimed for FY 2023 or FY
+  2025**, so those two years are ours to test rather than accept
 - 2026-09-11 — **No registrations are assumed; the point is that nothing is owed** (Julia). The
   buyers open their own companies and take **no existing certificate** — not the sales-tax
   registration, not the resale certificate, not the RT account, not the licences. **So the
