@@ -257,13 +257,68 @@ Anything the team must know to serve this client well.
 ## 6. History & open questions
 
 ### Log
+- 🔴 **2026-09-11 (the draft return) — the return as it actually stands in the tax software was read
+  end to end for the first time, and the largest problems on it are MISSING FORMS, not disputed
+  figures.** 🛑 **The draft ends in an amount DUE; every version of this return ends in a REFUND** —
+  ✅ **which finally explains the banner nobody could account for on 2026-09-11.** **The cause is that
+  the dependants have never been entered on page 1 of the 1040**, so the child credit, the earned
+  income credit and the preparer's due-diligence form are all absent, **and Form 8962 is not in the
+  return at all** even though the Marketplace paid advance credit for every month of the year — ⛔ **a
+  return with advance credit paid cannot be filed without it.** 🔑 **The arithmetic that HAS been keyed
+  is largely right:** both Schedule Cs agree with the working paper on every non-vehicle line, and both
+  self-employment schedules are mechanically correct.
+  🔴 **THE BIGGEST SINGLE ERROR IS A PARTNERSHIP LOSS BEING DEDUCTED IN FULL WHEN THE PARTNERSHIP'S OWN
+  BASIS WORKSHEET DISALLOWS ALMOST ALL OF IT** *(PEP Hollywood — he is a limited partner with no basis
+  beyond a small share of recourse debt, and no passive income to absorb even that)*. **Two more on the
+  same schedule: Gossip Miami is keyed as a PARTNERSHIP when it is an S CORPORATION** *(which is also
+  why the software will not generate her basis form)*, **and the Development Strategies figure does not
+  match the K-1 the partnership filed.**
+  🔴 **And a vehicle finding the working paper had predicted in the abstract has ALREADY HAPPENED: the
+  two spouses' returns are on TWO DIFFERENT METHODS for the same car**, because the software's own
+  standard-versus-actual comparison stops being able to see the lease once the lease is moved to the
+  line the IRS reserves for it. **The parking is also counted in full on BOTH returns instead of each
+  spouse keeping their own.** ✅ **Every item is listed with its fix, in the order to work them, in the
+  working paper's new §3L.** _(Lilian)_
+- 🔵 **2026-09-11 (the rule, stated in full) — Lilian restated the same-car rule and it REVERSES one
+  line of her own earlier annotation, which a session had already merged.** Her words: *"si es el mismo
+  auto, los gastos totales deben ser iguales en ambos Schedule C… según el porcentaje de uso reflejado
+  en cada Schedule C, será la deducción que se tomará en cada Schedule C."* 🔑 **The rule is about the
+  CAR's total cost, and then one business percentage each** — so the question on any line is not *which
+  figure is larger* but *what did the car actually cost between them*. ✅ **On insurance and the lease
+  the answer is unchanged** *(one spouse's entry is exactly a third of the other's — a duplicate)*;
+  🔴 **on FUEL the two entries are two different payments and the car's cost is the SUM**, which is what
+  her new annotation records. ⚠️ **A session had keyed the narrower reading that morning; this is the
+  correction, and it is hers.**
+  🟠 **ONE LINE WHERE THE FIRM'S PAPER NARROWS HER RULE, and it is put to her rather than assumed:
+  parking and tolls.** Her annotation pools them; the working paper keeps each spouse's own, because a
+  parking receipt belongs to **one trip made by one person** while fuel and insurance belong to the
+  **car** and have to be split by the only evidence there is. **The publication's own test for a parking
+  fee is what the trip WAS, not a percentage, and the software already adds parking after the
+  percentage.** 🛑 **Hers to overrule — it is in the working paper's §6 as an open item.** _(Lilian)_
+- ✅ **2026-09-11 — how a K-1 is actually keyed in THIS software was researched, at her request**
+  *("trata de encontrar instrucciones de cómo completarlos dentro de ATX, lo cual es diferente a
+  completarlo en la forma del IRS")*. ✅ **The most useful answer is that the Gossip Miami K-1 should
+  not be typed at all** — the firm prepares that company's return, and the software imports a K-1
+  straight from the business return into the 1040, including on a later re-import when the company's
+  figures change. **The two partnership K-1s have to be typed, because the firm did not prepare those
+  returns.** 🔑 **And the field that decides where a K-1 lands is not a box number — it is whether the
+  activity is marked passive or nonpassive**, which is also the clean way to produce the correct nil
+  deduction on the disallowed partnership loss. ⚠️ **What could NOT be established: the vendor's own
+  help pages are blocked by the environment's network policy**, so one route is recorded as reported
+  rather than verified, and one input screen has still never been seen. **A screenshot closes both.**
+  _(Lilian)_
 - 🔵 **2026-09-11 — Lilian ruled the car's cost base herself, and it is the firm's position now rather
   than a session's inference.** She edited Yuliana's P&L template so the vehicle lines record the car's
   REAL totals — the ones on Marat's template — and said why: *"estos números deben coincidir porque se
   trata del mismo auto… tomé el valor mayor."* ✅ **That is the same conclusion the contract had already
   forced, reached from the other end**, and it closes the cost base except for one line. 🔑 **The rule
   she stated reaches further than the two lines she named:** it also settles the gas and repairs, and
-  **she had already written that combined figure in the margin of Marat's own template.**
+  **she had already written a combined figure in the margin of Marat's own template.**
+  🔴 **CORRECTED THE SAME DAY, by her — see the entry above this one.** *"Tomé el valor mayor"* is right
+  wherever one spouse's line is a **duplicate** of the other's, which is true of the insurance and the
+  lease *(hers are exactly a third of his)*. ⛔ **It is wrong on the FUEL, where the two lines are two
+  different payments for the same car** — and her second annotation says so, replacing the margin
+  figure. **The firm's position is her SECOND statement, and the working paper keys it.**
   ✅ **She also closed the telephone question on the template**: the home-office sheet already carries
   the household utilities, and the remainder comes out because **she has no premises** — so that
   Schedule C line is zero, not a residue. 🛑 **And the screen showed two things the working paper now
