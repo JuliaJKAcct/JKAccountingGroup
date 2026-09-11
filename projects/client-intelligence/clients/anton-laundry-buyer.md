@@ -213,6 +213,28 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-11 — **Julia's edits to the accountant ask, and a claim of mine she was right to challenge.**
+  ⛔ **I had written "six QuickBooks company files" as a fact. It is not one.** The binder's naming
+  key has a column headed *"QuickBooks company name on the statements"* listing six distinct names
+  against three entities — which proves the **stores are tracked separately**, but is equally
+  consistent with six company files *or* with locations and classes inside each entity's file, and
+  the broker who wrote it is not an accountant. **Item 1.5 now asks for access to every QuickBooks
+  file maintained for the three entities and asks them to say how the books are organised** — which
+  is the question rather than the answer. 📌 **Her other edits, all applied:** capital expenditures
+  narrowed to **2023–2026** (was 2021–2026); **utility bills specified as 1 January 2026 to the
+  latest closed month, July or August 2026** — the period the binder's year-to-date figures cover;
+  **UCC liens moved to the attorney**, who is confirming them; **TRIM notices dropped** because the
+  firm already holds all five, leaving only the actual bills with proof of payment (a TRIM notice is
+  August's proposed value, not a bill and not evidence of payment); **Forms 1099 dropped** from the
+  accountant ask; and **the IRS entity paperwork dropped** — no CP 575, no CP 261 — because the firm
+  prepares the Forms 8821 itself and pulls transcripts directly. ⚠️ **Two things flagged back rather
+  than silently actioned:** the **legal name, EIN and IRS address stay in 2.3**, because those are
+  what the 8821 is completed from and Samoset Florida's are the ones she said she was still missing;
+  and the **Forms 1099-K received from the card processors** are a different animal from the 1099s
+  the seller issued — third-party-reported gross card receipts, one of the few independent
+  corroborations of revenue — so the drop is recorded as needing her confirmation. ⓘ **The narrowed
+  utility window tests the 2026 year-to-date figure but not FY2025 adjusted net income**, which is
+  the headline number; noted once, her call taken
 - 2026-09-11 — **YES, they track by location — and the books are kept PER STORE, not per entity.**
   Julia asked whether financials are tracked by location, since each entity holds several. The
   binder's own **Store Naming Key (page 4)** answers it: **six separate QuickBooks company files
