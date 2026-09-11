@@ -1608,6 +1608,33 @@ el chat y, en el artefacto, no lo veo."*
 | **③** | 🛠️ **WHERE IT IS TYPED** | the entry route, to the precision item **8b** demands, **marked established or not per item 8 rule 4** — ⛔ **which is where that rule lives; do not restate it here, or the two copies drift** |
 | **④** | 🗣️ **WHAT IT DEPENDS ON** | the assumption underneath it, where one exists, so a changed answer visibly moves the figure |
 
+> ### 🔴 AND WHEN A FIGURE MOVES, ② IS THE THING THAT ROTS — re-derive it, never eyeball it
+>
+> 🛑 **A working paper gets REBASED — a client answers, a rate is corrected, a base changes — and the
+> sweep that moves the figures does not move the sentences around them.** ⚠️ **A find-and-replace
+> catches every bare figure and misses every one of these:**
+>
+> | What survives a sweep | Why it survives |
+> |---|---|
+> | 🧮 **an arithmetic annotation** — *"A × 20% = B"* | **the product** is written out, and it is not the figure being replaced |
+> | **a difference or a sum** — *"X − Y = Z"*, *"A and B, so C"* | **the operands moved; the result is typed** |
+> | **a "worth N" claim** — *"the method is worth 624"*, *"it loses by 624"* | **N is a derived gap between two versions, and BOTH ends moved** |
+> | **a distance** — *"they are 6,351 under the threshold"*, *"43 dollars from the edge"* | the threshold is fixed and the figure is not |
+> | **a count or a list** — *"FOUR values", "TWO gates", "33 items, 28 open"* | **nothing numeric changed; the WORLD did** |
+> | **a percentage of something** | the numerator moved |
+>
+> ✅ **THE RULE: after any rebase, every `🧮`, every "worth N", every "X is Y more than Z", and every
+> count is RE-DERIVED from the new figures — not read and approved.** 🔑 **The cheap mechanical version
+> is to grep the paper for each SUPERSEDED figure and for each DERIVED one, and to make the paper
+> re-derive itself where it can** *(a line that shows its own operands is checkable; a line that states
+> only its result is not)*.
+> ⛔ **AND A SUPERSEDED FIGURE THAT IS DELIBERATELY KEPT AS HISTORY MUST SAY SO ON ITS OWN LINE** — a
+> bare old number in a table reads as current.
+> ⓘ **This rule exists because it has failed FOUR times on one return** *(Bogopolskyy 2025, 2026-09-10
+> and 2026-09-11)*. **Every time, the paper already carried the correct rebased value somewhere else**,
+> so each was internally checkable and none was caught by the session that made it. 🔑 **The tell is
+> that the failures cluster in exactly the six shapes above — they are not random.**
+
 ⛔ **AND NEVER THE IDENTITY BLOCK ON THE PAGE** — by existence, never by value *(`double-mcp` §2.2)*. ⚠️ **A 1040's entry-route column reaches the taxpayer-information screen, so this is not hypothetical.** ⓘ *A business EIN is not in that block; an SSN used as an entity's tax ID is.*
 
 🎨 **The page is built with [`impeccable`](../impeccable/) and the Design System**, like every other page the firm publishes — that is the standing rule, not a preference.
