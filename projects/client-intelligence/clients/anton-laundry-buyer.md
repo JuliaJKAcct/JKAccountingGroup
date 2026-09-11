@@ -213,6 +213,20 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-11 (later still) — **A third packet: the list narrowed to what the SELLER'S ACCOUNTANT can
+  produce, to be sent to them directly** (Julia). The seller side splits in two and the split is by
+  *who holds the record*, not by subject: the accountant holds the books, the returns, the payroll
+  filings and the add-back support; the seller and the broker hold everything operational — coin
+  collections, utility bills, card-system reports, leases, equipment, permits, contracts.
+  **58 of the 108 broker-packet items are the accountant's**, across sections 1–9 and 11; the other
+  50 stay with the seller and the broker. The page gained an **Accountant** filter beneath the
+  broker-packet chip, and the accountant packet ships as **its own Word file** with an
+  accountant-to-accountant preamble that says plainly it is one half of a wider request, so nothing
+  is asked twice. 🔑 **It opens on the two things that unblock the rest:** read-only access to the
+  accounting file (1.5 — Julia's standing ask), and the entity identifiers and authorizations
+  (1.1–1.3) that start the transcript requests and the state clearance, which are the slowest to
+  come back. ⛔ **Still nothing crossed off** — this is a third view of the same list, not a
+  reduction of it
 - 2026-09-11 (later) — **It is an ASSET purchase and the buyers form their own companies** (Julia).
   The Letter of Intent already said so \u2014 fee simple title to the five parcels plus the assets of
   the six businesses, sold by bill of sale \u2014 but the request list had been written as though the
