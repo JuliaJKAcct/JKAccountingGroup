@@ -323,7 +323,7 @@ Anything the team must know to serve this client well.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **THIRTY-ONE items live in the working paper's §6 — 27 still open, 4 closed** — and they are
+- 🔴 **THIRTY-TWO items live in the working paper's §6 — 28 still open, 4 closed** — and they are
   not duplicated here; the file is
   [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
   ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address:**
