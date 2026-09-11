@@ -150,7 +150,8 @@ Anything the team must know to serve this client well.
   🔴 **AND THE DRAFT IS MISSING MUCH MORE THAN THAT.** The **dependants have never been entered on page
   1 of the 1040**, so the child credit, the earned income credit and the preparer's due-diligence form
   are all absent, and the return currently ends in an **amount due** where it should end in a refund.
-  **Schedule D, Form 8949, Form 7203, Form 6198 and Form 8582 are absent too.** ✅ **The full list,
+  **Schedule D, Form 8949, Form 7203 and Form 8582 are absent too** — ⚠️ **and so is Form 6198, which
+  is CONDITIONAL and on today's facts probably not required at all.** ✅ **The full list,
   with each fix and the order to work them, is the working paper's §3L.**
   🔴 **AND ONE DEFECT THAT MUST BE SETTLED BEFORE FILING — it is not a question for the client.**
   Yuliana's **2024 Form 7203 opens at a stock basis materially higher than what she confirmed
@@ -288,14 +289,21 @@ Anything the team must know to serve this client well.
   dónde?"* ⛔ **The honest answer was that the RULE came from the IRS publication and the CLASSIFICATION
   came from a session's own reasoning** — the lease document names the payment and the term and never
   says it is rent paid in advance, and the rival reading *(a cost of entering the lease, deductible when
-  paid)* survives. ✅ **She ruled it out of the return:** *"No vamos a complicar las cosas si no estamos
-  seguros."*
+  paid)* ~~survives~~ ⛔ **— STRUCK LATER THE SAME DAY; it does not.** ✅ **She ruled it out of the
+  return:** *"No vamos a complicar las cosas si no estamos seguros."*
+  🛑 **AND THE EVIDENCE MOVED AFTER SHE RULED, WHICH SHE HAS NOT YET BEEN ASKED ABOUT.** 🔒 **Pub 334
+  ch. 2 and ch. 8 and Pub 538's 12-month rule, read at source the same day, foreclose the "all in 2024"
+  branch** — a payment at the start of a **36-month** term is spread **whatever it is called**, so both
+  readings give the same answer. ⚠️ **Her ruling was expressly conditional on the uncertainty, and the
+  uncertainty is smaller than she was told.** ⛔ **The return stays as she ruled — a permission is
+  widened by asking, never by reasoning** — and the question goes back to her at §6 item 31.
   🔑 **Two things worth keeping about this, neither of them about the car.** ① **She found it by asking
   for the source, not by checking the arithmetic** — the figure was right; the label on it was not.
   ② **The question does not go away: it returns on every remaining year of the lease**, and on the
   reading she declined, the household is leaving a real deduction unclaimed across four returns.
-  🛠️ **What would settle it is recorded in the working paper's §6 item 31, in the order that costs
-  least.** _(Lilian)_
+  🛠️ **What is left of the question is recorded in the working paper's §6 item 31** — ⚠️ **no longer an
+  ordered list of routes: the cheapest one has been read and it decides the matter**, so what remains is
+  her call plus two optional corroborations. _(Lilian)_
 - 🔵 **2026-09-11 (the vehicle rule, explained end to end) — she asked to understand which car costs can
   be POOLED across two Schedule Cs and which cannot, and that turned out to be the organising principle
   for the whole vehicle block.** ✅ **Two classes of cost:** what it costs to **have and move the car**
@@ -453,7 +461,7 @@ Anything the team must know to serve this client well.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **THIRTY-SIX items live in the working paper's §6 — 30 still open, 6 closed** — and they are
+- 🔴 **THIRTY-SIX items live in the working paper's §6 — 29 still open, 7 closed** — and they are
   not duplicated here; the file is
   [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
   ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address:**
@@ -467,7 +475,10 @@ Anything the team must know to serve this client well.
   ⚠️ **Also not blockers, but they change what this return IS:** **item 1**, the extension question,
   and **item 25**, the below-100%-of-FPL position, on which **item 23 (§162(l)) is conditional** — so
   item 23 is answered and still open.
-  ✅ **Closed so far:** **item 20** the 1095-A figures and **item 16** the estimated-tax penalty
+  ✅ **Closed so far:** **item 11**, whether the two car-insurance figures are one number reused
+  *(2026-09-11 — the ÷3 pattern IS the answer, and Lilian's rule says what to do with it; what the
+  client still has to state, the actual cost, is asked once, at item 29)*; **item 20** the 1095-A
+  figures and **item 16** the estimated-tax penalty
   *(2026-09-10)*; **item 15** the Schedule 1-A vehicle-loan-interest deduction; **item 27** the
   car contract *(2026-09-11 — it is a lease)*; **item 8**, Yuliana's telephone/utilities line
   *(2026-09-11 — Lilian settled it on the template itself)*; and **item 33**, the software's
