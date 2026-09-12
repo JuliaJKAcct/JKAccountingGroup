@@ -1,6 +1,6 @@
 # YMI TRUCKING LLC
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-12
 
 > ✅ **First full historical sweep completed 2026-08-29** (Ping org-wide, Gmail full history, Drive, Double activity log — all unbounded). See §6 log for what each source added.
 
@@ -115,6 +115,7 @@ the actual details (and Claude can pull them live when a task needs them).
   - **Gmail** (full history, no date bound; business name, portal-contact names, both known email domains): **~200+ threads**, almost all routine Gusto payroll/invoice notices for **both** YMI Trucking and the related **Prime Road Carriers Inc**, running back to at least 2022 (Drive) / 2024 (Gmail). The one substantive personal-name hit (an Aug 2026 thread from the owner to Julia) turned out to be the **owner's own personal Illinois W-2 withholding letter** — unrelated to this company and correctly left out of this file.
   - **Google Drive** (`excludeContentSnippets: true`): folders going back to **2022** — signed/unsigned Lease-to-Purchase agreements for a truck and trailer, a 2023 vehicle-loan disclosure, a 2025 insurance master certificate, a driver MVR/PSP authorization (2025), a monthly dispatch "OCAC" schedule report, a 2024 consolidated financial workbook covering **both** YMI Trucking and Prime Road Carriers Inc, and the 2026-03-15 Form 2848 draft. None of it bears on the Texas/Indiana address question specifically.
   - **Double** (`list_activity_log`, full history — 9 entries total): confirms the 2025 return moved to `filed` on 2026-07-30. No entries relate to the address or the 7004 filer.
+- 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29).** Double: note 491842's `updatedAt` unchanged (2026-08-13); client properties unchanged; 0 activity-log entries in the window. Gmail (YMI Trucking, since 08-29): only routine Gusto AutoPilot payroll notices (Sep 1–15 pay period, confirmed 09-10) and an Intuit subscription-payment receipt (09-09) — nothing bearing on the Texas/Indiana address or 7004-filer questions. Gmail (Prime Road Carriers, since 08-29, per the owner-level sweep rule): routine parallel Gusto payroll notices, **plus one new item worth flagging** — a 2026-09-10 Bank of America "Business Lending" statement-notification email lists FOUR businesses on one shared thread reaching `julia@jkaccountinggroup.com`: **Prime Road Carriers Inc**, **Jupiter Digital Solutions LLC** (two separate accounts), and **Goncharov Group LLC** — none of which (besides Prime Road Carriers) have appeared in this file's research before. **Not investigated further this sweep and no CI file created for any of them** — flagged per this run's scope (YMI Trucking only); a future owner-level or Prime-Road-Carriers pass should establish whether these share Prime Road Carriers' portal contact or are an unrelated banking relationship. Google Drive (title "YMI" or "Prime Road", modified since 08-29): found seven driver/truck-level bookkeeping spreadsheets (individual lease/payroll workbooks per driver, owned by `jeff@primeroadcarriers.com` / `tnt@primeroadcarriers.com`), all modified 2026-09-07 → 09-11 — confirms the trucking operation remains active and its bookkeeping is being maintained, but none bear on the two open IRS questions; driver names not written here (personal data). Ping: org-wide semantic search for "YMI Trucking address Texas Indiana Form 7004" returned no legible, client-specific results. **Neither open item (the address question, the unexplained 7004 filer) moved this sweep.**
 
 ### Tax year 2025 — the review
 
@@ -122,11 +123,11 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Establish the company's correct legal and mailing address, and what the IRS should hold.** Ask the client directly rather than inferring from a bank statement. If the IRS record needs changing, a **Form 8822-B** is the usual route. _(Open since 2026-03-16 — 166 days as of this sweep. No deadline attached.)_
-- 🔴 **Find out who filed the 2025 Form 7004 on 2026-03-14.** Not the firm, not the previous accountant. Ask the client whether they or anyone else filed it. _(Open since 2026-03-16 — 166 days.)_
+- 🔴 **Establish the company's correct legal and mailing address, and what the IRS should hold.** Ask the client directly rather than inferring from a bank statement. If the IRS record needs changing, a **Form 8822-B** is the usual route. _(Open since 2026-03-16 — ~180 days as of 2026-09-12. No deadline attached. Re-chased this sweep via Gmail/Drive/Ping — no movement found; this needs a direct client question, not a document search.)_
+- 🔴 **Find out who filed the 2025 Form 7004 on 2026-03-14.** Not the firm, not the previous accountant. Ask the client whether they or anyone else filed it. _(Open since 2026-03-16 — ~180 days as of 2026-09-12. Re-chased this sweep — no movement found.)_
 - [x] **Confirm the 2025 return was actually filed by the extended deadline** — **YES, 2026-07-30** _(Double activity log, confirmed 2026-08-29)_.
 - **Get written confirmation the 2025 extension was formally accepted** — an IRS transcript would show it. Only a verbal assurance exists; low priority now that the return itself is confirmed filed on time.
-- **Consider whether Prime Road Carriers Inc (the owner's other trucking company) needs its own Client Intelligence file** — it has none yet, and this sweep found it referenced throughout YMI Trucking's own Gmail/Drive history.
+- **Consider whether Prime Road Carriers Inc (the owner's other trucking company) needs its own Client Intelligence file** — it has none yet, and this sweep found it referenced throughout YMI Trucking's own Gmail/Drive history. **New this sweep:** Prime Road Carriers' own correspondence surfaced two further untracked entity names (Jupiter Digital Solutions LLC, Goncharov Group LLC) on a shared BofA banking notification — worth folding into whatever future pass creates Prime Road Carriers' file.
 
 ### Information still needed
 

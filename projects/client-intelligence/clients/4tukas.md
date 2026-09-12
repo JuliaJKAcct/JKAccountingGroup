@@ -2,7 +2,7 @@
 
 > **Status:** Prospect — engagement letter drafted and delivered 2026-08-27; a paid
 > consultation for the client's remaining planning questions is proposed for 2026-09-17 ·
-> **Owner:** Julia · **Last updated:** 2026-08-29
+> **Owner:** Julia · **Last updated:** 2026-09-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -134,6 +134,15 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-12 — **Bounded prospect sweep (Gmail in:inbox + in:sent, since 2026-08-29; Drive
+  checked; no Double/Ping — no Double account exists).** Searched Gmail for "4TUKAS" /
+  "Mindaugas" / "Kezys" / "Tumaite" / "Sargsyan" / "Uznys", and separately for
+  closing/contract/escrow language combined with "4TUKAS" — both searches surfaced only the
+  same pre-2026-08-29 correspondence thread (last message 2026-08-27) plus the firm's own
+  automated weekly-sweep digest email (a false-positive keyword match, not a client message).
+  **No message from Mindaugas Kezys or any other member has arrived since 2026-08-27.**
+  Searched Drive for "4TUKAS" and "Mindaugas Kezys" — no results at all (`excludeContentSnippets:
+  true`). Both open items below are therefore unchanged and both are now 16 days old
 - 2026-08-29 — **Bounded prospect sweep (Gmail in:inbox+in:sent, since 2026-08-27; Drive
   checked; no Double/Ping — no Double account exists).** Read the full correspondence
   thread ("Following up — Alina's investors group (Miami)") end to end. New context: (a)
@@ -159,12 +168,13 @@ the actual details.
 
 - [x] **Julia to decide: the tax-planning exclusion** — RESOLVED 2026-08-27, see §5.
 - **Still open:** the §1446/8804-8805 withholding scope question (flagged 2026-08-27,
-  2 days old as of this sweep — not settled by anything found in Gmail)
+  **16 days old** as of the 2026-09-12 sweep — a bounded Gmail search since 2026-08-29 found
+  no message from either side addressing it)
 - [x] **Before signing: Mindaugas Kezys' email** — on file since 2026-08-12, see §2.
 - **Still open — before signing:** confirm TY2026 vs 2027 (purchase timing) — his own
-  2026-08-27 words say the property is not yet under contract, so this is unresolved and
-  not yet even close, 2 days since last checked; the info-needed-by date (2027-02-15
-  assumed)
+  2026-08-27 words say the property is not yet under contract; **still unresolved, 16 days
+  since last checked** (2026-09-12 sweep: no message found since 2026-08-27 on this or any
+  other topic); the info-needed-by date (2027-02-15 assumed)
 
 ### Information still needed
 

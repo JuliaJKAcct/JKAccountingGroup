@@ -1,6 +1,6 @@
 # Viacheslav Honcharenko
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-14
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -24,11 +24,17 @@
 > The SOP is the curated view of the **Operating** zone. See the project README
 > ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
 
-> ⚠️ **NO FULL HISTORICAL SWEEP HAS RUN.** Created 2026-08-14; the Gmail pass covered
-> **2026-03 → 2026-08 only** (a targeted catch-up run after the first version of this file drew
-> conclusions from a six-day window). Ping, Drive and the years before 2026 are **still unswept**.
-> A gap below means *not yet looked at*. The catch-up is recorded in
-> [`sweep-state.md`](../automation/sweep-state.md).
+> ✅ **FIRST FULL HISTORICAL SWEEP COMPLETED 2026-09-12.** Gmail searched unbounded (no date
+> filter) by every surname spelling + both known emails — 15 threads, resultCountEstimate matched
+> returned count, read to exhaustion, oldest hit 2025-04-26. Google Drive searched by name (two
+> pages) — every hit reviewed. Double fully re-read: `get_client`, `list_client_properties`,
+> `list_notes` (0 notes), `list_contacts`, `list_activity_log` (9/9 events, full history since
+> client creation), `list_projects`, `list_tasks` (12/12), `list_files` (16/16). **Ping: genuinely
+> empty, not unsearched** — `resolve_person` found the client, but `search_meetings` scoped to his
+> Ping client ID returned zero results, and an org-wide semantic search for his name/business
+> returned no results specific to him (the org-wide "matches" were keyword collisions with other
+> clients' unrelated meetings) — `list_action_items` also returned zero. The client simply has no
+> recorded meetings in Ping's index (169 org meetings / 111 accessible recorded events, none his).
 
 ## 1. Snapshot
 
@@ -51,7 +57,7 @@ the actual details (and Claude can pull them live when a task needs them).
 |---|---|
 | The client | Double client (link below) |
 | **A dependent daughter**, added to the 2025 organizer | Double — 🔒 her **date of birth and SSN** are in the migrated note and are recorded **nowhere** here |
-| A second adult whose driver's licence is on file _(surname spelled differently again)_ | Double / TaxDome documents |
+| A second adult whose driver's licence is on file _(surname spelled differently again)_ | Double / TaxDome documents. **Confirmed 2026-09-12: this is a second Double portal contact with tax access enabled** (`hasTaxAccess: true`) — consistent with a spouse/partner rather than a one-off document upload |
 | Assigned staff | **Lilian Gonzalez** _(Double)_ |
 
 - **Double client:** [app.doublehq.com/close?cid=710665](https://app.doublehq.com/close?cid=710665)
@@ -98,7 +104,8 @@ the actual details (and Claude can pull them live when a task needs them).
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- 🔴 **HE IS NOT A PLAIN 1040 CLIENT — HE HAS BUSINESS ACTIVITY, AND DOUBLE'S COLUMNS DO NOT SHOW IT.** He uploaded **1099s from Maxrating LLC and OPTIC GOLD INC** on 2026-03-31; Liudmyla listed him among the **2025 W-9 requests for Optic Gold** in January 2026 — i.e. he is a paid contractor to another of the firm's own clients; and **Broward County approved a business tax receipt in his name on 2026-07-07**. Double still reads `Tax Return Type = 1040`, `Bookkeeping = N/A`. **Settle the Schedule C position before preparing anything.**
+- 🔴 **HE IS NOT A PLAIN 1040 CLIENT — HE HAS BUSINESS ACTIVITY, AND DOUBLE'S COLUMNS DO NOT SHOW IT.** He uploaded **1099s from THREE payers** on 2026-03-31 — Maxrating LLC, OPTIC GOLD INC, and **a third payer not previously recorded here: PRO MANAGEMENT AGENCY LLC** (Double `list_files`, confirmed 2026-09-12) — plus a **Home Office Deduction** worksheet the same day. Liudmyla separately listed him among the **2025 W-9 requests for Optic Gold** in January 2026. **Broward County approved a business tax receipt in his name on 2026-07-07.** Double still reads `Tax Return Type = 1040`, `Bookkeeping = N/A`.
+  🔵 **New lead, 2026-09-12 sweep: Pro Management Agency LLC sits inside a cluster of businesses this firm already serves for one person, Sergey Karpenko.** Karpenko's personal inbox (found in Gmail, not written here) is cc'd on billing/business correspondence for **Best Broker Realty LLC** (706712 — the SAME company Honcharenko's own Double portal-contact record is separately linked to, per `list_contacts`), **Pro Title Agency LLC** (706716 — whose admin@protitleagency.com correspondence explicitly calls Julia "Sergey's Accountant" and "Sergey's CPA"), **Optic Gold Inc** (706702), and **VoiceCapital Inc** (710725); a fifth entity, "Paylite," appears in the same billing cc chain with no Double record found yet. **Pro Management Agency LLC itself was dissolved 2026-04-29** (Sunbiz Doc #L24000494171, notice to the firm). **And the SAME DAY (2026-07-06) the firm filed Honcharenko's Broward BTR, it also filed one for "Sergey A Karpenko" personally** — both confirmation emails landed in one Gmail thread. **The Honcharenko↔Karpenko relationship itself is NOT established** (contractor? employee? colleague? no direct email between them found) — but the pattern points at real-estate/title-adjacent work inside Karpenko's group rather than a stand-alone business. **Settle the Schedule C position — and who Karpenko is to this client — before preparing anything.**
 - 🔴 **WHAT THE 2025 RETURN IS WAITING ON IS ALREADY WRITTEN DOWN — DO NOT ASK HIM AGAIN.** Lilian emailed him on **2026-04-12** (in Russian): the firm's tax software **flagged an error in at least one of the names** while filing the extension. He replied on **2026-04-13 and 2026-04-14** through the TaxDome thread *"Недостающая информация — налоговая декларация за 2025 год"*. **Read that thread first** — the answer may already be in it.
 - ⚠️ **The surname is transliterated at least three ways** — Honcharenko, Goncharenko, and `goncharencko` in his own email address; a second adult's licence on file reads **"Honarenko"**. Search every spelling before concluding a source has nothing, and expect the name mismatch to be exactly what the tax software objected to.
 - ⚠️ **A dependent daughter was added for 2025** _(Lilian, 2026-04-07)_. The prior year is **not** a template: a first dependant moves filing status, the Child Tax Credit, and any care or education credits. 🔒 Her date of birth and SSN are in the migrated note and are recorded nowhere here — read them from Double if a filing needs them.
@@ -116,7 +123,8 @@ the actual details (and Claude can pull them live when a task needs them).
   - **2026-04-12 — Lilian emailed him in Russian** about the 2025 extension: the tax software **reported an error in at least one of the names**. He replied **2026-04-13** (with his name spelled out) and again **2026-04-14** asking whether there was any news.
   - **2026-07-06 → 07-07 — Broward County BTExpress**: business tax receipt applied for and **approved**.
 - **2026-01-14 — earlier, and worth knowing:** Liudmyla asked Optic Gold to collect **2025 W-9s**, listing him among the payees. That is the other side of the 1099 he later uploaded.
-- **Nothing further was found in the sources actually searched** — Double live, and Gmail from 2026-03 forward. **Ping, Drive and everything before 2026 have never been swept**, so this is a statement about the search, not about the world.
+- 2026-09-12 — **first full historical sweep (Lilian's session).** Double: `list_notes` returned 0 notes (none exist); `list_contacts` (2, one with tax access — see §2); `list_activity_log` read in full (9/9 events, since client creation 2026-05-19); `list_tasks` (12/12, all project-checklist tasks `notStarted` — no "Extension Filed" nonclosing task exists for this client, unlike Iurii Iakovenko's, but the **file itself (`2025 4868 Ext.pdf`) exists in the File Library, confirming the extension was actually filed**); `list_projects` unchanged (`waitingOnClient`, moved there 2026-08-04 by Julia, from `inProgress` since 2026-06-29 per Lilian). Gmail searched unbounded by every surname spelling: found a **2025-04-26 "Conference call with Julia CPA" invitation** naming Sergey Karpenko (admin@protitleagency.com) as organizer, with Honcharenko among the invitees — the first documented link between him and Pro Title Agency LLC's principal. Broadened search on "Sergey Karpenko" / "zhukbanda" (the email cc'd across several other firm clients' invoices) surfaced the Karpenko-cluster finding written into §5 above. Google Drive: his folder confirmed (two parallel copies exist — one under Julia's Drive, one under Maria Zavarce's, both from the 2026-05 TaxDome-to-Drive migration batch — a duplicate-folder pattern also seen on other backfilled clients, not itself concerning). Ping: `resolve_person`, `search_contacts`, and `search_meetings` (both client-scoped and org-wide) all returned no meetings genuinely about this client — recorded as a confirmed negative, not an unsearched gap.
+- **Nothing further was found in the sources actually searched.** Every source reached in this pass — Double (all planes), Gmail (unbounded), Google Drive, Ping — either returned material or a confirmed empty result; none was left unsearched.
 
 ### Tax year 2025 — the review
 
@@ -128,17 +136,19 @@ the actual details (and Claude can pull them live when a task needs them).
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **Read the TaxDome thread from 2026-04-13/14 before contacting him.** The firm asked, he answered, and nobody recorded the outcome. Asking again is the failure `method.md` rule 1 exists to prevent.
-- 🔴 **Settle the Schedule C position** — 1099s from two payers and a county business tax receipt, against a Double column that says plain `1040`.
-- **Confirm the 2025 Form 4868 is on file**, which moves the deadline to 2026-10-15.
+- 🔴 **Settle the Schedule C position** — 1099s from THREE payers (see §5) and a county business tax receipt, against a Double column that says plain `1040`.
+- 🔴 **Find out who Sergey Karpenko is to this client** (2026-09-12) — the evidence points at his business activity being connected to Karpenko's group (Best Broker Realty, Pro Title Agency, Optic Gold, VoiceCapital, the now-dissolved Pro Management Agency), but the nature of the relationship (contractor, employee, colleague) is unconfirmed. This likely settles the Schedule C question above once known.
+- [x] **Confirm the 2025 Form 4868 is on file** — **YES, confirmed 2026-09-12**: `2025 4868 Ext.pdf` exists in the Double File Library _(Double `list_files`, 2026-09-12)_. Deadline is 2026-10-15.
 - **Assign the Broward County BTR renewal** — it is annual, and nobody owns it.
 
 ### Information still needed
 
 - [ ] What the business does, and whether it needs a Schedule C
+- [ ] Who Sergey Karpenko is to this client, and what the third 1099 payer (Pro Management Agency LLC) actually paid him for
 - [ ] Who the second adult on the documents is (spouse? the daughter?)
 - [ ] Whether the name mismatch was resolved and the extension accepted
 - [ ] Whether sales tax touches any of the activity
-- [ ] Ping, Drive, and everything before 2026 — never swept
+- [x] Ping, Drive, and everything before 2026 — **swept 2026-09-12, first full historical pass, COMPLETE** (see banner and §6 log)
 
 ## 7. Links
 
@@ -146,5 +156,6 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Double tax project (2025):** [tax-return?cid=710665&projectId=219349](https://app.doublehq.com/tax-return?cid=710665&projectId=219349)
 - **Related — he is a 1099 payee of [OPTIC GOLD INC](./optic-gold.md)**, another client of the firm. Anything about that payment relationship touches both files.
 - **Migrated TaxDome notes:** Drive `4. Documents > Viacheslav Honcharenko` — read 2026-08-13.
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** [Viacheslav Honcharenko](https://drive.google.com/drive/folders/1Xv24MpX7Mr_3o6U29IkpCe4InQ8QZMaF) _(a second, duplicate folder from the 2026-05 migration also exists at [this link](https://drive.google.com/drive/folders/1oXs9Xptwokkww7z1DBJTtFWcMdHZVuAi) — not merged, not investigated further)_
+- **Related — possibly connected to [Sergey Karpenko's business cluster](#5-key-facts--quirks)**, which the firm also serves through Best Broker Realty LLC, Pro Title Agency LLC, Optic Gold Inc and VoiceCapital Inc — relationship unconfirmed, see §5 and §6 outstanding items.
 - **Related SOPs:** _(pending)_

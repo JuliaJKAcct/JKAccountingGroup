@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-06
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1297,6 +1297,11 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   the entity's real filing history and would also explain the withholding notices arriving since
   January.** ⛔ **Do not transmit the 2025 state return until this is answered.**
 
+- 2026-09-12 — **Incremental sweep (baseline 2026-08-29→2026-09-12; this client is under very active tax-prep work — see the log above — so this pass only adds facts NOT already captured by those direct sessions, plus the chase pass).** Double: 🆕 the **"2025 Taxes" project moved from In Progress to Ready for Review on 2026-09-09** (Lilian) — not previously recorded at project-status level. **Case note 485258 (QuickBooks primary-admin handover) is UNCHANGED — `updatedAt` still reads 2026-08-06**, despite the extensive tax-prep work on this client since; it has not been touched or mirrored in **37 days**. No other property changes. Gmail (Ecoorganic/Corganix/Markarian + "QuickBooks"/"primary admin"/"QR code"/"CT-941", `after:2026/08/29`): nothing beyond routine Intuit invoice/payment-received notifications — **no correspondence found on the CT-941 past-due notice, the QR-code/ID-verification step, or Turo** in this window. Ping (`search_meetings`, scoped "Ecoorganic USA"): no legible, on-topic hits dated on/after 2026-08-29. **Chase pass:**
+  - 🔴 **The CT-941 past-due notice (arrived 2026-08-18) — a search of Gmail, bounded ≥2026-08-29, on 2026-09-12, found no reply, filing, or other action.** Now **25 days pending**, still "past due." (Separately, the 2026-09-06 tax-prep work established the state's own $50-discretionary-penalty rule and that the state return itself is mandatory regardless of tax due — see the log above; that is a different, now-better-understood exposure than this specific withholding notice, which is still unactioned.)
+  - 🔴 **QuickBooks primary-admin handover (case note 485258) — still stuck on Ishkhan's ID/QR-code step. 37 days pending since last moved (2026-08-06).** No deadline, but the subscription-downgrade risk (§5) grows every week; the note is now materially stale against the return's own progress and is flagged for whoever next opens it to mirror.
+  - Turo escalation email, the nine-months-of-2025 sales-tax gap, and the two unopened DRS notices are **superseded by the tax-prep work already logged above** (Turo answered 2026-09-01; a return was submitted 2026-09-02 and further DRS correspondence arrived 2026-09-03, still unread as of the log entry above) — not re-chased here to avoid duplicating that work.
+
 - 2026-09-06 (later) — 🟢 **THE CONNECTICUT RETURN IS NOW ANSWERED FROM THE STATE'S OWN INSTRUCTIONS, AND
   THREE OF THE FIRM'S EARLIER CONCLUSIONS WERE WRONG.** 🔓 **The reason is simple: the Connecticut revenue
   portal, which had been unreachable from the firm's Claude sessions, became reachable.** The 2025 form
@@ -1580,7 +1585,7 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
 - Clarify the relationship (if any) between this LLC and a same-named Ukraine-based company that periodically exchanges financial documents with the firm.
 
 ### Information still needed
-- [ ] 🔴 New: confirm/action the CT-941 past-due notice received 2026-08-18 (see Outstanding items)
+- [ ] 🔴 Confirm/action the CT-941 past-due notice received 2026-08-18 — **still unactioned as of 2026-09-12, 25 days pending** (see Outstanding items and the 2026-09-12 sweep log entry above)
 - [ ] ⏸️ **PARKED 2026-08-13 — do not chase her; ask when we next work this client's sales tax.**
       **On what basis is the CT sales-tax return filed at ZERO?** The business has revenue, so
       this is a filing position with no recorded reason (§4). Practice continues unchanged; the

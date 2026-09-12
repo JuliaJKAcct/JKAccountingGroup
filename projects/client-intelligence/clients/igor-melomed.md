@@ -1,6 +1,6 @@
 # Igor Melomed & Yelena Lovkina
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-12
 
 > ✅ **First full historical sweep completed 2026-08-29** (Ping org-wide — nothing found; Gmail full history back to 2026-03; Drive; Double activity log — all unbounded). See §6 log. 🔴 **Biggest finding: the "three Double records, one Melomed business" question is now SETTLED — see §5 bullet 1.** Swept together with [R & G Friendly Inc](./rg-friendly.md) at the owner level, per this run's instructions.
 
@@ -136,6 +136,7 @@ here and must not be — the firm's convention puts credentials in the Drive vau
   - **Gmail** (full history, no date bound — extended back from the prior 2026-03 catch-up): confirmed correspondence back to **2025-05-07** (an FL DOR sales-tax audit thread that turned out to be R & G Friendly's, not his — see that file) and **his own** Sunoma/Magnum 152 bookkeeping correspondence back to **2026-03-08**. The month-by-month volume (25+ threads) is almost entirely Sunoma/Magnum 152 GL reports, Bravo POS access issues, bank-statement requests, and QuickBooks payment notices — **no thread connects him to R & G Friendly Inc.**
   - **Google Drive** (`excludeContentSnippets: true`): an `IGOR MELOMED` folder tree, a 2021 **1120-S K-1** issued to him (`IGOR MELOMED_2021_1120S_K1.zip`) — meaning he held an **S-corp shareholder position as far back as 2021**, likely in Sunoma or Magnum 152 (not established which) — and his 2021 joint 1040. Also found **"Lucky Pawn Dania (RAZZ)"** and **" lucky pawn Oakland #3941"/" lucky pawn Davia #3888"** folders dating to 2022–2024, which turned out on inspection to be **R & G Friendly's** store-numbered folders, not his — a naming collision worth remembering (§5 bullet 1's separation is the corrective).
   - **Double** (`list_activity_log`, full history — 19 entries): confirms the "File Extension" task (2026-05-27, Done) and the 2025 organizer publish (2026-06-22); nothing bears on the ownership question, which was settled from contacts + Gmail instead.
+- 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29) — the monthly bookkeeping relationship (§5 bullet 2) continues at its established pace; no movement on any tax/compliance open item.** Double: 0 new notes, 0 activity-log entries, client properties unchanged (`Bookkeeping = N/A`, `Organizer Status = Sent`). Gmail (Sunoma/Magnum 152/Igor Melomed, since 08-29): Maria requested Sunoma's August 2026 reports and cash-on-hand by store (2026-09-11, naming "LP" and "AP" monthly ledger/expenses reports — consistent with the existing Lucky Pawn/Auto Pawn split); Igor himself directly requested two years of P&L and Balance Sheet statements for each store (2026-09-03), which Maria supplied 2026-09-04 (BS for the combined entity only — it cannot be run by store; P&L by class for the Magnum stores specifically). This is more evidence for, not against, the already-flagged mismatch between Double's `Bookkeeping = N/A` and the real monthly work. Google Drive: a "Sunoma Process" spreadsheet (Maria's, in the client's folder) was modified 2026-09-04 — an internal process-documentation file, not opened for content this sweep. Ping: org-wide semantic search for "Igor Melomed Sunoma Magnum 152 sales tax organizer" returned no legible, client-specific results. **Chased all five outstanding items (below) — none moved.**
 
 ### Tax year 2025 — the review
 
@@ -145,12 +146,12 @@ here and must not be — the firm's convention puts credentials in the Drive vau
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Reconcile the engagement with the work.** The firm does monthly books for two operations while Double says `Bookkeeping = N/A`. Whatever the truth, the column, the scope and the billing should agree. _(Open since 2026-08-14 — 15 days as of this sweep.)_
-- 🔴 **Settle what the 2025 1040 carries** — Schedule C for one or both operations, or something else — and confirm the 4868 was accepted. _(Open since 2026-08-14 — 15 days.)_
+- 🔴 **Reconcile the engagement with the work.** The firm does monthly books for two operations while Double says `Bookkeeping = N/A`. Whatever the truth, the column, the scope and the billing should agree. _(Open since 2026-08-14 — ~29 days as of 2026-09-12. Re-chased this sweep — the mismatch only deepened: Igor and Maria exchanged reporting requests as recently as 2026-09-11, and the property is still unchanged.)_
+- 🔴 **Settle what the 2025 1040 carries** — Schedule C for one or both operations, or something else — and confirm the 4868 was accepted. _(Open since 2026-08-14 — ~29 days as of 2026-09-12. Re-chased this sweep — no movement found in Double or Gmail.)_
 - [x] ~~Settle the owner-group links to Magnum 152 and Sunoma~~ — **ANSWERED 2026-08-29:** confirmed by Double contacts + a full year of Gmail (§5 bullet 1). Cross-references updated in §7.
-- **Chase the 2025 organizer BY EMAIL**, not through the portal.
-- **Answer the 2023 classification question** — customer appreciation / company events, open since Julia raised it.
-- **Establish the sales-tax and pawnbroker-licensing position for Sunoma/Magnum 152** — a Florida retail firearms/pawn operation almost certainly has both (R & G Friendly's own FL DOR sales-tax audit, found this sweep, shows the firm has handled exactly this kind of matter for the family's other company — see [`rg-friendly.md`](./rg-friendly.md) §5).
+- **Chase the 2025 organizer BY EMAIL**, not through the portal. _(Re-chased this sweep — organizer property still reads `Sent`, no evidence of a chase email sent this window.)_
+- **Answer the 2023 classification question** — customer appreciation / company events, open since Julia raised it 2024-10-14 (pending since unknown exact chase date — no start date for a chase attempt is in the file, only the original question date). Not specifically re-chased this sweep (budget went to the higher-priority reconciliation and 1040 items above).
+- **Establish the sales-tax and pawnbroker-licensing position for Sunoma/Magnum 152** — a Florida retail firearms/pawn operation almost certainly has both (R & G Friendly's own FL DOR sales-tax audit, found this sweep, shows the firm has handled exactly this kind of matter for the family's other company — see [`rg-friendly.md`](./rg-friendly.md) §5). _(Open since 2026-08-14 — ~29 days as of 2026-09-12. Re-chased this sweep (Gmail, Drive) — no movement found.)_
 
 ### Information still needed
 

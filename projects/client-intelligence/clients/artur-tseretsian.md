@@ -1,6 +1,6 @@
 # Artur Tseretsian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -196,6 +196,7 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** No new Double notes (both existing notes' `updatedAt` predate baseline), no new contacts, zero activity-log entries, no new Gmail correspondence, no new/modified Drive files under "Rewhip". Ping `resolve_person` for this name still returns no match, consistent with prior sweeps. Chase pass on all three outstanding items — ages above, no arrivals found.
 - 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: both notes' `updatedAt` unchanged from 2026-08-22 (no re-read needed beyond metadata check); zero activity-log entries since baseline; no new contacts. Gmail (`after:2026/08/22`, name + Rewhip + CS Float + Stripe) found nothing beyond the internal weekly-sweep digest — no client correspondence in the window, including no confirmation of the QuickBooks recurring-payment setup. Ping org-wide semantic search returned only unrelated pre-2026-08-22 noise; `resolve_person` still no match. Chase pass on all three outstanding items — ages below; none arrived. No SOP exists yet for this client; no SOP-proposal candidates queued.
+- 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29→2026-09-12 — the 2026-09-05 run never completed, see `sweep-state.md`).** Double: note 479443 (`updatedAt` 2026-09-03) matches the 2026-09-03 log entry already on this file (Lilian's own status check/WhatsApp fact); note 479444 unchanged; zero activity-log entries in the window. ✅ **QuickBooks: the client's recurring payment to the firm has started** — a "Woohoo! You got paid" notice shows a **REWHIP LLC recurring payment posted 2026-09-01** (figure not retained) — this closes the standing "did he complete recurring-payment setup" question, though ⚠️ **a separate notice 2026-09-03 shows one bank transfer from REWHIP LLC (invoice 2272) was CANCELED for a bank-account problem on his end** — worth a light check that the recurring payment is actually stable, not just that it started once. Gmail (`after:2026/08/29`, name + Rewhip + Stripe + CS Float + Social Security) found nothing else client-specific — no SSN update, no Rewhip-scope answer, no Stripe data. Ping `search_meetings` (several phrasings) returned no legible content specific to this client — same off-topic pattern as prior runs; `resolve_person` not re-tried (no change expected, per 2026-08-15's settled finding that this client has no dedicated Ping record). Google Drive: a title search for "Rewhip" bounded to `modifiedTime > 2026-08-29` returned zero files — no new/modified documents in the window. `FOLLOW-UPS.md`/`BACKLOG.md` grepped — no hits. **Chase pass (unbounded) on all three named outstanding items** — the older child's SSN, the Rewhip LLC scope question, and the Stripe transaction data — **none arrived**; ages below.
 - _(2026-09-03, Lilian — human-initiated status check)_ — Lilian asked what remains
   pending on this client and, specifically, **the result of the older son's Social
   Security number** (she recalled the client saying he had gone to apply). Ran a live
@@ -224,14 +225,14 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
-- **The older child's SSN** — SS card was lost. On **2026-07-31** the client went to the SSA office and was told the replacement card would be **mailed by post** (allow ~1 month), so it was expected around **late August 2026**. As of **2026-09-03** we still don't have the number. The client sends such items by **WhatsApp** (outside the digital sweep). **Next step:** confirm with the client that the card arrived and get the number — entered into Double, never the repo.
+- **The older child's SSN** — SS card was lost. On **2026-07-31** the client went to the SSA office and was told the replacement card would be **mailed by post** (allow ~1 month), so it was expected around **late August 2026**. As of **2026-09-12** we still don't have the number — a Gmail search bounded `after:2026/08/29` for name/"Social Security" found nothing, and Double notes carry no update. The client sends such items by **WhatsApp** (outside the digital sweep). **Next step:** confirm with the client that the card arrived and get the number — entered into Double, never the repo.
 - **Year-end 2024 & 2025 addresses** — not chased this run (budget).
 - January 2026 statements (both accounts) to complete Dec 2025 — not chased this run (budget).
 - CS Float purchases/expense report — not chased this run (budget).
 - Home-office worksheet, Lendbuzz/Westlake amortization schedules, Form 1095-A, car purchase/sale documents, external-card statements, client-review items (deposits/travel/auto-transport Zelles) — not chased this run (budget).
-- Confirmation the client completed the QuickBooks recurring-payment setup — STILL OPEN, ~31 days pending since the first reminder (2026-07-29), the 2026-08-01/08-04 deadline already passed. A targeted search bounded `after:2026/08/22` for "recurring payment" found no confirmation the client ever completed setup.
-- **Rewhip LLC — clarify scope** — STILL OPEN, 45 days pending since raised (2026-07-15), no deadline. A targeted search bounded `after:2026/08/22` found nothing beyond what's already on file.
-- **Stripe transaction data** — STILL OPEN, 54 days pending since raised (2026-07-06), no deadline. A targeted search bounded `after:2026/08/22` found nothing client-specific.
+- ✅ **Confirmation the client completed the QuickBooks recurring-payment setup — ARRIVED 2026-09-12.** A QuickBooks "you got paid" notice shows a REWHIP LLC recurring payment posted 2026-09-01 (figure not retained). Closed as a setup question; ⚠️ **new, narrower watch-item**: a separate transfer for invoice 2272 was canceled 2026-09-03 for a bank-account problem on the client's side — worth confirming the payment stays reliable, not a re-opening of the original item.
+- **Rewhip LLC — clarify scope** — STILL OPEN, ~59 days pending since raised (2026-07-15), no deadline. A targeted search bounded `after:2026/08/29` found nothing beyond what's already on file.
+- **Stripe transaction data** — STILL OPEN, ~68 days pending since raised (2026-07-06), no deadline. A targeted search bounded `after:2026/08/29` found nothing client-specific.
 
 ### Information still needed
 - [ ] Primary language / preferred communication.
