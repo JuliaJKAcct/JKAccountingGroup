@@ -111,7 +111,19 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- 🔴 **HE IS A TIPPED WORKER, AND FROM 2025 THAT IS A DEDUCTION — his employers report the tips
+- 🔴 **HE ANSWERS THE ORGANIZER'S INCOME-SOURCE QUESTION WITH `Wages (W2)` ONLY, WHICH IS WRONG AND
+  SILENTLY CLOSES THE WHOLE SELF-EMPLOYED BRANCH.** He did exactly this on the 2025 organizer while
+  uploading 1099-NECs in the same submission. Because the organizer is conditional, that single tick
+  means he is **never asked** for business expenses, mileage, home office or a P&L — so a Schedule C
+  arrives with income and no deductions. **Do not trust that answer; ask the business questions
+  directly.**
+- 🔴 **HE HAS MARKETPLACE HEALTH INSURANCE, SO FORM 1095-A GATES HIS RETURN EVERY YEAR — and it
+  has already cost him money.** His 2024 return carried an **excess advance premium tax credit
+  repayment** on Schedule 2 line 1a because his advance credit exceeded what he was entitled to.
+  **Form 8962 is mandatory and blocks e-file**, his coverage has **month-gaps** rather than running
+  all twelve months, and his income moving up or down changes the repayment. **Get the 1095-A
+  early, and get it as a real PDF** — he photographs documents with his phone (see below).
+- - 🔴 **HE IS A TIPPED WORKER, AND FROM 2025 THAT IS A DEDUCTION — his employers report the tips
   in TWO DIFFERENT BOXES, so one of them is easy to miss.** One 2025 employer reported tips in
   **Form W-2 box 7** (`Social security tips`); another reported none in box 7 at all and instead
   put the tip figure in **box 14 marked `TIPS`**, with the tips folded into boxes 1, 3 and 5. The
@@ -121,18 +133,15 @@ watch-outs, one-off arrangements, history that affects the work.
   or automatic gratuity distributed to staff is NOT a qualified tip**, and all three tip-bearing
   employers are **contract catering and events** businesses, where a fixed distributed service
   charge is normal. **Ask the employer to split the figure before claiming it.**
-- 🔴 **HE HAS MARKETPLACE HEALTH INSURANCE, SO FORM 1095-A GATES HIS RETURN EVERY YEAR — and it
-  has already cost him money.** His 2024 return carried an **excess advance premium tax credit
-  repayment** on Schedule 2 line 1a because his advance credit exceeded what he was entitled to.
-  **Form 8962 is mandatory and blocks e-file**, his coverage has **month-gaps** rather than running
-  all twelve months, and his income moving up or down changes the repayment. **Get the 1095-A
-  early, and get it as a real PDF** — he photographs documents with his phone (see below).
-- 🔴 **HE ANSWERS THE ORGANIZER'S INCOME-SOURCE QUESTION WITH `Wages (W2)` ONLY, WHICH IS WRONG AND
-  SILENTLY CLOSES THE WHOLE SELF-EMPLOYED BRANCH.** He did exactly this on the 2025 organizer while
-  uploading 1099-NECs in the same submission. Because the organizer is conditional, that single tick
-  means he is **never asked** for business expenses, mileage, home office or a P&L — so a Schedule C
-  arrives with income and no deductions. **Do not trust that answer; ask the business questions
-  directly.**
+- 🔴 **HIS CAR COSTS WERE DEDUCTED WITHOUT ANY VEHICLE INFORMATION, AND THAT MAY HAVE LOCKED HIM
+  OUT OF THE BETTER METHOD FOR GOOD.** The prior year deducted fuel as an ordinary business cost
+  instead of as a **car and truck expense**, so the return never asked — and he never answered —
+  when the car went into service, how many miles were business, or whether he keeps a log.
+  🔑 **Two consequences.** The deduction has **no business-use percentage** behind it, and the IRS
+  does not allow amounts that are approximated. And because deducting fuel is the **actual-expense**
+  method, **choosing it in the first year a car is used in the business closes the mileage-rate
+  method for that car permanently** — the choice cannot be revoked after the due date. **Establish
+  owned-or-leased, the first business-use year, and the mileage before touching the car again.**
 - 🔴 **ALMOST EVERYTHING HE UPLOADS IS A PHONE PHOTOGRAPH WITH NO TEXT LAYER.** His 1095-A, his
   1099-NECs, his LLC papers, his installment agreement and one of his W-2s are all scans — they
   cannot be read by tooling and must be read by eye. **Ask for the issuer's original PDF** wherever
