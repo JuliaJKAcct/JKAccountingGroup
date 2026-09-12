@@ -312,12 +312,17 @@ Anything the team must know to serve this client well.
   ends of 2025; that is now an open question on the working paper.
   🔑 **And the practical answer to her worry: none of it changes 2025 tax.** The household's taxable
   income before the QBI deduction is **zero**, so the §199A deduction is zero however every one of those
-  questions is answered. **What the answers DO fix is the CHARACTER of a suspended loss in the year it
-  is incurred**, which is what governs the year it is finally allowed.
-  🛠️ **Three keying defects were found and each was delivered with its fix** — a one-dollar break on
-  Form 7203, a transposed figure on Schedule E, and a partnership loss deducted in full that the
-  partnership itself says is mostly disallowed. ⚠️ **None of them moves the refund**, which is exactly
-  why they would survive a bottom-line check. **Figures: the working paper, §3P.**
+  questions is answered — ⚠️ **on the branch as built; if the open question about whether the second
+  partnership's loss is passive lands the other way, taxable income turns positive and the deduction
+  becomes real.** **What the answers DO fix is the CHARACTER of a suspended loss in the year it is
+  incurred**, which is what governs the year it is finally allowed.
+  🛠️ **Three keying defects were found, each delivered with its fix** — a one-dollar break on Form 7203,
+  a transposed figure on Schedule E, and a partnership loss deducted in full that the partnership itself
+  says is mostly disallowed — 🔴 **and two further things that nobody had decided, found by an
+  independent review of that work: the premium-tax-credit position reversed between drafts and is now
+  claimed on a fact nobody has established, and a required attachment is missing.** ⚠️ **None of the
+  five moves the refund**, which is exactly why they would survive a bottom-line check.
+  **Figures: the working paper, §3P.**
 - 🔵 **2026-09-11 (the lease advance) — Lilian asked where a rule had been read, and the answer was that
   half of it had not been.** She worked through the vehicle treatment line by line and then asked the
   plain question about the amount paid at signing: *"¿dónde lo leíste, en el documento de renta o
