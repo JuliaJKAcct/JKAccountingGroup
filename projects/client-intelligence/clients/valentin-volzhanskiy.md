@@ -26,24 +26,14 @@
 
 ## 1. Snapshot
 
-- **Business name:** Individual taxpayer — no trading entity used on the return. Files a
-  **Schedule C as a sole proprietor**; the 2024 Schedule C carried **no business name and no EIN**.
-- **Entity type:** Individual / sole proprietor. ⚠️ He has uploaded **Delaware LLC formation
-  documents** to the portal, and their relationship to the Schedule C is **unestablished** — see §5.
-- **Home state:** Florida. **Moved within Florida during 2025** — Hialeah (Miami-Dade) →
-  **Fort Lauderdale, Broward County**. Florida levies no personal income tax, so no state return
-  has been required to date.
-- **Industry / what they do:** Hospitality. Occupation on the return is **Bartender**; the 2024
-  Schedule C principal business was **catering**, business code **722410**. Separately takes
-  **contractor work paid on Form 1099-NEC** by several companies the firm also serves.
-- **Primary language:** EN (portal and email correspondence are in English; the July 2026 Zoom call
-  was conducted largely in Russian).
-- **Our engagement (services we provide):** **Income tax only** — Form 1040 preparation.
-  `Income Tax` is ticked in Double; `Bookkeeping` is **N/A**; `1099 Preparation` and `Annual Report`
-  are both **off**.
+- **Business name:** Individual taxpayer — no trading entity is used on the return; he files a **Schedule C as a sole proprietor**, and the 2024 Schedule C carried **no business name and no EIN**.
+- **Entity type:** Individual / sole proprietor. ⚠️ He has uploaded **Delaware LLC formation documents** to the portal and their relationship to the Schedule C is **unestablished** — see §5.
+- **Home state:** **Florida — Broward County (Fort Lauderdale)** since his 2025 move; previously Miami-Dade (Hialeah). Florida levies no personal income tax, so no state return has been required to date.
+- **Industry / what they do:** Hospitality — occupation on the return is **Bartender**; the 2024 Schedule C principal business was **catering**, code **722410**. He separately takes **contractor work paid on Form 1099-NEC** by several companies the firm also serves.
+- **Primary language:** EN — portal and email correspondence are in English, though the July 2026 Zoom call was conducted largely in Russian.
+- **Our engagement (services we provide):** **Income tax only** — Form 1040 preparation. `Income Tax` is ticked in Double; `1099 Preparation` and `Annual Report` are both off.
 - **Fiscal year-end:** 31 December (calendar year).
-- **Accounting platform:** **None.** Double shows `platform: none` — there are no books, and there
-  is no QuickBooks file. Everything on the return comes from third-party documents.
+- **Accounting platform:** **None** — Double shows `platform: none`, so there are no books and no QuickBooks file; everything on the return comes from third-party documents.
 
 ## 2. Contacts
 
@@ -69,7 +59,7 @@ link). Never write the credential itself here.
 |---|---|---|---|
 | Double client portal | Document exchange, organizer | Client's own login — the firm holds none | Migrated from TaxDome; account activated Apr 2025 |
 | Health Insurance Marketplace (healthcare.gov) | Source of the annual Form 1095-A | Client's own login — the firm holds none | Needed **every year** — see §5 |
-| Bank (direct deposit) | Refund deposit / balance debit | Double organizer response | Capital One, checking |
+| Bank (direct deposit) | Refund deposit / balance debit | Double organizer response | Bank on file — details in Double |
 
 ## 4. Obligations & recurring processes
 
@@ -84,9 +74,10 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Applies?** No — he is an employee of several unrelated employers and has no payroll of his own.
 
 ### Bookkeeping & monthly close
-- **Applies?** No. Double records `Bookkeeping: N/A` and `platform: none`. ⚠️ **This is the reason
-  his Schedule C has no books**: the expense side of it exists only in whatever he can tell us or
-  document, which is why the organizer's business questions matter so much for him.
+- **Applies?** No.
+- Double records `Bookkeeping: N/A` and `platform: none`.
+- ⚠️ **This is the reason his Schedule C has no books**: the expense side exists only in whatever he
+  can tell us or document, which is why the organizer's business questions matter so much for him.
 
 ### Income tax
 - **Applies?** **Yes — this is the whole engagement.**
@@ -126,6 +117,10 @@ watch-outs, one-off arrangements, history that affects the work.
   put the tip figure in **box 14 marked `TIPS`**, with the tips folded into boxes 1, 3 and 5. The
   box-14 one is by far the larger. **Read box 7 AND box 14 on every W-2 he sends**, every year.
   The deduction is claimed on **Schedule 1-A (Form 1040) Part II**, which did not exist before 2025.
+  🔴 **But reporting is not eligibility, and his employers are the risky kind:** a **service charge
+  or automatic gratuity distributed to staff is NOT a qualified tip**, and all three tip-bearing
+  employers are **contract catering and events** businesses, where a fixed distributed service
+  charge is normal. **Ask the employer to split the figure before claiming it.**
 - 🔴 **HE HAS MARKETPLACE HEALTH INSURANCE, SO FORM 1095-A GATES HIS RETURN EVERY YEAR — and it
   has already cost him money.** His 2024 return carried an **excess advance premium tax credit
   repayment** on Schedule 2 line 1a because his advance credit exceeded what he was entitled to.

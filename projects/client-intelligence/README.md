@@ -190,7 +190,7 @@ client-intelligence/
 │   ├── email-template.html  ← the on-brand, email-safe report template the routine fills
 │   └── sweep-health-review.md ← post-run checklist for a Saturday report, + the standing
 │                                diagnosis of how this sweep fails (and two retracted findings)
-└── clients/               ← one file per client (56 so far — see the Clients index below)
+└── clients/               ← one file per client (57 so far — see the Clients index below)
 ```
 
 ## Clients
