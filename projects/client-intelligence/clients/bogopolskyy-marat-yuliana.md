@@ -290,16 +290,21 @@ Anything the team must know to serve this client well.
   not Odoo** *(Odoo is the firm's own ERP and holds no client tax documents)* — **the three files were
   read from her Double library through the redactor**, and saying which system was opened is part of the
   answer.
-  ✅ **What the documents settle, all of it new knowledge about this household's partnership interests:**
+  ✅ **What the documents settle** *(⚠️ **not all of it new** — this file already recorded PEP as a
+  retail food-service activity with Marat a limited partner at 35%; **what is genuinely new is the
+  aggregation box, the Final-K-1 answer, the partnership's own allowed/disallowed split, and the 2024
+  search**)*:
   **PEP Hollywood FL LLC** attached a full §199A statement — the activity is **`RETAIL FOOD SERVICE`**,
   it is **NOT a specified service trade or business**, not a PTP, not aggregated, and it reports **no
   W-2 wages and no qualified property**; Marat holds **35%** and is ticked as a **limited partner or
   other LLC member**, which makes his share **passive**; and **the partnership's own basis worksheet
   prints its loss split as `allowed / disallowed`**, i.e. the partnership has already decided most of it
   is not deductible by him this year.
-  🔴 **Development Strategies LLC attached NOTHING on §199A** — no code Z, no statement — and its own
-  box-by-box attachment is **missing the sheet that would carry boxes 15–23**, so the firm should ask for
-  the complete package, not only Statement A. He is a **general partner / LLC member-manager** there,
+  🔴 **Development Strategies LLC: the K-1 FACE reports nothing under box 20** — no code Z, no statement
+  anywhere in the three pages we hold — **and its own box-by-box attachment is missing the sheet that
+  would carry boxes 15–23**, so the honest sentence is *"the face reports nothing and a page that could
+  contradict it is missing from our copy"*, not *"the partnership reported nothing"*. 🛠️ **Ask for the
+  complete package, not only Statement A.** He is a **general partner / LLC member-manager** there,
   he **joined during 2025** *(his share runs 0% → 20%)*, and he **funded it in cash**.
   ✅ **Neither K-1 is marked FINAL**, so he still holds both interests at year end.
   ⛔ **NEITHER PARTNERSHIP APPEARS ANYWHERE IN THE 2024 RETURN** *(searched in full)*. For Development
