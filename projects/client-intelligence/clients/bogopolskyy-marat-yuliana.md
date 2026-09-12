@@ -1,6 +1,6 @@
 # BOGOPOLSKYY, MARAT and YULIANA — the joint individual return
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-11
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -133,13 +133,22 @@ Anything the team must know to serve this client well.
 
 - 🔴 **WHAT STOPS THE 2025 RETURN BEING TRANSMITTED — THREE things, and only the first is a question
   for the client.**
-  ① **What Yuliana's business actually IS** — her Schedule C has no principal-business description
-  and no code, and **the return cannot be filed without them**. *(This is the only client answer that
-  actually blocks e-file.)*
-  ② 🔴 **FORM 8962 IS NOT IN THE DRAFT AT ALL** *(found 2026-09-11, reading the return itself)*. The
-  Marketplace paid advance credit for **every month of the year**, and the instructions' *Who Must
-  File* is unconditional — **a return with advance credit paid cannot be filed without that form.**
-  ✅ **Every figure for it is already in hand and computed; it has simply never been keyed.**
+  🛑 **REWRITTEN 2026-09-12 — this band described the FIRST draft and was four drafts out of date.**
+  Read as it stood, it said the premium-tax-credit form was missing, the dependants had never been
+  entered, and the return ended in an amount due. **None of that has been true since 2026-09-11**, and
+  this band's own rule is to put first whatever would cause the worst mistake if someone did not know
+  it. *(Caught by the independent review of PR #372.)*
+  ① 🔵 **What Yuliana's business actually IS — the boxes are FILLED, the fact is not CONFIRMED.** The
+  draft now carries a principal-business description and code, so **it no longer blocks e-file** —
+  ⚠️ **but nobody recorded where those words came from, and her two 1099-NECs are from a
+  personal-services payer and a business-services payer, neither of which the description obviously
+  describes.** ⛔ **If it was chosen at the keyboard rather than given by her, the taxpayer is signing
+  a description she never supplied.** 🛠️ **Ask her, in her own words, what work she did after the salon
+  was sold.**
+  ② ✅ ~~**FORM 8962 IS NOT IN THE DRAFT AT ALL**~~ — **CLOSED: it is in, and it computes to nil in both
+  directions.** 🟠 **What is still open is the FACT underneath it** — whether the household qualifies
+  under the below-the-poverty-line exception — **which is Lilian's call and is on the outstanding
+  list.** ⛔ **The form itself must NOT be re-keyed.**
   ⚠️ **AND ONE THAT CHANGES WHAT THE RETURN IS WITHOUT BLOCKING IT — was the car used for Marat
   Boxing in 2024?** ✅ **It no longer decides the METHOD** *(the contract is a lease, and actual
   expenses wins either way)*, **but it decides whether 2024 left a real deduction unclaimed**: **two
@@ -147,12 +156,16 @@ Anything the team must know to serve this client well.
   return claimed nothing, and the new organizer saying 01/01/2025.
   ③ **File the Gossip Miami 1120-S, then re-check box 1 and box 16D against what was filed** — ours
   to do, and still open even though the amounts are ruled.
-  🔴 **AND THE DRAFT IS MISSING MUCH MORE THAN THAT.** The **dependants have never been entered on page
-  1 of the 1040**, so the child credit, the earned income credit and the preparer's due-diligence form
-  are all absent, and the return currently ends in an **amount due** where it should end in a refund.
-  **Schedule D, Form 8949, Form 7203 and Form 8582 are absent too** — ⚠️ **and so is Form 6198, which
-  is CONDITIONAL and on today's facts probably not required at all.** ✅ **The full list,
-  with each fix and the order to work them, is the working paper's §3L.**
+  ✅ 🔵 **AND THE DRAFT IS NO LONGER MISSING MUCH.** As at the fifth draft *(2026-09-12)*: **the
+  dependants are entered, the child credit, the earned income credit and the preparer's due-diligence
+  form are all in, and the return ends in a REFUND.** The shareholder basis form, the capital-gains
+  schedule and the sale itself are all keyed and internally right.
+  🔴 **ONE required form is still absent — the passive-activity limitation form**, which is where the
+  first partnership's blocked loss has to land. 🟠 **And the partnership loss itself is still deducted
+  in full on the rental-and-partnership schedule when almost none of it is allowable.** ⚠️ **Form 6198
+  is CONDITIONAL and on today's facts may not be required at all — do not add it by default.**
+  ✅ **The full list, with each fix, its entry route and the order to work them, is the working paper's
+  §3Q.** *(The §3L list this band used to point at is the FIRST draft's and is now history.)*
   🔴 **AND ONE DEFECT THAT MUST BE SETTLED BEFORE FILING — it is not a question for the client.**
   Yuliana's **2024 Form 7203 opens at a stock basis materially higher than what she confirmed
   paying.** ⛔ **Only Lilian or Julia can settle it**, and it swings her loss carryforward into 2026.
@@ -295,12 +308,22 @@ Anything the team must know to serve this client well.
   and the answer is that the allowed figure is not the firm's — it is the PARTNERSHIP's own.** Their
   accountant's basis worksheet prints the loss split under columns literally headed **`Allowed Loss`**
   and **`Disallowed Loss`**, and the allowed column is the smaller figure.
-  🔑 **The durable fact about this partnership interest, worth keeping because it governs every future
-  year:** Marat **has put no money into it** — his only basis is a share of the partnership's debt — and
-  he is a **limited partner**, which makes his share of the loss **passive**. **So two separate limits
-  stack: most of the loss is blocked for want of basis, and the small remainder is blocked because there
-  is no passive income to absorb it.** ⛔ **Nothing is lost — both pieces carry forward** and will be
-  released in the year he either puts money in or has passive income.
+  🔑 **What this establishes about the partnership interest, and two things it does NOT:** on the
+  partnership's own worksheet his **2025 basis opens at zero with no contribution recorded**, so his
+  only basis is his **share of the partnership's debt** — and the K-1 ticks him as a **limited partner
+  or other LLC member**, which the return treats as making his share of the loss **passive**. **So two
+  limits stack: most of the loss is blocked for want of basis, and the remainder is blocked because
+  there is no passive income to absorb it.**
+  ⚠️ **Neither of those is settled, and the file should not read as though they were** *(review,
+  2026-09-12)*: ① **the opening zero is a fact about 2025, not about the whole holding period** — an
+  earlier contribution already absorbed by earlier losses looks identical — **and the 2024 return does
+  not show this partnership at all**, which is its own open question; ② **whether an LLC MEMBER falls
+  inside the limited-partner presumption at all is contested**, and the firm follows it here only
+  because so little turns on it.
+  ⛔ **And "nothing is lost" is true of the passive piece, not of the basis piece:** a basis-blocked
+  loss is personal to the partner and **does not survive a disposal of the interest** before basis is
+  restored. **This household disposed of a different entity this same year, so that is not an abstract
+  point.**
   ⚠️ **And the worksheet's own footnote is the caveat that keeps this open:** it was *"prepared based on
   partnership records"*, so **if he put money in that the partnership did not record, more of the loss
   is deductible.** **That is a question for him, and it is on the open list.**
