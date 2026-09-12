@@ -1,6 +1,6 @@
 # LUMETRO LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-09-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -28,8 +28,9 @@
 
 - **Business name:** LUMETRO LLC
 - **Entity type:** LLC — Double flags Schedule C / income-tax-yes, **but see the tax quirk in §4** (the firm's note says Lumetro won't file its own return). _(Double + Gmail)_
-- **Home state:** _(pending — not conclusively established)_. **Lead:** the IRS EIN-assignment notice on file uses a Sheridan, **Wyoming** registered-agent mailing address for the entity — common for a WY-formed LLC, but not proof of where the business actually operates; still needs confirming. _(Google Drive, 2026-08-01 — low confidence)_
-- **Industry / what they do:** The **digital-advertising / ad-spend vehicle** within the owner's tech group — runs **Google Ads** spend that is allocated/billed to the affiliated operating company **SensusTech LLC**. Not a standalone operating business. _(Gmail)_
+- **Home state:** ✅ **State of FORMATION settled 2026-09-12: WYOMING.** The Articles of Organization (opened and read directly from Drive — a "Close Limited Liability Company" filed with the Wyoming Secretary of State, 2026-01-29, Original ID 2025-001602689) confirms Lumetro LLC was formed in Wyoming, with a Sheridan, WY registered-agent address (Sage Agents LLC) — the same address the EIN-assignment letter carries. **This does not by itself settle the entity's operating/tax home** — a Wyoming registered-agent formation is common for an out-of-state owner and says nothing about where the owner actually works; the owner's own residence/operating location is still not established. _(Google Drive, read 2026-09-12)_
+- **EIN:** **33-3132141** _(IRS CP 575 G notice, read from Google Drive 2026-09-12 — plainly an EIN, not an SSN)_.
+- **Industry / what they do:** The **digital-advertising / ad-spend vehicle** within the owner's tech group — runs **Google Ads** spend that is allocated/billed to the affiliated operating company **SensusTech LLC**. Not a standalone operating business. Also carries at least one **AI-compute hosting expense (Runpod — GPU rental for the group's AI services)** billed under Lumetro, per the owner's own explanation to the bookkeeper. _(Gmail, 2026-09-04)_
 - **Primary language:** English (all correspondence). _(Gmail; owner RU/UA heritage — low confidence)_
 - **Our engagement (services we provide):** Monthly bookkeeping (the monthly deliverable is an **"Ad breakdown Lumetro/Sensustech"**); **1099 preparation**. Sales tax N/A; payroll N/A; annual report **no**. Income tax — **see quirk**. **Assigned bookkeeper: Maria.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
@@ -63,7 +64,7 @@ here. Open the Double client to get the actual details.
 - **Applies?** No — **N/A** _(Double)_
 
 ### Bookkeeping & monthly close
-- **Applies?** Yes — **monthly** _(Double)_. Prepared and emailed **together with SensusTech**; the core work is the monthly **Google Ads spend breakdown**.
+- **Applies?** Yes — **monthly** _(Double)_. Prepared and emailed **together with SensusTech**; the core work is the monthly **Google Ads spend breakdown**. **August 2026 month-end close completed 2026-09-07** _(Double activity log)_; the combined "Sensustech/Lumetro Reports Aug2026" was sent to the owner and acknowledged 2026-09-09 _(Gmail)_.
 
 ### Income tax
 - **⚠️ Quirk to reconcile:** the firm's own proposal note says **Lumetro "won't file its own tax return"** — its results are **consolidated into SensusTech** (to avoid revising the SensusTech proposal). This **conflicts** with Double's "income tax = yes / Schedule C" flags. **Resolve which is correct.** _(Gmail: "New Proposal For LUMETRO LLC")_
@@ -90,14 +91,16 @@ here. Open the Double client to get the actual details.
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** No new Double activity/notes; Ping had no legible Lumetro-specific hits. Found the 2026-04-13 Julia email on the tax-filing-treatment quirk (see §4) — bears on but does not fully resolve the standing Schedule-C-flag question. Sibling-entity activity found under "Lumetro"/"Fedorov" (a 2026-08-21 "USD FUNDS - FYI" thread) belongs to Mobilesource/SensusTech, not routed here.
 - 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: properties unchanged (checked against the 2026-08-22 snapshot, no drift), no new notes (still zero), no activity-log entries in the window. Gmail bounded `after:2026/08/22` for "Lumetro"/"Fedorov" found nothing beyond the routine weekly-sweep meta-email. **Chase pass on the home-state question** (unbounded, since it has been open since file creation) surfaced a previously-unexamined **2026-01-22 email** ("LUMETRO LLC", from the owner's personal address to Julia) carrying two PDF attachments — an EIN-assignment letter and an **"Articles Of Organization"** document. The Articles of Organization would very likely settle the state-of-formation question, but **no tool available in this session can extract a Gmail attachment's PDF content** — flagged for a human (or a redactor pass) to open. Ping `search_meetings` scoped to "Lumetro LLC" returned no legible client-specific content (same semantically-loose, off-topic pattern as prior runs). Google Drive: the same 4–5 "Lumetro LLC" folders as before, no new modification dates since baseline — the duplicate-folder situation is unchanged.
+- 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29→2026-09-12 — the 2026-09-05 run never completed, see `sweep-state.md`).** Double: `list_client_properties` unchanged from the 2026-08-29 snapshot; `list_notes` still 0; `list_activity_log` (from 2026-08-29) shows the **August 2026 month-end close completed 2026-09-07** (all standard tasks Done) and one client-question resolution 2026-09-02. Gmail bounded `after:2026/08/29` for "Lumetro"/"Fedorov" found three routine threads: the combined "Sensustech/Lumetro Reports Aug2026" delivery (2026-09-09, acknowledged same day), a "RUNPOD 10K expense Lumetro" clarification (2026-09-04 — the owner explained Runpod is GPU-rental hosting for the group's AI services; no figures retained), and a routine QuickBooks payment-received notice for invoice #2286 (2026-09-01). (Two other Fedorov-side threads found in the same window — a Human Interest 401(k) escalation and a crypto/1099 question — belong to SensusTech and Mobilesource respectively, not routed here.) Ping `search_meetings` (scoped to the resolved Ping client record for Stanislav Fedorov, several phrasings) returned **zero** results for this client specifically. Google Drive: same 4–5 duplicate "Lumetro LLC" folders, no consolidation. `FOLLOW-UPS.md`/`BACKLOG.md` grepped for "Lumetro"/"Fedorov" — no hits. **Chase pass, unbounded, on both standing outstanding items:** (1) the tax-filing-treatment quirk — no new evidence found this run, stays open; (2) the home-state/state-of-formation question — **RESOLVED**, see §1: read the EIN letter and the Articles of Organization directly from Google Drive (both were already sitting in the Drive folder, not a Gmail attachment as the 2026-08-29 entry assumed) — Wyoming Close LLC, filed 2026-01-29, plus the entity's EIN (33-3132141).
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Reconcile the tax-filing treatment** — ARRIVED (partially): see the 2026-04-13 Julia email (§4), supporting "no separate filing." Not conclusively closed against the earlier Double Schedule-C flag, which was never explained (only noted stale). STILL OPEN as of 2026-08-29 — no further evidence found this run.
-- Confirm **home state / state of formation** — STILL OPEN, pending since at least 2026-08-01 (~28 days). A search of Gmail bounded `after:2026/08/22`, on 2026-08-29, for Wyoming/home-state/state-of-formation terms found no direct confirmation, but an unbounded chase-pass search surfaced a strong, unopened lead: a 2026-01-22 email carries an "Articles Of Organization" PDF attachment that likely names the state of formation directly — see the 2026-08-29 log entry. No deadline.
-- Drive has **duplicate "Lumetro LLC" folders** — not re-chased this run (budget); no modification-date changes observed, so nothing suggests the duplicates were consolidated.
+- **Reconcile the tax-filing treatment** — ARRIVED (partially): see the 2026-04-13 Julia email (§4), supporting "no separate filing." Not conclusively closed against the earlier Double Schedule-C flag, which was never explained (only noted stale). STILL OPEN as of 2026-09-12 (~ since 2026-08-01, ~43 days) — a targeted Gmail search bounded `after:2026/08/29` for the filing-treatment terms found no further evidence this run. No deadline.
+- ~~Confirm **home state / state of formation**~~ ✅ **ANSWERED 2026-09-12: state of formation is WYOMING** (Articles of Organization, read directly from Drive — see §1). What remains open, narrower than before: the entity's actual **operating/tax home** (where the owner works) is still not established — a Wyoming formation with a registered-agent address does not settle that.
+- Drive has **duplicate "Lumetro LLC" folders** — STILL OPEN, unchanged as of 2026-09-12; no modification-date changes observed across any of the 4–5 folders, so nothing suggests they were consolidated. Not chased further this run (low priority, no deadline).
 
 ### Information still needed
-- [ ] Home state; fiscal year-end; the income-tax treatment (above); credentials location
+- [x] State of formation — **Wyoming** _(Articles of Organization, read 2026-09-12)_.
+- [ ] Operating/tax home state (where the owner actually works); fiscal year-end; the income-tax treatment (above); credentials location
 
 ## 7. Links
 

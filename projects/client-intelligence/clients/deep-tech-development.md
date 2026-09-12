@@ -1,6 +1,6 @@
 # Deep Tech Development Group LLC
 
-> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-09-03
+> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-09-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -258,12 +258,11 @@ the actual details.
   **Julia's** store login, not the company's bank — **inferred from the store being registered to Julia, not
   confirmed by Shopify.**
   _(Shopify support conversation, read and answered 2026-09-03 — Lilian and Julia.)_
-- ⚠️ **USPS mail forwarding for this company (and for 1701 N M ST LLC, Universal Trading Technology
-  LLC, and the owner individually) ends 2026-09-18** — confirm whether it needs renewing or whether
-  a permanent address change should be filed instead, before mail starts bouncing. STILL OPEN — **15 days out
-  as at 2026-09-03** (it read "20 days out" when counted on 2026-08-29); no evidence found that a decision has
-  been made. _(Gmail, 2026-08-14; re-chased 2026-08-29 — a
-  search of Gmail bounded `after:2026/08/22` for USPS forwarding on this company or its related entities
+- 🔴 **USPS mail forwarding for this company (and for 1701 N M ST LLC, Universal Trading Technology
+  LLC, and the owner individually) ends 2026-09-18 — now 6 DAYS OUT.** Confirm whether it needs renewing or whether
+  a permanent address change should be filed instead, before mail starts bouncing. STILL OPEN; no evidence found that a decision has
+  been made. _(Gmail, 2026-08-14; re-chased 2026-09-12 — a
+  search of Gmail bounded `after:2026/09/07` for USPS forwarding on this company or its related entities
   found nothing new.)_
 - ⚠️ **CONFIRM THE FDOR WITHDREW ITS Q2 2025 REEMPLOYMENT-TAX DEMAND** (its letter to the client is dated
   **2025-10-22**) — STILL OPEN, **21 days pending as at 2026-09-03**, since first flagged 2026-08-13, no deadline, and **an
@@ -272,13 +271,13 @@ the actual details.
   `after:2026/08/22`, on 2026-08-29, for FDOR/reemployment-tax correspondence on this client found
   nothing new.
 - **Reconcile the payroll flag / Gusto cancellation decision (owner asked 2026-08-05)** — STILL
-  UNSETTLED, **24 days pending as at 2026-08-29 (29 on 2026-09-03), and the evidence now points the OTHER way.** Gusto sent an "Action
-  required: Payroll is late" reminder for **DEEP TECH DEVELOPMENT GROUP LLC** on **2026-08-27**, for the
-  **Aug 17–30, 2026** pay period, addressed to Julia, Lilian, Maria and the owner
-  (`willivanoff@gmail.com`) — an active, ongoing biweekly payroll run, not a lapsed one. This reverses
+  UNSETTLED, **~38 days pending as at 2026-09-12, and the evidence keeps pointing the OTHER way.** Gusto has sent "Action
+  required: Payroll is late/due" reminders for **DEEP TECH DEVELOPMENT GROUP LLC** on **2026-08-27, 2026-09-08 and 2026-09-10** (the last two for the
+  **Aug 31–Sep 13, 2026** pay period), addressed to Julia, Lilian, Maria and the owner
+  (`willivanoff@gmail.com`) — a repeated, ongoing biweekly payroll pattern, not a lapsed one. This reverses
   the 2026-08-22 negative finding (no Gusto emails naming this client 08-15→08-21) and strengthens the
   reading that the cancellation was never actioned, rather than that payroll quietly stopped. _(Gmail,
-  2026-08-27, found 2026-08-29.)_
+  2026-08-27/09-08/09-10.)_
 - **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30) — STILL OPEN, ~30 days pending as at 2026-08-29 (~35 on 2026-09-03), no deadline. A search of Gmail bounded `after:2026/08/22`, on 2026-08-29, for "Safe Guard Self Storage" did not find any results.
 - **New toll balance appeared** at Penn Credit after the last payment brought it to zero — STILL OPEN, no deadline (recurring item). A search of Gmail bounded `after:2026/08/22`, on 2026-08-29, for "Penn Credit" did not find any results (the portal itself was not logged into — out of scope for this sweep).
 - Confirm the **sales-tax state / registration** and what's taxed (Shopify goods).
@@ -296,6 +295,7 @@ the actual details.
 - ~~Confirm QuickBooks Online reconnection to Double~~ — **answered 2026-08-11 (Lilian): the disconnection follows the bookkeeping pause.** Reconnect when the client resumes, not before.
 
 ### Log (continued)
+- 2026-09-12 — **Incremental sweep (baseline 2026-08-29→2026-09-12; the 2026-09-07 manual Gmail-only catch-up already covers part of this window — see above, not duplicated here).** Double: `list_client_properties` unchanged; `list_notes` — both notes re-read in full. **491845 (FDOR) unchanged since 2026-08-13.** 🟡 **503544 (Shopify) is now STALE against this file** — its last edit was 2026-09-03 ("now genuinely with Shopify… watch for confirmation inside the conversation"), so it does **not** yet reflect the 2026-09-04 Balance-account closure or the 2026-09-07 discovery of the second blocker (Shopify Payments must be deactivated) and Julia's still-unanswered question about the bank account. Per the firm's case-note convention this note is due for a rewrite-in-place; flagged here rather than edited (outside this sweep's scope). `list_activity_log` (from 2026-08-29) shows only task administration on 2026-09-02 (Lilian): a new "Monthly Sales Tax" task was created, its recurrence changed twice, then **deleted** the same session; the existing standing "Sales Tax" task (quarterly) was marked priority instead — reads as cleanup, not a jurisdiction or status change. Gmail (`after:2026/09/07`, business names + Ivanov + Shopify, to close the gap left by the manual catch-up) surfaced **two more Gusto "payroll is late/due" reminders (2026-09-08, 2026-09-10)** for the Aug 31–Sep 13 pay period, addressed to Julia, Lilian, Maria and the owner — payroll is still demonstrably active, which continues to point away from "payroll quietly stopped" and toward "the cancellation decision was never actioned" (now **~38 days** pending since 2026-08-05); no reply from Shopify Support to Julia's 2026-09-07 bank-account question was found. Ping (org-wide, "Deep Tech Development Go Robots Shopify payments Ivanov Gusto FDOR toll Penn Credit storage") returned no legible, on-topic hits — all results are noise from unrelated clients' Shopify/e-commerce discussions. **Chase pass:** the USPS mail-forwarding deadline (2026-09-18) is now **6 days out** — STILL no evidence a renewal/address-change decision has been made; the FDOR Q2-2025 demand-withdrawal confirmation — STILL OPEN, no new evidence; Safe Guard Self Storage cancellation and the Penn Credit toll balance — **not chased this run** (budget; both were chased as recently as 2026-08-29 with no movement); the second "Deep Tech" Drive folder identity check and the State Farm UM wet-signature hand-off — **not chased this run** (budget).
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** No new Double notes/activity; the FDOR case note (491845) is unchanged since 2026-08-13. Chase pass on all five §6 items (deadline items first): the **USPS mail-forwarding-ending deadline is 2026-09-18 (27 days out)** — no evidence found that a renewal/address-change decision has been made; the Safe Guard Self Storage cancellation and the Penn Credit toll balance are both still open with no update; the FDOR Q2-2025-demand-withdrawal confirmation is unchanged since 2026-08-13; the Gusto cancellation decision remains UNSETTLED (see above — new negative evidence, not a resolution). The second "Deep Tech" Drive folder identity check was not re-chased this run (budget).
 - 2026-08-25 — **The Shopify store's ownership transfer to the owner was worked with Shopify support, and it is
   blocked.** _(Shopify support chat transcript, 2026-08-25, supplied by Lilian; corroborated against Gmail and

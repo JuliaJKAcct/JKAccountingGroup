@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1120,6 +1120,27 @@ street address never appear here, and nor do dollar figures — those live in Do
   unrelated subcontractor** than an identification of the former business partner — still not confirmed
   either way, and per the no-personal-names rule, no name is written here. Chase pass on the priority
   items below — no movement found on any of them.
+- 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29→2026-09-12 — the 2026-09-05 run never
+  completed, see `sweep-state.md`).** **Both notes re-read in full per this run's explicit instruction,
+  even though `updatedAt` looked unchanged, as required.** Both ARE unchanged: 485225 still shows
+  `updatedAt` Mon Aug 17 2026 13:47:21 with the same body already recorded here; 490984 still shows
+  `updatedAt` Thu Aug 20 2026 20:34:21, body identical (the K-1 route, the chase date, what's confirmed,
+  what's open) — no silent edit to either. `list_activity_log` (from 2026-08-29) returned zero entries.
+  Gmail bounded `after:2026/08/29` for "Melnyk" and separately for K-1/"Midwest Expedited"/"Midwest Truck
+  Leasing"/"AVDM Holdings" found **no client-specific correspondence at all** — the few hits that matched
+  were unrelated threads (Mobilesource bookkeeping, a Wolters Kluwer e-file error) sharing generic search
+  terms; no K-1, no health-coverage answer, no extension confirmation, and no reply from the former
+  partner (the note says any reply lands at Julia's email, which this search covers). Ping org-wide
+  semantic search (several phrasings on K-1/bankruptcy/Midwest/health coverage) returned nothing legible
+  specific to this client. Google Drive: the same two "Melnyk"-surname W-9 PDFs as 2026-08-29 (unchanged
+  creation dates, same folder). ⚠️ **Re-reading note 490984 this run surfaces that the former partner's
+  first name, recorded only in that note, now ALSO matches the first name on those two PDFs — not only
+  the surname as previously noted.** This raises, without settling, the "coincidental match vs. the
+  actual former partner" question flagged 2026-08-29. **Per the no-third-party-names rule, no name is
+  written here** — flagged for Lilian to compare directly, since she holds both names already.
+  `FOLLOW-UPS.md`/`BACKLOG.md` grepped — the existing tracked row is unchanged. **The three K-1s (chase
+  date 2026-09-15, now 3 days out) have NOT arrived.** No new health-coverage, extension, or
+  S-corp-Illinois-operations answers found. Chase pass on the priority items below — no movement on any.
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -1129,7 +1150,7 @@ for **the client**, some are firm-side work that must **never** involve him (the
 route with Julia), and the top item is now a **wait on a third party**. ⚠️ **Check which before acting
 on one.** ⚠️ **Only the first four reach the team on the published card.**
 
-- ⏰ **The three K-1s — PROMISED, NOT ARRIVED. Chase on 2026-09-15 — 17 days out, still not due.** ✅ **A route to them opened
+- ⏰ **The three K-1s — PROMISED, NOT ARRIVED. Chase on 2026-09-15 — now 3 days out.** ✅ **A route to them opened
   2026-08-20 and it does not run through the client** — who it runs through, and how, is in §5 and on
   **Double note 490984**, deliberately not on this line, which publishes. So this is no longer a
   decision for Lilian and Julia — it is a **wait to be managed**, needing three things: **(a) a diary
@@ -1140,7 +1161,7 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
   fallback routes stay on the table until the forms are in hand** — IRS wage & income transcript ·
   the 1120-S itself · file and amend with **Form 8082** (§5). ✅ **His name and number are now on Double note
   490984** — until 2026-08-20 the firm's only route to these documents lived in one person's phone.
-  ⓘ **Re-checked 2026-08-29 — no early arrival**, Double notes and Gmail both confirm nothing has moved.
+  ⓘ **Re-checked 2026-08-29 and again 2026-09-12 — no early arrival**, Double notes and Gmail both confirm nothing has moved. **The chase date is now imminent (3 days out) — this is the item to act on first.**
 - 🔍 **PULL THE BANKRUPTCY DOCKET — still the cheapest open item, though no longer the first action**
   (the K-1 route above overtook it on 2026-08-20). **Do it before asking the CLIENT anything else.**
   PACER by entity name and by the partner's name, plus the Secretary of State. It answers **which entity filed** (the blocker

@@ -1,6 +1,14 @@
 # M5 Studio Miami
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-01
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
+
+> ✅ **First full historical CI sweep completed 2026-09-12** — Gmail (full, unbounded), Ping
+> (org-wide, by both investors' names), and Google Drive. **Double intentionally NOT re-queried**:
+> a direct Double search for "M5 Studio" already returned zero results on 2026-08-29, and this
+> client has no Double id — re-confirming that would be a wasted call, per the standing note
+> below. 🔴 **The EIN fax-back is now well overdue** — the ~4-business-day clock from the second
+> attempt (27 Aug) ran out around 2026-09-02; as of this sweep (2026-09-12, 10 days later) nothing
+> confirming the EIN's arrival was found in any source read. See §6.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -45,7 +53,7 @@ the actual details (and Claude can pull them live when a task needs them).
 |---|---|
 | Owner / primary contact | **Oleksii ("Alex") Shtefan** — writes from the company's own domain; Julia's Gmail, threads *"E-2 / E-1 engagement proposal … (M5 Miami)"* and *"urgent — Alex Shtefan & Vladislav Dydenko"* |
 | Second investor | **Vladislav Dydenko** — same threads. A third person, **Vadim Shtempel**, appears in the immigration package as a prospective **E-2 employee**, not as an owner |
-| Immigration counsel (not us) | **Canero Fadul Reis PLLC** — Julia referred them 2026-07-13; they run the E-2 cases, we do the company set-up |
+| Immigration counsel (not us) | **Canero Fadul Reis PLLC** — Julia referred them 2026-07-13; they run the E-2 cases, we do the company set-up. 🔎 **More contacts confirmed 2026-09-12:** Marco Canero, Jesenia Velez, Alessia and Ana Cristina all correspond on the case, cc'ing Julia, through at least **2026-08-17** — the E-2 cases were still active mid-August |
 | Responsible party for the EIN (SS-4 line 7a) | _(pending — read it off the filed SS-4 in the client's Drive folder; it is one of the two investors)_ |
 
 - **Double client:** _(pending — link)_
@@ -60,7 +68,8 @@ link). Never write the credential itself here.
 |---|---|---|---|
 | Sunbiz | Entity formation / status | n/a (public) | **Document number `L26000418311`.** Articles of Organization filed **2026-08-07**, effective **2026-08-03**; state tracking number `4004 7953 0504` — ⚠️ **written in groups of four; the state's own email has it unspaced, and twelve bare digits abort the published-page build** (and `W26000112020`, the document number the state gave the **rejected** first submission — §6) |
 | IRS | EIN application | n/a | **SS-4 faxed 2026-08-18 to 855-641-6935** (the domestic fax — chosen on where the *entity* is; ⚠️ assumed, see §5), **and faxed again 2026-08-27 as a "second attempt"**. _(EIN pending — write it here, hyphenated, once assigned)_ |
-| Google Drive | The client's document folder — the Articles and **both** SS-4s | _(pending — link the folder here)_ | Folder **"M5 Studio Miami"**, created 2026-08-03. ⚠️ **The Form 2848 is NOT in it** — it sits in `Tax information authorization - form 2848 IRS → SIGNED` (§5) |
+| Google Drive | The client's document folder — the Articles and **both** SS-4s | _(pending — link the folder here)_ | Folder **"M5 Studio Miami"**, created 2026-08-03, holds `Articles of Incorporation - M5 Studio Miami LLC.pdf` (filed in Drive 2026-08-12), the SS-4 "for signature" draft (2026-08-14) and the final SS-4 (2026-08-18) — confirmed present, unchanged, 2026-09-12. ⚠️ **The Form 2848 is NOT in it** — it sits in `Tax information authorization - form 2848 IRS → SIGNED` (§5) |
+| Email / web | The business's own domain | n/a | 🔎 **New, found 2026-09-12:** the owner now corresponds from **`alex@m5miami.com`**, alongside his personal `alexshtefan@gmail.com` — the business has its own domain (`m5miami.com`) as of at least early August 2026 |
 
 ## 4. Obligations & recurring processes
 
@@ -309,6 +318,12 @@ A running, dated record as we build this profile.
     confirmations to Julia's mailbox, but **whether INBOUND faxes land there too was not checked** —
     so the Gmail silence may mean nothing, or may be real. **Check the fax inbox itself.**
 
+- _(2026-09-12)_ — **First full historical CI sweep.** Findings by source:
+  - **Ping** (`resolve_person` for "Oleksii Shtefan", "Alex Shtefan" and "Vladislav Dydenko" — all **NO_MATCH**; org-wide `search_meetings` for the business and owner names): **no formal Ping contact or client record exists for this business or either owner** — consistent with there being no Double record either; nobody has ever created a structured entry for M5 Studio on either platform. **But a recorded Zoom call does exist**, found by semantic search though invisible to `resolve_person`: **"Alex Shtefan's Zoom Meeting", 2026-07-13, 12:00 PM** — a month before the EIN application went out. Legible fragments: a discussion naming **"Studio Miami"** and **"doing business as M5"**, and a mention of **"the oven... in front of the studio Miami"** (consistent with equipment for a plaster/design studio). 🔎 **Low-confidence, garbled:** at the 3:16 mark Alex Shtefan raises **"General Contractor"** and Julia replies **"No"** — if legible correctly, this is an earlier, independent instance of the same conclusion Lilian later confirmed directly on 2026-08-14 (M5 does not install — Construction is off the table for line 16, §5). Tagged low-confidence per the transcript rule; not relied on where the higher-confidence 2026-08-14 finding already exists.
+  - **Gmail** (full history, unbounded — no baseline existed; searched "M5 Studio", "Shtefan", "Dydenko"): confirms the referral to Canero Fadul Reis PLLC (2026-07-13) and an active immigration-case correspondence through **at least 2026-08-17**, cc'ing Julia throughout and involving Marco Canero, Jesenia Velez, Alessia and Ana Cristina at the firm (§2). ⚠️ **Clarifying a possible false lead:** two Adobe Sign notification emails dated **2026-08-18** (the same day the SS-4 was faxed) were checked in full — they are for **"Agreement-For-Vladislav-Dydenko"**, sent by Jesenia Velez of the immigration firm. **This is an immigration-counsel engagement agreement, unrelated to the SS-4 or the Form 2848** — recorded so nobody later assumes these notifications explain the SS-4 signing route. A targeted search for anything dated 2026-08-25 → 2026-08-29 (the window of the second fax, the mystery 2-page fax, and the Form 2848 file's creation) returned **nothing beyond the already-known SS-4 thread** — the "why the second fax" and "was the 2848 signed" questions remain genuinely unanswered by Gmail. The two Sunbiz "Notice of Change or Filing" emails (2026-08-07 rejection, 2026-08-11 acceptance) were re-confirmed, unchanged.
+  - **Google Drive** (`excludeContentSnippets: true`): the `M5 Studio Miami` folder additionally holds `Articles of Incorporation - M5 Studio Miami LLC.pdf`, filed **2026-08-12** — the state's own filed Articles, not just its confirmation email. The SIGNED Form 2848 file's metadata was re-checked and is **unchanged** from the 2026-09-01 entry below (created 2026-08-27 17:08 GMT, modified 19:44 GMT) — **not opened**, per this sweep's instruction not to surface an identifier from it.
+  - **Repo** (`grep` across `projects/sops/`, `FOLLOW-UPS.md`, `BACKLOG.md`): `firm-identity.md` §4 is referenced (the general Form 2848/8821 eligibility rule already cited in §5 — no new content). **`FOLLOW-UPS.md` row 67** already tracks this exact matter (the double fax, the overdue EIN, and the SIGNED Form 2848 question) as Lilian's own open task, dated 2026-09-01 — now 11 days old, unchanged, and not edited here (out of this sweep's scope). No hits in `BACKLOG.md`.
+
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
      every question put to the client AND its answer once it arrives, what a prior-year
@@ -323,16 +338,12 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- 🔴 **CHASE THE EIN.** Path B was decided and executed — **faxed 2026-08-18, re-faxed 2026-08-27**;
-  what is open now is the **result**. On the second attempt the fax-back is due about **2026-09-02**,
-  and as of 2026-09-01 nothing was found confirming it arrived (§6 says exactly which searches that
-  covers). ❓ **And ask Lilian why the second fax was needed** — it is unrecorded, and the answer
-  decides whether the first attempt failed (so the clock is 27 August) or simply carried fewer pages. **First look at the firm's fax
-  inbox for (786) 866-6298**, then the client's Drive folder. If it truly has not come: the
+- 🔴 **CHASE THE EIN — NOW 10 DAYS PAST DUE.** Path B was decided and executed — **faxed 2026-08-18, re-faxed 2026-08-27**; the ~4-business-day fax-back from the second attempt was due about **2026-09-02**, and as of **2026-09-12** (this sweep) still nothing confirming arrival was found in Gmail, or in the client's Drive folder. ❓ **Still unanswered: why the second fax was needed** — no rejection notice or delivery failure was found anywhere this sweep looked either. **First look at the firm's fax
+  inbox for (786) 866-6298** (never checked by any session so far — Gmail cannot see inbound faxes there), then the client's Drive folder. If it truly has not come: the
   authorization that lets us ask is the **SS-4 designee block**, which is still alive precisely
   because the EIN has not been assigned. **The moment it is assigned: write it here hyphenated and
   save the confirmation letter** in the client's system — the CP 575 equivalent is only replaceable
-  by a phone-only 147C.
+  by a phone-only 147C. This is also [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 67, unchanged since 2026-09-01.
 - 🔴 **Ask Lilian whether a Form 2848 was SIGNED AND SENT for this client on 2026-08-27** — the file
   sits in Drive's `Tax information authorization - form 2848 IRS → SIGNED` folder, created 17:08 and
   modified 19:44 GMT that afternoon (§5, §6). The form is dated 2026-08-12, before the 2026-08-14 finding
@@ -366,7 +377,7 @@ reports for this client.
 - [ ] Whether the responsible party holds an SSN/ITIN — **understood to be neither** (foreign investors, E-2 pending), which is why the SS-4 went by fax, but **nobody has confirmed it against line 7b of the filed form**. **[ ] WHICH of the two investors signed as responsible party is still not recorded** — read it off the filed SS-4
 - [ ] Mailing and physical addresses, with county
 - [x] Whether the firm goes in the SS-4 Third Party Designee block — **yes, done** (Lilian's name, the FIRM's address, her work line, the JK fax; now the firm's standing pattern — [EIN SOP §4D](../../sops/ein-application-irs.md))
-- [ ] Does the client have a Double account? (link it here if so)
+- [x] Does the client have a Double account? — **No.** Settled 2026-08-29 (a direct Double search for "M5 Studio" returned zero results) and not re-checked in this sweep per the standing instruction not to waste a call re-confirming it
 - [ ] Which services the firm will provide beyond the set-up
 - [ ] Whether Florida sales-tax registration and a local Business Tax Receipt are needed
 
