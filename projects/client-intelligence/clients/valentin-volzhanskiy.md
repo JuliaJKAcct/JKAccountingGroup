@@ -121,9 +121,10 @@ watch-outs, one-off arrangements, history that affects the work.
   has already cost him money.** His 2024 return carried an **excess advance premium tax credit
   repayment** on Schedule 2 line 1a because his advance credit exceeded what he was entitled to.
   **Form 8962 is mandatory and blocks e-file**, his coverage has **month-gaps** rather than running
-  all twelve months, and his income moving up or down changes the repayment. **Get the 1095-A
-  early, and get it as a real PDF** — he photographs documents with his phone (see below).
-- - 🔴 **HE IS A TIPPED WORKER, AND FROM 2025 THAT IS A DEDUCTION — his employers report the tips
+  all twelve months, and his income moving up or down changes the repayment. 🔴 **Get the 1095-A early, and get it as an ORIGINAL PDF from healthcare.gov** — almost
+  everything he uploads is a phone photograph with no text layer, which no tool can read and
+  which has to be keyed by eye.
+- 🔴 **HE IS A TIPPED WORKER, AND FROM 2025 THAT IS A DEDUCTION — his employers report the tips
   in TWO DIFFERENT BOXES, so one of them is easy to miss.** One 2025 employer reported tips in
   **Form W-2 box 7** (`Social security tips`); another reported none in box 7 at all and instead
   put the tip figure in **box 14 marked `TIPS`**, with the tips folded into boxes 1, 3 and 5. The
@@ -133,10 +134,14 @@ watch-outs, one-off arrangements, history that affects the work.
   or automatic gratuity distributed to staff is NOT a qualified tip**, and all three tip-bearing
   employers are **contract catering and events** businesses, where a fixed distributed service
   charge is normal. **Ask the employer to split the figure before claiming it.**
-- 🔴 **HIS CAR COSTS WERE DEDUCTED WITHOUT ANY VEHICLE INFORMATION, AND THAT MAY HAVE LOCKED HIM
-  OUT OF THE BETTER METHOD FOR GOOD.** The prior year deducted fuel as an ordinary business cost
-  instead of as a **car and truck expense**, so the return never asked — and he never answered —
-  when the car went into service, how many miles were business, or whether he keeps a log.
+- 🔴 **HIS 2024 SCHEDULE C DEDUCTED `GAS & FUEL` WITH NO VEHICLE INFORMATION ON THE PAGES WE
+  RECOVERED — AND IF THAT WAS CAR FUEL IT MAY HAVE CLOSED THE BETTER METHOD.** It was deducted as
+  an ordinary business cost rather than as a **car and truck expense**, and **nothing on the
+  recovered pages asks or answers** when a car went into service, how many miles were business, or
+  whether he keeps a log. ⛔ **Two things are NOT established and must not be repeated as fact:**
+  **page 12 of 12 of that return was never read** *(and a Form 4562 would print exactly there)*,
+  and the detail says only `GAS & FUEL` — **on a catering business that can legitimately be fuel
+  for equipment rather than for a car.**
   🔑 **Two consequences.** The deduction has **no business-use percentage** behind it, and the IRS
   does not allow amounts that are approximated. And because deducting fuel is the **actual-expense**
   method, it puts the **mileage-rate method at risk for that car** — for a **leased** car the rules
@@ -208,6 +213,13 @@ A running, dated record as we build this profile.
   attributed to that call as low confidence unless a second source carries it.
 - _(2026-09-12)_ — **Pre-return review run for tax year 2025** (Lilian's request). All ten sources
   read. Client file created — he had none. See the tax-year entry below.
+- _(2026-09-12, later)_ — **Lilian asked why the prior year's Schedule C line 9 was empty** when
+  fuel had been deducted. Researched against the IRS instructions and Pub. 463 for both years:
+  fuel for a business car belongs on the car-and-truck line, the duty to give the vehicle
+  information is triggered by **claiming any vehicle expense** rather than by using that line, and
+  the deduction must be limited to the **business portion** worked out from miles. **Recorded as a
+  defect with two stated unknowns, not as a finished conclusion** — the working paper's §3E has the
+  full working, the branches and the six-step fix.
 
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
@@ -244,6 +256,13 @@ A running, dated record as we build this profile.
   - [ ] Ask about the **Delaware LLC**: its name, whether it traded in 2025, and whether it has its
         own EIN or bank account.
   - [ ] Confirm the **address** to use on the return.
+  - [ ] Ask whether the **car is owned or leased**, and **when it was first used for this business**
+        — this is what decides which expense method is even available.
+  - [ ] Ask for **total miles and business miles for 2025**, and whether a **written mileage log**
+        exists. Without them no vehicle figure is defensible under either method.
+  - [ ] Ask whether the prior year's fuel was for a **car** or for **business equipment** — on a
+        catering business it can legitimately be either, and the answer decides how much of the
+        vehicle finding applies at all.
 - **What the prior-year return established.** The 2024 return is the firm's own work and it settles
   several things the 2025 documents never mention:
   - Filing status **Single**; no dependants; standard deduction; Florida only, **no state return**.
