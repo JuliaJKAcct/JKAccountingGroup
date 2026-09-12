@@ -139,9 +139,11 @@ watch-outs, one-off arrangements, history that affects the work.
   when the car went into service, how many miles were business, or whether he keeps a log.
   🔑 **Two consequences.** The deduction has **no business-use percentage** behind it, and the IRS
   does not allow amounts that are approximated. And because deducting fuel is the **actual-expense**
-  method, **choosing it in the first year a car is used in the business closes the mileage-rate
-  method for that car permanently** — the choice cannot be revoked after the due date. **Establish
-  owned-or-leased, the first business-use year, and the mileage before touching the car again.**
+  method, it puts the **mileage-rate method at risk for that car** — for a **leased** car the rules
+  are clear that it is out; for a car he **owns** it is **arguable**, and the choice cannot be made
+  later because it is fixed at the return's due date. ⚠️ **Not settled — a position to take once the
+  facts are in. Establish owned-or-leased, the first business-use year, and the mileage before
+  touching the car again.**
 - 🔴 **ALMOST EVERYTHING HE UPLOADS IS A PHONE PHOTOGRAPH WITH NO TEXT LAYER.** His 1095-A, his
   1099-NECs, his LLC papers, his installment agreement and one of his W-2s are all scans — they
   cannot be read by tooling and must be read by eye. **Ask for the issuer's original PDF** wherever
