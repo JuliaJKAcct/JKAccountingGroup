@@ -131,9 +131,16 @@ Anything the team must know to serve this client well.
 > either. So put first whatever would cause the worst mistake if someone didn't know it —
 > **not** the oldest, and **not** whatever was added last.
 
-- 🔴 **WHAT STOPS THE 2025 RETURN BEING TRANSMITTED — ONE thing, and it is OURS, not the client's: ③.**
-  ⓘ *This heading read "THREE things, and only the first is a question for the client" until
-  2026-09-12 — ① and ② have both closed under it.*
+- 🔴 **WHAT STOPS THE 2025 RETURN BEING TRANSMITTED — THREE things, and only ONE of them is a question
+  for the client.** 🛠️ **③ is OURS** *(file the Gossip Miami 1120-S)*. **The other two gate TRANSMISSION
+  without blocking e-file**, and both are in the working paper's §6: **item 17** — Yuliana's 2024
+  opening stock basis, inherited from the outside firm and materially higher than what she confirmed
+  paying, **which only Lilian or Julia can settle** — and **item 22** — **is the purchaser related to
+  her?** ⛔ **A related purchaser disallows her loss ENTIRELY**, so it is asked before filing, not after.
+  ⓘ *This heading read "ONE thing, and it is OURS" for part of 2026-09-12, and "THREE things, and only
+  the first is a question for the client" before that. ① and ② did close — ⛔ **but the rewrite dropped
+  two gates its own body still carried twelve lines below.** (Caught by the independent review,
+  2026-09-12.)*
   🛑 **REWRITTEN 2026-09-12 — this band described the FIRST draft and was four drafts out of date.**
   Read as it stood, it said the premium-tax-credit form was missing, the dependants had never been
   entered, and the return ended in an amount due. **None of that has been true since 2026-09-11**, and
@@ -554,10 +561,13 @@ Anything the team must know to serve this client well.
 - 🔴 **THIRTY-NINE items live in the working paper's §6 — 31 still open, 8 closed** *(counts refreshed
   2026-09-12; they read 36 / 29 / 7 until then)* — and they are not duplicated here; the file is
   [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
-  ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address — and it is ONE, ours:**
-  **item 19** — file Gossip Miami's 1120-S, then re-check box 1 and box 16D against what was filed.
+  ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address — THREE, and only one is
+  the client's:** **item 19** *(OURS)* — file Gossip Miami's 1120-S, then re-check box 1 and box 16D
+  against what was filed · **item 17** *(Lilian's or Julia's call)* — Yuliana's 2024 opening stock
+  basis · **item 22** *(the CLIENT's)* — is the purchaser related to her, which if answered yes
+  disallows her loss entirely. ⓘ *This line said "it is ONE, ours" until the review of 2026-09-12.*
   ✅ **Item 2 no longer blocks e-file** *(the description and code are on the draft; what is left is
-  confirming them with her — see §5)*, and ✅ **the premium-tax-credit form is IN and computes to nil**,
+  confirming them with her — **§6 item 2**, not §5, which does not price it)*, and ✅ **the premium-tax-credit form is IN and computes to nil**,
   so the old pointer to the working paper's **§3L** is retired: 🔑 **the live list with every fix and its
   entry route is now §3Q.** 🔑 **Item 28 is NO LONGER a blocker** — the 2024
   vehicle-use question stopped deciding the method when the contract turned out to be a lease; it now
