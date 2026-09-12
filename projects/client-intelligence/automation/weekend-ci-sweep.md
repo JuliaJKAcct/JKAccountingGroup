@@ -281,9 +281,18 @@ was said). Better a sourced, low-confidence note than nothing.
 | M5 Studio Miami | *(none — no Double account confirmed; search Double by name first, then sweep by name)* |
 | Kompozit USA | *(none — PROSPECT, no Double account yet; Gmail + Drive only, and no `sweep-state.md` row until it signs)* |
 | Vitaliy Vasyutyk (10-company group) | 710668 |
+| Valentin Volzhanskiy | 710663 |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
+
+> ⓘ **Valentin Volzhanskiy added 2026-09-12**, when the 2025 pre-return review found he had no CI
+> file at all. ⚠️ **He is `platform: none` and `Bookkeeping: N/A`, so there is nothing to sweep in
+> QuickBooks** — the value is in **Gmail, Drive and Double files**, which is where his documents
+> actually arrive *(all of his 2025 ones landed on the April deadline in one burst)*. 🔑 **And his
+> 1099-NEC payers are themselves firm clients**, so a fact about his income can surface under
+> **their** records rather than his — sweep with that in mind.
+> **No `sweep-state.md` row until the first full historical pass has run.**
 
 > ⓘ **Vitaliy Vasyutyk is ONE row for TEN companies, and that is deliberate.** He holds ten
 > LLCs — **nine Florida and one TENNESSEE (Zumfi 2)** — all reached by one portal contact, and the firm bills them through six
