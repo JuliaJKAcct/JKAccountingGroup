@@ -283,6 +283,32 @@ Anything the team must know to serve this client well.
 ## 6. History & open questions
 
 ### Log
+- 🔵 **2026-09-12 — the fifth draft, and the partnership-loss limit explained because she asked for the
+  reasoning, not the number.** Lilian corrected the second partnership's figure herself, keyed the sale
+  of the business, and finished the shareholder basis form — **all three landed clean**, including every
+  judgement call on how the sale is reported *(the long-term box, the acquisition date off the 2024
+  purchase agreement, and the cost basis taken from the right line of the basis form)*.
+  🗣️ **Her question was about the first partnership: why the deductible figure is the small one on the
+  worksheet rather than the whole loss on the K-1 — *"no entiendo por qué. Explícame esto."*** ⓘ *(Her
+  words carried the two figures; they stay in the working paper under the two-data-homes rule.)*
+  ✅ **The K-1 package was re-read end to end at her request,
+  and the answer is that the allowed figure is not the firm's — it is the PARTNERSHIP's own.** Their
+  accountant's basis worksheet prints the loss split under columns literally headed **`Allowed Loss`**
+  and **`Disallowed Loss`**, and the allowed column is the smaller figure.
+  🔑 **The durable fact about this partnership interest, worth keeping because it governs every future
+  year:** Marat **has put no money into it** — his only basis is a share of the partnership's debt — and
+  he is a **limited partner**, which makes his share of the loss **passive**. **So two separate limits
+  stack: most of the loss is blocked for want of basis, and the small remainder is blocked because there
+  is no passive income to absorb it.** ⛔ **Nothing is lost — both pieces carry forward** and will be
+  released in the year he either puts money in or has passive income.
+  ⚠️ **And the worksheet's own footnote is the caveat that keeps this open:** it was *"prepared based on
+  partnership records"*, so **if he put money in that the partnership did not record, more of the loss
+  is deductible.** **That is a question for him, and it is on the open list.**
+  🆕 **One new question came out of this draft:** the sale's proceeds were keyed with the **whole**
+  broker fee taken against her half of the price rather than half of it. 🔑 **It may well be right** —
+  nobody has ever confirmed what each seller actually received or who paid the broker — **so it is a
+  question to the client, not a defect**, and it changes no tax this year. **Figures: the working
+  paper, §3Q.**
 - 🔵 **2026-09-11 (night) — the fourth draft, and the K-1 questions answered from the documents rather
   than from reasoning.** Lilian asked three things at once: review the whole return, say how the sale of
   the business is treated, and **find the answers to the "is this a qualified business?" questions the
