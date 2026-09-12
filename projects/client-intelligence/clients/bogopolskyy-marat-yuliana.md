@@ -304,6 +304,31 @@ Anything the team must know to serve this client well.
 ## 6. History & open questions
 
 ### Log
+- 🔵 **2026-09-12 — YULIANA ANSWERED WHO PAID THE BROKER ON THE SALE OF THE SALON, and it settles a
+  figure that was already on the draft return.** 🗣️ **Lilian asked her directly and relayed the answer:
+  *she* paid the broker's whole commission, and her co-seller paid none of it.**
+  ✅ **So the selling expense that reduces her proceeds is the WHOLE commission, not half** — which is
+  what the draft return already carried. 🔑 **The return was right and the firm's working paper was
+  wrong**, and the working paper had read it that way for three weeks — ⚠️ **not from the sale
+  agreement itself, but from a note in Double quoting one phrase of it**: the commission was *"payable
+  by the sellers at closing"*. 🔑 **That is a statement about who OWED it, not who PAID it**, and no
+  phrase about an obligation could ever have answered the question.
+  ⓘ *(The figures are in the working paper under the two-data-homes rule.)*
+  ✅ **No tax effect in 2025** — the capital-loss deduction is capped either way — **and it INCREASES the
+  capital loss she carries into 2026, in her favour.**
+  🔴 **BUT HALF OF THAT QUESTION IS STILL OPEN, and it now has its own item on the working paper.**
+  Nobody has confirmed **what each seller actually received** — her share of the price is an even split
+  read off the sale agreement, which is the natural reading of a 100% sale by two equal members and
+  **not a fact in evidence**.
+  🛠️ **The document that settles BOTH halves is the CLOSING / SETTLEMENT STATEMENT, or the wire
+  records — not the commission clause.** ⛔ **A clause says who OWED the commission; a closing statement
+  says what each seller was actually DISBURSED.** ⚠️ **If the closing statement simply netted the
+  commission off both sellers proportionally, then she and her co-seller each received the same amount,
+  and "I paid it" would be her reading of a line on that statement rather than a payment she made.**
+  ✅ **Her answer stands until a document says otherwise, and nothing in 2025 turns on it either way.**
+  🔑 **The transferable point, and it is not flattering:** ⛔ **a clause about who OWED a fee is not
+  evidence of who PAID it** — and the firm was not even reading the clause. **It held a note quoting
+  one phrase of it**, and it has never seen the closing statement at all.
 - 🔵 **2026-09-12 — the fifth draft, and the partnership-loss limit explained because she asked for the
   reasoning, not the number.** Lilian corrected the second partnership's figure herself, keyed the sale
   of the business, and finished the shareholder basis form — **all three landed clean**, including every
@@ -558,8 +583,8 @@ Anything the team must know to serve this client well.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **THIRTY-NINE items live in the working paper's §6 — 31 still open, 8 closed** *(counts refreshed
-  2026-09-12; they read 36 / 29 / 7 until then)* — and they are not duplicated here; the file is
+- 🔴 **FORTY items live in the working paper's §6 — 31 still open, 9 closed** *(counts refreshed
+  2026-09-12 — twice that day: once when the broker-fee question was answered, and once when the half of it that was NOT answered was opened as its own item; they read 36 / 29 / 7 before that)* — and they are not duplicated here; the file is
   [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
   ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address — THREE, and only one is
   the client's:** **item 19** *(OURS)* — file Gossip Miami's 1120-S, then re-check box 1 and box 16D
