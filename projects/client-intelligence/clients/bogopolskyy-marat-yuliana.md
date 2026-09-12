@@ -304,6 +304,46 @@ Anything the team must know to serve this client well.
 ## 6. History & open questions
 
 ### Log
+- 🟢 **2026-09-12 — THE SIXTH DRAFT IS ONE ROW FROM DONE, AND A QUESTION ABOUT MARAT'S FIRST
+  PARTNERSHIP IN 2024 WAS SEARCHED OUT RATHER THAN ASKED.**
+  ✅ **The return now computes correctly end to end.** The rental-and-partnership schedule no longer
+  deducts the blocked partnership loss; **the passive-activity limitation form is in and its whole
+  chain is right**; the QBI form now lists all four businesses including that partnership at nil; and
+  the sale, **all three 1099-NECs and all three K-1s were verified box by box against the documents** — nothing
+  mis-keyed, nothing missing. 🔴 **One row is left to clear at the keyboard**, a zero-value leftover on
+  the first page of the capital-gains detail form, and it is cleared on the S-corporation's K-1 input
+  sheet rather than on the form itself.
+  ⚠️ **The EIN defect inherited from the 2024 return is NOT repeated** — Marat's Schedule C now carries
+  his own company's EIN rather than the payer's off the 1099.
+  🔑 **THE 2024 QUESTION, and the answer is the opposite of what was assumed.** Lilian asked whether we
+  can be sure **Marat held no interest in the first partnership during 2024**. ⛔ **We cannot — the K-1
+  says he DID.** Its ownership percentage reads **35% at BOTH ends of 2025**, and a partner who joins
+  mid-year shows **zero** at the start. ⚠️ **What that proves precisely: he held it at the END of 2024
+  at the latest — not necessarily all year.** 🔑 **This return contains the control case:** his *other*
+  partnership's K-1 runs **0% → 20%**, which is what joining during the year actually looks like.
+  🔒 **The firm then LOOKED before asking, and came up empty in the two places it searched:** the
+  client's **entire Double file library** holds no 2024 K-1 from that partnership *(the only 2024
+  material is the prior-year return, already searched)*, and **Julia's Gmail** holds only the 2025
+  package the client sent in July 2026. ⚠️ **Google Drive, Ping, Lilian's own mailbox and Double's notes
+  were NOT searched** — the negative belongs to the search that produced it.
+  ✅ **It does NOT hold up the 2025 return** — the loss is blocked by the passive rules with or without
+  the answer, and the refund is identical either way. 🛑 **But "blocked by the passive rules" is itself a
+  POSITION the firm takes BECAUSE so little is at stake, not a settled fact** — and a higher opening
+  basis is precisely what would reopen it. ⚠️ **The two questions have to be read together, never
+  apart** *(the working paper says so, and this entry said "identical either way" without the caveat
+  until the review of 2026-09-12)*.
+  🔴 **But FOUR things ride on it** *(this entry said "two" until the review of 2026-09-12, and the two
+  it named were the two smallest)*: what the **passive-limitation form reports** as carrying into next
+  year · **whether the 2024 return, prepared by the outside firm, is missing a K-1 altogether**, which
+  would be its own matter · 🔴 **the SPLIT of his two carryforwards between the basis bucket and the
+  passive one — the bigger number, and it matters because the basis one does NOT survive disposing of
+  the interest while the passive one does** · and **two inputs on this year's own forms** if a 2024 K-1
+  turns out to carry a suspended loss.
+  🛠️ **So it is asked as ONE line, riding with the client questions already owed, and not as a
+  blocker:** *did he receive a K-1 from that partnership for 2024, and if so, send it.*
+  ✉️ **In SIMPLE Russian under Lilian's name** — this household is Russian-only — **with the form name,
+  the company name and the year left in English**, the way they appear in his own paperwork.
+  🔑 **The transferable point: "is it worth asking?" was answered by searching first.**
 - 🔵 **2026-09-12 — YULIANA ANSWERED WHO PAID THE BROKER ON THE SALE OF THE SALON, and it settles a
   figure that was already on the draft return.** 🗣️ **Lilian asked her directly and relayed the answer:
   *she* paid the broker's whole commission, and her co-seller paid none of it.**
