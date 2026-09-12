@@ -131,8 +131,9 @@ Anything the team must know to serve this client well.
 > either. So put first whatever would cause the worst mistake if someone didn't know it —
 > **not** the oldest, and **not** whatever was added last.
 
-- 🔴 **WHAT STOPS THE 2025 RETURN BEING TRANSMITTED — THREE things, and only the first is a question
-  for the client.**
+- 🔴 **WHAT STOPS THE 2025 RETURN BEING TRANSMITTED — ONE thing, and it is OURS, not the client's: ③.**
+  ⓘ *This heading read "THREE things, and only the first is a question for the client" until
+  2026-09-12 — ① and ② have both closed under it.*
   🛑 **REWRITTEN 2026-09-12 — this band described the FIRST draft and was four drafts out of date.**
   Read as it stood, it said the premium-tax-credit form was missing, the dependants had never been
   entered, and the return ended in an amount due. **None of that has been true since 2026-09-11**, and
@@ -550,15 +551,15 @@ Anything the team must know to serve this client well.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **THIRTY-SIX items live in the working paper's §6 — 29 still open, 7 closed** — and they are
-  not duplicated here; the file is
+- 🔴 **THIRTY-NINE items live in the working paper's §6 — 31 still open, 8 closed** *(counts refreshed
+  2026-09-12; they read 36 / 29 / 7 until then)* — and they are not duplicated here; the file is
   [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
-  ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address:**
-  **item 2** — Yuliana's principal-business description and code, the one thing that stops e-file
-  outright; 🔴 **the MISSING FORM 8962**, found on 2026-09-11 by reading the draft return itself and
-  carried in the working paper's **§3L** rather than as a §6 item, because it is ours to key and not a
-  question for anyone; and **item 19**, which is ours rather than theirs: file Gossip Miami's 1120-S and
-  re-check box 1 and box 16D against what was filed. 🔑 **Item 28 is NO LONGER a blocker** — the 2024
+  ⚠️ **§6 is NOT in blocking order.** **What actually blocks, with its address — and it is ONE, ours:**
+  **item 19** — file Gossip Miami's 1120-S, then re-check box 1 and box 16D against what was filed.
+  ✅ **Item 2 no longer blocks e-file** *(the description and code are on the draft; what is left is
+  confirming them with her — see §5)*, and ✅ **the premium-tax-credit form is IN and computes to nil**,
+  so the old pointer to the working paper's **§3L** is retired: 🔑 **the live list with every fix and its
+  entry route is now §3Q.** 🔑 **Item 28 is NO LONGER a blocker** — the 2024
   vehicle-use question stopped deciding the method when the contract turned out to be a lease; it now
   decides only whether 2024 left a deduction unclaimed *(worth amending for)*.
   ⚠️ **Also not blockers, but they change what this return IS:** **item 1**, the extension question,
@@ -600,8 +601,12 @@ Anything the team must know to serve this client well.
 
 ### Information still needed
 
-- [ ] **What Yuliana's business actually is** — no principal-business description or code exists for
-      her Schedule C, and the return cannot be filed without them.
+- [ ] **What Yuliana's business actually is — CONFIRM it, the boxes are no longer blank** *(updated
+      2026-09-12; this row said no description or code existed, which stopped being true on the fifth
+      draft)*. **The draft carries a description and a code, so it no longer blocks filing** —
+      ⚠️ **but nobody recorded where they came from, and her two 1099-NECs are from a personal-services
+      payer and a business-services payer.** ⛔ **If they were chosen at the keyboard, she is signing a
+      description she never gave.**
 - [ ] **Marat Boxing LLC's own obligations** — sales tax, local licences, annual report. Never examined.
 - [ ] 🟠 **Whether the household has ONE vehicle or two.** ⚠️ **One car is the WORKING ASSUMPTION,
       not an established fact** — the three "proofs" this row once claimed *(the same finance document,
