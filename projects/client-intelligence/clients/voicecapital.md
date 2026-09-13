@@ -1,6 +1,6 @@
 # VOICECAPITAL INC
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-13
 >
 > ✅ **First full historical sweep completed 2026-08-22; Gmail catch-up READ TO COMPLETION 2026-08-29** — Double (client record, properties, note 491840 read in full, contacts, activity log), Gmail (full history — paged to the end: a plain "Voicecapital" search ran out of pages after 2 (no further `nextPageToken`), and a second, substantive-terms-narrowed search across the same full history returned no `nextPageToken` either — both exhausted, not merely budget-limited), Ping (`resolve_person` + `search_meetings`), and Google Drive all checked.
 
@@ -114,6 +114,22 @@ the actual details (and Claude can pull them live when a task needs them).
 - 2026-08-22 — **First full historical sweep (weekend CI sweep, unbounded).** Double: note 491840 re-read in full — matches this file's existing summary exactly, no new substantive content. Client properties resolved bookkeeping cadence (Quarterly) and assigned staff (Julia Kononova); "2025 Taxes" project confirmed Filed 2026-07-03. Gmail: full history, EIN found, a second 2848 fax (2026-04-28), a Sunbiz notice (2026-04-29), and the shared "paylitemerchant.com" beneficial-owner-group signal — see §5. Drive: found off-Double bookkeeping work product (2024 P&Ls, a Chase export). Ping: `resolve_person` + `search_meetings` scoped to this client returned only semantically-loose, largely irrelevant or garbled results — no legible new content specific to the S-election matter. ⚠️ **Only the first page of ~201 estimated Gmail results was actually reviewed this run** — the baseline advanced anyway, leaving a coverage gap (corrected 2026-08-24 to a `⚠️ CATCH-UP OWED` marker in `sweep-state.md`).
 - 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29).** Double: note 491840's `updatedAt` unchanged (2026-08-13) — not touched since the last read, so not re-read again; client properties and 0 activity-log entries in the window confirm no Double-side movement at all. Gmail: a plain "Voicecapital" search after 2026-08-29 found only 3 threads — one a false-positive keyword match on an unrelated OPTIC GOLD financials email, one the firm's own 2026-08-29 weekly-sweep report email (not client content), and one new, substantive item: a QuickBooks "URGENT: Pay overdue invoice" notice (2026-09-11) shows the firm's own invoice to VOICECAPITAL INC, originally due 2026-05-21, now **112 days overdue** — a billing-relationship fact, dollar amount withheld per the two-data-homes rule. A targeted follow-up search for "2848"/"power of attorney" found no new correspondence beyond the already-known 2026-04-28 MyFax transmission receipt (fax number 1-855-374-0047, distinct from the 2026-03-16 fax's 1-855-309-1422) — the receipt confirms only that the fax was sent, not its content or purpose; still not established. Ping: org-wide semantic search for "Voicecapital S-election IRS 2553 C-corp" returned no legible, client-specific results — same non-result pattern as the prior sweep. Google Drive: a title search for "Voicecapital" modified since 2026-08-29 returned zero files — no new documents.
 - 2026-08-29 — **Gmail catch-up READ TO COMPLETION.** Double: properties unchanged, note 491840 re-read in full again — body identical to the 2026-08-22 read, no new content, no activity-log entries in the window. **Gmail: paged the plain "Voicecapital" query to the end** (page 1 of 50 + page 2 of 25, no further `nextPageToken` — full history from 2024-09 through 2026-08 actually read), then ran a second query narrowed to substantive S-election/IRS terms across the same unbounded history (17 results, also exhausted with no further page) to confirm nothing relevant was missed in the noise. **Result: no correspondence after 2026-03-16 anywhere in Gmail confirms or denies whether the IRS accepted the S-election** — the case remains genuinely open, not merely unread. One resolution found: a signed Form 7004 return receipt, dated 2026-03-25, was located in Google Drive — this **confirms** the paper 2025 extension was processed (see Outstanding items). Ping: `resolve_person` + `search_meetings` returned only semantically-loose/off-topic hits, nothing legible and specific. Drive: files unchanged since 2026-08-22 except for the newly-noticed signed 7004 receipt (already present, just not previously flagged).
+
+- 2026-09-13 — **This client ISSUED a 2025 Form 1099-NEC to another JK client, [Valentin
+  Volzhanskiy](./valentin-volzhanskiy.md)**, prepared by the firm on **2026-01-31** through
+  tax1099.com with this payer's other 1099s. It surfaced while his 2025 return was being reviewed:
+  🔑 **he had never mentioned this payer and the form was in THIS client's Drive folder, not his**,
+  which is why it was invisible from his own file, his uploads and his organizer answers.
+  *(2026-09-13 — recorded here because the payer side is the half that can be checked; the figure
+  lives in his working paper, never in a client file.)*
+- 2026-09-13 — 🔵 **NEW CORROBORATION FOR THE BENEFICIAL-OWNER-GROUP QUESTION IN §5.** The 2025
+  1099s this client and **[Pro Title Agency](./pro-title-agency.md)** issued to that same recipient
+  **carry the same telephone number as the payer's contact number.** ⚠️ **Consistent with shared
+  administration; it is not proof of common ownership** — a shared bookkeeping or payment-processing
+  service produces the same signature. 🔑 **It does line up with the `paylitemerchant.com` signal
+  and the Sergey Karpenko contact cluster already recorded in §5.** ⛔ *The number itself is
+  deliberately not written here — a fax/phone number in this file has broken the Hub's published-page
+  gate before (FOLLOW-UPS row 105); the fact of the match is what matters.*
 
 ### Tax year YYYY — the review
 

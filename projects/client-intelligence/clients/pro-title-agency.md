@@ -1,6 +1,6 @@
 # Pro Title Agency
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -157,6 +157,16 @@ _(Double notes — live status lives in Double.)_
   - **IRS Form 1065-vs-Schedule-C filing-requirement mismatch — no movement found.** Pending since unknown — no start date in the file.
   - **Payroll (Gusto) vs. Double-property (N/A) discrepancy — no movement found.** Pending since unknown — no start date in the file.
   - **Reconciling the file's "Owner" (Lilian) against Double's "Assigned Staff" (Liudmyla Kazannik) — not chased this run (budget), same as the last two runs.**
+- 2026-09-13 — **This client issued a 2025 Form 1099-NEC to another JK client, [Valentin
+  Volzhanskiy](./valentin-volzhanskiy.md)** — surfaced while his 2025 return was being reviewed, and
+  his own copy of it corroborated the firm's. 🔵 **And a corroboration for the owner-group question
+  in §5:** that 1099 and the one **[Voicecapital Inc](./voicecapital.md)** issued to the same
+  recipient **share a telephone number**, and the two forms also share one recipient record in the
+  1099 software. ⚠️ **Consistent with shared administration — not proof of common ownership**, since
+  a shared bookkeeping or payment-processing service produces the same signature; it sits alongside
+  the **Paylite** routing quirk and the Karpenko contact cluster already in §5. ⛔ *The number itself
+  is deliberately not written here (FOLLOW-UPS row 105 — a phone/fax number in a client file has
+  broken the Hub's published-page gate before).*
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end

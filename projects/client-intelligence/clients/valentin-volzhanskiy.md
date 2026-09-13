@@ -229,12 +229,21 @@ A running, dated record as we build this profile.
   **payer's** folder — `VOICECAPITAL INC` → `2025` → `1099 2025` — prepared by the firm on
   **2026-01-31** through tax1099.com along with that payer's other 1099s. 🔑 **That location is the
   whole explanation of why nobody saw it:** it was never in his own folder, he never uploaded it,
-  and he listed no such payer. **Four independent things tie it to him** — his full name, the
-  **Fort Lauderdale** address he gave on the 2025 organizer *(not the older one)*, the last four of
-  the recipient TIN matching his W-2s, and an **account number identical to the Pro Title Agency
-  1099** issued to him. **Blocker ③ closed; the figure is in the working paper, not here.**
-  ⚠️ **What is established is that the firm PREPARED AND ISSUED it** — whether it was transmitted
-  to the IRS and furnished to him is a separate, smaller question.
+  and he listed no such payer. **Four fields cross-check** — his full name, the **Fort Lauderdale**
+  address he gave on the 2025 organizer *(not the older one)*, the last four of the recipient TIN,
+  and the 1099's payer-assigned **account-number box, identical to the Pro Title Agency 1099**
+  issued to him. ⚠️ **They are four fields of ONE record the firm itself keyed, not four
+  observations**, so what carries the confirmation is the **TIN check against his W-2s** — the only
+  one tested against data the firm did not enter. **Blocker ③ closed; the figures stay in the
+  working paper, never here.**
+  🔴 ⚠️ **AND THE ROUTE MATTERS: it was read through Google Drive's own indexed text, NOT the
+  redactor** — the second document on this client pulled in with no masking, and the third use of
+  that route *(the working paper's §4
+  decision 6 records it; FOLLOW-UPS row 103 is the open decision)*. **Nothing from the identity
+  block was written anywhere**, and the ties above are recorded **by existence, never by value**.
+  ⚠️ **What is established is that the firm PREPARED it** — ⛔ *not* "issued", which means furnished
+  to him; whether it was transmitted to the IRS and furnished to him is a separate, smaller
+  question.
 
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
@@ -253,8 +262,9 @@ A running, dated record as we build this profile.
   3. ✅ **CLOSED 2026-09-13 — a 1099-NEC he did not report DOES exist, and it is his.** A 2025
      Form 1099-NEC issued by **VoiceCapital Inc** — a payer the firm also serves — was found and
      then read in the **payer's** Drive folder, never his own. It is **not** in his Double folder,
-     he did not upload it and he listed no such payer. It is the **largest** of his three 1099s, so
-     it moves the Schedule C, the self-employment tax and the premium tax credit together. 🔑 **What
+     he did not upload it and he listed no such payer. It is the **second largest** of his three 1099s and close to
+     **half his contractor gross**, so it moves the Schedule C, the self-employment tax and the
+     premium tax credit together. 🔑 **What
      remains is a client conversation, not a blocker: ask him what the work was**, because the
      Schedule C's principal business and code depend on the answer.
   4. **The tips deduction is new, large and unclaimed.** He is a bartender with tips reported by
@@ -264,7 +274,7 @@ A running, dated record as we build this profile.
 - **Questions put to the client.** (Answers to be appended here as they arrive.)
   - [x] ~~Confirm whether he was paid by **VoiceCapital Inc** during 2025~~ — ✅ **answered from the
         firm's own files on 2026-09-13, without asking him.** He was. *(The form is the one the firm
-        itself issued.)*
+        itself prepared.)*
   - [ ] Ask for the **business expenses** behind the contractor work — vehicle/fuel, phone, and
         anything else — and whether he kept a mileage log.
   - [ ] Ask what the **contractor work actually was**, so the Schedule C's principal business and
@@ -330,3 +340,6 @@ A running, dated record as we build this profile.
 - **Google Drive folder (sensitive vault):** `Valentin Volzhanskiy` under Julia's client tree.
 - **Working paper for the return:** [`tax-returns/valentin-volzhanskiy/2025-form-1040.md`](../../tax-returns/valentin-volzhanskiy/2025-form-1040.md)
 - **Related SOPs:** [`form-1040-preparation.md`](../../sops/form-1040-preparation.md)
+- 🔑 **Related clients — three of his 1099 payers are OUR clients, and their folders hold forms his
+  own file never will:** [Voicecapital Inc](./voicecapital.md) · [Pro Title Agency
+  LLC](./pro-title-agency.md) · **Maxratings LLC** *(no Client Intelligence file yet)*.
