@@ -170,8 +170,8 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   strictly pro-rata, makes the company **member-managed** with **unanimous consent for every business
   decision** and **equal votes regardless of ownership** — and leaves its **Initial Capital
   Contributions line BLANK**, which is the one place the capital-versus-loan question might have been
-  answered. 🔴 **FOUR things in the draft have to change and a FIFTH has to be confirmed**, the worst a **Schedule L asserting
-  zero total assets**; they are listed with their fixes in the working paper — **four at §10A, the fifth (Schedule K line 16b) at §6 item ⑱**. ⚠️ **And two
+  answered. 🔴 **FOUR things in the draft have to change and TWO more have to be confirmed**, the worst a **Schedule L asserting
+  zero total assets**; they are listed with their fixes in the working paper — **the four changes at §10A; the two confirmations (Schedule K line 16b, and the wording of the two K-2/K-3 partner notices) at §6 items ⑱ and ⑲**. ⚠️ **And two
   things the firm believed turned out to be wrong: the 65% partner is a member-manager, not a
   passive member (the agreement says so), and the "he funds, he does not manage" premise is now
   contradicted by that agreement rather than settled.**
@@ -183,9 +183,9 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   blocker is closed. 🔴 **One thing still blocks transmission:** confirmation that the **Form 7004
   was accepted**, since the copy in Double is an unreadable scan and the small-partnership relief
   that lets this return be filed without a balance sheet depends on the extension existing.
-  🔴 **And FOUR things in the keyed draft must change first, with a FIFTH to confirm** — the worst
-  being a **Schedule L asserting zero total assets** on a company holding the parcel. Four of the five, with their fixes, are in the
-  working paper's §10A; **the fifth — confirming Schedule K line 16b is ticked — is §6 item ⑱**, not §10A. Sources read: the ALTA
+  🔴 **And FOUR things in the keyed draft must change first, with TWO more to confirm** — the worst
+  being a **Schedule L asserting zero total assets** on a company holding the parcel. The four changes, with their
+  fixes, are in the working paper's §10A; **the two confirmations are §6 items ⑱ and ⑲**, not §10A. Sources read: the ALTA
   settlement statement, the client's spreadsheet, the Form 1099-NEC, both organizers, Double's
   properties, tax project, tasks and file library, and the 2025 IRS instructions and forms.
   **There is no prior-year return** — first year — so none of the usual conventions could be
