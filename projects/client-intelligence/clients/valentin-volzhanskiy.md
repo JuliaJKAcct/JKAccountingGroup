@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13 *(second entry same day — the return was prepared)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -248,6 +248,27 @@ A running, dated record as we build this profile.
   to him; whether it was transmitted to the IRS and furnished to him is a separate, smaller
   question.
 
+- _(2026-09-13, later)_ — 🟡 **THE 2025 RETURN WAS PREPARED** by Lilian in ATX and brought back for
+  review. **Blocker ① closed in the same pass** — she supplied the Form 1095-A directly, so the
+  unreadable scan never had to be defeated: **twelve months of Marketplace coverage with no gap**,
+  which is a change from 2024's four-month gap. The return was **checked line by line** and the
+  arithmetic holds throughout. **Two things it got right that nothing in the 2025 paperwork would
+  have prompted:** the prior-year **qualified-business-loss carryforward** is on Form 8995 line 3
+  *(it exists only on the 2024 return; a preparation that never opened last year would have put a
+  zero there)*, and the **Schedule C start-date box was not re-ticked** — the most reproducible error
+  in this client's file, and it was not repeated.
+  🔴 **Two things are open and both move money.** ① The **Schedule C carries no expenses at all** —
+  a declared, documented decision *(the client never returned the P&L template)*, but its cost
+  compounds: it overstates the profit, the self-employment tax, the AGI **and the health-insurance
+  repayment**, in that order. ② **The larger employer's box-14 tips are nowhere on the return.**
+  ⛔ **Whether that is a deliberate position on service charges or an oversight is NOT established** —
+  it is worth roughly two thousand dollars of tax and is the first question for the reviewer.
+  🔑 **And one number nobody would look for: he lands at 389% of the federal poverty line, and the
+  400% cliff — where the repayment cap disappears entirely — is about 1,500 dollars of income away.**
+  Income that turns up later does not cost its marginal tax; it can cost thousands at once. The
+  missing business expenses push him **away** from that cliff.
+  ⓘ *A Double note (**524890**) records the preparer's own three assumptions for the reviewer.*
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
@@ -316,14 +337,24 @@ A running, dated record as we build this profile.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Get the 2025 Form 1095-A read** — it is the single thing standing between us and a computable
-  return, and it is already in Double.
-- 🔴 **Collect the Schedule C expenses** — the organizer never asked for them.
-- ⚠️ **Establish the multi-employer tips computation** before claiming the deduction.
+- 🔴 **Settle the box-14 tips before the return is filed** — the larger employer's tip figure is on
+  the return nowhere, and whether that is a position or an oversight is worth about two thousand
+  dollars. **The question goes to the EMPLOYER, not the client**: ask them to split the figure
+  between genuine tips and a distributed service charge.
+- 🔴 **Collect the Schedule C expenses** — the organizer never asked for them, and this is the single
+  highest-value hour left on the return.
+- ⚠️ **Check the taxpayer signature date before e-file** — the prepared return carries an April date
+  against a September preparation, which looks like a field inherited from the extension.
+- ⚠️ **Tell him the balance due BEFORE the IRS does** — he has a live installment agreement and a new
+  balance can default it.
+- ✅ ~~Get the 2025 Form 1095-A read~~ — **closed 2026-09-13**, supplied directly by Lilian.
 - ⚠️ **Ask him what the VoiceCapital work actually was** — the Schedule C's principal business and
   code turn on it, and **none of his three 1099 payers is a caterer.**
 - ✅ **The VoiceCapital 1099-NEC itself is settled** *(2026-09-13)* — the firm's own Drive answered
   it faster than the client could have; only the question above is left.
+- ⚠️ **Correct his address with the Marketplace** — it still holds the old one. It changes nothing on
+  2025, but the second-lowest-cost silver plan is rated by county, so 2026 would be priced off the
+  wrong area.
 - ⓘ The Delaware LLC has been sitting unexplained in his file since April 2025.
 - ⓘ The **Form 8821** prepared in June 2025 has no recorded outcome.
 
@@ -339,7 +370,8 @@ A running, dated record as we build this profile.
 
 - **Double client:** [Valentin Volzhanskiy — id 710663](https://app.doublehq.com/close?cid=710663)
 - **Double tax project:** [2025 Taxes — project 219347](https://app.doublehq.com/tax-return?cid=710663&projectId=219347)
-- **Double case note:** none.
+- **Double case note:** `2025 Form 1040 — preparation notes for review` — note **524890**
+  *(the preparer's own assumptions, written for Julia, 2026-09-13)*.
 - **Google Drive folder (sensitive vault):** `Valentin Volzhanskiy` under Julia's client tree.
 - **Working paper for the return:** [`tax-returns/valentin-volzhanskiy/2025-form-1040.md`](../../tax-returns/valentin-volzhanskiy/2025-form-1040.md)
 - **Related SOPs:** [`form-1040-preparation.md`](../../sops/form-1040-preparation.md)
