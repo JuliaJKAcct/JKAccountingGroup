@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13 *(second entry same day — the return was prepared)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13 *(fifth entry same day — the return was prepared, then the tipped income was claimed)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -310,7 +310,7 @@ A running, dated record as we build this profile.
 
 - _(2026-09-13, fifth)_ — 🟡 **THE TIPPED INCOME WAS CLAIMED, and the note to Julia was updated to
   say so.** The larger employer's box-14 tip figure had been left off the first version of the return;
-  Lilian keyed it, and **every figure on the second version was re-verified** — the multi-employer
+  Lilian keyed it, and **every figure on the second version was re-verified** *(two sections were missed on the first sweep and corrected the same day on an independent review)* — the multi-employer
   mechanics resolved correctly and nothing that should have stayed still moved *(the AGI and the
   health-credit repayment are both unchanged, which is what proves it)*.
   🛑 **AND A PROCESS LESSON WORTH MORE THAN THE FIGURE.** The note bullet had been drafted hours
