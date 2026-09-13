@@ -42,6 +42,13 @@ job, so nothing depends on someone remembering.
 > test.** ⚠️ **Until then: a `0 street lines` count on a return that carries a K-1 is a reason to look,
 > not a clean result** — the same lesson as *"0 masked can mean BLIND rather than clean"* above.
 
+> 🔴 **A SECOND CONFIRMED INSTANCE — 2026-09-13, on three one-page lender interest letters.** Reading a
+> client's 2025 interest statements, **two of the three printed the addressee's full street line** while
+> the third (a different city) masked correctly. The escaping shape is
+> `<number> <directional> <ordinal> <STREET-WORD>` — **the same family as the 2026-09-02 case but with
+> NO suite segment**, so the gap is wider than that entry recorded. ⛔ **Nothing was written anywhere**,
+> and nothing was bypassed. **The fix needs a test that carries both shapes.**
+
 **Why the street line but not the city.** Lilian's identity block does not name a home address, so
 this was not covered by her ruling either way; it is masked because losing it costs nothing and it
 is the one field on a return that points at where a person actually sleeps. The **city and state
