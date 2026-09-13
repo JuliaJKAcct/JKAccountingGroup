@@ -393,20 +393,76 @@ The lender's costs are retained at **his** closing and never reach the company a
 balance sheet from the bank alone:
 
 ```
-total assets  (cash + property WIP)
-   less  payable to the partner
-   ------------------------------
-   =  capital,  which must equal:  contributions  −  the year's loss
+cash  +  property (WIP)  −  liabilities not yet paid
+   =  capital,  which must equal  what was actually CONTRIBUTED
+        (the loan proceeds that LANDED  +  anything a partner paid outside the account,
+         earnest money above all — it is usually wired before the company has a bank account)
+   −  whatever the acquisition year actually DEDUCTED   ← read this off the prior return, never assume it
 ```
 
 **At the received amount this closes three ways. At the note's face it misses by exactly the lender's costs.**
 Three independently derived numbers do not agree by accident — so the tie is the proof, and the gap names the
-error. ⓘ It also hands you the acquisition-year loss and the contributions, which is most of what the prior
-return should say when it arrives.
+error. ⓘ It also hands you most of what the prior return should say, which is what makes the check worth doing
+*before* that return arrives rather than after.
+
+⚠️ **The last term is the one to get from the document, not from your own arithmetic** — see the section below.
+On the pilot the acquisition year deducted **nothing at all**, and a first pass that assumed a loss put the
+deduction in the wrong year.
 
 🛑 **Then watch what goes back to him on the sale.** Repayment above the payable is **not automatically
 repayment** — it is a reimbursement of his loan costs, or a distribution, and the two are different lines.
 **Establish which; never assume.**
+
+### 🔴 THE ACQUISITION YEAR MAY HAVE **CAPITALISED** THE CARRYING COSTS — READ ITS RETURN, DO NOT ASSUME A LOSS
+
+A property bought in one year and sold in the next raises one question the sale-year preparer has to answer
+before anything else: **what did the acquisition year actually DEDUCT?**
+
+There are two live answers and they look identical from the bank:
+
+| | Interest · insurance · property tax · the accountant's fee | The acquisition year's page 1 |
+|---|---|---|
+| **Expensed** | deducted in the acquisition year | an ordinary **loss** |
+| **Capitalised** | folded into the property's cost, alongside the purchase and the renovation | **ZERO — every line** |
+
+🛑 **A page 1 of zeros on a company that plainly spent money is not an empty return. It is a capitalised one**,
+and the costs are sitting in the balance sheet waiting for the sale.
+
+🔑 **The document that answers it in ten seconds is the prior return's own `Line 6, Sch L — Other current assets`
+statement**, which itemises what went into the property. On the pilot it read: land · building · construction in
+progress · **1098 interest** · survey · **accounting & professional fees** · **insurance** · materials. The last
+three are carrying costs, and their presence in that list *is* the answer.
+
+⛔ **Get this wrong and the deduction lands in the wrong year.** A session that reads capitalised costs as a
+prior-year loss reduces opening capital by them and understates the sale year by the same amount — the costs
+were never deducted anywhere, so they belong in the sale year's **cost of goods sold**.
+⚠️ **It is nearly invisible on a held-for-sale property**, because everything releases in one year either way.
+**The only thing the two treatments change is WHICH year — which is the whole of what matters.**
+
+ⓘ **And it tells you how to present the SALE year.** Follow the same convention: continuing to capitalise runs
+the carrying costs through COGS, expensing them puts them on lines 9–21, and **because the property sells the
+bottom line is identical.** Say so rather than agonising — but note the one real hook: capitalising carrying
+charges on real property outside §263A is a **§266 election**, which needs a statement. Since a same-year sale
+makes the timing difference nil, the simpler route on the sale year is to expense them.
+
+### 🔑 A FORM 1098 CARRIES THE FOLLOWING **JANUARY'S** PAYMENT — so it will not tie to the bank
+
+A mortgage interest statement reports what the servicer **received**, and mortgage interest is paid in arrears,
+so **the payment made in early January is reported in the PRIOR year's box 1.** The form's own FAQ says it:
+interest on payments for due dates of *February and beyond* is not reportable for the current year.
+
+So a 1098 for an acquisition year routinely shows more interest than left the company's bank that year, and the
+difference is **exactly one monthly payment.** Two consequences:
+
+- **If the prior return capitalised the 1098 figure**, that January payment is already inside the opening cost
+  and **must not be counted again in the sale year** — and the prior balance sheet needs an **accrued interest
+  liability** for it, which a plugged one will not have.
+- ⛔ **Never reconcile a 1098 to the bank and call the difference an error.** Check the January payment first,
+  at both ends of the year.
+
+⚠️ **Servicing transfers mid-year mean TWO forms**, and the transferor may issue none at all for its final year
+if its last reportable interest already landed on the previous year's form. Ask for both; do not assume a
+missing one is missing.
 
 ### 🛑 THE CLIENT BOOKS THE SALE AT THE **WIRE**, NOT THE PRICE — read "Cash to Seller" first
 
