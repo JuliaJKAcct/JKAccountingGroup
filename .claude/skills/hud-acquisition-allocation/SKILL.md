@@ -310,6 +310,36 @@ on page 1 of Form 1065; or item L on Schedule K-1."*
 **Prepare the balance sheet anyway** — the year the property sells needs the opening figures — but say plainly
 that it is not a filing requirement, so nobody spends a day reconciling something the return will not carry.
 
+### 🔴 A PARTNER WITH NO CAPITAL HAS NO BASIS — and on a CASH purchase there is no debt to give him any
+
+**§704(d) allows a partner's share of loss only up to his outside basis.** On a cash-purchase property partnership
+there is **no entity debt**, so a partner who contributed nothing has **zero basis** and **his share of the loss is
+suspended at his own level** — the K-1 still reports it, but he cannot deduct it.
+
+⚠️ **This is the NORMAL case here, not an edge case**, because these deals are routinely all-cash and one partner
+routinely brings only the work. **Check it every time a property partnership reports a loss**, and check it
+separately from §704(b): the substantial-economic-effect question is about whether the ALLOCATION stands, and the
+basis question is about whether the partner can USE it. **A draft flagged §704(b) and missed §704(d) entirely** —
+caught only by an independent review.
+
+ⓘ And where a partner takes a profit share for services with no capital, note the **profits-interest vs capital-interest**
+question (Rev. Proc. 93-27 / §83) — a pure profits interest is generally not taxable on receipt; a capital interest is.
+
+### Two habits the same review is worth keeping
+
+🔑 **Say which figures are OBSERVED, which are DERIVED and which are ASSUMED — on the deliverable, not just in your
+head.** The review's sharpest structural criticism was that residuals were presented as facts. A short
+*"proven vs assumed"* tab costs nothing and is what makes the rest trustworthy. ⚠️ **In particular, reconcile a
+derived figure against any observed figure that speaks to it** — on the pilot a back-solved tax base was never
+checked against the one payment actually recorded for it, and there turned out to be **three** candidate numbers in
+the file, none of them a bill.
+
+⚠️ **And when you commission an independent review, give it the RULINGS as well as the documents.** A third of the
+pilot's findings re-opened questions the signer had already decided, because the reviewer had the source files but
+not the conversation. ⛔ **Judge each finding on whether it survives that context — not on how confidently it is
+written.** Where it correctly describes a ruling as an assumption, the fix is usually not to change the number but
+to make the deliverable **read as a ruling** rather than as an observed fact.
+
 ## What to ask
 
 Group these and send once, per [`method.md`](../../../projects/pre-return-review/method.md):
