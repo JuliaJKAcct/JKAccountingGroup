@@ -283,6 +283,20 @@ A running, dated record as we build this profile.
   the open question that goes to the employer. **Written up with both traps in the working paper
   §9D.** ⓘ *Worth knowing for next season: the 2026 W-2 splits box 14 and adds a dedicated box 12
   code for cash tips, so this route is a 2025-only transition.*
+  🔑 **Two things came out of it that outlive this client.** ① **Ticking the checkbox reveals an empty
+  field and pulls nothing** — the amount is typed, so "the number is not flowing" is almost always
+  that field, not a software fault. ② **That field's label names only the monthly employee tip report
+  (Form 4070), which is NARROWER than the IRS rule**: the 2025 Form 1040 instructions give four
+  methods for figuring qualified tips and the third is *"if your employer voluntarily chooses to
+  report the amount of your tips in box 14 … you can use the amount reported to you"* — **box 14 is a
+  source in its own right, with no employee tip report anywhere.** The IRS says why on the same page:
+  the 2025 W-2 was never updated to carry this separately.
+- ⚠️ **AND THE ELIGIBILITY QUESTION MUST BE ASKED PRECISELY, OR IT RETURNS A FALSE NEGATIVE.**
+  ✅ **A tip pool qualifies — even a mandatory one**; the rule expressly covers a *"mandatory or
+  voluntary tip-sharing arrangement, such as a tip pool"*. ⛔ **What disqualifies is a charge added to
+  the CUSTOMER'S BILL** by the establishment. 🛑 **So "was it mandatory?" is the wrong question.
+  The right one is where the money originated: did the customer choose to pay it, or did the invoice
+  impose it?** *(2025 Form 1040 instructions p. 102, read 2026-09-13.)*
 
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
