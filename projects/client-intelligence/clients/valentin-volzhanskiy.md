@@ -271,6 +271,19 @@ A running, dated record as we build this profile.
   ⓘ *The percentage, the headroom and the arithmetic are in the working paper §9E — not here.*
   ⓘ *A Double note (**524890**) records the preparer's own three assumptions for the reviewer.*
 
+- _(2026-09-13, third)_ — 🛠️ **THE ATX ENTRY ROUTE FOR BOX-14 TIPS WAS ESTABLISHED** — Lilian keyed
+  the larger employer's box-14 tip figure and asked why the Description dropdown offers no `TIPS`
+  option. 🔑 **It offers none because the IRS prescribes no codes for box 14 at all** — the box is
+  literally *"Other"* and carries whatever the employer chose to write, so **leaving the descriptor
+  blank changes no figure.** ⛔ **And box 14 feeds nothing:** the fields that reach Schedule 1-A are
+  the **`Qualified Tips (No Tax on Tips)` checkboxes at the top of the same W-2 screen**, plus a
+  separate **`Qualified tips (in Box 7)`** dollar field beneath box 7. For this employer the second
+  checkbox is the one that fits — *"Box 7 social Security tips is blank"*.
+  🛑 **But ticking it is the ELIGIBILITY ASSERTION, not a data-entry step**, and eligibility is still
+  the open question that goes to the employer. **Written up with both traps in the working paper
+  §9D.** ⓘ *Worth knowing for next season: the 2026 W-2 splits box 14 and adds a dedicated box 12
+  code for cash tips, so this route is a 2025-only transition.*
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
