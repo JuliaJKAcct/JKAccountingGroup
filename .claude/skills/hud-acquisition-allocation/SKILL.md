@@ -325,7 +325,35 @@ caught only by an independent review.
 ⓘ And where a partner takes a profit share for services with no capital, note the **profits-interest vs capital-interest**
 question (Rev. Proc. 93-27 / §83) — a pure profits interest is generally not taxable on receipt; a capital interest is.
 
-### Two habits the same review is worth keeping
+🛑 **And head off the question this always provokes: "what if we call the funding partner's money a LOAN instead?"**
+**It does not help the other partner.** A loan from a partner is a liability the LENDING partner bears the economic
+risk of loss on, so §1.752-2 allocates the whole of it to him — the partner with no capital still gets no basis, and
+the loss is still suspended. ⚠️ **So settle capital-vs-loan on the facts, not in the hope it fixes a §704(d) problem.**
+ⓘ On the pilot the signer ruled the funding accounts were **contributions on behalf of** the holding company, which
+means the partnership has **no debt at all** — that CONFIRMS the zero-basis conclusion rather than relieving it.
+
+### 🔴 A CLOSING-ADJACENT PAYMENT MAY BELONG TO A DIFFERENT PROPERTY — and the way OUT of basis is a choice
+
+A title/escrow payment that lands **weeks or months after closing**, is on **no settlement statement**, and is paid
+**by a related company in the buyer's name** is not automatically a cost of this property. **Ask which property it
+belongs to before capitalising it.** ⚠️ On the pilot such a payment was capitalised on an assumption; the signer knew
+it belonged to a **different** deal entirely. Two tells: it postdates the closing, and the group was chasing another
+parcel at the time.
+
+🔑 **And when it comes OUT of basis, where it goes is a decision for the signer, not an accounting default.** The
+realistic routes are a **receivable from the partner**, a **receivable from the affiliate whose property it is**, or a
+**DISTRIBUTION to the partner** charged against capital he has already contributed. ⛔ **Do not pick one silently** —
+they land in different places on the return, and only the distribution reaches **Schedule K line 19a and K-1 box 19**.
+
+⚠️ **If it is a distribution, check WHICH partner can absorb it.** Cash distributed to a partner with **zero basis** is
+**gain under §731(a)(1)**; charging the same amount to the funding partner, who has ample basis, produces none. **The
+two choices differ by a taxable event.**
+
+ⓘ **What does NOT move:** if a related company actually paid the money and is still owed it, the **intercompany
+balance is unchanged.** The reclassification happens inside the buyer — basis out, distribution in — and a traced
+intercompany figure should survive it untouched. **If yours moves, you have changed two things instead of one.**
+
+### Three habits the same review is worth keeping
 
 🔑 **Say which figures are OBSERVED, which are DERIVED and which are ASSUMED — on the deliverable, not just in your
 head.** The review's sharpest structural criticism was that residuals were presented as facts. A short
@@ -339,6 +367,18 @@ pilot's findings re-opened questions the signer had already decided, because the
 not the conversation. ⛔ **Judge each finding on whether it survives that context — not on how confidently it is
 written.** Where it correctly describes a ruling as an assumption, the fix is usually not to change the number but
 to make the deliverable **read as a ruling** rather than as an observed fact.
+
+🔑 **A client-supplied figure the bank does not corroborate is REMOVED — not capitalised, and not left in with a
+footnote.** _(Julia's rule, 2026-09-13: "whatever you don't confirm from the bank statements, just remove it.")_ A
+line on a client's own P&L is a **claim**, and a claim no statement of any company in the group supports across the
+whole year does not become true by being labelled an assumption. ⚠️ **Apply it to the whole package and say what
+survived** — on the pilot exactly one figure failed the test, which is worth stating, because "I removed everything
+unsupported" and "one item was unsupported" are different claims.
+
+ⓘ **And the arithmetic will usually corroborate the removal.** Where contributions (or any equity figure) are a
+**plug** from the balance sheet, striking a phantom expense drops the plug by **exactly** that amount — because the
+expense never had cash behind it. **If the plug moves by something else, the figure was real and you have just
+removed a genuine cost.** That is a free check; run it.
 
 ## What to ask
 
