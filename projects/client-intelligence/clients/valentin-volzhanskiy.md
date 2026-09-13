@@ -341,5 +341,6 @@ A running, dated record as we build this profile.
 - **Working paper for the return:** [`tax-returns/valentin-volzhanskiy/2025-form-1040.md`](../../tax-returns/valentin-volzhanskiy/2025-form-1040.md)
 - **Related SOPs:** [`form-1040-preparation.md`](../../sops/form-1040-preparation.md)
 - 🔑 **Related clients — three of his 1099 payers are OUR clients, and their folders hold forms his
-  own file never will:** [Voicecapital Inc](./voicecapital.md) · [Pro Title Agency
-  LLC](./pro-title-agency.md) · **Maxratings LLC** *(no Client Intelligence file yet)*.
+  own file never will:** [`voicecapital.md`](./voicecapital.md) ·
+  [`pro-title-agency.md`](./pro-title-agency.md) · **Maxratings LLC** *(no Client Intelligence file
+  yet — FOLLOW-UPS row 109)*.

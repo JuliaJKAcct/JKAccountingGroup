@@ -183,3 +183,6 @@ _(Double notes — live status lives in Double.)_
 - **Double client:** [app.doublehq.com/close?cid=706716](https://app.doublehq.com/close?cid=706716)
 - **Google Drive folder:** [drive.google.com/drive/folders/1WkJaJq33S06SGB_zArnYR1QpcDQHDtIE](https://drive.google.com/drive/folders/1WkJaJq33S06SGB_zArnYR1QpcDQHDtIE) _(found via Drive search, 2026-08-01; holds Articles of Organization, DFS license, BTR receipt, and the Best Broker Realty sublease)_
 - **Related SOPs:** [`../../sops/hollywood-broward-business-tax-receipt.md`](../../sops/hollywood-broward-business-tax-receipt.md)
+- 🔑 **Related clients:** [`valentin-volzhanskiy.md`](./valentin-volzhanskiy.md) — **paid by this
+  client on a 2025 Form 1099-NEC** · [`voicecapital.md`](./voicecapital.md) — same recipient, and the
+  two 1099s share a telephone number (§6, 2026-09-13)
