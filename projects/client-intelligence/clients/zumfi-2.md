@@ -51,8 +51,8 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 
 | Role | Where to find them |
 |---|---|
-| Owner / manager — **Vitaliy Vasyutyk, 35%** | Double client (link below). ⚠️ **Described as managing and not funding** _(Julia, from the client, 2026-09-13)_ — **but the quote was said of Zumfi 1 and Fizum 1, never of this company, and it has not been confirmed for it.** Recorded as reported, not as established; the row below holds the other half of the same unsettled fact |
-| Partner — **Bahruz (also spelled Behruz) Naghiyev, 65%** | Double client. ⚠️ **UNSETTLED — two sources disagree and both are recorded, per the firm's rule:** the **client** says he **funds and does not manage** _(Julia, from the client, 2026-09-13)_; the **operating agreement** makes him a **co-equal member-manager** — all decisions by the Members, any Member may bind the company, votes count equally, and **every business decision needs unanimous consent** _(read 2026-09-13)_. Also a partner in **Zumfi 1 and Fizum 1**, and **his details already exist on those two records** _(Lilian, from Vitaliy, 2026-09-07)_ |
+| Owner / manager — **Vitaliy Vasyutyk, 35%** | Double client (link below). ✅ **He RUNS the company — ACTIVE** _(Julia, confirmed for this company 2026-09-13)_. Keyed on the 2025 Form 1065 as `A -- Active Individual`. ⓘ *It had been recorded as reported-not-established until then, because the original remark was made about Zumfi 1 and Fizum 1.* |
+| Partner — **Bahruz (also spelled Behruz) Naghiyev, 65%** | Double client. ✅ **He FUNDS and does not manage — PASSIVE** _(Julia, confirmed 2026-09-13)_. Keyed on the 2025 Form 1065 as `I -- Passive Individual`. ⚠️ **The operating agreement pulls the other way and is kept on the record**: it makes him a **co-equal member-manager** — all decisions by the Members, any Member may bind the company, votes count equally, and **every business decision needs unanimous consent** _(read 2026-09-13)_. 🔑 **The IRS test is about CONDUCT, and the firm ruled on it; a member-manager can be passive.** Also a partner in **Zumfi 1 and Fizum 1**, and **his details already exist on those two records** _(Lilian, from Vitaliy, 2026-09-07)_ |
 | Portal contact | one address covers all ten companies — see the group file §5 |
 | **The two partners share ONE postal address** | ✅ **Confirmed by Lilian, 2026-09-13**, when the 2025 Form 1065 review flagged both Schedules K-1 printing the same one as an error. **It is not an error.** ⚠️ **The operating agreement appears to carry a different address for the 65% partner** — a formation-era document, not a current address. 🔑 **Do not raise it again.** *(No address is recorded here or in the working paper — `projects/tax-returns/README.md` bars a person's home address from the repo.)* |
 
@@ -114,11 +114,24 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   On the sibling company **Zumfi 1**, the county kept mailing to the **late former owner** and the
   2025 bill went unpaid for ten months, settled late with interest _(Julia, 2026-09-13)_.
   **Zumfi 2 closed 2025-11-06 and has the identical exposure. It has not been checked.**
-- ⚠️ **WHO ACTUALLY RUNS THIS COMPANY IS UNSETTLED — and it is a tax fact, not gossip.** The
+- ✅ **WHO RUNS THIS COMPANY IS SETTLED: the 65% partner is PASSIVE.** 🔑 **Julia confirmed it on
+  2026-09-13** and Lilian keyed it into the 2025 return — `I -- Passive Individual` on his Schedule
+  K-1, `A -- Active Individual` for the 35% partner. ⚠️ **The operating agreement gives him a
+  unanimous-consent veto over every business decision, which is the argument the other way and is kept
+  on the record** — but the test the IRS asks is about **conduct**, and the firm has ruled on it.
+  🔴 **THIS IS A TAX FACT, NOT GOSSIP, AND IT IS THE ONE THAT DECIDES THE MOST ON THIS CLIENT:** more
+  than 35% of any loss allocated to a member who does not actively participate makes the partnership a
+  **syndicate**, therefore a **tax shelter**, which costs it the **cash method** and the
+  **small-business exemptions** — and a first-year entity forced onto accrual *adopts* accrual.
+  🔑 **The practical rule: do not reach for a small deduction on this company without checking what it
+  arms.** 🔵 **A member can be a MEMBER-MANAGER and PASSIVE at the same time** — the K-1's item G asks
+  what he is entitled to do, the entity type asks what he does. **Do not "fix" one to match the other.**
+- ⓘ *(Superseded, kept for the trail.)* **This was recorded as UNSETTLED between two sources on
+  2026-09-13, before Julia answered.** The
   **client** says the 65% partner funds and does not manage; the **operating agreement** makes him a
   **co-equal member-manager** with a unanimous-consent veto. 🔑 **Both are recorded because they
-  disagree** *(the firm's rule: write both with their sources and mark it unsettled)*, and **one
-  question to Vitaliy settles it** — does Bahruz take any part in running it, or only put money in?
+  disagree** *(the firm's rule: write both with their sources and mark it unsettled)*. ✅ **Julia
+  answered it the same day and the entry above carries the answer.**
   🔴 **Why it matters:** if he does **not** actively participate, more than 35% of any loss goes to a
   non-participant, which makes the partnership a **syndicate** and therefore a tax shelter — costing
   it the **cash method** and the small-business exceptions. **If he does, that risk falls away.**
