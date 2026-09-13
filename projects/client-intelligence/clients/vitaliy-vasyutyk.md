@@ -1,6 +1,6 @@
 # Vitaliy Vasyutyk — property & renovation LLC group
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-07
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -84,6 +84,29 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Our role:** we prepare and file.
 - **Process notes (→ future SOP):** the **owner's individual 1040 carries gig income** — he uploaded Uber (1099-NEC + 1099-K), Lyft and DoorDash summaries with his 2025 organizer (Apr 2026), so his personal return is not just K-1s.
 
+### 1099 filing (Form 1099-NEC)
+- **Applies?** Yes — every Double record carries `1099 Preparation ✓`, and the group files each January.
+- 🔑 **Why this gets asked every year:** Form 1065 Schedule B — and 1120-S Schedule B on Nika Realty — asks whether the company made payments requiring a 1099 **and whether it filed them.** The table below is that answer, per company.
+- 🔴 **WHICH COMPANIES ACTUALLY ISSUED 1099s, BY TAX YEAR** _(established 2026-09-13)_. The firm files through **Tax1099**, which emails Julia a submission receipt (`Payer` · `Tax Year` · count) and then an IRS acceptance notice (`Payer Name` · `Tax Year` · `Tax1099 Reference Number` · accepted count). **That pair is the evidence; the invoice is only the mirror.**
+
+  | Company | TY 2025 forms | TY 2024 forms |
+  |---|---|---|
+  | Fastighet | 3 | — _(formed Jan 2025)_ |
+  | Sunshine Renovations 1 | 2 | 1 |
+  | Fizum 1 | 2 | — _(formed May 2025)_ |
+  | 2 Romans Realty | 1 | 2 |
+  | Nika Realty | 1 | — |
+  | Tropical Coast 1 | 1 | 1 |
+  | Zumfi 1 | 1 | — _(formed May 2025)_ |
+  | Zumfi 2 | 1 | — _(formed Oct 2025)_ |
+  | **SYS 1 Realty** | **none** | **none** |
+  | **Remodel Master Realty** | **none** | **none** |
+
+  Every TY2025 form was **e-filed 2026-01-31** and **accepted by the IRS on 2026-02-10 or 02-11**, all as **Form 1099-NEC**.
+- ⛔ **The two NEGATIVES are the load-bearing part, so here is the search that produced them** _(method rule 1b)_: **no email from `payments@tax1099.com` or `support@tax1099.com` has ever named SYS 1 Realty or Remodel Master Realty**, in any year — searched by company name on 2026-09-13. That agrees with Lilian's 2026-09-07 finding that both had **no activity in 2025**. ⚠️ **It is a negative about what the FIRM filed through Tax1099** — it does not establish that the client filed nothing anywhere else.
+- ⚠️ **A `1099 Preparation.pdf` sitting in a company's Double folder is NOT evidence that a 1099 was filed.** Remodel Master Realty has one and has never had a 1099 filed for it. The worksheet is the preparation step; the Tax1099 acceptance is the filing.
+- 🔵 **One billing discrepancy, found the same day and not yet raised with the client:** Fastighet had **3** forms filed and accepted, but invoice `2143` bills the 1099 service fee for **2** — while the platform-reimbursement line on that same invoice does cover all three. The firm is **one form short** on that invoice.
+
 ### Licenses & other filings
 - **Applies?** Yes — this is the bulk of the work.
 - **What & when:** annual reports for every live company, once a year in the spring — 🔴 **but on TWO different clocks.** The nine Florida companies file with **Sunbiz, due 1 May**. **ZUMFI 2 LLC files with TENNESSEE, due 1 APRIL** — a month earlier, a different portal, and its reminders arrive from `tnsos.gov` rather than Sunbiz _(TN reminders of 2026-01-01 and 2026-03-04 both read `AR Date Due: 04/01/2026`; the 2026 report was approved 2026-03-26)_. The 2025 cycle was billed in April 2025, the 2026 cycle in March 2026 and confirmed to him by email on 2026-03-27. **1099 filings each January–March.** Plus formations, S-elections, BOI and dissolutions as they arise.
@@ -125,6 +148,8 @@ A running, dated record as we build this profile.
 - _(2026-03-27)_ — Lilian confirmed to him **by email, in Russian**, that the **2026 annual reports were filed** for Nika Realty, Sunshine Renovations 1, 2 Romans Realty, SYS 1 Realty and Remodel Master (and the rest of the list). So the work behind the three open invoices **was delivered**. _(Source: Gmail, 2026-03-27.)_
 - _(2026-04-02)_ — He **completed the 2025 individual Tax Organizer in TaxDome** and uploaded Uber (1099-NEC, 1099-K, annual summary), Lyft and DoorDash P&Ls — his 1040 carries **gig-economy Schedule C income**. The same day, Vladyslav Vasiutyk's 2025 return was e-signed. _(Source: TaxDome notifications to Julia.)_
 - _(2026-09-07)_ — Lilian left **five** comments for Julia on Double the same day this file was created, working the 2025 returns. Read back at source _(`list_comments`, comments 6206475 · 6206486 · 6206564 · 6206764 and the Zumfi 1 one)_: **Zumfi 1 LLC — "we need to close this company"**; 🔴 **SYS 1 Realty AND Remodel Master Realty — "no activity in 2025. The only thing we need to report is a change of address"**, word for word the same on both, and **SYS 1's is the one Lilian flagged 🚨** (that is a filing each company still owes, not just a note); and two on **Zumfi 2 LLC** — **the partner's SSN is missing from the organizer and his email address is wrong, 🔑 and "we can take his info from Zumfi 1 and Fizum — he is also a partner in these 2 companies"** (so the details already exist on those two records, and it explains why all three read `1065`), and **Zumfi 2 bought a parcel of land in November 2025 with no renovation work being done on it**. _(The partner's identifiers are NOT recorded here — the comments carry none either.)_
+
+- _(2026-09-13)_ — **Lilian asked, while preparing the 2025 returns, which of Vitaliy's companies the firm issued 1099s for. Answered, and written into §4 as a standing table rather than left in a session.** **Eight of the ten issued Form 1099-NEC for tax year 2025; SYS 1 Realty and Remodel Master Realty issued none, in any year.** Established from **Tax1099's own submission receipts and IRS acceptance notices in Julia's Gmail**, then cross-checked against the firm's **QuickBooks** invoices `2097`, `2099`, `2100` and `2143`: every platform-reimbursement line ties **to the cent** with the matching Tax1099 receipt, which is what makes the two sources genuinely independent rather than one copied from the other. 🔑 **The route is the transferable part: the invoice answers *what did we bill*, the Tax1099 acceptance answers *what did the IRS actually receive* — and on Fastighet the two disagree** (§4). ⓘ **The invoice alone would have been the wrong source** for a second reason as well: §5's umbrella-billing rule means the customer on the invoice is not the company the work was for, so four invoices carry the 1099 work of eight companies. _(Source: Gmail + the firm's QuickBooks, this session.)_
 
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
