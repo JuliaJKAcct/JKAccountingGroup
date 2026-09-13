@@ -135,6 +135,11 @@ watch-outs, one-off arrangements, history that affects the work.
   employers — and in fact all four of his 2025 employers — are contract catering, events or
   concessions businesses**, where a fixed distributed service charge is normal. **Ask the employer to
   split the figure before claiming it.**
+  🛑 **ASK IT PRECISELY, OR IT RETURNS A FALSE NEGATIVE.** ✅ **A tip pool qualifies — even a mandatory
+  one**; the rule expressly covers a *"mandatory or voluntary tip-sharing arrangement, such as a tip
+  pool"*. ⛔ **What disqualifies is a charge added to the CUSTOMER'S BILL** by the establishment.
+  🔑 **So "was it mandatory?" is the wrong question. The right one is where the money originated: did
+  the customer choose to pay it, or did the invoice impose it?**
 - 🔴 **HIS 2024 SCHEDULE C DEDUCTED `GAS & FUEL` WITH NO VEHICLE INFORMATION ON THE PAGES WE
   RECOVERED — AND IF THAT WAS CAR FUEL IT MAY HAVE CLOSED THE BETTER METHOD.** It was deducted as
   an ordinary business cost rather than as a **car and truck expense**, and **nothing on the
@@ -291,12 +296,6 @@ A running, dated record as we build this profile.
   report the amount of your tips in box 14 … you can use the amount reported to you"* — **box 14 is a
   source in its own right, with no employee tip report anywhere.** The IRS says why on the same page:
   the 2025 W-2 was never updated to carry this separately.
-- ⚠️ **AND THE ELIGIBILITY QUESTION MUST BE ASKED PRECISELY, OR IT RETURNS A FALSE NEGATIVE.**
-  ✅ **A tip pool qualifies — even a mandatory one**; the rule expressly covers a *"mandatory or
-  voluntary tip-sharing arrangement, such as a tip pool"*. ⛔ **What disqualifies is a charge added to
-  the CUSTOMER'S BILL** by the establishment. 🛑 **So "was it mandatory?" is the wrong question.
-  The right one is where the money originated: did the customer choose to pay it, or did the invoice
-  impose it?** *(2025 Form 1040 instructions p. 102, read 2026-09-13.)*
 
 - _(2026-09-13, fourth)_ — 📋 **A STANDING CONVENTION FOR THIS RETURN, at Lilian's instruction:
   every consideration taken while preparing it is drafted as a note bullet ON THE DAY, and the whole
