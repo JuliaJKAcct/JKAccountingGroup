@@ -131,9 +131,10 @@ watch-outs, one-off arrangements, history that affects the work.
   box-14 one is by far the larger. **Read box 7 AND box 14 on every W-2 he sends**, every year.
   The deduction is claimed on **Schedule 1-A (Form 1040) Part II**, which did not exist before 2025.
   🔴 **But reporting is not eligibility, and his employers are the risky kind:** a **service charge
-  or automatic gratuity distributed to staff is NOT a qualified tip**, and all three tip-bearing
-  employers are **contract catering and events** businesses, where a fixed distributed service
-  charge is normal. **Ask the employer to split the figure before claiming it.**
+  or automatic gratuity distributed to staff is NOT a qualified tip**, and **both tip-bearing
+  employers — and in fact all four of his 2025 employers — are contract catering, events or
+  concessions businesses**, where a fixed distributed service charge is normal. **Ask the employer to
+  split the figure before claiming it.**
 - 🔴 **HIS 2024 SCHEDULE C DEDUCTED `GAS & FUEL` WITH NO VEHICLE INFORMATION ON THE PAGES WE
   RECOVERED — AND IF THAT WAS CAR FUEL IT MAY HAVE CLOSED THE BETTER METHOD.** It was deducted as
   an ordinary business cost rather than as a **car and truck expense**, and **nothing on the
@@ -262,23 +263,26 @@ A running, dated record as we build this profile.
   compounds: it overstates the profit, the self-employment tax, the AGI **and the health-insurance
   repayment**, in that order. ② **The larger employer's box-14 tips are nowhere on the return.**
   ⛔ **Whether that is a deliberate position on service charges or an oversight is NOT established** —
-  it is worth roughly two thousand dollars of tax and is the first question for the reviewer.
-  🔑 **And one number nobody would look for: he lands at 389% of the federal poverty line, and the
-  400% cliff — where the repayment cap disappears entirely — is about 1,500 dollars of income away.**
-  Income that turns up later does not cost its marginal tax; it can cost thousands at once. The
-  missing business expenses push him **away** from that cliff.
+  it is worth **low four figures** of tax and is the first question for the reviewer.
+  🔑 **And one thing nobody would look for: he lands JUST UNDER the 400%-of-poverty-line threshold
+  where the premium-tax-credit repayment cap disappears entirely.** Income that turns up later does
+  not cost its marginal tax — **crossing that threshold costs several thousand at once**, because the
+  cap goes AND the excess itself grows. **The missing business expenses push him away from it.**
+  ⓘ *The percentage, the headroom and the arithmetic are in the working paper §9E — not here.*
   ⓘ *A Double note (**524890**) records the preparer's own three assumptions for the reviewer.*
 
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
-- **What gated the return.** Four things, and none of them is a missing document in the ordinary
-  sense. ⓘ *The third closed on 2026-09-13; **three still stand** and the return is still not
-  prepared:*
-  1. **The Form 1095-A cannot be read.** It is on file — he uploaded it — but it is a photograph
-     with no text layer, and **Form 8962 cannot be computed without its month-by-month columns.**
-     A figure on the return depends on it, so this blocks. It needs a human to read it, or a fresh
-     PDF from the Marketplace.
+- **What gated the return.** Four things, and none of them was a missing document in the ordinary
+  sense. ⓘ *🟡 **Superseded 2026-09-13: TWO closed that day (① and ③), and Lilian prepared the return
+  without the other two** — see the log entry above and the working paper §9. Kept as written because
+  it is what the review found:*
+  1. ✅ **CLOSED 2026-09-13 — the Form 1095-A was read.** It read: *it is on file — he uploaded it —
+     but it is a photograph with no text layer, and Form 8962 cannot be computed without its
+     month-by-month columns.* **Lilian supplied the document directly**, so the scan never had to be
+     defeated: **twelve months of coverage with no gap**, unlike 2024's four-month one, and Form 8962
+     was computed and checked.
   2. **The Schedule C has income and no expenses.** His 1099-NEC income is established from the
      documents, but the organizer's `Wages (W2)`-only answer meant he was never asked a single
      business question. The prior year deducted fuel and phone costs; this year's equivalents have
@@ -303,7 +307,10 @@ A running, dated record as we build this profile.
         anything else — and whether he kept a mileage log.
   - [ ] Ask what the **contractor work actually was**, so the Schedule C's principal business and
         code are right and so we know whether it is the same activity as the prior year's catering.
-  - [ ] Ask for the **Form 1095-A as an original PDF** from the Marketplace, not a photograph.
+  - [x] ~~Ask for the **Form 1095-A as an original PDF**~~ — ✅ **answered 2026-09-13**; Lilian
+        supplied a readable copy. ⚠️ **But one thing came out of it that is still open: the
+        Marketplace holds his OLD address**, which rates next year's benchmark plan off the wrong
+        county.
   - [ ] Ask whether he had **tips at every job**, and ask for final pay stubs or a payroll summary
         for the employer that reported none in box 7.
   - [ ] Ask whether he actually made any **estimated tax payments** in 2025 — his organizer says
@@ -331,16 +338,19 @@ A running, dated record as we build this profile.
     knowable from that return.
   - The 2024 return carried an **excess advance premium tax credit repayment**, with coverage in
     some months and not others.
-- **What was decided.** Nothing was computed. **Block A came back blocked**, so the review stopped
-  at the question list rather than producing figures — per the firm's rule against preparing around
-  a hole.
+- **What was decided.** 🟡 **Superseded on 2026-09-13.** It read: *nothing was computed; Block A came
+  back blocked, so the review stopped at the question list rather than producing figures, per the
+  firm's rule against preparing around a hole.* **That held for a day.** Two blockers then closed,
+  and **Lilian prepared the return without the other two** — the Schedule C expenses as a declared,
+  documented decision, the tips question still open. **The return is prepared and checked, and is NOT
+  yet filed.**
 
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **Settle the box-14 tips before the return is filed** — the larger employer's tip figure is on
-  the return nowhere, and whether that is a position or an oversight is worth about two thousand
-  dollars. **The question goes to the EMPLOYER, not the client**: ask them to split the figure
-  between genuine tips and a distributed service charge.
+  the return nowhere, and whether that is a position or an oversight is worth **low four figures** of
+  tax. **The question goes to the EMPLOYER, not the client**: ask them to split the figure between
+  genuine tips and a distributed service charge.
 - 🔴 **Collect the Schedule C expenses** — the organizer never asked for them, and this is the single
   highest-value hour left on the return.
 - ⚠️ **Check the taxpayer signature date before e-file** — the prepared return carries an April date
