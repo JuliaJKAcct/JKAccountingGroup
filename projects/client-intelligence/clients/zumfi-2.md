@@ -185,10 +185,10 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   not established either way.**
 - 🔴 **Check the Hamilton County Trustee's mailing address for this parcel** before the next bill
   goes astray, as Zumfi 1's did.
-- ⚠️ **Tennessee franchise & excise** — is a 2025 return owed, and does the FONCE exemption reach
-  a land-holding LLC? Never asked for this group.
-- ⚠️ **Name the Partnership Representative** — a required entry on every Form 1065, and nothing in
-  the organizer supplies it.
+- ⚖️ **Schedule B question 33 — elect OUT of the centralized partnership audit regime, or name a
+  Partnership Representative?** A two-member LLC whose partners are both individuals is, on its
+  face, eligible to elect out, which removes the PR block entirely. **A decision, not an
+  omission** — and electing out still needs every partner's TIN, for Schedule B-2.
 - ⚠️ **Inventory or capital asset?** The parcel's character decides whether the eventual gain is
   ordinary or capital. **It does not have to be decided to file 2025** — it must be decided before
   the sale year.
