@@ -124,8 +124,10 @@ the actual details (and Claude can pull them live when a task needs them).
   *(2026-09-13 — recorded here because the payer side is the half that can be checked; the figure
   lives in his working paper, never in a client file.)*
 - 2026-09-13 — 🔵 **NEW CORROBORATION FOR THE BENEFICIAL-OWNER-GROUP QUESTION IN §5.** The 2025
-  1099s this client and **[Pro Title Agency](./pro-title-agency.md)** issued to that same recipient
-  **carry the same telephone number as the payer's contact number.** ⚠️ **Consistent with shared
+  1099s this client and **[Pro Title Agency](./pro-title-agency.md)** prepared for that same
+  recipient **carry the same telephone number as the payer's contact number.** *(Pro Title's was
+  also furnished — his own copy corroborates it; this one's was not, which is why the verb differs
+  from the entry above.)* ⚠️ **Consistent with shared
   administration; it is not proof of common ownership** — a shared bookkeeping or payment-processing
   service produces the same signature. 🔑 **It does line up with the `paylitemerchant.com` signal
   and the Sergey Karpenko contact cluster already recorded in §5.** ⛔ *The number itself is

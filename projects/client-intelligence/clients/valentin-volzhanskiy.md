@@ -233,8 +233,11 @@ A running, dated record as we build this profile.
   address he gave on the 2025 organizer *(not the older one)*, the last four of the recipient TIN,
   and the 1099's payer-assigned **account-number box, identical to the Pro Title Agency 1099**
   issued to him. ⚠️ **They are four fields of ONE record the firm itself keyed, not four
-  observations**, so what carries the confirmation is the **TIN check against his W-2s** — the only
-  one tested against data the firm did not enter. **Blocker ③ closed; the figures stay in the
+  observations**, so what carries the confirmation is the **TIN check against a W-2 of his** — the
+  only one tested against data the firm did not enter. ⚠️ **And it is narrower than it sounds:** the
+  redactor emits tags, never digits, so the only W-2 that could have supplied those four digits is
+  the **Compass Group** one — **which came off the same unmasked channel as the 1099**. 🔑 **Both
+  sides of the strongest tie are OCR'd digits on one route.** **Blocker ③ closed; the figures stay in the
   working paper, never here.**
   🔴 ⚠️ **AND THE ROUTE MATTERS: it was read through Google Drive's own indexed text, NOT the
   redactor** — the second document on this client pulled in with no masking, and the third use of
