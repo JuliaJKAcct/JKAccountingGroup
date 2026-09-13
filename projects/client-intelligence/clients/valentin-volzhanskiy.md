@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13 *(second entry same day — the return was prepared)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13 *(fifth entry same day — the return was prepared, then the tipped income was claimed)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -135,6 +135,11 @@ watch-outs, one-off arrangements, history that affects the work.
   employers — and in fact all four of his 2025 employers — are contract catering, events or
   concessions businesses**, where a fixed distributed service charge is normal. **Ask the employer to
   split the figure before claiming it.**
+  🛑 **ASK IT PRECISELY, OR IT RETURNS A FALSE NEGATIVE.** ✅ **A tip pool qualifies — even a mandatory
+  one**; the rule expressly covers a *"mandatory or voluntary tip-sharing arrangement, such as a tip
+  pool"*. ⛔ **What disqualifies is a charge added to the CUSTOMER'S BILL** by the establishment.
+  🔑 **So "was it mandatory?" is the wrong question. The right one is where the money originated: did
+  the customer choose to pay it, or did the invoice impose it?**
 - 🔴 **HIS 2024 SCHEDULE C DEDUCTED `GAS & FUEL` WITH NO VEHICLE INFORMATION ON THE PAGES WE
   RECOVERED — AND IF THAT WAS CAR FUEL IT MAY HAVE CLOSED THE BETTER METHOD.** It was deducted as
   an ordinary business cost rather than as a **car and truck expense**, and **nothing on the
@@ -271,6 +276,55 @@ A running, dated record as we build this profile.
   ⓘ *The percentage, the headroom and the arithmetic are in the working paper §9E — not here.*
   ⓘ *A Double note (**524890**) records the preparer's own three assumptions for the reviewer.*
 
+- _(2026-09-13, third)_ — 🛠️ **THE ATX ENTRY ROUTE FOR BOX-14 TIPS WAS ESTABLISHED** — Lilian keyed
+  the larger employer's box-14 tip figure and asked why the Description dropdown offers no `TIPS`
+  option. 🔑 **It offers none because the IRS prescribes no codes for box 14 at all** — the box is
+  literally *"Other"* and carries whatever the employer chose to write, so **leaving the descriptor
+  blank changes no figure.** ⛔ **And box 14 feeds nothing:** the fields that reach Schedule 1-A are
+  the **`Qualified Tips (No Tax on Tips)` checkboxes at the top of the same W-2 screen**, plus a
+  separate **`Qualified tips (in Box 7)`** dollar field beneath box 7. For this employer the second
+  checkbox is the one that fits — *"Box 7 social Security tips is blank"*.
+  🛑 **But ticking it is the ELIGIBILITY ASSERTION, not a data-entry step**, and eligibility is still
+  the open question that goes to the employer. **Written up with both traps in the working paper
+  §9D.** ⓘ *Worth knowing for next season: the 2026 W-2 splits box 14 and adds a dedicated box 12
+  code for cash tips, so this route is a 2025-only transition.*
+  🔑 **Two things came out of it that outlive this client.** ① **Ticking the checkbox reveals an empty
+  field and pulls nothing** — the amount is typed, so "the number is not flowing" is almost always
+  that field, not a software fault. ② **That field's label names only the monthly employee tip report
+  (Form 4070), which is NARROWER than the IRS rule**: the 2025 Form 1040 instructions give four
+  methods for figuring qualified tips and the third is *"if your employer voluntarily chooses to
+  report the amount of your tips in box 14 … you can use the amount reported to you"* — **box 14 is a
+  source in its own right, with no employee tip report anywhere.** The IRS says why on the same page:
+  the 2025 W-2 was never updated to carry this separately.
+
+- _(2026-09-13, fourth)_ — 📋 **A STANDING CONVENTION FOR THIS RETURN, at Lilian's instruction:
+  every consideration taken while preparing it is drafted as a note bullet ON THE DAY, and the whole
+  note goes to Julia ONCE when the return is finished.** *("Cuando terminemos, hagamos una nota para
+  Julia con todos los comentarios de los análisis que hicimos en esta declaración.")* 🔑 **The reason
+  is the review gap:** Julia reviews the return afterwards and was not in the room, so reconstructing
+  the reasoning on the last day is how it gets lost. **The accumulating draft lives in the working
+  paper §10**; the live note is the Double one. 🆕 **All four bullets are now published** *(2026-09-13,
+  p.m.)* — the fourth reports the position taken on the tipped income.
+  ⚠️ **Rule 11's default keeps our analysis out of Double notes. She authorised it for THIS note by
+  name, case by case — it does not generalise.**
+
+- _(2026-09-13, fifth)_ — 🟡 **THE TIPPED INCOME WAS CLAIMED, and the note to Julia was updated to
+  say so.** The larger employer's box-14 tip figure had been left off the first version of the return;
+  Lilian keyed it, and **every figure on the second version was re-verified** *(two sections were missed on the first sweep and corrected the same day on an independent review)* — the multi-employer
+  mechanics resolved correctly and nothing that should have stayed still moved *(the AGI and the
+  health-credit repayment are both unchanged, which is what proves it)*.
+  🛑 **AND A PROCESS LESSON WORTH MORE THAN THE FIGURE.** The note bullet had been drafted hours
+  earlier, when the deduction was **not** on the return, and it said so. ⛔ **Posting it unchecked
+  would have told the person who signs the return the OPPOSITE of what the return does** — and
+  nothing in the note itself would have shown it. ✅ **It was held instead, with the one number that
+  distinguishes the two states written down**, and rewritten once that number was seen.
+  🔑 **The rule: a note drafted while someone is still at the keyboard goes stale between the drafting
+  and the posting. Name the number that settles it, and hold the bullet until someone looks.**
+  ⚠️ **What is still open is now a LIABILITY rather than a gap:** the deduction is claimed and its
+  eligibility is not established, so the deadline moved from the keystroke to the filing. **Two
+  questions to the employer close it** — what the job actually was, and how much of the figure the
+  customer chose to pay rather than the invoice imposing it.
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
@@ -347,10 +401,12 @@ A running, dated record as we build this profile.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Settle the box-14 tips before the return is filed** — the larger employer's tip figure is on
-  the return nowhere, and whether that is a position or an oversight is worth **low four figures** of
-  tax. **The question goes to the EMPLOYER, not the client**: ask them to split the figure between
-  genuine tips and a distributed service charge.
+- 🔴 **The box-14 tips are CLAIMED but not ESTABLISHED — close it before filing.** Worth **low four
+  figures** of tax. **Two questions, and they go to the EMPLOYER, not the client:** what job he
+  actually did there *(a role off the tipped-occupation list voids the whole amount)*, and how much
+  of the figure the **customer chose** to pay rather than the invoice imposing it. ⛔ **Do not ask
+  "was it mandatory" — a mandatory tip pool still qualifies, and that wording returns a false
+  negative.**
 - 🔴 **Collect the Schedule C expenses** — the organizer never asked for them, and this is the single
   highest-value hour left on the return.
 - ⚠️ **Check the taxpayer signature date before e-file** — the prepared return carries an April date
