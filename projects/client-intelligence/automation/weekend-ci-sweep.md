@@ -282,6 +282,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | Kompozit USA | *(none — PROSPECT, no Double account yet; Gmail + Drive only, and no `sweep-state.md` row until it signs)* |
 | Vitaliy Vasyutyk (10-company group) | 710668 |
 | Valentin Volzhanskiy | 710663 |
+| Zakom Incorporated | 710612 |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
@@ -292,6 +293,14 @@ per-tool call limits._
 > actually arrive *(all of his 2025 ones landed on the April deadline in one burst)*. 🔑 **And his
 > 1099-NEC payers are themselves firm clients**, so a fact about his income can surface under
 > **their** records rather than his — sweep with that in mind.
+> **No `sweep-state.md` row until the first full historical pass has run.**
+
+> ⓘ **Zakom Incorporated added 2026-09-13**, when Julia's question about what the client had uploaded found he
+> had **no CI file and no Double notes at all**. ⚠️ **`platform: none` and `Bookkeeping: N/A` — there is nothing to
+> sweep in QuickBooks, and no ledger anywhere**; for this client the documents arrive **through the Double portal and
+> the organizer itself**, which is where the 2025 books turned up. 🔑 **The owner has a second, personal Double record**
+> (`Oleg Zakala & Milana Podrugina`, `710652`, no CI file yet), so a company fact can arrive under the personal one and
+> the reverse — a personal loan document was uploaded into the company's organizer. Sweep with that in mind.
 > **No `sweep-state.md` row until the first full historical pass has run.**
 
 > ⓘ **Vitaliy Vasyutyk is ONE row for TEN companies, and that is deliberate.** He holds ten
