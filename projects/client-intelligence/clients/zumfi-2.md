@@ -11,6 +11,18 @@
 > so hiding it protects nothing _(Lilian, 2026-08-12)_. An **SSN or ITIN never may**,
 > including when it is the entity's tax ID.
 
+> **Two zones — what feeds the SOP vs what stays here.** This file is the master
+> record. Its sections split into two zones:
+> - **Operating (feeds the client SOP):** §1 Snapshot, §2 Contacts, §3 Systems &
+>   access, §4 Obligations & recurring processes, §5 Key facts & quirks, §7 Links —
+>   the standing info a covering bookkeeper needs to run this client.
+> - **Working context (CI-only — never in the SOP):** §6 — the log and outstanding
+>   tasks/meeting follow-ups. Live tasks live in Double / Ping (linked), not copied
+>   here.
+>
+> The SOP is the curated view of the **Operating** zone. See the project README
+> ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
+
 > 🔗 **This is one of TEN companies in the Vitaliy Vasyutyk group.** The owner-level map — the
 > billing structure, the shared portal contact, the group's history — is
 > [`vitaliy-vasyutyk.md`](./vitaliy-vasyutyk.md). **Read both.** This file holds only what is
@@ -148,9 +160,12 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 
 ### Tax year 2025 — the review
 
-- **Prepared 2026-09-13, by Lilian with a Claude Code session.** **Block A verdict: YES, with one
-  open item** — the return computes in full; only **transmission** is blocked, on the 65%
-  partner's SSN/ITIN, which Schedule B-1 and his Schedule K-1 both need. Sources read: the ALTA
+- **Prepared 2026-09-13, by Lilian with a Claude Code session.** **Block A verdict: YES, with open items** —
+  the return computes in full; only **transmission** is blocked, and 🔴 **on TWO things, not one**:
+  the 65% partner's SSN/ITIN *(his Schedule K-1, Schedule B-1, and Schedule B-2 if the partnership
+  elects out of the centralized audit regime)*, **and** confirmation that the Form 7004 was
+  **accepted** — the copy in Double is an unreadable scan, and the small-partnership relief that
+  lets this return be filed without a balance sheet depends on the extension existing. Sources read: the ALTA
   settlement statement, the client's spreadsheet, the Form 1099-NEC, both organizers, Double's
   properties, tax project, tasks and file library, and the 2025 IRS instructions and forms.
   **There is no prior-year return** — first year — so none of the usual conventions could be
@@ -159,9 +174,15 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **The 65% partner's SSN/ITIN** — blocks e-filing the 2025 return. Lilian is chasing it;
-  Vitaliy has said it is on the **Zumfi 1 and Fizum 1** records.
-- 🔴 **The extension could not be verified** — `7004 2025 Ext.pdf` in Double is a **scan with no
-  text layer**. Confirm acceptance from ATX or the e-file acknowledgment.
+  Vitaliy has said it is on the **Zumfi 1 and Fizum 1** records. ⚠️ **Ask whether he has an SSN at
+  all** — if not, the route is a Form W-7 and it takes weeks.
+- 🔴 **The extension could not be verified — and it is a CO-BLOCKER, not a tidy-up.**
+  `7004 2025 Ext.pdf` in Double is a **scan with no text layer**. Confirm acceptance from ATX or
+  the e-file acknowledgment. **If no extension was accepted, the return has been late since March
+  and the small-partnership relief it rests on is gone.**
+- 🔴 **Tennessee franchise & excise may already be late** — if a 2025 return or a Form FAE 183 was
+  owed for a TN LLC holding TN land, its deadline has long passed. **Never asked for this group;
+  not established either way.**
 - 🔴 **Check the Hamilton County Trustee's mailing address for this parcel** before the next bill
   goes astray, as Zumfi 1's did.
 - ⚠️ **Tennessee franchise & excise** — is a 2025 return owed, and does the FONCE exemption reach
@@ -193,4 +214,4 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 - **Owner-level group file:** [`vitaliy-vasyutyk.md`](./vitaliy-vasyutyk.md)
 - **2025 working paper (the figures live here, and only here):**
   [`tax-returns/zumfi-2-llc/2025-form-1065.md`](../../tax-returns/zumfi-2-llc/2025-form-1065.md)
-- **The acquisition method:** [`hud-acquisition-allocation`](../../../.claude/skills/hud-acquisition-allocation/) skill
+- **The acquisition method:** the `hud-acquisition-allocation` skill — ⚠️ **no link yet: it is on an unmerged branch** and the path does not resolve on `main`
