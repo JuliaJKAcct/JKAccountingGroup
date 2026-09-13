@@ -219,6 +219,31 @@ that the depreciation half of the workbook is provisional until it is answered. 
 building allocation is still worth having either way** — it is the acquisition entry and the
 balance sheet — but a depreciation schedule handed over without this question asked is a defect.
 
+### ⚖️ THE TOOL'S OWN FOUR SECTIONS ARE THE DECISION RULE — use them
+
+_(Julia, 2026-09-13, when a draft had capitalised the carrying costs of a flip: **"reference the HUD tool… you should be
+using that as guidance to know whether you can expense something or not."**)_
+
+The section headings are not labels, they are the answer:
+
+| § | Heading, verbatim | So |
+|---|---|---|
+| 1 | *FACILITATIVE COSTS — **Added to Basis of Building*** | capitalise |
+| 2 | *LOAN COSTS — **Added to Basis of Loan*** | capitalise, amortise over the loan |
+| 3 | *OPERATING COSTS — **Expensed Immediately*** | **expense** |
+| 4 | *ESCROW COSTS — **Deposits to Escrow Account*** | an asset |
+
+🔑 **§3's four lines settle the argument that comes up on every held property: `Property Taxes Paid` ·
+`Prorated Interest (Daily Interest)` · `Homeowners Insurance Premium` · `HOA/Condo Fees Paid`.** Those are
+**expensed**, and they are expensed **even on a flip that is being renovated for sale**.
+
+⚠️ **Do not reason your way past this into a §263A capitalisation argument.** A session did exactly that and was
+corrected. **Costs not named in the tool are placed by CHARACTER**: utilities go with §3 *(operating, same
+character as the named four)*; travel and lodging during the acquisition go with §1 *(facilitative)*, as do the
+**inspection** (`B39`) and the **wire fee** (`B34`), which the tool lists in §1 **by name**.
+
+⛔ **And a renovation is not in the tool at all** — it is an improvement to the asset and capitalises regardless.
+
 ### 🔴 If it IS a flip: §263A, and the trap that the LOSS itself springs
 
 Verified against the **2025 Form 1065 instructions** (irs.gov, 2026-09-13) — re-read them for the year you are working.
@@ -250,6 +275,30 @@ extensions**, so it is still open while a return is on extension.
 their nature rather than by election — often 95%+ of the spend. What is actually in play is only the carrying
 costs and bank charges. **Say that out loud**: it stops a discussion about "can we take a loss" from feeling
 bigger than the dollars involved.
+
+### Property tax: the closing proration is NOT the year-end liability
+
+🛑 **A closing proration tells you what the SELLER owed. It never tells you what the COMPANY owes at year end.**
+Two different numbers, and only the second belongs on a balance sheet.
+
+1. **Pull the county's own record** *(the Trustee / collector site)* for the actual bill, and **check whether it
+   was ever PAID**. A property bought mid-year is routinely still unpaid at 31 December.
+2. **The payable is the WHOLE unpaid bill**, not the closing credit — the company owes the taxing authority the
+   lot, and the credit merely funded part of it.
+3. **Apportion under §164(d)**: the seller bears the days up to the sale date, the company the rest. The
+   company's share is the §3 expense. **The closing figure was an estimate** — it is set before the bill exists —
+   so expect a small true-up, which adjusts the property cost.
+4. 🔑 **If the county record is missing a year, a LATER closing statement often carries it.** On the pilot, the
+   2025 city bill was nowhere to be found until the **2026 ALTA** showed both years' bills being paid out of the
+   sale — and the same statement's 2026 proration, run backwards, gave the city bill's amount, **with the county
+   proration as the control that proved the method.**
+
+### 🔴 CHANGE THE MAILING ADDRESS AFTER EVERY CLOSING
+
+**A title company prorates the tax at closing. It does NOT redirect the bill.** Two different jobs, and only the
+first happens automatically. ⚠️ On the pilot, the county was **still mailing to the late former owner** months
+after the sale, so **both 2025 bills went unpaid until the next closing cleared them — with interest on each.**
+**Add it to the post-closing checklist for every property, county AND city.**
 
 ### Schedule L is usually NOT required — check before building one
 
