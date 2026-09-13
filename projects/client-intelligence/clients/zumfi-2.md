@@ -114,15 +114,22 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   On the sibling company **Zumfi 1**, the county kept mailing to the **late former owner** and the
   2025 bill went unpaid for ten months, settled late with interest _(Julia, 2026-09-13)_.
   **Zumfi 2 closed 2025-11-06 and has the identical exposure. It has not been checked.**
-- ✅ **WHO RUNS THIS COMPANY IS SETTLED: the 65% partner is PASSIVE.** 🔑 **Julia confirmed it on
+- ✅ **THE 65% PARTNER IS PASSIVE — for what the return reports.** 🔑 **Julia answered it on
   2026-09-13** and Lilian keyed it into the 2025 return — `I -- Passive Individual` on his Schedule
-  K-1, `A -- Active Individual` for the 35% partner. ⚠️ **The operating agreement gives him a
-  unanimous-consent veto over every business decision, which is the argument the other way and is kept
-  on the record** — but the test the IRS asks is about **conduct**, and the firm has ruled on it.
-  🔴 **THIS IS A TAX FACT, NOT GOSSIP, AND IT IS THE ONE THAT DECIDES THE MOST ON THIS CLIENT:** more
-  than 35% of any loss allocated to a member who does not actively participate makes the partnership a
+  K-1, `A -- Active Individual` for the 35% partner *(that second one is **inferred**, not confirmed:
+  Julia's answer covered the 65% partner only)*. ✅ **What that settles is the page 6 Analysis-grid
+  column**, judged to the IRS instructions' own *"best of its knowledge and belief"* standard by the
+  person who knows the client.
+  ⛔ **WHAT IT DOES NOT SETTLE, and a first version of this entry said it did:** the **§461(k)(4)(B)
+  limited-entrepreneur** limb that the syndicate test turns on. **Nobody recorded what question was put
+  to Julia**, and the operating agreement gives him a **unanimous-consent veto over every business
+  decision** — evidence the other way, kept on the record.
+  🔴 **IT IS STILL A TAX FACT, NOT GOSSIP, AND IT DECIDES THE MOST ON THIS CLIENT — CONDITIONALLY:**
+  **IF** that limb is met, more than 35% of any loss allocated to him makes the partnership a
   **syndicate**, therefore a **tax shelter**, which costs it the **cash method** and the
   **small-business exemptions** — and a first-year entity forced onto accrual *adopts* accrual.
+  🔑 **And the practical answer does not depend on settling it:** allocate no loss and the test cannot
+  be reached on any reading.
   🔑 **The practical rule: do not reach for a small deduction on this company without checking what it
   arms.** 🔵 **A member can be a MEMBER-MANAGER and PASSIVE at the same time** — the K-1's item G asks
   what he is entitled to do, the entity type asks what he does. **Do not "fix" one to match the other.**
