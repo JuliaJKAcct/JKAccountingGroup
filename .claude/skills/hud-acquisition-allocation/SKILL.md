@@ -310,6 +310,12 @@ on page 1 of Form 1065; or item L on Schedule K-1."*
 **Prepare the balance sheet anyway** — the year the property sells needs the opening figures — but say plainly
 that it is not a filing requirement, so nobody spends a day reconciling something the return will not carry.
 
+🔴 **BUT THE YEAR IT SELLS IS THE EXCEPTION, AND IT REVERSES THIS SECTION.** On a held-for-sale deal the sale
+price is **gross receipts** (see the WIP section below), so total receipts jump past $250,000 and question 4
+fails. **Schedules L, M-1 and M-2, item F and K-1 item L all become mandatory** in exactly the year the balance
+sheet is hardest to build — and the prior year's closing figures, which nobody had to file, become the opening
+column everyone can see. ⚠️ **So "prepare it anyway" is not tidiness; it is what makes the sale year filable.**
+
 ### 🔴 A PARTNER WITH NO CAPITAL HAS NO BASIS — and on a CASH purchase there is no debt to give him any
 
 **§704(d) allows a partner's share of loss only up to his outside basis.** On a cash-purchase property partnership
@@ -331,6 +337,39 @@ risk of loss on, so §1.752-2 allocates the whole of it to him — the partner w
 the loss is still suspended. ⚠️ **So settle capital-vs-loan on the facts, not in the hope it fixes a §704(d) problem.**
 ⓘ On the pilot the signer ruled the funding accounts were **contributions on behalf of** the holding company, which
 means the partnership has **no debt at all** — that CONFIRMS the zero-basis conclusion rather than relieving it.
+
+### 🔑 ON A BUY-RENOVATE-SELL THE RENOVATION IS **WORK IN PROGRESS**, NOT BUILDING BASIS
+
+When the property is held for sale, **there are no fixed assets at all.** Land, building and renovation are
+**inventory**; the renovation accumulates as **WIP** until the sale, nothing is depreciated, and on the sale the
+whole accumulated cost becomes **cost of goods sold**. That is what makes the result **ORDINARY** — it runs
+through gross receipts and Form 1125-A, never Form 4797 or Schedule D.
+
+⚠️ **Two consequences worth knowing before you build the return.** Gross receipts become the **whole sale price**,
+which usually blows past the $250,000 in Schedule B question 4 — so **Schedules L, M-1 and M-2 become mandatory**
+on a return that needed none of them the year before. And where the deal makes a **loss**, ordinary is the
+friendlier answer: the partners deduct it in full, where a capital loss would be capped at $3,000 a year.
+
+⛔ **AND THE TRAP THIS EXISTS TO STOP: a prior-year balance sheet that shows the renovation somewhere other than
+Buildings is probably RIGHT, not broken.** On the pilot, Buildings sat at exactly the acquisition figure with no
+renovation added and a large unexplained "Other current assets" line beside it. A session read that as a defect,
+rebuilt the balance sheet, and told the signer that opening capital was overstated by a five-figure sum. **It was
+not.** Under WIP the line composed **to the cent** — renovation + loan costs + escrow + the undrawn construction
+reserve. 🔑 **Before calling a prior return wrong, test whether it is using a convention you have not applied.**
+An hour of reconstruction was spent proving an error that did not exist.
+
+### 🔴 TWO PEOPLE WITH THE SAME FIRST NAME — USE THE BANK'S PAYEE REFERENCE, NEVER THE NAME
+
+Closely held groups run on first names, and bank memos carry nicknames and handles rather than legal names. On
+the pilot a **partner** and an unrelated **outside lender** shared a first name; the lender appeared under a
+nickname. A session merged them and allocated a five-figure payment to the wrong person's capital account —
+caught only when the signer said so.
+
+🔑 **The bank distinguishes them even when the description does not: Chase carries a numeric PAYEE REFERENCE on
+realtime/vendor payments, and it differs per payee.** Match on that. ⚠️ **And the check that actually breaks it
+open is arithmetic, not identity** — money a lender advanced is a traceable deposit, and a repayment that matches
+those advances exactly cannot be a partner's capital withdrawal. **Reconcile the advances before you name the
+payee.**
 
 ### 🔴 A CLOSING-ADJACENT PAYMENT MAY BELONG TO A DIFFERENT PROPERTY — and the way OUT of basis is a choice
 
@@ -425,5 +464,7 @@ Group these and send once, per [`method.md`](../../../projects/pre-return-review
   working paper is the repo's only sanctioned home for them.
 - **The county egress block lifts**, or a route to assessor data becomes available — Step 3's
   "ask a person" changes.
+- **A held-for-sale deal runs through it.** The WIP/inventory section above came from the first one; a
+  RENTAL that is genuinely placed in service takes the opposite route and needs its own worked example.
 - **Bodner & Clark ship a new version of the workbook.** It is dated in its own footer and the
   firm does not control it; re-read the cell references before trusting this map.
