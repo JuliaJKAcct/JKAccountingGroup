@@ -358,6 +358,71 @@ not.** Under WIP the line composed **to the cent** — renovation + loan costs +
 reserve. 🔑 **Before calling a prior return wrong, test whether it is using a convention you have not applied.**
 An hour of reconstruction was spent proving an error that did not exist.
 
+### 🔴 THE LOAN THAT BOUGHT THE HOUSE MAY BE SECURED BY THE **PARTNER'S OWN HOME** — and that changes who deducts the interest
+
+A partner borrows personally and puts the money into the company. It looks like the familiar
+*"mortgage in his name, company pays it"* case — **and it may not be.** There are two shapes, they look
+identical on the bank, and they land in different places:
+
+| | Collateral | Who may deduct the interest |
+|---|---|---|
+| **The company's property secures it** | the house being bought | the company, as **equitable owner** — **Treas. Reg. §1.163-1(b)** exists for exactly this |
+| **The partner's OWN home secures it** | his residence, nothing of the company's | **§1.163-1(b) does not reach it.** The company has no interest in the collateral, so the deduction is a decision to put, not a default |
+
+🔑 **Two documents settle it in under a minute, and neither is the mortgage statement people reach for first:**
+
+1. **Box 8 of the Form 1098 — "address or description of property securing mortgage."** If it is the
+   partner's home address rather than the subject property, you are in the second row. **Box 7 and the
+   borrower name are not enough** — a loan can be in his name and still be secured by the company's house.
+2. 🛑 **The SELLER's Closing Disclosure, lines 04 and 05 — "Payoff of first / second mortgage loan."**
+   **Blank means nothing of the company's was encumbered.** A property that really secured a loan cannot
+   be conveyed without paying it off, so a blank payoff line is **positive evidence**, not an absence.
+   ⚠️ It is also the one check nobody runs, because by the time the sale is being worked the loan feels settled.
+
+⛔ **Do not carry a treatment across from another company in the same group.** Two companies with the same
+owners, the same bank and the same shape of deal can sit on opposite sides of this table — and on the pilot
+group they did. **Read each one's own box 8.**
+
+### 🔑 A PARTNER PAYABLE IS MEASURED AT WHAT THE COMPANY **RECEIVED** — never at the face of the note
+
+Where the ruling is *book it as a payable to the partner* (the firm's route, on tax-attorney advice — see the
+client file), the amount is **the cash that actually landed in the company's account**, not the note's principal.
+The lender's costs are retained at **his** closing and never reach the company at all.
+
+✅ **And you can PROVE which figure is right without the prior-year return.** Rebuild the acquisition-year
+balance sheet from the bank alone:
+
+```
+total assets  (cash + property WIP)
+   less  payable to the partner
+   ------------------------------
+   =  capital,  which must equal:  contributions  −  the year's loss
+```
+
+**At the received amount this closes three ways. At the note's face it misses by exactly the lender's costs.**
+Three independently derived numbers do not agree by accident — so the tie is the proof, and the gap names the
+error. ⓘ It also hands you the acquisition-year loss and the contributions, which is most of what the prior
+return should say when it arrives.
+
+🛑 **Then watch what goes back to him on the sale.** Repayment above the payable is **not automatically
+repayment** — it is a reimbursement of his loan costs, or a distribution, and the two are different lines.
+**Establish which; never assume.**
+
+### 🛑 THE CLIENT BOOKS THE SALE AT THE **WIRE**, NOT THE PRICE — read "Cash to Seller" first
+
+A client-prepared P&L on a property company is built from the bank, so its revenue is the **amount that arrived**:
+the seller Closing Disclosure's **"Cash to Seller"** line, after commission, doc stamps, title, any seller credit
+and the unpaid property taxes. **Every one of those selling costs disappears with it**, and the gain is
+understated at the top and overstated at the bottom by different amounts.
+
+⚠️ **Pair it with the defect that always travels alongside** — a property bought in one year and sold in the next
+leaves its **whole cost in the prior year**, and the sale-year P&L has no line for it at all. On the pilot the
+two together moved the result by **more than the entire profit the client had reported**.
+
+🔑 **And note what makes this hard to catch: the rest of the statement is usually careful.** On the pilot the
+client's materials, accounting and bank-fee lines tied to the cent. **A statement that is right where you check
+it reads as right everywhere** — so check the two structural things first and the detail afterwards.
+
 ### 🔴 TWO PEOPLE WITH THE SAME FIRST NAME — USE THE BANK'S PAYEE REFERENCE, NEVER THE NAME
 
 Closely held groups run on first names, and bank memos carry nicknames and handles rather than legal names. On
@@ -370,6 +435,18 @@ realtime/vendor payments, and it differs per payee.** Match on that. ⚠️ **An
 open is arithmetic, not identity** — money a lender advanced is a traceable deposit, and a repayment that matches
 those advances exactly cannot be a partner's capital withdrawal. **Reconcile the advances before you name the
 payee.**
+
+🔴 **The same payee reference then answers a 1099 question, and this is the commonest 1099 error in a
+group like this: ONE CONTRACTOR, TWO PAYING COMPANIES, ONE FORM.** A holder company and its remodeler both
+pay the same man; the 1099-NEC is cut for **his whole year** and filed by whichever company files the rest.
+**The money is right and the payer is wrong** — and the form is then unsupportable against either company's
+bank. On the pilot the over-reported amount was **exactly** what the *other* company had paid him.
+
+🔑 **Reconcile every 1099 to the PAYING entity's own bank before filing**, using the payee reference to split a
+handle that appears in two companies' statements. ⛔ **And run the check backwards too**: a contractor over the
+threshold with **no** form, and a form reporting more than any record in the group shows being paid, are the
+same failure seen from the other side. ⚠️ **Look at the PRIOR year as well** — a property bought in December
+is usually paying its first contractor in December, under the holder's name, before the remodeler exists.
 
 ### 🔴 A CLOSING-ADJACENT PAYMENT MAY BELONG TO A DIFFERENT PROPERTY — and the way OUT of basis is a choice
 
