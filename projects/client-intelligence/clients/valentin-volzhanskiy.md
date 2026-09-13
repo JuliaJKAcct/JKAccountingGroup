@@ -304,11 +304,27 @@ A running, dated record as we build this profile.
   Julia con todos los comentarios de los análisis que hicimos en esta declaración.")* 🔑 **The reason
   is the review gap:** Julia reviews the return afterwards and was not in the room, so reconstructing
   the reasoning on the last day is how it gets lost. **The accumulating draft lives in the working
-  paper §10**; the live note is the Double one. **Three bullets are published; a fourth is drafted
-  and held** — it reports a position on the tipped income, and whether that position was actually
-  taken in the software is the one thing still to confirm.
+  paper §10**; the live note is the Double one. 🆕 **All four bullets are now published** *(2026-09-13,
+  p.m.)* — the fourth reports the position taken on the tipped income.
   ⚠️ **Rule 11's default keeps our analysis out of Double notes. She authorised it for THIS note by
   name, case by case — it does not generalise.**
+
+- _(2026-09-13, fifth)_ — 🟡 **THE TIPPED INCOME WAS CLAIMED, and the note to Julia was updated to
+  say so.** The larger employer's box-14 tip figure had been left off the first version of the return;
+  Lilian keyed it, and **every figure on the second version was re-verified** — the multi-employer
+  mechanics resolved correctly and nothing that should have stayed still moved *(the AGI and the
+  health-credit repayment are both unchanged, which is what proves it)*.
+  🛑 **AND A PROCESS LESSON WORTH MORE THAN THE FIGURE.** The note bullet had been drafted hours
+  earlier, when the deduction was **not** on the return, and it said so. ⛔ **Posting it unchecked
+  would have told the person who signs the return the OPPOSITE of what the return does** — and
+  nothing in the note itself would have shown it. ✅ **It was held instead, with the one number that
+  distinguishes the two states written down**, and rewritten once that number was seen.
+  🔑 **The rule: a note drafted while someone is still at the keyboard goes stale between the drafting
+  and the posting. Name the number that settles it, and hold the bullet until someone looks.**
+  ⚠️ **What is still open is now a LIABILITY rather than a gap:** the deduction is claimed and its
+  eligibility is not established, so the deadline moved from the keystroke to the filing. **Two
+  questions to the employer close it** — what the job actually was, and how much of the figure the
+  customer chose to pay rather than the invoice imposing it.
 
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
@@ -386,10 +402,12 @@ A running, dated record as we build this profile.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Settle the box-14 tips before the return is filed** — the larger employer's tip figure is on
-  the return nowhere, and whether that is a position or an oversight is worth **low four figures** of
-  tax. **The question goes to the EMPLOYER, not the client**: ask them to split the figure between
-  genuine tips and a distributed service charge.
+- 🔴 **The box-14 tips are CLAIMED but not ESTABLISHED — close it before filing.** Worth **low four
+  figures** of tax. **Two questions, and they go to the EMPLOYER, not the client:** what job he
+  actually did there *(a role off the tipped-occupation list voids the whole amount)*, and how much
+  of the figure the **customer chose** to pay rather than the invoice imposing it. ⛔ **Do not ask
+  "was it mandatory" — a mandatory tip pool still qualifies, and that wording returns a false
+  negative.**
 - 🔴 **Collect the Schedule C expenses** — the organizer never asked for them, and this is the single
   highest-value hour left on the return.
 - ⚠️ **Check the taxpayer signature date before e-file** — the prepared return carries an April date
