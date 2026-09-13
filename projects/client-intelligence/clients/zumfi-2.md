@@ -51,8 +51,8 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 
 | Role | Where to find them |
 |---|---|
-| Owner / manager — **Vitaliy Vasyutyk, 35%** | Double client (link below). He **manages**; he does not fund |
-| Partner — **Bahruz (also spelled Behruz) Naghiyev, 65%** | Double client. He **funds**; he does not manage _(Julia, from the client, 2026-09-13)_. Also a partner in **Zumfi 1 and Fizum 1**, and **his details already exist on those two records** _(Lilian, from Vitaliy, 2026-09-07)_ |
+| Owner / manager — **Vitaliy Vasyutyk, 35%** | Double client (link below). ⚠️ **Described as managing and not funding** _(Julia, from the client, 2026-09-13)_ — **but the quote was said of Zumfi 1 and Fizum 1, never of this company, and it has not been confirmed for it.** Recorded as reported, not as established; the row below holds the other half of the same unsettled fact |
+| Partner — **Bahruz (also spelled Behruz) Naghiyev, 65%** | Double client. ⚠️ **UNSETTLED — two sources disagree and both are recorded, per the firm's rule:** the **client** says he **funds and does not manage** _(Julia, from the client, 2026-09-13)_; the **operating agreement** makes him a **co-equal member-manager** — all decisions by the Members, any Member may bind the company, votes count equally, and **every business decision needs unanimous consent** _(read 2026-09-13)_. Also a partner in **Zumfi 1 and Fizum 1**, and **his details already exist on those two records** _(Lilian, from Vitaliy, 2026-09-07)_ |
 | Portal contact | one address covers all ten companies — see the group file §5 |
 
 ## 3. Systems & access
@@ -113,12 +113,17 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   On the sibling company **Zumfi 1**, the county kept mailing to the **late former owner** and the
   2025 bill went unpaid for ten months, settled late with interest _(Julia, 2026-09-13)_.
   **Zumfi 2 closed 2025-11-06 and has the identical exposure. It has not been checked.**
-- 🔴 **THE 65% PARTNER FUNDS AND DOES NOT MANAGE — and that is a tax fact, not gossip.** More than
-  35% of any loss would be allocated to a member who does not actively participate, which makes
-  the partnership a **syndicate**, therefore a tax shelter — costing it the cash method and the
-  small-business exceptions. 🔑 **The practical rule: do not reach for a small deduction on this
-  company without checking what it arms.** The reasoning is in the
-  [2025 working paper](../../tax-returns/zumfi-2-llc/2025-form-1065.md) §4 decision 3.
+- ⚠️ **WHO ACTUALLY RUNS THIS COMPANY IS UNSETTLED — and it is a tax fact, not gossip.** The
+  **client** says the 65% partner funds and does not manage; the **operating agreement** makes him a
+  **co-equal member-manager** with a unanimous-consent veto. 🔑 **Both are recorded because they
+  disagree** *(the firm's rule: write both with their sources and mark it unsettled)*, and **one
+  question to Vitaliy settles it** — does Bahruz take any part in running it, or only put money in?
+  🔴 **Why it matters:** if he does **not** actively participate, more than 35% of any loss goes to a
+  non-participant, which makes the partnership a **syndicate** and therefore a tax shelter — costing
+  it the **cash method** and the small-business exceptions. **If he does, that risk falls away.**
+  ⛔ **Either way the practical rule holds: do not reach for a small deduction on this company
+  without checking what it arms.** The reasoning is in the
+  [2025 working paper](../../tax-returns/zumfi-2-llc/2025-form-1065.md) §4 decision 3 and §10B.
 - ⚠️ **The 2025 organizer answered three Yes/No questions in a way the firm's own records
   contradict** — no 50%-or-more owner *(Bahruz has 65%)*, and no 1099 payments *(one was filed and
   accepted)*. **Test every factual Yes/No on this client against a record, not against the
@@ -158,14 +163,29 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   (c) requires the K-1s to be furnished by the extended due date, so a late return must carry
   Schedules L, M-1, M-2 and item L, which cannot be built from what we hold.
 
+- _(2026-09-13, later)_ — **Lilian keyed the 2025 return in ATX and it was reviewed.** ✅ **She
+  closed two open items herself:** the 65% partner's identifier is keyed, and she **ruled question
+  33 = No, designating Vitaliy as Partnership Representative.** 🔑 **The operating agreement was
+  opened for the first time** *(at her request)* and **documents the 35/65 split**, allocates profits
+  strictly pro-rata, makes the company **member-managed** with **unanimous consent for every business
+  decision** and **equal votes regardless of ownership** — and leaves its **Initial Capital
+  Contributions line BLANK**, which is the one place the capital-versus-loan question might have been
+  answered. 🔴 **FOUR things in the draft have to change and TWO more have to be confirmed**, the worst a **Schedule L asserting
+  zero total assets**; they are listed with their fixes in the working paper — **the four changes at §10A; the two confirmations (Schedule K line 16b, and the wording of the two K-2/K-3 partner notices) at §6 items ⑱ and ⑲**. ⚠️ **And two
+  things the firm believed turned out to be wrong: the 65% partner is a member-manager, not a
+  passive member (the agreement says so), and the "he funds, he does not manage" premise is now
+  contradicted by that agreement rather than settled.**
+
 ### Tax year 2025 — the review
 
-- **Prepared 2026-09-13, by Lilian with a Claude Code session.** **Block A verdict: YES, with open items** —
-  the return computes in full; only **transmission** is blocked, and 🔴 **on TWO things, not one**:
-  the 65% partner's SSN/ITIN *(his Schedule K-1, Schedule B-1, and Schedule B-2 if the partnership
-  elects out of the centralized audit regime)*, **and** confirmation that the Form 7004 was
-  **accepted** — the copy in Double is an unreadable scan, and the small-partnership relief that
-  lets this return be filed without a balance sheet depends on the extension existing. Sources read: the ALTA
+- **Prepared 2026-09-13, by Lilian with a Claude Code session.** **Block A verdict: YES.** The return computes in full,
+  **and Lilian keyed it in ATX on 2026-09-13.** ✅ **The 65% partner's identifier is in** — that
+  blocker is closed. 🔴 **One thing still blocks transmission:** confirmation that the **Form 7004
+  was accepted**, since the copy in Double is an unreadable scan and the small-partnership relief
+  that lets this return be filed without a balance sheet depends on the extension existing.
+  🔴 **And FOUR things in the keyed draft must change first, with TWO more to confirm** — the worst
+  being a **Schedule L asserting zero total assets** on a company holding the parcel. The four changes, with their
+  fixes, are in the working paper's §10A; **the two confirmations are §6 items ⑱ and ⑲**, not §10A. Sources read: the ALTA
   settlement statement, the client's spreadsheet, the Form 1099-NEC, both organizers, Double's
   properties, tax project, tasks and file library, and the 2025 IRS instructions and forms.
   **There is no prior-year return** — first year — so none of the usual conventions could be
@@ -173,9 +193,12 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **The 65% partner's SSN/ITIN** — blocks e-filing the 2025 return. Lilian is chasing it;
-  Vitaliy has said it is on the **Zumfi 1 and Fizum 1** records. ⚠️ **Ask whether he has an SSN at
-  all** — if not, the route is a Form W-7 and it takes weeks.
+- ✅ **CLOSED 2026-09-13 — the 65% partner's identifier is keyed** on his Schedule K-1 and on
+  Schedule B-1. It was the blocker; it is not any more.
+- ⚠️ **Is the 65% partner a U.S. CITIZEN or a RESIDENT ALIEN?** Schedule B-1 asserts citizen. **If
+  he is a resident alien, one cell moves** (the B-1's country-of-citizenship column) and nothing
+  else does — the foreign-partner question, the K-1's domestic box and the Schedule K-2/K-3
+  exception are all unaffected. **Only a NONRESIDENT alien changes those.**
 - 🔴 **The extension could not be verified — and it is a CO-BLOCKER, not a tidy-up.**
   `7004 2025 Ext.pdf` in Double is a **scan with no text layer**. Confirm acceptance from ATX or
   the e-file acknowledgment. **If no extension was accepted, the return has been late since March
@@ -185,10 +208,9 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   not established either way.**
 - 🔴 **Check the Hamilton County Trustee's mailing address for this parcel** before the next bill
   goes astray, as Zumfi 1's did.
-- ⚖️ **Schedule B question 33 — elect OUT of the centralized partnership audit regime, or name a
-  Partnership Representative?** A two-member LLC whose partners are both individuals is, on its
-  face, eligible to elect out, which removes the PR block entirely. **A decision, not an
-  omission** — and electing out still needs every partner's TIN, for Schedule B-2.
+- ✅ **RULED 2026-09-13 by Lilian: question 33 = NO, and VITALIY VASYUTYK is the Partnership
+  Representative.** No Schedule B-2. 🔑 **That is this company's convention now, and probably the
+  group's** — the other nine face the same question.
 - ⚠️ **Inventory or capital asset?** The parcel's character decides whether the eventual gain is
   ordinary or capital. **It does not have to be decided to file 2025** — it must be decided before
   the sale year.
