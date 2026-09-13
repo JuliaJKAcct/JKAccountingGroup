@@ -298,6 +298,18 @@ A running, dated record as we build this profile.
   The right one is where the money originated: did the customer choose to pay it, or did the invoice
   impose it?** *(2025 Form 1040 instructions p. 102, read 2026-09-13.)*
 
+- _(2026-09-13, fourth)_ — 📋 **A STANDING CONVENTION FOR THIS RETURN, at Lilian's instruction:
+  every consideration taken while preparing it is drafted as a note bullet ON THE DAY, and the whole
+  note goes to Julia ONCE when the return is finished.** *("Cuando terminemos, hagamos una nota para
+  Julia con todos los comentarios de los análisis que hicimos en esta declaración.")* 🔑 **The reason
+  is the review gap:** Julia reviews the return afterwards and was not in the room, so reconstructing
+  the reasoning on the last day is how it gets lost. **The accumulating draft lives in the working
+  paper §10**; the live note is the Double one. **Three bullets are published; a fourth is drafted
+  and held** — it reports a position on the tipped income, and whether that position was actually
+  taken in the software is the one thing still to confirm.
+  ⚠️ **Rule 11's default keeps our analysis out of Double notes. She authorised it for THIS note by
+  name, case by case — it does not generalise.**
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
