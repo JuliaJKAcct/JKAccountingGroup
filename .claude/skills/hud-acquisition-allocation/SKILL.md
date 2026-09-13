@@ -219,6 +219,48 @@ that the depreciation half of the workbook is provisional until it is answered. 
 building allocation is still worth having either way** — it is the acquisition entry and the
 balance sheet — but a depreciation schedule handed over without this question asked is a defect.
 
+### 🔴 If it IS a flip: §263A, and the trap that the LOSS itself springs
+
+Verified against the **2025 Form 1065 instructions** (irs.gov, 2026-09-13) — re-read them for the year you are working.
+
+1. **§263A generally requires capitalising** costs for real property **acquired for resale** and real property
+   **produced** (renovated) for sale. A flip is squarely inside it.
+2. Those costs **"aren't deductible until the property to which the costs relate is sold, used, or otherwise
+   disposed of."** So they sit on the balance sheet until the sale year.
+3. **There is an exception:** a **small business taxpayer** may adopt a method **not** to capitalise under
+   **§263A(i)**. For 2025 that is average annual gross receipts **≤ $31 million** for the prior three years
+   **and not a tax shelter** under §448(d)(3). A small property LLC clears the receipts half easily.
+4. 🛑 **The second half is where it bites. A "syndicate" IS a tax shelter, and a syndicate is a partnership
+   where MORE THAN 35% OF THE LOSSES for the tax year are allocated to limited partners or limited
+   entrepreneurs** — a limited entrepreneur being someone who does not actively participate in management.
+5. **A tax shelter loses the small-business exemptions** — §263A(i), §471(c), §163(j)(3), §460(e)(1)(B) — **and
+   the cash method.**
+
+🔑 **Read 3–5 together and the shape is: the test turns on how the LOSS is allocated, so reporting a loss is
+what switches the test on.** Expense more → bigger loss → more of it allocated to any inactive member → the
+entity becomes a syndicate → §263A becomes mandatory → the deductions disappear anyway. **The bigger the loss
+you reach for, the more likely you lose the right to it.**
+
+⚠️ **So check who actually participates before expensing carrying costs on a flip partnership**, and note that
+the §448 regulations allow an **annual election to test the syndicate question on the PRIOR year's
+allocations** instead of the current year's — made on the **timely filed original return including
+extensions**, so it is still open while a return is on extension.
+
+ⓘ **And most of the time this is a small question**, because the purchase and the renovation capitalise by
+their nature rather than by election — often 95%+ of the spend. What is actually in play is only the carrying
+costs and bank charges. **Say that out loud**: it stops a discussion about "can we take a loss" from feeling
+bigger than the dollars involved.
+
+### Schedule L is usually NOT required — check before building one
+
+Form 1065 **Schedule B question 4**: answer Yes if **all four** hold — total receipts **< $250,000**, total
+assets at year end **< $1,000,000**, K-1s filed and furnished by the due date **including extensions**, and no
+Schedule M-3 requirement. Then *"the partnership is not required to complete Schedules L, M-1, and M-2; item F
+on page 1 of Form 1065; or item L on Schedule K-1."*
+
+**Prepare the balance sheet anyway** — the year the property sells needs the opening figures — but say plainly
+that it is not a filing requirement, so nobody spends a day reconciling something the return will not carry.
+
 ## What to ask
 
 Group these and send once, per [`method.md`](../../../projects/pre-return-review/method.md):
@@ -248,6 +290,7 @@ Group these and send once, per [`method.md`](../../../projects/pre-return-review
 
 ## Update this skill when…
 
+- **The year changes.** §263A's small-business threshold is indexed and the Schedule B question 4 figures can move — **re-read the current Form 1065 and its instructions** rather than trusting the numbers quoted above.
 - **A financed purchase runs through it.** The pilot was all cash, so §2 and §4 have never been
   exercised on real data and the loan-cost mapping above is from the workbook's own labels, not
   from a statement the firm has coded.
