@@ -54,6 +54,7 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 | Owner / manager — **Vitaliy Vasyutyk, 35%** | Double client (link below). ⚠️ **Described as managing and not funding** _(Julia, from the client, 2026-09-13)_ — **but the quote was said of Zumfi 1 and Fizum 1, never of this company, and it has not been confirmed for it.** Recorded as reported, not as established; the row below holds the other half of the same unsettled fact |
 | Partner — **Bahruz (also spelled Behruz) Naghiyev, 65%** | Double client. ⚠️ **UNSETTLED — two sources disagree and both are recorded, per the firm's rule:** the **client** says he **funds and does not manage** _(Julia, from the client, 2026-09-13)_; the **operating agreement** makes him a **co-equal member-manager** — all decisions by the Members, any Member may bind the company, votes count equally, and **every business decision needs unanimous consent** _(read 2026-09-13)_. Also a partner in **Zumfi 1 and Fizum 1**, and **his details already exist on those two records** _(Lilian, from Vitaliy, 2026-09-07)_ |
 | Portal contact | one address covers all ten companies — see the group file §5 |
+| **The two partners share ONE postal address** | ✅ **Confirmed by Lilian, 2026-09-13**, when the 2025 Form 1065 review flagged both Schedules K-1 printing the same one as an error. **It is not an error.** ⚠️ **The operating agreement appears to carry a different address for the 65% partner** — a formation-era document, not a current address. 🔑 **Do not raise it again.** *(No address is recorded here or in the working paper — `projects/tax-returns/README.md` bars a person's home address from the repo.)* |
 
 ## 3. Systems & access
 
@@ -170,7 +171,7 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   strictly pro-rata, makes the company **member-managed** with **unanimous consent for every business
   decision** and **equal votes regardless of ownership** — and leaves its **Initial Capital
   Contributions line BLANK**, which is the one place the capital-versus-loan question might have been
-  answered. 🔴 **FOUR things in the draft have to change and TWO more have to be confirmed**, the worst a **Schedule L asserting
+  answered. 🔴 **THREE things in the draft have to change and TWO more have to be confirmed** *(a fourth — the partner address — was closed on 2026-09-13 when Lilian confirmed the two partners share one address)*, the worst a **Schedule L asserting
   zero total assets**; they are listed with their fixes in the working paper — **the four changes at §10A; the two confirmations (Schedule K line 16b, and the wording of the two K-2/K-3 partner notices) at §6 items ⑱ and ⑲**. ⚠️ **And two
   things the firm believed turned out to be wrong: the 65% partner is a member-manager, not a
   passive member (the agreement says so), and the "he funds, he does not manage" premise is now
@@ -183,7 +184,7 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   blocker is closed. 🔴 **One thing still blocks transmission:** confirmation that the **Form 7004
   was accepted**, since the copy in Double is an unreadable scan and the small-partnership relief
   that lets this return be filed without a balance sheet depends on the extension existing.
-  🔴 **And FOUR things in the keyed draft must change first, with TWO more to confirm** — the worst
+  🔴 **And THREE things in the keyed draft must change first, with TWO more to confirm** — the worst
   being a **Schedule L asserting zero total assets** on a company holding the parcel. The four changes, with their
   fixes, are in the working paper's §10A; **the two confirmations are §6 items ⑱ and ⑲**, not §10A. Sources read: the ALTA
   settlement statement, the client's spreadsheet, the Form 1099-NEC, both organizers, Double's
