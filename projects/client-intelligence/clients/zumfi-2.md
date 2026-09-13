@@ -51,7 +51,7 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 
 | Role | Where to find them |
 |---|---|
-| Owner / manager — **Vitaliy Vasyutyk, 35%** | Double client (link below). ✅ **He RUNS the company — ACTIVE** _(Julia, confirmed for this company 2026-09-13)_. Keyed on the 2025 Form 1065 as `A -- Active Individual`. ⓘ *It had been recorded as reported-not-established until then, because the original remark was made about Zumfi 1 and Fizum 1.* |
+| Owner / manager — **Vitaliy Vasyutyk, 35%** | Double client (link below). 🟠 **Described as running the company — keyed ACTIVE, still INFERRED.** _(The client remark was made about Zumfi 1 and Fizum 1; Julia's 2026-09-13 answer covered the OTHER partner only.)_ Keyed on the 2025 Form 1065 as `A -- Active Individual`. ⓘ *It had been recorded as reported-not-established until then, because the original remark was made about Zumfi 1 and Fizum 1.* |
 | Partner — **Bahruz (also spelled Behruz) Naghiyev, 65%** | Double client. ✅ **He FUNDS and does not manage — PASSIVE** _(Julia, confirmed 2026-09-13)_. Keyed on the 2025 Form 1065 as `I -- Passive Individual`. ⚠️ **The operating agreement pulls the other way and is kept on the record**: it makes him a **co-equal member-manager** — all decisions by the Members, any Member may bind the company, votes count equally, and **every business decision needs unanimous consent** _(read 2026-09-13)_. 🔑 **The IRS test is about CONDUCT, and the firm ruled on it; a member-manager can be passive.** Also a partner in **Zumfi 1 and Fizum 1**, and **his details already exist on those two records** _(Lilian, from Vitaliy, 2026-09-07)_ |
 | Portal contact | one address covers all ten companies — see the group file §5 |
 | **The two partners share ONE postal address** | ✅ **Confirmed by Lilian, 2026-09-13**, when the 2025 Form 1065 review flagged both Schedules K-1 printing the same one as an error. **It is not an error.** ⚠️ **The operating agreement appears to carry a different address for the 65% partner** — a formation-era document, not a current address. 🔑 **Do not raise it again.** *(No address is recorded here or in the working paper — `projects/tax-returns/README.md` bars a person's home address from the repo.)* |
@@ -185,10 +185,11 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   decision** and **equal votes regardless of ownership** — and leaves its **Initial Capital
   Contributions line BLANK**, which is the one place the capital-versus-loan question might have been
   answered. 🔴 **THREE things in the draft have to change and TWO more have to be confirmed** *(a fourth — the partner address — was closed on 2026-09-13 when Lilian confirmed the two partners share one address)*, the worst a **Schedule L asserting
-  zero total assets**; they are listed with their fixes in the working paper — **the four changes at §10A; the two confirmations (Schedule K line 16b, and the wording of the two K-2/K-3 partner notices) at §6 items ⑱ and ⑲**. ⚠️ **And two
-  things the firm believed turned out to be wrong: the 65% partner is a member-manager, not a
-  passive member (the agreement says so), and the "he funds, he does not manage" premise is now
-  contradicted by that agreement rather than settled.**
+  zero total assets**; they are listed with their fixes in the working paper — **the three changes at §10A; the two confirmations (Schedule K line 16b, and the wording of the two K-2/K-3 partner notices) at §6 items ⑱ and ⑲**. ⛔ ⓘ *(SUPERSEDED the same day — kept for the trail.)* **This entry went on to say that "the 65%
+  partner is a member-manager, not a passive member (the agreement says so)" and that the funding
+  premise was "contradicted by that agreement rather than settled".** ✅ **Julia answered it hours
+  later: he IS passive**, and a member-manager can be passive — the K-1's item G asks what he is
+  entitled to do, the entity type asks what he does. **See the settled entry above.**
 
 ### Tax year 2025 — the review
 
@@ -198,7 +199,7 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   was accepted**, since the copy in Double is an unreadable scan and the small-partnership relief
   that lets this return be filed without a balance sheet depends on the extension existing.
   🔴 **And THREE things in the keyed draft must change first, with TWO more to confirm** — the worst
-  being a **Schedule L asserting zero total assets** on a company holding the parcel. The four changes, with their
+  being a **Schedule L asserting zero total assets** on a company holding the parcel. The three changes, with their
   fixes, are in the working paper's §10A; **the two confirmations are §6 items ⑱ and ⑲**, not §10A. Sources read: the ALTA
   settlement statement, the client's spreadsheet, the Form 1099-NEC, both organizers, Double's
   properties, tax project, tasks and file library, and the 2025 IRS instructions and forms.
