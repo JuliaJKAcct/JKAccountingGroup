@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13 *(second entry same day — the return was prepared)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -131,9 +131,10 @@ watch-outs, one-off arrangements, history that affects the work.
   box-14 one is by far the larger. **Read box 7 AND box 14 on every W-2 he sends**, every year.
   The deduction is claimed on **Schedule 1-A (Form 1040) Part II**, which did not exist before 2025.
   🔴 **But reporting is not eligibility, and his employers are the risky kind:** a **service charge
-  or automatic gratuity distributed to staff is NOT a qualified tip**, and all three tip-bearing
-  employers are **contract catering and events** businesses, where a fixed distributed service
-  charge is normal. **Ask the employer to split the figure before claiming it.**
+  or automatic gratuity distributed to staff is NOT a qualified tip**, and **both tip-bearing
+  employers — and in fact all four of his 2025 employers — are contract catering, events or
+  concessions businesses**, where a fixed distributed service charge is normal. **Ask the employer to
+  split the figure before claiming it.**
 - 🔴 **HIS 2024 SCHEDULE C DEDUCTED `GAS & FUEL` WITH NO VEHICLE INFORMATION ON THE PAGES WE
   RECOVERED — AND IF THAT WAS CAR FUEL IT MAY HAVE CLOSED THE BETTER METHOD.** It was deducted as
   an ordinary business cost rather than as a **car and truck expense**, and **nothing on the
@@ -248,16 +249,40 @@ A running, dated record as we build this profile.
   to him; whether it was transmitted to the IRS and furnished to him is a separate, smaller
   question.
 
+- _(2026-09-13, later)_ — 🟡 **THE 2025 RETURN WAS PREPARED** by Lilian in ATX and brought back for
+  review. **Blocker ① closed in the same pass** — she supplied the Form 1095-A directly, so the
+  unreadable scan never had to be defeated: **twelve months of Marketplace coverage with no gap**,
+  which is a change from 2024's four-month gap. The return was **checked line by line** and the
+  arithmetic holds throughout. **Two things it got right that nothing in the 2025 paperwork would
+  have prompted:** the prior-year **qualified-business-loss carryforward** is on Form 8995 line 3
+  *(it exists only on the 2024 return; a preparation that never opened last year would have put a
+  zero there)*, and the **Schedule C start-date box was not re-ticked** — the most reproducible error
+  in this client's file, and it was not repeated.
+  🔴 **Two things are open and both move money.** ① The **Schedule C carries no expenses at all** —
+  a declared, documented decision *(the client never returned the P&L template)*, but its cost
+  compounds: it overstates the profit, the self-employment tax, the AGI **and the health-insurance
+  repayment**, in that order. ② **The larger employer's box-14 tips are nowhere on the return.**
+  ⛔ **Whether that is a deliberate position on service charges or an oversight is NOT established** —
+  it is worth **low four figures** of tax and is the first question for the reviewer.
+  🔑 **And one thing nobody would look for: he lands JUST UNDER the 400%-of-poverty-line threshold
+  where the premium-tax-credit repayment cap disappears entirely.** Income that turns up later does
+  not cost its marginal tax — **crossing that threshold costs several thousand at once**, because the
+  cap goes AND the excess itself grows. **The missing business expenses push him away from it.**
+  ⓘ *The percentage, the headroom and the arithmetic are in the working paper §9E — not here.*
+  ⓘ *A Double note (**524890**) records the preparer's own three assumptions for the reviewer.*
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
-- **What gated the return.** Four things, and none of them is a missing document in the ordinary
-  sense. ⓘ *The third closed on 2026-09-13; **three still stand** and the return is still not
-  prepared:*
-  1. **The Form 1095-A cannot be read.** It is on file — he uploaded it — but it is a photograph
-     with no text layer, and **Form 8962 cannot be computed without its month-by-month columns.**
-     A figure on the return depends on it, so this blocks. It needs a human to read it, or a fresh
-     PDF from the Marketplace.
+- **What gated the return.** Four things, and none of them was a missing document in the ordinary
+  sense. ⓘ *🟡 **Superseded 2026-09-13: TWO closed that day (① and ③), and Lilian prepared the return
+  without the other two** — see the log entry above and the working paper §9. Kept as written because
+  it is what the review found:*
+  1. ✅ **CLOSED 2026-09-13 — the Form 1095-A was read.** It read: *it is on file — he uploaded it —
+     but it is a photograph with no text layer, and Form 8962 cannot be computed without its
+     month-by-month columns.* **Lilian supplied the document directly**, so the scan never had to be
+     defeated: **twelve months of coverage with no gap**, unlike 2024's four-month one, and Form 8962
+     was computed and checked.
   2. **The Schedule C has income and no expenses.** His 1099-NEC income is established from the
      documents, but the organizer's `Wages (W2)`-only answer meant he was never asked a single
      business question. The prior year deducted fuel and phone costs; this year's equivalents have
@@ -282,7 +307,10 @@ A running, dated record as we build this profile.
         anything else — and whether he kept a mileage log.
   - [ ] Ask what the **contractor work actually was**, so the Schedule C's principal business and
         code are right and so we know whether it is the same activity as the prior year's catering.
-  - [ ] Ask for the **Form 1095-A as an original PDF** from the Marketplace, not a photograph.
+  - [x] ~~Ask for the **Form 1095-A as an original PDF**~~ — ✅ **answered 2026-09-13**; Lilian
+        supplied a readable copy. ⚠️ **But one thing came out of it that is still open: the
+        Marketplace holds his OLD address**, which rates next year's benchmark plan off the wrong
+        county.
   - [ ] Ask whether he had **tips at every job**, and ask for final pay stubs or a payroll summary
         for the employer that reported none in box 7.
   - [ ] Ask whether he actually made any **estimated tax payments** in 2025 — his organizer says
@@ -310,20 +338,33 @@ A running, dated record as we build this profile.
     knowable from that return.
   - The 2024 return carried an **excess advance premium tax credit repayment**, with coverage in
     some months and not others.
-- **What was decided.** Nothing was computed. **Block A came back blocked**, so the review stopped
-  at the question list rather than producing figures — per the firm's rule against preparing around
-  a hole.
+- **What was decided.** 🟡 **Superseded on 2026-09-13.** It read: *nothing was computed; Block A came
+  back blocked, so the review stopped at the question list rather than producing figures, per the
+  firm's rule against preparing around a hole.* **That held for a day.** Two blockers then closed,
+  and **Lilian prepared the return without the other two** — the Schedule C expenses as a declared,
+  documented decision, the tips question still open. **The return is prepared and checked, and is NOT
+  yet filed.**
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Get the 2025 Form 1095-A read** — it is the single thing standing between us and a computable
-  return, and it is already in Double.
-- 🔴 **Collect the Schedule C expenses** — the organizer never asked for them.
-- ⚠️ **Establish the multi-employer tips computation** before claiming the deduction.
+- 🔴 **Settle the box-14 tips before the return is filed** — the larger employer's tip figure is on
+  the return nowhere, and whether that is a position or an oversight is worth **low four figures** of
+  tax. **The question goes to the EMPLOYER, not the client**: ask them to split the figure between
+  genuine tips and a distributed service charge.
+- 🔴 **Collect the Schedule C expenses** — the organizer never asked for them, and this is the single
+  highest-value hour left on the return.
+- ⚠️ **Check the taxpayer signature date before e-file** — the prepared return carries an April date
+  against a September preparation, which looks like a field inherited from the extension.
+- ⚠️ **Tell him the balance due BEFORE the IRS does** — he has a live installment agreement and a new
+  balance can default it.
+- ✅ ~~Get the 2025 Form 1095-A read~~ — **closed 2026-09-13**, supplied directly by Lilian.
 - ⚠️ **Ask him what the VoiceCapital work actually was** — the Schedule C's principal business and
   code turn on it, and **none of his three 1099 payers is a caterer.**
 - ✅ **The VoiceCapital 1099-NEC itself is settled** *(2026-09-13)* — the firm's own Drive answered
   it faster than the client could have; only the question above is left.
+- ⚠️ **Correct his address with the Marketplace** — it still holds the old one. It changes nothing on
+  2025, but the second-lowest-cost silver plan is rated by county, so 2026 would be priced off the
+  wrong area.
 - ⓘ The Delaware LLC has been sitting unexplained in his file since April 2025.
 - ⓘ The **Form 8821** prepared in June 2025 has no recorded outcome.
 
@@ -339,7 +380,8 @@ A running, dated record as we build this profile.
 
 - **Double client:** [Valentin Volzhanskiy — id 710663](https://app.doublehq.com/close?cid=710663)
 - **Double tax project:** [2025 Taxes — project 219347](https://app.doublehq.com/tax-return?cid=710663&projectId=219347)
-- **Double case note:** none.
+- **Double case note:** `2025 Form 1040 — preparation notes for review` — note **524890**
+  *(the preparer's own assumptions, written for Julia, 2026-09-13)*.
 - **Google Drive folder (sensitive vault):** `Valentin Volzhanskiy` under Julia's client tree.
 - **Working paper for the return:** [`tax-returns/valentin-volzhanskiy/2025-form-1040.md`](../../tax-returns/valentin-volzhanskiy/2025-form-1040.md)
 - **Related SOPs:** [`form-1040-preparation.md`](../../sops/form-1040-preparation.md)
