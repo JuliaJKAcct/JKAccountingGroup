@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -153,11 +153,14 @@ watch-outs, one-off arrangements, history that affects the work.
   1099-NECs, his LLC papers, his installment agreement and one of his W-2s are all scans — they
   cannot be read by tooling and must be read by eye. **Ask for the issuer's original PDF** wherever
   one exists (Marketplace, payroll portals), or budget the time to key them manually.
-- ⚠️ **He receives 1099-NEC income from companies that are themselves JK clients** — among them
-  Pro Title Agency LLC and Maxratings LLC, and the firm prepares those payers' 1099s. That means
-  **the firm's own records can corroborate what he was paid**, which is a real advantage; it also
-  means a payment can exist in the firm's files without him ever mentioning it. **Check the payer
-  side.**
+- 🔑 **He receives 1099-NEC income from companies that are themselves JK clients — and in 2025 that
+  is how a whole payer was found that he never mentioned.** Pro Title Agency LLC, Maxratings LLC
+  and **VoiceCapital Inc** are all payers the firm prepares 1099s for. So **the firm's own records
+  can corroborate what he was paid**, which is a real advantage — but the form lives in the
+  **payer's** folder, not his, so it is invisible from his own file, his uploads and his organizer
+  answers. ✅ **Standing rule for this client: before computing his Schedule C, search the firm's
+  Drive for his NAME across every payer folder, not just his own.** *(2026-09-13 — that search is
+  what produced the VoiceCapital form, and reading it confirmed it.)*
 - ⚠️ **He is NOT an owner of Maxratings LLC**, despite using a `@maxratings.com` address. The
   operating agreements name other members entirely. Treat him as a **contractor paid by** that
   company, not a member, unless something new says otherwise.
@@ -221,11 +224,36 @@ A running, dated record as we build this profile.
   defect with two stated unknowns, not as a finished conclusion** — the working paper's §3E has the
   full working, the branches and the six-step fix.
 
+- _(2026-09-13)_ — **Lilian asked how we knew a VoiceCapital 1099 existed and where to find it.**
+  Retrieved the document itself and **settled it: it is his.** It sits in Google Drive in the
+  **payer's** folder — `VOICECAPITAL INC` → `2025` → `1099 2025` — prepared by the firm on
+  **2026-01-31** through tax1099.com along with that payer's other 1099s. 🔑 **That location is the
+  whole explanation of why nobody saw it:** it was never in his own folder, he never uploaded it,
+  and he listed no such payer. **Four fields cross-check** — his full name, the **Fort Lauderdale**
+  address he gave on the 2025 organizer *(not the older one)*, the last four of the recipient TIN,
+  and the 1099's payer-assigned **account-number box, identical to the Pro Title Agency 1099**
+  issued to him. ⚠️ **They are four fields of ONE record the firm itself keyed, not four
+  observations**, so what carries the confirmation is the **TIN check against a W-2 of his** — the
+  only one tested against data the firm did not enter. ⚠️ **And it is narrower than it sounds:** the
+  redactor emits tags, never digits, so the only W-2 that could have supplied those four digits is
+  the **Compass Group** one — **which came off the same unmasked channel as the 1099**. 🔑 **Both
+  sides of the strongest tie are OCR'd digits on one route.** **Blocker ③ closed; the figures stay in the
+  working paper, never here.**
+  🔴 ⚠️ **AND THE ROUTE MATTERS: it was read through Google Drive's own indexed text, NOT the
+  redactor** — the second document on this client pulled in with no masking, and the third use of
+  that route *(the working paper's §4
+  decision 6 records it; FOLLOW-UPS row 103 is the open decision)*. **Nothing from the identity
+  block was written anywhere**, and the ties above are recorded **by existence, never by value**.
+  ⚠️ **What is established is that the firm PREPARED it** — ⛔ *not* "issued", which means furnished
+  to him; whether it was transmitted to the IRS and furnished to him is a separate, smaller
+  question.
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
 - **What gated the return.** Four things, and none of them is a missing document in the ordinary
-  sense:
+  sense. ⓘ *The third closed on 2026-09-13; **three still stand** and the return is still not
+  prepared:*
   1. **The Form 1095-A cannot be read.** It is on file — he uploaded it — but it is a photograph
      with no text layer, and **Form 8962 cannot be computed without its month-by-month columns.**
      A figure on the return depends on it, so this blocks. It needs a human to read it, or a fresh
@@ -234,16 +262,22 @@ A running, dated record as we build this profile.
      documents, but the organizer's `Wages (W2)`-only answer meant he was never asked a single
      business question. The prior year deducted fuel and phone costs; this year's equivalents have
      not been collected.
-  3. **A 1099-NEC that he did not report may exist.** A 2025 Form 1099-NEC issued by
-     **VoiceCapital Inc** naming him sits in the firm's own Google Drive. It is **not** in his
-     Double folder and he listed no such payer. If it is his, it changes the Schedule C, the
-     self-employment tax and the premium tax credit together.
+  3. ✅ **CLOSED 2026-09-13 — a 1099-NEC he did not report DOES exist, and it is his.** A 2025
+     Form 1099-NEC issued by **VoiceCapital Inc** — a payer the firm also serves — was found and
+     then read in the **payer's** Drive folder, never his own. It is **not** in his Double folder,
+     he did not upload it and he listed no such payer. It is the **second largest** of his three 1099s and close to
+     **half his contractor gross**, so it moves the Schedule C, the self-employment tax and the
+     premium tax credit together. 🔑 **What
+     remains is a client conversation, not a blocker: ask him what the work was**, because the
+     Schedule C's principal business and code depend on the answer.
   4. **The tips deduction is new, large and unclaimed.** He is a bartender with tips reported by
      two different employers in two different W-2 boxes, and he answered **"None of the above"** to
      the organizer's 2025-updates question. The multi-employer computation on Schedule 1-A line 4c
      needs settling before the figure is final.
 - **Questions put to the client.** (Answers to be appended here as they arrive.)
-  - [ ] Confirm whether he was paid by **VoiceCapital Inc** during 2025, and ask for the form.
+  - [x] ~~Confirm whether he was paid by **VoiceCapital Inc** during 2025~~ — ✅ **answered from the
+        firm's own files on 2026-09-13, without asking him.** He was. *(The form is the one the firm
+        itself prepared.)*
   - [ ] Ask for the **business expenses** behind the contractor work — vehicle/fuel, phone, and
         anything else — and whether he kept a mileage log.
   - [ ] Ask what the **contractor work actually was**, so the Schedule C's principal business and
@@ -284,10 +318,12 @@ A running, dated record as we build this profile.
 
 - 🔴 **Get the 2025 Form 1095-A read** — it is the single thing standing between us and a computable
   return, and it is already in Double.
-- 🔴 **Settle the VoiceCapital 1099-NEC** — the firm's own Drive can answer this faster than the
-  client can.
 - 🔴 **Collect the Schedule C expenses** — the organizer never asked for them.
 - ⚠️ **Establish the multi-employer tips computation** before claiming the deduction.
+- ⚠️ **Ask him what the VoiceCapital work actually was** — the Schedule C's principal business and
+  code turn on it, and **none of his three 1099 payers is a caterer.**
+- ✅ **The VoiceCapital 1099-NEC itself is settled** *(2026-09-13)* — the firm's own Drive answered
+  it faster than the client could have; only the question above is left.
 - ⓘ The Delaware LLC has been sitting unexplained in his file since April 2025.
 - ⓘ The **Form 8821** prepared in June 2025 has no recorded outcome.
 
@@ -307,3 +343,7 @@ A running, dated record as we build this profile.
 - **Google Drive folder (sensitive vault):** `Valentin Volzhanskiy` under Julia's client tree.
 - **Working paper for the return:** [`tax-returns/valentin-volzhanskiy/2025-form-1040.md`](../../tax-returns/valentin-volzhanskiy/2025-form-1040.md)
 - **Related SOPs:** [`form-1040-preparation.md`](../../sops/form-1040-preparation.md)
+- 🔑 **Related clients — three of his 1099 payers are OUR clients, and their folders hold forms his
+  own file never will:** [`voicecapital.md`](./voicecapital.md) ·
+  [`pro-title-agency.md`](./pro-title-agency.md) · **Maxratings LLC** *(no Client Intelligence file
+  yet — FOLLOW-UPS row 109)*.
