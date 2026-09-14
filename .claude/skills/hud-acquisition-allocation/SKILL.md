@@ -519,7 +519,15 @@ three are carrying costs, and their presence in that list *is* the answer.
 
 ⛔ **Get this wrong and the deduction lands in the wrong year.** A session that reads capitalised costs as a
 prior-year loss reduces opening capital by them and understates the sale year by the same amount — the costs
-were never deducted anywhere, so they belong in the sale year's **cost of goods sold**.
+were never deducted anywhere, so they belong in the **sale year**.
+🔴 **And they go on their NATURAL OPERATING LINES, not into cost of goods sold** _(Julia, 2026-09-14:
+"there are items that are added to the basis, and there are items that are an actual operating expense, like
+taxes, licenses, and interest")_. Interest to line 15, taxes to line 14, insurance · HOA · utilities ·
+professional fees to line 20. **Only the cost of the house and the work done to it is inventory.**
+⚠️ **This corrects an earlier version of this section, which sent them to COGS.** The bottom line is the same
+either way, but the presentation is not: sweeping interest and property tax into COGS is exactly what makes
+cost of goods sold come out **smaller than the opening inventory**, which is the symptom that started the
+reconstruction this rule came from.
 ⚠️ **It is nearly invisible on a held-for-sale property**, because everything releases in one year either way.
 **The only thing the two treatments change is WHICH year — which is the whole of what matters.**
 
@@ -528,6 +536,87 @@ the carrying costs through COGS, expensing them puts them on lines 9–21, and *
 bottom line is identical.** Say so rather than agonising — but note the one real hook: capitalising carrying
 charges on real property outside §263A is a **§266 election**, which needs a statement. Since a same-year sale
 makes the timing difference nil, the simpler route on the sale year is to expense them.
+
+### 🔴 THE PRIOR-YEAR BALANCE SHEET IS EVIDENCE OF WHAT WAS **FILED**, NOT OF WHAT WAS **OWED** — get the lender's payment statement
+
+_Sunshine Renovations 1 LLC, 2026-09-14. The 2025 return would not reconcile: cost of goods sold came out
+**smaller than the opening inventory**, and 4,036.28 refused to trace. Three prior-year defects were sitting in
+the balance sheet, and **not one of them was visible in any document the firm had prepared.**_
+
+🔑 **ONE document closed all of it: the lender's own PAYMENT STATEMENT for the month of the payoff.** It carries
+four facts, and between them they settle what was really owed, what was really interest, and whether an escrow
+asset on the balance sheet ever existed at all:
+
+| The statement says | What it settles |
+|---|---|
+| **Outstanding principal** | what was actually owed — against what the balance sheet *says* was owed |
+| **Payment type** (interest-only / amortising) and **principal paid year-to-date** | whether any of the payoff was principal reduction, or all of it interest and fees |
+| **Interest year-to-date** | reconciles the bank's payments to the Form 1098 |
+| **Escrow balance** | whether an "escrow" or "lender reserve" asset was ever real |
+
+⛔ **Ask for it BEFORE building the sale-year return, not after it fails to tie.** It is one email, and it
+replaces a day of arithmetic.
+
+#### ① The loan on the balance sheet can be the **COMMITMENT**, not the **DRAW**
+
+A construction facility is committed at one figure and advanced in draws. **A prior-year preparer who books the
+commitment creates a liability that was never owed** — on the pilot, the balance sheet carried the full facility
+while the lender's statement showed mortgage **plus only the advances actually taken**, and the draw package
+agreed with the lender to the cent.
+
+🔑 **The test is one subtraction: outstanding principal, less the mortgage, equals the draws. Compare that to the
+balance sheet.** ⛔ **The difference is not a rounding item — it has to be written off in the year of the sale**,
+and until it is, the balance sheet cannot reach zero.
+⚖️ **Write it off as a REDUCTION OF DEDUCTIONS, not as cancellation-of-indebtedness income.** Nothing was ever
+discharged because nothing was ever owed; it is the correction of a prior-year overstatement, and it belongs in
+the disclosure statement rather than on a §61(a)(11) line.
+
+#### ② A blank **Placed-in-Service date** silently folds the §3 operating costs into Building — and they usually appear a second time
+
+This is already flagged at Step 5, and here is what it costs a year later. With that date left blank, **HUD Tool
+v3 adds the whole of §3 *Operating Costs* to the building basis.** The prior-year preparer then — reasonably —
+also lists those same costs on the `Line 6, Sch L` statement as their own line. **The balance sheet now carries
+them twice.**
+
+🔑 **How to spot it in ten seconds:** take the Building figure on the prior-year Schedule L, subtract the
+building share of the price and the §1 facilitative costs, and see whether what is left **equals a line on the
+line-6 statement.** If it does, that line is a duplicate.
+⚠️ **Both copies still have to come off**, because 2024 is not being amended and the balance sheet must reach
+zero. One is a real cost; the other is written off through *Other deductions*, and **the disclosure statement has
+to say so in plain words** — a number that appears twice and is deducted twice without explanation is the worst
+thing on such a return.
+
+#### ③ A bucket NAME in the tool becomes a FACT nobody questions
+
+On the pilot, a **builder's-risk insurance premium that had been paid to the insurer** sat on the balance sheet
+for a year as *Lender Reserve Escrow (Current Asset)* — because that is the bucket it was dropped into. Nothing
+in the return contradicted it. It took the owner saying so plainly, and the lender's **escrow balance of 0.00**
+then corroborated it.
+🔑 **An escrow asset is a claim on money someone else is HOLDING. If the lender says the escrow balance is zero,
+there is no asset — whatever the balance sheet calls it.** Check it on any carried-forward "escrow", "reserve"
+or "deposit".
+
+#### 🔑 And the modelling lesson, which is the transferable half
+
+The first reconstruction of this return **assumed the payoff equalled the book liability**, counted the Form 1098
+interest **on top of** the cash that had paid part of it, and dropped the seller's proration credits. Every
+individual figure was right; the model was wrong, and it produced a residual that looked like a missing document.
+
+⚖️ **Rebuild it as: the balance sheet is anchored at both ends, and cash is cash.**
+
+```
+opening non-cash assets   (prior-year Schedule L)
+  + costs incurred in the sale year               (bank + settlement statement)
+  − liabilities written off                       (book liability less what was really owed)
+  = total charged against income
+sale price − total charged = the loss             ← and it MUST equal the capital roll-forward
+```
+
+🔑 **Built that way the answer is independent of how the payoff splits between principal, interest and fees** —
+which is exactly the split nobody can document. ✅ **On the pilot that took a 4,036.28 residual to zero, with
+eleven independent ties and one 0.08 difference that was itself explained** (the prior-year Schedule L had
+rounded cash to the dollar).
+⛔ **Never plug the residual.** It was never rounding; it was three real findings and a wire that arrived short.
 
 ### 🔑 A FORM 1098 CARRIES THE FOLLOWING **JANUARY'S** PAYMENT — so it will not tie to the bank
 
