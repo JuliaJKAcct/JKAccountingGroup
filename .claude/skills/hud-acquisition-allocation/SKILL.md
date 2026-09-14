@@ -276,6 +276,90 @@ their nature rather than by election — often 95%+ of the spend. What is actual
 costs and bank charges. **Say that out loud**: it stops a discussion about "can we take a loss" from feeling
 bigger than the dollars involved.
 
+### 🛑 A FIRST YEAR WITH NO RECEIPTS IS NOT A §195 YEAR — do not raise start-up costs on a company that bought a house
+
+_Julia's ruling, **2026-09-14**, correcting a session that had raised exactly this on Zumfi 1 LLC:_
+
+> *"I think we discussed and agreed … that, as a small business, they are allowed to take actual business
+> deductions for the portions of the cost that are not [capitalizable]."*
+
+**She is right, and the reason a session gets this wrong is that THREE different gates look like one.** Keep
+them apart and answer them in this order:
+
+| # | Gate | The question | On a property LLC |
+|---|---|---|---|
+| ① | **§263A / §471(c)** | must indirect costs be swept into inventory? | No — small-business exception, subject to the syndicate test above |
+| ② | **cost of the ASSET vs cost of the YEAR** | is this spend part of the house? | The four-bucket model — §1 facilitative to basis, §3 operating expensed now |
+| ③ | **§195** | had the trade or business **BEGUN** at all? | ⛔ **Yes, once it bought the property and started work** |
+
+⛔ **A dealer's trade or business begins when it ACQUIRES AND STARTS WORK ON ITS INVENTORY, not when it first
+sells.** Buying the house and renovating it *is* the business being carried on. So a first year that shows a
+purchase, a renovation and no sale is an ordinary trading year with a deductible loss — **the absence of
+revenue is not evidence the business had not started**, and treating it as such is the error.
+
+🛑 **BUT DO NOT OVERSHOOT IN THE OTHER DIRECTION — two limits, and a session got both wrong on the same
+workbook on 2026-09-14, in opposite directions within an hour.**
+
+**① A ruling about WHICH costs capitalise cannot settle WHETHER the business had begun.** They are different
+questions. ⛔ **Commencement is a question of FACT and it is the firm's judgement — record it in the
+judgements list, never as settled.** Everything on page 1 rests on it: if the business had not begun, line 21,
+line 22, line 23, Schedule K line 1 and both K-1 box 1s all go to zero, and both capital accounts move with
+them. *(Reasoning your way from one ruling to another is the same failure the root `CLAUDE.md` names as
+**a permission is widened by asking, never by reasoning**.)*
+
+**② COMMENCEMENT HAS A DATE, AND SPEND BEFORE IT IS STILL §195 / §709.** Once you have said the business began
+at the closing, **go back through the ledger and look at what was spent before that date** — a formation fee,
+an abandoned deal's wire charge, postage during set-up. *(On the pilot that was 710.33 of a 2,645.15
+deduction, and the first draft captioned all of it as ordinary §162 expense.)*
+✅ **It is normally still deductible in full** — §195(b)(1)(A) and §709(b)(1)(A) each allow up to **$5,000** in
+the year business begins, and the election is **deemed made by filing**. 🔑 **So the total does not move —
+the LINE 21 STATEMENT does.** *"Certain business startup and organizational costs"* is its own entry on the
+instructions' line-21 example list; calling a formation fee *"legal and professional fees"* points the
+statement at the wrong one.
+
+⚠️ **This is not the same as the PLACED-IN-SERVICE gate at Step 5.** That one is real and still applies: it
+decides whether *depreciation* may begin. This one decides whether the operating costs are deductible **at
+all**. A flip can quite properly have **no depreciation** and **a deductible loss** in the same year, and the
+two answers do not contradict each other.
+
+🔑 **AND THE CONSEQUENCE TRAVELS TO SCHEDULE K — two lines that are easy to leave at nil:**
+
+- **Line 14a — self-employment.** A dealer's general partners / member-managers take their share as
+  **self-employment loss**. Neither exclusion reaches it: §1402(a)(1) excludes rentals from real estate *except*
+  a real-estate dealer's, and §1402(a)(3) excludes gain or loss on property that is **neither** inventory
+  **nor** held primarily for sale — flip property is **both**. **14a is not blank.**
+- **Line 20c — §199A.** **A loss is still QBI and still gets a Statement A.** Negative QBI carries forward
+  under **§199A(c)(2)** and reduces next year's deduction. ⛔ **Report zero and that carryforward is silently
+  deleted** — which on a flip matters precisely because the gain lands in the *following* year.
+
+⚙️ **One label to get right without changing the answer:** an accountant's or attorney's **formation-period
+fee** is an **organizational expense under §709**, not an ordinary §162 cost. **§709(b)(1) deducts up to
+$5,000 of it in the year the partnership begins business**, with the rest amortised over 180 months — so on a
+small LLC it is fully deductible anyway. **Note the label, do not move the figure.**
+
+⚠️ **AND THE PREMISE UNDERNEATH ALL OF IT — DEALER vs INVESTOR — IS ITSELF A JUDGEMENT, so list it as one.**
+*"The house was never rented"* rules out the rental case; it does **not** separate a **dealer** (§1221(a)(1),
+property held primarily for sale **to customers** — inventory, page-1 income, SE tax, QBI, **ordinary** gain)
+from an **investor** flipping one house (capital asset, costs separately stated rather than on page 1, no SE
+tax, no QBI, **capital** gain). **An investor never rents it either.** Form 1065 page 1 carries its own gate
+— *"Include only trade or business income and expenses on lines 1a through 23"* — and the instructions
+exclude *"expenses incurred for the production of income instead of in a trade or business."* One purchase,
+one sale and no listing activity is thin for *"in the ordinary course"*. 🔑 **It sits upstream of inventory
+treatment, §195, 14a, 20c and the character of next year's gain, so it belongs in the judgements list on
+every one of these returns.**
+
+🔴 **AND A PROPERTY LLC IS ALMOST NEVER DEBT-FREE, EVEN WHEN IT PAID CASH — check §752 before writing that a
+partner has no basis.** ⛔ **§752 is not about borrowings.** Reg. **§1.752-1(a)(4)(i)** makes an obligation a
+liability once it **gives rise to a deduction** or **creates basis in an asset** — so an unpaid **property-tax
+payable** and an unpaid **renovation payable** both count. Nobody is personally liable on trade payables, so
+they are **nonrecourse** and shared **by profit share** under Reg. **§1.752-3(a)(3)**. 🔑 **That gives a
+zero-capital partner real outside basis**, which changes how much §704(d) suspends — and it is the figure
+**Schedule K-1 item K1** asks for, which **Schedule B question 4 does NOT waive**.
+⚠️ **It is decided by the accounting method (Form 1065 item H), and the two halves must match.** On
+**accrual** the payable is a deduction *and* a §752 liability. On **cash** it is **neither** — and then the
+property-tax deduction is not available this year either. ⛔ **Taking the accrual deduction while denying the
+accrual liability is the internally inconsistent position, and it is the easy one to fall into.**
+
 ### Property tax: the closing proration is NOT the year-end liability
 
 🛑 **A closing proration tells you what the SELLER owed. It never tells you what the COMPANY owes at year end.**
