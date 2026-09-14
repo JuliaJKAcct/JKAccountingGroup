@@ -42,12 +42,28 @@ job, so nothing depends on someone remembering.
 > test.** ⚠️ **Until then: a `0 street lines` count on a return that carries a K-1 is a reason to look,
 > not a clean result** — the same lesson as *"0 masked can mean BLIND rather than clean"* above.
 
-> 🔴 **A SECOND CONFIRMED INSTANCE — 2026-09-13, on three one-page lender interest letters.** Reading a
-> client's 2025 interest statements, **two of the three printed the addressee's full street line** while
-> the third (a different city) masked correctly. The escaping shape is
-> `<number> <directional> <ordinal> <STREET-WORD>` — **the same family as the 2026-09-02 case but with
-> NO suite segment**, so the gap is wider than that entry recorded. ⛔ **Nothing was written anywhere**,
-> and nothing was bypassed. **The fix needs a test that carries both shapes.**
+> 🔴 **A SECOND CONFIRMED INSTANCE — 2026-09-13 — AND IT IDENTIFIES THE ACTUAL CAUSE OF BOTH.** Reading
+> a client's three one-page 2025 lender interest letters, **two of the three printed the addressee's
+> full street line** while the third (a different city) masked correctly. ⛔ **Nothing was written
+> anywhere and nothing was bypassed.**
+>
+> 🛑 **The cause is NOT the suite segment** — that group is optional and can never cause a miss — **and
+> it is not the two-letter directional.** It is that the street-name token class requires every token
+> to **begin with a letter**, so **a NUMERIC ORDINAL breaks the match.** Verified against the live
+> pattern:
+>
+> | Input | Result |
+> |---|---|
+> | `1234 NW 5th Street` | ⛔ escapes *(this instance)* |
+> | `1234 NW 5th Street STE 200` | ⛔ escapes *(the 2026-09-02 instance)* |
+> | `800 5th Avenue` | ⛔ escapes — **no directional, no suite** |
+> | `1234 W Madison Street` | ✅ masked |
+> | `1234 Sunset Boulevard` | ✅ masked |
+>
+> 🔑 **So the gap is ANY street whose name is a number**, and both recorded instances are one bug, not
+> two shapes. ⛔ **The 2026-09-02 entry above blames the suite; that diagnosis is wrong and is corrected
+> here.** 🛠️ **The test must carry numeric ordinals — with and without a directional, with and without
+> a suite.** **The fix still needs a test, not a patch in passing.**
 
 **Why the street line but not the city.** Lilian's identity block does not name a home address, so
 this was not covered by her ruling either way; it is masked because losing it costs nothing and it
