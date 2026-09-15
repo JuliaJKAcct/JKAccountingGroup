@@ -21,6 +21,8 @@ tools/        Executable tooling — code that does something, as opposed to doc
               tools/odoo-api/   the guarded route for changing anything in Odoo.
               tools/redact-doc/ read a client's document without its identifiers
               reaching the session — see .claude/skills/double-mcp/ for the rule.
+              tools/export-chat/ save a session's conversation to a .txt before
+              the session is deleted — the chat only, never internals.
 .claude/      Reusable Claude skills that power the projects, plus the hooks that
               keep parallel sessions from colliding (see .claude/hooks/README.md).
 BACKLOG.md    Firm idea parking lot — ideas captured now to build later.
