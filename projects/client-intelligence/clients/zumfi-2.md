@@ -61,7 +61,7 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 | System | What it's for | Where credentials live | Non-sensitive reference |
 |---|---|---|---|
 | **Tennessee Secretary of State** | formation + the annual report | firm-level, not client-specific | control number `002 059 868`; reminders come from `tnsos.gov` to Julia's mailbox — **never from Sunbiz** |
-| **Hamilton County Trustee** (TN) | the parcel's property-tax bill | public record | ⚠️ **not yet checked for this parcel** — §5 |
+| **Hamilton County Trustee** (TN) | the parcel's property-tax bill | public record | map/parcel number **`144E-A-002`** _(off the recorded deed, 2026-09-15)_; ⚠️ **the mailing address on the Trustee's record is still not checked** — §5 |
 | Bank | funding the purchase | _(pending — no statement has ever been provided)_ | 🔴 **the firm has never seen a bank statement for this company** |
 | Double | client record, files, organizers | — | client `710614` |
 
@@ -198,6 +198,32 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   later: he IS passive**, and a member-manager can be passive — the K-1's item G asks what he is
   entitled to do, the entity type asks what he does. **See the settled entry above.**
 
+- _(2026-09-15)_ — **Lilian asked for a search of Julia's Google Drive and Gmail for a Tennessee
+  ACCOUNT NUMBER for this company. THERE IS NONE.** Searched: Drive full-text `Zumfi`, `Tennessee`,
+  `TNTAP` / `franchise and excise`; then **every file in both Zumfi 2 Drive folders and all their
+  subfolders, listed by hand** rather than trusted to the full-text index (13 files); Gmail `Zumfi`
+  (51 threads), `from:tn.gov OR from:tnsos.gov` (8 threads), the client's own address, and the
+  TNTAP / Department of Revenue / franchise-&-excise / FONCE terms. 🔑 **Every Tennessee number the
+  firm holds is a SECRETARY OF STATE number** — control `002 059 868`, tracking `B2025811896`
+  (Articles) and `B2026299197` (2025 annual report), receipt `2026-379730`.
+  ⛔ **There is not one piece of correspondence from the Tennessee DEPARTMENT OF REVENUE in Julia's
+  mailbox** — no TNTAP account, no franchise-&-excise account ID, no registration confirmation.
+  ⚠️ **That is evidence the company was never REGISTERED with Revenue. It is NOT evidence that
+  nothing is OWED** — the open item below stands untouched.
+- _(2026-09-15)_ — 🆕 🔴 **THAT SEARCH FOUND A PRIMARY SOURCE THE 2025 RETURN WAS NEVER PREPARED
+  FROM: the RECORDED WARRANTY DEED**, sitting in Julia's Drive under `Zumfi 2 LLC > Client uploaded
+  documents` with a **camera-roll filename** (`image_8E001685-…_1775150382.pdf`) — which is why
+  nobody found it: the working paper's eleven sources are all Double and irs.gov, and **Drive was
+  never swept for this client.** Recorded **2025-11-10** by the Hamilton County Register of Deeds,
+  Book `GI 14103 / 396`, instrument `2025111000240`, two tracts off Plaza Circle, grantor **Anytime
+  Offer LLC**, escrow file `S-AO-25-3190-BC`.
+  ✅ **It independently confirms the purchase price** — the working paper had to derive that figure
+  from a transfer-tax rate it could **not** read at source (§4b); **the deed states the conveyance
+  tax on its face.** _(Both figures stay in the [working paper](../../tax-returns/zumfi-2-llc/2025-form-1065.md),
+  by the two-data-homes rule.)_
+  🔑 **It answers one open item (the parcel number) and opens a new one (improved or not), both
+  below.**
+
 ### Tax year 2025 — the review
 
 - **Prepared 2026-09-13, by Lilian with a Claude Code session.** **Block A verdict: YES.** The return computes in full,
@@ -229,10 +255,26 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   owed for a TN LLC holding TN land, its deadline has long passed. **Never asked for this group;
   not established either way.**
 - 🔴 **Check the Hamilton County Trustee's mailing address for this parcel** before the next bill
-  goes astray, as Zumfi 1's did.
+  goes astray, as Zumfi 1's did. 🆕 **2026-09-15 — the deed carries a `SEND TAX BILLS TO` block, so
+  the closing DID direct the bill somewhere.** ⚠️ **But which address won cannot be read from the
+  extracted text** — the deed's two side-by-side blocks come out interleaved, one reading
+  `Same As New Owner` (the Fort Lauderdale address) and the other the entity's **Tennessee principal
+  office** in Chattanooga. 🛠️ **Read that block off the PDF by eye**, and check it against what the
+  Trustee actually holds; the parcel number `144E-A-002` is now known, so the record can be pulled
+  directly.
 - ✅ **RULED 2026-09-13 by Lilian: question 33 = NO, and VITALIY VASYUTYK is the Partnership
   Representative.** No Schedule B-2. 🔑 **That is this company's convention now, and probably the
   group's** — the other nine face the same question.
+- 🔴 🆕 **IS THE PARCEL IMPROVED? The only PRIMARY document that characterises it says IT IS.**
+  The recorded deed's form line reads *"This is improved property known as: …"*. ⚠️ **Nothing in the
+  2025 return's sources says "unimproved" — the firm supplied that word itself**, and it now carries
+  weight in three places: the **§266 election statement** (*"unimproved and unproductive real
+  property"*), **page 1 item B**, and the working paper's reasoning throughout.
+  🔑 **It is ONE word on a preprinted deed form and may be the title company's default** — the
+  client's own account is bare land being held, and the legal description names no structure.
+  🛠️ **Read that line off the deed by eye and settle it.** If the parcel does carry a structure,
+  three things move: the §266 election's premise, item B's wording, and — the expensive one —
+  **part of the purchase price belongs to a DEPRECIABLE BUILDING instead of all of it to LAND.**
 - ⚠️ **Inventory or capital asset?** The parcel's character decides whether the eventual gain is
   ordinary or capital. **It does not have to be decided to file 2025** — it must be decided before
   the sale year.
@@ -248,8 +290,8 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 - [ ] **Whether a HELOC exists**, in whose name, and whether the company services it.
 - [ ] **What the parcel is for** — held, built on, or resold. It is the fact behind the inventory
       question.
-- [ ] **The parcel's Hamilton County parcel ID**, so the Trustee record can be pulled without
-      hunting.
+- [x] ✅ **The parcel's Hamilton County parcel ID — `144E-A-002`**, off the recorded deed
+      _(2026-09-15)_. The Trustee record can now be pulled without hunting.
 
 ## 7. Links
 
