@@ -282,7 +282,7 @@ it here; these never go into the client SOP.
 - [ ] 🟠 **Identify USA Florida Freight LLC** — a loan borrowed and repaid within 2025; related party or not
 - [ ] 🔴 **WHICH STATES the 2025 return covers** — the firm filed FL + IL for 2022; the client answered "no" to multi-state on the 2025 organizer. Settle it before preparing, and check whether an Illinois return is owed for 2023 and 2024 too
 - [ ] 🔴 **Is Mema Colors LLC a live engagement, and is Zakom paying its Amex?** No Double record, no CI file, yet the firm filed its BOI and an amendment. Same question for **Palm Terra LLC**. **Lilian decides whether either gets its own file**
-- [ ] 🔴 **Statements for EVERY account and contract we now know exist** — the four other Fifth Third accounts, **plus the credit line and the credit card**, plus BMO's three contracts, the Audi lease and IPFS. **None has ever been provided, for any year**
+- [ ] 🔴 **Statements for EVERY account and contract we now know exist** — the four other Fifth Third accounts, **plus the credit line and the credit card**, plus ✅ 🆕 **NARROWED 2026-09-15:** ⛔ **the three contracts with that bank are CLOSED — the firm already held all three interest letters and did not know it**, and ⛔ **the new vehicle is a LEASE, so it has no year-end balance at all**; **the premium-finance agreement is still open.** _(As written: BMO's three contracts, the Audi lease and IPFS.)_ **None has ever been provided, for any year**
 - [ ] 🟠 **Ask what `Statement2023-01-31 (4).pdf` and `Statement2023-12-31.pdf` are** — the only documents on file whose institution is unknown; the guard refused both
 - [ ] 🛠️ **Fix the redactor's guard false positive** *(`NNN.NN` + wide gap + `NNNN` on a money column)* **with a test**, then read `Jan24`–`April24` and the two `Statement2023-*` files. ⛔ **It is a safety control — fix it, never bypass it**
 - [ ] 🟠 **Ask for TEXT PDFs** of the two SBA statements and the December Amex balance statement — the copies on file are scans
@@ -304,7 +304,7 @@ it here; these never go into the client SOP.
 - [ ] Corrected shareholder-count answer
 - [ ] Which tax year `2025 7004 EXT.pdf` actually extends
 - [ ] Whether `2024 ZAKOMINCORPORATED.pdf` in `1099 > 2024` is the filed 2024 return, and refiling it under `Tax Return Filed > 2024`
-- [ ] Audi Q6 and Macan — leased or purchased, and business versus personal use
+- [ ] ✅ 🆕 **ANSWERED for the Audi — LEASED** *(the contract was read 2026-09-15)*; ⛔ **the Macan is still open**, and it is the one the client labels personal, and business versus personal use
 - [ ] Whether the company really operated in one state only, for interstate trucking
 - [ ] Primary language of correspondence
 - [ ] Fiscal year-end (calendar year assumed, not established)
