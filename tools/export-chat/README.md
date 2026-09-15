@@ -11,6 +11,9 @@ python3 tools/export-chat/export.py <transcript.jsonl> -o out.txt
 python3 tools/export-chat/export.py -o out.txt --me LILIAN    # label the human side
 ```
 
+With no `-o` it writes to your home directory. **It refuses to write anywhere inside a git
+working tree** — see the confidentiality section; that is not a style preference.
+
 ## What it writes, and what it refuses to write
 
 The log holds **the conversation as it appeared in the chat** — what the person typed and
@@ -40,6 +43,8 @@ dropped whole.
 | **A resumed session replaying lines** | De-duplicated by message id |
 | **Days** | Separated by a dated heading, in **America/New_York** — a 9pm Miami message would otherwise land on the next day in UTC |
 | **A session still running** | A half-written final line is skipped instead of crashing |
+| **A turn that interrupted a tool** | The `tool_result` is dropped, the words typed beside it are kept — they are exactly what the log is for |
+| **A reply quoting `<system-reminder>` or a slash command** | Left alone. Those envelopes are stripped from a person's prompt only; rewriting Claude's own prose would silently destroy an answer |
 
 ## ⛔ The limit that decides how you use this
 
@@ -56,7 +61,10 @@ The conversation carries whatever passed through it — organizer answers, ident
 client figures, the things the two-data-homes rule deliberately keeps out of this repo. So
 the file is **handed to the person**, and:
 
-- ⛔ never committed to this repo, never into an artifact, never into a Double note;
+- ⛔ never committed to this repo, never into an artifact, never into a Double note. The
+  tool **refuses to write inside a git working tree** and `claude-session-*.txt` is in
+  `.gitignore`, because the realistic failure is not a deliberate commit — it is `git add -A`
+  after a default-path export, or an "you have untracked files" prompt;
 - it is **not a substitute for deleting the session.** Deleting removes the history from the
   firm's shared Claude account; the export is a private copy, and it belongs where the firm
   keeps client material (Drive / Double), not loose on a desktop.
@@ -69,9 +77,26 @@ The header of every export says so, so the warning travels with the file.
 python3 tools/export-chat/test_export.py
 ```
 
-Thirteen cases, and they exist to hold the one promise above — that nothing internal reaches
+Twenty-one cases, and they exist to hold the one promise above — that nothing internal reaches
 the file. Run them after any change; a regression here is silent, because a leak looks like
 an ordinary line of text.
+
+## What an earlier draft got wrong
+
+Kept because each was silent, and a reader deciding whether to trust this should see the
+shape of what goes wrong here.
+
+1. **Merging a reply's lines across a day boundary.** A day heading vanished and the header
+   reported the wrong end time — on the tool's headline feature. Turns now merge only within
+   one day, and each carries its own end.
+2. **Dropping a whole message on a `tool_result`.** It also threw away the sentence the
+   person typed to interrupt the tool.
+3. **Re-implementing the project-folder encoding by hand.** Claude Code uses
+   `/[^a-zA-Z0-9]/g → '-'`; a hand-rolled version matched the container's path by luck and
+   would miss any path with a space or an accent — and the fallback then exported *another
+   project's* session. It now uses the real encoding, and the fallback says out loud which
+   transcript it chose.
+4. **Defaulting the output into the current directory** — which is normally the repo.
 
 ## Update this tool when…
 

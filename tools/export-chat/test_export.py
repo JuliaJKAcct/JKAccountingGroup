@@ -7,6 +7,7 @@ and these are what hold it to that. Run after any change:
     python3 tools/export-chat/test_export.py
 """
 
+import itertools
 import json
 import os
 import subprocess
@@ -20,10 +21,14 @@ BASE = {"cwd": "/home/user/JKAccountingGroup", "gitBranch": "main",
         "sessionId": "test-session"}
 
 
+_SEQ = itertools.count()
+
+
 def line(kind, role, content, when="2026-09-10T14:00:00.000Z", **extra):
+    """A transcript line. The uuid must be unique or the dedup eats the fixture."""
     row = dict(BASE, type=kind, timestamp=when,
                message={"role": role, "content": content})
-    row.setdefault("uuid", f"u{len(str(content))}-{when}-{kind}")
+    row["uuid"] = f"u{next(_SEQ)}"
     row.update(extra)
     return row
 
@@ -210,6 +215,106 @@ def the_cli_writes_a_file():
         os.unlink(path)
         if os.path.exists(out):
             os.unlink(out)
+
+
+@case
+def a_merged_run_never_swallows_a_day_boundary():
+    """The headline feature. Consecutive assistant lines can span days."""
+    text, turns = export_text([
+        line("assistant", "assistant", [{"type": "text", "text": "before"}],
+             when="2026-09-10T20:00:00.000Z"),
+        line("assistant", "assistant", [{"type": "text", "text": "after"}],
+             when="2026-09-12T15:00:00.000Z"),
+    ])
+    assert len(turns) == 2, "a merge across days loses the heading"
+    assert "Thursday, 10 September 2026" in text
+    assert "Saturday, 12 September 2026" in text
+
+
+@case
+def the_period_ends_at_the_last_thing_said():
+    text, _ = export_text([
+        line("assistant", "assistant", [{"type": "text", "text": "first"}],
+             when="2026-09-10T14:00:00.000Z"),
+        line("assistant", "assistant", [{"type": "text", "text": "last"}],
+             when="2026-09-10T18:30:00.000Z"),
+    ])
+    assert "2026-09-10 10:00  ->  2026-09-10 14:30" in text, text[:400]
+
+
+@case
+def typed_words_survive_beside_a_tool_result():
+    """She interrupts a running tool. Those words are the whole point of the log."""
+    text, turns = export_text([
+        line("user", "user", [
+            {"type": "tool_result", "content": "SECRET-LEDGER"},
+            {"type": "text", "text": "wait, stop, that is the wrong client"},
+        ]),
+    ])
+    assert "SECRET-LEDGER" not in text
+    assert "wait, stop, that is the wrong client" in text
+    assert len(turns) == 1
+
+
+@case
+def claudes_own_text_is_never_rewritten():
+    """The envelopes wrap a person's prompt; in a reply they are ordinary prose."""
+    text, _ = export_text([
+        line("assistant", "assistant", [{"type": "text", "text":
+             "It is recorded as <command-name>/review</command-name> in the "
+             "transcript. THE-REST-MATTERS."}]),
+        line("assistant", "assistant", [{"type": "text", "text":
+             "The harness injects <system-reminder>rules</system-reminder> "
+             "first. KEEP-ME."}], when="2026-09-11T14:00:00.000Z"),
+    ])
+    assert "THE-REST-MATTERS." in text
+    assert "KEEP-ME." in text
+
+
+@case
+def the_project_folder_encoding_matches_claude_code():
+    """Claude Code uses /[^a-zA-Z0-9]/g -> '-'. A near-miss finds no folder."""
+    assert export.slug("/Users/lilian/JK Accounting") == "-Users-lilian-JK-Accounting"
+    assert export.slug("/home/user/JKAccountingGroup") == "-home-user-JKAccountingGroup"
+    assert export.slug("/home/julia/contabilidad-año/v1.2") == \
+        "-home-julia-contabilidad-a-o-v1-2"
+
+
+@case
+def metadata_is_taken_from_whichever_line_carries_it():
+    text, _ = export_text([
+        dict(line("user", "user", "hello"), sessionId=None, cwd=None, gitBranch=None),
+        line("assistant", "assistant", [{"type": "text", "text": "hi"}]),
+    ])
+    assert "test-session" in text, "a None on the first line must not stick"
+    assert "(unknown)" not in text
+
+
+@case
+def a_strange_timestamp_does_not_abort_the_export():
+    """It is run once, on a session about to be deleted. It must not crash."""
+    _, turns = export_text([
+        dict(line("user", "user", "still worth keeping"), timestamp=1757520000),
+    ])
+    assert len(turns) == 1
+
+
+@case
+def it_refuses_to_write_into_the_working_tree():
+    """CLAUDE.md: client material NEVER into the repo working tree."""
+    repo = tempfile.mkdtemp()
+    os.mkdir(os.path.join(repo, ".git"))
+    path = build([line("user", "user", "hello")])
+    try:
+        script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "export.py")
+        run = subprocess.run(
+            [sys.executable, script, path, "-o", os.path.join(repo, "out.txt")],
+            capture_output=True, text=True)
+        assert run.returncode == 1, run.stdout
+        assert "Refusing to write inside the git working tree" in run.stderr
+        assert not os.path.exists(os.path.join(repo, "out.txt"))
+    finally:
+        os.unlink(path)
 
 
 def main():
