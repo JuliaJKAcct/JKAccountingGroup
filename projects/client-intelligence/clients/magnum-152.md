@@ -1,6 +1,6 @@
 # MAGNUM 152, INC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-09-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -96,6 +96,31 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 
 - **Pawn/jewelry owner-group (with Sunoma Inc):** same owner, same administrative assistant. Managed together; **keep the books distinct**. _(Double, Drive)_
 - **2 active stores** — MS1 (Griffin), MS2 (Miami). MS3 sold 2024, MS4 sold 2025 — old MS4 costs (rent, some payroll benefits) still surface in the checklist. _(Maria's doc guide)_
+- 🔴 **THE 2025 STORE SALE, now documented from the deal papers themselves _(2026-09-15)_.** On
+  **2025-05-21** Magnum sold the **`US Pawn Jewelry and Guns`** location on **South State Road 7** to
+  **Queen of Pawns & Jewelry, Inc.** (d/b/a Queen of Pawns 16), EIN 65-0569810. 🔑 **It is an ASSET
+  sale of ONE location — not a sale of the company**: the corporation continues, the S election is
+  untouched, and 2025 is one ordinary full-year Form 1120-S with a disposition inside it. **Four
+  features of the deal matter to anyone who touches these books:**
+  1. 🔴 **Half the price never reached the seller at closing — it went to an escrow agent**, releasable
+     only once the buyer obtained its **own Florida pawn licence and a City of Hollywood Business Tax
+     Receipt**, with an outside date around **2025-11-21**. Under PSA Article XI the **whole sale is
+     rescindable** if the buyer never got them.
+  2. 🔴 **Firearms were carved OUT.** The firearms licences, firearms pawn contracts and the inventory
+     associated with them were **retained by Magnum** — so that store's books do not empty out at the
+     sale, and the retained assets had to go somewhere.
+  3. 🔴 **The buyer traded at the location under MAGNUM's own pawn licence and BTR after closing**, and
+     the contract gives Magnum **no profits** from that period. Any post-2025-05-21 activity for that
+     store sitting in Magnum's books is the **buyer's**, not Magnum's.
+  4. **Magnum retained** all cash and bank accounts, all pre-closing receivables and payables, and
+     terminated every employee at the location on the closing date. A **broker (Jerry Whitehead) was
+     retained by the seller**; each side paid its own closing costs.
+  ⓘ **Which QuickBooks class this store is has NOT been established** — the guide records `MS4` as sold
+  in 2025, but nothing seen ties `MS4` to this address. **Confirm before pulling anything by class.**
+  ⛔ **Figures, the allocation and the tax analysis live in the working paper**, never here:
+  [`tax-returns/magnum-152-inc/2025-form-1120s.md`](../../tax-returns/magnum-152-inc/2025-form-1120s.md).
+  _(Source: the PSA, Bill of Sale, Assignment of Lease, Escrow Agreement and draft Form 8594, supplied
+  by Julia 2026-09-15.)_
 - 🔴 **Open mapping error with a sales-tax angle — the "Gunshow tender" in Bravo is mapped incorrectly to the sales-tax account.** Julia flagged this to Igor and Luis on 2026-08-20 and asked for a new, dedicated Cash-on-Hand account for visibility; Igor said he'd discuss with Luis "next week" — no reply as of a 2026-08-27 reminder. Still unresolved. A strong SOP-proposal candidate for the monthly reclass checklist. _(Gmail "Bravo - Gunshow Tender Issues," 2026-08-20 → 2026-08-27)_
 - **PayPal 1015 feed sync is broken** — recorded via a **monthly journal entry** instead of a live feed.
 - **Bank-feed handling rules:** do **not** match open JE balances for vendors with payments — always categorize; **TD Bank check images aren't attaching in QBO** — pull images from the bank and use the vendor to pick the account; the store **class** is confirmed at month-end from the admin's bills; Amex payments are booked as CC payments from TD Bank, then matched by most-recent payment/date.
@@ -125,7 +150,33 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 - 2026-08-29 — **Incremental sweep (baseline 2026-08-22→2026-08-29).** Double: 0 activity-log entries since baseline; properties unchanged (Organizer Status still "N/A (we have QBO access)"); `list_projects` re-confirms the 2025 tax project still `notStarted`. Drive: a **"Magnum152_2025_TaxLiability_Report_v4.xlsx"** was created 2026-08-24/25 (added to §4) — active estimate work despite the project's status field not moving; the shared "Magnum Process" doc guide was also edited 2026-08-24/25 (a 2024 comment thread resolved, routine). Gmail: reading the FULL "Open Items for Magnum and Sunoma" thread (2026-08-19 → 2026-08-25) surfaced a **correction to last week's conclusion** on the Comcast/FPL item (see below), a new open **Bravo "Gunshow tender" mapping issue** (added to §5), and confirmation that most of the vendor-login list was resupplied by 2026-08-20 (Silencer Shop MS1 excepted — see below). ⚠️ **That same thread's later messages (chasing "TD Bank Statements," forwarded 2026-08-27 as "TD PAPER WORK") are about a DIFFERENT entity — "7806 Miami LLC"** — not Magnum, not Sunoma. 7806 Miami LLC appears in this owner group's correspondence (also named in a Jan-2026 Alla Trost loan-interest thread and in a 2026-08-27 Zoom recap task, "remind him about 7806 for tax return filing") but has **no client-intelligence file and did not appear in the project README's Clients index** — flagged for Julia/Lilian's awareness; out of scope for this sweep, not actioned here. Chase pass on all outstanding items — results below.
 - 2026-09-12 — **Incremental sweep (baseline 2026-08-29→2026-09-12).** Double: 0 new notes. Activity log (2026-09-02→09-04) shows the July close's Monthly Journal Entries, ADP-vs-QBO reconciliation, a Bravo task renamed "Bravo JE " → "Bravo reclass" and marked Done, PayPal (1015), and two named-individual Chase reconciliations ("N. Tucker," "I. Melomed") — but **no `EndClose` status entry appeared for July**, the same open-close pattern now also seen at Sunoma this run. Properties and the 2025 tax project (`notStarted`) unchanged. Gmail: a broad owner/business-name search plus a targeted `(Gunshow OR "gun show" OR Bravo) after:2026/08/29` found **no reply to Julia's 2026-08-27 Gunshow-tender reminder** — still unresolved, now 23 days since her original flag. The "Paperwork request" thread (2026-09-03/04) reconfirmed the P&L-by-store / no-Balance-Sheet-by-store limitation (added to §4) and showed Igor asking for two years of P&L/BS by store — Maria explained the August 2026 close was still in progress and sent the closest available range. Ping: no legible new content. Drive: "Magnum Process" touched again 2026-09-02 (routine). Chase pass on all outstanding items — results below.
 
+- 2026-09-15 — **Julia opened the 2025 Form 1120-S** and supplied the five sale documents for the store
+  sold in May 2025 (PSA, Bill of Sale, Assignment of Lease, Post-Closing Escrow Agreement, draft Form
+  8594 + allocation schedule). 🛑 **She instructed that Double NOT be read** — *"don't connect to double,
+  it is too much to read there"* — so **phase 1 of the tax-return method did not run against its Double
+  sources** and nothing this session says is evidence about what Double holds. A working paper was opened
+  at [`tax-returns/magnum-152-inc/2025-form-1120s.md`](../../tax-returns/magnum-152-inc/2025-form-1120s.md)
+  and the deal was documented in §5 above. 🔴 **Eleven findings recorded, three of them material:** the
+  **draft Form 8594 does not foot** (a transposed digit in the Class V figure makes the classes exceed the
+  stated total — catchable now, since the form attaches to this unfiled return); the **escrowed half of the
+  price has an unknown release date**, which decides how much of the gain is even a 2025 item; and the
+  **allocation gives the equipment, the security equipment and the customer lists nothing**, though all
+  three transferred. The P&L / balance-sheet / depreciation-schedule request went to Julia the same day.
+  ⏰ **And the deadline is the headline: the extended due date for a calendar-year 2025 Form 1120-S is
+  2026-09-15 — the day this was opened.**
+
 ### Outstanding items (CI-only — never in the SOP)
+- 🔴 **2025 Form 1120-S — the extended deadline was 2026-09-15**, the day the work was opened, and the
+  return was not ready. **Whether Form 7004 was filed at all is unconfirmed**, as is the fiscal year-end
+  (recorded as *pending* in §1). ⚠️ If the year is calendar and no extension was filed, the S-corp
+  late-filing penalty runs **per shareholder per month** — confirm the current rate against the IRS
+  instructions, never from memory.
+- 🔴 **Escrow on the 2025 store sale — released or not, when, and how much?** Nothing on the return can be
+  finalised until this is answered. _(2026-09-15)_
+- 🔴 **Which QuickBooks class is the sold store?** `MS4` is recorded as the 2025 sale, but no source seen
+  ties it to the sold address. _(2026-09-15)_
+- 🔴 **Post-closing activity at the sold store may be sitting in Magnum's books as Magnum's** — the buyer
+  traded there under Magnum's licence and Magnum is contractually entitled to none of it. _(2026-09-15)_
 - 🔴 **Open mapping error — Bravo "Gunshow tender" mis-mapped to the sales-tax account** (see §5 for detail) — STILL UNRESOLVED. CHASED this run: a targeted search found no reply from Igor/Luis; now 23 days since Julia's original flag (2026-08-20), 16 days since her 2026-08-27 reminder.
 - **Inventory-donation tax treatment** — STILL OPEN. CHASED this run: a targeted search found no update; now ~51 days pending since 2026-07-23, no deadline known.
 - **2025 Business Tax Organizer** reverted to draft 2026-07-31 — STILL OPEN, now 43 days, no update found; see the countervailing Drive evidence in §4 (a v4 tax-liability estimate already exists).
