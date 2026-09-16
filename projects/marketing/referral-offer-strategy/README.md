@@ -79,10 +79,10 @@ referral-offer-strategy/
 ├── talks/           ← LIVE, IN-PERSON cuts of the webinar for a specific room
 │   ├── family-business-club-ru.html  the Business Family (Hallandale Beach) cut:
 │   │                       23 slides, RU, ~41 min. The webinar deck plus a speaker
-│   │                       slide, a fifth leak written for family companies (personal
-│   │                       and business money in one pocket) and its three-step fix,
-│   │                       an in-person close with phone/WhatsApp — and NO price
-│   │                       slide, because the club was promised no selling from stage
+│   │                       slide leading with "we become your finance department", a
+│   │                       fifth leak (personal and business money in one pocket) with
+│   │                       its three-step fix, an in-person close with phone/WhatsApp —
+│   │                       and NO price slide, the club was promised no selling
 │   └── family-business-club-speaker-notes-ru.html  the sheet Julia holds: six time
 │                           checkpoints, slide-by-slide beats, what was promised to
 │                           the club, and the print + pack list (3 pages, A4)
@@ -169,12 +169,17 @@ there.
   deck is built to be screen-shared; a live club talk needs different things, so a
   cut lives here rather than overwriting `webinar/`. The first is
   **Business Family Social Club** (Hallandale Beach, ~45-min slot, Russian), pitched
-  with `webinar/webinar-overview-businessclub-ru.html`. What changes from the webinar
-  deck: a speaker slide (a live room needs to know who is talking), a **fifth leak
-  written for this audience** — personal and business money in one pocket, plus the
-  three-step fix — the point that until the pockets are split *none* of the four
-  formulas can be computed at all, an in-person close carrying the phone/WhatsApp
-  number, and **the $250 offer slide removed**: the one-pager promised the club
+  with `webinar/webinar-overview-businessclub-ru.html`. WARNING: **"Business Family" is
+  the club's NAME, not a description of its members** — they are not family companies,
+  and nothing in this cut may be written as though they were. The audience line is the
+  positioning one: **almost all the firm's clients are founders from other countries
+  with a business in the US.** What changes from the webinar deck: a speaker slide that
+  leads with the firm as a **finance department** rather than with the IRS credential —
+  the first version read as "I do taxes" and contradicted slide 12, which says
+  accounting is not about taxes — a **fifth leak**, personal and business money in one
+  pocket, plus the three-step fix, the point that until the pockets are split *none* of
+  the four formulas can be computed at all, an in-person close carrying the
+  phone/WhatsApp number, and **the $250 offer slide removed**: the one-pager promised the club
   *«услуги не продаются и ничего не навязывается»*, and a price on screen breaks
   that. It also promised *«каждый считает свою цифру прямо на встрече»* — so the
   margin and cash-cushion slides are timed as live calculations, and the speaker
