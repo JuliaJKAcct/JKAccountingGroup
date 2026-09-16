@@ -71,6 +71,16 @@ referral-offer-strategy/
 │       ├── cover-ru.html / .png     on-brand event cover image (1:1, legible small)
 │       ├── event-ru.md              event-page copy + Luma setup checklist
 │       └── readiness-check-ru.pdf   the worksheet gift, print-ready for Luma
+├── talks/           ← LIVE, IN-PERSON cuts of the webinar for a specific room
+│   ├── family-business-club-ru.html  the Business Family (Hallandale Beach) cut:
+│   │                       23 slides, RU, ~41 min. The webinar deck plus a speaker
+│   │                       slide, a fifth leak written for family companies (personal
+│   │                       and business money in one pocket) and its three-step fix,
+│   │                       an in-person close with phone/WhatsApp — and NO price
+│   │                       slide, because the club was promised no selling from stage
+│   └── family-business-club-speaker-notes-ru.html  the sheet Julia holds: six time
+│                           checkpoints, slide-by-slide beats, what was promised to
+│                           the club, and the print + pack list (3 pages, A4)
 └── wealth-partner/  ← wealth-manager channel (Imperial Fund / Yuri Nosenko)
     └── imperial-fund-intro.html  client-facing EN intro sheet the advisor hands
                                   to clients (who we are · what we do · how we help)
@@ -150,6 +160,20 @@ there.
   (`announcement-ru.md`), a co-branded partner invite (`invite-candramas-ru.html`), and
   the on-brand 20-slide deck to screen-share (`webinar-deck-ru.html`). Coffee-shop
   figures are grounded in real industry data (net margin 5–12%, owner ~$50–65k/yr).
+- **`talks/`** — in-person cuts of the webinar for one named room. The webinar
+  deck is built to be screen-shared; a live club talk needs different things, so a
+  cut lives here rather than overwriting `webinar/`. The first is
+  **Business Family Social Club** (Hallandale Beach, ~45-min slot, Russian), pitched
+  with `webinar/webinar-overview-businessclub-ru.html`. What changes from the webinar
+  deck: a speaker slide (a live room needs to know who is talking), a **fifth leak
+  written for this audience** — personal and business money in one pocket, plus the
+  three-step fix — the point that until the pockets are split *none* of the four
+  formulas can be computed at all, an in-person close carrying the phone/WhatsApp
+  number, and **the $250 offer slide removed**: the one-pager promised the club
+  *«услуги не продаются и ничего не навязывается»*, and a price on screen breaks
+  that. It also promised *«каждый считает свою цифру прямо на встрече»* — so the
+  margin and cash-cushion slides are timed as live calculations, and the speaker
+  notes mark both as non-cuttable. Verified with no overflow at 4:3, 16:9 and 16:10.
 - **`wealth-partner/`** — a client-facing EN introduction sheet for the
   wealth-manager channel (Imperial Fund Asset Management / Yuri Nosenko),
   designed to be handed to *their clients*: who JK is, what we do, how we help,

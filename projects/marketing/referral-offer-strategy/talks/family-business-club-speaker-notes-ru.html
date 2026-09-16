@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Шпаргалка докладчика · Клуб семейного бизнеса — JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#123841; --teal-900:#0D2A31; --bronze:#9C6A39; --bronze-700:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#fff;
+    --ink:#0D2A31; --body:#22201A; --muted:#5C5647;
+    --rule:#D6CFBF; --rule-soft:#E7E1D4;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--ivory); color:var(--body); font-family:var(--sans); font-size:15px; line-height:1.45;
+       padding:28px 20px 60px}
+  .sheet{max-width:940px; margin:0 auto}
+
+  header.top{border-bottom:3px solid var(--teal); padding-bottom:14px; margin-bottom:22px}
+  .kicker{font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-700)}
+  h1{font-family:var(--serif); font-weight:700; font-size:30px; line-height:1.12; color:var(--ink); margin-top:6px; text-wrap:balance}
+  .meta{margin-top:8px; font-size:14px; color:var(--muted)}
+  .meta b{color:var(--ink)}
+  .fill{border-bottom:1px dashed var(--bronze); padding:0 34px; color:var(--bronze-700)}
+
+  h2.sec{font-family:var(--serif); font-weight:700; font-size:21px; color:var(--ink);
+         margin:26px 0 12px; padding-bottom:7px; border-bottom:1px solid var(--rule)}
+
+  /* checkpoint strip — the only thing she needs mid-talk */
+  .marks{display:grid; grid-template-columns:repeat(auto-fit,minmax(128px,1fr)); gap:8px; margin-bottom:6px}
+  .mark{background:var(--teal); color:#fff; border-radius:9px; padding:10px 12px}
+  .mark .t{font-family:var(--mono); font-weight:600; font-size:19px; color:#E8C99A; line-height:1}
+  .mark .w{font-size:12.5px; line-height:1.3; margin-top:5px; color:#DCE5E4}
+  .marks-note{font-size:13px; color:var(--muted); margin-top:9px}
+
+  table{width:100%; border-collapse:collapse; margin-top:4px}
+  th{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+     text-align:left; padding:0 8px 7px; border-bottom:1px solid var(--rule)}
+  td{padding:9px 8px; border-bottom:1px solid var(--rule-soft); vertical-align:top}
+  tr:nth-child(even) td{background:var(--paper)}
+  td.n{font-family:var(--mono); font-weight:600; color:var(--bronze-700); width:34px; text-align:right; white-space:nowrap}
+  td.clock{font-family:var(--mono); font-weight:600; color:var(--ink); width:58px; white-space:nowrap}
+  td.what{font-weight:600; color:var(--ink); width:33%}
+  td.say{color:var(--body)}
+  td.say em{font-style:normal; background:#F2E4CF; padding:1px 5px; border-radius:4px; font-weight:600; color:var(--bronze-700)}
+  tr.beat td{background:#EFF3F2}
+  tr.beat td.what{color:var(--teal)}
+
+  .warn{background:var(--white); border:1.5px solid var(--bronze); border-radius:11px; padding:14px 16px; margin-top:14px}
+  .warn h3{font-family:var(--serif); font-size:17px; color:var(--bronze-700); margin-bottom:8px}
+  .warn ul{margin:0; padding-left:19px}
+  .warn li{margin:6px 0}
+  .warn b{color:var(--ink)}
+
+  /* page 2 — pack list */
+  .pagebreak{break-before:page}
+  .cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:18px; margin-top:6px}
+  .block{background:var(--white); border:1px solid var(--rule); border-radius:11px; padding:15px 17px}
+  .block h3{font-family:var(--serif); font-size:17px; color:var(--ink); margin-bottom:4px}
+  .block .hint{font-size:12.5px; color:var(--muted); margin-bottom:10px}
+  .block ul{list-style:none}
+  .block li{position:relative; padding-left:27px; margin:8px 0; line-height:1.4}
+  .block li::before{content:""; position:absolute; left:0; top:2px; width:15px; height:15px;
+    border:1.5px solid var(--teal); border-radius:3.5px; background:var(--white)}
+  .qty{font-family:var(--mono); font-weight:600; color:var(--bronze-700)}
+  .file{font-family:var(--mono); font-size:11.5px; color:var(--muted); display:block; margin-top:2px; word-break:break-all}
+
+  footer{margin-top:26px; padding-top:12px; border-top:1px solid var(--rule); font-size:12.5px; color:var(--muted)}
+
+  @media print{
+    @page{ size:A4 portrait; margin:9mm 9mm }
+    body{background:#fff; padding:0; font-size:8.6pt; line-height:1.3}
+    .sheet{max-width:none}
+    body,*{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    header.top{padding-bottom:6pt; margin-bottom:9pt}
+    h1{font-size:15pt} .kicker{font-size:7pt} .meta{font-size:8.2pt; margin-top:4pt}
+    h2.sec{font-size:11pt; margin:10pt 0 5pt; padding-bottom:3pt}
+    .marks{gap:4pt} .mark{padding:5pt 6pt; border-radius:6px}
+    .mark .t{font-size:11pt} .mark .w{font-size:7.4pt; margin-top:2pt}
+    .marks-note{font-size:8pt; margin-top:5pt}
+    td,th{padding:3pt 4pt} th{font-size:7pt; padding-bottom:3pt}
+    td.n{width:22pt} td.clock{width:34pt}
+    .warn{padding:8pt 10pt; margin-top:8pt} .warn h3{font-size:10pt; margin-bottom:4pt}
+    .warn li{margin:3pt 0}
+    .cols{gap:8pt; grid-template-columns:1fr 1fr}
+    .block{padding:8pt 10pt} .block h3{font-size:10pt} .block .hint{font-size:7.6pt; margin-bottom:5pt}
+    .block li{margin:4pt 0; padding-left:17pt}
+    .block li::before{width:9pt; height:9pt; top:1pt}
+    .file{font-size:7pt}
+    footer{margin-top:10pt; padding-top:6pt; font-size:7.6pt}
+    tr{break-inside:avoid} .block{break-inside:avoid} .marks{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<header class="top">
+  <p class="kicker">Шпаргалка докладчика · держать в руке</p>
+  <h1>Почему бизнес растёт, а прибыль уменьшается</h1>
+  <p class="meta">
+    <b>Business Family</b> · Social Club, Hallandale Beach · <span class="fill">&nbsp;</span> (дата) · <b>19:00</b><br>
+    <b>23 слайда · ~41 минута + вопросы</b> &nbsp;·&nbsp; листать: <b>→</b> или клик справа · назад: <b>←</b> · номер слайда — внизу справа
+  </p>
+</header>
+
+<h2 class="sec">Шесть контрольных точек</h2>
+<div class="marks">
+  <div class="mark"><p class="t">5:00</p><p class="w">слайд 5 — первое убеждение</p></div>
+  <div class="mark"><p class="t">11:00</p><p class="w">слайд 9 — зал считает свою маржу</p></div>
+  <div class="mark"><p class="t">17:30</p><p class="w">слайд 11 — зал считает подушку</p></div>
+  <div class="mark"><p class="t">23:30</p><p class="w">слайд 14 — три числа</p></div>
+  <div class="mark"><p class="t">31:00</p><p class="w">слайд 17 — семейная утечка</p></div>
+  <div class="mark"><p class="t">39:30</p><p class="w">слайд 23 — контакты</p></div>
+</div>
+<p class="marks-note">Отстаёте? Сокращайте слайды-убеждения (5, 7, 12, 20) — они по 30 секунд, их можно просто прочитать вслух. <b>Не сокращайте слайды 9 и 11</b> — живой счёт вы клубу пообещали, — и <b>не сокращайте 17–19</b>: ради них этот зал и собрался.</p>
+
+<h2 class="sec">Слайд за слайдом</h2>
+<table>
+  <thead><tr><th>№</th><th>Время</th><th>Слайд</th><th>Что сделать</th></tr></thead>
+  <tbody>
+    <tr><td class="n">1</td><td class="clock">0:00</td><td class="what">Заголовок</td><td class="say">Назвать тему одной фразой. Не представляться здесь — это следующий слайд.</td></tr>
+    <tr><td class="n">2</td><td class="clock">0:30</td><td class="what">Кто я</td><td class="say">Одна минута, не больше. Закончить на «почти все мои клиенты — семейные компании» — это мост в зал.</td></tr>
+    <tr class="beat"><td class="n">3</td><td class="clock">1:30</td><td class="what">Две кофейни</td><td class="say"><em>Вопрос в зал:</em> «Какую выбрали бы себе?» Дождаться рук. Не подсказывать — пауза здесь работает.</td></tr>
+    <tr><td class="n">4</td><td class="clock">3:30</td><td class="what">Ответ</td><td class="say">Открыть доход владельца. Дать залу отреагировать, не объяснять сразу.</td></tr>
+    <tr><td class="n">5</td><td class="clock">5:00</td><td class="what">Убеждение 1</td><td class="say">Прочитать вслух. 30 секунд.</td></tr>
+    <tr><td class="n">6</td><td class="clock">5:30</td><td class="what">Дырявое ведро</td><td class="say">«Рост не создаёт прибыль — он усиливает то, что уже есть». Картинка делает работу за вас.</td></tr>
+    <tr><td class="n">7</td><td class="clock">7:00</td><td class="what">Убеждение 2</td><td class="say">30 секунд.</td></tr>
+    <tr><td class="n">8</td><td class="clock">7:30</td><td class="what">Заказ на $5 000</td><td class="say">Идти по строкам сверху вниз. <b>Сказать вслух один раз:</b> «цифры условные, для примера».</td></tr>
+    <tr class="beat"><td class="n">9</td><td class="clock">11:00</td><td class="what">Маржа — 5 минут</td><td class="say"><em>Зал считает сам.</em> Формула → ваш пример → «возьмите рабочий лист и посчитайте свою». Дать <b>две минуты тишины</b> и походить по залу. <b>Это обещано клубу в анонсе</b> — не пропускать.</td></tr>
+    <tr class="beat"><td class="n">10</td><td class="clock">16:00</td><td class="what">Плюс 30 дней</td><td class="say"><em>Вопрос в зал.</em> Дать тишине постоять. Ответ не нужен — нужен дискомфорт.</td></tr>
+    <tr class="beat"><td class="n">11</td><td class="clock">17:30</td><td class="what">Подушка — 4 минуты</td><td class="say"><em>Зал считает сам.</em> Деньги на счету ÷ расходы за месяц. Ориентир 3+ месяца. <b>Тоже обещано в анонсе.</b></td></tr>
+    <tr><td class="n">12</td><td class="clock">21:30</td><td class="what">Убеждение 3</td><td class="say">30 секунд.</td></tr>
+    <tr class="beat"><td class="n">13</td><td class="clock">22:00</td><td class="what">Прибыль за прошлый месяц</td><td class="say"><em>Руки в зал.</em> Рук будет мало — <b>не превращать это в упрёк</b>, сказать «это нормально» и идти дальше.</td></tr>
+    <tr><td class="n">14</td><td class="clock">23:30</td><td class="what">Три числа</td><td class="say">Закрытие месяца к 10–15 числу. Самый практичный слайд доклада.</td></tr>
+    <tr><td class="n">15</td><td class="clock">26:30</td><td class="what">Структура</td><td class="say">Быстро, списком. Не углубляться — следующий слайд считает.</td></tr>
+    <tr><td class="n">16</td><td class="clock">28:00</td><td class="what">S-corp и LLC</td><td class="say"><b>Обязательно проговорить сноску:</b> «упрощённо, точная сумма зависит от ситуации».</td></tr>
+    <tr class="beat"><td class="n">17</td><td class="clock">31:00</td><td class="what">Личное и бизнес в одном кармане</td><td class="say"><b>Рук здесь не просить.</b> Сказать: «не поднимайте руку — просто отметьте про себя». В зале семейных компаний это личное.</td></tr>
+    <tr><td class="n">18</td><td class="clock">33:30</td><td class="what">Почему это первое</td><td class="say">Связать с началом: пока карманы смешаны, ни одна из четырёх формул не считается.</td></tr>
+    <tr><td class="n">19</td><td class="clock">35:00</td><td class="what">Три шага</td><td class="say">Единственное место, где вы говорите «сделайте». Три шага, коротко.</td></tr>
+    <tr><td class="n">20</td><td class="clock">36:30</td><td class="what">Убеждение 4</td><td class="say">30 секунд.</td></tr>
+    <tr><td class="n">21</td><td class="clock">37:00</td><td class="what">Рабочий лист</td><td class="say">Лист уже лежит на столах и уже наполовину заполнен — его считали на слайдах 9 и 11. «Каждое “не уверен(а)” — скорее всего утечка».</td></tr>
+    <tr><td class="n">22</td><td class="clock">38:30</td><td class="what">Пять мыслей</td><td class="say">Прочитать по пунктам. Это то, что унесут из зала.</td></tr>
+    <tr><td class="n">23</td><td class="clock">39:30</td><td class="what">Спасибо + контакты</td><td class="say">Призыв один: взять лист, написать в WhatsApp — <b>бесплатный разговор на 10 минут</b>. Оставить слайд на экране на время вопросов.</td></tr>
+  </tbody>
+</table>
+
+<div class="warn">
+  <h3>Что вы пообещали клубу — и что из этого следует</h3>
+  <ul>
+    <li><b>«Услуги не продаются и ничего не навязывается».</b> Это ваша формулировка из анонса для Business Family. Поэтому <b>слайда с ценой в этой версии нет</b> — разбор за $250 со сцены не называем. Захотят — спросят сами, и вот тогда можно.</li>
+    <li><b>«Каждый считает свою цифру прямо на встрече».</b> Тоже из анонса. Это слайды 9 и 11 — живой счёт по рабочему листу. Если их скомкать, обещание не выполнено.</li>
+    <li><b>Ни одного имени клиента и ни одной его цифры.</b> Даже если история идеально иллюстрирует мысль — без письменного разрешения нельзя. «У одного производственного бизнеса», без узнаваемых деталей.</li>
+    <li><b>«Бесплатная консультация» — так не говорим.</b> Бесплатный — <b>разговор на 10 минут</b>. Консультация — это платная работа, $150.</li>
+  </ul>
+</div>
+
+<div class="pagebreak"></div>
+
+<header class="top">
+  <p class="kicker">Накануне · собрать и распечатать</p>
+  <h1>Что напечатать и что взять с собой</h1>
+  <p class="meta">Гостей ожидается: <span class="fill">&nbsp;</span> → печатать по этому числу <b>+ 20% запаса</b>.
+  Тиражи ниже рассчитаны на <b>зал 30–35 человек</b>, состав неизвестен.</p>
+</header>
+
+<div class="cols">
+  <div class="block">
+    <h3>Печать — раздатка</h3>
+    <p class="hint">Открыть HTML в Chrome → «Печать» → «Сохранить как PDF» или сразу на бумагу. Все файлы уже свёрстаны под печать.</p>
+    <ul>
+      <li><span class="qty">40 шт</span> — «Проверка готовности к росту» <b>(главная раздатка, лежит на каждом месте)</b>
+        <span class="file">partner-pitch/worksheets/readiness-check-ru.html</span></li>
+      <li><span class="qty">15 шт</span> — «Финансовая проверка бизнеса» — для действующих компаний
+        <span class="file">templates/operating-business-financial-checklist-ru.html</span></li>
+      <li><span class="qty">10 шт</span> — «Чек-лист запуска нового бизнеса» — для тех, кто только открывается
+        <span class="file">templates/new-business-launch-checklist-ru.html</span></li>
+      <li><span class="qty">10 шт</span> — партнёрский one-pager — для юристов, риелторов, советников в зале
+        <span class="file">partner-pitch/one-pager-ru.html</span></li>
+      <li><span class="qty">50 шт</span> — визитки</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h3>Техника</h3>
+    <p class="hint">Порядок проверки — от самого вероятного отказа к самому редкому.</p>
+    <ul>
+      <li>Презентация <b>PDF на флешке</b> — если чужой ноутбук или нет интернета</li>
+      <li>Презентация <b>отправлена себе на почту</b> — вторая копия</li>
+      <li>Ноутбук + <b>зарядка</b></li>
+      <li>Переходник <b>HDMI и USB-C</b></li>
+      <li>Кликер (или листать с ноутбука — в колоде работают <b>← →</b> и клик мышью)</li>
+      <li>Телефон заряжен, <b>раздача интернета включается</b></li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h3>Зал — за 20 минут до начала</h3>
+    <ul>
+      <li>Разложить рабочий лист на места <b>до прихода гостей</b></li>
+      <li>Прогнать слайды 1 → 24 на проекторе: <b>шрифты загрузились, ничего не обрезано</b></li>
+      <li>Проверить, читается ли текст <b>с последнего ряда</b></li>
+      <li>Узнать у организатора: сколько минут реально, будет ли микрофон, будут ли вопросы</li>
+      <li>Блокнот и ручка — <b>записывать имена</b>, ради этого всё и делается</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h3>Не печатать</h3>
+    <p class="hint">Одна проверка, которая экономит весь тираж.</p>
+    <ul>
+      <li><b>QR-код на страницу записи — не ставить.</b> Обе ссылки записи (<span class="file">/book/Discovery-Call</span> и <span class="file">/appointment/3</span>) сейчас отдают ошибку 500. Если к утру они не заработают — на раздатке только <b>телефон и WhatsApp (786) 318-1505</b>.</li>
+      <li>Если ссылку всё же ставите — <b>открыть её в браузере в день доклада</b>, не накануне.</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  JK Accounting Group · Юлия Кононова · (786) 318-1505 · julia@jkaccountinggroup.com<br>
+  Колода: <span class="file" style="display:inline">talks/family-business-club-ru.html</span> · шпаргалка: <span class="file" style="display:inline">talks/family-business-club-speaker-notes-ru.html</span>
+</footer>
+
+</div>
+</body>
+</html>
