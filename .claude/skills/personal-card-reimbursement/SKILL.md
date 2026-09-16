@@ -143,24 +143,25 @@ different:
 | A delicatessen abroad | `Health & Wellness` | Hospitality | **Tier 2** |
 | A beach club | `Personal` | The owner labelled it a business-trip meal | **Tier 2** — his label is the evidence, not the venue |
 
-### 🔎 An unrecognisable merchant: search the client's OWN ledger before the internet
-
-A foreign merchant descriptor often cannot be identified online at all — a sole trader billing
-under a personal name, a local operator with no web presence. **Look in the client's own books
-first.** *(Yes Team, 2026-09-16: a travel agency that returned nothing useful from a web search was
-already booked in the client's ledger, from the other card, to `Travel` with a vendor record and a
-memo saying it was an airline ticket — and a later refund line repeated it. The firm had answered
-its own question months earlier.)* **A prior quarter's report, the other card's feed and the vendor
-list are all cheaper and better evidence than a search engine.** Where the web *is* the answer,
-say which reading is **established** and which is an **inference** — a naming convention in another
-language is a strong hint, not a fact.
-
 🔑 **Read the table for one thing only: the category is not evidence, in either direction.**
 ⛔ **It is not a licence to resolve a line by reading the merchant name** — that is the
 inference §0 forbids, and the rows above say which *tier* each kind lands in, never that
 the name settled the purpose. Where the card's category and the merchant name disagree,
 **show the client both and ask.** *(`method.md` — where two records disagree, show both,
 then ask.)*
+
+### 🔎 An unrecognisable merchant: search the client's OWN ledger before the internet
+
+A foreign merchant descriptor often cannot be identified online at all — a sole trader billing
+under a personal name, a local operator with no web presence. **Look in the client's own books
+first.** *(Yes Team, 2026-09-16: a travel agency that returned nothing useful from a web search was
+already booked in the client's own ledger, to `Travel`, with a vendor record and a memo saying it
+was an airline ticket — and a later refund line repeated it. The firm had answered its own question
+months earlier.)* **A prior quarter's report, the vendor list, and any connected card feed the
+client has (§4) are all cheaper and better evidence than a search engine.** Where the web *is* the
+answer, say which reading is **established** and which is an **inference** — a naming convention in
+another language is a strong hint, not a fact. ⛔ **And identifying a merchant is not establishing a
+purpose**: knowing it is a hotel moves it from "unknown" to **tier 2**, never to tier 1.
 
 ---
 
@@ -199,11 +200,15 @@ the M-1 adjustment** — and flag it to whoever prepares the return.
 
 Two halves, and they are separate events:
 
-1. **Booking.** Each business line is an expense **debit** with the credit to a **"used
-   personal card"** account — an **Other Current Liability**, i.e. the company now owes the
-   owner. Personal lines are **not entered at all**: it is the owner's own card, so they
-   are simply not the company's transactions. *(This is the opposite of a personal charge
-   on a **company** card, which is a distribution / owner draw.)*
+1. **Booking.** Every tier-1 line is an expense **debit** against a **"used personal card"**
+   account — an **Other Current Liability**, i.e. the company now owes the owner. Personal
+   lines are **not entered at all**: it is the owner's own card, so they are simply not the
+   company's transactions. *(This is the opposite of a personal charge on a **company**
+   card, which is a distribution / owner draw.)*
+   ⚠️ **That is the mechanism, not the posting method.** It is booked as **one summary journal
+   entry per period, one debit line per account** — see *The entry itself* below. ⛔ **Never
+   both**: line-level entries *and* the summary entry for one period doubles the expense and
+   the liability.
 2. **Payment.** An **off-cycle payroll run** for the total, as a **non-taxable
    reimbursement** (accountable-plan style) — not wages, so nothing is withheld on it and
    it does not touch the owner's reasonable-compensation figure. The run clears the
@@ -221,18 +226,58 @@ not a personal card at all in accounting terms — it behaves like a company car
 | Feed connected | no | **yes** — categorised line by line |
 | A business charge | expense + `used personal card`, then reimbursed | expense + the card account. **No reimbursement** |
 | A personal charge | **never entered** | **`Distributions`** |
+| **§0's purpose gate** | **applies** | 🔴 **APPLIES EXACTLY THE SAME** |
 
-⚠️ **The two cards share merchants**, because it is one person living one life. **Before posting the
-entry, check the connected card for the same charge** — a match on date *and* amount is a double
-booking, and the report's own total will never reveal it. **Close the connected card's month
-first**, or a charge categorised later can still collide.
+🛑 **Read that last row before anything else in this section.** *"The company pays it"* changes **who
+gets reimbursed** — it changes **nothing** about what establishes business purpose. A connected feed
+presents every line pre-labelled with a merchant name, which makes it feel settled; it is the same
+descriptor that §0 says can never establish purpose. ⛔ **Categorising a company-paid card straight
+off its feed is the identical error, and it fails in BOTH directions** — a personal charge pushed to
+an expense account on a plausible merchant name, or a business charge pushed to `Distributions` on an
+implausible one.
+
+⚠️ **The two cards share merchants**, because it is one person living one life — so the same purchase
+can be booked twice, and **neither document's own total will reveal it**. Before posting:
+
+- **Match on MERCHANT + AMOUNT, inside a date WINDOW of several days** — ⛔ **never on date and amount
+  together.** The feed carries the **posting** date and the card export carries the **transaction**
+  date; they differ by one to three days as a matter of course, and by more over a weekend or abroad.
+  A test that requires both to match is a test a real duplicate passes.
+- **On a match, the connected card's entry stands and the line comes OUT of the report** — the
+  company has already paid that charge, so there is nothing to reimburse.
+- **Close the connected card's month first.** A charge categorised after you look will not be there
+  when you look.
 
 ### The entry itself
 
-**Only the expense side is ours.** One journal entry, dated **the last day of the period covered**,
-memo **`<n>-Reimbursement <MM-MM>`**, with **one debit line per account — the expense report's pivot,
-row for row — and the total credited to the liability.** The pivot *is* the entry. **The payroll
-provider posts the payment side by itself**; creating it by hand duplicates it.
+**Only the expense side is ours.** One journal entry, with **one debit line per account taken from
+the report's TIER 1 sheet — and only that sheet — and their total credited to the liability.**
+
+⛔ **Tier 1 only, and this is the sharpest edge in the section.** The report carries all three tiers
+and its summary is per-account, so "pivot the report" silently sweeps the **held** tier-2 lines and
+the **excluded** tier-3 lines into the entry — and the off-cycle run then pays the owner for them.
+That is the outcome §4's closing paragraph names: **not a reimbursement, wages.**
+
+**Date it the last day of the period covered** — ⛔ **but never across a closed period or a fiscal
+year end.** A reimbursement period follows card cycles, not the books: one that runs 12/20–03/31
+would date every prior-year expense into the new year, moving the deduction off the return it
+belongs to. **Split the entry at the boundary and post one per period.** Check the previous entry's
+own period as well: **an export that starts inside it has already been claimed.**
+
+**Give it a memo that names the sequence and the period covered**, in whatever form that client
+already uses — the literal string belongs in **their** client file, not here.
+
+✅ **Before posting, the liability should be back at zero** from the previous period. If it is not,
+stop: either the last payment was never booked, or something has been booked twice.
+
+⚠️ **The payment side may be posted by the payroll provider's own integration, in which case
+creating it by hand duplicates it.** *(Established at Yes Team for Gusto→QuickBooks, from the
+shape of the entries: every monthly payroll posts identically, and the reimbursement entry carries
+**no tax lines**, which is what a non-taxable reimbursement looks like as against wages. It is an
+inference from the ledger, not a statement from the provider, and it is **not** a firm-wide fact —
+another provider, or another chart mapping, may post nothing at all, or post the debit to a wage
+account instead of the liability.)* 🔑 **So: look for it before you write it, and use the
+zero-check above to tell which world you are in.**
 
 ⚠️ **The accountable-plan conditions are what make it non-taxable**: a business connection,
 substantiation, and any excess returned. **Tier 2 exists to protect exactly this** — a
