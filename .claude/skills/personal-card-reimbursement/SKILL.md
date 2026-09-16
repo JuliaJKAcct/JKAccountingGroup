@@ -143,6 +143,18 @@ different:
 | A delicatessen abroad | `Health & Wellness` | Hospitality | **Tier 2** |
 | A beach club | `Personal` | The owner labelled it a business-trip meal | **Tier 2** — his label is the evidence, not the venue |
 
+### 🔎 An unrecognisable merchant: search the client's OWN ledger before the internet
+
+A foreign merchant descriptor often cannot be identified online at all — a sole trader billing
+under a personal name, a local operator with no web presence. **Look in the client's own books
+first.** *(Yes Team, 2026-09-16: a travel agency that returned nothing useful from a web search was
+already booked in the client's ledger, from the other card, to `Travel` with a vendor record and a
+memo saying it was an airline ticket — and a later refund line repeated it. The firm had answered
+its own question months earlier.)* **A prior quarter's report, the other card's feed and the vendor
+list are all cheaper and better evidence than a search engine.** Where the web *is* the answer,
+say which reading is **established** and which is an **inference** — a naming convention in another
+language is a strong hint, not a fact.
+
 🔑 **Read the table for one thing only: the category is not evidence, in either direction.**
 ⛔ **It is not a licence to resolve a line by reading the merchant name** — that is the
 inference §0 forbids, and the rows above say which *tier* each kind lands in, never that
@@ -196,6 +208,31 @@ Two halves, and they are separate events:
    reimbursement** (accountable-plan style) — not wages, so nothing is withheld on it and
    it does not touch the owner's reasonable-compensation figure. The run clears the
    liability.
+
+### 🔴 One owner can have TWO cards, treated in opposite ways — check before you book
+
+The trap, and it is not hypothetical *(Yes Team, found 2026-09-16)*: the same owner had a second
+card **in his own name that the COMPANY pays**, with its feed connected to QuickBooks. That one is
+not a personal card at all in accounting terms — it behaves like a company card:
+
+| | The card the report comes from | A card the company pays |
+|---|---|---|
+| Who pays it | the owner | **the company** |
+| Feed connected | no | **yes** — categorised line by line |
+| A business charge | expense + `used personal card`, then reimbursed | expense + the card account. **No reimbursement** |
+| A personal charge | **never entered** | **`Distributions`** |
+
+⚠️ **The two cards share merchants**, because it is one person living one life. **Before posting the
+entry, check the connected card for the same charge** — a match on date *and* amount is a double
+booking, and the report's own total will never reveal it. **Close the connected card's month
+first**, or a charge categorised later can still collide.
+
+### The entry itself
+
+**Only the expense side is ours.** One journal entry, dated **the last day of the period covered**,
+memo **`<n>-Reimbursement <MM-MM>`**, with **one debit line per account — the expense report's pivot,
+row for row — and the total credited to the liability.** The pivot *is* the entry. **The payroll
+provider posts the payment side by itself**; creating it by hand duplicates it.
 
 ⚠️ **The accountable-plan conditions are what make it non-taxable**: a business connection,
 substantiation, and any excess returned. **Tier 2 exists to protect exactly this** — a
