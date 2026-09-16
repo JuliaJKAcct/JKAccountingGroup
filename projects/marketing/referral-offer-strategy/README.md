@@ -41,6 +41,11 @@ referral-offer-strategy/
 │   ├── talk-track.md          plain-language script + Readiness Check timing
 │   └── worksheets/            fillable worksheets (interactive + print)
 │       ├── readiness-check-ru.html     self-scored readiness quiz (webinar gift)
+│       ├── numbers-worksheet-ru.html   FILL-IN calculation sheet (2 pages, A4): real
+│       │                       margin, cash cushion in months, how late the books are,
+│       │                       a structure check and the family personal-vs-business
+│       │                       check. The quiz is self-assessment; this one is arithmetic
+│       │                       the room does live — built for the club talk's slides 9 and 11
 │       ├── readiness-check-en.html     English version of the readiness quiz
 │       ├── margin-calculator-ru.html   true-margin calculator (standalone, kept for later)
 │       └── keep-more-checklist-ru.html tax-efficiency checklist (standalone, kept for later)

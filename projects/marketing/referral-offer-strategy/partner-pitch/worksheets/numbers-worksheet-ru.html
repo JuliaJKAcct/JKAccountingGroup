@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Посчитайте свои цифры — рабочий лист · JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#123841; --teal-900:#0D2A31; --bronze:#9C6A39; --bronze-700:#7E5430; --bronze-300:#CFA268;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#fff;
+    --ink:#0D2A31; --body:#22201A; --muted:#5C5647;
+    --rule:#D6CFBF; --rule-soft:#E7E1D4; --sage:#6E9A79;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#E9E4D8; color:var(--body); font-family:var(--sans); font-size:15px; line-height:1.45; padding:24px 16px 64px}
+
+  .printbar{max-width:820px; margin:0 auto 14px; text-align:right}
+  .printbar button{font-family:var(--sans); font-size:14px; font-weight:600; color:#fff; background:var(--teal);
+    border:0; border-radius:8px; padding:10px 18px; cursor:pointer}
+  .printbar button:hover{background:var(--teal-900)}
+
+  .sheet{max-width:820px; margin:0 auto 22px; background:var(--white); padding:34px 38px 30px;
+         box-shadow:0 2px 22px rgba(13,42,49,.13)}
+
+  /* masthead — the house lockup, same as the other worksheets */
+  .masthead{display:flex; align-items:flex-start; justify-content:space-between; gap:20px;
+            border-bottom:2px solid var(--teal); padding-bottom:14px}
+  .masthead svg{width:270px; height:auto; flex:none}
+  .tag{text-align:right; font-family:var(--mono); font-size:10.5px; letter-spacing:.16em;
+       text-transform:uppercase; color:var(--bronze-700); line-height:1.7; padding-top:6px}
+  .tag b{display:block; font-family:var(--serif); font-size:15px; font-weight:700; letter-spacing:0;
+         text-transform:none; color:var(--ink)}
+
+  .lede{margin-top:20px}
+  .lede h1{font-family:var(--serif); font-weight:700; font-size:31px; line-height:1.1; color:var(--ink); text-wrap:balance}
+  .lede p{margin-top:9px; font-size:15px; color:var(--muted); max-width:66ch}
+
+  .idline{display:flex; gap:22px; margin-top:16px; padding-bottom:4px}
+  .idline label{flex:1; font-family:var(--mono); font-size:10.5px; letter-spacing:.12em;
+                text-transform:uppercase; color:var(--muted)}
+  .idline label span{display:block; border-bottom:1px solid var(--rule); height:24px; margin-top:4px}
+
+  .step{margin-top:22px; border-top:1px solid var(--rule-soft); padding-top:16px}
+  .step:first-of-type{border-top:0}
+  .sh{display:flex; align-items:baseline; gap:11px}
+  .sh .num{font-family:var(--mono); font-weight:600; font-size:12px; color:var(--bronze-700);
+           border:1.5px solid var(--bronze); border-radius:50%; width:25px; height:25px; flex:none;
+           display:grid; place-items:center; line-height:1}
+  .sh h2{font-family:var(--serif); font-weight:700; font-size:20px; color:var(--ink); line-height:1.2}
+  .sh .when{margin-left:auto; font-family:var(--mono); font-size:10px; letter-spacing:.1em;
+            text-transform:uppercase; color:var(--muted); white-space:nowrap; padding-top:3px}
+  .step > p.note{margin:7px 0 0 36px; font-size:13.5px; color:var(--muted); max-width:64ch}
+
+  /* the fill-in ledger */
+  .calc{margin:11px 0 0 36px}
+  .calc .r{display:flex; align-items:baseline; gap:12px; padding:6px 0; border-bottom:1px dotted var(--rule)}
+  .calc .r .k{font-size:14.5px; color:var(--body)}
+  .calc .r .k i{font-style:normal; color:var(--muted); font-size:13px}
+  .calc .r .v{margin-left:auto; width:132px; border-bottom:1.5px solid var(--teal); height:23px; flex:none}
+  .calc .r.minus .k::before{content:"–"; font-family:var(--mono); color:var(--bronze-700); font-weight:600; margin-right:7px}
+  .calc .r.total{border-bottom:0; border-top:2px solid var(--bronze); margin-top:5px; padding-top:9px}
+  .calc .r.total .k{font-family:var(--serif); font-weight:700; font-size:16.5px; color:var(--ink)}
+  .calc .r.total .v{border-bottom-width:2px; border-bottom-color:var(--bronze)}
+
+  .result{display:flex; align-items:center; gap:13px; flex-wrap:wrap; margin:12px 0 0 36px;
+          background:var(--paper); border:1px solid var(--rule); border-radius:10px; padding:11px 14px}
+  .result .f{font-family:var(--mono); font-size:13px; color:var(--ink)}
+  .result .f b{color:var(--bronze-700)}
+  .result .eq{margin-left:auto; display:flex; align-items:baseline; gap:8px}
+  .result .eq .box{width:96px; height:28px; border:1.5px solid var(--teal); border-radius:6px; background:var(--white)}
+  .result .eq .u{font-family:var(--serif); font-weight:700; font-size:17px; color:var(--ink)}
+
+  .bench{margin:9px 0 0 36px; font-size:13.5px; color:var(--muted)}
+  .bench b{color:var(--ink)}
+  .bench .ok{color:var(--sage); font-weight:700}
+  .bench .bad{color:var(--bronze-700); font-weight:700}
+
+  /* yes/no checks */
+  .checks{margin:11px 0 0 36px; list-style:none}
+  .checks li{display:flex; align-items:flex-start; gap:11px; padding:7px 0; border-bottom:1px dotted var(--rule); font-size:14.5px}
+  .checks li:last-child{border-bottom:0}
+  .checks li.hdr{padding:0 0 3px; border-bottom:0}
+  .checks li.hdr > span:first-child{flex:1}
+  .checks .bx{display:flex; gap:7px; margin-left:auto; flex:none; padding-top:1px}
+  .checks .bx span{width:23px; height:23px; border:1.5px solid var(--teal); border-radius:5px; background:var(--white)}
+  .checks .hd{margin-left:auto; display:flex; gap:7px; font-family:var(--mono); font-size:9.5px;
+              letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+  .checks .hd span{width:23px; text-align:center}
+
+  .closing{margin-top:24px; border:1.5px solid var(--teal); border-radius:12px; padding:16px 18px; background:var(--paper)}
+  .closing h2{font-family:var(--serif); font-weight:700; font-size:19px; color:var(--ink)}
+  .closing p{font-size:13.5px; color:var(--muted); margin-top:5px}
+  .three{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:13px}
+  .three div{text-align:center}
+  .three .lb{font-family:var(--mono); font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+  .three .bx{height:34px; border:1.5px solid var(--teal); border-radius:7px; background:var(--white); margin-bottom:6px}
+  .action{margin-top:14px}
+  .action .lb{font-family:var(--serif); font-weight:700; font-size:15px; color:var(--ink)}
+  .action .ln{border-bottom:1.5px solid var(--teal); height:26px; margin-top:7px}
+
+  .disc{margin-top:16px; font-size:11.5px; line-height:1.5; color:var(--muted)}
+  .foot{margin-top:15px; padding-top:11px; border-top:1px solid var(--rule);
+        display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:12.5px; color:var(--muted)}
+  .foot b{color:var(--ink)}
+  .foot a{color:var(--teal); text-decoration:none; font-weight:600}
+
+  .breakhere{break-before:page}
+
+  @media (max-width:640px){
+    .sheet{padding:22px 18px}
+    .masthead{flex-direction:column} .tag{text-align:left}
+    .calc, .result, .bench, .checks, .step > p.note{margin-left:0}
+    .three{grid-template-columns:1fr}
+  }
+
+  @media print{
+    @page{ size:A4 portrait; margin:10mm 11mm }
+    body{background:#fff; padding:0; font-size:9pt; line-height:1.34}
+    .printbar{display:none}
+    .sheet{max-width:none; margin:0; padding:0; box-shadow:none}
+    body,*{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    .masthead{padding-bottom:7pt} .masthead svg{width:172px}
+    .tag{font-size:7pt; padding-top:2pt} .tag b{font-size:10pt}
+    .lede{margin-top:10pt} .lede h1{font-size:16pt} .lede p{font-size:8.4pt; margin-top:4pt}
+    .idline{margin-top:8pt; gap:16pt} .idline label{font-size:7pt} .idline label span{height:14pt}
+    .step{margin-top:9pt; padding-top:7pt}
+    .sh h2{font-size:11.5pt} .sh .num{width:17pt; height:17pt; font-size:8pt}
+    .sh .when{font-size:6.8pt}
+    .step > p.note{font-size:8pt; margin:4pt 0 0 25pt; max-width:none}
+    .calc{margin:6pt 0 0 25pt} .calc .r{padding:2.4pt 0}
+    .calc .r .k{font-size:8.6pt} .calc .r .k i{font-size:7.8pt}
+    .calc .r .v{height:12pt; width:104pt}
+    .calc .r.total{margin-top:3pt; padding-top:5pt} .calc .r.total .k{font-size:10pt}
+    .result{margin:6pt 0 0 25pt; padding:5pt 8pt; border-radius:7px}
+    .result .f{font-size:8pt} .result .eq .box{width:70pt; height:14pt} .result .eq .u{font-size:10pt}
+    .bench{margin:5pt 0 0 25pt; font-size:8pt}
+    .checks{margin:6pt 0 0 25pt} .checks li{padding:3pt 0; font-size:8.6pt}
+    .checks .bx span{width:13pt; height:13pt} .checks .hd{font-size:6.6pt} .checks .hd span{width:13pt}
+    .checks li.hdr{padding:0 0 2pt}
+    .closing{margin-top:9pt; padding:8pt 10pt; border-radius:8px}
+    .closing h2{font-size:11.5pt} .closing p{font-size:8pt; margin-top:3pt}
+    .three{gap:8pt; margin-top:7pt} .three .bx{height:19pt; margin-bottom:3pt} .three .lb{font-size:6.6pt}
+    .action{margin-top:8pt} .action .lb{font-size:9.4pt} .action .ln{height:15pt; margin-top:4pt}
+    .disc{font-size:7pt; margin-top:8pt; line-height:1.4}
+    .foot{font-size:7.8pt; margin-top:8pt; padding-top:6pt}
+    .breakhere{break-before:page; margin-top:0; padding-top:0; border-top:0}
+    .step,.closing,.result{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<div class="printbar"><button onclick="window.print()">Печать / Сохранить в PDF</button></div>
+
+<article class="sheet">
+  <header class="masthead">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group">
+      <g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#123841" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#9C6A39" stroke-width="1.4"></circle><g fill="#9C6A39"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#123841" stroke-width="9"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g>
+      <text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#0D2A31">JK Accounting Group</text>
+      <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#7E5430">TAX · BOOKKEEPING · CFO</text>
+    </svg>
+    <div class="tag">Рабочий лист<b>Посчитайте свои цифры</b></div>
+  </header>
+
+  <div class="lede">
+    <h1>Где растущий бизнес теряет прибыль</h1>
+    <p>Заполняйте прямо на встрече — считаем вместе. Точных цифр не нужно: берите те, что помните.
+       Незаполненная строка — это тоже ответ.</p>
+  </div>
+
+  <div class="idline">
+    <label>Бизнес<span></span></label>
+    <label>Дата<span></span></label>
+  </div>
+
+  <!-- 1 — margin, computed live -->
+  <section class="step">
+    <div class="sh"><span class="num">1</span><h2>Настоящая маржа</h2><span class="when">считаем вместе</span></div>
+    <p class="note">Возьмите <b>один типичный заказ</b> — или весь прошлый месяц, как удобнее. Главное, чтобы все строки были про один и тот же период.</p>
+    <div class="calc">
+      <div class="r"><span class="k">Выручка <i>— сколько пришло</i></span><span class="v"></span></div>
+      <div class="r minus"><span class="k">Товар, сырьё, материалы</span><span class="v"></span></div>
+      <div class="r minus"><span class="k">Люди, которые это делают <i>— зарплаты, подрядчики</i></span><span class="v"></span></div>
+      <div class="r minus"><span class="k">Аренда, коммуналка, страховка, софт</span><span class="v"></span></div>
+      <div class="r minus"><span class="k">Остальное <i>— эквайринг, доставка, реклама, ваше время</i></span><span class="v"></span></div>
+      <div class="r total"><span class="k">Осталось у вас</span><span class="v"></span></div>
+    </div>
+    <div class="result">
+      <span class="f"><b>Маржа</b> = Осталось ÷ Выручка × 100%</span>
+      <span class="eq"><span class="box"></span><span class="u">%</span></span>
+    </div>
+    <p class="bench"><span class="ok">10–15%</span> — здоровая маржа. &nbsp;<span class="bad">ниже 5%</span> — сигнал тревоги, даже если выручка растёт.</p>
+  </section>
+
+  <!-- 2 — cash cushion, computed live -->
+  <section class="step">
+    <div class="sh"><span class="num">2</span><h2>Запас прочности</h2><span class="when">считаем вместе</span></div>
+    <p class="note">Прибыль бывает на бумаге. Это — про то, сколько вы продержитесь, если завтра всё замедлится.</p>
+    <div class="calc">
+      <div class="r"><span class="k">Деньги на счетах сегодня</span><span class="v"></span></div>
+      <div class="r"><span class="k">Средние расходы за месяц <i>— всё, что уходит</i></span><span class="v"></span></div>
+    </div>
+    <div class="result">
+      <span class="f"><b>Подушка</b> = Деньги ÷ Расходы за месяц</span>
+      <span class="eq"><span class="box"></span><span class="u">мес.</span></span>
+    </div>
+    <p class="bench"><span class="ok">3+ месяца</span> — спокойно. &nbsp;<span class="bad">меньше одного</span> — бизнес работает «с колёс».</p>
+  </section>
+
+  <!-- 3 — how late the books are -->
+  <section class="step">
+    <div class="sh"><span class="num">3</span><h2>Насколько вы опаздываете</h2></div>
+    <p class="note">Решение, принятое по цифрам трёхмесячной давности, — это решение вслепую.</p>
+    <div class="calc">
+      <div class="r"><span class="k">За какой месяц у вас есть готовый отчёт о прибыли <i>(P&amp;L)</i></span><span class="v"></span></div>
+      <div class="r"><span class="k">Какой месяц сейчас</span><span class="v"></span></div>
+      <div class="r total"><span class="k">Отставание, месяцев</span><span class="v"></span></div>
+    </div>
+    <p class="bench">Норма — отчёт за прошлый месяц <b>к 10–15 числу</b> текущего. Три числа, которые смотрят каждый месяц:
+       <b>выручка</b> · <b>маржа</b> · <b>деньги на счету</b>.</p>
+  </section>
+
+  <!-- 4 — structure -->
+  <section class="step breakhere">
+    <div class="sh"><span class="num">4</span><h2>Структура бизнеса</h2></div>
+    <p class="note">Здесь не считаем — здесь отмечаем. То, что было нормально на старте, с ростом начинает стоить денег каждый год.</p>
+    <ul class="checks">
+      <li class="hdr"><span></span><span class="hd"><span>да</span><span>нет</span></span></li>
+      <li><span>Форму бизнеса пересматривали за последние два года</span><span class="bx"><span></span><span></span></span></li>
+      <li><span>Вы знаете, сколько платите налогов в год — не «примерно», а числом</span><span class="bx"><span></span><span></span></span></li>
+      <li><span>Если у вас LLC: считали, что даёт переход на S-corp</span><span class="bx"><span></span><span></span></span></li>
+      <li><span>Продаёте или работаете в нескольких штатах — и знаете, где обязаны регистрироваться</span><span class="bx"><span></span><span></span></span></li>
+    </ul>
+    <p class="bench">Каждое «нет» — это не ошибка, а <b>невыясненный вопрос</b>. Некоторые из них стоят несколько тысяч долларов в год.</p>
+  </section>
+
+  <!-- 5 — the family-business leak -->
+  <section class="step">
+    <div class="sh"><span class="num">5</span><h2>Личное и бизнес</h2><span class="when">про семейный бизнес</span></div>
+    <p class="note">Это есть почти у всех, и это не про дисциплину. Отвечайте себе, вслух говорить не нужно.</p>
+    <ul class="checks">
+      <li class="hdr"><span></span><span class="hd"><span>да</span><span>нет</span></span></li>
+      <li><span>Отдельный счёт и карта — только для бизнеса</span><span class="bx"><span></span><span></span></span></li>
+      <li><span>Родственники, которые работают в компании, оформлены</span><span class="bx"><span></span><span></span></span></li>
+      <li><span>Себе вы платите зарплату или оформленную выплату, а не берёте «из кассы»</span><span class="bx"><span></span><span></span></span></li>
+      <li><span>Договорённости внутри семьи записаны, а не только проговорены</span><span class="bx"><span></span><span></span></span></li>
+    </ul>
+    <p class="bench">Каждое «нет» здесь означает одно: <b>цифры, которые вы посчитали выше, посчитаны не по вашему бизнесу.</b>
+       Поэтому этот блок — первый по важности, хотя стоит последним.</p>
+  </section>
+
+  <!-- the takeaway -->
+  <div class="closing">
+    <h2>Три числа, с которыми вы уходите</h2>
+    <p>Перепишите их сюда — через неделю вы не вспомните, а сравнить будет с чем.</p>
+    <div class="three">
+      <div><div class="bx"></div><p class="lb">моя маржа, %</p></div>
+      <div><div class="bx"></div><p class="lb">подушка, месяцев</p></div>
+      <div><div class="bx"></div><p class="lb">отставание учёта, мес.</p></div>
+    </div>
+    <div class="action">
+      <p class="lb">Одно, что я сделаю на этой неделе:</p>
+      <div class="ln"></div>
+    </div>
+  </div>
+
+  <p class="disc">Это быстрая самопроверка для ориентировки, а не бухгалтерская или налоговая консультация. Она строится
+    на цифрах, которые вы вспомнили на встрече. Точную картину даёт разбор по вашим реальным данным — по учёту,
+    выпискам и декларации. Ориентиры на этом листе — типичные значения для малого бизнеса, а не норматив для вашей отрасли.</p>
+
+  <footer class="foot">
+    <span><b>Юлия Кононова</b> · JK Accounting Group · Майами · Форт-Лодердейл · Онлайн</span>
+    <span>WhatsApp и телефон <b>(786) 318-1505</b> · <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a></span>
+  </footer>
+</article>
+
+</body>
+</html>
