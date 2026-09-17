@@ -236,6 +236,45 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 (tax review) — 🧾 **THE TAX REVIEW, RUN ON WHAT IS ACTUALLY READABLE — one entity in
+  full, two not read at all.** ⛔ **The two corporations' returns cannot be reached from this session:**
+  Drive's reader truncates the Financial Binder at page 80 of 309 and its downloader refuses the file
+  for size, so **Bayshore's and Samoset Florida's six returns (pp. 190–309) remain unread** and the
+  review is explicitly partial on them. **Complete** on Lemon Squeeze — both federal returns and the
+  state return, every schedule, both continuation statements — and on the transaction's own tax shape.
+  🔑 **① THE ALLOCATION IS THE BUYER'S BIGGEST TAX LEVER AND THE BROKER'S OWN SHEET UNDERSTATES IT.**
+  His split runs *buildings* against *business* and treats the whole business half as fifteen-year
+  goodwill. Under the residual method the tangible personal property — the washers and dryers, the
+  uninstalled card systems, the vans, changers, cameras, terminals — is **Class V and the FASTEST
+  write-off of the three, quicker than the building**; and *buildings* is not *real estate*, because
+  **land is not depreciable at all**. Goodwill is the residual after every other class sits at fair
+  value, so the order is: appraise the land and buildings, value the equipment off the Tab C invoices
+  and the technician, and let goodwill fall out. **Both sides must file consistent Forms 8594.** 🔴 **②
+  WHAT FOLLOWS THE ASSETS EVEN THOUGH THE BUYERS FORM NEW COMPANIES** — the whole point of the tax half
+  of this engagement: **Florida sales-tax successor liability**, which can reach the buyer personally
+  unless purchase money is withheld against a clearance; **reemployment-tax successor experience
+  rating**, so a new company does not automatically get a new-employer rate; **tangible personal
+  property tax**, which attaches to the equipment itself; **stored value on customer cards**, a real
+  liability the seller calls nominal; and **the Ruskin apartment lease**, which runs with the land. 🔴
+  **③ EXPOSURES VISIBLE IN THE ONE ENTITY WE CAN READ.** Officer compensation is **zero on both of
+  Lemon Squeeze's returns** — but the payroll registers show both shareholders ARE paid, through codes
+  belonging to the OTHER two corporations, **so this is a misallocation between related parties rather
+  than a no-compensation case**: weaker as an IRS matter, messier for the analysis, and it means Lemon
+  Squeeze's reported income is overstated because its labour is partly borne elsewhere. The **rent line
+  is blank both years** for space inside a commonly-controlled corporation's building, which is the same
+  defect from the other direction. **PPP forgiveness was never recorded in the books** of two entities,
+  which if it never reached the returns either would understate **shareholder basis and the other
+  adjustments account** — noting that forgiveness income is tax-exempt income going to **OAA, not AAA**.
+  And the **shareholder loans on the balance sheet** contradict a seller representation the buyer is
+  relying on. ⚠️ **④ THE ONE QUESTION THAT DECIDES THE PAYROLL PRESENTATION** is whether the payroll
+  company is a PEO or a processor: under co-employment the blank wage lines are arguably correct, and
+  under a processor they are a classification error on every return in the set. ❓ **⑤ AND A FILING
+  QUESTION NOBODY HAS ASKED:** the LLC filed a Florida corporate return for its first year, while
+  **neither corporation has one in the package for any year** — either none was required, or returns are
+  unfiled. 🛑 **Deliberately NOT stated: any statute subsection or specific Florida exemption wording.**
+  The Department's own site is unreachable from this environment, the firm's rule is that anything
+  changing a figure is read off the current source rather than memory, and the sales-tax returns
+  themselves are not in hand
 - 2026-09-17 (audit complete) — ✅ **BOTH AUDITS AGREE ON EVERY VERDICT, REACHED SEPARATELY** — and
   between them they sharpen four asks, add two, and put two behind a gate. **Confirmed genuinely
   outstanding:** bank statements · credit-card statements · the merchant *processing* statements for the
