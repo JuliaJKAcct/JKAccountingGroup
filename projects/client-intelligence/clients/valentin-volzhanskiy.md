@@ -386,20 +386,28 @@ A running, dated record as we build this profile.
   Figures stay in the working paper and on that page — never here.*
 
 - _(2026-09-17, third)_ — 🔁 **THE PREPARED RETURN WAS RE-READ at Lilian's request** *(several days
-  had passed and she wanted to know what was outstanding)*. **Read through the redactor**; the
-  by-hand leak grep the firm requires on a glyph-decoding read came back clean.
-  🛑 **THE HEADLINE: nothing has been keyed since 13 September.** Every figure from the line-by-line
-  check is present and unchanged, and **none of the second pass's figures appear anywhere.** Only two
-  things moved, neither a figure: the package was **reprinted** *(the preparer's signature date moved
-  with it)*, and **ATX's own penalty worksheet is now in the package**, which previously was not.
+  had passed and she wanted to know what was outstanding)*. **Read through the redactor.**
+  ⚠️ **The by-hand leak grep the firm requires on a glyph-decoding read was clean FOR SSN SHAPES —
+  that is what it tests, and it should not be read as a clean bill.** 🔴 **It was not: the taxpayer's
+  home street line came through UNMASKED three times**, which is a reproducible gap in the tool and is
+  now logged against the follow-up that already tracks that family. **Nothing reached the repo.**
+  🛑 **THE HEADLINE: nothing that PRINTS has changed since 13 September**, and **none of the second
+  pass's figures appear anywhere.** ⛔ **Stated that way on purpose — this searched a printed package,
+  so it cannot see input-screen state**, and two of the open checks live exactly there. Only two
+  things moved on the printed package, neither a figure: it was **reprinted** *(the preparer's
+  signature date moved with it)*, and **ATX's own penalty worksheet is now in it**, which previously
+  was not — itself proof the software was opened that day.
   ✅ **FOUR THINGS THE READ CLOSED**, all previously derived or unchecked: the qualified-business-income
   form's own input line reads the **net-of-SE-tax** figure rather than the gross *(the check that had
   to be done on screen)*; its **taxable-income-before-the-deduction line is now READ, not derived**;
   its **carryforward line prints ZERO, so nothing carries into 2026** — established rather than
   inferred; and the **estimated-tax penalty is corroborated by the software's own quarterly
   worksheet**, which foots to the same figure and to the prior-year safe harbour.
-  🔴 **AND ONE DEFECT CONFIRMED, NOW WIDER: the taxpayer's signature is dated the day the EXTENSION
-  was filed, while the preparer's is dated the day the package was reprinted — five months apart.**
+  🔴 **AND THE SIGNATURE DATES — an OPEN ITEM, not a defect, and be exact about what is new.** The
+  taxpayer's signature is dated the day the **EXTENSION** was filed; the preparer's, the day the
+  package was reprinted. ⛔ **That gap was already recorded on 13 September and has moved by three
+  days — it is the same finding.** 🆕 **What IS new: the signature form is not in the package at
+  all**, so the thing that had to be checked still cannot be checked from a PDF.
   ⛔ **An authorisation dated before the return existed is not valid authorisation.** The signature
   form itself is not in the package, so it has to be checked on the signature screen and a fresh one
   obtained before e-filing.
