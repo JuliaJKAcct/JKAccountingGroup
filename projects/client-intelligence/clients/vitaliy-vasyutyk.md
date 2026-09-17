@@ -1,6 +1,6 @@
 # Vitaliy Vasyutyk — property & renovation LLC group
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-07
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-17
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -103,13 +103,17 @@ watch-outs, one-off arrangements, history that affects the work.
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
 - 🔴 **ZUMFI 2 LLC IS A TENNESSEE LLC — its annual report is due 1 APRIL, a month before everyone else's.** The other nine file with Sunbiz by 1 May. Zumfi 2 files with the **Tennessee Secretary of State** (control number `002 059 868`), its reminders come from `tnsos.gov` and never appear in a Sunbiz notice, and its state fee is visibly different from every Florida entity on the same invoice. **A covering staffer working from "they're all Florida LLCs" files it in the wrong state, late.**
-  🔴 **AND THAT IS NO LONGER A RISK — IT HAS HAPPENED, AND IT COST A PENALTY.** On **2026-09-17**
-  Lilian called Tennessee and established that Zumfi 2 also owes the TN **Department of Revenue** a
-  **franchise & excise return** — a **second** Tennessee agency, separate from the Secretary of State
-  — and that **the 2025 one is LATE, because the firm filed the tax extension believing the company
-  was registered in Florida.** ✅ **The penalty is nominal.** 🔑 **The lesson is not:** the
-  state question belongs to **every filing this company makes**, not just its annual report. Details
-  and the next steps are in [`zumfi-2.md`](./zumfi-2.md) §4.
+  🔴 **AND THE SAME ASSUMPTION HAS NOW COST A REAL PENALTY — ON A DIFFERENT FILING.**
+  ⚠️ **The annual-report risk above is UNCHANGED and still live** — that one has never gone wrong
+  (the 2026 TN report was filed correctly, approved 2026-03-26). **What went wrong was the TAX
+  EXTENSION.** On **2026-09-17** Lilian called Tennessee and established that Zumfi 2 **also owes a
+  Tennessee STATE RETURN** — a **second** Tennessee agency, separate from the Secretary of State —
+  and that **the 2025 one is LATE, because the firm filed the extension believing the company was
+  registered in Florida.** ✅ **The penalty is nominal.** ⚠️ **Which agency and which tax is
+  INFERRED** *(Department of Revenue; franchise & excise)* — her report says only *"TN state"* and
+  *"our return"*. 🔑 **The lesson is neither of those:** the state question belongs to **every
+  filing this company makes**, not just its annual report. **The next steps are in Zumfi 2's own
+  client file, §4.**
 - 🔴 **An invoice's CUSTOMER is not the company the work was done for — read the line descriptions.** In the firm's own A/R ledger the group is billed through only **six** customer records (Nika Realty, 2 Romans Realty, SYS 1 Realty, Zumfi 2, Fastighet, Tropical Coast) while **ten** companies generate the work. Nika Realty and Fastighet in particular act as **umbrella billing accounts**: Remodel Master, Sunshine Renovations 1, Zumfi 1, Fizum 1 and Tropical Coast 1 have all appeared as *lines* on another company's invoice. Any "has this been billed?" question must be answered on **line descriptions across all six records**, never on the customer name.
 - 🔴 **The 2026 cycle was re-cut twice, so old invoice numbers in email no longer exist in the firm's ledger.** March 2026's group 1099 invoice was cancelled and re-issued split per company; April 2026's Fastighet/Tropical Coast invoices were cancelled and consolidated into one. Deleted invoice numbers still appear in Julia's Gmail with amounts and reminders — **an email is not evidence that an invoice exists.** The full trail is in §6 (2026-09-07).
 - ⚠️ **Tropical Coast 1 LLC is DISSOLVED** — Articles of Dissolution filed **2026-03-31** (Sunbiz doc `L24000400203`, confirmation to Julia 2026-04-02). Its final annual report and 1099 were billed on the **Fastighet** invoice, together with the dissolution state fee. No further annual report is due for it, and the third-party "renewal due" emails that keep arriving for it are advertising, not a state notice.
@@ -131,6 +135,7 @@ A running, dated record as we build this profile.
   - **Still open:** `2097`, `2101`, `2104` — all dated 2026-03-25, all reminded repeatedly — 04-02, 04-20, 06-03, 06-08, 06-25 and 07-27 each covered all three, plus a re-send of **2104 alone on 04-14** — and **unpaid for over five months**, while every other invoice in the same batch was paid in April. **Paid:** `2099`, `2100`, `2103`, `2105`, `2143`.
 - _(2026-03-27)_ — Lilian confirmed to him **by email, in Russian**, that the **2026 annual reports were filed** for Nika Realty, Sunshine Renovations 1, 2 Romans Realty, SYS 1 Realty and Remodel Master (and the rest of the list). So the work behind the three open invoices **was delivered**. _(Source: Gmail, 2026-03-27.)_
 - _(2026-04-02)_ — He **completed the 2025 individual Tax Organizer in TaxDome** and uploaded Uber (1099-NEC, 1099-K, annual summary), Lyft and DoorDash P&Ls — his 1040 carries **gig-economy Schedule C income**. The same day, Vladyslav Vasiutyk's 2025 return was e-signed. _(Source: TaxDome notifications to Julia.)_
+- _(2026-09-17)_ — 🔴 **A SECOND TENNESSEE OBLIGATION SURFACED ON ZUMFI 2, AND IT IS LATE.** Lilian called the state and established that the company owes a **Tennessee state return** as well as its annual report — **late, because the firm filed the tax extension believing Zumfi 2 was registered in Florida.** ✅ **Penalty nominal; nothing on the federal return moves.** 🔑 **It is recorded here because the *"they're all Florida LLCs"* trap in §5 was written about the annual report and has now cost money on a different filing.** The detail, the next steps and what is still only inferred are in [`zumfi-2.md`](./zumfi-2.md) §4 and §6.
 - _(2026-09-07)_ — Lilian left **five** comments for Julia on Double the same day this file was created, working the 2025 returns. Read back at source _(`list_comments`, comments 6206475 · 6206486 · 6206564 · 6206764 and the Zumfi 1 one)_: **Zumfi 1 LLC — "we need to close this company"**; 🔴 **SYS 1 Realty AND Remodel Master Realty — "no activity in 2025. The only thing we need to report is a change of address"**, word for word the same on both, and **SYS 1's is the one Lilian flagged 🚨** (that is a filing each company still owes, not just a note); and two on **Zumfi 2 LLC** — **the partner's SSN is missing from the organizer and his email address is wrong, 🔑 and "we can take his info from Zumfi 1 and Fizum — he is also a partner in these 2 companies"** (so the details already exist on those two records, and it explains why all three read `1065`), and **Zumfi 2 bought a parcel of land in November 2025 with no renovation work being done on it**. _(The partner's identifiers are NOT recorded here — the comments carry none either.)_
 
 ### Tax year 2025 — the review

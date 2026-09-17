@@ -61,7 +61,7 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 | System | What it's for | Where credentials live | Non-sensitive reference |
 |---|---|---|---|
 | **Tennessee Secretary of State** | formation + the annual report | firm-level, not client-specific | control number `002 059 868`; reminders come from `tnsos.gov` to Julia's mailbox — **never from Sunbiz** |
-| 🔴 **TN Department of Revenue** | **franchise & excise** — correspondence **and filing returns** | 🟠 **the online account is being created by Lilian (2026-09-17)**; it opens from the **EIN** alone. Credentials go to the firm's password store, never here | 🔴 **the company has NO TN account number yet** — the state issues one when it processes the first return (§4) |
+| 🔴 **The Tennessee tax agency** *(the Department of Revenue — **inferred**, §4)* | the state return — correspondence **and filing returns** | 🟠 **the online account is being created by Lilian (2026-09-17)**; it opens from the **EIN** alone. Credentials go to the firm's password store, never here | 🔴 **the company has NO TN account number yet** — the state issues one when it processes the first return (§4) |
 | **Hamilton County Trustee** (TN) | the parcel's property-tax bill | public record | ⚠️ **not yet checked for this parcel** — §5 |
 | Bank | funding the purchase | _(pending — no statement has ever been provided)_ | 🔴 **the firm has never seen a bank statement for this company** |
 | Double | client record, files, organizers | — | client `710614` |
@@ -84,14 +84,25 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 - **Deadline:** 15 March, **extended to 15 September** by Form 7004.
 - **First return:** **tax year 2025** — the organizer's *"Has the company filed a tax return
   before?"* is **No**.
-- 🔵 **Tennessee franchise & excise is a SEPARATE return to a separate agency** — its own heading
+- 🔵 **The Tennessee state return is a SEPARATE return to a separate agency** — its own heading
   below. ⛔ **The federal Form 7004 does not extend it**, which is exactly what went wrong.
 
-### Tennessee franchise & excise (TN Department of Revenue)
+### The Tennessee state return
 
-- ✅ **Applies — ESTABLISHED 2026-09-17**, when **Lilian called the state**. Until that day this
-  file and the working paper both recorded it as *"never asked for this group; not established
-  either way."* **It is established now: a return is owed.**
+> ⚠️ **READ THE NAMES IN THIS SECTION AS INFERENCES.** Lilian's report says **"TN state"** and
+> **"our return"** — it names **no agency and no tax.** *Franchise & excise* and *Department of
+> Revenue* are the firm's reading, because a TN LLC holding TN land is the classic case and
+> because an account number and a return point at the revenue agency rather than the Secretary of
+> State. ⛔ **They are not established, and nothing should be prepared or filed on them until the
+> account confirms it.**
+
+- ✅ **A TENNESSEE RETURN IS OWED — ESTABLISHED 2026-09-17**, when **Lilian called the state**.
+  Until that day this file and the working paper both recorded it as *"never asked for this group;
+  not established either way."* **That much is settled.**
+  ⛔ **WHAT IS NOT SETTLED IS *WHICH* RETURN**, and the two are not the same question: a **franchise
+  & excise** return, or the **FONCE exemption filing** the working paper named (**Form FAE 183**),
+  which is itself an annual filing. 🔑 **An entity that is FONCE-exempt still files — so "a return
+  is owed" does NOT establish that franchise & excise applies.**
 - 🔴 **The 2025 return is LATE, and the cause is this group's standing trap.** The firm filed the
   tax extension **believing Zumfi 2 was a Florida company**, so **no Tennessee extension was ever
   filed** _(Lilian, from the state, 2026-09-17)_. ✅ **The penalty the agent quoted is nominal** —
@@ -104,11 +115,11 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 - 🛠️ **THE FASTER ROUTE, and Lilian is taking it:** an **online account can be opened from the EIN
   alone**, and it both **shows correspondence** and **FILES RETURNS**. **She said on 2026-09-17
   that she would create it.**
-- ⛔ **What the call did NOT settle**, so no one reads more into it than was said: **which form**
-  and **which year(s)** the state means, whether the quoted penalty is one year or includes
-  interest, and **whether the FONCE exemption was ever raised.** 🔑 **The working paper had carried
-  FONCE as the possible escape route — the call establishes that a return is OWED, not that the
-  exemption was considered and rejected.**
+- ⛔ **What the call did NOT settle**, so no one reads more into it than was said: **which agency**,
+  **which tax**, **which form** and **which year(s)** the state means, whether the quoted penalty is
+  one year or includes interest, and **whether the FONCE exemption was ever raised.** 🔑 **The
+  working paper had carried FONCE as the possible escape route — the call establishes that a return
+  is OWED, not that the exemption was considered and rejected.**
 
 ### Licenses & other filings
 - 🔴 **TN annual report — due 1 APRIL**, a month before the nine Florida companies' 1 May Sunbiz
@@ -132,13 +143,15 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 - 🔴 **ZUMFI 2 IS A TENNESSEE LLC — AND THAT MEANS TWO TENNESSEE AGENCIES, NOT ONE.**
   **① Secretary of State** — the **annual report, due 1 APRIL**, not Florida's 1 May
   (`002 059 868`), with reminders from `tnsos.gov` that never appear in a Sunbiz notice.
-  **② Department of Revenue** — a **franchise & excise return**, which the firm did not know this
-  company owed **until 2026-09-17** (§4).
-  🔴 **AND THE *"THEY'RE ALL FLORIDA LLCs"* ASSUMPTION HAS NOW COST A REAL PENALTY — on a filing
+  **② A TAX AGENCY TOO** — a **state return**, which the firm did not know this company owed **until
+  2026-09-17** (§4). ⚠️ **The tax and the agency are INFERRED, not established** — the firm reads
+  them as **franchise & excise** at the **Department of Revenue**, and §4 says why, but Lilian's
+  report says only "TN state" and "our return".
+  🔴 **AND THE "THEY'RE ALL FLORIDA LLCs" ASSUMPTION HAS NOW COST A REAL PENALTY — on a filing
   this bullet was NOT written about.** The firm filed the **tax extension believing Zumfi 2 was
   registered in Florida**, so **nothing was extended with Tennessee and the state return is late**
-  _(Lilian, from the state by phone, 2026-09-17)_. ✅ **The penalty is nominal** — the figure is in
-  the [working paper](../../tax-returns/zumfi-2-llc/2025-form-1065.md) §6 ⑧.
+  _(Lilian, from the state by phone, 2026-09-17)_. ✅ **The penalty is nominal** — the amount is
+  recorded in the return's working paper at §6 ⑧, not in this file.
   🔑 **So the lesson is wider than the deadline it started as: the state question belongs to EVERY
   filing this company makes, not just the annual report.** A covering staffer working from *"they're
   all Florida LLCs"* does not merely file one report in the wrong state — **they extend the wrong
@@ -275,11 +288,15 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   the e-file acknowledgment. **If no extension was accepted, the return has been late since March
   and the small-partnership relief it rests on is gone.**
 - 🔴 **TENNESSEE — ANSWERED 2026-09-17, AND NOW A LIVE FILING RATHER THAN A QUESTION.** It is no
-  longer *"not established either way"*: **a return is owed and it is late.** ✅ **The penalty is
+  longer "not established either way": **a return is owed and it is late.** ✅ **The penalty is
   nominal, so this is a job to do, not an alarm.** **Next, in order:** ① **Lilian creates the online
-  account from the EIN** *(she said she would, 2026-09-17)*; ② **prepare the 2025 Tennessee
-  return**; ③ **file it online if the new account allows it** — **posting it means waiting roughly
-  six months for the account number.** ⚠️ **Confirm which form and which year(s) the state means
+  account from the EIN** (she said she would, 2026-09-17) — 🔑 **and the FIRST thing to do in it
+  is READ THE CORRESPONDENCE ALREADY THERE, before anything is prepared.** **The firm has never had
+  a login**, so whatever Tennessee has already sent this company has gone somewhere nobody
+  monitors — **and on the sibling company Zumfi 1 exactly that cost ten months of interest** (§5).
+  A notice, an assessment or a registration letter sitting in that inbox may answer the agency and
+  form questions outright; ② **prepare the 2025 Tennessee return**; ③ **file it online if the new
+  account allows it** — **posting it means waiting roughly six months for the account number.** ⚠️ **Confirm which form and which year(s) the state means
   before preparing anything** — the call is relayed, not documented.
 - 🔴 **Check the Hamilton County Trustee's mailing address for this parcel** before the next bill
   goes astray, as Zumfi 1's did.
@@ -303,10 +320,11 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
       question.
 - [ ] **The parcel's Hamilton County parcel ID**, so the Trustee record can be pulled without
       hunting.
-- [ ] 🔴 **The 2026 Tennessee franchise & excise return and its due date.** The company still holds
-      the parcel, so **the obligation established for 2025 does not end with 2025.** Put the TN
-      deadline on the calendar beside the 1 April annual report, read off the new online account
-      once it exists — **this is what stops 2026 repeating 2025.**
+- [ ] 🔴 **The 2026 Tennessee return, ITS EXTENSION, and BOTH due dates.** The company still holds
+      the parcel, so **the obligation established for 2025 does not end with 2025.** 🔑 **Name the
+      extension explicitly, because the extension is the thing that actually failed in 2025** — the
+      federal Form 7004 does not extend Tennessee. Put both dates on the calendar beside the
+      1 April annual report, read off the new online account once it exists.
 
 ## 7. Links
 
