@@ -1,6 +1,6 @@
 # Grigoriy & Margarita Melomed
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-14
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -24,19 +24,22 @@
 > The SOP is the curated view of the **Operating** zone. See the project README
 > ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
 
-> ⚠️ **NO FULL HISTORICAL SWEEP HAS RUN.** Created 2026-08-14 from Double read live plus a
-> targeted Gmail pass over **2026-03 only** — the month this client's return was worked. Ping,
-> Drive and every other period are **unswept**. A gap below means *not yet looked at*. There is
-> **no migrated TaxDome note** for this client, so it was outside the backfill entirely; it
-> surfaced only because a *different* Melomed household was being written up. The catch-up is recorded in
-> [`sweep-state.md`](../automation/sweep-state.md).
+> ✅ **First full historical sweep completed 2026-09-12** — Ping (org-wide `resolve_person` +
+> `search_meetings` for both spouses: **zero results about this household**, corroborating
+> [`rg-friendly.md`](./rg-friendly.md)'s 2026-08-29 finding of `recentMeetingCount: 0`); Gmail
+> (full, unbounded — the correspondence with Julia runs back to **2023-01-12**, far earlier than
+> the 2026-03 window this file previously covered); Google Drive (the personal `Grigoriy Melomed`
+> folder walked in full, including its `2024` subfolder); Double (`get_client`, properties,
+> contacts, `list_notes` — still **zero notes** — and the full `list_activity_log`, 11 entries).
+> See §6 log for what each source turned up. There is still **no migrated TaxDome note** for this
+> client (outside the 2026-08-13 backfill entirely).
 
 ## 1. Snapshot
 
 - **Business name:** Grigoriy & Margarita Melomed — an **individual (joint) client record**
 - **Entity type:** Individual taxpayers — Form 1040 _(Double: `Account Type = Individual`, `Tax Return Type = 1040`, read 2026-08-14)_
 - **Home state:** _(pending — likely Florida, on the family group's footprint)_
-- **Industry / what they do:** 🔴 **He is an officer and W-2 employee of [R & G Friendly Inc — "Lucky Pawn & Jewelry"](./rg-friendly.md)** — he signs its return and a 2025 W-2 in his name was filed with it (§5). ⚠️ **Whether he OWNS it is not established**
+- **Industry / what they do:** ✅ **SETTLED 2026-08-29 (mirrored here 2026-09-12): Grigoriy & Margarita Melomed OWN [R & G Friendly Inc — "Lucky Pawn & Jewelry"](./rg-friendly.md).** A full historical sweep of that company's own file, run jointly with [`igor-melomed.md`](./igor-melomed.md) at the owner level, found **no connection whatsoever** to the other Melomed household — R & G Friendly is this couple's company alone. He is its officer and holds a W-2 from it; the two returns were signed the same day, 2026-03-14.
 - **Primary language:** _(pending — likely Russian)_
 - **Our engagement (services we provide):** individual income tax (1040). Bookkeeping **N/A**, `1099 Preparation = false`, `Annual Report = false` _(Double properties)_
 - **Fiscal year-end:** calendar year
@@ -56,6 +59,7 @@ the actual details (and Claude can pull them live when a task needs them).
 
 - **Double client:** [app.doublehq.com/close?cid=710633](https://app.doublehq.com/close?cid=710633)
 - **Double case note:** none — no agency matter has been worked for this client
+- ✅ **Corroborating detail found 2026-09-12 (Double `list_contacts`):** Margarita's own portal-contact record carries **`clientIds: [710633, 710589]`** — she is directly linked to *both* this personal record **and** R & G Friendly Inc's Double client. Grigoriy's contact record carries only `[710633]`. This is independent, structural confirmation of the ownership settled in §1/§5 (a portal contact is not linked to a company by accident).
 
 ⚠️ **THERE ARE TWO MELOMED HOUSEHOLDS IN DOUBLE, AND A COMPANY BETWEEN THEM.** This file is
 **`Grigoriy & Margarita Melomed` (710633)**. The other household is
@@ -105,10 +109,10 @@ named `IGOR MELOMED` belongs to the *other* household.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- 🔴 **THIS RETURN AND [R & G FRIENDLY INC'S](./rg-friendly.md) 1120-S ARE ONE PIECE OF WORK — SETTLE THE COMPANY FIRST.** ✅ **What is evidenced:** a **2025 W-2 from that company in his name** was filed with the company's 2025 documents (2026-03-05), and **the company's 1120-S and this 1040 were signed the same day, 2026-03-14, from the same address.** So his wages and any S-corp K-1 land on this return, and the company's numbers gate it. ⚠️ **What is NOT established — do not write it as fact: that he OWNS the company.** An officer who signs a return and draws a W-2 need not be a shareholder, the *other* Melomed household is the one that emails the firm from a Lucky Pawn address and sends its monthly ledgers, and **at least three addresses are in use across this family.** [`rg-friendly.md`](./rg-friendly.md) still carries *"who owns the company"* as an open question, and so does this file.
-- ⚠️ **THREE DOUBLE RECORDS BELONG TO ONE MELOMED FAMILY GROUP** — this household (710633), [`Igor Melomed & Yelena Lovkina`](./igor-melomed.md) (710635), and [`R & G Friendly Inc`](./rg-friendly.md) (710589), with **at least two operations** behind them (Lucky Pawn and Auto Pawn) and probable links to Magnum 152 and Sunoma. **Confirm which record a fact belongs to before writing it** — §2 carries the detail. **How the two households relate, and who owns what, is not established.**
-- ⚠️ **A VEHICLE HAD BEEN SOLD AND THE MILEAGE FIGURES CROSSED OVER** (established 2026-03-13, while working the 2025 return). The odometer reading first given for one car turned out to belong to the other, which had been sold. ⚠️ **Which tax year the sale fell in is NOT established** — that is exactly what Outstanding item 4 asks. **Check disposals before accepting a mileage figure**, and expect the same next year.
-- **This client had no migrated TaxDome note**, so the 2026-08-13 backfill never touched it and nothing here predates March 2026. The file is thin because nobody has looked, not because there is little.
+- ✅ **SETTLED 2026-08-29, mirrored here 2026-09-12 — THIS RETURN AND [R & G FRIENDLY INC'S](./rg-friendly.md) 1120-S ARE ONE PIECE OF WORK, AND GRIGORIY & MARGARITA OWN THE COMPANY.** A 2025 W-2 from the company in his name was filed with the company's 2025 documents (2026-03-05), the company's 1120-S and this 1040 were signed the same day (2026-03-14, same address), and Margarita's own Double portal-contact record is linked to **both** clients (§2). R & G Friendly Inc's own full historical sweep, run jointly with the *other* Melomed household's file, found **no connection whatsoever** between that household and this company. **This closes the ownership question this file used to carry as open.**
+- ✅ **THE THREE-HOUSEHOLD FAMILY-GROUP FRAMING IS RETIRED.** This file used to say three Double records — this household (710633), [`Igor Melomed & Yelena Lovkina`](./igor-melomed.md) (710635), and [`R & G Friendly Inc`](./rg-friendly.md) (710589) — belonged to "one Melomed family group." **They do not.** R & G Friendly Inc is Grigoriy & Margarita's alone; Igor Melomed's household is a **separate, unrelated** family that happens to share a surname. Its own confirmed businesses are Sunoma Inc and Magnum 152, Inc — nothing to do with this household or with pawnbroking. See [`rg-friendly.md`](./rg-friendly.md) §5 and [`igor-melomed.md`](./igor-melomed.md) for the full settlement.
+- ⚠️ **A VEHICLE HAD BEEN SOLD AND THE MILEAGE FIGURES CROSSED OVER** (established 2026-03-13, while working the 2025 return). The odometer reading first given for one car turned out to belong to the other, which had been sold. ⚠️ **Which tax year the sale fell in is NOT established** — that is exactly what Outstanding item 4 asks. 🔎 **A lead, found 2026-09-12, not opened:** the client's personal Drive folder's `2024` subfolder holds a document named **`honda.pdf`**, uploaded in **three identical copies** (same file size each time) alongside his 2024 W-2 and Margarita's 1099. A vehicle document filed under the **2024** tax-year folder is consistent with — but does not by itself prove — the sale having fallen in **2024**. Nobody has opened the file to confirm. **Check disposals before accepting a mileage figure**, and expect the same next year.
+- **This client had no migrated TaxDome note**, so the 2026-08-13 backfill never touched it. ⚠️ **Superseded 2026-09-12:** the earlier note that "nothing here predates March 2026" is no longer accurate — a full Gmail sweep found direct correspondence with Julia running back to **2023-01-12**, and Drive/Double confirm the relationship is a long-standing one (see §6).
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -121,6 +125,12 @@ named `IGOR MELOMED` belongs to the *other* household.
   - **2026-03-14 — the 2025 Form 1040 signed** by both spouses, and Julia confirmed the balance due and asked which date to schedule the payment for. 🔒 **The amount is not recorded here.**
   - **2026-05-27 — Double records the 2025 return as filed.** ⓘ **Do not read the 74-day gap as a late filing.** [`rg-friendly.md`](./rg-friendly.md) shows the same pattern — signed 2026-03-14, recorded filed 2026-05-25 — and **two returns signed the same day whose `filedAt` land two days apart in late May look far more like a batch status update in Double than like two independent late filings.** Read the pair before drawing anything from either.
 - **Nothing further was found in the sources actually searched** — Double live, and Gmail across March 2026 only. **Ping, Drive and every other period have never been swept**, so this is a statement about the search, not about the world.
+- 2026-09-12 — **First full historical sweep.** Findings by source:
+  - **Ping** (`resolve_person` on both spouses, org-wide `search_meetings` for "Grigoriy Melomed" and "Margarita Melomed"): **zero results about this household** — every hit returned was about an unrelated client or topic. Corroborates [`rg-friendly.md`](./rg-friendly.md)'s 2026-08-29 finding of `recentMeetingCount: 0` for the same family.
+  - **Double** (`get_client`, properties, contacts, `list_notes`, full `list_activity_log`): still **zero notes**. The activity log (11 entries, full history) shows the Double client itself was **created 2026-05-19 by Maria Zavarce** as "Grigoriy Melomed", then **renamed to "Grigoriy & Margarita Melomed" on 2026-05-27** the same moment the 2025 project was marked Filed — both by Lilian. Contacts confirm Margarita's cross-link to R & G Friendly Inc (§2).
+  - **Gmail** (full history, unbounded — no baseline existed): correspondence with Julia runs back to **2023-01-12**, continuing through 2023 (Jan, Mar, Aug, Sep), 2024 (Feb–Dec, including the FL DOR item below and the ADP "insufficient-pay" exchange already known from §5/§6), and 2025 (Feb–Aug). 🔎 **New: an earlier, separate-looking Florida DOR contact, 2024-10-23 → 2024-11-22.** Sharon Wood and Angela Hibbert (Florida Department of Revenue) sent Grigoriy and Julia an **encrypted "Power of Attorney form"** message (2024-10-23, unopened — Microsoft Purview protected message) and further correspondence through 2024-11-22. This is **different senders** than the 2025 audit documented in [`rg-friendly.md`](./rg-friendly.md) §4 (Trevor Holden, May–Jul 2025) and the 2025-08-25 encrypted "Communication" (Erika Gonzalez-Solis) already flagged there as unopened. **Not established** whether this is an earlier phase of the same sales-tax matter or a separate one — the message is encrypted and was not opened. **Flagged for [`rg-friendly.md`](./rg-friendly.md), which is out of this sweep's assigned scope to edit** — its FL DOR audit timeline may need to extend back to October 2024.
+  - **Google Drive** (`excludeContentSnippets: true`): the personal `Grigoriy Melomed` folder holds `1. Completed organizers`, `Taxes` (with a `2024` subfolder plus top-level 2024/2025 combined-return PDFs), `Firm docs shared with client`, `Private` (empty), and `Client uploaded documents`. The `2024` subfolder's contents are the 2024 source documents: `W2 Grigory Melomed.pdf`, `wgreg1.pdf`, `margarita 1099.pdf` (×2, duplicate upload), three copies of `honda.pdf` (§5), `medic.pdf` and `dlri.pdf` (not opened — filenames suggest a medical/insurance document and a driver's licence; identity documents are never opened per the redaction rule), and a 2025 receipt. ⚠️ **A naming-collision negative:** a title search for "Margarita" also surfaced Merrill-brokerage 1099-DIV/1099-INT and Form-1095-A documents for **"Margarita and Andrey"** — a different person (this Margarita's husband is Grigoriy, not Andrey). **Not this client's documents** — recorded so nobody attributes them here by mistake.
+  - **Repo** (`grep` across `projects/sops/`, `FOLLOW-UPS.md`, `BACKLOG.md`): no hits in `sops/` or `BACKLOG.md`. `FOLLOW-UPS.md` row 33 names this client (historical — the 2026-08-12 discovery that this client had no CI file; closed 2026-08-14). ⚠️ **Not actioned, and outside this sweep's scope:** the 2026-08-29 R & G Friendly sweep's own note records that the ownership correction (Grigoriy & Margarita, not Igor) still needs to be reflected in `README.md`'s Clients index and in `FOLLOW-UPS.md` row 33 — flagged again here, still open.
 
 ### Tax year 2025 — the review
 
@@ -130,17 +140,20 @@ named `IGOR MELOMED` belongs to the *other* household.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Map the Melomed group** — three Double records, one family business, and no established relationship between the two households. Until that is drawn, every "Melomed" fact is ambiguous.
-- **Give this client its first full historical pass.** It is in the weekend-sweep scope from 2026-08-14, but **nothing before March 2026 has ever been read** and it was invisible to the TaxDome backfill (no migrated note).
-- **Confirm the real 2025 filing date if it ever matters** — 74 days between signature and `filedAt`, and the sibling record shows the same pattern (§6).
-- 🔴 **Work out which schedule the vehicle mileage belongs on, and in which year the sale fell.** ⚠️ **A return of W-2 wages plus an S-corp K-1 has no use for mileage at all** — unreimbursed employee vehicle expense is suspended for 2025 — so either there is a Schedule C or E nobody has recorded, or the vehicle belongs on the **company's** return. §1 currently records the engagement as 1040-only.
+- ✅ ~~Map the Melomed group~~ — **ANSWERED 2026-08-29, mirrored here 2026-09-12:** R & G Friendly Inc belongs to Grigoriy & Margarita alone; Igor Melomed's household is unrelated (§1/§5).
+- ✅ ~~Give this client its first full historical pass~~ — **DONE 2026-09-12.** Ping (zero results), Gmail (full history to 2023-01-12), Drive (personal folder walked in full), Double (full activity log + notes + contacts). See §6 log.
+- **Confirm the real 2025 filing date if it ever matters** — 74 days between signature and `filedAt`, and the sibling record shows the same pattern (§6). *Not chased this run — low priority, no budget spent on it.*
+- 🔴 **Work out which schedule the vehicle mileage belongs on, and in which year the sale fell.** ⚠️ **A return of W-2 wages plus an S-corp K-1 has no use for mileage at all** — unreimbursed employee vehicle expense is suspended for 2025 — so either there is a Schedule C or E nobody has recorded, or the vehicle belongs on the **company's** return. §1 currently records the engagement as 1040-only. 🔎 **A lead exists (§5): `honda.pdf` ×3 sits in the 2024 Drive folder** — narrows the likely year but was not opened to confirm.
+- 🔎 **Ask Lilian or Julia to open the encrypted 2024-10-23 → 2024-11-22 Florida DOR "Power of Attorney form" correspondence (§6)** and confirm whether it is an earlier phase of the 2025 sales-tax audit already documented on [`rg-friendly.md`](./rg-friendly.md), or a separate matter. Not opened this sweep (encrypted Microsoft Purview message).
+- **Feed the ownership settlement and the earlier FL DOR correspondence finding back into [`rg-friendly.md`](./rg-friendly.md)** — both concern that file more than this one but were found while sweeping this client; not edited here as it is outside this sweep's assigned scope (already swept 2026-08-29).
 
 ### Information still needed
 
-- [ ] **Who owns R & G Friendly Inc**, and how this household relates to the other Melomed household
-- [ ] Which state they live in, and their working language
-- [ ] Whether there are dependants
-- [ ] Everything before March 2026, and every source other than Double and Gmail — never swept
+- [x] ~~Who owns R & G Friendly Inc~~ — **ANSWERED 2026-08-29: Grigoriy & Margarita Melomed** (§1/§5)
+- [x] ~~How this household relates to the other Melomed household~~ — **ANSWERED 2026-08-29: unrelated** (§1/§5)
+- [ ] Which state they live in, and their working language — searched Double properties, Gmail and Drive folder names this run; none state it explicitly
+- [ ] Whether there are dependants — not found in any source searched
+- [x] ~~Everything before March 2026, and every source other than Double and Gmail~~ — **first full historical sweep completed 2026-09-12** (Ping, Gmail, Drive, Double all read; see §6 log)
 
 ## 7. Links
 

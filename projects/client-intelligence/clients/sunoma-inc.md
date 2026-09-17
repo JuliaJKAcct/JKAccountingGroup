@@ -1,6 +1,6 @@
 # Sunoma Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-09-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -78,6 +78,7 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
   4. **Monthly JEs, per store:** Monthly JE (LP), Monthly JE (AP), Expenses JE (LP), Expenses JE (AP), Cash-on-Hand adjustment, Inventory adjustment, Deposit-Fee (MRCH) AP, Deposit-Fee (MRCH) LP.
   5. **Reconcile intercompany loans (Sunoma ↔ Magnum 152)** — a recurring **monthly closing task** ("Reconcile Sunoma/Magnum loans — to discuss with Julia"), assigned to Maria, due around the 10th of the following month. _(Double tasks/activity log, 2026-08-01)_
 - **Categorization quirks:** _(see §5)_
+- **Reporting limit confirmed:** the Balance Sheet **cannot** be produced by individual store/class in QuickBooks — only the P&L can be split that way. When the owner asks for per-store financials, only a P&L-by-class can be delivered; the Balance Sheet is entity-wide. _(Gmail "Paperwork request," 2026-09-03/04)_
 
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** _(Double)_; **1099 preparation** included.
@@ -121,17 +122,20 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: zero activity-log entries, zero notes. New facts found in §5/outstanding items above (intercompany-loan work confirmed, two Drive files touched). Chase pass on all five §6 items — results above; the Auto Pawn April-2024 report and the legal-matter confirmation not chased this run (budget).
 - 2026-08-29 — **Incremental sweep (baseline 2026-08-22→2026-08-29).** Double: **June 2026 monthly close finally marked Done 2026-08-24** — Monthly Journal Entries, A/R and A/P Aging, Cash Flow Statement, Balance Sheet and P&L all closed that day (added to §5). Zero new notes. Gmail: a search of `(Sunoma OR "Igor Melomed" OR "Lucky Pawn" OR "Auto Pawn") after:2026/08/22` surfaced only pre-baseline correspondence (a Jan-2026 loan-interest thread) plus the Magnum-side vendor-login/Bravo-tender threads, which belong to [`magnum-152.md`](./magnum-152.md), not here — no Sunoma-specific new item found. A targeted donation-follow-up search (`(Sunoma) (donation OR donated OR charity) after:2026/08/22`) found nothing. Drive: "Sunoma Process" (doc guide) and "Sunoma journal entry 2026.xlsx" were both touched again 2026-08-24 — ongoing routine work, no new distinct fact beyond continued activity. Ping: no legible new content. Chase pass on all five §6 items — results below.
+- 2026-09-12 — **Incremental sweep (baseline 2026-08-29→2026-09-12).** Double: 0 new notes. Activity log (2026-09-02→09-04) shows July-close tasks progressing — ADP JE renaming, Merch/PaymentsHub deposit-date fixes, ADP-vs-QBO reconciliation, PayPal and Chase Credit Card reconciliations — but **no `EndClose` status entry appeared for the July period in this window**, meaning the close has not yet been marked Done (continuing the pattern already flagged: June's close finished ~2 months late, on 2026-08-24). A previously undocumented bank task, **"1022 Bank of Ozark,"** was closed out 2026-09-02 — a bank feed/account not on the §3 systems table; flagged for confirmation with Maria (added below as an information-still-needed item rather than asserted as a new account, since it could also be a one-off named transaction). Gmail: a search of `(Sunoma OR "Igor Melomed" OR "Lucky Pawn" OR "Auto Pawn" OR Magnum OR "US Pawn") after:2026/08/29` surfaced a routine "Sunoma Reports for August 2026" request (2026-09-11, still awaiting the owner's upload) and the "Paperwork request" thread (2026-09-03/04, see §4 — P&L-by-store vs. Balance Sheet limitation) but nothing new on the donation, the reverted organizer, or Bravo access. Ping: no legible new content. Drive: "Sunoma Process" touched again 2026-09-04 (routine). Chase pass on all outstanding items — results below.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Donated-inventory tax deduction** — STILL OPEN, now ~37 days pending since 2026-07-23, no deadline. A targeted search bounded ≥2026-08-22, run 2026-08-29, found no update.
-- **"JK 2025 Business Tax Organizer - Sunoma" reverted to draft** by Lilian (2026-07-31) — STILL OPEN, now 29 days pending, no deadline; a targeted search found no follow-up. _(Double activity log, 2026-08-01)_
-- **Recurring Bravo access/license problems** — STILL OPEN, no new correspondence found this window. _(Gmail, 2026-07)_
-- A missing **Auto Pawn April-2024 expense report** was requested from the owner (2026-06-28) — CHASED this run: a targeted search (`("Auto Pawn" OR "April 2024") expense report after:2026/08/22`) found nothing; still open, now ~62 days pending since the original ask.
+- **Donated-inventory tax deduction** — STILL OPEN, now ~51 days pending since 2026-07-23, no deadline. A targeted search bounded ≥2026-08-29, run 2026-09-12, found no update.
+- **"JK 2025 Business Tax Organizer - Sunoma" reverted to draft** by Lilian (2026-07-31) — STILL OPEN, now 43 days pending, no deadline; a targeted search found no follow-up. _(Double activity log, 2026-08-01)_
+- **Recurring Bravo access/license problems** — STILL OPEN, no new correspondence found this window either. _(Gmail, 2026-07)_
+- A missing **Auto Pawn April-2024 expense report** was requested from the owner (2026-06-28) — not separately re-chased this run (budget; same search as on [`magnum-152.md`](./magnum-152.md) covers it, and that search found nothing either); still open, now ~76 days pending since the original ask.
+- **July 2026 close still not marked Done** — new this run: close-task activity ran 2026-09-02→04 but no `EndClose` status entry followed, unlike June's close (which did eventually finish, ~2 months late, on 2026-08-24). Worth watching whether this is another multi-week lag. Pending since 2026-09-04 (last observed activity), no deadline stated.
 - **Legal matter — bank-statement compilation** sent to the owner 2026-07-20/21 — not re-chased this run (budget; delivered already, no reply expected).
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm the pawn-group relationship (Sunoma / Magnum)
 - [ ] Which Drive folder is canonical; credentials location
+- [ ] Confirm with Maria whether **"1022 Bank of Ozark"** (a close-checklist task closed 2026-09-02) is a bank account belonging to Sunoma not yet on the §3 systems table, or something else entirely — not in the file's existing bank list (Truist ×2, Chase CC, Truist Visa, PayPal)
 
 ## 7. Links
 

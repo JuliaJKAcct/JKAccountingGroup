@@ -1,6 +1,6 @@
 # Greenair International LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-29
+> **Status:** Active _(⚠️ but see the 🔴 flag in §5 — the Double record was archived and QuickBooks disconnected 2026-09-09/10; this needs a human decision on whether "Active" still applies)_ · **Owner:** Liudmyla · **Last updated:** 2026-09-12
 >
 > ✅ **First full historical sweep completed 2026-08-15** — Gmail (inbox + sent, full history,
 > back to 2025-09), Double (client record, notes — none exist — contacts, properties), Google
@@ -124,7 +124,8 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- The primary contact is **also the contact for `SETATECH USA, INC.`** (Double id 706706, archived 2026-07-22, ~$40–50k/pay-period contractor payroll via Gusto) and holds a separate personal Double record. Setatech is **already tracked** in its own client-intelligence file and in `FOLLOW-UPS.md` row 35, **owned by Julia** — not part of Liudmyla's book, and not actioned here.
+- 🔴 **NEW, 2026-09-09/10: the Double record was DISCONNECTED and then ARCHIVED.** `list_activity_log` shows **`client_disconnected` on 2026-09-09 (by Julia Kononova)** — this almost certainly means the QuickBooks connection itself, given the long-open, never-resolved QuickBooks-subscription-renewal-failure item below — followed by **`client_archived` on 2026-09-10 (by Lilian Gonzalez)**. ⚠️ **A search of this window's Gmail (bounded, business name + contact name) found NO explanation** — no email thread mentions why, and no reply exists to the original 2026-03-17 "could not renew" forward. **The client also has an unexplained overlap**: its 2025 Business Tax Organizer was **opened by the client contact on 2026-09-07**, three days before the archival — an organizer being actively worked the same week the account was wound down is worth a human's attention. This may be the resolution (in the negative) of the standing "confirm the QuickBooks renewal was fixed" open item — or it may be unrelated (e.g. an end-of-engagement decision). **Flagging for Lilian/Julia rather than assuming either.**
+- The primary contact is **also the contact for `SETATECH USA, INC.`** (Double id 706706, archived 2026-07-22, runs contractor payroll via Gusto — figures stay in Double/Gusto, not here) and holds a separate personal Double record. Setatech is **already tracked** in its own client-intelligence file and in `FOLLOW-UPS.md` row 35, **owned by Julia** — not part of Liudmyla's book, and not actioned here. _(Note: Setatech's own Gusto payroll troubles are continuing as of 2026-09-11 — a contractor payment failed to process — but that is Setatech's matter, tracked in its own file, not Greenair's.)_
 - The client's **QuickBooks subscription failed to auto-renew** around 2026-03-15; the client asked the firm for help (2026-03-17). Whether it was resolved is not recorded — see §6.
 - The firm has prepared this client's **1099s for tax years 2023 and 2024**, and prior-year returns for both years exist in Drive.
 - **Assigned to Liudmyla Kazannik.** First full historical sweep completed 2026-08-15 — see §6.
@@ -149,13 +150,14 @@ A running, dated record as we build this profile.
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: 0 activity-log entries this window, consistent with the Gmail correspondence gap found (nothing client-specific since 2026-04-02). Chase pass on the one outstanding item — now flagged as a live risk, not just unconfirmed (see below).
 - 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: 0 activity-log entries again. Gmail: a business-name search bounded to this window returned **no client-specific result at all** — not even automated invoice/payment noise, which had continued monthly through 2026-04-02. The silence now runs from 2026-04-02 through 2026-08-29, essentially five months. Chase pass on the one outstanding item — still open, age updated below.
+- 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29→2026-09-12; the 2026-09-05 run never completed — see `sweep-state.md`).** Double: **major, unexplained change** — bookkeeping tasks moved In Progress on 2026-09-01 (routine), then the client's 2025 Business Tax Organizer was opened by the contact on 2026-09-07, then the client record was **disconnected 2026-09-09** and **archived 2026-09-10** (now §5, flagged for a human decision). Gmail: a bounded search (business name + contact name, after:2026/08/29) returned **zero results** — the correspondence silence, previously ~5 months, now runs unbroken through this sweep, and no email explains the disconnection/archival either. Ping: `search_meetings` scoped to "Greenair International"/QuickBooks returned only pre-baseline, unrelated garbled content. Chase pass on the one outstanding item — see below; its status is now entangled with the archival finding.
 
 ### Outstanding items (CI-only — never in the SOP)
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Confirm the QuickBooks subscription-renewal failure (2026-03-17) was actually resolved** — STILL OPEN, **165 days** pending since 2026-03-17. A targeted search (2026-08-29) found only the original "Could not renew…help please…" forward, no reply or resolution email. ⚠️ The client-specific Gmail silence now extends to **nearly five months** (last activity of any kind was the 2026-04-02 "Payment received" notice) — this is a live risk, not an unconfirmed fix, and it is worth a direct outreach to the client rather than another passive search next week.
+- 🔴 **Confirm the QuickBooks subscription-renewal failure (2026-03-17) was actually resolved** — STILL OPEN, **~180 days** pending since 2026-03-17, and **now overtaken by events**: the QuickBooks connection was disconnected 2026-09-09 and the client archived 2026-09-10 (§5). A targeted search (2026-09-12) again found only the original "Could not renew…help please…" forward, no reply or resolution email, and nothing explaining the disconnection/archival either. **This is no longer a passive wait-and-recheck item — it needs Lilian/Julia to say what happened and whether the engagement is ending.**
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit

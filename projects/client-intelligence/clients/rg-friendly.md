@@ -1,6 +1,6 @@
 # R & G Friendly Inc — *DBA Lucky Pawn & Jewelry*
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-12
 
 > ✅ **First full historical sweep completed 2026-08-29** (Ping org-wide — nothing found; Gmail full history back to 2025-02, with Drive evidence of the engagement to 2021; Drive; Double activity log — all unbounded). See §6 log. 🔴 **Biggest finding: OWNERSHIP IS NOW SETTLED — see §5 bullet 1.** Swept together with [Igor Melomed & Yelena Lovkina](./igor-melomed.md) at the owner level, per this run's instructions.
 
@@ -123,6 +123,7 @@ the actual details (and Claude can pull them live when a task needs them).
   - **Gmail** (full history, no date bound — extended well back of the prior 2026-03 catch-up): found the engagement runs back to at least **2025-05** and surfaced a full **Florida Department of Revenue sales-tax audit, 2025-05 through 2025-07, PASSED** (§4/§5) — a major finding this file did not previously carry at all. Also found the **ADP payroll relationship predates the March 2026 QuickBooks integration**, back to Nov 2025 (§4-Payroll). **No thread anywhere connects this client to Igor Melomed's household.**
   - **Google Drive** (`excludeContentSnippets: true`): confirms the engagement runs back to **2021** — a filed 2021 1120-S with signature documents and filing instructions, a 2020 personal 1040 for Margarita Melomed, and Grigoriy's 2021 personal 1040 and W-2. Also confirms the FP/RAZZ store-number naming (#3941 Oakland Park, #3888 Davie) used in monthly reconciliation folders back to 2022.
   - **Double** (`list_activity_log`, full history — 11 entries): confirms the 2025 project moved to `filed` on 2026-05-25; nothing else new.
+- 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29) — genuinely quiet: no activity found in any source.** Double: 0 notes, 0 activity-log entries in the window, client properties unchanged (`platform`, `Bookkeeping` and `Payroll` still read as understating the engagement — the correction flagged 2026-08-29 has not been made). Gmail: a plain "R & G Friendly / Lucky Pawn / Grigoriy Melomed / Margarita Melomed" search since 08-29 returned only a false-positive match (a January 2026 thread about Sunoma/Magnum 152/7806 Miami LLC that cc's Igor Melomed's own email address, not this client's) and the firm's own 08-29 weekly-sweep report — nothing genuinely new for this client. A targeted chase for the 2025-08-25 encrypted FL DOR "Communication" (searching "Florida Department of Revenue" + "R & G"/"Lucky Pawn", and by the sender name "Erika Gonzalez-Solis") found only older, already-known correspondence (a 2025-07-18 out-of-office auto-reply, the 2024 audit-notification email) — **the 2025-08-25 encrypted communication itself was not found again this pass and remains unopened and unconfirmed.** Ping: org-wide semantic search for "Grigoriy Margarita Melomed R&G Friendly pawnbroker license 7004" returned no legible, client-specific results. Google Drive: a title search for "R & G Friendly" modified since 08-29 returned zero files.
 
 ### Tax year 2025 — the review
 
@@ -133,10 +134,10 @@ the actual details (and Claude can pull them live when a task needs them).
 ### Outstanding items (CI-only — never in the SOP)
 
 - [x] ~~Settle who OWNS this company~~ — **ANSWERED 2026-08-29:** Grigoriy & Margarita Melomed (§5 bullet 1). Igor Melomed's household is unrelated.
-- ⚠️ **Correct the Double record** — `platform`, `Bookkeeping` and `Payroll` all understate what is actually happening here. _(Open since 2026-08-14 — 15 days as of this sweep.)_
-- **Check the PNC → Truist cut-over in the 2025 books**, and confirm the card feed question from 2024 is closed.
-- **Review the owner's reasonable compensation** — a W-2 exists, so the question is the amount, not the existence.
-- **Confirm the 2025-08-25 FL DOR "Communication" (encrypted) was a routine audit follow-up**, not a new matter — found but not opened this sweep.
+- ⚠️ **Correct the Double record** — `platform`, `Bookkeeping` and `Payroll` all understate what is actually happening here. _(Open since 2026-08-14 — ~29 days as of 2026-09-12. Re-chased this sweep — properties unchanged, still uncorrected.)_
+- **Check the PNC → Truist cut-over in the 2025 books**, and confirm the card feed question from 2024 is closed. _(Pending since unknown — no start date in the file for this specific action item; not specifically re-chased this sweep, budget went to the FL DOR communication below.)_
+- **Review the owner's reasonable compensation** — a W-2 exists, so the question is the amount, not the existence. _(Pending since unknown — no start date in the file; not chased this sweep, no budget.)_
+- **Confirm the 2025-08-25 FL DOR "Communication" (encrypted) was a routine audit follow-up**, not a new matter — found but not opened 2026-08-29, still unopened; ~383 days old at the underlying date (2025-08-25) and ~18 days since first flagged (2026-08-29). Re-chased this sweep with two targeted Gmail searches — the encrypted communication was **not found again**, and no further correspondence on it exists in any source searched. This should be escalated for someone to open the original encrypted item directly rather than searched for again.
 
 ### Information still needed
 

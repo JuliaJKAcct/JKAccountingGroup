@@ -234,6 +234,7 @@ was said). Better a sourced, low-confidence note than nothing.
 |---|---|
 | Atman Parts | 763909 |
 | BEST BROKER REALTY LLC | 706712 |
+| BOGOPOLSKYY, MARAT and YULIANA | `710627` |
 | ECOORGANIC USA LLC | 719473 |
 | GOSSIP MIAMI LLC | `710577` |
 | Kolo Florida Inc | 706626 |
@@ -279,9 +280,41 @@ was said). Better a sourced, low-confidence note than nothing.
 | Grigoriy & Margarita Melomed | 710633 |
 | M5 Studio Miami | *(none — no Double account confirmed; search Double by name first, then sweep by name)* |
 | Kompozit USA | *(none — PROSPECT, no Double account yet; Gmail + Drive only, and no `sweep-state.md` row until it signs)* |
+| Vitaliy Vasyutyk (10-company group) | 710668 |
+| Valentin Volzhanskiy | 710663 |
+| Zakom Incorporated | 710612 |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
+
+> ⓘ **Valentin Volzhanskiy added 2026-09-12**, when the 2025 pre-return review found he had no CI
+> file at all. ⚠️ **He is `platform: none` and `Bookkeeping: N/A`, so there is nothing to sweep in
+> QuickBooks** — the value is in **Gmail, Drive and Double files**, which is where his documents
+> actually arrive *(all of his 2025 ones landed on the April deadline in one burst)*. 🔑 **And his
+> 1099-NEC payers are themselves firm clients**, so a fact about his income can surface under
+> **their** records rather than his — sweep with that in mind.
+> **No `sweep-state.md` row until the first full historical pass has run.**
+
+> ⓘ **Zakom Incorporated added 2026-09-13**, when Julia's question about what the client had uploaded found he
+> had **no CI file and no Double notes at all**. ⚠️ **`platform: none` and `Bookkeeping: N/A` — there is nothing to
+> sweep in QuickBooks, and no ledger anywhere**; for this client the documents arrive **through the Double portal and
+> the organizer itself**, which is where the 2025 books turned up. 🔑 **The owner has a second, personal Double record**
+> (`Oleg Zakala & Milana Podrugina`, `710652`, no CI file yet), so a company fact can arrive under the personal one and
+> the reverse — a personal loan document was uploaded into the company's organizer. Sweep with that in mind.
+> **No `sweep-state.md` row until the first full historical pass has run.**
+
+> ⓘ **Vitaliy Vasyutyk is ONE row for TEN companies, and that is deliberate.** He holds ten
+> LLCs — **nine Florida and one TENNESSEE (Zumfi 2)** — all reached by one portal contact, and the firm bills them through six
+> customer records in its own A/R ledger that do **not** map one-to-one onto the companies — so a fact about
+> one company routinely arrives under another. Sweep him **by owner** (`710668`) and route each
+> fact to the company it belongs to, per the skill's "sweep by owner, assign by company" rule.
+> The companies: Nika Realty `710583` · 2 Romans Realty `710561` · Sunshine Renovations 1 `710599`
+> · SYS 1 Realty `710600` · Remodel Master Realty `710590` · Fastighet `710573` · Tropical Coast 1
+> `710603` _(dissolved 2026-03-31)_ · Zumfi 1 `710613` · Zumfi 2 `710614` · Fizum 1 `710574`.
+> ⚠️ Only the **owner-level** file [`clients/vitaliy-vasyutyk.md`](../clients/vitaliy-vasyutyk.md)
+> exists so far (created 2026-09-07); the per-company files are still owed, so a run that learns
+> something company-specific writes it into that file and says which company it belongs to.
+> **No `sweep-state.md` row until the first full historical pass has run.**
 
 > ⓘ **M5 Studio Miami has no Double id, and that is not an oversight.** It is a **company set-up**
 > client (EIN application in flight, 2026-08-14) and nobody has established whether it exists in

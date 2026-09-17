@@ -1,6 +1,6 @@
 # Kompozit USA
 
-> **Status:** Prospect — proposal sent 2026-08-19, now in active negotiation (a 30-day trial period was floated 2026-08-25 as an alternative to the firm's standard annual contract; outcome of the follow-up call pending) · **Owner:** Julia · **Last updated:** 2026-08-29
+> **Status:** Prospect — proposal sent 2026-08-19, now in active negotiation (a 30-day trial period was floated 2026-08-25 as an alternative to the firm's standard annual contract; outcome of the follow-up call pending) · **Owner:** Julia · **Last updated:** 2026-09-12
 >
 > ⚠️ **Coverage gap, weekend sweep 2026-08-22:** this client has no Double account yet and is **not
 > named in `weekend-ci-sweep.md`'s scope or exclusion table** — a genuine gap found by this run's
@@ -171,6 +171,18 @@ link). Never write the credential itself here.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-12 — **Bounded prospect sweep (Gmail in:inbox+in:sent + Google Drive, since
+  2026-08-29; no Double/Ping — no Double account exists).** Searched Gmail for "Kompozit" /
+  "Ostapenko" / "Dmytro", both in:inbox and in:sent, `after:2026/08/29`. The only matches
+  were the firm's own automated weekly repo-coherence-audit emails (2026-08-31, 2026-09-07 —
+  unrelated, keyword false positives) and the firm's own 2026-08-29 weekly CI-sweep digest
+  (sent before the search boundary's day-end, also unrelated). **No message from Dmytro
+  Ostapenko or anyone at Kompozit was found on either side since 2026-08-25** (the last known
+  contact, already in this file). Searched Drive for "Kompozit" / "Ostapenko" —
+  (`excludeContentSnippets: true`); results were unrelated files only (old bank exports,
+  a spreadsheet, a condo-association notice) — no Kompozit folder or document. Both open
+  items below are unchanged; the proposal's 30-day validity (through ~2026-09-18) now has
+  about 6 days left
 - 2026-08-29 — **Bounded prospect sweep (Gmail in:inbox+in:sent + Google Drive, since
   2026-08-19; no Double/Ping — no Double account exists, so nothing was searched there).**
   Found a **third Zoom call** the file's log did not yet have: "Dmytro Ostapenko Follow Up
@@ -223,10 +235,10 @@ link). Never write the credential itself here.
 
 - **Still to confirm:** exact legal entity name (Sunbiz — Facebook suggests "Art
   Kompozit USA") and entity/return type. Contact settled (Dmytro Ostapenko); the proposal
-  went out 2026-08-19 with start "1st of the month after signing". STILL OPEN as of
-  2026-08-29 (10 days since the proposal went out) — a Gmail search (in:inbox + in:sent,
-  `after:2026/08/19`, on 2026-08-29) for "Kompozit"/"Ostapenko"/"Dmytro" found no message
-  supplying either
+  went out 2026-08-19 with start "1st of the month after signing". **STILL OPEN as of
+  2026-09-12 (24 days since the proposal went out)** — a Gmail search (in:inbox + in:sent,
+  `after:2026/08/29`, on 2026-09-12) for "Kompozit"/"Ostapenko"/"Dmytro" again found no
+  message supplying either
 - **Pricing settled** (2026-08-19): one all-in fee, controller included — decision recorded
   in §1 and the log
 - **Owner reply to the proposal — now an active NEGOTIATION, not a clean accept/decline.**
@@ -236,8 +248,11 @@ link). Never write the credential itself here.
   needs more time to decide. They agreed to a follow-up call "Friday morning at 10 or 11"
   (likely 2026-08-28). **A Gmail search (in:inbox + in:sent, `after:2026/08/26`, on
   2026-08-29) for "Kompozit"/"Ostapenko"/"Dmytro" found no record that call happened or
-  its outcome** — so whether the trial was accepted is unknown as of this sweep. Proposal
-  is valid 30 days from 2026-08-19 (through ~2026-09-18)
+  its outcome** — so whether the trial was accepted is unknown as of this sweep. **A second,
+  wider search (`after:2026/08/29`, on 2026-09-12) still found nothing** — no confirmation
+  the Friday follow-up call ever took place, and no reply from Dmytro on any channel in the
+  18 days since the 2026-08-25 call. Proposal is valid 30 days from 2026-08-19 (through
+  ~2026-09-18 — about 6 days left as of this sweep)
 
 ### Information still needed
 

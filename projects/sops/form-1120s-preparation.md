@@ -3,7 +3,15 @@
 > **Status:** 🟡 **DRAFT — in review with Lilian.** Written 2026-08-14 while preparing the
 > firm's first 1120-S with a session assisting, and shaped by what a first-time preparer
 > actually needed to be told. **Remove this note when Lilian signs it off.** ·
-> **Owner:** Lilian · **Last updated:** 2026-08-23
+> **Owner:** Lilian · **Last updated:** 2026-09-06
+>
+> ⚠️ **The Atlas render beside this file (`.html`) is a CURATED view and is dated 2026-09-05 — it does
+> NOT yet carry §11F.** 🛑 **Its date is deliberately left behind rather than bumped**, because a generated
+> page that asserts a currency it does not have is worse than one honestly dated. 🛠️ **Re-curating it is an OPEN CURATION DECISION, not a chore** —
+> [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) **row 78**, which already asks the same question about §5C-v,
+> §5C-vi and §5C-viii: *what does the team-facing artifact carry?* ⛔ **Not a session's call.** ⓘ *Row 80
+> is the separate Hub-build blocker; this render is built from its own body file and does not depend on it.* ⓘ *The Hub renders this file in full and is the team-facing view; that render
+> is a selective summary.*
 >
 > 🔵 **One part of this DRAFT is already FIRM POLICY and is not waiting on the sign-off: §5C-v**,
 > Julia's rule on netting a shareholder's contributions against their distributions. **Read it
@@ -362,8 +370,7 @@ ordinary sale of the business there is nothing to elect, nothing to sign, and no
 a buyer nobody has spoken to.**
 
 > 🔑 **WHY THIS MATTERS SO MUCH, IN ONE LINE:** under method A the return reports a **per-day fraction of
-> a full year**, which is not a real result of anything. **On the pilot the two methods gave 36,990 and
-> 51,452 for the same line 22.** ⛔ **Getting this wrong is not a presentation error.**
+> a full year**, which is not a real result of anything. **On the pilot the two methods gave figures roughly 40% apart for the same line 22.** ⛔ **Getting this wrong is not a presentation error.**
 >
 > 🛑 **AND DO NOT REASON YOUR WAY TO THE RIGHT ANSWER BY THE WRONG ROAD.** A session on the pilot argued
 > *"nobody made a §1362(e)(3) election, so the books cannot be closed"* — and that argument **fails**,
@@ -800,7 +807,7 @@ shortcut is the special case of it.**
 
 | What the preparer does | line 1a | line 1c | Caught? |
 |---|---|---|---|
-| Subtracts refunds inside 1a **and leaves 1b blank** | **understated** by the refunds | ✅ **correct** — because `1c = 1a` and the refunds came off already | 🔴 **Only ONE check catches it, and it exists because of this.** §14's check on these lines is **internal** — `1a − 1b = 1c` — and it passes identically whether or not the refunds were taken out of 1a, because both sides move together; every other tie-out runs off **1c or below**. **So §14 now carries a check that compares line 1a to the books account by account** *(and line 1b to the refunds account)*. ⛔ **Skip that one and the return foots, the P&L agrees, and line 1a is understated with nothing to surface it.** ✅ **The Schedule B question that asks whether receipts AND assets were both under $250,000 is measured on it** *(question 11 on the 2025 form — ⚠️ find it by its wording, §6)*: the instructions define *total receipts* as starting from *"Gross receipts or sales (page 1, line 1a)"*. ⚠️ **Whether the §448(c) / §163(j) gross-receipts test is measured on 1a or on 1c (net of returns) is NOT settled here** — the 1120-S instructions only cross-refer to §448(c), and the regulation could not be read. **Check it before relying on either** |
+| Subtracts refunds inside 1a **and leaves 1b blank** | **understated** by the refunds | ✅ **correct** — because `1c = 1a` and the refunds came off already | 🔴 **Only ONE check catches it, and it exists because of this.** §14's check on these lines is **internal** — `1a − 1b = 1c` — and it passes identically whether or not the refunds were taken out of 1a, because both sides move together; every other tie-out runs off **1c or below**. **So §14 now carries a check that compares line 1a to the books account by account** *(and line 1b to the refunds account)*. ⛔ **Skip that one and the return foots, the P&L agrees, and line 1a is understated with nothing to surface it.** ✅ **The Schedule B question that asks whether receipts AND assets were both under $250,000 is measured on it** *(question 11 on the 2025 form — ⚠️ find it by its wording, §6)*: the instructions define *total receipts* as starting from *"Gross receipts or sales (page 1, line 1a)"*. 🟢 **SETTLED — it is measured on 1c, NET of returns and allowances.** 📄 **Instructions for Form 8990 (Rev. 12-2025), verbatim:** *"Gross receipts for any tax year must be reduced by returns and allowances made during the year."* 🔗 **§11F ④ has the full build.** ⓘ *This row previously read "NOT settled here"; the 8990 instructions state it outright.* |
 | Subtracts refunds inside 1a **and also puts them on 1b** | understated | **understated** too — deducted twice | 🟡 usually, because 1c stops agreeing with the books |
 
 🔑 **So the rule is not "don't double count" — it is `refunds NEVER touch line 1a`, full stop.**
@@ -1036,7 +1043,7 @@ each expense that has its own line, then group the remainder.
 
 | Line | Category | Typical QuickBooks accounts |
 |---|---|---|
-| **7** | Compensation of officers | Salaries paid to **officers** — not to every shareholder-employee (§5C-i). Form 1125-E is required at **$500,000 or more** of total receipts |
+| **7** | Compensation of officers | Salaries paid to **officers** — not to every shareholder-employee (§5C-i). Form 1125-E is required at **$500,000 or more** of total receipts. 🛠️ **YOU CANNOT TYPE THIS LINE — the entry route is §5C-i** |
 | **8** | Salaries and wages | Everyone else's wages — **and only actual wages**. See 5C-i |
 | **9** | Repairs and maintenance | |
 | **10** | Bad debts | |
@@ -1064,6 +1071,28 @@ total expenses per the P&L
 
 Then **itemise** it in the attached statement. If your line 20 does not equal that subtraction,
 you have either double-counted or dropped an account.
+
+#### 🧭 The subsections of §5C, in the order they appear
+
+⚠️ **The numbers are NOT the reading order, and that is deliberate.** Each one was added the first
+time the firm hit the problem it describes, and **the number never changes afterwards** so that every
+cross-reference in this SOP — and in the working papers that cite it — keeps pointing at the same
+place. Read down this table, not up the numbers.
+
+| | Subsection | What it is for |
+|---|---|---|
+| **1** | **5C-vi** · 🔴 Money the entity collects for somebody else | tips, gratuities and pass-throughs — money that runs through the company and is not its income |
+| **2** | **5C-iii** · 🛑 Distributions hide inside ONE capital account per shareholder | 🔑 **the entry point to the equity block.** Why the balance sheet cannot give you the two figures the return needs |
+| **3** | **5C-vii** · 🛠️ How to pull the two totals out of QuickBooks | the click-path for 2, the **balance-vs-movement** trap, and what the rows hold that the account name does not say |
+| **4** | **5C-iv** · ⚠️ A debit in a capital account is not automatically a distribution | how to classify what 3 puts in front of you |
+| **5** | **5C-v** · 🔵 **FIRM POLICY** — net the account, report distributions at zero | 🔵 **the one part of this draft that is already firm policy**, and its five gates |
+| **6** | **5C-ii** · ⚠️ Line 12 is tax the COMPANY bears | sales tax collected is not one |
+| **7** | **5C-viii** · 🔴 No payroll and big distributions | the reasonable-compensation exposure, and how to raise it with the client |
+| **8** | **5C-i** · ⚠️ Line 8 is WAGES — **and the ENTRY ROUTE for line 7** | not the "payroll" accounts — the officer/staff/platform-fee split; **plus how officer compensation is actually keyed in ATX**, which is not on line 7 |
+
+🔑 **Items 2 → 3 → 4 → 5 are one chain and are meant to be read in that order.** 2 says what the
+return needs, 3 is how to get it out of the software, 4 is how to read what comes back, and 5 is how
+the firm then presents it.
 
 ### 5C-vi · 🔴 MONEY THE ENTITY COLLECTS FOR SOMEBODY ELSE — tips, gratuities, pass-throughs
 
@@ -1187,6 +1216,222 @@ apply the firm's netting policy without it — its own test is *"are the contrib
 distributions?"*, which is unanswerable from a net figure. **Split first. Decide the presentation
 second.**
 
+🛠️ **And "open the ledger and total them separately" is easier said than done if nobody has shown you
+which report to run. §5C-vii, immediately below, is the four reports — which THREE of them can give
+you both totals and which one can only ever confirm a net — and the one distinction that decides
+whether the number you get is even the right one.**
+
+### 5C-vii · 🛠️ HOW TO PULL THE TWO TOTALS OUT OF QUICKBOOKS — and the balance/movement trap
+
+**Nobody should have to add up a hundred ledger rows by hand, and nobody should have to ask.** This
+section is the click-path.
+
+🛑 **TWO THINGS TO FIX IN YOUR HEAD BEFORE THE ROUTES, OR THE REPORT WILL HAND YOU THE WRONG NUMBER.**
+
+**① You need TWO totals, and "the total at the bottom" is only ONE.** §5C's opening rule is *gross out
+· gross in · net — **never the net alone***. ⛔ **A report's own total is the NET.** The two figures the
+return needs come from **totalling the debit side and the credit side separately** (§5C-iii) — which
+means **reading the rows**, not reading a footer.
+
+**② A route can only give you the two totals if it gives you the ROWS.** That is the whole test, and
+it splits the four routes cleanly:
+
+| | Rows? | So it can give you |
+|---|---|---|
+| **ⓐ ⓑ ⓓ** | ✅ **yes** — each one lists the transactions | **both totals**, once you total the two sides yourself. *(Their own footers are still nets — ignore the footer, read the rows.)* |
+| **ⓒ** | ⛔ **no** — a change column and nothing behind it | **the NET only. Never the split.** It is a cross-check, not a source |
+
+**And how the client's chart is laid out decides how much work that is:**
+
+| The chart looks like | What it means for you |
+|---|---|
+| 🔴 **ONE pooled capital account per shareholder** *(§5C-iii says this is the usual case)* | the **per-shareholder** split already exists; the **contributions-vs-distributions** split does not. **You get it by totalling the two sides of that account's rows** — so ⓐ, ⓑ or ⓓ, and ⓐ is fine here because it is one account at a time anyway |
+| **A separate contributions account and a separate distributions account** *(less common)* | the **type** split already exists, so each account's net movement is a fast cross-check — ⛔ **but each account can still hold rows going the other way** *(see the six below)*, so the rows still have to be read before either figure is final. **And if there is more than one owner, the per-shareholder split does not exist at all** |
+
+🔑 **So: ⓑ is the one to run and keep, ⓐ is the quick one for a single account, ⓓ is ⓑ in another
+layout — and ⓒ can only ever confirm a net somebody else produced.**
+
+#### 🛑 FIRST — the distinction that decides whether your number is right at all
+
+| | What it is | Where you see it |
+|---|---|---|
+| **The BALANCE** | the account's total **since the company existed** — every year added together | the Balance Sheet |
+| 🔴 **The MOVEMENT** | only what happened **this year** | ⛔ **nowhere on a SINGLE-DATE Balance Sheet** — the **comparative** one has it, in its change column (route ⓒ) |
+
+🔴 **Schedule K line 16d asks for distributions MADE DURING THE YEAR. That is the MOVEMENT.**
+
+⛔ **Taking the balance off the Balance Sheet and typing it into 16d reports every distribution the
+company has ever made, in one year.** ⚠️ **And nothing in the tax software flags it** — the return
+comes out clean and wrong. **Same trap on the contributions side of Form 7203.**
+
+🔑 **Every route below gives the MOVEMENT rather than the balance. That is why they are the routes** —
+but see ① and ② above for which of them can give you the two totals rather than one net.
+
+#### The four routes, fastest first
+
+| | Route | Where | What you get |
+|---|---|---|---|
+| **ⓐ** | 🟢 **The account's own report** — *the fastest* | **Chart of accounts → find the account → the dropdown at its right → `Run report`** | set the dates to the tax year. **You get the account's transactions for the year, one account at a time** — about ten seconds each. ⛔ **Ignore the footer: that total is the NET.** ⚠️ **And this report prints an OPENING BALANCE and a CLOSING BALANCE around the rows** — in a section about the balance/movement trap, those are the two lines you must not pick up. **The year's rows are the answer; the balances are not.** ⚠️ **Check whether it gives you a debit/credit PAIR or one signed `Amount` column** — if it is a single signed column, the ⓓ warning below applies here too |
+| **ⓑ** | 🔵 **General Ledger, filtered** — 🟢 **THE ONE THAT ANSWERS THE QUESTION** | **Reports → `General Ledger` → set the year → `Customize` → `Filter` → `Distribution Account` → tick the equity account(s)** ⚠️ **`Distribution Account` is QuickBooks' own name for *the account a transaction line is distributed to* — it has nothing to do with shareholder distributions.** Do not read it as a shortcut | **every row** with its date, type, payee and description, and each account section closing with **`Total for <account>`** *(again, a net)*. 🔑 **Total the debits and the credits separately from the rows** — this is the report that lets you. **And it is the one to save with the working papers: both figures AND the evidence behind them, in one document** |
+| **ⓒ** | ⚖️ **Balance Sheet comparative** — *cross-check only* | **Reports → `Balance Sheet` → `Customize` → `Rows/Columns` → compare with the previous year**, and tick the change column ⚠️ *(the compare control has moved between QuickBooks versions — if you do not see it on the report bar, it is inside `Customize`)* | the **change column IS the movement** — but only ever the **net**. ✅ **Use it to confirm the NET from ⓐ, ⓑ or ⓓ by a different route** — two routes agreeing is what makes the figure safe to sign. ⛔ **It can never give you the gross split** |
+| **ⓓ** | ◻︎ **Transaction Detail by Account**, filtered to the equity account(s) | **Reports → `Transaction Detail by Account`** | the same row detail as ⓑ in a different layout — **so it answers the question too** — and it is the friendlier one to hand to someone else. ⚠️ **It shows ONE signed `Amount` column rather than a debit/credit pair**, so you split it by sign instead of by column — and **an equity account's normal side is CREDIT**, so get the sign convention straight on a row you already understand before trusting the totals |
+
+⛔ **What NOT to use as the source: the Statement of Cash Flows.** Its *Financing Activities* section
+does show owner money, but the software nets and reclassifies there in ways that do not always mirror
+the account. **For a figure that goes on a signed return, use the ledger — not something derived from it.**
+
+#### 🔴 The total is the START of the work, not the end
+
+**Run the report, then READ it.** The name of an account is not the nature of a transaction, and both
+accounts routinely hold rows that are not what the account is called:
+
+1. 🔴 **Money going OUT sitting inside the CONTRIBUTIONS account** — a debit in an account whose
+   normal side is credit. It is a distribution wearing the wrong label, and while it sits there it
+   **understates both figures at once.**
+2. 🔴 **Money coming BACK sitting inside the DISTRIBUTIONS account** — a credit in an account whose
+   normal side is debit. ⚠️ **Do NOT net it on sight.** 📌 **§5C-iv item 1 is the test**: it may be
+   netted only when it is an identifiable **ROUND TRIP** *(out and straight back, similar size, days
+   apart)*. **A capital contribution misposted into the distributions account is NOT a round trip** —
+   netting it understates **both** gross figures, so **Schedule K 16d, every K-1 box 16D, M-2 line 7
+   and Form 7203 lines 2 and 6 all come out short** *(line 7 subject to §10A's cap — where gross
+   distributions already exceed the AAA, line 7 is capped and may not move at all)*. ⛔ **And M-2 line 3 ONLY on a client that runs
+   contributions through it** — 📌 **on the textbook convention a capital contribution never touches
+   Schedule M-2 at all** *(§10.1 rule 6: it increases **basis**, not the AAA)*, and putting one on
+   line 3 to "fix" this overstates the AAA. **Check what the prior return did before you touch line
+   3** — §5C-v's **gate 4** exists for exactly this split. ⓘ *This also does not by itself flip §5C-v
+   gate 1 for a single shareholder: moving an amount from one side of that shareholder's account to
+   the other leaves the comparison unchanged. **Where it does break gate 1 is a SHARED
+   contributions/distributions account**, because there the netting can offset one owner's
+   contribution against another owner's distribution, which gate 1 exists to forbid.*
+3. ⚠️ **Owner health-insurance premiums** inside distributions — **potentially a deduction the company
+   is not taking, and it is chained to the payroll question.** A more-than-2% shareholder's premiums
+   are deductible by the corporation **only if they are included in that shareholder's Form W-2 box
+   1** — so where §5C-viii's no-payroll position is being taken, **there is no company deduction and no
+   self-employed-health-insurance deduction on the 1040 either.** ⚠️ **This SOP does not yet carry the
+   full treatment** *(the W-2 mechanics, the >2% test, the 1040 side)* — **say so rather than implying
+   it is covered**, and write it up the first time the firm actually takes the deduction.
+4. ⚠️ **Payments to a THIRD PARTY that look like labour**, paid out of the draw account — a
+   **Form 1099-NEC** question (§6B), whatever account they sit in.
+   ⛔ **NOT the same thing as payments to the SHAREHOLDER for services** — that is **not a 1099
+   question you settle here.** 📌 **§5C-viii is explicit: never write that a 1099 was owed to a
+   shareholder-employee**, because under the position being argued it was not. **It is the
+   reasonable-compensation question, and it goes there** — §5C-viii is also where the other branch
+   lives *(if the contractor characterisation were to stand, a 1099-NEC WAS owed and Schedule B 14a/14b
+   moves)*, which is exactly why it is decided there and not in a list of ledger rows.
+5. ⚠️ **Personal tax payments** inside distributions — usually correctly a distribution, and worth
+   naming in the hand-off so nobody re-deducts them. ⛔ **But check WHOSE tax it is, and there are
+   THREE answers, not two.** §5C-ii's test is the one that decides it: **not the account's name — who
+   the tax belonged to.**
+   - **The owner's personal federal or state income tax**, paid out of the company account →
+     🔴 **the owner's tax** → ✅ **a distribution.** Never a company deduction.
+   - **A state PTE tax borne by the ENTITY ITSELF** — usually an election the company makes, ⚠️ **but
+     not always: some states impose the entity-level tax without any election.** The label does not
+     decide it; **whose liability it was** does → ✅ **the COMPANY's own** → **line 12.** *(§5C-ii's
+     row reads "State income or PTE tax **on the corporation**" — that qualifier is the whole row.)*
+   - **A COMPOSITE-return payment, or nonresident-shareholder WITHHOLDING**, that the company remits
+     **on the owners' behalf** → 🔴 **the OWNERS' tax** → ⛔ **NOT a company deduction. It stays a
+     DISTRIBUTION.** ⚠️ **The two are not the same thing downstream, so do not describe them as one:**
+     **withholding** is credited on the owner's own state return, while a **composite return** is
+     generally filed **INSTEAD OF** that owner filing in that state at all. **Which one this client is
+     in changes what the owner does next — find out before you write it in the hand-off.**
+
+   🛑 **The trap is that the last two are often the same state, the same portal and sometimes the same
+   account name.** *"The company paid the state"* is not the test; **"whose liability was it"** is.
+   📌 **§5C-v carries the same pair, under a heading that calls them THREE CASES THE POLICY DOES NOT
+   COVER — though its own bullet only says "check the state before netting".** ⚠️ *The heading and the
+   bullet do not say quite the same thing; take the heading.* The mechanics differ state to state, so
+   **confirm it against the state's own rules rather than off this list.** ⛔ **Moving a composite
+   payment onto line 12 understates ordinary income, 16d, every K-1 box 16D, M-2 line 7 and every
+   Form 7203 line 6 at once** — and nothing in the software flags any of it.
+
+6. ⚠️ **A year-end entry closing the PRIOR year's draws or contributions to Retained Earnings**, dated
+   inside the year you are working. Not every bookkeeper does it, but where one does, **every route's
+   TOTAL folds it into "the movement", and ⓒ gives you nothing else** — so its figure is not this
+   year's activity at all. ⓐ, ⓑ and ⓓ show it as a **readable row** you can pull back out.
+   🔑 **One more instance of the same rule: read the rows, not the footer.**
+
+🔑 **A total from a report is a starting point. The row-by-row read is what turns it into a figure you
+can put your name on.** 📌 §5C-iv is how to classify what you find.
+
+#### ✅ The cross-check that proves it
+
+**Do it in whole numbers, on EACH equity account you read:**
+
+```
+closing balance (Balance Sheet, this year)
+  minus opening balance (Balance Sheet, prior year)
+  =  the movement    <- must equal the NET from route (a), (b) or (d)
+                        i.e. your gross credits minus your gross debits
+```
+
+⛔ **Know what this proves and what it does not: it proves the NET, never the SPLIT.** Two offsetting
+mistakes — a debit you missed and a credit you missed — cancel and the check still passes. **It
+catches a dropped or double-counted row; it cannot catch a misclassified one.** That is what the
+row-by-row read above is for.
+
+⚠️ **And check the opening balance against the PRIOR-YEAR RETURN'S Schedule L too.** If the books and
+the filed return do not start on the same figure, **something has to be explained before you go
+further** — §3 (build the map from the prior year), §8A (how the shareholder accounts were mapped)
+and §14 (the tie-out checks).
+
+#### 🛠️ THE STRUCTURAL FIX — where the answer should live when there is MORE THAN ONE shareholder
+
+**No report can tell you whose money a row is** — and **which fix you need depends on which chart
+shape ② put you in:**
+
+| You have | What is missing | The fix |
+|---|---|---|
+| **ONE pooled capital account per shareholder** *(the usual case)* | nothing structural — **the per-shareholder split is already there.** The type split comes out of totalling the two sides of the rows | ✅ **leave the chart alone.** ⓐ/ⓑ/ⓓ and a careful read are the whole job |
+| **One contributions account and one distributions account, shared by two or more owners** | 🔴 **the per-shareholder split does not exist anywhere in the books** — and it is exactly what Schedule K-1 box 16D and each Form 7203 need | **build a sub-account per shareholder under each parent**, below |
+
+**Where the second row applies:**
+
+```
+Owner's contribution                       (parent - left empty from here on)
+  |- Owner's contribution - <SHAREHOLDER 1>
+  |- Owner's contribution - <SHAREHOLDER 2>
+Owner's distribution                       (parent - left empty from here on)
+  |- Owner's distribution - <SHAREHOLDER 1>
+  |- Owner's distribution - <SHAREHOLDER 2>
+```
+
+✅ **Then the Balance Sheet gives you the split directly, and each Form 7203 reads off a line instead
+of being reconstructed.**
+
+⛔ **DO NOT use the `NAME` column on a journal entry for this.** **QuickBooks ONLINE** accepts only a
+**Customer, Vendor or Employee** there — **there is no shareholder type** — so tagging an owner files
+them in the **Vendor list**. ⚠️ *(QuickBooks **Desktop** has an "Other Names" list, which exists for
+exactly this; the constraint below is an Online one.)*
+
+🔑 **Two reasons that matters, and the second is the stronger one:**
+1. **It produces no balance.** You cannot read "distributions by shareholder" off the Balance Sheet
+   from a name tag. **Sub-accounts can — that is the whole point.**
+2. 🔴 **It puts the owner in the VENDOR LIST.** ⓘ *A vendor record does not by itself enter anyone into
+   1099 reporting — that needs the 1099 flag and a mapped account.* **But §6B's method is to run the
+   1099 review BY PAYEE off the ledger**, and an owner sitting in the vendor list is exactly what that
+   sweep picks up — into a question §5C-viii says must never be answered that way.
+
+⚖️ **Contrast with wages, where sub-accounts are NOT needed:** a salary's split between people is
+recorded on each **Form W-2**, so one `Compensation of Officers` account is enough. **Equity has no
+such second record — which is the whole reason the sub-accounts are worth building.**
+
+#### ⛔ And the one thing no report will ever answer
+
+> ⚠️ **A word of warning about the word "pooled", because this SOP uses it for two OPPOSITE shapes.**
+> Above, *"one **pooled** capital account per shareholder"* means **one account each** — the
+> per-shareholder split already exists. Elsewhere *(§10B, §11B, §12C)* **"pooled" means the other
+> thing: ONE account SHARED by all the owners** — where the split does not exist and cannot be
+> guessed. 🔑 **Whenever you meet the word, ask which one, and count the accounts before you believe
+> either.** *(§12C's "never assume half each" is about the SHARED shape.)*
+
+**Whose money it is.** Where **one account is SHARED by two or more owners**, that fact is not in the
+books at all —
+🛠️ **it is read row by row** *(names on transfers, whose obligation a payment settles, whose card,
+whose personal bank account the money leaves from and returns to)* **and what is left after that is
+a question for the client, not a calculation.** 📌 **§10B shows what an uneven split DOES** — each
+shareholder's basis test turns on it — **and says to settle it. ⚠️ It does not carry a method for
+determining whose money a row is; the passes above are it.**
+
 ### 5C-iv · ⚠️ A debit in a capital account is not automatically a distribution
 
 Total the debits, then **look at them**. They divide into three kinds, and only the last two are
@@ -1228,11 +1473,70 @@ wrong.
 > 🔑 **Julia's decision, 2026-08-20, and it is firm policy rather than a per-return judgement:**
 > **where a shareholder's contributions for the year EXCEED their distributions, net the two and
 > report distributions as ZERO.** **"At least"** for the case that prompted it — **S-corporation
-> owners who took no reasonable salary.** _(Relayed by Lilian; the pilot is the **Gossip
-> Miami LLC** 2025 return, recorded in its working paper at **§4 decision 5**. ⚠️ **An earlier version
-> of this line said "decision 8" and named no client — in that paper decision 8 is the undeposited cash
-> sales, not the distributions presentation. Corrected 2026-08-27, and the client is now named so the
-> reference can be checked.)_
+> owners who took no reasonable salary.** _(Relayed by Lilian; the pilot is the **Kolo Florida Inc**
+> 2025 return, recorded in its working paper at **§4 decision 8** — which says so in terms: *"this
+> return is the pilot"*, and *"CONTRIBUTIONS AND DISTRIBUTIONS: NETTED — and it is now FIRM POLICY"*.)_
+>
+> ⚠️ **This pointer has been wrong twice, in opposite ways, so here is the whole history.** It first
+> said **"decision 8"** and named **no client** — the decision number was RIGHT and the missing name is
+> what broke it. On **2026-08-27** a session supplied a name, guessed **Gossip Miami LLC**, found that
+> that paper's decision 8 is the undeposited cash sales, and "corrected" the number to **decision 5**.
+> ⛔ **That made it worse: Gossip Miami §4 decision 5 records the policy being TESTED AND FAILING**
+> — *"the firm's netting policy was tested and fails gate 1 in both branches… netting was never
+> available here."* **So the SOP's own firm-policy section pointed at a return that did not net.**
+> ✅ **Restored 2026-09-04 to Kolo §4 decision 8, checked against both working papers rather than
+> inferred.** 🔑 **The lesson, because it is the reason this note is long: a reference is repaired by
+> OPENING THE THING IT POINTS AT.** The 08-27 session corrected the half it could see from the SOP
+> alone and never opened either paper. _(Flagged by the independent review of PR #333.)_
+
+#### 🟢 THE FIRM APPROACH WHEN THE GATES FAIL BUT THE SIGNER STILL WANTS IT NETTED — and the note is not optional
+
+> 🛑 **READ THE SCOPE GATE BELOW FIRST.** This block is the **exception**, and it sits above the rule only
+> because it is the newest addition to this section. ⛔ **You cannot know the gates have failed until you
+> have worked them**, and *"which gates fail"* is a required part of the note this block demands. 🔑 **The
+> order to work in is: the five gates → they pass, net under the policy → they fail, come back here.**
+> ⚠️ **And this exception is NOT covered by the header's carve-out**, which exempts the ORIGINAL netting
+> policy from Lilian's sign-off. **This block was recorded from one live return on 2026-09-05 and is
+> Draft like the rest of the section.**
+
+_(**Lilian, 2026-09-05**, relaying **Julia's approval** on a live return: *"tratamos de netear estas
+contribuciones contra estas distribuciones para no levantar red flags sin sentido… siempre que hagas
+esto, haces la explicación en una nota para que nosotros sepamos qué sucedió… en caso de que no
+queramos hacerlo así, nos demos cuenta de qué approach se tomó y lo corrijamos."*)_
+
+🔑 **The shape of it, and it is a THREE-step move, not one:**
+
+| Step | What you do |
+|---|---|
+| **1** | **Compute the excess** of the year's gross distributions over the year's gross contributions — per §5C-iii and §5C-vii, **reading the rows, never a net** |
+| **2** | **Book that excess as OFFICER COMPENSATION** *(page 1 line 7 — the entry route is §5C-i)*. ⚠️ This is a **book entry the client posts**, not a presentation choice. ⛔ **AND IT IS THE SIGNER'S DECISION, NEVER THE PREPARER'S — §5C-viii**, which says in terms that a preparer does not reclassify distributions to salary unilaterally and that whoever decided it gets recorded. **Steps 1, 3 and 4 are preparation; step 2 is an instruction you must already have** |
+| **3** | **Net what remains and report distributions at ZERO** on Schedule K line 16d and every K-1 box 16D |
+
+🛑 **AND STEP 4, WHICH IS NOT OPTIONAL: WRITE THE NOTE.** It goes in the return's working paper, and it
+says — in this order — **what the gross figures were · which of §5C-v's five gates FAIL · what the
+policy as written would have produced · what was reported instead · and who approved it.**
+🔑 **Its purpose is stated by the person who asked for it: so that the firm can find the approach later
+and change it.** ⛔ **A netted return with no note is the failure this rule exists to prevent** — the
+figures reconcile to nothing and nobody remembers why.
+
+⚠️ **THREE THINGS THE NETTING DOES NOT DO, and each has caught somebody:**
+
+1. 🔴 **It does not change anyone's BASIS, and it does not remove a capital gain.** §1368(b)(2) works
+   on **actual** distributions against **actual** basis. **A shareholder whose real distributions
+   exceeded his real basis still has a gain on his own Form 1040**, and the netted return will not
+   mention it. **§5C-iii still governs the analysis: gross, always.**
+2. 🔴 **Entity-level netting is NOT the same as gate 1**, and this is the one to watch with more than
+   one owner. **Gate 1 is per shareholder** — *"one owner's contributions never offset another's
+   distributions."* Netting at the **entity** level does exactly that, and it can report zero while one
+   owner is over and the other under. **Say which level was used.**
+3. ⚠️ **It removes the marker for a non-pro-rata distribution** — the visible evidence of a possible
+   **second class of stock** (§1361(b)(1)(D)). Two K-1s both reading zero look identical when the
+   underlying draws were not.
+
+📌 **And the standing warning above still applies in full:** netting does **not** reduce
+reasonable-compensation exposure, and a later study that reads distributions off a filed **K-1 box
+16D** will read **zero**. 🔑 **On a netted client, distributions come from the capital-account ledger,
+never from the return.**
 
 #### 🛑 THE SCOPE GATE — all five, checked BEFORE netting, on the GROSS figures
 
@@ -1403,6 +1707,7 @@ The test is not the account's name — it is **who the tax belonged to**.
 | Business licences, local occupational taxes, state franchise tax | ✅ yes |
 | Sales tax **collected from customers and remitted** | ❌ **no — it was never the company's** |
 | **State** income or PTE tax on the corporation | ✅ yes |
+| A **composite-return** payment, or **nonresident-shareholder withholding**, the company remits **on the owners' behalf** | ❌ **no — it was the OWNERS'.** It is a **distribution** (§5C-vii item 5) |
 | **Federal** income tax | ❌ no |
 
 **Why sales tax is different: the company is a collection agent, not a taxpayer.** The money
@@ -1538,6 +1843,68 @@ What actually lands where:
 Salary` child**; the payroll tax goes to line 12. **Taking the parent's `Total for…` line puts
 the payroll taxes on the wages line and empties line 12.** Reproducing the prior year (§3) shows
 you which one that client's return used.
+
+#### 🛠️ THE ENTRY ROUTE FOR LINE 7 IN ATX — you cannot type on the line, and the form you are sent to is usually not even filed
+
+_(Observed at the keyboard by **Lilian, 2026-09-05**, preparing a real 1120-S in ATX 2025, and
+recorded as **her observation of one software version** rather than as vendor documentation.)_
+
+🛑 **Click page 1 line 7 and you cannot type — ATX opens Form 1125-E instead.**
+
+| Step | What you do | What you see |
+|---|---|---|
+| **1** | Click **page 1, line 7** *(`Compensation of officers`)* | ATX opens **Form 1125-E**, `Compensation of Officers`. ⛔ **The grid on the face of 1125-E is not where you type either** |
+| **2** | On Form 1125-E, click **line 2** — *"Total compensation of officers"* | a **detail tab** opens, headed `Compensation of Officers`. **That is where the figure is keyed** |
+| **3** | Add a record and fill the row | `Name` · `First Name` · `M.I.` · `Last Name` · `Suffix` · address block · `Soc. Sec. Num.` · `Check if Officer is a Shareholder` · `Percent of time devoted to business` · `Percent of corporation stock owned — Common / Preferred` · `Officer Title` · 🔴 `Amount of compensation` |
+| **4** | Close the detail tab | the total reaches page 1 line 7 **through line 4, not line 2** — see the line-3 warning below |
+
+🔑 **ATX's own on-screen note, and it is the part that decides how you use the detail tab:**
+> *"If form 1125-E is not required, enter the sum of officer compensation on the detail tab on the
+> first row. **The form will not be e-filed or printed with the return.**"*
+
+**Read both halves of that, because each one catches somebody:**
+
+✅ **Below $500,000 of total receipts you still go through 1125-E to get the number in — and ATX then
+suppresses the form.** ⛔ **Do not conclude the entry failed because 1125-E is missing from the printed
+return. Check page 1 line 7.**
+
+🛑 **AND THE SECOND HALF, WHICH IS THE ONE THAT MISLEADS: where the form is not required, ATX tells you
+to put THE SUM ON THE FIRST ROW.** So a single detail row is **the software's instruction being
+followed**, not a statement about who was paid. ⛔ **The suppressed form transmits nothing** — the IRS
+receives one total on page 1 line 7, with no officer name, no per-officer amount and no percentage.
+**A one-row detail tab therefore asserts NOTHING about the split**, and reading it as an attribution is
+a mistake this SOP has already made once.
+
+⚠️ **The row's fields become assertions ONLY where the form IS filed** *(receipts ≥ $500,000)*. There,
+four of them are facts somebody signs for:
+1. 🔴 **`Amount of compensation` is per officer, so a filed 1125-E states WHO was paid WHAT.**
+2. **`Percent of time devoted to business`** — a number somebody has to stand behind.
+3. **`Check if Officer is a Shareholder`** — it links the person to the stock percentages.
+4. **`Percent of corporation stock owned`** must agree with the shares behind each **Schedule K-1 item
+   G**, *"current year allocation percentage"* (§11B). ⛔ **NOT page 1 item I**, which is the **number**
+   of shareholders, and ⛔ **not K-1 item F**, which is the shareholder's name and address.
+
+🔑 **Either way — filed or suppressed — DECIDE THE SPLIT BEFORE YOU KEY IT.** Not because the return
+states it, but because **who was paid what drives each shareholder's distributions, stock basis and
+Form 7203** (§12), and those do leave the firm on the K-1s.
+
+⛔ **The flow is line 2 MINUS line 3, not line 2 straight to page 1.** Line 3 is *"Compensation of
+officers claimed on Form 1125-A or elsewhere on return"*, and line 4 subtracts it. **Where officer
+compensation sits in cost of labor (1125-A line 3), page 1 line 7 receives LESS than what you keyed** —
+which is the same reconciliation §5C-i opens with.
+
+⚠️ **And the destination wording on the form contradicts itself for an 1120-S.** Line 4 reads *"Enter
+the result here and on **Form 1120, page 1, line 12** or the appropriate line of your tax return"* —
+1125-E is shared across the 1120 family. **On an 1120-S "the appropriate line" is page 1 line 7.**
+🛑 **Read the current-year form before relying on either caption** — this SOP's standing rule.
+
+ⓘ **A checkbox on the form truncates officers' SSNs** — `Check ("X") to truncate officers' SSNs`.
+Worth ticking where the form *is* filed; irrelevant where it is suppressed.
+
+⚠️ **ATX carries page 1 in whole dollars.** *(Invented illustration — the shape, not any client's
+figures: a book figure of `80,000.15` is keyed and page 1 displays `80,000`.)* **Tie out in cents
+against the books and in dollars against the screen**, and see §9A for the tolerance.
+
 
 _(Worked example: a client's 2024 return took the `Wages & Salary` child to line 8 and the
 `Payroll Tax` child to line 12 — never the parent subtotal. In 2025 the same client had stopped
@@ -1950,7 +2317,7 @@ one owner's slice of it.
 | **14a/14b** | **Schedules K-2 / K-3** | Attach K-2 if there is any foreign activity — or tick the exception box. ⚠️ **This is what §1's foreign-accounts question is for.** Omitting them carries per-shareholder penalties, so do not skip it because the client "has nothing foreign" without confirming |
 | **16d** | Distributions | Money paid out to shareholders during the year — 🔵 **or ZERO under the firm's netting policy, but ONLY where all five of §5C-v's gates pass.** ⛔ A year with distributions and no contributions fails gate 1: the zero is never available on its own |
 | **17d** | **§199A / QBI information** — Schedule K line 17d *Other items and amounts*; on the K-1 it is **box 17, code V** | Attach the statement. **A loss year still produces QBI information** — a negative amount that carries forward for the owner |
-| **17d** | **Gross receipts for §448(c)** — also line 17d, and on the K-1 it is **box 17, code AC** | ƒ **page 1 line 1c.** 🔴 **A SECOND item that lives under the same line 17d**, which is why the line needs an itemised statement. ⚠️ **Reproduce the prior return's convention** — if last year reported it, this year must. 🛠️ **On screen it is usually not "17d" at all:** software expands line 17 into the **K-1 code letters**, so look for the row reading `AC Gross receipts for section 448(c)` — ⛔ **`D Basis of energy property` is a different item; the form's sub-line "d" and the code letter "D" are unrelated** (§11A) |
+| **17d** | **Gross receipts for §448(c)** — also line 17d, and on the K-1 it is **box 17, code AC** | ƒ **page 1 line 1c + lines 4 and 5 + the Schedule K portfolio items — see §11F ④.** ⛔ **NOT line 1c alone**: on any client with a Form 4797 gain, other income, interest, dividends, rents, royalties or capital gains, line 1c alone understates it. 🔴 **A SECOND item that lives under the same line 17d**, which is why the line needs an itemised statement. ⚠️ **Reproduce the prior return's convention** — if last year reported it, this year must. 🛠️ **On screen it is usually not "17d" at all:** software expands line 17 into the **K-1 code letters**, so look for the row reading `AC Gross receipts for section 448(c)` — ⛔ **`D Basis of energy property` is a different item; the form's sub-line "d" and the code letter "D" are unrelated** (§11A) |
 | **18** | **Income (loss) reconciliation** | ƒ `= lines 1 through 10, less lines 11 through 12e and 16f`. **This is what Schedule M-1 reconciles to** — not page 1's ordinary income (§9) |
 
 > 🛠️ **HOW LINE 17d IS ENTERED, because the box on the form face is often greyed out.** 17d is not one
@@ -1989,6 +2356,58 @@ Two columns: **beginning of year** and **end of year**.
    split between *capital stock*, *additional paid-in capital* and *retained earnings* on the
    form is whatever the prior return did. **Repeat it**, or the two years cannot be compared.
 
+### 8-R · 🛑 THE SOFTWARE ROUNDS BEFORE IT ADDS — and line 23 is the line that absorbs it
+
+_(**Lilian, 2026-09-05**, at the keyboard: she keyed a return whose Schedule L came out **2 apart**,
+with every input matching the working paper. Neither number was wrong.)_
+
+🔑 **A tax return is filed in WHOLE DOLLARS, and the software rounds EACH LINE and then totals the
+rounded lines. A working paper computes in cents and rounds at the end. The two disagree by a dollar
+or two, every time, and the disagreement COMPOUNDS down the return.**
+
+**How it compounds, and it is worth seeing once:**
+
+| | Working paper *(cents, rounded last)* | 🔴 **Software** *(rounds first, then adds)* |
+|---|---|---|
+| **Gross profit** | receipts minus COGS **in cents** | ƒ **rounded receipts − rounded COGS** — up to 1 apart |
+| **Total deductions** | the cents summed, then rounded | ƒ the **rounded lines** summed — up to 1 apart the other way |
+| 🔴 **Ordinary income (line 22)** | one rounding | ƒ **carries BOTH** — so it can be 1–2 from the paper's |
+| **M-1, M-2 and Schedule L line 24** | | ƒ **each recomputes from the rounded line above it** |
+
+⛔ **So a working paper's Schedule L equity figures are NOT keying instructions.** Key them and the
+balance sheet misses by the accumulated drift — which is exactly what the software's own
+*"End of year balance sheet out of balance by …"* line is telling you.
+
+#### ✅ THE RULE: derive line 23, never compute it
+
+**On Schedule L, line 24 (retained earnings) is normally COMPUTED by the software from Schedule M-2,
+and line 23 (additional paid-in capital) is TYPED.** So **line 23 is the line that absorbs the
+rounding**, and it is derived from the other three:
+
+```
+line 23  =  line 15 (total assets)  −  total liabilities  −  line 24 (AS THE SOFTWARE SHOWS IT)
+```
+
+🔑 **Read line 24 off the screen. Do not substitute the working paper's version of it** — the paper's
+figure came from a different rounding order and will not tie.
+
+⚠️ **Two things that follow, and both have bitten:**
+1. **The equity ROLL-FORWARD is still the analysis** — *opening + contributions − distributions ±
+   anything else that moved in the equity block* — and it is what proves the figure is right in
+   substance. ⛔ **It is not what you type.** Keep both: the roll-forward in the paper, the derived
+   figure on the form.
+2. 🔴 **Item F on page 1 is TOTAL ASSETS — Schedule L line 15, never line 27.** When the balance
+   sheet is out, some versions carry line 27 into item F, so item F goes wrong in sympathy and
+   "corrects itself" when line 23 does. **Check it afterwards rather than trusting it.**
+
+#### ⚠️ And the M-1's first line can end up a plug
+
+Where the software's line 22 differs from the books by a dollar or two, **Schedule M-1 line 1 (net
+income per books) is what gets adjusted to make the M-1 tie** — it becomes *"whatever makes line 4
+equal line 22"*, not the P&L's figure. **That is acceptable on a whole-dollar return and it is what
+the software does**, but ⛔ **say so in the working paper**, because the next person who compares
+Schedule M-1 line 1 against the client's P&L will find the difference and think something is broken.
+
 ### 8A · ⚠️ The named shareholder accounts do NOT map to the line their name suggests
 
 The books usually carry **one equity account per shareholder, under that person's name**. The
@@ -2001,7 +2420,7 @@ The three candidates, and what choosing each one *asserts*:
 |---|---|
 | **Line 19** — *Loans from shareholders* | The money is **debt**. It supports losses through **debt basis**, and it is a liability the company owes back |
 | **Line 23** — *Additional paid-in capital* | The money is **contributed capital**, shown as its own equity line |
-| **Line 24** — *Retained earnings* | The named accounts are **swept in with accumulated earnings**, and the form shows no separate contribution line at all |
+| **Line 24** — *Retained earnings* — ⚠️ **see §8-R: on a live return the SOFTWARE computes line 24 from Schedule M-2 and LINE 23 is the residual you type; the roll-forward here is the ANALYSIS, not the keying instruction** | The named accounts are **swept in with accumulated earnings**, and the form shows no separate contribution line at all |
 
 🔑 **Read the prior return's lines 19, 22, 23 and 24 before you fill in any of them** — and read
 the prior year's **K-1 box for *Loans from shareholder*** as the cross-check. A blank line 19
@@ -2701,6 +3120,10 @@ then accumulated E&P, then the OAA. **§10A qualifies it.**
 **Schedule M-2 is that pool's bank statement. That is all it is:** what was in it, what went in, what
 came out, what is left. Everything below follows from that one idea.
 
+🛠️ **Line 7 needs the year's DISTRIBUTIONS — the movement, not the account balance. §5C-vii is the
+four QuickBooks reports that give it, which of them can give the GROSS figure this line needs, and
+why a single-date Balance Sheet is the one place that will not.**
+
 | Line | What it does to the pool | Where the figure comes from |
 |---|---|---|
 | **1** Balance at beginning | what was in it on day one | 🔒 **last year's FILED return, its own line 8.** Copied, never recalculated. ⓘ **It can be negative** — losses do drive the AAA below zero |
@@ -3175,6 +3598,161 @@ apply and the zeros cost nothing.**
 
 🛑 **Never leave the SSTB question unanswered**, and reproduce the prior return's answer: it is the
 switch that can remove the shareholder's deduction entirely above the income threshold.
+
+---
+
+### 11F · 🔵 **BOX 17 CODE AC — `Gross receipts for section 448(c)`.** What it is FOR, before what goes in it
+
+🛑 **ESTABLISH WHAT A BOX IS FOR BEFORE DECIDING WHAT VALUE GOES IN IT.** This one cost a firm session
+two days and four contradictory answers, and every wrong turn came from reasoning about the *number*
+without first settling the *purpose*. **Read this section in its order.**
+
+#### ① What it is — and what it is NOT
+
+| | |
+|---|---|
+| ⛔ **It is NOT** | income · a deduction · a basis item · anything the shareholder pays tax on · anything that enters ANY computation on the 1120-S |
+| ✅ **It IS** | a **disclosure**. Box 17 is literally titled **"Other information"** — a place where the company hands the shareholder a fact only the company knows |
+
+📄 **Instructions for Form 1120-S (2025), code AC — the WHOLE entry, and the last sentence is the
+useful one:** *"Gross receipts for section 448(c) (code AC). Provide information shareholders need to
+complete the gross receipts test for section 448(c) purposes. **See the Instructions for Form 8990 for
+details.**"*
+📄 **Shareholder's Instructions for Schedule K-1 (2025), code AC:** *"Code AC. Gross receipts for
+section 448(c). Use the gross receipts amount to figure the business interest expense you can deduct, if
+applicable. See section 163(j) **and the Instructions for Form 8990** for details."*
+
+🔑 **Both entries end by pointing at the Form 8990 instructions. That cross-reference is the IRS's own,
+and it is why §11F ③ reasons from that form rather than from an outside source.**
+
+#### ② Why the shareholder needs it — the §448(c) test, in plain terms
+
+The shareholder runs the test **on his own return**, on **all** his businesses together. If his **average
+annual gross receipts for the 3 preceding tax years** exceed the threshold *(**$31,000,000** for tax years beginning in 2025; indexed
+annually — read the year's figure, never this one)*, he loses three exemptions at once:
+
+| Exemption lost above the threshold | What that means for him |
+|---|---|
+| **§163(j)** | his business interest deduction is limited → **Form 8990** |
+| **§263A** | he must capitalise indirect costs into inventory (UNICAP) |
+| **§448(a) / §471** | he may no longer use the **cash method**, nor the small-taxpayer inventory rules |
+
+⚠️ **WHOSE receipts get added to his own is NOT one rule, and the SOP used to state it as one.**
+📄 **The pro-rata inclusion of a pass-through's receipts is introduced by the 8990 instructions with the
+words "For section 163(j), a taxpayer with an ownership interest in a partnership or S corporation must
+include a share…"** — 🛑 **so it is scoped to §163(j).** For **§263A** and **§448(a) / §471** the
+aggregation that applies is the **single-employer** rule — controlled groups under §52(a), businesses
+under common control under §52(b), affiliated service groups under §414(m) and (o) — which is a
+different question with a different answer. ⛔ **Do not carry the pro-rata sentence across all three.**
+
+🔑 **The S corporation is the only party that knows its own gross receipts, so it discloses them. That
+is the entire function of the box.**
+
+#### ③ 🔴 WHICH FIGURE — **one annual figure, not an average; and the firm reads it as the CURRENT year**
+
+📄 **The instruction never says it in one sentence** *(it says only "information shareholders need")*,
+**so the answer comes from the worksheet the shareholder actually fills in** — the
+`Average Annual Gross Receipts Worksheet Per Section 448(c)` in the Instructions for Form 8990:
+
+| Line | | **Column A** | **Column B** | **Column C** |
+|---|---|---|---|---|
+| | | *1st preceding tax year* | *2nd preceding tax year* | *3rd preceding tax year* |
+| **1** | Annual gross receipts | $ | $ | $ |
+| **2** | Plus annual gross receipts of related entities per aggregate rules | $ | $ | $ |
+| **3** | Total annual gross receipts | $ | $ | $ |
+| **4** | **Average annual gross receipts** *(line 3, columns A + B + C, **divided by 3**)* | | | $ |
+
+⛔ **Note what is NOT in that table: a column for the CURRENT year.** All three are *preceding* years.
+
+**🛑 SPLIT THE CLAIM, BECAUSE THE EVIDENCE PROVES ONE HALF AND NOT THE OTHER:**
+
+| The claim | How well the sources support it |
+|---|---|
+| ✅ **It is ONE ANNUAL FIGURE, not an average** | **PROVED by the worksheet's shape.** He computes the average himself at line 4, from three separate annual figures. **An average handed to him on a single K-1 has no row to go in** |
+| ⚠️ **And that figure is the CURRENT year** | **NOT quoted anywhere. It is an inference** — from the convention that **every** Schedule K and K-1 amount is a current-year amount, and from the fact that the three columns are all *preceding* years, so he assembles them from **three consecutive K-1s**. 🔑 **A strong inference, and the one the firm follows. Not a rule anyone can cite** |
+
+⚠️ **THE TRAP THAT PRODUCES THE WRONG ANSWER, and it is a good one:** the ENTITY's own §448(c)
+small-business test **is** a three-year average *(Schedule B question 10's $31,000,000 test)*, while the
+K-1 disclosure is **one year's receipts**. **Two different things wearing the same words**, on the same
+return, both called "gross receipts for section 448(c)".
+
+#### ④ How to compute the entity figure, and how it reaches each K-1
+
+**§448(c) gross receipts are ALL gross receipts and are NOT reduced by cost of goods sold:**
+
+| Include | |
+|---|---|
+| Page 1 **line 1c** — gross receipts or sales, net of returns and allowances | ✅ |
+| Page 1 **lines 4 and 5** — Form 4797 gain and other income | ✅ |
+| Schedule K — **interest, dividends, rents, royalties, capital gains** | ✅ |
+| ⛔ minus cost of goods sold | **NO** |
+
+**Then each K-1 carries that shareholder's SHARE, not the whole** — ⚠️ **a convention, not a quoted rule.
+Read the next block before treating it as settled.**
+
+📄 **The sentence usually cited for it, in full** *(Instructions for Form 8990, Rev. 12-2025 — quoted
+whole, because an abbreviated version of it misleads)*:
+
+> *"For section 163(j), a taxpayer with an ownership interest in a partnership or S corporation must
+> include **a share of the partnership's or S corporation's gross receipts, in proportion to** the
+> partner's distributive share of items of gross income or S corporation's shareholder's pro rata share
+> of gross receipts, **unless** the partner and partnership, or S corporation shareholder and S
+> corporation, **are treated as a single person**."*
+
+⚠️ **THREE THINGS THAT CUT THE OTHER WAY, and an SOP that hides them is not worth having:**
+
+1. 🔴 **For codes AA and AB the IRS says explicitly *"Report the shareholder's pro rata share in box 17
+   of Schedule K-1."* For code AC, in the very next paragraph, it does NOT.** That omission is evidence.
+2. **The sentence above tells the SHAREHOLDER what to include on HIS return.** It says nothing about what
+   the S corporation prints on the K-1.
+3. **Its "unless … single person" clause points the opposite way.** A shareholder aggregated with the
+   entity must *"aggregate the … S corporation's gross receipts with your gross receipts"* and **not**
+   duplicate by adding a share — **and a K-1 carrying only his 50% share cannot serve him.**
+
+✅ **The firm's practice: enter it ONCE at the entity and let the software split it by ownership
+percentage** — because that is what the software produces and what the shareholder rule implies.
+🛑 **It is a convention, and it should be described as one.** ⓘ *On any client near the threshold, where
+the difference would matter, get the shareholder's own preparer to say which he needs.*
+
+#### ⑤ 🛠️ WHERE IT IS TYPED — line 17d has no dollar box
+
+**Same shape as §9C's M-1 line 3, and it catches people the same way.**
+
+| Step | |
+|---|---|
+| **1** | **Schedule K, line 17d** is **greyed — you cannot type there.** It is a printed output |
+| **2** | **Click the greyed line anyway** → the worksheet **`Ln 17d, Sch K - Oth Items`** opens, with **`Code AC - Gross receipts for section 448(c)`** in an editable box. **That is the entry point** |
+| **3** | ⛔ **Do NOT type it on each K-1.** Two per-K-1 overrides is the failure mode — they stop agreeing with the entity and with each other |
+
+🔴 **IT IS A MANUAL FIELD THAT ROLLS FORWARD, AND ROLLOVER DOES NOT UPDATE IT.** The software cannot
+compute it, because §448(c) can require **aggregating a related entity's receipts** (§52(a)/(b),
+§414(m)/(o)) — which no return knows about. 🛑 **So on a rolled-over file it arrives holding LAST
+YEAR's number, looking exactly like a computed default. Check it every year.**
+
+⚠️ **A separate, OPTIONAL worksheet is easy to mistake for the source.** The `Line 13 (1120S) - Interest
+Expense` worksheet has a checkbox — *"Check to use Gross Receipts Test worksheet to determine status as
+a Small Business Taxpayer"* — which opens a three-prior-year grid with an `Average Gross Receipts` line.
+⛔ **That grid serves Schedule B question 10 ONLY** *(is the ENTITY over the threshold — see §6A)*. **It
+does not feed box 17 code AC.** ✅ **Proof, and the way to prove it in any software: uncheck the box and
+watch whether the code AC value changes. If it does not, they are not connected.**
+
+#### ⑥ ⚖️ HOW MUCH IT MATTERS — say this out loud to whoever is signing
+
+🔑 **For almost every client this firm has, the figure decides NOTHING.** The threshold is **$31 million**;
+a client at a few hundred thousand passes the test on any figure anyone could type. **No tax on the
+1120-S moves, no tax on any 1040 moves, and Form 8990 is not filed either way.**
+
+🛑 **That is a reason to fix it in one field, not a reason to escalate it — and equally not a reason to
+leave a prior-year figure on this year's K-1.** ✅ **What is NOT optional, whatever value is chosen: every
+K-1 must carry the SAME basis for it** — a 50/50 pair showing two unrelated numbers is a visible defect
+on a signed return even when the tax is identical. **If you are leaving the software's rolled-over
+figure, leave it on BOTH; if you are correcting it, correct it at the entity so both recompute.**
+
+📌 **AND THE REUSABLE LESSON, which is not about §448(c) at all: A FIGURE THAT MATCHES IS NOT A FIGURE
+THAT IS CAUSED.** When one value appears in two places, **change one and look** — do not build an
+explanation for the match. *(In the session this section came from, the same number appearing in an
+optional worksheet and in the disclosure field was read as a mechanism three times running. One
+unchecked checkbox settled what three rounds of reasoning could not.)*
 
 ---
 
@@ -3794,6 +4372,23 @@ return** — so the shareholder's own history is invisible from here:
 **Do not file until every one of these passes.** A check that fails is a mapping error, not a
 rounding difference.
 
+- [ ] 🔴 **NO FORM 8990 IS IN THE PACKAGE — but it is a TWO-STEP check, and step 1 is the one that
+      matters.** ⛔ **"Small business taxpayer, so delete the 8990" is NOT the rule and is false for a real
+      case.** 📄 **The operative sentence is the EXCLUSION:** *"A taxpayer isn't required to file Form 8990
+      if the taxpayer is a small business taxpayer **and doesn't have excess business interest expense
+      from a partnership**."* 🔑 **① First confirm Schedule B question 10 is answered correctly against all
+      three of its legs** — (a) owns a pass-through with current or prior-year carryover **excess business
+      interest expense**, (b) receipts over the threshold **with** business interest expense, (c) tax
+      shelter with business interest expense. **An S corporation that IS a small business taxpayer still
+      files Form 8990 if leg (a) is true.** 🔑 **② Only once `No` is right does the form's absence follow.**
+      ⛔ **A wrongly-answered question 10 turns this check into a second error.** 🛑 **Answering question 10 correctly does NOT detach a Form 8990 the software
+      already attached** — working on line 13 is enough to pull it in, and it then transmits, blank,
+      asserting a limitation the corporation is exempt from. **Read the FORM LIST, not just the lines**
+      (§6A, and the skill's §3A check 3). ⓘ *Caught on a real return in Sep 2026, after line 13 had been
+      opened repeatedly for a different reason.*
+- [ ] 🔴 **Box 17 code AC is THIS year's figure, not the one that rolled over.** The software cannot
+      compute it, so a rolled file arrives holding **last year's** number looking like a default — and
+      **every K-1 must carry the same basis for it** (§11F ⑤, ⑥)
 - [ ] 1125-A: **line 6 − line 7 = line 8**
 - [ ] 1125-A line 8 **equals** page 1 line 2
 - [ ] Page 1: **1a − 1b = 1c**. ⚠️ **This one is INTERNAL — it passes even when line 1a is wrong**,
@@ -4024,6 +4619,10 @@ TIE-OUT CHECKS (§14)        [ ] all pass        date: ______
 
 The quick reference. **Confirm it against the prior year (§3) before you rely on it** — the
 right-hand column is the firm's usual convention, not a rule of the form.
+
+🛠️ **Where the equity figures come from is its own question, and it has its own section:
+§5C-vii — the four QuickBooks reports, which of them can give you both totals rather than one net,
+and the balance-vs-movement trap that makes the wrong figure look right.**
 
 | QuickBooks account (typical name) | Goes to |
 |---|---|

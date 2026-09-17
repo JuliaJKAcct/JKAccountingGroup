@@ -1,6 +1,6 @@
 # ZETECH LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-09-12
 >
 > ✅ **First full historical sweep completed 2026-08-15** — Ping (via a synced Double meeting
 > note), Gmail (inbox + sent, full history), Double (client record, notes, contacts, properties),
@@ -102,6 +102,7 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Applies?** **Yes** _(Double client properties, 2026-08-11)_
 - **Return type(s) & deadlines:** **1120-S** per Double — ⚠️ but see §5: the IRS's own record says sole proprietorship. **Reconcile before filing.**; deadlines _(pending)_
 - **Our role:** _(pending)_
+- **Current status:** The **2025 "Taxes" project is `filed`, `filedAt` 2026-07-03** _(Double `list_projects`, 2026-09-12)_ — not previously recorded in this file.
 - **Process notes (→ future SOP):** _(pending)_
 
 ### Licenses & other filings
@@ -131,7 +132,9 @@ watch-outs, one-off arrangements, history that affects the work.
 - ⚠️ **A2X's payment-gateway mapping for eBay/Amazon payouts posted wrong journal entries to QBO in July 2026** — they were deleted and had to be remapped before re-posting. Check A2X's mapping each month before trusting its auto-posted JEs, especially after any change to sales channels. _(Gmail "Zetech A2X" thread, mariaf@jkaccountinggroup.com, 2026-07-28.)_
 - **Multi-channel e-commerce business** — sells on Amazon, Walmart, Shopify and WooCommerce (B2B and B2C), sources product via Alibaba. Payroll runs through Gusto on weekly AutoPilot. _(Double note "Meeting: Zetech", 2026-06-26; Gmail, recurring Jul–Aug 2026.)_
 - A **`Zetech Holding LLC`** also exists in Double (id `717754`, no QuickBooks connected) — **confirmed as a separate billing entity**: the firm invoiced ZETECH HOLDING LLC and ZETECH LLC on two different QuickBooks invoices, paid separately on 2026-07-09. The **relationship between the two entities themselves is still not established** _(to verify)_. A `zetech-consolidation` skill is available in the firm's Claude environment (it is **not** in this repo), which suggests consolidation work has been done for this client before — **unverified**.
-- The primary contact's Double portal login is also linked to **6 other Double client IDs** beyond Zetech and Zetech Holding — a serial-entity structure like the one already flagged at Optic Gold/best-broker-realty. **Which companies those are is not established** — out of scope for this sweep (this is the client's own group, not Liudmyla's book of business). _(Double `list_contacts`, 2026-08-15.)_
+- The primary contact's Double portal login is also linked to **6 other Double client IDs** beyond Zetech and Zetech Holding — a serial-entity structure like the one already flagged at Optic Gold/best-broker-realty. **Two of those group entities are now identified by name from Gmail correspondence**: **LE DELICE LLC** (a Gusto payroll client, cc'ing the same contact and Julia/Irina) and **EVERMONY, LLC** (a Gusto-invoiced entity also cc'ing the same contact) — which of the 6 Double IDs each maps to is not established. _(Gmail, "Payroll is late for LE DELICE LLC" and "EVERMONY, LLC's August 2026 invoice has been paid" threads, 2026-09-02/10.)_
+- ⚠️ **New, unresolved (2026-09-09/10): a COGS/inventory discrepancy flagged by the client via the Veeqo integration** — the contact said "the COGS cannot be that low," referencing a return to "the Finale Inventory from Veeqo," and Maria (bookkeeping) confirmed the same figure changed between two checks days apart with no known cause. **Veeqo is a newly-identified system for this client** (inventory/3PL, alongside A2X) — not yet in §3. _(Gmail thread "Re: August 2026 Financials", 2026-09-09/10.)_
+- **Payroll: the firm actively manages Gusto, not just monitors it.** The 2026-09-01/02 cancel-and-rerun (a fourth instance of the pattern) shows Gusto's cancellation notice addressed directly to Julia as the one who canceled it — settling the previously-open question of whether the firm runs payroll or only watches AutoPilot notifications. _(Gmail, Gusto notifications, 2026-09-01/02.)_
 - **Assigned to Liudmyla Kazannik.** First full historical sweep completed 2026-08-15 (Ping, Gmail, Double, Drive, QuickBooks-platform check) — see §6.
 
 ## 6. History & open questions
@@ -155,16 +158,18 @@ A running, dated record as we build this profile.
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** July sales tax was filed and paid (Gmail + Drive confirmation, 2026-08-18/19) — first confirmed sales-tax activity for this client. The Aug 8–14 Gusto AutoPilot payroll run confirmed without a failure notice. A W-9 was uploaded to Drive 2026-08-17. August month-end close moved to In Progress and the "Monthly Sales Taxes" task marked Done. Chase pass on all four outstanding items — results above.
 - 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: 0 notes changed (the single note is unchanged since 2026-06-26); 0 activity-log entries this window. Gmail: the Aug 15–21 payroll run was canceled and re-confirmed the same day (2026-08-26) — a third instance of the cancel/re-run pattern (§4/§5). No new sales-tax, A2X or fee-proposal correspondence found. Chase pass on all four outstanding items — results below; all remain open.
+- 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29→2026-09-12; the 2026-09-05 run never completed — see `sweep-state.md`).** Double: the single note (451544) unchanged; heavy month-end-close task activity (Aug close finished 2026-09-09); `list_projects` read for the first time — 2025 Taxes `filed` 2026-07-03 (§4). Gmail: a fourth AutoPilot cancel/re-run (2026-09-01/02), settling that Julia actively runs/intervenes in payroll rather than only monitoring it (§5); two more group-entity names surfaced (LE DELICE LLC, EVERMONY LLC — §5); a new, unresolved COGS/Veeqo discrepancy flagged by the client 2026-09-09/10 (§5); three "Uncapped" financing offers expired unused 2026-08-28 (no amounts recorded). Ping: `search_meetings` scoped to "Zetech" returned only pre-baseline (June 2026) garbled content — nothing new or legible this window. Chase pass on all four outstanding items — results below; all remain open.
 
 ### Outstanding items (CI-only — never in the SOP)
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Confirm the A2X eBay/Amazon mapping fix held** — STILL OPEN, **32 days** pending since 2026-07-28, no deadline. A targeted search (2026-08-29, bounded to this window plus a general re-check) found no message after the 2026-07-28 remap note.
-- **Client pushed back on an updated group fee proposal** (`#JKA1204-v3`) — STILL OPEN, **51 days** pending since 2026-07-09, no deadline. No follow-up email found this window either.
+- **Confirm the A2X eBay/Amazon mapping fix held** — STILL OPEN, **46 days** pending since 2026-07-28, no deadline. A targeted search (2026-09-12, bounded to this window) found no message on the A2X mapping since the 2026-07-28 remap note.
+- **Client pushed back on an updated group fee proposal** (`#JKA1204-v3`) — STILL OPEN, **65 days** pending since 2026-07-09, no deadline. No follow-up email found this window either.
 - **The IRS sole-proprietorship-vs-1120-S mismatch (§5) is still unresolved** — no correspondence found on this matter since the 2026-04-17 call it originates from; it is an internal reconciliation item with no natural external counterparty thread to chase.
-- Whether the firm actually **runs** this client's payroll or only monitors Gusto's AutoPilot notifications — STILL unconfirmed; no clarifying communication found. The recurring cancel/re-run pattern (§4/§5, now three occurrences) makes this worth settling rather than leaving open indefinitely.
+- [x] Whether the firm actually **runs** this client's payroll or only monitors Gusto's AutoPilot notifications — **SETTLED 2026-09-12**: the firm (Julia) actively runs/cancels/re-runs it — Gusto's cancellation email for the 2026-09-01/02 instance is addressed to her directly as the one who canceled it.
+- **NEW, unchased this window (no natural search target beyond the thread found):** the 2026-09-09/10 COGS/Veeqo discrepancy — flagged 2–3 days old as of this sweep, too soon to have a resolution; watch next run.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit

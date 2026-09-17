@@ -1,6 +1,6 @@
 # SENSUSTECH LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-09-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -57,6 +57,7 @@ doc guide** in Drive (§7) — never copied here.
 | **Gusto** (AutoPilot) | Payroll | Maria's doc guide (§7) | Semi-monthly; owner/CEO on payroll |
 | **TaxDome** | Document exchange / e-sign; **brokerage statements requested here** | — | Monthly reports |
 | Bank & cards | Reconciliation | Maria's doc guide (§7) | **Chase Checking** (5506), **Chase Savings** (8090), **Chase CC ×3** (6463, 9203, 9206 + sub-CC 4800 manual) |
+| **Human Interest** | 401(k) retirement plan | — | Login/access issue surfaced 2026-09-09 (see §6); plan is under a pricing/termination notice |
 
 ## 4. Obligations & recurring processes
 
@@ -78,6 +79,7 @@ doc guide** in Drive (§7) — never copied here.
 ### Income tax
 - **Applies?** Yes — **Form 1120** (C-corp) _(Double)_; **1099 preparation** included.
 - **Organizer Status property:** "N/A (we have QBO access)" _(Double client properties, 2026-08-15)_ — the firm has direct QBO access, so no organizer is issued for this client.
+- **2025 return: actively in progress.** The Double tax project (`219899`) reads `inProgress` (re-confirmed live 2026-09-12). On 2026-09-07 Lilian marked the project tasks "Prepare and send organizer" and "Prepare and send engagement letter" Done, and toggled "Review client documents & responses" Done → In Progress (still open). A brokerage 1099 (JP Morgan) was requested from and provided by the owner 2026-09-07 for the return. Two Drive workbooks — "Sensustech_Lumetro_FY2025_Books_Review" (created 2026-09-04) and "SensusTech11202025WORKSHEETFINAL.xlsx" (created by Julia, 2026-09-10) — confirm active preparation work. _(Double, Gmail, Drive — 2026-09-07/10)_
 
 ### Licenses & other filings
 - _(pending)_
@@ -118,15 +120,17 @@ doc guide** in Drive (§7) — never copied here.
   or the owner in this window.
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: 0 notes, 0 activity-log entries despite the client `updatedAt` field showing 2026-08-17T16:30:45Z — cause not determined. Gmail: on 2026-08-21 the Mobilesource GM sent this client's CEO a cross-company "USD Funds" pending-deposit position update — indicates operational/cash coordination across the tech owner-group beyond the documented Lumetro loan; folded into §5 as a note, not a new intercompany loan. Chase pass on all six §6 items — results above.
 - 2026-08-29 — **Incremental sweep (baseline 2026-08-22→2026-08-29).** Double: 1 activity-log entry — a client-portal transaction question ("gas station" categorization) resolved 2026-08-28 — routine, not logged further. 0 new notes; properties unchanged. Gmail: a search of `(Sensustech OR "Stanislav Fedorov") after:2026/08/22` returned only routine Gusto AutoPilot payroll confirmations (2026-08-25, 2026-08-26) and the firm's own internal sweep-health email — no update on the Gusto→QBO mapping-sync issue either way. A targeted follow-up search (`(Sensustech) (Gusto OR mapping OR sync) after:2026/08/22`) confirmed no fix or further correspondence. Drive: a title search for `Sensustech`, bounded ≥2026-08-22, returned nothing — cannot confirm or rule out the duplicate-folder consolidation this window. Ping: an org-wide semantic search for Sensustech/Mobilesource/Lumetro/Stanislav Fedorov returned no legible, on-topic results. Chase pass on all six §6 items — results below.
+- 2026-09-12 — **Incremental sweep (baseline 2026-08-29→2026-09-12).** Double: 0 new notes; `list_projects` shows the 2025 tax project moved to `inProgress` (added to §4); the August 2026 monthly close completed 2026-09-07 (bank feeds, 1099 prep, uncategorized transactions, JE Brokerage for both managed-brokerage sub-accounts, Loan-from-Lumetro, Ads JE — all Done), and two 2025 tax-document PDFs were uploaded to the client's file library 2026-09-07 (by Irina) matching the brokerage task numbers. Gmail: a search of `Sensustech (Gusto OR mapping OR sync OR duplicate) after:2026/08/29` found only routine Gusto payroll notices — still **no update either way** on the Gusto→QBO mapping-sync issue or the duplicate-Drive-folder question. Separately (not a targeted chase, found via the tech-group sweep): a brokerage 1099 (JP Morgan) was exchanged 2026-09-07 for the 2025 return, and a **Human Interest 401(k) plan issue** surfaced 2026-09-09 — a "12-Month Waiver and Reduce Pricing or Plan Termination" notice, plus a login-access problem for the owner (Julia is arranging replacement credentials and has booked a resolution call for 2026-09-16/17). Added to §3 and to outstanding items below. A separate personal/1040 matter for the owner (rental-property expenses, "2025 Tax return - rental info" thread) surfaced in the same mailbox sweep — **out of scope for this company file** (personal, not SensusTech operations) and not written in here. Drive: two new 2025-tax-prep workbooks confirm active return work (added to §4). Ping: an org-wide semantic search for Sensustech/Mobilesource/Stanislav Fedorov returned no legible, on-topic results. Chase pass on all outstanding items — results below.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.
-- **External financial audit (mid-2026)** — not chased this run (budget).
-- Reconcile the **crypto/USDT** note against the managed-brokerage statement flow — not chased this run (budget).
-- **Duplicate Drive folders:** a second "SENSUSTECH LLC" folder (2026-05) still exists alongside the original 2023 vault folder — STILL OPEN; a Drive search for files modified after 2026-08-22 found nothing addressing consolidation.
-- **June reports pending** final expense categorization — not chased this run (budget).
+- 🔴 **NEW — Human Interest 401(k) plan at risk (waiver/pricing/termination notice)**, surfaced 2026-09-09; a login-access problem is blocking the owner from reviewing it. Julia has booked a resolution call for **2026-09-16 or 09-17, 2026** (two calendar invites exist for adjacent times — exact slot not yet settled). Pending since 2026-09-09, deadline is the scheduled call.
+- **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **31 days past its due date**. CHASED again this run: a targeted search bounded ≥2026-08-29, run 2026-09-12, found only routine AutoPilot payroll-run confirmations — still no mention of the mapping issue either way; watch the next close for a recurrence.
+- **External financial audit (mid-2026)** — not chased this run (budget; no targeted search run).
+- Reconcile the **crypto/USDT** note against the managed-brokerage statement flow — not chased this run (budget; no targeted search run). ⓘ Related development at the sibling company: Mobilesource's crypto/USDT activity was clarified this window to run through the *owner's personal* wallet — see [`mobilesource-corp.md`](./mobilesource-corp.md) §5 — worth keeping in mind if this SensusTech item turns out to be the same wallet.
+- **Duplicate Drive folders:** a second "SENSUSTECH LLC" folder (2026-05) still exists alongside the original 2023 vault folder — STILL OPEN; a Drive title search bounded ≥2026-08-29 again found nothing addressing consolidation.
+- **June reports pending** final expense categorization — not chased this run (budget; likely superseded by the August close now being complete, but not confirmed).
 - Confirm **home state** and a definitive primary language.
-- **Confirm intent** behind the 2026-07-31 reversion of the "JK 2025 Business Tax Organizer - Sensustech" to draft — not chased this run (budget).
+- **Confirm intent** behind the 2026-07-31 reversion of the "JK 2025 Business Tax Organizer - Sensustech" to draft — not chased this run (budget); note the tax PROJECT itself has since moved to `inProgress` (see §4), which may make this question moot, but that has not been confirmed.
 
 ### Information still needed
 - [ ] Home state; fiscal year-end

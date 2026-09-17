@@ -1,6 +1,16 @@
 # Preparing a Form 1040 (individual return) — the modular procedure
 
-> **Status:** 🟡 **DRAFT — pending Lilian's sign-off.** Started 2026-08-18 from the first two 1040s
+> **Status:** 🟡 **DRAFT — pending Lilian's sign-off.** 🔴 **Extended 2026-09-07 AT HER REQUEST** — 🛠️ **the
+> ATX ENTRY ROUTE for a K-1: the money is keyed on the K-1's OWN form, which feeds Schedule E, Form 7203 and
+> Form 8995 at once, while line 27 and the (e)/(f) ticks stay the preparer's** — 🔴 **with the input sheet
+> addressed by ITS OWN labels (it has no "Part III") and its CHECKBOXES treated as part of the route** — with the "it did not flow"
+> table *(whose first question is WHICH COLUMN, since line 30 adds (h) and (k) and a misclassified K-1 gives
+> an identical line 32)* and the note that the vendor's FORMS LIST is readable while its knowledge base needs the firm's own
+> customer login — plus the **four-form disambiguation** for a K-1 in a 1040 and the **structural tell**
+> that separates a K-1 you receive from one you issue (M3). 🔴 **Extended
+> 2026-09-06** — the Schedule C `Other expenses` line *(27b, not 27a)* and the prior-year-convention rule
+> that decides which expense line at all (M2), and **Schedule E Part II's two stacked grids** with the
+> (i)/(k) column correction (M3). Started 2026-08-18 from the first two 1040s
 > the firm prepared with a session assisting; extended the same day with the **credit mechanics**
 > (§3, M5, M6) and the **Form 1095-A continuation-page trap** (M4), and on **2026-08-19** with the
 > home-office **IN/OUT rule**, the **first-landline** limit, the two **lease** traps, the **Form 8829
@@ -265,6 +275,8 @@ withheld across employers; and the household-employee and statutory-employee cas
 | 8–27 | Expenses | Ordinary and necessary, and **substantiated** |
 | **9** | Car and truck | Mileage log or actual costs. ⚠️ **A driver with zero vehicle expenses is a red flag, not a simple return** _(seen on a real 2024 Uber Schedule C)_ |
 | **25** | Utilities | ⚠️ **Telephone: the business share of the taxpayer's OWN line.** A household account total on a multi-line plan is not deductible as such |
+| 🔴 **27a · 27b** | **The two that are inverted from what everyone assumes** | 📄 **2025 form, verbatim:** `27 a Energy efficient commercial bldgs deduction (attach Form 7205)` · `b Other expenses (from line 48)`. 🛑 **`Other expenses` is 27b, NOT 27a.** 🔑 **AND NEITHER 27b NOR 48 IS WHERE YOU TYPE.** 📄 Part V is headed *"Other Expenses. **List below** business expenses not included on lines 8-27a, or line 30"* and its listing rows are **UNNUMBERED**; **line 48** is *"Total other expenses. Enter here and on line 27b"*. ✅ **So: type each item — description and amount — on a blank listing row in Part V, page 2. The form totals them to 48, and 48 carries to 27b.** ⚠️ **Read all of this off the current-year PDF every year** — these lines have moved before |
+| 🔑 **which expense line at all** | **The prior year's return decides it where one exists** | 🛑 **If last year's return put an expense in `Other expenses` rather than on a named line, this year follows it** unless there is a reason to change, and the delivery **names it as the prior-year convention with its evidence**. 🔴 **AND ASK WHO PREPARED THAT YEAR — it changes WHOSE convention it is.** An **outside** preparer's choice is a **client** convention; **the FIRM'S own prior-year return is the firm's position**, set by the person who signs, so departing from it silently is the firm contradicting itself on the same activity in consecutive years — no tax changes, but it breaks the reproduce-the-prior-year method and leaves an unexplained year-over-year swing. 🔑 **Unless the prior line was WRONG — then it is a DEFECT: correct it, and record what changed, why, and who made the original call.** ⛔ *(Real: a session put a rental platform's commission on line 10 `Commissions and fees` while the client's own 2024 return — already quoted in that client's working paper — had deducted its expenses as `Other expenses`. The evidence was in the file and the figure went elsewhere anyway.)* |
 | **30** | **Business use of the home** | See below. The **actual** method is computed on **Form 8829**; the simplified method has no form, only a worksheet |
 | **31** | **Net profit or (loss)** | ƒ line 7 − line 28 − line 30 → **Schedule 1 line 3** *and* **Schedule SE** |
 
@@ -601,7 +613,7 @@ ruling it is.**
 
 | From the K-1 | Goes to | Note |
 |---|---|---|
-| **Box 1** ordinary business income (loss) | **Schedule E Part II line 28 col (i)** *(nonpassive)* → line 32 → line 41 → **Schedule 1 line 5** | ⚠️ see the col **(e)** rule below — **four triggers, not one** |
+| **Box 1** ordinary business income (loss) | 🔴 **Schedule E Part II — the LOWER grid, same row letter: col (k) `Nonpassive income from Schedule K-1` for INCOME, col (i) `Nonpassive loss allowed` for a LOSS** → line 32 → line 41 → **Schedule 1 line 5**. ⛔ *(A first version of this row named col (i) unconditionally. (i) is the loss column; a profit keyed there is a loss on the return.)* | ⚠️ see the col **(e)** rule below — **four triggers, not one** |
 | Boxes 2 · 3 rental | Schedule E Part II | |
 | Box 4 interest · 5a/5b dividends | Schedule B | |
 | **Box 6 royalties** | 🔑 **Schedule E line 4 — Part I, not Part II** | easy to file with box 1 and be on the wrong part of the same form |
@@ -618,7 +630,210 @@ ruling it is.**
 
 #### 🛑 Schedule E column (e) — FOUR triggers, and three of them are not a loss
 
-**Schedule E page 2 prints it above line 28. Quote it, do not paraphrase:**
+> ### 🔴 Part II is TWO STACKED GRIDS, and the same row letter appears in both
+>
+> 🛑 **This is the single thing preparers cannot find, and the form gives no clue.** Line **28** is the
+> **identity** grid — `(a) Name · (b) P or S · (c) foreign · (d) EIN · (e) basis computation · (f) not at
+> risk`. ⛔ **It has no money column at all.** Directly below it, with **no line number of its own**, sits
+> the **money** grid — `(g) Passive loss · (h) Passive income · (i) Nonpassive loss · (j) §179 ·
+> (k) Nonpassive income` — and you use **the same row letter** you used above.
+>
+> 🔑 **So "Schedule E page 2 Part II" is not an address.** A delivery must name **the grid, the row letter
+> and the COLUMN**: *"lower grid, row A, column (k)"*. ⚠️ **Naming only the part sends someone to a page
+> with two places to write and no way to choose.**
+>
+> ⚖️ **Passive or nonpassive is a POSITION, not a lookup.** An S-corporation shareholder who materially
+> participates is nonpassive. **Record the reason** *(officer, the year's compensation, hours)* rather than
+> defaulting — and say plainly when no §469 test has been run.
+
+> ### 🔴 AND IN THE SOFTWARE THE MONEY IS NOT TYPED ON THIS PAGE — the K-1 has its own form
+>
+> 🛑 **The block above answers *where on the FORM*. It does not answer *where do I TYPE*, and the two are
+> different forms.** ✅ **The K-1 is keyed on its own form**, added to the 1040 — and **Schedule E page 2,
+> Form 7203 and Form 8995 all take their figures from that one screen.** 🔑 **Same rule as Form 7203,
+> which opens NO line of Part I at all** — and the same rule as the 1120-S SOP's **`Fixed Assets` tab** *("4562 in
+> ATX is a computed output")* and its **Form 1125-E** route for page 1 line 7. **Three instances of one
+> rule.**
+>
+> 🔴 **THE FORM'S NAME IS NOT ENOUGH — in a 1040, typing `K1` in *Add Forms* returns FOUR.**
+> ✅ **Read off the vendor's forms list, by package** *(`support.atxinc.com/taxna/software-system-requirements/atx-forms`, the site's current program year — read 2026-09-07)*:
+>
+> | In the **Individual (1040)** package | What it is | |
+> |---|---|---|
+> | ✅ **`K1 INPUT (1120S)`** | *Federal K-1 (1120S) Input Worksheet* | 🔴 **THE ONE** |
+> | `K1 INPUT (1065)` · `K1 INPUT (1041)` | receives from a **partnership** / a **trust** | ⛔ wrong issuer |
+> | `SCH K1 (8865)` | *K-1 Partner's Share…* for **Form 8865, a FOREIGN partnership** | ⛔ **not on THIS return** — it belongs on the 1040 of a client who must file Form 8865 |
+>
+> 🔑 **AND WHAT IS *NOT* IN THAT BOX IS HALF THE ANSWER: `SCH K1 (1120S)` and `SCH K1 (1065)` are in the
+> CORPORATE and PARTNERSHIP packages**, so on a 1040 they cannot be picked by accident. ⛔ **The only
+> `SCH K1` a 1040 offers is the foreign-partnership one — which is precisely the one that was picked.**
+> ⚠️ **Attach a state and its own `XX K1 INPUT` joins the list** *(most states have one — `CT K1 INPUT`
+> for a Connecticut return)*. ⓘ **`8865` itself is also in the package — but it is the foreign-partnership
+> RETURN, not a K-1, and its name contains no `K1`, so a `K1` search never returns it.**
+>
+> 🔑 **THE NAMING RULE:** **`K1 INPUT …` = the K-1 you RECEIVE** *(a capture worksheet feeding your
+> return)*; **`SCH K1 …` = the K-1 you ISSUE**. ⚠️ **And the parenthesised number is the ISSUING entity's
+> form — but only inside this family**: elsewhere the parentheses name the **parent** form
+> *(`SCH E (1040) PAGE 2`)*, so never state it unscoped.
+>
+> 🔴 **THE TELL — and it is STRUCTURAL, not lexical.** ⛔ **"An issuing K-1 asks for a percentage" is
+> FALSE**, and a first version of this row said it. 📄 **A RECEIVED K-1 carries one too:** Schedule K-1
+> (1120-S) Part II **item G is `Current year allocation percentage`**; Schedule K-1 (1065) **item J is the
+> partner's own `Profit / Loss / Capital %`** *(2025 PDFs, read 2026-09-07)*. **The capture worksheet
+> mirrors those boxes.** ✅ **What separates them is the SHAPE:**
+>
+> | | |
+> |---|---|
+> | 🔴 **ISSUING** | a **multi-owner GRID** — one **row per owner**, *Add Record / Delete Record*, asking for **the OWNERS' names and addresses**, percentages split among them |
+> | ✅ **RECEIVING** | an **Input Sheet for ONE entity** — asking for **the COMPANY's name, EIN and address**, then that entity's boxes |
+>
+> 🔑 **The question that always separates them: *whose* name and address is this screen asking for?**
+>
+> ### 🔴 THE INPUT SHEET HAS NO "PART III" — address it by ITS OWN labels
+>
+> 🗣️ *"Parte 3, casilla 1: ¿dónde está eso?"* ⛔ **Nowhere.** The sheet renumbers the K-1's boxes 1-19
+> **without the Part heading**, in a block headed **`Shareholder's share of current year income,
+> deductions, credits`**, and rewords them: the IRS's *"Ordinary **business** income (loss)"* is the
+> sheet's **`1 Ordinary income (loss)`**. 🔑 **Give the screen's heading, the screen's line number and the
+> screen's wording — and flag where it differs from the IRS's.** *(Observed on the ATX 2025 `K1 Input
+> (1120S)` sheet, from Lilian's screenshot, 2026-09-07.)*
+>
+> ### 🔴 AND THE CHECKBOXES ARE PART OF THE ENTRY ROUTE
+>
+> ⛔ **A figure keyed correctly on a sheet whose checkboxes are wrong gives a wrong return with no error
+> and often no changed total.** ✅ **List them with their consequence, and say which stay EMPTY.**
+>
+> | Checkbox on the K-1 input sheet | Consequence if wrong |
+> |---|---|
+> | 🔴 **`Calculate basis limitation`** | 📄 **the sheet's own header: mark EVERY 1120S record, "to support Form 7203 and to track beginning and ending stock/loan basis".** Unticked, **the basis limitation is not computed** ⚠️ *(that the form vanishes entirely is `not established` — `7203, BASIS WKST` is a form in its own right)* |
+> | 🔴 **`Passive activity`** — ✅ **left EMPTY = nonpassive** ⚠️ `inferred — not established` | the figure lands in Schedule E's **passive** column instead of the nonpassive one, and **line 32 is identical**, so no total reveals it. 🛑 **Settle the §469 position before relying on the default** |
+> | 🔴 **`Qualified Business`** ⚠️ `inferred — not established` | box 17V is expected to reach **Form 8995** through it; unticked, the §199A deduction is silently lost |
+> | `Check ("X") if a Specified Service Trade or Business` | ticking it on a non-SSTB limits the deduction for no reason |
+> | `more-than-2% shareholder` · `Final K-1` · `Amended K-1` · `Calculate at-risk limitation` | ordinary facts — but each is a **statement**, so set them deliberately rather than leaving the default. ⚠️ **What the program DOES with each is `inferred`** |
+>
+> 🛑 **AND THE LIMIT: A SCREENSHOT ESTABLISHES LABELS, NOT BEHAVIOUR.** ⛔ **Mark every consequence
+> `inferred` unless the screen states it or someone watched the output change.**
+>
+> ### 🔴 BOX 17 CODE V IS GREYED — §199A is its own BLOCK, split Non-SSTB / SSTB
+>
+> 🛑 **The QBI code is an OUTPUT like every other computed line on this sheet.** ✅ **Scroll to
+> `Section 199A Information`**: two halves — **`Non-SSTB`** and **`SSTB`** — each with `Income Items`,
+> `Deduction Items` and `Additional Information`. 🔑 **Put everything in the half the business actually
+> is, and leave the other half completely empty.** ⛔ **Ticking the sheet's `Specified Service Trade or
+> Business` checkbox and then filling the Non-SSTB half is a contradiction** ⚠️ `inferred — nobody has
+> watched whether the program flags it`.
+>
+> | From the company's **Statement A** | Where it goes in the block |
+> |---|---|
+> | **QBI / ordinary income** | `Income Items → Ordinary Income` — ⚠️ **a different field from box 1**, even when the figures match ⓘ *(the two labels are observed; that they are independent inputs is `inferred`)* |
+> | **W-2 wages** | `Additional Information → Section 199A W-2 wages` |
+> | **UBIA of qualified property** | `Additional Information → Section 199A unadjusted basis` |
+> | REIT dividends · PTP income | ⚠️ `Section 199A REIT dividends` and `Section 199A PTP income` appear in `Additional Information` alongside the wage and UBIA fields — **observed on one screenshot, at one scroll position** |
+>
+> ⚠️ **SAY WHETHER IT MOVES THE TAX, because usually it does not.** 📄 **Form 8995 line 15 is the smaller
+> of line 10** *(the deduction before the limitation)* **and line 14** *(20% of line 13 — taxable income less net
+> capital gain, qualified dividends included)*, so on a small return line 14 binds long before the QBI figure does and the
+> entry can leave **Form 8995 line 15 — and so Form 1040 line 13a — unchanged.**
+> ⛔ **And say what that depends on: a cap that binds today can stop binding** once an open QBI position is
+> settled, at which point the same entry becomes a money fix. 🔑 **And the W-2-wage / UBIA limitation only applies ABOVE the
+> §199A taxable-income threshold**, so on a modest return those two fields never bite at all. ✅ **Enter
+> them anyway** — the return must say what the K-1 says — **but tell the person it is a correctness fix,
+> not a money fix**, or they will hunt for a change that was never going to appear.
+> ⚠️ **AND RECONCILE IT WITH THE CHECKBOX ABOVE:** the `Qualified Business` tick and this block are **not
+> alternatives** — the tick is what makes the activity qualified at all, the block is what supplies its
+> figures. ⛔ **Neither alone produces a §199A deduction**, and `how the two combine` is `inferred`.
+> _(Lilian, 2026-09-07: **"esa casilla en ATX no está disponible para escribir y me remite a esta sección
+> 199A para llenarla, pero no sé cómo llenarla."** On the draft return Form 8995 line 1 carried the
+> S corporation at **0** because the block was empty.)_
+>
+> ### 🔴 NETTING MOVES BOTH SIDES — and on a 1040 line 2 is keyed on the K-1 screen, not on Form 7203
+>
+> 📌 **The policy itself is [`form-1120s-preparation.md`](./form-1120s-preparation.md) §5C-v — read it
+> there, with its **five gates** and its *"plus any stock ACQUIRED during the year"* clause.** ⛔ **Do not
+> restate it; a restatement drops the parts that bite.** **What is new on THIS side of the return:**
+>
+> ⛔ **Form 7203 must carry BOTH halves**: line 6 goes to **zero** *and* line 2 becomes the **net**.
+> **Zero on line 6 with the gross on line 2 overstates ending basis by the whole distribution; zero on
+> line 6 with nothing on line 2 understates it by the whole net.** _(Both errors on one live return,
+> 2026-09-07 — one in the working paper's own instruction, one in the software.)_
+> 🛠️ **And neither line is typed on Form 7203** — both arrive from the **K-1 input screen**: line 6 from
+> box 16D, line 2 from the `Basis Limitation` section.
+>
+> 🛑 **THE ARITHMETIC CHECK, AND ITS LIMIT.** ✅ Where the policy's gates pass, the gross and netted
+> presentations give the **same line 15**, and that is a cheap way to catch a half-applied netting.
+> ⛔ **But a DIFFERENCE is not proof of an error, and treating it as one is dangerous:** where the gates
+> fail — 🔴 **gate 1 is that shareholder's CONTRIBUTIONS exceeding his DISTRIBUTIONS** — netting was never
+> available and the form must carry the gross. ⚠️ **And where his distributions ALSO exceed his BASIS, the
+> difference between the two presentations IS the §1368(b)(2) capital gain the netted version would
+> erase.** ⛔ **Two different tests: the GATE is contributions vs distributions, the GAIN is distributions
+> vs basis. A failed gate does not imply a gain** — and reading the gate as the gain test lets someone net
+> a case the policy forbids.
+> 🔑 **Gates first, per shareholder; comparison second.** ⚠️ **Two shareholders of the same company can
+> land on opposite sides of this, and both K-1s print box 16D at zero.**
+>
+> 🔑 **AND READ THE SCREEN'S OWN INSTRUCTION TEXT.** Input sheets carry it, and it settles questions a
+> session would otherwise guess at. *(The ATX sheet's header states the import route — **"To Import K-1s
+> from a S Corporation return, select Returns / Import Data / K-1 Data"** — and where the basis section
+> lives: **"Scroll down to the 'Basis Limitation' section on this tab."** Both had been carried as
+> unverified leads until the screenshot arrived.)*
+> 🛑 **ONE SCREENSHOT OUTRANKS EVERY SEARCH RESULT. ASK FOR IT EARLY.**
+>
+> ⛔ **And not `SCH E (1040) PAGE 1`** — *Supplemental Income and Loss Page 1* is **the RENTAL sheet**
+> *(Property Type · Fair rental days · Rent income · Royalties)*, a different form with no K-1 on it.
+> **The K-1 lands on `SCH E (1040) PAGE 2`.**
+>
+> | What is typed on the K-1's own form | Where it surfaces |
+> |---|---|
+> | company **name · EIN** | Schedule E line 28 row A, cols **(a)** and **(d)** |
+> | 🔴 **box 1** | 🔴 **TWO destinations, and the second is the one that gets missed:** Schedule E **LOWER** grid, row A, `Nonpassive income from Schedule K-1` *(the nonpassive-LOSS column for a loss)* — **AND Form 7203 line 3a**, which is how income raises basis |
+> | **box 16 C** · **box 16 D** | Form 7203 **line 8a** · **line 6** |
+> | **capital contributions** *(on no K-1 box — from the books)* | Form 7203 **line 2** — in a **`Basis Limitation`** section further down the **`K-1 Detail Schedule`** tab of the same worksheet ✅ *(**established 2026-09-09**: the sheet's own header says **"Scroll down to the 'Basis Limitation' section on this tab to enter/review beginning basis values"**, and Form 7203's banner says **"Basis information is entered on K1 Input (1120S)"**)* ⚠️ **the field labels INSIDE that section are still `not established` — ask for the screenshot** |
+> | **box 17 V** | Form 8995 |
+>
+> 💡 **AND THERE MAY BE NO TYPING AT ALL WHEN THE FIRM PREPARED THE COMPANY.** The vendor's KB describes a K-1 **import**: *Returns → Import Data → K-1 Data*, which lists every business return in the same program where this person is a shareholder, and writes the data into the K-1 Input Worksheet. ⚠️ *(Search-result summary of their article 2595 — `not established`.)* 🛑 **Check by hand afterwards anything the PRINTED K-1 does not carry** — a distribution figure the firm reports gross while the K-1 prints net, and the contributions, which are on no K-1 box at all. **An import gets those wrong silently.**
+>
+> ⚠️ **That table is the worked case, not the whole screen** — **every** K-1 box is keyed there, **16A/B
+> and 16E included** *(see the box map above: ⛔ "NOT just C and D")*. **These five are the ones that moved.**
+>
+> 🛑 **AND DO NOT OVERSTATE IT: Schedule E page 2 still has preparer entries on it.** ⛔ **"That form
+> takes no input" is the wrong lesson and sends someone hunting on the wrong screen a second time.**
+> ✅ **Line 27's Yes/No and the (e) and (f) ticks are the preparer's.** ⚠️ **WHERE they are made is a
+> separate, `not established` question** — [Kolo Florida's paper](../tax-returns/kolo-florida-inc/2025-form-1120s.md)
+> §8A records column **(e)** as entered *"Schedule E page 2"*, and that row was never read back off a
+> screen. **Ask whoever has it open.**
+>
+> ✅ **AND ALWAYS GIVE THE "IT DID NOT FLOW" LIST — WITH ITS FIX — because a missing or misrouted input
+> produces NO error message:**
+>
+> | Check | Symptom | 🛠️ Fix |
+> |---|---|---|
+> | 🔴 **① WHICH COLUMN did it land in** — not whether it arrived | 🛑 **NONE.** 📄 **Line 30 adds columns (h) *(passive income)* and (k) *(nonpassive income)*, so a K-1 classified the wrong way lands one column over and LINE 32 IS IDENTICAL.** ⛔ **No total will ever reveal it.** ⚠️ *(Income-year symmetry only: a misclassified LOSS goes to (g) rather than (i), and (g) carries only what Form 8582 allows, so there line 32 usually does move.)* | ⛔ **Settle the §469 position FIRST** — then set the activity to match and confirm the figure sits in **(h)** if passive, **(k)** if nonpassive. 🛑 **Do NOT default to nonpassive:** on a shareholder who does not materially participate, (h) is the RIGHT answer, and forcing (k) also pulls the income out of the Form 8582 pool *(other suspended passive losses stay suspended)* and out of **net investment income on Form 8960** — a 3.8% swing. ⚖️ **Record the reason either way** |
+> | ② the amount is in a box that does not feed Part II at all *(box 4, box 10…)* | Schedule E blank | move it to box 1. ⚠️ **Boxes 2 and 3 do NOT blank it** — rental and other rental income also land on line 28 and default to **passive**, which is finding ① wearing a different hat |
+> | 🔴 **②b the screen is a GRID with one row per OWNER, asking for their names and addresses** | 🛑 **you are on an ISSUING K-1** — the payer's allocation schedule, not a capture worksheet | ⛔ **check the screen's TITLE and whether it lists more than one owner before deleting anything** — a percentage field alone is not the tell. The right form's name begins **`K1 INPUT`** |
+> | ③ the **(b)** column reads **`P`** *(it should read `S`)* | ⚠️ **Not a blank Schedule E** — a 1065 K-1's ordinary income also lands on line 28, but **no Form 7203 is produced** ⓘ *(a partner's loss is still limited, under §704(d) — it is just not computed on that form)* | delete it and add **`K1 INPUT (1120S)`** |
+> | ④ a **second K-1 tab** for the same company | ⚠️ **DOUBLE-COUNTS; it does not blank** | delete the duplicate and re-check line 32 |
+> | 🔴 **⑤ on a LOSS — the one cause where a BLANK IS CORRECT** | the loss is legitimately suspended by **§1366(d) basis** or **§465 at-risk** — **the first two of the three gates**, in that order | ⛔ **Nothing to fix.** ✅ Check the carryforward is where it belongs: **Form 7203 Part III column (e)** for a basis suspension, **Form 6198** for an at-risk one — ⛔ **they are not the same form, and an at-risk carryover does not live on Form 7203** |
+>
+> ⛔ *(An earlier version of this list said a passive activity **"goes to Form 8582 and never reaches
+> Schedule E at all"**. **That is wrong.** 📄 The 2025 form reads `(g) Passive loss allowed (attach Form
+> 8582 if required)` and `(h) Passive income from Schedule K-1` — **Form 8582 is the passive LOSS form**,
+> and passive **income** goes straight into (h) and on to line 30. Read off the PDF, 2026-09-07.)*
+>
+> 🟢 **THE VENDOR'S SUPPORT SITE IS REACHABLE** *(Lilian opened it 2026-09-07 — a rule written that
+> morning saying otherwise was wrong within hours)*. ✅ **`support.atxinc.com` serves the FORMS LIST at
+> `/taxna/software-system-requirements/atx-forms`** — every form's exact ATX name and description, by
+> year, and **that is the authority on what a form is CALLED.** ⚠️ **`support.cch.com` answers, but its KB
+> articles sit behind the vendor's customer login** — a session cannot open one; **Lilian can.**
+> 🛑 **AND `WebFetch` IS BLOCKED ON ALL OF THESE WHILE `curl` WORKS** *(irs.gov included)* — ⛔ **never
+> conclude a host is unreachable from a WebFetch failure; retry with `curl -A` and a browser user-agent.**
+> 🔑 **What is still not checkable is what a SCREEN LOOKS LIKE** — its tabs, field positions and column
+> letters. **Those are `established` only from a screenshot or from `projects/tax-returns/`**, carrying
+> **who observed it, when, and in which version** *(the 1120-S SOP's 🖥️ convention)*, **and a delivery
+> steers by a column's TITLE rather than by a screen letter nobody has seen.**
+> _(Lilian, 2026-09-07: **"No encuentro dónde entrar a nada."** The route was already in the repo, on
+> another client's paper, and a delivery gave the form's coordinates without it.)_
+
+**Schedule E page 2 prints the basis-computation note above line 28. Quote it, do not paraphrase:**
 
 > *"Note: If you **report a loss, receive a distribution, dispose of stock, or receive a loan
 > repayment** from an S corporation, you must check the box in column (e) on line 28 and attach the
@@ -651,7 +866,7 @@ a preparer works from anyway. **Cite the instructions; do not restate a regulati
 > *"1. Basis is increased by (a) all income… 2. Basis is decreased (but not below zero) by (a)
 > property distributions… **3. Basis is decreased (but not below zero) by (a) nondeductible
 > expenses**… **4. Basis is decreased (but not below zero) by all losses and deductions reported on
-> Schedule K-1."*
+> Schedule K-1.**"*
 
 Under that default, nondeductible expenses in excess of basis are **lost**. The election reverses
 steps 3 and 4: *"You may elect to decrease your basis under (4) prior to decreasing your basis under
@@ -711,10 +926,15 @@ explanation is finished work; a warning nobody looked at is a defect waiting.
 
 ### 🛑 Form 7203 — the thing nobody tells you: almost NONE of Part I is typed on it
 
-🔑 **Form 7203 Part I is an OUTPUT.** In **ATX**, only **lines 1 and 13** are typed there; everything
-else arrives from the **K-1 input screen** or is computed. **If a line will not accept a number, you
-are on the wrong screen.**
-ⓘ **Outside Part I the form IS typed** — items C, D and E, and Part II's loan balances (lines 16–20).
+🔑 **Form 7203 Part I is an OUTPUT.** 🔴 **CORRECTED 2026-09-09 — in ATX 2025, NO line of Part I is typed
+on the form.** The form prints its own banner across the top: **`Basis information is entered on K1 Input
+(1120S)`** *(observed on a live return)*. **Lines 1 and 2 are keyed in that worksheet's `Basis Limitation`
+section**, the rest is computed. **If a line will not accept a number, you are on the wrong screen and
+nothing is broken.**
+⛔ **This SOP said "only lines 1 and 13 are typed" until 2026-09-09. That was never observed — it was
+inferred — and it cost a preparer an afternoon hunting for a keyboard inside a form that takes no input.**
+🔑 **The lesson is not the line numbers: it is that a claim about a SCREEN must come from a screen.**
+ⓘ **Outside Part I the form IS typed** — items A, B, C, D and E, and Part II's loan balances (lines 16–20).
 
 ⚠️ **The `Where it is ENTERED` column is ATX's behaviour, not an IRS rule** — screens move between
 versions and other software routes differently. **The middle column is the tax fact; the right-hand
@@ -722,12 +942,12 @@ one is only the route.**
 
 | Line | What it is | Where the FIGURE comes from *(the tax fact)* | 🛠️ **Where it is ENTERED** |
 |---|---|---|---|
-| **1** | Stock basis at the beginning of the year | 🔒 **last year's line 15**, copied. ⛔ **Never recomputed WHERE A PRIOR FORM 7203 EXISTS.** 🛑 **Where none exists — the ordinary case, since the form is only required in four situations — it is RECONSTRUCTED as scoped work and labelled as such** *(1120-S SOP §12A)* | ✅ **the only line typed on Form 7203** — or rolled forward automatically if the prior year was prepared in the same software |
-| **2** | Basis from capital contributions or additional stock acquired | 📖 the company's books — the shareholder's capital contributions for the year, ➕ **any additional stock he ACQUIRED during the year** (stock bought from another shareholder never touches the company's capital account and is not in that figure). ⚠️ **On NO K-1 box.** 🛑 **The instructions EXCLUDE loans:** *"Don't include any loans to the S corporation"* — so gross credits to the capital account are a **starting point, not the answer**; strip loan reclassifications and income postings. 🔵 **IF THE ISSUING CORPORATION NETTED** its contributions against its distributions under the firm's policy ([1120-S SOP §5C-v](./form-1120s-preparation.md)), line 2 carries the **NET** and box 16D is blank — ⛔ **the gross figure here beside a blank 16D is the mismatch that section warns about.** Confirm the presentation **in writing** with whoever prepared the 1120-S; do not assume it from a blank box | 🔴 **NOT on Form 7203 — the K-1 input screen**, contributions field |
+| **1** | Stock basis at the beginning of the year | 🔒 **last year's line 15**, copied. ⛔ **Never recomputed WHERE A PRIOR FORM 7203 EXISTS.** 🛑 **Where none exists — the ordinary case, since the form is only required in four situations — it is RECONSTRUCTED as scoped work and labelled as such** *(1120-S SOP §12A)* | 🔴 **NOT typed on Form 7203** — in ATX it is keyed in the `Basis Limitation` section of `K1 Input (1120S)`, or rolled forward automatically if the prior year was prepared in the same software |
+| **2** | Basis from capital contributions or additional stock acquired | 📖 the company's books — the shareholder's capital contributions for the year, ➕ **any additional stock he ACQUIRED during the year** (stock bought from another shareholder never touches the company's capital account and is not in that figure). ⚠️ **On NO K-1 box.** 🛑 **The instructions EXCLUDE loans:** *"Don't include any loans to the S corporation"* — so gross credits to the capital account are a **starting point, not the answer**; strip loan reclassifications and income postings. 🔵 **IF THE ISSUING CORPORATION NETTED** its contributions against its distributions under the firm's policy ([1120-S SOP §5C-v](./form-1120s-preparation.md)), line 2 carries the **NET** and box 16D is blank — ⛔ **the gross figure here beside a blank 16D is the mismatch that section warns about.** Confirm the presentation **in writing** with whoever prepared the 1120-S; do not assume it from a blank box | 🔴 **NOT on Form 7203 — the K-1 input screen**, contributions field ⚠️ **ON A CLIENT WHOSE RETURN NETS** *(§5C-v — see **NETTING MOVES BOTH SIDES** above)*: **this line carries the NET excess of contributions over distributions, plus any stock acquired** — ⛔ **not the gross.** |
 | **3a–3m** | Income and other basis-increasing items *(ordinary income · rentals ×2 · interest · dividends · royalties · net capital gains · §1231 · other income · excess depletion · tax-exempt income · **credit recapture** · **other items that increase stock basis**)* | mostly the K-1's income boxes — ⚠️ **3l and 3m are not income boxes, and 3m has no K-1 box at all.** 🛑 **A LOSS NEVER GOES HERE**: line 3a prints *"enter losses in Part III"* | 🔴 **the K-1 input screen** for the K-1-sourced ones |
 | **4** | Add 3a–3m | ƒ | **computed — do not type** |
 | **5** | Stock basis before distributions | ƒ 1 + 2 + 4 | **computed** |
-| **6** | Distributions *(excluding dividend distributions)* | 🔴 **K-1 box 16, code D** | 🔴 **the K-1 input screen, box 16 code D** |
+| **6** | Distributions *(excluding dividend distributions)* | 🔴 **K-1 box 16, code D** — ⚠️ **which reads ZERO on a netted client** *(§5C-v)*, and that is correct: **the netting moved the figure onto line 2** | 🔴 **the K-1 input screen, box 16 code D** |
 | **7** | Stock basis after distributions | ƒ 5 − 6. ⚠️ *"If the result is zero or less, enter -0-, **skip lines 8 through 14**, and enter -0- on line 15"* — and a distribution above basis is a **capital gain** on Form 8949/Schedule D | **computed** |
 | **8a** | Nondeductible expenses | 🔴 **K-1 box 16, code C.** ⚠️ **Blank when there is no 16C amount — and blank BY RULE if a §1.1367-1(g) election is in effect**, in which case it goes on **line 13** | 🔴 **the K-1 input screen, box 16 code C** |
 | **8b** | Oil and gas depletion | ⚠️ **NOT a K-1 figure** — *"the amount of oil and gas depletion claimed **on your personal return**, up to your proportionate share of basis in the property subject to depletion"* | from the 1040's depletion computation |
@@ -735,7 +955,7 @@ one is only the route.**
 | **9** | Add 8a–8c | ƒ | **computed** |
 | **10** | Stock basis before loss items | ƒ 7 − 9 | **computed** |
 | **11** | Allowable loss and deduction items | ƒ **Part III, line 47, column (c)** | 🔴 **Part III**, which fills from the K-1's **loss** boxes |
-| 12 | Debt basis restoration | ƒ Part II line 23 | Part II |
+| ⚠️ **12** | Debt basis restoration | 🛑 **NEITHER typed nor computed on the face of the form** — it carries **no arithmetic and no "Enter the amount from line N"**, only a pointer to the line-23 instructions. **It comes from Part II**, and where the shareholder made no loans Part II is blank and this is **0** either way. ⛔ **Do not label it; say what it is** | Part II |
 | 13 | Other items that decrease stock basis | a stock sale or redemption — **and the (g)-election amounts, with prior-year carryovers** | typed, when it applies |
 | **14** | Add 11, 12 and 13 | ƒ | **computed** |
 | **15** | **Stock basis at END of year** | ƒ 10 − 14 | **computed → next year's line 1** |
@@ -780,6 +1000,7 @@ screenshot, twice.**)_
 - [ ] **Line 1 = last year's line 15**, to the dollar
 - [ ] **Every K-1 box that feeds a 7203 line is actually IN the K-1 input** — 16C and 16D above all,
       plus the **contributions** figure, which is on **no K-1 box at all** and comes from the books
+      — ⚠️ **the NET of them, on a client whose return NETS** *(§5C-v; see **NETTING MOVES BOTH SIDES**)*
 - [ ] **Line 15 recomputed by hand:** `line 1 + contributions + income − distributions − nondeductible − allowed losses`
 
 #### The rest of the mechanics that get done wrong
@@ -1576,7 +1797,7 @@ client's — and it is written from the **carryover reasoning**, which the retur
       and exclusive** use.
 - [ ] A K-1 loss clears **all four** limitations, in order — basis (7203) · at-risk (6198) · passive (8582) · excess business loss (461).
 - [ ] Form 7203 line 1 = **last year's line 15**.
-- [ ] 🛑 **Every K-1 box that feeds a Form 7203 line is actually IN the K-1 input** — **16C → line 8a**, **16D → line 6**, and the **contributions → line 2**, which is on no K-1 box. ⚠️ **A missing input leaves a blank line and the form still FOOTS** (M3)
+- [ ] 🛑 **Every K-1 box that feeds a Form 7203 line is actually IN the K-1 input** — **16C → line 8a**, **16D → line 6**, and the **contributions → line 2**, which is on no K-1 box. ⚠️ **A missing input leaves a blank line and the form still FOOTS** ⚠️ **On a NETTED client, 16D reads zero and line 2 carries the NET** *(§5C-v)*. (M3)
 - [ ] 🛑 **Form 7203 line 15 RECOMPUTED BY HAND on the printed form** — `line 1 + 2 + 4 − 6 − 9 − 14` — **and each input compared digit by digit with the figure that should feed it.** ⚠️ **A mistyped input produces a form that recomputes correctly and flags nothing**, so nothing in the software catches it. **Re-run after every re-key.** 🔑 **It is next year's opening basis, and on a company heading for a final return it opens the liquidation computation** (M3)
 - [ ] The NOL deduction on Schedule 1 line 8a is the **allowable** amount under the §172(a) **80%** cap, and any unused amount is carried forward. ⓘ **In a loss year the cap is nil and the whole carryforward is listed anyway** — Form 172 line 23 adds it back (M7)
 - [ ] **Form 8867** is complete where EIC, CTC/ACTC, AOTC or HOH is claimed.

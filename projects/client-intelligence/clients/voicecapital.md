@@ -1,6 +1,6 @@
 # VOICECAPITAL INC
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-13
 >
 > ✅ **First full historical sweep completed 2026-08-22; Gmail catch-up READ TO COMPLETION 2026-08-29** — Double (client record, properties, note 491840 read in full, contacts, activity log), Gmail (full history — paged to the end: a plain "Voicecapital" search ran out of pages after 2 (no further `nextPageToken`), and a second, substantive-terms-narrowed search across the same full history returned no `nextPageToken` either — both exhausted, not merely budget-limited), Ping (`resolve_person` + `search_meetings`), and Google Drive all checked.
 
@@ -105,14 +105,34 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Log
 
-- 2026-08-13 — **File created** from Lilian's own call notes, kept on her phone before the firm used Claude. _(Lilian's iCloud notes, migrated — folder "Voicecapital Inc"; note dated 2026-03-16.)_ The operational detail — the fax number, what the agent said — is in the **Double case note** (§7). _(Worked by Lilian.)_
+- 2026-08-13 — **File created** from Lilian's own call notes, kept on her phone before the firm used Claude. _(Lilian's iCloud notes, migrated — folder "Voicecapital Inc"; note dated 2026-03-16.)_ The operational detail — what the agent said — is in the **Double case note** (§7), which stays the durable home. ⓘ *The §6 log below also records the two MyFax transmission numbers, surfaced by the 2026-09-12 sweep: a toll-free fax number is not client data, and the two are what distinguish the 2026-03-16 fax from the 2026-04-28 one.* _(Worked by Lilian.)_
   - **2026-03-13 — Form 7004 mailed.** The 2025 extension for the 1120-S had been **rejected on e-file** because the form did not match the IRS's records, so it went out on paper.
   - **2026-03-16 — IRS call.** The agent said the **S-Corp status was NOT accepted** and the business is **still considered a C-corp**: the IRS has **no Form 2553** on record. Lilian pointed out it had been **mailed attached to the 2023 return, which the IRS confirms receiving**. The agent's suggestion — that the 2553 may have gone to a different address — was checked and **the address was correct**. The IRS also confirmed it **received the 2023 return but has not processed it**, precisely because of the missing 2553. Lilian was given a fax line and **faxed the copy of the 2553 plus the certified-mail receipt the same day**. It also emerged that **the address in the IRS's records is the company's previous one**.
 - **Nothing after 2026-03-16 is recorded anywhere the firm can reach.** Per Lilian's instruction of 2026-08-12, this is left open rather than chased or inferred. ⚠️ **Read that as a statement about the SOURCES SEARCHED, not about the world** — these files were built from the migrated notes plus Double, with **no full historical sweep of Gmail, Drive or Ping**. _(Qualifier added 2026-08-14, after an independent review showed the same phrasing on other files was concealing live work.)_
 
 ⚠️ **This is the same fact pattern as [Optic Gold](./optic-gold.md), which DID resolve** — there the IRS accepted the election about six weeks after the identical fax. That is a reason to go and check this one, **not** a reason to assume it resolved the same way.
 - 2026-08-22 — **First full historical sweep (weekend CI sweep, unbounded).** Double: note 491840 re-read in full — matches this file's existing summary exactly, no new substantive content. Client properties resolved bookkeeping cadence (Quarterly) and assigned staff (Julia Kononova); "2025 Taxes" project confirmed Filed 2026-07-03. Gmail: full history, EIN found, a second 2848 fax (2026-04-28), a Sunbiz notice (2026-04-29), and the shared "paylitemerchant.com" beneficial-owner-group signal — see §5. Drive: found off-Double bookkeeping work product (2024 P&Ls, a Chase export). Ping: `resolve_person` + `search_meetings` scoped to this client returned only semantically-loose, largely irrelevant or garbled results — no legible new content specific to the S-election matter. ⚠️ **Only the first page of ~201 estimated Gmail results was actually reviewed this run** — the baseline advanced anyway, leaving a coverage gap (corrected 2026-08-24 to a `⚠️ CATCH-UP OWED` marker in `sweep-state.md`).
+- 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29).** Double: note 491840's `updatedAt` unchanged (2026-08-13) — not touched since the last read, so not re-read again; client properties and 0 activity-log entries in the window confirm no Double-side movement at all. Gmail: a plain "Voicecapital" search after 2026-08-29 found only 3 threads — one a false-positive keyword match on an unrelated OPTIC GOLD financials email, one the firm's own 2026-08-29 weekly-sweep report email (not client content), and one new, substantive item: a QuickBooks "URGENT: Pay overdue invoice" notice (2026-09-11) shows the firm's own invoice to VOICECAPITAL INC, originally due 2026-05-21, now **112 days overdue** — a billing-relationship fact, dollar amount withheld per the two-data-homes rule. A targeted follow-up search for "2848"/"power of attorney" found no new correspondence beyond the already-known 2026-04-28 MyFax transmission receipt (fax number 1-855-374-0047, distinct from the 2026-03-16 fax's 1-855-309-1422) — the receipt confirms only that the fax was sent, not its content or purpose; still not established. Ping: org-wide semantic search for "Voicecapital S-election IRS 2553 C-corp" returned no legible, client-specific results — same non-result pattern as the prior sweep. Google Drive: a title search for "Voicecapital" modified since 2026-08-29 returned zero files — no new documents.
 - 2026-08-29 — **Gmail catch-up READ TO COMPLETION.** Double: properties unchanged, note 491840 re-read in full again — body identical to the 2026-08-22 read, no new content, no activity-log entries in the window. **Gmail: paged the plain "Voicecapital" query to the end** (page 1 of 50 + page 2 of 25, no further `nextPageToken` — full history from 2024-09 through 2026-08 actually read), then ran a second query narrowed to substantive S-election/IRS terms across the same unbounded history (17 results, also exhausted with no further page) to confirm nothing relevant was missed in the noise. **Result: no correspondence after 2026-03-16 anywhere in Gmail confirms or denies whether the IRS accepted the S-election** — the case remains genuinely open, not merely unread. One resolution found: a signed Form 7004 return receipt, dated 2026-03-25, was located in Google Drive — this **confirms** the paper 2025 extension was processed (see Outstanding items). Ping: `resolve_person` + `search_meetings` returned only semantically-loose/off-topic hits, nothing legible and specific. Drive: files unchanged since 2026-08-22 except for the newly-noticed signed 7004 receipt (already present, just not previously flagged).
+
+- 2026-09-13 — **This client's 2025 Form 1099-NEC NAMING another JK client, [Valentin
+  Volzhanskiy](./valentin-volzhanskiy.md), as recipient was PREPARED** by the firm on **2026-01-31**
+  through
+  tax1099.com with this payer's other 1099s. It surfaced while his 2025 return was being reviewed:
+  🔑 **he had never mentioned this payer and the form was in THIS client's Drive folder, not his**,
+  which is why it was invisible from his own file, his uploads and his organizer answers.
+  *(2026-09-13 — recorded here because the payer side is the half that can be checked; the figure
+  lives in his working paper, never in a client file.)*
+- 2026-09-13 — 🔵 **NEW CORROBORATION FOR THE BENEFICIAL-OWNER-GROUP QUESTION IN §5.** The 2025
+  1099s this client and **[Pro Title Agency](./pro-title-agency.md)** prepared for that same
+  recipient **carry the same telephone number as the payer's contact number.** *(Pro Title's was
+  also furnished — his own copy corroborates it; this one's was not, which is why the verb differs
+  from the entry above.)* ⚠️ **Consistent with shared
+  administration; it is not proof of common ownership** — a shared bookkeeping or payment-processing
+  service produces the same signature. 🔑 **It does line up with the `paylitemerchant.com` signal
+  and the Sergey Karpenko contact cluster already recorded in §5.** ⛔ *The number itself is
+  deliberately not written here — a fax/phone number in this file has broken the Hub's published-page
+  gate before (FOLLOW-UPS row 105); the fact of the match is what matters.*
 
 ### Tax year YYYY — the review
 
@@ -120,10 +140,11 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Find out whether the IRS accepted the S-election after the 2026-03-16 fax.** STILL OPEN, pending since 2026-03-16 (~166 days). No deadline recorded. The Gmail catch-up was read to full completion 2026-08-29 and still found no confirmation either way — this is a genuine gap in the firm's own records, not an unread source; the "2025 Taxes" project shows Filed regardless (see §5, unreconciled). **This must be resolved by calling the IRS directly** — no further document search will surface it. Gates the 2023 return being processed, the 2025 return's classification, and whether the company owes anything as a C-corp.
-- **Correct the company's address with the IRS** (a Form 8822-B is the usual route) — STILL OPEN, pending since 2026-03-16 (~166 days), not confirmed done; no new evidence found 2026-08-29.
+- 🔴 **Find out whether the IRS accepted the S-election after the 2026-03-16 fax.** STILL OPEN, pending since 2026-03-16 (~180 days as of 2026-09-12). No deadline recorded. Re-chased this sweep (a plain "Voicecapital" Gmail search since the 08-29 baseline) — still no confirmation either way; the "2025 Taxes" project shows Filed regardless (see §5, unreconciled). **This must be resolved by calling the IRS directly** — no further document search will surface it. Gates the 2023 return being processed, the 2025 return's classification, and whether the company owes anything as a C-corp.
+- **Correct the company's address with the IRS** (a Form 8822-B is the usual route) — STILL OPEN, pending since 2026-03-16 (~180 days as of 2026-09-12), not confirmed done; no new evidence found this sweep.
 - [x] **Confirm the paper Form 7004 for 2025 was processed**, mailed 2026-03-13 — **CONFIRMED 2026-08-29**: a signed return receipt dated 2026-03-25 was found in Google Drive.
-- **Confirm the purpose of the 2026-04-28 Form 2848 fax** — STILL OPEN, pending since 2026-04-28 (~123 days); content unclear from the notification email alone, and the Gmail catch-up read to completion 2026-08-29 found nothing further naming its purpose.
+- **Confirm the purpose of the 2026-04-28 Form 2848 fax** — STILL OPEN, pending since 2026-04-28 (~137 days as of 2026-09-12); re-chased this sweep with a targeted "2848"/"power of attorney" search — found only the already-known MyFax transmission receipt, which confirms the fax was sent but not its content or purpose.
+- **New this sweep, not previously tracked:** the firm's own invoice to this client is **112 days overdue** as of 2026-09-11 (originally due 2026-05-21) — a billing-relationship fact worth flagging to whoever manages collections; not previously on this file.
 
 ### Information still needed
 
@@ -140,3 +161,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Migrated TaxDome notes (Drive):** `4. Documents > Voicecapital Inc > 1. Notes`. **Read 2026-08-13.** It covers the same matter written up above from Lilian's phone notes and adds no new facts.
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending)_
+- 🔑 **Related clients:** [`valentin-volzhanskiy.md`](./valentin-volzhanskiy.md) — **paid by this
+  client on a 2025 Form 1099-NEC**, and the form lives in **this** client's Drive folder, not his ·
+  [`pro-title-agency.md`](./pro-title-agency.md) — same recipient, and the two 1099s share a
+  telephone number (§6, 2026-09-13)

@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-02
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -53,7 +53,7 @@ the actual details.
   day is withdrawn.** 🔑 **The lesson worth keeping: the meeting transcript was right and the date given
   deliberately was wrong** — which is the reverse of what the firm's own rule assumes, and it is why both
   versions were kept with their sources until someone could confirm. **The table below is the record of the
-  contradiction, now closed.**
+  contradiction, now closed.**~~
 
   | Source | Says |
   |---|---|
@@ -469,11 +469,12 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   account**; the business expenses are re-entered in QuickBooks manually later, as a separate piece
   of work. Until that happens, leave it alone.
   ✅ **WHICH account, settled 2026-08-26 by Lilian when asked:** the personal one is the account
-  QuickBooks names **`Artem Personal`** — the Chase checking ending **…2935** that appears in the
-  transfer descriptors, which is what the SOP already recorded as the owner's personal account.
-  **`Checking Chase 8310` is the BUSINESS operating account** and is cleaned normally. Worth keeping
-  because it nearly went the other way: Lilian named *"la que dice Chase 8310"* in the session, the
-  live chart carries **both as separate bank accounts**, and treating 8310 as personal would have
+  QuickBooks names **`Artem Personal`**, which is what the SOP already recorded as the owner's
+  personal account. **The OTHER Chase checking is the BUSINESS operating account** and is cleaned
+  normally. ⛔ **The two are distinguished by ROLE here, never by their descriptors** — the account
+  identifiers live in QuickBooks and Double, and this file is rendered on a shared page. Worth keeping
+  because it nearly went the other way: Lilian named the business account by its descriptor in the
+  session, the live chart carries **both as separate bank accounts**, and treating it as personal would have
   stranded the entire company ledger — it is the feed the July 2026 review worked through and the one
   carrying customer deposits, vendor payments and the subcontractor Zelles. **Asked, not inferred.**
 - 🔴 **QuickBooks' "pair" suggestions are actively producing false transfers on this client, and
@@ -494,7 +495,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - 2026-07-20 — Profile started from the existing Ecoorganic bookkeeping SOP and the Double record (ECOORGANIC USA LLC, QBO). This client already has a full bookkeeping SOP; the profile mainly points to it.
 - 2026-07-20 — Sweep: no Double notes yet; Ping has the client + contacts on file but **no indexed meetings**. Nothing new beyond the bookkeeping SOP.
 - 2026-07-21 — Firm recently took this client over (from the prior bookkeeper); active cleanup in progress. Working session refined the SOP as understanding builds: gas-station threshold moved $30 → **$25** with small charges now → distributions (not meals holding); cash-out withdrawals changed from blanket owner-draws to an **investigate-first** procedure (ATM vs transfer; known contractor vs personal account; 1099 exposure); COGS-vs-opex rule flagged **to verify** (provenance unconfirmed); Double noted as the vendor/1099/W-9 tracking tool; COA renumbering reframed as a later, incremental step (classify first). SOP rules now tagged provisional until validated against the client's history.
-- 2026-07-21 — Reviewed the only connected feed (Chase checking 8310), Apr–Jul 2026 (357 transactions), to learn the client's actual keeping. Findings reported to Lilian (client figures kept out of the repo). Confirmed business type (spray-foam/insulation contractor). Corrected the SOP's account names to the real QBO chart (the personal/draws account is **Owner's distribution**, not "Owner's Pay & Personal Expenses"; there is a single **Cost of Goods Sold** account with no Materials/Sub-labor/Job-disposal sub-accounts). Key issues surfaced: subcontractor labor (incl. several payees ≥ $2,000) parked in **Outside services** with no W-9/1099 tracking; small gas/convenience charges coded to **Meals**; some …2935 owner transfers hitting **COGS**; owner transfers lumped in the **Owner's Equity** parent instead of contribution/distribution; frequent overdraft fees; triage sits at ~$0 but many categories are still wrong. Judgment calls (meals policy, COGS-vs-opex intent, which payees are 1099 subs) pending Lilian/client.
+- 2026-07-21 — Reviewed the only connected feed (the business Chase checking), Apr–Jul 2026 (357 transactions), to learn the client's actual keeping. Findings reported to Lilian (client figures kept out of the repo). Confirmed business type (spray-foam/insulation contractor). Corrected the SOP's account names to the real QBO chart (the personal/draws account is **Owner's distribution**, not "Owner's Pay & Personal Expenses"; there is a single **Cost of Goods Sold** account with no Materials/Sub-labor/Job-disposal sub-accounts). Key issues surfaced: subcontractor labor (incl. several payees ≥ $2,000) parked in **Outside services** with no W-9/1099 tracking; small gas/convenience charges coded to **Meals**; some owner transfers from the personal account hitting **COGS**; owner transfers lumped in the **Owner's Equity** parent instead of contribution/distribution; frequent overdraft fees; triage sits at ~$0 but many categories are still wrong. Judgment calls (meals policy, COGS-vs-opex intent, which payees are 1099 subs) pending Lilian/client.
 - 2026-07-21 — Decisions from Lilian: **meals policy resolved** (per Julia) — no client/crew/personal split; all food/restaurant/fast-food/convenience → distributions (non-deductible for now), gas ≥ $25 → fuel, < $25 → distributions (so the Meals account should trend to ~$0). **1099s deferred** — Lilian will resolve payee-by-payee over time; tracked via Double for now, no repo worklist needed. Grocery/food stores → distributions, **except** supply/materials stores (Home Depot, hardware, work-parts, rental/supply houses) → Supplies & Materials/COGS. Vehicle financing left as an **open question** (SOP's "Hyundai/Ally" doesn't match the actual RAM truck loans — to reconcile later). Lilian notes she's "flying blind" on this new client and will study it piece by piece.
 - 2026-07-25 — Coverage-gap sweep: full historical Gmail pass. Filled in sales tax/payroll/income tax/1099/annual-report obligations (all confirmed applicable), primary language, fiscal year-end, and several key-facts quirks. Found the Google Drive folder (§7, filed as "Ecoorganic USA INC"). Flagged a new categorization rule (U-Haul/vehicle-rental → Shipping and deliveries) as an SOP-proposal candidate, and a possible Turo car-rental topic to follow up once its meeting transcript is indexed.
 - 2026-07-30 — **2025 tax return (1120-S) is in progress**, waiting on information from the client
@@ -623,6 +624,24 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   ✅ **Two things this run CLOSED:** the extension question *(filed, federal and state — the deadline
   is 2026-09-15)*, and where the prior returns live *(both in Double; never ask the client)*.
   _(Worked by Lilian.)_
+
+- 2026-09-06 (evening) — 🔴 **JULIA REMOVED THE BONUS DEPRECIATION, AND THE RETURN SWINGS FROM A LOSS
+  TO INCOME.** She re-ran the three 2025 vehicle additions on **ordinary MACRS half-year** instead of the 100%
+  first-year allowance. **Twelve lines of the return move by one single amount**, and the two owners' K-1s change
+  sign — the year is no longer a loss that neither of them could deduct, which also means **nothing dies on the
+  departing shareholder's final K-1** any more.
+  🔴 **Connecticut follows:** the state's §168(k) addback existed only because the federal bonus did, so it
+  **disappears entirely** from Part 5 and from both Schedule CT K-1s.
+  🛑 **Removing the bonus is an ELECTION, not a setting** — §168(k)(7), attached to the return and made **by
+  class of property**, irrevocable without IRS consent. There are **two** classes here, and a statement naming
+  only one would leave the bonus applying to the other. Drafted and handed over.
+  ⚠️ **A defect found in the books while checking:** the depreciation journal entry now carries the new amount
+  but **still carries its old description saying "100% bonus depreciation, entire cost deducted in the first
+  year"**. Replacement wording handed over; until it is applied, the books misdescribe themselves.
+  ✅ **Contributions and distributions did not move at all** — Lilian asked which exceeded which, and for 2025
+  they are **exactly equal**, so the netting the return already applies leaves both at zero. The excess visible
+  on the balance sheet is entirely the opening balance from prior years, not this year's activity.
+  📄 Delivered as a live worksheet Lilian works from while keying. _(Worked by Lilian.)_
 
 - 2026-09-01 — ✅ **THE TURO ANSWER ARRIVED — and it moved the 2025 return forward by one blocker
   while making a different question harder (Lilian).** Lilian supplied the email Turo Executive
@@ -978,6 +997,90 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   assumption could be hiding a five-figure gain for one of them. _(Worked by Lilian.)_
 
 
+- 2026-09-04 (later) — ✅ **THE DEPRECIATION IS POSTED AND THE BOOKS VERIFY (Lilian).** She built the
+  accounts, posted the entry, and re-exported all three reports; every check passes and the return's
+  figures are now supported by the client's own books.
+  🔑 **She improved on what the firm proposed, and the better structure is now the client's:** under
+  **each** asset she created the two sub-accounts the accounting software's own fixed-asset tool uses —
+  **original cost** and **accumulated depreciation** — instead of the flat separate accounts this firm
+  suggested. The parent then shows the asset's net book value on one line, cost and wear sit together,
+  and a future disposal reads off two lines. **It also matches the convention the chart already used
+  for a vehicle disposed of in a prior year.**
+  🛑 **AND THE LESSON THAT COST THREE ATTEMPTS, worth carrying to every client with fixed assets:**
+  **the expense account CANNOT be a sub-account of the asset** — the software requires a sub-account to
+  share its parent's type, and that is correct rather than a limitation, because an expense belongs to
+  the profit and loss while the asset belongs to the balance sheet. **Two wrong versions were posted
+  first:** one moved the cost sideways inside the balance sheet and never touched the profit and loss
+  at all; the second got the expense side right but still emptied the cost account, which would have
+  made the three assets vanish from the books with no record of what they cost. 🔑 **The two rules that
+  prevent both: on a client like this one the debit of a depreciation entry is never an asset account,
+  and the original-cost account never appears in a DEPRECIATION entry at all.** ⚠️ **Neither is an
+  absolute and the firm should not carry them as one** *(corrected in review the same day)*: where
+  depreciation is on assets used in **production** it is capitalised into inventory or
+  work-in-progress, and depreciation on an asset used to **build another asset** is capitalised into
+  it — **the debit is then an asset account, correctly.** That does not arise here — no inventory, a
+  service trade — **but it would at a manufacturer or a contractor carrying work-in-progress.** And
+  the original-cost account does move for a capital improvement, a price correction, a trade-in or an
+  impairment; **what it never does is appear in a depreciation entry.** ⚠️ **The mechanical trap underneath it is the account dropdown**,
+  which offers the expense account and one same-named sub-account per asset; **the sub-accounts show
+  the parent's name first, and the path is what tells them apart.**
+  ✅ **A confirmation worth recording:** the expense account **already existed and was reactivated, not
+  recreated.** ⚖️ **The re-exported profit and loss puts it in the same section the prior year did,
+  which is CONSISTENT with that but does not prove it** — where an account lands is decided by its
+  type, and a new account of the same type would render identically *(corrected in review)*. **The
+  reactivation is what establishes identity.**
+  ⚠️ **And a related correction: the account's type is "other expense", not "expense".** That is why
+  it sits below net operating income, on this return and on the prior year's — **and it is the type,
+  not the name, that decides where it lands on the profit and loss.**
+  🛠️ **Two loose ends on the entry, neither of which moves a figure:** the per-line descriptions were
+  left empty *(the firm's own rule requires one beside every debit and every credit)*, and the
+  adjusting-entry flag was unticked. _(Worked by Lilian.)_
+- 2026-09-05 — 🔴 **PART OF THE 2025 DISTRIBUTIONS WAS RECLASSIFIED TO OFFICER'S COMPENSATION, THE BOOKS
+  VERIFY, AND THE COMPANY'S 2025 RETURN IS NOW A LOSS (Lilian).** She posted a second year-end entry on
+  2026-09-04 — a new `Officer's compensation` expense account against `Owner's distribution` — and
+  re-exported all three reports; **a row-by-row comparison with the previous export shows exactly the two
+  new lines and nothing else moved**, and the depreciation entry's four lines now carry the descriptions
+  they lacked. **The amount reclassified is exactly the excess of the year's distributions over the
+  year's contributions, so after it the two are equal.** 🔑 **What that does, and it is what the firm's
+  own earlier analysis said it would do:** the company reports an **ordinary loss** instead of a profit;
+  each owner's K-1 carries **a loss neither can deduct in 2025** — basis after distributions is zero, so
+  it is suspended, and **the departing owner's share is lost for good on his final K-1** while the
+  continuing owner's carries into 2026; **the capital gain each owner would have had on the distributions
+  disappears**; and the same amount per head reaches each owner's own return as **compensation**, which
+  carries employment tax and removes the continuing owner's QBI deduction. 🛑 **Three things the entry
+  does not settle, all recorded for Julia:** ① **who decided it** — the firm's SOP says reclassifying
+  distributions to salary is the signer's decision and must be recorded, and that is not established;
+  ② **how the compensation is reported** — late 2025 payroll *(W-2s, 941s, 940, Connecticut
+  withholding — the company's half of FICA then becomes a deduction and a liability)* or each owner
+  reporting his share on a Schedule C with self-employment tax *(the return tables are built on this
+  route, because it is what the books as posted say)*; ③ ~~**whose compensation it is**~~ — 🟢 **SETTLED
+  2026-09-05 by Lilian: the WHOLE of it is the CONTINUING owner's** *(working paper §4 decision 24)*, so
+  the outgoing owner's distributions rise by the same amount and **he takes a capital gain on his own
+  final-year return, while the continuing owner's loss becomes fully deductible and he carries basis into
+  2026.** 🟢 **2026-09-05 — his 2024 Form 7203 arrived and CONFIRMS the zero opening basis the paper had
+  been doubting, so the gain stands.** 🔴 **It also revealed a block of suspended losses from 2024 that
+  nobody knew about, which die on his final K-1 and which his basis cannot absorb on any presentation** —
+  **so the netting decision does not move his tax at all.** 🛑 **The live risk is on HIS return, not this
+  one:** his K-1's distribution code reads nil while his contributions are real, and combining the two
+  produces a deduction the gross facts do not support. **His own basis form is prepared GROSS.**
+  🆕 **TWO MORE DECISIONS OF JULIA'S REACHED THE RETURN THE SAME DAY** *(working paper §4 decisions 25–27)*:
+  ① **contributions and distributions are NETTED OUT on the face of the return** — the Schedule K
+  distributions line and both K-1 distribution codes report nil. ⛔ **Presentation only: every basis
+  computation and both Forms 7203 run on the GROSS ledger figures**, and the working paper carries the
+  mandatory note saying what was done, which of the firm policy's five gates fail *(three do)* and how to
+  undo it in one step. 🔑 **The practical consequence for this client, worth carrying: a later
+  reasonable-compensation study that reads distributions off the K-1 will read nil — on this client
+  distributions come from the capital-account ledger, never from the return.** ② **the vehicle loan sits
+  inside other current liabilities rather than long-term**, which closes the term question by decision
+  rather than by evidence; and **the paid-in-capital line is DERIVED from the other balance-sheet lines,
+  never rolled forward**, because the software rounds each line before it adds them — the roll-forward
+  instruction the paper had been carrying left the balance sheet two dollars out. 📌 **Now a firm rule**
+  ([`form-1120s-preparation.md`](../../sops/form-1120s-preparation.md) §8-R). 📌 **Also recorded as
+  a fact for the file, not as a criticism:** the figure was derived from the equity accounts, not from a
+  valuation of the work; the firm's reasonable-compensation skill is the tool that produces a defensible
+  one. **The chart of accounts gained one account:** `Officer's compensation` *(type Expenses)*.
+  _(Figures in the working paper only. Worked by Lilian.)_
+
 ### ✅ The shareholder question — answered 2026-09-02, and what the search for evidence found
 
 - 🛑 **WITHDRAWN THE SAME DAY.** ~~Lilian settled it by instruction: Artem is the 100% shareholder from
@@ -1143,7 +1246,154 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   remains is only the 1099-NEC / Schedule B 14a question.**
 - **Deadline:** **2026-09-15**, extension filed. The review ran on 2026-08-31 — fifteen days.
 
+- 2026-09-06 — 🔵 **THE 2025 RETURN'S §448(c) DISCLOSURE ON BOTH K-1s WAS SETTLED, AND THE FIRM TOOK THE
+  MINIMAL ROUTE.** Box 17 code AC on the two K-1s carried **two different figures** — one rolled over by
+  the software, one typed over by hand — which is a visible defect on a 50/50 pair even though the box
+  feeds nobody's tax *(the §448(c) threshold is thirty-one million dollars; this company is nowhere near
+  it, so no tax on the return or on either shareholder's 1040 moves on any figure)*. ⚖️ **Lilian's
+  decision: leave the software's rolled-over figure and remove the hand-typed override, so BOTH K-1s
+  agree** *(working paper §4 decision 29 — "route A")*. 🔁 **EXPLICITLY PROVISIONAL: she asked that Julia
+  be told, and will relay it if Julia wants this year's own figure keyed instead** *(route B, one field)*.
+  📌 **The general lesson went into the firm's 1120-S SOP as §11F** — what that box is for, which figure
+  it carries, and that it is a **manual field that rolls forward holding last year's number**, so it must
+  be checked every year on every client.
+- 2026-09-06 — 📮 **CONNECTICUT: a post-transmission step nobody knew about, and three questions for
+  Julia.** ① **The CT package instructs that the Schedule CT K-1s are NOT filed with the return** — they
+  go to DRS separately, attached to a transmittal the instruction names as Form CT-1T. ⚠️ **What that form
+  is could not be verified — portal.ct.gov is blocked from the firm's Claude sessions** — and the printed
+  instruction refers to the *composite* return, which this entity may not file at all, so **whether it
+  binds this filing is itself unconfirmed.** 🛠️ **On the transmit checklist either way: sending them
+  needlessly costs a stamp; not sending them if required costs a notice.** ② 🔴 **Both members are coded
+  Connecticut RESIDENT individual on the state return and nobody has verified either.** 🛑 **It sits
+  against this file's own record that the CONTINUING owner replaced the departing one because a
+  non-resident shareholder would disqualify the S election** — but the departure is dated at the very
+  close of the year, so 2025 itself may still be fine. **Genuinely unsettled; it is the entry that decides
+  whether the state return has anything to pay.** ③ **The return says Connecticut business began
+  01/01/2025**, against a company incorporated in 2022 that apportions 100% to Connecticut — **so: was a
+  CT pass-through return ever filed for 2023 or 2024?** Nobody has checked, and **CT DRS has been writing
+  about withholding since January** *(§6 above)*. ④ **The optional Connecticut pass-through-entity tax
+  election is IRREVOCABLE and has not been made or recorded as a decision** — Julia's, in writing, before
+  transmitting. 🔗 **All four are set out item by item, with what to type and how to know it worked, in
+  the working paper's §CT-FIX.**
+- 2026-09-06 — 🔴 **NO CONNECTICUT RETURN CAN BE FOUND FOR 2023 OR 2024, AND THIS COMPANY HAS BEEN IN
+  CONNECTICUT SINCE IT WAS FORMED.** 🛑 **Lilian raised it from the return itself** — she went looking for
+  the prior year's state form and it is not there. **The search, so the negative belongs to it rather
+  than to the world:** the client's **entire Double file library** *(49 entries)* and the extracted text
+  of **both** the 2023 and 2024 returns — **no Connecticut document of any kind for either year.**
+  ⛔ **Not proof of a non-filing** *(a state return can be prepared in a separate file and filed straight
+  on the DRS portal without ever being saved back)*, ✅ **but it is a bounded search that comes back empty
+  twice.** 🔑 **The sharpest internal evidence is that a Connecticut EXTENSION was filed for 2025 and is
+  saved in the library — nobody extends a return they believe does not exist.** 🧭 **The most likely
+  explanation, and it is not carelessness:** Connecticut's pass-through-entity **TAX** went from
+  mandatory to **optional** for years beginning in **2024**, and *"the tax is optional"* reads almost
+  exactly like *"the filing is optional"* — ⚠️ **the tax became elective, the return did not** *(unverified;
+  the CT portal is blocked from these sessions)*. **That explains 2024, the first year of the change, and
+  not 2023.** 🚨 **Why it is urgent rather than historic:** the 2025 return currently says Connecticut
+  business began **01/01/2025**, which is what the software writes when there is **no prior state return
+  to roll a date from** — transmitted, it becomes a written statement to the state that reads as the
+  explanation for the missing years. ⚠️ **And a state return with nothing to pay can still carry a
+  per-member, per-month late-filing penalty** *(unverified)*. 🟢 **CORRECTED 2026-09-06 from the state's own instructions: where no tax is due it is a SINGLE DISCRETIONARY $50 per return** — the per-member per-month shape was the **federal** one, imported without checking. 🛑 **But the state return is MANDATORY for any entity doing business there "regardless of the amount of its income (loss)", so the exposure is the unfiled YEAR, not the fine.**
+  🛠️ **Next: ask Julia whether it was a decision or an omission, and check the DRS portal, which holds
+  the entity's real filing history and would also explain the withholding notices arriving since
+  January.** ⛔ **Do not transmit the 2025 state return until this is answered.**
+
+- 2026-09-12 — **Incremental sweep (baseline 2026-08-29→2026-09-12; this client is under very active tax-prep work — see the log above — so this pass only adds facts NOT already captured by those direct sessions, plus the chase pass).** Double: 🆕 the **"2025 Taxes" project moved from In Progress to Ready for Review on 2026-09-09** (Lilian) — not previously recorded at project-status level. **Case note 485258 (QuickBooks primary-admin handover) is UNCHANGED — `updatedAt` still reads 2026-08-06**, despite the extensive tax-prep work on this client since; it has not been touched or mirrored in **37 days**. No other property changes. Gmail (Ecoorganic/Corganix/Markarian + "QuickBooks"/"primary admin"/"QR code"/"CT-941", `after:2026/08/29`): nothing beyond routine Intuit invoice/payment-received notifications — **no correspondence found on the CT-941 past-due notice, the QR-code/ID-verification step, or Turo** in this window. Ping (`search_meetings`, scoped "Ecoorganic USA"): no legible, on-topic hits dated on/after 2026-08-29. **Chase pass:**
+  - 🔴 **The CT-941 past-due notice (arrived 2026-08-18) — a search of Gmail, bounded ≥2026-08-29, on 2026-09-12, found no reply, filing, or other action.** Now **25 days pending**, still "past due." (Separately, the 2026-09-06 tax-prep work established the state's own $50-discretionary-penalty rule and that the state return itself is mandatory regardless of tax due — see the log above; that is a different, now-better-understood exposure than this specific withholding notice, which is still unactioned.)
+  - 🔴 **QuickBooks primary-admin handover (case note 485258) — still stuck on Ishkhan's ID/QR-code step. 37 days pending since last moved (2026-08-06).** No deadline, but the subscription-downgrade risk (§5) grows every week; the note is now materially stale against the return's own progress and is flagged for whoever next opens it to mirror.
+  - Turo escalation email, the nine-months-of-2025 sales-tax gap, and the two unopened DRS notices are **superseded by the tax-prep work already logged above** (Turo answered 2026-09-01; a return was submitted 2026-09-02 and further DRS correspondence arrived 2026-09-03, still unread as of the log entry above) — not re-chased here to avoid duplicating that work.
+
+- 2026-09-06 (later) — 🟢 **THE CONNECTICUT RETURN IS NOW ANSWERED FROM THE STATE'S OWN INSTRUCTIONS, AND
+  THREE OF THE FIRM'S EARLIER CONCLUSIONS WERE WRONG.** 🔓 **The reason is simple: the Connecticut revenue
+  portal, which had been unreachable from the firm's Claude sessions, became reachable.** The 2025 form
+  and its instruction booklet were read directly. ⛔ **What changed:** ① the *Place(s) of Business* schedule
+  is completed **only** by an entity doing business both inside and outside Connecticut — this company is
+  entirely in-state, so that schedule should be **blank**, and it had been filled in on the firm's earlier
+  (wrong) advice; ② the late-filing penalty where no tax is due is **a single discretionary fifty-dollar
+  penalty per return**, not the per-member per-month figure previously recorded *(that shape was the
+  federal one, imported without checking)*; ③ **the pass-through-entity tax election is made BY CHECKING THE BOX on the
+  return AND filing a second Connecticut return — and it must happen on a TIMELY FILED ORIGINAL.** The
+  state says in terms that an entity which does not elect on that return **cannot elect on an amended
+  one**, so transmitting without the box closes the year's election permanently. ⛔ **A first version of
+  this entry said the box "merely states that a separate return has been filed" — wrong, caught in review
+  the same day, and it mattered because it made a deadline look like paperwork.** ✅ **What the instructions CONFIRM:** because both members are resident
+  individuals, the composite-tax schedules and the Connecticut-sourced-income schedule are correctly
+  empty — **there is nothing to pay by rule, not by luck** — and the bonus-depreciation add-back schedule
+  is correctly completed. 🔴 **What is still open and unchanged:** both members carry the **company's**
+  address rather than their own, both are coded **resident** with nobody having verified it, and the
+  return still says Connecticut business began on **1 January 2025** for a company operating there since
+  2022. 🔴 **And one new defect found in the package: a Form 8990 is attached and should not be** — the
+  corporation is a small-business taxpayer and exempt, and the software had attached the form while line
+  13 was being worked on. ⓘ **Also: the transmittal form the software names for the state K-1s does not
+  appear anywhere in the state's 2025 instructions** — to be settled with the agency.
+
+- 2026-09-06 (third pass) — 📮 **A DATED OBLIGATION NOBODY HAD: the state K-1s must be IN THE
+  SHAREHOLDERS' HANDS BY 15 SEPTEMBER 2026** — the same day as the return. The state's own guidance
+  settles what had been an open question: **the state K-1s are NOT filed with the agency when the return
+  is filed electronically**, and the software's warning about mailing them separately with a transmittal
+  form is **not supported by the state's current instructions**, where that form appears nowhere at all.
+  🔑 **What IS required, regardless of how the return is filed, is that each member be ISSUED their
+  K-1** — and **IF** the state extension was validly filed, that deadline moves from March to **the
+  fifteenth day of the ninth month**. ⚠️ **That "if" is real and the firm has not closed it:** the state's
+  condition is a **timely, electronically filed** state extension, and what the file actually holds is a
+  federal extension form, a document named as a state one, and the state extension form present in the
+  software. 🛑 **If it does not hold, the deadline was March and is six months past.** 🛠️ **Confirm the
+  state extension acknowledgement.** ⛔ **The firm had been about to do the opposite of the rule** *(an earlier note said
+  to mail them to the agency anyway, "it costs a stamp")*.
+
+- 2026-09-06 (fourth pass) — 🔴 **JULIA TOOK THE BONUS DEPRECIATION OFF THE 2025 RETURN, AND IT TURNS A
+  LOSS YEAR INTO AN INCOME YEAR.** The two vehicles and the forklift bought in 2025 — **three assets in all** — had been written off
+  in full in their first year under the special first-year allowance; they now run on ordinary depreciation
+  spread over five and seven years. 🔑 **The company's 2025 ordinary result flips from a loss to income**,
+  and with it **every shareholder's share flips from a loss to income too.**
+  ⛔ **It is an ELECTION, not a setting.** Electing out of the first-year allowance has to be attached to
+  the return as a written statement, **is made class of property by class of property**, must be on a
+  **timely filed** return, and **cannot be undone without the IRS's permission.** 🟢 **The software produced
+  the statements correctly** — one per class of property, which is broader than the firm had drafted and
+  right whichever way the open question below goes.
+  ✅ **WHAT IT BUYS, and it is not one-sided.** The company gives up a large deduction this year, but:
+  **the departing shareholder's capital gain shrinks sharply** *(he was the only one who had one, once the
+  officer's compensation was attributed whole to the continuing shareholder)*; the continuing
+  shareholder's share of the year now **builds** his basis instead of consuming it; and **there is
+  depreciation left to deduct in 2026**, where the old method had used it all up. ⚠️ **What it does NOT
+  fix: the departing shareholder's suspended losses carried in from 2024 still die on his final K-1** —
+  his distributions still outrun his basis. *(A first version of this analysis said nothing was lost;
+  that was wrong and is withdrawn.)*
+  🟢 **CONNECTICUT GETS SIMPLER.** The state's bonus-depreciation add-back is worded as *"the amount
+  **allowed** for federal purposes"* — none was allowed, so **the add-back disappears entirely** and the
+  state schedule that carried it is correctly zero. 🔑 **But the state's pass-through-entity tax election is now priced on a different number**, and it is
+  the irrevocable one that must be decided before the return is transmitted. ⚠️ **That price is not firm.**
+  The RATE was read off the form and never confirmed with the state; and — the one that decides whether
+  the election is cheap either way — **nobody has established whether the members' credit EQUALS the
+  entity tax or is only a percentage of it.** ⛔ **Both have to be confirmed before the number is relied
+  on, because the election cannot be undone.**
+  🔴 **ONE QUESTION IS OPEN AND ONLY JULIA CAN CLOSE IT: WHAT CLASS THE FORKLIFT IS.** The firm's own
+  earlier analysis, run twice, puts a forklift used by a **spray-foam insulation contractor** in the
+  five-year class rather than the seven-year one — the company's own business activity code is a special
+  trade contractor. **The return as generated is internally consistent at seven years**, so this is a
+  choice between two coherent returns, not a defect. ⚠️ **It moves the company's income, the balance
+  sheet, the state election's price, and it means the depreciation journal entry is posted a second
+  time.** ⓘ *While the whole cost was written off in year one the class made no difference at all, which
+  is exactly why it was never settled — removing the allowance is what made it matter.*
+  🟢 **THE REGENERATED RETURN WAS READ PAGE BY PAGE ON 2026-09-06 AND EVERY CHANGE KEYED WENT IN** —
+  including the state schedules, the depreciation form and the election statements. ⛔ **Read that as
+  "as generated on that date", never as a standing fact** *(the working paper's own warning: a status
+  column is the first thing to rot)*. ⛔ **And it is NOT a ruling on the forklift's class** — the return is
+  internally consistent whichever way that goes.
+  🔴 **AND SOMETHING IS PROBABLY WRONG IN THE BOOKS, NOT THE RETURN — narrowed to what was actually
+  checked.** The 2025 depreciation journal entry carries the new amount, and **its consolidated expense
+  line still carries the old description**, which says the whole cost was written off in the first year.
+  **A note that contradicts its own amount is worse than no note, because the next reader believes the
+  note.** ⚠️ **Two honest limits: the three credit lines were re-read and are FINE** *(they say only
+  "accumulated depreciation, first year, no prior depreciation")*, **and the entry's HEADER MEMO has never
+  been opened** — so it is unverified rather than known to be wrong. 🛠️ **Read the entry first, then
+  replace only what carries the old wording.** 🛠️ **Replacement text — the line notes and the header memo, in English, ready to paste — is in the
+  [return's working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md).** ⛔ **Do not write it until
+  the forklift's class is settled**, or it will contradict the amount again.
+
+- 2026-09-02/03 — 📮 **CT DRS MOVED IN BOTH DIRECTIONS, and neither side was recorded until now.** (a) **2026-09-02, 22:02 UTC — a return was SUBMITTED.** `DRS-NoReply@ct.gov`: *"Your return for ECOORGANIC USA LLC has been submitted to the CT Department of Revenue Services (DRS) myconneCT"*, addressed to Yuliia Kononova. 🛑 **Which return this is, the email does not say, and it was not established here** — only myconneCT itself shows that. It plainly bears on the tracked **CT-941 past-due** item, but it does **not** close it: treat "a return was filed" and "the CT-941 was filed" as two different facts until someone opens the account. (b) **2026-09-03, 23:44 UTC — a NEW correspondence alert**, `DRS-NoReply@ct.gov`: *"The following taxpayer(s) have received correspondence from the Department of Revenue Services (DRS)"*, contents visible only inside myconneCT. **Still unread.** That makes **three** unopened DRS communications on this client. ⓘ Found 2026-09-07 by a manual catch-up; the 2026-09-05 sweep never ran. _(Gmail, `DRS-NoReply@ct.gov`.)_
+
 ### Outstanding items (CI-only — never in the SOP)
+- 🟡 **CT DRS — there IS movement, and it cuts both ways (2026-09-07).** A return was **submitted through myconneCT on 2026-09-02** (which return is unstated — see §6), and a **new DRS correspondence landed 2026-09-03 and is unread**, making three unopened. **Both need one action, and it is the same action:** open myconneCT and read what is actually there. Until someone does, the CT-941 past-due item cannot be closed *or* confirmed — the filing confirmation is not evidence about which filing.
 - ✅ **THE 2024 FILED RETURN HAS BEEN READ — 2026-09-02.** Lilian added the Double file host to the
   tax-return environment's allowed domains and the redactor went through on the first try. **It changed
   more than it closed** — see the log entry for that date and the working paper §6 E. **What follows is
@@ -1335,7 +1585,7 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
 - Clarify the relationship (if any) between this LLC and a same-named Ukraine-based company that periodically exchanges financial documents with the firm.
 
 ### Information still needed
-- [ ] 🔴 New: confirm/action the CT-941 past-due notice received 2026-08-18 (see Outstanding items)
+- [ ] 🔴 Confirm/action the CT-941 past-due notice received 2026-08-18 — **still unactioned as of 2026-09-12, 25 days pending** (see Outstanding items and the 2026-09-12 sweep log entry above)
 - [ ] ⏸️ **PARKED 2026-08-13 — do not chase her; ask when we next work this client's sales tax.**
       **On what basis is the CT sales-tax return filed at ZERO?** The business has revenue, so
       this is a filing position with no recorded reason (§4). Practice continues unchanged; the

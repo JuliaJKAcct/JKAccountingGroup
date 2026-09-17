@@ -1,6 +1,6 @@
 # Anton & Olga Stenin — laundry portfolio buyers
 
-> **Status:** Engaged in practice — proposal sent 2026-08-30, fixed fee finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen (not in Gmail or Drive as of 2026-09-03 — it may have come by WhatsApp or the portal). 🔴 **UNDER CONTRACT TRACK — a Letter of Intent is in signature (acceptance date 2026-09-08) and a 30-day due-diligence clock starts on mutual acceptance.** Seller document request list at v4 (2026-09-11); the seller's financial binder and first reports have arrived · **Owner:** Julia · **Last updated:** 2026-09-04
+> **Status:** Engaged in practice — proposal sent 2026-08-30, fixed fee finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen (not in Gmail or Drive as of 2026-09-03 — it may have come by WhatsApp or the portal). 🔴 **UNDER CONTRACT TRACK — a Letter of Intent is in signature (acceptance date 2026-09-08) and a 30-day due-diligence clock starts on mutual acceptance.** Seller document request list at v4 (2026-09-11); the seller's financial binder and first reports have arrived · **Owner:** Julia · **Last updated:** 2026-09-17
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -29,10 +29,20 @@
 - **Business name:** _(pending — individual buyer; an acquisition entity may follow)_
 - **Entity type:** _(pending)_
 - **Home state:** _(pending — the target is in Florida)_
-- **Industry / what they do:** **Buyer evaluating a business acquisition**: a five-location
-  card/coin laundry portfolio in Bradenton, Palmetto and Ruskin, Florida, sold with its real
-  estate and a laundry-delivery business (broker: Merritt Realty; the seller's offering
-  memorandum is in the firm's hands, held outside the repo)
+- **Industry / what they do:** **Buyer evaluating a business acquisition**: a card/coin
+  laundry portfolio in Bradenton, Palmetto and Ruskin, Florida, sold with its real estate and
+  a laundry-delivery/wash-and-fold business (broker: Merritt Realty — **Kevin Riordan** is the
+  broker corresponding directly with the buyer's side; the seller's offering memorandum is in
+  the firm's hands, held outside the repo). **The broker's own description (email, 2026-09-05,
+  forwarded to Julia 2026-09-08) states the package is SIX operating businesses across FIVE
+  real-estate properties, fee simple** — this is the authoritative count, superseding the
+  earlier "4+2 vs 5" ambiguity (see §6, 2026-09-12 entry). The named locations/entities that
+  have surfaced: **Bayshore** (legal name **Bayshore Laundromat, Inc.** — confirmed via a
+  Form 8821 template drafted for it, 2026-09-08), **Samoset**, **Select** (a coin laundry —
+  the wash-and-fold/delivery brand **Lemon Squeeze** trades from inside this location), and
+  **Palmetto Coin Laundry** / **Palmetto Wash & Fold** as a pair. This is consistent with,
+  and now names, the "three companies" structure already on file below (real estate / the
+  laundromat operation / the ironing-delivery service)
 - **Primary language:** Russian-speaking — the proposal is bilingual RU/EN (English governs)
 - **Our engagement (services we provide):** **ENGAGED in practice (first milestone invoiced 2026-09-02 — status line).** A **Financial Due Diligence &
   Purchase Analysis** proposal drafted 2026-08-28 — the firm's first consulting-type
@@ -76,8 +86,9 @@ the actual details.
 
 | Role | Where to find them |
 |---|---|
-| Buyers / decision-makers | **Anton & Olga Stenin** (Julia, 2026-08-30 — the joint name on the cover, agreement and T&C; Anton's own first-vs-family name still unconfirmed). Email received — lives in the delivered proposal and Double, not here |
+| Buyers / decision-makers | **Anton & Olga Stenin** (Julia, 2026-08-30 — the joint name on the cover, agreement and T&C; Anton's own first-vs-family name still unconfirmed — a 2026-09-12 sweep found none, and every reference in the correspondence names only "Olga Stenin" or "Anton" alone). Email received — lives in the delivered proposal and Double, not here |
 | Buyers' own attorney — **the whole real-estate and legal side** | **Olesya Trayber, Esq. — Trayber Law Group, P.A.** (Aventura, Florida), the buyers' REAL ESTATE ATTORNEY *(confirmed 2026-09-11 from the broker's threads and the transaction binder; contact details in Gmail, not here)*. Per Anton's letter 2026-08-30 she handles everything about the real estate and land as objects: re-registration, building/land inspections, property taxes and fines, leases, and drafting the purchase agreements. Julia added 2026-09-04 that **the property appraisal and the UCC financing-statement / lien work are also hers** — items 13.5 and 13.6 of the request list. 📌 **Extended 2026-09-11 after a call:** she also **sources the commercial building inspector** (item 13.4), so the only specialist left for the firm to find is the **laundromat technician** for the machines. Coordinate with her, do not duplicate her; she is on the kick-off call. ⓘ **The name "Alicia" in Julia's 2026-09-04 message is this same person** — settled by her the same day, recorded so an old note reading "Alicia" is not mistaken for a second advisor. ⓘ The appraisal itself is a **Florida Certified General Real Estate Appraiser's** work, which she engages and holds |
+| Seller's broker | **Kevin Riordan** — Merritt Realty Corporation, "Senior Commercial Associate" (name confirmed via his own correspondence, 2026-09-04→09-11). Corresponds directly with Julia, Olesya and Olga; source of the financial binder, the LOI drafts, and now Julia's due-diligence document requests |
 
 - **Double client:** _(pending — still not in Double as of 2026-09-03; create it once the signed agreement is confirmed)_
 
@@ -208,6 +219,18 @@ the actual details.
   (Gusto payroll + I-9 administration) is the follow-on if he buys — do not let it slip
 - The proposal document is bespoke (no tool template exists yet for consulting engagements);
   if due-diligence work recurs, it should become the third template family
+- **The engagement itself is live.** The firm invoiced Olga Stenin for the DD engagement's
+  first milestone via QuickBooks Payments (2026-09-02); she asked to pay by standard ACH bank
+  transfer rather than the card-payment link (2026-09-03), and Julia sent the firm's ACH
+  banking letter the same day. No dollar figures recorded here — see Double/QuickBooks
+- **Julia has begun formal document requests directly to the seller's side** (2026-09-08 and
+  2026-09-11, to broker Kevin Riordan, copying Olesya and the client): an exhaustive list per
+  §5's revenue-testing methodology — QuickBooks access, bank/debt records, revenue by location
+  (card systems, coin collection, POS, delivery), fixed-asset registers, payroll, utility
+  accounts (feeding the water-hole test), and federal/state tax filings 2023-2025 for all
+  three entities — plus Forms 8821 being prepared per entity for the seller's accountant to
+  sign. Julia is also asking to be introduced directly to the **seller's own accountant** — the
+  route flagged as fastest in the 2026-08-30 kick-off sequence (§6)
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -644,6 +667,52 @@ the actual details.
   ask about a direct line to the seller's accountant). ⚠️ The body carried **that day's hourly
   pricing** (Part 1 hourly with a budget cap and a deposit), superseded on 2026-09-02 by v13/v14 —
   the client's written record of the fee is the later exchange, not this email
+- 2026-09-12 — **Bounded prospect sweep (Gmail in:inbox+in:sent + Google Drive, since
+  2026-09-02; no Double/Ping — no Double account exists).** Searched Gmail for "Anton"
+  combined with "laundry"/"Bradenton"/"Palmetto"/"Ruskin"/"Merritt Realty", and separately
+  for "Olga Stenin", both in:inbox and in:sent, `after:2026/09/02`. Found substantial new
+  activity on BOTH tracks — the firm's own DD engagement and the underlying property
+  purchase:
+  - **The DD engagement was invoiced.** JK Accounting Group sent Olga Stenin an invoice via
+    QuickBooks Payments (2026-09-02); she asked (2026-09-03, in Russian) to pay by ordinary
+    ACH bank transfer instead of the card-payment link, and Julia sent the firm's ACH banking
+    letter the same day. No dollar figure recorded per the sensitive-data rule
+  - **The property purchase progressed to a negotiated Letter of Intent.** Olesya Trayber
+    (buyer's real-estate attorney — full name/firm newly confirmed, see §2) emailed Julia a
+    document package "Anton purchase." (2026-09-04, forwarded to Lilian 2026-09-07) including
+    an LOI draft, a transaction binder, and per-store utility "trim" reports (Samoset, Soap
+    Opera Laundry, Palmetto Coin Laundry, Palmetto Wash & Fold, Select). Kevin Riordan (the
+    seller's broker, Merritt Realty — full name newly confirmed, see §2) then forwarded a
+    2026-09-05 update naming the SIX-businesses/FIVE-properties structure (see §1/§5) and an
+    independent CoStar real-estate valuation (August 2026) used to argue the price
+    allocation; he also reported a new commercial wash-and-fold account (IMG Academy,
+    Bradenton) recently secured by the Lemon Squeeze brand, not yet reflected in trailing
+    revenue — a business development worth tracking, no dollar figures recorded
+  - **The LOI itself went through active redlining 2026-09-08→09-09**: Kevin circulated a
+    revised LOI, Olesya pushed back on one real-estate-allocation clause and asked for a
+    30-day post-signing due-diligence window before the real estate contracts are finalized,
+    and DocuSign was sent to Olga for signature with a stated 2026-09-10 5:00pm expiration.
+    **No message after 2026-09-09 was found confirming whether the LOI was actually
+    signed** — Julia's 2026-09-11 document-request email talks as if DD is already
+    proceeding ("once we sign the LOI" language from 2026-09-08 is not repeated), but this
+    is an inference, not a confirmed fact — flagged as an open item below
+  - **Julia sent a comprehensive, itemized document request directly to the seller's broker**
+    on 2026-09-08 (asking for IRS mailing addresses + return types to prepare Forms 8821) and
+    again 2026-09-11 (a full request list — QuickBooks access, banking/debt, revenue by
+    location, fixed assets, payroll, utilities, tax filings 2023-2025 for all three entities)
+    — this operationalizes the three revenue tests and other DD procedures from the
+    2026-08-28/29 scope. She also asked to be introduced directly to the **seller's own
+    accountant**, and raised two open questions of her own: where Lemon Squeeze (an LLC
+    trading from inside the Select location) files and whether it has an S-election on
+    file, and how occupancy between it and Bayshore is handled — neither answered as of
+    this sweep
+  - Searched Drive for "laundromat" / "Merritt Realty" / "Stenin" (`excludeContentSnippets:
+    true`) — **found an active folder of deal documents for the first time** (the LOI PDF,
+    a Transaction Binder, an allocation-math PDF, per-store utility "trim" PDFs, a Form 8821
+    template for Bayshore Laundromat, Inc. drafted by Lilian, and several versions of the
+    document-request list) — link added to §7. **Anton's last name still did not surface**
+    anywhere in this pass — every reference found continues to name only "Olga Stenin" or
+    "Anton" alone
 - 2026-08-29 — **Bounded prospect sweep (Gmail in:inbox+in:sent + Google Drive, since
   2026-08-28; no Double/Ping — no Double account exists).** Searched Gmail for "Anton"
   combined with "laundry"/"Bradenton"/"Palmetto"/"Ruskin"/"Merritt Realty" (to disambiguate
@@ -792,11 +861,23 @@ the actual details.
   Olga Stenin** — now on the cover, the agreement block and the T&C party line (v11)
 - ~~The deposit amount ($3,500 vs $4,000)~~ **Moot 2026-09-02:** billing became fixed
   milestone installments; there is no deposit any more
-- **Julia to confirm — the unit count:** her brief says four cash points + two card points
-  (six); the offering memorandum lists five locations plus the delivery business. The
-  document uses her 4 + 2 framing — confirm the counting before signing
+- ~~Julia to confirm — the unit count~~ **Largely resolved, 2026-09-12:** the seller's own
+  broker states in writing (2026-09-05 email) that the package is SIX operating businesses
+  across FIVE real-estate properties, fee simple — see §1/§5 for the named entities. This
+  supersedes the earlier "4+2 vs 5" framing from Julia's brief; a session should still have
+  Julia confirm the DD document requests are scoped to all six businesses / three legal
+  entities before the analysis phase begins
 - **Julia to confirm:** whether the bespoke T&C set reads right for a first consulting
   engagement (balance-on-report-delivery was her own instruction and is settled)
+- **New, 2026-09-12 — whether the LOI was actually signed.** Kevin Riordan sent Olga a
+  DocuSign LOI with a stated 2026-09-10 5:00pm expiration; no message after 2026-09-09 was
+  found confirming signature by either side. Julia's 2026-09-11 document-request email reads
+  as though due diligence is already underway, but that is an inference, not a confirmed
+  fact — **2 days old as of this sweep, unconfirmed**
+- **New, 2026-09-12 — Lemon Squeeze's filing status.** Julia asked the seller's broker
+  (2026-09-11) where the Lemon Squeeze LLC files, on which return, and whether it has an
+  S-election, plus how occupancy/rent between it and Bayshore is recorded. **1 day old,
+  unanswered** as of this sweep
 
 ### Information still needed
 
@@ -817,7 +898,15 @@ the actual details.
 - [ ] Whether the extended Electrolux warranties transfer to a new owner, and which serial numbers
       they cover (Laundrylux to confirm)
 - [ ] Whether the second LaundryPay instalment was paid — if not, support lapsed July 2026
-
+- [ ] Whether the 2026-09-10 LOI was actually signed, and by whom — no message after
+      2026-09-09 confirmed it (2026-09-12 sweep)
+- [x] ~~Lemon Squeeze's return type / S-election status and its occupancy arrangement with
+      Bayshore~~ — **answered by binder Vol. 1 (2026-09-17):** it files its own Form 1120-S,
+      S election effective 04/15/2024, and the occupancy is **no rent and no cost allocation
+      recorded at all** (line 11 blank both years)
+- ⓘ On the lender question: the 2026-09-12 sweep found no mention of financing either, and the
+      purchase correspondence reads as all-cash or seller-financed so far — **absence of
+      evidence in a bounded search, not confirmation**
 ## 7. Links
 
 - **Double client:** _(pending — still no account as of 2026-09-03; create it once the signed agreement is confirmed)_
@@ -825,4 +914,10 @@ the actual details.
   https://claude.ai/code/artifact/f45c0b6f-5051-4883-825f-6e0d605df4a7 (status tracking, filters, print view,
   and the notes-for-Julia panel); the editable seller-facing Word draft was delivered in chat the
   same day and is not stored in the repo
+- **Google Drive folder (deal documents — LOI, transaction binder, allocation math, utility
+  "trim" reports, document-request drafts; found 2026-09-12):**
+  [folder](https://drive.google.com/drive/folders/1Br3GwwWlwD5oabnghpxxqd5RdiMcsAJR) — an
+  earlier/parallel copy of some of the same documents also sits in
+  [this folder](https://drive.google.com/drive/folders/1Ruor2VSVJ3tYPszmmGfa-vfrsiE_WwaR);
+  neither is yet the firm's organized client vault
 - **Related SOPs:** _(none — first consulting engagement)_
