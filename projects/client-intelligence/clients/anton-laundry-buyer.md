@@ -213,6 +213,86 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 (later still) — 📘 **Volume 1 of the binder — the reading copy — and it is the volume
+  that reframes the deal.** 32 pages: one portfolio-overview page plus the broker's summary page from
+  every tab across all four volumes, so it carries material from Vols 2 and 3 that have still not been
+  sent. It closes several gaps and opens larger ones. 🔴 **① MACHINE REVENUE IS ABSENT FOR ALL FIVE
+  STORES — and self-service machines are the majority of a laundromat's income.** Every card system is
+  named and every one of the exports lives in **Tab I-1, which the broker says repeatedly is "not
+  included in this set"**: Huebsch Command at Select, LaundryPay/LaundryPulse at Samoset, Laundry
+  Works/CENTS at 8th Ave, CCI FasCard at Ruskin, **coin at 9th St**. The only machine-revenue evidence
+  anywhere in the set is the Ruskin FasCard **card loads** on the Paystri statements — and the broker
+  himself says a load is a **prepayment, not revenue**, and that reconciling it needs beginning and
+  ending customer-card balances from CCI, which is also Tab I-1. ⛔ **And at 9th St there is nothing to
+  ask for:** the seller states *"no collection logs, route sheets, changer fill records, or cash-count
+  records exist or have been kept."* A 24-hour coin store with no record of its own takings — the only
+  possible tests there are bank deposits and the **supervised collection / observation period the
+  seller is offering**, which should be accepted. 🔴 **② COUNTER SALES ARE FALLING ACROSS THE
+  PORTFOLIO.** CleanTie POS (Tab I-4) for all five stores: 2026 year-to-date annualises to roughly
+  **18% below 2025**, worst at Select retail (~30%), Palmetto 8th Ave (~27%, food and drink halved)
+  and Ruskin wash-dry-fold (~19%); 9th St is flat. ⚠️ The broker is careful that his annualisation is
+  "a supplemental illustration only" and the proper comparison is **January–August 2025 against
+  January–August 2026** — which **cannot be made from this set**, because the 2025 reports supplied are
+  full-year summaries. That same-period export is a cheap, decisive ask. 🔴 **③ THE LEMON SQUEEZE
+  RETURNS ARE IN, AND THEY CARRY A CLASSIC S-CORP PROBLEM.** Two returns exist, not three — the entity
+  began business **April 15, 2024**, so there is a short-year 2024 and a full 2025 (S election
+  effective 04/15/2024, cash basis, code 812310, two shareholders, EIN on file with the broker). Three
+  findings: **lines 7 and 8 — officer compensation and salaries — are BLANK on both years**, with the
+  labour instead sitting inside "other deductions" as a payroll-service line large enough to be actual
+  wages rather than a fee (a separate, small processing line sits beside it), so there should be 941s,
+  W-2s and RT-6s the set does not contain and an **owner-compensation exposure on the seller's own
+  returns**; **line 11 (Rents) is blank both years** — Lemon Squeeze trades from inside Bayshore's
+  Select store and records **no rent and no cost allocation**, which overstates its margin and
+  understates Bayshore's, and Vol 4 already showed its wash-and-fold volume running on Bayshore's water
+  and gas meters; and **reported margin fell by more than half** between the two years on "other
+  deductions" that more than doubled. ⚠️ **The broker states outright that the returns do NOT tie to
+  the monthly P&Ls (Tab G-1) for either year, that the difference is unexplained, and that the sellers'
+  accountant has not reconciled it.** That reconciliation is our engagement's core work and it cannot
+  start without the underlying ledgers. 🔴 **④ RUSKIN HAS AN OPEN ENVIRONMENTAL QUESTION AND A DEAD
+  PRIOR DEAL BEHIND IT.** A **Phase I assessment was performed in 2026 for a prior prospective
+  purchaser's lender** — so an earlier transaction reached lender diligence and did not close. **The
+  Phase I recommended a Phase II; no Phase II has been performed**, and the report itself is withheld
+  on confidentiality grounds. The seller states dry cleaning was never performed there — but the
+  statement is expressly limited to *"during their ownership"* and the building is pre-1978. This is
+  Olesya's and a consultant's, but it is also a **financing gate** (a lender will require the Phase II)
+  and a deal-structure question about who commissions it and what happens if it comes back dirty. 🔴
+  **⑤ THE RUSKIN TENANCY IS DOCUMENTED NOW, AND IT IS WORSE THAN VOL 4 IMPLIED.** Tab N-1 is a rent
+  roll: **Apt. B is let on a 12-month Florida residential lease running to 31 July 2027** (tenant named,
+  **no security deposit**, landlord-owned appliances including a washer and dryer, tenant pays all
+  utilities, lead-paint disclosure signed). ⛔ **The landlord of record is Bruce Nye INDIVIDUALLY — not
+  Samoset Florida, Inc., the fee owner** — so the rent may never have reached the entity's books at all,
+  and the assignment at closing must come from **both**. **Apt. A and a rear commercial space of roughly
+  2,400 square feet have no lease and no status in the set** — either vacant, or occupied by someone
+  whose rights nobody has described. The buyers take the property subject to the lease. 📌 **The rest,
+  each of which is real work:** three loans are to be paid at closing, but the **lender on the largest —
+  the equipment loan on the Nov–Dec 2025 fleet at 8th Ave — is "to be confirmed"**, and the seller's
+  blanket statement that there is no other debt (no PPP or EIDL, no leases, no lines of credit, no
+  merchant advances, no owner loans, no surviving guarantees) needs payoff letters and Olesya's UCC
+  search behind it before it is worth anything; **extended Electrolux warranties cover three of the five
+  fleets** (Samoset, 8th Ave, Ruskin — parts into 2027–2030, frames and bearings into 2032–2035) but
+  the certificates are **silent on transfer to a new owner and list no serial numbers**, so the coverage
+  may be worth nothing to the buyers, and the two oldest fleets — 2017 Speed Queen at 9th St and 2019
+  Huebsch at Select — have **no coverage at all**; **ancillary income from arcade machines, massage
+  chairs, vending and taxi signage is paid to the owner in CASH**, only the arcade is documented by
+  vendor slips, and the broker states it is in **no** revenue figure he has presented and that whether
+  it is in the P&Ls is unconfirmed; **all seven Paystri merchant accounts are in Sonja Nye's personal
+  name**, new accounts board in the buyer's name 20–30 days before closing, and **funds continue to the
+  sellers until final activation** — a proration mechanism the purchase agreement has to carry; the
+  seller is **migrating from CleanTie to CENTS during the sale**, which puts the historical POS data at
+  risk; the LaundryPay subscription at Samoset was split into two payments in Feb 2026 and **whether the
+  second was paid is not established, so support may have lapsed in July 2026**; the CCI service
+  agreement (term, termination, transfer) is **not** in the set, nor is the 8th Ave card processor's
+  agreement, nor the current ADT contract; and the card processing itself is being done at effective
+  rates between roughly 15% and 45% on the small counter accounts, which is a genuine post-close saving
+  rather than a claimed one. ✅ **Two useful confirmations:** the sellers' accountant is named —
+  **Alan M. Stein Accounting & Tax Service Inc., Bradenton** — and management is owner-operated with
+  **no employment agreements in existence**. ⓘ **A correction to what this session said on Vol 4:** the
+  utility accounts are **not** cross-wired to the wrong entities — they match the entity map exactly.
+  The trap is that **the entity called Samoset Florida, Inc. does not own the store called Samoset**
+  (Bayshore does); it owns the other three. What survives from that reading is real and is now
+  documented rather than inferred: Lemon Squeeze holds no utility account and pays no rent, and the
+  personal-name holdings (Sonja Nye on the water and every merchant account, Bruce Nye individually on
+  the apartment lease) are exactly as flagged
 - 2026-09-17 (later) — 📗 **The seller's due-diligence binder arrived — Volume 4, Utilities — and it
   discloses three things no earlier document did.** A **four-volume set** dated 2026-09-13 (Vol 1
   Summary · Vol 2 Real Estate, Equipment & Vendors · Vol 3 Financial · Vol 4 Utilities), tabs A–O,
@@ -727,6 +807,16 @@ the actual details.
 - [ ] When the seller's records start arriving — the request list (v1) is drafted; the date it goes
       to the broker and the seller's turnaround are still unknown
 - [ ] Whether the firm is an IVES participant (decides Form 4506-C vs Form 8821 for item 1.1)
+- [ ] The Tab I-1 card-system exports for all five stores — the machine-revenue evidence, absent from
+      the whole binder and the largest single gap in the deal
+- [ ] CleanTie January–August 2025 by store, to make a true same-period comparison against 2026
+- [ ] Whether the Ruskin Phase II is commissioned, by whom, and who pays — and whether a lender makes
+      it a condition
+- [ ] Apt. A and the Ruskin rear space — leases, occupancy, and whether any of that rent reached the
+      entity's returns rather than Bruce Nye personally
+- [ ] Whether the extended Electrolux warranties transfer to a new owner, and which serial numbers
+      they cover (Laundrylux to confirm)
+- [ ] Whether the second LaundryPay instalment was paid — if not, support lapsed July 2026
 
 ## 7. Links
 
