@@ -398,8 +398,8 @@ A running, dated record as we build this profile.
   signature date moved with it)*, and **ATX's own penalty worksheet is now in it**, which previously
   was not — itself proof the software was opened that day.
   ✅ **FOUR THINGS THE READ CLOSED**, all previously derived or unchecked: the qualified-business-income
-  form's own input line reads the **net-of-SE-tax** figure rather than the gross *(the check that had
-  to be done on screen)*; its **taxable-income-before-the-deduction line is now READ, not derived**;
+  form's own input line reads the **net-of-SE-tax** figure rather than the gross *(it had been listed as
+  an on-screen check and turned out to print)*; its **taxable-income-before-the-deduction line is now READ, not derived**;
   its **carryforward line prints ZERO, so nothing carries into 2026** — established rather than
   inferred; and the **estimated-tax penalty is corroborated by the software's own quarterly
   worksheet**, which foots to the same figure and to the prior-year safe harbour.
