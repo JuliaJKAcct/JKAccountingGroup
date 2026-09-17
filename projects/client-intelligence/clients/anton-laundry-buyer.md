@@ -213,6 +213,43 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 (later) — 📗 **The seller's due-diligence binder arrived — Volume 4, Utilities — and it
+  discloses three things no earlier document did.** A **four-volume set** dated 2026-09-13 (Vol 1
+  Summary · Vol 2 Real Estate, Equipment & Vendors · Vol 3 Financial · Vol 4 Utilities), tabs A–O,
+  plus a **915-page appendix of every bill in four files**. Only Vol 4's 14 summary pages have been
+  read; **Vols 1–3 and the whole bills appendix have not been seen.** Twelve months, Sep 2025–Aug
+  2026, five stores, every account listed by number and provider. The broker states plainly that his
+  own total is *"a broker calculation, not an audited figure"* mixing actuals, estimates and one
+  incomplete figure, and his basis column names every gap — good faith, and it is the gaps that
+  matter. 🔴 **① RUSKIN HAS APARTMENTS AND AT LEAST ONE TENANT.** Four electric meters and two water
+  meters sit on one account *"covering the apartments and rear space as well as the laundromat"*, and
+  there is an **Apt. B lease at Tab N-1** whose tenant is *"responsible for all utilities"* — **but
+  the meter is in Samoset's name**, so the landlord pays. Three consequences: there is **residential
+  rental income** nobody has shown us and it may or may not be inside the reported revenue; the
+  buyers become **residential landlords** in Florida, with deposits and notice rules, which is
+  Olesya's; and the apartment usage **contaminates the water test** at that store unless it is netted
+  out. 🔴 **② THE 702 / 706 "CONFLICT" WAS NOT AN ERROR — THEY ARE TWO PARCELS.** Palmetto Coin
+  carries two City of Palmetto accounts: 706 9th St W on a 1½-inch meter (the laundromat) and **702
+  9th St W on a ¾-inch meter, described as the adjacent parcel**. **Whether 702 is in the sale is now
+  a question for the contract**, not a typo to fix — either the LOI's parcel schedule is short one,
+  or the buyers inherit a water account on land they are not buying. 🔴 **③ THE 8TH AVE RE-EQUIP IS
+  THE VALUATION QUESTION IN THIS BINDER.** Water consumption there fell by roughly two thirds from
+  December 2025 and gas therms roughly halved, coinciding with a **Nov–Dec 2025 Electrolux fleet
+  installation (Tab C)** — while **counter sales at that store are down about a quarter in 2026 (Tab
+  I-4)**. The broker says himself that **machine-cycle records (Tab I-1) are needed to separate
+  efficiency from lost volume** before the saving is treated as sustainable. ⓘ **So cycle records may
+  already EXIST in Vol 3** — which would move three items off the inspection list. ⚠️ **④ The window
+  is wrong for the tests:** Vol 4 runs Sep 2025–Aug 2026, while the financials are FY2025 and 2026
+  year-to-date — it matches neither, so **calendar-2025 bills are still needed**. 📌 **Smaller things
+  worth keeping:** several utility accounts are in **Sonja Nye's personal name** rather than an
+  entity's (Select water, both Palmetto water accounts), which affects transfer at closing and
+  whether a utility will even speak to the buyers; a **Manatee County bill carries a deposit and a
+  past-due balance**; the Ruskin Waste Management account trades as **"Sunny Bubbles West"**, a name
+  in no other document; FPL at Select reads **a flat 60 kW demand every month**, which the broker
+  suspects is contracted rather than measured and may be reducible; and **Samoset has no internet or
+  alarm bill in the set at all**, which is either a gap or a fact about the store. 🔑 **The pattern in
+  the gaps: dollars are nearly complete, CONSUMPTION is not** — kWh and therms are the readable-OCR
+  casualties, and consumption is exactly what the revenue test runs on
 - 2026-09-17 — 🔴 **NO LIVE ACCESS TO THE BOOKS, AND THE REASON IS THE SOFTWARE.** The broker's
   update: the sellers keep their books on **QuickBooks Desktop Pro 2015** — an installed program,
   not the online version — so **there is no view-only user and no remote login to give.** Their
