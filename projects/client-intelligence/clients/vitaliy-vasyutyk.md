@@ -103,6 +103,13 @@ watch-outs, one-off arrangements, history that affects the work.
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
 - 🔴 **ZUMFI 2 LLC IS A TENNESSEE LLC — its annual report is due 1 APRIL, a month before everyone else's.** The other nine file with Sunbiz by 1 May. Zumfi 2 files with the **Tennessee Secretary of State** (control number `002 059 868`), its reminders come from `tnsos.gov` and never appear in a Sunbiz notice, and its state fee is visibly different from every Florida entity on the same invoice. **A covering staffer working from "they're all Florida LLCs" files it in the wrong state, late.**
+  🔴 **AND THAT IS NO LONGER A RISK — IT HAS HAPPENED, AND IT COST A PENALTY.** On **2026-09-17**
+  Lilian called Tennessee and established that Zumfi 2 also owes the TN **Department of Revenue** a
+  **franchise & excise return** — a **second** Tennessee agency, separate from the Secretary of State
+  — and that **the 2025 one is LATE, because the firm filed the tax extension believing the company
+  was registered in Florida.** ✅ **The penalty is nominal.** 🔑 **The lesson is not:** the
+  state question belongs to **every filing this company makes**, not just its annual report. Details
+  and the next steps are in [`zumfi-2.md`](./zumfi-2.md) §4.
 - 🔴 **An invoice's CUSTOMER is not the company the work was done for — read the line descriptions.** In the firm's own A/R ledger the group is billed through only **six** customer records (Nika Realty, 2 Romans Realty, SYS 1 Realty, Zumfi 2, Fastighet, Tropical Coast) while **ten** companies generate the work. Nika Realty and Fastighet in particular act as **umbrella billing accounts**: Remodel Master, Sunshine Renovations 1, Zumfi 1, Fizum 1 and Tropical Coast 1 have all appeared as *lines* on another company's invoice. Any "has this been billed?" question must be answered on **line descriptions across all six records**, never on the customer name.
 - 🔴 **The 2026 cycle was re-cut twice, so old invoice numbers in email no longer exist in the firm's ledger.** March 2026's group 1099 invoice was cancelled and re-issued split per company; April 2026's Fastighet/Tropical Coast invoices were cancelled and consolidated into one. Deleted invoice numbers still appear in Julia's Gmail with amounts and reminders — **an email is not evidence that an invoice exists.** The full trail is in §6 (2026-09-07).
 - ⚠️ **Tropical Coast 1 LLC is DISSOLVED** — Articles of Dissolution filed **2026-03-31** (Sunbiz doc `L24000400203`, confirmation to Julia 2026-04-02). Its final annual report and 1099 were billed on the **Fastighet** invoice, together with the dissolution state fee. No further annual report is due for it, and the third-party "renewal due" emails that keep arriving for it are advertising, not a state notice.
@@ -169,6 +176,8 @@ reports for this client.
   [Zumfi 1 LLC `710613`](https://app.doublehq.com/close?cid=710613) ·
   [Zumfi 2 LLC `710614`](https://app.doublehq.com/close?cid=710614) ·
   [FIZUM 1 LLC `710574`](https://app.doublehq.com/close?cid=710574)
+- **Per-company Client Intelligence files:** [`zumfi-2.md`](./zumfi-2.md) — **the only company with
+  its own file so far**; the other nine still live in this group map _(FOLLOW-UPS row 112)_.
 - **Related individuals in Double:** [Veronika Vasiutyk `710664`](https://app.doublehq.com/close?cid=710664) · [Vladyslav Vasiutyk `710670`](https://app.doublehq.com/close?cid=710670) — relationship unconfirmed
 - **Double case note:** none
 - **Google Drive folder (sensitive vault):** _(pending — link)_
