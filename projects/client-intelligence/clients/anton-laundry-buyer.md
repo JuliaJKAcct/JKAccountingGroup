@@ -236,6 +236,23 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 (priority list) — 🎯 **Julia re-scoped the ask: not the exhaustive list, but THE ITEMS
+  THAT LET THE FINANCIAL WORK BEGIN.** The seven-section version was the complete outstanding set; what
+  goes to the broker now is the **opening wave** — the books, the bank and card statements, the revenue
+  evidence, the add-back detail, the payroll roster and the PEO question, and the **Forms 8821, which
+  lead the list only because the IRS clock is the longest one running.** Everything else — insurance,
+  the equipment detail, vendor fee schedules, the utility gaps, the tangible-property and county items —
+  **waits for a second wave**, and the email says so, so the broker does not read a short list as the
+  whole ask. 🔴 **AND A GAP THIS SESSION INTRODUCED: BANK STATEMENTS HAD FALLEN OUT.** They were on the
+  master list from the start, they are **one of the three revenue tests in the firm's own scope** — bank
+  deposits alongside the utility-consumption and card/coin methods — and **not one of the drafts sent to
+  Julia contained them.** Restored to the top of the opening wave, with the account inventory that has
+  to come with them. ⛔ **The lesson is narrow and worth keeping: a list assembled by working through
+  what ARRIVED will silently lose whatever was never sent and never mentioned again.** The utilities
+  binder, the volumes and the Financial Binder all drove the drafts; the bank statements were in none of
+  them, so nothing prompted the omission. ⓘ **Also cut from the broker's email at Julia's direction:**
+  the Ruskin rental-income question, which is financial but reads as real estate — the ledgers will show
+  the account once they arrive, so it costs nothing to drop
 - 2026-09-17 (scope trim) — ✂️ **Julia cut the contractual and real-estate items out of the request
   email — they are OLESYA'S, not ours.** The line she drew, applied item by item: **anything whose
   purpose is legal effect leaves** (parcels, deeds and folio numbers; the Apartment A and rear-space
