@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-17 *(the second pass — §162(l) computed, and an entire Schedule 1-A Part nobody had looked at)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-17 *(the second pass — §162(l) computed, a Schedule 1-A Part nobody had looked at, and the ATX worklist delivered)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -360,6 +360,30 @@ A running, dated record as we build this profile.
   `Energy efficient commercial bldgs`, not Other expenses *(that is now line 27b)*.
   ⓘ *Full working, with every figure and its form/line, in the working paper **§11**; the figures stay
   there and never here.*
+
+- _(2026-09-17, later)_ — 📤 **THE ATX WORKLIST WAS DELIVERED TO LILIAN AS AN ON-BRAND PAGE.** She
+  asked for the tables to work from at the keyboard, plus what is still to ask and what is missing.
+  🔑 **The shape is the one the firm settled on 2026-09-06: she types into the software from the
+  page, so the page carries more than the chat would** — every figure in the entries tables with its **form, page,
+  part and line**, **the arithmetic that produced it**, marked **typed** or **computed**, and the
+  **ATX entry route, marked NOT ESTABLISHED for both** since no session has keyed either; plus a
+  **tickable worklist that remembers itself**, grouped by **where she is working** rather than by
+  importance.
+  ⛔ **Two entries are shown as BLOCKED rather than ready to key** — both wait on the employers, and
+  presenting a conditional figure as an instruction is how a wrong number gets typed.
+  🛑 **AND WHAT THE PAGE DELIBERATELY DOES NOT CARRY, caught by the independent review: the question
+  list and the missing-items inventory are PHASE 1's REVIEW OUTPUT, and the firm's rule is that the
+  review goes in the CHAT while the tables go on the page.** The first version carried both; they
+  were removed and delivered in chat. ⛔ **There was an argument that restating already-open items is
+  not review output — and that is exactly the reasoning the firm forbids.** The page invites her to
+  overrule it; a session may not.
+  🔒 **No organizer-sourced VALUE reached the page, and no identifier of any kind** — given name only.
+  ⚠️ *The first version of this entry claimed "two items" rest on organizer answers; there were at
+  least four, three of which left with the question list, and none was ever a value. The wider
+  organizer-DATA reading is still an open question for her, not something this delivery settled.*
+  ⚠️ *And it is a hosted page whose URL travels onward by itself — not a file that dies with the
+  session. Hers to delete once the return is filed; deleting does not undo a forward already made.
+  Figures stay in the working paper and on that page — never here.*
 
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
