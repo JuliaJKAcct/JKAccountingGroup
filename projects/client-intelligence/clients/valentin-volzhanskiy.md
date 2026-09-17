@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-17 *(the second pass — §162(l) computed, and an entire Schedule 1-A Part nobody had looked at)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-17 *(the second pass, and the ATX worklist delivered)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -360,6 +360,21 @@ A running, dated record as we build this profile.
   `Energy efficient commercial bldgs`, not Other expenses *(that is now line 27b)*.
   ⓘ *Full working, with every figure and its form/line, in the working paper **§11**; the figures stay
   there and never here.*
+
+- _(2026-09-17, later)_ — 📤 **THE ATX WORKLIST WAS DELIVERED TO LILIAN AS AN ON-BRAND PAGE.** She
+  asked for the tables to work from at the keyboard, plus what is still to ask and what is missing.
+  🔑 **The shape is the one the firm settled on 2026-09-06: she types into the software from the
+  page, so the page carries more than the chat would** — every figure with its **form, part and
+  line**, marked **typed** or **computed**; a **tickable worklist that remembers itself**, grouped by
+  **where she is working** rather than by importance; the **three messages in English, ready to
+  paste**; and **what is missing, split by who can actually answer it** *(client · employer · ours to
+  verify)*.
+  ⛔ **Two entries are shown as BLOCKED rather than ready to key** — both wait on the employers, and
+  presenting a conditional figure as an instruction is how a wrong number gets typed.
+  🔒 **No organizer-sourced value reached the page, and no identifier of any kind** — his given name
+  only. The two items resting on organizer answers are there **as questions, with no value quoted**.
+  ⓘ *The page is a FILE, not a conversation: deleting the session does not reach it, and it is hers
+  to delete once the return is filed. Figures stay in the working paper and on that page — never here.*
 
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
