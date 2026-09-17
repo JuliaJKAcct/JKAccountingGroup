@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13 *(fifth entry same day — the return was prepared, then the tipped income was claimed)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-17 *(the second pass — §162(l) computed, and an entire Schedule 1-A Part nobody had looked at)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -120,8 +120,10 @@ watch-outs, one-off arrangements, history that affects the work.
 - 🔴 **HE HAS MARKETPLACE HEALTH INSURANCE, SO FORM 1095-A GATES HIS RETURN EVERY YEAR — and it
   has already cost him money.** His 2024 return carried an **excess advance premium tax credit
   repayment** on Schedule 2 line 1a because his advance credit exceeded what he was entitled to.
-  **Form 8962 is mandatory and blocks e-file**, his coverage has **month-gaps** rather than running
-  all twelve months, and his income moving up or down changes the repayment. 🔴 **Get the 1095-A early, and get it as an ORIGINAL PDF from healthcare.gov** — almost
+  **Form 8962 is mandatory and blocks e-file**, and his income moving up or down changes the
+  repayment. ⚠️ **Coverage months vary year to year and must be read off the form, never assumed:**
+  **2024 had a four-month gap; 2025 ran all twelve with NO gap.** *(Corrected 2026-09-17 — this
+  bullet used to state the gap as a standing fact, and it is one of the four that publish.)* 🔴 **Get the 1095-A early, and get it as an ORIGINAL PDF from healthcare.gov** — almost
   everything he uploads is a phone photograph with no text layer, which no tool can read and
   which has to be keyed by eye.
 - 🔴 **HE IS A TIPPED WORKER, AND FROM 2025 THAT IS A DEDUCTION — his employers report the tips
@@ -266,9 +268,10 @@ A running, dated record as we build this profile.
   🔴 **Two things are open and both move money.** ① The **Schedule C carries no expenses at all** —
   a declared, documented decision *(the client never returned the P&L template)*, but its cost
   compounds: it overstates the profit, the self-employment tax, the AGI **and the health-insurance
-  repayment**, in that order. ② **The larger employer's box-14 tips are nowhere on the return.**
-  ⛔ **Whether that is a deliberate position on service charges or an oversight is NOT established** —
-  it is worth **low four figures** of tax and is the first question for the reviewer.
+  repayment**, in that order. ② **The larger employer's box-14 tips.** 🆕 ✅ **INVERTED THE SAME DAY
+  (p.m.): Lilian KEYED them**, so the deduction is **claimed**, not missing — see the fifth entry
+  below. *(It read, in the a.m.: they are nowhere on the return.)* ⛔ **What stays open is their
+  ELIGIBILITY**, worth **low four figures** of tax.
   🔑 **And one thing nobody would look for: he lands JUST UNDER the 400%-of-poverty-line threshold
   where the premium-tax-credit repayment cap disappears entirely.** Income that turns up later does
   not cost its marginal tax — **crossing that threshold costs several thousand at once**, because the
@@ -325,6 +328,36 @@ A running, dated record as we build this profile.
   questions to the employer close it** — what the job actually was, and how much of the figure the
   customer chose to pay rather than the invoice imposing it.
 
+- _(2026-09-17)_ — 🔬 **SECOND PASS OVER THE PREPARED RETURN — Lilian asked for it to be "started",
+  and it was already prepared, so the work was to close what the review said it had NOT done.**
+  ⛔ **Nothing on the return was changed and nothing was written to Double.** Everything came from the
+  working paper, the 2025 forms and instructions at irs.gov, and Double metadata — **no client
+  document was opened and no organizer answer was read.**
+  🆕 🔴 **THE HEADLINE IS A DEDUCTION NOBODY HAD LOOKED FOR: Schedule 1-A has more than one Part, and
+  only Part II was ever analysed.** **Part III — No Tax on Overtime, up to 12,500** — is live on an
+  hourly FLSA-covered worker at four catering, events and concessions employers, and 2025 W-2s were
+  **not required to report overtime separately** *(the same transition gap that hid his tips in box
+  14)*. It is **neither claimed nor ruled out**. **Part IV — car loan interest, up to 10,000 — was
+  never asked about either**, though it rides on the owned-or-leased conversation already open.
+  ✅ **§162(l) IS NOW A COMPUTATION, NOT A QUESTION:** Pub. 974's Worksheets W and X give
+  **Schedule 1 line 17 = the repayment amount**, because the advance credit covered **100%** of his
+  premiums — so the premiums are **not** the deduction, and the earlier sizing overstated it ~3.6×.
+  ⚠️ **It is gated on an EMPLOYER question, not a client one: eligibility — not enrolment — for a
+  subsidised plan in any month, across four employers.** ⛔ **And that is NOT the test Form 8962
+  already passed**, so the twelve accepted coverage months are not the answer. 🔑 **The same fact
+  reaches the credit too**, which is why it is worth asking once and recording.
+  ✅ **The estimated-tax penalty is VERIFIED** *(and the paper's description of how was wrong — the
+  Form 2210 "short method" no longer exists)*, and **Form 8995 line 11 is confirmed off the
+  instruction rather than derived.**
+  🛠️ **Four stale statements in THIS file were corrected**, one of them on a **published** card: it
+  asserted his coverage has month-gaps as a standing fact *(2024 did; 2025 ran all twelve with none)*;
+  two more still described the tips as unclaimed after they had been keyed; and the prior-year
+  section still told the next preparer to reproduce 2024's `Other expenses` presentation — **which the
+  working paper had reversed** — while naming **line 27a**, which on the **2025** Schedule C is
+  `Energy efficient commercial bldgs`, not Other expenses *(that is now line 27b)*.
+  ⓘ *Full working, with every figure and its form/line, in the working paper **§11**; the figures stay
+  there and never here.*
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
@@ -349,10 +382,14 @@ A running, dated record as we build this profile.
      premium tax credit together. 🔑 **What
      remains is a client conversation, not a blocker: ask him what the work was**, because the
      Schedule C's principal business and code depend on the answer.
-  4. **The tips deduction is new, large and unclaimed.** He is a bartender with tips reported by
-     two different employers in two different W-2 boxes, and he answered **"None of the above"** to
-     the organizer's 2025-updates question. The multi-employer computation on Schedule 1-A line 4c
-     needs settling before the figure is final.
+  4. 🆕 🟡 **SUPERSEDED 2026-09-13 (p.m.) — THE TIPS WERE CLAIMED.** *(It read: the deduction is new,
+     large and **unclaimed**.)* He is a bartender with tips reported by two different employers in two
+     different W-2 boxes, and he answered **"None of the above"** to the organizer's 2025-updates
+     question. **Lilian keyed the box-14 figure; the multi-employer computation resolved on the form.**
+     🔴 **So this is no longer a gap but a LIABILITY: the deduction is claimed and its ELIGIBILITY is
+     still not established, and the deadline moved from the keystroke to the FILING.** ⚠️ **Items 1
+     and 3 of this list were individually ticked while this one was not, which made it read as
+     current — corrected 2026-09-17.**
 - **Questions put to the client.** (Answers to be appended here as they arrive.)
   - [x] ~~Confirm whether he was paid by **VoiceCapital Inc** during 2025~~ — ✅ **answered from the
         firm's own files on 2026-09-13, without asking him.** He was. *(The form is the one the firm
@@ -384,9 +421,15 @@ A running, dated record as we build this profile.
   - Filing status **Single**; no dependants; standard deduction; Florida only, **no state return**.
   - A **Schedule C** existed, with the "started this business" box ticked for 2024 — **that box must
     not be ticked again for 2025.**
-  - Every Schedule C deduction sat in **`Other expenses` (line 27a, itemised in Part V)** and
-    nothing on a named line. That is **the firm's own convention**, not an outside preparer's, and
-    the reproduce-the-prior-year method says to follow it unless there is a reason not to.
+  - Every Schedule C deduction sat in **`Other expenses` (itemised in Part V)** and nothing on a
+    named line — the firm's own convention, not an outside preparer's.
+    🔴 **DO NOT REPRODUCE IT WHOLESALE — the working paper REVERSED this on the evidence** *(§3E, §4
+    decision 4, 2026-09-12)*: a car's **operating** costs belong on **line 9**, depreciation on 13,
+    lease payments on 20a, ⛔ **never `Other expenses`.** *"The firm did it last year" is a reason to
+    be consistent, never a reason to repeat an error.*
+    ⛔ **AND THE LINE NUMBER HAS MOVED — this bullet used to say "line 27a", which is wrong for 2025.**
+    ✅ **Read off the 2025 Schedule C PDF (irs.gov, 2026-09-17): line 27a is now `Energy efficient
+    commercial bldgs`; `Other expenses (from line 48)` is line 27b.**
   - **A qualified-business-loss carryforward runs into 2025** — the 2024 Form 8995 closed with a
     negative total on its last line. Nothing in the 2025 documents points at it; it is only
     knowable from that return.
