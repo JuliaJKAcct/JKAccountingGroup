@@ -135,8 +135,9 @@ watch-outs, one-off arrangements, history that affects the work.
   🔴 **But reporting is not eligibility, and his employers are the risky kind:** a **service charge
   or automatic gratuity distributed to staff is NOT a qualified tip**, and **both tip-bearing
   employers — and in fact all four of his 2025 employers — are contract catering, events or
-  concessions businesses**, where a fixed distributed service charge is normal. **Ask the employer to
-  split the figure before claiming it.**
+  concessions businesses**, where a fixed distributed service charge is normal. 🆕 ⚠️ **The figure WAS claimed on 2026-09-13 on the
+  reporting route — so the ask moved: split it before FILING, because eligibility is still not
+  established.**
   🛑 **ASK IT PRECISELY, OR IT RETURNS A FALSE NEGATIVE.** ✅ **A tip pool qualifies — even a mandatory
   one**; the rule expressly covers a *"mandatory or voluntary tip-sharing arrangement, such as a tip
   pool"*. ⛔ **What disqualifies is a charge added to the CUSTOMER'S BILL** by the establishment.
@@ -334,11 +335,13 @@ A running, dated record as we build this profile.
   working paper, the 2025 forms and instructions at irs.gov, and Double metadata — **no client
   document was opened and no organizer answer was read.**
   🆕 🔴 **THE HEADLINE IS A DEDUCTION NOBODY HAD LOOKED FOR: Schedule 1-A has more than one Part, and
-  only Part II was ever analysed.** **Part III — No Tax on Overtime, up to 12,500** — is live on an
-  hourly FLSA-covered worker at four catering, events and concessions employers, and 2025 W-2s were
-  **not required to report overtime separately** *(the same transition gap that hid his tips in box
-  14)*. It is **neither claimed nor ruled out**. **Part IV — car loan interest, up to 10,000 — was
-  never asked about either**, though it rides on the owned-or-leased conversation already open.
+  only Part II was ever analysed.** **Part III — No Tax on Overtime** — is live on someone working at
+  four catering, events and concessions employers, and 2025 W-2s were **not required to report
+  overtime separately** *(the same transition gap that hid his tips in box 14)*. ⛔ **His pay basis
+  and FLSA status are NOT established** and are part of the same employer ask. It is **neither
+  claimed nor ruled out**. **Part IV — car loan interest — was never asked about either**, though it
+  rides on the owned-or-leased conversation already open. ⓘ *Both Parts carry statutory caps; the
+  figures live in the working paper.*
   ✅ **§162(l) IS NOW A COMPUTATION, NOT A QUESTION:** Pub. 974's Worksheets W and X give
   **Schedule 1 line 17 = the repayment amount**, because the advance credit covered **100%** of his
   premiums — so the premiums are **not** the deduction, and the earlier sizing overstated it ~3.6×.
