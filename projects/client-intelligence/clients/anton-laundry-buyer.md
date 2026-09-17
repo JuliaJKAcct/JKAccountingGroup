@@ -236,6 +236,45 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 (the books arrive) — 📗 **THE QUICKBOOKS EXPORTS ARE IN DROPBOX — 18 reports, and the
+  broker's covering email answers the structural question while creating four fresh discrepancies.**
+  Kevin exported **a Profit & Loss by month, a Balance Sheet and a General Ledger for each of six
+  company files** rather than set up the read-only login that Desktop cannot provide. 🔑 **① THE BOOKS
+  STRUCTURE IS NOW SETTLED, AND IT IS SIX SEPARATE FILES.** *"Each business is a separate QuickBooks
+  Desktop company file, kept on a cash basis from that business's own operating bank account. There is
+  no location or class tracking inside a single file, and no entity-level company file."* ⓘ **That
+  resolves the open question this session was right to leave open** — six statement headers were
+  equally consistent with classes inside fewer files, and they are not: they are six files. ⛔ **But it
+  creates the real problem: the RETURNS ARE FILED AT ENTITY LEVEL and there is no entity-level file.**
+  Two stores roll into one corporation's return and three into another's, so **the combining entries
+  exist nowhere in the six files** — they live in the sellers' accountant's workpapers. The Financial
+  Binder claims the stores agree to the filed returns *"to the dollar"* for one year, so that
+  reconciliation was performed by someone; **it has to be produced, or six cash-basis files cannot be
+  tied to three returns at all.** 🔴 **② CASH OR ACCRUAL — THE PACKAGE SAYS BOTH.** The broker's email
+  says the files are kept on a **cash basis**; the Financial Binder's own source line under the sales
+  table says **accrual basis**; the Lemon Squeeze return is filed **cash**. One of the three is wrong
+  and it changes every figure. 🔴 **③ PPP LOANS EXIST, AND THE SELLER RESPONSES SAID THEY DID NOT.**
+  Two of the six balance sheets still carry **2020 PPP balances that were forgiven and never cleared
+  from QuickBooks**, which the broker discloses plainly — against a Seller Response reading *"There are
+  no PPP or EIDL loans."* Three consequences: if the books never recorded the forgiveness, **retained
+  earnings, AAA and shareholder basis are understated in both files**; whether the *returns* reported
+  it is a separate question; and **two balance-sheet liabilities have been wrong for six years**, which
+  is a data-quality signal about everything else on those balance sheets. **Ask for the forgiveness
+  letters.** 🔴 **④ "LEMON SQUEEZY CARRIES NO DEBT" IS CONTRADICTED BY ITS OWN FILED RETURN**, which
+  shows **loans from shareholders in both years** on Schedule L. Books and return disagree, or the
+  statement is wrong — this is now a documented books-versus-return conflict rather than an
+  observation. ⚠️ **⑤ THE GENERAL LEDGER AS EXPORTED CANNOT TEST THE ADD-BACKS.** Bank and accounts-
+  payable detail runs the full period, but **the income and expense sections show the CURRENT YEAR
+  ONLY**, because each prior year was closed to Retained Earnings — prior-year detail survives only in
+  the Split column of the bank and A/P sections. 🔑 **The add-back schedule under examination is a
+  PRIOR year, so the detail needed to test it is precisely what did not come.** The fix is
+  parameterisation, not a new system: **re-run the General Ledger, or Transaction Detail by Account,
+  SEPARATELY FOR EACH FISCAL YEAR** rather than as one long range. 📌 **Also disclosed, and worth
+  taking:** two bank posting errors already documented by the bookkeeper (a deposit posted three times
+  at one store and twice at another, both reversed, with **the bank's reversal documentation offered on
+  request** — take it, it feeds the deposit test); the store files stop at **31 July 2026** while Lemon
+  Squeezy runs to **31 August**, a fourth reporting window in one package; and the store reports are
+  Excel while Lemon Squeezy's three are CSV
 - 2026-09-17 (priority list) — 🎯 **Julia re-scoped the ask: not the exhaustive list, but THE ITEMS
   THAT LET THE FINANCIAL WORK BEGIN.** The seven-section version was the complete outstanding set; what
   goes to the broker now is the **opening wave** — the books, the bank and card statements, the revenue
