@@ -213,6 +213,30 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 — 🔴 **NO LIVE ACCESS TO THE BOOKS, AND THE REASON IS THE SOFTWARE.** The broker's
+  update: the sellers keep their books on **QuickBooks Desktop Pro 2015** — an installed program,
+  not the online version — so **there is no view-only user and no remote login to give.** Their
+  accountant, **in Maui**, runs a current version, but the data lives on the sellers' machine.
+  📌 **The route offered instead:** the sellers export 2023 through year-to-date 2026 from
+  QuickBooks and upload to the Laundry Portfolio Dropbox; the broker wants **a list of reports with
+  date ranges** and will send the sellers step-by-step instructions. ✅ **Confirmed in passing:
+  there ARE multiple company files** — his own wording is *"the Sellers run each report for each
+  company file"* — which settles the question left open on 2026-09-11, without settling how many.
+  🛠️ **Delivered: a QuickBooks Export Request document**, written so the broker can forward it
+  straight to the sellers — **25 reports in 7 groups**, each with its exact menu path, date range,
+  settings and file-naming convention. 🔑 **What it leads with, and why:** ① ask for a **QuickBooks
+  backup (.QBB) of each company file** first — one upload instead of two dozen exports, and their
+  own accountant can open it; ② the **General Ledger and the Journal in Excel** are the core,
+  because every other report can be rebuilt from them, which is what Julia actually asked for;
+  ③ 🔴 **the Audit Trail, the Voided/Deleted Transactions Detail and the Closing Date Exception
+  Report** — Desktop's audit trail is always on and cannot be switched off, so **Pro 2015 gives a
+  better forensic record than QuickBooks Online would have**, and against books being used to sell
+  a business it shows whether 2025 was being edited during 2026. ⚠️ **Two settings decide whether
+  any of it is usable — report basis (accrual vs cash, which must match the returns; the P&L is
+  requested BOTH ways) and the column setting** — so the document says plainly that **the Maui
+  accountant should run these, not the sellers.** ⓘ **And a caution included for the sellers' own
+  protection:** opening a 2015 file in a current QuickBooks converts it permanently, so anyone
+  helping must work on a copy, never the live file
 - 2026-09-11 — **Julia's edits to the accountant ask, and a claim of mine she was right to challenge.**
   ⛔ **I had written "six QuickBooks company files" as a fact. It is not one.** The binder's naming
   key has a column headed *"QuickBooks company name on the statements"* listing six distinct names
