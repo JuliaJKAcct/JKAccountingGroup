@@ -236,6 +236,52 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 (payroll) — 👥 **JULIA ASKED WHETHER THERE ARE PAYROLL RECORDS. There are — but they
+  cover only the FAMILY, and what they show reframes the largest add-back in the deal.** The Financial
+  Binder's Section 2 carries a **real payroll register per payroll company code**, for calendar 2025 and
+  January–July 2026: names, employee numbers, rates, hours, gross, federal / FICA / Medicare / FUTA /
+  Florida SUTA, net pay and employer match. **Five codes across the two corporations — and every single
+  person on them is a Nye.** Employee counts per code run two, two, two and four; **not one store
+  attendant appears anywhere.** 🔴 **① TWO FAMILY MEMBERS ARE PAID FULL-TIME HOURS AT GENUINE HOURLY
+  RATES, AND THEY ARE THE PEOPLE RUNNING THE PORTFOLIO.** **Eric Nye** and **Amarilys Nye** both sit on
+  the Ruskin payroll code at real hourly rates for **2,080 hours each in 2025** and 1,440 each in the
+  seven months of 2026 — Eric at the higher of the two rates. **Eric Nye is also the person who sent the
+  broker the CleanTie and Paystri reports**, so he is demonstrably operating the business, not drawing a
+  nominal salary. **Bruce and Sonja Nye are the opposite shape**: token hourly for 120–200 hours plus
+  flat amounts typed into the rate field. 🔑 **So the add-back labelled "owner / family payroll and
+  manager reallocation" — the second largest category in FY2025 and the LARGEST in 2026 year-to-date —
+  is not all discretionary owner compensation. A large part of it is two people working full-time hours
+  to run five stores.** ⛔ **There are NO employment agreements** *(Seller Responses)*, so both can leave
+  at closing, and the seller's own provision for replacing them is **$15,000 per store at three of the
+  five stores.** **That gap is the single biggest adjustment in the engagement.** 🔴 **② THE STAFF
+  PAYROLL IS NOT IN THE BOOKS AS PAYROLL AT ALL.** It arrives as **weekly vendor bills from ENTRUST
+  SOLUTIONS / ENTRUST PAYROLL**, posted to accounts payable — four stores' seven-month totals are
+  visible and are several multiples of the family payroll. So the package contains **no employee roster,
+  no headcount, no rates, no hours, no classifications, no W-2s, no Forms 941 or 940 and no Florida
+  RT-6.** Vol 1 says it in one line: *"Employee roster, payroll filings — Not included in this set (Tabs
+  J, M)."* ✅ **③ AND THIS EXPLAINS THE LEMON SQUEEZE RETURN** — lines 7 and 8 blank with a large
+  "Payroll Service" figure inside other deductions is the **same Entrust arrangement**, so it is the
+  structure across all six businesses rather than an anomaly on one return. 🛑 **④ ONE QUESTION DECIDES
+  THE WHOLE EMPLOYMENT PICTURE: is Entrust a PEO or a payroll processor?** If it is a **PEO
+  (co-employment)** the W-2s are issued under **Entrust's EIN**, the sellers' own 941s show only the
+  family, the staff are not legally the sellers' employees, **the buyers cannot simply take them over**,
+  the I-9s sit with Entrust, and there is a fee layer to price. If it is a **processor**, the W-2s are
+  under the sellers' EINs and full 941s and RT-6s exist to be asked for. **Nothing in the binder says
+  which.** ⚠️ **⑤ A CLASSIFICATION FLAG:** alongside the Entrust bills, **individual people appear paid
+  directly as accounts-payable bills** rather than through payroll. Someone doing store work paid on an
+  AP bill is a worker-classification question, and it sits inside the engagement's scope. ⓘ **⑥ A
+  CORRECTION TO THIS SESSION'S OWN FINDING.** It flagged "Additional Owner Income" as the only add-back
+  category with no support named. **The 2026 schedule explains it: it is a $500-per-week owner draw from
+  each of the six businesses**, and at six businesses over a full year that is essentially the FY2025
+  amount. So it is not mystery income — the FY2025 table simply did not label it. 🔑 **The question
+  narrows to one thing, and it is still worth asking plainly: is that weekly draw taken out of CASH
+  TAKINGS BEFORE THEY ARE RECORDED, or is it recorded and expensed?** If the former, the sales figures
+  are understated and the add-back is really unrecorded revenue; if the latter it is a clean add-back.
+  🔴 **⑦ A FOURTH LOAN SURFACES IN THE SAME SCHEDULE:** the 2026 add-backs show seven monthly payments
+  to **First Horizon for RUSKIN EQUIPMENT**, separate from the First Horizon **mortgage on Select** that
+  is on the schedule of debt — and, like the Clean Laundry Funding payments, it is booked in the
+  **Palmetto 8th St** records rather than Ruskin's. That makes **four** obligations the schedule of debt
+  does not fully describe
 - 2026-09-17 (delivered) — 📤 **The outstanding-items request list produced for Julia to email the
   broker.** Nine groups built from everything read across the four volumes and the Financial Binder,
   with the four priorities named at the top: the **Tab I-1 card-system exports** (all five stores,
