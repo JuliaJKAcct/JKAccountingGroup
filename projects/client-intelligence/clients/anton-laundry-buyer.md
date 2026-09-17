@@ -236,6 +236,32 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 (verification) — 🔍 **JULIA STOPPED THE EMAIL AND ASKED FOR THE LIST TO BE AUDITED BY
+  INDEPENDENT AGENTS BEFORE ANYTHING MORE IS REQUESTED** — *"you already reviewed everything you sent
+  and I think certain things you right now put in on the list, we already have."* Two ran separately
+  over the extracted volumes and the Drive folder. ✅ **Her instinct was right on one item and wrong on
+  the one she named.** **Bank statements were NOT supplied** — the audit found no statement for any
+  entity, account or period anywhere in the four volumes, the Financial Binder or the Drive folder;
+  what exists is the *books'* record of the bank (the six Dropbox General Ledgers) and a debt schedule
+  of the seller's own approximations, neither of which can test the other. **So restoring them was
+  correct.** ⚠️ **But the list did carry a real duplicate risk elsewhere:** the **915 pages of actual
+  utility bills are in the Drive folder** (appendix files 4A–4D, all four present), and the Vol 4
+  summaries **mix "bill not in set" with "page did not OCR — the bills are attached"** — so a list built
+  from that basis column would re-request bills the seller has already sent. 🔴 **AND THE AUDIT FOUND A
+  DEFECT IN THIS SESSION'S OWN MATERIAL: the Financial Binder extraction stops at PAGE 80 OF 309**, and
+  the two files on disk are byte-identical, so the "second extraction" corroborated nothing. Everything
+  read from that binder — the portfolio overview, the 2026 year-to-date detail, the payroll registers,
+  the whole FY2025 add-back schedule — sits inside pages 4–80 and **stands**. ⛔ **But pages 81–309 were
+  never reachable by that route at all**, which covers the FY2025 profit-and-loss detail, the Section 4
+  store statements and **all of Section 5 — Bayshore's and Samoset Florida's returns for 2023, 2024 and
+  2025.** Those were reported as "in hand, not yet read"; the accurate statement is **in hand and not
+  readable by the route used.** 📌 **Two genuine gaps the audit added:** there is **no Florida Form
+  F-1120 for Bayshore or Samoset Florida for any year** — the only state return in the set is Lemon
+  Squeeze's 2024 — and the **Paystri statements are ONE MONTH, not thirteen**; the thirteen-month figure
+  is a trend panel printed on those same August statements, so the correct ask names the eleven months
+  either side rather than "the statements." 🔑 **The lesson is the method's own: a request list built
+  from what a session REMEMBERS reading will re-ask for what it forgot and omit what was never
+  mentioned. It has to be built against an index of what arrived.**
 - 2026-09-17 (the books arrive) — 📗 **THE QUICKBOOKS EXPORTS ARE IN DROPBOX — 18 reports, and the
   broker's covering email answers the structural question while creating four fresh discrepancies.**
   Kevin exported **a Profit & Loss by month, a Balance Sheet and a General Ledger for each of six
