@@ -1,6 +1,6 @@
 # NEVER GIVE UP KK LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-17
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -52,6 +52,7 @@ the actual details.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
+| QuickBooks Payments | Card / ACH payment processing on the client's invoices | n/a | In use — the books carry its **processing fees**, which is what prompted the account assignment in §4 _(Lilian, 2026-09-17)_ |
 
 ## 4. Obligations & recurring processes
 
@@ -64,7 +65,8 @@ the actual details.
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **quarterly** _(Double)_
 - **Cadence:** Quarterly.
-- **Process notes (→ future SOP):** _(pending)_
+- **Process notes (→ future SOP):**
+  - **Chart of accounts — QuickBooks Payments fees → `615 Merchant / Credit Card Fees`** (QBO Type *Expense*, Detail Type *Bank Charges*). Assigned 2026-09-17 from the firm standard, which already carries this account — no new number was created (`chart-of-accounts-standard.md` rule 6: only add a number when nothing existing fits). Two neighbours it is **not**: `620 Bank Service Charges` (the bank's own account fees) and `675 Software & Subscriptions` (the QuickBooks Online **subscription** itself). ⚠️ Both Intuit charges land in the same bank feed, and at **Ecoorganic** they crossed in both directions — see that runbook's open item 14. _(Lilian, 2026-09-17)_
 - **June 2026 month-end close completed 2026-08-25** — the full close-task checklist (A/R and A/P aging, balance sheet, P&L, cash-flow statement, 1099 prep, uncategorized-transactions review, duplicate/newly-added customers and vendors, bank-rule review) was marked Done in one batch. _(Double activity log, 2026-08-25)_
 
 ### Income tax
@@ -87,6 +89,7 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 — **Chart-of-accounts question (Lilian).** Asked which number QuickBooks Payments fees take under the firm standard; answered **`615 Merchant / Credit Card Fees`** — an account that already exists in the master, so nothing was added. Recorded in §4; QuickBooks Payments added to §3 as a system in use. No Double/Gmail/Ping sweep was run this session — this is a single fact from the conversation, not a sweep.
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; entity/tax-return type; service frequencies).
 - 2026-07-20 — **Gmail + Double-note enrichment sweep:** established the thermal-optics trade profile, FL (South Florida), RU language, June-2026 onboarding, and the open structure / BOI / nexus items. Ping had **no indexed meetings**; facts from Gmail + the Double note. Ping + Gmail now swept (see sweep-state).
 - 2026-08-01 — **Incremental weekly sweep** (bounded to 2026-07-20 and later): Ping (org-wide meeting search for the business + owner, `resolve_person`), Double (`get_client`, `list_client_properties`, `list_notes`, `list_contacts`, `list_activity_log` — activity log empty since baseline), Gmail (`in:inbox`/`in:sent` after:2026/07/20), Drive (folder confirmed), and the repo (FOLLOW-UPS/BACKLOG/sops) all came up with **no new activity in the window** — the owner's Jul-14 and Jun-23 Double-note meetings predate the baseline and were already captured. Owner-level check (contact spans Boost You LLC, Goshakes LLC, The Roadside Project LLC, and the owner's individual Double profile) surfaced no post-baseline facts specific to this company either. No SOP exists yet for this client, so no SOP-proposal candidates were queued.
