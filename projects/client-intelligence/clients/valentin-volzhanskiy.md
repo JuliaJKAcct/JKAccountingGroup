@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-17 *(the second pass — §162(l) computed, a Schedule 1-A Part nobody had looked at, and the ATX worklist delivered)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-17 *(the return re-read — nothing keyed since 13 Sep, and the signature-date gap has widened)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -384,6 +384,31 @@ A running, dated record as we build this profile.
   ⚠️ *And it is a hosted page whose URL travels onward by itself — not a file that dies with the
   session. Hers to delete once the return is filed; deleting does not undo a forward already made.
   Figures stay in the working paper and on that page — never here.*
+
+- _(2026-09-17, third)_ — 🔁 **THE PREPARED RETURN WAS RE-READ at Lilian's request** *(several days
+  had passed and she wanted to know what was outstanding)*. **Read through the redactor**; the
+  by-hand leak grep the firm requires on a glyph-decoding read came back clean.
+  🛑 **THE HEADLINE: nothing has been keyed since 13 September.** Every figure from the line-by-line
+  check is present and unchanged, and **none of the second pass's figures appear anywhere.** Only two
+  things moved, neither a figure: the package was **reprinted** *(the preparer's signature date moved
+  with it)*, and **ATX's own penalty worksheet is now in the package**, which previously was not.
+  ✅ **FOUR THINGS THE READ CLOSED**, all previously derived or unchecked: the qualified-business-income
+  form's own input line reads the **net-of-SE-tax** figure rather than the gross *(the check that had
+  to be done on screen)*; its **taxable-income-before-the-deduction line is now READ, not derived**;
+  its **carryforward line prints ZERO, so nothing carries into 2026** — established rather than
+  inferred; and the **estimated-tax penalty is corroborated by the software's own quarterly
+  worksheet**, which foots to the same figure and to the prior-year safe harbour.
+  🔴 **AND ONE DEFECT CONFIRMED, NOW WIDER: the taxpayer's signature is dated the day the EXTENSION
+  was filed, while the preparer's is dated the day the package was reprinted — five months apart.**
+  ⛔ **An authorisation dated before the return existed is not valid authorisation.** The signature
+  form itself is not in the package, so it has to be checked on the signature screen and a fresh one
+  obtained before e-filing.
+  ⛔ **Two checks a printed return can never close** — the source of the carryforward input, and a
+  W-2 eligibility checkbox — **are input-screen state and print nowhere.** They stay open however
+  many times the package is re-read.
+  ⓘ *A number that looked like an unexplained adjustment turned out to be the extraction
+  concatenating a line number with a zero value; the arithmetic settled it. Recorded in the working
+  paper so nobody re-chases it. Figures stay there — never here.*
 
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
