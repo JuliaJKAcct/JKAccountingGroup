@@ -1,6 +1,6 @@
 ---
 name: odoo-mcp
-description: Operating guide for ANY work in the firm's Odoo ERP — through the `Odoo_JK_Accounting_Group` MCP connector, or through Odoo's own API. Load this BEFORE the first Odoo call in a session. Use whenever a task will read or write Odoo data: journal entries, invoices, bills, payments, partners/contacts, reconciliation, taxes, accounting reports, CRM leads, appointments/calendars, website pages and views, products — anything "in Odoo." Also load it to answer where the 50-calls-per-day limit comes from (the MCP connector's free plan — not Odoo's subscription, not the Claude plan), how to set up the direct-API connection that removes that ceiling, or what the write-safety rules are before changing anything on the website. Encodes the call budget and how to plan a task inside it, the chatter audit-log convention, the six write-safety layers, the model map, and the call-efficient query patterns.
+description: Operating guide for ANY work in the firm's Odoo ERP — through the `Odoo_JK_Accounting_Group` MCP connector, or through Odoo's own API. Load this BEFORE the first Odoo call in a session. ALSO load it when someone says "Odoo" and the object is a CLIENT — Lilian's voice-to-text mis-hears "Double" as "Odoo", and this skill's opening guard says which system actually holds what. Use whenever a task will read or write Odoo data: journal entries, invoices, bills, payments, partners/contacts, reconciliation, taxes, accounting reports, CRM leads, appointments/calendars, website pages and views, products — anything "in Odoo." Also load it to answer where the 50-calls-per-day limit comes from (the MCP connector's free plan — not Odoo's subscription, not the Claude plan), how to set up the direct-API connection that removes that ceiling, or what the write-safety rules are before changing anything on the website. Encodes the call budget and how to plan a task inside it, the chatter audit-log convention, the six write-safety layers, the model map, and the call-efficient query patterns.
 ---
 
 # Odoo MCP — operating guide
@@ -14,15 +14,22 @@ Instructions for working with the firm's Odoo instance (JK Accounting Group) via
 > "todo el tiempo está confundiendo Double con Odoo")_. ⛔ **This is the mis-transcription that does
 > not look like one — `Odoo` is a real firm system, so nothing trips.**
 >
-> - 🔵 **A CLIENT's profile, tax return, organizer, documents, notes, tasks, properties or file
->   library → [`double-mcp`](../double-mcp/), not this skill.** **Odoo holds none of it.**
-> - 🟢 **The FIRM's website, appointments, CRM leads, invoices, bills, payments, journal entries or
->   accounting reports → you are in the right place.**
+> - 🔵 **A CLIENT's profile, tax return, organizer, documents, case notes, tasks, properties, closes
+>   or file library → [`double-mcp`](../double-mcp/), not this skill.** **Odoo holds none of the
+>   practice-management record.**
+> - 🟢 **The FIRM's OWN website, appointments, CRM leads, invoices, bills, payments, journal entries
+>   or accounting reports → you are in the right place.** ⛔ **Only when the object is the FIRM
+>   ITSELF** — a **client's** invoices, payments, journal entries and accounting reports are **their
+>   QuickBooks books, reached through Double.**
 >
-> 🔑 **Read it by the OBJECT, not the word.** ⛔ **Don't stop to ask on this pair** — she ruled once;
-> the rule is [`CLAUDE.md`](../../../CLAUDE.md) → *Lilian is practicing her English* → the dictation
-> bullet. ⚠️ **Do ask when the object is genuinely ambiguous** *(both systems hold "contacts", and the
-> firm invoices its clients in Odoo)*.
+> 🔑 **Read it by the OBJECT, not the word.** ⛔ **Don't stop to ask on this pair** — she has spoken
+> on it; the rule is [`CLAUDE.md`](../../../CLAUDE.md) → *Lilian is practicing her English* → the
+> dictation bullet. ⚠️ **Do ask when the object is genuinely ambiguous — "contacts" is the standing
+> example, since both systems hold them** *(Odoo `res.partner`; Double's portal contacts)*.
+>
+> ⓘ **The two lists are copied from `CLAUDE.md` — change them THERE first, then mirror here.**
+> ⚠️ **§2's chatter convention is not a counter-example:** a note on an Odoo record, the partner
+> included, is an **audit trail on that record**, not a client's case history.
 
 **Load this before the first Odoo MCP call.** The Odoo MCP is an account-level connector
 shared by the whole firm; it is **not** declared in this repo's `.mcp.json`. This guide is

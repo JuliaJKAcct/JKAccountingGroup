@@ -263,22 +263,32 @@ in that folder.
   write it into the repo as if it meant something.** _(2026-08-17: "Dulce" in a sentence about
   a client's tax return was **"Schedule C"**. Guessing at a name there would have put a
   fictional person into a client file.)_
-  🔴 **THE ONE THAT RECURS, AND IT DOES *NOT* LOOK LIKE A MIS-TRANSCRIPTION: "Odoo" IS USUALLY
-  "DOUBLE".** _(Lilian, 2026-09-17: "mi programa de conversión de voz a texto, todo el tiempo, está
-  confundiendo Double con Odoo… cuando sientas que Odoo no encaja y que debería ser mejor Double, es
-  porque probablemente lo que haya dicho sea Double.")_ 🛑 **This one defeats the rule above**, which
-  keys on *a word that does not parse* — **`Odoo` parses perfectly: it is a real system this firm
-  uses**, so nothing trips. **The tell is not the word, it is WHAT IS BEING ASKED FOR:**
-  - 🔵 **A CLIENT's profile, tax return, organizer, documents, notes, tasks, properties, closes or
-    file library → that is DOUBLE**, always. ⛔ **Odoo holds none of it.** *"Ve a Odoo y busca el
-    perfil de X cliente"* means **Double**.
-  - 🟢 **The FIRM's own website, appointments/booking, CRM leads, invoices, bills, payments, journal
-    entries, contacts or accounting reports → that really is ODOO.**
+  🔴 **THE ONE THAT RECURS, AND IT DOES *NOT* LOOK LIKE A MIS-TRANSCRIPTION: WHEN "ODOO" DOES NOT
+  FIT THE OBJECT, SHE SAID "DOUBLE".** _(Lilian, 2026-09-17: "mi programa de conversión de voz a
+  texto, todo el tiempo, está confundiendo Double con Odoo… cuando sientas que Odoo no encaja y que
+  debería ser mejor Double, es porque probablemente lo que haya dicho sea Double.")_ 🛑 **This one
+  defeats the rule above**, which keys on *a word that does not parse* — **`Odoo` parses perfectly:
+  it is a real system this firm uses**, so nothing trips. **The tell is not the word, it is WHAT IS
+  BEING ASKED FOR:**
+
+  - 🔵 **A CLIENT's profile, tax return, organizer, documents, case notes, tasks, properties, closes
+    or file library → that is DOUBLE**, always. ⛔ **Odoo holds none of the practice-management
+    record.** *"Ve a Odoo y busca el perfil de X cliente"* means **Double**.
+  - 🟢 **The FIRM's OWN website, appointments/booking, CRM leads, invoices, bills, payments, journal
+    entries or accounting reports → that really is ODOO.** ⛔ **And only when the object is the FIRM
+    ITSELF** — a **client's** invoices, payments, journal entries and accounting reports are **their
+    QuickBooks books, reached through Double.**
+
   🔑 **So read it by the OBJECT, not the word — and when the object is a client, just go to Double
   and say in one line that you did.** ⛔ **Don't stop and ask on this particular pair**; she has
-  ruled once and the rule is written here. ⚠️ **Do ask when the object is genuinely ambiguous**
-  *(both systems hold "contacts", and the firm invoices its clients in Odoo)* — that is the ordinary
-  ask-don't-guess rule, unchanged.
+  spoken on it and the mapping is written here. ⚠️ **Do ask when the object is genuinely ambiguous** —
+  **"contacts" is the standing example: both systems hold them** *(Odoo `res.partner`; Double's
+  portal contacts)* — that is the ordinary ask-don't-guess rule, unchanged.
+  ⓘ **Her quote carries the FACT — that the mis-hearing happens and that "Double" is the likely
+  reading. The two lists above are this file's own Double/Odoo rows, not her words.**
+  ⚠️ **Odoo chatter is not a counter-example:** a chatter note on an Odoo record — including on a
+  partner — is an **audit trail on that record** ([`odoo-mcp`](./.claude/skills/odoo-mcp/) §2), **not
+  a client's case history**, which is Double's.
   ⓘ _(Recorded because it had already cost a turn: on 2026-09-17 a session was sent to "Odoo" for a
   client's tax profile, went to Double, and flagged the mismatch rather than guessing. She then gave
   the rule above — **so the next session does not have to reason it out, or ask again.**)_
