@@ -8,6 +8,22 @@ description: Operating guide for ANY work in the firm's Odoo ERP — through the
 Instructions for working with the firm's Odoo instance (JK Accounting Group) via the
 **`Odoo_JK_Accounting_Group`** MCP server.
 
+> ## 🛑 FIRST — ARE YOU SURE SHE SAID "ODOO"? IF THE OBJECT IS A **CLIENT**, SHE SAID **DOUBLE**.
+>
+> **Lilian's voice-to-text mis-hears "Double" as "Odoo" constantly** _(her own words, 2026-09-17:
+> "todo el tiempo está confundiendo Double con Odoo")_. ⛔ **This is the mis-transcription that does
+> not look like one — `Odoo` is a real firm system, so nothing trips.**
+>
+> - 🔵 **A CLIENT's profile, tax return, organizer, documents, notes, tasks, properties or file
+>   library → [`double-mcp`](../double-mcp/), not this skill.** **Odoo holds none of it.**
+> - 🟢 **The FIRM's website, appointments, CRM leads, invoices, bills, payments, journal entries or
+>   accounting reports → you are in the right place.**
+>
+> 🔑 **Read it by the OBJECT, not the word.** ⛔ **Don't stop to ask on this pair** — she ruled once;
+> the rule is [`CLAUDE.md`](../../../CLAUDE.md) → *Lilian is practicing her English* → the dictation
+> bullet. ⚠️ **Do ask when the object is genuinely ambiguous** *(both systems hold "contacts", and the
+> firm invoices its clients in Odoo)*.
+
 **Load this before the first Odoo MCP call.** The Odoo MCP is an account-level connector
 shared by the whole firm; it is **not** declared in this repo's `.mcp.json`. This guide is
 the firm's operating layer on top of it — the 50-call/day budget, the chatter audit trail,
