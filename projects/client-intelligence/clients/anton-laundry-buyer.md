@@ -236,6 +236,24 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 (delivered) — 📤 **The outstanding-items request list produced for Julia to email the
+  broker.** Nine groups built from everything read across the four volumes and the Financial Binder,
+  with the four priorities named at the top: the **Tab I-1 card-system exports** (all five stores,
+  monthly, with Ruskin's beginning/ending card balances so loads can be turned into revenue), the
+  **CleanTie January–August 2025** reports that make a same-period comparison possible, the
+  **machine-cycle counter readings** either side of the 8th Ave re-equip, and **dates for the supervised
+  collection period the seller has already offered**. 🔑 **Written deliberately NEUTRAL — the findings
+  stay ours.** The list asks for documents and never states why: it does not say that the adjusted
+  earnings are almost entirely add-backs, that four stores reported losses, that the per-store ledgers
+  carry each other's costs, or that the debt representation is contradicted by the seller's own books.
+  The three undisclosed financings are asked for as *"these appear in the records; please document each
+  and say how it is dealt with at closing"* — which gets the answer without handing the seller our
+  reading of it. ⓘ **One structural ask runs through it: a SINGLE reporting window.** The package
+  arrived on three — the Financial Binder is January–July 2026, CleanTie is January–August, the
+  utilities are September 2025–August 2026 — so nothing cross-tests cleanly, and the list asks for
+  everything restated on a calendar basis through the latest closed month. 🔵 **Nothing was crossed off
+  the master list** *(Julia's standing rule)*: this is the outstanding layer, not a replacement.
+  Delivered in chat, not committed
 - 2026-09-17 (the Drive folder) — 📕 **Volumes 2 and 3 and the seller's FINANCIAL BINDER read, and the
   deal's centre of gravity is now documented: the laundromats are SHRINKING and the earnings are
   ALMOST ENTIRELY ADD-BACKS.** Julia pointed the session at the buyers' Google Drive deal folder, which
