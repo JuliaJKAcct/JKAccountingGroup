@@ -236,6 +236,20 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 (final) — 📨 **The request email ISSUED to Julia in final form**, with the payroll section
+  rebuilt around what the registers turned out to be *(nine sub-items: the roster, the **PEO-or-processor
+  question about Entrust**, the staff-level registers behind the weekly bills, the filings, the I-9s,
+  the service agreement and its fees, **whether Eric and Amarilys Nye stay on and on what terms**, the
+  people paid as accounts-payable bills, and whose workers'-compensation policy covers the staff)*, the
+  **fourth obligation** added to the debt items, and the "Additional Owner Income" ask narrowed to the
+  one question that decides it — **whether the weekly draw is taken from receipts before they are
+  entered, or entered and then expensed.** ⓘ **Nothing that has already ARRIVED is asked for again** —
+  the equipment schedule, the serial-numbered invoices, the surveys, the family payroll registers, the
+  Apartment B lease and the three entities' returns are all in hand, so the email asks only for what is
+  genuinely outstanding. 🔵 **That is not a contradiction of Julia's never-cross-anything-off rule:** the
+  master list stays whole and arrivals remain their own layer — this email is the outstanding slice of
+  it, drawn fresh. ✉️ **Addressed to the broker, copying Olesya**, so the environmental thread and the
+  702/706 parcel question reach her at the same time
 - 2026-09-17 (payroll) — 👥 **JULIA ASKED WHETHER THERE ARE PAYROLL RECORDS. There are — but they
   cover only the FAMILY, and what they show reframes the largest add-back in the deal.** The Financial
   Binder's Section 2 carries a **real payroll register per payroll company code**, for calendar 2025 and
