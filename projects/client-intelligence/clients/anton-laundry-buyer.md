@@ -236,6 +236,17 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 (issued) — 📎 **The request goes out as a SHORT EMAIL PLUS A BRANDED PDF** (Julia's
+  format call): the five QuickBooks follow-ups sit in the email body where they will actually be read,
+  and the full outstanding set — **38 items across eight sections, 10 flagged priority** — ships as a
+  six-page attachment built on the Atlas design system *(teal masthead, reversed lockup, mono kicker →
+  Source Serif headline → Plex Sans body, bronze reserved for the priority marks and the ACCT tags)*
+  with **a tick box on every row** so the broker can work down it. 🔑 **Its last page is the part that
+  does the quiet work: an "already received — not requested again" panel**, listing the eight things in
+  hand. It costs nothing, it proves the list was checked against the delivered package rather than
+  written from memory, and it is the cheapest possible guard against the duplicate-ask failure that
+  nearly went out earlier today. ⛔ **Client-facing, so delivered and never committed** — the source and
+  the render live in the session scratchpad only
 - 2026-09-17 (tax review) — 🧾 **THE TAX REVIEW, RUN ON WHAT IS ACTUALLY READABLE — one entity in
   full, two not read at all.** ⛔ **The two corporations' returns cannot be reached from this session:**
   Drive's reader truncates the Financial Binder at page 80 of 309 and its downloader refuses the file
