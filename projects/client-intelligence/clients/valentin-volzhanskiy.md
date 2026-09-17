@@ -364,11 +364,11 @@ A running, dated record as we build this profile.
 - _(2026-09-17, later)_ — 📤 **THE ATX WORKLIST WAS DELIVERED TO LILIAN AS AN ON-BRAND PAGE.** She
   asked for the tables to work from at the keyboard, plus what is still to ask and what is missing.
   🔑 **The shape is the one the firm settled on 2026-09-06: she types into the software from the
-  page, so the page carries more than the chat would** — every figure with its **form, part and
-  line**, marked **typed** or **computed**; a **tickable worklist that remembers itself**, grouped by
-  **where she is working** rather than by importance; the **three messages in English, ready to
-  paste**; and **what is missing, split by who can actually answer it** *(client · employer · ours to
-  verify)*.
+  page, so the page carries more than the chat would** — every figure in the entries tables with its **form, page,
+  part and line**, **the arithmetic that produced it**, marked **typed** or **computed**, and the
+  **ATX entry route, marked NOT ESTABLISHED for both** since no session has keyed either; plus a
+  **tickable worklist that remembers itself**, grouped by **where she is working** rather than by
+  importance.
   ⛔ **Two entries are shown as BLOCKED rather than ready to key** — both wait on the employers, and
   presenting a conditional figure as an instruction is how a wrong number gets typed.
   🛑 **AND WHAT THE PAGE DELIBERATELY DOES NOT CARRY, caught by the independent review: the question
