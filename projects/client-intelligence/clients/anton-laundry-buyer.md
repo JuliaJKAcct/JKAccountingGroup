@@ -236,6 +236,25 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 (scope trim) — ✂️ **Julia cut the contractual and real-estate items out of the request
+  email — they are OLESYA'S, not ours.** The line she drew, applied item by item: **anything whose
+  purpose is legal effect leaves** (parcels, deeds and folio numbers; the Apartment A and rear-space
+  leases, the rent roll and the deposits; both environmental reports and the Phase II question; permits
+  and certificates of completion; the warranty *assignment* question; vehicle titles and whether an
+  asset conveys; the changer-float *proration mechanism*; the CCI, CENTS and ADT agreements themselves)
+  — **anything whose purpose is a NUMBER stays with us** (balances, costs, income, and where a figure is
+  recorded). Four items were therefore **moved rather than deleted**: **where the Ruskin rental income is
+  recorded in the books and on the returns**; **what the Ruskin capital work comprised**, which sits
+  inside the largest add-back category; **the covered warranty serial numbers**, needed for the
+  fixed-asset schedule and the §1060 allocation; and **the float held in the changers and safes**. This
+  matches her own scope brief — Olesya takes the real estate and land as objects, the leases, the UCC and
+  the appraisal, while *"we review the financing information; the confirmation is the attorney's."* A
+  short companion list went with it for Olesya, so nothing was lost, only re-addressed. 🔑 **The email
+  went from eight sections to seven.** ⓘ **And a correction worth keeping: this session invented a
+  surname for Julia in the signature block.** She is **Julia Kononova, MBA, EA** — which was already
+  recorded correctly in [`firm-identity.md`](../../sops/firm-identity.md) §2 and used verbatim in the
+  committed client-email templates. **The answer was one search away and the session wrote a placeholder
+  instead.** ⛔ The firm's own details are looked up, never composed — the whole reason that file exists
 - 2026-09-17 (final) — 📨 **The request email ISSUED to Julia in final form**, with the payroll section
   rebuilt around what the registers turned out to be *(nine sub-items: the roster, the **PEO-or-processor
   question about Entrust**, the staff-level registers behind the weekly bills, the filings, the I-9s,
