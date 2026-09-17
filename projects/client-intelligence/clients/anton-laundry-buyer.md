@@ -236,6 +236,100 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 (the Drive folder) — 📕 **Volumes 2 and 3 and the seller's FINANCIAL BINDER read, and the
+  deal's centre of gravity is now documented: the laundromats are SHRINKING and the earnings are
+  ALMOST ENTIRELY ADD-BACKS.** Julia pointed the session at the buyers' Google Drive deal folder, which
+  holds the whole set — all four volumes, the four-file bills appendix, the LOI, the transaction binder,
+  the five per-store TRIM reports, the broker's allocation sheet and the 309-page Financial Binder. Read
+  in full: Vol 2 (101 pp) and Vol 3. Read in part: the Financial Binder's Sections 1–3 (overview, 2026
+  year-to-date, FY2025 results and the complete add-back schedule); its Section 4 store P&Ls and
+  **Section 5 — the Bayshore and Samoset Florida returns for 2023–2025 — have NOT been read yet**, nor
+  the 915 pages of scanned bills. 🔴 **① THE FIVE LAUNDROMATS HAVE DECLINED TWO YEARS RUNNING, AND THE
+  PORTFOLIO TOTAL HIDES IT.** Every one of the five stores is lower on a trailing-twelve-month basis
+  than in FY2024; the five together are down by mid-single digits in each of the two steps, **about a
+  seventh over two years**. The portfolio total looks nearly flat only because **Lemon Squeezy**, the
+  delivery business, roughly doubled over the same period — and that is the entity which **pays no rent
+  and carries no cost allocation** for the space it occupies inside Bayshore's Select store. **The thing
+  being bought is shrinking; the thing masking it is the one whose costs are being borne by something
+  else.** 🔴 **② REPORTED EARNINGS ARE ESSENTIALLY NIL AND THE ADJUSTED FIGURE IS ~98% ADD-BACKS.**
+  FY2025 reported net income across all six businesses is a **rounding error against sales**; FY2024 was
+  a **loss**. **Four of the five laundromats reported a LOSS in FY2025**; the only positive contributor
+  was Lemon Squeezy. Everything presented as earnings is built by the seller's own normalising
+  adjustments. ⚠️ **The schedule foots** — by type, by store and line by line — **so the arithmetic is
+  sound and the question is characterisation, not maths.** 🔑 **③ WHAT DOES AND DOES NOT SURVIVE, BY
+  CATEGORY** *(the nine types, in the seller's own order of size)*: **storm repairs / equipment
+  replacement / capital items** is the largest at nearly three tenths — plausible as non-recurring for
+  the hurricane half, but *"equipment replacement"* in a laundromat is a recurring cost of the business,
+  and two of the five fleets are seven-to-nine years old **with no warranty**; **owner and family
+  payroll plus manager reallocation** is the next largest at about a quarter **and is the single biggest
+  valuation question**, because it assumes the buyers need nobody to do that work; **equipment-loan
+  payments expensed** must be **split** — principal was never an expense and adds back correctly, but
+  expensing the payment means the asset was never capitalised, **so there is no depreciation in the P&L
+  either**, and the interest half disappears only because the buyer pays cash, which is a financing
+  choice and not an operating gain; **the personal share of supplies** runs at a strikingly similar
+  amount at **every one of the five stores** (*"largely Sam's Club"*) on the seller's own say-so and
+  should be sample-tested; **inter-company transfers** wash out **only if the offsetting INCOME was
+  removed too** — and at Ruskin a flagged line explicitly **includes an income item being added BACK**,
+  which runs the wrong way and may double-count; and 🛑 **"ADDITIONAL OWNER INCOME" — nearly a tenth of
+  all add-backs — is the one that cannot be accepted as presented:** its description is circular
+  (*"owner compensation the seller identifies in addition to payroll and distributions"*) and it is
+  **the only category in the table whose Support column is BLANK** while every other names payroll
+  records, lender statements, county bills or vendor invoices. It is either unreported cash being
+  claimed as value, or a second count of the owner payroll already added back — **and taken together
+  with the owner-payroll category, owner-related items are about a THIRD of every add-back dollar.**
+  ⚖️ **The counterweight the binder itself concedes:** adjusted net income is stated *"before any charge
+  for rent on the owned real estate, before any provision for a replacement manager, and before debt
+  service, income taxes, depreciation and capital reserves"*, and **the 2026 year-to-date figures carry
+  NO property tax at all**, because the county bills in November and December — the add-back schedule
+  itself shows what a full year costs, so the seven-month figure is overstated by roughly seven twelfths
+  of it. **A manager allocation does appear — but only at three of the five stores and at a level far
+  below what managing a store open 18 to 24 hours actually costs.** 🔴 **④ THE SELLER'S DEBT
+  REPRESENTATION IS CONTRADICTED BY THE SELLER'S OWN BOOKS, IN THREE PLACES.** The Seller Responses say
+  the three loans paid at closing are the only ones and that there are *"no equipment leases or other
+  equipment loans… no lines of credit, merchant cash advances, seller notes, or loans to or from the
+  owners."* But: **Lemon Squeeze's own balance sheet carries LOANS FROM SHAREHOLDERS in both years**;
+  its add-back detail names an equipment purchase financed through **Wittern Financial**; and the
+  Palmetto 8th St books carry an account grouping a **"First Hawaii"** item with an owner loan
+  distribution — either a lender nobody has named or a state tax nobody has mentioned *(the sellers'
+  accountant is in Maui, which may or may not explain it)*. ⛔ **A UCC search catches filed liens; it
+  does not catch any of these.** This one goes to Olesya as well as into our report. 🔴 **⑤ TWO NAMED
+  HURRICANES IN 2024 AND NO INSURANCE CLAIM WAS FILED.** The binder states it plainly, alongside roughly
+  a million dollars of capital work at Ruskin including a rebuild. Either there was no property cover,
+  or the deductible swallowed it, or a claim was not pursued — each has a different consequence, and a
+  lender will require cover in any case. ⚠️ **⑥ THE PER-STORE P&Ls ARE CONTAMINATED IN BOTH DIRECTIONS
+  AND THE MARGIN TABLE RESTS ON THEM:** Palmetto 8th St's books carry **Ruskin's** equipment purchase
+  and **Ruskin's** hurricane parts, while Ruskin's books carry **Palmetto II's** hurricane parts. Both
+  stores sit inside Samoset Florida, so the entity return is unaffected — but the headline **adjusted
+  margin by store** is built on ledgers that hold each other's costs. ✅ **⑦ WHAT THE VOLUMES CLOSED —
+  four of my open asks are answered.** **Tab D is a real equipment and asset schedule** listing **216
+  washers and 141 dryers** by store with **the CURRENT VEND PRICE for every washer size** — which is the
+  missing half of the water test, now buildable; **Tab C carries the purchase invoices with serial
+  numbers for all five fleets**, which is the §1060 evidence and the serial list the Electrolux
+  warranties need; **Tab A has boundary surveys for all five parcels — and TWO for the 9th St store**;
+  and the **Financial Binder carries per-store PAYROLL DETAIL**, which I had listed as missing. Also
+  newly documented: **three CENTS card systems bought and NOT YET INSTALLED** (a six-figure asset in
+  boxes), **two delivery vans**, a **garage at the 9th St store used as the supply hub for all five
+  locations**, and **bill changers taking $1 to $20 notes at every store**. 🔎 **⑧ THE 702 / 706
+  QUESTION HARDENS:** the Financial Binder calls that store **702** 9th St W while the rest of the set
+  calls it **706**, and a **2014 Phase I assessment covers "702–706" as ONE property** under a prior
+  operator's name. ⚠️ **⑨ ENVIRONMENTAL COVERAGE IS INCOMPLETE ACROSS THE PORTFOLIO:** Ruskin has a 2026
+  Phase I that **recommended a Phase II nobody performed**; the 9th St pair has a **2014** Phase I —
+  favourable *(no dry cleaning on site; no further assessment recommended)* but **twelve years stale**,
+  written for another party's lender, and it identifies **two adjacent former petrol stations with
+  underground tanks** as significant concerns; and **Select, Samoset and Palmetto 8th Ave have no
+  environmental report in the set at all.** 💵 **⑩ THE ALLOCATION SHEET IS THE BROKER ARGUING THE
+  BUYER'S SIDE — AND IT HAS A HOLE THAT RUNS THE BUYER'S WAY.** He splits the price into *buildings* and
+  *business* and treats the whole business half as fifteen-year goodwill, to show that the low-building
+  figure the buyer's side proposed costs Olga far more in year-one deductions than it saves. **His
+  conclusion is right and his framing is wrong in the buyer's favour: EQUIPMENT IS ABSENT FROM BOTH
+  COLUMNS.** Under §1060 the tangible personal property here — 216 washers, 141 dryers, the uninstalled
+  card systems, the vans, changers, cameras, POS and terminals, with a fleet bought nine months ago at
+  arm's length as the strongest possible evidence — is **Class V, not goodwill**, and it is the
+  **fastest** write-off of the three, faster than the building. **And "buildings" is not "real estate":
+  the land component is not depreciable at all**, which his cost-segregation figure does not separate.
+  🔑 **Goodwill is not a bucket anyone chooses — it is the residual after every other class is at fair
+  value**, so the order of work is: the appraiser values the land and buildings, the Tab C invoices plus
+  the technician value the equipment, and goodwill falls out of what is left
 - 2026-09-17 (later still) — 📘 **Volume 1 of the binder — the reading copy — and it is the volume
   that reframes the deal.** 32 pages: one portfolio-overview page plus the broker's summary page from
   every tab across all four volumes, so it carries material from Vols 2 and 3 that have still not been
@@ -898,6 +992,16 @@ the actual details.
 - [ ] Whether the extended Electrolux warranties transfer to a new owner, and which serial numbers
       they cover (Laundrylux to confirm)
 - [ ] Whether the second LaundryPay instalment was paid — if not, support lapsed July 2026
+- [ ] The three financings the seller's debt representation denies — the Lemon Squeeze shareholder
+      loans, the Wittern Financial equipment purchase, and the "First Hawaii" item — each identified,
+      documented and either paid off or excluded at closing
+- [ ] Why no insurance claim was filed for either 2024 hurricane, and whether property cover was in
+      force then and is in force now
+- [ ] The support behind "Additional Owner Income" — the only add-back category with no support named
+- [ ] Bayshore's and Samoset Florida's returns for 2023-2025 (Financial Binder Section 5) and the
+      Section 4 store P&Ls — in hand, not yet read
+- [ ] A realistic replacement-management cost for five stores across three cities, to set against the
+      owner-payroll add-backs
 - [ ] Whether the 2026-09-10 LOI was actually signed, and by whom — no message after
       2026-09-09 confirmed it (2026-09-12 sweep)
 - [x] ~~Lemon Squeeze's return type / S-election status and its occupancy arrangement with
