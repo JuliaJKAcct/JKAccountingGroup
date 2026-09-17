@@ -236,6 +236,35 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-17 (audit complete) — ✅ **BOTH AUDITS AGREE ON EVERY VERDICT, REACHED SEPARATELY** — and
+  between them they sharpen four asks, add two, and put two behind a gate. **Confirmed genuinely
+  outstanding:** bank statements · credit-card statements · the merchant *processing* statements for the
+  delivery business (only its account application was supplied) · **every Tab I-1 machine-revenue
+  export, for all five stores** · machine-cycle readings · the observation period's dates and terms *(the
+  seller stated willingness only)* · the employee roster · the payroll filings · the IRS authorisations ·
+  lender payoff letters *(expressly deferred by the broker himself: "will be substituted before
+  allocation")* · the state sales-tax and reemployment returns · insurance policies and loss runs · and
+  the whole QuickBooks integrity set — chart of accounts, trial balance, audit trail, closing-date
+  exception, journal report, deposit detail, 1099s and bank reconciliations. **Confirmed ALREADY IN HAND
+  and not to be re-requested:** the federal returns for all three entities · the point-of-sale reports
+  for five stores · the equipment invoices with serial numbers and the asset schedule · the boundary
+  surveys for all five parcels · **the 915 pages of actual utility bills** · the schedule of debt · and
+  the store profit-and-loss statements through July. ✏️ **Four asks sharpened:** the **merchant
+  statements are ONE month of thirteen**, so the ask names the other eleven; the **payroll registers in
+  hand are the family's**, so the ask must say *store staff* or it invites "we sent those"; **arcade
+  commissions are one month and the vending and signage records were never supplied at all**, which the
+  binder states in terms; and the deposit lines inside the profit-and-loss detail **name two banks
+  beyond the one already known**, and the travel add-back **names three card issuers** — so both asks can
+  now be made by name instead of generically. ➕ **Two gaps added:** there is **no Florida corporate
+  return for either corporation, any year**, and **no UCC search** in the set. 🚧 **Two items go behind a
+  gate — do NOT ask until someone opens the PDFs:** the **utility gaps**, because the basis column mixes
+  absent bills with unreadable scans and the appendix was never extracted; and the **journal entries**,
+  which may already sit inside the six General Ledgers as transactions, leaving only a discrete
+  adjusting-entry report as a real ask. ⓘ **A second extraction limit found:** the Vol 3 text also stops
+  short — around its page 97 of 133 — so the merchant statements at pp. 98–133 were never read either,
+  and that verdict rests on the tab's own attachment list. 📌 **Incidental but useful:** the five "Trim"
+  files in the Drive folder are **TRIM notices — proposed property-tax notices, one per parcel** — not
+  financial records; and the boundary surveys are **old**, one certificate dating from 2004
 - 2026-09-17 (verification) — 🔍 **JULIA STOPPED THE EMAIL AND ASKED FOR THE LIST TO BE AUDITED BY
   INDEPENDENT AGENTS BEFORE ANYTHING MORE IS REQUESTED** — *"you already reviewed everything you sent
   and I think certain things you right now put in on the list, we already have."* Two ran separately
