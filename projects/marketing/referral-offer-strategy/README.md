@@ -71,6 +71,12 @@ referral-offer-strategy/
 │       ├── cover-ru.html / .png     on-brand event cover image (1:1, legible small)
 │       ├── event-ru.md              event-page copy + Luma setup checklist
 │       └── readiness-check-ru.pdf   the worksheet gift, print-ready for Luma
+├── amazon-partner/  ← Amazon-education channel (Евгений / Business Family Club)
+│   ├── referral-proposal-ru.html  the RU partner proposal: the two commission
+│   │                       rates (20% returns · 15% monthly), our price anchors,
+│   │                       the earnings maths (1 / 5 / 10 clients + a worked
+│   │                       ten-client year), how it works, the terms
+│   └── referral-proposal-ru.pdf   print-ready export to send (Letter, 5 pp.)
 └── wealth-partner/  ← wealth-manager channel (Imperial Fund / Yuri Nosenko)
     └── imperial-fund-intro.html  client-facing EN intro sheet the advisor hands
                                   to clients (who we are · what we do · how we help)
@@ -83,6 +89,12 @@ referral-offer-strategy/
 > **Partner 2 — Imperial Fund Asset Management** (wealth manager, Yuri Nosenko):
 > a client-facing intro sheet in `wealth-partner/`, positioned as the
 > tax/accounting complement to their investment management.
+> **Partner 3 — Евгений** (Amazon-launch education + seller support; co-owner of
+> the **Business Family Club**): the `amazon-partner/` proposal. ⚠️ **This is the
+> firm's first channel on a PERCENTAGE of revenue rather than a flat referral
+> fee** — he asked for percentages, Julia agreed (Sep 2026). The rates, the
+> reasoning and the points still open are in
+> [`strategy.md`](./strategy.md) → *Amazon-education channel*.
 > **Realtor channel** — the `templates/` checklists (Operating + Pre-Launch) and
 > the `realtor-referral-playbook`: a print-ready leave-behind a real-estate
 > partner hands a client moving into a new space.
@@ -150,6 +162,16 @@ there.
   (`announcement-ru.md`), a co-branded partner invite (`invite-candramas-ru.html`), and
   the on-brand 20-slide deck to screen-share (`webinar-deck-ru.html`). Coffee-shop
   figures are grounded in real industry data (net margin 5–12%, owner ~$50–65k/yr).
+- **`amazon-partner/referral-proposal-ru.html`** (+ `.pdf`) — the native-Russian
+  referral proposal for the Amazon-education channel, written to be read by the
+  partner himself rather than by his clients. Leads on the money because that is
+  what he asked about: the two rates as a three-number deal line (20% · 15% ·
+  paid monthly), what a seller's accounting actually looks like from day one,
+  our price anchors with his cut beside each, an earnings matrix (each package ×
+  1 / 5 / 10 clients, monthly and annual) and a worked ten-client year
+  (**$18,840** in year one, **$17,460** of it recurring into year two), then the
+  mechanics and the whole terms list. Atlas chassis shared with
+  `partner-pitch/one-pager-ru.html`; prints to Letter.
 - **`wealth-partner/`** — a client-facing EN introduction sheet for the
   wealth-manager channel (Imperial Fund Asset Management / Yuri Nosenko),
   designed to be handed to *their clients*: who JK is, what we do, how we help,

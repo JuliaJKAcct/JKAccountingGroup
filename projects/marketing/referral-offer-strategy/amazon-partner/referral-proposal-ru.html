@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Реферальное партнёрство — JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
+    --bronze-500:#9C6A39; --bronze-300:#CFA268; --bronze-700:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --ink:#0D2A31; --body:#22201A; --muted:#645D4D;
+    --on-dark:#ECE6DA; --on-dark-muted:#A8BCBF;
+    --border:#C5BEAD; --border-soft:#DAD4C6;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--ivory); color:var(--body);
+    font-family:var(--sans); font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+
+  /* ---- Sheet ---- */
+  .sheet{
+    max-width:860px; margin:28px auto 56px; background:var(--white);
+    box-shadow:0 1px 2px rgba(9,31,36,.06), 0 24px 60px -28px rgba(9,31,36,.34);
+    overflow:hidden; border-radius:4px;
+    animation:rise .7s var(--ease) both;
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  /* ---- Masthead ---- */
+  .masthead{
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+    padding:26px clamp(22px,5vw,44px) 22px; background:var(--paper);
+    border-bottom:1px solid var(--ivory-stroke);
+  }
+  .masthead svg{display:block; width:238px; height:auto; max-width:56vw}
+  .tag{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--bronze-700); text-align:right; line-height:1.7; white-space:nowrap;
+  }
+  .tag b{display:block; color:var(--ink); font-weight:500; letter-spacing:.1em}
+
+  /* ---- Hero ---- */
+  .hero{
+    background:
+      radial-gradient(120% 140% at 85% -10%, rgba(207,162,104,.14), transparent 55%),
+      linear-gradient(160deg, var(--teal-800), var(--teal-900) 70%, var(--teal-950));
+    color:var(--on-dark); padding:clamp(34px,5.2vw,52px) clamp(22px,5vw,48px) clamp(30px,4.6vw,44px);
+  }
+  .kicker{
+    font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--bronze-300); margin:0 0 16px;
+  }
+  .hero h1{
+    font-family:var(--serif); font-weight:600; letter-spacing:-0.014em; line-height:1.14;
+    font-size:clamp(26px,4.1vw,38px); margin:0 0 16px; color:#fff; text-wrap:balance;
+    max-width:25ch;
+  }
+  .hero h1 em{font-style:italic; color:var(--bronze-300)}
+  .hero p{
+    margin:0; font-size:clamp(15px,1.9vw,17px); line-height:1.62; color:var(--on-dark);
+    max-width:64ch;
+  }
+
+  /* ---- Deal line (the three terms, editorial dateline) ---- */
+  .terms{
+    display:flex; align-items:stretch; background:var(--paper);
+    border-bottom:1px solid var(--ivory-stroke);
+  }
+  .terms div{
+    flex:1; padding:20px clamp(14px,2.6vw,26px) 18px; text-align:center;
+    animation:fadeup .6s var(--ease) both;
+  }
+  .terms div + div{border-left:1px solid var(--ivory-stroke)}
+  .terms div:nth-child(1){animation-delay:.10s}
+  .terms div:nth-child(2){animation-delay:.18s}
+  .terms div:nth-child(3){animation-delay:.26s}
+  @keyframes fadeup{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+  .terms b{
+    display:block; font-family:var(--serif); font-weight:600; font-size:clamp(28px,4.6vw,38px);
+    color:var(--teal-800); line-height:1; letter-spacing:-0.02em; margin:0 0 7px;
+  }
+  .terms b.word{font-size:clamp(17px,2.5vw,22px); padding-top:.45em; padding-bottom:.28em}
+  .terms span{display:block; font-size:13px; color:var(--muted); line-height:1.4; text-wrap:balance}
+
+  /* ---- Content ---- */
+  .body{padding:clamp(30px,4.6vw,46px) clamp(22px,5vw,48px) clamp(20px,3vw,28px)}
+  section{margin:0 0 clamp(32px,4.2vw,44px)}
+  h2{
+    font-family:var(--serif); font-weight:600; letter-spacing:-0.012em; color:var(--ink);
+    font-size:clamp(21px,3vw,27px); line-height:1.2; margin:0 0 6px; text-wrap:balance;
+  }
+  .lede{color:var(--muted); font-size:15.5px; margin:0 0 22px; max-width:66ch}
+  p{max-width:70ch; text-wrap:pretty}
+  .rule{display:flex; align-items:center; gap:14px; margin:0 0 22px; color:var(--border)}
+  .rule::before,.rule::after{content:""; height:1px; flex:1; background:var(--border-soft)}
+  .rule i{width:7px; height:7px; background:var(--bronze-500); transform:rotate(45deg); flex:none}
+
+  /* ---- What a seller acquires on day one ---- */
+  .facts{margin:20px 0 0; padding:0; list-style:none; display:grid; gap:0}
+  .facts li{
+    display:grid; grid-template-columns:minmax(0,15.5ch) 1fr; gap:6px 22px;
+    padding:12px 0; border-top:1px solid var(--ivory-stroke); font-size:14.5px; line-height:1.5;
+  }
+  .facts li:last-child{border-bottom:1px solid var(--ivory-stroke)}
+  .facts b{font-family:var(--serif); font-weight:600; font-size:15.5px; color:var(--ink)}
+  .facts span{color:var(--body)}
+
+  /* ---- The two rates ---- */
+  .rates{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+  .rate{
+    padding:24px 24px 22px; border:1px solid var(--border-soft); border-radius:14px;
+    background:var(--white); display:flex; flex-direction:column;
+  }
+  .rate.keep{background:var(--paper); border-color:var(--bronze-500)}
+  .rate .pct{
+    font-family:var(--serif); font-weight:600; font-size:44px; line-height:1;
+    letter-spacing:-0.03em; color:var(--teal-800); margin:0 0 4px;
+  }
+  .rate.keep .pct{color:var(--bronze-700)}
+  .rate h3{font-family:var(--serif); font-weight:600; font-size:18px; color:var(--ink); margin:0 0 9px; letter-spacing:-0.01em}
+  .rate p{margin:0; font-size:14.5px; line-height:1.55; color:var(--body); max-width:none}
+  .rate .note{
+    margin-top:14px; padding-top:13px; border-top:1px solid var(--ivory-stroke);
+    font-size:12.5px; color:var(--muted); line-height:1.5;
+  }
+  .rate.keep .note{border-top-color:var(--border-soft)}
+
+  /* ---- Price anchors ---- */
+  .anchor{margin:0 0 26px}
+  .anchor:last-child{margin-bottom:0}
+  .anchor > h3{
+    font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--bronze-700); font-weight:500; margin:0 0 12px;
+  }
+  table{width:100%; border-collapse:collapse; font-size:14.5px}
+  caption{caption-side:bottom; text-align:left; font-size:12.5px; color:var(--muted); padding-top:11px; line-height:1.5}
+  th{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.11em; text-transform:uppercase;
+    color:var(--muted); font-weight:500; text-align:right; padding:0 0 9px; vertical-align:bottom;
+  }
+  th:first-child{text-align:left}
+  td{padding:13px 0; border-top:1px solid var(--ivory-stroke); text-align:right; vertical-align:top}
+  td:first-child{text-align:left; padding-right:18px}
+  tbody tr:last-child td{border-bottom:1px solid var(--ivory-stroke)}
+  .svc{font-family:var(--serif); font-weight:600; font-size:15.5px; color:var(--ink); display:block}
+  .svc + em{font-style:normal; font-size:13px; color:var(--muted); display:block; margin-top:2px; line-height:1.45; max-width:42ch}
+  .fee{font-family:var(--mono); font-size:14.5px; color:var(--body); white-space:nowrap}
+  .cut{font-family:var(--mono); font-size:16px; font-weight:600; color:var(--bronze-700); white-space:nowrap}
+
+  /* ---- Earnings matrix ---- */
+  .matrix td{padding:15px 0}
+  .matrix td:first-child{padding-right:18px}
+  .matrix tbody tr{transition:background .2s var(--ease)}
+  .matrix .mo{font-family:var(--mono); font-size:19px; font-weight:600; color:var(--ink); letter-spacing:-0.01em; white-space:nowrap}
+  .matrix .yr{font-family:var(--mono); font-size:12px; color:var(--muted); white-space:nowrap; margin-top:3px}
+  .matrix .yr::before{content:"в год "; letter-spacing:.02em}
+
+  /* ---- Worked scenario ---- */
+  .scenario{
+    margin-top:26px; border:1px solid var(--border-soft); border-radius:14px; overflow:hidden;
+    background:var(--paper);
+  }
+  .scenario h3{
+    font-family:var(--serif); font-weight:600; font-size:18px; color:var(--ink);
+    margin:0; padding:18px 22px 14px; letter-spacing:-0.01em;
+  }
+  .scenario h3 span{display:block; font-family:var(--sans); font-weight:400; font-size:13.5px; color:var(--muted); margin-top:3px; letter-spacing:0}
+  .calc{margin:0; padding:0 22px; list-style:none; font-size:14.5px}
+  .calc li{
+    display:flex; justify-content:space-between; align-items:baseline; gap:18px;
+    padding:9px 0; border-top:1px solid var(--ivory-stroke); line-height:1.45;
+  }
+  .calc li i{font-style:normal; color:var(--body)}
+  .calc li b{font-family:var(--mono); font-weight:600; font-size:14.5px; color:var(--ink); white-space:nowrap}
+  .total{
+    display:flex; justify-content:space-between; align-items:baseline; gap:18px; flex-wrap:wrap;
+    background:var(--teal-800); color:#fff; padding:17px 22px; margin-top:12px;
+  }
+  .total i{font-style:normal; font-size:14.5px; color:var(--on-dark)}
+  .total b{font-family:var(--serif); font-weight:600; font-size:clamp(23px,3.4vw,29px); letter-spacing:-0.02em; color:#fff; white-space:nowrap}
+  .after{margin:16px 0 0; font-size:14.5px; color:var(--body)}
+  .after b{color:var(--ink); font-weight:600}
+
+  /* ---- How it works (ladder) ---- */
+  .ladder{list-style:none; margin:0; padding:0; display:grid; gap:12px}
+  .step{
+    display:grid; grid-template-columns:auto 1fr; align-items:start; gap:18px;
+    padding:18px 22px; border:1px solid var(--border-soft); border-radius:14px; background:var(--white);
+  }
+  .step .n{
+    font-family:var(--mono); font-size:13px; font-weight:600; color:var(--teal-800);
+    width:30px; height:30px; border-radius:50%; border:1.5px solid var(--teal-800);
+    display:grid; place-items:center; margin-top:1px;
+  }
+  .step h3{font-family:var(--serif); font-weight:600; font-size:17.5px; color:var(--ink); margin:0 0 3px; letter-spacing:-0.01em}
+  .step p{margin:0; font-size:14.5px; color:var(--body); line-height:1.5}
+
+  /* ---- Terms checklist ---- */
+  .nod{display:grid; grid-template-columns:1fr 1fr; gap:12px 30px; margin:0; padding:0; list-style:none}
+  .nod li{position:relative; padding:2px 0 2px 30px; font-size:14.5px; color:var(--body); line-height:1.45}
+  .nod li b{color:var(--ink); font-weight:600}
+  .nod li::before{
+    content:""; position:absolute; left:0; top:3px; width:19px; height:19px; border-radius:50%;
+    background:var(--teal-800);
+    -webkit-mask:no-repeat center/11px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+    mask:no-repeat center/11px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  }
+
+  /* ---- CTA ---- */
+  .cta{
+    background:linear-gradient(160deg,var(--teal-800),var(--teal-900) 80%);
+    color:var(--on-dark); padding:clamp(28px,4vw,38px) clamp(22px,5vw,48px);
+    display:flex; align-items:center; justify-content:space-between; gap:26px; flex-wrap:wrap;
+  }
+  .cta h2{color:#fff; margin:0 0 6px; font-size:clamp(20px,2.6vw,25px)}
+  .cta p{color:var(--on-dark); margin:0; font-size:14.5px; max-width:48ch}
+  .btn{
+    font-family:var(--sans); font-weight:600; font-size:15px; color:var(--teal-950);
+    background:var(--bronze-300); background-image:linear-gradient(180deg,#DBB27C,#C79A5E);
+    padding:14px 24px; border-radius:10px; text-decoration:none; white-space:nowrap;
+    box-shadow:0 1px 0 rgba(255,255,255,.35) inset, 0 10px 22px -10px rgba(156,106,57,.7);
+    transition:transform .2s var(--ease), box-shadow .2s var(--ease);
+  }
+  .btn:hover{transform:translateY(-1px); box-shadow:0 1px 0 rgba(255,255,255,.4) inset, 0 16px 30px -12px rgba(156,106,57,.8)}
+  .btn small{display:block; font-weight:400; font-size:11px; opacity:.82; margin-top:1px}
+
+  /* ---- Footer ---- */
+  .foot{
+    padding:22px clamp(22px,5vw,48px); background:var(--paper); border-top:1px solid var(--ivory-stroke);
+    display:grid; grid-template-columns:1fr auto; align-items:end; gap:14px 28px;
+  }
+  .foot .who{font-size:14px; color:var(--body); line-height:1.65}
+  .foot .who b{color:var(--ink); font-family:var(--serif); font-weight:600; font-size:15px}
+  .foot .who span{color:var(--muted)}
+  .foot a{color:var(--teal-800); text-decoration:none; font-weight:500}
+  .proof{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; color:var(--muted);
+    text-transform:uppercase; text-align:right; line-height:1.9;
+  }
+
+  .printbar{position:fixed; top:16px; right:16px; z-index:10}
+  @media (max-width:640px){
+    .printbar{top:auto; bottom:14px; right:14px}
+    .printbar button{font-size:12px; padding:8px 12px; opacity:.94}
+  }
+  .printbar button{
+    font-family:var(--sans); font-size:13px; font-weight:600; color:#fff; cursor:pointer;
+    background:var(--teal-800); border:none; padding:9px 15px; border-radius:8px;
+    box-shadow:0 8px 20px -8px rgba(9,31,36,.5);
+  }
+  .printbar button:hover{background:var(--teal-900)}
+
+  @media (hover:hover){ .matrix tbody tr:hover{background:var(--paper)} }
+
+  @media (max-width:720px){
+    .rates,.nod{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    .masthead{flex-direction:column; align-items:flex-start; gap:14px}
+    .tag{text-align:left}
+    .terms{display:grid; grid-template-columns:1fr 1fr}
+    .terms div + div{border-left:none}
+    .terms div:nth-child(2){border-left:1px solid var(--ivory-stroke)}
+    .terms div:nth-child(3){grid-column:1 / -1; border-top:1px solid var(--ivory-stroke)}
+    .facts li{grid-template-columns:1fr; gap:3px}
+
+    /* price + matrix tables restack as labelled blocks */
+    .stack thead{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+    .stack tbody tr{display:block; border-top:1px solid var(--ivory-stroke); padding:14px 0}
+    .stack tbody tr:last-child{border-bottom:1px solid var(--ivory-stroke)}
+    .stack td{display:flex; justify-content:space-between; align-items:baseline; gap:16px;
+      border:none; padding:5px 0; text-align:right}
+    .stack td:first-child{display:block; padding:0 0 7px; text-align:left}
+    .stack td[data-label]::before{
+      content:attr(data-label); font-family:var(--mono); font-size:10.5px; letter-spacing:.11em;
+      text-transform:uppercase; color:var(--muted); text-align:left; flex:none; padding-top:4px;
+    }
+    .stack .yr{margin:0 0 0 10px; flex:none}
+    .matrix td .mo{margin-left:auto; flex:none}
+    .calc li{flex-wrap:wrap; gap:2px 14px}
+    .calc li b{margin-left:auto}
+    .foot{grid-template-columns:1fr}
+    .proof{text-align:left}
+  }
+
+  @media print{
+    @page{ size:Letter; margin:0 }
+    body{background:#fff}
+    .printbar{display:none}
+    .sheet{max-width:none; margin:0; box-shadow:none; border-radius:0; animation:none}
+    .terms div{animation:none}
+    .hero,.cta,.total,.terms,.rate.keep,.scenario,.masthead,.foot{
+      -webkit-print-color-adjust:exact; print-color-adjust:exact;
+    }
+    .rate,.step,.scenario,.terms,tr,.total{break-inside:avoid}
+    h2{break-after:avoid}
+    .anchor > h3,thead{break-after:avoid}
+    .body{padding-top:clamp(24px,3.4vw,34px)}
+    section{margin-bottom:clamp(24px,3.4vw,34px)}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .sheet,.terms div{animation:none}
+    .btn,.matrix tbody tr{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="printbar">
+  <button onclick="window.print()">Печать / Сохранить в PDF</button>
+</div>
+
+<article class="sheet">
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group">
+      <g transform="translate(6,5)">
+        <circle cx="60" cy="60" r="57" fill="none" stroke="#123841" stroke-width="3"></circle>
+        <circle cx="60" cy="60" r="50.5" fill="none" stroke="#9C6A39" stroke-width="1.4"></circle>
+        <g fill="#9C6A39">
+          <path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path>
+          <path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path>
+        </g>
+        <g transform="translate(60,60) scale(0.6) translate(-59,-56)">
+          <g fill="none" stroke="#123841" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter">
+            <path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path>
+            <path d="M70 26 L70 86"></path>
+            <path d="M70 56 L92 26"></path>
+            <path d="M70 56 L95 86"></path>
+          </g>
+        </g>
+      </g>
+      <text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#0D2A31">JK Accounting Group</text>
+      <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#7E5430">TAX · BOOKKEEPING · CFO</text>
+    </svg>
+    <div class="tag">
+      Подготовлено для
+      <b>Евгения</b>
+      Реферальное партнёрство
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <p class="kicker">Предложение о партнёрстве</p>
+    <h1>Вы доводите человека до первой продажи на Amazon. Дальше у него начинается <em>бухгалтерия</em> — и это наша часть пути.</h1>
+    <p>Предложение простое: вы рекомендуете нас своим ученикам и клиентам, мы берём на себя их учёт, налоги и отчётность, а вы получаете процент с каждого счёта, который они нам оплачивают. Не разово за приведённого человека — каждый месяц, пока он остаётся с нами.</p>
+  </div>
+
+  <!-- The deal in three numbers -->
+  <div class="terms">
+    <div>
+      <b>20%</b>
+      <span>с подготовки налоговых деклараций</span>
+    </div>
+    <div>
+      <b>15%</b>
+      <span>с ежемесячного обслуживания</span>
+    </div>
+    <div>
+      <b class="word">Каждый месяц</b>
+      <span>выплаты — пока клиент платит нам</span>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- Why this audience -->
+    <section>
+      <h2>Почему это работает именно с вашей аудиторией</h2>
+      <div class="rule"><i></i></div>
+      <p>Селлер на Amazon получает бухгалтерию повышенной сложности буквально с первого месяца — и почти никогда этого не ожидает. Он приходит за продажами, а вместе с ними получает набор обязательств, который не отменяется тем, что бизнес ещё маленький.</p>
+      <ul class="facts">
+        <li><b>Компания и EIN</b><span>Форма бизнеса выбрана на старте — и дальше она определяет, сколько человек заплатит налогов. Переиграть её позже дороже, чем сделать сразу правильно.</span></li>
+        <li><b>Выплаты Amazon</b><span>То, что приходит на счёт, — это не выручка. Внутри комиссии, возвраты, резервы, реклама и логистика FBA. Без разбора выплат отчётность не сходится ни с чем.</span></li>
+        <li><b>Закупки и остатки</b><span>Товар на складе — это не расход, пока он не продан. На этом месте цифра прибыли расходится с реальностью чаще всего.</span></li>
+        <li><b>Sales tax</b><span>Склады FBA создают обязательства сразу в нескольких штатах — человек обычно узнаёт об этом последним.</span></li>
+        <li><b>Годовая декларация</b><span>Подаётся с первого же года, даже если бизнес ещё не вышел в прибыль.</span></li>
+      </ul>
+      <p style="margin-top:22px">Эти вопросы задают вам уже сейчас — и вы на них отвечаете сами или отправляете человека искать бухгалтера самостоятельно. Мы закрываем эту часть: работаем с продавцами на Amazon, Shopify, Walmart и eBay, разбираем выплаты и сверяем их с книгами, ведём учёт FBA и остатков, готовим декларации. По-русски, по-украински и по-английски.</p>
+    </section>
+
+    <!-- The two rates -->
+    <section>
+      <h2>Ваше вознаграждение</h2>
+      <p class="lede">Две ставки — по типу услуги. Считаются от суммы, которую клиент фактически нам оплатил.</p>
+      <div class="rates">
+        <div class="rate">
+          <p class="pct">20%</p>
+          <h3>Подготовка налоговых деклараций</h3>
+          <p>С каждой декларации, которую мы готовим для приведённого вами клиента. Суммы здесь разовые и небольшие — поэтому и процент выше.</p>
+          <p class="note">Начисляется после того, как клиент оплатил декларацию — и повторяется каждый год, пока мы готовим её для него.</p>
+        </div>
+        <div class="rate keep">
+          <p class="pct">15%</p>
+          <h3>Ежемесячное обслуживание</h3>
+          <p>С каждого оплаченного месяца — всё время, пока клиент с нами. Это основная часть вашего дохода: она повторяется сама и не требует от вас новых действий.</p>
+          <p class="note">Выплаты помесячно — так честнее для обеих сторон: мы не обещаем вам годовую сумму вперёд, потому что не можем гарантировать, что клиент останется на год, а вы получаете деньги тогда же, когда их получаем мы.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Price anchors -->
+    <section>
+      <h2>Порядок наших цен</h2>
+      <p class="lede">Чтобы вы понимали, о каких суммах идёт речь. Это отправные точки — итоговая цена зависит от объёма операций и сложности конкретного бизнеса.</p>
+
+      <div class="anchor">
+        <h3>Налоговые декларации · ваши 20%</h3>
+        <table class="stack">
+          <thead>
+            <tr><th>Декларация</th><th>Наша цена, от</th><th>Ваше вознаграждение</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="svc">Личная декларация</span><em>Form 1040 — физическое лицо, в том числе владелец с одним LLC</em></td>
+              <td data-label="Наша цена"><span class="fee">от $450</span></td>
+              <td data-label="Вам"><span class="cut">$90</span></td>
+            </tr>
+            <tr>
+              <td><span class="svc">Партнёрство</span><em>Form 1065 — два и более владельца</em></td>
+              <td data-label="Наша цена"><span class="fee">от $650</span></td>
+              <td data-label="Вам"><span class="cut">$130</span></td>
+            </tr>
+            <tr>
+              <td><span class="svc">S-корпорация</span><em>Form 1120-S — самая частая форма у работающего селлера</em></td>
+              <td data-label="Наша цена"><span class="fee">от $850</span></td>
+              <td data-label="Вам"><span class="cut">$170</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="anchor">
+        <h3>Ежемесячное обслуживание · ваши 15%</h3>
+        <table class="stack">
+          <thead>
+            <tr><th>Пакет</th><th>Наша цена</th><th>Ваше вознаграждение</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="svc">Базовый</span><em>Один канал продаж, одна компания — с этого начинает почти каждый селлер</em></td>
+              <td data-label="Наша цена"><span class="fee">от $600 / мес</span></td>
+              <td data-label="Вам"><span class="cut">$90 / мес</span></td>
+            </tr>
+            <tr>
+              <td><span class="svc">Расширенный</span><em>Бизнес побольше: несколько каналов продаж, заметно больше операций</em></td>
+              <td data-label="Наша цена"><span class="fee">$1,200 / мес</span></td>
+              <td data-label="Вам"><span class="cut">$180 / мес</span></td>
+            </tr>
+            <tr>
+              <td><span class="svc">Крупный</span><em>Несколько магазинов или локаций, сложная структура владения</em></td>
+              <td data-label="Наша цена"><span class="fee">$2,500 / мес</span></td>
+              <td data-label="Вам"><span class="cut">$375 / мес</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- The math -->
+    <section>
+      <h2>Сколько это в деньгах</h2>
+      <p class="lede">Ежемесячное обслуживание, ваши 15% — при разном количестве приведённых клиентов.</p>
+      <table class="matrix stack">
+        <thead>
+          <tr><th>Пакет клиента</th><th>1 клиент</th><th>5 клиентов</th><th>10 клиентов</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="svc">Базовый</span><em>$600 / мес</em></td>
+            <td data-label="1 клиент"><div class="mo">$90</div><div class="yr">$1,080</div></td>
+            <td data-label="5 клиентов"><div class="mo">$450</div><div class="yr">$5,400</div></td>
+            <td data-label="10 клиентов"><div class="mo">$900</div><div class="yr">$10,800</div></td>
+          </tr>
+          <tr>
+            <td><span class="svc">Расширенный</span><em>$1,200 / мес</em></td>
+            <td data-label="1 клиент"><div class="mo">$180</div><div class="yr">$2,160</div></td>
+            <td data-label="5 клиентов"><div class="mo">$900</div><div class="yr">$10,800</div></td>
+            <td data-label="10 клиентов"><div class="mo">$1,800</div><div class="yr">$21,600</div></td>
+          </tr>
+          <tr>
+            <td><span class="svc">Крупный</span><em>$2,500 / мес</em></td>
+            <td data-label="1 клиент"><div class="mo">$375</div><div class="yr">$4,500</div></td>
+            <td data-label="5 клиентов"><div class="mo">$1,875</div><div class="yr">$22,500</div></td>
+            <td data-label="10 клиентов"><div class="mo">$3,750</div><div class="yr">$45,000</div></td>
+          </tr>
+        </tbody>
+        <caption>Крупная цифра — ваш доход в месяц, под ней — за двенадцать месяцев. Расчёт при указанных выше суммах; фактическое вознаграждение считается от реально оплаченных счетов.</caption>
+      </table>
+
+      <div class="scenario">
+        <h3>Как это выглядит на практике<span>Десять клиентов за год — обычное для этой аудитории соотношение пакетов</span></h3>
+        <ul class="calc">
+          <li><i>6 клиентов на базовом пакете · $90</i><b>$540 / мес</b></li>
+          <li><i>3 клиента на расширенном · $180</i><b>$540 / мес</b></li>
+          <li><i>1 клиент на крупном · $375</i><b>$375 / мес</b></li>
+          <li><i>Декларации этих же десяти: 6 × $170 и 4 × $90</i><b>$1,380 за год</b></li>
+        </ul>
+        <div class="total">
+          <i>Первый год — ежемесячные $1,455 плюс декларации</i>
+          <b>$18,840</b>
+        </div>
+      </div>
+      <p class="after">И главное: <b>второй год начинается не с нуля.</b> Ежемесячная часть — $17,460 в год — продолжает начисляться сама, пока клиенты остаются с нами. Всё, что вы приведёте дальше, складывается сверху.</p>
+    </section>
+
+    <!-- How it works -->
+    <section>
+      <h2>Как это работает</h2>
+      <div class="rule"><i></i></div>
+      <ol class="ladder">
+        <li class="step">
+          <span class="n">1</span>
+          <div>
+            <h3>Вы передаёте контакт</h3>
+            <p>Или человек сам называет вас при обращении. Мы сразу записываем его как вашего — до первого разговора, а не после.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="n">2</span>
+          <div>
+            <h3>Бесплатный звонок 10 минут</h3>
+            <p>Разбираем ситуацию и говорим прямо, нужны мы этому человеку сейчас или нет. Никакого давления: вы рекомендуете нас своим людям, и ваша репутация в этом разговоре стоит ровно столько же, сколько наша.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="n">3</span>
+          <div>
+            <h3>Клиент начинает работать с нами</h3>
+            <p>Ваше вознаграждение начинается с первого оплаченного счёта — и дальше начисляется с каждого следующего.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="n">4</span>
+          <div>
+            <h3>Выплата каждый месяц</h3>
+            <p>До 15-го числа за предыдущий месяц, вместе с коротким отчётом: кто из ваших клиентов что оплатил и сколько из этого ваше. Вам не нужно ничего считать и ни о чём напоминать.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Terms -->
+    <section>
+      <h2>Условия — коротко</h2>
+      <p class="lede">Ничего мелким шрифтом. Это весь список.</p>
+      <ul class="nod">
+        <li><b>Клиент закрепляется за вами</b> — один раз, в момент обращения, и остаётся вашим, пока работает с нами.</li>
+        <li><b>Платим с полученных денег</b> — с оплаченных счетов, а не с выставленных.</li>
+        <li><b>Возврат не оплачивается</b> — если мы вернули клиенту деньги, эта сумма из расчёта выпадает.</li>
+        <li><b>Без ограничений</b> — ни по количеству клиентов, ни по сроку выплат.</li>
+        <li><b>Прозрачно</b> — каждый месяц вы видите, за что именно вам начислено.</li>
+        <li><b>Без эксклюзива</b> — вы ничем нам не обязаны и ничего не должны по объёму.</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div>
+      <h2>Если условия подходят</h2>
+      <p>Скажите — и я подготовлю соглашение на одну страницу и вашу персональную ссылку, которую можно давать ученикам. Запустить можно на этой же неделе.</p>
+    </div>
+    <a class="btn" href="mailto:julia@jkaccountinggroup.com?subject=%D0%A0%D0%B5%D1%84%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%B0%D1%80%D1%82%D0%BD%D1%91%D1%80%D1%81%D1%82%D0%B2%D0%BE">Написать Юлии<small>julia@jkaccountinggroup.com</small></a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="foot">
+    <div class="who">
+      <b>Юлия Кононова</b><br>
+      <span>Основатель и главный бухгалтер · JK Accounting Group</span><br>
+      <span>Майами · Форт-Лодердейл · Онлайн &nbsp;·&nbsp;</span><a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a>
+    </div>
+    <div class="proof">
+      7 лет · 50+ предпринимателей · сэкономлено $1M+ на налогах<br>
+      English · Русский · Українська
+    </div>
+  </footer>
+
+</article>
+
+</body>
+</html>

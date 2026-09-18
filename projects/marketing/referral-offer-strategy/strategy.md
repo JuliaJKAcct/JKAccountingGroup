@@ -136,6 +136,63 @@ split, and reframes every box from "is this set up?" to "is this still right
 **Referral mechanics (applies to the free-call chassis generally):** flat
 fee paid to the partner only if the free call converts into a paying
 engagement — no fee for the call itself, no percentage of ongoing revenue.
+⚠️ **This is no longer the firm's only referral model.** The Amazon-education
+channel below runs on a **percentage of revenue**, decided by Julia in Sep 2026
+because that partner asked for percentages specifically. Treat the flat fee as
+the default for a partner who has no preference, not as a rule — and check which
+model a given partner is on before quoting anything.
+
+### Amazon-education channel — percentage model (decided, Sep 2026)
+
+**Partner 3 — Евгений**, one of the owners of the **Business Family Club**
+(Hallandale Beach; the same club the in-person talk topic in `webinar/` was
+pitched to). He **teaches people how to launch on Amazon** and then keeps
+supporting those sellers operationally — shipping and similar. Julia met him at
+the club on **Wed 2026-09-16**; he said he wants a referral arrangement and that
+**he is interested in percentages, not a flat fee**. Julia's answer is the
+percentage model below, and the leave-behind is
+[`amazon-partner/referral-proposal-ru.html`](./amazon-partner/referral-proposal-ru.html)
+(+ `.pdf`).
+
+**Why this audience is worth a different model:** every seller he launches
+acquires a real accounting problem on day one — an entity and EIN whose choice
+sets their tax bill, Amazon payouts that are not revenue (fees, refunds,
+reserves, FBA), inventory that decides where profit actually is, multi-state
+sales tax created by FBA warehouses, and a return from year one. The firm
+already works with Amazon/Shopify/Walmart/eBay sellers, so the fit is real
+rather than positional.
+
+| | Rate | Base | Cadence |
+|---|---|---|---|
+| Tax-return preparation | **20%** | the return fee the client actually paid | on payment, **and again each year** we prepare that client's return |
+| Monthly engagement | **15%** | each month the client actually paid | **paid monthly**, for as long as the client stays |
+
+**Why monthly and not a year up front** (Julia's reasoning, recorded because it
+is the part a partner argues about): the firm has no guarantee a client stays a
+full year, so it will not promise an annual figure — and the partner is paid at
+the same time the firm is.
+
+**Price anchors quoted to the partner** (starting points, not a rate card):
+returns from **$450** (1040), **$650** (1065), **$850** (1120-S); monthly
+packages **$600** (one sales channel, one company — the typical Amazon start),
+**$1,200** (several sales channels, more volume), **$2,500** (several stores or
+locations). The 1120-S anchor here is **$850**, while
+[`proposal-tool/docs/methodology.md`](../../proposal-tool/docs/methodology.md)
+still records a **$750/yr** starting point — unreconciled, see
+[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
+
+**Still open, and deliberately written into the document as decided so the
+partner is not left guessing** — overturn any of these by changing one line of
+the HTML:
+
+- The 20% repeats **every year** the firm prepares that client's return, and the
+  15% has **no time cap** (both follow Julia's "pay while the client pays us"
+  logic; a 12-month cap is the common alternative).
+- Commission is on **tax preparation and the monthly engagement only** —
+  one-off work (company formation, EIN, cleanup, the $150 consultation) carries
+  none.
+- Attribution is at **first contact**, payment by the **15th** of the following
+  month, refunds excluded, no exclusivity, no volume commitment.
 
 ### Real estate affiliate channel (decided + refined)
 
