@@ -72,11 +72,11 @@ referral-offer-strategy/
 │       ├── event-ru.md              event-page copy + Luma setup checklist
 │       └── readiness-check-ru.pdf   the worksheet gift, print-ready for Luma
 ├── amazon-partner/  ← Amazon-education channel (Евгений / Business Family Club)
-│   ├── referral-proposal-ru.html  the RU partner proposal: the two commission
-│   │                       rates (10% returns · 15% monthly), our price anchors,
-│   │                       the earnings maths (1 / 5 / 10 clients + a worked
-│   │                       ten-client year), how it works, the terms
-│   └── referral-proposal-ru.pdf   print-ready export to send (Letter, 5 pp.)
+│   ├── referral-proposal-ru.html  the RU partner proposal, built to TWO Letter
+│   │                       pages: p1 = the offer, the rates+prices table and the
+│   │                       earnings matrix; p2 = the worked year, how it works,
+│   │                       the terms. Break is forced (`.page2`), not left to luck
+│   └── referral-proposal-ru.pdf   print-ready export to send (Letter, 2 pp.)
 └── wealth-partner/  ← wealth-manager channel (Imperial Fund / Yuri Nosenko)
     └── imperial-fund-intro.html  client-facing EN intro sheet the advisor hands
                                   to clients (who we are · what we do · how we help)
@@ -173,7 +173,13 @@ there.
   the mechanics and the whole terms list. Carries the **upgrade bridge** — a
   return-only client who later moves to the monthly engagement starts paying the
   partner 15% from that month — which is what keeps small referrals worth making.
-  Atlas chassis shared with `partner-pitch/one-pager-ru.html`; prints to Letter.
+  Atlas chassis shared with `partner-pitch/one-pager-ru.html`.
+  ⚠️ **It is a TWO-PAGE document by construction, and that constraint is load-bearing**
+  (Julia, 2026-09-18 — the first build ran to six pages and she would not send it).
+  The page break is *forced* with `.page2` rather than left to the flow, print runs a
+  notch denser than screen, and the layout carries ~30 px of slack per page so a font
+  that loads differently cannot spill it onto a third. **Adding a section means taking
+  one out** — measure with a print-media render before committing, never by eye.
 - **`wealth-partner/`** — a client-facing EN introduction sheet for the
   wealth-manager channel (Imperial Fund Asset Management / Yuri Nosenko),
   designed to be handed to *their clients*: who JK is, what we do, how we help,
