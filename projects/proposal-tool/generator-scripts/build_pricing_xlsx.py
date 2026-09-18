@@ -113,7 +113,7 @@ rt[f"A{base7}"].font = Font(bold=True, name="Arial")
 rt[f"A{base7+1}"] = "Tax Prep (partnership, Form 1065) default annual fee"
 rt[f"B{base7+1}"] = 650
 rt[f"A{base7+2}"] = "Tax Prep (S-corp, Form 1120S) default annual fee"
-rt[f"B{base7+2}"] = 750
+rt[f"B{base7+2}"] = 850
 rt[f"A{base7+3}"] = "Tax Prep (C-corp, Form 1120) default annual fee (assumed)"
 rt[f"B{base7+3}"] = 780
 rt[f"A{base7+4}"] = "1099 Filing, per contractor"

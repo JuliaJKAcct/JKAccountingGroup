@@ -204,10 +204,14 @@ document says that ratio out loud rather than leaving it to be noticed.
 returns from **$450** (1040), **$650** (1065), **$850** (1120-S); monthly
 packages **$600** (one sales channel, one company — the typical Amazon start),
 **$1,200** (several sales channels, more volume), **$2,500** (several stores or
-locations). The 1120-S anchor here is **$850**, while
-[`proposal-tool/docs/methodology.md`](../../proposal-tool/docs/methodology.md)
-still records a **$750/yr** starting point — unreconciled, see
-[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
+locations). ✅ **The 1120-S anchor is $850, confirmed by Julia on 2026-09-18** when this
+document and the proposal tool disagreed — the tool had **$750**, inherited from
+the legacy GoProposal matrix. **All five places that carried $750 were moved to
+$850**: `pricing-core.js` (the shared fee math inlined into every tool that
+prices), the calculator's on-screen hint, both `generator-scripts/` workbooks and
+[`proposal-tool/docs/methodology.md`](../../proposal-tool/docs/methodology.md),
+whose note explains the one thing left open — the assumed **$780** C-corp figure
+now sits *below* the S-corp one.
 
 **Still open, and deliberately written into the document as decided so the
 partner is not left guessing** — overturn any of these by changing one line of

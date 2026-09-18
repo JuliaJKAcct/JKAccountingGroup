@@ -69,7 +69,7 @@ inputs = [
     ("Number of business locations", 1, "A8"),
     ("Number of bank/CC accounts to reconcile", 5, "A9"),
     ("Accounting Advisory Services tier", "Small", "A10"),
-    ("Annual tax prep fee (by return type)", 750, "A11"),
+    ("Annual tax prep fee (by return type)", 850, "A11"),
     ("Sales tax filing frequency", "Monthly", "A12"),
     ("Number of states for sales tax", 1, "A13"),
     ("Number of 1099 contractors", 0, "A14"),

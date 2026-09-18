@@ -79,8 +79,27 @@ from `build_pricing_xlsx.py`).
 
 **Tax prep** — *not* from the matrix's cascading revenue-tier calculation. It's a
 flat annual fee set per client, divided by 12. Firm starting points (adjusted per
-client, not hard rules): **$650/yr** Form 1065 partnership, **$750/yr** Form 1120-S
+client, not hard rules): **$650/yr** Form 1065 partnership, **$850/yr** Form 1120-S
 S-corp, **~$780/yr** assumed Form 1120 C-corp.
+
+> ⬆️ **The 1120-S starting point moved from $750 to $850 on 2026-09-18** — Julia
+> confirmed $850 is the current figure when the referral proposal for the
+> Amazon-education channel quoted it and the two disagreed
+> ([`referral-offer-strategy/strategy.md`](../../marketing/referral-offer-strategy/strategy.md)
+> → *Amazon-education channel*). The number lives in **five** places and all five
+> were moved together: this doc, `tools/pricing-core.js` (`TAXDEFAULT`, inlined
+> into every tool that prices), the calculator's on-screen hint in
+> `tools/pricing-calculator.src.html`, and the two `generator-scripts/`
+> workbooks. **Change all five or none** — a split leaves the tool quoting a price
+> the firm has stopped using.
+>
+> ⚠️ **This inverts the C-corp assumption and nobody has ruled on it.** The 1120
+> figure was always marked *assumed*, and at $780 it now sits **below** the
+> 1120-S it used to sit above — a C-corp return priced under an S-corp return.
+> Left at $780 because Julia was asked about the 1120-S and answered about the
+> 1120-S; **it is a guess either way, and the guess is now visibly wrong in a new
+> direction.** Worth one sentence from her the next time proposal pricing comes
+> up.
 
 **1099 filing** = $25 flat per contractor. **Sales tax filing** = $60 per state per
 filing period (monthly filers $60/mo/state; quarterly shown as $20/mo/state; annual
