@@ -144,12 +144,13 @@ model a given partner is on before quoting anything.
 
 ### Amazon-education channel — percentage model (decided, Sep 2026)
 
-**Partner 3 — Евгений**, one of the owners of the **Business Family Club**
-(Hallandale Beach; the same club the in-person talk topic in `webinar/` was
-pitched to). He **teaches people how to launch on Amazon** and then keeps
-supporting those sellers operationally — shipping and similar. Julia met him at
-the club on **Wed 2026-09-16**; he said he wants a referral arrangement and that
-**he is interested in percentages, not a flat fee**. Julia's answer is the
+**Partner 3 — Евгений**, **a co-owner of the Business Family Club** — the same
+club (Hallandale Beach) the firm's in-person talk *"Почему бизнес растёт, а
+прибыль уменьшается"* was prepared for; that presentation was made on
+**2026-09-16** and is what put Julia in front of him. He **teaches people how to
+launch on Amazon** and then keeps supporting those sellers operationally —
+shipping and similar. In that conversation he said he wants a referral
+arrangement and that **he is interested in percentages, not a flat fee**. Julia's answer is the
 percentage model below, and the leave-behind is
 [`amazon-partner/referral-proposal-ru.html`](./amazon-partner/referral-proposal-ru.html)
 (+ `.pdf`).
@@ -164,13 +165,40 @@ rather than positional.
 
 | | Rate | Base | Cadence |
 |---|---|---|---|
-| Tax-return preparation | **20%** | the return fee the client actually paid | on payment, **and again each year** we prepare that client's return |
+| Tax-return preparation | **10%** | the return fee the client actually paid | on payment, **and again each year** we prepare that client's return |
 | Monthly engagement | **15%** | each month the client actually paid | **paid monthly**, for as long as the client stays |
+
+⚠️ **The return rate was 20% for one day and Julia cut it to 10% on 2026-09-18** —
+worth recording, because her stated reason and the actual reason differ and the
+next person to reprice this needs both. **Her worry:** 20% would push the partner
+toward sending return-only clients, since "even the base monthly package costs
+about what a basic return costs." **The arithmetic says that worry was already
+covered** — at 20% a base monthly client was worth $1,080/yr against $170 once
+for an S-corp return, so the money pointed at monthly by 6–12× on its own.
+**What was NOT covered is the optics: 20% printed beside 15% reads, at a glance,
+as "returns are worth more to me."** A partner skims two numbers; he does not
+multiply by twelve. 10% vs 15% tells the true story instead of contradicting it,
+and 10% is the ordinary market rate for one-off professional work besides.
+🔑 **The change that does the actual motivating is not the rate at all — it is
+the upgrade bridge below.**
+
+**The upgrade bridge (added with the rate cut):** a client who comes for a return
+only and later moves to the monthly engagement starts paying the partner **15%
+from that month**, with no time limit and no re-attribution. This is what keeps
+small referrals worth making — and it matters commercially, because an
+early-stage Amazon seller usually **cannot afford $600/mo yet**, so the return is
+this channel's real entry point and the firm's own pipeline. A rate structure
+that discouraged return referrals would have closed the top of the funnel to
+protect the bottom of it.
 
 **Why monthly and not a year up front** (Julia's reasoning, recorded because it
 is the part a partner argues about): the firm has no guarantee a client stays a
 full year, so it will not promise an annual figure — and the partner is paid at
 the same time the firm is.
+
+**Worked example in the document** (ten clients in a year: six base, three
+extended, one large): **$18,150** in year one, of which **$17,460 recurs** — the
+document says that ratio out loud rather than leaving it to be noticed.
 
 **Price anchors quoted to the partner** (starting points, not a rate card):
 returns from **$450** (1040), **$650** (1065), **$850** (1120-S); monthly
@@ -185,9 +213,13 @@ still records a **$750/yr** starting point — unreconciled, see
 partner is not left guessing** — overturn any of these by changing one line of
 the HTML:
 
-- The 20% repeats **every year** the firm prepares that client's return, and the
+- The 10% repeats **every year** the firm prepares that client's return, and the
   15% has **no time cap** (both follow Julia's "pay while the client pays us"
-  logic; a 12-month cap is the common alternative).
+  logic; a 12-month cap or a step-down is the common alternative). ⚠️ **The
+  perpetual 15% is where the real money is, not the return rate** — one base
+  client held five years is ~$5,400 to the partner for a single introduction.
+  That is a defensible price for a channel, but it is the number to revisit if
+  this model is ever reviewed, not the 10%.
 - Commission is on **tax preparation and the monthly engagement only** —
   one-off work (company formation, EIN, cleanup, the $150 consultation) carries
   none.
