@@ -236,6 +236,21 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-18 — 🛑 **THE OBSERVATION PERIOD COMES OFF THE BROKER'S LIST — Julia is taking it to the
+  BUYERS AND THE ATTORNEY FIRST.** *"This is something I have to bring up to the buyer… I need to first
+  discuss it with the buyer and the attorney before I go with this to the broker."* 🔑 **The reasoning is
+  worth keeping, because it is a rule about sequencing, not about this item:** asking the seller to let
+  our people stand at the cash collection is **not an ordinary document request** — it puts a buyer
+  representative inside the seller's premises, needs the buyers to supply that person or agree to pay
+  for one, and the terms *(dates, how many cycles, who picks the days)* are close enough to the contract
+  that the attorney should see them first. **Raising it with the broker before the buyers have agreed
+  would commit them to something they have not decided.** ⓘ **Nothing else changes:** the store it
+  covers is still the one with no card system and no cash records of any kind, so it remains the only
+  test available there besides bank deposits — it is **deferred, not dropped**, and it goes back on the
+  list once the buyers and Olesya have ruled. ⚠️ **It also carries a clock:** collections are typically
+  weekly, four cycles is roughly a month, and the diligence window is shorter than that — so the
+  decision itself is time-critical even though the item is parked. 📎 The request PDF was rebuilt
+  without it *(37 items, 9 priority)*, and a Russian WhatsApp message went to Julia for the buyers
 - 2026-09-17 (issued) — 📎 **The request goes out as a SHORT EMAIL PLUS A BRANDED PDF** (Julia's
   format call): the five QuickBooks follow-ups sit in the email body where they will actually be read,
   and the full outstanding set — **38 items across eight sections, 10 flagged priority** — ships as a
