@@ -30,10 +30,10 @@ flowchart TD
   D --> E["Step 1 — what is in the file<br/>(rows, dates, accounts, missing periods)"]
   E --> F["Step 2 — MONEY IN, grouped by PAYER<br/>never by the words in the description"]
   F --> G["Step 3 — MONEY OUT, into buckets<br/>purpose comes from the CLIENT, not the description"]
-  G --> H["Step 4 — the three outputs:<br/>reconciliation · detail CSV · question list"]
-  H --> I{"Client answers the questions"}
-  I --> J["Claude re-runs and<br/>reconciles again"]
-  J --> K["Client sends US: the CSV, the answers,<br/>and the documents list"]
+  G --> H["Step 4 — ONE .xlsx workbook:<br/>Summary · All transactions · TO CONFIRM<br/>· Money in by payer · Questions"]
+  H --> I{"Client fills in the TO CONFIRM tab<br/>— business or personal, and what for —<br/>and sends the workbook back"}
+  I --> J["Claude applies each answer to EVERY row<br/>of that Group ID and reconciles again"]
+  J --> K["Client sends US the finished workbook<br/>+ the documents it asked for"]
   K --> L["🛑 WE decide every category,<br/>every percentage, every deduction"]
   L --> M["Figures + decisions → the return's<br/>working paper in projects/tax-returns/"]
 ```
@@ -97,13 +97,15 @@ year** (capital, not a supply).
 > account you used for the business, January through December.
 >
 > Then open Claude (claude.ai), attach the files, and paste the text below as
-> your message. It will sort everything, add it up, and come back to you with a
-> list of questions. Answer the questions in the same chat and it will update
-> the files.
+> your message. It will sort everything, add it up, and give you back an
+> **Excel file**. One tab in that file — **"To confirm"** — is the list of
+> things it could not work out on its own: for each one, mark whether it was
+> **business or personal** and write **what it was for**. Then send the file
+> back into the same chat and it will redo everything with your answers.
 >
-> Send us: the final CSV it produces, its list of questions **with your
-> answers**, and anything it asks you to dig out. We make all the tax decisions
-> from there — you do not have to decide what is deductible.
+> Send us: the finished Excel file, and anything it asks you to dig out. We make
+> all the tax decisions from there — you do not have to decide what is
+> deductible.
 >
 > One thing to watch: it will ask you *why* you spent money in certain places.
 > That is the whole point of the exercise. The bank only tells us where the
@@ -120,12 +122,15 @@ year** (capital, not a supply).
 >
 > Затем откройте Claude (claude.ai), прикрепите файлы и отправьте текст, который
 > я привожу ниже, в качестве сообщения. Он разложит все операции по категориям,
-> всё посчитает и вернётся к вам со списком вопросов. Ответьте на вопросы в этом
-> же чате — и он обновит файлы.
+> всё посчитает и выдаст вам **файл Excel**. В нём будет вкладка **«To confirm»** —
+> это список того, в чём он не смог разобраться сам: по каждой строке отметьте,
+> **деловой это расход или личный**, и напишите, **на что именно** он был. Затем
+> отправьте файл обратно в этот же чат — он всё пересоберёт с учётом ваших
+> ответов.
 >
-> Нам пришлите: итоговый файл CSV, список его вопросов **с вашими ответами** и
-> всё, что он попросит вас найти. Дальше все налоговые решения принимаем мы —
-> вам не нужно решать, что подлежит вычету, а что нет.
+> Нам пришлите: готовый файл Excel и всё, что он попросит вас найти. Дальше все
+> налоговые решения принимаем мы — вам не нужно решать, что подлежит вычету, а
+> что нет.
 >
 > Один момент, к которому стоит подготовиться: он будет спрашивать, **с какой
 > целью** были те или иные расходы. В этом и смысл всей работы. Банк показывает
@@ -297,33 +302,68 @@ Also do these checks and report what you find:
    individual or a small unincorporated business. List them with year totals —
    I may owe them a 1099 form and my accountant has to know.
 
-STEP 4 — THE OUTPUT. Give me all of this:
- 1. A RECONCILIATION that proves nothing was lost:
-    - rows in the files = rows classified;
-    - total money in = I1 + I2 + I3 + I4 + I5;
-    - total money out = A + B + C + D.
-    If either does not balance to the cent, say so and show me the difference.
- 2. A SUMMARY TABLE: every bucket, its number of transactions and its total.
- 3. A MONTH-BY-MONTH table of money in and money out.
- 4. A DETAIL FILE I can download as CSV, containing every original row with its
-    original columns, plus these added columns: account, payee (normalised),
-    bucket, Schedule C line (blank where there is none), business purpose (blank
-    where I have not given one), confidence (high / medium / ask me), and the
-    number of the question that covers it.
- 5. THE QUESTION LIST, numbered, grouped by subject, in plain language — no tax
-    terms. Attach the payee name, the year total and the number of transactions
-    to each question so I can answer without going back to the file. Do not ask
-    me about anything I have already told you.
- 6. A LIST OF DOCUMENTS my accountant will need (for example: a year-end
-    statement from the car lender, 1099 forms, receipts for equipment, a
-    phone bill, statements for any period missing from these files).
+STEP 4 — THE OUTPUT. Put everything in ONE Excel workbook (.xlsx) with the tabs
+below. If you cannot create an .xlsx, give me one CSV per tab instead, named the
+same way.
+
+ TAB 1 "Summary"
+    - The reconciliation that proves nothing was lost: rows in the files = rows
+      classified; total money in = I1 + I2 + I3 + I4 + I5; total money out =
+      A + B + C + D. If either does not balance to the cent, say so and show me
+      the difference.
+    - Every bucket with its number of transactions and its total.
+    - A month-by-month table of money in and money out.
+
+ TAB 2 "All transactions" — EVERY transaction of the year, nothing left out.
+    Keep every original column exactly as it came, then add these:
+      Group ID | Payee (normalised) | Bucket | Schedule C line | Business
+      purpose | Confidence (high / medium / ask me) | Question number
+    Sorted by date. This tab must have the same number of rows as the files I
+    gave you — say so at the top of the tab, with the count.
+
+ TAB 3 "To confirm" — THE TAB I FILL IN. This is the important one.
+    Everything you are not sure about, so I can tell you whether it was business
+    or personal. Build it like this:
+      - ONE ROW PER PAYEE, not one row per transaction. If there are 40 charges
+        from the same place, that is ONE row, so I can answer once.
+      - BUT give any single transaction of $500 or more its own row, even when
+        other charges from that payee are grouped — a big one deserves its own
+        answer.
+      - Include unclear money IN as well as money out, and say which it is.
+    Columns, in this order:
+      Group ID | Money in or out | Payee | Number of transactions | Total for
+      the year | First date | Last date | Example description from the bank |
+      What you think it is | Why you are not sure |
+      FILL IN: Business or personal? | FILL IN: What was it for? |
+      FILL IN: If mixed, which ones or what share?
+    The last three columns are empty, for me. Mark them clearly, colour their
+    headers, freeze the header row, and if you can, put a dropdown on
+    "Business or personal?" with: Business / Personal / Mixed / Not sure.
+    Sort by total, largest first, so the money that matters is at the top.
+    Put one instruction line at the very top of the tab: fill in only the marked
+    columns; do not delete rows, do not re-sort, do not change the Group ID.
+
+ TAB 4 "Money in by payer" — every payer who sent me money: payer, number of
+    deposits, first and last date, total for the year, and which group (I1 to
+    I5) you put them in. Sorted by total, largest first.
+
+ TAB 5 "Questions" — everything that is not a row in the file: the numbered,
+    grouped question list in plain language with no tax terms, and the list of
+    documents my accountant will need (for example: a year-end statement from
+    the car lender, 1099 forms, receipts for equipment, a phone bill, statements
+    for any period missing from these files).
+
+The Group ID must be the SAME in tab 2 and tab 3, so that one answer from me can
+be applied to every transaction in that group.
 
 AFTER I ANSWER
-Update the classification and the detail file, run the reconciliation again, and
-show me what changed. Do not ask me the same question twice. Then give me the
-final files to send to my accountant, and tell me plainly what is still
-unresolved — a short honest list of open items is worth more to my accountant
-than a confident guess.
+I will fill in tab 3 and send the workbook back to you in this chat. Read my
+answers, apply each one to EVERY transaction in that group, move those rows into
+the right bucket, and rebuild the whole workbook with the reconciliation run
+again. Tell me what changed and what is still unanswered. Do not ask me the same
+question twice. Then give me the final workbook to send to my accountant,
+together with a short honest list of what is still unresolved — that is worth
+more to my accountant than a confident guess.
 ```
 
 ---
@@ -332,9 +372,10 @@ than a confident guess.
 
 | What arrives | What it is worth | What we do |
 |---|---|---|
-| The **detail CSV** | Every row of the year, sorted and reconciled | Read it as **triage**, never as categories. No expense is accepted on it alone |
+| Tab 2, **All transactions** | Every row of the year, sorted and reconciled | Read it as **triage**, never as categories. No expense is accepted on it alone |
+| Tab 3, **To confirm** | 🔑 **The client's own answers, payee by payee** — business or personal, and what for. This is the purpose column a bank export does not have | The only thing that converts a triaged row into a deduction. Check that the answer actually names a **purpose**, not a category |
 | The **payer-grouped income list** | 🔴 **The most valuable part.** Income the firm never knew about surfaces here, by name and year total | Check **every payer** against the W-2 employers and the 1099s already on the return before a dollar goes on line 1 |
-| The **answered question list** | The business purposes, in the client's own words | This is what converts a triaged row into a deduction |
+| Tab 5, **Questions** | What no row in the file can answer — the intake gaps and the documents | Work it before the return, not during |
 | The **"not income" and "not deductible" piles** | What we do **not** have to chase | Skim for anything misfiled into them |
 | The **$600+ payee list** | The 1099 exposure, before we answer Schedule C lines I and J | Establish the year total **per person**, then decide |
 
