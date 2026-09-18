@@ -502,6 +502,67 @@ A running, dated record as we build this profile.
   documented decision, the tips question still open. **The return is prepared and checked, and is NOT
   yet filed.**
 
+### 2026-09-18 — the client's own expense workbook, and what it settled
+
+**He uploaded a spreadsheet he had built for us** — a full-year extraction of **four bank and card
+accounts of his** *(the institutions are named in Double, and in the working paper)*, with his own
+classifications on it. It says of itself that it is *"not a filed tax return"* and refers every
+judgement back to us. 🛑 **It has no business-purpose column, so it can be triaged and not
+categorised** — the same defect the
+[`personal-card-reimbursement`](../../../.claude/skills/personal-card-reimbursement/) skill exists for.
+By its own count, well under one per cent of the pooled outflow is a high-confidence deduction
+candidate.
+
+🔴 **THE FINDING THAT MATTERS MOST IS ON THE INCOME SIDE AND IT RUNS THE OTHER WAY.** The workbook
+leaves a large block of inflows *"unclassified"*, and the client's own sheet labels two of those
+payers **"work income"**. 🔑 **They are two of the four W-2 employers already on his return.** The
+tool had keyed on the literal word `PAYROLL` in the bank description; one employer changed its
+descriptor from `DIRECT DEP` to `PAYROLL` mid-year, and every earlier deposit fell out of the payroll
+bucket. **The net-pay tie-out confirms it — for one employer it is exact to the penny against box 1
+less boxes 2, 4 and 6.**
+⛔ **So "work income" in his vocabulary means "money I earned by working" — it is NOT a statement
+about which schedule a dollar belongs on**, and no unclassified deposit goes on a Schedule C until its
+payer has been checked against his W-2 employers. **Reporting it would report the same wages twice and
+turn them into self-employment income.**
+
+✅ **CREDIT REPAIR IS CONFIRMED** — Lilian suspected it and the client's own sheet says it: his
+credit-monitoring subscription is *"used for credit-repair business"*, one contractor he pays is
+recorded as *"contractor / credit repair"*, one of his payers is a credit-repair company, and the
+largest payer on the return is one too. **On the money it is the main activity, not a sideline.**
+
+🆕 **AND A THIRD ACTIVITY NOBODY HAD RAISED — REAL ESTATE.** The same sheet records **brokerage fees
+to a Florida brokerage (LOKATION)**, **real-estate licence-renewal education**, and business meals
+described as *"meetings with realtors"*. **Nothing on his return mentions real estate at all, and a
+person does not pay a brokerage fee or renew a licence without holding one.** 🔑 **So the open
+question is no longer "what was the VoiceCapital work" but "how many businesses is this" — and that is
+a question of fact only he can answer.** ⚠️ **It also means the return's stated principal business and
+its activity code are both wrong: the code on it is the one for drinking places, not catering, and
+neither describes any of his payers.**
+
+🔴 **Unfiled information returns are now a live exposure.** His own sheet confirms he paid contractors,
+referral commissions, lead generation and a paralegal, naming the people. **The test is the annual
+total per payee**, the 2025 threshold is the old one, and **Zelle does not remove the payer's duty.**
+**His Schedule C currently answers "No" to the question of whether he made payments requiring a
+Form 1099** — which, if wrong, is a false answer under penalties of perjury on the exact line the IRS
+uses to select these cases. ⚠️ **Two of the payees are JK clients** — the same pattern as the
+VoiceCapital discovery, and a conflict to name rather than to use.
+
+⚠️ **The file is not a closed system.** His **Chase Prime Visa statements stop on 1 December 2025** and
+no statement covering the rest of December was present — **his busiest month** — and five payers he
+confirmed as work income have **no matching row anywhere in the extract**. **Completeness cannot be
+certified on either side until that is closed.**
+
+🔑 **AND THE ONE OPERATING RULE THAT CAME OUT OF IT: the new income and the expenses go onto the
+return in ONE pass.** He is very close to the 400%-of-federal-poverty-line limit that governs how much
+of his health-insurance subsidy he repays, and it is a cliff, not a slope. **A return keyed with the
+income and not yet the expenses shows a balance due that is wrong by thousands** — so it is never
+quoted to him, never printed and never filed in that state. ⚖️ **The same arithmetic run backwards is
+why we take the boring documented deductions and refuse the large estimated ones: a deduction
+disallowed later does not only cost its own tax, it detonates the subsidy repayment a second time.**
+
+ⓘ **The full analysis, with every figure, its source and where it is typed, is in the working paper's
+§13.** Figures stay there.
+
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **The box-14 tips are CLAIMED but not ESTABLISHED — close it before filing.** Worth **low four
@@ -510,8 +571,24 @@ A running, dated record as we build this profile.
   of the figure the **customer chose** to pay rather than the invoice imposing it. ⛔ **Do not ask
   "was it mandatory" — a mandatory tip pool still qualifies, and that wording returns a false
   negative.**
-- 🔴 **Collect the Schedule C expenses** — the organizer never asked for them, and this is the single
-  highest-value hour left on the return.
+- 🟡 **The Schedule C expenses ARRIVED on 2026-09-18 — as a workbook, not as deductions.** *(See the
+  log entry for that date.)* **What is still needed is not more data but FACTS**: a business purpose
+  per line, the mileage evidence, the exclusive-use answer on the home office, and a month-by-month
+  rent schedule *(rent reached the landlord by five different routes, two of them financing companies,
+  so the same rent can appear twice)*.
+- 🔴 **HOW MANY BUSINESSES IS THIS? — the question that now governs the Schedule C.** Credit repair is
+  confirmed, real estate has surfaced, and the hospitality work is W-2. **Splitting is nearly
+  money-neutral this year** *(one Schedule SE combines them; the QBI carryforward applies to the
+  aggregate)* **except for the health-insurance deduction, which can sit under only one business** —
+  so the question can be settled calmly, and settling it now is what makes a future year defensible.
+- 🔴 **The return's principal business and activity code are both wrong** and are typed fields.
+  **Neither can be corrected until he answers what the work actually is.** ⛔ *(This supersedes the
+  narrower "ask him what the VoiceCapital work was" below — it is the same question, widened.)*
+- 🔴 **Unfiled 2025 Forms 1099-NEC, and Schedule C line I currently says "No".** Needs the year total
+  per payee before anything else. **A missing 1099 does not disallow the deduction** — the exposure is
+  penalties, and it is a separate question from the expense.
+- 🔴 **Get the Chase Prime Visa statement for 2–31 December 2025.** Without it neither income nor
+  expenses can be called complete, and December is his busiest month.
 - ⚠️ **Check the taxpayer signature date before e-file** — the prepared return carries an April date
   against a September preparation, which looks like a field inherited from the extension.
 - ⚠️ **Tell him the balance due BEFORE the IRS does** — he has a live installment agreement and a new
@@ -534,6 +611,17 @@ A running, dated record as we build this profile.
 - [ ] Whether the IRS installment agreement is still live, and for which years.
 - [ ] Boxes 15–17 on each 2025 W-2, to close the out-of-state question for good.
 - [ ] Whether the catering activity continued in 2025 or was replaced by the contractor work.
+- [ ] 🆕 **Whether he holds a Florida real-estate licence, and whether he earned anything from it in
+      2025** — brokerage fees and a licence renewal are in his own records; the return knows nothing
+      of it.
+- [ ] 🆕 Whether he was **eligible** for a subsidised health plan at any of his employers, and for
+      which months. 🔑 **Eligibility, not enrolment — and it is the highest-value unanswered question
+      on the return.**
+- [ ] 🆕 Whether he paid **dental, vision or long-term-care** premiums separately in 2025.
+- [ ] 🆕 When the Hyundai Tucson was acquired, whether it is financed or leased, and whether it was
+      already used for work in an earlier year. **The answer decides which vehicle method is even
+      available.**
+- [ ] 🆕 Whether any **other bank or card account** was used in 2025 that is not in the workbook.
 
 ## 7. Links
 

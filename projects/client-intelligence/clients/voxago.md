@@ -121,6 +121,21 @@ the actual details (and Claude can pull them live when a task needs them).
 - 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29) — nothing new found anywhere.** Double: note 491841's `updatedAt` unchanged (2026-08-29T07:28:20Z, the last sweep's own edit) — not re-touched; client properties unchanged; 0 activity-log entries in the window. Gmail: a plain "Voxago" search since 2026-08-29 returned only 2 threads — one a false-positive keyword match on an unrelated OPTIC GOLD financials email, one the firm's own 2026-08-29 weekly-sweep report (not client content). A targeted, unbounded chase search for "Voxago" + (lien OR DOR OR "Department of Revenue" OR "annual report") — run specifically to check whether any of the open items below had moved — surfaced only the same historical correspondence already on file (the Nov 2025 lien dispute, the Dec 2025 FDOR reply, the Apr 2026 annual-report receipts); **nothing postdating 2026-08-29 on any of these matters.** Ping: org-wide semantic search for "Voxago FDOR sales tax lien" returned no legible, client-specific results — same non-result pattern as prior sweeps. Google Drive: a title search for "Voxago" modified since 2026-08-29 returned zero files.
 - 2026-08-29 — **Gmail catch-up READ TO COMPLETION.** Double: properties unchanged, note 491841 re-read in full again — body identical to the 2026-08-22 read, no new content, no activity-log entries in the window. **Gmail: a plain "Voxago" search returned all ~42 estimated results in a single page (no `nextPageToken`) — full history from 2024-06 through 2026-08 actually read in one pass**, not sampled. This surfaced a previously-unknown November 2025 Florida DOR tax-lien matter (§5) — the most significant finding of this run — and strengthened the case that the 2026-03-24 Zoom recap belongs to Best Broker Realty rather than Voxago (§5). Ping: `resolve_person` + `search_meetings` returned only semantically-loose/off-topic hits, nothing legible and specific to the FDOR or lien matters. Drive: the same folders as 2026-08-22 (including "Voxago LLC (empty)"), no new modification dates.
 
+- 2026-09-18 — 🆕 **A CROSS-CLIENT DATA POINT ON THE OLDEST OPEN QUESTION HERE — *what does this
+  business actually do?*** While preparing **Valentin Volzhanskiy's** 2025 Form 1040, his own bank
+  records showed **Voxago paying him for work in 2025**, and his own written classification of that
+  payment is *"work income"*. 🔑 **His work for his other payers is CREDIT REPAIR**, confirmed in his
+  own words *(one of his payers is a credit-repair company, the largest is another, and he pays a
+  contractor recorded as "contractor / credit repair")*. ⚠️ **That is evidence, not an answer** — it
+  says Voxago buys contractor work from someone whose comparable engagements are credit repair; it
+  does **not** establish what Voxago itself sells, and the *"sells tangible goods"* question the FDOR
+  asked in Dec 2025 is untouched by it. 🔗 **It does corroborate the Drive spreadsheet noted above
+  ("Voxago's client list", 2025-12-16) — the business has clients and buys outside help.**
+  ⓘ *The amount is small and is in Valentin's working paper, never here.* ⓘ **On the single row visible in Valentin's
+  extract the amount is well under the reporting threshold, so no 1099 duty appears on Voxago's side —
+  ⚠️ but that extract is NOT complete** *(it stops on 1 December, and several payers he confirmed have no
+  row in it at all)*, **so this is what was found, not a clearance.** _(Worked by Lilian.)_
+
 ### Tax year YYYY — the review
 
 - _(pending)_
@@ -136,7 +151,7 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Information still needed
 
-- [ ] What the business actually does, and its website (a "Voxago's client list" spreadsheet exists in Drive, dated 2025-12-16 — suggests the business itself has clients, not yet followed up)
+- [ ] What the business actually does, and its website (a "Voxago's client list" spreadsheet exists in Drive, dated 2025-12-16 — suggests the business itself has clients, not yet followed up). 🆕 **2026-09-18: partly advanced — it pays outside contractors, and at least one of them does credit-repair work for other payers (see the log). Still not an answer.**
 - [ ] The owner, and whether the business income lands on an individual return
 - [ ] The company's current address, and whether the FDOR now has it (two different wrong addresses are now on record — see §5)
 - [x] Whether the firm also does bookkeeping here — **yes, Quarterly per Double** (§1); off-Double work product found in Drive
