@@ -126,15 +126,22 @@ the actual details (and Claude can pull them live when a task needs them).
 - 2026-09-12 — **first full historical sweep (Lilian's session).** Double: `list_notes` returned 0 notes (none exist); `list_contacts` (2, one with tax access — see §2); `list_activity_log` read in full (9/9 events, since client creation 2026-05-19); `list_tasks` (12/12, all project-checklist tasks `notStarted` — no "Extension Filed" nonclosing task exists for this client, unlike Iurii Iakovenko's, but the **file itself (`2025 4868 Ext.pdf`) exists in the File Library, confirming the extension was actually filed**); `list_projects` unchanged (`waitingOnClient`, moved there 2026-08-04 by Julia, from `inProgress` since 2026-06-29 per Lilian). Gmail searched unbounded by every surname spelling: found a **2025-04-26 "Conference call with Julia CPA" invitation** naming Sergey Karpenko (admin@protitleagency.com) as organizer, with Honcharenko among the invitees — the first documented link between him and Pro Title Agency LLC's principal. Broadened search on "Sergey Karpenko" / "zhukbanda" (the email cc'd across several other firm clients' invoices) surfaced the Karpenko-cluster finding written into §5 above. Google Drive: his folder confirmed (two parallel copies exist — one under Julia's Drive, one under Maria Zavarce's, both from the 2026-05 TaxDome-to-Drive migration batch — a duplicate-folder pattern also seen on other backfilled clients, not itself concerning). Ping: `resolve_person`, `search_contacts`, and `search_meetings` (both client-scoped and org-wide) all returned no meetings genuinely about this client — recorded as a confirmed negative, not an unsearched gap.
 - **Nothing further was found in the sources actually searched.** Every source reached in this pass — Double (all planes), Gmail (unbounded), Google Drive, Ping — either returned material or a confirmed empty result; none was left unsearched.
 
-- 2026-09-18 — 🔴 **THE KARPENKO QUESTION IS ADVANCED FROM ANOTHER CLIENT'S FILE, AND A NEW LINK
-  APPEARS: VALENTIN VOLZHANSKIY PAYS HIM DIRECTLY.** Preparing **Valentin Volzhanskiy's** 2025
+- 2026-09-18 — 🔴 **THE KARPENKO QUESTION IS ADVANCED FROM ANOTHER CLIENT'S FILE, AND A POSSIBLE NEW
+  LINK APPEARS: VALENTIN VOLZHANSKIY'S RECORDS SHOW PAYMENTS TO A PAYEE HIS SHEET NAMES
+  "Viacheslav Honcharenko".** ⛔ **That is a NAME MATCH in a client's own spreadsheet, not an
+  established identification** — the same step [`2025-form-1040.md`](../../tax-returns/valentin-volzhanskiy/2025-form-1040.md)
+  §3B records as its own lesson *("the file name carried his name too … which is suggestive and is not a
+  recipient block")*. **Treat it as a lead to confirm.** Preparing **Valentin Volzhanskiy's** 2025
   Form 1040, his own records — classified by him — show **referral commissions and lead-generation
   payments going OUT to Viacheslav Honcharenko**, and, separately, **money moving both ways with
   Sergey Karpenko**, which Valentin marks as work.
-  🔑 **THE CLUSTER NOW HAS A THIRD MEMBER AND A SHARED PAYER.** This file already records 1099s to
-  him from **Maxrating LLC** and Optic Gold, and the Karpenko link to Best Broker Realty, Pro Title
-  Agency, VoiceCapital and Pro Management Agency. **Valentin is paid by Maxratings, VoiceCapital and
-  Pro Title Agency — the same three names — and by Karpenko personally.** ⚠️ **So the answer to
+  🔑 **THE CLUSTER NOW HAS A THIRD MEMBER AND ONE SHARED PAYER.** ⛔ **An earlier draft of this entry
+  said "the same three names" — that was wrong.** This file records his own 1099 payers as **Maxrating
+  LLC, Optic Gold Inc and Pro Management Agency LLC**; *VoiceCapital* and *Pro Title Agency* are
+  **Karpenko-cluster** names on this file, **not his payers**. **Valentin is paid by Maxratings,
+  VoiceCapital and Pro Title Agency, and exchanges money with Karpenko as work — so exactly ONE payer
+  name overlaps**, ⚠️ **and it is spelt `Maxrating` here and `Maxratings` in Valentin's working paper,
+  which nobody has reconciled.** ⚠️ **So the answer to
   *"who is Sergey Karpenko to this client"* is very likely NOT a one-to-one relationship but a
   referral network several firm clients sit inside**, in which **Valentin's confirmed activity is
   credit repair** and, newly, **real estate**. ⛔ **That is a strong inference from one client's bank

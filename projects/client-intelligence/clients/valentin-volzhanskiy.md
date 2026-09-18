@@ -504,9 +504,9 @@ A running, dated record as we build this profile.
 
 ### 2026-09-18 — the client's own expense workbook, and what it settled
 
-**He uploaded a spreadsheet he had built for us** — a full-year extraction of his **Capital One 360
-checking, Capital One Venture and Quicksilver, Apple Card and Chase Prime Visa** activity, with his
-own classifications on it. It says of itself that it is *"not a filed tax return"* and refers every
+**He uploaded a spreadsheet he had built for us** — a full-year extraction of **four bank and card
+accounts of his** *(the institutions are named in Double, and in the working paper)*, with his own
+classifications on it. It says of itself that it is *"not a filed tax return"* and refers every
 judgement back to us. 🛑 **It has no business-purpose column, so it can be triaged and not
 categorised** — the same defect the
 [`personal-card-reimbursement`](../../../.claude/skills/personal-card-reimbursement/) skill exists for.

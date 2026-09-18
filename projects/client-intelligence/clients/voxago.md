@@ -131,8 +131,10 @@ the actual details (and Claude can pull them live when a task needs them).
   does **not** establish what Voxago itself sells, and the *"sells tangible goods"* question the FDOR
   asked in Dec 2025 is untouched by it. 🔗 **It does corroborate the Drive spreadsheet noted above
   ("Voxago's client list", 2025-12-16) — the business has clients and buys outside help.**
-  ⓘ *The amount is small and is in Valentin's working paper, never here.* ⛔ **No 1099 question arises
-  on Voxago's side — the payment is well under the threshold.** _(Worked by Lilian.)_
+  ⓘ *The amount is small and is in Valentin's working paper, never here.* ⓘ **On the single row visible in Valentin's
+  extract the amount is well under the reporting threshold, so no 1099 duty appears on Voxago's side —
+  ⚠️ but that extract is NOT complete** *(it stops on 1 December, and several payers he confirmed have no
+  row in it at all)*, **so this is what was found, not a clearance.** _(Worked by Lilian.)_
 
 ### Tax year YYYY — the review
 
