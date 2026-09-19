@@ -563,7 +563,57 @@ disallowed later does not only cost its own tax, it detonates the subsidy repaym
 ⓘ **The full analysis, with every figure, its source and where it is typed, is in the working paper's
 §13.** Figures stay there.
 
-### Outstanding items (CI-only — never in the SOP)
+### 2026-09-19 — the 1099 sweep, the 2024 vehicle, and the posture Lilian set
+
+🔑 **LILIAN SET THE POSTURE FOR THIS RETURN AND IT GOVERNS WHAT WE ASK FOR:** *"no somos auditors…
+vamos a tomar la información que nos da el cliente y preparar su declaración… en caso de que él diga
+algo incorrecto o falso, sería un problema de él."* ⛔ **So the firm does NOT ask this client for
+mileage evidence, trip logs, meal attendees or receipts.** **What we ask for is what the FORMS
+require as inputs, and documents the firm cannot produce itself.** *(The working paper's §14H is the
+live list; its earlier substantiation discussion stays as the record of the law, not as an
+instruction.)*
+
+✅ **THE 1099 SWEEP IS DONE — Julia's Drive, full-text, paginated to exhaustion.** Three 1099s were
+issued to him and **the firm holds all three** *(Maxratings, VoiceCapital, Pro Title Agency)*.
+🔑 **The Maxratings one was found the same way the VoiceCapital one was: in the PAYER's Drive folder,
+under a filename carrying no person's name**, matched by the full-text index reading inside the PDF.
+**One of its batch-mates was renamed and filed into its recipient's folder; his never was** — so it
+was invisible from his own file, his uploads and his organizer at once. ⌨️ **Filing the firm's own
+copy into his folder under a proper name is the fix.** ⓘ *His own copy of it, already in Double, is a
+one-page scan with no text layer — the redactor stops on it, which is why the figure was always taken
+from the firm's copy.*
+🟢 **AND TWO OF THE PAYERS ARE OUR OWN CLIENTS — Voxago and Paylite — so whether a 1099 was due from
+them is the FIRM's question, not his: both paid him under the reporting threshold, so none was
+required and none existing is consistent.** ⛔ **Everyone else on his list is outside the firm**, so
+only he can say whether they issued one.
+
+🔴 **TRUSTED CREDIT REPAIR LLC is NOT a firm client** — no Double record, no Drive folder, no file.
+**It paid him during 2025 and he labelled it work income himself; it is the largest single piece of
+income missing from the return.** **So the "did they send you a 1099?" question genuinely has to go
+to him.** ⚠️ **The answer does not change what goes on the return** — the income is reportable either
+way; it changes only whether a matching notice is coming.
+
+✅ **2024 DID DEDUCT THE CAR, and that answers a question that was open.** The prior year deducted
+**fuel** — inside *Other expenses*, with **line 9 blank, Schedule C Part IV empty, and no business-use
+percentage at all**. 🛑 **Deducting actual fuel IS the actual-expense method**, wherever it was
+written, and the 2025 instruction allows the standard mileage rate **only if it was used in the
+vehicle's first business year.** ⚠️ **So 2024 may have closed that route for this car — and two facts
+decide it, neither established: whether that fuel was CAR fuel or EQUIPMENT fuel** *(on a catering
+activity either is ordinary)*, **and when the vehicle was placed in service for business.**
+
+🏠 **On the home office he has already answered the two questions that usually stall it**: he states
+the room at the first address was used **exclusively** as an office, and **he himself excluded the
+second residence** as mixed-use. 🔴 **What is missing is arithmetic, not judgement — he gave a
+PERCENTAGE, and both methods want SQUARE FEET**: the office area and the total area of the home. **A
+percentage cannot be typed into either form.**
+
+✂️ **Lilian is asking him to split his expenses by business.** ⚠️ **A caution on the wording, recorded
+because it changes the answer he gives:** her framing is *"catering and credit repair"*, but **on this
+return the catering work is his W-2 employment**, and **none of his three 1099 payers is a caterer**.
+🔑 **Asking him to split by WHICH WORK the expense belongs to, listing the payers, avoids him filing
+employment costs under a business that does not exist on his Schedule C.**
+
+
 
 - 🔴 **The box-14 tips are CLAIMED but not ESTABLISHED — close it before filing.** Worth **low four
   figures** of tax. **Two questions, and they go to the EMPLOYER, not the client:** what job he
