@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -238,7 +238,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md).
 
 ### Income tax
-- **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). 🔴 **It issues TWO K-1s — one to each owner, 50% each** *(Lilian, relaying Julia's notes, 2026-09-03)*. **The father's is marked FINAL** — he leaves at the close of 2025-12-31 — **the son's is not**, and the son is already a 2025 shareholder rather than starting in 2026. 🛑 **SUPERSEDED:** ~~it issues ONE K-1, to the father, the sole 100% shareholder for all of 2025 (2026-09-02 evening)~~. ⚠️ **The 50/50 split of the DISTRIBUTIONS is a working assumption until Julia settles it, and so is the split of the contributions** — 🔴 **one owner whose real share of the distributions exceeds about 59% has a taxable gain on his personal return with no other change made.** ⚠️ **Two things are open and both go to Julia: WHEN the son was admitted** *(mid-year forces a per-day allocation and a flat half misstates both K-1s)* **and whether he is an ELIGIBLE S-corporation shareholder at all** — that is the rule that drove the ownership change in the first place, and an ineligible shareholder terminates the election. 📌 **Working assumptions for the computation:** 🛑 *(the shareholder assumption below was replaced the same evening — the transfer is at the close of **2025**-12-31 and the K-1 is Ishkhan's)*; ~~the transfer is taken as effective at the close of 2024-12-31~~; **no employees in 2025** *(the three onboarded people stay a question for later)*; the **opening AAA is the figure the 2024 return filed**, kept for year-to-year consistency even though the 2023 return shows it understated *(the SOP default)*; and **`Outside services` stays out of COGS** — Julia's meeting rule, which the books already follow. **How the ownership transfer happened is deliberately left open until Lilian speaks to Julia.** Figures and reasoning in the working paper §4 and §6.
+- **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm. ✅ **FILED 2026-09-15** — see the bullet below and §6, 2026-09-19 entry. The account of how it was prepared (in progress, waiting on client information) is kept below as history. 🔴 **It issues TWO K-1s — one to each owner, 50% each** *(Lilian, relaying Julia's notes, 2026-09-03)*. **The father's is marked FINAL** — he leaves at the close of 2025-12-31 — **the son's is not**, and the son is already a 2025 shareholder rather than starting in 2026. 🛑 **SUPERSEDED:** ~~it issues ONE K-1, to the father, the sole 100% shareholder for all of 2025 (2026-09-02 evening)~~. ⚠️ **The 50/50 split of the DISTRIBUTIONS is a working assumption until Julia settles it, and so is the split of the contributions** — 🔴 **one owner whose real share of the distributions exceeds about 59% has a taxable gain on his personal return with no other change made.** ⚠️ **Two things are open and both go to Julia: WHEN the son was admitted** *(mid-year forces a per-day allocation and a flat half misstates both K-1s)* **and whether he is an ELIGIBLE S-corporation shareholder at all** — that is the rule that drove the ownership change in the first place, and an ineligible shareholder terminates the election. 📌 **Working assumptions for the computation:** 🛑 *(the shareholder assumption below was replaced the same evening — the transfer is at the close of **2025**-12-31 and the K-1 is Ishkhan's)*; ~~the transfer is taken as effective at the close of 2024-12-31~~; **no employees in 2025** *(the three onboarded people stay a question for later)*; the **opening AAA is the figure the 2024 return filed**, kept for year-to-year consistency even though the 2023 return shows it understated *(the SOP default)*; and **`Outside services` stays out of COGS** — Julia's meeting rule, which the books already follow. **How the ownership transfer happened is deliberately left open until Lilian speaks to Julia.** Figures and reasoning in the working paper §4 and §6.
 - 🔴 **PRE-RETURN REVIEW RUN 2026-08-31 — VERDICT: THE RETURN CANNOT BE PREPARED YET.** 📌 **2026-09-02: the five things are now answered or assumed on Lilian's instruction; the gate is executing the book worklist in QuickBooks (working paper §D-6), then phase 2.** Five things
   the return needed had no source: **payroll** (§5) · the **per-shareholder split of the capital
   accounts** (§5) · the **depreciation schedule** (§5) · **Turo** · and **the 2024 filed return, which
@@ -258,6 +258,22 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   last modified 2026-04-28 — the same day Julia emailed *"2025 Ecoorganic USA LLC"* to the Ukrainian
   affiliate's accountant. **Not opened** (it is the year under preparation, outside the document
   rule's scope). **Ask Julia what it is** before the return is prepared.
+  ✅ **RESOLVED BY EVENT, 2026-09-15** — the file was **removed** from the custom "2025" folder the same
+  day the actual filed return, `ECOORGANICUSALLC2025.pdf`, was created there (Double `list_activity_log`,
+  2026-09-19 sweep). It was superseded, not identified — nobody has said what it originally was, but it no
+  longer sits alongside the filed return to be confused with it.
+- ✅ **THE 2025 FORM 1120-S WAS FILED — 2026-09-15.** Double's "2025 Taxes" project moved
+  **Ready for Review → Waiting on Client Approval → Filed**, all on 2026-09-15, and every remaining
+  project task ("Review tax return," "Send draft return & e-file authorization," "File tax return,"
+  "Follow up on tax payments," "Send final returns to client") was marked **Done** the same day. A new
+  Double property, **Signature = Signed**, appeared for the first time. The filed PDF,
+  `ECOORGANICUSALLC2025.pdf`, was created in the client's "2025" folder 2026-09-15. _(Double
+  `list_activity_log` + `list_client_properties`, 2026-09-19 sweep.)_ ⚠️ **Whether every open item this
+  file records as blocking (Julia's bonus-depreciation reversal, the shareholder/K-1 question, the
+  meals/1099 findings) was actually resolved before filing is NOT established from the activity log
+  alone** — the log shows status changes and file events, not decisions. The authoritative record of what
+  was decided is the working paper:
+  [`projects/tax-returns/ecoorganic-usa-llc/2025-form-1120s.md`](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md).
 - ✅ **CLOSED 2026-09-01 — the Turo 2025 earnings answer arrived**, by email from Turo Executive
   Support to the client, supplied by Lilian. **No Form 1099-K was issued for 2025.** Figures are in
   the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 blocker D, not here.
@@ -892,6 +908,30 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   **her method** instead: the Turo total inside the account, less that lump, less the misposted refund.
   Every row of the vehicle account was classified for that purpose *(working paper §D-6d)*. _(Worked by
   Lilian.)_
+- 2026-09-19 — **Incremental sweep (baseline 2026-09-12→2026-09-19).** 🔴 **Headline finding: the 2025
+  Form 1120-S was FILED 2026-09-15** — see §4 Income tax and the new bullet above; this also resolves
+  the previously-unidentified `2025 ECOORGANICUSALLC_1.pdf`, which was removed the same day the actual
+  filed copy was created. Double: case note 485258 (QuickBooks primary-admin handover) is **unchanged**
+  — same body, `updatedAt` still 2026-08-06 04:20 UTC, still paused on Ishkhan's ID/QR-code step, **now
+  44 days pending**. Client properties: `Organizer Status` now reads "N/A (we have QBO access)" (a
+  wording change from "N/A (BK client)," not a status change) and the new `Signature = Signed` property
+  (above). `list_activity_log` bounded ≥2026-09-12 shows only the filing-day events (all 2026-09-15) —
+  nothing after. Gmail (Ecoorganic/Corganix/Markarian/CT-941/Turo, `after:2026/09/12`): 🆕 **a new,
+  unopened CT DRS myconneCT "New Correspondence Alert" for ECOORGANIC USA LLC arrived 2026-09-18** — a
+  third piece of unopened DRS correspondence on this account (joining the 12.2025 Delinquency Notice and
+  the 01.2026 Proposed Assessment already on file); whether it relates to the CT-941 past-due notice or
+  is something new is not established, because DRS correspondence is read only through myconneCT, not
+  from the alert email. No reply, filing, or other action was found on the **CT-941 past-due notice**
+  itself (arrived 2026-08-18). Ping (`search_meetings`, scoped clientId 719473): no legible, on-topic
+  hits dated on/after 2026-09-12. **Chase pass:**
+  - 🔴 **CT-941 past-due notice (2026-08-18) — a search of Gmail, bounded ≥2026-09-12, on 2026-09-19,
+    found no reply, filing, or other action.** **32 days pending, still not actioned** — and a further,
+    unopened DRS alert arrived 2026-09-18 (above), unrelated confirmation either way.
+  - 🔴 **QuickBooks primary-admin handover (case note 485258) — unchanged, still waiting on Ishkhan's
+    ID/QR-code step. 44 days pending since last moved (2026-08-06).** No deadline.
+  - **Nine months of 2025 with no sales-tax return on file / two unopened DRS notices — no update found
+    this run; now joined by the 2026-09-18 alert above.** The zero-filing-basis question stays parked
+    per Lilian's 2026-08-13 instruction (not chased, by design).
 - 2026-09-02 (evening) — 📗 **The 2025 GENERAL LEDGER arrived, the reconciliation is done, and the
   reclassification entry is finished (Lilian).** She supplied the client's own General Ledger, P&L and
   Balance Sheet and asked for the reconciliation of the discrepancies this firm had flagged. **All 51

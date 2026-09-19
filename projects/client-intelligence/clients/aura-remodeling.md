@@ -1,6 +1,6 @@
 # AURA REMODELING LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -132,6 +132,8 @@ the actual details.
   (business + owner names) returned only unrelated pre-2026-08-22 noise. Chase pass on all four outstanding
   items — ages and partial movement above; none fully resolved. No SOP exists yet for this client; no
   SOP-proposal candidates queued.
+
+- 2026-09-19 — **Incremental sweep (baseline 2026-09-12→2026-09-19).** Double: `list_client_properties` unchanged; `list_notes` still empty; `list_activity_log` (from 2026-09-12) shows **one more `ClientPortalPost` "Transaction question resolved" event, 2026-09-17** (by Lilian) — the specific question was not individually pulled this run (budget), consistent with the ongoing pattern of aged transaction questions being cleared. Gmail (business name + "Naum", after:2026/09/12) found only the firm's own automated weekly CI-sweep digest — nothing else client-specific; no new statement uploads or answered questions surfaced beyond the one already reflected via the activity log. Google Drive (`fullText contains 'Aura Remodeling'`, `modifiedTime > 2026-09-12`, `excludeContentSnippets: true`) returned only the firm's internal password vault and "My hours" spreadsheet — no client-specific document this window. Ping (org-wide, "Aura Remodeling Naum Chase credit card Amex Bank of America invoice unpaid customer") returned no legible, on-topic hits — all results are noise from unrelated clients' invoice/payment discussions. **Chase pass, all four outstanding items:** the Amex/BofA reclassification — STILL OPEN, not chased this run (budget; needs QuickBooks transaction-level review); the Chase card replacement — no further movement found this window (still short of a direct QBO bank-feed check); the invoice-to-deposit mismatch / January-2026 unpaid invoice (possibly invoice #1089) — STILL OPEN, **~9.5 months** pending, no new evidence; the "QuickBooks flagged behind" item — still not affirmatively cleared, no new statement uploads found this window to further evidence catch-up.
 
 ### Information still needed
 - [ ] Confirm home state (IL inferred); fiscal year-end

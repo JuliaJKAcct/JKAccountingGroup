@@ -1,6 +1,6 @@
 # Ishkhan Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-05
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -31,7 +31,10 @@
 - **Entity type:** n/a — individual taxpayer. 🔴 **He is the SOLE 100% shareholder of [ECOORGANIC USA LLC](./ecoorganic-usa.md) in 2023, 2024 AND 2025** *(2023 and 2024 read off the filed returns; 2025 settled by Julia on 2026-09-02 — he left at the end of 31 December 2025)*. **His son [Artem](./artem-markarian.md) becomes the shareholder on 2026-01-01.** ⛔ *(A line here said the son was the 100% shareholder from 2025-01-01 — that was a working assumption of one day and it is withdrawn.)*
 - **Relationship to the firm:** he is **the founder of the company the firm does the bookkeeping and tax work for**, and the person the 2023 and 2024 returns were prepared for. **The 2025 engagement letter (2025-01-11) is still in his name.**
 - **Primary language:** **Russian**.
-- **Our engagement:** ⚠️ **not established in this file.** He has an individual client account; whether the firm prepares his 1040 is unconfirmed.
+- **Our engagement:** ✅ **RESOLVED 2026-09-19, from Double's own client properties:** `Income Tax: true`,
+  `Tax Return Type: 1040`, `Assigned Staff: Lilian Gonzalez`, `Organizer Status: Sent`, `Bookkeeping: N/A`,
+  `1099 Preparation: false`, `Annual Report: false`. **The firm prepares his individual 1040** — this
+  closes the "does the firm prepare his 1040?" question that had been open since file creation.
 - **Fiscal year-end:** calendar year.
 
 ## 2. Contacts
@@ -53,7 +56,8 @@ the actual details.
 ## 4. Obligations & recurring processes
 
 ### Income tax
-- ⚠️ **Not established.** What IS established is what his 2024 return should carry from the company — see §5.
+- **Applies?** ✅ **Yes — Form 1040, prepared by this firm, assigned to Lilian** (Double client
+  properties, confirmed 2026-09-19; see §1). What his 2025 return should carry from the company is in §5.
 
 ## 5. Key facts & quirks
 
@@ -86,12 +90,56 @@ the actual details.
 - 🛑 **WITHDRAWN — the working assumption of 2026-09-02 (morning) was wrong by a year.** ~~the transfer was effective at the CLOSE of 2024-12-31, so he is not a shareholder for any day of 2025 and receives NO 2025 K-1~~ ⛔ ~~If it was executed ON 1 January 2025… a one-day K-1 at 1/365~~ — **that scenario no longer exists: Julia's date is the close of 31 December 2025, so he holds the stock for all 365 days of 2025 and the one-day question does not arise.**
 - ⚠️ **The reason the ownership changed, as the firm recorded it:** the **S-corporation shareholder rule — a nonresident shareholder is disqualifying** — so he left ownership. 🔑 **Lilian's instruction, 2026-09-02: the S-corporation status was NOT lost and everything is in order in that respect.** ⛔ **Recorded as her assurance about the outcome; the residency dates were not checked and are not being pursued.**
 - ⚠️ **He is the primary admin on the company's QuickBooks and the handover is stuck on a step only he can do.**
+- 🆕 **"THREE BRICKS GROUP LLC" WAS HIS SECOND LLC, AND IT IS NOW CLOSED — corroborated 2026-09-19.** A
+  2024-03-07 email from his own address (personal email, withheld) to Julia states, verbatim: *"у Ишхана 2
+  ллс, он единственный владелец сейчас"* ("Ishkhan has 2 LLCs, he is currently the sole owner") — naming
+  Three Bricks Group and Ecoorganic, and noting Three Bricks Group had no activity. **Three Bricks Group
+  LLC was formally dissolved in Florida** (Articles of Dissolution, doc `L23000034678`, effective
+  2025-01-13) **and its EIN cancelled** (letter dated 2025-01-14, on file in Drive). ⚠️ **Not the same
+  correspondence thread as "Three Bricks Group Corp"**, which appears in Julia's Gmail in Jan–Feb 2025
+  with Artem as the correspondent — see [`artem-markarian.md`](./artem-markarian.md) §5; whether these
+  are one entity under two names or two separate entities was not settled this pass. **No current filing
+  obligation found for either.**
+- 🆕 **Oksana has NO portal access to the company — corroborated 2026-09-19 from Double contacts.** His
+  own portal contact (id 567494) is linked to both his individual client (710638) and the company
+  (719473); **Oksana's portal contact (id 567508) is linked ONLY to the individual/joint record, not to
+  the company.**
 - ⚠️ **He signed the 2025 engagement letter for the company on 2025-01-11** — ten days after the date on which his son is said to have become the 100% owner. **Recorded as an observation; engagement paperwork routinely lags reality.**
 
 ## 6. History & open questions
 
 ### Log
 
+- 2026-09-19 — 🔎 **CORROBORATION PASS (weekly CI sweep) — NOT a first read; this file already carried
+  substantial content from concurrent tax-prep sessions, so this pass focused on Ping / Gmail / Drive
+  against the outstanding items below, plus a light Double re-check.**
+  ✅ **Double `get_client` + `resolve_person` (Ping) re-confirmed the joint record** — `cid 710638`,
+  named "Ishkhan Markarian & Oksana Markaryan", `platform: none`, not archived. Ping resolves it to the
+  same joint client under a shared business email address (withheld).
+  ✅ **"Does the firm prepare his 1040?" — RESOLVED from Double's own properties** (§1, §4): yes.
+  🆕 **Two new facts** — Three Bricks Group LLC (his second, now-dissolved LLC) and the Oksana
+  portal-access asymmetry — folded into §5, both sourced and dated there.
+  🔍 **Double `list_notes(710638)` returned zero notes** (no case note on this record) and
+  `list_activity_log` (from 2026-08-25) returned **zero entries** — no movement on this client's own
+  record since the basis work of 2026-09-05.
+  🔴 **Chase pass on §6 Outstanding items:**
+  - **How did the transfer happen (sale / gift / redemption)?** — Lilian put this to Julia by email on
+    **2026-09-04** ("How did Artem get his 50%? Did he buy the shares from Ishkhan? If so, how much did
+    he pay?"). **A search of that Gmail thread on 2026-09-19 found no reply from Julia** — still open,
+    **15 days pending**, no deadline set.
+  - **His 2024 Form 7203 line 15** — already marked in hand as of 2026-09-05 in this file; nothing further
+    chased.
+  - **Whose personal checking accounts funded the owner accounts** — already settled 2026-09-02 ("todo es
+    de Ishkhan"); nothing further chased.
+  - **QuickBooks primary-admin handover** — a Ping search scoped to this client and a Gmail search for
+    "QuickBooks handover" found **no update**. Still open; age not established (no dated request found in
+    either this file or the sources searched this pass).
+  🟡 **Corroboration finished to exhaustion on Double (client, properties, notes, activity log, contacts)
+  and on Gmail (in:inbox + in:sent, unbounded, by both names + "Ecoorganic").** **Ping was PARTIAL** — a
+  client-scoped semantic search on his transfer/basis question and on the QuickBooks handover returned
+  zero results (nothing indexed, not "checked and clear"), and an org-wide semantic search returned mostly
+  cross-client noise. **No document content was read in Drive** (`excludeContentSnippets: true`
+  throughout) — folder listings only.
 - 2026-09-02 — 📄 **FILE CREATED, from what the two prior-year returns turned out to say.** Preparing the company's FY2025 return, the firm read the 2024 and (with Lilian's authorisation) the 2023 filed returns. **Both show him as the sole 100% shareholder** — which had not been established before and which reassigned several 2024 attributes from "both owners" to him alone. **He had no Client Intelligence file despite having his own individual client account, being the transferor in the 2025 ownership change, and holding the only prior-year basis form this company has.** _(Worked by Lilian.)_
 - 2026-09-02 (evening) — 💰 **EVERY DOLLAR IN THE COMPANY'S TWO OWNER ACCOUNTS IS HIS — Lilian settled it
   by instruction, and the ledger corroborates it.** *"Todo es de Ishkhan. Todo es de él, aunque veas cosas
@@ -178,15 +226,15 @@ the actual details.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- ✅ **Double client id recorded 2026-09-02 (cid 710638, joint with his wife).** 🔴 **Still open: does the firm prepare his 1040?** It now matters — his 2025 K-1 lands on it.
-- 🔴 **How did the transfer at the close of 2025 happen — sale, gift, or redemption?** 📌 **Sharpened 2026-09-02 (evening):** a **sale** is a 2025 stock sale on HIS Schedule D, measured against his basis **after** all 2025 K-1 adjustments; a **gift** raises a **Form 709** *(and, if he is a nonresident alien, US-corporation stock may be outside the US gift tax — status not established)* and carries his basis to his son; a **redemption by the company** is a §302 question needing a family-attribution waiver, and it is the only version that touches the company's own return. It decides his own 2025 reporting **and** his son's 2026 opening basis. **One question, three returns.** 🛠️ **Lilian is taking it to Julia herself (2026-09-02).**
-- 🔴 **Get his 2024 Form 7203 line 15 — it is now on the critical path**, not a nice-to-have: it is the opening basis for the 2025 distributions test on the company's return.
-- 🔴 **Whose are the two personal checking accounts that funded and received the company's owner accounts in 2025, and whose apartment rent did the company pay?** (§5.) Julia's call, with one question to the client.
-- ⚠️ **The QuickBooks primary-admin handover is waiting on him personally.**
+- ✅ **Double client id recorded 2026-09-02 (cid 710638, joint with his wife).** ✅ **RESOLVED 2026-09-19: the firm DOES prepare his 1040** — Double properties (`Income Tax: true`, `Tax Return Type: 1040`, `Assigned Staff: Lilian`). It matters — his 2025 K-1 lands on it.
+- 🔴 **How did the transfer at the close of 2025 happen — sale, gift, or redemption?** 📌 **Sharpened 2026-09-02 (evening):** a **sale** is a 2025 stock sale on HIS Schedule D, measured against his basis **after** all 2025 K-1 adjustments; a **gift** raises a **Form 709** *(and, if he is a nonresident alien, US-corporation stock may be outside the US gift tax — status not established)* and carries his basis to his son; a **redemption by the company** is a §302 question needing a family-attribution waiver, and it is the only version that touches the company's own return. It decides his own 2025 reporting **and** his son's 2026 opening basis. **One question, three returns.** 🛠️ **Lilian put it to Julia by email 2026-09-04** ("How did Artem get his 50%? Did he buy the shares from Ishkhan?"). 🔎 **Chased 2026-09-19: no reply found in that Gmail thread — 15 days pending, no deadline.**
+- 🔴 **Get his 2024 Form 7203 line 15 — it is now on the critical path**, not a nice-to-have: it is the opening basis for the 2025 distributions test on the company's return. ✅ **Already recorded as IN HAND as of 2026-09-05 (§6) — not re-opened.**
+- 🔴 **Whose are the two personal checking accounts that funded and received the company's owner accounts in 2025, and whose apartment rent did the company pay?** (§5.) Julia's call, with one question to the client. ✅ **Already recorded as settled 2026-09-02 ("todo es de Ishkhan") — not re-opened.**
+- ⚠️ **The QuickBooks primary-admin handover is waiting on him personally.** 🔎 **Chased 2026-09-19: a Ping search (client-scoped) and a Gmail search for "QuickBooks handover" found no update — still open, age not established.**
 
 ### Information still needed
 
-- Whether the firm prepares his individual return, and for which years.
+- ✅ **Whether the firm prepares his individual return** — **Yes** (Double properties, 2026-09-19). Which years beyond 2025 remains unconfirmed.
 - Whether he has 2024 suspended losses, and what happened to them on disposal.
 
 ## 7. Links

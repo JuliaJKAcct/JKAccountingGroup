@@ -1,6 +1,6 @@
 # Pro Title Agency
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -167,6 +167,25 @@ _(Double notes — live status lives in Double.)_
   the **Paylite** routing quirk and the Karpenko contact cluster already in §5. ⛔ *The number itself
   is deliberately not written here (FOLLOW-UPS row 105 — a phone/fax number in a client file has
   broken the Hub's published-page gate before).*
+- 2026-09-19 — **Incremental sweep (baseline 2026-09-12→2026-09-19).** Double: all 3 notes unchanged
+  (`updatedAt` still 2026-07-15/07-15/07-23); `list_activity_log` bounded ≥2026-09-12 returns no entries.
+  Gmail (Pro Title/Karpenko/"40698"/"Coral Springs"/WLTIC, `after:2026/08/29` and `after:2026/09/12`): a
+  search of Gmail, bounded as stated, on 2026-09-19, found no further correspondence on the Coral
+  Springs address change, the IRS 1065-vs-Schedule-C mismatch, or the payroll (Gusto) vs. Double-property
+  discrepancy. The WLTIC unpaid-invoice follow-up already recorded (2026-09-09) was not superseded by any
+  further chase in this window. Ping (`search_meetings`, scoped clientId 706716): no legible, on-topic
+  hits dated on/after 2026-09-12. **Chase pass:**
+  - **Coral Springs address change (DFS/Sunbiz) — a search of Gmail, bounded ≥2026-09-12, on 2026-09-19,
+    found nothing further.** Pending since unknown — no start date recorded beyond "in progress" (Jul
+    2026); no deadline.
+  - **IRS Form 1065-vs-Schedule-C filing-requirement mismatch — no movement found.** Pending since
+    unknown.
+  - **Payroll (Gusto) vs. Double-property (N/A) discrepancy — no movement found.** Pending since unknown.
+  - **WLTIC "Plant Search Statement" invoice (ref A12495) — a search of Gmail, bounded ≥2026-09-12, on
+    2026-09-19, found no further chase from the vendor and no payment confirmation.** Still open since
+    2026-09-09.
+  - **Reconciling the file's "Owner" (Lilian) against Double's "Assigned Staff" (Liudmyla Kazannik) —
+    not chased this run (budget), same as the last three runs.**
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end
