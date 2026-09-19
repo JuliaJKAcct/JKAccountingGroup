@@ -573,8 +573,10 @@ require as inputs, and documents the firm cannot produce itself.** *(The working
 live list; its earlier substantiation discussion stays as the record of the law, not as an
 instruction.)*
 
-✅ **THE 1099 SWEEP IS DONE — Julia's Drive, full-text, paginated to exhaustion.** Three 1099s were
-issued to him and **the firm holds all three** *(Maxratings, VoiceCapital, Pro Title Agency)*.
+✅ **THE 1099 SWEEP FOUND THREE — Julia's Drive, full-text, paginated to exhaustion.** The firm holds
+1099s naming him from **Maxratings, VoiceCapital and Pro Title Agency.** ⚠️ **That is what the firm
+HOLDS, not how many were issued** — a scan with no text layer would not match a full-text search, and
+the other payers are outside the firm, so only he can say.
 🔑 **The Maxratings one was found the same way the VoiceCapital one was: in the PAYER's Drive folder,
 under a filename carrying no person's name**, matched by the full-text index reading inside the PDF.
 **One of its batch-mates was renamed and filed into its recipient's folder; his never was** — so it
@@ -582,10 +584,11 @@ was invisible from his own file, his uploads and his organizer at once. ⌨️ *
 copy into his folder under a proper name is the fix.** ⓘ *His own copy of it, already in Double, is a
 one-page scan with no text layer — the redactor stops on it, which is why the figure was always taken
 from the firm's copy.*
-🟢 **AND TWO OF THE PAYERS ARE OUR OWN CLIENTS — Voxago and Paylite — so whether a 1099 was due from
-them is the FIRM's question, not his: both paid him under the reporting threshold, so none was
-required and none existing is consistent.** ⛔ **Everyone else on his list is outside the firm**, so
-only he can say whether they issued one.
+⏳ **AND TWO OF THE PAYERS ARE OUR OWN CLIENTS — Voxago and Paylite — so their 1099 question is the
+FIRM's to settle from THEIR books, not his to answer. It is NOT settled yet:** the amounts that make
+it look closed come from **his** bank extract, which the firm has already documented as incomplete.
+⌨️ **Read the payers' own 2025 ledgers to close it.** ⛔ **Everyone else on his list is outside the
+firm**, so only he can say whether they issued one.
 
 🔴 **TRUSTED CREDIT REPAIR LLC is NOT a firm client** — no Double record, no Drive folder, no file.
 **It paid him during 2025 and he labelled it work income himself; it is the largest single piece of
@@ -593,13 +596,15 @@ income missing from the return.** **So the "did they send you a 1099?" question 
 to him.** ⚠️ **The answer does not change what goes on the return** — the income is reportable either
 way; it changes only whether a matching notice is coming.
 
-✅ **2024 DID DEDUCT THE CAR, and that answers a question that was open.** The prior year deducted
-**fuel** — inside *Other expenses*, with **line 9 blank, Schedule C Part IV empty, and no business-use
-percentage at all**. 🛑 **Deducting actual fuel IS the actual-expense method**, wherever it was
-written, and the 2025 instruction allows the standard mileage rate **only if it was used in the
-vehicle's first business year.** ⚠️ **So 2024 may have closed that route for this car — and two facts
-decide it, neither established: whether that fuel was CAR fuel or EQUIPMENT fuel** *(on a catering
-activity either is ordinary)*, **and when the vehicle was placed in service for business.**
+✅ **2024 DEDUCTED FUEL, which answers a question that was open** — inside *Other expenses*, with
+**line 9 blank, Schedule C Part IV empty, and no business-use percentage at all.** ⚠️ **Whether it was
+CAR fuel or EQUIPMENT fuel is not established** *(on a catering activity either is ordinary)*, **and
+if it was equipment fuel there was no actual-expense claim at all.**
+🛑 **THREE things decide the 2025 method and none is settled: that question · when the vehicle was
+placed in service · and whether the car is OWNED or LEASED.** ⚖️ **The answer differs between the
+last two** — for a leased car a prior actual-expense year rules the mileage rate out; for an owned car
+the working paper records a real argument the other way. ⛔ **The firm has NOT concluded the route is
+closed; that position is Lilian's and Julia's.**
 
 🏠 **On the home office he has already answered the two questions that usually stall it**: he states
 the room at the first address was used **exclusively** as an office, and **he himself excluded the
@@ -612,6 +617,8 @@ because it changes the answer he gives:** her framing is *"catering and credit r
 return the catering work is his W-2 employment**, and **none of his three 1099 payers is a caterer**.
 🔑 **Asking him to split by WHICH WORK the expense belongs to, listing the payers, avoids him filing
 employment costs under a business that does not exist on his Schedule C.**
+
+### Outstanding items (CI-only — never in the SOP)
 
 
 
