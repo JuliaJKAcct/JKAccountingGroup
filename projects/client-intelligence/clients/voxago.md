@@ -137,6 +137,18 @@ the actual details (and Claude can pull them live when a task needs them).
   row in it at all)*, **so this is what was found, not a clearance.** _(Worked by Lilian.)_
 - 2026-09-19 — **Weekend sweep (incremental, baseline 2026-09-12→2026-09-19) — nothing new found.** Double: note 491841's `updatedAt` unchanged (Sat Aug 29 2026 07:28:20) — not re-touched; `list_client_properties` unchanged (Bookkeeping Quarterly, Annual Report checkbox still `true`, Income Tax still `false`); `list_activity_log` bounded `fromTimestamp=2026-09-12` returned zero entries. Gmail: a plain "Voxago" search since 09-12 found only the firm's own 2026-09-12 weekly-sweep meta-email — no client correspondence on the liens, the FDOR review, or the annual report. A targeted "Notice of Change or Filing" search (org-wide, since 09-12) found nothing — no new Sunbiz notice this window. Ping: org-wide semantic search for "Voxago FDOR sales tax lien annual report" returned no legible, client-specific results — same non-result pattern as every prior run. Google Drive: not re-searched this run (budget went to the higher-priority Vitalii Ivanov USPS deadline). **Chase pass** — see updated ages below; nothing moved on any item.
 
+- 2026-09-19 — ⏳ **THE 1099 QUESTION ON THIS CLIENT WAS RE-CHECKED AND IS STILL NOT CLOSED.** While
+  working **Valentin Volzhanskiy's** 2025 return he listed Voxago among the payers he classifies as
+  work income. **A full-text sweep of Julia's Drive found NO 1099 prepared for Voxago in 2025.** On
+  the rows visible in his bank extract the year's total is below the reporting threshold, which is
+  **consistent with** none being due — ⛔ **but that is not a clearance, and an earlier entry in this
+  same file already said so**: his extract stops on 1 December and several payers he confirmed have
+  no row in it at all. ⚠️ **And the evidence is the PAYEE's records, not ours** — a payment under an
+  unmatched bank descriptor lands in his unclassified pool by a mechanism his working paper documents.
+  ⌨️ **To close it properly: read what VOXAGO'S OWN 2025 books show it paid him.** 🔑 **Voxago is our
+  client, so this is the firm's question to settle from the payer side — not Valentin's to answer.**
+  ⓘ *The amount is in Valentin's working paper, never here.* _(Worked by Lilian.)_
+
 ### Tax year YYYY — the review
 
 - _(pending)_
