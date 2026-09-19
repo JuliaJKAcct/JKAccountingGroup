@@ -1,6 +1,6 @@
 # VOICECAPITAL INC
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-13
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-19
 >
 > ✅ **First full historical sweep completed 2026-08-22; Gmail catch-up READ TO COMPLETION 2026-08-29** — Double (client record, properties, note 491840 read in full, contacts, activity log), Gmail (full history — paged to the end: a plain "Voicecapital" search ran out of pages after 2 (no further `nextPageToken`), and a second, substantive-terms-narrowed search across the same full history returned no `nextPageToken` either — both exhausted, not merely budget-limited), Ping (`resolve_person` + `search_meetings`), and Google Drive all checked.
 
@@ -133,6 +133,7 @@ the actual details (and Claude can pull them live when a task needs them).
   and the Sergey Karpenko contact cluster already recorded in §5.** ⛔ *The number itself is
   deliberately not written here — a fax/phone number in this file has broken the Hub's published-page
   gate before (FOLLOW-UPS row 105); the fact of the match is what matters.*
+- 2026-09-19 — **Weekend sweep (incremental, baseline 2026-09-12→2026-09-19) — nothing new found.** Double: note 491840's `updatedAt` unchanged (Thu Aug 13 2026 17:01:42) — not touched this window; `list_client_properties` unchanged (Bookkeeping Quarterly, Assigned Staff Julia Kononova); `list_activity_log` bounded `fromTimestamp=2026-09-12` returned zero entries. Gmail: a plain "Voicecapital" search since 09-12 found only the firm's own 2026-09-12 weekly-sweep meta-email — no client correspondence. A targeted follow-up search combining "Voicecapital"/"Voxago" with "overdue"/"invoice"/"payment" since 09-12 found nothing beyond that same meta-email — **no new movement on the overdue firm invoice** (was 112 days overdue as of 2026-09-11; now **~120 days overdue** as of 2026-09-19, still no dollar figure written per the two-data-homes rule). A targeted "2848"/"power of attorney" search found nothing beyond the already-known 2026-04-28 MyFax receipt. Ping: org-wide semantic search for "Voicecapital S-election IRS 2553 C-corp address" returned no legible, client-specific results — same non-result pattern as every prior run. Google Drive: no new searches this run (no title hits expected given the Gmail/Double silence; budget went to the higher-priority Vitalii Ivanov USPS deadline this run). **Chase pass** — see updated ages below; nothing moved.
 
 ### Tax year YYYY — the review
 
@@ -140,11 +141,11 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Find out whether the IRS accepted the S-election after the 2026-03-16 fax.** STILL OPEN, pending since 2026-03-16 (~180 days as of 2026-09-12). No deadline recorded. Re-chased this sweep (a plain "Voicecapital" Gmail search since the 08-29 baseline) — still no confirmation either way; the "2025 Taxes" project shows Filed regardless (see §5, unreconciled). **This must be resolved by calling the IRS directly** — no further document search will surface it. Gates the 2023 return being processed, the 2025 return's classification, and whether the company owes anything as a C-corp.
-- **Correct the company's address with the IRS** (a Form 8822-B is the usual route) — STILL OPEN, pending since 2026-03-16 (~180 days as of 2026-09-12), not confirmed done; no new evidence found this sweep.
+- 🔴 **Find out whether the IRS accepted the S-election after the 2026-03-16 fax.** STILL OPEN, pending since 2026-03-16 (~187 days as of 2026-09-19). No deadline recorded. Re-chased this sweep — still no confirmation either way; the "2025 Taxes" project shows Filed regardless (see §5, unreconciled). **This must be resolved by calling the IRS directly** — no further document search will surface it. Gates the 2023 return being processed, the 2025 return's classification, and whether the company owes anything as a C-corp.
+- **Correct the company's address with the IRS** (a Form 8822-B is the usual route) — STILL OPEN, pending since 2026-03-16 (~187 days as of 2026-09-19), not confirmed done; no new evidence found this sweep.
 - [x] **Confirm the paper Form 7004 for 2025 was processed**, mailed 2026-03-13 — **CONFIRMED 2026-08-29**: a signed return receipt dated 2026-03-25 was found in Google Drive.
-- **Confirm the purpose of the 2026-04-28 Form 2848 fax** — STILL OPEN, pending since 2026-04-28 (~137 days as of 2026-09-12); re-chased this sweep with a targeted "2848"/"power of attorney" search — found only the already-known MyFax transmission receipt, which confirms the fax was sent but not its content or purpose.
-- **New this sweep, not previously tracked:** the firm's own invoice to this client is **112 days overdue** as of 2026-09-11 (originally due 2026-05-21) — a billing-relationship fact worth flagging to whoever manages collections; not previously on this file.
+- **Confirm the purpose of the 2026-04-28 Form 2848 fax** — STILL OPEN, pending since 2026-04-28 (~144 days as of 2026-09-19); re-chased this sweep with a targeted "2848"/"power of attorney" search — found only the already-known MyFax transmission receipt, which confirms the fax was sent but not its content or purpose.
+- **The firm's own invoice to this client is now ~120 days overdue** as of 2026-09-19 (originally due 2026-05-21, 112 days overdue as of 2026-09-11) — re-chased this sweep, no payment/collections correspondence found; a billing-relationship fact worth flagging to whoever manages collections.
 
 ### Information still needed
 

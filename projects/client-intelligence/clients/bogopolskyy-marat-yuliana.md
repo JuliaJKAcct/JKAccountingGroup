@@ -1,6 +1,6 @@
 # BOGOPOLSKYY, MARAT and YULIANA — the joint individual return
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -45,8 +45,13 @@
   SIMPLE Russian**; one under Julia's is native register *(CLAUDE.md)*.
 - **Our engagement:** **tax preparation only.** ⛔ The firm is not their bookkeeper and does not
   prepare their financial statements — the P&Ls arrive from the client on the firm's own template.
-- **Tax year in hand:** **2025.** Double tax project `219315`, status **`waitingOnClient`**, due
-  **2026-04-15**. 🔴 **See §5 — whether an extension was filed is unanswered.**
+- **Tax year in hand:** **2025.** Double tax project `219315` — status **`Filed`** as of
+  **2026-09-15 16:39** _(Double activity log, read 2026-09-19; was `waitingOnClient` as of 2026-09-12)_.
+  🔴 **See the new §5 bullet — this contradicts the working paper, which still lists three open
+  blockers and has not been touched since 2026-09-13.** Due date was **2026-04-15**;
+  🔴 **whether an extension was filed for 2025 is STILL unanswered** — no `Ext. Filed` value is
+  stored on this client's Double properties (checked again 2026-09-19), which is not evidence
+  either way, and it now matters more because the return has already gone out.
 - **Assigned staff:** Lilian.
 
 ## 2. Contacts
@@ -59,7 +64,7 @@ the actual details.
 |---|---|
 | **Marat** — the husband; owns Marat Boxing, holds two partnership K-1s | Double client (link below) |
 | **Yuliana** — the wife; former 50% member of Gossip Miami, her own Schedule C from 2025 | same Double client |
-| Correspondence | ⚠️ **One shared email address carries everything for the whole family**, including the company side *(see [`gossip-miami.md`](./gossip-miami.md) §2)*. **No individual message can be reliably attributed to one of them** — when a signature or an owner-specific answer matters, **ask in the message who is answering** |
+| Correspondence | ⚠️ **One shared email address carries everything for the whole family**, including the company side *(see [`gossip-miami.md`](./gossip-miami.md) §2)*. **No individual message can be reliably attributed to one of them** — when a signature or an owner-specific answer matters, **ask in the message who is answering**. ⚠️ **UNSETTLED, both sources recorded 2026-09-19:** Double's portal-contact list for this client shows **two separate registered contacts, one per spouse, each with its own distinct email address** — Marat's carries financial + files access only, Yuliana's carries admin + tax + financial + files access. That is the opposite of "one shared address," at least at the **login/portal** level. Whether actual correspondence still funnels through one inbox in practice (the Gossip file's claim) is not something this sweep could confirm either way — **ask before assuming either version** |
 | The two dependants | ⛔ **Names and dates of birth are in Double and in the organizer; they are deliberately not written here** — this file publishes to the Knowledge Hub |
 
 - **Double client:** [app.doublehq.com/close?cid=710627](https://app.doublehq.com/close?cid=710627)
@@ -131,8 +136,40 @@ Anything the team must know to serve this client well.
 > either. So put first whatever would cause the worst mistake if someone didn't know it —
 > **not** the oldest, and **not** whatever was added last.
 
-- 🔴 **WHAT STOPS THE 2025 RETURN BEING TRANSMITTED — THREE things, and only ONE of them is a question
-  for the client.** 🛠️ **③ is OURS** *(file the Gossip Miami 1120-S)*. **The other two gate TRANSMISSION
+- 🔴 **THE RETURN WAS FILED ON 2026-09-15 — AND THAT CONTRADICTS EVERYTHING BELOW ABOUT
+  BLOCKERS, WHICH NOBODY HAS RECONCILED.** *(CI sweep, 2026-09-19 — this bullet moved to first
+  position under this section's own consequence rule, displacing the fourth bullet from the
+  published view.)* **Double's activity log** shows tax project `219315` moved from `In Progress`
+  to **`Filed`** at **2026-09-15 16:39:52**, immediately after all six of its project tasks
+  ("Prepare and send engagement letter" through "Review tax return") were marked Done in the
+  same few minutes, and a signed e-file-authorization attachment was filed twice into the client's
+  `2025` folder (once at 15:02, once again at 16:36 — a re-signature). 🔴 **An e-filing rejection
+  happened in between and was worked around, not avoided:** a Wolters Kluwer/ATX support case
+  (#04753704, read in full 2026-09-19) shows the firm hit **"Filer name, formatted per IRS
+  specifications, is too long for e-file"** on this household's combined name, at 15:31, and got a
+  workaround from support (abbreviate names per IRS Pub 4164 p.36) that the support case itself
+  says was **only "partially resolved during the chat"** — the customer was to apply and verify it
+  themselves. The case closed at 16:41:39, two minutes after the project flipped to `Filed`.
+  🔴 **What this sweep could NOT establish, and what needs Lilian's or Julia's confirmation:**
+  whether the abbreviated-name fix actually went through cleanly (an ATX support "closed" status
+  is explicitly not a confirmation of success), and — far more consequential — **whether the
+  return was transmitted with the working paper's own three open blockers still open.** The
+  working paper ([`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md))
+  has **not been touched since 2026-09-13** and, as it stands, still says the return **"cannot be
+  transmitted"** on item 22 (is the purchaser related to Yuliana — undecided) and still carries
+  item 17 (the contested opening basis) and item 19 (Gossip Miami's 1120-S, unfiled as of the
+  paper's last edit) as open. ⛔ **Nobody wrote in the working paper that any of the three closed,
+  and nobody wrote there that the return went out anyway.** ✅ **What is confirmed, separately:** a
+  tax-prep invoice to Marat Boxing LLC was issued and paid the same afternoon (Double property
+  `Invoice = Paid`; QuickBooks notice emails, 2026-09-15 — figure not repeated here). 🛠️ **This is a
+  question to put to Lilian/Julia, not something to resolve by reasoning about it** — per this
+  file's own rule, a permission or a conclusion is never assumed into existence. *(Source: Double
+  `list_activity_log` on client 710627, and Gmail thread `1a0a5b19a138fe42` / `1a0a5f21037cb948`,
+  both read 2026-09-19.)*
+- 🔴 **WHAT STOPPED THE 2025 RETURN BEING TRANSMITTED, AS OF THE WORKING PAPER'S LAST EDIT
+  (2026-09-13) — THREE things, and only ONE of them is a question
+  for the client.** ⚠️ **See the bullet above: Double says this return was filed 2026-09-15, and
+  whether these three were actually resolved first is UNCONFIRMED.** 🛠️ **③ is OURS** *(file the Gossip Miami 1120-S)*. **The other two gate TRANSMISSION
   without blocking e-file**, and both are in the working paper's §6: **item 17** — Yuliana's 2024
   opening stock basis, inherited from the outside firm and materially higher than what she confirmed
   paying, **which only Lilian or Julia can settle** — and **item 22** — **is the purchaser related to
@@ -304,6 +341,27 @@ Anything the team must know to serve this client well.
 ## 6. History & open questions
 
 ### Log
+- 🔴 **2026-09-19 — CI SWEEP: THE RETURN WAS FILED 2026-09-15, HIT AN E-FILE NAME-LENGTH REJECTION
+  ON THE WAY, AND NOBODY RECONCILED IT AGAINST THE WORKING PAPER'S OPEN BLOCKERS.** Full detail in
+  the new top bullet of §5; not repeated here. **Sources swept, bound 2026-09-12 → 2026-09-19:**
+  Double (`get_client`, `list_client_properties`, `list_notes` — still zero, confirming §2 —
+  `list_contacts`, `list_activity_log`, all current); Gmail (`in:inbox`/`in:sent` for
+  "Bogopolskyy", the two client email addresses, and the ATX case number); Google Drive (the
+  client's folder and the `Gossip bank docs` folder Marat shared with the firm on 2026-08-10 —
+  neither had anything dated after 2026-09-11); Ping Assistant (`resolve_person` on both spouses,
+  `search_contacts`, org-wide `search_meetings` for "Bogopolskyy"/"Gossip Miami", client-scoped
+  `search_meetings` and `list_action_items`). ⛔ **A gap to flag honestly: `resolve_person` found
+  no Ping contact for "Yuliana Bogopolskyy"** (only "Yuliana Bogopolska" via `search_contacts`),
+  and Ping's `list_client_meetings` needs a client already in scope and returned nothing usable —
+  so Ping coverage for this specific client rests on the org-wide semantic search and the
+  client-scoped tools above, not a confirmed meeting inventory. ⚠️ **A second gap, load-bearing:**
+  a search of Ping's client-scoped meetings and action items, bound to this client, on 2026-09-19,
+  found **no record of anyone asking Yuliana to confirm her Schedule C business description/code**
+  before the return went out — that is a search result, not proof it never happened (§6
+  "Information still needed" below, updated accordingly). 🆕 **Also found and worth keeping:**
+  Double's two portal contacts for this client carry two distinct email addresses, one per spouse
+  (§2, marked unsettled against the "one shared email" claim); and this client's Google Drive
+  sensitive-vault folder link, previously missing from §7, is now recorded there.
 - 🟢 **2026-09-12 — THE SIXTH DRAFT IS ONE ROW FROM DONE, AND A QUESTION ABOUT MARAT'S FIRST
   PARTNERSHIP IN 2024 WAS SEARCHED OUT RATHER THAN ASKED.**
   ✅ **The return now computes correctly end to end.** The rental-and-partnership schedule no longer
@@ -623,6 +681,12 @@ Anything the team must know to serve this client well.
 
 ### Outstanding items (CI-only — never in the SOP)
 
+- 🔴 **UPDATE 2026-09-19 (CI sweep) — READ THIS BEFORE ACTING ON ANYTHING BELOW: Double's activity
+  log says this return was FILED on 2026-09-15, five days after the counts and blockers below were
+  last refreshed, and the working paper has not been touched since.** Whether items 17, 19 and 22
+  were actually resolved before transmission, or the return went out with them still open, is
+  UNCONFIRMED — see §5's new top bullet. Treat every "blocks transmission" claim below as
+  **historical (true as of 2026-09-13)**, not as a live gate, until someone checks.
 - 🔴 **FORTY items live in the working paper's §6 — 31 still open, 9 closed** *(counts refreshed
   2026-09-12 — twice that day: once when the broker-fee question was answered, and once when the half of it that was NOT answered was opened as its own item; they read 36 / 29 / 7 before that)* — and they are not duplicated here; the file is
   [`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md).
@@ -682,6 +746,11 @@ Anything the team must know to serve this client well.
       ⚠️ **but nobody recorded where they came from, and her two 1099-NECs are from a personal-services
       payer and a business-services payer.** ⛔ **If they were chosen at the keyboard, she is signing a
       description she never gave.**
+      🔴 **UPDATED 2026-09-19, and it is now urgent rather than merely open: Double shows the return
+      was already FILED on 2026-09-15, and a search of Ping's meetings/action items for this client
+      on 2026-09-19 found no record of her ever being asked.** If she was not asked before filing,
+      the return may already carry a description she never supplied — ask her now, after the fact,
+      and be ready to amend if her own words don't match what was keyed.
 - [ ] **Marat Boxing LLC's own obligations** — sales tax, local licences, annual report. Never examined.
 - [ ] 🟠 **Whether the household has ONE vehicle or two.** ⚠️ **One car is the WORKING ASSUMPTION,
       not an established fact** — the three "proofs" this row once claimed *(the same finance document,
@@ -699,6 +768,10 @@ Anything the team must know to serve this client well.
 - **Double client:** [app.doublehq.com/close?cid=710627](https://app.doublehq.com/close?cid=710627)
 - **Double case notes:** ⛔ none on this client — the family's two are on **Gossip Miami**
   (`710577`): **485291** and **491858**.
+- **Google Drive folder (sensitive vault):** [`Bogopolskyy, Marat and Yuliana`](https://drive.google.com/drive/folders/15V-xtz9JXmSGq4Hw-t8_frHYRxBvery5)
+  _(found by the 2026-09-19 CI sweep — was missing from this section)_. ⚠️ **A second folder,
+  `Gossip bank docs`, was shared into Drive by Marat on 2026-08-10** and sits outside this folder —
+  worth a look if bank-statement-side documents for the Gossip sale go missing.
 - **The 2025 working paper:** [`projects/tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md)
   — 🔴 **the only place the figures live.**
 - **The company side:** [`gossip-miami.md`](./gossip-miami.md) and

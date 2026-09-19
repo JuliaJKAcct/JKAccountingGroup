@@ -1,6 +1,6 @@
 # Viacheslav Honcharenko
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -156,6 +156,20 @@ the actual details (and Claude can pull them live when a task needs them).
   other.** That is not improper, but it is a thing to be conscious of, and **the two sides of a
   payment should not be treated inconsistently between two of our own returns.**
   ⓘ *Amounts are in Valentin's working paper, never here.* _(Worked by Lilian.)_
+
+- 2026-09-19 — **First ordinary incremental sweep, baseline 2026-09-12 (bounded 2026-09-12→09-19).**
+  Double: `list_notes` (still 0) and `list_activity_log` bounded to the window returned **zero
+  entries** — no property, note, task or file movement since the last full sweep. Gmail (every
+  surname spelling + `Karpenko`, after:2026/09/12): only the automated weekly-sweep digest email
+  itself; **no new correspondence found beyond the 2026-09-18 Karpenko-network entry already in
+  this file** (that finding came from Valentin Volzhanskiy's own working-paper session, not from a
+  source search bounded to this client, and is unchanged since it was written). Google Drive
+  (`fullText contains 'Honcharenko'`, modified after 2026-09-12): no hits for this client. Ping
+  (`search_meetings`, org-wide, this client's name + "Schedule C"): no results specific to him — a
+  confirmed negative, consistent with the first full sweep's finding that he has no indexed
+  meetings. **Chase pass:** the Schedule C position, the Karpenko relationship, and the Broward BTR
+  renewal assignment were all re-checked against the same sources above — **none moved**; all
+  remain open with no new deadline. The 2025 4868 extension (deadline 2026-10-15) is unaffected.
 
 ### Tax year 2025 — the review
 

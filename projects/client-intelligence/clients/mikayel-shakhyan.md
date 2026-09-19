@@ -1,6 +1,6 @@
 # Mikayel Shakhyan
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-07
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -37,6 +37,8 @@
 - **Fiscal year-end:** Calendar. 2025 is a **short first year, 8 Aug → 31 Dec 2025**.
 - **Accounting platform:** None — Double `platform: none`, no QuickBooks. **There are no books.**
   The bank account is the only ledger.
+- **Double `Account Type`:** **Individual** _(Double `list_client_properties`, read 2026-09-19)_ —
+  corroborates that this one Double record carries both the LLC's filing and his own, per above.
 
 ## 2. Contacts
 
@@ -46,7 +48,7 @@
 | The company's attorney | **Pivniak Law** — correspondent on the LUMARI trademark application, and paid out of the LLC's account in Nov 2025 |
 
 - **Double client:** https://app.doublehq.com/clients/710648/info/properties
-- **Double case note:** none — `list_notes(710648)` returned **0 notes** on 2026-09-05.
+- **Double case note:** none — `list_notes(710648)` returned **0 notes** on 2026-09-05, **reconfirmed 0 notes on 2026-09-19.**
 
 ## 3. Systems & access
 
@@ -80,14 +82,24 @@
    PIN Unit, Ogden, UT 84201*. Extension is **Form 7004, form code 12**, same caption, same
    fax/address, by the **regular** due date.
    _(Instructions for Form 5472, Rev. 12/2024.)_
-2. **His own individual return.** Double's `Tax Return Type` says **`1040`** while
-   `Organizer Status` says **`N/A (Nonresident)`** — ⚠️ **the two disagree; a nonresident files
+2. **His own individual return.** Double's `Tax Return Type` said **`1040`** while
+   `Organizer Status` says **`N/A (Nonresident)`** — ⚠️ **the two disagreed; a nonresident files
    1040-NR.** Hand-maintained column, Lilian's to change. Whether he owes one at all for 2025 is
    a separate question — the LLC gave him no U.S.-source income.
+   🔄 **UPDATED 2026-09-19** _(Double `list_client_properties`, read this date)_: `Tax Return Type`
+   now reads **`1120 Proforma`** — changed from `1040` sometime between 2026-09-07 and 2026-09-19.
+   ⚠️ **`list_activity_log` on this client (bounded from 2026-09-05) shows no property-change entry** —
+   Double's activity log does not appear to record property edits, so who changed it and exactly
+   when could not be established from this sweep. This closes the LITERAL mismatch that was
+   flagged below for Lilian, but **does not by itself confirm whether his personal return should
+   be 1040-NR or nothing at all** — that question, and whether the change was a deliberate fix or
+   just relabels the entity side of this shared record, is still worth a word with her.
 - **Current status (2026-09-05):** 🟠 **NOT FILED.** Lilian confirmed the 5472 has not gone in.
   Double's tax project *"2025 Taxes"* reads `notStarted`, `filedAt` null. A complete package was
   prepared (7004 + pro forma 1120 + 5472, in `JK Accounting Group > Tax Return Filed > 2025`,
   file `2025 7004 Ext LumandAriLLC.pdf`) — ⚠️ **but the 5472 in it MAY be a shell, and may equally be complete; nobody has looked at it on screen** — §5.
+  🔴 **STILL NOT FILED as of 2026-09-19** _(Double `list_tasks`/`list_activity_log`, read this date)_ —
+  see the new §5 bullet: the project's own due date has now passed.
 
 ### Licenses & other filings
 - **Forms 8843 — four, one per household member** (`JK Accounting Group > Others > 2025 >
@@ -112,6 +124,16 @@
 
 ## 5. Key facts & quirks
 
+- 🔴🚨 **THE PROJECT'S OWN DUE DATE HAS PASSED, AND NOTHING HAS MOVED SINCE.** Double's tax
+  project (`Prepare tax return`) carries **2026-09-15** as the due date on every remaining task
+  (`list_tasks`, read 2026-09-19). That date is consistent with the short-year Form 1120's regular
+  due date (year ended 31 Dec 2025) plus the six-month Form 7004 extension filed 2026-04-15 — i.e.
+  it reads as the **actual extended IRS deadline**, not merely an internal target. ⚠️ **That
+  reading is inferred from the date math, not stated anywhere as such — confirm it.** As of
+  2026-09-19 (**four days past**): `Prepare tax return` is `wip`; `Review tax return`, `Send draft
+  return & e-file authorization`, `File tax return`, `Follow up on tax payments` and `Send final
+  returns to client` are all still `notStarted`. **Nothing has moved on any of the ten sources this
+  sweep checked** — the return is still blocked on the client's questions below.
 - 🔴 **THE FORM 5472 SITTING IN DOUBLE MAY BE A SHELL — DO NOT FILE IT *OR REBUILD IT* UNTIL IT IS
   CHECKED BY EYE. THE TWO POSSIBLE MISTAKES ARE OPPOSITE.** Part I names the entity, but on the extracted text of **both** copies **Part II (the 25%
   foreign shareholder — i.e. the owner) and Part III (related party) carry no values**, and the
@@ -167,6 +189,55 @@
 
 ### Log
 
+- _(2026-09-19)_ — **Weekly CI sweep — Ping and Drive read for the FIRST time; Gmail/Double
+  re-checked; nothing new from the client.** ⚠️ **Coverage gap found (separate from this client):
+  Mikayel Shakhyan is named in neither the scope table nor the exclusion table of**
+  [`automation/weekend-ci-sweep.md`](../automation/weekend-ci-sweep.md) — flagged for a human to
+  add his scope-table row; this session did not edit that file.
+  - **Ping:** `resolve_person("Mikayel Shakhyan")` matched exactly one Ping client
+    (`fd7aa395-7479-40fe-9a86-666e2e96e0a7`, created 2026-06-24, one contact "Mykayel Shakhyan" —
+    email withheld here per the two-data-homes rule). `get_client_details` on that id returns **`recentMeetingCount: 0`,
+    `otherMatches: []`.** `search_client_meetings` scoped to that id, three queries (his name, "Form
+    5472 foreign-owned LLC cosmetics", "Lumari trademark"), returned **0 results**. An org-wide
+    semantic `search_meetings` for his name and separately for "Lum and Ari LLC / Form 5472" each
+    returned 20 results, none relevant on inspection (garbled multilingual transcripts about other
+    clients) — so a search of Ping, org-wide and client-scoped, on 2026-09-19, did not find any
+    meeting or call involving this client. **This reads as exhaustive** — Ping has no recorded
+    meeting for him at all, not a search that came up short.
+  - **Google Drive:** `search_files` (both `fullText contains` and `title contains`, always
+    `excludeContentSnippets: true` — no content was read) for "Mikayel Shakhyan" / "Lum and Ari" /
+    "Lumari" surfaced **three separate folders all named "Mikayel Shakhyan"**: two owned by
+    `julia@jkaccountinggroup.com` (`.../folders/17lyqFNdm81qwlePVrVEN7ruybD_4bjps`, modified
+    2026-05-12; `.../folders/1HqdOx3kgS1BEZFV3KiRlEON1KCLK9H2i`, modified 2026-04-16) and one owned
+    by `mariaf@jkaccountinggroup.com` (`.../folders/1Z-qYgSvfSxdGEs18QxgErYp7lKydLx3s`, containing
+    two generically-named files `Mikayel Shakhyan1.pdf` / `Mikayel Shakhyan2.pdf`, uploaded
+    2026-05-11). ⚠️ **Which one is canonical is not established** — this matches the
+    `client-intelligence` skill's documented pattern of Drive splitting into parallel,
+    near-duplicate subtrees after the TaxDome migration. Recorded as a contradiction/ambiguity in
+    §7 rather than picked at random. All the substantive documents already known from Double
+    (bank statements, Sunbiz, EIN, trademark receipt, lease, Form 8843s) also turned up here under
+    the first `julia@` folder's sibling paths, confirming Double and this Drive tree overlap rather
+    than diverge in content — no new document was found that Double doesn't already have.
+  - **Gmail:** re-ran the client search bounded `after:2026/09/05` for "Shakhyan OR 'Lum and Ari'
+    OR Lumari" — the one hit was the firm's own internal weekly CI-sweep email (2026-09-12, Julia →
+    Lilian), not client correspondence. A separate, unbounded search on his email address (on file in
+    Double/Ping, withheld here) returned only the same two 2026-04 threads found on 2026-09-05
+    (invoice-paid notification, portal activation) — **no client email exists in Julia's mailbox
+    before or since**, so any client contact runs through the Double portal or another channel,
+    not Gmail.
+  - **Double (corroboration):** `get_client` unchanged (`platform: none`). `list_notes` — 0, see §2.
+    `list_contacts` — same one contact, `updatedAt` now 2026-09-09 (nine days after this file's
+    prior update; no visible content change reachable from this tool). `list_client_properties` —
+    `Tax Return Type` changed to `1120 Proforma` (§4, above). `list_activity_log` bounded from
+    2026-09-05: **all seven entries date to 2026-09-07** (Lilian marking "Prepare and send
+    engagement letter", "Prepare and send organizer" and "Review client documents & responses"
+    Done; "Prepare tax return" moved Not Started → In Progress; two new project tasks created under
+    `Prepare tax return` and `File tax return`, one due 2026-09-15) — **nothing logged 2026-09-08
+    through 2026-09-19.**
+  - **Chase pass** (§0 outstanding items, taken back to the sources above): see the updated
+    Outstanding items below for arrival/age/deadline on each. Net result: **no client answer, no
+    forwarded memo, no ruling — everything open on 2026-09-06/07 is still open on 2026-09-19**,
+    except the Tax Return Type property, which moved on the firm's own side.
 - _(2026-09-07)_ — **The trademark's public record, and it moves the analysis.** Lilian found a
   Trademarkia listing for LUMARI and sent it in. ✅ **It confirms independently that the owner is Mikayel
   personally** — until now that rested on decoding a PDF whose font defeats text search, and the working
@@ -254,7 +325,11 @@
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Forward the transaction summary to Julia** — prepared 2026-09-06 and **still with Lilian**; then put the two signer positions to her **only if the client's answers do not come** (working paper §6D). `FOLLOW-UPS.md` row 85.
+- 🔴 **Forward the transaction summary to Julia** — prepared 2026-09-06, **still with Lilian** as
+  of 2026-09-07. 🔄 **CHASED 2026-09-19 — UNCHANGED, now 13 days old (12 since the last file
+  update).** No confirmation of receipt in Julia's Gmail (searched, found nothing); `FOLLOW-UPS.md`
+  row 85 itself reads unchanged since 2026-09-07. Then put the two signer positions to her **only
+  if the client's answers do not come** (working paper §6D). `FOLLOW-UPS.md` row 85.
 - **Ask the client the FOUR still-outstanding questions in one message — Q1, Q3, Q4 and Q5** (working
   paper §6A). ⚠️ **Q2 is already in the Russian message drafted 2026-09-07 and sitting with Lilian —
   do not re-ask its money half.** ⛔ **But Q2 is only HALF covered:** the message asks what he paid, and
@@ -262,15 +337,35 @@
   That half still has to go. ⚠️ **And do not drop Q5** — his country of tax residence and whether he has a
   tax number there fills four fields on the form and nothing on file answers it, so it rides in the same
   message. Everything else on the return can either be entered now or is ours to look up (§6B).
-- **Raise the `Tax Return Type` mismatch** with Lilian (`1040` for a nonresident) — read-only
-  column, hers to change.
+  🔄 **CHASED 2026-09-19 — UNCHANGED.** The combined message (Q1/Q3/Q4/Q5) still shows no evidence of
+  having been sent, now **13 days** since first raised (2026-09-06). The Q2 draft is now **12 days**
+  old with no evidence it reached him — no client email exists in Julia's Gmail at all (searched
+  unbounded on his address), no Ping meeting/call for him exists (searched, none found), no Double
+  note recording it (0 notes). **No deadline of its own**, but it gates the return, whose own
+  extended due date (2026-09-15) has now passed — see §5.
+- ✅ **`Tax Return Type` mismatch — RESOLVED (or at least changed) as of 2026-09-19.** Was `1040` for
+  a nonresident; now reads **`1120 Proforma`** (Double `list_client_properties`, read 2026-09-19).
+  No activity-log entry for the change was found (bounded search from 2026-09-05), so who changed it
+  and exactly when is not established — worth a word with Lilian to confirm this was the intended fix
+  and not just a relabel of the entity side. See §4.
 - 🔴 **TELL him he must keep records** — §1.6038A-3 applies with **no relief available** and
   carries the same **$25,000** penalty as the filing itself. He has no accounting system at all,
   so the bank statements plus the receipts behind Q2 are the entire record. This is a *tell*, not
-  an ask (working paper §6C).
-- **Ping has never been searched for this client** — `search_client_meetings` needs a Ping client
-  id and could not run. **Google Drive has not been searched either.** Neither is a "nothing
-  found"; both are searches that have not happened.
+  an ask (working paper §6C). 🔄 **CHASED 2026-09-19 — no evidence this has been told to him yet**
+  (same search of Gmail/Ping/Double as above); **14 days** since first raised (2026-09-05).
+- ✅ **Ping and Google Drive — BOTH SEARCHED for the first time, 2026-09-19.** ⚠️ **Superseding the
+  line below, which is now stale.** **Ping:** `resolve_person` found a Ping client record for him
+  (created 2026-06-24) but `get_client_details` shows **`recentMeetingCount: 0`** and
+  `search_client_meetings` scoped to that id (3 queries) returned 0 results — org-wide semantic
+  search for his name and for "Lum and Ari / Form 5472" also returned nothing relevant. **This
+  client genuinely has no meeting or call recorded in Ping**, not a search gap. **Google Drive:**
+  found **three** folders named "Mikayel Shakhyan" (two under Julia, one under Maria — see §6 Log
+  and §7) holding documents that duplicate what Double already has; no new document surfaced.
+  Which folder is canonical is unresolved — see §7.
+- ⛔ **SUPERSEDED 2026-09-19 (kept for history, not struck):** "Ping has never been searched for
+  this client — `search_client_meetings` needs a Ping client id and could not run. Google Drive
+  has not been searched either. Neither is a 'nothing found'; both are searches that have not
+  happened." Both are now searched — see the bullet above.
 
 ### Information still needed
 
@@ -292,16 +387,28 @@
       identification number there?** **Four** fields on the 5472 depend on those two facts, and
       nothing on file answers either.
 
+🔄 **Chase pass, 2026-09-19 — all FIVE of the above are still unanswered, ages 13–14 days from
+first being raised, no deadline of their own but gating a return whose own extended due date
+(2026-09-15) has passed.** Checked against Gmail (client's address, unbounded — no message from
+him, ever), Ping (his resolved client record — 0 meetings), and Double (0 notes, no activity since
+2026-09-07). None of these five is answerable from the sources this sweep can reach; only he can
+close them.
+
 **Ours to settle, without asking him** _(§6B)_:
 
-- [ ] 🔴 Confirm by eye that Parts II and III of the prepared 5472 really are blank.
-- [ ] 🔴 **The dissolution date** — on **sunbiz.org**, where it is public and readable; the Sunbiz PDF in Double is one of the six unreadable scans, so it is only the fallback.
+- [ ] 🔴 Confirm by eye that Parts II and III of the prepared 5472 really are blank. _(Chased
+      2026-09-19 — still open, 14 days; none of this sweep's sources can settle it, it needs an
+      actual on-screen read.)_
+- [ ] 🔴 **The dissolution date** — on **sunbiz.org**, where it is public and readable; the Sunbiz PDF in Double is one of the six unreadable scans, so it is only the fallback. _(Chased 2026-09-19 —
+      still open, 14 days; sunbiz.org remains outside this session's reachable sources.)_
 - [ ] 🔍 **His country of citizenship — on his own Form 8843 in Double.** Do not ask him for it.
 - [ ] 🔍 Whether he holds an ITIN.
 - [x] ✅ **Who owns the LUMARI trademark — MIKAYEL PERSONALLY, CONFIRMED 2026-09-07** from the mark's
       public record, independently of the decoding. ⛔ **The "confirm by eye" step is done.**
-- [ ] 🟠 Whether the Form 7004 actually went, and by which route.
+- [ ] 🟠 Whether the Form 7004 actually went, and by which route. _(Chased 2026-09-19 — still open,
+      14 days.)_
 - [ ] 🟠 **Read the six image-only documents by eye.** _(Asking him for text-based PDFs is a fallback, and that half would go in a later message — not the one carrying the five questions.)_
+      _(Chased 2026-09-19 — still open, 14 days.)_
 
 ## 7. Links
 
@@ -311,8 +418,19 @@
 - **ATX capture sheet (artifact, 2026-09-06):** https://claude.ai/code/artifact/d2baf00b-08d2-49c5-a09b-e7d61b22ca21
   — the page Lilian types the return into ATX from. ⚠️ **The working paper is the master**; republish that page to
   the **same URL** after any change, or the link she holds goes stale.
-- **Double case note:** none yet.
-- **Google Drive folder (sensitive vault):** _(pending)_
+- **Double case note:** none yet — `list_notes` reconfirmed 0 on 2026-09-19.
+- **Google Drive folder (sensitive vault):** ⚠️ **THREE folders found 2026-09-19, canonical one
+  NOT established** (contradiction, not resolved — see §6 Log for the search):
+  - https://drive.google.com/drive/folders/17lyqFNdm81qwlePVrVEN7ruybD_4bjps (Julia's, most
+    recently modified — 2026-05-12 — and the one containing the documents already cited
+    throughout this file: statements, Sunbiz, EIN, trademark receipt, lease, Form 8843s)
+  - https://drive.google.com/drive/folders/1HqdOx3kgS1BEZFV3KiRlEON1KCLK9H2i (Julia's second
+    folder, modified 2026-04-16 — likely a TaxDome-migration parallel subtree per the
+    `client-intelligence` skill's documented pattern; contents not diffed against the folder above)
+  - https://drive.google.com/drive/folders/1Z-qYgSvfSxdGEs18QxgErYp7lKydLx3s (Maria's folder,
+    two generically-named files `Mikayel Shakhyan1.pdf` / `Mikayel Shakhyan2.pdf` uploaded
+    2026-05-11 — not opened, per the excludeContentSnippets rule; someone should open and name
+    these two files)
 - **Related SOPs:** none — the firm has **no SOP** for the foreign-owned-DE pro forma 1120 /
   Form 5472 filing. The only existing material is the public-facing marketing script
   [`form-5472-foreign-owned-llc-2026-07-03.md`](../../marketing/video-generation/scripts/form-5472-foreign-owned-llc-2026-07-03.md).

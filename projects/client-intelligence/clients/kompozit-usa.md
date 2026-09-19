@@ -1,13 +1,15 @@
 # Kompozit USA
 
-> **Status:** Prospect — proposal sent 2026-08-19, now in active negotiation (a 30-day trial period was floated 2026-08-25 as an alternative to the firm's standard annual contract; outcome of the follow-up call pending) · **Owner:** Julia · **Last updated:** 2026-09-12
+> **Status:** Prospect — proposal sent 2026-08-19, now in active negotiation (a 30-day trial period was floated 2026-08-25 as an alternative to the firm's standard annual contract; outcome of the follow-up call pending). ⚠️ **The proposal's 30-day validity window (through ~2026-09-18) has now elapsed with no reply found on either side (2026-09-19 sweep)** · **Owner:** Julia · **Last updated:** 2026-09-19
 >
-> ⚠️ **Coverage gap, weekend sweep 2026-08-22:** this client has no Double account yet and is **not
-> named in `weekend-ci-sweep.md`'s scope or exclusion table** — a genuine gap found by this run's
-> coverage check (2b). A human needs to add a scope-table row once it becomes a signed client with a
-> Double record (see the routine's email for the flag). Checked this run: Gmail (bounded to
-> `after:2026/08/19`) and Google Drive only — Ping and Double were not searched (no meetings
-> expected there yet, no Double account).
+> ✅ **Coverage gap CLOSED, 2026-08-24 (reconfirmed 2026-09-19).** The 2026-08-22 sweep found this
+> client absent from both `weekend-ci-sweep.md` tables (coverage check 2b) — but a scope-table row
+> for **Kompozit USA** was added by hand the same week (2026-08-24, per that file's own note; the
+> sweep itself may not edit that file), with `*(none — PROSPECT, no Double account yet; Gmail + Drive
+> only, and no sweep-state.md row until it signs)*` as its Double id. **Reconfirmed present in the
+> scope table on 2026-09-19** — this banner had gone stale and is corrected now. Checked this run:
+> Gmail and Google Drive only — Ping and Double were not searched (no meetings expected there yet,
+> no Double account).
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -171,6 +173,19 @@ link). Never write the credential itself here.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-19 — **Bounded prospect sweep (cheap pass — Gmail in:inbox+in:sent since
+  2026-09-12; Google Drive full-text search; no Ping/Double — no Double account exists,
+  and per this sweep's scope no `sweep-state.md` row is being added).** Searched Gmail for
+  "Kompozit" / "Ostapenko" / "Dmytro", both in:inbox and in:sent, `after:2026/09/12`. The
+  only match was the firm's own automated weekly repo-coherence-audit email (2026-09-14 —
+  a keyword false positive, unrelated). **No message from Dmytro Ostapenko or anyone at
+  Kompozit was found on either side since 2026-08-25** (the last known contact, already in
+  this file) — now **25 days** with no reply. Searched Drive full-text for "Kompozit" /
+  "Ostapenko" — results were unrelated files only (Voice Capital, Best Broker Realty and
+  other clients' bank exports/spreadsheets) — no Kompozit folder or document found.
+  **Material change: the proposal's 30-day validity window (sent 2026-08-19, valid through
+  ~2026-09-18) has now run out with no acceptance, decline, or further contact recorded** —
+  the outcome of the 30-day-trial negotiation floated 2026-08-25 remains unknown
 - 2026-09-12 — **Bounded prospect sweep (Gmail in:inbox+in:sent + Google Drive, since
   2026-08-29; no Double/Ping — no Double account exists).** Searched Gmail for "Kompozit" /
   "Ostapenko" / "Dmytro", both in:inbox and in:sent, `after:2026/08/29`. The only matches
@@ -249,10 +264,12 @@ link). Never write the credential itself here.
   (likely 2026-08-28). **A Gmail search (in:inbox + in:sent, `after:2026/08/26`, on
   2026-08-29) for "Kompozit"/"Ostapenko"/"Dmytro" found no record that call happened or
   its outcome** — so whether the trial was accepted is unknown as of this sweep. **A second,
-  wider search (`after:2026/08/29`, on 2026-09-12) still found nothing** — no confirmation
-  the Friday follow-up call ever took place, and no reply from Dmytro on any channel in the
-  18 days since the 2026-08-25 call. Proposal is valid 30 days from 2026-08-19 (through
-  ~2026-09-18 — about 6 days left as of this sweep)
+  wider search (`after:2026/08/29`, on 2026-09-12) still found nothing.** **A third search
+  (`after:2026/09/12`, on 2026-09-19) also found nothing** — no confirmation the Friday
+  follow-up call ever took place, and no reply from Dmytro on any channel in the **25 days**
+  since the 2026-08-25 call. 🔴 **The proposal's 30-day validity (through ~2026-09-18) has
+  now elapsed** — as of this sweep there is no record of it being accepted, declined, or
+  extended
 
 ### Information still needed
 

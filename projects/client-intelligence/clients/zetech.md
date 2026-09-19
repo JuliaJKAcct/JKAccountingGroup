@@ -1,6 +1,6 @@
 # ZETECH LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-09-19
 >
 > ✅ **First full historical sweep completed 2026-08-15** — Ping (via a synced Double meeting
 > note), Gmail (inbox + sent, full history), Double (client record, notes, contacts, properties),
@@ -63,10 +63,11 @@ link). Never write the credential itself here.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Connected — `platform: qbo` _(2026-08-11)_. Sales channels sync in via **A2X** (Shopify/eBay/Amazon payouts) _(Gmail "Zetech A2X", 2026-07-28)_ |
-| Sales-tax portal | Filing sales tax | _(pending — Drive link)_ | _(pending)_ |
-| Bank | Payroll debits / Direct Pay | _(pending — Drive link)_ | **Wells Fargo**, account ending **1937** (payroll debit account) _(Gmail Gusto/Wells Fargo notifications, Jul–Aug 2026)_ |
-| Payroll | Gusto, weekly **AutoPilot** (automatic), runs every Friday | _(pending — Drive link)_ | _(Gmail Gusto notifications, recurring through Jul–Aug 2026)_ |
+| QuickBooks Online (via Double) | Bookkeeping ledger | see Drive folder (§7) | Connected — `platform: qbo` _(2026-08-11)_. Sales channels sync in via **A2X** (Shopify/eBay/Amazon payouts) _(Gmail "Zetech A2X", 2026-07-28)_ |
+| Sales-tax portal | Filing sales tax | see Drive folder (§7) | _(pending — which state/portal)_ |
+| Bank | Payroll debits / Direct Pay | see Drive folder (§7) | **Wells Fargo**, account ending **1937** (payroll debit account) _(Gmail Gusto/Wells Fargo notifications, Jul–Aug 2026)_ |
+| Payroll | Gusto, weekly **AutoPilot** (automatic), runs every Friday | see Drive folder (§7) | _(Gmail Gusto notifications, recurring through Jul–Aug 2026)_ |
+| Credentials vault | Firm-held logins for this client | "Zetech Passwords" spreadsheet, in the Drive vault (§7) — **found 2026-09-19, closing the standing "Drive not searched" gap; the credential itself was not opened** | _(Google Drive, 2026-09-19)_ |
 | _(add systems as needed)_ | | | |
 
 ## 4. Obligations & recurring processes
@@ -83,14 +84,14 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Agency & portal:** _(pending)_
 - **Form:** _(pending)_
 - **Our role:** _(pending)_ <!-- we file / we prepare, client files / client handles -->
-- **Current status:** July 2026 sales-tax report filed and paid — first confirmed filing on record for this client _(Gmail + Google Drive, 2026-08-18/19)_.
+- **Current status:** July 2026 sales-tax report filed and paid _(Gmail + Google Drive, 2026-08-18/19)_; **August 2026 sales-tax report also filed, with the payment scheduled for 2026-09-18** _(Gmail, Liudmyla Kazannik to the client's contact, 2026-09-16 — figure not retained per the two-data-homes rule)_.
 - **Process notes (→ future SOP):** _(pending)_
 
 ### Payroll
 - **Applies?** **Yes — Automatic** _(Double client properties, 2026-08-11)_
 - **Provider / frequency:** **Gusto**, weekly AutoPilot, runs every Friday for the prior week's pay period; debited from the Wells Fargo account ending 1937 _(Gmail Gusto notifications, recurring Jul–Aug 2026)_. The Aug 8–14 pay period ran and confirmed without a failure notice _(Gmail, 2026-08-17/18)_.
 - **Our role:** _(pending — firm appears to receive every payroll notification; whether we run it or only monitor is unconfirmed)_
-- **Process notes (→ future SOP):** At least one payroll run was **manually canceled and re-run** in the same week (2026-07-14/15 and 2026-07-21/22) — cause not recorded. Worth a standing check that AutoPilot actually completed each week. ⚠️ **The pattern recurred 2026-08-26**: the Aug 15–21 AutoPilot run was canceled and re-confirmed the same day (Gmail, Gusto notifications, 2026-08-26) — a third occurrence, still with no recorded cause. Treat "AutoPilot confirmed" as unreliable on its own until a run is seen through to the actual debit.
+- **Process notes (→ future SOP):** At least one payroll run was **manually canceled and re-run** in the same week (2026-07-14/15 and 2026-07-21/22) — cause not recorded. Worth a standing check that AutoPilot actually completed each week. ⚠️ **The pattern recurred 2026-08-26**: the Aug 15–21 AutoPilot run was canceled and re-confirmed the same day (Gmail, Gusto notifications, 2026-08-26) — a third occurrence, still with no recorded cause. ⚠️ **And again 2026-09-15/16**: the Sep 5–11 AutoPilot run was canceled the night of 2026-09-15 and re-confirmed for a 2026-09-16 debit — a **fifth** occurrence of the same pattern, still with no recorded cause _(Gmail, Gusto notifications, 2026-09-15/16)_. Treat "AutoPilot confirmed" as unreliable on its own until a run is seen through to the actual debit.
 
 ### Bookkeeping & monthly close
 - **Applies?** **Yes** _(Double client properties, 2026-08-11)_
@@ -159,17 +160,18 @@ A running, dated record as we build this profile.
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** July sales tax was filed and paid (Gmail + Drive confirmation, 2026-08-18/19) — first confirmed sales-tax activity for this client. The Aug 8–14 Gusto AutoPilot payroll run confirmed without a failure notice. A W-9 was uploaded to Drive 2026-08-17. August month-end close moved to In Progress and the "Monthly Sales Taxes" task marked Done. Chase pass on all four outstanding items — results above.
 - 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: 0 notes changed (the single note is unchanged since 2026-06-26); 0 activity-log entries this window. Gmail: the Aug 15–21 payroll run was canceled and re-confirmed the same day (2026-08-26) — a third instance of the cancel/re-run pattern (§4/§5). No new sales-tax, A2X or fee-proposal correspondence found. Chase pass on all four outstanding items — results below; all remain open.
 - 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29→2026-09-12; the 2026-09-05 run never completed — see `sweep-state.md`).** Double: the single note (451544) unchanged; heavy month-end-close task activity (Aug close finished 2026-09-09); `list_projects` read for the first time — 2025 Taxes `filed` 2026-07-03 (§4). Gmail: a fourth AutoPilot cancel/re-run (2026-09-01/02), settling that Julia actively runs/intervenes in payroll rather than only monitoring it (§5); two more group-entity names surfaced (LE DELICE LLC, EVERMONY LLC — §5); a new, unresolved COGS/Veeqo discrepancy flagged by the client 2026-09-09/10 (§5); three "Uncapped" financing offers expired unused 2026-08-28 (no amounts recorded). Ping: `search_meetings` scoped to "Zetech" returned only pre-baseline (June 2026) garbled content — nothing new or legible this window. Chase pass on all four outstanding items — results below; all remain open.
+- 2026-09-19 — **Weekend sweep (incremental, baseline 2026-09-12→2026-09-19). 🔴 GOOGLE DRIVE SEARCHED THIS RUN, CLOSING THE STANDING GAP FLAGGED IN THE LAST TWO RUNS.** A title search for "Zetech" (no date bound, since this was the first-ever pass) returned the client's Drive footprint: a **"Zetech Passwords" spreadsheet** (credential vault — not opened) and **four separate "Zetech"/"ZETECH LLC" folders** across different parents, all with modification dates predating this baseline (last modified 2026-09-02 on the passwords sheet; the folders themselves are unmodified since creation) — the same duplicate-folder pattern already seen at Lumetro and Ecom Beavers. Linked in §3/§7; not consolidated (out of this sweep's remit). Double: `list_client_properties` unchanged; `list_notes` still 1 (451544), unchanged since 2026-06-26; `list_activity_log` (from 2026-09-12) shows one new entry — the "Monthly Sales Taxes" task marked Done 2026-09-16. Gmail bounded `after:2026/09/12` for "Zetech"/"Kazannik"/"LE DELICE"/EVERMONY found: (1) **August 2026 sales tax filed, payment scheduled 2026-09-18** (Liudmyla to the client's contact, 2026-09-16 — added to §4); (2) a **fifth** payroll AutoPilot cancel/re-run instance, 2026-09-15 (canceled) → 2026-09-16 (re-confirmed) — added to §4/§5; (3) routine LE DELICE LLC payroll notices (a related group entity, not this client, correctly not folded in here). No further correspondence on the COGS/Veeqo discrepancy or the fee-proposal pushback. Ping `search_meetings` (COGS/Veeqo/sales-tax/payroll phrasings) returned only the same pre-baseline June 2026 garbled content as every prior run — nothing new or legible. `FOLLOW-UPS.md`/`BACKLOG.md` grepped for "Zetech"/"Kazannik" — no hits. Chase pass on all four outstanding items — results below; all remain open except the payroll-runs-vs-monitors question, already settled 2026-09-12.
 
 ### Outstanding items (CI-only — never in the SOP)
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Confirm the A2X eBay/Amazon mapping fix held** — STILL OPEN, **46 days** pending since 2026-07-28, no deadline. A targeted search (2026-09-12, bounded to this window) found no message on the A2X mapping since the 2026-07-28 remap note.
-- **Client pushed back on an updated group fee proposal** (`#JKA1204-v3`) — STILL OPEN, **65 days** pending since 2026-07-09, no deadline. No follow-up email found this window either.
+- **Confirm the A2X eBay/Amazon mapping fix held** — STILL OPEN, **53 days** pending since 2026-07-28, no deadline. A targeted search (2026-09-19, bounded to this window) found no message on the A2X mapping since the 2026-07-28 remap note.
+- **Client pushed back on an updated group fee proposal** (`#JKA1204-v3`) — STILL OPEN, **72 days** pending since 2026-07-09, no deadline. No follow-up email found this window either.
 - **The IRS sole-proprietorship-vs-1120-S mismatch (§5) is still unresolved** — no correspondence found on this matter since the 2026-04-17 call it originates from; it is an internal reconciliation item with no natural external counterparty thread to chase.
-- [x] Whether the firm actually **runs** this client's payroll or only monitors Gusto's AutoPilot notifications — **SETTLED 2026-09-12**: the firm (Julia) actively runs/cancels/re-runs it — Gusto's cancellation email for the 2026-09-01/02 instance is addressed to her directly as the one who canceled it.
-- **NEW, unchased this window (no natural search target beyond the thread found):** the 2026-09-09/10 COGS/Veeqo discrepancy — flagged 2–3 days old as of this sweep, too soon to have a resolution; watch next run.
+- [x] Whether the firm actually **runs** this client's payroll or only monitors Gusto's AutoPilot notifications — **SETTLED 2026-09-12**: the firm (Julia) actively runs/cancels/re-runs it — Gusto's cancellation email for the 2026-09-01/02 instance is addressed to her directly as the one who canceled it. ⚠️ **Reinforced 2026-09-19**: a fifth cancel/re-run instance (2026-09-15/16) shows the same pattern continuing, cause still unrecorded.
+- **The 2026-09-09/10 COGS/Veeqo discrepancy** — STILL OPEN, ~9-10 days old as of this sweep; a targeted search bounded `after:2026/09/12` found no follow-up correspondence either confirming or resolving it.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
@@ -178,7 +180,7 @@ reports for this client.
 - [x] What the business actually does, and (partially) the owner's language — home state still unknown
 - [x] Whether the client belongs to a known owner-group already profiled here — assigned to Liudmyla Kazannik's book; the client's OWN serial-entity group (6 other Double IDs linked to the primary contact) is separate and unresolved
 - [ ] Contacts' precise roles (portal contacts are in Double; role labels beyond "primary/admin" not yet distinguished)
-- [ ] Bank/card feeds and where credentials live (Drive vault link)
+- [x] Drive vault location — **found 2026-09-19**: "Zetech Passwords" spreadsheet + four duplicate "Zetech"/"ZETECH LLC" folders (§3/§7); the credentials themselves were not opened
 - [ ] Fiscal year-end
 - [ ] Whether Liudmyla keeps working notes for this client that should feed this file
 
@@ -186,5 +188,5 @@ reports for this client.
 
 - **Double client:** [app.doublehq.com/close?cid=706710](https://app.doublehq.com/close?cid=706710)
 - **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** four separate "Zetech"/"ZETECH LLC" folders exist across Julia's Drive (not consolidated — same duplicate-folder pattern as Lumetro/Ecom Beavers); a "Zetech Passwords" spreadsheet (credentials, not opened) also sits in the vault. _(Google Drive, found 2026-09-19)_
 - **Related SOPs:** _(pending — links into ../sops/ once written)_
