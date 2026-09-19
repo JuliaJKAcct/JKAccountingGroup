@@ -151,6 +151,8 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Tax year YYYY — the review
 
+- _(pending)_
+
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **NEW — resolve the November 2025 DOR tax liens and how (or whether) they connect to the December FDOR review.** STILL OPEN, pending since 2025-11-05 (~318 days as of 2026-09-19). No deadline recorded, but this is the oldest live problem now known on this file — check first. Re-chased this sweep (targeted lien/DOR search, unbounded) — no movement found.

@@ -621,7 +621,6 @@ employment costs under a business that does not exist on his Schedule C.**
 ### Outstanding items (CI-only — never in the SOP)
 
 
-
 - 🔴 **The box-14 tips are CLAIMED but not ESTABLISHED — close it before filing.** Worth **low four
   figures** of tax. **Two questions, and they go to the EMPLOYER, not the client:** what job he
   actually did there *(a role off the tipped-occupation list voids the whole amount)*, and how much
