@@ -658,10 +658,13 @@ interest statement to get, which is why the owned-or-leased question comes first
 
 🔴 **A NEW PROBLEM, FOUND 2026-09-20 AND NOT YET PUT TO HIM: his stated housing dates do not match his
 own payments.** He says he was at the first apartment through the spring and at the second from the
-summer — **but payments to the first reappear in the autumn, one spring month has no housing payment
-at all, and a rent rail he never mentioned covers the start of the year.** ⚠️ **A second company in
-the mix is a rent-FINANCING service, not a landlord**, which is part of why the picture is hard to
-read. ⛔ **This is not a question about his honesty — it is a form input**: the home-office deduction
+summer — **but direct payments to the first reappear in the autumn, and a rent rail he never
+mentioned covers the start of the year.** ⚠️ **One spring month shows no payment on any of the three
+LANDLORD rails** — ⓘ *said of the transaction extract he sent, which stops on 1 December and may not
+be all his accounts; it is what the search returned, not a fact about where he lived.* ⚠️ **TWO of
+the companies in the mix are rent-FINANCING services rather than landlords**, which is part of why
+the picture is hard to read — **and a financier's repayment schedule cannot date his occupancy at
+all**, because what is deductible is when the financier pays the landlord. ⛔ **This is not a question about his honesty — it is a form input**: the home-office deduction
 is computed on the **months** the office existed, and those months are not currently knowable. 🔑 **It
 should go out with the next message**, alongside the square-footage question already asked.
 ⓘ *Two small charges the workbook filed as rent are renters insurance.*
