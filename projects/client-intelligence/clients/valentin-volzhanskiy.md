@@ -618,6 +618,57 @@ return the catering work is his W-2 employment**, and **none of his three 1099 p
 🔑 **Asking him to split by WHICH WORK the expense belongs to, listing the payers, avoids him filing
 employment costs under a business that does not exist on his Schedule C.**
 
+### 2026-09-20 — Julia settled the two-business question, and the client ask was drafted
+
+✅ **JULIA CONFIRMED HE HAS TWO ACTIVITIES** *(relayed by Lilian)*: the **catering** work he reported
+on his 2024 Schedule C, and a **credit-repair** activity that is new. 🔑 **That closes the question the
+firm had been circling** — whether the second business was real, and what the first one was.
+⚠️ **BUT THAT IS TWO ACTIVITIES, NOT YET TWO SCHEDULE Cs.** A Schedule C is filed for an activity
+that **traded in 2025**, and none of his 2025 1099 payers is a caterer, so **where 2025's catering
+receipts would come from is still unknown**. 🔑 **So the expenses are being collected on two separate
+templates either way** — that is what settles it. **A catering template that comes back with costs
+and no income means the activity did not trade in 2025**, and the return carries one Schedule C, not
+two. ⛔ **Nothing should be keyed on the assumption of two until those templates come back.**
+
+🔴 **AND THE VEHICLE USE HAS TO BE SPLIT TOO — Lilian's catch, and it is the right one.** Two
+activities means the mileage is apportioned between them, not assigned whole to one. **The draft asks
+him for two figures and gives a worked example**, so he cannot answer with a single number.
+
+📨 **A Russian email was DRAFTED for him on 2026-09-20, under Lilian's name, in simple register, and
+handed to Lilian.** ⚠️ **The firm has no record of it being sent** — the draft was produced in a
+working session and given to her; whether and how it went is not recorded here.
+**It asks him to:** confirm the four W-2s are all of them · say whether one payer sent him a 1099 ·
+fill **two separate expense templates**, one per activity · describe the car *(make, model, year;
+owned or leased; when he began using it for work; odometer at both ends; business, commuting and
+personal miles; whether it was the same car the year before)* · split the miles between the two
+activities · send the 2025 year-end statement from the **car lender or leasing company** · and give
+the **home office in SQUARE FEET**, because the tax form takes an area and not a percentage.
+✅ **It deliberately does NOT ask for parking and tolls — he already gave those**, which is
+[`method.md`](../../pre-return-review/method.md) rule 1 applied. ⛔ **And it asks for no
+substantiation at all**, per the posture set on 2026-09-19.
+
+🚗 **ON THE CAR, TWO DIFFERENT LEVELS OF EVIDENCE, worth keeping separate.** The **make and model are
+his word alone**, from his own rules sheet — **they appear in none of the 1,519 transaction rows of
+the extract he sent**, which is not the same as saying no record of them exists anywhere. **That is
+why the draft asks him to state them.** **The PAYMENTS are verified**: twelve identical monthly withdrawals to a named auto account,
+running the whole year. ⚠️ **Twelve identical payments fit a LEASE exactly as well as a loan**, so
+what is established is the counterparty, not the contract. 🟢 **That is still enough to ask for a
+concrete document — the 2025 year-end statement from that company** — ⛔ **but on a lease there is no
+interest statement to get, which is why the owned-or-leased question comes first.**
+
+🔴 **A NEW PROBLEM, FOUND 2026-09-20 AND NOT YET PUT TO HIM: his stated housing dates do not match his
+own payments.** He says he was at the first apartment through the spring and at the second from the
+summer — **but direct payments to the first reappear in the autumn, and a rent rail he never
+mentioned covers the start of the year.** ⚠️ **One spring month shows no payment on any of the three
+LANDLORD rails** — ⓘ *said of the transaction extract he sent, which stops on 1 December and may not
+be all his accounts; it is what the search returned, not a fact about where he lived.* ⚠️ **TWO of
+the companies in the mix are rent-FINANCING services rather than landlords**, which is part of why
+the picture is hard to read — **and a financier's repayment schedule cannot date his occupancy at
+all**, because what is deductible is when the financier pays the landlord. ⛔ **This is not a question about his honesty — it is a form input**: the home-office deduction
+is computed on the **months** the office existed, and those months are not currently knowable. 🔑 **It
+should go out with the next message**, alongside the square-footage question already asked.
+ⓘ *Two small charges the workbook filed as rent are renters insurance.*
+
 ### Outstanding items (CI-only — never in the SOP)
 
 
@@ -628,15 +679,14 @@ employment costs under a business that does not exist on his Schedule C.**
   "was it mandatory" — a mandatory tip pool still qualifies, and that wording returns a false
   negative.**
 - 🟡 **The Schedule C expenses ARRIVED on 2026-09-18 — as a workbook, not as deductions.** *(See the
-  log entry for that date.)* **What is still needed is not more data but FACTS**: a business purpose
-  per line, the mileage evidence, the exclusive-use answer on the home office, and a month-by-month
-  rent schedule *(rent reached the landlord by five different routes, two of them financing companies,
-  so the same rent can appear twice)*.
-- 🔴 **HOW MANY BUSINESSES IS THIS? — the question that now governs the Schedule C.** Credit repair is
-  confirmed, real estate has surfaced, and the hospitality work is W-2. **Splitting is nearly
-  money-neutral this year** *(one Schedule SE combines them; the QBI carryforward applies to the
-  aggregate)* **except for the health-insurance deduction, which can sit under only one business** —
-  so the question can be settled calmly, and settling it now is what makes a future year defensible.
+  log entry for that date.)* 🔄 **REWRITTEN 2026-09-20 — the posture changed on 2026-09-19** *(Lilian:
+  we are not auditors; we take what the client gives us and prepare the return)*. ⛔ **So the
+  business-purpose-per-line ask, the mileage evidence and the exclusive-use challenge are RETIRED** —
+  he has stated exclusive use and we take it. ✅ **What replaced the workbook is TWO expense
+  templates, one per activity, asked on 2026-09-20.** 🔴 **What is still genuinely missing is a
+  month-by-month rent schedule** *(rent reached the landlord by five different routes, two of them
+  financing companies, so the same rent can appear twice)* — **and it is now blocked on the housing
+  dates below, not just on the routes.**
 - 🔴 **The return's principal business and activity code are both wrong** and are typed fields.
   **Neither can be corrected until he answers what the work actually is.** ⛔ *(This supersedes the
   narrower "ask him what the VoiceCapital work was" below — it is the same question, widened.)*
@@ -649,6 +699,13 @@ employment costs under a business that does not exist on his Schedule C.**
   against a September preparation, which looks like a field inherited from the extension.
 - ⚠️ **Tell him the balance due BEFORE the IRS does** — he has a live installment agreement and a new
   balance can default it.
+- ✅ ~~**HOW MANY BUSINESSES IS THIS?**~~ — **ANSWERED 2026-09-20 by Julia: catering and credit
+  repair.** *(See the log entry for that date.)* 🟡 **What survives is narrower and still open:**
+  whether the **catering** activity actually **traded in 2025** — so whether the return carries one
+  Schedule C or two — and whether the **real-estate** work is a third. **The two expense templates
+  are what answer both.** ⓘ *Splitting is nearly money-neutral this year* — one Schedule SE combines
+  them and the QBI carryforward applies to the aggregate — *except for the health-insurance
+  deduction, which can sit under only one business.*
 - ✅ ~~Get the 2025 Form 1095-A read~~ — **closed 2026-09-13**, supplied directly by Lilian.
 - ⚠️ **Ask him what the VoiceCapital work actually was** — the Schedule C's principal business and
   code turn on it, and **none of his three 1099 payers is a caterer.**
@@ -674,10 +731,22 @@ employment costs under a business that does not exist on his Schedule C.**
       which months. 🔑 **Eligibility, not enrolment — and it is the highest-value unanswered question
       on the return.**
 - [ ] 🆕 Whether he paid **dental, vision or long-term-care** premiums separately in 2025.
-- [ ] 🆕 When the Hyundai Tucson was acquired, whether it is financed or leased, and whether it was
-      already used for work in an earlier year. **The answer decides which vehicle method is even
-      available.**
+- [ ] 🆕 🚗 **The car — one question, asked 2026-09-20:** its **make, model and year**; **when it was
+      first used for the business**; **whether it is owned, financed or leased**; and whether it was
+      already used for work in an earlier year. 🔑 **The answer decides which vehicle method is even
+      available**, and the description is a typed field on the return. ⚠️ **The make he has given is
+      his own statement on his expense sheet** — it appears in **none of the 1,519 rows of the bank
+      extract he sent**, which is not the same as saying no record of it exists. ✅ **What the extract
+      DOES corroborate is twelve identical monthly payments to a Capital One auto account** — and
+      twelve identical payments fit a lease as well as a loan, which is why the question is asked
+      rather than inferred.
 - [ ] 🆕 Whether any **other bank or card account** was used in 2025 that is not in the workbook.
+- [ ] 🆕 🔴 **Which months he lived at each address** — his own dates and his own payments disagree, and
+      the home-office months cannot be computed until they are reconciled *(2026-09-20)*.
+- [ ] 🆕 🔴 **How the vehicle use divides between the two activities** — asked 2026-09-20. ⛔ **One
+      mileage figure cannot be keyed once the return carries two Schedule C activities:** each one
+      has its own business-miles line and its own vehicle questions, so the split has to come from
+      him.
 
 ## 7. Links
 
