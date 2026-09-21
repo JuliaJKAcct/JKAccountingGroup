@@ -587,13 +587,35 @@ is the mortgage. **Do not re-ask him "rent or mortgage".**
 himself.** That looked like a contradiction, and it was not: **the two documents are about two
 different homes.**
 ⚠️ **The home-office numbers still are not simply "fine", but for a different reason than before.**
-Two conditions gate whether Form 8829 matters at all: **it attaches to Schedule C**, and whether he
-has one is still open — if the 2025 money was wages, a distribution or a K-1 share from his own
-S corp, a shareholder-**employee** has no home-office deduction on his 1040 (the route is an
-**accountable-plan reimbursement** on the 1120-S; employee home office is dead through 2025 under
-**§67(g)**, and **§280A(c)(6)** bars deducting rent charged to your own employer). And **under the
-SIMPLIFIED method none of this moves a number** — the $5/sq ft safe harbour uses no actual housing
-expense and files no 8829.
+**Form 8829 attaches to Schedule C, and whether he has one is still open** — so the home office
+hangs on the same fork as everything else. And **under the SIMPLIFIED method none of this moves a
+number** — the $5/sq ft safe harbour uses no actual housing expense and files no 8829.
+
+🔑 **"CAN'T AN S-CORP OWNER DEDUCT A HOME OFFICE?" — YES IN SUBSTANCE, NO IN MECHANISM, AND THE
+MECHANISM IS WHAT FAILS HERE.** _(Lilian's question, 2026-09-21. Her instinct is right and the
+short answer this file gave before was incomplete enough to read as a flat no. Verified against
+irs.gov, not from memory.)_
+
+- ⛔ **NOT on his 1040.** A shareholder who works in his own S corp is its **employee**, and
+  **Pub 587's own flowchart ends an employee at "No deduction."** **§67(g)** removed unreimbursed
+  employee expenses. ⚠️ **And that is no longer a temporary suspension** — an earlier version of
+  this line said *"dead through 2025"*, which implied it returns in 2026. **OBBBA made the
+  elimination PERMANENT for years after 2025.** _(Corrected 2026-09-21.)_
+- ⛔ **The usual workaround does not work either:** **§280A(c)(6)** bars any deduction attributable
+  to **renting the space to your own employer**. *(Not to be confused with §280A(g), the 14-day
+  rule, which is a different provision and does not cover a home office.)*
+- ✅ **The route that DOES work is an ACCOUNTABLE-PLAN REIMBURSEMENT.** The corporation reimburses
+  him, **deducts it on the 1120-S**, and the reimbursement is **not** income to him — Pub 463:
+  reimbursements under an accountable plan **are not reported as pay**.
+- 🔴 **Why that route is almost certainly shut for HIM, and it is four things at once:** the
+  deduction belongs to a **1120-S that is not filed and that we do not prepare**; an accountable
+  plan requires a **real reimbursement made during the year**, substantiated in time — ⛔ **it
+  cannot be constructed backwards at filing**; he was **locked out and holds no W-2**, so the odds
+  a formal reimbursement happened are very low; and even if it did, it reaches him **through the
+  K-1 we do not have**, at his ownership share.
+- ✅ **Where her instinct does land on the 1040: IF THERE IS A SCHEDULE C.** That fork is open
+  (Double reads `1040-SCH C`; the 2024 return does not support it — §4). **If one exists, Form 8829
+  or the simplified method is available and the template he filled in is usable.**
 ⓘ **For the record, since an earlier version of this file got it wrong:** interest, taxes and rent
 sit in different 8829 boxes, but the **indirect column of both is multiplied by the same
 business-use percentage — the apportionment is identical.** What differs is that **interest and
