@@ -1557,6 +1557,29 @@ street address never appear here, and nor do dollar figures — those live in Do
   independent review caught both** — recorded because it is the second time in one day.
   ⓘ *Also corrected: an earlier sweep counted page 22 as Schedule E; it is Schedule EIC.*
 
+- 2026-09-21 — **JULIA SETTLED THE SHAPE OF THE 2025 RETURN — three decisions, all relayed by
+  Lilian.** ① **File without the K-1s**, amend if they arrive. ② **Assume NO Marketplace coverage —
+  no Form 1095-A, no Form 8962.** The basis is the client's own final answer: after saying several
+  times that he did not know, he was asked to check with a broker (*he does not have the number*)
+  and to call the Marketplace himself (*he did not*), and then stated he had **no Marketplace cover
+  in 2025**. ⚠️ **Lilian's reading, recorded because it is the real reason: he shows no appetite for
+  making the enquiry.** ⚠️ **It contradicts his own organizer, and that contradiction stands.**
+  🟢 **The assumption is TESTED FREE AT E-FILE** — with an advance credit the IRS holds the 1095-A
+  and the return is rejected, which tells us we were wrong before any harm. ⛔ **The one case it
+  misses is an exchange plan with NO advance credit: no reject, and the cost is a forfeited credit —
+  his money, not a penalty.** ③ **Report the GROSS sum from Midwest Expedited with NO expenses on
+  his 1040**, because the expenses belong on the corporation's 1120-S.
+  ✅ **Decision ③ settles by implication the question this file has carried since August: the
+  business is the CORPORATION'S, so there is no Schedule C.** 🔑 **And that rules out the expensive
+  mistake — a Schedule C would have added self-employment tax at 15.3% on the whole sum.**
+  🔴 **What it does NOT settle is the CHARACTER of the money.** Lilian asked how it gets onto the
+  return with no K-1; **the four routes and the recommendation are in the working paper §4A**
+  ([`tax-returns/denys-melnyk/2025-form-1040.md`](../../tax-returns/denys-melnyk/2025-form-1040.md)).
+  **Recommended: Schedule E Part II as an estimated K-1 share, disclosed on Form 8082** — it matches
+  2024's presentation, carries no SE tax, and is what Form 8082 exists for. ⚠️ **Its known flaw is
+  recorded there: it puts a CASH figure on a line that reports an ALLOCATED SHARE**, so it probably
+  overstates his income — the safe direction, but not a measured one.
+
 ### Outstanding items (CI-only — never in the SOP)
 
 **The open list, in priority order — and it is NOT all client asks.** Items are ordered by what would
@@ -1624,14 +1647,20 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
 - 📅 **The proof-of-claim BAR DATE in the bankruptcy — find it and diary it.** He may hold an unpaid
   **wage** priority claim, a **shareholder-loan** claim, or a contingent claim on a **personal
   guarantee**. A bar date forfeits all of them silently (§5).
-- 🟠 **PENDING WITH THE CLIENT: he is asking his BROKER what kind of cover he had in 2025** —
+- 🔵 **CLOSED BY DECISION, NOT BY EVIDENCE — Julia ruled 2026-09-21 to ASSUME no Marketplace cover**
+  (§6 log). ⛔ **Stop chasing this before filing.** 🟢 **The assumption is tested free at e-file: a
+  reject means it was wrong.** ⚠️ **Re-open only if the return is rejected.** _(What follows is the
+  history of the chase, kept because the contradiction with his organizer is still on the record.)_
+  ~~**PENDING WITH THE CLIENT: he is asking his BROKER what kind of cover he had in 2025**~~ —
   Marketplace or not _(Lilian asked him again on 2026-08-12)_. ⓘ **That a broker is involved is
   itself informative:** brokers enrol people in Marketplace plans through their own systems, so the
   client may be a Marketplace enrollee **without ever having had an account** — which is why "no
   account" proves nothing (§5).
 - ~~**The two silent companies' own tax returns**~~ — ⚠️ **ASKED 2026-08-12: he does not have them.**
   Not a live ask to him any more; the only routes left are the companies themselves.
-- 🟠 **Marketplace or private? Ask WHERE he bought the cover and WHETHER anyone helped pay for it**
+- ~~🟠 **Marketplace or private? Ask WHERE he bought the cover and WHETHER anyone helped pay for it**~~
+  ⛔ **SUPERSEDED 2026-09-21 by Julia's assume-no-Marketplace decision — do NOT send this question.**
+  _(Method kept for the next client who needs it.)_
   — not "send me your 1095". ⚠️ **He may hold no form at all:** only the **1095-A** is ever needed,
   and a **1095-B is often never mailed**. ⚠️ **Ask about BOTH halves of the year** — Washington runs
   its own exchange and Florida uses healthcare.gov, so a WA plan would not appear on healthcare.gov
