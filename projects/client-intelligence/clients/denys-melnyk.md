@@ -588,34 +588,96 @@ himself.** That looked like a contradiction, and it was not: **the two documents
 different homes.**
 ⚠️ **The home-office numbers still are not simply "fine", but for a different reason than before.**
 **Form 8829 attaches to Schedule C, and whether he has one is still open** — so the home office
-hangs on the same fork as everything else. And **under the SIMPLIFIED method none of this moves a
-number** — the $5/sq ft safe harbour uses no actual housing expense and files no 8829.
+hangs on the same fork as everything else.
 
-🔑 **"CAN'T AN S-CORP OWNER DEDUCT A HOME OFFICE?" — YES IN SUBSTANCE, NO IN MECHANISM, AND THE
-MECHANISM IS WHAT FAILS HERE.** _(Lilian's question, 2026-09-21. Her instinct is right and the
-short answer this file gave before was incomplete enough to read as a flat no. Verified against
-irs.gov, not from memory.)_
+🔑 **"CAN'T AN S-CORP OWNER DEDUCT A HOME OFFICE?" — YES IN SUBSTANCE, BUT IT IS THE CORPORATION'S
+DEDUCTION, NOT HIS.** _(Lilian's question, 2026-09-21. **Her instinct is right**; the short answer
+this file gave before was incomplete enough to read as a flat no.)_ ⓘ **Sourcing, stated precisely
+because a later session will rely on it:** the Pub 587, Pub 463 and Form 8829 points below are read
+off **irs.gov**; the **§280A points are read off the CODE — §280A(c)(6) does not appear on irs.gov
+at all, and Pub 587 never mentions §280A.** Treat those two as verified against the statute, not
+against a publication.
 
-- ⛔ **NOT on his 1040.** A shareholder who works in his own S corp is its **employee**, and
-  **Pub 587's own flowchart ends an employee at "No deduction."** **§67(g)** removed unreimbursed
-  employee expenses. ⚠️ **And that is no longer a temporary suspension** — an earlier version of
-  this line said *"dead through 2025"*, which implied it returns in 2026. **OBBBA made the
-  elimination PERMANENT for years after 2025.** _(Corrected 2026-09-21.)_
-- ⛔ **The usual workaround does not work either:** **§280A(c)(6)** bars any deduction attributable
-  to **renting the space to your own employer**. *(Not to be confused with §280A(g), the 14-day
+- ⚠️ **FIRST, A CHARACTERISATION THIS FILE MAY NOT MAKE.** A shareholder **who performs services
+  for** his S corp is its **employee** — but ⛔ **whether HE did in 2025 is not established, and it
+  is Julia's call, not this file's** (the struck passive-shareholder precedent above). 🔑 **And it
+  cuts the other way from what you would expect:** the record says he was **locked out** and holds
+  **no W-2**, and a shareholder who performed no services **is not an employee at all** — which
+  would make the whole employee analysis **inapplicable rather than adverse.** **Everything below
+  is conditional on that question.**
+- ⛔ **IF he is an employee, then NOT on his 1040.** **Pub 587's own flowchart ends an employee at
+  "No deduction."** ⚠️ **Four categories of employee can still file Form 2106** — Armed Forces
+  reservists, qualified performing artists, fee-basis state or local officials, and employees with
+  impairment-related work expenses. **None applies to him**, so the conclusion holds *for him*; it
+  is not a flat universal rule.
+  - ⚠️ **And it is no longer a temporary suspension.** An earlier version of this line said *"dead
+    through 2025"*, implying a return in 2026. **OBBBA made the elimination PERMANENT — the current
+    Form 2106 instructions read "eliminated miscellaneous itemized deductions for tax years
+    beginning after 2017", with no end year.** _(Corrected 2026-09-21.)_
+  - 🔑 **CITE IT CAREFULLY — the section number MOVED.** OBBBA **redesignated §67(g) as §67(h)** and
+    put a new (and opposite) educator-expense allowance at §67(g). **§67(g) is the right citation
+    for tax year 2025**, which is the year being prepared; **§67(h) is the right one for the
+    permanence statement.** ⚠️ **The IRS is itself inconsistent** — the current Form 2106
+    instructions say **§67(h)**, while the 2025 Schedule K-1 (1041) instructions still say *"Section
+    67(g) suspends … for tax years 2018 through 2025"*, which is stale. **Recorded so the next
+    session does not "correct" this back.**
+- ⛔ **The rent-it-to-your-own-corporation workaround fails — but NOT the way an earlier version of
+  this line said.** It claimed §280A(c)(6) *"bars any deduction"*. ⛔ **That is wrong and is struck.**
+  §280A(c)(6) disallows the **employee-lessor's** §280A(c)(1)–(3) deductions for items attributable
+  to renting the unit to his employer. 🔑 **The corporation still deducts the rent it pays.** So the
+  real consequence is that **the shareholder reports the rent as INCOME with nothing to offset it** —
+  **a bad deal, not a nullity.** _(The distinction matters for the next S-corp client, who will be
+  advised wrongly on the old wording.)_ *(Not to be confused with **§280A(g)**, the fewer-than-15-days
   rule, which is a different provision and does not cover a home office.)*
-- ✅ **The route that DOES work is an ACCOUNTABLE-PLAN REIMBURSEMENT.** The corporation reimburses
-  him, **deducts it on the 1120-S**, and the reimbursement is **not** income to him — Pub 463:
-  reimbursements under an accountable plan **are not reported as pay**.
-- 🔴 **Why that route is almost certainly shut for HIM, and it is four things at once:** the
-  deduction belongs to a **1120-S that is not filed and that we do not prepare**; an accountable
-  plan requires a **real reimbursement made during the year**, substantiated in time — ⛔ **it
-  cannot be constructed backwards at filing**; he was **locked out and holds no W-2**, so the odds
-  a formal reimbursement happened are very low; and even if it did, it reaches him **through the
-  K-1 we do not have**, at his ownership share.
-- ✅ **Where her instinct does land on the 1040: IF THERE IS A SCHEDULE C.** That fork is open
-  (Double reads `1040-SCH C`; the 2024 return does not support it — §4). **If one exists, Form 8829
-  or the simplified method is available and the template he filled in is usable.**
+- ✅ **THE ROUTE THAT WORKS: AN ACCOUNTABLE-PLAN REIMBURSEMENT.** The corporation reimburses him,
+  **deducts it on its 1120-S**, and the reimbursement is **not income to him** — Pub 463: a
+  reimbursement under an accountable plan is **not included in box 1 of the W-2**.
+  - ⚠️ **The timing rule is NOT what an earlier version of this line said.** It claimed a
+    reimbursement *"cannot be constructed backwards at filing"*. ⛔ **There is no such bright line,
+    and the claim is struck.** Pub 463's three rules are a **business connection**, **adequate
+    accounting within a reasonable period**, and **return of any excess within a reasonable
+    period** — with safe harbours measured **from when the expense was paid or incurred**, not from
+    the year end: **60 days to account, 120 days to return excess** (a periodic-statement
+    alternative also runs to 120 days). Outside them it is facts and circumstances.
+  - ⚠️ **A condition the old block omitted entirely:** for an **employee**, §280A(c)(1) requires the
+    business use to be **for the convenience of the EMPLOYER**, not merely appropriate and helpful.
+    **That is what gives a home-office reimbursement its "business connection" under Pub 463's first
+    rule.** It has to be met before any of this works.
+  - ✅ **Being a >2% shareholder does NOT kill this**, though the adjacent health-insurance rule in
+    this file points the other way: an accountable-plan reimbursement of **business expenses** is
+    not a §1372 fringe benefit. **Different rule, different outcome.**
+- 🟠 **WHY IT PROBABLY FAILS FOR HIM — and each reason is labelled, because they are not the same
+  kind of thing.** ⛔ **This is a flag, not a verdict.**
+  - ✅ **On file:** he was **locked out**, and he holds **no W-2**.
+  - 🔍 **Inference, ours not his:** nothing anywhere records that a reimbursement was ever **made**,
+    and with no reimbursement there is nothing to exclude or to deduct. ⓘ **And paying one NOW would
+    be a 2026 corporate deduction, not a 2025 one** — which is the accurate version of the
+    struck "cannot be built backwards" point.
+  - ❓ **OPEN, not fact — an earlier version of this line wrote it as settled:** whether the
+    **1120-S has been filed**. This file keeps that open elsewhere, the extended due date of
+    **2026-09-15 has now passed**, and **nobody has checked.**
+  - ⏰ **"The K-1 we do not have" is a WAIT, not a dead end** — all three are promised with a live
+    route since 2026-08-20.
+  - 🔑 **And the benefit mechanics are the reverse of how the old wording read:** the reimbursement
+    reaches him as **direct tax-free cash, 100%**. What travels on the **K-1** is the corporation's
+    **deduction**, reducing his share of ordinary income **at his ownership percentage** — and on a
+    corporation already running a loss that enlarges the loss, which is then **basis-limited at the
+    shareholder** (the Form 7203 thread above).
+  - 📋 **If the K-1s arrive, this is what would EVIDENCE a reimbursement:** a written accountable
+    plan or corporate minutes, an expense report, an actual payment, and the corporation's books.
+    **Ask for those rather than dismissing the route on probability.**
+- ✅ **WHERE HER INSTINCT LANDS ON THE 1040: IF THERE IS A SCHEDULE C.** That fork is open (Double
+  reads `1040-SCH C`; the 2024 return does not support it — §4). **If one exists, Form 8829 or the
+  simplified method is available.**
+  ⚠️ **But NOT as simply as an earlier version of this line said — it claimed the template "is
+  usable", and TWO HOMES break that.** He **moved states mid-2025**, and **Pub 587 allows the
+  simplified method for only ONE home in a year**: *"If you used more than one home in your business
+  during the year (for example, you moved during the year), you can elect to use the simplified
+  method for only one of the homes. You must figure the deduction for any other home using actual
+  expenses."* 🔑 **So the retained line just above — that under the simplified method none of the
+  housing figures move a number — is true PER HOME and misleading across two.** The second home
+  needs actual expenses, the apportionment **does** matter, and **whether his template covers both
+  homes is unknown.** **Check it before relying on it.**
 ⓘ **For the record, since an earlier version of this file got it wrong:** interest, taxes and rent
 sit in different 8829 boxes, but the **indirect column of both is multiplied by the same
 business-use percentage — the apportionment is identical.** What differs is that **interest and
