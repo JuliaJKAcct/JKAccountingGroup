@@ -42,8 +42,11 @@ job, so nothing depends on someone remembering.
 > test.** ⚠️ **Until then: a `0 street lines` count on a return that carries a K-1 is a reason to look,
 > not a clean result** — the same lesson as *"0 masked can mean BLIND rather than clean"* above.
 
-> 🔴 **A THIRD CONFIRMED INSTANCE — 2026-09-21 — ON A SCHEDULE K-1, WHICH IS THE CASE THE FIRST
-> ENTRY PREDICTED.** Reading an S corporation's 2024 Form 1120-S and its Schedule K-1, the tool
+> 🔴 **ANOTHER CONFIRMED INSTANCE — 2026-09-21 — ON A SCHEDULE K-1, WHICH IS THE CASE THE FIRST
+> ENTRY PREDICTED.** ⚠️ **Deliberately NOT numbered.** This entry first called itself *"the third"* —
+> but [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) rows 81 and 111 already record a third, fourth and
+> fifth, and **both of those rows note that this README still says two.** ⛔ **The count here has
+> been wrong for weeks; do not add to it — fix it.** Reading an S corporation's 2024 Form 1120-S and its Schedule K-1, the tool
 > masked the **corporation's** address (a `STE #` line) correctly and reported `1 street line` — and
 > let the **shareholder's** address through **in full**, an `APT` line on the same K-1. ⛔ **Nothing
 > was written anywhere**, but the count read as a clean result while a real address was in the
