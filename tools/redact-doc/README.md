@@ -47,10 +47,18 @@ job, so nothing depends on someone remembering.
 > masked the **corporation's** address (a `STE #` line) correctly and reported `1 street line` — and
 > let the **shareholder's** address through **in full**, an `APT` line on the same K-1. ⛔ **Nothing
 > was written anywhere**, but the count read as a clean result while a real address was in the
-> output. ⚠️ **The lesson the first entry already drew is now three-for-three: on a document that
-> carries a K-1, a street-line count is a reason to LOOK, not a clean result** — and the miss is on
-> the **addressee**, not the entity. 🛠️ **Whatever fix lands must have a test with an `APT` line
-> alongside the `STE` one.**
+> output. ⚠️ **The lesson the first entry already drew holds: on a document that carries a K-1, a
+> street-line count is a reason to LOOK, not a clean result** — and the miss is on the **addressee**,
+> not the entity.
+> ⛔ **AND THE FIRST DIAGNOSIS THIS ENTRY GAVE WAS WRONG — struck, because it contradicted the very
+> next entry in this file.** It said the fix needs *"a test with an `APT` line alongside the `STE`
+> one"*. **The unit designator is not the cause** — the entry below says so in terms (*"the cause is
+> NOT the suite segment — that group is optional and can never cause a miss"*) and names the real
+> shape: a street **name** the token class rejects. ⚠️ **A test written to "APT vs STE" is exactly
+> the test [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) warns "would pass while the bug shipped."**
+> 🔑 **What this instance should have recorded and did not: whether the shareholder's street NAME was
+> numeric.** Nobody looked, and the address is gone now. **Next time note the street name's shape,
+> not the unit designator.**
 
 > 🔴 **A SECOND CONFIRMED INSTANCE — 2026-09-13 — AND IT IDENTIFIES THE ACTUAL CAUSE OF BOTH.** Reading
 > a client's three one-page 2025 lender interest letters, **two of the three printed the addressee's

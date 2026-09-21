@@ -30,7 +30,7 @@
 - **Primary language:** **Russian** — confirmed by Lilian, 2026-08-11. Write to him in Russian even though he completed the organizer in English.
 - **Our engagement (services we provide):** Individual income tax — **Form 1040**, tax year **2025**. **First year with JK**; the 2024 return was prepared by another firm (a Chicago practice). ⚠️ **Whether this is really a Schedule C engagement is an open question** — see §4 and §5.
 - **Fiscal year-end:** December 31
-- **Accounting platform:** None — Double shows `platform: "none"` (no QuickBooks). His figures come from his own summary, not from books we keep. **We do not have the S corporations' books or their 1120-S returns either**, which is the gap that matters most.
+- **Accounting platform:** None — Double shows `platform: "none"` (no QuickBooks). His figures come from his own summary, not from books we keep. 🔵 **We now hold MIDWEST EXPEDITED CORP's own 2024 Form 1120-S and Schedule K-1** _(supplied by Lilian, 2026-09-21 — see §6)_, which is what finally put evidence under the basis question. ⛔ **We still do not have the other two companies' returns, any of the 2025 returns, or any of the books.**
 
 ## 2. Contacts
 
@@ -1616,7 +1616,12 @@ street address never appear here, and nor do dollar figures — those live in Do
   him.**
   🔴 **And it opens two, one of them new and large:** the corporation was carrying **very
   substantial loans TO its shareholders, and nearly all of that balance came off the books during
-  2024 with nothing in the return explaining how** — repaid, or **forgiven, which would be income?**
+  2024 with nothing in the return explaining how** — and 🔴 **the return shows no corporate source
+  for a cash repayment of that size.** Three readings: repaid from **outside funds**; **written
+  off** — ⚠️ which between a company and its own shareholder is more likely a **distribution** or
+  **compensation (with FICA)** than cancellation-of-debt income; or 🔴 **never bona fide loans at
+  all**, in which case recharacterising them across prior years **would have consumed the very basis
+  the question above is trying to measure. The two findings interact.**
   ⚠️ **A loan TO him gives him no basis; it is the opposite of the loan that would.** 🟠 **And it
   puts a FIFTH possible character on the 2025 money: a LOAN DRAW, which is not income at all.**
   ⓘ **Redactor: 8 SSN/ITIN and 11 street lines masked across the two documents — but it LET THE
@@ -1792,10 +1797,17 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
   CORPORATION'S OWN RETURN, and it went the bad way.** ⛔ **No shareholder loans, so zero debt
   basis; nominal capital stock; trivial opening AAA — against a very large allocated loss.**
   **Most of the 2024 loss looks basis-limited** (§6 log; figures in the working paper §2F).
-  🔑 **What is left is not a research question but a DECISION FOR JULIA:** does she accept that
-  reading, and if so what happens to 2024? ⓘ *The old ask below is superseded — we no longer need
-  him to tell us what he lent the company, because the balance sheet says he lent it nothing.*
-  ~~**The single fact the 2025 return most depends on.**~~
+  🔑 **Two things are left, and an earlier version of this row wrongly closed the second.**
+  ① **A DECISION FOR JULIA:** does she accept that reading — and may the 2025 return use the
+  carryforward as reported while this stands? ② 🔴 **THE ASK IS STILL LIVE, narrowed but not closed.**
+  ⛔ **A blank shareholder-loan line does NOT prove he lent the company nothing** — the balance sheet
+  is a **books** document at **two dates**, so a loan made and repaid inside the year leaves both
+  columns empty, and a note of the corporation he acquired from a lender may never have been
+  reclassified. 🔑 **And what he PAID for his shares cannot appear on the corporation's return at
+  all** — the AAA starts at zero on day one of S status, so stock cost is invisible there by
+  construction. **So ask him three things: what he paid for the stock, any contribution the company
+  never recorded, and any note of the company he holds or has paid under a guarantee.**
+  ⓘ *A guarantee alone gives no basis; a payment made under one does.*
   Three things, and only he or the corporation's records have them: **what he paid for the stock**,
   **what he lent the corporation out of his own pocket**, and **what distributions he took**.
   ⛔ **NOT the bank's debt** — entity borrowing gives an S-corp shareholder no basis, and with
