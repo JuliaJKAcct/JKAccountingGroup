@@ -775,15 +775,26 @@ they mean:
   cross-check on that point. ⚠️ **Stated as the mechanism, not as a verified e-file rule** — nobody
   here has read the IRS business rules themselves. 🔑 **What is certain either way: that the return
   was filed says only that nobody checked it.**
-- 🔴 **A SECOND GAP ON THE SAME RETURN, and it is sharper than a first pass suggested:** the
-  **§461(l) excess-business-loss line on Schedule 1 is blank**, and **no Form 461 appears in the
-  extracted text** *(same extraction limit as above)*. 🔑 **Form 461 had to be FILED whatever the
-  arithmetic produced** — the 2024 instructions require it where a taxpayer *"would report a loss of
-  more than $152,500 on any one of Form 461, lines 1 through 8"*, and **his S-corp loss goes on one of
-  those lines and clears that test** *(by how much is in the working paper, not here)*. ⛔ **An earlier version of this bullet called it "probably not
-  material". That was a determination made without the computation, and it is struck** — the test
-  excludes employment income and nets his other business items first, and this file does not hold
-  that split. **Flag for Julia.** ⓘ *(The figures and the full test are in the working paper §2E.)*
+- ✅ **§461(l) — ASKED AND ANSWERED 2026-09-21, and it CLOSES in the return's favour.** There is
+  **no Form 461** in the package *(proven three ways — the form's title and its attachment sequence
+  are both absent, and the one occurrence of "461" is the printed Schedule 1 label)*, and the
+  **line 8p adjustment is blank**. 🔵 **That was CORRECT on the substance: his net business loss is
+  below the 2024 joint threshold, so there was no excess business loss to report.** The test
+  excludes income from **performing services as an employee**, and his other business items net
+  against the loss first — **the computation is in the working paper §2E, which now holds it.**
+  🟠 **What remains is a filing defect with NO tax effect:** the 2024 rules require the form where a
+  taxpayer *"would report a loss of more than $152,500 on any one of Form 461, lines 1 through 8"*,
+  and his S-corp loss clears that — **so the form was owed even though it would have computed to
+  zero.** ⛔ **Two earlier versions of this bullet were wrong and are struck:** one called it
+  *"probably not material"* without computing it, the other left it open as a flag for Julia.
+  **Neither is needed now — it is computed and the carryforward figure is unaffected.**
+- ✅ **THE 2024 SCHEDULE E IS PAGE 2 ONLY — HE REPORTED NO RENTAL PROPERTY THAT YEAR**, and it is
+  proved by arithmetic rather than by the extraction: Schedule E line 41 combines the Part I total
+  with the partnership, trust, REMIC and farm-rental lines, and what reaches Schedule 1 is the
+  S-corp figure **alone** — so **all of those are zero** (working paper §2C-bis). 🔵 **This
+  independently corroborates what the client told Lilian on 2026-08-17** about 2025 and extends it
+  back a year: **the Minnesota house has never appeared on a return as a rental.** ⚠️ **It does not
+  establish whether he still OWNED it at 31 December 2025** — which is what Minnesota now turns on.
 - 🔑 **WHAT WOULD SETTLE ALL OF IT:** what he paid for the stock, what he lent the corporation
   **out of his own pocket**, and what distributions he took. **Three facts, and only he or the
   corporation's records have them.** ⓘ **The 2025 K-1s, if they ever arrive, would state the
@@ -1516,6 +1527,16 @@ street address never appear here, and nor do dollar figures — those live in Do
   amending the federal return.**
   ⓘ **Redactor: 4 of 44 pages extracted only partially; 22 SSN/ITIN, 1 account, 3 digit-runs and 12
   street lines masked; 8 EINs kept. Only 2024 was read.**
+
+- 2026-09-21 — **Two follow-up reads of the same 2024 return, both at Lilian's request, and both
+  CLOSED a question rather than opening one.** ① **Is there a Schedule E, and what is on it?** —
+  yes, **page 2 only**: the three S corps in the nonpassive column, everything else on the schedule
+  empty. **Part I (rental) is absent, and the arithmetic proves it**, which corroborates his
+  2026-08-17 answer and extends it back to 2024. ② **Is there a Form 461?** — **no**, and the
+  §461(l) computation has now been done: **there was no excess business loss**, so the blank line
+  was right; only the unfiled *form* remains, with **no tax effect**. 🔑 **That closes the flag an
+  earlier entry left open for Julia.** ⓘ **Figures in the working paper §2C-bis and §2E.**
+  ⓘ *Also corrected: an earlier sweep counted page 22 as Schedule E; it is Schedule EIC.*
 
 ### Outstanding items (CI-only — never in the SOP)
 
