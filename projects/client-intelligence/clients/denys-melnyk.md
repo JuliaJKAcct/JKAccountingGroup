@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -25,7 +25,7 @@
 - **Business name:** Denys Melnyk (individual — no registered business entity is engaged with us directly; his companies are separate S corporations we do not act for)
 - **Entity type:** ⚠️ Individual. **Whether his 2025 activity belongs on a Schedule C at all is an open question** — the 2024 return says it does not. See §4 and §5.
 - **Home state:** ✅ **Most of his 2025 residence is established from his own account** _(client call with Lilian, 2026-08-12)_: **Kirkland, Washington** until **May 2025**, then **Florida**. Neither state taxes personal income, so on residence alone there is **no resident state return**. The two states match the organizer, though ⚠️ **its change of address is dated 06.06.2025 against his "May" — a one-month gap in the only dated evidence there is.** ✅ **MONTANA IS CLOSED — Lilian's decision, 2026-08-12: *"olvida eso"*.** Her reasoning: **the client lived in Washington and then moved to Florida, so if he lived in Montana it was 2024, and 2024 is not our year.** That fits the record — the Montana return is **2024** and everything he described is **2025**, so there was never a contradiction to resolve. **Do not re-open it.** ⓘ _(Recorded for completeness, not as a challenge: the one thing nobody stated is the DATE he moved to Washington. Her call assumes the Washington period covers the start of 2025, which is the natural reading of what he said. If a Montana date ever surfaces inside 2025, a part-year return would follow — otherwise this stays shut.)_ ⓘ **Her earlier hypothesis — that Montana came from a COMPANY registered there — is moot now, but worth keeping for the next trucking client:** Montana registration is a real fleet arrangement, and **a registration-only entity sources no income there, so it produces NO Montana return at all**; only an entity that genuinely operated there would give a nonresident return, and only living there gives a resident one. ⚠️ **MINNESOTA is a third candidate, new on 2026-08-12: he owns a mortgaged house there** (§5). It creates **no** return on residence — he did not live there — but **Minnesota-source rental income would**, above the state's filing threshold. _(One narrower point for later: Washington has no income tax but does levy a **capital-gains excise tax** above a high threshold — worth a glance only if the 2024 Form 4797 disposal produced a 2025 installment gain while he lived there.)_ ⚠️ **The state question is NOT closed, because Illinois was never about where he lived.** His **2024** return carried an **Illinois nonresident** return that followed the income his companies generate there. **One of those companies paid him in the first months of 2025** (which one is not established — §5), so an Illinois-source share can exist for 2025 whatever his address — and **we cannot compute it, because the K-1 that would state it is exactly the document he never received** (§5). So Illinois rides on the missing-K-1 problem, not on his address. Getting this wrong is a filing failure, not a missed deduction.
-- **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer. **For 2025 only ONE of the three had activity for him** — Lilian relayed the name hedged, as *"something like Midwest Expedited"*, and **two of his three companies start that way, so WHICH one is not established** — and **he holds no W-2, no 1099 and no K-1 for it, and cannot obtain them himself.** ⏰ **Since 2026-08-20 the FIRM has a route he does not, and is now WAITING on all three K-1s rather than blocked without them — chased 2026-09-15** (§5). ⚠️ **Promised, not arrived.** _(§5 holds WHY, and deliberately: this line publishes to the Knowledge Hub, and the reasons involve third parties.)_
+- **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer. **For 2025 only ONE of the three had activity for him** — Lilian relayed the name hedged, as *"something like Midwest Expedited"*, and **two of his three companies start that way, so WHICH one is not established** — and **he holds no W-2, no 1099 and no K-1 for it, and cannot obtain them himself.** ⏰ **Since 2026-08-20 the FIRM has a route he does not, and is now WAITING on all three K-1s rather than blocked without them — chase date 2026-09-15, NOW PAST** (§5). ⚠️ **Promised, not arrived — and whether anyone chased him on that date is not established** (§6, 2026-09-21). _(§5 holds WHY, and deliberately: this line publishes to the Knowledge Hub, and the reasons involve third parties.)_
 - **Household / filing status:** **Married filing jointly in 2024, and married at 31 December 2025 as well** _(2025 organizer, 2026-08-12)_ — he also confirms he did **not** live apart from his spouse for the last six months, which closes the Head-of-Household branch (§5). **Do not ask him again.** ✅ **The children are settled: he has TWO — the DAUGHTER already claimed on his 2024 return (with EIC and the Additional Child Tax Credit), and a SON from a previous relationship who does not live with him and is reported nowhere** _(Lilian, 2026-08-12)_. The **wife is not one of the two** — she is his spouse on the joint return. ⚠️ **What is still open is the daughter's 2025 RESIDENCE and AGE**, not her identity: his 2025 organizer records no dependants at all (almost certainly a missed question), and the **Child Tax Credit turns on living with him more than half the year and on being under 17 at year-end** (§5). Worth real money. Names, dates of birth and SSNs are in **Double**, not here.
 - **Primary language:** **Russian** — confirmed by Lilian, 2026-08-11. Write to him in Russian even though he completed the organizer in English.
 - **Our engagement (services we provide):** Individual income tax — **Form 1040**, tax year **2025**. **First year with JK**; the 2024 return was prepared by another firm (a Chicago practice). ⚠️ **Whether this is really a Schedule C engagement is an open question** — see §4 and §5.
@@ -1151,8 +1151,8 @@ street address never appear here, and nor do dollar figures — those live in Do
   no silent edit, and no sign anyone has updated Julia on the now-overdue date.** `list_activity_log`
   (from 2026-08-29, re-checked) returned zero entries. Gmail bounded `after:2026/09/12` searched
   three ways — "Melnyk"; "K-1" OR "Midwest Expedited" OR "Midwest Truck Leasing" OR "AVDM Holdings";
-  and "K-1" OR "Midwest Expedited" OR Andrii OR "Midwest Truck" (the ex-partner's first name, from
-  note 490984) — found **no client-specific correspondence at all**: the only matches were an NATP
+  and "K-1" OR "Midwest Expedited" OR "Midwest Truck" plus **the ex-partner's first name, read live
+  from note 490984 and deliberately not written here** — found **no client-specific correspondence at all**: the only matches were an NATP
   newsletter, an unrelated Wolters Kluwer support-case thread (a different client's Form 1065
   question), and the internal weekly-sweep digest. **No email from the ex-partner has reached
   Julia's inbox.** Ping org-wide semantic search (K-1/bankruptcy/Midwest/health-coverage phrasings)
@@ -1162,6 +1162,24 @@ street address never appear here, and nor do dollar figures — those live in Do
   `BACKLOG.md` grepped — the existing tracked row is unchanged. **No new health-coverage, extension,
   or S-corp-Illinois-operations answers found.** Chase pass on the priority items below — no
   movement on any, and the top item now needs an active decision rather than a wait.
+- 2026-09-21 — **Gap check (not a sweep), because Lilian asked for a status recap.** Searched only
+  what could have moved since the 09-19 run, and only in three places: **Double** — both notes
+  re-read, `updatedAt` still Mon Aug 17 (485225) and Thu Aug 20 (490984), bodies unchanged; **the
+  Double file library — zero files added since 2026-08-13**, so **no K-1 has been filed INTO DOUBLE**
+  _(which is not the same as "the corporations have not filed", and not the same as "no K-1 exists" —
+  this client sends things by text message, so one could be on Lilian's phone and nowhere else)_;
+  and **Gmail `after:2026/09/19`**, three angles — "Melnyk"; the three company names OR "K-1"; and
+  the ex-partner's first name — **two hits, neither client-related** (an NATP newsletter about
+  beneficiary K-1s, and our own weekly sweep digest). 🔴 **Nothing has moved in any of those three
+  places, and the three K-1s are now SIX DAYS past their chase date.**
+  ⛔ **WHETHER ANYONE CHASED IS UNKNOWN, AND THIS CHECK CANNOT ANSWER IT.** The route to the
+  ex-partner runs over **Lilian's own mobile, by text message** (§2, §5) — a chase sent from her
+  phone leaves **no trace** in Double, in the file library or in Julia's inbox. So silence in the
+  three sources above is **fully compatible with a chase having been sent.** What can honestly be
+  said is narrower: **no record of a chase, and no reply from him, in Double or in Julia's Gmail.**
+  **Whether she wrote to him again is a question for Lilian, not a finding.**
+  ⚠️ **Bounds: 2026-09-19 onward, Double + Double file library + Gmail only** — **Ping and Drive
+  were not re-run**, and neither was her phone. **This is not a substitute for the weekend sweep.**
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -1172,7 +1190,7 @@ route with Julia), and the top item is now a **wait on a third party**. ⚠️ *
 on one.** ⚠️ **Only the first four reach the team on the published card.**
 
 - 🔴⏰ **THE THREE K-1s — PROMISED 2026-08-20, STILL NOT ARRIVED, AND THE CHASE DATE (2026-09-15) IS
-  NOW FOUR DAYS PAST, AS OF 2026-09-19.** ✅ **A route to them opened 2026-08-20 and it does not run
+  NOW SIX DAYS PAST, AS OF 2026-09-21.** ✅ **A route to them opened 2026-08-20 and it does not run
   through the client** — who it runs through, and how, is in §5 and on **Double note 490984**,
   deliberately not on this line, which publishes. **What changes now that the date has passed:**
   this is no longer simply "a wait to be managed" — it is a wait that has missed its own checkpoint,
@@ -1187,9 +1205,14 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
   on the table and are now the live alternative to open-ended waiting** — IRS wage & income
   transcript · the 1120-S itself · file and amend with **Form 8082** (§5). ✅ **His name and number
   are on Double note 490984** — until 2026-08-20 the firm's only route to these documents lived in
-  one person's phone. ⓘ **Re-checked 2026-08-29, 2026-09-12 and again 2026-09-19 — no arrival on any
-  of the three checks**, Double notes (both re-read in full, unchanged) and Gmail (three separate
-  search angles, including the ex-partner's own first name) all confirm nothing has moved.
+  one person's phone. ⓘ **Re-checked 2026-08-29, 2026-09-12, 2026-09-19 and again 2026-09-21 — no
+  arrival on any of the four checks.** All four re-read **both Double notes** in full (unchanged
+  every time) and searched **Julia's Gmail** on three angles, including the ex-partner's own first
+  name; **Ping and Drive** were covered by the first three but **not** by the 09-21 gap check, and
+  the **Double file library** (zero files added since 2026-08-13) was checked **only on 09-21**.
+  ⛔ **None of those four checks can see whether anyone CHASED him** — that route is Lilian's own
+  SMS, which leaves no trace in any system the firm searches. **"Not arrived" is established;
+  "nobody chased" is not, and is a question for Lilian** (§6, 2026-09-21).
   **This is now the single highest-priority open item on this file — flag it to Lilian/Julia rather
   than let another week pass on the strength of the same wait.**
 - 🔍 **PULL THE BANKRUPTCY DOCKET — still the cheapest open item, though no longer the first action**
