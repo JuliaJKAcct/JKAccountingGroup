@@ -101,6 +101,12 @@ the actual details.
   asked for a review given they plan to bring **two companies**. Julia granted 20% off,
   shown in the proposal as a partnership discount against the named standard rate. Do not
   quote this client add-ons casually — price moves are felt here
+- **WHY they are switching — the pain is support, not price** (Sergii, on a call with
+  Julia, 2026-09-21): at the current provider, IRS letters keep arriving and nobody
+  answers or takes ownership; support is effectively absent. This is both the sales
+  argument (the reply message leads with it) and a standing service rule for this
+  client once signed: **their IRS notices get answered fast and driven to closure** —
+  slow notice handling is the exact wound they came to us with
 - **There is a SECOND company waiting:** Olha's message says they plan servicing two
   companies with us, and Julia's reply sketched a separate quarterly-billed engagement
   for the second ("personal") company — NOT part of the delivered proposal; it needs its
@@ -121,6 +127,12 @@ the actual details.
 - 2026-09-18 — **Olha's counter (WhatsApp, Ukrainian):** the quote far exceeds their
   budget; they pay much less at their current provider; asked to review the price since
   they plan to bring two companies
+- 2026-09-21 (call) — **Sergii's complaint, from Julia's call with him:** no support at
+  the current provider — constant IRS letters, nobody responds. The negotiation reply
+  was rewritten to lead with this pain (IRS letters handled to closure, year-round
+  support) rather than the scope list. ⚠️ Flag widened: the delivered PDF names neither
+  "IRS letter handling" nor "owner tax planning" as included lines — both are now the
+  core sales arguments; add both lines and reissue before signing
 - 2026-09-21 (afternoon) — **Julia sent the proposal into the WhatsApp group** with her
   message: 20% discount while the business grows, monthly for the main company, and a
   separate quarterly-billed figure for the second ("personal") company. **Olha countered
