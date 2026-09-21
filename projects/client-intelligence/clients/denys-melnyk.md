@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1163,6 +1163,16 @@ street address never appear here, and nor do dollar figures — those live in Do
   or S-corp-Illinois-operations answers found.** Chase pass on the priority items below — no
   movement on any, and the top item now needs an active decision rather than a wait.
 
+- 2026-09-21 — **Gap check (not a sweep), because Lilian asked for a status recap.** Searched only
+  what could have moved since the 09-19 run: **Double** — both notes re-read, `updatedAt` still
+  Mon Aug 17 (485225) and Thu Aug 20 (490984), bodies unchanged; **the file library — zero files
+  added since 2026-08-13**, so no K-1 has been filed; **Gmail `after:2026/09/19`** across Melnyk,
+  K-1, the three company names and the ex-partner's first name — **two hits, neither client-related**
+  (an NATP newsletter about beneficiary K-1s, and our own weekly sweep digest). 🔴 **Nothing has
+  moved. The three K-1s are now SIX DAYS past their chase date and nobody has chased.** ⚠️ **This
+  check was bounded to 2026-09-19 onward and covers Double, Gmail and the Double file library only** —
+  Ping and Drive were not re-run, so this is not a substitute for the weekend sweep.
+
 ### Outstanding items (CI-only — never in the SOP)
 
 **The open list, in priority order — and it is NOT all client asks.** Items are ordered by what would
@@ -1172,7 +1182,7 @@ route with Julia), and the top item is now a **wait on a third party**. ⚠️ *
 on one.** ⚠️ **Only the first four reach the team on the published card.**
 
 - 🔴⏰ **THE THREE K-1s — PROMISED 2026-08-20, STILL NOT ARRIVED, AND THE CHASE DATE (2026-09-15) IS
-  NOW FOUR DAYS PAST, AS OF 2026-09-19.** ✅ **A route to them opened 2026-08-20 and it does not run
+  NOW SIX DAYS PAST, AS OF 2026-09-21.** ✅ **A route to them opened 2026-08-20 and it does not run
   through the client** — who it runs through, and how, is in §5 and on **Double note 490984**,
   deliberately not on this line, which publishes. **What changes now that the date has passed:**
   this is no longer simply "a wait to be managed" — it is a wait that has missed its own checkpoint,
@@ -1187,9 +1197,10 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
   on the table and are now the live alternative to open-ended waiting** — IRS wage & income
   transcript · the 1120-S itself · file and amend with **Form 8082** (§5). ✅ **His name and number
   are on Double note 490984** — until 2026-08-20 the firm's only route to these documents lived in
-  one person's phone. ⓘ **Re-checked 2026-08-29, 2026-09-12 and again 2026-09-19 — no arrival on any
-  of the three checks**, Double notes (both re-read in full, unchanged) and Gmail (three separate
-  search angles, including the ex-partner's own first name) all confirm nothing has moved.
+  one person's phone. ⓘ **Re-checked 2026-08-29, 2026-09-12, 2026-09-19 and again 2026-09-21 — no
+  arrival on any of the four checks**, Double notes (both re-read in full, unchanged), the Double
+  **file library** (zero files added since 2026-08-13) and Gmail (several search angles, including
+  the ex-partner's own first name) all confirm nothing has moved.
   **This is now the single highest-priority open item on this file — flag it to Lilian/Julia rather
   than let another week pass on the strength of the same wait.**
 - 🔍 **PULL THE BANKRUPTCY DOCKET — still the cheapest open item, though no longer the first action**
