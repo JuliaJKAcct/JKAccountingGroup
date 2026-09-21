@@ -1,6 +1,6 @@
 # Viacheslav Honcharenko
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -126,6 +126,51 @@ the actual details (and Claude can pull them live when a task needs them).
 - 2026-09-12 — **first full historical sweep (Lilian's session).** Double: `list_notes` returned 0 notes (none exist); `list_contacts` (2, one with tax access — see §2); `list_activity_log` read in full (9/9 events, since client creation 2026-05-19); `list_tasks` (12/12, all project-checklist tasks `notStarted` — no "Extension Filed" nonclosing task exists for this client, unlike Iurii Iakovenko's, but the **file itself (`2025 4868 Ext.pdf`) exists in the File Library, confirming the extension was actually filed**); `list_projects` unchanged (`waitingOnClient`, moved there 2026-08-04 by Julia, from `inProgress` since 2026-06-29 per Lilian). Gmail searched unbounded by every surname spelling: found a **2025-04-26 "Conference call with Julia CPA" invitation** naming Sergey Karpenko (admin@protitleagency.com) as organizer, with Honcharenko among the invitees — the first documented link between him and Pro Title Agency LLC's principal. Broadened search on "Sergey Karpenko" / "zhukbanda" (the email cc'd across several other firm clients' invoices) surfaced the Karpenko-cluster finding written into §5 above. Google Drive: his folder confirmed (two parallel copies exist — one under Julia's Drive, one under Maria Zavarce's, both from the 2026-05 TaxDome-to-Drive migration batch — a duplicate-folder pattern also seen on other backfilled clients, not itself concerning). Ping: `resolve_person`, `search_contacts`, and `search_meetings` (both client-scoped and org-wide) all returned no meetings genuinely about this client — recorded as a confirmed negative, not an unsearched gap.
 - **Nothing further was found in the sources actually searched.** Every source reached in this pass — Double (all planes), Gmail (unbounded), Google Drive, Ping — either returned material or a confirmed empty result; none was left unsearched.
 
+- 2026-09-18 — 🔴 **THE KARPENKO QUESTION IS ADVANCED FROM ANOTHER CLIENT'S FILE, AND A POSSIBLE NEW
+  LINK APPEARS: VALENTIN VOLZHANSKIY'S RECORDS SHOW PAYMENTS TO A PAYEE HIS SHEET NAMES
+  "Viacheslav Honcharenko".** ⛔ **That is a NAME MATCH in a client's own spreadsheet, not an
+  established identification** — the same step [`2025-form-1040.md`](../../tax-returns/valentin-volzhanskiy/2025-form-1040.md)
+  §3B records as its own lesson *("the file name carried his name too … which is suggestive and is not a
+  recipient block")*. **Treat it as a lead to confirm.** Preparing **Valentin Volzhanskiy's** 2025
+  Form 1040, his own records — classified by him — show **referral commissions and lead-generation
+  payments going OUT to Viacheslav Honcharenko**, and, separately, **money moving both ways with
+  Sergey Karpenko**, which Valentin marks as work.
+  🔑 **THE CLUSTER NOW HAS A THIRD MEMBER AND ONE SHARED PAYER.** ⛔ **An earlier draft of this entry
+  said "the same three names" — that was wrong.** This file records his own 1099 payers as **Maxrating
+  LLC, Optic Gold Inc and Pro Management Agency LLC**; *VoiceCapital* and *Pro Title Agency* are
+  **Karpenko-cluster** names on this file, **not his payers**. **Valentin is paid by Maxratings,
+  VoiceCapital and Pro Title Agency, and exchanges money with Karpenko as work — so exactly ONE payer
+  name overlaps**, ⚠️ **and it is spelt `Maxrating` here and `Maxratings` in Valentin's working paper,
+  which nobody has reconciled.** ⚠️ **So the answer to
+  *"who is Sergey Karpenko to this client"* is very likely NOT a one-to-one relationship but a
+  referral network several firm clients sit inside**, in which **Valentin's confirmed activity is
+  credit repair** and, newly, **real estate**. ⛔ **That is a strong inference from one client's bank
+  data and his own labels — it is NOT established, and it must be put to someone rather than written
+  up as fact.**
+  🔴 **AND IT BEARS DIRECTLY ON THE UNSETTLED SCHEDULE C HERE:** if Valentin deducts what he paid
+  Honcharenko as a business expense, **the same money is receipts on Honcharenko's side** — and this
+  file already says his 1099 treatment is unsettled and his Double column says plain `1040`.
+  ⚠️ **It also raises a 1099 question on VALENTIN's side, not this one** *(the duty is the payer's)*,
+  **but the receipts land here either way, 1099 or no 1099.**
+  ⚖️ **CONFLICT NOTE: the firm prepares returns for several people in this network who pay each
+  other.** That is not improper, but it is a thing to be conscious of, and **the two sides of a
+  payment should not be treated inconsistently between two of our own returns.**
+  ⓘ *Amounts are in Valentin's working paper, never here.* _(Worked by Lilian.)_
+
+- 2026-09-19 — **First ordinary incremental sweep, baseline 2026-09-12 (bounded 2026-09-12→09-19).**
+  Double: `list_notes` (still 0) and `list_activity_log` bounded to the window returned **zero
+  entries** — no property, note, task or file movement since the last full sweep. Gmail (every
+  surname spelling + `Karpenko`, after:2026/09/12): only the automated weekly-sweep digest email
+  itself; **no new correspondence found beyond the 2026-09-18 Karpenko-network entry already in
+  this file** (that finding came from Valentin Volzhanskiy's own working-paper session, not from a
+  source search bounded to this client, and is unchanged since it was written). Google Drive
+  (`fullText contains 'Honcharenko'`, modified after 2026-09-12): no hits for this client. Ping
+  (`search_meetings`, org-wide, this client's name + "Schedule C"): no results specific to him — a
+  confirmed negative, consistent with the first full sweep's finding that he has no indexed
+  meetings. **Chase pass:** the Schedule C position, the Karpenko relationship, and the Broward BTR
+  renewal assignment were all re-checked against the same sources above — **none moved**; all
+  remain open with no new deadline. The 2025 4868 extension (deadline 2026-10-15) is unaffected.
+
 ### Tax year 2025 — the review
 
 - **Filing position:** Form 1040, **with a dependant for the first time on record**, and **with 1099 income** whose treatment is unsettled.
@@ -137,13 +182,13 @@ the actual details (and Claude can pull them live when a task needs them).
 
 - 🔴 **Read the TaxDome thread from 2026-04-13/14 before contacting him.** The firm asked, he answered, and nobody recorded the outcome. Asking again is the failure `method.md` rule 1 exists to prevent.
 - 🔴 **Settle the Schedule C position** — 1099s from THREE payers (see §5) and a county business tax receipt, against a Double column that says plain `1040`.
-- 🔴 **Find out who Sergey Karpenko is to this client** (2026-09-12) — the evidence points at his business activity being connected to Karpenko's group (Best Broker Realty, Pro Title Agency, Optic Gold, VoiceCapital, the now-dissolved Pro Management Agency), but the nature of the relationship (contractor, employee, colleague) is unconfirmed. This likely settles the Schedule C question above once known.
+- 🔴 **Find out who Sergey Karpenko is to this client** (2026-09-12) — the evidence points at his business activity being connected to Karpenko's group (Best Broker Realty, Pro Title Agency, Optic Gold, VoiceCapital, the now-dissolved Pro Management Agency), but the nature of the relationship (contractor, employee, colleague) is unconfirmed. This likely settles the Schedule C question above once known. 🆕 **2026-09-18 — ADVANCED, from Valentin Volzhanskiy's file: a THIRD firm client sits in the same network, is paid by the same three payers, exchanges money with Karpenko as work, and PAYS THIS CLIENT referral and lead-generation commissions.** 🔑 **That reframes the question from *what is Karpenko to him* to *what is this network, and what work does it actually sell* — the answer on Valentin's side is credit repair and, newly, real estate.** ⛔ **Inferred from one client's bank records and his own labels — put it to someone, do not file it as fact.**
 - [x] **Confirm the 2025 Form 4868 is on file** — **YES, confirmed 2026-09-12**: `2025 4868 Ext.pdf` exists in the Double File Library _(Double `list_files`, 2026-09-12)_. Deadline is 2026-10-15.
 - **Assign the Broward County BTR renewal** — it is annual, and nobody owns it.
 
 ### Information still needed
 
-- [ ] What the business does, and whether it needs a Schedule C
+- [ ] What the business does, and whether it needs a Schedule C. 🆕 **2026-09-18: he receives referral and lead-generation commissions from another firm client, which is Schedule C activity if it is his trade or business — and those receipts exist whether or not a 1099 was issued.**
 - [ ] Who Sergey Karpenko is to this client, and what the third 1099 payer (Pro Management Agency LLC) actually paid him for
 - [ ] Who the second adult on the documents is (spouse? the daughter?)
 - [ ] Whether the name mismatch was resolved and the extension accepted

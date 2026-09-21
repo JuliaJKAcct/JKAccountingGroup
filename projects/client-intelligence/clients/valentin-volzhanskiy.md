@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-13 *(fifth entry same day — the return was prepared, then the tipped income was claimed)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-17 *(the return re-read — nothing keyed since 13 Sep, and the signature-date gap has widened)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -120,8 +120,10 @@ watch-outs, one-off arrangements, history that affects the work.
 - 🔴 **HE HAS MARKETPLACE HEALTH INSURANCE, SO FORM 1095-A GATES HIS RETURN EVERY YEAR — and it
   has already cost him money.** His 2024 return carried an **excess advance premium tax credit
   repayment** on Schedule 2 line 1a because his advance credit exceeded what he was entitled to.
-  **Form 8962 is mandatory and blocks e-file**, his coverage has **month-gaps** rather than running
-  all twelve months, and his income moving up or down changes the repayment. 🔴 **Get the 1095-A early, and get it as an ORIGINAL PDF from healthcare.gov** — almost
+  **Form 8962 is mandatory and blocks e-file**, and his income moving up or down changes the
+  repayment. ⚠️ **Coverage months vary year to year and must be read off the form, never assumed:**
+  **2024 had a four-month gap; 2025 ran all twelve with NO gap.** *(Corrected 2026-09-17 — this
+  bullet used to state the gap as a standing fact, and it is one of the four that publish.)* 🔴 **Get the 1095-A early, and get it as an ORIGINAL PDF from healthcare.gov** — almost
   everything he uploads is a phone photograph with no text layer, which no tool can read and
   which has to be keyed by eye.
 - 🔴 **HE IS A TIPPED WORKER, AND FROM 2025 THAT IS A DEDUCTION — his employers report the tips
@@ -133,8 +135,9 @@ watch-outs, one-off arrangements, history that affects the work.
   🔴 **But reporting is not eligibility, and his employers are the risky kind:** a **service charge
   or automatic gratuity distributed to staff is NOT a qualified tip**, and **both tip-bearing
   employers — and in fact all four of his 2025 employers — are contract catering, events or
-  concessions businesses**, where a fixed distributed service charge is normal. **Ask the employer to
-  split the figure before claiming it.**
+  concessions businesses**, where a fixed distributed service charge is normal. 🆕 ⚠️ **The figure WAS claimed on 2026-09-13 on the
+  reporting route — so the ask moved: split it before FILING, because eligibility is still not
+  established.**
   🛑 **ASK IT PRECISELY, OR IT RETURNS A FALSE NEGATIVE.** ✅ **A tip pool qualifies — even a mandatory
   one**; the rule expressly covers a *"mandatory or voluntary tip-sharing arrangement, such as a tip
   pool"*. ⛔ **What disqualifies is a charge added to the CUSTOMER'S BILL** by the establishment.
@@ -266,9 +269,10 @@ A running, dated record as we build this profile.
   🔴 **Two things are open and both move money.** ① The **Schedule C carries no expenses at all** —
   a declared, documented decision *(the client never returned the P&L template)*, but its cost
   compounds: it overstates the profit, the self-employment tax, the AGI **and the health-insurance
-  repayment**, in that order. ② **The larger employer's box-14 tips are nowhere on the return.**
-  ⛔ **Whether that is a deliberate position on service charges or an oversight is NOT established** —
-  it is worth **low four figures** of tax and is the first question for the reviewer.
+  repayment**, in that order. ② **The larger employer's box-14 tips.** 🆕 ✅ **INVERTED THE SAME DAY
+  (p.m.): Lilian KEYED them**, so the deduction is **claimed**, not missing — see the fifth entry
+  below. *(It read, in the a.m.: they are nowhere on the return.)* ⛔ **What stays open is their
+  ELIGIBILITY**, worth **low four figures** of tax.
   🔑 **And one thing nobody would look for: he lands JUST UNDER the 400%-of-poverty-line threshold
   where the premium-tax-credit repayment cap disappears entirely.** Income that turns up later does
   not cost its marginal tax — **crossing that threshold costs several thousand at once**, because the
@@ -325,6 +329,95 @@ A running, dated record as we build this profile.
   questions to the employer close it** — what the job actually was, and how much of the figure the
   customer chose to pay rather than the invoice imposing it.
 
+- _(2026-09-17)_ — 🔬 **SECOND PASS OVER THE PREPARED RETURN — Lilian asked for it to be "started",
+  and it was already prepared, so the work was to close what the review said it had NOT done.**
+  ⛔ **Nothing on the return was changed and nothing was written to Double.** Everything came from the
+  working paper, the 2025 forms and instructions at irs.gov, and Double metadata — **no client
+  document was opened and no organizer answer was read.**
+  🆕 🔴 **THE HEADLINE IS A DEDUCTION NOBODY HAD LOOKED FOR: Schedule 1-A has more than one Part, and
+  only Part II was ever analysed.** **Part III — No Tax on Overtime** — is live on someone working at
+  four catering, events and concessions employers, and 2025 W-2s were **not required to report
+  overtime separately** *(the same transition gap that hid his tips in box 14)*. ⛔ **His pay basis
+  and FLSA status are NOT established** and are part of the same employer ask. It is **neither
+  claimed nor ruled out**. **Part IV — car loan interest — was never asked about either**, though it
+  rides on the owned-or-leased conversation already open. ⓘ *Both Parts carry statutory caps; the
+  figures live in the working paper.*
+  ✅ **§162(l) IS NOW A COMPUTATION, NOT A QUESTION:** Pub. 974's Worksheets W and X give
+  **Schedule 1 line 17 = the repayment amount**, because the advance credit covered **100%** of his
+  premiums — so the premiums are **not** the deduction, and the earlier sizing overstated it ~3.6×.
+  ⚠️ **It is gated on an EMPLOYER question, not a client one: eligibility — not enrolment — for a
+  subsidised plan in any month, across four employers.** ⛔ **And that is NOT the test Form 8962
+  already passed**, so the twelve accepted coverage months are not the answer. 🔑 **The same fact
+  reaches the credit too**, which is why it is worth asking once and recording.
+  ✅ **The estimated-tax penalty is VERIFIED** *(and the paper's description of how was wrong — the
+  Form 2210 "short method" no longer exists)*, and **Form 8995 line 11 is confirmed off the
+  instruction rather than derived.**
+  🛠️ **Four stale statements in THIS file were corrected**, one of them on a **published** card: it
+  asserted his coverage has month-gaps as a standing fact *(2024 did; 2025 ran all twelve with none)*;
+  two more still described the tips as unclaimed after they had been keyed; and the prior-year
+  section still told the next preparer to reproduce 2024's `Other expenses` presentation — **which the
+  working paper had reversed** — while naming **line 27a**, which on the **2025** Schedule C is
+  `Energy efficient commercial bldgs`, not Other expenses *(that is now line 27b)*.
+  ⓘ *Full working, with every figure and its form/line, in the working paper **§11**; the figures stay
+  there and never here.*
+
+- _(2026-09-17, later)_ — 📤 **THE ATX WORKLIST WAS DELIVERED TO LILIAN AS AN ON-BRAND PAGE.** She
+  asked for the tables to work from at the keyboard, plus what is still to ask and what is missing.
+  🔑 **The shape is the one the firm settled on 2026-09-06: she types into the software from the
+  page, so the page carries more than the chat would** — every figure in the entries tables with its **form, page,
+  part and line**, **the arithmetic that produced it**, marked **typed** or **computed**, and the
+  **ATX entry route, marked NOT ESTABLISHED for both** since no session has keyed either; plus a
+  **tickable worklist that remembers itself**, grouped by **where she is working** rather than by
+  importance.
+  ⛔ **Two entries are shown as BLOCKED rather than ready to key** — both wait on the employers, and
+  presenting a conditional figure as an instruction is how a wrong number gets typed.
+  🛑 **AND WHAT THE PAGE DELIBERATELY DOES NOT CARRY, caught by the independent review: the question
+  list and the missing-items inventory are PHASE 1's REVIEW OUTPUT, and the firm's rule is that the
+  review goes in the CHAT while the tables go on the page.** The first version carried both; they
+  were removed and delivered in chat. ⛔ **There was an argument that restating already-open items is
+  not review output — and that is exactly the reasoning the firm forbids.** The page invites her to
+  overrule it; a session may not.
+  🔒 **No organizer-sourced VALUE reached the page, and no identifier of any kind** — given name only.
+  ⚠️ *The first version of this entry claimed "two items" rest on organizer answers; there were at
+  least four, three of which left with the question list, and none was ever a value. The wider
+  organizer-DATA reading is still an open question for her, not something this delivery settled.*
+  ⚠️ *And it is a hosted page whose URL travels onward by itself — not a file that dies with the
+  session. Hers to delete once the return is filed; deleting does not undo a forward already made.
+  Figures stay in the working paper and on that page — never here.*
+
+- _(2026-09-17, third)_ — 🔁 **THE PREPARED RETURN WAS RE-READ at Lilian's request** *(several days
+  had passed and she wanted to know what was outstanding)*. **Read through the redactor.**
+  ⚠️ **The by-hand leak grep the firm requires on a glyph-decoding read was clean FOR SSN SHAPES —
+  that is what it tests, and it should not be read as a clean bill.** 🔴 **It was not: the taxpayer's
+  home street line came through UNMASKED three times**, which is a reproducible gap in the tool and is
+  now logged against the follow-up that already tracks that family. **Nothing reached the repo.**
+  🛑 **THE HEADLINE: nothing that PRINTS has changed since 13 September**, and **none of the second
+  pass's figures appear anywhere.** ⛔ **Stated that way on purpose — this searched a printed package,
+  so it cannot see input-screen state**, and two of the open checks live exactly there. Only two
+  things moved on the printed package, neither a figure: it was **reprinted** *(the preparer's
+  signature date moved with it)*, and **ATX's own penalty worksheet is now in it**, which previously
+  was not — itself proof the software was opened that day.
+  ✅ **FOUR THINGS THE READ CLOSED**, all previously derived or unchecked: the qualified-business-income
+  form's own input line reads the **net-of-SE-tax** figure rather than the gross *(it had been listed as
+  an on-screen check and turned out to print)*; its **taxable-income-before-the-deduction line is now READ, not derived**;
+  its **carryforward line prints ZERO, so nothing carries into 2026** — established rather than
+  inferred; and the **estimated-tax penalty is corroborated by the software's own quarterly
+  worksheet**, which foots to the same figure and to the prior-year safe harbour.
+  🔴 **AND THE SIGNATURE DATES — an OPEN ITEM, not a defect, and be exact about what is new.** The
+  taxpayer's signature is dated the day the **EXTENSION** was filed; the preparer's, the day the
+  package was reprinted. ⛔ **That gap was already recorded on 13 September and has moved by three
+  days — it is the same finding.** 🆕 **What IS new: the signature form is not in the package at
+  all**, so the thing that had to be checked still cannot be checked from a PDF.
+  ⛔ **An authorisation dated before the return existed is not valid authorisation.** The signature
+  form itself is not in the package, so it has to be checked on the signature screen and a fresh one
+  obtained before e-filing.
+  ⛔ **Two checks a printed return can never close** — the source of the carryforward input, and a
+  W-2 eligibility checkbox — **are input-screen state and print nowhere.** They stay open however
+  many times the package is re-read.
+  ⓘ *A number that looked like an unexplained adjustment turned out to be the extraction
+  concatenating a line number with a zero value; the arithmetic settled it. Recorded in the working
+  paper so nobody re-chases it. Figures stay there — never here.*
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
@@ -349,10 +442,14 @@ A running, dated record as we build this profile.
      premium tax credit together. 🔑 **What
      remains is a client conversation, not a blocker: ask him what the work was**, because the
      Schedule C's principal business and code depend on the answer.
-  4. **The tips deduction is new, large and unclaimed.** He is a bartender with tips reported by
-     two different employers in two different W-2 boxes, and he answered **"None of the above"** to
-     the organizer's 2025-updates question. The multi-employer computation on Schedule 1-A line 4c
-     needs settling before the figure is final.
+  4. 🆕 🟡 **SUPERSEDED 2026-09-13 (p.m.) — THE TIPS WERE CLAIMED.** *(It read: the deduction is new,
+     large and **unclaimed**.)* He is a bartender with tips reported by two different employers in two
+     different W-2 boxes, and he answered **"None of the above"** to the organizer's 2025-updates
+     question. **Lilian keyed the box-14 figure; the multi-employer computation resolved on the form.**
+     🔴 **So this is no longer a gap but a LIABILITY: the deduction is claimed and its ELIGIBILITY is
+     still not established, and the deadline moved from the keystroke to the FILING.** ⚠️ **Items 1
+     and 3 of this list were individually ticked while this one was not, which made it read as
+     current — corrected 2026-09-17.**
 - **Questions put to the client.** (Answers to be appended here as they arrive.)
   - [x] ~~Confirm whether he was paid by **VoiceCapital Inc** during 2025~~ — ✅ **answered from the
         firm's own files on 2026-09-13, without asking him.** He was. *(The form is the one the firm
@@ -384,9 +481,15 @@ A running, dated record as we build this profile.
   - Filing status **Single**; no dependants; standard deduction; Florida only, **no state return**.
   - A **Schedule C** existed, with the "started this business" box ticked for 2024 — **that box must
     not be ticked again for 2025.**
-  - Every Schedule C deduction sat in **`Other expenses` (line 27a, itemised in Part V)** and
-    nothing on a named line. That is **the firm's own convention**, not an outside preparer's, and
-    the reproduce-the-prior-year method says to follow it unless there is a reason not to.
+  - Every Schedule C deduction sat in **`Other expenses` (itemised in Part V)** and nothing on a
+    named line — the firm's own convention, not an outside preparer's.
+    🔴 **DO NOT REPRODUCE IT WHOLESALE — the working paper REVERSED this on the evidence** *(§3E, §4
+    decision 4, 2026-09-12)*: a car's **operating** costs belong on **line 9**, depreciation on 13,
+    lease payments on 20a, ⛔ **never `Other expenses`.** *"The firm did it last year" is a reason to
+    be consistent, never a reason to repeat an error.*
+    ⛔ **AND THE LINE NUMBER HAS MOVED — this bullet used to say "line 27a", which is wrong for 2025.**
+    ✅ **Read off the 2025 Schedule C PDF (irs.gov, 2026-09-17): line 27a is now `Energy efficient
+    commercial bldgs`; `Other expenses (from line 48)` is line 27b.**
   - **A qualified-business-loss carryforward runs into 2025** — the 2024 Form 8995 closed with a
     negative total on its last line. Nothing in the 2025 documents points at it; it is only
     knowable from that return.
@@ -399,7 +502,175 @@ A running, dated record as we build this profile.
   documented decision, the tips question still open. **The return is prepared and checked, and is NOT
   yet filed.**
 
+### 2026-09-18 — the client's own expense workbook, and what it settled
+
+**He uploaded a spreadsheet he had built for us** — a full-year extraction of **four bank and card
+accounts of his** *(the institutions are named in Double, and in the working paper)*, with his own
+classifications on it. It says of itself that it is *"not a filed tax return"* and refers every
+judgement back to us. 🛑 **It has no business-purpose column, so it can be triaged and not
+categorised** — the same defect the
+[`personal-card-reimbursement`](../../../.claude/skills/personal-card-reimbursement/) skill exists for.
+By its own count, well under one per cent of the pooled outflow is a high-confidence deduction
+candidate.
+
+🔴 **THE FINDING THAT MATTERS MOST IS ON THE INCOME SIDE AND IT RUNS THE OTHER WAY.** The workbook
+leaves a large block of inflows *"unclassified"*, and the client's own sheet labels two of those
+payers **"work income"**. 🔑 **They are two of the four W-2 employers already on his return.** The
+tool had keyed on the literal word `PAYROLL` in the bank description; one employer changed its
+descriptor from `DIRECT DEP` to `PAYROLL` mid-year, and every earlier deposit fell out of the payroll
+bucket. **The net-pay tie-out confirms it — for one employer it is exact to the penny against box 1
+less boxes 2, 4 and 6.**
+⛔ **So "work income" in his vocabulary means "money I earned by working" — it is NOT a statement
+about which schedule a dollar belongs on**, and no unclassified deposit goes on a Schedule C until its
+payer has been checked against his W-2 employers. **Reporting it would report the same wages twice and
+turn them into self-employment income.**
+
+✅ **CREDIT REPAIR IS CONFIRMED** — Lilian suspected it and the client's own sheet says it: his
+credit-monitoring subscription is *"used for credit-repair business"*, one contractor he pays is
+recorded as *"contractor / credit repair"*, one of his payers is a credit-repair company, and the
+largest payer on the return is one too. **On the money it is the main activity, not a sideline.**
+
+🆕 **AND A THIRD ACTIVITY NOBODY HAD RAISED — REAL ESTATE.** The same sheet records **brokerage fees
+to a Florida brokerage (LOKATION)**, **real-estate licence-renewal education**, and business meals
+described as *"meetings with realtors"*. **Nothing on his return mentions real estate at all, and a
+person does not pay a brokerage fee or renew a licence without holding one.** 🔑 **So the open
+question is no longer "what was the VoiceCapital work" but "how many businesses is this" — and that is
+a question of fact only he can answer.** ⚠️ **It also means the return's stated principal business and
+its activity code are both wrong: the code on it is the one for drinking places, not catering, and
+neither describes any of his payers.**
+
+🔴 **Unfiled information returns are now a live exposure.** His own sheet confirms he paid contractors,
+referral commissions, lead generation and a paralegal, naming the people. **The test is the annual
+total per payee**, the 2025 threshold is the old one, and **Zelle does not remove the payer's duty.**
+**His Schedule C currently answers "No" to the question of whether he made payments requiring a
+Form 1099** — which, if wrong, is a false answer under penalties of perjury on the exact line the IRS
+uses to select these cases. ⚠️ **Two of the payees are JK clients** — the same pattern as the
+VoiceCapital discovery, and a conflict to name rather than to use.
+
+⚠️ **The file is not a closed system.** His **Chase Prime Visa statements stop on 1 December 2025** and
+no statement covering the rest of December was present — **his busiest month** — and five payers he
+confirmed as work income have **no matching row anywhere in the extract**. **Completeness cannot be
+certified on either side until that is closed.**
+
+🔑 **AND THE ONE OPERATING RULE THAT CAME OUT OF IT: the new income and the expenses go onto the
+return in ONE pass.** He is very close to the 400%-of-federal-poverty-line limit that governs how much
+of his health-insurance subsidy he repays, and it is a cliff, not a slope. **A return keyed with the
+income and not yet the expenses shows a balance due that is wrong by thousands** — so it is never
+quoted to him, never printed and never filed in that state. ⚖️ **The same arithmetic run backwards is
+why we take the boring documented deductions and refuse the large estimated ones: a deduction
+disallowed later does not only cost its own tax, it detonates the subsidy repayment a second time.**
+
+ⓘ **The full analysis, with every figure, its source and where it is typed, is in the working paper's
+§13.** Figures stay there.
+
+### 2026-09-19 — the 1099 sweep, the 2024 vehicle, and the posture Lilian set
+
+🔑 **LILIAN SET THE POSTURE FOR THIS RETURN AND IT GOVERNS WHAT WE ASK FOR:** *"no somos auditors…
+vamos a tomar la información que nos da el cliente y preparar su declaración… en caso de que él diga
+algo incorrecto o falso, sería un problema de él."* ⛔ **So the firm does NOT ask this client for
+mileage evidence, trip logs, meal attendees or receipts.** **What we ask for is what the FORMS
+require as inputs, and documents the firm cannot produce itself.** *(The working paper's §14H is the
+live list; its earlier substantiation discussion stays as the record of the law, not as an
+instruction.)*
+
+✅ **THE 1099 SWEEP FOUND THREE — Julia's Drive, full-text, paginated to exhaustion.** The firm holds
+1099s naming him from **Maxratings, VoiceCapital and Pro Title Agency.** ⚠️ **That is what the firm
+HOLDS, not how many were issued** — a scan with no text layer would not match a full-text search, and
+the other payers are outside the firm, so only he can say.
+🔑 **The Maxratings one was found the same way the VoiceCapital one was: in the PAYER's Drive folder,
+under a filename carrying no person's name**, matched by the full-text index reading inside the PDF.
+**One of its batch-mates was renamed and filed into its recipient's folder; his never was** — so it
+was invisible from his own file, his uploads and his organizer at once. ⌨️ **Filing the firm's own
+copy into his folder under a proper name is the fix.** ⓘ *His own copy of it, already in Double, is a
+one-page scan with no text layer — the redactor stops on it, which is why the figure was always taken
+from the firm's copy.*
+⏳ **AND TWO OF THE PAYERS ARE OUR OWN CLIENTS — Voxago and Paylite — so their 1099 question is the
+FIRM's to settle from THEIR books, not his to answer. It is NOT settled yet:** the amounts that make
+it look closed come from **his** bank extract, which the firm has already documented as incomplete.
+⌨️ **Read the payers' own 2025 ledgers to close it.** ⛔ **Everyone else on his list is outside the
+firm**, so only he can say whether they issued one.
+
+🔴 **TRUSTED CREDIT REPAIR LLC is NOT a firm client** — no Double record, no Drive folder, no file.
+**It paid him during 2025 and he labelled it work income himself; it is the largest single piece of
+income missing from the return.** **So the "did they send you a 1099?" question genuinely has to go
+to him.** ⚠️ **The answer does not change what goes on the return** — the income is reportable either
+way; it changes only whether a matching notice is coming.
+
+✅ **2024 DEDUCTED FUEL, which answers a question that was open** — inside *Other expenses*, with
+**line 9 blank, Schedule C Part IV empty, and no business-use percentage at all.** ⚠️ **Whether it was
+CAR fuel or EQUIPMENT fuel is not established** *(on a catering activity either is ordinary)*, **and
+if it was equipment fuel there was no actual-expense claim at all.**
+🛑 **THREE things decide the 2025 method and none is settled: that question · when the vehicle was
+placed in service · and whether the car is OWNED or LEASED.** ⚖️ **The answer differs between the
+last two** — for a leased car a prior actual-expense year rules the mileage rate out; for an owned car
+the working paper records a real argument the other way. ⛔ **The firm has NOT concluded the route is
+closed; that position is Lilian's and Julia's.**
+
+🏠 **On the home office he has already answered the two questions that usually stall it**: he states
+the room at the first address was used **exclusively** as an office, and **he himself excluded the
+second residence** as mixed-use. 🔴 **What is missing is arithmetic, not judgement — he gave a
+PERCENTAGE, and both methods want SQUARE FEET**: the office area and the total area of the home. **A
+percentage cannot be typed into either form.**
+
+✂️ **Lilian is asking him to split his expenses by business.** ⚠️ **A caution on the wording, recorded
+because it changes the answer he gives:** her framing is *"catering and credit repair"*, but **on this
+return the catering work is his W-2 employment**, and **none of his three 1099 payers is a caterer**.
+🔑 **Asking him to split by WHICH WORK the expense belongs to, listing the payers, avoids him filing
+employment costs under a business that does not exist on his Schedule C.**
+
+### 2026-09-20 — Julia settled the two-business question, and the client ask was drafted
+
+✅ **JULIA CONFIRMED HE HAS TWO ACTIVITIES** *(relayed by Lilian)*: the **catering** work he reported
+on his 2024 Schedule C, and a **credit-repair** activity that is new. 🔑 **That closes the question the
+firm had been circling** — whether the second business was real, and what the first one was.
+⚠️ **BUT THAT IS TWO ACTIVITIES, NOT YET TWO SCHEDULE Cs.** A Schedule C is filed for an activity
+that **traded in 2025**, and none of his 2025 1099 payers is a caterer, so **where 2025's catering
+receipts would come from is still unknown**. 🔑 **So the expenses are being collected on two separate
+templates either way** — that is what settles it. **A catering template that comes back with costs
+and no income means the activity did not trade in 2025**, and the return carries one Schedule C, not
+two. ⛔ **Nothing should be keyed on the assumption of two until those templates come back.**
+
+🔴 **AND THE VEHICLE USE HAS TO BE SPLIT TOO — Lilian's catch, and it is the right one.** Two
+activities means the mileage is apportioned between them, not assigned whole to one. **The draft asks
+him for two figures and gives a worked example**, so he cannot answer with a single number.
+
+📨 **A Russian email was DRAFTED for him on 2026-09-20, under Lilian's name, in simple register, and
+handed to Lilian.** ⚠️ **The firm has no record of it being sent** — the draft was produced in a
+working session and given to her; whether and how it went is not recorded here.
+**It asks him to:** confirm the four W-2s are all of them · say whether one payer sent him a 1099 ·
+fill **two separate expense templates**, one per activity · describe the car *(make, model, year;
+owned or leased; when he began using it for work; odometer at both ends; business, commuting and
+personal miles; whether it was the same car the year before)* · split the miles between the two
+activities · send the 2025 year-end statement from the **car lender or leasing company** · and give
+the **home office in SQUARE FEET**, because the tax form takes an area and not a percentage.
+✅ **It deliberately does NOT ask for parking and tolls — he already gave those**, which is
+[`method.md`](../../pre-return-review/method.md) rule 1 applied. ⛔ **And it asks for no
+substantiation at all**, per the posture set on 2026-09-19.
+
+🚗 **ON THE CAR, TWO DIFFERENT LEVELS OF EVIDENCE, worth keeping separate.** The **make and model are
+his word alone**, from his own rules sheet — **they appear in none of the 1,519 transaction rows of
+the extract he sent**, which is not the same as saying no record of them exists anywhere. **That is
+why the draft asks him to state them.** **The PAYMENTS are verified**: twelve identical monthly withdrawals to a named auto account,
+running the whole year. ⚠️ **Twelve identical payments fit a LEASE exactly as well as a loan**, so
+what is established is the counterparty, not the contract. 🟢 **That is still enough to ask for a
+concrete document — the 2025 year-end statement from that company** — ⛔ **but on a lease there is no
+interest statement to get, which is why the owned-or-leased question comes first.**
+
+🔴 **A NEW PROBLEM, FOUND 2026-09-20 AND NOT YET PUT TO HIM: his stated housing dates do not match his
+own payments.** He says he was at the first apartment through the spring and at the second from the
+summer — **but direct payments to the first reappear in the autumn, and a rent rail he never
+mentioned covers the start of the year.** ⚠️ **One spring month shows no payment on any of the three
+LANDLORD rails** — ⓘ *said of the transaction extract he sent, which stops on 1 December and may not
+be all his accounts; it is what the search returned, not a fact about where he lived.* ⚠️ **TWO of
+the companies in the mix are rent-FINANCING services rather than landlords**, which is part of why
+the picture is hard to read — **and a financier's repayment schedule cannot date his occupancy at
+all**, because what is deductible is when the financier pays the landlord. ⛔ **This is not a question about his honesty — it is a form input**: the home-office deduction
+is computed on the **months** the office existed, and those months are not currently knowable. 🔑 **It
+should go out with the next message**, alongside the square-footage question already asked.
+ⓘ *Two small charges the workbook filed as rent are renters insurance.*
+
 ### Outstanding items (CI-only — never in the SOP)
+
 
 - 🔴 **The box-14 tips are CLAIMED but not ESTABLISHED — close it before filing.** Worth **low four
   figures** of tax. **Two questions, and they go to the EMPLOYER, not the client:** what job he
@@ -407,12 +678,34 @@ A running, dated record as we build this profile.
   of the figure the **customer chose** to pay rather than the invoice imposing it. ⛔ **Do not ask
   "was it mandatory" — a mandatory tip pool still qualifies, and that wording returns a false
   negative.**
-- 🔴 **Collect the Schedule C expenses** — the organizer never asked for them, and this is the single
-  highest-value hour left on the return.
+- 🟡 **The Schedule C expenses ARRIVED on 2026-09-18 — as a workbook, not as deductions.** *(See the
+  log entry for that date.)* 🔄 **REWRITTEN 2026-09-20 — the posture changed on 2026-09-19** *(Lilian:
+  we are not auditors; we take what the client gives us and prepare the return)*. ⛔ **So the
+  business-purpose-per-line ask, the mileage evidence and the exclusive-use challenge are RETIRED** —
+  he has stated exclusive use and we take it. ✅ **What replaced the workbook is TWO expense
+  templates, one per activity, asked on 2026-09-20.** 🔴 **What is still genuinely missing is a
+  month-by-month rent schedule** *(rent reached the landlord by five different routes, two of them
+  financing companies, so the same rent can appear twice)* — **and it is now blocked on the housing
+  dates below, not just on the routes.**
+- 🔴 **The return's principal business and activity code are both wrong** and are typed fields.
+  **Neither can be corrected until he answers what the work actually is.** ⛔ *(This supersedes the
+  narrower "ask him what the VoiceCapital work was" below — it is the same question, widened.)*
+- 🔴 **Unfiled 2025 Forms 1099-NEC, and Schedule C line I currently says "No".** Needs the year total
+  per payee before anything else. **A missing 1099 does not disallow the deduction** — the exposure is
+  penalties, and it is a separate question from the expense.
+- 🔴 **Get the Chase Prime Visa statement for 2–31 December 2025.** Without it neither income nor
+  expenses can be called complete, and December is his busiest month.
 - ⚠️ **Check the taxpayer signature date before e-file** — the prepared return carries an April date
   against a September preparation, which looks like a field inherited from the extension.
 - ⚠️ **Tell him the balance due BEFORE the IRS does** — he has a live installment agreement and a new
   balance can default it.
+- ✅ ~~**HOW MANY BUSINESSES IS THIS?**~~ — **ANSWERED 2026-09-20 by Julia: catering and credit
+  repair.** *(See the log entry for that date.)* 🟡 **What survives is narrower and still open:**
+  whether the **catering** activity actually **traded in 2025** — so whether the return carries one
+  Schedule C or two — and whether the **real-estate** work is a third. **The two expense templates
+  are what answer both.** ⓘ *Splitting is nearly money-neutral this year* — one Schedule SE combines
+  them and the QBI carryforward applies to the aggregate — *except for the health-insurance
+  deduction, which can sit under only one business.*
 - ✅ ~~Get the 2025 Form 1095-A read~~ — **closed 2026-09-13**, supplied directly by Lilian.
 - ⚠️ **Ask him what the VoiceCapital work actually was** — the Schedule C's principal business and
   code turn on it, and **none of his three 1099 payers is a caterer.**
@@ -431,6 +724,29 @@ A running, dated record as we build this profile.
 - [ ] Whether the IRS installment agreement is still live, and for which years.
 - [ ] Boxes 15–17 on each 2025 W-2, to close the out-of-state question for good.
 - [ ] Whether the catering activity continued in 2025 or was replaced by the contractor work.
+- [ ] 🆕 **Whether he holds a Florida real-estate licence, and whether he earned anything from it in
+      2025** — brokerage fees and a licence renewal are in his own records; the return knows nothing
+      of it.
+- [ ] 🆕 Whether he was **eligible** for a subsidised health plan at any of his employers, and for
+      which months. 🔑 **Eligibility, not enrolment — and it is the highest-value unanswered question
+      on the return.**
+- [ ] 🆕 Whether he paid **dental, vision or long-term-care** premiums separately in 2025.
+- [ ] 🆕 🚗 **The car — one question, asked 2026-09-20:** its **make, model and year**; **when it was
+      first used for the business**; **whether it is owned, financed or leased**; and whether it was
+      already used for work in an earlier year. 🔑 **The answer decides which vehicle method is even
+      available**, and the description is a typed field on the return. ⚠️ **The make he has given is
+      his own statement on his expense sheet** — it appears in **none of the 1,519 rows of the bank
+      extract he sent**, which is not the same as saying no record of it exists. ✅ **What the extract
+      DOES corroborate is twelve identical monthly payments to a Capital One auto account** — and
+      twelve identical payments fit a lease as well as a loan, which is why the question is asked
+      rather than inferred.
+- [ ] 🆕 Whether any **other bank or card account** was used in 2025 that is not in the workbook.
+- [ ] 🆕 🔴 **Which months he lived at each address** — his own dates and his own payments disagree, and
+      the home-office months cannot be computed until they are reconciled *(2026-09-20)*.
+- [ ] 🆕 🔴 **How the vehicle use divides between the two activities** — asked 2026-09-20. ⛔ **One
+      mileage figure cannot be keyed once the return carries two Schedule C activities:** each one
+      has its own business-miles line and its own vehicle questions, so the split has to come from
+      him.
 
 ## 7. Links
 

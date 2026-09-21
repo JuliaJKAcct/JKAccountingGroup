@@ -1,6 +1,6 @@
 # Deep Tech Development Group LLC
 
-> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-09-12
+> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -259,11 +259,7 @@ the actual details.
   confirmed by Shopify.**
   _(Shopify support conversation, read and answered 2026-09-03 — Lilian and Julia.)_
 - 🔴 **USPS mail forwarding for this company (and for 1701 N M ST LLC, Universal Trading Technology
-  LLC, and the owner individually) ends 2026-09-18 — now 6 DAYS OUT.** Confirm whether it needs renewing or whether
-  a permanent address change should be filed instead, before mail starts bouncing. STILL OPEN; no evidence found that a decision has
-  been made. _(Gmail, 2026-08-14; re-chased 2026-09-12 — a
-  search of Gmail bounded `after:2026/09/07` for USPS forwarding on this company or its related entities
-  found nothing new.)_
+  LLC, and the owner individually) — deadline was 2026-09-18, and TODAY (2026-09-19) IS THE FIRST DAY PAST IT.** No evidence found that a renewal or a permanent address change was filed. ⚠️ **Read carefully — this is corroborating, not conclusive:** USPS Informed Delivery digest emails addressed to "TETIANA" (i.e. Tetiana Mogylova, the owner's related individual — see §7) continued arriving in Julia's inbox daily through **2026-09-18** (the deadline day itself), the most recent found in a search bounded `after:2026/09/18`. **No digest for 2026-09-19 (today) has arrived at the time of this sweep** — consistent with, but not proof of, the forwarding having lapsed; today's digest may simply not have been generated yet, or may arrive later. **Recommend Lilian/Julia confirm directly with USPS or check the online forwarding-order status**, rather than inferring from digest timing alone. STILL OPEN; no decision found. _(Gmail, `USPSInformeddelivery@email.informeddelivery.usps.com`, bounded `after:2026/09/12` and `after:2026/09/18`, checked 2026-09-19.)_
 - ⚠️ **CONFIRM THE FDOR WITHDREW ITS Q2 2025 REEMPLOYMENT-TAX DEMAND** (its letter to the client is dated
   **2025-10-22**) — STILL OPEN, **21 days pending as at 2026-09-03**, since first flagged 2026-08-13, no deadline, and **an
   uncancelled FDOR bill escalates on its own**. With the effective date now 1 July 2025 that quarter
@@ -335,6 +331,8 @@ the actual details.
   `after:2026/08/22`) found nothing new. Ping: org-wide semantic search for this client returned only
   unrelated pre-2026-08-22 noise. No SOP exists yet for this client (the toll-debt SOP is Draft and
   unaffected); no SOP-proposal candidates queued.
+
+- 2026-09-19 — **Incremental sweep (baseline 2026-09-12→2026-09-19).** Double: `list_client_properties` unchanged; `list_notes` — both notes re-read in full, **491845 (FDOR) unchanged since 2026-08-13; 503544 (Shopify) remains STALE against this file**, still last edited 2026-09-03, now **16 days** without a rewrite despite the 2026-09-04 closure and 2026-09-07 second-blocker developments already logged here — flagged again, not edited (outside this sweep's scope, per the case-note convention). `list_activity_log` (from 2026-09-12) returned **zero entries**. Gmail (business names + Ivanov + Shopify, after:2026/09/12): **no reply found from Shopify Support to Julia's 2026-09-07 bank-account question** — the only Shopify-related hits in the window belong to other clients (Kolo Florida's KOLO HOUSE billing failures, unrelated third-party stores' routine bills); **no Gusto "payroll is late/due" reminder for this client found in this window** (searched both by business name and by `willivanoff`) — a break from the 08-27/09-08/09-10 pattern, **not established as the cancellation finally landing** (a single quiet week is not evidence either way, and no confirmation of a Gusto cancellation was found); the **FDOR Q2-2025 demand-withdrawal confirmation** — still nothing found; **Safe Guard Self Storage and Penn Credit** — not re-chased this run (budget; both chased as recently as 2026-08-29/09-12 with no movement). The USPS mail-forwarding deadline — see above, now past with no confirmed outcome. Google Drive (`fullText contains 'Deep Tech'`, `modifiedTime > 2026-09-12`, `excludeContentSnippets: true`) returned only the firm's internal "My hours" spreadsheet — no client-specific document. Ping (org-wide, "Deep Tech Development Go Robots Shopify payments Ivanov Gusto FDOR toll Penn Credit storage USPS mail forwarding") returned no legible, on-topic hits — all results are noise from unrelated clients' meetings.
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm sales-tax state / registration

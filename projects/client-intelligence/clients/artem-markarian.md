@@ -1,6 +1,6 @@
 # Artem Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-06
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -113,6 +113,19 @@ the actual details.
 - **A per-car earnings breakdown has been requested from Turo.** Julia asked him on 2026-09-01 to reply
   to Turo by email and ask for the 2025 earnings **broken down by car** — as audit backup, and because
   it is the only thing that splits the total across three vehicles. **Pending.**
+- 🆕 **HE HAS (OR HAD) SEVERAL OTHER LLCs, ALL NOW ADMINISTRATIVELY CLOSED — corroborated 2026-09-19 from
+  Julia's Gmail, Jan–Feb 2025 correspondence.** Three entities were dissolved with the state and had their
+  EINs cancelled in that window, with **Artem himself** corresponding directly with Julia on each: **AMZ
+  TRD LLC** (FL doc `L23000391883`, EIN **93-3053446**, admin-dissolved for non-renewal), **Arvest LLC**
+  (FL doc `L22000244013`, admin-dissolved for non-renewal), and **GRP APP LLC**. All three read as closed
+  matters — final EIN cancellation letters are on file in Drive — with **no current filing obligation**
+  found. ⚠️ **Separately, "Three Bricks Group LLC" was also closed in this window (FL Articles of
+  Dissolution, doc `L23000034678`, effective 2025-01-13) — but a 2024-03-07 email from Ishkhan's own
+  address states Ishkhan, not Artem, was its sole owner** (see [`ishkhan-markarian.md`](./ishkhan-markarian.md)
+  §5); Artem appears only as a correspondent on some of that entity's paperwork too. **Whether AMZ TRD /
+  Arvest / GRP APP are Artem's own or another family member's was not re-confirmed this pass** — recorded
+  from the Gmail correspondence pattern (he wrote to Julia about them in his own name), not from a Sunbiz
+  ownership check.
 - 🔑 **THE COMPANY'S 2025 BOOKS SHOW A SOUTH-FLORIDA STAY IN MARCH 2025 — AND EVERY TURO *GUEST* RENTAL
   THAT COST THE COMPANY ANYTHING CARRIES A MARCH TRIP DATE** *(read off the ledger dates, 2026-09-02)*:
   fuel in Fort Lauderdale, parking at Bal Harbour and at a mall read as Sunny Isles, fuel brands that do
@@ -131,6 +144,46 @@ the actual details.
 
 ### Log
 
+- 2026-09-19 (ninth pass — weekly CI sweep, corroboration) — 🔎 **CORROBORATION PASS, NOT A FIRST READ:
+  the file already carried substantial content from concurrent tax-prep sessions, so this pass focused
+  on Ping / Gmail / Drive against §6's open items.**
+  ✅ **Double properties re-read (2026-09-19), unchanged:** `Income Tax: true`, `Tax Return Type: 1040`,
+  `Bookkeeping: N/A`, `1099 Preparation: false`, `Annual Report: false`, `Organizer Status: Sent`,
+  `Assigned Staff: Lilian Gonzalez`.
+  🆕 **Double activity log (from 2026-08-25) shows the client OPENED his organizer** — "JK 2025 1040
+  Organizer - Artem Markarian" — on **2026-09-15**, and confirms the task trail already in this file:
+  "Prepare and send engagement letter", "Prepare and send organizer" and "Review client documents &
+  responses" all marked Done on 2026-09-07, "Prepare tax return" moved to In Progress the same day, and
+  the "2025 Taxes" project moved to **Ready for Review on 2026-09-10** (matches the eighth-pass log entry
+  below). ⚠️ **The organizer being opened does not mean it was completed** — `Organizer Status` still
+  reads `Sent`, not `Completed`, as of today; not chased further this pass since the return's blockers
+  run through Turo and the company's 1120-S, not the organizer.
+  ✅ **Double note `510952` re-read in full (body + `updatedAt`) — unchanged since 2026-09-01.** Still
+  reads **Open**, still waiting on the two items below.
+  🔴 **Chase pass on §6 Outstanding items — a search of Julia's Gmail (inbox + sent, bounded, 2026-09-19)
+  for Turo / per-car breakdown / Turo login did not find any new message.** So, with ages as of today:
+  - **Per-car Turo breakdown** — requested 2026-09-01, **18 days pending**, no deadline set.
+  - **Whose Turo account is it** — unconfirmed; a search of Gmail and Drive (title-only) found no
+    registration document or new correspondence settling it.
+  - **The Kona / possible 1099-MISC** — unchanged, no new information.
+  - **Turo login access** — a search of Gmail found no message about it being restored.
+  - **His residence / state** — still not recorded in Double or found in Gmail this pass.
+  🆕 **§5 gained one new fact from Julia's Gmail (Jan–Feb 2025 correspondence): three now-dissolved LLCs
+  in Artem's own correspondence history (AMZ TRD LLC, Arvest LLC, GRP APP LLC), plus a fourth entity
+  (Three Bricks Group LLC) that a 2024-03-07 email attributes to Ishkhan, not Artem** — see §5 for detail
+  and sourcing; none read as a current filing obligation.
+  ⛔ **A Ping org-wide semantic search ("Ecoorganic tax prep", 2026-07-23) surfaced the meeting that
+  underlies the existing Turo/S-corp/earned-income-credit discussion — no new facts, already reflected
+  above.** A scoped Ping search on his own client record for "how did he get the 50%" returned nothing —
+  consistent with the open question in §6 below (Julia has not answered Lilian's 2026-09-04 email; see
+  [`ishkhan-markarian.md`](./ishkhan-markarian.md) §6 for that same open thread).
+  🟢 **Corroboration finished to exhaustion on Gmail (in:inbox + in:sent, unbounded) and Double (properties
+  + notes + activity log + contacts). Ping was PARTIAL** — org-wide semantic search on his name returned
+  mostly irrelevant cross-client noise (the tool scores loosely), and a client-scoped search found nothing
+  beyond the one already-known July meeting; no `list_client_meetings` result was obtainable without a
+  Ping client context, so meeting coverage for this client should be treated as incomplete, not exhausted.
+  Drive was searched title-only (`excludeContentSnippets: true` throughout, per the enrichment rule); no
+  document content was read.
 - 2026-09-10 (eighth pass) — 🛑 **LILIAN CORRECTED US: HIS RETURN WAS ALREADY FINISHED, AND THE
   "MISSING ENTRY" WAS OUR ERROR.**
   🗣️ Her instruction, which she had given before: **both shareholders report zero contributions and zero
@@ -449,9 +502,10 @@ the actual details.
   §5 / the company's §6 B-1.** ~~his 1040 cannot be completed until the company's FY2025 Form 1120-S is~~ —
   the company's return is past the review's blockers and its gate is the QuickBooks worklist, with a
   **2026-09-15** deadline.
-- 🔴 **The per-car earnings breakdown from Turo** — requested 2026-09-01, not yet received.
+- 🔴 **The per-car earnings breakdown from Turo** — requested 2026-09-01, not yet received. 🔎 **Chased
+  2026-09-19: still not received — 18 days pending, no deadline set.**
 - 🔴 **Whose Turo account is it?** Not confirmed from the registration. With no 1099-K there is no
-  name-and-TIN to read.
+  name-and-TIN to read. 🔎 **Chased 2026-09-19: a Gmail + Drive search found nothing new.**
 - 🔴 **The Kona:** what he received, what he paid the friend, and whether a **Form 1099-MISC box 1** question — 🔑 **paying for the USE of a car is RENT**, not services; 1099-NEC only for a service element *(an operator, cleaning, detailing)*, prorated out. **$600 threshold for 2025** — ⚠️ *OBBBA raises §6041 to **$2,000** for payments made after 31 Dec 2025* was owed. ⚠️ **And he cannot depreciate a car that is not his** — *"his" is benefits and burdens, not the title (Pub 946 incidents of ownership; Helvering v. Lazarus, 308 U.S. 252; Grodt & McKay, 77 T.C. 1221)*.
 - 🔴 **Form 7203 — a 2026 matter now, not 2025.** His opening basis is created by the transfer at the **close of 2025-12-31**, so the first Form 7203 he files is with his **2026** return. How the transfer happened is the question, and **Lilian is putting it to Julia herself (2026-09-02)**. Not urgent for the company's return: no capital gain on any reading.
 - ⚠️ **Turo account access** — he cannot log in. Restore it before the next season.

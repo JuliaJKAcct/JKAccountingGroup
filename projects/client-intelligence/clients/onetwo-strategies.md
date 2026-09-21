@@ -1,6 +1,6 @@
 # ONETWO STRATEGIES INC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-09-19
 >
 > ✅ **First full historical sweep completed 2026-08-15** — Gmail (inbox + sent, full history),
 > Double (client record, notes — none exist — contacts, properties), Google Drive (folder + file
@@ -50,7 +50,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | Role | Where to find them |
 |---|---|
 | Owner / primary contact | Double client (link below) — full client-admin/tax/financial/files portal access _(Double `list_contacts`, 2026-08-15)_ |
-| Second contact (full access) | Double client (link below) — also linked to **1 other Double client ID**, not otherwise identified this sweep |
+| Second contact (full access) | Double client (link below) — also linked to **one other Double client record, a combined personal-return record for the household** (id 710654; identified 2026-09-19) |
 | _(add roles as needed)_ | |
 
 - **Double client:** [app.doublehq.com/close?cid=706701](https://app.doublehq.com/close?cid=706701)
@@ -157,16 +157,17 @@ A running, dated record as we build this profile.
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: 0 activity-log entries — no bookkeeping/close activity found at all this window, in contrast to Zetech/Optic Gold, which both show routine August close work (sales tax N/A for this client, so a sales-tax-task absence was expected, but nothing else logged either). Chase pass on all four outstanding items — results above, all still open.
 - 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: **0 activity-log entries again** — a second consecutive week with no logged bookkeeping/close activity at all. `list_projects` was checked for the first time this sweep (not a routine incremental item, done to support the chase) and surfaced the filed-vs-missing-K-1s contradiction now in §5. Gmail: routine Bank of America wire-transfer-advice and Gusto AutoPilot notices only; nothing on the K-1s, the home-office deduction, the salary/withholding change, or the reemployment-tax PDF. Chase pass on all four outstanding items — results below, all still open; ages updated.
 - 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29→2026-09-12; the 2026-09-05 run never completed — see `sweep-state.md`).** Double: **major activity found** — the "2025 Taxes" project was toggled Filed→Ready for Filing→Filed on 2026-08-31 with a client e-signature and organizer-opened event the same day (now §5, updated); a new "Signature" property reads Signed (§4). Bookkeeping task activity through 2026-09-12 is routine (August close, then September due-date rescheduling). Gmail: 10 threads this window (payroll, BofA statements, an August-financials send) — nothing on the two missing K-1s, the reemployment-tax PDF, the salary/withholding change, or the Accountable Plan. Ping: `search_meetings` scoped to "OneTwo Strategies"/"K-1" returned only pre-baseline, unrelated garbled content — nothing new or legible this window. Chase pass on all four outstanding items — results below; all still open, ages updated, with the filed-return contradiction now materially stronger evidence in both directions (§5).
+- 2026-09-19 — **Manual incremental sweep, baseline 2026-09-12→2026-09-19.** Double: `list_activity_log` this window is routine close-task rescheduling/completion dated 2026-09-12 (A/R and A/P aging, Statement of Cash Flows, Balance Sheet, P&L, several bank-account tasks all marked Done, due dates moved 09-07→09-11) — nothing touching the K-1 contradiction; `list_notes` still returns zero (no case note exists); `list_client_properties` unchanged (Organizer Status still Sent, Signature still Signed); `list_projects` unchanged (2025 Taxes still `filed`, `filedAt` 2026-08-31); `list_contacts` re-read — the second contact's linked Double id is now confirmed as a combined personal-return record for the household (§2, non-identifying). Gmail: a targeted search for "OneTwo Strategies"/onetoconsult/"2242 Monroe"/"Porcupine Partnership"/reemployment-tax, bounded after:2026/09/12, found only a routine August-financials email and the firm's own weekly CI report — **no correspondence on the two missing K-1s, the home-office deduction, the salary/withholding change, or the reemployment-tax PDF.** Ping: `search_meetings` scoped to K-1/Monroe/Porcupine returned no legible, client-scoped result (org-wide search). **Re-verified per instruction, not resolved: the contradiction between the return showing FILED (2026-08-31, client e-signature) and the two K-1s/home-office deduction never confirmed as arrived stands exactly as it did on 2026-09-12 — no new evidence either way this window.**
 
 ### Outstanding items (CI-only — never in the SOP)
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Chase the two missing K-1s** (2242 Monroe LLC, Porcupine Partnership) / home-office deduction — STILL OPEN, **141 days** pending since 2026-04-13, no arrival found. ⚠️ **See the strengthened §5 contradiction** — the return was not just marked filed but re-filed with a client e-signature on 2026-08-31, which makes it more likely (not certain) the return went out complete. **Ask before assuming either way.**
-- **Read the 2024 `ONETWO STRATEGIES REEMPLOYEMENT TAX.pdf`** — its Drive last-viewed timestamp is still 2025-03-17, confirming it remains unopened; not opened this sweep either (content stays out of scope).
-- **Confirm whether the discussed salary increase / withholding change was implemented** — STILL OPEN, targeted search found only unrelated correspondence.
-- **Confirm the Accountable Plan is actually posted to QuickBooks** — STILL OPEN; not re-checked this sweep (budget; the filed-return contradiction took priority again).
+- **Chase the two missing K-1s** (2242 Monroe LLC, Porcupine Partnership) / home-office deduction — STILL OPEN, **≈159 days** pending since 2026-04-13, no arrival found in a search bounded 2026-09-12→09-19. ⚠️ **The §5 contradiction is unresolved either way** — the return shows filed with a client e-signature (2026-08-31), but nothing found this sweep confirms the K-1s arrived or that the client re-confirmed they weren't needed. **Ask before assuming either way — this now needs a direct question to whoever prepared the return, not another search.**
+- **Read the 2024 `ONETWO STRATEGIES REEMPLOYEMENT TAX.pdf`** — Drive re-checked 2026-09-19 (`excludeContentSnippets:true`); the file's last-viewed timestamp is still 2025-03-17, confirming it remains unopened; content not opened this sweep either (stays out of scope).
+- **Confirm whether the discussed salary increase / withholding change was implemented** — STILL OPEN, the 2026-09-19 targeted search again found only unrelated correspondence.
+- **Confirm the Accountable Plan is actually posted to QuickBooks** — STILL OPEN; not independently re-checked this sweep (budget).
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
@@ -176,7 +177,7 @@ reports for this client.
 - [x] Contacts and their roles (portal contacts are in Double) — two contacts, both full access
 - [x] Bank feeds identified (Bank of America lending account + a separate payroll-debit account) — credentials link still pending
 - [ ] Fiscal year-end
-- [ ] Whether the client belongs to a known owner-group already profiled here (the second contact is linked to one other, unidentified Double client ID)
+- [x] Whether the client belongs to a known owner-group already profiled here — the second contact's other Double record is a combined personal-return record for the household (id 710654), not a second business (§2, 2026-09-19)
 - [ ] Whether Liudmyla keeps working notes for this client that should feed this file
 
 ## 7. Links

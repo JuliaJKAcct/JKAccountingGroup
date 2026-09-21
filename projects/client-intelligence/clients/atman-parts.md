@@ -1,6 +1,6 @@
 # Atman Parts
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -177,6 +177,12 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
   - 🔴 **Who files the sales tax — still unanswered, 26 days pending since raised (2026-08-17).** No deadline.
   - **Texas franchise-report filing status — still unconfirmed, 26 days pending since raised (2026-08-17).** No deadline found on the account; next live deadline 2027-05-15.
   - Sunbiz name check and the Ping coverage gap for the bookkeeping contact — **pending since unknown — no start date in the file**; not chased this run (budget; same as the last two runs).
+- 2026-09-19 — **Incremental sweep (baseline 2026-09-12→2026-09-19).** Double: `list_notes` returns none (unchanged); no property changes; `list_activity_log` bounded ≥2026-09-12 returns no entries. Gmail (business name + "atman.autoparts" + "franchise" + "PASSRDS", `after:2026/09/12`): a search of Gmail, bounded ≥2026-09-12, on 2026-09-19, did not find any client correspondence at all — only the firm's own automated weekly-sweep email. Google Drive (`title contains 'Atman'`, `modifiedTime > 2026-09-12`, `excludeContentSnippets: true`): no results — **no September sales-tax filing PDF has appeared yet** in the "Atman Products" filed-returns folder, though the recurring task now runs on the 5th; not itself evidence a period was missed, only that no new file was found. Ping (`search_meetings`, scoped clientId 763909): no legible, on-topic hits dated on/after 2026-09-12 — all results are pre-baseline noise or unrelated-client transcripts. **Chase pass — every open item named and searched, nothing new arrived on any of them:**
+  - 🔴 **"TAXES PASSRDS.txt" — a search of Gmail and Double notes, bounded ≥2026-09-12, on 2026-09-19, did not find any discussion of it.** **30 days pending since found (2026-08-20).** No deadline.
+  - 🔴 **Sch C vs 1120-S (ask Julia) — still unanswered, 33 days pending since raised (2026-08-17).** No deadline.
+  - 🔴 **Who files the sales tax — still unanswered, 33 days pending since raised (2026-08-17).** No deadline.
+  - **Texas franchise-report filing status — still unconfirmed, 33 days pending since raised (2026-08-17).** Next live deadline 2027-05-15.
+  - Sunbiz name check and the Ping coverage gap for the bookkeeping contact — **pending since unknown — no start date in the file**; not chased this run (budget; same as the last three runs).
 - 2026-08-17 — **Two corrections from Lilian the same day, both changing what the SOP claimed.** (1) 🔴 **July 2026's sales tax was NOT filed by the firm.** She went into the Texas portal to file it and **found it already submitted**; her read is that **the client did it himself**, unconfirmed. The SOP had recorded it as ours, filed on time — corrected, and it gained a standing **"check the period isn't already filed"** step at the top of §2 plus a new pitfall. The real finding underneath is that **two parties can reach this account and nobody has agreed who files**, which is now the first open question on the client. (2) ⏳ **Julia is going to connect eBay to QuickBooks**, after which **the reports come out differently** — so the "where do the figures come from" gap is now **parked on purpose** rather than open for research; Lilian delivers the new method once the connection exists, and the SOP is **provisional until then**.
 
 ### Outstanding items (CI-only — never in the SOP)

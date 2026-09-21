@@ -1,6 +1,6 @@
 # Iurii Iakovenko & Alina Yakovenko
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -133,6 +133,19 @@ the actual details (and Claude can pull them live when a task needs them).
   - **2026-05-27** — the 2025 extension confirmed filed (Double task).
   - Ping: `resolve_person`, `search_meetings` (scoped and org-wide), `list_action_items` all returned nothing specific to this client — confirmed empty, not unsearched.
 - **Nothing further was found in the sources actually searched.** Every source reached in this pass — Double (all planes), Gmail (unbounded back to 2023), Google Drive (four search angles), Ping — either returned material or a confirmed empty result; none was left unsearched.
+- 2026-09-19 — **First ordinary incremental sweep, baseline 2026-09-12 (bounded 2026-09-12→09-19).**
+  Double: `list_notes` (still 0) and `list_activity_log` bounded to the window returned **zero
+  entries** — no project-status, task or file movement since the last sweep (the "2025 Taxes"
+  project remains `inProgress`, unfiled). Gmail (every name variant + Semalt/YourSeoBoard, after
+  2026/09/12): no hits beyond the automated weekly-sweep digest. Google Drive (`fullText contains
+  'Iakovenko'`, modified after 2026-09-12): no hits for this client. Ping (org-wide
+  `search_meetings`, his name + "Semalt/YourSeoBoard" + "extension status"): no results specific to
+  him — consistent with the first full sweep's confirmed-empty finding. **Chase pass:** re-checked
+  what is blocking the return on the firm's side (now **five and a half months** since the client's
+  side finished, 2026-03-12), the Ukrainian PrivatBank-account lead (unchased since 2024-03-19,
+  now well over two years old), and who files each LLC's annual report/franchise tax — **none
+  moved; all three remain open with no source explaining the delay.** No 2025 Form 1095-A found
+  (unchanged from the last sweep's genuine negative).
 
 ### Tax year 2025 — the review
 

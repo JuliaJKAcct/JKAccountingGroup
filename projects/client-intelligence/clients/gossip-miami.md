@@ -1,6 +1,6 @@
 # GOSSIP MIAMI LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-12
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -132,6 +132,17 @@ the actual details.
 - **Our role:** prepare and file. **Tax preparation only** — see the scope rule below.
 - ✅ **The sale is now documented and its shape is settled (§1, 2026-08-21):** a membership-interest sale, closing 2025-10-30. What that means for the returns: the 1120-S is **NOT final** (the company continues under the buyer), the company's return reports **no sale of assets**, and the **sellers report their gain personally** (handoff item — their 1040s, a separate request). ✅ **UPDATED 2026-08-27 — the allocation question is closed:** the S election terminated, so **§1362(e)** governs and the year is **cut** at 29 October rather than allocated. ⛔ **§1377 does not apply and no election is needed.** **Open before figures can be typed:** the Sunbiz check on Sapa's status, and who engages and signs for the entity now that the year-end owner is not our client.
 - **Process notes (→ future SOP):** the firm's standard "Business Tax Return Process" email (engagement letter → business tax organizer → preparation → review, invoice & signature → e-file) was sent for Gossip Miami in Mar 2026 and is the shape to reuse _(Gmail)_.
+- ✅ **THE 2025 FORM 1120-S WAS FILED — 2026-09-15.** Double's "2025 Taxes" project moved
+  **Ready for Review → Waiting on Client Approval → Filed**, both status changes on 2026-09-15. The
+  same day, a K-1 (`GOSSIPMIAMILLC2025 - K1 - ANASTASIIA MAKALENDRA.pdf`) was attached to a client
+  portal question ("Please see attached Anastasiia's K1 for 2025") and copied into the custom "2025"
+  folder. On 2026-09-17 the filed return itself, `GOSSIPMIAMILLC2025.pdf`, was moved into the "2025"
+  folder from a transaction tagged `signedSignatureRequest-190150` — consistent with the client having
+  e-signed. _(Double `list_activity_log`, 2026-09-19 sweep.)_ ⚠️ **Whether the open items this file
+  records as blocking — Sapa's status and the Sunbiz check on L23000059008, who signs given the buyer
+  owned the entity by the time of filing, the FDOR DR-26S credit, the W-9 for the 1099-NEC contractor —
+  were resolved before filing is NOT established from the activity log alone**, which shows status
+  changes and file events, not the reasoning behind them. Not written into this file as resolved.
 
 ### Bookkeeping & monthly close
 - **Applies?** **No — the firm is not this client's bookkeeper**, and that is the point the rest of this section turns on. The client keeps no books during the year.
@@ -569,6 +580,27 @@ duplicate it here; a request list goes stale, this list doesn't.
   - **W-9 for the 1099-NEC contractor — a search of Gmail, bounded ≥2026-08-15, on 2026-08-29, found no request sent.** **Pending since unknown — no start date in the file** beyond "not yet asked"; the underlying 1099-NEC due date (2 Feb 2026) is already 7+ months past.
   - 🛑 **Victoria Sapa's Sunbiz status — NOT chased this run; the check is blocked at the network level, not merely undone.** The return should not be transmitted until it is done (§6); someone with unblocked access to sunbiz.org needs to run it.
   - The check images (verbal, 2025-10-30) and the closed-checking-account closing date remain open with no new movement found this run — ages as already stated below.
+
+- 2026-09-19 — **Incremental sweep (baseline 2026-09-12→2026-09-19).** 🔴 **Headline finding: the 2025
+  Form 1120-S was FILED 2026-09-15** — see §4 Income tax, new bullet. 🔵 **Cross-client lead, flagged for
+  whoever is sweeping [`bogopolskyy-marat-yuliana.md`](./bogopolskyy-marat-yuliana.md) this run (not
+  touched here per instruction):** that file's blocker list included "filing Gossip Miami's 1120-S and
+  re-checking box 1 and 16D against what was filed" — the filing side of that blocker is now done
+  (2026-09-15); the re-check itself is not evidenced. Double: notes 485291 and 491858 both **unchanged**
+  (`updatedAt` still 2026-08-21 and 2026-08-13) — the case notes were **not** rewritten to reflect the
+  filing; worth flagging for whoever next works this case, since the running-note convention calls for
+  updating in place when the matter moves. Gmail (`Gossip Miami`/Bogopolsk/Makalendra/Sapa/Vagaro,
+  `after:2026/09/12`; `DR-26S`/W-9, `after:2026/08/29`): a search of Gmail, bounded as stated, on
+  2026-09-19, found no correspondence on the FDOR DR-26S credit claim or the 1099-NEC contractor's W-9 —
+  only the firm's own automated weekly-sweep email. Ping (`search_meetings`, scoped clientId 710577): no
+  legible, on-topic hits dated on/after 2026-09-12 (results were pre-baseline noise or unrelated-client
+  transcripts). **Chase pass:**
+  - 💰 **FDOR DR-26S sales-tax credit claim — a search of Gmail, bounded ≥2026-08-29, on 2026-09-19,
+    found nothing.** **211 days pending** (since the 2026-02-19 call establishing the credit — figure withheld per the two-data-homes rule, see Double/Drive).
+  - **W-9 for the 1099-NEC contractor — a search of Gmail, bounded ≥2026-08-29, on 2026-09-19, found no
+    request sent.** Still 7+ months past the form's own filing deadline.
+  - Victoria Sapa's Sunbiz check (L23000059008) — still blocked; `search.sunbiz.org` remains refused by
+    the network egress proxy (confirmed structurally on prior runs, not re-attempted this run).
 
 ### Outstanding items (CI-only — never in the SOP)
 

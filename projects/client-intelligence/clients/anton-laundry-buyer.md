@@ -89,6 +89,7 @@ the actual details.
 | Buyers / decision-makers | **Anton & Olga Stenin** (Julia, 2026-08-30 — the joint name on the cover, agreement and T&C; Anton's own first-vs-family name still unconfirmed — a 2026-09-12 sweep found none, and every reference in the correspondence names only "Olga Stenin" or "Anton" alone). Email received — lives in the delivered proposal and Double, not here |
 | Buyers' own attorney — **the whole real-estate and legal side** | **Olesya Trayber, Esq. — Trayber Law Group, P.A.** (Aventura, Florida), the buyers' REAL ESTATE ATTORNEY *(confirmed 2026-09-11 from the broker's threads and the transaction binder; contact details in Gmail, not here)*. Per Anton's letter 2026-08-30 she handles everything about the real estate and land as objects: re-registration, building/land inspections, property taxes and fines, leases, and drafting the purchase agreements. Julia added 2026-09-04 that **the property appraisal and the UCC financing-statement / lien work are also hers** — items 13.5 and 13.6 of the request list. 📌 **Extended 2026-09-11 after a call:** she also **sources the commercial building inspector** (item 13.4), so the only specialist left for the firm to find is the **laundromat technician** for the machines. Coordinate with her, do not duplicate her; she is on the kick-off call. ⓘ **The name "Alicia" in Julia's 2026-09-04 message is this same person** — settled by her the same day, recorded so an old note reading "Alicia" is not mistaken for a second advisor. ⓘ The appraisal itself is a **Florida Certified General Real Estate Appraiser's** work, which she engages and holds |
 | Seller's broker | **Kevin Riordan** — Merritt Realty Corporation, "Senior Commercial Associate" (name confirmed via his own correspondence, 2026-09-04→09-11). Corresponds directly with Julia, Olesya and Olga; source of the financial binder, the LOI drafts, and now Julia's due-diligence document requests |
+| Unidentified additional party | A fourth email address (not Julia's, Kevin's or Olesya's) has been cc'd on every message in the active document-request thread since at least 2026-09-14 (2026-09-19 sweep) — role and identity not established; address withheld here per the personal-contact-details rule |
 
 - **Double client:** _(pending — still not in Double as of 2026-09-03; create it once the signed agreement is confirmed)_
 
@@ -231,6 +232,22 @@ the actual details.
   three entities — plus Forms 8821 being prepared per entity for the seller's accountant to
   sign. Julia is also asking to be introduced directly to the **seller's own accountant** — the
   route flagged as fastest in the 2026-08-30 kick-off sequence (§6)
+- 🔴 **DD is now ACTIVE and QuickBooks access to the seller's books is BLOCKED (2026-09-19
+  update, see §6).** The seller's QuickBooks Desktop version has no view-only user, so the
+  read-only login Julia asked for cannot be set up; the broker is routing around it through
+  the seller's own accountant (based in Maui) instead, and as of the last message found
+  (2026-09-16) Julia still had no access with the 30-day DD clock already running. In the
+  meantime the broker delivered a large document binder (four volumes + per-property
+  appendices) on 2026-09-17, which Julia acknowledged as genuinely useful on 2026-09-18
+- ⚠️ **A name error surfaced on a Form 8821 draft, 2026-09-18 — do NOT read the name that
+  appeared as Anton's surname.** The broker asked Julia who a specific name appearing on a
+  draft 8821 (sent for the seller's signature) was; Julia replied it was "probably on the
+  template," apologized, removed the name, and resent the forms. This is evidence of a
+  **template/drafting error caught before signature** — likely an unrelated name carried
+  over from another matter's template — not a source for Anton's last name, which remains
+  **unconfirmed** (see Outstanding items). The name itself is withheld here: it belongs to
+  someone with no established connection to this file, so it is treated as a third party's
+  identity rather than written down on the strength of one broker email
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -1081,6 +1098,57 @@ the actual details.
   ask about a direct line to the seller's accountant). ⚠️ The body carried **that day's hourly
   pricing** (Part 1 hourly with a budget cap and a deposit), superseded on 2026-09-02 by v13/v14 —
   the client's written record of the fee is the later exchange, not this email
+- 2026-09-19 — **Bounded prospect sweep (cheap pass — Gmail in:inbox+in:sent since
+  2026-09-12; Google Drive full-text search; no Ping/Double — no Double account exists,
+  and per this sweep's scope no `sweep-state.md` row is being added).** Searched Gmail for
+  "Anton" combined with "laundry"/"Bradenton"/"Palmetto"/"Ruskin"/"Merritt Realty"/
+  "Riordan"/"Trayber"/"laundromat", `after:2026/09/12`, both in:inbox and in:sent. Found
+  **substantial new activity, entirely on the DD-engagement side** (nothing new on the
+  Kompozit-style "is this signed yet" question — the file already established the
+  engagement itself as live and invoiced):
+  - **A Dropbox share arrived 2026-09-13** — Kevin Riordan invited Julia to a "Laundry
+    Portfolio" folder.
+  - **A parallel document-request thread ran 2026-09-14→09-18** ("Document request —
+    five-store laundry portfolio (Bayshore / Samoset Florida / Lemon Squeeze)"): the broker
+    reported (2026-09-14) that the seller's QuickBooks Desktop version has no view-only
+    user and that "their accountant" (based in **Maui**) was being brought in as an
+    alternative route; Julia followed up (2026-09-16) noting the **30-day DD term
+    "established by the seller"** was already running and she still had no access; the
+    broker gave a fuller update (2026-09-16 evening) copying "[Seller name]" (redacted in
+    the broker's own snippet); Olesya asked the broker for prior property surveys
+    (2026-09-17), which he said were already in the Dropbox folder.
+  - **A second thread, "Bradenton–Palmetto–Ruskin Laundry Portfolio — QuickBooks
+    financials in Dropbox," ran 2026-09-17→09-18**: the broker confirmed (2026-09-17) the
+    view-only login could not be set up and proposed continuing without it "rather than
+    hold [things up]"; Julia acknowledged and said she was preparing a detailed response
+    (2026-09-17); she then sent a substantial reply (2026-09-18) confirming receipt of "the
+    QuickBooks exports and your notes on how the six company files are organised" as
+    genuinely useful — the **six-company structure is now corroborated a second way**,
+    beyond the broker's 2026-09-05 email already on file. The same thread carries the
+    **Form 8821 name-error exchange** — see §5 — resolved same-day (2026-09-18) by Julia
+    removing the erroneous name and resending.
+  - **A large document delivery landed 2026-09-17**: four DD-binder volumes (Summary;
+    Real Estate/Equipment/Vendors; Financial; Utilities) plus **per-property appendices**
+    naming **Palmetto Coin** (4A), **Ruskin** (4B), **Samoset 8th Ave** (4C) and **Select**
+    (4D) — the first time "Ruskin" appears as a named property in this file rather than
+    only in the deal's general description.
+  - **A finalized-looking LOI document is on file, dated 2026-09-11** ("...FINAL.pdf",
+    named for a 12-month term), and Julia's own 2026-09-16 wording ("we have a 30-day due
+    diligence term, which was established by the seller... today, on the 16th") treats the
+    DD clock as already running. **No explicit "the LOI was signed" confirmation message
+    was found** — this remains an inference from behavior, not a stated fact — but it is
+    strong enough to downgrade the open item below from "unknown" to "very likely yes,
+    unconfirmed in so many words."
+  - **A fourth, unidentified email address** has been cc'd across the whole active
+    document-request correspondence since at least 2026-09-14 — see §2. Not Julia's,
+    Kevin's or Olesya's; role not established this pass.
+  - Searched Drive full-text for "Stenin" / "laundromat" (`excludeContentSnippets: true`)
+    — the client's known deal-documents folder returned many more files than the
+    2026-09-12 sweep found: the FINAL LOI, an updated Accountant Request List (through v10),
+    all four DD-binder volumes and their per-property appendices, and the Form 8821
+    template for Bayshore Laundromat, Inc. already on file. No new folder location found.
+  - **Anton's last name still did not surface as a confirmed fact** — see §5's caution
+    about the 2026-09-18 8821 name error, which is the opposite of confirmation
 - 2026-09-12 — **Bounded prospect sweep (Gmail in:inbox+in:sent + Google Drive, since
   2026-09-02; no Double/Ping — no Double account exists).** Searched Gmail for "Anton"
   combined with "laundry"/"Bradenton"/"Palmetto"/"Ruskin"/"Merritt Realty", and separately
@@ -1283,15 +1351,24 @@ the actual details.
   entities before the analysis phase begins
 - **Julia to confirm:** whether the bespoke T&C set reads right for a first consulting
   engagement (balance-on-report-delivery was her own instruction and is settled)
-- **New, 2026-09-12 — whether the LOI was actually signed.** Kevin Riordan sent Olga a
-  DocuSign LOI with a stated 2026-09-10 5:00pm expiration; no message after 2026-09-09 was
-  found confirming signature by either side. Julia's 2026-09-11 document-request email reads
-  as though due diligence is already underway, but that is an inference, not a confirmed
-  fact — **2 days old as of this sweep, unconfirmed**
-- **New, 2026-09-12 — Lemon Squeeze's filing status.** Julia asked the seller's broker
-  (2026-09-11) where the Lemon Squeeze LLC files, on which return, and whether it has an
-  S-election, plus how occupancy/rent between it and Bayshore is recorded. **1 day old,
-  unanswered** as of this sweep
+- **Whether the LOI was actually signed — updated 2026-09-19, still not stated outright.**
+  Kevin Riordan sent Olga a DocuSign LOI with a stated 2026-09-10 5:00pm expiration; no
+  message was ever found confirming signature by either side in so many words. But a
+  "FINAL" LOI document dated 2026-09-11 is now on file, and Julia's own 2026-09-16 email
+  treats a seller-established 30-day DD term as already running — **behavior consistent
+  with an executed LOI, though no explicit confirmation message has been found through
+  2026-09-19 (9 days since the last check on this specific point)**
+- **Lemon Squeeze's filing status — still unanswered as of 2026-09-19.** Julia asked the
+  seller's broker (2026-09-11) where the Lemon Squeeze LLC files, on which return, and
+  whether it has an S-election, plus how occupancy/rent between it and Bayshore is
+  recorded. **8 days old, no answer found** in this sweep's search of the active threads
+- **New, 2026-09-19 — QuickBooks access to the seller's books is blocked.** The seller's
+  QuickBooks Desktop has no view-only user; the broker is routing around it via the
+  seller's own accountant (Maui-based). **As of the last message found (2026-09-16), Julia
+  still had no access**, with the 30-day DD clock already running — worth a deadline watch
+  since DD analysis cannot proceed on QuickBooks without it
+- **New, 2026-09-19 — the fourth, unidentified cc'd party** on the active document-request
+  correspondence (see §2) — not yet identified by role
 
 ### Information still needed
 

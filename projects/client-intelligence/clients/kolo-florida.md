@@ -1,6 +1,6 @@
 # Kolo Florida Inc
 
-> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-09-12
+> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-09-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -609,6 +609,12 @@ the actual details.
   - 🆕 **QuickBooks subscription payment failing (Kolo Florida Inc, card ending in a JK staff member's name) — first seen this run, 2026-09-10; not previously tracked.** Worth reconciling against the "QuickBooks disconnected" finding before assuming the two are unrelated.
   - **BAI-branded lines (Kolo's own stock vs. someone else's) and whether the warehouse lease is still running — NOT chased this run (budget), same as the last two runs.**
   - **FL sales-tax account closure (file July 2026, then close) and the Lauderhill Certificate of Use/BTR — a search of Gmail, bounded ≥2026-08-29, on 2026-09-12, did not find any FDOR or city correspondence confirming either step.** Both wind-down checklist items remain unticked.
+- 2026-09-19 — **Incremental sweep (baseline 2026-09-12→2026-09-19).** Double: `list_notes` returns none (unchanged); `list_activity_log` bounded ≥2026-09-12 returns no entries. Gmail (broad "KOLO FLORIDA"/"Kolo House"/Kozlovsk/Gusto sweep, `after:2026/09/12`, then narrowed to Kolo-specific hits): 🔴 **Gusto payroll-late notice pattern CONTINUES** — a further "Action required: Payroll is late for KOLO FLORIDA INC" notice arrived **2026-09-17** (addressed to julia@ and kolofloridainc@gmail.com), so "payroll stopped" vs. "Gusto still billing" is now unresolved across **at least 2026-08-14 → 2026-09-17 (34+ days)**. 🔴 **Shopify billing failure ESCALATED** — a 2026-09-18 email changes register from routine retry notices to **"Urgent: Aug 23, 2026 bill must be paid or KOLO HOUSE will be frozen,"** with a further retry scheduled for **2026-09-22**; the failure streak first seen 2026-08-23 has now run **27+ days** without resolution and the account is explicitly threatened with suspension for the first time. 🔴 **QuickBooks/Intuit subscription payment failure CONTINUES** — a further "Please update your payment details" notice arrived 2026-09-15, in the same thread as a companion notice for a different company ("2115 NE 54th CT LLC"); whether the two are the same billing account or coincidentally bundled is not established. No FDOR/Lauderhill BTR correspondence found in the window. Ping (`search_meetings`, scoped clientId 706626): no legible, on-topic hits dated on/after 2026-09-12. **Chase pass:**
+  - 🔴 **Gusto payroll contradiction — STILL UNRESOLVED, now at least 34 days since the "stopped" statement (2026-08-14), with a further notice 2026-09-17.**
+  - 🔴 **Shopify billing failure — ESCALATED to a suspension warning ("will be frozen"), now at least 27 days since the first failure (2026-08-23), with a new retry scheduled 2026-09-22.**
+  - 🔴 **QuickBooks/Intuit subscription payment failure — CONTINUES, further notice 2026-09-15; still not reconciled against the "QuickBooks disconnected" (`platform: none`) finding.**
+  - **BAI-branded lines (Kolo's own stock vs. someone else's) and whether the warehouse lease is still running — NOT chased this run (budget), same as the last three runs.**
+  - **FL sales-tax account closure and the Lauderhill Certificate of Use/BTR — a search of Gmail, bounded ≥2026-09-12, on 2026-09-19, did not find any FDOR or city correspondence confirming either step.** Both wind-down checklist items remain unticked.
 
 ### Wind-down — what has to be closed (CI-only)
 - [ ] **Florida sales-tax account** — file July 2026 (Lilian), then close the FL DOR account. Not confirmed done: a search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for FL DOR/sales-tax correspondence did not find anything.
