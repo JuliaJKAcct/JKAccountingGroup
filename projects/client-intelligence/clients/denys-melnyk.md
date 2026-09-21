@@ -708,8 +708,9 @@ pay and we never ask, he simply loses the credit.
 
 **The prior-year return was prepared elsewhere, so the carryover check is not optional —
 and reading it changed the entire engagement.** (Reviewed 2026-08-11 from the redacted copy
-Lilian supplied; the client's own copy is in Double's file library. Figures stay out of the
-repo — they are on the return and in Double.)
+Lilian supplied; the client's own copy is in Double's file library. ⓘ **Figures stay out of THIS
+file; since 2026-09-21 they live in the working paper**
+[`tax-returns/denys-melnyk/2025-form-1040.md`](../../tax-returns/denys-melnyk/2025-form-1040.md).)
 
 - **He is an S-corporation shareholder, not a contractor.** The 2024 Schedule E carries
   **three** S-corp K-1s: **Midwest Expedited Corp** (a very large loss), **Midwest Truck
@@ -729,11 +730,64 @@ repo — they are on the return and in Double.)
   most or all of his 2025 income. **Preparing 2025 without it would cost him badly** — this
   single item is why reading a prior return prepared elsewhere is mandatory.
 - **A small suspended passive loss** also carries forward (Form 8582, prior-years' unallowed).
-- **⚠️ Verify basis before relying on the NOL.** The big S-corp loss was deducted as
-  **nonpassive**, i.e. in full, which requires sufficient stock and debt basis, and the "basis
-  computation required" box does not appear ticked. Not our return and not an accusation — but
-  if basis was short, part of that loss should have been suspended instead of deducted, and the
-  carryforward figure would change. Check before building on it.
+  **It is a separate carryforward from the NOL and is trivial in size.**
+
+🔵 **THE 2024 RETURN WAS READ LINE BY LINE ON 2026-09-21, at Lilian's request, to settle what
+carries into 2025. 💰 EVERY FIGURE IS IN THE WORKING PAPER —
+[`tax-returns/denys-melnyk/2025-form-1040.md`](../../tax-returns/denys-melnyk/2025-form-1040.md)
+§2 — and none of them is repeated here, because this file publishes.** What belongs here is what
+they mean:
+
+- ✅ **THE CARRYFORWARD IS NOT IN DOUBT, AND AN EARLIER READING OF THIS FILE COULD BE TAKEN THE
+  OTHER WAY.** The 2024 return carries its whole NOL into 2025 — **nothing was consumed**, because
+  2024's taxable income was already zero before any NOL was applied (Schedule 1 line 8a blank,
+  Form 172 Part II empty). 🔑 **The open question is not *whether* it carries. It is whether the
+  AMOUNT is right and whether it is even that KIND of carryforward.**
+- ✅ **Practically the whole loss is ONE company: Midwest Expedited Corp** — the other two S corps
+  contributed token amounts. 🔗 **And that is the company that paid him in 2025**, which is what
+  makes the basis question a money question rather than housekeeping.
+- 🔴 **NO FORM 7203 APPEARS IN THE TEXT EXTRACTED FROM THE 44-PAGE RETURN, AND IT WAS REQUIRED.**
+  ⚠️ **Say it that way and not more strongly: 4 of the 44 pages extracted only partially** (working
+  paper §6). None of the four is form-shaped, but **the absence rests on the extraction, not on the
+  return.** ⚠️ **And THREE were required, not one** — the basis limit is per corporation. The form's own
+  instructions compel it for a shareholder *"claiming a deduction for their share of an aggregate
+  loss from an S corporation"*, and Schedule E page 2 states the same duty on its face.
+  **§1366(d)(1) caps the deductible loss at stock and debt basis** — so deducting the whole loss
+  asserts a basis figure nobody has verified and no form supports.
+  ⚠️ **Whether the Schedule E basis-computation box was ticked cannot be read from a text
+  extraction** — checkboxes are graphical.
+- 🔑 **THE TWO POSSIBLE TREATMENTS ARE OPPOSITE, WHICH IS WHY THIS MATTERS.** If basis was
+  sufficient, it is an **NOL** — usable against any income, capped at 80%, and it survives a
+  disposal of the stock. If it was not, the excess is a **§1366(d)(2) suspended loss** — usable
+  **only against future income from that same corporation**, only once basis is restored, and
+  ⛔ **it DIES with the shares if basis never is.** *(That is the reverse of a §469 passive loss, which is released on
+  disposition — though only on disposing of the **entire interest** in a **fully taxable**
+  transaction. The two look alike and behave oppositely.)*
+- ⚠️ **THE MISSING FORM IS NOT PROOF THE LOSS WAS WRONG.** If he really contributed that capital or
+  lent the company the money **personally**, the loss is allowable and what is missing is the
+  **form**, not the **basis**. **Both readings are open and neither has been tested.**
+- ⛔ **THE BANK'S DEBT GIVES HIM NO BASIS.** In an S corporation — unlike a partnership —
+  entity-level borrowing does not lift a shareholder's basis. 🔑 **For a trucking company with
+  financed equipment that is the likeliest place for the figure to fail**, and it is the single
+  most common misconception in this area.
+- ⓘ **Why a return like this passes e-file, since it will be asked:** the IRS rejects where a
+  missing form contradicts data it already holds — Form 8962 against a 1095-A is the classic. **The IRS holds the K-1 loss but no record of anyone's BASIS**, so there is nothing to
+  cross-check on that point. ⚠️ **Stated as the mechanism, not as a verified e-file rule** — nobody
+  here has read the IRS business rules themselves. 🔑 **What is certain either way: that the return
+  was filed says only that nobody checked it.**
+- 🔴 **A SECOND GAP ON THE SAME RETURN, and it is sharper than a first pass suggested:** the
+  **§461(l) excess-business-loss line on Schedule 1 is blank**, and **no Form 461 appears in the
+  extracted text** *(same extraction limit as above)*. 🔑 **Form 461 had to be FILED whatever the
+  arithmetic produced** — the 2024 instructions require it where a taxpayer *"would report a loss of
+  more than $152,500 on any one of Form 461, lines 1 through 8"*, and **his S-corp loss goes on one of
+  those lines and clears that test** *(by how much is in the working paper, not here)*. ⛔ **An earlier version of this bullet called it "probably not
+  material". That was a determination made without the computation, and it is struck** — the test
+  excludes employment income and nets his other business items first, and this file does not hold
+  that split. **Flag for Julia.** ⓘ *(The figures and the full test are in the working paper §2E.)*
+- 🔑 **WHAT WOULD SETTLE ALL OF IT:** what he paid for the stock, what he lent the corporation
+  **out of his own pocket**, and what distributions he took. **Three facts, and only he or the
+  corporation's records have them.** ⓘ **The 2025 K-1s, if they ever arrive, would state the
+  year-end basis and close the question without relying on his memory.**
 - **Sale of business property in 2024** (Form 4797, an ordinary recapture gain) — assets were
   disposed of. Ask whether anything continued into 2025 or was sold on installments.
 - **An early retirement distribution in 2024**, with the 10% penalty on part of it (Form 5329,
@@ -1445,6 +1499,24 @@ street address never appear here, and nor do dollar figures — those live in Do
   ⚠️ **So her phone holds client answers the firm's systems do not, and the REST of that August
   traffic has still not been read.** **That is a standing gap, not a one-off.**
 
+- 2026-09-21 — **The 2024 return was read line by line, at Lilian's request, to settle the NOL.**
+  Fetched from Double through the redactor and worked through form by form; **the figures went to
+  the new working paper** ([`tax-returns/denys-melnyk/2025-form-1040.md`](../../tax-returns/denys-melnyk/2025-form-1040.md)),
+  **not here.** ✅ **What is settled: the whole 2024 NOL carries into 2025** — nothing was consumed,
+  because 2024's taxable income was already zero. **Practically all of the loss is Midwest Expedited
+  Corp**, the same company that paid him in 2025. 🔴 **What is NOT settled, and it is the substance:
+  no Form 7203 appears in the text extracted from the 44-page return** *(4 of 44 pages extracted only
+  partially — the claim is about the extraction, not the return)*, so the basis behind that loss is unverified — and
+  the two possible treatments (an unrestricted NOL vs a §1366(d)(2) loss usable only against that
+  one corporation) are opposite in effect. ⚠️ **The missing form does not prove the loss was wrong.**
+  🔴 A second gap: the §461(l) line is blank and no Form 461 appears — and **the 2024 rules required
+  one to be filed regardless of the arithmetic**. Not resolved here; flagged for Julia.
+  **Julia's decision the same day — file without the K-1s and amend — is recorded in the working
+  paper §4 with the two things it carries: Form 8082 is required, and Illinois cannot be fixed by
+  amending the federal return.**
+  ⓘ **Redactor: 4 of 44 pages extracted only partially; 22 SSN/ITIN, 1 account, 3 digit-runs and 12
+  street lines masked; 8 EINs kept. Only 2024 was read.**
+
 ### Outstanding items (CI-only — never in the SOP)
 
 **The open list, in priority order — and it is NOT all client asks.** Items are ordered by what would
@@ -1602,7 +1674,15 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
   residence and age**, above; who they are is settled). His 2024 return claimed one daughter with EIC and the child tax credit, and that
   needs re-establishing for 2025.
   ⚠️ **Ask facts, not documents.** The firm does not ask clients for custody orders, decrees or a signed Form 8332 _(Lilian, 2026-08-11)_. Form 8332 stays internal knowledge for how we **treat** his answer, and is raised **only if his answer makes it unavoidable** — a non-custodial parent claiming a child does need one signed and attached to the return (§152(e)), so the request can become necessary. It is simply never how we open.
-- **Basis in the S corporations** — needed before relying on the 2024 NOL carryforward (§5).
+- 🔴 **HIS BASIS IN MIDWEST EXPEDITED CORP — the single fact the 2025 return most depends on.**
+  Three things, and only he or the corporation's records have them: **what he paid for the stock**,
+  **what he lent the corporation out of his own pocket**, and **what distributions he took**.
+  ⛔ **NOT the bank's debt** — entity borrowing gives an S-corp shareholder no basis, and with
+  financed trucks that is where this most likely fails. It decides whether the 2024 carryforward is
+  an **NOL** or a **§1366(d)(2) suspended loss**, which behave oppositely (§5). ⚠️ **And it is a 2024
+  question before it is a 2025 one** — if basis was short, part of that loss should have been
+  suspended on the 2024 return, which raises **whether 2024 should be amended.** ⛔ Julia's call. ⓘ **The 2025 K-1s
+  would state it** — one more reason the chase matters.
 - **Form 4797 follow-through** — whether any 2024 asset disposal continued into 2025.
 - **Estimated payments** — confirm none were made, so the penalty is expected rather than discovered.
 - **2024 carryovers and elections** — read from the prior return (see §5).
