@@ -116,25 +116,6 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
-- 2026-09-21 (later) — 💬 **THEY COUNTERED AGAIN, AND JULIA HELD.** Within twenty minutes of the
-  proposal landing in the WhatsApp group, Olha came back: warm, thanking us for meeting them halfway,
-  but framing the relationship as **long-term and across several areas at once** and asking for a
-  **further discount on top of the 20%**, naming a figure for the main company **well below the
-  discounted one**. She confirmed **the rates for the other areas are acceptable** — so the whole
-  negotiation now sits on one line item. 🛑 **Julia's decision: that is the floor, no lower.** Her
-  reasoning, and it is the argument the reply is built on: **the discount was already granted for the
-  two-company volume**, so asking again is asking twice for the same thing; and **what they are
-  comparing against is not the same service** — the bundle carries monthly financial statements, owner
-  payroll, Forms 1099, the company return and year-round tax coordination, where a cheaper arrangement
-  is typically bookkeeping alone. ⚠️ **One drafting limit the reply respects:** Julia described the
-  engagement as including *"tax planning for the owner"*, which is true of the **owner's payroll and
-  the year-round coordination** — but the delivered proposal **excludes the owner's personal tax
-  return** and quotes it separately. **The message therefore promises planning and coordination, never
-  the personal return**, so nothing in the chat contradicts the document they are being asked to sign.
-  🔑 **And the reply does NOT assert what their current provider does** — Julia said *"I think"* they
-  get basic bookkeeping, and the message turns that into an invitation to check their own scope rather
-  than a claim about a competitor. ✉️ Drafted in **Ukrainian**, in Julia's own register, delivered in
-  chat and not committed
 - 2026-09-16 — **Zoom meeting (Julia + Olha):** the transcript PDF was shared into the
   WhatsApp group afterwards; the meeting produced the initial monthly quote
 - 2026-09-18 — **Olha's counter (WhatsApp, Ukrainian):** the quote far exceeds their
