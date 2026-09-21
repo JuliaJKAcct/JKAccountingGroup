@@ -253,6 +253,38 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-21 (the add-back test) — 🧪 **THE FY2025 ADD-BACK SCHEDULE TESTED LINE BY LINE AGAINST THE
+  2025 LEDGERS — the first time it has been possible — and the verdict is mostly GOOD FOR THEM, with one
+  real error.** 🟢 **① THIRTY-SEVEN OF THIRTY-EIGHT TESTED LINES TIE TO THE BOOKS, most to the cent.**
+  Every building-repair, equipment-purchase, officer-distribution, supplies, professional-fee and
+  property-tax figure the seller flagged is exactly what the ledger holds. **The schedule was genuinely
+  built from the books, not assembled for the sale** — and that, with the clean audit trail, is the
+  strongest evidence of good faith in the package so far. 🔴 **② ONE LINE HAS THE SIGN BACKWARDS, AND IT
+  RUNS THEIR WAY.** At Ruskin an account misspelt **`TRANFER`** carries a **CREDIT** balance — money
+  received from another store, booked as **income**. The schedule's Ruskin line bundles it with a
+  business-purchase expense and **adds the whole bundle back**. ⛔ **Adding back an income item increases
+  earnings; normalising it out requires SUBTRACTING it.** The swing is **twice the amount** — and
+  separately, **the same store's equipment-sale proceeds sit in income and are never removed at all**,
+  though selling a machine is not operating revenue. **Between them that store's adjusted figure is
+  overstated by close to fifty thousand dollars, and its adjusted margin falls by about eight points** —
+  which matters because the binder sells on a **per-store margin table** and that store carries the
+  highest margin in it. ⚖️ **③ THE SELLER'S "TRANSFERS WASH OUT ACROSS THE PORTFOLIO" IS ROUGHLY TRUE —
+  BY LUCK, NOT BY METHOD.** Two other stores have transfer entries running the **opposite** way that the
+  schedule does **not** adjust, so at portfolio level the three nearly cancel. **But every individual
+  store's adjusted figure is wrong**, in both directions, and the two that are understated are
+  understated in the BUYER's favour — so this is a finding to state, not a point to press. 📌 **④ A
+  presentation defect worth knowing:** at one store the schedule's *Account total* column shows roughly
+  half what the ledger holds for property tax, while the add-back itself is correct — so a reader
+  concludes the whole account was removed when in fact a year's worth stays in expenses. **Earnings
+  right, column wrong.** ❓ **⑤ Accounts the schedule never mentions and nobody has explained:** an
+  expense account **named after a bank**, a **workers'-compensation** account at one store only, a
+  **`RENTAL`** account, and — the one to ask about — **`FIRST HAWAII STATE TAX`, carrying a real
+  five-figure balance in a Florida laundromat's 2025 books.** That is either a badly named account or a
+  filing obligation in another state that nobody has mentioned. ⓘ **⑥ Method note for the next session:**
+  the first pass flagged the Ruskin line as a twenty-thousand-dollar discrepancy. **It was not — it was
+  this session's own account-mapping, defeated by a misspelt account name.** The lesson is narrow and
+  practical: **tie to the ledger's own account list before concluding a schedule is wrong**, because a
+  typo in a hand-made chart of accounts looks exactly like a missing figure
 - 2026-09-21 — 📚 **THE SECOND QUICKBOOKS RESPONSE ARRIVES — 45 files, nearly everything asked for, and
   it changes what we think the books ARE.** Per store: the **General Ledger re-run for 2023, 2024, 2025
   and 2026 to date** *(the one non-negotiable ask — delivered)*, the **Balance Sheet at all four
