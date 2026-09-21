@@ -55,7 +55,7 @@ link). Never write the credential itself here.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | Double (client portal) | Organizer, document delivery | n/a — firm platform | Client `cid=764785`; 2025 organizer `responsesVisibility: admins_only` |
-| Health insurance — **Blue Cross Blue Shield** | 2025 coverage. ⚠️ **Whether it is Marketplace or private is UNSETTLED** — and the answer decides whether Form 1095-A blocks the return | _(n/a)_ | Carrier named by the client 2026-08-12; the organizer says Marketplace. **BCBS sells both on and off the exchange, so the carrier name settles nothing** — see §5. ⛔ **It has NEVER been established either way** — asked and re-confirmed as open on 2026-09-21. **He is checking with his broker; that answer is still what settles it.** ⚠️ **And the premium figure he sent does not settle it either** — paying a full unsubsidised premium is equally consistent with an off-exchange plan and with an exchange plan bought without any advance credit, and the second one still produces a **1095-A**. ⓘ **Form 8962 is required only where APTC was PAID, or where the taxpayer CLAIMS the credit** — so an unsubsidised exchange plan is not automatically a filing blocker; it is an **opportunity to test**, since the credit may still be claimable |
+| Health insurance — **Blue Cross Blue Shield** | 2025 coverage. ⚠️ **Whether it is Marketplace or private is UNSETTLED** — and the answer decides whether Form 1095-A blocks the return | _(n/a)_ | Carrier named by the client 2026-08-12; the organizer says Marketplace. **BCBS sells both on and off the exchange, so the carrier name settles nothing** — see §5. ⛔ **It was NEVER established either way** — and on **2026-09-21 Julia ruled to ASSUME no Marketplace cover and stop chasing it** (§6). ⛔ **Do not re-open this or re-ask the broker question.** 🟢 **Partial self-test: an e-filed return omitting Form 8962 where APTC was paid is rejected (F8962-070) — but that is e-file only, and the IRS's "ACA Explanation" attachment would bypass it, so it must NOT be used here** (working paper §4). ⚠️ **And the premium figure he sent does not settle it either** — paying a full unsubsidised premium is equally consistent with an off-exchange plan and with an exchange plan bought without any advance credit, and the second one still produces a **1095-A**. ⓘ **Form 8962 is required only where APTC was PAID, or where the taxpayer CLAIMS the credit** — so an unsubsidised exchange plan is not automatically a filing blocker; it is an **opportunity to test**, since the credit may still be claimable |
 | Adobe | An intermediate working step of Lilian's for client PDFs — **not where documents end up** | _(n/a — firm tool)_ | ✅ **Settled 2026-08-12:** the client's documents land in **DOUBLE**. Adobe is a staging step, not a second home |
 
 - No QuickBooks, no bank feed, no payroll system. Everything we have came from the client directly.
@@ -698,7 +698,8 @@ Minnesota house at 31 December?** — see the 2026-09-21 block.
 🟠 **Health coverage — the Marketplace finding is CONTESTED as of 2026-08-12; see the call block
 above.** The organizer says Marketplace, which would make **Form 1095-A** a condition of filing
 (the premium tax credit reconciles on Form 8962 and the return is **rejected** without it). The
-client has since named **Blue Cross Blue Shield**, and Lilian's read is private cover. **Unsettled
+client has since named **Blue Cross Blue Shield**, and Lilian's read is private cover. ⛔ **SUPERSEDED 2026-09-21 — Julia ruled to assume no Marketplace cover; do NOT send this question.**
+_(The method below is kept for the next client who needs it, not for him.)_ **Unsettled
 — and settled by asking WHERE he bought it and WHETHER anyone helped pay the premium, not by asking
 which form he holds; he may hold none (the method above).** **Nothing comparable appears on the 2024 return**, so
 whatever it is, it is new for 2025 — do not expect a prior-year copy to exist.
@@ -1562,23 +1563,37 @@ street address never appear here, and nor do dollar figures — those live in Do
   no Form 1095-A, no Form 8962.** The basis is the client's own final answer: after saying several
   times that he did not know, he was asked to check with a broker (*he does not have the number*)
   and to call the Marketplace himself (*he did not*), and then stated he had **no Marketplace cover
-  in 2025**. ⚠️ **Lilian's reading, recorded because it is the real reason: he shows no appetite for
+  in 2025**. ⚠️ **The DATE and CHANNEL of that statement are not on record** — it reached the session
+  as Lilian's relay of 2026-09-21, and it is the only thing overriding his own organizer, so it is
+  worth pinning down. ⚠️ **Lilian's reading, recorded because it is the real reason: he shows no appetite for
   making the enquiry.** ⚠️ **It contradicts his own organizer, and that contradiction stands.**
   🟢 **The assumption is TESTED FREE AT E-FILE** — with an advance credit the IRS holds the 1095-A
   and the return is rejected, which tells us we were wrong before any harm. ⛔ **The one case it
   misses is an exchange plan with NO advance credit: no reject, and the cost is a forfeited credit —
   his money, not a penalty.** ③ **Report the GROSS sum from Midwest Expedited with NO expenses on
   his 1040**, because the expenses belong on the corporation's 1120-S.
-  ✅ **Decision ③ settles by implication the question this file has carried since August: the
-  business is the CORPORATION'S, so there is no Schedule C.** 🔑 **And that rules out the expensive
-  mistake — a Schedule C would have added self-employment tax at 15.3% on the whole sum.**
+  🟠 **Decision ③ IMPLIES the business is the CORPORATION'S — and therefore that there is no
+  Schedule C — but ⛔ that is a READING of her instruction, not a decision she gave.** **It has to be
+  put to her in terms before filing**, and the row above stays open until it is. ⚠️ *An earlier
+  version of this entry marked it settled; struck.* 🔑 **What it does rule out is the expensive
+  mistake — a Schedule C would add self-employment tax** *(⚠️ **not a flat 15.3%**: 12.4% up to the
+  year's wage base plus 2.9% uncapped, on 92.35% of net earnings — still tens of thousands here)*.
   🔴 **What it does NOT settle is the CHARACTER of the money.** Lilian asked how it gets onto the
   return with no K-1; **the four routes and the recommendation are in the working paper §4A**
   ([`tax-returns/denys-melnyk/2025-form-1040.md`](../../tax-returns/denys-melnyk/2025-form-1040.md)).
-  **Recommended: Schedule E Part II as an estimated K-1 share, disclosed on Form 8082** — it matches
-  2024's presentation, carries no SE tax, and is what Form 8082 exists for. ⚠️ **Its known flaw is
-  recorded there: it puts a CASH figure on a line that reports an ALLOCATED SHARE**, so it probably
-  overstates his income — the safe direction, but not a measured one.
+  🔑 **AND THE FIRST ANSWER WAS WRONG IN SHAPE, corrected the same day after review: the allocated
+  SHARE and the CASH DISTRIBUTION are not alternatives — a real K-1 reports BOTH, and so must this
+  return.** The share goes on Schedule E Part II as nonpassive income; the cash is a distribution
+  that adjusts basis. 🟢 **And the ORDER matters: income raises basis BEFORE a distribution reduces
+  it**, so the capital-gain outcome the first answer feared largely does not arise. 🔵 **Reporting
+  the income also RAISES his basis — which may free suspended 2024 losses, and is the first thing
+  all day that moves the file's biggest open question.** ⚠️ **Its known flaw stands: it puts a CASH
+  figure on a line that reports an ALLOCATED SHARE**, so it probably overstates his income — ⛔ **and
+  overstating is not a safe harbour, it is a wrong return disclosed as an estimate.**
+  🟠 **One thing Julia must be told she is CHOOSING: reporting the whole sum with zero FICA is a
+  position.** The IRS's published view is that payments for a shareholder's personal services should
+  be **wages**, and he worked in that company. **Form 8919 is a route that needs no withholding
+  figures** — an earlier version said no such route existed. **All of it is in the working paper §4A.**
 
 ### Outstanding items (CI-only — never in the SOP)
 
