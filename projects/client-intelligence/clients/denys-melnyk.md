@@ -1595,6 +1595,36 @@ street address never appear here, and nor do dollar figures — those live in Do
   be **wages**, and he worked in that company. **Form 8919 is a route that needs no withholding
   figures** — an earlier version said no such route existed. **All of it is in the working paper §4A.**
 
+- 2026-09-21 — 🔴 **LILIAN SUPPLIED MIDWEST EXPEDITED CORP'S OWN 2024 FORM 1120-S AND SCHEDULE K-1,
+  AND THEY ANSWER THE BASIS QUESTION THIS FILE HAS CARRIED ALL DAY. THE ANSWER GOES AGAINST THE
+  TAXPAYER.** Both read through the redactor; **every figure is in the working paper §2F**
+  ([`tax-returns/denys-melnyk/2025-form-1040.md`](../../tax-returns/denys-melnyk/2025-form-1040.md)).
+  **What the corporation's balance sheet shows:** ⛔ **no loans FROM shareholders — so he has ZERO
+  debt basis**; **nominal capital stock and no additional paid-in capital**; and an opening AAA that
+  is trivial beside the loss allocated to him. 🔑 **§1366(d)(1) caps a shareholder's loss deduction
+  at stock plus debt basis — so most of the 2024 loss looks like it should have been SUSPENDED
+  rather than deducted**, which would mean the carryforward is **not the free NOL the 2024 return
+  reports** but largely a **§1366(d)(2) loss tied to that one corporation**. ⛔ **Julia's
+  determination, not this file's — and it reaches back into 2024, not only forward.**
+  🔵 **And it makes the 2025 reporting route decisive rather than incidental:** reporting income
+  **restores basis and releases suspended loss** (working paper §4A).
+  ✅ **Four things it closes outright:** **accumulated E&P is ZERO**, so §1368(c) cannot apply and no
+  distribution can be a dividend; **there were NO distributions in 2024**, agreed by two sources;
+  **his 2024 wages are confirmed from the corporation's side** as officer compensation, so an earlier
+  derived figure is now a read *(he is recorded as devoting **100% of his time** to the business)*;
+  and **Illinois is not speculative — the state return carries a specific distributable share for
+  him.**
+  🔴 **And it opens two, one of them new and large:** the corporation was carrying **very
+  substantial loans TO its shareholders, and nearly all of that balance came off the books during
+  2024 with nothing in the return explaining how** — repaid, or **forgiven, which would be income?**
+  ⚠️ **A loan TO him gives him no basis; it is the opposite of the loan that would.** 🟠 **And it
+  puts a FIFTH possible character on the 2025 money: a LOAN DRAW, which is not income at all.**
+  ⓘ **Redactor: 8 SSN/ITIN and 11 street lines masked across the two documents — but it LET THE
+  SHAREHOLDER'S OWN ADDRESS THROUGH on the K-1 while masking the corporation's.** Recorded as the
+  third confirmed instance of that gap in [`tools/redact-doc/README.md`](../../../tools/redact-doc/README.md).
+  ⛔ **The other 50% shareholder is named on both documents; his name stays in Double note 490984,
+  not here.**
+
 ### Outstanding items (CI-only — never in the SOP)
 
 **The open list, in priority order — and it is NOT all client asks.** Items are ordered by what would
@@ -1758,7 +1788,14 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
   residence and age**, above; who they are is settled). His 2024 return claimed one daughter with EIC and the child tax credit, and that
   needs re-establishing for 2025.
   ⚠️ **Ask facts, not documents.** The firm does not ask clients for custody orders, decrees or a signed Form 8332 _(Lilian, 2026-08-11)_. Form 8332 stays internal knowledge for how we **treat** his answer, and is raised **only if his answer makes it unavoidable** — a non-custodial parent claiming a child does need one signed and attached to the return (§152(e)), so the request can become necessary. It is simply never how we open.
-- 🔴 **HIS BASIS IN MIDWEST EXPEDITED CORP — the single fact the 2025 return most depends on.**
+- 🔴 **HIS BASIS IN MIDWEST EXPEDITED CORP — ✅ SUBSTANTIALLY ANSWERED 2026-09-21 from the
+  CORPORATION'S OWN RETURN, and it went the bad way.** ⛔ **No shareholder loans, so zero debt
+  basis; nominal capital stock; trivial opening AAA — against a very large allocated loss.**
+  **Most of the 2024 loss looks basis-limited** (§6 log; figures in the working paper §2F).
+  🔑 **What is left is not a research question but a DECISION FOR JULIA:** does she accept that
+  reading, and if so what happens to 2024? ⓘ *The old ask below is superseded — we no longer need
+  him to tell us what he lent the company, because the balance sheet says he lent it nothing.*
+  ~~**The single fact the 2025 return most depends on.**~~
   Three things, and only he or the corporation's records have them: **what he paid for the stock**,
   **what he lent the corporation out of his own pocket**, and **what distributions he took**.
   ⛔ **NOT the bank's debt** — entity borrowing gives an S-corp shareholder no basis, and with
