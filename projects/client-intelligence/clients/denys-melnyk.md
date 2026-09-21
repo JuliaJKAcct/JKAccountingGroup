@@ -567,8 +567,10 @@ is the mortgage. **Do not re-ask him "rent or mortgage".**
   _(Filing below it can still be worth it to recover withholding.)_
   🔍 **LOOK BEFORE ASKING HIM — the answer may already be in our hands.** His **2024 return is in
   Double** and has been read once: **Schedule E page 1** would show a rental property, and
-  **Schedule A** would show Minnesota mortgage interest and property tax. Either settles it without
-  a client question. ⓘ **And a corroboration nobody has drawn: he filed 2024 as a MONTANA resident**,
+  **Schedule A** would show Minnesota mortgage interest and property tax. ⛔ **BOTH ROUTES ARE NOW
+  SPENT, 2026-09-21 — do not send anyone down them.** The return was read: **Schedule E page 1 was
+  not reached and Part I contributed zero** (which does not settle the question — working paper
+  §2C-bis), and **there is no Schedule A at all, because he took the standard deduction.** ⓘ **And a corroboration nobody has drawn: he filed 2024 as a MONTANA resident**,
   so the Minnesota house was not his home that year either — which closes off the one alternative
   worth worrying about, a Minnesota part-year *residency* in 2025 (Minnesota does tax income).
   ✅ **The ambiguity that sat here is now MOOT.** Her sentence — *"tiene todo el sentido que se
@@ -782,19 +784,33 @@ they mean:
   below the 2024 joint threshold, so there was no excess business loss to report.** The test
   excludes income from **performing services as an employee**, and his other business items net
   against the loss first — **the computation is in the working paper §2E, which now holds it.**
-  🟠 **What remains is a filing defect with NO tax effect:** the 2024 rules require the form where a
-  taxpayer *"would report a loss of more than $152,500 on any one of Form 461, lines 1 through 8"*,
-  and his S-corp loss clears that — **so the form was owed even though it would have computed to
-  zero.** ⛔ **Two earlier versions of this bullet were wrong and are struck:** one called it
-  *"probably not material"* without computing it, the other left it open as a flag for Julia.
-  **Neither is needed now — it is computed and the carryforward figure is unaffected.**
-- ✅ **THE 2024 SCHEDULE E IS PAGE 2 ONLY — HE REPORTED NO RENTAL PROPERTY THAT YEAR**, and it is
-  proved by arithmetic rather than by the extraction: Schedule E line 41 combines the Part I total
-  with the partnership, trust, REMIC and farm-rental lines, and what reaches Schedule 1 is the
-  S-corp figure **alone** — so **all of those are zero** (working paper §2C-bis). 🔵 **This
-  independently corroborates what the client told Lilian on 2026-08-17** about 2025 and extends it
-  back a year: **the Minnesota house has never appeared on a return as a rental.** ⚠️ **It does not
-  establish whether he still OWNED it at 31 December 2025** — which is what Minnesota now turns on.
+  🔴 **BUT IT NARROWS TO ONE QUESTION RATHER THAN CLOSING — a third version of this bullet claimed
+  closure and that was wrong too.** The result depends on the **2024 Form 4797 gain being a
+  trade-or-business disposal of his**, which the working paper itself records as *not examined*: if
+  it is not, there **was** an excess business loss to report. ⚖️ **What makes this safe rather than
+  alarming: the 2025 carryforward is the SAME on both branches**, because a disallowed excess
+  business loss becomes an NOL carryover. **Only the presentation of the 2024 return moves.**
+  **One question for Julia, answerable in seconds — working paper §8 item 0.**
+  🟠 **And separately, the FORM was owed whatever the arithmetic produced**, under the 2024 rule
+  requiring it where a taxpayer *"would report a loss of more than $152,500 on any one of Form 461,
+  lines 1 through 8"*. ⛔ **Whether to raise that with the client, or amend 2024, is Julia's call.**
+  ⛔ **Two earlier versions are struck:** one called it *"probably not material"* without computing
+  it; another called it closed.
+- 🟠 **THE 2024 SCHEDULE E: PART I CONTRIBUTED ZERO — AND THAT IS ALL IT SAYS.** Schedule E line 41
+  combines the Part I total with the partnership, trust, REMIC and farm-rental lines, and what
+  reaches Schedule 1 is the S-corp figure **alone**; with the other three read as blank, the Part I
+  total is zero (working paper §2C-bis). ⛔ **Three stronger claims a first version made are STRUCK,
+  and the third is the one that mattered:** that page 1 is *absent* (arithmetic cannot prove a page
+  is missing), that the four lines are zero *by arithmetic alone* (they could offset — it is the
+  extraction that reads three of them blank), and that **he reported no rental property in 2024.**
+  🔴 **That last one the return itself argues against:** a rental whose loss is **entirely disallowed
+  under §469** produces a Part I total of zero **with Part I fully filled in** — and this return
+  **contains a Form 8582** carrying prior-years' unallowed losses under *All Other Passive
+  Activities*, a category that includes rental real estate. **Which activity that is has not been
+  established.** 🟠 **So it is consistent with what the client told Lilian on 2026-08-17 and counts
+  in its favour — but it is not independent proof, and it speaks to 2024 only**, the one year read.
+  ⚠️ **It also does not establish whether he still OWNED the house at 31 December 2025** — which is
+  what Minnesota now turns on.
 - 🔑 **WHAT WOULD SETTLE ALL OF IT:** what he paid for the stock, what he lent the corporation
   **out of his own pocket**, and what distributions he took. **Three facts, and only he or the
   corporation's records have them.** ⓘ **The 2025 K-1s, if they ever arrive, would state the
@@ -1533,9 +1549,12 @@ street address never appear here, and nor do dollar figures — those live in Do
   yes, **page 2 only**: the three S corps in the nonpassive column, everything else on the schedule
   empty. **Part I (rental) is absent, and the arithmetic proves it**, which corroborates his
   2026-08-17 answer and extends it back to 2024. ② **Is there a Form 461?** — **no**, and the
-  §461(l) computation has now been done: **there was no excess business loss**, so the blank line
-  was right; only the unfiled *form* remains, with **no tax effect**. 🔑 **That closes the flag an
-  earlier entry left open for Julia.** ⓘ **Figures in the working paper §2C-bis and §2E.**
+  §461(l) computation has now been done, and it **narrows to one question** rather than closing:
+  no excess business loss **provided** the 2024 Form 4797 gain was a trade-or-business disposal of
+  his — which is not established. ⚖️ **The 2025 carryforward is the same either way.** ⓘ **Figures
+  and both branches in the working paper §2C-bis and §2E; the question for Julia is §8 item 0.**
+  ⚠️ **Both answers were written more strongly than the evidence carried on the first pass, and the
+  independent review caught both** — recorded because it is the second time in one day.
   ⓘ *Also corrected: an earlier sweep counted page 22 as Schedule E; it is Schedule EIC.*
 
 ### Outstanding items (CI-only — never in the SOP)
