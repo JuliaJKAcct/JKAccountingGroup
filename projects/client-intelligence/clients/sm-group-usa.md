@@ -121,6 +121,19 @@ the actual details.
 - 2026-09-18 — **Olha's counter (WhatsApp, Ukrainian):** the quote far exceeds their
   budget; they pay much less at their current provider; asked to review the price since
   they plan to bring two companies
+- 2026-09-21 (afternoon) — **Julia sent the proposal into the WhatsApp group** with her
+  message: 20% discount while the business grows, monthly for the main company, and a
+  separate quarterly-billed figure for the second ("personal") company. **Olha countered
+  within 20 minutes:** they see the cooperation as long-term and comprehensive across
+  several directions, asked for a further discount for the total volume, and named the
+  monthly price they would be comfortable with for the main company (well below the
+  discounted quote); the other directions' rates suit them. **Julia's position (same
+  day): the discounted price is the floor — no further discount.** The reply draft (UA)
+  argues volume, not price: the current provider's cheaper service is basic bookkeeping,
+  while the package includes monthly statements, owner payroll, 1099s, the 1120-S, owner
+  tax planning and year-round support in one fee. ⚠️ Flagged to Julia: the delivered
+  document says "year-round tax coordination", not "tax planning for the owner" — if
+  planning is being sold as included, add the line and reissue before signing
 - 2026-09-21 — **Proposal delivered (Julia's instruction: 20% off).** Monthly engagement
   for SM Group USA Inc. on the standard bilingual template: e-commerce bookkeeping,
   financial statements as the foundation box, owner payroll, 1099s, Form 1120-S;
