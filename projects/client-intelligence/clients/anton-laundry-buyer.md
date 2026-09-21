@@ -236,6 +236,53 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-21 — 📚 **THE SECOND QUICKBOOKS RESPONSE ARRIVES — 45 files, nearly everything asked for, and
+  it changes what we think the books ARE.** Per store: the **General Ledger re-run for 2023, 2024, 2025
+  and 2026 to date** *(the one non-negotiable ask — delivered)*, the **Balance Sheet at all four
+  year-end dates**, the **Account Listing**, the **Audit Trail** and the **Deposit Detail**. The delivery
+  business got a balance sheet, a deposit detail and three years of ledger as CSV. ⛔ **Missing: no
+  Account Listing and no Audit Trail for that sixth file, and no Closing Date Exception Report
+  anywhere.** 🟢 **① THE SALES FIGURES TIE TO THE BINDER TO THE CENT AT ALL FIVE STORES.** The ledgers'
+  own Sales totals match the Financial Binder's sales table exactly. **The binder's revenue line is not
+  invented** — it is the books. That is a real piece of comfort and it belongs in the report. 🟢 **② THE
+  AUDIT TRAIL IS CLEAN.** Across four of the five files the prior-version and deleted counts are
+  ordinary bookkeeping-correction volume for three and a half years, every entry is under one `Admin`
+  login, and **the only 2026 edits to earlier transactions are a handful of early-January year-end
+  corrections** — payroll, the card processor, a bank fee, two vendors. **There is no burst of activity
+  around the letter of intent or the binder's compilation.** The books were not dressed before the
+  sale, so far as the trail can show. 🔴 **③ NOTHING HAS EVER BEEN CAPITALISED — IN ANY OF THE FIVE
+  FILES.** `Furniture and Equipment` and `Accumulated Depreciation` are **fixed-asset accounts holding
+  ZERO at every date**, while every equipment purchase sits in an **expense** account. So the add-back
+  is directionally right — the capital spend really did pass through the profit and loss — **but the
+  "adjusted net income" then contains NO capital cost whatsoever**: no depreciation and no capex, for
+  216 washers and 141 dryers of which two fleets are seven-to-nine years old and out of warranty. 🔑
+  **And it reframes the ALLOCATION:** equipment expensed as incurred means the seller's basis in it is
+  **nil**, so every dollar allocated to equipment is likely **ordinary-rate recapture to them** while
+  goodwill is capital gain — **the seller has a tax reason to allocate away from the very class the
+  buyer most wants.** That is the contested class, and nobody has named it yet. 🔴 **④ THESE ARE NOT THE
+  ENTITIES' BOOKS.** The balance sheets carry **no real estate, no equipment and none of the
+  $860,000 of debt** — at one store the entire balance sheet is its bank account. Five parcels of
+  Florida commercial property and a seven-figure fleet appear nowhere. **The six files are store-level
+  cash-tracking files**, exactly as the broker's "no entity-level company file" implied, which means
+  **the entity balance sheets can only exist on the two corporations' returns — the six returns still
+  unread.** Combined book equity across the five stores is under two hundred thousand dollars. 🔴 **⑤ TWO
+  MORE UNDISCLOSED LIABILITIES, BOTH FROZEN.** Besides the two PPP balances the broker did disclose,
+  the balance sheets carry **`BREEZYS`** at one store — unchanged at the same figure from December 2023
+  through July 2026 — and **`REFUND`** at another, which crept up and then stopped. Neither is on the
+  schedule of debt, and the Seller Responses say those three obligations are the only ones. **That is
+  now five items the debt representation does not describe.** ✏️ **⑥ A CORRECTION TO THIS SESSION'S OWN
+  WORRY:** transfers between stores are **NOT inside the Sales line** — they sit in their own accounts,
+  so reported revenue is not inflated by them. **But they run through income and expense accounts
+  rather than the balance sheet, and each file treats them differently** *(Other Income in one, Income
+  in another, an Expense account in a third)*, and on a first pass they do not obviously net to zero
+  across the files. 🟡 **⑦ One store sold equipment in 2025** and booked the proceeds to an income
+  account — with nil basis, all gain, and it means something left the fleet the buyers are purchasing.
+  🟢 **⑧ Sales tax is being collected and remitted at all five stores**, visible as twelve monthly
+  payments per store per year. It does not prove the returns are right, but this is not a business
+  ignoring the tax. ⓘ **⑨ The tax-line mapping is `<Unassigned>` on every hand-created account** — the
+  bookkeeper's own accounts carry no mapping at all, only the QuickBooks defaults do. **That confirms
+  the returns were assembled in the accountant's workpapers, not derived from the files**, which is
+  precisely why the roll-up workpaper has to be produced
 - 2026-09-18 — 🛑 **THE OBSERVATION PERIOD COMES OFF THE BROKER'S LIST — Julia is taking it to the
   BUYERS AND THE ATTORNEY FIRST.** *"This is something I have to bring up to the buyer… I need to first
   discuss it with the buyer and the attorney before I go with this to the broker."* 🔑 **The reasoning is
