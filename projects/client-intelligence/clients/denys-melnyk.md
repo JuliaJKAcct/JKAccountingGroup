@@ -1645,6 +1645,29 @@ street address never appear here, and nor do dollar figures — those live in Do
   ⛔ **The other 50% shareholder is named on both documents; his name stays in Double note 490984,
   not here.**
 
+- 2026-09-23 — 📧 **AN ACKNOWLEDGEMENT EMAIL WAS DRAFTED FOR THIS CLIENT — not sent.** Lilian asked for
+  it; it goes out **under Julia's name**, **after the return is prepared and before it is transmitted**,
+  and **filing waits for his written reply.** 🔑 **It does two things.** It records that **amending the
+  return later — if the Schedule K-1s finally arrive — is separate, billable work**, because the missing
+  information was withheld by someone else and is not a defect in the firm's work. And it makes him
+  **state in writing** the facts the return rests on: that he received **no Form W-2 and that no money
+  was run through payroll**, that the funds came from the one corporation and relate to work he
+  performed, that he paid the business costs personally and was not reimbursed, that he had **no
+  Marketplace health insurance in 2025 and never received a Form 1095-A**, and that there is no other
+  income. ⚠️ **It also warns him that an amendment can carry additional tax, interest and penalties from
+  the IRS** — not just our fee — **and that an e-file rejection over the Marketplace question means more
+  work too.**
+  ⛔ **THREE THINGS IT DELIBERATELY DOES NOT DO, recorded so nobody reads it as more than it is:** it
+  **does not settle the payroll question** *(his answer is a representation, not evidence — a Form W-2
+  filed with the SSA is matched automatically whatever he believes)*; it **does not assert that the
+  chosen treatment is correct in law**, because the working paper records a live preparer's objection to
+  it and a letter to the client claiming otherwise would have the firm vouching for a position its own
+  file disputes; and it **asks him none of the return's still-open questions**, which go out first as an
+  ordinary question list. 📌 **Open point: whether to send it in English only or English + Russian** —
+  a consent he cannot read closely protects nobody, and **a Russian version under Julia's name is written
+  at full native register, not the simplified Russian used for Lilian's own messages.** **The draft and
+  the reasoning are in the return's working-paper folder; his reply must be filed in Double.**
+
 - 2026-09-23 — 🔴 **JULIA REVERSED THE SHAPE OF THE RETURN: the money goes on a SCHEDULE C, with zero
   salary and zero distributions, and a Form 8082 for EACH of the three corporations.** Relayed by
   Lilian. ⛔ **This takes the route the working paper had named as the one that must not be taken**, so
