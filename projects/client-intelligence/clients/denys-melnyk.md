@@ -1663,7 +1663,11 @@ street address never appear here, and nor do dollar figures — those live in Do
   value the vehicle at the date it converted to business use. ⚠️ **That rests on a POSITION, recorded as
   one: that 2025 is the first year the vehicle was placed in service in a business of his.** The record
   supports it — he had no Schedule C before 2025, an employee could not deduct vehicle costs at all in
-  these years, **and his own mileage jumped to more than twice its prior annual pace in 2025**.
+  these years *(⚠️ the suspension §4 of this file records as now **permanent and redesignated** — do not
+  write it as expiring)*, **and his own driving rose sharply in 2025 against its prior pace**.
+  ⚠️ **How sharply is a RANGE, not a figure** — he gave the purchase year but not the month, so the
+  multiple depends on a date nobody has. **The argument holds across the whole range; a first version
+  stated a single multiple as if it were his own number.**
   🛑 **AND THE RATE SWALLOWS THREE THINGS HE HAD CLAIMED SEPARATELY:** his **personal car insurance** is
   inside it, and so are **gas and repairs for that vehicle** — so the *"truck repair"* and *"towing"*
   items now survive **only if they belong to a DIFFERENT vehicle**, which nobody has asked.
