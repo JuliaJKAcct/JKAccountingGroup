@@ -1680,10 +1680,19 @@ street address never appear here, and nor do dollar figures — those live in Do
   office has to be in the home where he actually worked.** 🔑 **The question to put is not "own or
   rent" — that is the question that produced this — but "in which house or apartment did you actually
   work in 2025, and what is its address?"** ⚠️ **If the answer moves his residence, it moves his state
-  filings too, which is far bigger than a home office.** ⓘ *He has also never given the square footage
-  the worksheet needs, and the mid-year move keeps Pub. 587's one-home-a-year limit alive behind all
-  of it.*
-  🔴 **AND HIS TRIP TOTAL DOES NOT RECONCILE — by exactly ten thousand.** Asked to combine his two
+  filings too, which is far bigger than a home office.** 🛑 **AND BEFORE ANYONE ASKS HIM FOR SQUARE FOOTAGE — LOOK FIRST.** ⛔ **A first version of this entry
+  said he had never given it. That was written without opening the file the firm already holds** — §4 of
+  this file records the completed worksheet by name and location and says *"do not chase him for it; it
+  is already here."* 🔑 **Open it, then decide what is missing.**
+  ⚖️ **Whether a session may open it WITHOUT asking is unsettled, and it is Lilian's to settle, not a
+  session's.** The prepare-a-return instruction says to go to Double and get **every file the client
+  uploaded**, and the review skill lists Double files as an unrestricted source; the Double operating
+  guide says never a document that is not part of a filed return, though its examples are all
+  third-party and identity documents. 📌 **Ask her, and write the answer into the Double skill so nobody
+  reasons it out again** — she can also just open it herself in a minute.
+  ⓘ *The mid-year move still sits behind all of it — though the one-home rule permits the simplified
+  method for one home AND actual expenses for the other, so both periods can be deducted.*
+  🔴 **AND HIS TRIP TOTAL DOES NOT RECONCILE.** Asked to combine his two
   earlier trip figures into one, he returned a number that falls short of their sum by a **round amount
   exactly consistent with a dropped leading digit**. ⛔ **That is a transcription artifact, not a
   revision** — and he was dictating, which this file already records as
