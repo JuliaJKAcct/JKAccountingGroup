@@ -558,8 +558,9 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > ⛔ **A running-balance ledger** *(Step · Amount · Running total)* **answers the first and never the
 > second**, and on a basis or reconciliation form most lines are outputs: Form 7203 Part I has **nine
 > computed lines out of fifteen**. **Put `⌨️` or `ƒ` on every row**, and close the table with the two
-> lists — *typed: A, B, C, D, E and 1, 2, 3a, 6, 8a, 13; computed: 4, 5, 7, 9, 10, 11, 14, 15* — so the
-> count is checkable at a glance.
+> lists — *typed: A, B, C, D, E and 1, 2, 3a, 6, 8a, 13; computed: 4, 5, 7, 9, 10, 11, **12**, 14, 15* —
+> so the count is checkable at a glance. ⚠️ **That `12` is the correction below; the list read as eight
+> for weeks under a heading claiming nine.**
 > ⚠️ **Those lists are THIS return's, not the form's.** 3b–3m and 8b–8c are typed lines that happen to be
 > empty here. 🔑 **A line blank because this client has nothing there is not a computed line, and a
 > delivery that conflates the two teaches the wrong thing about the form.**

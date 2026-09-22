@@ -1655,9 +1655,15 @@ street address never appear here, and nor do dollar figures — those live in Do
   🏥 **THE MARKETPLACE QUESTION IS NOW A PROCEDURE, NOT A QUESTION.** Lilian: *"vamos a intentar
   someter la declaración y, si es rechazada, sabremos entonces que necesitamos ese formulario."*
   ⛔ **Nobody chases the 1095-A and nobody re-asks the broker question.** The return is transmitted;
-  **a rejection under F8962-070 is what turns the form into a requirement.** ⚠️ **Both limits still
-  bind: it is e-file only, and the `ACA Explanation` attachment would bypass it — it must not be
-  used, because that rejection is the only verification this return has.**
+  **a rejection under F8962-070 is what turns the form into a requirement.** ⚠️ **THREE limits still
+  bind, and the first now has a consequence for how this return is filed:** ① **it is e-file only** —
+  a paper return is accepted and followed up by mail, so 🔴 **e-filing is now a REQUIREMENT of this
+  return, not a preference; if it has to go on paper, say so and the assumption is back to untested**;
+  ② the `ACA Explanation` attachment would **bypass** it and **must not be used**, because that
+  rejection is the only verification this return has; ③ ⚠️ **the reject proves less than it looks** —
+  it says the IRS database shows advance credit paid, not that his memory was wrong — **and no reject
+  proves only that no advance credit was paid. An unsubsidised exchange plan still produces a 1095-A
+  and rejects nothing.**
   🧾 **And the forms were written up line by line** — Form 7203, Form 8082 and Form 8995 — **each off
   the current PDF on irs.gov** *(Form 8082 was revised **October 2025**, so a reference from memory
   would have been wrong)*. ⚠️ **The first draft of the Form 8995 part was written WITHOUT reading its
