@@ -669,6 +669,128 @@ is computed on the **months** the office existed, and those months are not curre
 should go out with the next message**, alongside the square-footage question already asked.
 ⓘ *Two small charges the workbook filed as rent are renters insurance.*
 
+### 2026-09-22 — he answered, and the reply changes the shape of the return
+
+✅ **THE 2026-09-20 EMAIL WENT OUT** — sent that day under Lilian's name, copying Julia. *(The previous
+entry recorded it as drafted with no record of sending; that is now settled.)* **He replied in two
+days**, in English, with **two draft Profit & Loss statements — one per activity — and a
+reconciliation note.**
+
+⛔ **THE THREE ATTACHMENTS HAVE NOT BEEN READ BY ANYONE AT THE FIRM.** The session had no way to
+download a Gmail attachment, and they are in neither Google Drive nor his Double file library *(both
+searched)*. 🛠️ **Someone needs to save them to Double or Drive** — everything below rests on his own
+one-paragraph summary in the email body, not on the files.
+
+✅ **WHAT HE SETTLED**
+- 🚗 **The car: a 2021 Hyundai Tucson, FINANCED — not leased.** **That closes a branch that had been
+  open since the first pass**, because a lease and a loan are treated completely differently. He also
+  says **the loan is now paid off**, and he is chasing the lender for the year's interest total.
+- **He split his expenses into the two activities as asked**, rather than lumping them together.
+  ⚠️ **That is NOT the same as the worry being closed.** The firm's concern was that costs belonging
+  to his employment would end up filed under the catering heading — **and the catering figures that
+  came back are exactly where that would show.** 🔑 **The check that settles it has not been run**,
+  because it needs the attachment nobody has read.
+- **He gave his own percentages** for the home office, the phone and internet, and business meals, and
+  correctly left the meals limitation for us to apply.
+
+🔴 **WHAT THE REPLY OPENED, and these matter more than what it closed**
+- 🔴 **He proposes to report LESS business income than the three information returns the firm is
+  holding for him.** That is not a judgement call — the forms are third-party documents the IRS also
+  receives. It changes what the return has to **attach**, and that class of attachment can stop the
+  return being filed electronically at all.
+- ⚠️ **And the shape the firm most likely lands on puts him right on the edge of a health-insurance
+  subsidy band** — close enough that a small amount of additional income moves him across it, on a
+  return where two bank statements are still missing. **There the manual calculation and the
+  software's automatic one disagree, and the manual one governs**, so that figure has to be worked by
+  hand rather than accepted.
+- 🔴 **He now says a payment the firm had treated as business income is "a refund of my own funds".**
+  ⚠️ **His own expense workbook labelled that same payment as work income four days earlier.** Two
+  statements from the same person pointing opposite ways — **and there is a mechanical way to settle
+  it**: a refund has a matching payment going out, income does not. The firm looks, rather than asking
+  him a third time.
+- 🔴 **The catering activity came back with NO revenue at all and a full year of expenses.** The firm
+  had written down in advance that this exact result would mean the activity did not trade that year —
+  so it is the answer to a test, not a surprise. **It decides whether the return carries one business
+  or two**, and that is a position for Lilian. **The one fact still needed from him is simply whether
+  he did any catering work at all in 2025.**
+- ⚠️ **He allocates most of the car to the activity that earned nothing.**
+- 💊 **Whether the two activities go on one form or two is now worth real money** — the health-insurance
+  deduction is capped by the profit of the business the policy sits under, and on a combined form that
+  profit is almost nothing. **The firm had recorded this as the one place the split would bite; it has
+  bitten.**
+
+⛔ **WHAT HE DID NOT ANSWER — all of it was in the email, and none of it is optional**
+- 🔴 **The square footage of the office and of the apartment.** He sent the percentage again. **Both
+  methods of claiming a home office require an AREA; a percentage cannot be entered.** Nothing about
+  the home office can be done until this arrives.
+- 🔴 **The mileage figures and the odometer readings**, and **the date he began using the car for the
+  business** — all of which the forms require.
+- 🟡 **Whether the four W-2 employers are all of them.**
+- 🟡 **Whether that company ever sent him an information return.** He answered a different question.
+- 🟡 **The housing dates**, which his own payment history contradicts — he repeated them unchanged.
+
+🆕 **One new gap he raised himself: a bank statement for September 2025 is missing**, and he has
+offered to send it. **The firm already knew December was missing; this is a second month.**
+
+### 2026-09-22 (later) — the attachments were read, and the note behind them says more than the email
+
+✅ **Lilian supplied the three files directly**, so the gap the earlier entry flagged is closed.
+🟢 **Every figure the client summarised in his email checked out exactly** against the two workbooks.
+🔴 **But the reconciliation note behind them carries a great deal the email did not**, and four
+things in it change the work.
+
+🔑 **First, what these documents ARE.** They were built from **the same transaction file the firm
+already had** — so they are not new records, they are that file's own rules applied to it. **And the
+client did not write the note**: it refers to him in the third person throughout and opens by saying
+nothing should be sent to the accountant until he separately confirms. **He then confirmed and sent
+it.** ⓘ *Worth knowing because it explains why the note argues with his own instructions in places —
+it was written TO him.*
+
+🔴 **THE SHARPEST FINDING, and it is not an expense question.** He leaves out a payment from one of
+the companies that reported paying him, treating it as personal — **and the firm is the one that
+PREPARED that form for the payer.** So the return as he proposes it would report less from that payer
+than a document the firm itself produced. ⚠️ **Whether that form was ever filed with the tax
+authority is a separate thing the firm has NOT established** — and it decides whether this risks a
+matching notice or is simply an internal contradiction to explain. **Checking it is ours to do, not
+a question for him.** ⚖️ **Whether
+the payment really was personal is a fact only he has** — but it cannot simply be dropped without
+explanation, and it is exactly what the attached statement the return now needs would have to
+explain.
+
+🔴 **The catering activity has no costs of its own either.** Every line on its statement is a share
+of something shared with the other activity — right down to half of the firm's own fee. **No income
+and no cost of its own** is the fact that most informs whether it was a business at all that year.
+
+🔴 **Four of the splits between the two activities have no stated basis** — the vehicle, the meals,
+the phone, and the home office. The note says plainly of one of them that the underlying context is
+unclear. **And the two big ones pull opposite ways: the desk-based activity gets all of the home
+office, while the activity with no income gets most of the car.** ⚠️ **These are not
+substantiation questions — they are figures the firm types onto two forms**, so they are ours to
+settle.
+
+🔴 **A third activity — real estate — has its own costs sitting in neither statement**, including a
+state professional-licence fee and brokerage fees, and the note leaves them for the firm to place.
+**It also flags that one payer it moved into the credit-repair column may belong to the real-estate
+side instead** — a title company paying a commission to someone taking a real-estate licence.
+
+✅ **Two things the note settles in our favour, and one the firm settled for itself.** The
+housing-date problem the firm found independently is **confirmed from his own side** — his preparer
+could not identify a payment for the month in question either, and flagged the later payments as
+needing explanation. And he states that the company behind the disputed payment **issued no
+information return** at all.
+
+🔑 **AND THE DISPUTED PAYMENT IS NOW SETTLED — it is income.** The firm searched his own transaction
+file for money going OUT to that company, which is what a refund would need. **There is none, and
+the account the money arrived in is covered for the whole year.** ⛔ **So his September
+reclassification is not supported by his own bank data**, and the label on his original file was the
+right one. ⚠️ *What bank records cannot rule out is a repayment in cash, or one that never crossed
+these accounts.*
+
+⚠️ **One thing the note says about itself, worth recording:** the expense claim moved from the small
+set of items the source file had actually confirmed to the full figure now proposed, by applying the
+file's rule sheet to everything it had left unclassified. **The note presents that as expected. It
+does not make the figures wrong — it does say what kind of figures they are.**
+
 ### Outstanding items (CI-only — never in the SOP)
 
 
@@ -731,22 +853,42 @@ should go out with the next message**, alongside the square-footage question alr
       which months. 🔑 **Eligibility, not enrolment — and it is the highest-value unanswered question
       on the return.**
 - [ ] 🆕 Whether he paid **dental, vision or long-term-care** premiums separately in 2025.
-- [ ] 🆕 🚗 **The car — one question, asked 2026-09-20:** its **make, model and year**; **when it was
-      first used for the business**; **whether it is owned, financed or leased**; and whether it was
-      already used for work in an earlier year. 🔑 **The answer decides which vehicle method is even
-      available**, and the description is a typed field on the return. ⚠️ **The make he has given is
-      his own statement on his expense sheet** — it appears in **none of the 1,519 rows of the bank
-      extract he sent**, which is not the same as saying no record of it exists. ✅ **What the extract
-      DOES corroborate is twelve identical monthly payments to a Capital One auto account** — and
-      twelve identical payments fit a lease as well as a loan, which is why the question is asked
-      rather than inferred.
+- [x] ✅ 🚗 **The car's make, model, year and whether it is owned, financed or leased** — **ANSWERED
+      2026-09-22: a 2021 Hyundai Tucson, financed, not leased**, and the loan is now paid off.
+      🔑 **That closes the branch the firm could not settle from the bank rows alone** — twelve
+      identical monthly payments fit a lease exactly as well as a loan.
+- [ ] 🆕 🔴 **The DATE he first used the car for the business, the odometer at both ends of the year,
+      and the miles by category** — **asked 2026-09-20 and NOT answered**; he sent percentages
+      instead. **The forms require the dates and the miles, not a percentage.**
 - [ ] 🆕 Whether any **other bank or card account** was used in 2025 that is not in the workbook.
 - [ ] 🆕 🔴 **Which months he lived at each address** — his own dates and his own payments disagree, and
       the home-office months cannot be computed until they are reconciled *(2026-09-20)*.
-- [ ] 🆕 🔴 **How the vehicle use divides between the two activities** — asked 2026-09-20. ⛔ **One
-      mileage figure cannot be keyed once the return carries two Schedule C activities:** each one
-      has its own business-miles line and its own vehicle questions, so the split has to come from
-      him.
+- [x] ✅ 🆕 **How the vehicle use divides between the two activities** — **ANSWERED 2026-09-22**, and
+      ⚠️ **his answer puts most of the car on the activity that earned nothing**, which is a question
+      of its own rather than a closed item.
+- [ ] 🆕 🔴 **The square footage of the office room and of the whole apartment** — **asked 2026-09-20
+      and NOT answered**; he sent the percentage again. ⛔ **Nothing about the home office can be done
+      until this arrives** — both methods require an area.
+- [ ] 🆕 🔴 **Did he do ANY catering work in 2025?** — the one fact the firm needs before deciding
+      whether the return carries one business or two. **His catering figures came back with no revenue
+      at all** — 🆕 **and its statement shows no cost of its own either: every line is a share of
+      something shared with the other activity.** ⚠️ **Note the zero revenue is an ASSIGNMENT his
+      own preparer declined to make** — the note says the payers could not be reliably attributed to
+      either activity — **so this question also decides where the income sits.**
+- [x] ✅ 🆕 **Whether that company ever sent him an information return** — **ANSWERED 2026-09-22**:
+      his reconciliation note says none was issued. ⓘ *It does not change whether the money is
+      reportable — only whether a matching notice is coming.*
+- [ ] 🆕 🔴 **What one specific December payment from a payer was for** — he treats it as personal and
+      leaves it out, but it is inside an information return **the firm itself prepared for that
+      payer**. **Only he can say what it was; it cannot be dropped silently.**
+
+- [ ] 🆕 ⚖️ **Four splits between the two activities need the firm's decision** — the vehicle, the
+      meals, the phone and the home office. **None has a stated basis, and two of them pull opposite
+      ways.**
+- [ ] 🆕 🔴 **Where the real-estate activity's costs go, and whether one payer's commission belongs
+      there rather than to credit repair.**
+- [ ] 🆕 ⏳ **The September 2025 bank statement** — he raised the gap himself and offered to send it.
+      **A second missing month; December was already known.**
 
 ## 7. Links
 

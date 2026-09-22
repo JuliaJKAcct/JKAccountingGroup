@@ -511,9 +511,11 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 > a table of values without a route through the forms does not help her. In English: *the tables per
 > form, the flow of the figures between the forms, the explanations, and the boxes I have to tick.*
 > **Deliver all four, every time, unprompted — plus part 2, which is what makes the flow readable,
-> and parts 1b to 1e, 6 to 13 and 8b below, which are what she has had to ask for since.**
+> and parts 1b to 1g, 6 to 13 and 8b to 8d below, which are what she has had to ask for since.**
+> ⓘ *The count was "eighteen" and then "nineteen" for months while **8c and 8d existed and were never
+> counted**; corrected to **22** on 2026-09-22 — 13 headline parts, 1b–1g, 8b–8d.*
 
-> 🛑 **THE CALIBRATION, and it governs all eighteen parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
+> 🛑 **THE CALIBRATION, and it governs all twenty-two parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
 > tiene que hacerlo una persona que no sabe prácticamente nada de taxes, ni de formularios, ni de
 > cómo fluyen las cosas en los formularios, ni las fórmulas detrás de cada número. Este es el nivel
 > de detalle que necesitamos."*
@@ -528,7 +530,7 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 > **statement the return could not e-file without**; the other was **a K-1 explained only as the two
 > boxes that carried numbers.** Parts 6 and 7 exist because of them.
 
-### The EIGHTEEN things every delivery carries
+### The TWENTY-TWO things every delivery carries
 
 **1 · ONE TABLE PER FORM, in the order the forms are actually prepared** — every table with the same
 columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid form — the COLUMN named**:
@@ -558,16 +560,43 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > ⛔ **A running-balance ledger** *(Step · Amount · Running total)* **answers the first and never the
 > second**, and on a basis or reconciliation form most lines are outputs: Form 7203 Part I has **nine
 > computed lines out of fifteen**. **Put `⌨️` or `ƒ` on every row**, and close the table with the two
-> lists — *typed: A, B, C, D, E and 1, 2, 3a, 6, 8a, 13; computed: 4, 5, 7, 9, 10, 11, 14, 15* — so the
-> count is checkable at a glance.
+> lists — *typed: A, B, C, D, E and 1, 2, 3a, 6, 8a, 13; computed: 4, 5, 7, 9, 10, 11, **12**, 14, 15* —
+> so the count is checkable at a glance. ⚠️ **That `12` is the correction below; the list read as eight
+> for weeks under a heading claiming nine.**
 > ⚠️ **Those lists are THIS return's, not the form's.** 3b–3m and 8b–8c are typed lines that happen to be
-> empty here, and **Form 7203 line 12 is NEITHER** — the form gives it no arithmetic at all, so it is
-> marked as neither rather than guessed. 🔑 **A line blank because this client has nothing there is not a
-> computed line, and a delivery that conflates the two teaches the wrong thing about the form.**
+> empty here. 🔑 **A line blank because this client has nothing there is not a computed line, and a
+> delivery that conflates the two teaches the wrong thing about the form.**
+> ⛔ **CORRECTED 2026-09-22 — an earlier version of this bullet said "Form 7203 line 12 is NEITHER typed
+> nor computed, the form gives it no arithmetic at all." That is WRONG and is struck.** `i7203.pdf` says:
+> *"Line 12. Use Part II to figure the debt basis restoration, if any. **Enter the total from line 23**."*
+> **That is the identical construction to line 11** *("Use Part III… Enter the total from line 47, column
+> (c)")*, which the same bullet marks **ƒ**. 🔑 **Line 12 is COMPUTED** — which also restores the count:
+> **nine computed lines are 4, 5, 7, 9, 10, 11, 12, 14, 15.** ⚠️ **The list above was only ever eight.**
+> ⓘ *The rule the error reached for survives without it: where a form genuinely gives a line no arithmetic,
+> mark it as neither rather than guessing. It just was not true here — and the tell was that the form's own
+> printed text names where the figure comes from.*
 > 🛑 **AND THE FORM AND THE SOFTWARE ARE TWO DIFFERENT ANSWERS. GIVE BOTH.** A line the IRS form treats as
-> an input can still be closed in the program because it arrives from another screen *(in ATX, Form 7203
-> Part I opens only lines 1 and 13 — the rest come from the K-1 capture screen)*. **Neither answer alone
-> is usable**: give the form's, then the program's, and say which is which.
+> an input can still be closed in the program because it arrives from another screen. **Neither answer
+> alone is usable**: give the form's, then the program's, and say which is which.
+> ✅ **FORM 7203's PART I IN ATX IS NOW ESTABLISHED, FROM THE KEYBOARD — use this, and stop reasoning
+> about it** _(Lilian, 2026-09-22: **"todos los referentes 7203 se entran en el K1 input y luego fluyen al
+> 7203. Al menos esta es la forma en la que trabaja ATX."**)_:
+> **Every Part I BASIS figure is entered on `K1 INPUT (1120S)` and flows to the 7203.** 🔑 **Including the
+> DISTRIBUTION, which goes in the `box 16D` field on that screen** and lands on **Form 7203 line 6** —
+> _her words: "las distribuciones se entran en el K1 input en el box 16d"_.
+> ⛔ **SCOPE IT TO PART I, WHICH IS WHAT SHE SAID AND WHAT WAS OBSERVED.** ⚠️ **"The 7203 takes nothing"
+> is TOO STRONG and was written that way for a day before review caught it** *(the very over-reach 8d's
+> own closing paragraph warns about)*. ✅ **Outside Part I the form IS typed: items A, B, C, D and E, and
+> Part II's loan balances, lines 16–20** — and the Hub has said so since 2026-09-09.
+> 🔑 **This matters concretely:** Form 7203 **item D** must be ticked on a real return, and a preparer told
+> "the form takes nothing" will hunt for it on the K-1 screen and not find it.
+> **So: say `7203, BASIS WKST` is a REPORT for Part I, name items A–E and lines 16–20 as the exceptions,
+> and give the FORM's ⌨️/ƒ split separately — the two answers disagree on every Part I line.**
+> ⚠️ **This supersedes an inference that stood for weeks and did real damage**: an earlier version of this
+> bullet said *"Part I opens only lines 1 and 13"*. Nobody had seen it; **it sent a preparer hunting for a
+> keyboard inside a form that has none** (part **8d**), and — because it survived HERE after 8d struck it —
+> **it was copied into a client's working paper on 2026-09-22.** 🔑 **Two lessons, and the second is the
+> expensive one: a screen fact comes from a screen; and when you retract a claim, grep the file for it.**
 > _(Lilian, 2026-09-06: **"tampoco entiendo bien cómo llenar la forma 7203"** — the figures were right and
 > the table's SHAPE was the defect.)_
 >
@@ -591,7 +620,8 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > K-1's **money** is not typed on Schedule E page 2 at all — the K-1 is keyed on **its own form**, and
 > **Schedule E page 2, Form 7203 and Form 8995 are outputs of that one screen** *(ATX; the firm's own record
 > is [Kolo Florida's paper](../../../projects/tax-returns/kolo-florida-inc/2025-form-1120s.md) §8A row 1,
-> Aug 2026 — ⚠️ **that row carries no read-back stamp, unlike rows 2-3 of the same table**)*. 🔑 **Same rule as Form 7203 opening only lines 1 and 13.**
+> Aug 2026 — ⚠️ **that row carries no read-back stamp, unlike rows 2-3 of the same table**)*. 🔑 **Same rule as the Form 7203 entry route — and ⛔ note that the "only lines 1 and 13" version of
+> that example was RETRACTED (part 1, and 8d).**
 >
 > 🛑 **BUT SCOPE THE CLAIM TO WHAT WAS OBSERVED — "that form takes no input" is almost always too strong.**
 > ⛔ **Schedule E page 2 still has preparer entries on it** — line 27's Yes/No and the **(e)** and **(f)**
@@ -1049,6 +1079,107 @@ true — on the pilot software they collide on the line that carries **distribut
 line that can turn a basis shortfall into reportable income.
 
 
+**1f · 🛑 A FORM WHOSE ANSWER IS *SETTLED* STILL GETS ITS TABLE. The conclusion is not the delivery.**
+
+🔑 **This is the failure mode of part 1, and it does not look like a failure while you are writing it.**
+When the hard work on a form was the *reasoning* — a basis that had to be argued to zero, a disclosure
+that had to be justified — the section fills up with the argument, the argument is genuinely good, and
+**the table never gets written.** The section reads as finished because the *question* is finished.
+⛔ **But she is not reading the argument at the keyboard. She is reading the table.**
+
+> 🔑 **Lilian, 2026-09-22, on a worksheet whose Form 7203 section was three prose banners and no table:**
+> *"siempre habíamos hablado de que tenías que ponerme las tablas con las columnas, con todas las
+> explicaciones, las fórmulas, de dónde salía cada número, etcétera. En este último trabajo que me
+> hiciste no incluiste nada de eso."*
+
+**The tell, and it is checkable in one pass before delivering: every form named anywhere in the
+delivery has a table with the standard columns.** A form that appears only in prose — however
+completely the prose explains it — **has not been delivered.**
+
+🔑 **And a settled answer needs MORE rows, not fewer, for three reasons:**
+- **A settled zero and a careless zero look identical in the software.** The table is the only place
+  the reasoning sits beside the field, and it is what a later preparer reads instead of re-deriving it.
+- **"Settled" usually means settled for ONE line.** Form 7203's opening line being zero says nothing
+  about items C, D and E in its header, about which of Parts II and III go blank and why, or about
+  which lines the form's own **skip instruction** closes — **and writing the rows turned up a header box
+  that must be ticked and had never been asked about.** ⓘ *Small on its own; the point is that it was
+  invisible until the table existed.*
+- ⛔ **A form is never all conclusion.** Even where every figure is zero, the rows carry *which* lines
+  are typed, which are computed, which are blank because the client has nothing, and which are blank
+  because the form said to skip them. **Those are four different kinds of empty and only a table
+  separates them.**
+
+⚠️ **The same applies to a pure DISCLOSURE form** — Form 8082, Form 8275, a statement-only attachment.
+**It carries no tax figure, so it invites a paste block and nothing else.** ⛔ **Wrong:** it still has a
+box to tick on line 1 that routes the whole form, an entity-type box, columns whose contents are
+dictated word for word by the instructions *(on Form 8082: column (c) is **zero**, not blank, **when no
+schedule was received**; both boxes in column (b) get ticked **on that same fact pattern** — ⚠️ a
+shareholder who DID receive a K-1 and disputes only the treatment ticks **Treatment of item** alone, and is
+then excused columns (d) and (e); the explanation is prefixed with the Part II item number)* — and **a block of items that must be deliberately left blank because they belong to the
+box you did not tick.** **Every one of those is a row.**
+
+**1g · 🛑 SEPARATE WHAT IS TYPED FROM WHAT IS READ — and default the reading to COLLAPSED.**
+
+🔑 **Every rule above adds material to the delivery, and none of them says where it goes.** Follow them
+all on a real return and the page grows past the point where the **forms are findable** — the tables are
+correct, complete and buried between them.
+
+> 🔑 **Lilian, 2026-09-22, on a worksheet that had passed three independent reviews:** *"a veces, con
+> tanto texto y tantas explicaciones intermedias, **se pierden los formularios**. Quiero que esté
+> estructurado de otra manera para que me sea más fácil introducirlo, para entender **qué formas tengo
+> que introducir, qué números tengo que introducir en cada forma**."*
+
+⚠️ **This is not a request to write less.** She asked for the same content in a shape she can key from —
+and the parts she called "intermediate explanations" are the parts earlier rules were added to produce.
+⛔ **So do not resolve it by cutting; resolve it by SORTING.**
+
+**Three moves, and they cost nothing analytically:**
+
+1. ✅ **OPEN WITH A FORM INDEX.** One row per form, in preparation order: **the form's name in the
+   software · what has to be typed in it · a status · where the detail is.** 🔑 **It answers "which
+   forms am I filing?" before any figure appears**, and it is the only place that says **how many of
+   them need a human at all** *(on the worked return: nine forms, four with anything to type)*.
+   ⓘ *Name what is deliberately NOT filed too — that question costs a preparer a search.*
+2. ✅ **IN EVERY FORM'S BLOCK, THE TABLE COMES FIRST.** **Two things may precede it and nothing else
+   may:** the **entry route**, and ✅ **part 1's required first-line statement for a computed form**
+   *(which is itself an entry-route fact — "this form is an output; the figures are typed on X")*. ⛔ **A caveat, a correction and a worked example all belong AFTER the rows they qualify.**
+3. 🔑 **COLLAPSE THE PROSE.** On a page, every banner-sized explanation becomes a **closed
+   `<details>` whose summary is its own heading**, so it reads as one line until she wants it — with an
+   **expand-all / collapse-all** control at the top.
+   ⛔ **ONE CARVE-OUT, and it is not optional:** anything **part 11 requires to be VISIBLE stays open** —
+   above all the notice naming **which rows are held back and where their values are.** 🔑 **Part 11's
+   own words are that "a worksheet that is silently incomplete is worse than one that is visibly
+   incomplete", and a held-back notice collapsed by default is silently incomplete by construction.** ⛔ **Collapsing deletes nothing and moves nothing
+   between sections**, so it creates no second home for a figure — ⚠️ **that guarantee belongs to THIS
+   move, not to the split below**, which does relocate whole sections *(and must therefore move them
+   entire, never copy a table out of one)*. ⓘ *In CHAT, the same
+   move is ordering plus a one-line "why" that points at the working paper.*
+
+🗂️ **AND SPLIT THE PAGE IN TWO, VISIBLY: *to type* and *to understand*.** The analysis sections —
+exposure, characterisation, the reasoning behind a settled figure — go **after** every keying block,
+under their own heading. **She works the first half at the keyboard and reads the second half when
+something surprises her.** ⚠️ **AND RULE 13'S CHECKBOX LISTS SPLIT — they do not move as one block, and an earlier version of
+this bullet said they did.** 🔑 **A single list strands half of itself wherever you put it:**
+
+| The rows that say… | Where they go | Why |
+|---|---|---|
+| **DO THIS AT THE KEYBOARD** — open the form, type the figure, verify the column | ✅ **With the keying half** — ideally **inside each form's own block**, which is rule 13 ⑤'s first grouping *("this form, then that form, then the state return")* | They act on the table **beside them** |
+| **DECIDE THIS** *(the signer's open choices)* and **ASK THE CLIENT THIS** | ✅ **At the END, after the analysis** | ⛔ **Every one of them is explained by a section in the "to understand" half.** A row saying *"put the line-6 variant to the signer"* with its reasoning two screens **below** is this rule's own failure running backwards |
+
+⛔ **So "the lists go first" is wrong and "the lists go last" is wrong.** ✅ **The key-it rows close the
+keying half; the decide and ask rows close the page.** 🔑 **That satisfies both of rule 13 ⑤'s
+groupings at once.**
+ⓘ *If a page reorders an existing list, check the tick storage keys on a **stable per-row id**, not on
+position — a positional key remaps saved ticks onto different rows, and a restored tick then reads as
+"done" on something that was never done. **Rule 13 already says a tick is never evidence, so nothing
+about the RETURN is at risk — but it misleads her at the keyboard, silently.** A test that only proves
+persistence WORKS does not catch persistence landing in the WRONG PLACE.*
+
+🛑 **THE TELL, and it is checkable before delivering.** 📄 **On a page:** *open it and count how far
+you scroll before the first line-by-line table.* 💬 **In chat:** *the first thing after the form index
+is a TABLE, not a paragraph* — and each form's block opens with its rows. ⛔ **If an explanation gets
+there first in either container, the delivery is sorted wrong** — however good the explanation is.
+
 **2 · THE ORDER OF PREPARATION, up front — and every circularity called out.** Forms are not
 prepared in the order they are numbered. Open with the route:
 
@@ -1402,8 +1533,20 @@ form takes NO Part I entry at all** — it prints its own banner, `Basis informa
 she reported the software was refusing her.** 🔑 **The cost is not the wrong line numbers: it is that a
 confident vendor claim is followed, fails, and reads as the preparer's fault.**
 
+✅ **THE EXAMPLE IS RESOLVED — THE RULE IS NOT.** *(Banner scoped 2026-09-22: what follows retires the
+worked case, not the item.)* Lilian, who is the one at the keyboard, **told the firm how ATX behaves** —
+*"todos los referentes 7203 se entran en el K1 input y luego fluyen al 7203"*, distributions included, via
+the **box 16D** field. 🔑 **That is an observation from the person using the program, which is exactly the
+source this item asks for**, and it is recorded in part 1 as the established route for **Part I**.
+⚠️ **AND IT IMMEDIATELY DEMONSTRATED THE RULE AGAIN:** the first write-up widened her sentence to *"the
+7203 takes nothing"*, which is false — items A–E and Part II's lines 16–20 are typed on the form.
+🔑 **A sourced observation is still only worth what it actually covers.**
+
 ✅ **So:** a statement about what a program does is written **only** from an observation — a screenshot, a
-generated PDF, the vendor's own published page — and it **names the source and the date**. ⚠️ **A tax fact
+generated PDF, the vendor's own published page, **or the preparer telling you what is on her screen** — it
+**names the source and the date**, and ⛔ **it is scoped to what was actually said or seen.** **The
+preparer's word is the weakest of the four and the easiest to over-read**, because it arrives as prose
+rather than as a screen. ⚠️ **A tax fact
 may be reasoned; a screen fact may not.** ⛔ **And "it must work like this because the form is computed"
 is reasoning.**
 

@@ -42,6 +42,27 @@ job, so nothing depends on someone remembering.
 > test.** ⚠️ **Until then: a `0 street lines` count on a return that carries a K-1 is a reason to look,
 > not a clean result** — the same lesson as *"0 masked can mean BLIND rather than clean"* above.
 
+> 🔴 **ANOTHER CONFIRMED INSTANCE — 2026-09-21 — ON A SCHEDULE K-1, WHICH IS THE CASE THE FIRST
+> ENTRY PREDICTED.** ⚠️ **Deliberately NOT numbered.** This entry first called itself *"the third"* —
+> but [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) rows 81 and 111 already record a third, fourth and
+> fifth, and **both of those rows note that this README still says two.** ⛔ **The count here has
+> been wrong for weeks; do not add to it — fix it.** Reading an S corporation's 2024 Form 1120-S and its Schedule K-1, the tool
+> masked the **corporation's** address (a `STE #` line) correctly and reported `1 street line` — and
+> let the **shareholder's** address through **in full**, an `APT` line on the same K-1. ⛔ **Nothing
+> was written anywhere**, but the count read as a clean result while a real address was in the
+> output. ⚠️ **The lesson the first entry already drew holds: on a document that carries a K-1, a
+> street-line count is a reason to LOOK, not a clean result** — and the miss is on the **addressee**,
+> not the entity.
+> ⛔ **AND THE FIRST DIAGNOSIS THIS ENTRY GAVE WAS WRONG — struck, because it contradicted the very
+> next entry in this file.** It said the fix needs *"a test with an `APT` line alongside the `STE`
+> one"*. **The unit designator is not the cause** — the entry below says so in terms (*"the cause is
+> NOT the suite segment — that group is optional and can never cause a miss"*) and names the real
+> shape: a street **name** the token class rejects. ⚠️ **A test written to "APT vs STE" is exactly
+> the test [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) warns "would pass while the bug shipped."**
+> 🔑 **What this instance should have recorded and did not: whether the shareholder's street NAME was
+> numeric.** Nobody looked, and the address is gone now. **Next time note the street name's shape,
+> not the unit designator.**
+
 > 🔴 **A SECOND CONFIRMED INSTANCE — 2026-09-13 — AND IT IDENTIFIES THE ACTUAL CAUSE OF BOTH.** Reading
 > a client's three one-page 2025 lender interest letters, **two of the three printed the addressee's
 > full street line** while the third (a different city) masked correctly. ⛔ **Nothing was written

@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-21
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -30,7 +30,7 @@
 - **Primary language:** **Russian** — confirmed by Lilian, 2026-08-11. Write to him in Russian even though he completed the organizer in English.
 - **Our engagement (services we provide):** Individual income tax — **Form 1040**, tax year **2025**. **First year with JK**; the 2024 return was prepared by another firm (a Chicago practice). ⚠️ **Whether this is really a Schedule C engagement is an open question** — see §4 and §5.
 - **Fiscal year-end:** December 31
-- **Accounting platform:** None — Double shows `platform: "none"` (no QuickBooks). His figures come from his own summary, not from books we keep. **We do not have the S corporations' books or their 1120-S returns either**, which is the gap that matters most.
+- **Accounting platform:** None — Double shows `platform: "none"` (no QuickBooks). His figures come from his own summary, not from books we keep. 🔵 **We now hold MIDWEST EXPEDITED CORP's own 2024 Form 1120-S and Schedule K-1** _(supplied by Lilian, 2026-09-21 — see §6)_, which is what finally put evidence under the basis question. ⛔ **We still do not have the other two companies' returns, any of the 2025 returns, or any of the books.**
 
 ## 2. Contacts
 
@@ -55,7 +55,7 @@ link). Never write the credential itself here.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | Double (client portal) | Organizer, document delivery | n/a — firm platform | Client `cid=764785`; 2025 organizer `responsesVisibility: admins_only` |
-| Health insurance — **Blue Cross Blue Shield** | 2025 coverage. ⚠️ **Whether it is Marketplace or private is UNSETTLED** — and the answer decides whether Form 1095-A blocks the return | _(n/a)_ | Carrier named by the client 2026-08-12; the organizer says Marketplace. **BCBS sells both on and off the exchange, so the carrier name settles nothing** — see §5. ⛔ **It has NEVER been established either way** — asked and re-confirmed as open on 2026-09-21. **He is checking with his broker; that answer is still what settles it.** ⚠️ **And the premium figure he sent does not settle it either** — paying a full unsubsidised premium is equally consistent with an off-exchange plan and with an exchange plan bought without any advance credit, and the second one still produces a **1095-A**. ⓘ **Form 8962 is required only where APTC was PAID, or where the taxpayer CLAIMS the credit** — so an unsubsidised exchange plan is not automatically a filing blocker; it is an **opportunity to test**, since the credit may still be claimable |
+| Health insurance — **Blue Cross Blue Shield** | 2025 coverage. ⚠️ **Whether it is Marketplace or private is UNSETTLED** — and the answer decides whether Form 1095-A blocks the return | _(n/a)_ | Carrier named by the client 2026-08-12; the organizer says Marketplace. **BCBS sells both on and off the exchange, so the carrier name settles nothing** — see §5. ⛔ **It was NEVER established either way** — and on **2026-09-21 Julia ruled to ASSUME no Marketplace cover and stop chasing it** (§6). ⛔ **Do not re-open this or re-ask the broker question.** 🟢 **Partial self-test: an e-filed return omitting Form 8962 where APTC was paid is rejected (F8962-070) — but that is e-file only, and the IRS's "ACA Explanation" attachment would bypass it, so it must NOT be used here** (working paper §4). ⚠️ **And the premium figure he sent does not settle it either** — paying a full unsubsidised premium is equally consistent with an off-exchange plan and with an exchange plan bought without any advance credit, and the second one still produces a **1095-A**. ⓘ **Form 8962 is required only where APTC was PAID, or where the taxpayer CLAIMS the credit** — so an unsubsidised exchange plan is not automatically a filing blocker; it is an **opportunity to test**, since the credit may still be claimable |
 | Adobe | An intermediate working step of Lilian's for client PDFs — **not where documents end up** | _(n/a — firm tool)_ | ✅ **Settled 2026-08-12:** the client's documents land in **DOUBLE**. Adobe is a staging step, not a second home |
 
 - No QuickBooks, no bank feed, no payroll system. Everything we have came from the client directly.
@@ -567,8 +567,10 @@ is the mortgage. **Do not re-ask him "rent or mortgage".**
   _(Filing below it can still be worth it to recover withholding.)_
   🔍 **LOOK BEFORE ASKING HIM — the answer may already be in our hands.** His **2024 return is in
   Double** and has been read once: **Schedule E page 1** would show a rental property, and
-  **Schedule A** would show Minnesota mortgage interest and property tax. Either settles it without
-  a client question. ⓘ **And a corroboration nobody has drawn: he filed 2024 as a MONTANA resident**,
+  **Schedule A** would show Minnesota mortgage interest and property tax. ⛔ **BOTH ROUTES ARE NOW
+  SPENT, 2026-09-21 — do not send anyone down them.** The return was read: **Schedule E page 1 was
+  not reached and Part I contributed zero** (which does not settle the question — working paper
+  §2C-bis), and **there is no Schedule A at all, because he took the standard deduction.** ⓘ **And a corroboration nobody has drawn: he filed 2024 as a MONTANA resident**,
   so the Minnesota house was not his home that year either — which closes off the one alternative
   worth worrying about, a Minnesota part-year *residency* in 2025 (Minnesota does tax income).
   ✅ **The ambiguity that sat here is now MOOT.** Her sentence — *"tiene todo el sentido que se
@@ -696,7 +698,8 @@ Minnesota house at 31 December?** — see the 2026-09-21 block.
 🟠 **Health coverage — the Marketplace finding is CONTESTED as of 2026-08-12; see the call block
 above.** The organizer says Marketplace, which would make **Form 1095-A** a condition of filing
 (the premium tax credit reconciles on Form 8962 and the return is **rejected** without it). The
-client has since named **Blue Cross Blue Shield**, and Lilian's read is private cover. **Unsettled
+client has since named **Blue Cross Blue Shield**, and Lilian's read is private cover. ⛔ **SUPERSEDED 2026-09-21 — Julia ruled to assume no Marketplace cover; do NOT send this question.**
+_(The method below is kept for the next client who needs it, not for him.)_ **Unsettled
 — and settled by asking WHERE he bought it and WHETHER anyone helped pay the premium, not by asking
 which form he holds; he may hold none (the method above).** **Nothing comparable appears on the 2024 return**, so
 whatever it is, it is new for 2025 — do not expect a prior-year copy to exist.
@@ -756,16 +759,20 @@ they mean:
   asserts a basis figure nobody has verified and no form supports.
   ⚠️ **Whether the Schedule E basis-computation box was ticked cannot be read from a text
   extraction** — checkboxes are graphical.
-- 🔑 **THE TWO POSSIBLE TREATMENTS ARE OPPOSITE, WHICH IS WHY THIS MATTERS.** If basis was
+- 🔑 **THE TWO POSSIBLE TREATMENTS ARE OPPOSITE, WHICH IS WHY THIS MATTERED.** If basis was
   sufficient, it is an **NOL** — usable against any income, capped at 80%, and it survives a
   disposal of the stock. If it was not, the excess is a **§1366(d)(2) suspended loss** — usable
   **only against future income from that same corporation**, only once basis is restored, and
   ⛔ **it DIES with the shares if basis never is.** *(That is the reverse of a §469 passive loss, which is released on
   disposition — though only on disposing of the **entire interest** in a **fully taxable**
   transaction. The two look alike and behave oppositely.)*
+  ✅ **RESOLVED 2026-09-22 — the FIRST reading is the one the firm has adopted**, by Lilian's ruling
+  that the prior return is accepted rather than audited (§6 log). **It is an NOL, and the opening
+  2025 basis is zero.**
 - ⚠️ **THE MISSING FORM IS NOT PROOF THE LOSS WAS WRONG.** If he really contributed that capital or
   lent the company the money **personally**, the loss is allowable and what is missing is the
-  **form**, not the **basis**. **Both readings are open and neither has been tested.**
+  **form**, not the **basis**. ✅ **That is the reading the firm adopted — which leaves the missing
+  form standing on its own as a 2024 question, and it is Julia's.**
 - ⛔ **THE BANK'S DEBT GIVES HIM NO BASIS.** In an S corporation — unlike a partnership —
   entity-level borrowing does not lift a shareholder's basis. 🔑 **For a trucking company with
   financed equipment that is the likeliest place for the figure to fail**, and it is the single
@@ -775,15 +782,40 @@ they mean:
   cross-check on that point. ⚠️ **Stated as the mechanism, not as a verified e-file rule** — nobody
   here has read the IRS business rules themselves. 🔑 **What is certain either way: that the return
   was filed says only that nobody checked it.**
-- 🔴 **A SECOND GAP ON THE SAME RETURN, and it is sharper than a first pass suggested:** the
-  **§461(l) excess-business-loss line on Schedule 1 is blank**, and **no Form 461 appears in the
-  extracted text** *(same extraction limit as above)*. 🔑 **Form 461 had to be FILED whatever the
-  arithmetic produced** — the 2024 instructions require it where a taxpayer *"would report a loss of
-  more than $152,500 on any one of Form 461, lines 1 through 8"*, and **his S-corp loss goes on one of
-  those lines and clears that test** *(by how much is in the working paper, not here)*. ⛔ **An earlier version of this bullet called it "probably not
-  material". That was a determination made without the computation, and it is struck** — the test
-  excludes employment income and nets his other business items first, and this file does not hold
-  that split. **Flag for Julia.** ⓘ *(The figures and the full test are in the working paper §2E.)*
+- ✅ **§461(l) — ASKED AND ANSWERED 2026-09-21, and it CLOSES in the return's favour.** There is
+  **no Form 461** in the package *(proven three ways — the form's title and its attachment sequence
+  are both absent, and the one occurrence of "461" is the printed Schedule 1 label)*, and the
+  **line 8p adjustment is blank**. 🔵 **That was CORRECT on the substance: his net business loss is
+  below the 2024 joint threshold, so there was no excess business loss to report.** The test
+  excludes income from **performing services as an employee**, and his other business items net
+  against the loss first — **the computation is in the working paper §2E, which now holds it.**
+  🔴 **BUT IT NARROWS TO ONE QUESTION RATHER THAN CLOSING — a third version of this bullet claimed
+  closure and that was wrong too.** The result depends on the **2024 Form 4797 gain being a
+  trade-or-business disposal of his**, which the working paper itself records as *not examined*: if
+  it is not, there **was** an excess business loss to report. ⚖️ **What makes this safe rather than
+  alarming: the 2025 carryforward is the SAME on both branches**, because a disallowed excess
+  business loss becomes an NOL carryover. **Only the presentation of the 2024 return moves.**
+  **One question for Julia, answerable in seconds — working paper §8 item 0.**
+  🟠 **And separately, the FORM was owed whatever the arithmetic produced**, under the 2024 rule
+  requiring it where a taxpayer *"would report a loss of more than $152,500 on any one of Form 461,
+  lines 1 through 8"*. ⛔ **Whether to raise that with the client, or amend 2024, is Julia's call.**
+  ⛔ **Two earlier versions are struck:** one called it *"probably not material"* without computing
+  it; another called it closed.
+- 🟠 **THE 2024 SCHEDULE E: PART I CONTRIBUTED ZERO — AND THAT IS ALL IT SAYS.** Schedule E line 41
+  combines the Part I total with the partnership, trust, REMIC and farm-rental lines, and what
+  reaches Schedule 1 is the S-corp figure **alone**; with the other three read as blank, the Part I
+  total is zero (working paper §2C-bis). ⛔ **Three stronger claims a first version made are STRUCK,
+  and the third is the one that mattered:** that page 1 is *absent* (arithmetic cannot prove a page
+  is missing), that the four lines are zero *by arithmetic alone* (they could offset — it is the
+  extraction that reads three of them blank), and that **he reported no rental property in 2024.**
+  🔴 **That last one the return itself argues against:** a rental whose loss is **entirely disallowed
+  under §469** produces a Part I total of zero **with Part I fully filled in** — and this return
+  **contains a Form 8582** carrying prior-years' unallowed losses under *All Other Passive
+  Activities*, a category that includes rental real estate. **Which activity that is has not been
+  established.** 🟠 **So it is consistent with what the client told Lilian on 2026-08-17 and counts
+  in its favour — but it is not independent proof, and it speaks to 2024 only**, the one year read.
+  ⚠️ **It also does not establish whether he still OWNED the house at 31 December 2025** — which is
+  what Minnesota now turns on.
 - 🔑 **WHAT WOULD SETTLE ALL OF IT:** what he paid for the stock, what he lent the corporation
   **out of his own pocket**, and what distributions he took. **Three facts, and only he or the
   corporation's records have them.** ⓘ **The 2025 K-1s, if they ever arrive, would state the
@@ -1117,7 +1149,15 @@ routing gross receipts through its shareholder, who then pays the running costs,
 and it is still **wages or a distribution**, not Schedule C income. **The fork is unchanged; the
 expense list is evidence inside it, not a way around it.**
 
-**🔴 NEW PROBLEM — THE VEHICLE HE SOLD IN 2025, and his reason for thinking it is nothing is the
+**✅ CLOSED FOR THE 2025 RETURN, 2026-09-22 — JULIA RULED IT IS NOT REPORTED.** Lilian: *"en cuanto
+al vehículo, vamos a olvidar eso por ahora. Julia me dijo que no es algo que vamos a reportar en esta
+declaración."* ⛔ **Nothing to ask him, nothing to compute, and it comes off every open list.**
+⚠️ **What the closure does NOT establish, kept because the analysis below is still the right one if
+anyone re-opens it: "no profit" is his characterisation, not a computation.** 🔵 **And it narrows by
+itself if the working paper's §2F-i reading holds — the 2024 Form 4797 gain traced to the
+CORPORATION's §179 disposition, so the vehicles here may be the company's throughout.**
+
+**🔴 THE ORIGINAL ANALYSIS — THE VEHICLE HE SOLD IN 2025, and his reason for thinking it is nothing is the
 wrong test.** His words, relayed by Lilian, 2026-09-21: *"I sold one of my vehicles in 2025 but it
 just close credit (balance on credit) I didn't make any profit etc."*
 
@@ -1517,6 +1557,300 @@ street address never appear here, and nor do dollar figures — those live in Do
   ⓘ **Redactor: 4 of 44 pages extracted only partially; 22 SSN/ITIN, 1 account, 3 digit-runs and 12
   street lines masked; 8 EINs kept. Only 2024 was read.**
 
+- 2026-09-21 — **Two follow-up reads of the same 2024 return, both at Lilian's request, and both
+  CLOSED a question rather than opening one.** ① **Is there a Schedule E, and what is on it?** —
+  yes, **page 2 only**: the three S corps in the nonpassive column, everything else on the schedule
+  empty. **Part I (rental) is absent, and the arithmetic proves it**, which corroborates his
+  2026-08-17 answer and extends it back to 2024. ② **Is there a Form 461?** — **no**, and the
+  §461(l) computation has now been done, and it **narrows to one question** rather than closing:
+  no excess business loss **provided** the 2024 Form 4797 gain was a trade-or-business disposal of
+  his — which is not established. ⚖️ **The 2025 carryforward is the same either way.** ⓘ **Figures
+  and both branches in the working paper §2C-bis and §2E; the question for Julia is §8 item 0.**
+  ⚠️ **Both answers were written more strongly than the evidence carried on the first pass, and the
+  independent review caught both** — recorded because it is the second time in one day.
+  ⓘ *Also corrected: an earlier sweep counted page 22 as Schedule E; it is Schedule EIC.*
+
+- 2026-09-21 — **JULIA SETTLED THE SHAPE OF THE 2025 RETURN — three decisions, all relayed by
+  Lilian.** ① **File without the K-1s**, amend if they arrive. ② **Assume NO Marketplace coverage —
+  no Form 1095-A, no Form 8962.** The basis is the client's own final answer: after saying several
+  times that he did not know, he was asked to check with a broker (*he does not have the number*)
+  and to call the Marketplace himself (*he did not*), and then stated he had **no Marketplace cover
+  in 2025**. ⚠️ **The DATE and CHANNEL of that statement are not on record** — it reached the session
+  as Lilian's relay of 2026-09-21, and it is the only thing overriding his own organizer, so it is
+  worth pinning down. ⚠️ **Lilian's reading, recorded because it is the real reason: he shows no appetite for
+  making the enquiry.** ⚠️ **It contradicts his own organizer, and that contradiction stands.**
+  🟢 **The assumption is TESTED FREE AT E-FILE** — with an advance credit the IRS holds the 1095-A
+  and the return is rejected, which tells us we were wrong before any harm. ⛔ **The one case it
+  misses is an exchange plan with NO advance credit: no reject, and the cost is a forfeited credit —
+  his money, not a penalty.** ③ **Report the GROSS sum from Midwest Expedited with NO expenses on
+  his 1040**, because the expenses belong on the corporation's 1120-S.
+  🟠 **Decision ③ IMPLIES the business is the CORPORATION'S — and therefore that there is no
+  Schedule C — but ⛔ that is a READING of her instruction, not a decision she gave.** **It has to be
+  put to her in terms before filing**, and the row above stays open until it is. ⚠️ *An earlier
+  version of this entry marked it settled; struck.* 🔑 **What it does rule out is the expensive
+  mistake — a Schedule C would add self-employment tax** *(⚠️ **not a flat 15.3%**: 12.4% up to the
+  year's wage base plus 2.9% uncapped, on 92.35% of net earnings — still tens of thousands here)*.
+  🔴 **What it does NOT settle is the CHARACTER of the money.** Lilian asked how it gets onto the
+  return with no K-1; **the four routes and the recommendation are in the working paper §4A**
+  ([`tax-returns/denys-melnyk/2025-form-1040.md`](../../tax-returns/denys-melnyk/2025-form-1040.md)).
+  🔑 **AND THE FIRST ANSWER WAS WRONG IN SHAPE, corrected the same day after review: the allocated
+  SHARE and the CASH DISTRIBUTION are not alternatives — a real K-1 reports BOTH, and so must this
+  return.** The share goes on Schedule E Part II as nonpassive income; the cash is a distribution
+  that adjusts basis. 🟢 **And the ORDER matters: income raises basis BEFORE a distribution reduces
+  it**, so the capital-gain outcome the first answer feared largely does not arise. 🔵 **Reporting
+  the income also RAISES his basis — which may free suspended 2024 losses, and is the first thing
+  all day that moves the file's biggest open question.** ⚠️ **Its known flaw stands: it puts a CASH
+  figure on a line that reports an ALLOCATED SHARE**, so it probably overstates his income — ⛔ **and
+  overstating is not a safe harbour, it is a wrong return disclosed as an estimate.**
+  🟠 **One thing Julia must be told she is CHOOSING: reporting the whole sum with zero FICA is a
+  position.** The IRS's published view is that payments for a shareholder's personal services should
+  be **wages**, and he worked in that company. **Form 8919 is a route that needs no withholding
+  figures** — an earlier version said no such route existed. **All of it is in the working paper §4A.**
+
+- 2026-09-21 — 🔴 **LILIAN SUPPLIED MIDWEST EXPEDITED CORP'S OWN 2024 FORM 1120-S AND SCHEDULE K-1,
+  AND THEY ANSWER THE BASIS QUESTION THIS FILE HAS CARRIED ALL DAY. THE ANSWER GOES AGAINST THE
+  TAXPAYER.** Both read through the redactor; **every figure is in the working paper §2F**
+  ([`tax-returns/denys-melnyk/2025-form-1040.md`](../../tax-returns/denys-melnyk/2025-form-1040.md)).
+  **What the corporation's balance sheet shows:** ⛔ **no loans FROM shareholders — so he has ZERO
+  debt basis**; **nominal capital stock and no additional paid-in capital**; and an opening AAA that
+  is trivial beside the loss allocated to him. 🔑 **§1366(d)(1) caps a shareholder's loss deduction
+  at stock plus debt basis — so most of the 2024 loss looks like it should have been SUSPENDED
+  rather than deducted**, which would mean the carryforward is **not the free NOL the 2024 return
+  reports** but largely a **§1366(d)(2) loss tied to that one corporation**. ⛔ **Julia's
+  determination, not this file's — and it reaches back into 2024, not only forward.**
+  🔵 **SUPERSEDED THE NEXT DAY — see the 2026-09-22 entry below**, where Lilian ruled the prior
+  return is **accepted, not audited**. ⛔ **Do not act on this entry's reading.** *(Kept because §6
+  is a chronology: this is what the evidence looked like before she ruled.)*
+  🔵 **And it makes the 2025 reporting route decisive rather than incidental:** reporting income
+  **restores basis and releases suspended loss** (working paper §4A).
+  ✅ **Four things it closes outright:** **accumulated E&P is ZERO**, so §1368(c) cannot apply and no
+  distribution can be a dividend; **there were NO distributions in 2024**, agreed by two sources;
+  **his 2024 wages are confirmed from the corporation's side** as officer compensation, so an earlier
+  derived figure is now a read *(he is recorded as devoting **100% of his time** to the business)*;
+  and **Illinois is not speculative — the state return carries a specific distributable share for
+  him.**
+  🔴 **And it opens two, one of them new and large:** the corporation was carrying **very
+  substantial loans TO its shareholders, and nearly all of that balance came off the books during
+  2024 with nothing in the return explaining how** — and 🔴 **the return shows no corporate source
+  for a cash repayment of that size.** Three readings: repaid from **outside funds**; **written
+  off** — ⚠️ which between a company and its own shareholder is more likely a **distribution** or
+  **compensation (with FICA)** than cancellation-of-debt income; or 🔴 **never bona fide loans at
+  all**, in which case recharacterising them across prior years **would have consumed the very basis
+  the question above is trying to measure. The two findings interact.**
+  ⚠️ **A loan TO him gives him no basis; it is the opposite of the loan that would.** 🟠 **And it
+  puts a FIFTH possible character on the 2025 money: a LOAN DRAW, which is not income at all.**
+  ⓘ **Redactor: 8 SSN/ITIN and 11 street lines masked across the two documents — but it LET THE
+  SHAREHOLDER'S OWN ADDRESS THROUGH on the K-1 while masking the corporation's.** Recorded as the
+  third confirmed instance of that gap in [`tools/redact-doc/README.md`](../../../tools/redact-doc/README.md).
+  ⛔ **The other 50% shareholder is named on both documents; his name stays in Double note 490984,
+  not here.**
+
+- 2026-09-23 — 🔴 **JULIA REVERSED THE SHAPE OF THE RETURN: the money goes on a SCHEDULE C, with zero
+  salary and zero distributions, and a Form 8082 for EACH of the three corporations.** Relayed by
+  Lilian. ⛔ **This takes the route the working paper had named as the one that must not be taken**, so
+  both halves are recorded.
+  🛑 **AND BEFORE THE TRADE-OFF — ON THE FACTS THIS FILE ITSELF RECORDS, THIS MONEY CANNOT BE SCHEDULE
+  C INCOME, and the preparer's objection is recorded here so it travels with the decision.** The
+  Schedule SE instructions exclude from self-employment earnings any income received **for performing
+  services as an employee** — and a shareholder-officer performing services for his own S corporation
+  **is** an employee for employment-tax purposes, which is the very proposition the
+  reasonable-compensation exposure rests on. **An S-corporation shareholder's distributive share is
+  not self-employment income either.** ⛔ **So this money is wages, a distribution, or a loan draw —
+  there is no state of the world in which it is sole-proprietor gross receipts.** ⚠️ **And the Form
+  8082 text the firm is filing says so to the IRS in its own words: the funds were received *for
+  services he performed*.**
+  ⛔ **TWO SENTENCES WRITTEN HERE ON 2026-09-23 ARE STRUCK, and were struck in the working paper the
+  same day:** ~~"the whole reasonable-compensation exposure evaporates… no §6672 route on this
+  money"~~ — **the exposure is the CORPORATION's payroll failure and a Schedule C on his 1040 does not
+  reach it; what changes is that it becomes an assertion instead of an implication** — and ~~"it is
+  the conservative characterisation, and the IRS rarely objects to being paid more"~~, **which is not
+  true here: the cheaper and better-fitting route was already on the record.**
+  ✅ **What it genuinely buys, narrowly stated:** it removes the **presentation** — no distribution on
+  the return to challenge, no zero-wage-with-distribution pattern, and no capital-gain risk.
+  🔴 **What it costs: SELF-EMPLOYMENT TAX, which nothing on this return can shelter.** 12.4% to the
+  wage base plus 2.9% uncapped on 92.35% of net profit — 🛑 **and the large loss carryforward does NOT
+  reduce it**, because the statute computes net earnings without that deduction.
+  ⚠️ **AND THE LOSS DOES NOT WIPE OUT HIS INCOME TAX EITHER — a correction to what an earlier version
+  of this entry implied.** A post-2017 NOL is capped at **80% of taxable income**, so **a fifth
+  survives and is taxed**, on income that had **no withholding at all** — which is its own
+  estimated-tax exposure that nobody has costed *(the prior-year no-liability exception may waive it,
+  and that turns on the spouse's 2024 Schedule C — unchecked)*. 🔑 **That cuts both ways on the
+  comparison: the Schedule C route carries deductions the alternative does not allow, so it recovers
+  part of the difference in income tax. It narrows the gap by about 40%; it does not close it.**
+  ✅ **AND THE UNRESOLVED CHILD CREDIT DOES NOT MOVE THE COMPARISON AT ALL — worth knowing, because it
+  removes an unknown from Julia's decision.** Where the credit exceeds the tax on the cheaper branch
+  the unused part comes back as the **refundable** additional child tax credit, so the two branches
+  move together; the other-dependent credit is absorbed on both; and an ITIN filer gets neither.
+  🔑 **The daughter's status still has to be settled for the RETURN — it is worth real money — but it
+  is not a variable in the Schedule C choice.**
+  🔴 **ONE COST NOBODY HAS PRICED, AND IT IS UNVERIFIED:** federal law on **interstate motor-carrier
+  employees** is generally understood to stop any state but the residence state taxing their pay —
+  **and it reaches employees, not self-employed owner-operators.** ⚠️ **If that holds, treating him as
+  self-employed may CREATE a multi-state problem that a wage treatment would have closed**, which
+  bears on the Illinois question already open on him. ⛔ **Nobody has read the statute; recorded as a
+  question, not as law.**
+  🔴 **AND IT IS NOT THE CHEAPEST ROUTE EITHER: Form 8919 charges only the EMPLOYEE half** of the same
+  taxes and is designed for exactly this fact pattern — someone treated as other than an employee when
+  he should have been one. **On these facts the Schedule C costs materially more than Form 8919 would
+  have, and mischaracterises the income as well.**
+  **Figures are in the working paper; the point for this file is that the trade has a price, the price
+  is large, and it should be one Julia set deliberately with the alternative in front of her.**
+  🛑 **AND THE CLIENT'S EXPENSE LIST CANNOT BE USED AS SENT — five of its twelve items are not
+  Schedule C expenses at all** *(health insurance belongs on Schedule 1, not Schedule C, whose
+  insurance line says "other than health"; personal car insurance, rent, child support and a car-loan
+  principal are not deductible anywhere)*, **two were given as MONTHLY amounts and FOUR carry no
+  period** *(corrected 2026-09-23 — this said "three")*. 🔑 **The rule that governs it: a description
+  is not a business purpose.**
+  🔴 **THREE THINGS THE SCHEDULE C CREATES THAT DID NOT EXIST BEFORE:** ① **the two Form 1099
+  questions on its face** — the client said he sent money to **drivers**, which is contract labour, and
+  answering those boxes is a compliance statement under penalties of perjury, so **he has to be asked
+  who they were and whether anything was filed**; ② **the self-employed health deduction reopens the
+  Marketplace question** that was closed, because the deduction and the premium credit interact; and
+  ③ **the vehicle decision is reopened** — it was closed as "not reported" when there was no Schedule C,
+  and a business vehicle that is sold is a Form 4797 event.
+  ✅ **Her SECOND procedural question is answered by the Form 8082 instructions verbatim: a SEPARATE
+  form is required for EACH pass-through entity** *(three corporations, three forms — the form cannot
+  name more than one).*
+  🛑 **HER FIRST QUESTION WAS ANSWERED WRONG IN CHAT ON 2026-09-23, AND THE CORRECTION IS RECORDED
+  HERE RATHER THAN QUIETLY DROPPED.** She was told Part II is left blank. **It is not.** The
+  instructions' first note under *Specific Instructions* says that where the entity gave no Schedule
+  K-1 by the filing date, you **complete Parts I and II to the best of your knowledge** — and the
+  waiver she was quoted applies only where **no change to the amount or treatment** is reported, while
+  the instructions themselves treat a missing K-1 as a change of treatment *(it is the stated reason
+  to tick both boxes in column (b))*. ✅ **What IS true, and was the substance of her question: nothing
+  is typed into the K-1 input and nothing from any of the three corporations reaches the return.**
+  **The form's own line 8 is completed with zeros, and the zero is what does the disclosing.**
+  🔴 **AND A THIRD THING NOBODY ASKED, which changes what these forms ARE:** the instructions make the
+  form mandatory only where *there are items you must include on your return* — **with nothing
+  reported from any of the three, that trigger is met by none of them.** **So all three are a
+  PROTECTIVE disclosure, not a required notice.** ✅ **Filing them is still right** *(without the
+  notice, a later deficiency can be assessed immediately, and nobody knows what those corporations
+  filed)* — **but it is a disclosure choice for Julia, not a compliance step.**
+  ⚠️ **One thing the three forms must NOT be: identical.** The money on the Schedule C is Midwest's
+  money, so that corporation's form has to say what was done with it — otherwise the return states two
+  different things about one sum with nothing connecting them.
+- 2026-09-22 — 🔴 **A NEW QUESTION WORTH MORE THAN ANY OTHER STILL OPEN ON HIM: WAS PART OF THE 2025
+  MONEY RUN THROUGH PAYROLL?** Lilian raised it while thinking about the reasonable-compensation
+  exposure, and **the file already argues in her favour**: this corporation **reported him as a
+  COMPENSATED OFFICER on its prior-year return** *(Form 1125-E)* — ⚠️ **which is a deduction line, not
+  proof a Form W-2 was ever issued; nobody has seen one**, and **he worked
+  there in the early months of 2025 — the same months the money arrived.** ⛔ **A payroll account open
+  in December does not close itself in January.** 🔑 **So "some payroll was run in 2025" is the more
+  likely reading, and it has never been tested.**
+  ✅ **AND IT CAN BE SETTLED WITHOUT RELYING ON HIS MEMORY.** 🥇 The **IRS wage & income transcript**
+  shows any W-2 **filed with the IRS** *(needs his IRS account or a **Form 8821** — ⛔ **not a 2848**,
+  which Lilian may not be named on)*. ✅ **Timing is not a constraint: the current processing year's
+  information returns post from the first week of February.** ⛔ **But a BLANK transcript proves only
+  that no W-2 was FILED — not that no payroll was run**, which is a real and separate outcome. 🥈 **His own bank descriptions** — a payroll deposit normally
+  names the provider, an owner draw does not. 🥉 **The shape of the deposits** — payroll is the same
+  amount on a regular date and arrives NET of withholding. **And his `ssa.gov` account** shows wages
+  posted by year. 📩 **Three plain questions are drafted in the working paper §4C.**
+  ⚖️ **WHY IT MATTERS — the exposure, stated so nobody over-reads it.** A shareholder-employee who
+  performed services, has **no wages** and takes a **distribution** is the textbook reasonable-
+  compensation profile, and it is visible without anyone opening an audit: the **corporation's own
+  return pairs officer compensation against distributions on one page**, and **his own Form 7203
+  states the distribution beside a wage line of zero.** ⛔ **Most of the assessment lands on the
+  CORPORATION — the employment taxes, the unfiled 941/940, the missing W-2s and their penalties are
+  the employer's — and this firm does not prepare that return.**
+  🔴 **BUT TWO ROUTES REACH HIM PERSONALLY, and he is entitled to know.** The **Trust Fund Recovery
+  Penalty (§6672)** makes a responsible person personally liable for the whole trust-fund half, and he
+  is a 50% shareholder-officer recorded as devoting all his time to the business — **being locked out
+  later answers for the months he was locked out, not for the months he ran it.** And **his own half
+  of FICA is his regardless of what the corporation pays.** ⛔ **Nothing on his 1040 creates or cures
+  either — but "the firm is only creating visibility, not liability" was written and is struck, because
+  it is not true of him.**
+  🛑 **AND THE FIRM'S OWN OBLIGATIONS ARE NOT OPTIONAL:** under Circular 230 the practitioner **must
+  advise a client of known non-compliance and its consequences**, and of the penalties reasonably
+  likely to apply. **That is owed whatever Julia decides to write on the form.**
+  🟢 **The mitigation is already true and was unstated: he did not choose to take no salary — he was
+  locked out.** A sentence saying so, and that **the corporation reported him as a compensated officer
+  on its 2024 return**, is **recommended for the Form 8082 explanation and is Julia's to approve.**
+  ⛔ **It does NOT say he drew W-2 wages** — that is not established, and nobody has seen a 2024 W-2.
+  ⚖️ **AND THE ROUTES, WHICH ARE THREE — an earlier version of this entry said there was none and was
+  wrong on the forms' own text:** ① **payroll ran and a W-2 was filed** → get it and report it,
+  nothing special; ② **payroll ran and no W-2 was ever filed** → that is precisely what **Form 4852**
+  exists for; ③ **no payroll ran and part is still to be treated as wages** → **Form 8919 IS
+  available**, through its *"none of the reason codes apply"* catch-all, which sends you to **reason
+  code G and a Form SS-8**. 🔑 **What that costs is an SS-8 naming the corporation in a live dispute —
+  a decision, not an impossibility.**
+  ⛔ **Struck from an earlier version:** that Form 8919 "describes a misclassified contractor, which he
+  is not" *(the catch-all is written for exactly his case)*; that Form 4852 "needs withholding figures
+  he does not have" *(if no payroll ran the withholding is zero — known, not estimated; the real
+  objections are attesting to wages never paid, and the §6702 penalty)*; and that he was "never paid
+  at all" *(he was paid — just not as wages)*.
+  🛑 **What IS true of all three: none cures the corporation's side**, which he cannot reach because he
+  is locked out — **and §6672 means the trust-fund half can be assessed against him personally
+  whatever his 1040 says.**
+- 2026-09-22 — ✅ **TWO MORE THINGS CAME OFF THE OPEN LIST, and neither is a finding — both are
+  decisions about what goes on the return.**
+  🚗 **THE VEHICLE HE SOLD IN 2025 IS NOT REPORTED.** Julia's ruling, relayed by Lilian: *"en cuanto
+  al vehículo, vamos a olvidar eso por ahora. Julia me dijo que no es algo que vamos a reportar en
+  esta declaración."* ⛔ **Nothing to ask him, nothing to compute.** ⚠️ **It does not establish that
+  there was no gain** — the whole point of the analysis in §5 was that *"I didn't make any profit"*
+  is the wrong test. **That test has not been run and is not being run.**
+  🏥 **THE MARKETPLACE QUESTION IS NOW A PROCEDURE, NOT A QUESTION.** Lilian: *"vamos a intentar
+  someter la declaración y, si es rechazada, sabremos entonces que necesitamos ese formulario."*
+  ⛔ **Nobody chases the 1095-A and nobody re-asks the broker question.** The return is transmitted;
+  **a rejection under F8962-070 is what turns the form into a requirement.** ⚠️ **THREE limits still
+  bind, and the first now has a consequence for how this return is filed:** ① **it is e-file only** —
+  a paper return is accepted and followed up by mail, so 🔴 **e-filing is now a REQUIREMENT of this
+  return, not a preference; if it has to go on paper, say so and the assumption is back to untested**;
+  ② the `ACA Explanation` attachment would **bypass** it and **must not be used**, because that
+  rejection is the only verification this return has; ③ ⚠️ **the reject proves less than it looks** —
+  it says the IRS database shows advance credit paid, not that his memory was wrong — **and no reject
+  proves only that no advance credit was paid. An unsubsidised exchange plan still produces a 1095-A
+  and rejects nothing.**
+  🧾 **And the forms were written up line by line** — Form 7203, Form 8082 and Form 8995 — **each off
+  the current PDF on irs.gov** *(Form 8082 was revised **October 2025**, so a reference from memory
+  would have been wrong)*. ⚠️ **The first draft of the Form 8995 part was written WITHOUT reading its
+  PDF**, and an independent review caught what that cost: a quotation that exists nowhere in the
+  instructions, and a Form 1040 line number that the 2025 form no longer has. **Both corrected from
+  the PDF; recorded because "I reasoned it" and "I read it" look identical on the page.**
+  **Three new open items came out of doing the tables**, all in the working paper §8: **Form 7203
+  item D** *(how he acquired the stock — a box that must be ticked and has never been asked; ⛔ **not**
+  a contradiction of the zero opening basis, as a first draft claimed)*, **Form 8082 line 5** *(which
+  IRS centre the corporation filed at — unknown, and not a blocker)*, and **the §199A carryforward**
+  *(2024's qualified business loss must be typed on Form 8995 line 3 and is not yet quantified; the
+  software never asks for it and raises no error)*.
+- 2026-09-22 — ✅ **LILIAN RULED, AND IT CLOSES THE BIGGEST OPEN ITEM ON THIS CLIENT: THE PRIOR
+  RETURN IS ACCEPTED, NOT AUDITED.** Her words: *"Mi objetivo no es tratar de corregir la declaración
+  anterior. Hay que asumir que todo lo que hay ahí es correcto. No vamos a inventar declaraciones
+  hechas por otros contadores… A menos que sea un error extremadamente grande, [Julia] tendrá que
+  decidir, pero vamos a asumir que todo está perfecto."*
+  🔑 **She put the consequence herself, as a question:** *"¿podemos saber que su base en el 7203, a
+  pesar de que no está incluido, sería cero?"* — **the corporation's return shows what reached his
+  K-1; his own return shows the whole of it was deducted and became the NOL; accept that, and his
+  opening 2025 basis is ZERO.** ✅ **The chain holds, and it was worked out and confirmed to her in
+  the session** — §1366(d)(1) means the return asserts basis at least equal to the loss, §1367
+  reduces basis by losses deducted **but not below zero**, and debt basis reads zero on the balance
+  sheet. ⚠️ **Her ruling is on the PREMISE (accept the prior return); the statutory reasoning is the
+  session's, not a practitioner's determination.** ⚠️ **What it does not establish is that basis was
+  not MORE than the loss** — but nothing in the two returns read evidences more, substantiating basis
+  is the taxpayer's burden **and he has not been asked**, and assuming a leftover would be inventing
+  a figure, which is what her ruling forbids.
+  🔵 **What it unblocks, and it is most of the return:** the NOL is used **as reported**; there is
+  **no suspended §1366(d)(2) carryforward** to track; **2024 is not amended on the basis figure**;
+  and the Form 7203 opening line is **zero with the reasoning beside it** rather than a
+  reconstruction costed as separate work. 🔑 **It also resolves the 2025 distribution question** —
+  opening at zero, the year's income raises basis **before** a distribution reduces it, so no capital
+  gain arises up to the income reported. ⚠️ **Conditionally, on two things neither of which is
+  closed:** it holds only while **2025 is an income year** *(that is the firm's chosen reporting
+  figure, not a fact — the loan-draw branch would break it)* and only while **debt basis really is
+  zero** *(if it is not, a later year's net increase restores DEBT basis before stock basis, and the
+  distribution becomes taxable)*. 🔑 **The 2025 K-1 settles both.**
+  ⛔ **AND THREE THINGS HER RULING DOES NOT REACH, all of them Julia's:** ① **she is the SIGNER and
+  has not confirmed it** — Lilian directed the work to proceed and the confirmation is owed before
+  filing; ② **two forms were REQUIRED on the 2024 return and are missing** — a shareholder basis
+  computation and an excess-business-loss form — **a question about FORMS, not about the figures her
+  ruling accepts**; ③ the magnitude of the gap, below, answered against her own *"error
+  extremadamente grande"* test: **large in size, not established as an error.**
+  ⚖️ **The contrary evidence is KEPT, reclassified:** the corporation's balance sheet shows far less
+  visible basis than the deduction required. ⛔ **That is now information carried to Julia once under
+  Lilian's own escalation clause, not a defect to fix.** 🔑 **And the honest framing that makes it
+  easy: NO ERROR HAS BEEN ESTABLISHED** — what a shareholder PAID for his shares can never appear on
+  the corporation's return, because the AAA starts at zero on day one of S status. **We have a figure
+  we cannot verify, not an error we found.** Figures and the full chain in the working paper §2F-i.
+
 ### Outstanding items (CI-only — never in the SOP)
 
 **The open list, in priority order — and it is NOT all client asks.** Items are ordered by what would
@@ -1584,14 +1918,20 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
 - 📅 **The proof-of-claim BAR DATE in the bankruptcy — find it and diary it.** He may hold an unpaid
   **wage** priority claim, a **shareholder-loan** claim, or a contingent claim on a **personal
   guarantee**. A bar date forfeits all of them silently (§5).
-- 🟠 **PENDING WITH THE CLIENT: he is asking his BROKER what kind of cover he had in 2025** —
+- 🔵 **CLOSED BY DECISION, NOT BY EVIDENCE — Julia ruled 2026-09-21 to ASSUME no Marketplace cover**
+  (§6 log). ⛔ **Stop chasing this before filing.** 🟢 **The assumption is tested free at e-file: a
+  reject means it was wrong.** ⚠️ **Re-open only if the return is rejected.** _(What follows is the
+  history of the chase, kept because the contradiction with his organizer is still on the record.)_
+  ~~**PENDING WITH THE CLIENT: he is asking his BROKER what kind of cover he had in 2025**~~ —
   Marketplace or not _(Lilian asked him again on 2026-08-12)_. ⓘ **That a broker is involved is
   itself informative:** brokers enrol people in Marketplace plans through their own systems, so the
   client may be a Marketplace enrollee **without ever having had an account** — which is why "no
   account" proves nothing (§5).
 - ~~**The two silent companies' own tax returns**~~ — ⚠️ **ASKED 2026-08-12: he does not have them.**
   Not a live ask to him any more; the only routes left are the companies themselves.
-- 🟠 **Marketplace or private? Ask WHERE he bought the cover and WHETHER anyone helped pay for it**
+- ~~🟠 **Marketplace or private? Ask WHERE he bought the cover and WHETHER anyone helped pay for it**~~
+  ⛔ **SUPERSEDED 2026-09-21 by Julia's assume-no-Marketplace decision — do NOT send this question.**
+  _(Method kept for the next client who needs it.)_
   — not "send me your 1095". ⚠️ **He may hold no form at all:** only the **1095-A** is ever needed,
   and a **1095-B is often never mailed**. ⚠️ **Ask about BOTH halves of the year** — Washington runs
   its own exchange and Florida uses healthcare.gov, so a WA plan would not appear on healthcare.gov
@@ -1674,15 +2014,29 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
   residence and age**, above; who they are is settled). His 2024 return claimed one daughter with EIC and the child tax credit, and that
   needs re-establishing for 2025.
   ⚠️ **Ask facts, not documents.** The firm does not ask clients for custody orders, decrees or a signed Form 8332 _(Lilian, 2026-08-11)_. Form 8332 stays internal knowledge for how we **treat** his answer, and is raised **only if his answer makes it unavoidable** — a non-custodial parent claiming a child does need one signed and attached to the return (§152(e)), so the request can become necessary. It is simply never how we open.
-- 🔴 **HIS BASIS IN MIDWEST EXPEDITED CORP — the single fact the 2025 return most depends on.**
-  Three things, and only he or the corporation's records have them: **what he paid for the stock**,
-  **what he lent the corporation out of his own pocket**, and **what distributions he took**.
+- ✅ **HIS BASIS IN MIDWEST EXPEDITED CORP — SETTLED 2026-09-22 AT ZERO FOR PREPARATION PURPOSES**,
+  by Lilian's ruling that the prior return is accepted rather than audited (§6 log). ⛔ **Do not ask
+  him the three basis questions for the 2025 return** — accepting the return settles the opening
+  figure without them. **They are kept below because they are what would answer Julia if she ever
+  wants the gap tested rather than accepted.**
+  🟠 **THREE THINGS HER RULING DOES NOT REACH, and each belongs to someone else:**
+  ① **JULIA IS THE SIGNER and has not confirmed it.** Lilian directed the work to proceed; the
+  confirmation is owed before the return is filed. ② ⛔ **TWO FORMS WERE REQUIRED ON THE 2024 RETURN
+  AND ARE MISSING** — a shareholder basis computation and an excess-business-loss form. **That is a
+  question about FORMS, not about the figures her ruling accepts**, and whether a return another
+  firm filed should be amended for it is **Julia's call**. ③ ⚠️ **The evidence carried to her once,
+  as information:** the corporation's balance sheet shows **far less visible basis than the
+  deduction required** — large by size, **but not an established error**, because the corporation's
+  return **cannot measure a shareholder's basis at all**. 🔑 **The AAA starts at zero on day one of S
+  status, so what he PAID for his shares is invisible there by construction.**
+  ⓘ *And a blank shareholder-loan line does not prove he lent the company nothing — a balance sheet
+  states two dates, so a loan made and repaid inside the year leaves both columns empty.*
+  📌 **The three questions, if they are ever needed:** what he paid for the stock · what he
+  contributed that the company never recorded · any note of the company he holds, or a payment he
+  made under a guarantee. ⓘ *A guarantee alone gives no basis; a payment under one does.*
   ⛔ **NOT the bank's debt** — entity borrowing gives an S-corp shareholder no basis, and with
-  financed trucks that is where this most likely fails. It decides whether the 2024 carryforward is
-  an **NOL** or a **§1366(d)(2) suspended loss**, which behave oppositely (§5). ⚠️ **And it is a 2024
-  question before it is a 2025 one** — if basis was short, part of that loss should have been
-  suspended on the 2024 return, which raises **whether 2024 should be amended.** ⛔ Julia's call. ⓘ **The 2025 K-1s
-  would state it** — one more reason the chase matters.
+  financed trucks that is where this would most likely fail. ⓘ **The 2025 K-1s would state his
+  basis** — one more reason the chase matters.
 - **Form 4797 follow-through** — whether any 2024 asset disposal continued into 2025.
 - **Estimated payments** — confirm none were made, so the penalty is expected rather than discovered.
 - **2024 carryovers and elections** — read from the prior return (see §5).

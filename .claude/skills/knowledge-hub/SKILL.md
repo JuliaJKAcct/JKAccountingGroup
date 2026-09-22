@@ -473,6 +473,14 @@ file locally. Neither is how the team uses it. Two checks, every time a Hub tool
 
    > **THE Hub link (the team's bookmark):**
    > `https://claude.ai/code/artifact/b194a4e7-caf5-40c6-afb3-99741ec22f3e`
+   >
+   > ✅ **SAME ARTIFACT, SHORT FORM:** `https://claude.ai/artifact/NvrBqfd7eBH9MHAsSSKrBP`
+   > **— ESTABLISHED 2026-09-22, not inferred:** publishing to the `b194a4e7` URL returned the
+   > `NvrBqfd7eBH9MHAsSSKrBP` one. ⛔ **They are ONE artifact, and neither is a duplicate.**
+   > 🔑 **Recorded because an artifact LISTING shows only the short form, so a session that lists
+   > instead of reading this skill sees an id that appears nowhere in the repo and reasonably
+   > concludes it has found a second Hub.** *(That is exactly what happened in review on 2026-09-22.)*
+   > 📌 **Pass either; this file's long form stays the one to quote.**
 
    - **From ANY session, pass that URL as the Artifact tool's `url`** (with `file_path`
      = `projects/knowledge-hub/scratch/hub.artifact.html`). Passing the same **file path**
@@ -494,15 +502,39 @@ file locally. Neither is how the team uses it. Two checks, every time a Hub tool
    - 🔍 **When someone ASKS for the guarantee — "republish it, but I don't want to lose what I
      changed in the other session" — reasoning is not the answer. PROVE IT, and it is cheap.**
      _(Lilian asked exactly this on 2026-08-14.)_ The argument above is sound and it is still an
-     argument; what she wanted was certainty. **`WebFetch` the artifact URL** — it saves the full
-     HTML to disk and hands you the path — then diff the **visible text** of the live page against
-     your fresh build:
+     argument; what she wanted was certainty. ⛔ **`WebFetch` NO LONGER WORKS ON AN ARTIFACT URL** — the tool
+     now refuses claude.ai artifact links and sends you to the Artifact tool. ✅ **CORRECTED ROUTE,
+     used successfully 2026-09-22:** `Artifact` **`action: "read"` with `path: "index.html"` and an
+     `out_dir`** — ⚠️ **the `path` form saves the file to disk and does NOT pull 13 MB into the
+     session**, which a plain read would. *(It also does not count as having viewed the version, so
+     the publish still needs `force: true` — which is the point: you get the proof AND the guard
+     stays honest.)* Then diff the **visible text** of the live page against your fresh build:
      ```
      strip <script>/<style> and data: URIs → text → set of non-blank lines → published − mine
      ```
      On 2026-08-14 the set difference was exactly **two lines**, both render bugs the build had
      just fixed, against **304 added** — so the answer was *"no visible prose is lost, and here is
      the list of what changes"*.
+     ⚠️ **AND A SECOND RUN, 2026-09-22, WHERE THE RAW DIFF LOOKED ALARMING AND WAS NOT — read this
+     before panicking at a big number.** The set difference was **200 long lines** against 661 added.
+     🔑 **Nearly all of them were WEEKLY SWEEP TEXT.** The Client-Intelligence sweep rewrites its own
+     dated lines every run — *"re-chased this sweep, 2026-09-12"*, *"29 days pending"* — so a page
+     published before a later sweep will always show hundreds of superseded lines. ✅ **The check that
+     settles it is not the line count: it is `git log --since=<live publish date>` on the rendered
+     directories.** **50 merged commits explained the whole delta**, and the dates in the current
+     sources had simply moved on.
+     ⚠️ **CLAIM EXACTLY WHAT YOU MEASURED, AND THAT RUN DID NOT MEASURE "NOTHING WAS LOST."** What it
+     established is narrower: *the delta is explained by 50 merged commits, and no SAMPLED line traced
+     to unmerged work.* **The 200 were not each individually accounted for.**
+     ⛔ **AND THE TEXT DIFF IS STRUCTURALLY BLIND to `<script>`, `<style>`, attributes and embedded
+     binaries** — so a Hub feature published from an unmerged branch that was **purely JS, CSS or a
+     link target** would not show up in it at all. 🔑 **Low risk while step 6 is followed (publish
+     AFTER merge), but it is the one category this method can never cover — say so rather than
+     claiming a clean bill.** ⛔ **A literal `grep` of a lost line against the `.md` sources does
+     NOT work** — the renderer strips `**` and joins across emphasis, so a rendered line often exists
+     nowhere contiguously in its own source. **Normalise the sources first — strip the emphasis
+     characters (asterisk, underscore, tilde, backtick) and the link syntax, and collapse whitespace —
+     or you will chase 146 phantom losses.**
      ⚠️ **Claim exactly that much and no more — the diff is NOT proof the page is intact.** By
      construction it cannot see: everything in `<script>` (stripped — and whole-page-JS breakage is
      what the verify gate below exists for), everything in `<style>`, **attributes** (`href`, ids,
