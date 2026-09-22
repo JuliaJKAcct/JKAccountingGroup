@@ -17,7 +17,7 @@ sería un gasto extra."**)_
 | | |
 |---|---|
 | 1. **A scope-and-fee letter** | It records what was agreed, and that **amending later is separate, billable work** |
-| 2. 🔴 **A WRITTEN REPRESENTATION LETTER** | It makes the client **state in writing** the facts the return rests on. ⛔ **This is the stronger half.** A client who has confirmed *"I received no W-2 and no money was run through payroll"* in his own reply cannot later say we assumed it |
+| 2. 🔴 **A WRITTEN REPRESENTATION LETTER** | It makes the client **state in writing** the facts the return rests on. ⛔ **This is the stronger half.** A client who has confirmed **in his own reply** that he received no Form W-2, and who has answered in his own words what the bank descriptions said and whether the deposits were regular, cannot later say we assumed any of it. ⚠️ **An earlier version of this row said he would confirm *"no money was run through payroll"* — that is defect 5 in §7 and the letter no longer asks it** |
 
 ⛔ **WHAT IT IS NOT: it is not the firm certifying that the treatment is correct.** The email says
 **what was done, on what basis and on whose instruction.** 🛑 **It must never be edited into a sentence
@@ -40,9 +40,12 @@ wage & income transcript is what settles the RETURN.** ⛔ **Both, not either.**
 
 ## 2 · Four things added to what was asked for, each with its reason
 
-1. 🔴 **THE PAYROLL REPRESENTATION** *(point 1 of the email)*. Not requested, and it is the most
-   valuable line in the letter: **it is the return's one pre-filing blocker** (§9A ④). Getting it in
-   his own words, in writing, before filing is the whole point of sending this at all.
+1. 🔴 **THE PAYROLL QUESTIONS** *(point 6 of the email)*. Not requested, and they are the most
+   valuable lines in the letter: **this is the return's one pre-filing blocker** (§9A ④). ⛔ **They are
+   deliberately QUESTIONS, not a representation** — §4C's three factual ones *(regular or irregular ·
+   what the bank description says · `ssa.gov` access)*. ⚠️ **An earlier draft asked him to certify
+   "no money was run through payroll", which is a conclusion he cannot know and which §4C reads the
+   other way** (§7 defect 5).
 2. 🔴 **THE IRS's OWN COST, not just ours** *(the amendment section)*. ⛔ **"Extra cost" left undefined
    reads as "your invoice."** An amendment can carry **additional tax, interest and penalties**, which
    are far larger than a fee. 🔑 **A client who learns that from the IRS instead of from us will be
@@ -84,8 +87,11 @@ a reply, sent to an address he may not read, is a filing delay with a deadline a
 
 ## 4 · 🟢 THE DRAFT — English, ready to send
 
-> ⌨️ **Everything between the two rules below is the email.** ✅ **There are NO placeholders — it is
-> complete as written**, in **US English**, and every word of it has been run through the
+> ⌨️ **Everything between the two rules below is the email.** 🔴 **ONE placeholder, `[[SE TAX]]`,
+> MUST be filled before sending** — the self-employment tax off Schedule SE line 12 on the finished
+> return (§5 check 1). ⛔ **An earlier version of this banner said there were none; a letter went out
+> under an EA's name with a bracket in it is exactly what that would have caused.** The rest is
+> complete as written, in **US English**, and every word of it has been run through the
 > [`humanizer`](../../../.claude/skills/humanizer/) skill *(no em dashes, no decorative bold, no
 > chatbot cadence — the firm's standing rule for client-facing prose)*. ⚠️ **Re-read it once against
 > the finished return before sending**, in case a form or a name changed.
@@ -96,8 +102,8 @@ a reply, sent to an address he may not read, is a filing delay with a deadline a
 
 Dear Denys,
 
-Your 2025 return is ready. Before I file it I want to put in writing how I have prepared it and why,
-and there are a few things I need you to confirm.
+Your 2025 return is prepared. Before I file it I want to put in writing how I have prepared it and
+why, and there are a few things I need from you first.
 
 **Where things stand**
 
@@ -110,32 +116,36 @@ to you for the year. We did not simply wait for it. We contacted your former bus
 and asked for all three. He said they were not ready and undertook to send them. Nothing has arrived
 since.
 
-**What I need you to confirm**
-
-Please answer each of these. If you are unsure of any of them, say so rather than guessing.
+**Please confirm that these four are correct**
 
 1. You received **no Form W-2** from any of the three corporations for 2025.
-2. About the money you received during 2025, so that I can work out whether any of it was run through
-   payroll. You may not know, and that is fine, but these three answers tell me:
+2. The money you received during 2025 came from **Midwest Expedited Corp**.
+3. The business costs you listed for us were paid by you **personally**, and no one reimbursed you for
+   them. (Not all of them belong on a tax return. I have included the ones that do.)
+4. You have **no other 2025 income** that you have not already given us.
+
+**And please answer these four**
+
+5. **What was the money for?** Was all of it for work you performed, or was any part of it a loan to
+   you, a repayment of money you had lent the company, or something else you were owed?
+6. **Was any of it run through payroll?** You may not know, and that is fine. These three answers tell
+   me:
    a. Did it arrive on a regular schedule, the same amount on the same day each week or month, or in
    irregular amounts?
    b. In your bank app, what does the description on those deposits say? Does it name a payroll company
    (for example Gusto, ADP, Paychex, Intuit), or is it just a transfer from the company?
    c. Do you have online access to your Social Security account at ssa.gov? It will show whether any
-   wages were reported for you in 2025.
-3. The funds you received during 2025 came from Midwest Expedited Corp and relate to work you performed.
-4. **Did you, or anyone else, file an extension for your 2025 return?** This is a Form 4868, and it
+   wages were reported for you in 2025. If you check it, please do so after September 30, which is when
+   2025 wages appear there.
+7. **Did you, or anyone else, file an extension for your 2025 return?** This is a Form 4868, and it
    would have been filed before April. We did not file one, because you became our client in July.
    I need to know either way.
-5. The business costs you listed for us were paid by you **personally**, and no one reimbursed you for
-   them. (Not all of them belong on a tax return. I will come back to you separately about which ones
-   do.)
-6. **Health insurance.** In the tax organizer you completed you answered that you had Marketplace
+8. **Health insurance.** In the tax organizer you completed you answered that you had Marketplace
    coverage in 2025, and you later told us you did not. I need to know which is right. If you did have
    it, through healthcare.gov or a state exchange, there is a Form 1095-A and I need it before filing.
-7. You have **no other 2025 income** that you have not already given us.
 
-Correcting any of this before I file costs you nothing. Correcting it afterwards does.
+If you are unsure about any of these, say so rather than guessing. Correcting something before I file
+costs you nothing. Correcting it afterwards does.
 
 **How I have prepared the return**
 
@@ -181,11 +191,12 @@ lead to, and I would rather we agreed it in advance than discussed it afterwards
 
 **What I need from you**
 
-Please reply to this email confirming:
+Please reply to this email:
 
-- your answers to points 1 to 7 above; and
-- that you accept how I have prepared the return, including that an amendment needed because the
-  Schedule K-1s arrive later would be charged separately.
+- confirming that points **1 to 4** are correct;
+- answering points **5 to 8**; and
+- confirming that you accept how I have prepared the return, including that an amendment needed
+  because the Schedule K-1s arrive later would be charged separately.
 
 I will not file until I have your reply, so please do not leave it. Once I have it, and have finished
 the last checks on my side, we will file.
@@ -212,6 +223,8 @@ JK Accounting Group
 | 1 | 🔴 **FILL `[[SE TAX]]`** — the one placeholder. It is the self-employment tax off Schedule SE line 12 on the finished return. ⛔ **Do not send the letter with a bracket in it** |
 | 2 | 🛑 **THE DEADLINE, AND IT IS THE REAL RISK.** ⛔ **Nobody knows whether a 2025 extension was filed** (§8 item 3). **If one was, 2026-10-15; if not, the return has been late since 2026-04-15** and the failure-to-file penalty now runs on a base that includes the self-employment tax (§8 item 7). 🔴 **This letter GATES FILING on his reply, and his channel is text, not email** (§3). **A slow reply is a filing delay with a penalty attached.** 📌 **Send it the day the return is finished, chase by text the next day** |
 | 3 | 🔴 **PUT THE "we agreed" QUESTION TO JULIA FIRST.** Lilian's words were *"lo que **acordó** Julia con el cliente"*. ⛔ **Nothing in the file records a conversation with the CLIENT about a Schedule C** — decision 7 is Julia's, relayed by Lilian, and the last recorded client contact is August. ✅ **The draft is therefore worded so it is TRUE either way** *("This is how I have decided to prepare it")*. 🔑 **If Julia did discuss it with him, she can restore the stronger wording herself — but she has to say so.** ⛔ **A false "as we agreed" in a document whose only purpose is evidence is the one sentence that would turn this letter against the firm** |
+| 3b | 🔴 **RE-READ IT AGAINST THE FINISHED RETURN before sending.** ⚠️ **It asserts a form COUNT and the Midwest wording as settled**, and §4E leaves two things open until the return exists: whether Julia confirms three protective filings, and 🛠️ **whether ATX will even accept three copies of Form 8082 on one return** *(a screen fact nobody has seen; the fallback is a PDF attachment)*. ⛔ **If it ends up being anything other than three, this letter is wrong** |
+| 3c | 🔴 **TELL JULIA THE LETTER REOPENS DECISION 6, because it does more than reopen it.** Point 8 commits the firm **in writing, to the client**, to getting the Form 1095-A **before filing** — while §8 item 0c still reads *"Nobody chases the 1095-A, nobody asks the client again… File; a rejection is what turns the form into a requirement."* ⛔ **A letter cannot change a recorded decision of hers by itself.** ✅ **The method rule is on the letter's side** *(two records disagree — show the client both, then ask)*, **but she rules** |
 | 4 | 🛑 **Send it AFTER the return is prepared and BEFORE it is transmitted.** Sending it early invites him to renegotiate the approach; sending it after filing protects nothing |
 | 5 | ⚠️ **Do not attach the return.** This is the acknowledgement; the return and Form 8879 go separately, once he has replied |
 | 6 | 📧 **Confirm the email address in Double first, and send a short TEXT telling him the email is coming and that a reply is needed** (§3). ⛔ **We hold no evidence he reads email** |
