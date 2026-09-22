@@ -759,16 +759,20 @@ they mean:
   asserts a basis figure nobody has verified and no form supports.
   ⚠️ **Whether the Schedule E basis-computation box was ticked cannot be read from a text
   extraction** — checkboxes are graphical.
-- 🔑 **THE TWO POSSIBLE TREATMENTS ARE OPPOSITE, WHICH IS WHY THIS MATTERS.** If basis was
+- 🔑 **THE TWO POSSIBLE TREATMENTS ARE OPPOSITE, WHICH IS WHY THIS MATTERED.** If basis was
   sufficient, it is an **NOL** — usable against any income, capped at 80%, and it survives a
   disposal of the stock. If it was not, the excess is a **§1366(d)(2) suspended loss** — usable
   **only against future income from that same corporation**, only once basis is restored, and
   ⛔ **it DIES with the shares if basis never is.** *(That is the reverse of a §469 passive loss, which is released on
   disposition — though only on disposing of the **entire interest** in a **fully taxable**
   transaction. The two look alike and behave oppositely.)*
+  ✅ **RESOLVED 2026-09-22 — the FIRST reading is the one the firm has adopted**, by Lilian's ruling
+  that the prior return is accepted rather than audited (§6 log). **It is an NOL, and the opening
+  2025 basis is zero.**
 - ⚠️ **THE MISSING FORM IS NOT PROOF THE LOSS WAS WRONG.** If he really contributed that capital or
   lent the company the money **personally**, the loss is allowable and what is missing is the
-  **form**, not the **basis**. **Both readings are open and neither has been tested.**
+  **form**, not the **basis**. ✅ **That is the reading the firm adopted — which leaves the missing
+  form standing on its own as a 2024 question, and it is Julia's.**
 - ⛔ **THE BANK'S DEBT GIVES HIM NO BASIS.** In an S corporation — unlike a partnership —
   entity-level borrowing does not lift a shareholder's basis. 🔑 **For a trucking company with
   financed equipment that is the likeliest place for the figure to fail**, and it is the single
@@ -1635,20 +1639,33 @@ street address never appear here, and nor do dollar figures — those live in Do
   anterior. Hay que asumir que todo lo que hay ahí es correcto. No vamos a inventar declaraciones
   hechas por otros contadores… A menos que sea un error extremadamente grande, [Julia] tendrá que
   decidir, pero vamos a asumir que todo está perfecto."*
-  🔑 **And she worked out the consequence herself, correctly:** the corporation's return shows what
-  reached his K-1; his own return shows the whole of it was deducted and became the NOL; **accept
-  that, and his opening 2025 basis is ZERO.** ✅ **The chain holds** — §1366(d)(1) means the return
-  asserts basis at least equal to the loss, §1367 reduces basis by losses deducted **but not below
-  zero**, and debt basis is independently zero. ⚠️ **What it does not establish is that basis was not
-  MORE than the loss** — but nothing evidences more, substantiating basis is the taxpayer's burden,
-  and assuming a leftover would be inventing a figure, which is what her ruling forbids. 🟢 **Zero
-  also errs in the safe direction.**
+  🔑 **She put the consequence herself, as a question:** *"¿podemos saber que su base en el 7203, a
+  pesar de que no está incluido, sería cero?"* — **the corporation's return shows what reached his
+  K-1; his own return shows the whole of it was deducted and became the NOL; accept that, and his
+  opening 2025 basis is ZERO.** ✅ **The chain holds, and it was worked out and confirmed to her in
+  the session** — §1366(d)(1) means the return asserts basis at least equal to the loss, §1367
+  reduces basis by losses deducted **but not below zero**, and debt basis reads zero on the balance
+  sheet. ⚠️ **Her ruling is on the PREMISE (accept the prior return); the statutory reasoning is the
+  session's, not a practitioner's determination.** ⚠️ **What it does not establish is that basis was
+  not MORE than the loss** — but nothing in the two returns read evidences more, substantiating basis
+  is the taxpayer's burden **and he has not been asked**, and assuming a leftover would be inventing
+  a figure, which is what her ruling forbids.
   🔵 **What it unblocks, and it is most of the return:** the NOL is used **as reported**; there is
-  **no suspended §1366(d)(2) carryforward** to track; **2024 is not amended**; and the Form 7203
-  opening line is **zero with the reasoning beside it** rather than a reconstruction costed as
-  separate work. 🔑 **It also resolves the 2025 distribution question** — opening at zero, the year's
-  income raises basis **before** a distribution reduces it, so no capital gain arises up to the
-  income reported.
+  **no suspended §1366(d)(2) carryforward** to track; **2024 is not amended on the basis figure**;
+  and the Form 7203 opening line is **zero with the reasoning beside it** rather than a
+  reconstruction costed as separate work. 🔑 **It also resolves the 2025 distribution question** —
+  opening at zero, the year's income raises basis **before** a distribution reduces it, so no capital
+  gain arises up to the income reported. ⚠️ **Conditionally, on two things neither of which is
+  closed:** it holds only while **2025 is an income year** *(that is the firm's chosen reporting
+  figure, not a fact — the loan-draw branch would break it)* and only while **debt basis really is
+  zero** *(if it is not, a later year's net increase restores DEBT basis before stock basis, and the
+  distribution becomes taxable)*. 🔑 **The 2025 K-1 settles both.**
+  ⛔ **AND THREE THINGS HER RULING DOES NOT REACH, all of them Julia's:** ① **she is the SIGNER and
+  has not confirmed it** — Lilian directed the work to proceed and the confirmation is owed before
+  filing; ② **two forms were REQUIRED on the 2024 return and are missing** — a shareholder basis
+  computation and an excess-business-loss form — **a question about FORMS, not about the figures her
+  ruling accepts**; ③ the magnitude of the gap, below, answered against her own *"error
+  extremadamente grande"* test: **large in size, not established as an error.**
   ⚖️ **The contrary evidence is KEPT, reclassified:** the corporation's balance sheet shows far less
   visible basis than the deduction required. ⛔ **That is now information carried to Julia once under
   Lilian's own escalation clause, not a defect to fix.** 🔑 **And the honest framing that makes it
@@ -1819,34 +1836,29 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
   residence and age**, above; who they are is settled). His 2024 return claimed one daughter with EIC and the child tax credit, and that
   needs re-establishing for 2025.
   ⚠️ **Ask facts, not documents.** The firm does not ask clients for custody orders, decrees or a signed Form 8332 _(Lilian, 2026-08-11)_. Form 8332 stays internal knowledge for how we **treat** his answer, and is raised **only if his answer makes it unavoidable** — a non-custodial parent claiming a child does need one signed and attached to the return (§152(e)), so the request can become necessary. It is simply never how we open.
-- ✅ **HIS BASIS IN MIDWEST EXPEDITED CORP — SETTLED 2026-09-22 AT ZERO**, by Lilian's ruling that
-  the prior return is accepted rather than audited (§6 log). ⛔ **The three questions below are no
-  longer needed for the 2025 return** — accepting the return settles the opening figure without
-  them. ⓘ *They would only matter if someone later decided to revisit 2024, which Lilian has ruled
-  out.* _(What follows is the evidence, kept as information for Julia.)_
-  ~~🔴 **SUBSTANTIALLY ANSWERED 2026-09-21 from the CORPORATION'S OWN RETURN, and it went the bad
-  way.**~~ ⛔ **No shareholder loans, so zero debt
-  basis; nominal capital stock; trivial opening AAA — against a very large allocated loss.**
-  **Most of the 2024 loss looks basis-limited** (§6 log; figures in the working paper §2F).
-  🔑 **Two things are left, and an earlier version of this row wrongly closed the second.**
-  ① **A DECISION FOR JULIA:** does she accept that reading — and may the 2025 return use the
-  carryforward as reported while this stands? ② 🔴 **THE ASK IS STILL LIVE, narrowed but not closed.**
-  ⛔ **A blank shareholder-loan line does NOT prove he lent the company nothing** — the balance sheet
-  is a **books** document at **two dates**, so a loan made and repaid inside the year leaves both
-  columns empty, and a note of the corporation he acquired from a lender may never have been
-  reclassified. 🔑 **And what he PAID for his shares cannot appear on the corporation's return at
-  all** — the AAA starts at zero on day one of S status, so stock cost is invisible there by
-  construction. **So ask him three things: what he paid for the stock, any contribution the company
-  never recorded, and any note of the company he holds or has paid under a guarantee.**
-  ⓘ *A guarantee alone gives no basis; a payment made under one does.*
-  Three things, and only he or the corporation's records have them: **what he paid for the stock**,
-  **what he lent the corporation out of his own pocket**, and **what distributions he took**.
+- ✅ **HIS BASIS IN MIDWEST EXPEDITED CORP — SETTLED 2026-09-22 AT ZERO FOR PREPARATION PURPOSES**,
+  by Lilian's ruling that the prior return is accepted rather than audited (§6 log). ⛔ **Do not ask
+  him the three basis questions for the 2025 return** — accepting the return settles the opening
+  figure without them. **They are kept below because they are what would answer Julia if she ever
+  wants the gap tested rather than accepted.**
+  🟠 **THREE THINGS HER RULING DOES NOT REACH, and each belongs to someone else:**
+  ① **JULIA IS THE SIGNER and has not confirmed it.** Lilian directed the work to proceed; the
+  confirmation is owed before the return is filed. ② ⛔ **TWO FORMS WERE REQUIRED ON THE 2024 RETURN
+  AND ARE MISSING** — a shareholder basis computation and an excess-business-loss form. **That is a
+  question about FORMS, not about the figures her ruling accepts**, and whether a return another
+  firm filed should be amended for it is **Julia's call**. ③ ⚠️ **The evidence carried to her once,
+  as information:** the corporation's balance sheet shows **far less visible basis than the
+  deduction required** — large by size, **but not an established error**, because the corporation's
+  return **cannot measure a shareholder's basis at all**. 🔑 **The AAA starts at zero on day one of S
+  status, so what he PAID for his shares is invisible there by construction.**
+  ⓘ *And a blank shareholder-loan line does not prove he lent the company nothing — a balance sheet
+  states two dates, so a loan made and repaid inside the year leaves both columns empty.*
+  📌 **The three questions, if they are ever needed:** what he paid for the stock · what he
+  contributed that the company never recorded · any note of the company he holds, or a payment he
+  made under a guarantee. ⓘ *A guarantee alone gives no basis; a payment under one does.*
   ⛔ **NOT the bank's debt** — entity borrowing gives an S-corp shareholder no basis, and with
-  financed trucks that is where this most likely fails. It decides whether the 2024 carryforward is
-  an **NOL** or a **§1366(d)(2) suspended loss**, which behave oppositely (§5). ⚠️ **And it is a 2024
-  question before it is a 2025 one** — if basis was short, part of that loss should have been
-  suspended on the 2024 return, which raises **whether 2024 should be amended.** ⛔ Julia's call. ⓘ **The 2025 K-1s
-  would state it** — one more reason the chase matters.
+  financed trucks that is where this would most likely fail. ⓘ **The 2025 K-1s would state his
+  basis** — one more reason the chase matters.
 - **Form 4797 follow-through** — whether any 2024 asset disposal continued into 2025.
 - **Estimated payments** — confirm none were made, so the penalty is expected rather than discovered.
 - **2024 carryovers and elections** — read from the prior return (see §5).
