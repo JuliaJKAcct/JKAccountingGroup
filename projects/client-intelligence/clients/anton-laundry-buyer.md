@@ -253,6 +253,39 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-22 — 🔓 **THE UTILITY BILLS WERE ALWAYS REACHABLE — the session's own method was wrong.** Vol 4's
+  bills appendix (four separate Drive files, 4A Palmetto Coin · 4B Ruskin · 4C Samoset + 8th Ave · 4D Select)
+  had been reported to Julia as unobtainable because each file exceeds Drive's **download** cap. ⛔ **That was
+  an assumption, never tested.** Drive's `read_file_content` extracts server-side and ignores the cap; all four
+  opened on the first attempt. 🔑 **The rule for next time: when one Drive tool refuses a large file, try the
+  other one before reporting the document as unreachable.** ⚠️ **What the appendices DO and do NOT contain:**
+  the broker's per-store summary pages are full text and carry the twelve-month account detail; **the bill scans
+  themselves are images with no text layer** (the broker reduced them to grayscale for file size), so the
+  underlying bills can be listed but not read.
+- 2026-09-22 — 📊 **The utility picture, and the one finding that changes the earnings question.** Each store's
+  twelve-month water, electric, gas and internet detail is now established by account, with the metered gallons
+  month by month — which is what makes an **independent revenue check** possible at all, and is the *only*
+  route at **Palmetto Coin (9th St)**, the coin-only store with no electronic record. 🔴 **The finding is at
+  Palmetto Wash & Fold (8th Ave): water consumption fell sharply from Dec 2025, gas roughly halved, and the
+  drop coincides with the Nov–Dec 2025 Electrolux installation — while that store's counter sales fell too.**
+  The broker states it himself and does not resolve it: a large water/sewer run-rate reduction the 2025 P&L
+  does not reflect, but *"not yet a demonstrated increase in sustainable earnings"* because electric rose after
+  the re-equip and sales are lower. ⚖️ **It cuts both ways — efficiency is an upward adjustment to sustainable
+  earnings; volume loss is the opposite** — and 🛑 **the document that decides which it is, is Tab I-1, the
+  machine-cycle records the seller has still never produced.** The broker says so in terms. **That moves Tab I-1
+  from a missing nice-to-have to the item on which one of five stores' value turns.**
+- 2026-09-22 — 🧰 **Equipment vendors, contacts and warranty expiry issued as a standalone reference note**
+  (Julia's request, for the deal file). Reconstructed from Vol 2 Tabs C, C-6 and E-3 to E-5: who sold and
+  installed each of the five fleets, the named contacts at the distributor and the manufacturer, the recurring
+  service and subscription vendors with their transfer route, and the extended-warranty expiry per store.
+  🔴 **The two gaps it exists to surface: the extended-warranty certificates are SILENT ON TRANSFER to a new
+  owner and DO NOT LIST COVERED SERIAL NUMBERS**, and every expiry date is the broker's estimate from the
+  purchase invoices rather than a figure the distributor has confirmed — the dates printed on the certificates
+  are form dates, not purchase dates. **Three of five fleets carry the cover; the two Alliance fleets have no
+  certificate in the binder at all.** ⚠️ **And an independence problem worth holding onto: three of the four
+  distributors a session would naturally recommend as inspectors are the seller's OWN vendors** — the binder
+  names who sold each fleet. They are the right call for warranty and parts, **never for grading their own
+  installation.** Delivered as a PDF, not committed
 - 2026-09-21 (the add-back test) — 🧪 **THE FY2025 ADD-BACK SCHEDULE TESTED LINE BY LINE AGAINST THE
   2025 LEDGERS — the first time it has been possible — and the verdict is mostly GOOD FOR THEM, with one
   real error.** 🟢 **① THIRTY-SEVEN OF THIRTY-EIGHT TESTED LINES TIE TO THE BOOKS, most to the cent.**
