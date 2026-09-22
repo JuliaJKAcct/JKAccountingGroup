@@ -1673,9 +1673,22 @@ street address never appear here, and nor do dollar figures — those live in Do
   ⚠️ **AND THE LOSS DOES NOT WIPE OUT HIS INCOME TAX EITHER — a correction to what an earlier version
   of this entry implied.** A post-2017 NOL is capped at **80% of taxable income**, so **a fifth
   survives and is taxed**, on income that had **no withholding at all** — which is its own
-  estimated-tax exposure that nobody has costed. 🔑 **That cuts both ways on the comparison: the
-  Schedule C route carries deductions the alternative does not allow, so it recovers part of the
-  difference in income tax. It narrows the gap by roughly half; it does not close it.**
+  estimated-tax exposure that nobody has costed *(the prior-year no-liability exception may waive it,
+  and that turns on the spouse's 2024 Schedule C — unchecked)*. 🔑 **That cuts both ways on the
+  comparison: the Schedule C route carries deductions the alternative does not allow, so it recovers
+  part of the difference in income tax. It narrows the gap by about 40%; it does not close it.**
+  ✅ **AND THE UNRESOLVED CHILD CREDIT DOES NOT MOVE THE COMPARISON AT ALL — worth knowing, because it
+  removes an unknown from Julia's decision.** Where the credit exceeds the tax on the cheaper branch
+  the unused part comes back as the **refundable** additional child tax credit, so the two branches
+  move together; the other-dependent credit is absorbed on both; and an ITIN filer gets neither.
+  🔑 **The daughter's status still has to be settled for the RETURN — it is worth real money — but it
+  is not a variable in the Schedule C choice.**
+  🔴 **ONE COST NOBODY HAS PRICED, AND IT IS UNVERIFIED:** federal law on **interstate motor-carrier
+  employees** is generally understood to stop any state but the residence state taxing their pay —
+  **and it reaches employees, not self-employed owner-operators.** ⚠️ **If that holds, treating him as
+  self-employed may CREATE a multi-state problem that a wage treatment would have closed**, which
+  bears on the Illinois question already open on him. ⛔ **Nobody has read the statute; recorded as a
+  question, not as law.**
   🔴 **AND IT IS NOT THE CHEAPEST ROUTE EITHER: Form 8919 charges only the EMPLOYEE half** of the same
   taxes and is designed for exactly this fact pattern — someone treated as other than an employee when
   he should have been one. **On these facts the Schedule C costs materially more than Form 8919 would
