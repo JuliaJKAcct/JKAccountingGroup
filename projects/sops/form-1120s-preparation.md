@@ -4212,8 +4212,11 @@ file, and this is owed to her 1040."
 the sequence §1.1367-1(f) requires, which is why reading it top to bottom is the safest way to
 prepare it.
 
-🛑 **AND MOST OF PART I CANNOT BE TYPED ON THE FORM.** In ATX only **lines 1 and 13** are typed
-there; **lines 2, 3a–3m, 6 and 8a all live on the K-1 INPUT SCREEN**, and the rest is computed.
+🛑 **AND NO LINE OF PART I CAN BE TYPED ON THE FORM.** ⛔ **CORRECTED 2026-09-22 — this SOP said "in
+ATX only lines 1 and 13 are typed" and that was never observed; it was inferred.** In ATX 2025 the
+form prints `Basis information is entered on K1 Input (1120S)`: **lines 1, 2, 3a–3m, 6, 8a and 13 all
+live on the K-1 INPUT SCREEN**, and the rest is computed. ⓘ **Outside Part I the form IS typed** —
+items A–E and Part II's loan balances (lines 16–20).
 ⚠️ **A blank line that should carry a figure means a missing INPUT — and the form still FOOTS**, so
 nothing flags it. **The full entry-route table and the failure mode are in
 [`form-1040-preparation.md` § M3](./form-1040-preparation.md#-form-7203--the-thing-nobody-tells-you-almost-none-of-part-i-is-typed-on-it)**, which is the canonical version; the table below is the
