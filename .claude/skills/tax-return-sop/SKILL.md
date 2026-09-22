@@ -1158,10 +1158,22 @@ and the parts she called "intermediate explanations" are the parts earlier rules
 🗂️ **AND SPLIT THE PAGE IN TWO, VISIBLY: *to type* and *to understand*.** The analysis sections —
 exposure, characterisation, the reasoning behind a settled figure — go **after** every keying block,
 under their own heading. **She works the first half at the keyboard and reads the second half when
-something surprises her.** ⚠️ **AND THE CHECKBOX LISTS OF RULE 13 BELONG WITH THE KEYING HALF, NOT AFTER THE ANALYSIS** — they
-are the most keyboard-facing thing on the page, and putting them last makes her scroll past the
-reasoning to reach what she is actively working through. ⓘ *Either open the page with them or close
-the keying half with them; a third part at the very end fights this rule's own sort.*
+something surprises her.** ⚠️ **AND RULE 13'S CHECKBOX LISTS SPLIT — they do not move as one block, and an earlier version of
+this bullet said they did.** 🔑 **A single list strands half of itself wherever you put it:**
+
+| The rows that say… | Where they go | Why |
+|---|---|---|
+| **DO THIS AT THE KEYBOARD** — open the form, type the figure, verify the column | ✅ **With the keying half** — ideally **inside each form's own block**, which is rule 13 ⑤'s first grouping *("this form, then that form, then the state return")* | They act on the table **beside them** |
+| **DECIDE THIS** *(the signer's open choices)* and **ASK THE CLIENT THIS** | ✅ **At the END, after the analysis** | ⛔ **Every one of them is explained by a section in the "to understand" half.** A row saying *"put the line-6 variant to the signer"* with its reasoning two screens **below** is this rule's own failure running backwards |
+
+⛔ **So "the lists go first" is wrong and "the lists go last" is wrong.** ✅ **The key-it rows close the
+keying half; the decide and ask rows close the page.** 🔑 **That satisfies both of rule 13 ⑤'s
+groupings at once.**
+ⓘ *If a page reorders an existing list, check the tick storage keys on a **stable per-row id**, not on
+position — a positional key remaps saved ticks onto different rows, and a restored tick then reads as
+"done" on something that was never done. **Rule 13 already says a tick is never evidence, so nothing
+about the RETURN is at risk — but it misleads her at the keyboard, silently.** A test that only proves
+persistence WORKS does not catch persistence landing in the WRONG PLACE.*
 
 🛑 **THE TELL, and it is checkable before delivering.** 📄 **On a page:** *open it and count how far
 you scroll before the first line-by-line table.* 💬 **In chat:** *the first thing after the form index
