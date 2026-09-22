@@ -235,7 +235,7 @@ JK Accounting Group
 | 8 | 🔑 **File his REPLY in Double**, on his client record, next to the return. ⛔ **An acknowledgement nobody can find later is not an acknowledgement** |
 | 9 | ⚠️ **His answers do NOT close the payroll blocker** (§0) — the wage & income transcript and `ssa.gov` still settle it. ⏰ **`ssa.gov` shows 2025 wages from 30 September** |
 | 10 | ⚖️ **Julia signs it and Julia sends it.** ⛔ **It is a fee-and-scope term and a representation letter; it is not Lilian's to send under her own name** |
-| 11 | 📌 **JULIA DECIDES whether to tell him a cheaper route existed.** §4E puts Form 8919 at roughly 13,819 against 19,000–27,000 here. ⛔ **This draft does NOT mention it** — naming a rejected alternative to a client invites him to demand it, and the choice was hers. ⚠️ **But she should make that omission knowingly** |
+| 11 | 📌 **JULIA DECIDES whether to tell him a cheaper route existed.** §4E puts Form 8919 at roughly 13,819 against **17,000–27,000** here *(≈ 16,841 – 27,194 — §4E's banner; the earlier "19,000–27,000" was stale at the bottom, corrected 2026-09-23)*. ⛔ **This draft does NOT mention it** — naming a rejected alternative to a client invites him to demand it, and the choice was hers. ⚠️ **But she should make that omission knowingly** |
 
 ## 6 · What this closes, and what it does not
 
