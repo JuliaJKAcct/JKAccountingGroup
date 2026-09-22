@@ -1149,7 +1149,15 @@ routing gross receipts through its shareholder, who then pays the running costs,
 and it is still **wages or a distribution**, not Schedule C income. **The fork is unchanged; the
 expense list is evidence inside it, not a way around it.**
 
-**🔴 NEW PROBLEM — THE VEHICLE HE SOLD IN 2025, and his reason for thinking it is nothing is the
+**✅ CLOSED FOR THE 2025 RETURN, 2026-09-22 — JULIA RULED IT IS NOT REPORTED.** Lilian: *"en cuanto
+al vehículo, vamos a olvidar eso por ahora. Julia me dijo que no es algo que vamos a reportar en esta
+declaración."* ⛔ **Nothing to ask him, nothing to compute, and it comes off every open list.**
+⚠️ **What the closure does NOT establish, kept because the analysis below is still the right one if
+anyone re-opens it: "no profit" is his characterisation, not a computation.** 🔵 **And it narrows by
+itself if the working paper's §2F-i reading holds — the 2024 Form 4797 gain traced to the
+CORPORATION's §179 disposition, so the vehicles here may be the company's throughout.**
+
+**🔴 THE ORIGINAL ANALYSIS — THE VEHICLE HE SOLD IN 2025, and his reason for thinking it is nothing is the
 wrong test.** His words, relayed by Lilian, 2026-09-21: *"I sold one of my vehicles in 2025 but it
 just close credit (balance on credit) I didn't make any profit etc."*
 
@@ -1637,6 +1645,27 @@ street address never appear here, and nor do dollar figures — those live in Do
   ⛔ **The other 50% shareholder is named on both documents; his name stays in Double note 490984,
   not here.**
 
+- 2026-09-22 — ✅ **TWO MORE THINGS CAME OFF THE OPEN LIST, and neither is a finding — both are
+  decisions about what goes on the return.**
+  🚗 **THE VEHICLE HE SOLD IN 2025 IS NOT REPORTED.** Julia's ruling, relayed by Lilian: *"en cuanto
+  al vehículo, vamos a olvidar eso por ahora. Julia me dijo que no es algo que vamos a reportar en
+  esta declaración."* ⛔ **Nothing to ask him, nothing to compute.** ⚠️ **It does not establish that
+  there was no gain** — the whole point of the analysis in §5 was that *"I didn't make any profit"*
+  is the wrong test. **That test has not been run and is not being run.**
+  🏥 **THE MARKETPLACE QUESTION IS NOW A PROCEDURE, NOT A QUESTION.** Lilian: *"vamos a intentar
+  someter la declaración y, si es rechazada, sabremos entonces que necesitamos ese formulario."*
+  ⛔ **Nobody chases the 1095-A and nobody re-asks the broker question.** The return is transmitted;
+  **a rejection under F8962-070 is what turns the form into a requirement.** ⚠️ **Both limits still
+  bind: it is e-file only, and the `ACA Explanation` attachment would bypass it — it must not be
+  used, because that rejection is the only verification this return has.**
+  🧾 **And the forms were written up line by line** — Form 7203, Form 8082 and Form 8995 — off the
+  current PDFs on irs.gov *(Form 8082 was revised **October 2025**, so a reference from memory would
+  have been wrong)*. **Three new open items came out of doing it**, all in the working paper §8:
+  **Form 7203 item D** *(how he acquired the stock — a box that must be ticked, never asked, and it
+  touches the very basis we set at zero)*, **Form 8082 line 5** *(which IRS centre the corporation
+  filed at — unknown, and not a blocker)*, and **the §199A carryforward** *(2024's qualified business
+  loss must be entered on Form 8995 line 3 and is not yet quantified; the software never asks for it
+  and raises no error)*.
 - 2026-09-22 — ✅ **LILIAN RULED, AND IT CLOSES THE BIGGEST OPEN ITEM ON THIS CLIENT: THE PRIOR
   RETURN IS ACCEPTED, NOT AUDITED.** Her words: *"Mi objetivo no es tratar de corregir la declaración
   anterior. Hay que asumir que todo lo que hay ahí es correcto. No vamos a inventar declaraciones

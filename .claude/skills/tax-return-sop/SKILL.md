@@ -511,9 +511,9 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 > a table of values without a route through the forms does not help her. In English: *the tables per
 > form, the flow of the figures between the forms, the explanations, and the boxes I have to tick.*
 > **Deliver all four, every time, unprompted — plus part 2, which is what makes the flow readable,
-> and parts 1b to 1e, 6 to 13 and 8b below, which are what she has had to ask for since.**
+> and parts 1b to 1f, 6 to 13 and 8b below, which are what she has had to ask for since.**
 
-> 🛑 **THE CALIBRATION, and it governs all eighteen parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
+> 🛑 **THE CALIBRATION, and it governs all nineteen parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
 > tiene que hacerlo una persona que no sabe prácticamente nada de taxes, ni de formularios, ni de
 > cómo fluyen las cosas en los formularios, ni las fórmulas detrás de cada número. Este es el nivel
 > de detalle que necesitamos."*
@@ -528,7 +528,7 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 > **statement the return could not e-file without**; the other was **a K-1 explained only as the two
 > boxes that carried numbers.** Parts 6 and 7 exist because of them.
 
-### The EIGHTEEN things every delivery carries
+### The NINETEEN things every delivery carries
 
 **1 · ONE TABLE PER FORM, in the order the forms are actually prepared** — every table with the same
 columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid form — the COLUMN named**:
@@ -1048,6 +1048,43 @@ arise.)*
 true — on the pilot software they collide on the line that carries **distributions**, which is the one
 line that can turn a basis shortfall into reportable income.
 
+
+**1f · 🛑 A FORM WHOSE ANSWER IS *SETTLED* STILL GETS ITS TABLE. The conclusion is not the delivery.**
+
+🔑 **This is the failure mode of part 1, and it does not look like a failure while you are writing it.**
+When the hard work on a form was the *reasoning* — a basis that had to be argued to zero, a disclosure
+that had to be justified — the section fills up with the argument, the argument is genuinely good, and
+**the table never gets written.** The section reads as finished because the *question* is finished.
+⛔ **But she is not reading the argument at the keyboard. She is reading the table.**
+
+> 🔑 **Lilian, 2026-09-22, on a worksheet whose Form 7203 section was three prose banners and no table:**
+> *"siempre habíamos hablado de que tenías que ponerme las tablas con las columnas, con todas las
+> explicaciones, las fórmulas, de dónde salía cada número, etcétera. En este último trabajo que me
+> hiciste no incluiste nada de eso."*
+
+**The tell, and it is checkable in one pass before delivering: every form named anywhere in the
+delivery has a table with the standard columns.** A form that appears only in prose — however
+completely the prose explains it — **has not been delivered.**
+
+🔑 **And a settled answer needs MORE rows, not fewer, for three reasons:**
+- **A settled zero and a careless zero look identical in the software.** The table is the only place
+  the reasoning sits beside the field, and it is what a later preparer reads instead of re-deriving it.
+- **"Settled" usually means settled for ONE line.** Form 7203's opening line being zero says nothing
+  about items C, D and E in its header, about which of Parts II and III go blank and why, or about
+  which lines the form's own skip instruction closes — **and item D turned out to be a live question
+  that touched the very basis the section had just settled.**
+- ⛔ **A form is never all conclusion.** Even where every figure is zero, the rows carry *which* lines
+  are typed, which are computed, which are blank because the client has nothing, and which are blank
+  because the form said to skip them. **Those are four different kinds of empty and only a table
+  separates them.**
+
+⚠️ **The same applies to a pure DISCLOSURE form** — Form 8082, Form 8275, a statement-only attachment.
+**It carries no tax figure, so it invites a paste block and nothing else.** ⛔ **Wrong:** it still has a
+box to tick on line 1 that routes the whole form, an entity-type box, columns whose contents are
+dictated word for word by the instructions *(on Form 8082: column (c) is **zero**, not blank, when no
+schedule was received; both boxes in column (b) get ticked; the explanation is prefixed with the Part II
+item number)* — and **a block of items that must be deliberately left blank because they belong to the
+box you did not tick.** **Every one of those is a row.**
 
 **2 · THE ORDER OF PREPARATION, up front — and every circularity called out.** Forms are not
 prepared in the order they are numbered. Open with the route:
