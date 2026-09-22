@@ -1670,6 +1670,12 @@ street address never appear here, and nor do dollar figures — those live in Do
   🔴 **What it costs: SELF-EMPLOYMENT TAX, which nothing on this return can shelter.** 12.4% to the
   wage base plus 2.9% uncapped on 92.35% of net profit — 🛑 **and the large loss carryforward does NOT
   reduce it**, because the statute computes net earnings without that deduction.
+  ⚠️ **AND THE LOSS DOES NOT WIPE OUT HIS INCOME TAX EITHER — a correction to what an earlier version
+  of this entry implied.** A post-2017 NOL is capped at **80% of taxable income**, so **a fifth
+  survives and is taxed**, on income that had **no withholding at all** — which is its own
+  estimated-tax exposure that nobody has costed. 🔑 **That cuts both ways on the comparison: the
+  Schedule C route carries deductions the alternative does not allow, so it recovers part of the
+  difference in income tax. It narrows the gap by roughly half; it does not close it.**
   🔴 **AND IT IS NOT THE CHEAPEST ROUTE EITHER: Form 8919 charges only the EMPLOYEE half** of the same
   taxes and is designed for exactly this fact pattern — someone treated as other than an employee when
   he should have been one. **On these facts the Schedule C costs materially more than Form 8919 would
