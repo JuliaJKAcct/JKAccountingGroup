@@ -576,15 +576,20 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > 🛑 **AND THE FORM AND THE SOFTWARE ARE TWO DIFFERENT ANSWERS. GIVE BOTH.** A line the IRS form treats as
 > an input can still be closed in the program because it arrives from another screen. **Neither answer
 > alone is usable**: give the form's, then the program's, and say which is which.
-> ✅ **FORM 7203 IN ATX IS NOW ESTABLISHED, FROM THE KEYBOARD — use this, and stop reasoning about it**
-> _(Lilian, 2026-09-22: **"todos los referentes 7203 se entran en el K1 input y luego fluyen al 7203. Al
-> menos esta es la forma en la que trabaja ATX."**)_:
-> **EVERY Form 7203 figure is entered on `K1 INPUT (1120S)` and flows to the 7203. The 7203 itself takes
-> nothing.** 🔑 **Including the DISTRIBUTION, which goes in the `box 16D` field on that screen** and lands
-> on **Form 7203 line 6** — _her words: "las distribuciones se entran en el K1 input en el box 16d"_.
-> ⛔ **So on a 1040, `7203, BASIS WKST` is a REPORT, not a data-entry screen** — a line that comes out
-> blank or wrong is fixed on the K-1 screen, never on the form. **Say so in the entry-route block, and give
-> the FORM's ⌨️/ƒ split separately, because the two answers disagree on every typed line.**
+> ✅ **FORM 7203's PART I IN ATX IS NOW ESTABLISHED, FROM THE KEYBOARD — use this, and stop reasoning
+> about it** _(Lilian, 2026-09-22: **"todos los referentes 7203 se entran en el K1 input y luego fluyen al
+> 7203. Al menos esta es la forma en la que trabaja ATX."**)_:
+> **Every Part I BASIS figure is entered on `K1 INPUT (1120S)` and flows to the 7203.** 🔑 **Including the
+> DISTRIBUTION, which goes in the `box 16D` field on that screen** and lands on **Form 7203 line 6** —
+> _her words: "las distribuciones se entran en el K1 input en el box 16d"_.
+> ⛔ **SCOPE IT TO PART I, WHICH IS WHAT SHE SAID AND WHAT WAS OBSERVED.** ⚠️ **"The 7203 takes nothing"
+> is TOO STRONG and was written that way for a day before review caught it** *(the very over-reach 8d's
+> own closing paragraph warns about)*. ✅ **Outside Part I the form IS typed: items A, B, C, D and E, and
+> Part II's loan balances, lines 16–20** — and the Hub has said so since 2026-09-09.
+> 🔑 **This matters concretely:** Form 7203 **item D** must be ticked on a real return, and a preparer told
+> "the form takes nothing" will hunt for it on the K-1 screen and not find it.
+> **So: say `7203, BASIS WKST` is a REPORT for Part I, name items A–E and lines 16–20 as the exceptions,
+> and give the FORM's ⌨️/ƒ split separately — the two answers disagree on every Part I line.**
 > ⚠️ **This supersedes an inference that stood for weeks and did real damage**: an earlier version of this
 > bullet said *"Part I opens only lines 1 and 13"*. Nobody had seen it; **it sent a preparer hunting for a
 > keyboard inside a form that has none** (part **8d**), and — because it survived HERE after 8d struck it —
@@ -613,7 +618,8 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > K-1's **money** is not typed on Schedule E page 2 at all — the K-1 is keyed on **its own form**, and
 > **Schedule E page 2, Form 7203 and Form 8995 are outputs of that one screen** *(ATX; the firm's own record
 > is [Kolo Florida's paper](../../../projects/tax-returns/kolo-florida-inc/2025-form-1120s.md) §8A row 1,
-> Aug 2026 — ⚠️ **that row carries no read-back stamp, unlike rows 2-3 of the same table**)*. 🔑 **Same rule as Form 7203 opening only lines 1 and 13.**
+> Aug 2026 — ⚠️ **that row carries no read-back stamp, unlike rows 2-3 of the same table**)*. 🔑 **Same rule as the Form 7203 entry route — and ⛔ note that the "only lines 1 and 13" version of
+> that example was RETRACTED (part 1, and 8d).**
 >
 > 🛑 **BUT SCOPE THE CLAIM TO WHAT WAS OBSERVED — "that form takes no input" is almost always too strong.**
 > ⛔ **Schedule E page 2 still has preparer entries on it** — line 27's Yes/No and the **(e)** and **(f)**
@@ -1463,15 +1469,20 @@ form takes NO Part I entry at all** — it prints its own banner, `Basis informa
 she reported the software was refusing her.** 🔑 **The cost is not the wrong line numbers: it is that a
 confident vendor claim is followed, fails, and reads as the preparer's fault.**
 
-✅ **RESOLVED 2026-09-22, and this is what a good outcome looks like:** Lilian, who is the one at the
-keyboard, **told the firm how ATX actually behaves** — *"todos los referentes 7203 se entran en el K1
-input y luego fluyen al 7203"*, distributions included, via the **box 16D** field. 🔑 **That is an
-observation from the person using the program, which is exactly the source this item asks for**, and it
-is now recorded in part 1 as the established route. ⛔ **Nobody has to reason about this screen again.**
+✅ **THE EXAMPLE IS RESOLVED — THE RULE IS NOT.** *(Banner scoped 2026-09-22: what follows retires the
+worked case, not the item.)* Lilian, who is the one at the keyboard, **told the firm how ATX behaves** —
+*"todos los referentes 7203 se entran en el K1 input y luego fluyen al 7203"*, distributions included, via
+the **box 16D** field. 🔑 **That is an observation from the person using the program, which is exactly the
+source this item asks for**, and it is recorded in part 1 as the established route for **Part I**.
+⚠️ **AND IT IMMEDIATELY DEMONSTRATED THE RULE AGAIN:** the first write-up widened her sentence to *"the
+7203 takes nothing"*, which is false — items A–E and Part II's lines 16–20 are typed on the form.
+🔑 **A sourced observation is still only worth what it actually covers.**
 
 ✅ **So:** a statement about what a program does is written **only** from an observation — a screenshot, a
-generated PDF, the vendor's own published page, **or the preparer telling you what is on her screen** — and
-it **names the source and the date**. ⚠️ **A tax fact
+generated PDF, the vendor's own published page, **or the preparer telling you what is on her screen** — it
+**names the source and the date**, and ⛔ **it is scoped to what was actually said or seen.** **The
+preparer's word is the weakest of the four and the easiest to over-read**, because it arrives as prose
+rather than as a screen. ⚠️ **A tax fact
 may be reasoned; a screen fact may not.** ⛔ **And "it must work like this because the form is computed"
 is reasoning.**
 

@@ -1647,14 +1647,17 @@ street address never appear here, and nor do dollar figures — those live in Do
 
 - 2026-09-22 — 🔴 **A NEW QUESTION WORTH MORE THAN ANY OTHER STILL OPEN ON HIM: WAS PART OF THE 2025
   MONEY RUN THROUGH PAYROLL?** Lilian raised it while thinking about the reasonable-compensation
-  exposure, and **the file already argues in her favour**: this corporation **ran payroll for him in
-  the prior year** *(its Form 1125-E names him as an officer with compensation)*, and **he worked
+  exposure, and **the file already argues in her favour**: this corporation **reported him as a
+  COMPENSATED OFFICER on its prior-year return** *(Form 1125-E)* — ⚠️ **which is a deduction line, not
+  proof a Form W-2 was ever issued; nobody has seen one**, and **he worked
   there in the early months of 2025 — the same months the money arrived.** ⛔ **A payroll account open
   in December does not close itself in January.** 🔑 **So "some payroll was run in 2025" is the more
   likely reading, and it has never been tested.**
   ✅ **AND IT CAN BE SETTLED WITHOUT RELYING ON HIS MEMORY.** 🥇 The **IRS wage & income transcript**
-  shows any W-2 filed with the SSA *(needs his IRS account or a Form 8821; ⚠️ W-2 data posts late, so
-  2025 may be incomplete for a while)*. 🥈 **His own bank descriptions** — a payroll deposit normally
+  shows any W-2 **filed with the IRS** *(needs his IRS account or a **Form 8821** — ⛔ **not a 2848**,
+  which Lilian may not be named on)*. ✅ **Timing is not a constraint: the current processing year's
+  information returns post from the first week of February.** ⛔ **But a BLANK transcript proves only
+  that no W-2 was FILED — not that no payroll was run**, which is a real and separate outcome. 🥈 **His own bank descriptions** — a payroll deposit normally
   names the provider, an owner draw does not. 🥉 **The shape of the deposits** — payroll is the same
   amount on a regular date and arrives NET of withholding. **And his `ssa.gov` account** shows wages
   posted by year. 📩 **Three plain questions are drafted in the working paper §4C.**
@@ -1662,11 +1665,19 @@ street address never appear here, and nor do dollar figures — those live in Do
   performed services, has **no wages** and takes a **distribution** is the textbook reasonable-
   compensation profile, and it is visible without anyone opening an audit: the **corporation's own
   return pairs officer compensation against distributions on one page**, and **his own Form 7203
-  states the distribution beside a wage line of zero.** ⛔ **But the assessment lands on the
+  states the distribution beside a wage line of zero.** ⛔ **Most of the assessment lands on the
   CORPORATION — the employment taxes, the unfiled 941/940, the missing W-2s and their penalties are
-  the employer's — and this firm does not prepare that return.** 🔑 **What the 1040 creates is
-  VISIBILITY, not liability**, and **no honest version of the return hides the pattern, because the
-  pattern is a fact.**
+  the employer's — and this firm does not prepare that return.**
+  🔴 **BUT TWO ROUTES REACH HIM PERSONALLY, and he is entitled to know.** The **Trust Fund Recovery
+  Penalty (§6672)** makes a responsible person personally liable for the whole trust-fund half, and he
+  is a 50% shareholder-officer recorded as devoting all his time to the business — **being locked out
+  later answers for the months he was locked out, not for the months he ran it.** And **his own half
+  of FICA is his regardless of what the corporation pays.** ⛔ **Nothing on his 1040 creates or cures
+  either — but "the firm is only creating visibility, not liability" was written and is struck, because
+  it is not true of him.**
+  🛑 **AND THE FIRM'S OWN OBLIGATIONS ARE NOT OPTIONAL:** under Circular 230 the practitioner **must
+  advise a client of known non-compliance and its consequences**, and of the penalties reasonably
+  likely to apply. **That is owed whatever Julia decides to write on the form.**
   🟢 **The mitigation is already true and was unstated: he did not choose to take no salary — he was
   locked out.** A sentence saying so, and that he drew W-2 wages from this same corporation the year
   before, is **recommended for the Form 8082 explanation and is Julia's to approve.**
@@ -1674,10 +1685,6 @@ street address never appear here, and nor do dollar figures — those live in Do
   of a distribution to be salary. **Form 8919 describes a misclassified contractor, which he is not;
   Form 4852 needs withholding figures he does not have; and neither cures the corporation's side,
   which he cannot reach because he is locked out.**
-  🛠️ **Also recorded from Lilian at the keyboard:** in ATX, **every Form 7203 figure is entered on the
-  `K1 INPUT (1120S)` screen and flows to the form — distributions in the box 16D field.** The 7203
-  itself takes nothing. ✅ **That replaces an inference that had been carried in the firm's guidance
-  for weeks and had already cost a preparer a session.**
 - 2026-09-22 — ✅ **TWO MORE THINGS CAME OFF THE OPEN LIST, and neither is a finding — both are
   decisions about what goes on the return.**
   🚗 **THE VEHICLE HE SOLD IN 2025 IS NOT REPORTED.** Julia's ruling, relayed by Lilian: *"en cuanto
