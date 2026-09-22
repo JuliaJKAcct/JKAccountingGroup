@@ -1645,6 +1645,49 @@ street address never appear here, and nor do dollar figures — those live in Do
   ⛔ **The other 50% shareholder is named on both documents; his name stays in Double note 490984,
   not here.**
 
+- 2026-09-23 — ✅ **THE CLIENT ANSWERED LILIAN'S QUESTION EMAIL OF 09-22, and it closes three things,
+  computes the vehicle, and opens one contradiction.** _(Her email, sent from her address with Julia
+  copied, asked about the home office, the trip expenses, the health insurance and the vehicle; he
+  replied by voice dictation, relayed by Lilian.)_
+  ✅ **HEALTH INSURANCE IS CLOSED, and it removes a whole branch of work:** he says he had **no health
+  insurance at all in 2025 and paid no bills**. So the amount he had originally listed comes out
+  entirely — **not as a business expense and not as the self-employed health deduction either**, and the
+  three §162(l) tests the file had opened *(the employer-plan month test, the earned-income cap, the
+  policy-established-under-the-business test)* are all moot. ⚠️ **It also turns the Marketplace
+  assumption into HIS statement rather than the firm's** — though it cannot make an IRS record
+  disappear, so the file-and-see-if-it-rejects procedure still stands.
+  ✅ **THE VEHICLE IS FULLY ANSWERED AND COMPUTED.** He gave opening and closing odometer readings,
+  business miles, and confirmed he **owns** it *(bought 2023 used, with the price and the year's loan
+  interest)*. **Business use works out to just under 70%.** 🔑 **The return will use the STANDARD
+  MILEAGE RATE**, which is both the larger deduction and the simpler one — and it avoids having to
+  value the vehicle at the date it converted to business use. ⚠️ **That rests on a POSITION, recorded as
+  one: that 2025 is the first year the vehicle was placed in service in a business of his.** The record
+  supports it — he had no Schedule C before 2025, an employee could not deduct vehicle costs at all in
+  these years, **and his own mileage jumped to more than twice its prior annual pace in 2025**.
+  🛑 **AND THE RATE SWALLOWS THREE THINGS HE HAD CLAIMED SEPARATELY:** his **personal car insurance** is
+  inside it, and so are **gas and repairs for that vehicle** — so the *"truck repair"* and *"towing"*
+  items now survive **only if they belong to a DIFFERENT vehicle**, which nobody has asked.
+  🔑 **Only the business share of the car-loan INTEREST survives on top of the rate**, on its own line.
+  🔴 **THE HOME OFFICE ANSWER CONTRADICTS THIS FILE, and it must not be acted on as given.** Asked
+  whether the office is in a rented home or one he owns, he answered that it is **his own home, still
+  under financing**. ⛔ **But §1 of this file records the opposite arrangement**: the mortgage he pays is
+  on the **Minnesota** house, while he **lived in Washington and then Florida** — so he mortgages one
+  home and rents another, and he confirmed the Minnesota house produced no rental income. **A home
+  office has to be in the home where he actually worked.** 🔑 **The question to put is not "own or
+  rent" — that is the question that produced this — but "in which house or apartment did you actually
+  work in 2025, and what is its address?"** ⚠️ **If the answer moves his residence, it moves his state
+  filings too, which is far bigger than a home office.** ⓘ *He has also never given the square footage
+  the worksheet needs, and the mid-year move keeps Pub. 587's one-home-a-year limit alive behind all
+  of it.*
+  🔴 **AND HIS TRIP TOTAL DOES NOT RECONCILE — by exactly ten thousand.** Asked to combine his two
+  earlier trip figures into one, he returned a number that falls short of their sum by a **round amount
+  exactly consistent with a dropped leading digit**. ⛔ **That is a transcription artifact, not a
+  revision** — and he was dictating, which this file already records as
+  unreliable for figures. **Do not choose between them: put the arithmetic in front of him and ask
+  which is right.** ⚠️ **And whichever it is, it still has to be split between travel and meals**, with
+  the meals rate turning on whether he was personally under DOT hours-of-service limits.
+  ⓘ **Figures are in the return's working paper, which is where they belong.**
+
 - 2026-09-23 — 📧 **AN ACKNOWLEDGEMENT EMAIL WAS DRAFTED FOR THIS CLIENT — not sent.** Lilian asked for
   it; it goes out **under Julia's name**, **after the return is prepared and before it is transmitted**,
   and **filing waits for his written reply.** 🔑 **It does two things.** It records that **amending the
