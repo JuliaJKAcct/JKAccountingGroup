@@ -698,6 +698,11 @@ one-paragraph summary in the email body, not on the files.
   holding for him.** That is not a judgement call — the forms are third-party documents the IRS also
   receives. It changes what the return has to **attach**, and that class of attachment can stop the
   return being filed electronically at all.
+- ⚠️ **And the shape the firm most likely lands on puts him right on the edge of a health-insurance
+  subsidy band** — close enough that a small amount of additional income moves him across it, on a
+  return where two bank statements are still missing. **There the manual calculation and the
+  software's automatic one disagree, and the manual one governs**, so that figure has to be worked by
+  hand rather than accepted.
 - 🔴 **He now says a payment the firm had treated as business income is "a refund of my own funds".**
   ⚠️ **His own expense workbook labelled that same payment as work income four days earlier.** Two
   statements from the same person pointing opposite ways — **and there is a mechanical way to settle
