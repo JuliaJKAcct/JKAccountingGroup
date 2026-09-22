@@ -1610,6 +1610,9 @@ street address never appear here, and nor do dollar figures — those live in Do
   rather than deducted**, which would mean the carryforward is **not the free NOL the 2024 return
   reports** but largely a **§1366(d)(2) loss tied to that one corporation**. ⛔ **Julia's
   determination, not this file's — and it reaches back into 2024, not only forward.**
+  🔵 **SUPERSEDED THE NEXT DAY — see the 2026-09-22 entry below**, where Lilian ruled the prior
+  return is **accepted, not audited**. ⛔ **Do not act on this entry's reading.** *(Kept because §6
+  is a chronology: this is what the evidence looked like before she ruled.)*
   🔵 **And it makes the 2025 reporting route decisive rather than incidental:** reporting income
   **restores basis and releases suspended loss** (working paper §4A).
   ✅ **Four things it closes outright:** **accumulated E&P is ZERO**, so §1368(c) cannot apply and no
