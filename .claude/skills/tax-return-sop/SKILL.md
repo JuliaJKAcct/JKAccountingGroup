@@ -511,9 +511,11 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 > a table of values without a route through the forms does not help her. In English: *the tables per
 > form, the flow of the figures between the forms, the explanations, and the boxes I have to tick.*
 > **Deliver all four, every time, unprompted — plus part 2, which is what makes the flow readable,
-> and parts 1b to 1g, 6 to 13 and 8b below, which are what she has had to ask for since.**
+> and parts 1b to 1g, 6 to 13 and 8b to 8d below, which are what she has had to ask for since.**
+> ⓘ *The count was "eighteen" and then "nineteen" for months while **8c and 8d existed and were never
+> counted**; corrected to **22** on 2026-09-22 — 13 headline parts, 1b–1g, 8b–8d.*
 
-> 🛑 **THE CALIBRATION, and it governs all twenty parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
+> 🛑 **THE CALIBRATION, and it governs all twenty-two parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
 > tiene que hacerlo una persona que no sabe prácticamente nada de taxes, ni de formularios, ni de
 > cómo fluyen las cosas en los formularios, ni las fórmulas detrás de cada número. Este es el nivel
 > de detalle que necesitamos."*
@@ -528,7 +530,7 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 > **statement the return could not e-file without**; the other was **a K-1 explained only as the two
 > boxes that carried numbers.** Parts 6 and 7 exist because of them.
 
-### The TWENTY things every delivery carries
+### The TWENTY-TWO things every delivery carries
 
 **1 · ONE TABLE PER FORM, in the order the forms are actually prepared** — every table with the same
 columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid form — the COLUMN named**:
@@ -1138,22 +1140,33 @@ and the parts she called "intermediate explanations" are the parts earlier rules
    forms am I filing?" before any figure appears**, and it is the only place that says **how many of
    them need a human at all** *(on the worked return: nine forms, four with anything to type)*.
    ⓘ *Name what is deliberately NOT filed too — that question costs a preparer a search.*
-2. ✅ **IN EVERY FORM'S BLOCK, THE TABLE COMES FIRST.** The entry route may precede it; **nothing else
-   may.** ⛔ **A caveat, a correction and a worked example all belong AFTER the rows they qualify.**
+2. ✅ **IN EVERY FORM'S BLOCK, THE TABLE COMES FIRST.** **Two things may precede it and nothing else
+   may:** the **entry route**, and ✅ **part 1's required first-line statement for a computed form**
+   *(which is itself an entry-route fact — "this form is an output; the figures are typed on X")*. ⛔ **A caveat, a correction and a worked example all belong AFTER the rows they qualify.**
 3. 🔑 **COLLAPSE THE PROSE.** On a page, every banner-sized explanation becomes a **closed
    `<details>` whose summary is its own heading**, so it reads as one line until she wants it — with an
-   **expand-all / collapse-all** control at the top. ⛔ **Nothing is deleted and nothing moves between
-   sections**, so there is no second home for a figure and nothing can drift. ⓘ *In CHAT, the same
+   **expand-all / collapse-all** control at the top.
+   ⛔ **ONE CARVE-OUT, and it is not optional:** anything **part 11 requires to be VISIBLE stays open** —
+   above all the notice naming **which rows are held back and where their values are.** 🔑 **Part 11's
+   own words are that "a worksheet that is silently incomplete is worse than one that is visibly
+   incomplete", and a held-back notice collapsed by default is silently incomplete by construction.** ⛔ **Collapsing deletes nothing and moves nothing
+   between sections**, so it creates no second home for a figure — ⚠️ **that guarantee belongs to THIS
+   move, not to the split below**, which does relocate whole sections *(and must therefore move them
+   entire, never copy a table out of one)*. ⓘ *In CHAT, the same
    move is ordering plus a one-line "why" that points at the working paper.*
 
 🗂️ **AND SPLIT THE PAGE IN TWO, VISIBLY: *to type* and *to understand*.** The analysis sections —
 exposure, characterisation, the reasoning behind a settled figure — go **after** every keying block,
 under their own heading. **She works the first half at the keyboard and reads the second half when
-something surprises her.** *(A third part, the checkbox lists of rule 13, closes the page.)*
+something surprises her.** ⚠️ **AND THE CHECKBOX LISTS OF RULE 13 BELONG WITH THE KEYING HALF, NOT AFTER THE ANALYSIS** — they
+are the most keyboard-facing thing on the page, and putting them last makes her scroll past the
+reasoning to reach what she is actively working through. ⓘ *Either open the page with them or close
+the keying half with them; a third part at the very end fights this rule's own sort.*
 
-🛑 **THE TELL, and it is checkable before delivering:** *open the page and count how far you scroll
-before the first line-by-line table.* ⛔ **If an explanation gets there first, the delivery is sorted
-wrong** — however good the explanation is.
+🛑 **THE TELL, and it is checkable before delivering.** 📄 **On a page:** *open it and count how far
+you scroll before the first line-by-line table.* 💬 **In chat:** *the first thing after the form index
+is a TABLE, not a paragraph* — and each form's block opens with its rows. ⛔ **If an explanation gets
+there first in either container, the delivery is sorted wrong** — however good the explanation is.
 
 **2 · THE ORDER OF PREPARATION, up front — and every circularity called out.** Forms are not
 prepared in the order they are numbered. Open with the route:
