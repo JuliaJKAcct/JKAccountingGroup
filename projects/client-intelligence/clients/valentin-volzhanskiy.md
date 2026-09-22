@@ -685,8 +685,11 @@ one-paragraph summary in the email body, not on the files.
 - 🚗 **The car: a 2021 Hyundai Tucson, FINANCED — not leased.** **That closes a branch that had been
   open since the first pass**, because a lease and a loan are treated completely differently. He also
   says **the loan is now paid off**, and he is chasing the lender for the year's interest total.
-- **He split his expenses into the two activities as asked**, rather than lumping them together — which
-  is the thing the firm was most worried he would do.
+- **He split his expenses into the two activities as asked**, rather than lumping them together.
+  ⚠️ **That is NOT the same as the worry being closed.** The firm's concern was that costs belonging
+  to his employment would end up filed under the catering heading — **and the catering figures that
+  came back are exactly where that would show.** 🔑 **The check that settles it has not been run**,
+  because it needs the attachment nobody has read.
 - **He gave his own percentages** for the home office, the phone and internet, and business meals, and
   correctly left the meals limitation for us to apply.
 
