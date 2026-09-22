@@ -522,10 +522,19 @@ file locally. Neither is how the team uses it. Two checks, every time a Hub tool
      published before a later sweep will always show hundreds of superseded lines. ✅ **The check that
      settles it is not the line count: it is `git log --since=<live publish date>` on the rendered
      directories.** **50 merged commits explained the whole delta**, and the dates in the current
-     sources had simply moved on. ⛔ **A literal `grep` of a lost line against the `.md` sources does
+     sources had simply moved on.
+     ⚠️ **CLAIM EXACTLY WHAT YOU MEASURED, AND THAT RUN DID NOT MEASURE "NOTHING WAS LOST."** What it
+     established is narrower: *the delta is explained by 50 merged commits, and no SAMPLED line traced
+     to unmerged work.* **The 200 were not each individually accounted for.**
+     ⛔ **AND THE TEXT DIFF IS STRUCTURALLY BLIND to `<script>`, `<style>`, attributes and embedded
+     binaries** — so a Hub feature published from an unmerged branch that was **purely JS, CSS or a
+     link target** would not show up in it at all. 🔑 **Low risk while step 6 is followed (publish
+     AFTER merge), but it is the one category this method can never cover — say so rather than
+     claiming a clean bill.** ⛔ **A literal `grep` of a lost line against the `.md` sources does
      NOT work** — the renderer strips `**` and joins across emphasis, so a rendered line often exists
-     nowhere contiguously in its own source. **Normalise the sources (strip `*_`` ` ``~` and link
-     syntax, collapse whitespace) before comparing, or you will chase 146 phantom losses.**
+     nowhere contiguously in its own source. **Normalise the sources first — strip the emphasis
+     characters (asterisk, underscore, tilde, backtick) and the link syntax, and collapse whitespace —
+     or you will chase 146 phantom losses.**
      ⚠️ **Claim exactly that much and no more — the diff is NOT proof the page is intact.** By
      construction it cannot see: everything in `<script>` (stripped — and whole-page-JS breakage is
      what the verify gate below exists for), everything in `<style>`, **attributes** (`href`, ids,
