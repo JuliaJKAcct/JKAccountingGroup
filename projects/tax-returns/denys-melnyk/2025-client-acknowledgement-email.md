@@ -36,7 +36,7 @@ wage & income transcript is what settles the RETURN.** ⛔ **Both, not either.**
 | What was said | What it is |
 |---|---|
 | *"las formas 8202"* | 🔑 **Form 8082**, *Notice of Inconsistent Treatment or Administrative Adjustment Request* |
-| *"no sé si es una o son tres"* | ✅ **THREE — one per corporation.** The instructions require *"a separate form for each pass-through entity"*, and the form's lines 3–6 are all singular so it cannot name more than one (§4E) |
+| *"no sé si es una o son tres"* | ✅ **THREE — one per corporation**, and the form's lines 3–6 are all singular so one form cannot name two. ⚠️ **But not for the reason it first said here.** The instruction is *"a separate form for each pass-through entity **for which you're reporting an inconsistent or AAR item**"* — and §4E concludes **none of the three meets that trigger** *(arguable on Midwest)*. 🔑 **They are three because Julia is choosing three PROTECTIVE disclosures, not because three were required** |
 
 ## 2 · Four things added to what was asked for, each with its reason
 
@@ -53,20 +53,30 @@ wage & income transcript is what settles the RETURN.** ⛔ **Both, not either.**
 4. 🔑 **AN EXPLICIT REQUEST FOR A REPLY.** ⛔ **An email he never answered protects far less than one he
    accepted.** The letter asks for a written confirmation and says filing waits for it.
 
-## 3 · 🛑 THE ONE THING TO SETTLE BEFORE SENDING — the language
+## 3 · 🛑 THE LANGUAGE AND THE CHANNEL — ⛔ NOT open questions; the file already answered both
 
-⚠️ **Lilian asked for English and the draft below is English.** 🔑 **But a consent the client cannot
-read closely is worth very little**, and the whole purpose of this letter is that he cannot later say
-he did not understand what was agreed.
+🔴 **RUSSIAN IS NOT A RECOMMENDATION HERE, IT IS A STANDING INSTRUCTION.** 📖 The client file §1:
+**"Primary language: Russian — confirmed by Lilian, 2026-08-11. Write to him in Russian even though he
+completed the organizer in English."** ⛔ **So an English-only send would breach it** — on the one
+document in this whole matter whose entire value depends on him understanding it.
+⚠️ **An earlier version of this section raised the language as an open question and recommended
+Russian. That was wrong: it had already been decided, and this file should have cited it.**
 
-📌 **Recommendation: send BOTH — English above, Russian below, in one email.** ⛔ **Not a separate
-message**; one email, one reply, one record.
+📌 **Send BOTH in ONE email — English above, Russian below.** ⛔ **Not two messages**; one email, one
+reply, one record. ⓘ *The genuine tension worth naming: §4C records that **he writes to the firm in
+English**. That is a reason to include the English, not a reason to drop the Russian.*
 
-🔴 **AND THE REGISTER OF THAT RUSSIAN IS JULIA'S, NOT LILIAN'S.** She is a **native speaker** and this
-goes out under her name, so it is written at **full native register** — the simplified Russian the firm
-uses for Lilian's own messages would read as talking down to her own client
-_(`CLAUDE.md` — "no confundas el caso mío con el de Yulia")_. ⓘ *Form names, `Schedule K-1`, `Schedule
-C`, `Form 8082`, `Form 1095-A` and `Marketplace` stay in English inside the Russian, in «guillemets».*
+🔴 **AND THE REGISTER OF THAT RUSSIAN IS JULIA'S, NOT LILIAN'S.** She is a **native speaker** and it
+goes out under her name, so **full native register** — the simplified Russian the firm uses for
+Lilian's own messages would read as talking down to her own client
+_(`CLAUDE.md` — "no confundas el caso mío con el de Yulia")_. ⓘ *`Schedule K-1`, `Schedule C`,
+`Form 8082`, `Form 1095-A`, `Form 4868` and `Marketplace` stay in English inside the Russian, in
+«guillemets».*
+
+🔴 **THE CHANNEL IS THE SECOND HALF, AND IT IS THE ONE THAT WILL ACTUALLY SINK THIS.** 📖 The client
+file: **"His channel is settled too: text message, not the portal."** ⛔ **This matter's only email
+address on record is JULIA's — the one given to the ex-partner.** 🛑 **A letter that gates filing on
+a reply, sent to an address he may not read, is a filing delay with a deadline attached** (§5).
 
 📌 **Say the word and the Russian half gets written.**
 
@@ -82,52 +92,70 @@ C`, `Form 8082`, `Form 1095-A` and `Marketplace` stay in English inside the Russ
 
 ---
 
-**Subject:** Your 2025 tax return: how we prepared it, and what I need you to confirm
+**Subject:** Your 2025 tax return: what I need you to confirm before I file
 
 Dear Denys,
 
-Before I file your 2025 return, I want to put in writing how we have prepared it and why. Please read
-this carefully and reply to confirm. I will not file until you do.
+Your 2025 return is ready. Before I file it I want to put in writing how I have prepared it and why,
+and there are a few things I need you to confirm.
 
 **Where things stand**
 
 You hold shares in three S corporations: Midwest Expedited Corp, Midwest Truck Leasing LLC and AVDM
-Holdings Inc. None of them has given you a 2025 Schedule K-1, and you have told us that you no longer
-have access to their books, records or systems.
+Holdings Inc. None of them has given you a 2025 Schedule K-1, and you have told us you no longer have
+access to their books, records or systems.
 
 A Schedule K-1 is the document that tells you, and the IRS, what share of a corporation's income belongs
-to you for the year. We did not simply wait for them. We contacted your former business partner directly
+to you for the year. We did not simply wait for it. We contacted your former business partner directly
 and asked for all three. He said they were not ready and undertook to send them. Nothing has arrived
 since.
 
-**What you have told us, and what I need you to confirm**
+**What I need you to confirm**
 
-Everything below rests on what you have told us. Please confirm each point:
+Please answer each of these. If you are unsure of any of them, say so rather than guessing.
 
-1. You received **no Form W-2** from any of the three corporations for 2025, and **none of the money you
-   received was run through payroll**.
-2. The funds you received during 2025 came from Midwest Expedited Corp and relate to work you performed.
-3. You paid the business costs you listed for us **personally**, and no one reimbursed you for them.
-4. You had **no health insurance through the Marketplace** (healthcare.gov or a state exchange) at any
-   point in 2025, and you have **never received a Form 1095-A** for 2025.
-5. You have **no other 2025 income** that you have not already given us.
+1. You received **no Form W-2** from any of the three corporations for 2025.
+2. About the money you received during 2025, so that I can work out whether any of it was run through
+   payroll. You may not know, and that is fine, but these three answers tell me:
+   a. Did it arrive on a regular schedule, the same amount on the same day each week or month, or in
+   irregular amounts?
+   b. In your bank app, what does the description on those deposits say? Does it name a payroll company
+   (for example Gusto, ADP, Paychex, Intuit), or is it just a transfer from the company?
+   c. Do you have online access to your Social Security account at ssa.gov? It will show whether any
+   wages were reported for you in 2025.
+3. The funds you received during 2025 came from Midwest Expedited Corp and relate to work you performed.
+4. **Did you, or anyone else, file an extension for your 2025 return?** This is a Form 4868, and it
+   would have been filed before April. We did not file one, because you became our client in July.
+   I need to know either way.
+5. The business costs you listed for us were paid by you **personally**, and no one reimbursed you for
+   them. (Not all of them belong on a tax return. I will come back to you separately about which ones
+   do.)
+6. **Health insurance.** In the tax organizer you completed you answered that you had Marketplace
+   coverage in 2025, and you later told us you did not. I need to know which is right. If you did have
+   it, through healthcare.gov or a state exchange, there is a Form 1095-A and I need it before filing.
+7. You have **no other 2025 income** that you have not already given us.
 
-If any of these is wrong, even slightly, or if you are unsure, please tell me now. Correcting something
-before we file costs you nothing. Correcting it afterwards does.
+Correcting any of this before I file costs you nothing. Correcting it afterwards does.
 
-**How we have prepared the return**
+**How I have prepared the return**
 
-- The money you received, and the business costs you paid, are reported on a Schedule C. This lets you
-  report that income and pay the tax on it on time, without the Schedule K-1s.
-- We are filing three Forms 8082, one for each corporation. This is a formal notice to the IRS that you
-  did not receive a Schedule K-1 from any of them, and that nothing from those corporations has been
-  reported on your return because you have no information from which to determine it. It puts their
-  failure to issue those documents on the record, and it is in your favor.
-- We are not reporting any salary or any distribution from the corporations, because nothing we hold
-  would tell us what to report.
+- The money you received, and the business costs that qualify, are reported on a Schedule C. This is
+  how you report that income and pay the tax on it without the Schedule K-1s.
+- Because that income is reported this way, the return includes **self-employment tax**, which is the
+  Social Security and Medicare tax on it. This is the largest single item on your return and I want you
+  to see it before you agree to anything: it comes to approximately **$[[SE TAX]]**. The loss carried
+  forward from 2024 reduces your income tax but it does not reduce this.
+- I am filing **three Forms 8082**, one for each corporation. These record with the IRS that no Schedule
+  K-1 was furnished to you. Two of them state that nothing from those corporations is reported on your
+  return, because you have no information from which to determine it. The third, for Midwest Expedited
+  Corp, also states that the funds you received from it were for services you performed and that they
+  are reported on Schedule C. Filing these preserves your position if one of those corporations later
+  reports something different.
+- I am not reporting any salary or any distribution from the corporations, because nothing we hold would
+  tell us what to report.
 
-This is the approach we discussed and agreed. It is the most accurate return we can prepare from the
-information that exists today.
+This is how I have decided to prepare it on the information available today, and I want you to have it
+in writing before I file.
 
 **What happens if this changes. Please read this part**
 
@@ -138,14 +166,14 @@ IRS if what the corporations eventually report does not match your return.
 If that happens, three things follow, and I would rather you hear them from me now than from the IRS
 later:
 
-- **Preparing an amended return is separate work and is billed separately.** It is not covered by the
-  fee for this return. This would not be us correcting our own mistake. The information was withheld
-  from you by someone else, and we prepared the best return possible without it.
+- **If the return has to be amended because the Schedule K-1s arrive, that is separate work and is
+  billed separately.** It is not covered by the fee for this return. The Schedule K-1s were not provided
+  to you, and we have prepared the best return possible without them.
 - **An amendment may also change what you owe the IRS.** There may be additional tax, interest, and in
   some cases penalties. Those are not our charges, and I cannot predict them until I see what the
   Schedule K-1s actually say.
-- **The same applies if the IRS rejects your return** because their records show a Marketplace health
-  policy for 2025. If that happens we will need the Form 1095-A from you, and resolving it is additional
+- **The same applies if the IRS rejects the return** because their records show a Marketplace health
+  policy for 2025. If that happens I will need the Form 1095-A from you, and resolving it is additional
   work.
 
 None of this is a prediction that something will go wrong. It is what an incomplete set of documents can
@@ -155,11 +183,12 @@ lead to, and I would rather we agreed it in advance than discussed it afterwards
 
 Please reply to this email confirming:
 
-- that points 1 to 5 above are correct; and
-- that you understand and accept how we have prepared the return, including that an amendment arising
-  from the missing Schedule K-1s would be charged separately.
+- your answers to points 1 to 7 above; and
+- that you accept how I have prepared the return, including that an amendment needed because the
+  Schedule K-1s arrive later would be charged separately.
 
-As soon as I have your reply, we will file.
+I will not file until I have your reply, so please do not leave it. Once I have it, and have finished
+the last checks on my side, we will file.
 
 If anything here is unclear, or you would rather go over it by phone, call me on
 
@@ -180,27 +209,62 @@ JK Accounting Group
 
 | # | Check |
 |---|---|
-| 1 | ✅ **No placeholders to fill** — the draft is complete as written. ⚠️ **Re-read it once against the finished return** in case a form, a company name or a fact changed |
-| 2 | 🛑 **Send it AFTER the return is prepared and BEFORE it is transmitted.** Sending it early invites him to renegotiate the approach; sending it after filing protects nothing |
-| 3 | ⚠️ **Do not attach the return to this email.** This is the acknowledgement; the return and Form 8879 go separately, once he has replied |
-| 4 | 🔑 **File his REPLY** — in Double, on his client record, next to the return. ⛔ **An acknowledgement nobody can find later is not an acknowledgement** |
-| 5 | 📌 **Decide the Russian half** (§3) before sending, not after |
-| 6 | ⚠️ **His answer to point 1 does NOT close the payroll blocker** (§0) — the wage & income transcript still has to be run |
-| 7 | ⚖️ **Julia signs it and Julia sends it.** ⛔ **It is a fee-and-scope term and a representation letter; it is not Lilian's to send under her own name** |
+| 1 | 🔴 **FILL `[[SE TAX]]`** — the one placeholder. It is the self-employment tax off Schedule SE line 12 on the finished return. ⛔ **Do not send the letter with a bracket in it** |
+| 2 | 🛑 **THE DEADLINE, AND IT IS THE REAL RISK.** ⛔ **Nobody knows whether a 2025 extension was filed** (§8 item 3). **If one was, 2026-10-15; if not, the return has been late since 2026-04-15** and the failure-to-file penalty now runs on a base that includes the self-employment tax (§8 item 7). 🔴 **This letter GATES FILING on his reply, and his channel is text, not email** (§3). **A slow reply is a filing delay with a penalty attached.** 📌 **Send it the day the return is finished, chase by text the next day** |
+| 3 | 🔴 **PUT THE "we agreed" QUESTION TO JULIA FIRST.** Lilian's words were *"lo que **acordó** Julia con el cliente"*. ⛔ **Nothing in the file records a conversation with the CLIENT about a Schedule C** — decision 7 is Julia's, relayed by Lilian, and the last recorded client contact is August. ✅ **The draft is therefore worded so it is TRUE either way** *("This is how I have decided to prepare it")*. 🔑 **If Julia did discuss it with him, she can restore the stronger wording herself — but she has to say so.** ⛔ **A false "as we agreed" in a document whose only purpose is evidence is the one sentence that would turn this letter against the firm** |
+| 4 | 🛑 **Send it AFTER the return is prepared and BEFORE it is transmitted.** Sending it early invites him to renegotiate the approach; sending it after filing protects nothing |
+| 5 | ⚠️ **Do not attach the return.** This is the acknowledgement; the return and Form 8879 go separately, once he has replied |
+| 6 | 📧 **Confirm the email address in Double first, and send a short TEXT telling him the email is coming and that a reply is needed** (§3). ⛔ **We hold no evidence he reads email** |
+| 7 | 🇷🇺 **The Russian half is written before sending, not after** (§3) — it is a standing instruction, not a preference |
+| 8 | 🔑 **File his REPLY in Double**, on his client record, next to the return. ⛔ **An acknowledgement nobody can find later is not an acknowledgement** |
+| 9 | ⚠️ **His answers do NOT close the payroll blocker** (§0) — the wage & income transcript and `ssa.gov` still settle it. ⏰ **`ssa.gov` shows 2025 wages from 30 September** |
+| 10 | ⚖️ **Julia signs it and Julia sends it.** ⛔ **It is a fee-and-scope term and a representation letter; it is not Lilian's to send under her own name** |
+| 11 | 📌 **JULIA DECIDES whether to tell him a cheaper route existed.** §4E puts Form 8919 at roughly 13,819 against 19,000–27,000 here. ⛔ **This draft does NOT mention it** — naming a rejected alternative to a client invites him to demand it, and the choice was hers. ⚠️ **But she should make that omission knowingly** |
 
 ## 6 · What this closes, and what it does not
 
-✅ **It discharges the client-facing half of the firm's duty to say what the missing documents mean**
-*(Circular 230 §10.21 — known non-compliance and its consequences are brought to the client's
-attention).* ⓘ *Recorded because §4E of the working paper carries the firm's obligations and this is
-where one of them is actually performed.*
+🟠 **It performs PART of the firm's duty to tell the client what the missing documents mean**
+*(Circular 230 §10.21).* ⛔ **An earlier version of this section said it "discharges the client-facing
+half" of that duty. That is struck, and it mattered:** §4C defines the duty here as advising him of the
+corporations' **payroll and employment-return non-compliance and its consequences, including the
+§6672 trust-fund route that can reach him personally.** 🛑 **This letter mentions none of that. That
+conversation is still owed** — and it is Julia's, because it touches his personal exposure.
 
 ⛔ **It does NOT reach:**
 
-- **The payroll blocker** (§9A ④) — his answer is a representation, not evidence.
-- **The Schedule C characterisation itself.** 🔑 **The client's consent does not make a treatment
-  correct**, and this letter is deliberately worded so that it never claims otherwise. **Julia is the
-  signer, and that decision is recorded as hers in §4E with the objection beside it.**
-- **The open items that still gate the return** — the Schedule C business description, the Form 1099
-  questions, the meals rate, whose truck, whose drivers, Illinois (§8). ⚠️ **This email does not ask
-  him any of those.** 📌 **They are a separate, ordinary question list and should go out FIRST.**
+- **The payroll blocker** (§9A ④) — his answers are information, not evidence. ✅ **The draft now asks
+  the three FACTUAL questions from §4C** *(regularity · the bank description · `ssa.gov` access)*
+  **instead of asking him to certify a conclusion he cannot know.** ⚠️ **An earlier version did the
+  latter, and also made filing turn on it.**
+- **The Schedule C characterisation itself.** 🔑 **A client's consent does not make a treatment
+  correct**, and the letter is worded so it never claims otherwise. ⛔ **An earlier draft said the
+  return was "the most accurate return we can prepare" — struck**, because §0 of this very file forbids
+  exactly that sentence and §4E holds the opposite.
+- **The Marketplace contradiction** — ✅ **now put to him properly.** 📖 `method.md`: *where two records
+  disagree, show the client both, then ask.* ⛔ **An earlier draft asked him to affirm one side while
+  the firm sat on his own contrary organizer answer** — a signed denial obtained that way is worse than
+  never having asked. ⚠️ **It does reopen what decision 6 closed; that is deliberate and Julia should
+  know it.**
+- **The return's other open items** — the Schedule C business description, the two Form 1099 questions,
+  the DOT meals rate, whose truck, whose drivers, **Illinois** (§8). ⛔ **This email asks him none of
+  them.** 📌 **They are a separate, ordinary question list and should go out FIRST.**
+
+## 7 · 🔎 What an independent review found, 2026-09-23
+
+⚠️ **Recorded so the next session does not restore any of it.** The first draft carried **six** false or
+unsupported statements, and the review found them all:
+
+| # | What it said | Why it was wrong |
+|---|---|---|
+| 1 | All three Forms 8082 report *"nothing from those corporations"* | ⛔ **The Midwest form says the opposite in two places** (§4F-iv), and §4E has a whole subsection on why it must |
+| 2 | *"pay the tax on it **on time**"* | ⛔ **Not established** — the extension is unknown (§8 item 3). **Now a question in the letter** |
+| 3 | *"the approach we **discussed and agreed**"* | ⛔ **Nothing records a client conversation.** Now worded true either way (§5 check 3) |
+| 4 | *"the **most accurate** return we can prepare"* | ⛔ **The correctness claim §0 forbids** |
+| 5 | *"none of the money was run through payroll"* as a yes/no | ⛔ **A conclusion he cannot know**, on a fact §4C thinks is probably the other way |
+| 6 | *"This would not be us correcting our own mistake"* | ⛔ **Overbroad** — it pre-committed against amendments caused by a W-2 surfacing or by Julia reversing her own decision, both live. **Now scoped to the K-1 cause alone** |
+
+✅ **Also fixed from the same review:** the self-employment tax is now disclosed *(you cannot consent to
+a cost you were never told)*; *"withheld from you"* became *"were not provided to you"* **because it
+asserted intent by a named third party inside a live dispute**; *"it is in your favor"* became what the
+form actually buys; and *"I will not file until you do"* moved out of the opening paragraph, where it
+was the first thing a client who communicates by text would read.
