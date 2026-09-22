@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-23
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1644,6 +1644,42 @@ street address never appear here, and nor do dollar figures — those live in Do
   third confirmed instance of that gap in [`tools/redact-doc/README.md`](../../../tools/redact-doc/README.md).
   ⛔ **The other 50% shareholder is named on both documents; his name stays in Double note 490984,
   not here.**
+
+- 2026-09-23 — 📧 **AN ACKNOWLEDGEMENT EMAIL WAS DRAFTED FOR THIS CLIENT — not sent.** Lilian asked for
+  it; it goes out **under Julia's name**, **after the return is prepared and before it is transmitted**,
+  and **filing waits for his written reply.** 🔑 **It does two things.** It records that **amending the
+  return later — if the Schedule K-1s finally arrive — is separate, billable work**, because the missing
+  information was withheld by someone else and is not a defect in the firm's work. And it makes him
+  **state in writing** the facts the return rests on: that he received **no Form W-2**; the three
+  factual questions that decide whether anything was run through **payroll** *(was it regular or
+  irregular · what the bank description says · whether he can reach `ssa.gov`)*, asked that way
+  **because certifying "no payroll" is a conclusion he cannot know and the firm's own reading is that
+  some probably was run**; that the funds came from the one corporation and relate to work he
+  performed; 🔴 **whether anyone filed a 2025 EXTENSION** *(unknown, and only he can answer — if none
+  was filed the return has been late since April and the penalty base now includes the
+  self-employment tax)*; that he paid the business costs personally; ⚠️ **which of his two contrary
+  answers on MARKETPLACE coverage is right** *(his organizer says he had it, he later said he did not —
+  both are put to him, per the firm's own rule that where two records disagree you show the client
+  both and then ask)*; and that there is no other income. 🔑 **It also tells him the
+  self-employment tax the chosen route carries, because he is being asked to accept the approach and
+  that is its largest cost.** ⚠️ **It also warns him that an amendment can carry additional tax, interest and penalties from
+  the IRS** — not just our fee — **and that an e-file rejection over the Marketplace question means more
+  work too.**
+  ⛔ **THREE THINGS IT DELIBERATELY DOES NOT DO, recorded so nobody reads it as more than it is:** it
+  **does not settle the payroll question** *(his answer is a representation, not evidence — a Form W-2
+  filed with the SSA is matched automatically whatever he believes)*; it **does not assert that the
+  chosen treatment is correct in law**, because the working paper records a live preparer's objection to
+  it and a letter to the client claiming otherwise would have the firm vouching for a position its own
+  file disputes; and it **asks him none of the return's still-open questions**, which go out first as an
+  ordinary question list. 🔴 **IT GOES OUT IN ENGLISH AND RUSSIAN, and that is not a preference** — §1 of this
+  file already says to write to him in Russian, and this is the one document whose whole value depends on
+  his understanding it; **the Russian is at full native register because it carries Julia's name, not the
+  simplified Russian used for Lilian's own messages.** 🛑 **And the CHANNEL is the risk nobody had
+  noticed: his settled channel is TEXT, the only email address on this matter is Julia's, and the letter
+  makes filing wait for a reply** — so it must be sent the day the return is finished and chased by text,
+  or it becomes a filing delay with a deadline attached. ⚠️ **An independent review found six false or
+  unsupported statements in the first draft and all six were corrected**; the draft, the reasoning and the
+  list of what was wrong are in the return's working-paper folder. **His reply must be filed in Double.**
 
 - 2026-09-23 — 🔴 **JULIA REVERSED THE SHAPE OF THE RETURN: the money goes on a SCHEDULE C, with zero
   salary and zero distributions, and a Form 8082 for EACH of the three corporations.** Relayed by
