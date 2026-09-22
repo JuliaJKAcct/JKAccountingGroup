@@ -1649,19 +1649,39 @@ street address never appear here, and nor do dollar figures — those live in Do
   salary and zero distributions, and a Form 8082 for EACH of the three corporations.** Relayed by
   Lilian. ⛔ **This takes the route the working paper had named as the one that must not be taken**, so
   both halves are recorded.
-  ✅ **What it buys, and it is not small:** the whole reasonable-compensation exposure **evaporates** —
-  no distribution to challenge, no zero-wage pattern, no §6672 route on this money, and no capital-gain
-  risk. **It is the conservative characterisation, and the IRS rarely objects to being paid more.**
+  🛑 **AND BEFORE THE TRADE-OFF — ON THE FACTS THIS FILE ITSELF RECORDS, THIS MONEY CANNOT BE SCHEDULE
+  C INCOME, and the preparer's objection is recorded here so it travels with the decision.** The
+  Schedule SE instructions exclude from self-employment earnings any income received **for performing
+  services as an employee** — and a shareholder-officer performing services for his own S corporation
+  **is** an employee for employment-tax purposes, which is the very proposition the
+  reasonable-compensation exposure rests on. **An S-corporation shareholder's distributive share is
+  not self-employment income either.** ⛔ **So this money is wages, a distribution, or a loan draw —
+  there is no state of the world in which it is sole-proprietor gross receipts.** ⚠️ **And the Form
+  8082 text the firm is filing says so to the IRS in its own words: the funds were received *for
+  services he performed*.**
+  ⛔ **TWO SENTENCES WRITTEN HERE ON 2026-09-23 ARE STRUCK, and were struck in the working paper the
+  same day:** ~~"the whole reasonable-compensation exposure evaporates… no §6672 route on this
+  money"~~ — **the exposure is the CORPORATION's payroll failure and a Schedule C on his 1040 does not
+  reach it; what changes is that it becomes an assertion instead of an implication** — and ~~"it is
+  the conservative characterisation, and the IRS rarely objects to being paid more"~~, **which is not
+  true here: the cheaper and better-fitting route was already on the record.**
+  ✅ **What it genuinely buys, narrowly stated:** it removes the **presentation** — no distribution on
+  the return to challenge, no zero-wage-with-distribution pattern, and no capital-gain risk.
   🔴 **What it costs: SELF-EMPLOYMENT TAX, which nothing on this return can shelter.** 12.4% to the
   wage base plus 2.9% uncapped on 92.35% of net profit — 🛑 **and the large loss carryforward does NOT
-  reduce it**, because that reduces taxable income and self-employment tax is computed separately.
-  **Figures are in the working paper; the point for this file is that the trade has a price and it
-  should be one Julia set deliberately.**
+  reduce it**, because the statute computes net earnings without that deduction.
+  🔴 **AND IT IS NOT THE CHEAPEST ROUTE EITHER: Form 8919 charges only the EMPLOYEE half** of the same
+  taxes and is designed for exactly this fact pattern — someone treated as other than an employee when
+  he should have been one. **On these facts the Schedule C costs materially more than Form 8919 would
+  have, and mischaracterises the income as well.**
+  **Figures are in the working paper; the point for this file is that the trade has a price, the price
+  is large, and it should be one Julia set deliberately with the alternative in front of her.**
   🛑 **AND THE CLIENT'S EXPENSE LIST CANNOT BE USED AS SENT — five of its twelve items are not
   Schedule C expenses at all** *(health insurance belongs on Schedule 1, not Schedule C, whose
   insurance line says "other than health"; personal car insurance, rent, child support and a car-loan
-  principal are not deductible anywhere)*, **two were given as MONTHLY amounts and three carry no
-  period.** 🔑 **The rule that governs it: a description is not a business purpose.**
+  principal are not deductible anywhere)*, **two were given as MONTHLY amounts and FOUR carry no
+  period** *(corrected 2026-09-23 — this said "three")*. 🔑 **The rule that governs it: a description
+  is not a business purpose.**
   🔴 **THREE THINGS THE SCHEDULE C CREATES THAT DID NOT EXIST BEFORE:** ① **the two Form 1099
   questions on its face** — the client said he sent money to **drivers**, which is contract labour, and
   answering those boxes is a compliance statement under penalties of perjury, so **he has to be asked
@@ -1669,11 +1689,24 @@ street address never appear here, and nor do dollar figures — those live in Do
   Marketplace question** that was closed, because the deduction and the premium credit interact; and
   ③ **the vehicle decision is reopened** — it was closed as "not reported" when there was no Schedule C,
   and a business vehicle that is sold is a Form 4797 event.
-  ✅ **Her two procedural questions are answered by one paragraph of the Form 8082 instructions,
-  verbatim: a SEPARATE form is required for EACH pass-through entity** *(three corporations, three
-  forms — the form cannot name more than one)*, **and lines 8–11 need not be completed when no monetary
-  change is reported, provided Part III carries the explanation.** ⛔ **So the form works as a pure
-  notice, which is exactly what she wanted.**
+  ✅ **Her SECOND procedural question is answered by the Form 8082 instructions verbatim: a SEPARATE
+  form is required for EACH pass-through entity** *(three corporations, three forms — the form cannot
+  name more than one).*
+  🛑 **HER FIRST QUESTION WAS ANSWERED WRONG IN CHAT ON 2026-09-23, AND THE CORRECTION IS RECORDED
+  HERE RATHER THAN QUIETLY DROPPED.** She was told Part II is left blank. **It is not.** The
+  instructions' first note under *Specific Instructions* says that where the entity gave no Schedule
+  K-1 by the filing date, you **complete Parts I and II to the best of your knowledge** — and the
+  waiver she was quoted applies only where **no change to the amount or treatment** is reported, while
+  the instructions themselves treat a missing K-1 as a change of treatment *(it is the stated reason
+  to tick both boxes in column (b))*. ✅ **What IS true, and was the substance of her question: nothing
+  is typed into the K-1 input and nothing from any of the three corporations reaches the return.**
+  **The form's own line 8 is completed with zeros, and the zero is what does the disclosing.**
+  🔴 **AND A THIRD THING NOBODY ASKED, which changes what these forms ARE:** the instructions make the
+  form mandatory only where *there are items you must include on your return* — **with nothing
+  reported from any of the three, that trigger is met by none of them.** **So all three are a
+  PROTECTIVE disclosure, not a required notice.** ✅ **Filing them is still right** *(without the
+  notice, a later deficiency can be assessed immediately, and nobody knows what those corporations
+  filed)* — **but it is a disclosure choice for Julia, not a compliance step.**
   ⚠️ **One thing the three forms must NOT be: identical.** The money on the Schedule C is Midwest's
   money, so that corporation's form has to say what was done with it — otherwise the return states two
   different things about one sum with nothing connecting them.
