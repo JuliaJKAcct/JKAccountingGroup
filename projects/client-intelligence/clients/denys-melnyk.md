@@ -1645,6 +1645,39 @@ street address never appear here, and nor do dollar figures — those live in Do
   ⛔ **The other 50% shareholder is named on both documents; his name stays in Double note 490984,
   not here.**
 
+- 2026-09-22 — 🔴 **A NEW QUESTION WORTH MORE THAN ANY OTHER STILL OPEN ON HIM: WAS PART OF THE 2025
+  MONEY RUN THROUGH PAYROLL?** Lilian raised it while thinking about the reasonable-compensation
+  exposure, and **the file already argues in her favour**: this corporation **ran payroll for him in
+  the prior year** *(its Form 1125-E names him as an officer with compensation)*, and **he worked
+  there in the early months of 2025 — the same months the money arrived.** ⛔ **A payroll account open
+  in December does not close itself in January.** 🔑 **So "some payroll was run in 2025" is the more
+  likely reading, and it has never been tested.**
+  ✅ **AND IT CAN BE SETTLED WITHOUT RELYING ON HIS MEMORY.** 🥇 The **IRS wage & income transcript**
+  shows any W-2 filed with the SSA *(needs his IRS account or a Form 8821; ⚠️ W-2 data posts late, so
+  2025 may be incomplete for a while)*. 🥈 **His own bank descriptions** — a payroll deposit normally
+  names the provider, an owner draw does not. 🥉 **The shape of the deposits** — payroll is the same
+  amount on a regular date and arrives NET of withholding. **And his `ssa.gov` account** shows wages
+  posted by year. 📩 **Three plain questions are drafted in the working paper §4C.**
+  ⚖️ **WHY IT MATTERS — the exposure, stated so nobody over-reads it.** A shareholder-employee who
+  performed services, has **no wages** and takes a **distribution** is the textbook reasonable-
+  compensation profile, and it is visible without anyone opening an audit: the **corporation's own
+  return pairs officer compensation against distributions on one page**, and **his own Form 7203
+  states the distribution beside a wage line of zero.** ⛔ **But the assessment lands on the
+  CORPORATION — the employment taxes, the unfiled 941/940, the missing W-2s and their penalties are
+  the employer's — and this firm does not prepare that return.** 🔑 **What the 1040 creates is
+  VISIBILITY, not liability**, and **no honest version of the return hides the pattern, because the
+  pattern is a fact.**
+  🟢 **The mitigation is already true and was unstated: he did not choose to take no salary — he was
+  locked out.** A sentence saying so, and that he drew W-2 wages from this same corporation the year
+  before, is **recommended for the Form 8082 explanation and is Julia's to approve.**
+  ⛔ **And the route that is NOT available:** if no payroll was run, a 1040 cannot simply declare part
+  of a distribution to be salary. **Form 8919 describes a misclassified contractor, which he is not;
+  Form 4852 needs withholding figures he does not have; and neither cures the corporation's side,
+  which he cannot reach because he is locked out.**
+  🛠️ **Also recorded from Lilian at the keyboard:** in ATX, **every Form 7203 figure is entered on the
+  `K1 INPUT (1120S)` screen and flows to the form — distributions in the box 16D field.** The 7203
+  itself takes nothing. ✅ **That replaces an inference that had been carried in the firm's guidance
+  for weeks and had already cost a preparer a session.**
 - 2026-09-22 — ✅ **TWO MORE THINGS CAME OFF THE OPEN LIST, and neither is a finding — both are
   decisions about what goes on the return.**
   🚗 **THE VEHICLE HE SOLD IN 2025 IS NOT REPORTED.** Julia's ruling, relayed by Lilian: *"en cuanto
