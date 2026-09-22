@@ -1630,6 +1630,32 @@ street address never appear here, and nor do dollar figures — those live in Do
   ⛔ **The other 50% shareholder is named on both documents; his name stays in Double note 490984,
   not here.**
 
+- 2026-09-22 — ✅ **LILIAN RULED, AND IT CLOSES THE BIGGEST OPEN ITEM ON THIS CLIENT: THE PRIOR
+  RETURN IS ACCEPTED, NOT AUDITED.** Her words: *"Mi objetivo no es tratar de corregir la declaración
+  anterior. Hay que asumir que todo lo que hay ahí es correcto. No vamos a inventar declaraciones
+  hechas por otros contadores… A menos que sea un error extremadamente grande, [Julia] tendrá que
+  decidir, pero vamos a asumir que todo está perfecto."*
+  🔑 **And she worked out the consequence herself, correctly:** the corporation's return shows what
+  reached his K-1; his own return shows the whole of it was deducted and became the NOL; **accept
+  that, and his opening 2025 basis is ZERO.** ✅ **The chain holds** — §1366(d)(1) means the return
+  asserts basis at least equal to the loss, §1367 reduces basis by losses deducted **but not below
+  zero**, and debt basis is independently zero. ⚠️ **What it does not establish is that basis was not
+  MORE than the loss** — but nothing evidences more, substantiating basis is the taxpayer's burden,
+  and assuming a leftover would be inventing a figure, which is what her ruling forbids. 🟢 **Zero
+  also errs in the safe direction.**
+  🔵 **What it unblocks, and it is most of the return:** the NOL is used **as reported**; there is
+  **no suspended §1366(d)(2) carryforward** to track; **2024 is not amended**; and the Form 7203
+  opening line is **zero with the reasoning beside it** rather than a reconstruction costed as
+  separate work. 🔑 **It also resolves the 2025 distribution question** — opening at zero, the year's
+  income raises basis **before** a distribution reduces it, so no capital gain arises up to the
+  income reported.
+  ⚖️ **The contrary evidence is KEPT, reclassified:** the corporation's balance sheet shows far less
+  visible basis than the deduction required. ⛔ **That is now information carried to Julia once under
+  Lilian's own escalation clause, not a defect to fix.** 🔑 **And the honest framing that makes it
+  easy: NO ERROR HAS BEEN ESTABLISHED** — what a shareholder PAID for his shares can never appear on
+  the corporation's return, because the AAA starts at zero on day one of S status. **We have a figure
+  we cannot verify, not an error we found.** Figures and the full chain in the working paper §2F-i.
+
 ### Outstanding items (CI-only — never in the SOP)
 
 **The open list, in priority order — and it is NOT all client asks.** Items are ordered by what would
@@ -1793,8 +1819,13 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
   residence and age**, above; who they are is settled). His 2024 return claimed one daughter with EIC and the child tax credit, and that
   needs re-establishing for 2025.
   ⚠️ **Ask facts, not documents.** The firm does not ask clients for custody orders, decrees or a signed Form 8332 _(Lilian, 2026-08-11)_. Form 8332 stays internal knowledge for how we **treat** his answer, and is raised **only if his answer makes it unavoidable** — a non-custodial parent claiming a child does need one signed and attached to the return (§152(e)), so the request can become necessary. It is simply never how we open.
-- 🔴 **HIS BASIS IN MIDWEST EXPEDITED CORP — ✅ SUBSTANTIALLY ANSWERED 2026-09-21 from the
-  CORPORATION'S OWN RETURN, and it went the bad way.** ⛔ **No shareholder loans, so zero debt
+- ✅ **HIS BASIS IN MIDWEST EXPEDITED CORP — SETTLED 2026-09-22 AT ZERO**, by Lilian's ruling that
+  the prior return is accepted rather than audited (§6 log). ⛔ **The three questions below are no
+  longer needed for the 2025 return** — accepting the return settles the opening figure without
+  them. ⓘ *They would only matter if someone later decided to revisit 2024, which Lilian has ruled
+  out.* _(What follows is the evidence, kept as information for Julia.)_
+  ~~🔴 **SUBSTANTIALLY ANSWERED 2026-09-21 from the CORPORATION'S OWN RETURN, and it went the bad
+  way.**~~ ⛔ **No shareholder loans, so zero debt
   basis; nominal capital stock; trivial opening AAA — against a very large allocated loss.**
   **Most of the 2024 loss looks basis-limited** (§6 log; figures in the working paper §2F).
   🔑 **Two things are left, and an earlier version of this row wrongly closed the second.**
