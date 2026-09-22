@@ -747,9 +747,12 @@ it.** ⓘ *Worth knowing because it explains why the note argues with his own in
 it was written TO him.*
 
 🔴 **THE SHARPEST FINDING, and it is not an expense question.** He leaves out a payment from one of
-the companies that issued him an information return, treating it as personal — **and the firm is the
-one that prepared that form for the payer.** So the return as he proposes it would report less from
-that payer than the document the firm itself issued, and the tax authority holds both. ⚖️ **Whether
+the companies that reported paying him, treating it as personal — **and the firm is the one that
+PREPARED that form for the payer.** So the return as he proposes it would report less from that payer
+than a document the firm itself produced. ⚠️ **Whether that form was ever filed with the tax
+authority is a separate thing the firm has NOT established** — and it decides whether this risks a
+matching notice or is simply an internal contradiction to explain. **Checking it is ours to do, not
+a question for him.** ⚖️ **Whether
 the payment really was personal is a fact only he has** — but it cannot simply be dropped without
 explanation, and it is exactly what the attached statement the return now needs would have to
 explain.
@@ -770,10 +773,18 @@ state professional-licence fee and brokerage fees, and the note leaves them for 
 **It also flags that one payer it moved into the credit-repair column may belong to the real-estate
 side instead** — a title company paying a commission to someone taking a real-estate licence.
 
-✅ **Two things the note settles in our favour.** The housing-date problem the firm found
-independently is **confirmed from his own side** — his preparer could not identify a payment for the
-month in question either, and flagged the later payments as needing explanation. And he states that
-the company behind the disputed payment **issued no information return** at all.
+✅ **Two things the note settles in our favour, and one the firm settled for itself.** The
+housing-date problem the firm found independently is **confirmed from his own side** — his preparer
+could not identify a payment for the month in question either, and flagged the later payments as
+needing explanation. And he states that the company behind the disputed payment **issued no
+information return** at all.
+
+🔑 **AND THE DISPUTED PAYMENT IS NOW SETTLED — it is income.** The firm searched his own transaction
+file for money going OUT to that company, which is what a refund would need. **There is none, and
+the account the money arrived in is covered for the whole year.** ⛔ **So his September
+reclassification is not supported by his own bank data**, and the label on his original file was the
+right one. ⚠️ *What bank records cannot rule out is a repayment in cash, or one that never crossed
+these accounts.*
 
 ⚠️ **One thing the note says about itself, worth recording:** the expense claim moved from the small
 set of items the source file had actually confirmed to the full figure now proposed, by applying the
@@ -860,16 +871,17 @@ does not make the figures wrong — it does say what kind of figures they are.**
       until this arrives** — both methods require an area.
 - [ ] 🆕 🔴 **Did he do ANY catering work in 2025?** — the one fact the firm needs before deciding
       whether the return carries one business or two. **His catering figures came back with no revenue
-      at all.**
+      at all** — 🆕 **and its statement shows no cost of its own either: every line is a share of
+      something shared with the other activity.** ⚠️ **Note the zero revenue is an ASSIGNMENT his
+      own preparer declined to make** — the note says the payers could not be reliably attributed to
+      either activity — **so this question also decides where the income sits.**
 - [x] ✅ 🆕 **Whether that company ever sent him an information return** — **ANSWERED 2026-09-22**:
       his reconciliation note says none was issued. ⓘ *It does not change whether the money is
       reportable — only whether a matching notice is coming.*
 - [ ] 🆕 🔴 **What one specific December payment from a payer was for** — he treats it as personal and
       leaves it out, but it is inside an information return **the firm itself prepared for that
       payer**. **Only he can say what it was; it cannot be dropped silently.**
-- [ ] 🆕 🔴 **Whether the catering activity operated at all in 2025** — now sharper: its statement
-      shows **no income and no cost of its own**, only shares of costs belonging to the other
-      activity.
+
 - [ ] 🆕 ⚖️ **Four splits between the two activities need the firm's decision** — the vehicle, the
       meals, the phone and the home office. **None has a stated basis, and two of them pull opposite
       ways.**
