@@ -127,7 +127,9 @@ since.
 **And please answer these four**
 
 5. **What was the money for?** Was all of it for work you performed, or was any part of it a loan to
-   you, a repayment of money you had lent the company, or something else you were owed?
+   you, a repayment of money you had lent the company, money you simply took out of the company as an
+   owner, or something else you were owed? I have prepared the return on the basis that it was for
+   work you performed, and I need you to tell me now if that is wrong.
 6. **Was any of it run through payroll?** You may not know, and that is fine. These three answers tell
    me:
    a. Did it arrive on a regular schedule, the same amount on the same day each week or month, or in
@@ -224,6 +226,7 @@ JK Accounting Group
 | 2 | 🛑 **THE DEADLINE, AND IT IS THE REAL RISK.** ⛔ **Nobody knows whether a 2025 extension was filed** (§8 item 3). **If one was, 2026-10-15; if not, the return has been late since 2026-04-15** and the failure-to-file penalty now runs on a base that includes the self-employment tax (§8 item 7). 🔴 **This letter GATES FILING on his reply, and his channel is text, not email** (§3). **A slow reply is a filing delay with a penalty attached.** 📌 **Send it the day the return is finished, chase by text the next day** |
 | 3 | 🔴 **PUT THE "we agreed" QUESTION TO JULIA FIRST.** Lilian's words were *"lo que **acordó** Julia con el cliente"*. ⛔ **Nothing in the file records a conversation with the CLIENT about a Schedule C** — decision 7 is Julia's, relayed by Lilian, and the last recorded client contact is August. ✅ **The draft is therefore worded so it is TRUE either way** *("This is how I have decided to prepare it")*. 🔑 **If Julia did discuss it with him, she can restore the stronger wording herself — but she has to say so.** ⛔ **A false "as we agreed" in a document whose only purpose is evidence is the one sentence that would turn this letter against the firm** |
 | 3b | 🔴 **RE-READ IT AGAINST THE FINISHED RETURN before sending.** ⚠️ **It asserts a form COUNT and the Midwest wording as settled**, and §4E leaves two things open until the return exists: whether Julia confirms three protective filings, and 🛠️ **whether ATX will even accept three copies of Form 8082 on one return** *(a screen fact nobody has seen; the fallback is a PDF attachment)*. ⛔ **If it ends up being anything other than three, this letter is wrong** |
+| 3d | ✅ **POINT 5's OPTION SET IS COMPLETE — keep it that way if anyone edits it.** It offers work performed · a loan to him · repayment of a loan he made · **money taken out as an owner** · something else owed. 🛑 **That fourth branch is a DISTRIBUTION, and without it the true answer gets forced by elimination into "for work I performed"** — the one answer that supports the Schedule C. ⚠️ **§4A notes a client would not call a distribution "income" at all**, so he will not volunteer it |
 | 3c | 🔴 **TELL JULIA THE LETTER REOPENS DECISION 6, because it does more than reopen it.** Point 8 commits the firm **in writing, to the client**, to getting the Form 1095-A **before filing** — while §8 item 0c still reads *"Nobody chases the 1095-A, nobody asks the client again… File; a rejection is what turns the form into a requirement."* ⛔ **A letter cannot change a recorded decision of hers by itself.** ✅ **The method rule is on the letter's side** *(two records disagree — show the client both, then ask)*, **but she rules** |
 | 4 | 🛑 **Send it AFTER the return is prepared and BEFORE it is transmitted.** Sending it early invites him to renegotiate the approach; sending it after filing protects nothing |
 | 5 | ⚠️ **Do not attach the return.** This is the acknowledgement; the return and Form 8879 go separately, once he has replied |
