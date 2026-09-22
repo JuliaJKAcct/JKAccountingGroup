@@ -1645,6 +1645,38 @@ street address never appear here, and nor do dollar figures — those live in Do
   ⛔ **The other 50% shareholder is named on both documents; his name stays in Double note 490984,
   not here.**
 
+- 2026-09-23 — 🔴 **JULIA REVERSED THE SHAPE OF THE RETURN: the money goes on a SCHEDULE C, with zero
+  salary and zero distributions, and a Form 8082 for EACH of the three corporations.** Relayed by
+  Lilian. ⛔ **This takes the route the working paper had named as the one that must not be taken**, so
+  both halves are recorded.
+  ✅ **What it buys, and it is not small:** the whole reasonable-compensation exposure **evaporates** —
+  no distribution to challenge, no zero-wage pattern, no §6672 route on this money, and no capital-gain
+  risk. **It is the conservative characterisation, and the IRS rarely objects to being paid more.**
+  🔴 **What it costs: SELF-EMPLOYMENT TAX, which nothing on this return can shelter.** 12.4% to the
+  wage base plus 2.9% uncapped on 92.35% of net profit — 🛑 **and the large loss carryforward does NOT
+  reduce it**, because that reduces taxable income and self-employment tax is computed separately.
+  **Figures are in the working paper; the point for this file is that the trade has a price and it
+  should be one Julia set deliberately.**
+  🛑 **AND THE CLIENT'S EXPENSE LIST CANNOT BE USED AS SENT — five of its twelve items are not
+  Schedule C expenses at all** *(health insurance belongs on Schedule 1, not Schedule C, whose
+  insurance line says "other than health"; personal car insurance, rent, child support and a car-loan
+  principal are not deductible anywhere)*, **two were given as MONTHLY amounts and three carry no
+  period.** 🔑 **The rule that governs it: a description is not a business purpose.**
+  🔴 **THREE THINGS THE SCHEDULE C CREATES THAT DID NOT EXIST BEFORE:** ① **the two Form 1099
+  questions on its face** — the client said he sent money to **drivers**, which is contract labour, and
+  answering those boxes is a compliance statement under penalties of perjury, so **he has to be asked
+  who they were and whether anything was filed**; ② **the self-employed health deduction reopens the
+  Marketplace question** that was closed, because the deduction and the premium credit interact; and
+  ③ **the vehicle decision is reopened** — it was closed as "not reported" when there was no Schedule C,
+  and a business vehicle that is sold is a Form 4797 event.
+  ✅ **Her two procedural questions are answered by one paragraph of the Form 8082 instructions,
+  verbatim: a SEPARATE form is required for EACH pass-through entity** *(three corporations, three
+  forms — the form cannot name more than one)*, **and lines 8–11 need not be completed when no monetary
+  change is reported, provided Part III carries the explanation.** ⛔ **So the form works as a pure
+  notice, which is exactly what she wanted.**
+  ⚠️ **One thing the three forms must NOT be: identical.** The money on the Schedule C is Midwest's
+  money, so that corporation's form has to say what was done with it — otherwise the return states two
+  different things about one sum with nothing connecting them.
 - 2026-09-22 — 🔴 **A NEW QUESTION WORTH MORE THAN ANY OTHER STILL OPEN ON HIM: WAS PART OF THE 2025
   MONEY RUN THROUGH PAYROLL?** Lilian raised it while thinking about the reasonable-compensation
   exposure, and **the file already argues in her favour**: this corporation **reported him as a
