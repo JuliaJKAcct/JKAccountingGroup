@@ -1679,12 +1679,24 @@ street address never appear here, and nor do dollar figures — those live in Do
   advise a client of known non-compliance and its consequences**, and of the penalties reasonably
   likely to apply. **That is owed whatever Julia decides to write on the form.**
   🟢 **The mitigation is already true and was unstated: he did not choose to take no salary — he was
-  locked out.** A sentence saying so, and that he drew W-2 wages from this same corporation the year
-  before, is **recommended for the Form 8082 explanation and is Julia's to approve.**
-  ⛔ **And the route that is NOT available:** if no payroll was run, a 1040 cannot simply declare part
-  of a distribution to be salary. **Form 8919 describes a misclassified contractor, which he is not;
-  Form 4852 needs withholding figures he does not have; and neither cures the corporation's side,
-  which he cannot reach because he is locked out.**
+  locked out.** A sentence saying so, and that **the corporation reported him as a compensated officer
+  on its 2024 return**, is **recommended for the Form 8082 explanation and is Julia's to approve.**
+  ⛔ **It does NOT say he drew W-2 wages** — that is not established, and nobody has seen a 2024 W-2.
+  ⚖️ **AND THE ROUTES, WHICH ARE THREE — an earlier version of this entry said there was none and was
+  wrong on the forms' own text:** ① **payroll ran and a W-2 was filed** → get it and report it,
+  nothing special; ② **payroll ran and no W-2 was ever filed** → that is precisely what **Form 4852**
+  exists for; ③ **no payroll ran and part is still to be treated as wages** → **Form 8919 IS
+  available**, through its *"none of the reason codes apply"* catch-all, which sends you to **reason
+  code G and a Form SS-8**. 🔑 **What that costs is an SS-8 naming the corporation in a live dispute —
+  a decision, not an impossibility.**
+  ⛔ **Struck from an earlier version:** that Form 8919 "describes a misclassified contractor, which he
+  is not" *(the catch-all is written for exactly his case)*; that Form 4852 "needs withholding figures
+  he does not have" *(if no payroll ran the withholding is zero — known, not estimated; the real
+  objections are attesting to wages never paid, and the §6702 penalty)*; and that he was "never paid
+  at all" *(he was paid — just not as wages)*.
+  🛑 **What IS true of all three: none cures the corporation's side**, which he cannot reach because he
+  is locked out — **and §6672 means the trust-fund half can be assessed against him personally
+  whatever his 1040 says.**
 - 2026-09-22 — ✅ **TWO MORE THINGS CAME OFF THE OPEN LIST, and neither is a finding — both are
   decisions about what goes on the return.**
   🚗 **THE VEHICLE HE SOLD IN 2025 IS NOT REPORTED.** Julia's ruling, relayed by Lilian: *"en cuanto
