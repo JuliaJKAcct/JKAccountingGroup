@@ -561,13 +561,26 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > lists — *typed: A, B, C, D, E and 1, 2, 3a, 6, 8a, 13; computed: 4, 5, 7, 9, 10, 11, 14, 15* — so the
 > count is checkable at a glance.
 > ⚠️ **Those lists are THIS return's, not the form's.** 3b–3m and 8b–8c are typed lines that happen to be
-> empty here, and **Form 7203 line 12 is NEITHER** — the form gives it no arithmetic at all, so it is
-> marked as neither rather than guessed. 🔑 **A line blank because this client has nothing there is not a
-> computed line, and a delivery that conflates the two teaches the wrong thing about the form.**
+> empty here. 🔑 **A line blank because this client has nothing there is not a computed line, and a
+> delivery that conflates the two teaches the wrong thing about the form.**
+> ⛔ **CORRECTED 2026-09-22 — an earlier version of this bullet said "Form 7203 line 12 is NEITHER typed
+> nor computed, the form gives it no arithmetic at all." That is WRONG and is struck.** `i7203.pdf` says:
+> *"Line 12. Use Part II to figure the debt basis restoration, if any. **Enter the total from line 23**."*
+> **That is the identical construction to line 11** *("Use Part III… Enter the total from line 47, column
+> (c)")*, which the same bullet marks **ƒ**. 🔑 **Line 12 is COMPUTED** — which also restores the count:
+> **nine computed lines are 4, 5, 7, 9, 10, 11, 12, 14, 15.** ⚠️ **The list above was only ever eight.**
+> ⓘ *The rule the error reached for survives without it: where a form genuinely gives a line no arithmetic,
+> mark it as neither rather than guessing. It just was not true here — and the tell was that the form's own
+> printed text names where the figure comes from.*
 > 🛑 **AND THE FORM AND THE SOFTWARE ARE TWO DIFFERENT ANSWERS. GIVE BOTH.** A line the IRS form treats as
-> an input can still be closed in the program because it arrives from another screen *(in ATX, Form 7203
-> Part I opens only lines 1 and 13 — the rest come from the K-1 capture screen)*. **Neither answer alone
-> is usable**: give the form's, then the program's, and say which is which.
+> an input can still be closed in the program because it arrives from another screen. **Neither answer
+> alone is usable**: give the form's, then the program's, and say which is which.
+> ⛔ **DO NOT REACH FOR FORM 7203 IN ATX AS THE EXAMPLE HERE — that is the retracted claim part 8d exists
+> about.** **In ATX 2025 the form takes NO Part I entry at all**; it prints its own banner, `Basis
+> information is entered on K1 Input (1120S)`. *(An earlier version of this bullet said "Part I opens only
+> lines 1 and 13". It was an inference nobody had seen; it sent a preparer hunting for a keyboard inside a
+> form that has none. Struck here as well as in 8d — **it had survived in this bullet for weeks after 8d
+> retracted it**, which is how it was copied into a client's working paper on 2026-09-22.)*
 > _(Lilian, 2026-09-06: **"tampoco entiendo bien cómo llenar la forma 7203"** — the figures were right and
 > the table's SHAPE was the defect.)_
 >
@@ -1071,8 +1084,9 @@ completely the prose explains it — **has not been delivered.**
   the reasoning sits beside the field, and it is what a later preparer reads instead of re-deriving it.
 - **"Settled" usually means settled for ONE line.** Form 7203's opening line being zero says nothing
   about items C, D and E in its header, about which of Parts II and III go blank and why, or about
-  which lines the form's own skip instruction closes — **and item D turned out to be a live question
-  that touched the very basis the section had just settled.**
+  which lines the form's own **skip instruction** closes — **and writing the rows turned up a header box
+  that must be ticked and had never been asked about.** ⓘ *Small on its own; the point is that it was
+  invisible until the table existed.*
 - ⛔ **A form is never all conclusion.** Even where every figure is zero, the rows carry *which* lines
   are typed, which are computed, which are blank because the client has nothing, and which are blank
   because the form said to skip them. **Those are four different kinds of empty and only a table
@@ -1081,9 +1095,10 @@ completely the prose explains it — **has not been delivered.**
 ⚠️ **The same applies to a pure DISCLOSURE form** — Form 8082, Form 8275, a statement-only attachment.
 **It carries no tax figure, so it invites a paste block and nothing else.** ⛔ **Wrong:** it still has a
 box to tick on line 1 that routes the whole form, an entity-type box, columns whose contents are
-dictated word for word by the instructions *(on Form 8082: column (c) is **zero**, not blank, when no
-schedule was received; both boxes in column (b) get ticked; the explanation is prefixed with the Part II
-item number)* — and **a block of items that must be deliberately left blank because they belong to the
+dictated word for word by the instructions *(on Form 8082: column (c) is **zero**, not blank, **when no
+schedule was received**; both boxes in column (b) get ticked **on that same fact pattern** — ⚠️ a
+shareholder who DID receive a K-1 and disputes only the treatment ticks **Treatment of item** alone, and is
+then excused columns (d) and (e); the explanation is prefixed with the Part II item number)* — and **a block of items that must be deliberately left blank because they belong to the
 box you did not tick.** **Every one of those is a row.**
 
 **2 · THE ORDER OF PREPARATION, up front — and every circularity called out.** Forms are not

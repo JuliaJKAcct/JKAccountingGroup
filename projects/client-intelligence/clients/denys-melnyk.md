@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-21
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1658,14 +1658,18 @@ street address never appear here, and nor do dollar figures — those live in Do
   **a rejection under F8962-070 is what turns the form into a requirement.** ⚠️ **Both limits still
   bind: it is e-file only, and the `ACA Explanation` attachment would bypass it — it must not be
   used, because that rejection is the only verification this return has.**
-  🧾 **And the forms were written up line by line** — Form 7203, Form 8082 and Form 8995 — off the
-  current PDFs on irs.gov *(Form 8082 was revised **October 2025**, so a reference from memory would
-  have been wrong)*. **Three new open items came out of doing it**, all in the working paper §8:
-  **Form 7203 item D** *(how he acquired the stock — a box that must be ticked, never asked, and it
-  touches the very basis we set at zero)*, **Form 8082 line 5** *(which IRS centre the corporation
-  filed at — unknown, and not a blocker)*, and **the §199A carryforward** *(2024's qualified business
-  loss must be entered on Form 8995 line 3 and is not yet quantified; the software never asks for it
-  and raises no error)*.
+  🧾 **And the forms were written up line by line** — Form 7203, Form 8082 and Form 8995 — **each off
+  the current PDF on irs.gov** *(Form 8082 was revised **October 2025**, so a reference from memory
+  would have been wrong)*. ⚠️ **The first draft of the Form 8995 part was written WITHOUT reading its
+  PDF**, and an independent review caught what that cost: a quotation that exists nowhere in the
+  instructions, and a Form 1040 line number that the 2025 form no longer has. **Both corrected from
+  the PDF; recorded because "I reasoned it" and "I read it" look identical on the page.**
+  **Three new open items came out of doing the tables**, all in the working paper §8: **Form 7203
+  item D** *(how he acquired the stock — a box that must be ticked and has never been asked; ⛔ **not**
+  a contradiction of the zero opening basis, as a first draft claimed)*, **Form 8082 line 5** *(which
+  IRS centre the corporation filed at — unknown, and not a blocker)*, and **the §199A carryforward**
+  *(2024's qualified business loss must be typed on Form 8995 line 3 and is not yet quantified; the
+  software never asks for it and raises no error)*.
 - 2026-09-22 — ✅ **LILIAN RULED, AND IT CLOSES THE BIGGEST OPEN ITEM ON THIS CLIENT: THE PRIOR
   RETURN IS ACCEPTED, NOT AUDITED.** Her words: *"Mi objetivo no es tratar de corregir la declaración
   anterior. Hay que asumir que todo lo que hay ahí es correcto. No vamos a inventar declaraciones
