@@ -229,7 +229,7 @@ in that folder.
   project docs, templates — is in English so anyone on the team using Claude Code can
   read it, whatever language the chat is in.
   🔴 **AND SO IS EVERY TAX-RETURN WORKING-PAPER WORKBOOK, EVEN THOUGH IT IS NEVER COMMITTED.**
-  _(Lilian, 2026-09-24: **"prepararás el documento Excel en inglés, por favor. Este worksheet en Excel
+  _(Lilian, 2026-09-23: **"prepararás el documento Excel en inglés, por favor. Este worksheet en Excel
   siempre necesito que sea en inglés."**)_ ⛔ **It joins the deliverables where the
   reply-in-the-language-you-are-addressed-in rule does NOT reach** *(the others are below: the text that
   goes into a client's BOOKS, and any string TYPED INTO A RETURN)*: the workbook that backs a return

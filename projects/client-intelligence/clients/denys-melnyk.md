@@ -2292,9 +2292,15 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   always was, **never deductible on any return.** ⓘ **Worth keeping for future years:** the fact he has
   a second child is true and will keep surfacing; the answer is already here.
 
-- 🔵 **TWO OF HIS DOCUMENTS WERE OPENED IN DOUBLE, at Lilian's explicit request**, through the
-  redactor: the **2024 Midwest Expedited Form 1120-S** and his **2024 personal return**. It was to fill
-  in the disclosure forms she asked for. ✅ **What that established:** the corporation's city and state,
+- 🔵 **TWO DOCUMENTS IN HIS DOUBLE FOLDER WERE OPENED** through the redactor, to fill in the disclosure
+  forms Lilian asked for: **his own 2024 personal return** and the **2024 Midwest Expedited Form
+  1120-S**. ⚠️ **The permission is clean for the first and was INFERRED for the second, and that is
+  recorded honestly rather than smoothed over.** His own prior year is the written default during his
+  own preparation, and she named it. The **1120-S is a different taxpayer's return** — it needs the
+  wider permission, which turns on her or Julia asking, and **she did not name that document**; the
+  session read her instruction to fill the tables as carrying it. 📌 **The question is with her.** ⛔
+  **Nothing from either document was committed, published or written into a Double note.**
+  ✅ **What the reads established:** the corporation's city and state,
   and — from the 2024 Schedule K-1 — **the IRS service centre where that corporation filed**, which
   differs from what the new return names. ⚠️ **It is a prior-year fact about a current-year box, so it
   is a better answer than a blank rather than the correction of an error** — nobody knows whether that
