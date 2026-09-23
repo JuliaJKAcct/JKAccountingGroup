@@ -138,6 +138,9 @@
    аудированной отчётности, *applicable financial statement*). В плане счетов фирмы это счёт
    `685 Non-Capitalized Assets < $2500`, а крупные покупки для проверки временно стоят на
    `998 Transactions > $2500`.
+   ⚠️ Правило действует, только если к своевременно поданной декларации **каждый год** приложено
+   заявление о выборе (*de minimis safe harbor election statement*, Reg. §1.263(a)-1(f)); текст
+   заявления — на английском.
 4. **Погашение тела кредита не является расходом.** Вычитаются только **проценты** (interest).
    Основной долг уменьшает обязательство на балансе.
 5. **Штрафы и пени государству не вычитаются** (fines and penalties paid to a government), как и
@@ -191,7 +194,7 @@
 - Form 1065 — [форма](https://www.irs.gov/pub/irs-pdf/f1065.pdf) · [инструкция](https://www.irs.gov/instructions/i1065)
 - Form 1120 — [форма](https://www.irs.gov/pub/irs-pdf/f1120.pdf) · [инструкция](https://www.irs.gov/instructions/i1120)
 - Form 1120-S — [форма](https://www.irs.gov/pub/irs-pdf/f1120s.pdf) · [инструкция](https://www.irs.gov/instructions/i1120s)
-- Form 1125-A — [форма с инструкцией на странице 2](https://www.irs.gov/pub/irs-pdf/f1125a.pdf) (Rev. November 2024)
+- Form 1125-A — [форма с инструкцией на страницах 2–3](https://www.irs.gov/pub/irs-pdf/f1125a.pdf) (Rev. November 2024)
 - Pub. 334 (малый бизнес), Pub. 463 (командировки, питание, авто), Pub. 946 (амортизация), Pub. 560 (пенсионные планы) — на irs.gov
 
 *Update this guide when a tax year changes a line number or an amount, or when Julia or Lilian
