@@ -214,8 +214,8 @@ unsupported statements, and the review found them all:
 
 | # | What it said | Why it was wrong |
 |---|---|---|
-| 1 | All three Forms 8082 report *"nothing from those corporations"* | ⛔ **The Midwest form says the opposite in two places** (§4F-iv), and §4E has a whole subsection on why it must |
-| 2 | *"pay the tax on it **on time**"* | ⛔ **Not established** — the extension is unknown (§8 item 3). **Now a question in the letter** |
+| 1 | All three Forms 8082 report *"nothing from those corporations"* | ⛔ **the Midwest form may say the opposite in two places — ⚠️ **under §4F-iv-b Package B only; under Package A it reports nothing in Part II and the sentence does not arise**** (§4F-iv), and §4E has a whole subsection on why it must |
+| 2 | *"pay the tax on it **on time**"* | ⛔ **Not established** — the extension is unknown (§8 item 3). **⛔ ~~Now a question in the letter~~ — **STRUCK 2026-09-24: the rewrite cut every question. It is OPEN and lives in the working paper's §8 item 3**** |
 | 3 | *"the approach we **discussed and agreed**"* | ⛔ **Nothing records a client conversation.** Now worded true either way (§5 check 3) |
 | 4 | *"the **most accurate** return we can prepare"* | ⛔ **The correctness claim §0 forbids** |
 | 5 | *"none of the money was run through payroll"* as a yes/no | ⛔ **A conclusion he cannot know**, on a fact §4C thinks is probably the other way |
