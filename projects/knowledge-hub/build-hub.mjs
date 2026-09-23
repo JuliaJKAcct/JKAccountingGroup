@@ -1383,6 +1383,55 @@ const SOP_GROUPS = [
     ],
   },
   {
+    name: 'Tax forms in Russian', note: 'Справочник на русском — expense lines explained, RU / EN',
+    items: [
+      { file: 'tax-form-guides-ru.md', dir: 'projects/sops/tax-form-guides-ru', kicker: 'Reference · RU', readerKick: 'Russian-language reference · firm-wide', title: 'Tax-Form Guides in Russian — Overview & Glossary',
+        blurb: 'Обзор справочника на русском: where one expense lands on Schedule C, 1065, 1120 and 1120-S (one table), the five rules common to every form, and an English-to-Russian glossary of the tax terms a preparer meets. Start here.' },
+      { file: 'schedule-c-ru.md', dir: 'projects/sops/tax-form-guides-ru', kicker: 'Reference · RU', readerKick: 'Russian-language reference · firm-wide', title: 'Schedule C (Form 1040) — Expenses in Russian',
+        flowLede: 'A line-by-line reference for a Russian-speaking preparer. The English wording stays exactly as printed on Schedule C, so it can be found on the form and in ATX; the explanation is in Russian. Tax year 2025, checked against irs.gov.',
+        flow: [
+          { t: 'Find the line', d: 'Exact English line name + number, as printed on Schedule C', ic: 'search' },
+          { t: 'Read what it is', d: 'Russian explanation, and what the IRS instructions say belongs there', ic: 'form' },
+          { t: 'Check what does NOT go there', d: 'The common mis-postings and the line each one belongs on instead', ic: 'key', k: 'gate' },
+          { t: 'Map the QuickBooks account', d: 'The firm chart-of-accounts numbers that usually feed the line', ic: 'diagram' },
+          { t: 'Match last year', d: 'Where the firm convention and the prior-year return differ, the prior year wins until Julia or Lilian decide', ic: 'check', k: 'done' },
+        ],
+        blurb: 'Каждая строка расходов Schedule C (8–27b) на русском: what the IRS says, what we usually see there, what does not belong and where it goes, and the QuickBooks accounts that feed it. Plus Part III (COGS), Part IV (vehicle) and the Part V other-expenses list.' },
+      { file: 'form-1065-ru.md', dir: 'projects/sops/tax-form-guides-ru', kicker: 'Reference · RU', readerKick: 'Russian-language reference · firm-wide', title: 'Form 1065 (Partnership) — Deductions in Russian',
+        flowLede: 'A line-by-line reference for a Russian-speaking preparer. The English wording stays exactly as printed on Form 1065, so it can be found on the form and in ATX; the explanation is in Russian. Tax year 2025, checked against irs.gov.',
+        flow: [
+          { t: 'Find the line', d: 'Exact English line name + number, as printed on Form 1065', ic: 'search' },
+          { t: 'Read what it is', d: 'Russian explanation, and what the IRS instructions say belongs there', ic: 'form' },
+          { t: 'Check what does NOT go there', d: 'The common mis-postings and the line each one belongs on instead', ic: 'key', k: 'gate' },
+          { t: 'Map the QuickBooks account', d: 'The firm chart-of-accounts numbers that usually feed the line', ic: 'diagram' },
+          { t: 'Match last year', d: 'Where the firm convention and the prior-year return differ, the prior year wins until Julia or Lilian decide', ic: 'check', k: 'done' },
+        ],
+        blurb: 'Строки вычетов Form 1065 (9–21) на русском, with the partnership traps: a partner is never on W-2, guaranteed payments and partner health insurance, retirement for partners on the K-1, and the items passed to partners on Schedule K.' },
+      { file: 'form-1120-ru.md', dir: 'projects/sops/tax-form-guides-ru', kicker: 'Reference · RU', readerKick: 'Russian-language reference · firm-wide', title: 'Form 1120 (C-corporation) — Deductions in Russian',
+        flowLede: 'A line-by-line reference for a Russian-speaking preparer. The English wording stays exactly as printed on Form 1120, so it can be found on the form and in ATX; the explanation is in Russian. Tax year 2025, checked against irs.gov.',
+        flow: [
+          { t: 'Find the line', d: 'Exact English line name + number, as printed on Form 1120', ic: 'search' },
+          { t: 'Read what it is', d: 'Russian explanation, and what the IRS instructions say belongs there', ic: 'form' },
+          { t: 'Check what does NOT go there', d: 'The common mis-postings and the line each one belongs on instead', ic: 'key', k: 'gate' },
+          { t: 'Map the QuickBooks account', d: 'The firm chart-of-accounts numbers that usually feed the line', ic: 'diagram' },
+          { t: 'Match last year', d: 'Where the firm convention and the prior-year return differ, the prior year wins until Julia or Lilian decide', ic: 'check', k: 'done' },
+        ],
+        blurb: 'Строки вычетов Form 1120 (12–26, 29a–b) на русском: charitable contributions and Section 179 deducted by the company itself, state income tax deductible but federal not, constructive dividends, and the Schedule M-1 lines.' },
+      { file: 'form-1120s-ru.md', dir: 'projects/sops/tax-form-guides-ru', kicker: 'Reference · RU', readerKick: 'Russian-language reference · firm-wide', title: 'Form 1120-S (S-corporation) — Deductions in Russian',
+        flowLede: 'A line-by-line reference for a Russian-speaking preparer. The English wording stays exactly as printed on Form 1120-S, so it can be found on the form and in ATX; the explanation is in Russian. Tax year 2025, checked against irs.gov.',
+        flow: [
+          { t: 'Find the line', d: 'Exact English line name + number, as printed on Form 1120-S', ic: 'search' },
+          { t: 'Read what it is', d: 'Russian explanation, and what the IRS instructions say belongs there', ic: 'form' },
+          { t: 'Check what does NOT go there', d: 'The common mis-postings and the line each one belongs on instead', ic: 'key', k: 'gate' },
+          { t: 'Map the QuickBooks account', d: 'The firm chart-of-accounts numbers that usually feed the line', ic: 'diagram' },
+          { t: 'Match last year', d: 'Where the firm convention and the prior-year return differ, the prior year wins until Julia or Lilian decide', ic: 'check', k: 'done' },
+        ],
+        blurb: 'Строки вычетов Form 1120-S (7–20) на русском: officer compensation and reasonable salary, the more-than-2% shareholder benefits rule, the line-20 statement, and what passes to shareholders on Schedule K.' },
+      { file: 'form-1125-a-ru.md', dir: 'projects/sops/tax-form-guides-ru', kicker: 'Reference · RU', readerKick: 'Russian-language reference · firm-wide', title: 'Form 1125-A (Cost of Goods Sold) — in Russian',
+        blurb: 'Себестоимость на русском, строка за строкой: beginning inventory must equal last year, purchases, labor, ending inventory (the most dangerous line) and the inventory-method boxes.' },
+    ],
+  },
+  {
     name: 'ITIN & Acceptance Agent', note: 'Getting authorized, then doing the work',
     items: [
       { file: 'irs-certifying-acceptance-agent.md', title: 'Becoming a Certifying Acceptance Agent',
@@ -2717,9 +2766,17 @@ ${templatesViewHtml}
 const fonts = read(resolve(repoRoot, 'brand/design-system/fonts-embedded.css'));
 const atlas = read(resolve(repoRoot, '.claude/skills/sop-authoring/render/atlas.css'));
 const hubcss = read(resolve(here, 'hub.css'));
+// The Russian-language tax-form guides (projects/sops/tax-form-guides-ru/) are read in the
+// Hub's own reader, and the brand fonts above are Latin-only — without this, every Cyrillic
+// glyph falls back to whatever the viewer's system has. Only the BASIC Cyrillic faces
+// (U+0400-045F — Russian and Ukrainian) go in, ~0.4MB, not the whole ~0.7MB file: the page
+// sits close to the Artifact's 16MB ceiling, and Cyrillic-ext is never used here.
+const cyrillicBasic = (read(resolve(repoRoot, 'brand/design-system/fonts-cyrillic-embedded.css'))
+  .match(/@font-face\s*\{[\s\S]*?\}/g) || [])
+  .filter((f) => /unicode-range:[^;]*U\+0400-045F/.test(f)).join('\n');
 // fonts + atlas (shared) + hub.css (Hub components) + DASH_CSS (the CI dashboard's
 // client-card styles, reused verbatim so the cards look identical to the dashboard).
-const style = [fonts.trimEnd(), atlas.trimEnd(), hubcss.trimEnd(), DASH_CSS().trimEnd()].join('\n\n') + '\n';
+const style = [fonts.trimEnd(), cyrillicBasic, atlas.trimEnd(), hubcss.trimEnd(), DASH_CSS().trimEnd()].join('\n\n') + '\n';
 
 const faviconSvg = read(resolve(repoRoot, 'brand/logo/favicon/favicon.svg'));
 const favicon = 'data:image/svg+xml;base64,' + Buffer.from(faviconSvg).toString('base64');

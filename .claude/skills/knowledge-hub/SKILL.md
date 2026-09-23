@@ -287,6 +287,12 @@ emitted script silently broke *every* click.
     off-brand. `inlineToolDoc(src, title, { cyrillic:true })` handles the `/*__FONTS_CYRILLIC__*/`
     placeholder for the Hub embed; the tool's own `build.mjs` carries the same `cyrillic` flag.
     Inline it **only** for tools that need it, so Latin-only tools stay small.
+    ⓘ **The Hub page ITSELF now carries the BASIC Cyrillic faces** (U+0400-045F only, ~0.4MB,
+    filtered out of that file at build time — `cyrillicBasic` in `build-hub.mjs`), since
+    2026-09-23, because the Russian-language tax-form guides
+    (`projects/sops/tax-form-guides-ru/`) are read in the Hub's own reader, not in an iframe.
+    ⚠️ **That covers the reader only — an embedded tool is its own document** and still needs its
+    own `cyrillic: true`. It also moved the page from ~85% to ~87% of the 16MB ceiling.
 
 ## Design is not optional — impeccable + the Design System, always
 
