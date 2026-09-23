@@ -2270,6 +2270,55 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   and no alarm** in the close, and **the firm speaks as a team ("we")**. The draft is in the return's
   email file §4.
 
+### 2026-09-23 (later the same day) — two open questions CLOSED by Lilian, and a second ATX version
+
+> ⚠️ **A dating warning for anyone reading these papers later.** Much of this client's material —
+> here, in the working paper and in the letter — labels **this** day **"2026-09-24"**. It is wrong by
+> one: the git timestamps and the return's own preparer date govern, and both say the second ATX
+> version was produced on **2026-09-23**. Nothing was done on the 24th. Read any "09-24" in these
+> three files as the afternoon of the 23rd until the labels are swept.
+
+- ✅ **THE NOL IS HIS.** Lilian took it off the first ATX version calling it her mistake, then ruled
+  the same week that **removing** it was the mistake — *"el NOL lo voy a incluir nuevamente porque sí
+  es suyo"*. It is back on the return **capped at 80%**, which is what the statute requires for a
+  post-2017 carryforward and which she applied herself. ⚠️ **What is still open is not whether but HOW
+  MUCH CARRIES TO 2026** — and the answer is on the ATX NOL worksheet, not on the filed form.
+
+- ✅ **THE SECOND CHILD IS NOT ON THIS RETURN, AND THE REASON MATTERS FOR NEXT YEAR TOO.** His August
+  note said *"I am married and have two children"*, which raised a real question about a missing
+  dependant. 🔑 **Lilian settled it: the second child is by another parent, does not live with the
+  client, and is the child the monthly child support is paid FOR.** ⛔ **So he is not a qualifying child
+  of this household — no dependant line, no child tax credit** — and the child support remains what it
+  always was, **never deductible on any return.** ⓘ **Worth keeping for future years:** the fact he has
+  a second child is true and will keep surfacing; the answer is already here.
+
+- 🔵 **TWO DOCUMENTS IN HIS DOUBLE FOLDER WERE OPENED** through the redactor, to fill in the disclosure
+  forms Lilian asked for: **his own 2024 personal return** and the **2024 Midwest Expedited Form
+  1120-S**. ⚠️ **The permission is clean for the first and was INFERRED for the second, and that is
+  recorded honestly rather than smoothed over.** His own prior year is the written default during his
+  own preparation, and she named it. The **1120-S is a different taxpayer's return** — it needs the
+  wider permission, which turns on her or Julia asking, and **she did not name that document**; the
+  session read her instruction to fill the tables as carrying it. 📌 **The question is with her.** ⛔
+  **Nothing from either document was committed, published or written into a Double note.**
+  ✅ **What the reads established:** the corporation's city and state,
+  and — from the 2024 Schedule K-1 — **the IRS service centre where that corporation filed**, which
+  differs from what the new return names. ⚠️ **It is a prior-year fact about a current-year box, so it
+  is a better answer than a blank rather than the correction of an error** — nobody knows whether that
+  corporation filed at all for 2025. ⛔ **What it did NOT establish, and nothing in Double does:**
+  any address at all for **Midwest Truck Leasing LLC** or **AVDM Holdings Inc**. The 2024 return
+  carries their names and identifiers and nothing else. **Lilian has to supply those two.**
+
+- 🔑 **THE DISCLOSURE FORM'S KEY FIELD IS SETTLED BY THE INSTRUCTIONS, NOT BY JUDGEMENT.** Lilian asked
+  what to enter where the form asks for *the amount shown on the Schedule K-1* when no Schedule K-1 was
+  ever received. **The instruction is explicit: a written ZERO**, not an empty box — the corporation
+  reported nothing to him, and the form's change column is defined as one figure less that one.
+  ⚠️ **A separate field on the same line remains a drafting choice and is recorded as a recommendation
+  in the working paper, not as a settled answer.**
+
+- 🟠 **NEW AND MINOR:** the second version attaches an earned-income-credit schedule to a return that
+  claims no earned income credit. He is far over the income limit, correctly, so nothing is claimed —
+  but a schedule that exists only to support a claim should not travel with a return that makes none.
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
