@@ -2194,6 +2194,74 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
 - [ ] Assigned staff in Double — no `Assigned Staff` property is set on this client.
 - [ ] Google Drive folder, if one exists.
 
+### 2026-09-23/24 — the 2025 return was PREPARED in ATX, read back, and five things came out of it
+
+**What happened.** Lilian prepared the 2025 Form 1040 in ATX and handed over the finished 24-page PDF.
+It was read page by page against the working paper. She then **removed the NOL** from Schedule 1
+line 8a, calling it something she had left in by mistake. The findings below are what the read
+produced; **every figure lives in the working paper and in the Excel delivered to her, never here.**
+
+- 🔴 **HE SAYS HE HAS TWO CHILDREN AND THE RETURN CLAIMS ONE.** 📖 His own words in the 2026-08-05
+  Double note: *"I am married and have two children."* The prepared return carries a single
+  dependant, with the child tax credit box ticked. ⛔ **Nobody has asked about the second child** —
+  name, date of birth, whether they have an SSN, and whether they lived with the couple in the US for
+  over half of 2025. **It is worth a full child tax credit if the child qualifies, and it is the
+  largest open item on the return after the NOL.**
+
+- 🔴 **THE HOME-OFFICE FORM WAS BUILT ON THE MINNESOTA HOUSE.** This file has recorded since
+  2026-08-12 that *the house on the Form 1098 is in Minnesota* and that **he was paying a mortgage on
+  a house he did not live in while renting where he did.** The prepared Form 8829 nevertheless runs on
+  that house's **mortgage interest, property taxes, HOA and homeowner's insurance.** ⛔ **Those belong
+  to a property that is not the home office.** 🔑 **The corrected form runs on the RENT**, which is
+  also where the rent figure from his 2026-08-05 expense list finally goes — it had been sitting
+  unplaced. ⚠️ **And because he moved from Washington to Florida in May, there were two rented homes
+  in one year, and the form's own instruction requires a separate Form 8829 for each home used for
+  business.** ✅ **Useful side effect:** the Minnesota mortgage interest is not lost, it is
+  Schedule A material for a second home, and that test should be run and written down rather than
+  left to vanish.
+  ⓘ **One earlier worry is closed:** the square footage on his worksheet is **his own entry**, not the
+  blank template's example — he completed and returned the template.
+
+- ✅ **THE TRAVEL FIGURE IS SOUND AND THE APPARENT CONTRADICTION WAS A DICTATION ERROR.** His
+  2026-09-23 answer read as a total ten thousand dollars below what he had sent in August. The
+  2026-08-13 Double note already reconciles the August figures to the higher total, and the two
+  components add to it exactly. 🔑 **The voice-to-text dropped a leading digit.** ⛔ **What remains is
+  not the amount but the composition:** the August figure was described as *"gas, hotels, and food"*,
+  and fuel for his own vehicle cannot be deducted separately once the standard mileage rate is used,
+  while meals go on their own line at a reduced percentage.
+
+- 🔑 **FORM 8082 — part settled, part still a choice** (instructions Rev. 10-2025, supplied by Lilian
+  2026-09-24). ✅ **Settled: three forms, one per corporation**, and the two silent ones are filed with
+  **Part II blank and Part III filled**, which the instructions expressly permit. ⛔ **The prepared
+  return had one form, not three; its Part III was missing entirely; and neither the *notice of
+  inconsistent treatment* box nor the two boxes that say what is inconsistent appear ticked** — those
+  are what make it a notice of anything, and they must be confirmed on screen. ⚖️ **NOT settled, and it
+  is Lilian's to choose: whether the Midwest form reports the corporation's money in Part II, or
+  reports nothing there and explains the Schedule C in Part III.** 🔑 **The working paper argues both,
+  and the same choice decides whether that form is required or merely protective.** ⛔ **A session must
+  not pick it.**
+
+- 🔴 **THE PREPARER DUE-DILIGENCE FORM WAS ESSENTIALLY BLANK**, including the preparer's own
+  certification, on a return claiming the child tax credit. ⚠️ **That exposure is the firm's, not the
+  client's.** Also, **the signature dates on the return predate the preparer's by six weeks** — the
+  e-file authorisation has to be re-signed on the final version.
+
+- ⚖️ **THE NOL QUESTION IS OPEN AND ONLY LILIAN CAN CLOSE IT.** She removed it as an error. ⛔ **If it
+  is a valid carryforward of his it is not elective** — the law measures what is used up against the
+  year's income whether or not the deduction is claimed, so leaving it off does not bank it for 2026,
+  and if it goes back on it goes on capped, not in full. 🔑 **Either the carryforward is not his, in
+  which case this file's prior-year section needs correcting, or it is, in which case a Form 172 or an
+  NOL statement has to be attached showing what carries forward.** **Neither is in the prepared
+  package.**
+
+- 📬 **The client acknowledgement letter was rewritten on 2026-09-24 and its PURPOSE changed.** It was
+  a representation letter that asked him to confirm facts in writing and waited for his reply; Lilian
+  cut that *("no quiero exigirle que se comprometa a nada")*. ✅ **It is now a short recap** — what
+  happened, how the firm treated the money and why, and the single forward-looking point that
+  responding to a notice or amending later is separately billed work. **His statements are attributed
+  to him in it, which is what preserves the evidentiary value.**
+
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
