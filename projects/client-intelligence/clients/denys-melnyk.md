@@ -2262,6 +2262,14 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   to him in it, which is what preserves the evidentiary value.**
 
 
+- 📬 **2026-09-23 (second pass) — Lilian shaped the letter once more, and set how the firm writes to
+  him about this return.** *Worked-by: Lilian.* **Statements, never questions** — what the firm already
+  knows is told to him, and **if he stays silent it stands** (*"si él simplemente se queda callado,
+  significa que todo es cierto… no quiero que parezca interrogatorio"*). **No self-employment tax in
+  it** — *"no necesita saber o entender"*; the Schedule C is explained, its tax is not. **No pressure
+  and no alarm** in the close, and **the firm speaks as a team ("we")**. The draft is in the return's
+  email file §4.
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
