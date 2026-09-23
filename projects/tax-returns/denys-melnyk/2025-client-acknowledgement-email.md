@@ -12,12 +12,13 @@ sería un gasto extra."**)_
 
 ## 0 · What this document is, and the one thing it is NOT
 
-🔑 **It is TWO things at once, and the second is what actually protects the firm:**
+🛑 **ITS PURPOSE CHANGED ON 2026-09-24 AND THE TABLE BELOW RECORDS BOTH, because the reasoning behind
+the discarded half is worth keeping.**
 
 | | |
 |---|---|
-| 1. **A scope-and-fee letter** | It records what was agreed, and that **amending later is separate, billable work** |
-| 2. 🔴 **A WRITTEN REPRESENTATION LETTER** | It makes the client **state in writing** the facts the return rests on. ⛔ **This is the stronger half.** A client who has confirmed **in his own reply** that he received no Form W-2, and who has answered in his own words what the bank descriptions said and whether the deposits were regular, cannot later say we assumed any of it. ⚠️ **An earlier version of this row said he would confirm *"no money was run through payroll"* — that is defect 5 in §7 and the letter no longer asks it** |
+| 1. ✅ **A RECAP, and a scope-and-fee letter** — **this is what it is now** | It states what happened, what the firm did with the money and why, and that **responding to a notice or amending later is new, separately billed work**. 🔑 **It asks the client for nothing and does not gate the filing** |
+| 2. ⛔ ~~**A WRITTEN REPRESENTATION LETTER**~~ — **STRUCK 2026-09-24 by Lilian** | It would have made the client **state in writing** the facts the return rests on, and an earlier version of this row called it *"the stronger half"*. ⚠️ **That analysis was not wrong and it is why the loss is named:** a client who has not confirmed in his own reply that he received no Form W-2 can later say the firm assumed it. 🔑 **Lilian weighed that against a client who feels interrogated and chose the recap** *("no quiero exigirle que se comprometa a nada")*. ✅ **The mitigation is ATTRIBUTION** — the recap says *"you have told us"* and *"you told us you paid"*, so the letter still records whose facts these are |
 
 ⛔ **WHAT IT IS NOT: it is not the firm certifying that the treatment is correct.** The email says
 **what was done, on what basis and on whose instruction.** 🛑 **It must never be edited into a sentence
@@ -36,7 +37,7 @@ wage & income transcript is what settles the RETURN.** ⛔ **Both, not either.**
 | What was said | What it is |
 |---|---|
 | *"las formas 8202"* | 🔑 **Form 8082**, *Notice of Inconsistent Treatment or Administrative Adjustment Request* |
-| *"no sé si es una o son tres"* | ✅ **THREE — one per corporation**, and the form's lines 3–6 are all singular so one form cannot name two. ⚠️ **But not for the reason it first said here.** The instruction is *"a separate form for each pass-through entity **for which you're reporting an inconsistent or AAR item**"* — and §4E concludes **none of the three meets that trigger** *(arguable on Midwest)*. 🔑 **They are three because Julia is choosing three PROTECTIVE disclosures, not because three were required** |
+| *"no sé si es una o son tres"* | ✅ **THREE — one per corporation.** 📎 *"You must complete and file a separate form for each pass-through entity for which you're reporting an inconsistent or AAR item."* 🔴 **AND THE TRIGGER QUESTION IS NOW SETTLED AGAINST WHAT THIS FILE USED TO SAY.** ⛔ An earlier version read *"§4E concludes none of the three meets that trigger (arguable on Midwest)"* — **that is STRUCK.** 📎 The *Who Must File* bullet, verbatim from the **Rev. 10-2025** instructions Lilian supplied on 2026-09-24: *"The pass-through entity hasn't filed a tax return or given you a Schedule K-1 … by the time you're required to file your tax return (including extensions) **and there are items you must include on your return**."* 🔑 **For MIDWEST EXPEDITED both halves are met** — no K-1, and the **200,053 is an item he must include**. **That form is REQUIRED, not protective.** ✅ **The other two are protective**, because nothing from them is reported. ⚠️ **And they are still filed with Part II BLANK and Part III filled** — 📎 *"You don't need to complete lines 8 through 11 if not reporting a change to the amount or treatment of a monetary item; however, you must include an explanation of the change(s) in Part III."* |
 
 ## 2 · Four things added to what was asked for, each with its reason
 
@@ -87,142 +88,72 @@ a reply, sent to an address he may not read, is a filing delay with a deadline a
 
 ## 4 · 🟢 THE DRAFT — English, ready to send
 
-> ⌨️ **Everything between the two rules below is the email.** 🔴 **ONE placeholder, `[[SE TAX]]`,
-> MUST be filled before sending** — the self-employment tax off Schedule SE line 12 on the finished
-> return (§5 check 1). ⛔ **An earlier version of this banner said there were none; a letter went out
-> under an EA's name with a bracket in it is exactly what that would have caused.** The rest is
-> complete as written, in **US English**, and every word of it has been run through the
-> [`humanizer`](../../../.claude/skills/humanizer/) skill *(no em dashes, no decorative bold, no
-> chatbot cadence — the firm's standing rule for client-facing prose)*. ⚠️ **Re-read it once against
-> the finished return before sending**, in case a form or a name changed.
+> 🔴 **REWRITTEN 2026-09-24, and the rewrite is a CHANGE OF PURPOSE, not a trim.** _(Lilian:
+> **"estaba demasiado extenso, demasiado aplicativo… no quiero exigirle que se comprometa a nada.
+> Simplemente quiero hacer una repetición de la situación, de su declaración, todas las cosas que han
+> pasado… sencillo, conciso, con toda la información, pero sencillo. No quiero que parezca un
+> periódico tampoco."**)_
+>
+> ⛔ **The previous draft was a REPRESENTATION LETTER: it asked the client to confirm facts in writing
+> and waited for his reply before filing. That is struck.** 🔑 **This one is a RECAP.** It states what
+> happened, what the firm did and why, and the one forward-looking point about cost. **It asks him for
+> nothing and it does not gate the filing.**
+>
+> ⚠️ **§0 said the representation half was "the stronger half" — that judgement stands as analysis and
+> is now OVERRULED as instruction.** Lilian weighed it against the risk of a client who feels
+> interrogated, and chose. ⓘ **What is lost is real and is named here so nobody has to rediscover it:**
+> a client who has not confirmed in his own words that he received no Form W-2 can later say the firm
+> assumed it. 🔑 **The mitigation is that his statements are now ATTRIBUTED to him in the recap
+> ("you have told us", "you told us you paid"), so the letter still records whose facts these are.**
+>
+> ⌨️ **Everything between the two rules below is the email. There are NO placeholders in it** — the
+> self-employment tax figure was removed with the rest of the numbers, because a recap that quotes one
+> figure invites an argument about that figure. ⚠️ **Re-read it once against the finished return before
+> sending**, in case a corporation's name or the money figure changed.
 
 ---
 
-**Subject:** Your 2025 tax return: what I need you to confirm before I file
+Subject: Your 2025 tax return, and how we have prepared it
 
 Dear Denys,
 
-Your 2025 return is prepared. Before I file it I want to put in writing how I have prepared it and
-why, and there are a few things I need from you first.
+Before we file your 2025 return I want to set out in writing how we have prepared it and why, so that you have the whole picture in one place.
 
-**Where things stand**
+**What we have, and what we do not**
 
-You hold shares in three S corporations: Midwest Expedited Corp, Midwest Truck Leasing LLC and AVDM
-Holdings Inc. None of them has given you a 2025 Schedule K-1, and you have told us you no longer have
-access to their books, records or systems.
+None of your three S corporations, Midwest Expedited Corp, Midwest Truck Leasing LLC and AVDM Holdings Inc, issued you a Schedule K-1 for 2025. You have also told us that you received no Form W-2 and no salary from any of them during the year, and we have prepared the return on that basis.
 
-A Schedule K-1 is the document that tells you, and the IRS, what share of a corporation's income belongs
-to you for the year. We did not simply wait for it. We contacted your former business partner directly
-and asked for all three. He said they were not ready and undertook to send them. Nothing has arrived
-since.
+A shareholder's return is normally built from the Schedule K-1 the corporation issues. Without one we cannot see what these corporations reported to the IRS, or whether they filed at all.
 
-**Please confirm that these four are correct**
+**How we have treated the money**
 
-1. You received **no Form W-2** from any of the three corporations for 2025.
-2. The money you received during 2025 came from **Midwest Expedited Corp**.
-3. The business costs you listed for us were paid by you **personally**, and no one reimbursed you for
-   them. (Not all of them belong on a tax return. I have included the ones that do.)
-4. You have **no other 2025 income** that you have not already given us.
+During 2025 you received $200,053 from Midwest Expedited for work you performed. So that this income is reported and the tax on it is paid, we have put it on a Schedule C, together with the expenses you told us you paid out of your own pocket for that work and for which the company did not reimburse you.
 
-**And please answer these four**
+We are also attaching a Form 8082 for each of the three corporations. Each one tells the IRS that no Schedule K-1 was received from that corporation. The one for Midwest Expedited also shows where the $200,053 is reported on your return.
 
-5. **What was the money for?** Was all of it for work you performed, or was any part of it a loan to
-   you, a repayment of money you had lent the company, money you simply took out of the company as an
-   owner, or something else you were owed? I have prepared the return on the basis that it was for
-   work you performed, and I need you to tell me now if that is wrong.
-6. **Was any of it run through payroll?** You may not know, and that is fine. These three answers tell
-   me:
-   a. Did it arrive on a regular schedule, the same amount on the same day each week or month, or in
-   irregular amounts?
-   b. In your bank app, what does the description on those deposits say? Does it name a payroll company
-   (for example Gusto, ADP, Paychex, Intuit), or is it just a transfer from the company?
-   c. Do you have online access to your Social Security account at ssa.gov? It will show whether any
-   wages were reported for you in 2025. If you check it, please do so after September 30, which is when
-   2025 wages appear there.
-7. **Did you, or anyone else, file an extension for your 2025 return?** This is a Form 4868, and it
-   would have been filed before April. We did not file one, because you became our client in July.
-   I need to know either way.
-8. **Health insurance.** In the tax organizer you completed you answered that you had Marketplace
-   coverage in 2025, and you later told us you did not. I need to know which is right. If you did have
-   it, through healthcare.gov or a state exchange, there is a Form 1095-A and I need it before filing.
+**One thing to be aware of**
 
-If you are unsure about any of these, say so rather than guessing. Correcting something before I file
-costs you nothing. Correcting it afterwards does.
+Because the corporations have not reported anything to you, we cannot rule out that the IRS later receives information from them that does not match your return. A Schedule K-1 or a Form W-2 issued after the fact would do that. If it happens, or if you receive a notice connected to any of this, responding to it or amending the return is new work and would be billed separately. It is not covered by the fee for preparing this return.
 
-**How I have prepared the return**
+I am not expecting it and there is nothing for you to do now. I simply want it on record while everything is fresh.
 
-- The money you received, and the business costs that qualify, are reported on a Schedule C. This is
-  how you report that income and pay the tax on it without the Schedule K-1s.
-- Because that income is reported this way, the return includes **self-employment tax**, which is the
-  Social Security and Medicare tax on it. This is the largest single item on your return and I want you
-  to see it before you agree to anything: it comes to approximately **$[[SE TAX]]**. The loss carried
-  forward from 2024 reduces your income tax but it does not reduce this.
-- I am filing **three Forms 8082**, one for each corporation. These record with the IRS that no Schedule
-  K-1 was furnished to you. Two of them state that nothing from those corporations is reported on your
-  return, because you have no information from which to determine it. The third, for Midwest Expedited
-  Corp, also states that the funds you received from it were for services you performed and that they
-  are reported on Schedule C. Filing these preserves your position if one of those corporations later
-  reports something different.
-- I am not reporting any salary or any distribution from the corporations, because nothing we hold would
-  tell us what to report.
+If anything above does not match your own understanding of the year, tell me and we will look at it again before we file.
 
-This is how I have decided to prepare it on the information available today, and I want you to have it
-in writing before I file.
+Kind regards,
 
-**What happens if this changes. Please read this part**
-
-The Schedule K-1s may still arrive. If they do, or if information about those corporations reaches the
-IRS from another direction, your return may have to be amended. You may also receive a notice from the
-IRS if what the corporations eventually report does not match your return.
-
-If that happens, three things follow, and I would rather you hear them from me now than from the IRS
-later:
-
-- **If the return has to be amended because the Schedule K-1s arrive, that is separate work and is
-  billed separately.** It is not covered by the fee for this return. The Schedule K-1s were not provided
-  to you, and we have prepared the best return possible without them.
-- **An amendment may also change what you owe the IRS.** There may be additional tax, interest, and in
-  some cases penalties. Those are not our charges, and I cannot predict them until I see what the
-  Schedule K-1s actually say.
-- **The same applies if the IRS rejects the return** because their records show a Marketplace health
-  policy for 2025. If that happens I will need the Form 1095-A from you, and resolving it is additional
-  work.
-
-None of this is a prediction that something will go wrong. It is what an incomplete set of documents can
-lead to, and I would rather we agreed it in advance than discussed it afterwards.
-
-**What I need from you**
-
-Please reply to this email:
-
-- confirming that points **1 to 4** are correct;
-- answering points **5 to 8**; and
-- confirming that you accept how I have prepared the return, including that an amendment needed
-  because the Schedule K-1s arrive later would be charged separately.
-
-I will not file until I have your reply, so please do not leave it. Once I have it, and have finished
-the last checks on my side, we will file.
-
-If anything here is unclear, or you would rather go over it by phone, call me on
-
-**(786) 318-1505**
-
-and I will take you through it.
-
-Best regards,
-
-**Julia Kononova**, MBA, EA
+Yuliia Kononova, EA
 CEO · Chief Accountant
 JK Accounting Group
 (786) 318-1505 · julia@jkaccountinggroup.com
 
 ---
 
+
 ## 5 · 🛠️ Before it goes out
 
 | # | Check |
 |---|---|
-| 1 | 🔴 **FILL `[[SE TAX]]`** — the one placeholder. It is the self-employment tax off Schedule SE line 12 on the finished return. ⛔ **Do not send the letter with a bracket in it** |
+| 1 | ✅ **NO PLACEHOLDER LEFT — the 2026-09-24 rewrite removed the figure entirely.** ⛔ Do not put it back: a recap that quotes one number invites an argument about that number. *(The old check read "FILL `[[SE TAX]]`".)* ⓘ **Historic note, kept because it is the reason this row exists:** **Do not send the letter with a bracket in it** |
 | 2 | 🛑 **THE DEADLINE, AND IT IS THE REAL RISK.** ⛔ **Nobody knows whether a 2025 extension was filed** (§8 item 3). **If one was, 2026-10-15; if not, the return has been late since 2026-04-15** and the failure-to-file penalty now runs on a base that includes the self-employment tax (§8 item 7). 🔴 **This letter GATES FILING on his reply, and his channel is text, not email** (§3). **A slow reply is a filing delay with a penalty attached.** 📌 **Send it the day the return is finished, chase by text the next day** |
 | 3 | 🔴 **PUT THE "we agreed" QUESTION TO JULIA FIRST.** Lilian's words were *"lo que **acordó** Julia con el cliente"*. ⛔ **Nothing in the file records a conversation with the CLIENT about a Schedule C** — decision 7 is Julia's, relayed by Lilian, and the last recorded client contact is August. ✅ **The draft is therefore worded so it is TRUE either way** *("This is how I have decided to prepare it")*. 🔑 **If Julia did discuss it with him, she can restore the stronger wording herself — but she has to say so.** ⛔ **A false "as we agreed" in a document whose only purpose is evidence is the one sentence that would turn this letter against the firm** |
 | 3b | 🔴 **RE-READ IT AGAINST THE FINISHED RETURN before sending.** ⚠️ **It asserts a form COUNT and the Midwest wording as settled**, and §4E leaves two things open until the return exists: whether Julia confirms three protective filings, and 🛠️ **whether ATX will even accept three copies of Form 8082 on one return** *(a screen fact nobody has seen; the fallback is a PDF attachment)*. ⛔ **If it ends up being anything other than three, this letter is wrong** |

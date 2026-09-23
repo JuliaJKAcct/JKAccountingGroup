@@ -12,3 +12,7 @@ ci-review-dashboard.html
 # A session transcript is client material — never in the working tree.
 # tools/export-chat/ refuses to write here, and this is the second lock.
 claude-session-*.txt
+
+# Hojas de trabajo de declaraciones con cifras de clientes — se entregan, nunca se commitean
+/Melnyk-*.xlsx
+/*-hoja-de-trabajo.xlsx
