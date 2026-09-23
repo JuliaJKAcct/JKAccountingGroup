@@ -86,7 +86,7 @@ a reply, sent to an address he may not read, is a filing delay with a deadline a
 
 ## 4 · 🟢 THE DRAFT — English, ready to send
 
-> 🔴 **REWRITTEN AGAIN 2026-09-23 (second pass), by Lilian, from her own earlier long draft.** She
+> 🔴 **REWRITTEN AGAIN — second pass, AFTER the recap described in §0/§2 — by Lilian, from her own earlier long draft.** She
 > handed the pre-recap version back as *"extremadamente largo"* and gave four instructions, all of
 > which this draft carries:
 >
@@ -150,7 +150,7 @@ As you have told us:
 
 - The money you received, and the business costs that qualify, are reported on a Schedule C. This is how the income is reported, and the tax on it paid, without the Schedule K-1s.
 - We are attaching three Forms 8082, one for each corporation. Each one tells the IRS that no Schedule K-1 was furnished to you. The one for Midwest Expedited Corp also shows how the $200,053 is reported on your return.
-- We are not reporting any salary or distribution from the corporations, because nothing we hold would tell us what to report.
+- We are not reporting any salary or distribution from the corporations. The money is reported on the Schedule C instead.
 
 **If new information arrives**
 
@@ -216,7 +216,10 @@ conversation is still owed** — and it is Julia's, because it touches his perso
   correct**, and the letter is worded so it never claims otherwise. ⛔ **An earlier draft said the
   return was "the most accurate return we can prepare" — struck**, because §0 of this very file forbids
   exactly that sentence and §4E holds the opposite.
-- **The Marketplace contradiction** — 🔴 **NOT in the letter at all after the 2026-09-24 rewrite, and it
+- **The Marketplace contradiction** — 🔵 **SUPERSEDED IN PART by the second pass (§4): the letter now
+  STATES his no-Marketplace answer, attributed to him, and names the Form 1095-A case — Lilian chose a
+  statement over a question. The contradiction with his organizer is still not shown to him.** ⓘ *What
+  follows is the reasoning from before that choice.* 🔴 **NOT in the letter at all after the 2026-09-24 rewrite, and it
   is the one cut that leaves a real question unasked.** ⓘ **The history, because it is the reason not to
   put it back carelessly:** one draft asked him to *affirm* that he had no Marketplace cover while the
   firm sat on his own contrary organizer answer — ⛔ **a signed denial obtained that way is worse than
