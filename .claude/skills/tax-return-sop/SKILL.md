@@ -2069,6 +2069,34 @@ times and **the LAST call wins**, pinning every table above it — so two-thirds
 and the sheet cannot be scrolled. ✅ **The rule: freeze only a header that sits in the top few rows,
 and only the FIRST one on a sheet. A multi-table sheet freezes nothing.**
 
+#### 🔢 A trap that produced FOUR wrong figures on one sheet: `round()` is not the IRS's rounding
+
+🛑 **Python's built-in `round()` does BANKER'S rounding — it sends `.5` to the nearest EVEN number.**
+⛔ **The IRS tax table, and tax arithmetic generally, round `.5` UP.** 🔑 **The two agree about half the
+time, which is exactly what makes this dangerous:**
+
+```
+round(1247.5) -> 1248   # agrees, so the check against the filed return PASSES
+round(1512.5) -> 1512   # disagrees - and this is the figure nobody can check
+```
+
+⚠️ **A generator that validates itself by reproducing the filed return will sail straight through.**
+*(It did: the chain rebuilt the return's own 16,626 / 8,313 / 77,860 / 62,288 / 12,458 / 1,248 exactly,
+and then produced a tax of 1,512 where the table says 1,513 — carrying a wrong ACTC and a wrong amount
+due onto the summary sheet.)*
+
+✅ **Use explicit half-up rounding everywhere a figure is computed:**
+
+```python
+from decimal import Decimal, ROUND_HALF_UP
+def r(x): return int(Decimal(str(x)).quantize(Decimal('1'), rounding=ROUND_HALF_UP))
+```
+
+🔑 **And validate the generator against a figure the filed return does NOT already contain**, because
+a self-check that only reproduces known outputs cannot distinguish a right method from a lucky one.
+📌 **The tax on a bracket line is read off the table's `$50` row midpoint** — that is what reproduces
+the software's own figures, and it is where the half-up rule bites.
+
 #### The rest of the shape, as it stands
 
 - **Sheets:** `Read me` · `The return` *(the line-by-line, the one she types from)* · `Computations`
