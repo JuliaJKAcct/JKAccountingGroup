@@ -230,8 +230,9 @@ in that folder.
   read it, whatever language the chat is in.
   🔴 **AND SO IS EVERY TAX-RETURN WORKING-PAPER WORKBOOK, EVEN THOUGH IT IS NEVER COMMITTED.**
   _(Lilian, 2026-09-24: **"prepararás el documento Excel en inglés, por favor. Este worksheet en Excel
-  siempre necesito que sea en inglés."**)_ ⛔ **This is the one deliverable where the
-  reply-in-the-language-you-are-addressed-in rule does NOT reach**: the workbook that backs a return
+  siempre necesito que sea en inglés."**)_ ⛔ **It joins the deliverables where the
+  reply-in-the-language-you-are-addressed-in rule does NOT reach** *(the others are below: the text that
+  goes into a client's BOOKS, and any string TYPED INTO A RETURN)*: the workbook that backs a return
   is handed to the client's file and read later by **Julia**, who does not speak Spanish, so a Spanish
   workbook is unreadable by half the firm. 🔑 **Chat stays in her language; the workbook is English —
   sheet names, column headers, findings, everything.** ⚠️ **It is "siempre", not "this one"** — the

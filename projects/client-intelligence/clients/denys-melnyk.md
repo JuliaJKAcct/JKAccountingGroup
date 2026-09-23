@@ -2295,8 +2295,10 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 - 🔵 **TWO OF HIS DOCUMENTS WERE OPENED IN DOUBLE, at Lilian's explicit request**, through the
   redactor: the **2024 Midwest Expedited Form 1120-S** and his **2024 personal return**. It was to fill
   in the disclosure forms she asked for. ✅ **What that established:** the corporation's city and state,
-  and — from the 2024 Schedule K-1 — **the IRS service centre where that corporation filed**, which the
-  new return currently names wrongly. ⛔ **What it did NOT establish, and nothing in Double does:**
+  and — from the 2024 Schedule K-1 — **the IRS service centre where that corporation filed**, which
+  differs from what the new return names. ⚠️ **It is a prior-year fact about a current-year box, so it
+  is a better answer than a blank rather than the correction of an error** — nobody knows whether that
+  corporation filed at all for 2025. ⛔ **What it did NOT establish, and nothing in Double does:**
   any address at all for **Midwest Truck Leasing LLC** or **AVDM Holdings Inc**. The 2024 return
   carries their names and identifiers and nothing else. **Lilian has to supply those two.**
 
