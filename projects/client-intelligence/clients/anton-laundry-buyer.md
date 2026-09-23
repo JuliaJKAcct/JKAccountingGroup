@@ -253,6 +253,27 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-23 — 🔧 **Inspection scope + per-store worksheets issued to Julia** (the technician asked for an
+  itemised list per store and what needs doing). 🛑 **The itemised list DOES NOT EXIST, and that is the
+  finding:** the seller's equipment schedule gives **counts by size only — no serial numbers and no model
+  numbers** — and its own footer says these were to follow *"as a supplement"*. **They never came.** So the
+  inspection creates the only machine schedule there will be, and the worksheets ship blank by necessity.
+  ⚠️ **Two defects in the seller's schedule worth quoting back to the broker:** its washer columns add to
+  **218 against a stated total of 216**, and it gives a portfolio dryer total without a legible per-store
+  split. ⓘ *Checked twice — Drive's own text extraction of Vol 2 comes out identically scrambled, so the
+  grid is unreadable in the source PDF, not in our tooling.* 🔑 **And the serial gap is the SAME gap as the
+  warranty one** — Laundrylux cannot confirm which machines the extended cover applies to without the serial
+  list either. **One request to Kevin closes both.**
+- 2026-09-23 — 🗺️ **What the worksheets encode, per store**, because the inspection differs site by site:
+  the fleet and its age, **who installed it**, the payment/cycle system, **whether that store is under
+  warranty** (three are — inspection only, nothing opened), and the store-specific task. 🔴 **Two stores
+  carry a priority instruction.** **Palmetto Coin is coin-only** — there is no electronic record of machine
+  use anywhere, so the board counts taken there are the only usage evidence that will ever exist for that
+  site. **Palmetto Wash & Fold is where the value question sits** — its cycle counts are what separate
+  efficiency from lost volume after the Dec 2025 re-equip. ⚠️ **Also scoped in: the three UNINSTALLED CENTS
+  card systems** (seller-stated replacement value, boxed on site at three stores), the two delivery vans, the
+  Ruskin card hardware, and **which of Ruskin's four electric meters serves the apartments** — undocumented,
+  and the buyer inherits it either way. Delivered as a PDF, not committed
 - 2026-09-22 — 🔓 **THE UTILITY BILLS WERE ALWAYS REACHABLE — the session's own method was wrong.** Vol 4's
   bills appendix (four separate Drive files, 4A Palmetto Coin · 4B Ruskin · 4C Samoset + 8th Ave · 4D Select)
   had been reported to Julia as unobtainable because each file exceeds Drive's **download** cap. ⛔ **That was
