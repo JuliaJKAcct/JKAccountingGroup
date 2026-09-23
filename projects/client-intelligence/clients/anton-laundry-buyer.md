@@ -253,6 +253,26 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-23 — 🛑 **JULIA CAUGHT A REAL ERROR: THE SERIAL NUMBERS WERE IN THE BINDER ALL ALONG.**
+  *"I am looking at Vol 2 and we have invoices attached. Are you sure we don't have what we need?"* ⛔ **She
+  was right.** A session had read Tab D-1's footer — *"serial numbers, model numbers and purchase invoices to
+  be provided by seller as a supplement"* — and concluded the serials did not exist, **without opening Tab
+  C**, whose entry on the binder's own contents page reads **"Equipment purchase records with serial numbers
+  — all five fleets, pages 15–53."** 🔑 **This is [`method.md`](../../pre-return-review/method.md) rule 1
+  failing in its purest form — a gap is not a finding until you have looked where the thing is kept — and it
+  had already been drafted into an email to the broker asking for documents the firm was holding.** ✅ **What
+  Tab C actually contains, checked tab by tab:** serials **are** on the three Electrolux/Laundrylux invoices
+  *(Samoset 2022, Palmetto W&F 2025, Ruskin 2024)*; they are **absent** from the two Alliance ones *(Select —
+  Commercial Laundries West Florida 2019–20; Palmetto Coin — AAXON 2017)*, which are older invoices listing
+  **model codes and quantities only**. 🔵 **AND THE SPLIT INVERTS THE WARRANTY ASK:** the three fleets that
+  have serials are **exactly** the three carrying the extended-warranty certificates, so the firm does not
+  need to request a covered-serial list from Laundrylux — **it already holds one, taken from Laundrylux's own
+  invoices**, and the request becomes *confirm these are the covered machines*. ⚖️ **The two fleets without
+  serials have no warranty to confirm**, so serials there are asset identification only, which the inspection
+  produces anyway. 🧰 **Consequences applied:** the broker email was cut back to the schedule's arithmetic and
+  a reframed warranty question, and the **inspection scope was corrected** — it had told technicians no
+  serials existed, which would have had three stores' fleets re-catalogued from scratch instead of verified
+  against a list, at the buyer's cost.
 - 2026-09-23 — 🔴 **JULIA CORRECTED THE CYCLE-COUNT METHOD, AND THE CORRECTION STANDS:** *"Cycle reading is
   going to help us to verify. We're not going to have historical cycle readings to do it."* ⛔ **She is right
   and the earlier framing was overstated.** A board count is a **single cumulative number at one moment** —
