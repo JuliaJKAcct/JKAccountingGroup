@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-23
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1645,6 +1645,98 @@ street address never appear here, and nor do dollar figures — those live in Do
   ⛔ **The other 50% shareholder is named on both documents; his name stays in Double note 490984,
   not here.**
 
+- 2026-09-23 — ✅ **THE CLIENT ANSWERED LILIAN'S QUESTION EMAIL OF 09-22, and it closes three things,
+  computes the vehicle, and opens one contradiction.** _(Her email, sent from her address with Julia
+  copied, asked about the home office, the trip expenses, the health insurance and the vehicle; he
+  replied by voice dictation, relayed by Lilian.)_
+  ✅ **HEALTH INSURANCE IS CLOSED, and it removes a whole branch of work:** he says he had **no health
+  insurance at all in 2025 and paid no bills**. So the amount he had originally listed comes out
+  entirely — **not as a business expense and not as the self-employed health deduction either**, and the
+  three §162(l) tests the file had opened *(the employer-plan month test, the earned-income cap, the
+  policy-established-under-the-business test)* are all moot. ⚠️ **It also turns the Marketplace
+  assumption into HIS statement rather than the firm's** — though it cannot make an IRS record
+  disappear, so the file-and-see-if-it-rejects procedure still stands.
+  ✅ **THE VEHICLE IS FULLY ANSWERED AND COMPUTED.** He gave opening and closing odometer readings,
+  business miles, and confirmed he **owns** it *(bought 2023 used, with the price and the year's loan
+  interest)*. **Business use works out to just under 70%.** 🔑 **The return will use the STANDARD
+  MILEAGE RATE**, which is both the larger deduction and the simpler one — and it avoids having to
+  value the vehicle at the date it converted to business use. ⚠️ **That rests on a POSITION, recorded as
+  one: that 2025 is the first year the vehicle was placed in service in a business of his.** The record
+  supports it — he had no Schedule C before 2025, an employee could not deduct vehicle costs at all in
+  these years *(⚠️ the suspension §4 of this file records as now **permanent and redesignated** — do not
+  write it as expiring)*, **and his own driving rose sharply in 2025 against its prior pace**.
+  ⚠️ **How sharply is a RANGE, not a figure** — he gave the purchase year but not the month, so the
+  multiple depends on a date nobody has. **The argument holds across the whole range; a first version
+  stated a single multiple as if it were his own number.**
+  🛑 **AND THE RATE SWALLOWS THREE THINGS HE HAD CLAIMED SEPARATELY:** his **personal car insurance** is
+  inside it, and so are **gas and repairs for that vehicle** — so the *"truck repair"* and *"towing"*
+  items now survive **only if they belong to a DIFFERENT vehicle**, which nobody has asked.
+  🔑 **Only the business share of the car-loan INTEREST survives on top of the rate**, on its own line.
+  🔴 **THE HOME OFFICE ANSWER CONTRADICTS THIS FILE, and it must not be acted on as given.** Asked
+  whether the office is in a rented home or one he owns, he answered that it is **his own home, still
+  under financing**. ⛔ **But §1 of this file records the opposite arrangement**: the mortgage he pays is
+  on the **Minnesota** house, while he **lived in Washington and then Florida** — so he mortgages one
+  home and rents another, and he confirmed the Minnesota house produced no rental income. **A home
+  office has to be in the home where he actually worked.** 🔑 **The question to put is not "own or
+  rent" — that is the question that produced this — but "in which house or apartment did you actually
+  work in 2025, and what is its address?"** ⚠️ **If the answer moves his residence, it moves his state
+  filings too, which is far bigger than a home office.** 🛑 **AND BEFORE ANYONE ASKS HIM FOR SQUARE FOOTAGE — LOOK FIRST.** ⛔ **A first version of this entry
+  said he had never given it. That was written without opening the file the firm already holds** — §4 of
+  this file records the completed worksheet by name and location and says *"do not chase him for it; it
+  is already here."* 🔑 **Open it, then decide what is missing.**
+  ⚖️ **Whether a session may open it WITHOUT asking is unsettled, and it is Lilian's to settle, not a
+  session's.** The prepare-a-return instruction says to go to Double and get **every file the client
+  uploaded**, and the review skill lists Double files as an unrestricted source; the Double operating
+  guide says never a document that is not part of a filed return, though its examples are all
+  third-party and identity documents. 📌 **Ask her, and write the answer into the Double skill so nobody
+  reasons it out again** — she can also just open it herself in a minute.
+  ⓘ *The mid-year move still sits behind all of it — though the one-home rule permits the simplified
+  method for one home AND actual expenses for the other, so both periods can be deducted.*
+  🔴 **AND HIS TRIP TOTAL DOES NOT RECONCILE.** Asked to combine his two
+  earlier trip figures into one, he returned a number that falls short of their sum by a **round amount
+  exactly consistent with a dropped leading digit**. ⛔ **That is a transcription artifact, not a
+  revision** — and he was dictating, which this file already records as
+  unreliable for figures. **Do not choose between them: put the arithmetic in front of him and ask
+  which is right.** ⚠️ **And whichever it is, it still has to be split between travel and meals**, with
+  the meals rate turning on whether he was personally under DOT hours-of-service limits.
+  ⓘ **Figures are in the return's working paper, which is where they belong.**
+
+- 2026-09-23 — 📧 **AN ACKNOWLEDGEMENT EMAIL WAS DRAFTED FOR THIS CLIENT — not sent.** Lilian asked for
+  it; it goes out **under Julia's name**, **after the return is prepared and before it is transmitted**,
+  and **filing waits for his written reply.** 🔑 **It does two things.** It records that **amending the
+  return later — if the Schedule K-1s finally arrive — is separate, billable work**, because the missing
+  information was withheld by someone else and is not a defect in the firm's work. And it makes him
+  **state in writing** the facts the return rests on: that he received **no Form W-2**; the three
+  factual questions that decide whether anything was run through **payroll** *(was it regular or
+  irregular · what the bank description says · whether he can reach `ssa.gov`)*, asked that way
+  **because certifying "no payroll" is a conclusion he cannot know and the firm's own reading is that
+  some probably was run**; that the funds came from the one corporation and relate to work he
+  performed; 🔴 **whether anyone filed a 2025 EXTENSION** *(unknown, and only he can answer — if none
+  was filed the return has been late since April and the penalty base now includes the
+  self-employment tax)*; that he paid the business costs personally; ⚠️ **which of his two contrary
+  answers on MARKETPLACE coverage is right** *(his organizer says he had it, he later said he did not —
+  both are put to him, per the firm's own rule that where two records disagree you show the client
+  both and then ask)*; and that there is no other income. 🔑 **It also tells him the
+  self-employment tax the chosen route carries, because he is being asked to accept the approach and
+  that is its largest cost.** ⚠️ **It also warns him that an amendment can carry additional tax, interest and penalties from
+  the IRS** — not just our fee — **and that an e-file rejection over the Marketplace question means more
+  work too.**
+  ⛔ **THREE THINGS IT DELIBERATELY DOES NOT DO, recorded so nobody reads it as more than it is:** it
+  **does not settle the payroll question** *(his answer is a representation, not evidence — a Form W-2
+  filed with the SSA is matched automatically whatever he believes)*; it **does not assert that the
+  chosen treatment is correct in law**, because the working paper records a live preparer's objection to
+  it and a letter to the client claiming otherwise would have the firm vouching for a position its own
+  file disputes; and it **asks him none of the return's still-open questions**, which go out first as an
+  ordinary question list. 🔴 **IT GOES OUT IN ENGLISH AND RUSSIAN, and that is not a preference** — §1 of this
+  file already says to write to him in Russian, and this is the one document whose whole value depends on
+  his understanding it; **the Russian is at full native register because it carries Julia's name, not the
+  simplified Russian used for Lilian's own messages.** 🛑 **And the CHANNEL is the risk nobody had
+  noticed: his settled channel is TEXT, the only email address on this matter is Julia's, and the letter
+  makes filing wait for a reply** — so it must be sent the day the return is finished and chased by text,
+  or it becomes a filing delay with a deadline attached. ⚠️ **An independent review found six false or
+  unsupported statements in the first draft and all six were corrected**; the draft, the reasoning and the
+  list of what was wrong are in the return's working-paper folder. **His reply must be filed in Double.**
+
 - 2026-09-23 — 🔴 **JULIA REVERSED THE SHAPE OF THE RETURN: the money goes on a SCHEDULE C, with zero
   salary and zero distributions, and a Form 8082 for EACH of the three corporations.** Relayed by
   Lilian. ⛔ **This takes the route the working paper had named as the one that must not be taken**, so
@@ -2101,6 +2193,82 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
   property is Minnesota-source (§5).
 - [ ] Assigned staff in Double — no `Assigned Staff` property is set on this client.
 - [ ] Google Drive folder, if one exists.
+
+### 2026-09-23/24 — the 2025 return was PREPARED in ATX, read back, and five things came out of it
+
+**What happened.** Lilian prepared the 2025 Form 1040 in ATX and handed over the finished 24-page PDF.
+It was read page by page against the working paper. She then **removed the NOL** from Schedule 1
+line 8a, calling it something she had left in by mistake. The findings below are what the read
+produced; **every figure lives in the working paper and in the Excel delivered to her, never here.**
+
+- 🔴 **HE SAYS HE HAS TWO CHILDREN AND THE RETURN CLAIMS ONE.** 📖 His own words in the 2026-08-05
+  Double note: *"I am married and have two children."* The prepared return carries a single
+  dependant, with the child tax credit box ticked. ⛔ **Nobody has asked about the second child** —
+  name, date of birth, whether they have an SSN, and whether they lived with the couple in the US for
+  over half of 2025. **It is worth a full child tax credit if the child qualifies, and it is the
+  largest open item on the return after the NOL.**
+
+- 🔴 **THE HOME-OFFICE FORM WAS BUILT ON THE MINNESOTA HOUSE.** This file has recorded since
+  2026-08-12 that *the house on the Form 1098 is in Minnesota* and that **he was paying a mortgage on
+  a house he did not live in while renting where he did.** The prepared Form 8829 nevertheless runs on
+  that house's **mortgage interest, property taxes, HOA and homeowner's insurance.** ⛔ **Those belong
+  to a property that is not the home office.** 🔑 **The corrected form runs on the RENT**, which is
+  also where the rent figure from his 2026-08-05 expense list finally goes — it had been sitting
+  unplaced. ⚠️ **And because he moved from Washington to Florida in May, there were two rented homes
+  in one year, and the form's own instruction requires a separate Form 8829 for each home used for
+  business.** ✅ **Useful side effect:** the Minnesota mortgage interest is not lost, it is
+  Schedule A material for a second home, and that test should be run and written down rather than
+  left to vanish.
+  ⓘ **One earlier worry is closed:** the square footage on his worksheet is **his own entry**, not the
+  blank template's example — he completed and returned the template.
+
+- ✅ **THE TRAVEL FIGURE IS SOUND AND THE APPARENT CONTRADICTION WAS A DICTATION ERROR.** His
+  2026-09-23 answer read as a total ten thousand dollars below what he had sent in August. The
+  2026-08-13 Double note already reconciles the August figures to the higher total, and the two
+  components add to it exactly. 🔑 **The voice-to-text dropped a leading digit.** ⛔ **What remains is
+  not the amount but the composition:** the August figure was described as *"gas, hotels, and food"*,
+  and fuel for his own vehicle cannot be deducted separately once the standard mileage rate is used,
+  while meals go on their own line at a reduced percentage.
+
+- 🔑 **FORM 8082 — part settled, part still a choice** (instructions Rev. 10-2025, supplied by Lilian
+  2026-09-24). ✅ **Settled: three forms, one per corporation**, and the two silent ones are filed with
+  **Part II blank and Part III filled**, which the instructions expressly permit. ⛔ **The prepared
+  return had one form, not three; its Part III was missing entirely; and neither the *notice of
+  inconsistent treatment* box nor the two boxes that say what is inconsistent appear ticked** — those
+  are what make it a notice of anything, and they must be confirmed on screen. ⚖️ **NOT settled, and it
+  is Lilian's to choose: whether the Midwest form reports the corporation's money in Part II, or
+  reports nothing there and explains the Schedule C in Part III.** 🔑 **The working paper argues both,
+  and the same choice decides whether that form is required or merely protective.** ⛔ **A session must
+  not pick it.**
+
+- 🔴 **THE PREPARER DUE-DILIGENCE FORM WAS ESSENTIALLY BLANK**, including the preparer's own
+  certification, on a return claiming the child tax credit. ⚠️ **That exposure is the firm's, not the
+  client's.** Also, **the signature dates on the return predate the preparer's by six weeks** — the
+  e-file authorisation has to be re-signed on the final version.
+
+- ⚖️ **THE NOL QUESTION IS OPEN AND ONLY LILIAN CAN CLOSE IT.** She removed it as an error. ⛔ **If it
+  is a valid carryforward of his it is not elective** — the law measures what is used up against the
+  year's income whether or not the deduction is claimed, so leaving it off does not bank it for 2026,
+  and if it goes back on it goes on capped, not in full. 🔑 **Either the carryforward is not his, in
+  which case this file's prior-year section needs correcting, or it is, in which case a Form 172 or an
+  NOL statement has to be attached showing what carries forward.** **Neither is in the prepared
+  package.**
+
+- 📬 **The client acknowledgement letter was rewritten on 2026-09-24 and its PURPOSE changed.** It was
+  a representation letter that asked him to confirm facts in writing and waited for his reply; Lilian
+  cut that *("no quiero exigirle que se comprometa a nada")*. ✅ **It is now a short recap** — what
+  happened, how the firm treated the money and why, and the single forward-looking point that
+  responding to a notice or amending later is separately billed work. **His statements are attributed
+  to him in it, which is what preserves the evidentiary value.**
+
+
+- 📬 **2026-09-23 (second pass) — Lilian shaped the letter once more, and set how the firm writes to
+  him about this return.** *Worked-by: Lilian.* **Statements, never questions** — what the firm already
+  knows is told to him, and **if he stays silent it stands** (*"si él simplemente se queda callado,
+  significa que todo es cierto… no quiero que parezca interrogatorio"*). **No self-employment tax in
+  it** — *"no necesita saber o entender"*; the Schedule C is explained, its tax is not. **No pressure
+  and no alarm** in the close, and **the firm speaks as a team ("we")**. The draft is in the return's
+  email file §4.
 
 ## 7. Links
 
