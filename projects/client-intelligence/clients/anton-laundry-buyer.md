@@ -253,6 +253,29 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-23 — 🧾 **THE EQUIPMENT MODELS ARE NOW READ OFF THE INVOICES, STORE BY STORE.** Julia reported a
+  page where a part code sat on one page and its description on the next, and asked for it consolidated.
+  ⓘ *The page she meant is the SELLER's Vol 2 (none of the firm's own PDFs runs to 34 pages) — and Vol 2
+  p34/35 is exactly that: an AAXON invoice with `Item Code INST40` on one page and `Installation-tampa` on
+  the next.* 🔑 **The fix that made extraction reliable: segment Vol 2 by its own `Vol. 2 page N of 101`
+  footers, NOT by the tab headers**, which repeat on every page and had been putting the same serials in two
+  different stores. With page anchors the tabs map cleanly — C-1 pp16-20 · C-2 pp21-27 · C-3 pp28-35 ·
+  C-4 pp36-41 · C-5 pp42-53. ✅ **What the invoices establish:** the three Electrolux sites run **EUD-series
+  washer-extractors** (518/618/630/645/660/680, Compass Pro) and **DE-series gas dryers** (635S/650S/683);
+  **Palmetto Coin is Speed Queen** — `STOFSCN0xxLC…` codes for SPQ 20/30/40/60/80/100 lb washers plus 30 lb,
+  45 lb, 75 lb and 754 dryers; **Select's invoices carry no model codes and no serials at all**, being
+  summary invoices with totals only. ⛔ **A correction to an earlier claim in this file's chat: `EUD` is the
+  WASHER line, not a dryer prefix** — `DE` is the dryer line. ⚠️ **Quantities were NOT published and must not
+  be reconstructed from the OCR** — the invoice text runs quantity and price together closely enough that
+  `$6,473.00` reads as a quantity of 473. **The inspection count governs.** 🧰 Issued as Appendix A of the
+  inspection scope, one block per store, every code on the same row as its description.
+- 2026-09-23 — ⚠️ **A naming trap worth holding on to, found on the Palmetto W&F invoices:** the Laundrylux
+  invoices for **1527 8th Ave W (Palmetto Wash & Fold)** are billed to a customer named **"Palmetto Coin
+  Laundry"**. **The customer NAME and the store are different things**, exactly as with *Samoset Florida,
+  Inc.* not owning the Samoset store. 🔑 **Read these documents by ADDRESS, never by the name on the
+  invoice.** Also noted: Tab C for that store is **several invoices, not one fleet purchase** — binder p36 is
+  a two-machine invoice and p37 a separate installation charge billed to a finance company, so a reader
+  expecting one schedule per store will conclude machines are missing when they are on another page.
 - 2026-09-23 — 🛑 **JULIA CAUGHT A REAL ERROR: THE SERIAL NUMBERS WERE IN THE BINDER ALL ALONG.**
   *"I am looking at Vol 2 and we have invoices attached. Are you sure we don't have what we need?"* ⛔ **She
   was right.** A session had read Tab D-1's footer — *"serial numbers, model numbers and purchase invoices to
