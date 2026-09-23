@@ -797,12 +797,18 @@ does not make the figures wrong — it does say what kind of figures they are.**
 activity, with all of the revenue on the credit-repair form and none on the catering one. **What he
 owes came down accordingly.**
 
-✅ **The keying itself is faithful.** Both of his draft profit-and-loss workbooks were traced line by
-line onto the return and they reconcile **to the cent** — nothing was mis-typed and nothing was
-invented. 🔑 **What is at issue is entirely what was left OUT**, and it is a material share of what
-he claimed: the vehicle fuel and repairs on both activities, the credit-repair share of the car
-insurance, and the home office. ⛔ **Nothing on the return says why**, and leaving the vehicle out
-pending a mileage record may well be deliberate.
+✅ **The EXPENSE keying is faithful.** Both of his draft profit-and-loss workbooks were traced line
+by line onto the return and every expense reconciles **to the cent** — nothing was mis-typed and
+nothing was invented. ⚠️ **The one line that does NOT tie is the revenue**, and that is deliberate:
+the return takes the information returns as issued, while he proposes a figure that excludes one
+payment and adds another nobody reported. 🔑 **What else is at issue is what was left OUT** — the
+vehicle fuel and repairs on both activities, the credit-repair share of the car insurance, and the
+home-office rent. ⛔ **Nothing on the return says why**, and leaving the vehicle out pending a
+mileage record may well be deliberate.
+🔴 **AND ONE THING WENT IN THAT SHOULD NOT HAVE, which the first read of this return missed:** the
+electricity share of the home office is deducted among the ordinary utilities. **Business use of a
+home may only ever go on its own line**, through one of the two dedicated routes. ⚠️ **Correcting it
+RAISES his tax**, which is exactly why that kind of error survives a read.
 
 🔴 **THE ONE REAL DEFECT IS THE SOFTWARE'S, NOT ANYONE'S JUDGEMENT.** The qualified-business-income
 form now lists only the **catering** activity. **The profitable one is simply absent from it**, so
@@ -811,9 +817,11 @@ not exist. 🔑 **Before the activities were split, the same form worked.** ⚠�
 half that costs twice** — nobody re-derives one; it is typed across from last year's return.
 
 ⚖️ **A ruling of Lilian's is recorded so nobody re-derives it later.** In his workbook he put the car
-policy on a row labelled only *"insurance"*, without saying it was the vehicle. **She read it as the
-car policy and moved it out of the general-insurance line and into the vehicle line** — which is
-right, and she annotated both of his workbooks to say so. 🔑 **Doing that exposes an inconsistency:**
+policy on a row labelled only *"insurance"*. **She read it as the car policy and moved it out of the
+general-insurance line and into the vehicle line** — which is right, and she annotated both of his
+workbooks to say so. ✅ **His own reconciliation note then corroborates her**: it sets that amount
+inside a table headed with the car, alongside the same splits she reached independently. 🔑 **So the
+ruling rests on the document, not only on a reading of an ambiguous label.** 🔑 **Doing that exposes an inconsistency:**
 the car insurance is claimed on one activity while the fuel and repairs are claimed on neither, and
 all of it rests on the same unsupported business-use percentage. ⚖️ **The claim has to be taken whole
 or held back whole.**
@@ -824,14 +832,20 @@ income level**, because that exclusion only begins to apply far above where he i
 
 🔴 **ANSWERED, and the answer is no — the home-office measurements are in nothing he has sent.** His
 reconciliation note and both workbooks were searched in full for any floor area, room dimension or
-room count. **There is none.** ✏️ **He has to be asked directly for two numbers: the apartment's total
-area and the office room's**, because a percentage cannot be entered on either of the two forms that
-compute this — **both want square feet.** ⚠️ **And in his own workbook the amount sits on a rent line,
-which is not where business use of a home may ever be reported.**
+room count. **There is none.** 📨 **And this is the SECOND time of asking** — both numbers were put to
+him on 20 September and he answered with the percentage again. ✏️ **The message carries two numbers
+and nothing else**; the follow-ups that usually go with them are already answered in his own words.
+🔑 **Worth chasing hard, and not for the size of the deduction:** he is sitting just above a step in
+the Marketplace-subsidy repayment cap, and **even the smallest version of this deduction carries him
+under it** — the band is worth more than the deduction.
 
-🔑 **AND THE THING THAT MOVES THE MOST MONEY IS NOT A DEDUCTION AT ALL.** He is sitting just above a
-step in the Marketplace-subsidy repayment cap, and the corrections the firm owes him carry him across
-it. **Most of the difference is the health-insurance reconciliation, not the business expenses.**
+🔑 **AND THE THING THAT MOVES THE MOST MONEY IS NOT A DEDUCTION AT ALL — BUT THE FIRM CANNOT REACH
+IT ALONE.** He is sitting just above a step in the Marketplace-subsidy repayment cap. **The
+corrections that are purely ours do NOT carry him across it** — they stop just short. ⚖️ **The two
+things that do both need an answer from outside the firm:** the self-employed health-insurance
+deduction, which is gated on a question nobody has put to him about his employers' coverage, and the
+home office, which is gated on the two measurements. ⛔ **Recorded because the obvious reading — that
+fixing our own errors gets him there — is wrong.**
 
 📤 **An Excel working worksheet was delivered to Lilian** — the two activities line by line against
 his own figures, the vehicle pool, the home office, a live model of the return, and the open items
