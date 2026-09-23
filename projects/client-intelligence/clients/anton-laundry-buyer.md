@@ -253,6 +253,46 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-23 — 🔴 **JULIA CORRECTED THE CYCLE-COUNT METHOD, AND THE CORRECTION STANDS:** *"Cycle reading is
+  going to help us to verify. We're not going to have historical cycle readings to do it."* ⛔ **She is right
+  and the earlier framing was overstated.** A board count is a **single cumulative number at one moment** —
+  it measures a machine's whole life, not a period, and **verifying a YEAR needs two readings and the
+  difference.** 🔑 **What survives the correction, store by store:** at **Palmetto Wash & Fold it genuinely
+  works**, because that fleet was installed Nov–Dec 2025 and started at zero, so its lifetime count ≈ the
+  period in question — **the one place a single reading answers a real question.** Ruskin (Sep–Oct 2024) is
+  usable as a two-year average; **Samoset, Select and Palmetto Coin give long lifetime averages in which a
+  recent decline would disappear.** ✅ **Two things rescue real value:** read now and **re-read at closing**,
+  because the interval between two readings is an exactly measured trading period with no seller involvement
+  *(a cheaper form of the supervised observation period, which is still parked with the buyers and the
+  attorney)*; and ask for **whatever the board holds beyond the headline total** — error logs with dates,
+  counts by programme, resettable counters — which varies by model. ⛔ **And the counts DO NOT replace
+  Tab I-1.** The card-system exports remain the only historical record, and this does not reduce the pressure
+  to obtain them.
+- 2026-09-23 — ✂️ **Julia also cut a SCOPE error, and it was a real one:** *"I don't think the mechanical
+  technician is going to be verifying whether the uninstalled card system is in the garage. It doesn't make
+  any sense."* ⛔ **Correct — a machine technician inspects machines.** Counting boxed CENTS systems, checking
+  van mileage, looking at garage stock and working out which electric meter feeds an apartment are **asset-
+  verification and closing tasks**, and putting them in an inspection scope inflates the quote and blurs what
+  is being bought. 🔑 **They moved to a CLOSING-VERIFICATION list** — asset schedule to the purchase
+  agreement, checked at final walkthrough. **One exception kept with the technician because it is fitted to
+  the machine:** whether each machine's payment reader is present and working, at Ruskin and 8th Ave.
+- 2026-09-23 — 🔥 **DRYERS ARE THE GAS SIDE OF THE SAME TEST** *(Julia: "and what about dryers?" — they had
+  been folded in with the washers, which was wrong)*. Washers consume water; **dryers consume gas**, and the
+  Vol 4 appendices give twelve-month therms per store, so the verification runs twice on two independent
+  utilities. ⚖️ **A cross-check the pair gives that neither gives alone:** nearly every wash gets dried, so
+  washer and dryer cycles should move together at a store — where they do not, something is happening
+  *(laundry leaving wet, or wash-dry-fold handled somewhere other than where it is billed)*. 🔴 **At Palmetto
+  Wash & Fold this sharpens the finding into three signals pointing one way:** water down sharply, **gas
+  therms down by roughly a third to a half over the same months**, and counter sales down — after the
+  re-equip. **New machines are more efficient; they are not that much more efficient.** ⚠️ **One honest
+  caveat that must travel with it: gas is partly weather-driven** (incoming water temperature, ambient) and
+  the before/after periods straddle seasons, **so the gas is corroboration, not proof — the water figure is
+  the harder number** because laundromat water use is not seasonal in that way. 🧰 **The inspection scope now
+  carries a separate dryer item list** — burner and igniter, thermostats and high-limit, belts/rollers/
+  bearings, **lint and exhaust venting** (the building's main fire risk *and* a gas-burn issue), make-up air —
+  and the warning that **dryers usually vend by TIME, so a board may report vends, run-minutes or cycles**,
+  which are not interchangeable and must be labelled. 📧 Scope PDF reissued and the request-for-quote email
+  drafted; both delivered, neither committed
 - 2026-09-23 — 🔧 **Inspection scope + per-store worksheets issued to Julia** (the technician asked for an
   itemised list per store and what needs doing). 🛑 **The itemised list DOES NOT EXIST, and that is the
   finding:** the seller's equipment schedule gives **counts by size only — no serial numbers and no model
