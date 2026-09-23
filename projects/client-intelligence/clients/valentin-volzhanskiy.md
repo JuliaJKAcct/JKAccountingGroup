@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-17 *(the return re-read — nothing keyed since 13 Sep, and the signature-date gap has widened)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-23 *(the return now carries TWO Schedule C forms, keyed from his own statements — and the QBI form has dropped one of them)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
