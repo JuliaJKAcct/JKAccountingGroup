@@ -13,6 +13,9 @@ ci-review-dashboard.html
 # tools/export-chat/ refuses to write here, and this is the second lock.
 claude-session-*.txt
 
-# Hojas de trabajo de declaraciones con cifras de clientes — se entregan, nunca se commitean
-/Melnyk-*.xlsx
-/*-hoja-de-trabajo.xlsx
+# Tax-return working papers carrying a client's dollar figures. They are DELIVERED to the person and
+# never committed. Not root-anchored on purpose: the natural place to drop one is beside the working
+# paper it documents, and a rooted pattern would miss it there.
+Melnyk-*.xlsx
+*-hoja-de-trabajo.xlsx
+*-working-paper.xlsx

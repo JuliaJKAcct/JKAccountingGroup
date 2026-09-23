@@ -39,23 +39,21 @@ wage & income transcript is what settles the RETURN.** ⛔ **Both, not either.**
 | *"las formas 8202"* | 🔑 **Form 8082**, *Notice of Inconsistent Treatment or Administrative Adjustment Request* |
 | *"no sé si es una o son tres"* | ✅ **THREE — one per corporation.** 📎 *"You must complete and file a separate form for each pass-through entity for which you're reporting an inconsistent or AAR item."* 🔴 **AND THE TRIGGER QUESTION IS NOW SETTLED AGAINST WHAT THIS FILE USED TO SAY.** ⛔ An earlier version read *"§4E concludes none of the three meets that trigger (arguable on Midwest)"* — **that is STRUCK.** 📎 The *Who Must File* bullet, verbatim from the **Rev. 10-2025** instructions Lilian supplied on 2026-09-24: *"The pass-through entity hasn't filed a tax return or given you a Schedule K-1 … by the time you're required to file your tax return (including extensions) **and there are items you must include on your return**."* 🔑 **For MIDWEST EXPEDITED both halves are met** — no K-1, and the **200,053 is an item he must include**. **That form is REQUIRED, not protective.** ✅ **The other two are protective**, because nothing from them is reported. ⚠️ **And they are still filed with Part II BLANK and Part III filled** — 📎 *"You don't need to complete lines 8 through 11 if not reporting a change to the amount or treatment of a monetary item; however, you must include an explanation of the change(s) in Part III."* |
 
-## 2 · Four things added to what was asked for, each with its reason
+## 2 · ⛔ FOUR THINGS THAT WERE ADDED, AND WERE ALL CUT ON 2026-09-24
 
-1. 🔴 **THE PAYROLL QUESTIONS** *(point 6 of the email)*. Not requested, and they are the most
-   valuable lines in the letter: **this is the return's one pre-filing blocker** (§9A ④). ⛔ **They are
-   deliberately QUESTIONS, not a representation** — §4C's three factual ones *(regular or irregular ·
-   what the bank description says · `ssa.gov` access)*. ⚠️ **An earlier draft asked him to certify
-   "no money was run through payroll", which is a conclusion he cannot know and which §4C reads the
-   other way** (§7 defect 5).
-2. 🔴 **THE IRS's OWN COST, not just ours** *(the amendment section)*. ⛔ **"Extra cost" left undefined
-   reads as "your invoice."** An amendment can carry **additional tax, interest and penalties**, which
-   are far larger than a fee. 🔑 **A client who learns that from the IRS instead of from us will be
-   angry at US** — the paragraph exists so the bigger number is not the surprise.
-3. 🟠 **THE E-FILE REJECTION PATH** *(the 1095-A section)*. Decision 6 is *file, and let a rejection be
-   the test* (§8 item 0c). ⚠️ **So a rejection is a foreseeable outcome of the plan, not an accident** —
-   and the extra work it causes belongs in the same paragraph as the other extra work.
-4. 🔑 **AN EXPLICIT REQUEST FOR A REPLY.** ⛔ **An email he never answered protects far less than one he
-   accepted.** The letter asks for a written confirmation and says filing waits for it.
+🛑 **THIS SECTION IS HISTORY, NOT INSTRUCTION. None of the four is in the letter any more** — §4's
+rewrite removed every one of them when Lilian turned the letter from a representation into a recap
+*("no quiero exigirle que se comprometa a nada… sencillo, conciso… no quiero que parezca un
+periódico")*. ✅ **It is kept because each was added for a reason, and a later session that re-adds one
+should at least know it was already weighed and dropped.**
+
+| What it was | Why it was added | Why it went |
+|---|---|---|
+| 1. **THE PAYROLL QUESTIONS** — §4C's three factual ones *(regular or irregular · what the bank description says · `ssa.gov` access)* | The return's one pre-filing blocker (§9A ④), and asked as **questions**, not a representation *(an earlier draft asked him to certify "no money was run through payroll", which is a conclusion he cannot know — §7 defect 5)* | ⛔ **Asking is what Lilian cut.** 🔑 **The blocker does not go away** — §9A ④ still holds, and it is answered by the **IRS wage & income transcript**, not by him |
+| 2. **THE IRS's OWN COST** *(in the amendment paragraph)* | *"Extra cost"* left undefined reads as *"your invoice"*; an amendment can carry **tax, interest and penalties** far larger than a fee, and a client who learns that from the IRS is angry at **us** | ⚠️ **Cut for length.** 🟠 **This is the one worth reconsidering** — it protects the client, not the firm, and it is one sentence |
+| 3. **THE E-FILE REJECTION PATH** *(the 1095-A section)* | Decision 6 is *file and let a rejection be the test* (§8 item 0c), so a rejection is foreseeable, not an accident | ⛔ **Cut.** ⚠️ **And the Marketplace contradiction with it** — §6 records that as still open, and it is better put as a direct question than buried in a recap |
+| 4. **AN EXPLICIT REQUEST FOR A REPLY** | An email he never answered protects less than one he accepted; the letter said filing waits for it | ⛔ **Cut, and this is the change** — §0 now: *"It asks the client for nothing and does not gate the filing."* ✅ **Replaced by ATTRIBUTION** *("you have told us", "you told us you paid")* |
+
 
 ## 3 · 🛑 THE LANGUAGE AND THE CHANNEL — ⛔ NOT open questions; the file already answered both
 
@@ -141,7 +139,7 @@ If anything above does not match your own understanding of the year, tell me and
 
 Kind regards,
 
-Yuliia Kononova, EA
+Julia Kononova, MBA, EA
 CEO · Chief Accountant
 JK Accounting Group
 (786) 318-1505 · julia@jkaccountinggroup.com
@@ -149,24 +147,28 @@ JK Accounting Group
 ---
 
 
-## 5 · 🛠️ Before it goes out
+## 5 · 🛠️ Before it goes out — REWRITTEN 2026-09-24 for the recap
+
+> 🛑 **The old checklist had eleven rows and SEVEN of them described a letter that no longer exists** —
+> a point 5 option set, a point 6 payroll question, a point 8 Marketplace commitment, a reply to file
+> in Double, a disclosed self-employment tax figure. ⛔ **All struck.** ⚠️ **What the struck rows were
+> PROTECTING has not gone away, and each survivor below says where it went instead.**
 
 | # | Check |
 |---|---|
-| 1 | ✅ **NO PLACEHOLDER LEFT — the 2026-09-24 rewrite removed the figure entirely.** ⛔ Do not put it back: a recap that quotes one number invites an argument about that number. *(The old check read "FILL `[[SE TAX]]`".)* ⓘ **Historic note, kept because it is the reason this row exists:** **Do not send the letter with a bracket in it** |
-| 2 | 🛑 **THE DEADLINE, AND IT IS THE REAL RISK.** ⛔ **Nobody knows whether a 2025 extension was filed** (§8 item 3). **If one was, 2026-10-15; if not, the return has been late since 2026-04-15** and the failure-to-file penalty now runs on a base that includes the self-employment tax (§8 item 7). 🔴 **This letter GATES FILING on his reply, and his channel is text, not email** (§3). **A slow reply is a filing delay with a penalty attached.** 📌 **Send it the day the return is finished, chase by text the next day** |
-| 3 | 🔴 **PUT THE "we agreed" QUESTION TO JULIA FIRST.** Lilian's words were *"lo que **acordó** Julia con el cliente"*. ⛔ **Nothing in the file records a conversation with the CLIENT about a Schedule C** — decision 7 is Julia's, relayed by Lilian, and the last recorded client contact is August. ✅ **The draft is therefore worded so it is TRUE either way** *("This is how I have decided to prepare it")*. 🔑 **If Julia did discuss it with him, she can restore the stronger wording herself — but she has to say so.** ⛔ **A false "as we agreed" in a document whose only purpose is evidence is the one sentence that would turn this letter against the firm** |
-| 3b | 🔴 **RE-READ IT AGAINST THE FINISHED RETURN before sending.** ⚠️ **It asserts a form COUNT and the Midwest wording as settled**, and §4E leaves two things open until the return exists: whether Julia confirms three protective filings, and 🛠️ **whether ATX will even accept three copies of Form 8082 on one return** *(a screen fact nobody has seen; the fallback is a PDF attachment)*. ⛔ **If it ends up being anything other than three, this letter is wrong** |
-| 3d | ✅ **POINT 5's OPTION SET IS COMPLETE — keep it that way if anyone edits it.** It offers work performed · a loan to him · repayment of a loan he made · **money taken out as an owner** · something else owed. 🛑 **That fourth branch is a DISTRIBUTION, and without it the true answer gets forced by elimination into "for work I performed"** — the one answer that supports the Schedule C. ⚠️ **§4A notes a client would not call a distribution "income" at all**, so he will not volunteer it |
-| 3c | 🔴 **TELL JULIA THE LETTER REOPENS DECISION 6, because it does more than reopen it.** Point 8 commits the firm **in writing, to the client**, to getting the Form 1095-A **before filing** — while §8 item 0c still reads *"Nobody chases the 1095-A, nobody asks the client again… File; a rejection is what turns the form into a requirement."* ⛔ **A letter cannot change a recorded decision of hers by itself.** ✅ **The method rule is on the letter's side** *(two records disagree — show the client both, then ask)*, **but she rules** |
-| 4 | 🛑 **Send it AFTER the return is prepared and BEFORE it is transmitted.** Sending it early invites him to renegotiate the approach; sending it after filing protects nothing |
-| 5 | ⚠️ **Do not attach the return.** This is the acknowledgement; the return and Form 8879 go separately, once he has replied |
-| 6 | 📧 **Confirm the email address in Double first, and send a short TEXT telling him the email is coming and that a reply is needed** (§3). ⛔ **We hold no evidence he reads email** |
-| 7 | 🇷🇺 **The Russian half is written before sending, not after** (§3) — it is a standing instruction, not a preference |
-| 8 | 🔑 **File his REPLY in Double**, on his client record, next to the return. ⛔ **An acknowledgement nobody can find later is not an acknowledgement** |
-| 9 | ⚠️ **His answers do NOT close the payroll blocker** (§0) — the wage & income transcript and `ssa.gov` still settle it. ⏰ **`ssa.gov` shows 2025 wages from 30 September** |
-| 10 | ⚖️ **Julia signs it and Julia sends it.** ⛔ **It is a fee-and-scope term and a representation letter; it is not Lilian's to send under her own name** |
-| 11 | 📌 **JULIA DECIDES whether to tell him a cheaper route existed.** §4E puts Form 8919 at roughly 13,819 against **17,000–27,000** here *(≈ 16,841 – 27,194 — §4E's banner; the earlier "19,000–27,000" was stale at the bottom, corrected 2026-09-23)*. ⛔ **This draft does NOT mention it** — naming a rejected alternative to a client invites him to demand it, and the choice was hers. ⚠️ **But she should make that omission knowingly** |
+| 1 | ✅ **No placeholder, and no figure at all.** ⛔ **Do not put one back** — a recap that quotes one number invites an argument about that number. *(The old row read "FILL `[[SE TAX]]`".)* |
+| 2 | 🛑 **THE DEADLINE IS THE REAL RISK.** ⛔ **Nobody knows whether a 2025 extension was filed** (§8). **Establish that before the letter goes out**, because the letter says filing is imminent |
+| 3 | 🔴 **PUT THE "we agreed" QUESTION TO JULIA FIRST.** Lilian's words were *"lo que **acordó** Julia con el cliente"*. ⚠️ **The recap deliberately does NOT say the approach was discussed or agreed** — there is no record of a client conversation. ✅ **If Julia says there WAS one, that is worth one added sentence and she should supply it in her words** |
+| 4 | 🔴 **RE-READ IT AGAINST THE FINISHED RETURN.** ⚠️ **It asserts a form COUNT** *("a Form 8082 for each of the three corporations")* **and names the Midwest one as showing where the money is reported.** ⛔ **Both depend on §4F-iv-b, which is UNSETTLED** — under Package A the Midwest form shows the money in Part III, not Part II. 🔑 **Either settle 4F-iv-b first, or soften that one clause to "shows how the $200,053 is reported"** |
+| 5 | 🛑 **Send it AFTER the return is prepared and BEFORE it is transmitted.** Early invites renegotiation of the fee; after transmission it is not a recap, it is a defence |
+| 6 | ⚠️ **Do not attach the return.** The return and the Form 8879 go separately |
+| 7 | 📧 **Confirm the email address in Double first**, and send a short text saying the email is coming |
+| 8 | 🔑 **File the SENT letter in Double**, on his client record, next to the return. ⛔ **The old row said "file his REPLY" — there is no reply now, so the sent copy IS the record.** A recap nobody can find later is not a recap |
+| 9 | ⚠️ **Nothing in this letter closes the payroll blocker** (§0, §9A ④). **The wage & income transcript settles it**, and the letter never claimed otherwise |
+| 10 | ⚖️ **Julia signs it and Julia sends it.** ⛔ **It is a fee-and-scope term in her name.** *(The old row also called it a representation letter; that half is struck — §0.)* |
+| 11 | 📌 **JULIA DECIDES whether to tell him a cheaper route existed.** §4E puts Form 8919 at roughly 13,819 against 17,000–27,000 here. ⛔ **The draft does NOT mention it** — naming a cheaper route she chose against is her call, not a session's |
+| 12 | ✅ **The signature block reads `Julia Kononova, MBA, EA`**, matching [`firm-identity.md`](../../sops/firm-identity.md) §3. ⛔ **An intermediate draft had dropped the MBA and spelled it `Yuliia`** — that file is the authority for both |
+
 
 ## 6 · What this closes, and what it does not
 
@@ -179,22 +181,31 @@ conversation is still owed** — and it is Julia's, because it touches his perso
 
 ⛔ **It does NOT reach:**
 
-- **The payroll blocker** (§9A ④) — his answers are information, not evidence. ✅ **The draft now asks
-  the three FACTUAL questions from §4C** *(regularity · the bank description · `ssa.gov` access)*
-  **instead of asking him to certify a conclusion he cannot know.** ⚠️ **An earlier version did the
-  latter, and also made filing turn on it.**
+- **The payroll blocker** (§9A ④) — and after the 2026-09-24 rewrite **the letter does not go near it
+  at all.** ⛔ **An intermediate draft asked him to certify "no money was run through payroll", which is
+  a conclusion he cannot know; a later one replaced that with §4C's three FACTUAL questions
+  (regularity · the bank description · `ssa.gov` access). Lilian cut the asking entirely.** 🔑 **The
+  blocker is unchanged and is settled by the IRS wage & income transcript, not by him** — which is what
+  §0 said even when the questions were in.
 - **The Schedule C characterisation itself.** 🔑 **A client's consent does not make a treatment
   correct**, and the letter is worded so it never claims otherwise. ⛔ **An earlier draft said the
   return was "the most accurate return we can prepare" — struck**, because §0 of this very file forbids
   exactly that sentence and §4E holds the opposite.
-- **The Marketplace contradiction** — ✅ **now put to him properly.** 📖 `method.md`: *where two records
-  disagree, show the client both, then ask.* ⛔ **An earlier draft asked him to affirm one side while
-  the firm sat on his own contrary organizer answer** — a signed denial obtained that way is worse than
-  never having asked. ⚠️ **It does reopen what decision 6 closed; that is deliberate and Julia should
-  know it.**
+- **The Marketplace contradiction** — 🔴 **NOT in the letter at all after the 2026-09-24 rewrite, and it
+  is the one cut that leaves a real question unasked.** ⓘ **The history, because it is the reason not to
+  put it back carelessly:** one draft asked him to *affirm* that he had no Marketplace cover while the
+  firm sat on his own contrary organizer answer — ⛔ **a signed denial obtained that way is worse than
+  never having asked** — and the next draft fixed it by putting **both records** to him, per
+  📖 `method.md`: *where two records disagree, show the client both, then ask.* ✅ **That version was
+  right and it is what should be reinstated — but as a DIRECT question in the ordinary question list
+  below, not inside a recap.** ⚠️ **Until it is asked, decision 6 stands as it was and Julia should
+  know the question is open.**
 - **The return's other open items** — the Schedule C business description, the two Form 1099 questions,
-  the DOT meals rate, whose truck, whose drivers, **Illinois** (§8). ⛔ **This email asks him none of
-  them.** 📌 **They are a separate, ordinary question list and should go out FIRST.**
+  the DOT meals rate, whose truck, whose drivers, **Illinois** (§8), and after the 2026-09-23 read-back
+  also 🔴 **the SECOND CHILD**, 🔴 **whether the rent is monthly or annual**, and 🔴 **which home the
+  office was in** (§4H). ⛔ **This email asks him none of them.** 📌 **They are a separate, ordinary
+  question list and it should go out FIRST — the recap is written on the assumption those answers are
+  already in.**
 
 ## 7 · 🔎 What an independent review found, 2026-09-23
 
@@ -210,8 +221,17 @@ unsupported statements, and the review found them all:
 | 5 | *"none of the money was run through payroll"* as a yes/no | ⛔ **A conclusion he cannot know**, on a fact §4C thinks is probably the other way |
 | 6 | *"This would not be us correcting our own mistake"* | ⛔ **Overbroad** — it pre-committed against amendments caused by a W-2 surfacing or by Julia reversing her own decision, both live. **Now scoped to the K-1 cause alone** |
 
-✅ **Also fixed from the same review:** the self-employment tax is now disclosed *(you cannot consent to
-a cost you were never told)*; *"withheld from you"* became *"were not provided to you"* **because it
-asserted intent by a named third party inside a live dispute**; *"it is in your favor"* became what the
-form actually buys; and *"I will not file until you do"* moved out of the opening paragraph, where it
-was the first thing a client who communicates by text would read.
+✅ **Also fixed by the same review, and all six defects above stayed fixed through the 2026-09-24
+rewrite** — the recap makes no correctness claim, asks him to certify nothing, and does not describe
+all three Forms 8082 as reporting nothing.
+
+⚠️ **Two of that review's repairs were CUT rather than kept, and it is worth knowing which:**
+
+| Repair | What happened to it on 2026-09-24 |
+|---|---|
+| **The self-employment tax figure was disclosed** *(you cannot consent to a cost you were never told)* | ⛔ **Removed with every other figure.** 🔑 **The premise fell away with it** — the recap asks for no consent, so there is nothing to consent to uninformed. ✅ **But if anyone re-adds a request for his agreement, the figure has to come back with it** |
+| **"I will not file until you do" was moved out of the opening paragraph** | ✅ **Moot — the sentence is gone entirely.** Nothing in the recap gates filing |
+
+ⓘ **Kept unchanged and still right:** *"withheld from you"* stayed *"were not provided to you"*,
+**because it asserted intent by a named third party inside a live dispute**, and *"it is in your
+favor"* still describes what the form actually buys rather than promising an outcome.

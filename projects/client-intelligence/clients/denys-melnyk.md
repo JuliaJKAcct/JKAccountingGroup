@@ -2230,13 +2230,16 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   and fuel for his own vehicle cannot be deducted separately once the standard mileage rate is used,
   while meals go on their own line at a reduced percentage.
 
-- 🔑 **FORM 8082 — the rule is now settled from the instructions themselves** (Rev. 10-2025, supplied
-  by Lilian 2026-09-24). **Three forms, one per corporation.** For **Midwest Expedited the form is
-  REQUIRED**, because the *Who Must File* test is met on both halves: no Schedule K-1 by the due date
-  **and** there is an item he must include on his return. **For the other two it is protective** —
-  nothing from them is reported — and those two are filed with **Part II blank and Part III filled**,
-  which the instructions expressly permit. ⛔ **The prepared return had one form, not three, and its
-  Part III was missing entirely.**
+- 🔑 **FORM 8082 — part settled, part still a choice** (instructions Rev. 10-2025, supplied by Lilian
+  2026-09-24). ✅ **Settled: three forms, one per corporation**, and the two silent ones are filed with
+  **Part II blank and Part III filled**, which the instructions expressly permit. ⛔ **The prepared
+  return had one form, not three; its Part III was missing entirely; and neither the *notice of
+  inconsistent treatment* box nor the two boxes that say what is inconsistent appear ticked** — those
+  are what make it a notice of anything, and they must be confirmed on screen. ⚖️ **NOT settled, and it
+  is Lilian's to choose: whether the Midwest form reports the corporation's money in Part II, or
+  reports nothing there and explains the Schedule C in Part III.** 🔑 **The working paper argues both,
+  and the same choice decides whether that form is required or merely protective.** ⛔ **A session must
+  not pick it.**
 
 - 🔴 **THE PREPARER DUE-DILIGENCE FORM WAS ESSENTIALLY BLANK**, including the preparer's own
   certification, on a return claiming the child tax credit. ⚠️ **That exposure is the firm's, not the
