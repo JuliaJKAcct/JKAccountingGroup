@@ -51,7 +51,7 @@ should at least know it was already weighed and dropped.**
 |---|---|---|
 | 1. **THE PAYROLL QUESTIONS** — §4C's three factual ones *(regular or irregular · what the bank description says · `ssa.gov` access)* | The return's one pre-filing blocker (§9A ④), and asked as **questions**, not a representation *(an earlier draft asked him to certify "no money was run through payroll", which is a conclusion he cannot know — §7 defect 5)* | ⛔ **Asking is what Lilian cut.** 🔑 **The blocker does not go away** — §9A ④ still holds, and it is answered by the **IRS wage & income transcript**, not by him |
 | 2. **THE IRS's OWN COST** *(in the amendment paragraph)* | *"Extra cost"* left undefined reads as *"your invoice"*; an amendment can carry **tax, interest and penalties** far larger than a fee, and a client who learns that from the IRS is angry at **us** | ⚠️ **Cut for length.** 🟠 **This is the one worth reconsidering** — it protects the client, not the firm, and it is one sentence |
-| 3. **THE E-FILE REJECTION PATH** *(the 1095-A section)* | Decision 6 is *file and let a rejection be the test* (§8 item 0c), so a rejection is foreseeable, not an accident | ⛔ **Cut.** ⚠️ **And the Marketplace contradiction with it** — §6 records that as still open, and it is better put as a direct question than buried in a recap |
+| 3. **THE E-FILE REJECTION PATH** *(the 1095-A section)* | Decision 6 is *file and let a rejection be the test* (§8 item 0c), so a rejection is foreseeable, not an accident | ⛔ **Cut.** ⚠️ **And the Marketplace contradiction with it** — §6 records that as still open, and it is better put as a direct question than buried in a recap. 🔵 **PARTLY BACK since the 2026-09-23 second pass (§4):** the no-Marketplace line returns as *his attributed statement*, and the amendment paragraph names the Form 1095-A case — **as statements, not a question** |
 | 4. **AN EXPLICIT REQUEST FOR A REPLY** | An email he never answered protects less than one he accepted; the letter said filing waits for it | ⛔ **Cut, and this is the change** — §0 now: *"It asks the client for nothing and does not gate the filing."* ✅ **Replaced by ATTRIBUTION** *("you have told us", "you told us you paid")* |
 
 
@@ -86,56 +86,81 @@ a reply, sent to an address he may not read, is a filing delay with a deadline a
 
 ## 4 · 🟢 THE DRAFT — English, ready to send
 
-> 🔴 **REWRITTEN 2026-09-24, and the rewrite is a CHANGE OF PURPOSE, not a trim.** _(Lilian:
-> **"estaba demasiado extenso, demasiado aplicativo… no quiero exigirle que se comprometa a nada.
-> Simplemente quiero hacer una repetición de la situación, de su declaración, todas las cosas que han
-> pasado… sencillo, conciso, con toda la información, pero sencillo. No quiero que parezca un
-> periódico tampoco."**)_
+> 🔴 **REWRITTEN AGAIN — second pass, AFTER the recap described in §0/§2 — by Lilian, from her own earlier long draft.** She
+> handed the pre-recap version back as *"extremadamente largo"* and gave four instructions, all of
+> which this draft carries:
 >
-> ⛔ **The previous draft was a REPRESENTATION LETTER: it asked the client to confirm facts in writing
-> and waited for his reply before filing. That is struck.** 🔑 **This one is a RECAP.** It states what
-> happened, what the firm did and why, and the one forward-looking point about cost. **It asks him for
-> nothing and it does not gate the filing.**
+> 1. **Statements only — no questions, no requests for confirmation.** _(**"Es simplemente poner en
+>    statements las cosas que ya sabemos. Si las ponemos en un correo y él simplemente se queda
+>    callado, significa que todo es cierto… No quiero que parezca interrogatorio."**)_ 🔑 **His silence
+>    is the acceptance** — the one sentence that carries that is *"We will file your return on this
+>    basis"*, which is itself a statement.
+> 2. ⛔ **NO self-employment tax.** _(**"Eso es algo que no necesita saber o entender. No tiene sentido
+>    en este correo. Lo del Schedule C sí… pero lo del self-employment tax no."**)_ ⚠️ **§7's earlier
+>    argument that the figure must be disclosed so he can consent to it does not apply** — nothing
+>    here asks for his consent. **If a request for agreement is ever re-added, that argument returns.**
+> 3. ⛔ **A plain, short close — nothing that pressures or alarms.** _(**"No quiero presionarlo, no
+>    quiero asustarlo… un cierre un poco más acortado: mis intenciones."**)_ The *"none of this is a
+>    prediction… I would rather you hear it from me than from the IRS"* paragraph is **struck**, and
+>    so is the IRS tax / interest / penalties bullet. **The amendment-is-billed-separately point stays**,
+>    stated once and neutrally — it is the reason the email exists (the header quote).
+> 4. 🔑 **The firm speaks as a TEAM — "we", never "I".** _(**"Quiero que te refieras en todo momento a
+>    nosotros como equipo… como la compañía."**)_ Julia still signs it (§5 row 10).
 >
-> ⚠️ **§0 said the representation half was "the stronger half" — that judgement stands as analysis and
-> is now OVERRULED as instruction.** Lilian weighed it against the risk of a client who feels
-> interrogated, and chose. ⓘ **What is lost is real and is named here so nobody has to rediscover it:**
-> a client who has not confirmed in his own words that he received no Form W-2 can later say the firm
-> assumed it. 🔑 **The mitigation is that his statements are now ATTRIBUTED to him in the recap
-> ("you have told us", "you told us you paid"), so the letter still records whose facts these are.**
+> ✅ **What was kept from the recap it replaces:** his facts are **attributed** to him (*"as you have
+> told us"*), which is what preserves the record without asking him to confirm anything (§0); the
+> **$200,053** appears (§5 row 1); and the Midwest Form 8082 clause is the **softened** *"shows how the
+> $200,053 is reported"* (§5 row 4), so it is true under either §4F-iv-b package.
 >
-> ⌨️ **Everything between the two rules below is the email. There are NO placeholders in it** — the
-> self-employment tax figure was removed with the rest of the numbers, because a recap that quotes one
-> figure invites an argument about that figure. ⚠️ **Re-read it once against the finished return before
-> sending**, in case a corporation's name or the money figure changed.
+> ⚠️ **One line changed its footing — the Marketplace.** It is back in, as *his* statement ("you did
+> not have Marketplace health coverage", under *"as you have told us"*). 📖 **He did say it**
+> (the working paper, decision 6), so the attribution is true — ⛔ **but his own organizer says the
+> opposite, and this email does not show him both.** 🔑 **Lilian chose statements over questions
+> knowing the organizer said otherwise** (her own long draft raised the contradiction); decision 6's
+> *file and let a rejection be the test* is still the procedure, and the amendment paragraph names
+> the Form 1095-A case.
+>
+> ⌨️ **Everything between the two rules below is the email. No placeholders.**
 
 ---
 
-Subject: Your 2025 tax return, and how we have prepared it
+Subject: Your 2025 tax return: how we have prepared it
 
 Dear Denys,
 
-Before we file your 2025 return I want to set out in writing how we have prepared it and why, so that you have the whole picture in one place.
+Your 2025 return is prepared. Before we file it, we want to put in writing how we have prepared it and why.
 
-**What we have, and what we do not**
+**Where things stand**
 
-None of your three S corporations, Midwest Expedited Corp, Midwest Truck Leasing LLC and AVDM Holdings Inc, issued you a Schedule K-1 for 2025. You have also told us that you received no Form W-2 and no salary from any of them during the year, and we have prepared the return on that basis.
+You hold shares in three S corporations: Midwest Expedited Corp, Midwest Truck Leasing LLC and AVDM Holdings Inc. None of them has given you a 2025 Schedule K-1, and you have told us that you no longer have access to their books, records or systems.
 
-A shareholder's return is normally built from the Schedule K-1 the corporation issues. Without one we cannot see what these corporations reported to the IRS, or whether they filed at all.
+A Schedule K-1 is the document that tells you, and the IRS, what share of a corporation's income belongs to you for the year. We did not simply wait for it. We contacted your former business partner directly and asked for all three. He said they were not ready and undertook to send them. Nothing has arrived since.
 
-**How we have treated the money**
+**What the return is based on**
 
-During 2025 you received $200,053 from Midwest Expedited for work you performed. So that this income is reported and the tax on it is paid, we have put it on a Schedule C, together with the expenses you told us you paid out of your own pocket for that work and for which the company did not reimburse you.
+As you have told us:
 
-We are also attaching a Form 8082 for each of the three corporations. Each one tells the IRS that no Schedule K-1 was received from that corporation. The one for Midwest Expedited also shows where the $200,053 is reported on your return.
+- You received no Form W-2 from any of the three corporations for 2025.
+- The $200,053 you received during 2025 came from Midwest Expedited Corp, for work you performed.
+- The business costs you listed for us were paid by you personally, and no one reimbursed you for them. We have included the ones that belong on a tax return.
+- You have no other 2025 income beyond what you have given us.
+- You did not have Marketplace health coverage in 2025.
 
-**One thing to be aware of**
+**How we have prepared the return**
 
-Because the corporations have not reported anything to you, we cannot rule out that the IRS later receives information from them that does not match your return. A Schedule K-1 or a Form W-2 issued after the fact would do that. If it happens, or if you receive a notice connected to any of this, responding to it or amending the return is new work and would be billed separately. It is not covered by the fee for preparing this return.
+- The money you received, and the business costs that qualify, are reported on a Schedule C. This is how the income is reported, and the tax on it paid, without the Schedule K-1s.
+- We are attaching three Forms 8082, one for each corporation. Each one tells the IRS that no Schedule K-1 was furnished to you. The one for Midwest Expedited Corp also shows how the $200,053 is reported on your return.
+- We are not reporting any salary or distribution from the corporations. The money is reported on the Schedule C instead.
 
-I am not expecting it and there is nothing for you to do now. I simply want it on record while everything is fresh.
+**If new information arrives**
 
-If anything above does not match your own understanding of the year, tell me and we will look at it again before we file.
+If the Schedule K-1s arrive later, or the IRS receives information from the corporations that differs from your return, the return may need to be amended. The same applies if the IRS asks for a Form 1095-A. An amendment is separate work and is billed separately from this return.
+
+Our aim is simply for you to have a clear picture of your return and of what we did with the information available. We will file your return on this basis.
+
+If you would like to go through it by phone, call us on
+
+(786) 318-1505
 
 Kind regards,
 
@@ -191,7 +216,10 @@ conversation is still owed** — and it is Julia's, because it touches his perso
   correct**, and the letter is worded so it never claims otherwise. ⛔ **An earlier draft said the
   return was "the most accurate return we can prepare" — struck**, because §0 of this very file forbids
   exactly that sentence and §4E holds the opposite.
-- **The Marketplace contradiction** — 🔴 **NOT in the letter at all after the 2026-09-24 rewrite, and it
+- **The Marketplace contradiction** — 🔵 **SUPERSEDED IN PART by the second pass (§4): the letter now
+  STATES his no-Marketplace answer, attributed to him, and names the Form 1095-A case — Lilian chose a
+  statement over a question. The contradiction with his organizer is still not shown to him.** ⓘ *What
+  follows is the reasoning from before that choice.* 🔴 **NOT in the letter at all after the 2026-09-24 rewrite, and it
   is the one cut that leaves a real question unasked.** ⓘ **The history, because it is the reason not to
   put it back carelessly:** one draft asked him to *affirm* that he had no Marketplace cover while the
   firm sat on his own contrary organizer answer — ⛔ **a signed denial obtained that way is worse than
