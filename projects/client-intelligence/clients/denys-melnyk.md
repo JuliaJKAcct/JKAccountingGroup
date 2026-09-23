@@ -2319,6 +2319,26 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   claims no earned income credit. He is far over the income limit, correctly, so nothing is claimed —
   but a schedule that exists only to support a claim should not travel with a return that makes none.
 
+### 2026-09-23 (third pass) — Lilian reshaped the Excel she types from, and the rules are now firm
+
+- 📊 **THE WORKBOOK'S MAIN COLUMN WAS THE WRONG THING, AND SHE SAID SO PLAINLY.** It showed the value
+  **already on the return**, with a `DEFECT` flag beside the wrong ones. 🗣️ *"Si cometí un error y tú
+  simplemente me pones el valor que ya está en la declaración, eso no me sirve de ninguna ayuda… ¿pero
+  qué es lo correcto? Eso no me sirve. Así no necesito que me ayudes. **No es la forma.**"*
+  ✅ **The sheet now leads with `WHAT TO ENTER`** — the value that belongs there, filled on every row —
+  and an `Action` column that says whether a keystroke is needed. **The wrong value survives only
+  inside a `CHANGE` instruction**, because that is how she finds the box.
+- ⛔ **She does not want a "previous version" column at all** — *"lo que necesito es la versión final"*.
+  Comparing ATX versions is the session's working material and belongs in the working paper, not in the
+  file she types from.
+- 🧊 **And a layout bug: the disclosure-form sheet had rows 1–24 frozen** and could barely be scrolled.
+  The generator set the freeze inside its shared header helper, so on a three-table sheet the last
+  header won and pinned everything above it.
+- 🔑 **All three are now written into the [`tax-return-sop`](../../../.claude/skills/tax-return-sop/)
+  skill as §4D**, so the next return's workbook is built that way rather than corrected again. ⓘ *She
+  asked for exactly that: "quiero que guardes las cosas que vas aprendiendo acerca de cómo quiero este
+  Excel… en el skill de este tax preparation que hemos creado."*
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
