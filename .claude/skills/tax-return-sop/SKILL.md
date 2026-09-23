@@ -1996,6 +1996,98 @@ like every repo artifact, and the briefing is delivered in the language of the p
 [CLAUDE.md](../../../CLAUDE.md) reply-in-kind rule. ⓘ *Which is also why the paper carries the reasoning
 in full: it has to survive being read by someone who was not in the conversation that produced it.*
 
+### 4D · 📊 THE EXCEL WORKING-PAPER WORKBOOK — Lilian's evidence file, and the rules she set for it
+
+🔑 **What it is.** Alongside the working paper and the chat delivery, a prepared return ships an
+**`.xlsx` workbook** that holds every figure on the return with its origin, its arithmetic, its
+source and what is still open. 🗣️ **Its purpose is Lilian's, in her words** *(2026-09-23)*: *"esto va
+a ser la evidencia que voy a subir… si Julia, dentro de un tiempo, quiere saber qué sucedió con el
+cliente y de dónde salió determinado número, simplemente puede abrir ese Excel."*
+🔒 **Delivered to her, NEVER committed** — it carries client dollar figures and is covered by a
+`.gitignore` pattern. The generator script may live in the session scratchpad; the workbook does not
+go in the repo, into an artifact, or into a Double note.
+
+> ## 🛑 THE ONE THAT MATTERS MOST: THE VALUE COLUMN SAYS **WHAT TO ENTER**, NOT WHAT IS THERE
+>
+> 🗣️ **Lilian, 2026-09-23, after being handed a workbook whose main column was the value already on
+> the return:** *"no necesito que me pongas lo que está en la declaración. Eso no es lo que necesito.
+> Lo que necesito es que me digas **qué es lo que debo poner, qué es el valor correcto**, porque si
+> cometí un error y tú simplemente me pones el valor que ya está en la declaración, eso no me sirve
+> de ninguna ayuda. Al lado pones 'defecto'. Sí, está bien, es un defecto, **pero ¿qué es lo
+> correcto?** Eso no me sirve. Así no necesito que me ayudes. **No es la forma.**"*
+>
+> 🔑 **She reads this file WITH ATX OPEN, to type from it.** A column of what the software already
+> shows tells her nothing she cannot see on her own screen — and pairing it with a `DEFECT` flag is
+> worse than useless, because it names a problem and withholds the answer. ⛔ **"It is wrong" is not a
+> deliverable. "Type this" is.**
+>
+> ✅ **So the workbook's principal column is `What to enter`**, and it is filled on **every** row —
+> including the rows that are already right, where it simply repeats the value that belongs there.
+> ⓘ *This is the §4B rule "every finding delivered WITH ITS FIX" applied to the column itself rather
+> than to a note further down the page. It was already firm policy; the workbook was not obeying it.*
+
+#### The action vocabulary — one word per row, and the current value travels INSIDE it
+
+⚠️ **She still needs to know which rows require a keystroke** — otherwise she re-reads 140 lines to
+find the dozen that moved. 🔑 **That is what the `Action` column is for, and the wrong value belongs
+HERE, as part of the instruction, never as a column of its own:**
+
+| `Action` | What it means | What `Action detail` must say |
+|---|---|---|
+| **OK** | Already correct. Nothing to type. | — |
+| **CHANGE** | A value is there and it is wrong. | 🔴 **Name what is there now** — *"the return has `Ogden` — replace it"*. Without it she cannot tell she has found the right box. |
+| **ADD** | The field is blank and must be filled. | Where the blank is, if the line is easy to miss. |
+| **CONFIRM** | Probably right; must be checked on screen before filing. | **Why it cannot be read off a text extract** — a ticked Yes and a ticked No extract identically. |
+| **DECIDE** | Blocked on the client's answer or on a ruling by Lilian or Julia. | **Who has to answer what.** |
+| **COMPUTED** | ATX derives it; she types nothing. | The value it **should** show, and that a wrong one means a wrong input upstream. |
+
+⛔ **On a `DECIDE` row, `What to enter` is an INSTRUCTION, never a guessed number** — *"ASK THE CLIENT,
+then type his answer"*. 🛑 **A confident figure nobody actually knows is the worst possible cell in
+this file**, because the whole document exists to be typed from without re-deriving anything.
+
+#### ⛔ NO "WHAT IT USED TO SAY" COLUMN. EVER.
+
+🗣️ **Lilian, 2026-09-23:** *"si quieres decir que son los números que tenía anteriormente en versiones
+anteriores de esta declaración antes de hacer ciertos cambios, pues **eso no es algo que me interese**.
+Obviamente, lo que necesito es **la versión final**. Si estoy en lo correcto, por favor, elimina eso."*
+
+🔑 **She is preparing a return, not auditing its history.** A column comparing this ATX version against
+the previous one is the session's own working material — it belongs in the **working paper**, where the
+reasoning lives, and nowhere in the file she types from. ⓘ *It also ages badly: the moment she rebuilds
+the return the column describes a document that no longer exists.*
+✅ **The one legitimate place a superseded value appears is inside a `CHANGE` row's `Action detail`**,
+because there it is not history — it is how she finds the box.
+
+#### 🧊 Freeze ONE header, near the top, or none at all
+
+🗣️ **Lilian, 2026-09-23, on the Form 8082 sheet:** *"las filas de la 1 a la 24 están fijas y no puedo
+desplazarme por el Excel porque se quedan fijas. Casi no tengo espacio para ver qué hay debajo."*
+
+🔑 **The bug is structural and it will recur in any generator that sets `freeze_panes` inside a
+shared "write a header row" helper.** On a sheet with **three** stacked tables the helper runs three
+times and **the LAST call wins**, pinning every table above it — so two-thirds of the window is frozen
+and the sheet cannot be scrolled. ✅ **The rule: freeze only a header that sits in the top few rows,
+and only the FIRST one on a sheet. A multi-table sheet freezes nothing.**
+
+#### The rest of the shape, as it stands
+
+- **Sheets:** `Read me` · `The return` *(the line-by-line, the one she types from)* · `Computations`
+  *(live formulas **and** a separately verified value, because the container has no spreadsheet engine
+  to check them)* · `Client answers` *(what was asked, what he said, in his words, and what was done
+  with it — plus what has NOT been asked)* · `Sources` · `Decisions` · `Open items` · a sheet per
+  disclosure form where one is needed · `Entry order`.
+- ☑️ **`Open items` is sorted by severity, actually sorted.** ⛔ *A sheet whose subtitle says "ordered by
+  severity" and is not is worse than an unsorted one — it was shipped that way once, with a `Medium`
+  above seven `BLOCKING` rows, because the severities were edited and the order was not.*
+- 🇬🇧 **Everything in the file is in ENGLISH — sheet names, headers, findings, the filename** — even
+  when the session runs in Spanish. [`CLAUDE.md`](../../../CLAUDE.md) carries the standing rule and the
+  reason: **Julia reads this file and does not speak Spanish.**
+- 🗺️ **Every row keeps the full address** — form · page · part · line, and the **column** on a grid
+  form — and the **TYPED / COMPUTED** mark (§4B).
+- 🔒 **The identity block never enters it**: no SSN/ITIN, no date of birth, no home street address, no
+  bank or card number. **A business EIN is fine.**
+
+
 ---
 
 ## §5 · Every prepared return leaves a working paper
@@ -2043,6 +2135,11 @@ is how an SOP becomes confidently wrong.**
   — first that the tables never located Form 8829, then that she needs the flow, the explanations
   and the checkboxes as well. **Her corrections ARE the standard; write them in rather than
   remembering them.**
+- 📊 **LILIAN TELLS YOU SOMETHING ABOUT THE EXCEL WORKBOOK — a column she does not want, a column she
+  does, a thing she cannot scroll past.** ⛔ **That is not a cosmetic note to apply once and forget.**
+  She types a filed tax return out of that file, so the way it is laid out is part of the work, and
+  §4D exists because three of her corrections arrived in a single message. 🔑 **Write each one in,
+  with her words**, so the NEXT return's workbook is built that way instead of being corrected again.
 - 🔵 **JULIA TELLS YOU A BRIEFING MISSED SOMETHING SHE NEEDED IN ORDER TO REVIEW.** §4C is written
   from Lilian's side of the handover — what the *preparer* thinks a reviewer needs. **Only Julia knows
   what she actually reached for and did not find. Her corrections are the standard for §4C exactly as
