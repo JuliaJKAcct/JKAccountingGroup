@@ -791,6 +791,53 @@ set of items the source file had actually confirmed to the full figure now propo
 file's rule sheet to everything it had left unclassified. **The note presents that as expected. It
 does not make the figures wrong — it does say what kind of figures they are.**
 
+### 2026-09-23 — the return was re-read with two Schedule C forms, and one thing the software dropped
+
+🔁 **The return has changed shape since the last read: the one Schedule C became TWO**, one for each
+activity, with all of the revenue on the credit-repair form and none on the catering one. **What he
+owes came down accordingly.**
+
+✅ **The keying itself is faithful.** Both of his draft profit-and-loss workbooks were traced line by
+line onto the return and they reconcile **to the cent** — nothing was mis-typed and nothing was
+invented. 🔑 **What is at issue is entirely what was left OUT**, and it is a material share of what
+he claimed: the vehicle fuel and repairs on both activities, the credit-repair share of the car
+insurance, and the home office. ⛔ **Nothing on the return says why**, and leaving the vehicle out
+pending a mileage record may well be deliberate.
+
+🔴 **THE ONE REAL DEFECT IS THE SOFTWARE'S, NOT ANYONE'S JUDGEMENT.** The qualified-business-income
+form now lists only the **catering** activity. **The profitable one is simply absent from it**, so
+the deduction comes out at zero and a business-loss carryforward is pushed into next year that should
+not exist. 🔑 **Before the activities were split, the same form worked.** ⚠️ **The carryforward is the
+half that costs twice** — nobody re-derives one; it is typed across from last year's return.
+
+⚖️ **A ruling of Lilian's is recorded so nobody re-derives it later.** In his workbook he put the car
+policy on a row labelled only *"insurance"*, without saying it was the vehicle. **She read it as the
+car policy and moved it out of the general-insurance line and into the vehicle line** — which is
+right, and she annotated both of his workbooks to say so. 🔑 **Doing that exposes an inconsistency:**
+the car insurance is claimed on one activity while the fuel and repairs are claimed on neither, and
+all of it rests on the same unsupported business-use percentage. ⚖️ **The claim has to be taken whole
+or held back whole.**
+
+✅ **ANSWERED — the credit-repair activity qualifies for the small-business income deduction.** It is
+not one of the specified service trades the statute excludes, **and the point is academic at his
+income level**, because that exclusion only begins to apply far above where he is.
+
+🔴 **ANSWERED, and the answer is no — the home-office measurements are in nothing he has sent.** His
+reconciliation note and both workbooks were searched in full for any floor area, room dimension or
+room count. **There is none.** ✏️ **He has to be asked directly for two numbers: the apartment's total
+area and the office room's**, because a percentage cannot be entered on either of the two forms that
+compute this — **both want square feet.** ⚠️ **And in his own workbook the amount sits on a rent line,
+which is not where business use of a home may ever be reported.**
+
+🔑 **AND THE THING THAT MOVES THE MOST MONEY IS NOT A DEDUCTION AT ALL.** He is sitting just above a
+step in the Marketplace-subsidy repayment cap, and the corrections the firm owes him carry him across
+it. **Most of the difference is the health-insurance reconciliation, not the business expenses.**
+
+📤 **An Excel working worksheet was delivered to Lilian** — the two activities line by line against
+his own figures, the vehicle pool, the home office, a live model of the return, and the open items
+ranked. ⛔ **It carries client figures, so it was handed over and not committed** *(the full detail is
+in the working paper)*.
+
 ### Outstanding items (CI-only — never in the SOP)
 
 
@@ -860,6 +907,13 @@ does not make the figures wrong — it does say what kind of figures they are.**
 - [ ] 🆕 🔴 **The DATE he first used the car for the business, the odometer at both ends of the year,
       and the miles by category** — **asked 2026-09-20 and NOT answered**; he sent percentages
       instead. **The forms require the dates and the miles, not a percentage.**
+- [ ] 🆕 🔴 **THE HOME OFFICE'S TWO MEASUREMENTS — the apartment's total floor area and the office
+      room's, in square feet.** **Confirmed 2026-09-23 to be absent from everything he has sent**:
+      his reconciliation note and both workbooks were searched in full and contain no floor area at
+      all. ⛔ **He gave a percentage, and neither of the two forms that compute this has anywhere to
+      put one.** ⓘ *Ask in the same message whether the room was used **exclusively** for business,
+      **which** activity it served, and whether he kept a home office after moving mid-year — each
+      changes the answer more than the percentage does.*
 - [ ] 🆕 Whether any **other bank or card account** was used in 2025 that is not in the workbook.
 - [ ] 🆕 🔴 **Which months he lived at each address** — his own dates and his own payments disagree, and
       the home-office months cannot be computed until they are reconciled *(2026-09-20)*.
