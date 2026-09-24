@@ -2339,6 +2339,31 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   asked for exactly that: "quiero que guardes las cosas que vas aprendiendo acerca de cómo quiero este
   Excel… en el skill de este tax preparation que hemos creado."*
 
+### 2026-09-24 — what she actually keyed, read off her ATX screen
+
+- 🖥️ **Three ATX screens were shown and they closed five open items**: the car-loan interest is in
+  *(via the vehicle worksheet, not the interest line — same Schedule C, same result, and it is the
+  software's own route)*; the disclosure form's entity **address**, **IRS centre**, **tax years** and
+  both **column (b) boxes** are done. 🔑 **She supplied the street line this repo could not obtain** —
+  the redactor masks street lines by design.
+- 🛑 **One risk created by our own earlier instruction:** we had told her to type the interest on the
+  Schedule C interest line, and she keyed it into the worksheet instead. ⛔ **If both were done the
+  deduction is taken TWICE, and the software flags nothing.** 📌 Raised as the top blocking item.
+- 🗺️ **An entry route nobody had written down:** the five Schedule C vehicle questions are answered on
+  the **worksheet**, not on the form — and **two of them are in the opposite order to the form**, which
+  is exactly how a correct answer gets ticked into the wrong box.
+- ⚖️ **She asked whether disclosing the amount on the pass-through form would DOUBLE the income.**
+  ✅ **It cannot** — that form is a notice, nothing on it reaches any line of the return, and the
+  instructions require it even for items that never appear on a return at all. 🔑 **The money is taxed
+  once, on the Schedule C.** ⓘ *Her alternative — disclosing zero — stays defensible and is hers to
+  choose; what it costs is that the figure itself is then not covered by the notice.*
+- ✅ **Her Part III explanation was checked against the IRS instructions and holds**: it opens with the
+  exact sentence the IRS prescribes, carries the item number on every line, gives the reasons and the
+  treatment, and **correctly avoids** the sibling phrase that would assert the corporation did not file
+  — which nobody knows.
+- ⚠️ **One thing unreconciled and recorded as such:** the amount-due on her screen does not match what
+  this firm's own chain computes from the same inputs. 📌 **Not guessed at — put back to her.**
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
