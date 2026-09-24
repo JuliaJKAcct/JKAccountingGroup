@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(the credit-card interest answered — claim none, and why; the new car-loan-interest deduction ruled out; the client ask went out)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(we take his numbers, not audit them — the card interest now has a figure for Julia, and his home-office rent turned out to be half of what he paid)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -973,6 +973,50 @@ vehicle, when the client's own sheet answers it; and that he had *confirmed* cha
 itself flags with "confirm". ⚠️ **The arithmetic was right in every case and the framing was not** —
 which is the second time in two sessions on this client, and it is written into the working paper as
 a pattern rather than as four separate slips.
+
+### 2026-09-24 (later still) — the posture changed, and it moved three numbers
+
+🔑 **Lilian set a standing rule for this client, and it is the right one for what he is:** *"nuestro
+trabajo no es auditar los números del cliente. Él no es nuestro cliente de bookkeeping… tenemos que
+confiar, en cierta medida, en lo que cabe en la información que él nos da."* **He is a tax-preparation
+client, not a bookkeeping client. We take his figures and his percentages and put them in the right
+place.** ⓘ *Which percentages are his and which are ours is now written out explicitly in the
+worksheet he is billed against, so the distinction survives this session.*
+
+⚖️ **And she ruled on the card interest: it is not to be zero.** She asked for a defensible figure to
+put to Julia with an explanation, and Julia decides. **That is exactly the right shape** — the earlier
+recommendation of zero was a recommendation, and the signer overruled it.
+
+✅ **THE ANSWER CAME OUT OF HIS OWN FILE.** His handoff sheet does not leave the interest open at all:
+it says **"Allocate based on underlying business purchases"** and **"Do not deduct all card
+interest."** So applying **his own percentages** — the vehicle at 80%, the meals at 75%, his software at 100% —
+to everything he charged to those nine cards gives a business share of about **29%**, and that share
+of the interest is the figure. **The buckets he told us not to force are left at nothing, on his
+instruction** — though one of the three we zeroed is our own earlier ruling about card penalties, not
+his, and the working paper now says so. ⓘ *The split between his two activities works out at essentially half and half, and it
+cannot change his tax either way.*
+
+🔴 **AND THE BIGGEST FIND OF THE DAY WAS NOT THE INTEREST.** His home-office form is carrying about
+**half the rent he actually paid** — his own reconciliation note totals it in one line, and his
+transaction file had filed the two largest payments of the year under "other". **That is not
+second-guessing his classification; it is reading what he wrote.** The same pool also contains
+renter's insurance from the months after he had already moved, which he explicitly does not claim.
+
+🏠 **Two more corrections went with it.** The home office is on **two** forms where the IRS
+instruction says to compute **one** and allocate the result — and because the catering activity has no
+revenue, half of it is being suspended to next year for nothing. And the **phone** is buried inside
+the home-office form at 30% when he told us it is **85%** business and the IRS says telephone is never
+a cost of the home.
+
+💰 **Together the three corrections are worth about a third of what he currently owes, and the
+mileage he has not yet sent is worth about twice that again** — it is the only answer that takes him
+under the subsidy-repayment threshold. **Chase the miles first.**
+
+✅ **Her own keying was clean.** The whole return was rebuilt from her two business figures and
+reproduces line for line. 🛑 **The one disagreement was the CHECKER's fault** — it rounded a
+Marketplace figure down where the software correctly rounded it up, because of how binary arithmetic
+stores a number ending in 5. **A control that disagrees with the return is not evidence against the
+return until you know which side is wrong.**
 
 ### Outstanding items (CI-only — never in the SOP)
 
