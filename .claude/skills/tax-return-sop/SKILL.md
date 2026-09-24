@@ -503,6 +503,9 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 
 ### 4B · The delivery format
 
+🔄 **Before you build ANY of what follows, run §4E's three steps** — re-fetch, list the OPEN PRs, and
+re-read the working paper. **A delivery built on a stale paper is worse than no delivery.**
+
 **This is what the SOP is for, and the format matters as much as the figures.**
 
 > 🔑 **The standard, in Lilian's own words (2026-08-19):** *"las tablas por cada formulario · el flujo
@@ -1831,6 +1834,9 @@ is a list of changes like any other — it gets boxes too.
 
 ### 4C · 🔴 WHEN THE RETURN COMES BACK FOR **REVIEW** — brief the reviewer, do not audit her
 
+🔄 **§4E first — this is the highest-stakes stale-paper risk in the skill.** The whole method below is
+*read the working paper, then answer*, and the answer goes to **the person who signs**.
+
 🛑 **A return this firm prepared will come back, and the person reviewing it was NOT in the room when
 it was built.** 🔑 **This section is what a session does then, and it is not the same job as preparing.**
 
@@ -1998,6 +2004,9 @@ in full: it has to survive being read by someone who was not in the conversation
 
 ### 4D · 📊 THE EXCEL WORKING-PAPER WORKBOOK — Lilian's evidence file, and the rules she set for it
 
+🔄 **§4E first, every time.** A workbook is the deliverable most likely to be built from a paper the
+session read hours ago — and the one she types from.
+
 🔑 **What it is.** Alongside the working paper and the chat delivery, a prepared return ships an
 **`.xlsx` workbook** that holds every figure on the return with its origin, its arithmetic, its
 source and what is still open. 🗣️ **Its purpose is Lilian's, in her words** *(2026-09-23)*: *"esto va
@@ -2035,7 +2044,7 @@ HERE, as part of the instruction, never as a column of its own:**
 | `Action` | What it means | What `Action detail` must say |
 |---|---|---|
 | **OK** | Already correct. Nothing to type. | — |
-| **CHANGE** | A value is there and it is wrong. | 🔴 **Name what is there now** — *"the return has `Ogden` — replace it"*. Without it she cannot tell she has found the right box. |
+| **CHANGE** | A value is there and it is wrong. | 🔴 **Name what is there now** — *"the return has `Ogden` — replace it"*. Without it she cannot tell she has found the right box. 🔴 **AND SAY WHETHER "WHAT IS THERE NOW" WAS READ OFF THE RETURN OR MODELLED** from a stated change — where both exist, **the read-off value governs** *(§4E)*. ⓘ *A delivery once quoted a modelled balance due as what the return said, and the return was materially lower.* |
 | **ADD** | The field is blank and must be filled. | Where the blank is, if the line is easy to miss. |
 | **CONFIRM** | Probably right; must be checked on screen before filing. | **Why it cannot be read off a text extract** — a ticked Yes and a ticked No extract identically. |
 | **DECIDE** | Blocked on the client's answer or on a ruling by Lilian or Julia. | **Who has to answer what.** |
@@ -2115,6 +2124,100 @@ the software's own figures, and it is where the half-up rule bites.
 - 🔒 **The identity block never enters it**: no SSN/ITIN, no date of birth, no home street address, no
   bank or card number. **A business EIN is fine.**
 
+---
+
+### 4E · 🔄 RE-READ THE WORKING PAPER BEFORE YOU BUILD ANYTHING FROM IT — **and check what is IN FLIGHT, not just `main`**
+
+🔑 **A live return's working paper moves faster than a session does.** Valentin Volzhanskiy's moved
+**six sections in two days**. A session that read it once and then worked for a long stretch is
+holding a picture of the return that no longer exists — and it will hand that picture to Lilian
+without noticing.
+
+> 🛑 **THE FAILURE THIS RULE EXISTS FOR — 2026-09-24.** A session read the paper at §17, worked, and
+> delivered **an Excel workbook and a chat analysis** built on that state. In between, **five PRs had
+> merged and a sixth was open**. 🗣️ **Lilian's reply is the whole of it:** *"Sinceramente, no entendí
+> nada de la explicación que me diste… Pensaba que la declaración estaba prácticamente bien… Me estás
+> hablando de cosas rarísimas que no hemos conversado."*
+> 💸 **What it cost her:** an amount owed that was badly wrong; a Schedule C shape presented as
+> an open decision that she had **chosen and keyed the day before**; a required reconciling statement
+> that had been made **moot**; and a **second workbook** with the same client's name on it, whose
+> figures contradict the live one. 🔗 *The account is §24 of that client's working paper.*
+
+⛔ **NEITHER EXISTING CONTROL FIRES HERE, and that is the point.**
+[`CLAUDE.md`](../../../CLAUDE.md)'s drift check runs **before a commit**; a file handed over and a
+chat message are neither. The [session-start hook](../../../.claude/hooks/session-start.sh) briefs
+**once**, at session start.
+
+🛑 **AND RE-FETCHING `main` IS NOT ENOUGH.** The section that corrected the delivery was sitting in an
+**open, unmerged PR**. ⓘ *§24's own first draft was written after a fresh `git fetch origin main` and
+was still wrong, for exactly that reason — it had to be corrected in review.*
+
+ⓘ **This is a RE-TIMING, not a discovery.** [`CLAUDE.md`](../../../CLAUDE.md) already carries the
+habit — *"Check what's in flight before starting — open PRs (`list_pull_requests`)"* — but it is timed
+**before starting** and written **for people editing shared guidance**. 🔑 **§4E re-times it to before
+every deliverable, for the person building one.** ⛔ *A session reading §4E alone must not conclude the
+repo's existing guidance is `main`-only. It is not — it is correctly scoped guidance fired at the wrong
+moment, which is the actual argument for this section.*
+
+#### ✅ The four steps, and they take under a minute
+
+```
+git fetch origin main && git log --oneline HEAD..origin/main
+```
+1. **What merged** — anything returned means re-read before you build.
+
+2. **What is IN FLIGHT.** ⛔ **`list_pull_requests` alone does NOT answer this** — it returns numbers,
+   titles and branches, **never file paths**, so there is no way to filter it to this client's paper,
+   and a title tells you nothing *(the PR that superseded the 2026-09-24 delivery was titled "The
+   instruction was the defect — 'line 21' and 'line 25' are different forms"; it names neither the
+   client nor the file)*. ✅ **Ask git instead — and it also catches a branch pushed BEFORE its PR
+   exists, which a PR list cannot:**
+
+   ```
+   git fetch origin --prune
+   for b in $(git branch -r --no-merged origin/main | grep 'origin/claude/'); do
+     git log origin/main..$b --oneline -- projects/tax-returns/<client>/
+   done
+   ```
+   ⓘ *Same idiom [`session-start.sh`](../../../.claude/hooks/session-start.sh) uses, for the same
+   reason.* **Anything it prints, read before you build** — `git show <branch>:<path>`. *(The PR route
+   works too, but costs two calls: `list_pull_requests` then `pull_request_read` with
+   `method: get_files` on each one.)*
+
+3. **Re-read the working paper's LAST sections**, not your memory of them.
+
+4. 🗣️ **SAY WHAT IT FOUND — IN ONE LINE, AT THE TOP OF THE DELIVERABLE, INCLUDING WHEN IT FOUND
+   NOTHING.** e.g. *"Drift check: `main` at `23daa94`; no unmerged branch touches this paper; paper
+   re-read to §24."* ⛔ **A delivery without that line has not had the check run** — because a session
+   that skipped the check and a session that ran it and found nothing produce **identical
+   output**, and the person reading cannot tell them apart. 🔑 **That is the standing rule for every
+   scan in this skill** *(see "update this skill when…")*, and it is why §4A-M prints two lines for an
+   account with no mirrors.
+
+🔑 **WHEN: immediately before building EVERY deliverable** — the workbook *(§4D)*, the chat or
+artifact delivery *(§4B)*, a message to the client, a briefing for the reviewer *(§4C)*.
+⛔ **Not once per session. Once per deliverable.**
+
+#### 🔴 The second rule, and it is what made the corrected version wrong too
+
+🛑 **A FIGURE THE WORKING PAPER *MODELS* IS NOT A FIGURE READ OFF THE RETURN.** ✅ **Say which it is,
+every time. When both exist, the one READ OFF THE RETURN governs.**
+
+ⓘ *The case: one section computed the amount owed from Lilian's stated change and the very next
+subsection said so in terms — "No new return PDF was supplied." A later section read the actual
+return through the redactor and landed materially lower. A session took the modelled figure,
+labelled it "what the return actually says", and told her a wrong balance due.*
+
+- ⌨️ **In the workbook it is enforced by §4D's `CHANGE` row** — *"name what is there now"* is exactly
+  the cell this defect lands in, so that row carries the mark. ⛔ **Do not invent a column for it;
+  §4D forbids that.**
+- 🗺️ **In the working paper**, a section that MODELS says so in its own heading or opening line.
+
+#### 🗂️ And if two versions of a deliverable end up in her hands
+
+⛔ **Do not leave it to her to work out which is real.** ✅ **Name the live one and the one to discard
+in the client's [Client Intelligence](../../../projects/client-intelligence/) file** — that is where
+the next session looks first, and it holds no figures, so the pointer is safe there.
 
 ---
 
@@ -2176,7 +2279,9 @@ is how an SOP becomes confidently wrong.**
   an attention failure** — and the fix is never "be more careful", which cannot be executed. Work out
   what sort would have made it visible, write the sort down as a step that RUNS, and require it to be
   **reported even when it finds nothing**, because a silent session and a session that never looked
-  read identically. **§4A-M is the first of these; there will be others.**
+  read identically. **§4A-M is the first of these; §4E is the second** — a session that had read the working paper hours
+  earlier delivered a workbook built on a state of the return that was five merged PRs and one OPEN PR
+  behind, and the fix is a re-read that RUNS before every deliverable, not a resolution to be careful.
 - **Someone reports how the SOFTWARE behaves** — which worksheet feeds which form, which screen an
   entry has to be made on, which error it throws. That is knowledge no IRS document carries, and
   rule 9 says to record it.
