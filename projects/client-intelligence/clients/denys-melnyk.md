@@ -2366,8 +2366,8 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 
 ### 2026-09-24 (second pass) — the disclosure forms for the two silent corporations
 
-- 📄 **All three disclosure forms now exist**, and the two for the corporations he received nothing
-  from are written. ✅ **They report ZERO and carry the whole story in the explanation** — that he was
+- 📄 **All three disclosure forms now exist**, and the two for the corporations he is believed to
+  have received nothing from are written. ✅ **They report ZERO and carry the whole story in the explanation** — that he was
   locked out, that no schedule and no wage statement were issued, and that he cannot tell whether
   those companies even had results for the year.
 - ⚖️ **Lilian made the sharpest point in this matter herself, and it is why those two forms are worth
@@ -2375,7 +2375,10 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   or not a single dollar reaches him**. ⛔ **So "he took no money" does not establish that he owes
   nothing.** 🔑 **Reporting zero WITH a full explanation is the honest position** — *I am reporting
   nothing because nothing was given to me and I have no way to find out* — and the text commits him to
-  reporting a schedule if one ever arrives.
+  **acting** on a schedule if one ever arrives. ⛔ **Deliberately NOT to agreeing with it:** an earlier
+  draft promised he would report whatever a later schedule showed, which would have given away in advance
+  the exact right the form exists to preserve — to the other owner, who controls the books and is in
+  dispute with him.
 - 🛑 **A correction to what this firm told her, recorded because she caught it.** ⓘ *She read our note
   as saying a zero would leave the explanation uncovered; what we had actually written was that the
   **protection** would not reach the figure.* ⛔ **Both readings are wrong.** The explanation is
@@ -2386,6 +2389,14 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 - ⌨️ **The pass-through input screen is to be emptied**: nothing from any of the three companies is
   reported there, which also removes two basis forms that were being filed with zeros on a figure
   nobody knows. **The disclosure forms do not depend on it.**
+- 🔴 **TWO THINGS TO ASK HIM BEFORE THOSE TWO FORMS ARE FILED, both because the explanation is
+  signed under penalty of perjury and neither is established anywhere:** ① **what he actually owns of
+  the two silent companies, and whether he is still an owner at all** — the only percentage in the prior
+  year's papers is a loss-allocation ratio that would read the same whatever he holds, so it proves
+  nothing; and ② **whether either of them gave him anything during the year** — money, property, a
+  vehicle, costs paid for him. ⛔ **The firm has been told neither.** ✅ **If he confirms, both statements
+  are his; if he does not answer, the second one comes out of both forms and the position still stands**,
+  because reporting zero rests on nothing having been furnished to him, which IS established.
 - 🔴 **Still blocked on her:** the **addresses** of the two silent corporations. Nothing in the firm's
   records holds them.
 
