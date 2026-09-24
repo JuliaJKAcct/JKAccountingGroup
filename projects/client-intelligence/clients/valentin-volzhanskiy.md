@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(the phone instruction was the defect, not her keying; the home office is ONE worksheet that allocates; the rent is closed on her instruction)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(there is no home office after the move — a studio with coworking in the rent, said three times in his own documents; the two halves of the electricity year are reversed on the form; the 55/45 phone split is his own)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1105,6 +1105,59 @@ line for line.
 🛑 **AND THE RENT IS CLOSED ON HER INSTRUCTION.** *"Vamos a dejarlo así y no vamos a seguir buscando
 meses."* **His figure is keyed; the questions drafted for him are withdrawn and nobody chases them.**
 🔑 **Closed, not answered** — the evidence stays in the working paper for whoever asks later.
+
+### 2026-09-24 (later still) — why there are no utilities for the rest of the year, and the two halves are reversed
+
+🗣️ **Her question, and it is the right one to have asked:** *"¿por qué no tenemos gastos de utilidades
+del resto del año?"* — **and she asked us to look for a client note before answering.** ✅ **There is
+one, in three separate documents of his.**
+
+🔑 **THE ANSWER IS SUBSTANTIVE, NOT AN OVERSIGHT: there is no home office for the rest of the year.**
+The home office is the **first apartment, January to May**. In June he moved, and **he told us three
+times not to claim the new place** — his rules sheet marks it OUT as personal/mixed housing, his
+handoff sheet says the allocation applies **only during the first apartment's period**, and his own
+email says **January–May only**. 🔑 **And he gives the reason each time: it is a STUDIO, the work area
+is mixed personal use, and a COWORKING SPACE IS INCLUDED IN THE RENT.** The law needs an area used
+regularly and **exclusively** for business; a studio with a coworking membership paid inside the rent
+has neither. ✅ **The form already corroborates it on the line above** — the rent on it stops when he
+moved, so a full year of electricity beneath it contradicts the line it sits under.
+
+🔴 **BUT THE TWO HALVES OF THE YEAR ARE THE WRONG WAY ROUND.** The figure on the form is the
+**June–December** electricity — the exact months he said not to claim — and the **January–May** figure
+is slightly larger. 💵 **The money is trivial, about one dollar.** 🛑 **The reason to fix it is not the
+money: the months are printed NOWHERE on the return**, so nothing on paper would ever reveal that a
+year of electricity is sitting against a home office that ended in the spring. ⓘ *His electricity
+account ran all year because he kept it through the move; the fourteen postings in his file are not
+one a month — two months carry two each.*
+
+📞 **The phone split she applied is HIS OWN, and it holds.** She asked what we thought of 55/45. **His
+draft profit-and-loss divides his phone and utilities between the two activities at almost exactly
+that ratio**, so she is not inventing a percentage — she is using the one he supplied, which is the
+posture she set the day before. ⛔ **And it cannot change the tax at all:** both activities' results
+are added together before anything else happens. ⚠️ **One flag, not an objection:** it deepens the
+loss on the activity with **no revenue at all**, which makes that activity's status — a trade or
+business, or start-up costs — the open question for Julia. **The split did not create that question;
+it enlarged it.**
+
+✅ **AND SHE PUT THE PHONE SOMEWHERE BETTER THAN WE TOLD HER TO.** We said the business utilities
+line; she listed it in the schedule's *other expenses* part, described **"Phone"**. **Identical
+arithmetic, identical tax — and a line that says "Phone" cannot be misread the way "Utilities" was,
+which is the exact word that caused the confusion the day before.** 🛑 **Recorded so nobody raises it
+as a correction. It stays.**
+
+✅ **All three of the changes from the previous pass are keyed, and her return rebuilds line for line
+from her two business figures.** The interest is on the interest line and the insurance line is clear;
+the home office is ONE worksheet on the activity that actually traded, and **nothing is parked for a
+future year any more.**
+
+ⓘ **One thing that was NOT checked and is not being chased:** the IRS booklet's non-deductible piece is
+the basic charge for the **first landline** into a home. His phone pool is a mobile carrier plus a
+second carrier, and **nobody has established whether either is a landline at the apartment.** Written
+down so no later session assumes it was tested.
+
+📤 **The worksheet was rebuilt on the return she sent and delivered to her** *(and delivered twice —
+the first build said the phone was on the business utilities line, which the return does not support;
+reading the form itself caught it)*. ⛔ **Never committed.**
 
 ### Outstanding items (CI-only — never in the SOP)
 
