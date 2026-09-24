@@ -2400,6 +2400,27 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 - 🔴 **Still blocked on her:** the **addresses** of the two silent corporations. Nothing in the firm's
   records holds them.
 
+### 2026-09-24 (third pass) — the workbook was hiding the three explanations
+
+- 🗣️ **Lilian: the Part III explanations for the three disclosure forms were not in the version of
+  the workbook she was given, and they had been in earlier ones.** ✅ **She was right.**
+- 🛑 **The text was in the file. The row was not tall enough to show it.** The explanation sat in a
+  narrow column in a row of fixed height, so the first three lines appeared and the rest did not —
+  silently, with nothing in the file to say anything was cut. 🔑 **From her side the deliverable was
+  missing, which is the only side that counts.**
+- ⚠️ **A second cause, and it was ours:** a fix made earlier the same day replaced that text with a
+  cross-reference to another tab. ⛔ **She works down the main sheet at the keyboard, so a pointer where
+  a text used to be reads as a deletion.**
+- ✅ **Fixed so it cannot recur quietly:** the workbook now **refuses to be generated** if any cell she
+  has to act on would be cut off — every block is measured against the width it will be shown in, and
+  the row is grown to fit or the build stops. 📌 **The three texts are also announced on the first
+  sheet and at the top of the sheet that holds them**, and the pointer to them now names the exact
+  heading, because a text nobody can find is a text that is not there.
+- ⓘ **Worth recording because it cost a round:** the firm's first account of this named the wrong
+  cause — a different limit, on a different sheet — and an independent review disproved it from a
+  snapshot taken earlier the same day. **The lesson went into the tax-return skill: check a root cause
+  against evidence, not against the shape of the fix.**
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
