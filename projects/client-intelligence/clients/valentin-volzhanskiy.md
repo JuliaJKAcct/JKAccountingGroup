@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-23 *(the return now carries TWO Schedule C forms, keyed from his own statements — and the QBI form has dropped one of them)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(the expense side rebuilt from the client's own transaction package; the QBI form is fixed and the home office is on the return)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -851,6 +851,70 @@ fixing our own errors gets him there — is wrong.**
 his own figures, the vehicle pool, the home office, a live model of the return, and the open items
 ranked. ⛔ **It carries client figures, so it was handed over and not committed** *(the full detail is
 in the working paper)*.
+
+### 2026-09-24 — the expenses were rebuilt from the client's own transaction file
+
+🔁 **A change of method, and it is the right one.** Where the earlier passes worked from the two
+profit-and-loss statements the client sent, Lilian went back to the **1,519-row transaction package
+behind them** and rebuilt the expense side from its own category totals — annotating both statements
+as she went with where each figure came from.
+
+✅ **THREE OF HER FINDINGS CHECK OUT EXACTLY** against the package's own summary sheet: the meals
+pool, the rent pool and the combined utilities-and-phone pool all tie to the cent, and the business
+percentage she applied to the meals is the client's own, printed in his file rather than assumed.
+
+✅ **AND THREE THINGS ON THE RETURN ARE NOW RIGHT THAT WERE NOT.** The qualified-business-income form
+carries **both** businesses, so the deduction is live and the loss carryforward into next year has
+gone. The vehicle claim is held back **whole** instead of half-in — the car insurance came off the
+general-insurance line, which was the inconsistency the last pass flagged. And the home office is on
+the return for the first time, on the simplified method.
+
+🔴 **THE HOME OFFICE IS WHERE THE REAL PROBLEM IS, and the first version of this entry got it wrong.**
+⛔ *It said the return used the simplified method. It does not — it carries a separate home-office
+form for EACH business, on the regular method, and the session had not read that far into the
+document before saying so.*
+🔴 **What is actually happening: the business percentage is applied TWICE.** The figures entered on
+those forms had already been reduced to the business share and split between the two activities — and
+the form then applies the percentage again, because the column they sit in is for the expense of the
+**whole** home. **That is why the deduction came out at a fraction of what it should be.**
+🔴 **And two things are on the wrong forms, each deducted twice.** The **telephone** is on the
+home-office form, where it cannot go at all — it is an ordinary business expense. The **home's
+electricity** is on the ordinary utilities line, where it cannot go either. **They are the wrong way
+round.**
+
+⚠️ **AND THE NEW UTILITIES CALCULATION DOES NOT FIX IT — it reproduces it.** The percentage she
+applied appears nowhere in the client's file; it lands within two dollars of his own combined total,
+which is the tell. 🔑 **The pool it is applied to mixes two things that follow different rules and
+belong on different lines: the phone, which is a business expense, and the home's electricity, which
+is business use of the home.** Strip the electricity out and his own split between the two businesses
+was an even one, not the uneven one now in use.
+
+⚠️ **The rent figure still has to be settled, and the two open questions are narrower than they
+looked.** The package's own rent total is missing several months — the rent reached the landlord by
+five different payment routes and a total built from one of them cannot see the others — **but the
+client's own note itemises the full schedule**, so the material is not missing from the firm.
+🔑 **What is genuinely open is what HIS note flags: a possible double-count in March, and one month
+that is not identified in the statements at all.** ✏️ **Ask for the month-by-month rent schedule
+alongside the two measurements** — that is what settles both.
+
+🔑 **AND THE ORDER OF THE OUTSTANDING CLIENT QUESTIONS IS NOW SETTLED: the vehicle first.** It is the
+only pending answer that carries him below the subsidy-repayment threshold, and it is worth roughly
+**2.7 times** the home-office work.
+
+ⓘ **One assignment worth remembering:** all the business meals are now on the credit-repair activity.
+Two thirds of them fall in the last quarter of the year — which is exactly when his real-estate
+licence activity appears in the records, and his own note describes the meals as being with realtors.
+**It changes no tax while the return carries two activities, but it is the same open question as the
+title company's commission.**
+
+📤 **A rebuilt worksheet was delivered to Lilian, then RE-ISSUED the same day** once an independent
+review found that its home-office section rested on the wrong premise. — nine tabs, every figure with
+its origin and its arithmetic, and a column that says what to enter rather than what is already there.
+⛔ **Client figures, so it was handed over and not committed.**
+🛑 **The failure is recorded because it is the kind that matters: a negative was asserted about a
+document nobody had searched to the end.** The session read the return partway through and stated
+that a form was absent; it was there, a few pages later. ✅ **Caught in review before anything was
+filed — but it reached her desk first.**
 
 ### Outstanding items (CI-only — never in the SOP)
 
