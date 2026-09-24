@@ -2465,6 +2465,36 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   **Inspected by hand, the pattern was the fault, not the document.** It now requires such a match to sit on
   a single line, and reports the ones it lets go.
 
+### 2026-09-24 (fifth pass) — the vehicle answers, and two addresses he cannot get
+
+- ✅ **He answered every remaining question about the vehicle by Google Voice, and Lilian keyed it the
+  same day.** It is a **Ford F-150**, he started using it in his own business on **1 January 2025**, there
+  are **no commuting miles**, he has **no second vehicle**, he does use it privately outside working hours,
+  and **he keeps written records supporting the deduction.** 🔑 **That closes the whole vehicle section
+  of his Schedule C**, which had been the largest block of unanswered questions on the return.
+- 🟢 **One of those answers is worth more than it looks.** Starting to use the truck in his business on
+  1 January 2025 is what **keeps the simplified per-mile deduction available at all** — that method can
+  only be chosen in the first year a vehicle goes into a business. He bought the truck in 2023, but 2025
+  is the first year it was in a business of his. **Had it been otherwise, the whole vehicle deduction
+  would have had to be rebuilt from actual costs.**
+- ⚠️ **One thing to check on screen, and it is a trap the firm has already documented:** two of those
+  questions appear on the software's worksheet in the **opposite order** to the printed form. A correct
+  answer in the wrong box reads as the opposite claim.
+- 📬 **He cannot supply the addresses of the two companies he was locked out of, and has no way to get
+  them.** ✅ **The return does not need them.** The instruction for that block asks for the legal **name**
+  and the **identifying number** — it never names the address — and the rule for this exact situation says
+  to complete the form to the best of your knowledge. **The name and the tax ID identify each company
+  without ambiguity, and the explanation says why nothing more is held.** ⛔ **Nothing is to be invented,
+  and the third company's address must not be copied across.**
+  ⓘ *If anyone wants to try anyway: a state business registry publishes an address for every registered
+  entity, and Illinois is where to look first — that is where the third company sits. A general web search
+  on 2026-09-24 found neither.*
+- 🔁 **The order of the last steps, set by Lilian and recorded so nobody jumps it:** enter the
+  corrections → **Julia reviews and approves** → **then** ask him for his banking details → then a fresh
+  signature form, then file. ⛔ **He is not to be asked for the bank details before Julia has signed off**
+  — if she changes something he gets asked twice. ⓘ *He owes on this return, so the account is for paying
+  rather than for a refund.*
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
