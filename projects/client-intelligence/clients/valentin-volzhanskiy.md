@@ -920,9 +920,11 @@ filed — but it reached her desk first.**
 
 📧 **Lilian wrote to him that morning, copying Julia**, with the vehicle questions, the subcontractor
 1099 question and — asked properly this time, as two separate measurements rather than a percentage —
-the apartment and office areas. ⭐ **One question in it is new and is a good one: does he have another
-vehicle for personal use?** That is the fact that makes a high business-use claim credible, and the
-tax form asks it too.
+the apartment and office areas. 🔴 **One question in it, though, is one he has already answered — and his answer works
+against us.** Asked whether he has another vehicle for personal use, his own package says of the car:
+**"only vehicle in 2025; used for work daily."** A taxpayer with one car has done his personal
+driving in it, so that answer **undercuts** the high business-use share the return claims rather than
+supporting it. The tax form asks the same question, and we should expect to answer it **No**.
 
 ⛔ **THREE ASKS ARE MISSING FROM IT, and one blocks work already scheduled.** He has still never been
 asked to reconcile the months he says he paid rent against the months the statements show payments —
@@ -932,12 +934,15 @@ which he was asked once and did not answer.
 
 💳 **THE CARD INTEREST — HE ASKED US TO DIVIDE IT BETWEEN HIS TWO BUSINESSES, AND THE DIVISION TURNED
 OUT NOT TO BE THE QUESTION.** The rule allocates interest by tracing what the borrowed money bought,
-and his own year answers that: **on six of his nine cards he paid more interest during 2025 than he
-charged to the card all year**, and on one of them he paid interest with no charges at all. **The
-balances predate the year**, so the year's spending cannot describe them. Of the charges that are
-there, **almost none is confirmed by him** — the file marks the rest as still needing review, and
-reading those descriptions turns up a soap subscription, an aquarium ticket, a vape shop and, in the
-bank-fee pool, **late-payment penalties**.
+and the statements answer that: **on six of his nine cards he paid more interest than he charged to
+that card across the whole period the statements cover**, and on one of them four interest postings
+sit against not a single purchase. ⚠️ **Scoped deliberately — only one of these nine accounts covers
+the whole year**, so this is what the records the firm holds show, not a statement about his year.
+**The balances arrived before those records open**, so the spending in them cannot describe what the
+debt bought. And of the charges that are there, **only a small part is backed by anything he actually
+told us** — the rest the file still marks as needing review, and reading those descriptions turns up
+a soap subscription, an aquarium ticket, a vape shop and, in the bank-fee pool, **late-payment
+penalties**.
 
 ⚖️ **So the recommendation is to claim none of it — a position for Lilian and Julia to take, not a
 computation** — with a defensible split ready if they claim it anyway: **about 52 / 48**, built from
@@ -949,14 +954,25 @@ Marketplace repayment.
 ✅ **A separate question was settled before it could be got wrong.** 2025 is the first year with a
 federal deduction for car-loan interest on its own line, and his does **not** qualify — the loan is
 too old and he claims the car as predominantly business, which that deduction expressly excludes.
-**It belongs on his business schedule instead, at the business-use share**, and that answer holds
-whichever vehicle method is chosen, so it does not wait on the mileage.
+**It belongs on his business schedule instead, at the business-use share** — and *where* it goes
+holds whichever vehicle method is chosen, so that much is settled. **The amount still waits on the
+mileage**, because the share is business miles over total miles rather than the percentage he
+asserted.
 
 📤 **The worksheet was re-delivered with the new section, and then re-delivered AGAIN in the same
 session** — the first copy understated the business-classified charges because two pools had been
 left out of a subtotal without saying so. ✅ **Caught by the sheet's own tie-out before she worked
 from it**, and correcting it strengthened the case rather than weakening it: it is what surfaced the
 late-payment penalties. ⛔ **Client figures, so handed over and not committed.**
+
+🛑 **And the independent review of the write-up found four more, all confirmed and all fixed before
+anything was filed — three of them the same mistake in different clothes.** Each was a claim about
+**the world** where the file only supported a claim about **the search**: that the interest exceeded
+the charges *for the year* rather than for the months on file; that nobody had asked about a second
+vehicle, when the client's own sheet answers it; and that he had *confirmed* charges the package
+itself flags with "confirm". ⚠️ **The arithmetic was right in every case and the framing was not** —
+which is the second time in two sessions on this client, and it is written into the working paper as
+a pattern rather than as four separate slips.
 
 ### Outstanding items (CI-only — never in the SOP)
 
