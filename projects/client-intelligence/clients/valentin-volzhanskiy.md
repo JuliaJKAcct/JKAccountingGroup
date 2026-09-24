@@ -1119,25 +1119,37 @@ handoff sheet says the allocation applies **only during the first apartment's pe
 email says **January–May only**. 🔑 **And he gives the reason each time: it is a STUDIO, the work area
 is mixed personal use, and a COWORKING SPACE IS INCLUDED IN THE RENT.** The law needs an area used
 regularly and **exclusively** for business; a studio with a coworking membership paid inside the rent
-has neither. ✅ **The form already corroborates it on the line above** — the rent on it stops when he
-moved, so a full year of electricity beneath it contradicts the line it sits under.
+has neither. ✅ **The form already corroborates it on the line above** — there is **no post-move rent on it
+at all**, so the form carries **rent from before he moved and electricity from after it**. The two
+lines describe different homes.
 
 🔴 **BUT THE TWO HALVES OF THE YEAR ARE THE WRONG WAY ROUND.** The figure on the form is the
-**June–December** electricity — the exact months he said not to claim — and the **January–May** figure
-is slightly larger. 💵 **The money is trivial, about one dollar.** 🛑 **The reason to fix it is not the
-money: the months are printed NOWHERE on the return**, so nothing on paper would ever reveal that a
-year of electricity is sitting against a home office that ended in the spring. ⓘ *His electricity
-account ran all year because he kept it through the move; the fourteen postings in his file are not
-one a month — two months carry two each.*
+**post-move** electricity — the exact months he said not to claim — and the pre-move figure is
+slightly larger. 💵 **The money is trivial, about one dollar.** 🛑 **The reason to fix it is not the
+money: the months are printed NOWHERE on the return**, so nothing on paper would ever reveal that the
+form is claiming the electricity of the home he moved OUT of against the rent of the home he moved out
+of it. ⓘ *His electricity account ran all year because he kept the account through the move; the
+postings in his file are not one a month — two of them carry two each.*
 
-📞 **The phone split she applied is HIS OWN, and it holds.** She asked what we thought of 55/45. **His
-draft profit-and-loss divides his phone and utilities between the two activities at almost exactly
-that ratio**, so she is not inventing a percentage — she is using the one he supplied, which is the
-posture she set the day before. ⛔ **And it cannot change the tax at all:** both activities' results
-are added together before anything else happens. ⚠️ **One flag, not an objection:** it deepens the
-loss on the activity with **no revenue at all**, which makes that activity's status — a trade or
-business, or start-up costs — the open question for Julia. **The split did not create that question;
-it enlarged it.**
+📞 **The phone split she applied is OURS, NOT HIS — and an earlier version of this entry said the
+opposite.** She asked what we thought of the 55/45. The argument that it was **his** came from two
+figures in his draft profit-and-loss that differ from each other **only because one of them had the
+home-office electricity folded into it** — **the very electricity this same pass was moving onto the
+home-office form.** 🔑 **His own note states his split in his own words, and it is FIFTY-FIFTY — the
+same amount to each business.** ⛔ **The split cannot change the tax at all** *(both activities' results
+are added together before anything else happens)*, **so nothing on the return changes and it stays** —
+**but it is a FIRM allocation and must be put to Julia as ours, not as his.** ⚠️ **One flag,
+unchanged:** it deepens the loss on the activity with **no revenue at all**, which makes that
+activity's status — a trade or business, or start-up costs — the open question for her. **The split
+did not create that question; it enlarged it.**
+
+🔴 **AND THAT ERROR WAS HIDING A REAL ONE: THE PHONE TOTAL ITSELF IS SHORT.** His own phone base
+includes a second carrier's March and April bills, which his file had parked under *"other expense —
+needs review"* and **his own note pulls back in.** The return is built on the smaller base, so it is
+missing a real slice of deduction — **worth roughly ten times the electricity fix, and it is one more
+keystroke.** ✏️ **The cleanest keying is his own equal split.** ⓘ *The superseded note that covered
+this pool was stamped for a different reason — the percentage and the line had changed, not the base —
+which is exactly how it got through.*
 
 ✅ **AND SHE PUT THE PHONE SOMEWHERE BETTER THAN WE TOLD HER TO.** We said the business utilities
 line; she listed it in the schedule's *other expenses* part, described **"Phone"**. **Identical
