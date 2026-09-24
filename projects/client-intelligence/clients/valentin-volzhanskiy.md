@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(there is no home office after the move — a studio with coworking in the rent, said three times in his own documents; the two halves of the electricity year are reversed on the form; the 55/45 phone split is his own)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(the 2025 return is finished and reproduces line for line; one item open — the mileage, with the client; the employer-coverage question dropped on her instruction)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1169,6 +1169,49 @@ down so no later session assumes it was tested.
 📤 **The worksheet was rebuilt on the return she sent and delivered to her** *(and delivered twice —
 the first build said the phone was on the business utilities line, which the return does not support;
 reading the form itself caught it)*. ⛔ **Never committed.**
+
+### 2026-09-24 (last) — the return is finished, and the worksheet was rebuilt to explain every figure on it
+
+✅ **BOTH REMAINING CHANGES ARE KEYED AND THE RETURN REPRODUCES LINE FOR LINE.** The home office now
+carries the pre-move electricity, and the phone carries his full base rather than the short one. Read
+off the return itself, not modelled: rebuilt from her two business figures alone, every line of the
+return comes out exactly as the software printed it — the poverty-line percentage and the applicable
+figure included, which are the two most easily got wrong.
+
+🔑 **She took the firm's split on the corrected phone base rather than the client's own equal split,
+and it is worth EXACTLY the same tax** — one dollar of deduction between them, inside the same tax band
+and the same subsidy band. ⛔ **Nothing to change, and it is not a defect.** ⚠️ *It does mean the firm's
+split stays on the list of allocations that are ours rather than his.*
+
+🗣️ **Her instruction for the worksheet, and it changed its shape completely:** *"que explique de dónde
+salió cada cosa… **no puede quedar nada como en el limbo.** Todos los números tienen que tener su
+justificación y su explicación de dónde salieron."*
+🔑 **The old worksheet was built around WHAT TO CHANGE — a "now" column and an "after" column — and
+there is nothing left to change.** So it was rebuilt from zero around the opposite question: **why is
+every figure on a finished return the figure it is.** Every tab now carries the same five columns, two
+of them new: **how it was computed** *(the arithmetic, to the cent)* and **where the figure comes
+from** *(which document, or whose decision, in their words)*.
+🆕 **And one tab is new in kind: what is NOT on the return, and why each one is off it** — his own
+written instructions to leave pools alone, the judgements the firm made, and the one thing waiting on
+evidence. **An absence needs a reason as much as a figure does.**
+
+⛔ **THE EMPLOYER HEALTH-COVERAGE QUESTION IS DROPPED ON HER INSTRUCTION** — *"olvida la pregunta
+acerca de la cobertura médica"*. It is in no email, nobody chases it, and **no figure on the return
+depends on it**, because that deduction was never claimed. **Closed, not resolved** — the same shape as
+the rent questions she closed earlier in the day.
+
+🔴 **ONE THING IS OPEN, and it is with the client: THE MILEAGE.** Odometer at both ends of the year,
+business miles, the first-business-use date, and whether any log exists. **It is the largest number
+left in this return by a wide margin** — it crosses two thresholds at once, neither of them a tax rate:
+the subsidy repayment cap drops a band, and his self-employment earnings fall under the floor where
+that tax disappears entirely. The worksheet has it built and priced so the day he answers it is
+arithmetic and not analysis.
+
+⚠️ **AND ONE FIGURE THAT HAD GONE STALE IN THE WORKING PAPER WAS CORRECTED: what the tips deduction is
+worth.** It had been carried unchanged since 13 September, through five sections, priced against a
+version of the return that no longer existed. Recomputed on the return as filed it is materially
+larger — and it is the largest single figure on this return, while **its eligibility is still not
+established**. The price is corrected; the open question is not touched.
 
 ### Outstanding items (CI-only — never in the SOP)
 
