@@ -696,6 +696,22 @@ if not _c["cross_line"]:
 if "123" in redact(normalise("SSN   123   45   6789"))[0]:
     FAILURES.append("CROSS-LINE · a wide-spaced one-line SSN was neither masked nor flagged")
 
+# 🛑 THE CASES THE FIRST VERSION OF THIS RULE LEAKED. It let a cross-line run
+#    through unless a label sat within 160 characters BEFORE it — and on this
+#    firm's own 1040, 16 of 33 SSN sites have their label further away than that
+#    and 13 have no label at all. So the default is now REFUSE, and only a wide
+#    column gap with no label in sight is let through. Each of these is a real
+#    page geometry, not a hypothetical.
+for _name, _probe in [
+    ("no label anywhere",      "DENYS MELNYK AND MARIIA K\n123 45\n   6789\nPage 3\n"),
+    ("label 250 chars away",   "Your social security number" + "x" * 250 + "\n123 45\n   6789\n"),
+    ("label AFTER the digits", "\n123 45\n   6789\nsocial security number\n"),
+    ("an unlisted spelling",   "Soc. Sec. No.\n123 45\n   6789\n"),
+    ("wide gap BUT labelled",  "Your social security number\n123 45\n        6789\n"),
+]:
+    if not redact(normalise(_probe))[1]["leaks"]:
+        FAILURES.append(f"CROSS-LINE · a split SSN with {_name} did not stop the job")
+
 if FAILURES:
     print(f"FAILED — {len(FAILURES)} problem(s):")
     for f in FAILURES:

@@ -324,10 +324,19 @@ SSN_LOOSE = re.compile(r"(?<!\d)\d{3}[-\t .]{1,10}\d{2}[-\t .]{1,10}\d{4}(?!\d)"
 SSN_CROSS_LINE = re.compile(
     r"(?<!\d)\d{3}[-\s.]{1,10}\d{2}[-\s.]{1,10}\d{4}(?!\d)")
 
-# What makes a cross-line run an identifier rather than a column of figures: the
-# page saying so, anywhere in the 160 characters before it. Deliberately the same
-# vocabulary as SSN_LABELLED, but WITHOUT its no-newline restriction, because a
-# label on its own line above the value is the case this exists for.
+# Corroboration that a cross-line run is an identifier: the page saying so, within
+# 400 characters EITHER SIDE. Deliberately the same vocabulary as SSN_LABELLED but
+# WITHOUT its no-newline restriction, because a label on its own line above the
+# value is the case this exists for.
+#
+# 🛑 THIS IS CORROBORATION, NOT THE TEST, and the difference is a leak. An earlier
+#    version treated a cross-line run as safe UNLESS a label sat within 160
+#    characters before it. Measured against this firm's own 29-page 1040: of its
+#    33 SSN sites, 16 have their nearest label FURTHER than 160 characters away
+#    and 13 carry NO label at all - continuation-page headers print the number
+#    with no caption. So the common case was the unprotected one. The default is
+#    now REFUSE, and a run is let through only on positive evidence of a table
+#    gutter (a wide column gap after the line break) with no label in sight.
 IDENT_LABEL = re.compile(
     r"(social\s*security|\bSSN\b|\bITIN\b|\bTIN\b|"
     r"taxpayer\s+identif\w*|identifying\s+number)", re.IGNORECASE)
@@ -529,13 +538,19 @@ def redact(text: str) -> tuple[str, dict]:
     #    and only a genuinely unlabelled run is let go - reported by SHAPE, not
     #    by a bare count, because a count cannot be checked by a human.
     for m in SSN_CROSS_LINE.finditer(text):
-        if "\n" not in m.group(0):
+        run = m.group(0)
+        if "\n" not in run:
             continue
-        before = text[max(0, m.start() - 160):m.start()]
-        if IDENT_LABEL.search(before):
-            counts["leaks"].append(m.group(0))
+        # A cross-line run is a LEAK by default. It is let through only on
+        # positive evidence that it is a table gutter, and both tests must pass.
+        after_break = run[run.index("\n") + 1:]
+        wide_gutter = bool(re.search(r"  {4,}", after_break))     # >= 5 spaces
+        near = text[max(0, m.start() - 400):m.end() + 400]
+        labelled = bool(IDENT_LABEL.search(near))
+        if wide_gutter and not labelled:
+            counts["cross_line"].append(run)
         else:
-            counts["cross_line"].append(m.group(0))
+            counts["leaks"].append(run)
 
     text = re.sub(r"\x00EIN(\d+)\x00", lambda m: eins[int(m.group(1))], text)
     return text, counts
@@ -760,10 +775,11 @@ def _run(src: Path, dst: Path) -> int:
         shapes = sorted({re.sub(r"\d", "N", x).replace("\n", "\\n")
                          for x in counts["cross_line"]})
         print(
-            f"  ⓘ  {len(counts['cross_line'])} UNLABELLED run(s) matched the SSN shape only by\n"
-            "      spanning a line break, so the groups sit on two different lines of the\n"
-            "      layout. Let through; a run with an SSN/ITIN/TIN label in sight is treated\n"
-            "      as a leak and stops the job instead. CHECK THESE SHAPES AGAINST THE PAGE:\n"
+            f"  ⚠️  {len(counts['cross_line'])} run(s) matched the SSN shape across a LINE BREAK and were\n"
+            "      LET THROUGH — their digits are in the output file, unmasked. They passed two\n"
+            "      tests: a wide column gap after the break (a table gutter, not a wrapped\n"
+            "      field) and no SSN/ITIN/TIN label within 400 characters either side. Every\n"
+            "      other cross-line run stops the job. CHECK THESE AGAINST THE PAGE:\n"
             + "".join(f"        {sh}\n" for sh in shapes[:5])
         )
     return 0
