@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(the rent gap explained — it is a filing label, not a fact; the card interest is keyed; two keystrokes left before this can pause)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(the phone instruction was the defect, not her keying; the home office is ONE worksheet that allocates; the rent is closed on her instruction)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1062,6 +1062,49 @@ repayment cap drops with it. **It gets better while she waits, not worse.**
 reads as a DRIVER'S licence.** Not on the return, so nothing is wrong today — but it should not be
 added. ⓘ *It is an inference from a bank description and is recorded as one; his own file is not
 unqualified about that pool either.*
+
+### 2026-09-24 (later) — the instruction was the defect, not her keying
+
+🛑 **She could not follow an instruction of ours, and she was right not to.** We told her to move the
+phone "to line 25" and to change "line 21" — **without ever saying those are two different forms.**
+Her software puts a home's utilities and a business's telephone on lines with almost the same name,
+and she reasonably read one instruction as being about one place. **Written down because the failure
+was in how it was said, not in what she did.**
+
+📖 **The distinction that matters:** a home-office worksheet's utilities line is for utilities **of the
+home**, and everything on it is reduced to the business-use percentage. A business schedule's utilities
+line is for the **business's own** telephone and internet, at their own percentage, with no reduction.
+**The IRS booklet on business use of the home says plainly that telephone is never a cost of the home
+and must be deducted separately.** Left where it is, his phone is being reduced twice over.
+
+🏠 **And her screen settled something we had got structurally wrong.** We had been describing the home
+office as two independent forms and telling her to delete one. **Her software holds ONE worksheet that
+allocates across both activities** — the two forms that print are its output. So the instruction is to
+**detach** the activity that cannot use it, not to delete a form that does not exist as a separate
+thing.
+
+🔴 **That matters in money:** the worksheet is giving **45% of the home-office pool to the activity with
+no revenue**, where the law's income limit disallows every dollar of it and parks it for a future year
+that may never come. **Roughly a fifth of what he currently owes.**
+
+📋 **One keying slip, worth nothing and still worth fixing:** the card interest went onto the
+**insurance** line rather than the interest line. **Not a dollar changes** — but that is the very line
+the earlier passes cleared of a vehicle cost that did not belong there, and on the face of the return
+he now shows insurance he never paid and no interest when he paid some.
+
+⚠️ **And one of our own recommendations turned out to be two recommendations pulling opposite ways.**
+Moving the phone off the home-office form is required by the IRS booklet and gains money. Trimming the
+home's electricity to the months he actually lived there is **his own rule** and **costs** money. They
+had been bundled as one change with one figure; separated, the phone is worth about six times the net
+and the other half is a small price for following what he told us. **Written down because a net figure
+hides a decision.**
+
+✅ **Her arithmetic is clean.** The whole return rebuilds from her two business figures and reproduces
+line for line.
+
+🛑 **AND THE RENT IS CLOSED ON HER INSTRUCTION.** *"Vamos a dejarlo así y no vamos a seguir buscando
+meses."* **His figure is keyed; the questions drafted for him are withdrawn and nobody chases them.**
+🔑 **Closed, not answered** — the evidence stays in the working paper for whoever asks later.
 
 ### Outstanding items (CI-only — never in the SOP)
 
