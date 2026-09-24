@@ -503,6 +503,9 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 
 ### 4B · The delivery format
 
+🔄 **Before you build ANY of what follows, run §4E's three steps** — re-fetch, list the OPEN PRs, and
+re-read the working paper. **A delivery built on a stale paper is worse than no delivery.**
+
 **This is what the SOP is for, and the format matters as much as the figures.**
 
 > 🔑 **The standard, in Lilian's own words (2026-08-19):** *"las tablas por cada formulario · el flujo
@@ -1998,6 +2001,9 @@ in full: it has to survive being read by someone who was not in the conversation
 
 ### 4D · 📊 THE EXCEL WORKING-PAPER WORKBOOK — Lilian's evidence file, and the rules she set for it
 
+🔄 **§4E first, every time.** A workbook is the deliverable most likely to be built from a paper the
+session read hours ago — and the one she types from.
+
 🔑 **What it is.** Alongside the working paper and the chat delivery, a prepared return ships an
 **`.xlsx` workbook** that holds every figure on the return with its origin, its arithmetic, its
 source and what is still open. 🗣️ **Its purpose is Lilian's, in her words** *(2026-09-23)*: *"esto va
@@ -2116,6 +2122,65 @@ the software's own figures, and it is where the half-up rule bites.
   bank or card number. **A business EIN is fine.**
 
 
+
+### 4E · 🔄 RE-READ THE WORKING PAPER BEFORE YOU BUILD ANYTHING FROM IT — **and check the OPEN PRs, not just `main`**
+
+🔑 **A live return's working paper moves faster than a session does.** Valentin Volzhanskiy's moved
+**six sections in two days**. A session that read it once and then worked for a long stretch is
+holding a picture of the return that no longer exists — and it will hand that picture to Lilian
+without noticing.
+
+> 🛑 **THE FAILURE THIS RULE EXISTS FOR — 2026-09-24.** A session read the paper at §17, worked, and
+> delivered **an Excel workbook and a chat analysis** built on that state. In between, **five PRs had
+> merged and a sixth was open**. 🗣️ **Lilian's reply is the whole of it:** *"Sinceramente, no entendí
+> nada de la explicación que me diste… Pensaba que la declaración estaba prácticamente bien… Me estás
+> hablando de cosas rarísimas que no hemos conversado."*
+> 💸 **What it cost her:** an amount owed that was badly wrong; a Schedule C shape presented as
+> an open decision that she had **chosen and keyed the day before**; a required reconciling statement
+> that had been made **moot**; and a **second workbook** with the same client's name on it, whose
+> figures contradict the live one. 🔗 *The account is §24 of that client's working paper.*
+
+⛔ **NEITHER EXISTING CONTROL FIRES HERE, and that is the point.**
+[`CLAUDE.md`](../../../CLAUDE.md)'s drift check runs **before a commit**; a file handed over and a
+chat message are neither. The [session-start hook](../../../.claude/hooks/session-start.sh) briefs
+**once**, at session start.
+
+🛑 **AND RE-FETCHING `main` IS NOT ENOUGH.** The section that corrected the delivery was sitting in an
+**open, unmerged PR**. ⓘ *§24's own first draft was written after a fresh `git fetch origin main` and
+was still wrong, for exactly that reason — it had to be corrected in review.*
+
+#### ✅ The three steps, and they take under a minute
+
+```
+git fetch origin main && git log --oneline HEAD..origin/main
+```
+1. **What merged** — anything returned means re-read before you build.
+2. **What is OPEN** — `list_pull_requests`, filtered to this client's working paper. An unmerged
+   section can supersede yours and will not show up in `main`.
+3. **Re-read the working paper's LAST sections**, not your memory of them.
+
+🔑 **WHEN: immediately before building EVERY deliverable** — the workbook *(§4D)*, the chat or
+artifact delivery *(§4B)*, a message to the client, a briefing for the reviewer *(§4C)*.
+⛔ **Not once per session. Once per deliverable.**
+
+#### 🔴 The second rule, and it is what made the corrected version wrong too
+
+🛑 **A FIGURE THE WORKING PAPER *MODELS* IS NOT A FIGURE READ OFF THE RETURN.** ✅ **Say which it is,
+every time. When both exist, the one READ OFF THE RETURN governs.**
+
+ⓘ *The case: one section computed the amount owed from Lilian's stated change and the very next
+subsection said so in terms — "No new return PDF was supplied." A later section read the actual
+return through the redactor and landed materially lower. A session took the modelled figure,
+labelled it "what the return actually says", and told her a wrong balance due.*
+
+- ⌨️ **In the workbook** this is a marker on the row, not a footnote further down.
+- 🗺️ **In the working paper**, a section that models says so in its own heading or opening line.
+
+#### 🗂️ And if two versions of a deliverable end up in her hands
+
+⛔ **Do not leave it to her to work out which is real.** ✅ **Name the live one and the one to discard
+in the client's [Client Intelligence](../../../projects/client-intelligence/) file** — that is where
+the next session looks first, and it holds no figures, so the pointer is safe there.
 ---
 
 ## §5 · Every prepared return leaves a working paper
@@ -2176,7 +2241,9 @@ is how an SOP becomes confidently wrong.**
   an attention failure** — and the fix is never "be more careful", which cannot be executed. Work out
   what sort would have made it visible, write the sort down as a step that RUNS, and require it to be
   **reported even when it finds nothing**, because a silent session and a session that never looked
-  read identically. **§4A-M is the first of these; there will be others.**
+  read identically. **§4A-M is the first of these; §4E is the second** — a session that had read the working paper hours
+  earlier delivered a workbook built on a state of the return that was five merged PRs and one OPEN PR
+  behind, and the fix is a re-read that RUNS before every deliverable, not a resolution to be careful.
 - **Someone reports how the SOFTWARE behaves** — which worksheet feeds which form, which screen an
   entry has to be made on, which error it throws. That is knowledge no IRS document carries, and
   rule 9 says to record it.
