@@ -1225,3 +1225,10 @@ meses."* **His figure is keyed; the questions drafted for him are withdrawn and 
   own file never will:** [`voicecapital.md`](./voicecapital.md) ·
   [`pro-title-agency.md`](./pro-title-agency.md) · **Maxratings LLC** *(no Client Intelligence file
   yet — FOLLOW-UPS row 109)*.
+- 🔴 **THE WORKING WORKSHEET — and there are TWO files, one of which must be discarded.**
+  ✅ **LIVE: `Volzhanskiy-2025-worksheet.xlsx`** *(first issued 2026-09-23, extended tab by tab since;
+  the tabs are numbered)*. ⛔ **DISCARD: `Volzhanskiy-2025-working-paper.xlsx`** *(2026-09-24)* — it was
+  built from a state of the working paper that was **five merged PRs and one open PR behind**, so its
+  figures **contradict** the live one rather than merely lagging it. 🔗 **The working paper's §24 has
+  the whole account.** ⓘ *Neither file is in the repo — they carry client figures and are handed over,
+  never committed.*
