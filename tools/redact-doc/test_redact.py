@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from redact import redact, _run  # noqa: E402
+from redact import redact, normalise, _run  # noqa: E402
 
 FAILURES: list[str] = []
 
@@ -670,6 +670,31 @@ try:
     decode_glyph_names("/uniD800/uni0041")[0].encode("utf-8")
 except UnicodeEncodeError:
     FAILURES.append("GLYPH · decoded output is not UTF-8 encodable — write_text would crash")
+
+# ── THE CROSS-LINE SSN SHAPE. SSN_LOOSE (the guard) only matches within ONE
+#    line, because a column of figures collides with the shape across a line
+#    break: an amount ending one row, then the next row's number gutter. That
+#    narrowing was nearly a leak, so these four pin every branch of it.
+_LABELLED_SPLIT = "Your social security number\n123 45\n   6789\n"
+_GUTTER = "Add lines 22 and 23 .  .  . 230\n 24       1040 and\n"
+
+# a LABELLED run split across lines must still STOP THE JOB. On a layout
+# extraction a label routinely sits on its own line above its value, and
+# SSN_LABELLED cannot cross a newline - this is the only net under it.
+if not redact(normalise(_LABELLED_SPLIT))[1]["leaks"]:
+    FAILURES.append("CROSS-LINE · a labelled SSN split across lines did not stop the job")
+
+# an UNLABELLED gutter must NOT stop the job - that is the false alarm the
+# narrowing exists for - but it must be counted and reported by shape.
+_out, _c = redact(normalise(_GUTTER))
+if _c["leaks"]:
+    FAILURES.append("CROSS-LINE · an unlabelled table gutter stopped the job (false alarm is back)")
+if not _c["cross_line"]:
+    FAILURES.append("CROSS-LINE · an unlabelled gutter passed WITHOUT being counted — silently")
+
+# and the one the narrowing must never cost: a wide-spaced SSN on ONE line.
+if "123" in redact(normalise("SSN   123   45   6789"))[0]:
+    FAILURES.append("CROSS-LINE · a wide-spaced one-line SSN was neither masked nor flagged")
 
 if FAILURES:
     print(f"FAILED — {len(FAILURES)} problem(s):")

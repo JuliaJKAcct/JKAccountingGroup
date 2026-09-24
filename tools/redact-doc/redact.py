@@ -324,6 +324,14 @@ SSN_LOOSE = re.compile(r"(?<!\d)\d{3}[-\t .]{1,10}\d{2}[-\t .]{1,10}\d{4}(?!\d)"
 SSN_CROSS_LINE = re.compile(
     r"(?<!\d)\d{3}[-\s.]{1,10}\d{2}[-\s.]{1,10}\d{4}(?!\d)")
 
+# What makes a cross-line run an identifier rather than a column of figures: the
+# page saying so, anywhere in the 160 characters before it. Deliberately the same
+# vocabulary as SSN_LABELLED, but WITHOUT its no-newline restriction, because a
+# label on its own line above the value is the case this exists for.
+IDENT_LABEL = re.compile(
+    r"(social\s*security|\bSSN\b|\bITIN\b|\bTIN\b|"
+    r"taxpayer\s+identif\w*|identifying\s+number)", re.IGNORECASE)
+
 # Loose shape, but only where the page says what it is. This is what catches a
 # real SSN that extracted with wide spacing, without eating a table of amounts.
 SSN_LABELLED = re.compile(
@@ -505,10 +513,29 @@ def redact(text: str) -> tuple[str, dict]:
     #   already. **Its silence is not evidence of anything** — do not read a
     #   clean guard as confirmation that the digit rules ran.
     counts["leaks"] = SSN_LOOSE.findall(text) + LONG_DIGITS.findall(text)
-    # Same shape, broken by a newline: a table gutter, not an identifier. Counted
-    # so the narrowing above is visible in the report rather than silent.
-    counts["cross_line"] = [m for m in SSN_CROSS_LINE.findall(text)
-                            if "\n" in m]
+
+    # Same shape, broken by a newline. USUALLY a table gutter - but not always,
+    # and the difference is whether the page SAYS what the digits are.
+    #
+    # 🛑 The narrowing that let these through was nearly a leak. On a layout
+    #    extraction a label routinely sits on its OWN line above its value:
+    #        Your social security number
+    #        123 45
+    #           6789
+    #    SSN_LABELLED cannot reach it (its gap is `[^\n\d]{0,40}`, which stops at
+    #    a newline) and SSN allows only one separator per gap. Before the
+    #    narrowing, SSN_LOOSE caught it and the job REFUSED to write. So a
+    #    cross-line run stays a LEAK whenever an identifier label is in sight,
+    #    and only a genuinely unlabelled run is let go - reported by SHAPE, not
+    #    by a bare count, because a count cannot be checked by a human.
+    for m in SSN_CROSS_LINE.finditer(text):
+        if "\n" not in m.group(0):
+            continue
+        before = text[max(0, m.start() - 160):m.start()]
+        if IDENT_LABEL.search(before):
+            counts["leaks"].append(m.group(0))
+        else:
+            counts["cross_line"].append(m.group(0))
 
     text = re.sub(r"\x00EIN(\d+)\x00", lambda m: eins[int(m.group(1))], text)
     return text, counts
@@ -730,11 +757,14 @@ def _run(src: Path, dst: Path) -> int:
     print(f"  kept:   {counts['ein_kept']} EIN (public — Lilian, 2026-08-11)")
     print("  names are NOT masked, by the same ruling.")
     if counts.get("cross_line"):
+        shapes = sorted({re.sub(r"\d", "N", x).replace("\n", "\\n")
+                         for x in counts["cross_line"]})
         print(
-            f"  ⓘ  {len(counts['cross_line'])} run(s) matched the SSN shape only by spanning a\n"
-            "      LINE BREAK, so the groups sit on two different lines of the layout and are\n"
-            "      different values. Not treated as leaks (see SSN_LOOSE). Reported so the\n"
-            "      narrowing is never silent — a real one would be a first."
+            f"  ⓘ  {len(counts['cross_line'])} UNLABELLED run(s) matched the SSN shape only by\n"
+            "      spanning a line break, so the groups sit on two different lines of the\n"
+            "      layout. Let through; a run with an SSN/ITIN/TIN label in sight is treated\n"
+            "      as a leak and stops the job instead. CHECK THESE SHAPES AGAINST THE PAGE:\n"
+            + "".join(f"        {sh}\n" for sh in shapes[:5])
         )
     return 0
 

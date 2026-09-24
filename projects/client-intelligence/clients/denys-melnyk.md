@@ -2453,6 +2453,13 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 - ✅ **The worksheet was rebuilt against the finished return and now ties to it:** every line carries a
   value rather than "the software computes this", every computation is a live formula with an independently
   verified result, and no superseded figure is stated anywhere as current.
+- 🔴 **The independent review then found something neither of us had seen: on TWO of the three
+  disclosure forms, the very first box — the one that says the form is a notice of inconsistent treatment —
+  is NOT ticked.** ⛔ **Without it those two forms state no purpose at all**, and the protection they exist
+  to give is not given. ✅ **It is one tick each.** ⓘ *The box below it, the entity type, IS ticked on all
+  three, so it is a real blank rather than a reading error.*
+- ⚠️ **And the attached statement explaining the loss limitation recites the superseded figures**, so it
+  has to move together with the deduction or the return contradicts itself on its own face.
 - 🛠️ **A firm tool was fixed in passing.** The document reader refused this return — correctly, it fails
   closed — because a column of figures on one form matched the shape of an identifier across a line break.
   **Inspected by hand, the pattern was the fault, not the document.** It now requires such a match to sit on
