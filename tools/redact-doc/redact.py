@@ -533,24 +533,33 @@ def redact(text: str) -> tuple[str, dict]:
     #           6789
     #    SSN_LABELLED cannot reach it (its gap is `[^\n\d]{0,40}`, which stops at
     #    a newline) and SSN allows only one separator per gap. Before the
-    #    narrowing, SSN_LOOSE caught it and the job REFUSED to write. So a
-    #    cross-line run stays a LEAK whenever an identifier label is in sight,
-    #    and only a genuinely unlabelled run is let go - reported by SHAPE, not
-    #    by a bare count, because a count cannot be checked by a human.
+    #    narrowing, SSN_LOOSE caught it and the job REFUSED to write.
+    #
+    # 🛑 TWO LATER ATTEMPTS TO TELL THE TWO CASES APART BOTH LEAKED, and the
+    #    second one is why this rule no longer tries.
+    #      · gate on a label within 160 characters before the run - defeated:
+    #        of the 33 SSN sites in this firm's own 29-page 1040, 32 have their
+    #        nearest label further away than that and 14 have none within 400.
+    #        Continuation-page headers print the number with no caption at all.
+    #      · add "a wide column gap after the break" as positive evidence of a
+    #        gutter - defeated by `123-45-\n     6789` (a trailing hyphen cannot
+    #        be a gutter), by a three-line split where a wide SECOND gap excuses
+    #        a narrow first one, and by any unlabelled SSN padded with 5 spaces.
+    #
+    # ✅ SO THE RUN IS MASKED, NOT PASSED AND NOT REFUSED. Masking a column of
+    #    figures costs three numbers out of a redacted working copy, which the
+    #    report names and a human can check against the PDF in seconds. Passing
+    #    an SSN costs an SSN. This file's own doctrine settles which way to err:
+    #    "A false alarm here is cheap ... A miss is not recoverable."
+    #    The job still completes, so a legitimate gutter never blocks the work.
     for m in SSN_CROSS_LINE.finditer(text):
         run = m.group(0)
-        if "\n" not in run:
-            continue
-        # A cross-line run is a LEAK by default. It is let through only on
-        # positive evidence that it is a table gutter, and both tests must pass.
-        after_break = run[run.index("\n") + 1:]
-        wide_gutter = bool(re.search(r"  {4,}", after_break))     # >= 5 spaces
-        near = text[max(0, m.start() - 400):m.end() + 400]
-        labelled = bool(IDENT_LABEL.search(near))
-        if wide_gutter and not labelled:
+        if "\n" in run:
             counts["cross_line"].append(run)
-        else:
-            counts["leaks"].append(run)
+    if counts["cross_line"]:
+        def _cross(m: re.Match) -> str:
+            return f"[{tag_ssn(re.sub(chr(10), ' ', m.group(0)))}]" if "\n" in m.group(0) else m.group(0)
+        text = SSN_CROSS_LINE.sub(_cross, text)
 
     text = re.sub(r"\x00EIN(\d+)\x00", lambda m: eins[int(m.group(1))], text)
     return text, counts
@@ -776,10 +785,12 @@ def _run(src: Path, dst: Path) -> int:
                          for x in counts["cross_line"]})
         print(
             f"  ⚠️  {len(counts['cross_line'])} run(s) matched the SSN shape across a LINE BREAK and were\n"
-            "      LET THROUGH — their digits are in the output file, unmasked. They passed two\n"
-            "      tests: a wide column gap after the break (a table gutter, not a wrapped\n"
-            "      field) and no SSN/ITIN/TIN label within 400 characters either side. Every\n"
-            "      other cross-line run stops the job. CHECK THESE AGAINST THE PAGE:\n"
+            "      MASKED as [SSN-n]. Some of these are NOT identifiers — a column of figures\n"
+            "      collides with the shape when an amount ends one row and the next row's\n"
+            "      number gutter follows. They are masked anyway: two attempts to tell the\n"
+            "      two cases apart both leaked, and losing three numbers out of a working\n"
+            "      copy is cheaper than writing out an SSN. CHECK THESE AGAINST THE PAGE —\n"
+            "      if a figure you need is inside one, read it off the PDF:\n"
             + "".join(f"        {sh}\n" for sh in shapes[:5])
         )
     return 0

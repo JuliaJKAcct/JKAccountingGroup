@@ -2460,6 +2460,11 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   three, so it is a real blank rather than a reading error.*
 - ⚠️ **And the attached statement explaining the loss limitation recites the superseded figures**, so it
   has to move together with the deduction or the return contradicts itself on its own face.
+- 🛠️ **One question nobody has put to him, and it is the one an examiner reaches for on a trucking
+  client:** the simplified per-mile method **cannot be used for a vehicle driven for hire**. ✅ **His
+  pickup is plainly a support vehicle** — his income is for services performed for the corporation and no
+  freight revenue runs through his own business — **but it has never been asked.** 📌 **It goes with the
+  other questions.**
 - 🛠️ **A firm tool was fixed in passing.** The document reader refused this return — correctly, it fails
   closed — because a column of figures on one form matched the shape of an identifier across a line break.
   **Inspected by hand, the pattern was the fault, not the document.** It now requires such a match to sit on
