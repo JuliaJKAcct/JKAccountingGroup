@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from redact import redact, _run  # noqa: E402
+from redact import redact, normalise, _run  # noqa: E402
 
 FAILURES: list[str] = []
 
@@ -670,6 +670,83 @@ try:
     decode_glyph_names("/uniD800/uni0041")[0].encode("utf-8")
 except UnicodeEncodeError:
     FAILURES.append("GLYPH · decoded output is not UTF-8 encodable — write_text would crash")
+
+# ── THE CROSS-LINE SSN SHAPE. SSN_LOOSE (the guard) only matches within ONE
+#    line, because a column of figures collides with the shape across a line
+#    break: an amount ending one row, then the next row's number gutter. That
+#    narrowing was nearly a leak, so these four pin every branch of it.
+_LABELLED_SPLIT = "Your social security number\n123 45\n   6789\n"
+_GUTTER = "Add lines 22 and 23 .  .  . 230\n 24       1040 and\n"
+
+# a LABELLED run split across lines must not reach the output. On a layout
+# extraction a label routinely sits on its own line above its value, and
+# SSN_LABELLED cannot cross a newline - this is the only net under it.
+_ls_out, _ls_c = redact(normalise(_LABELLED_SPLIT))
+if "6789" in _ls_out or "123" in _ls_out:
+    FAILURES.append("CROSS-LINE · a labelled SSN split across lines reached the output")
+if not _ls_c["cross_line"]:
+    FAILURES.append("CROSS-LINE · a labelled split SSN was masked without being reported")
+
+# an unlabelled gutter must NOT stop the job - refusing it is the false alarm
+# this whole rule exists to avoid - but it IS masked, and it must be reported.
+_out, _c = redact(normalise(_GUTTER))
+if _c["leaks"]:
+    FAILURES.append("CROSS-LINE · an unlabelled table gutter stopped the job (false alarm is back)")
+if not _c["cross_line"]:
+    FAILURES.append("CROSS-LINE · an unlabelled gutter was masked WITHOUT being counted — silently")
+
+# and the one the narrowing must never cost: a wide-spaced SSN on ONE line.
+if "123" in redact(normalise("SSN   123   45   6789"))[0]:
+    FAILURES.append("CROSS-LINE · a wide-spaced one-line SSN was neither masked nor flagged")
+
+# 🛑 EVERY GEOMETRY THAT DEFEATED AN EARLIER VERSION OF THIS RULE. Two attempts
+#    were made to tell a split SSN from a table gutter — a label-proximity test
+#    and a wide-column-gap test — and both leaked. The rule now MASKS every
+#    cross-line run, so all of these must come out with no digits in the output.
+for _name, _probe in [
+    ("no label anywhere",       "DENYS MELNYK AND MARIIA K\n123 45\n   6789\nPage 3\n"),
+    ("label 250 chars away",    "Your social security number" + "x" * 250 + "\n123 45\n   6789\n"),
+    ("label 500 chars away",    "social security number" + "x" * 500 + "\n123 45\n     6789\n"),
+    ("label AFTER the digits",  "\n123 45\n   6789\nsocial security number\n"),
+    ("an unlisted spelling",    "Soc. Sec. No.\n123 45\n   6789\n"),
+    ("unlabelled, WIDE gutter", "DENYS MELNYK\n123 45\n        6789\n"),
+    ("exactly five spaces",     "DENYS MELNYK\n123 45\n     6789\n"),
+    ("a three-line split",      "X\n123\n 45\n     6789\n"),
+    ("a trailing hyphen",       "X\n123-45-\n     6789\n"),
+    ("dot separators",          "X\n123.45.\n      6789\n"),
+    ("a tab gutter",            "X\n123 45\n\t\t6789\n"),
+]:
+    _out, _c = redact(normalise(_probe))
+    if "6789" in _out or "123" in _out:
+        FAILURES.append(f"CROSS-LINE · a split SSN with {_name} reached the output")
+    if not _c["cross_line"]:
+        FAILURES.append(f"CROSS-LINE · a split SSN with {_name} was not reported")
+
+# 🛑 AND EVERY WHITESPACE CHARACTER THAT IS NOT \n. The mask used to test for a
+#    newline while the guard's separators were `[-\t .]`, so a run broken by any
+#    OTHER whitespace fell between the two: matched by SSN_CROSS_LINE (so the
+#    guard never saw it) and rejected by the newline test (so it was never
+#    masked). Nine digits went to disk with exit 0 and "0 masked". A font's
+#    ToUnicode map emitting one of these is exactly the case normalise() exists
+#    for, so this is not hypothetical.
+for _name, _sep in [
+    ("carriage returns", "\r\r"), ("vertical tabs", "\v\v"), ("form feeds", "\f\f"),
+    ("a form feed and a space", "\f "), ("a carriage return and a space", "\r "),
+    ("U+2028 line separator", "\u2028\u2028"), ("U+2029 paragraph separator", "\u2029\u2029"),
+    ("U+0085 NEL", "\u0085\u0085"), ("an ASCII file separator", "\x1c\x1c"),
+    ("an ASCII unit separator", "\x1f\x1f"),
+]:
+    _p = f"MELNYK  DENYS\n412{_sep}78{_sep}3906\n"
+    _o, _c = redact(normalise(_p))
+    if "412" in _o and "3906" in _o:
+        FAILURES.append(f"CROSS-LINE · an SSN separated by {_name} reached the output")
+
+# ⚠️ And the deliberate cost: a real table gutter is masked too, and SAID SO.
+_g_out, _g_c = redact(normalise("Add lines 22 and 23 .  .  . 230\n 24       1040 and\n"))
+if "1040" in _g_out:
+    FAILURES.append("CROSS-LINE · a table gutter was left unmasked — the rule is masking, not guessing")
+if not _g_c["cross_line"]:
+    FAILURES.append("CROSS-LINE · a masked table gutter was not reported, so nobody could check it")
 
 if FAILURES:
     print(f"FAILED — {len(FAILURES)} problem(s):")
