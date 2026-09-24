@@ -1,6 +1,6 @@
 # SM Group USA Inc. — e-commerce (Kostetskyi)
 
-> **Status:** Prospect — monthly proposal delivered 2026-09-21 · **Owner:** Julia · **Last updated:** 2026-09-21
+> **Status:** Prospect — PRICE AGREED, start 2026-11-01; final proposal redrafted for signature 2026-09-24 · **Owner:** Julia · **Last updated:** 2026-09-24
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -155,11 +155,27 @@ the actual details.
   rate computes to a slightly lower figure than the price she named — her named figure
   was used and the difference flagged to her in chat
 
+- 2026-09-24 — **Deal agreed; final version redrafted for signature.** The clients
+  accepted the discounted monthly price with a 2026-11-01 start. The redraft: start date
+  on the investment page and in the next steps (systems setup and provider handoff
+  before November 1, first invoice around that date), and the two lines the negotiation
+  was won on added to What's Included — "Tax planning for the owner" and "IRS letters:
+  we read them, answer them and drive them to closure" plus year-round support
+  (replacing the vaguer "year-round tax coordination"). Two cover fixes: the date field
+  finally renders (the tool's date input needs ISO format — earlier versions printed no
+  date), and the "e" prefix before Julia's email is stripped post-render per her
+  standing preference (2026-08-28, "it can cause confusion") — the tool itself still
+  prints it, left unchanged pending a deliberate tool-source change. Delivered as PDF +
+  the same artifact for her to resend
+
 ### Outstanding items (CI-only — never in the SOP)
 
-- **From Julia:** whether the named monthly figure stands or should be the exact 20%
-  computation (flagged 2026-09-21); Sergii's email for the cover (blank now); the second
-  company's name and scope for its own quote
+- ~~Named figure vs exact 20%~~ **Moot 2026-09-24:** the client agreed the named monthly
+  figure in writing — it stands
+- **From Julia:** Sergii's email for the cover (blank now); the second company's name and
+  scope for its own quote
+- **Waiting on the client:** the signed proposal (final version sent for signature
+  2026-09-24; service starts 2026-11-01)
 - **Before onboarding:** entity state + S election, sales channels and platforms, sales
   tax nexus, current provider handoff
 
