@@ -315,12 +315,16 @@ SSN = re.compile(r"(?<!\d)\d{3}[-\s.]\d{2}[-\s.]\d{4}(?!\d)")
 # wrong with the document and nothing was wrong with refusing — the pattern was.
 # ⚠️ A real SSN still cannot slip through here: on a layout extraction it is one
 # field on one line, wide spacing included, and that is exactly what this still
-# catches. Cross-line candidates are counted separately and REPORTED (see
-# `cross_line` below) so the narrowing is never silent.
+# catches. Everything the wider pattern below matches and this one does not is
+# MASKED and REPORTED, so the narrowing is never silent.
 SSN_LOOSE = re.compile(r"(?<!\d)\d{3}[-\t .]{1,10}\d{2}[-\t .]{1,10}\d{4}(?!\d)")
 
-# The runs the narrowing above lets go: the same shape but broken by a newline.
-# Never a leak on its own — reported so a real one could still be noticed.
+# The same shape with ANY whitespace between the groups, not just a space or a
+# tab. 🛑 THE DIFFERENCE BETWEEN THE TWO PATTERNS IS THE SET THAT GETS MASKED —
+# and it is wider than "broken by a newline", which is what an earlier version
+# tested for. A run separated by \r, \v, \f, U+0085, U+2028, U+2029 or
+# \x1c-\x1f fell between the two and reached disk. Never compare against \n;
+# compare against SSN_LOOSE itself.
 SSN_CROSS_LINE = re.compile(
     r"(?<!\d)\d{3}[-\s.]{1,10}\d{2}[-\s.]{1,10}\d{4}(?!\d)")
 
@@ -340,7 +344,7 @@ SSN_CROSS_LINE = re.compile(
 #         a narrow first one, and by any unlabelled SSN padded with 5 spaces.
 #    The lesson is in the shape of the problem, not in the patterns: the two
 #    cases are not distinguishable from the text alone, so the tool stops
-#    guessing and pays the over-masking cost instead.", re.IGNORECASE)
+#    guessing and pays the over-masking cost instead.
 
 # Loose shape, but only where the page says what it is. This is what catches a
 # real SSN that extracted with wide spacing, without eating a table of amounts.
