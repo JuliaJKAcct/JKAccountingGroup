@@ -2400,6 +2400,24 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 - 🔴 **Still blocked on her:** the **addresses** of the two silent corporations. Nothing in the firm's
   records holds them.
 
+### 2026-09-24 (third pass) — the workbook was hiding the three explanations
+
+- 🗣️ **Lilian: the Part III explanations for the three disclosure forms were not in the version of
+  the workbook she was given, and they had been in earlier ones.** ✅ **She was right, and the cause was
+  not what it looked like.**
+- 🛑 **All three texts WERE in the file.** ⛔ **The row holding them had been set taller than Excel
+  allows a row to be, so Excel shrank it and the text below the cut simply did not appear** — silently,
+  with no error. 🔑 **From her side the deliverable was missing, which is the only side that counts.**
+- ✅ **Fixed at the root, not at the cell:** the generator now measures how many lines a block will
+  actually occupy and keeps every row inside the limit, and the whole workbook is checked for the same
+  fault before it is handed over. 📌 **The three texts are also announced in two places now** — on the
+  first sheet and at the top of the sheet that holds them — because a text nobody can find is a text
+  that is not there.
+- ⚠️ **A second cause, worth recording because it was self-inflicted:** an earlier fix that day replaced
+  one of those texts with a cross-reference to another tab. ⛔ **She works down the main sheet at the
+  keyboard, so a pointer where a text used to be reads as a deletion.** 🔑 **The rule now written into
+  the firm's tax-return skill: never swap a deliverable for a pointer to it.**
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785

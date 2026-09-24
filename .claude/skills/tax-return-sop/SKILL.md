@@ -2124,6 +2124,39 @@ the software's own figures, and it is where the half-up rule bites.
 - 🔒 **The identity block never enters it**: no SSN/ITIN, no date of birth, no home street address, no
   bank or card number. **A business EIN is fine.**
 
+> ### 🛑 A ROW CANNOT BE TALLER THAN **409.5 POINTS**, AND A ROW THAT ASKS FOR MORE **HIDES ITS OWN TEXT**
+>
+> 🗣️ **Lilian, 2026-09-24:** *"En esta última versión del Excel no me diste la explicación que debo poner
+> en la parte 3 para ninguna de las tres S-Corp. Eso estaba en versiones anteriores, pero en esta no me
+> lo diste."* ⛔ **All three texts were in the file.** 🔑 **The row asking to hold them was set to 450pt,
+> Excel clamped it to its 409.5pt ceiling, and `wrap_text` clipped the rest away — silently, with no
+> error anywhere.** ⚠️ **From her side the deliverable was simply missing, and she was right to say so.**
+>
+> 📌 **So whenever a generated cell holds a long block** — a statement, an explanation, a pasteable text —
+> **compute the height from the WRAPPED lines and cap it below the ceiling:**
+>
+> ```python
+> WIDTH = sum(col_widths)                 # the MERGED width, in characters
+> lines = sum(max(1, -(-len(l) // WIDTH)) for l in text.split('\n'))
+> ws.row_dimensions[r].height = min(405, 12.5 * (lines + 1))
+> ```
+>
+> ⚠️ **And check the whole workbook, not the cell you just wrote** — a fixed `height = 28` on a subtitle
+> that later grew is the same bug in a quieter place:
+>
+> ```python
+> [(s, r, d.height) for s in wb.sheetnames
+>  for r, d in wb[s].row_dimensions.items() if d.height and d.height > 409.5]   # must be []
+> ```
+>
+> 🔑 **The design rule behind it: a block that will not fit under the ceiling in a narrow column does not
+> belong in that column.** ⛔ **Do not "solve" it by pointing at another sheet and deleting the text** —
+> that is what produced her message, when a cross-reference replaced a text she had been reading. ✅ **Put
+> the block where the row is WIDE — a merged full-width cell on the form's own sheet — keep it in ONE cell
+> so a single copy carries the line breaks, and then make the pointer name the exact heading and say
+> "PASTE the block headed …".** 🗺️ **Say where it is in the `Read me` sheet AND in the target sheet's own
+> subtitle**, because a text nobody can find is a text that is not there.
+
 ---
 
 ### 4E · 🔄 RE-READ THE WORKING PAPER BEFORE YOU BUILD ANYTHING FROM IT — **and check what is IN FLIGHT, not just `main`**
@@ -2271,6 +2304,12 @@ is how an SOP becomes confidently wrong.**
   She types a filed tax return out of that file, so the way it is laid out is part of the work, and
   §4D exists because three of her corrections arrived in a single message. 🔑 **Write each one in,
   with her words**, so the NEXT return's workbook is built that way instead of being corrected again.
+  🛑 **AND WHEN SHE SAYS SOMETHING IS *MISSING* FROM THE WORKBOOK, DO NOT ASSUME SHE DID NOT FIND IT —
+  OPEN THE FILE AND CHECK WHETHER IT RENDERS.** ⛔ **The 2026-09-24 case looked like a search problem
+  and was a RENDERING one:** three Part III texts were present in the cells and invisible on screen,
+  because the row asked for 450pt against Excel's 409.5pt ceiling. 🔑 **"It is there, scroll down" would
+  have been wrong, and would have sent her back to a file that genuinely could not show it.** ✅ **Verify
+  the cell holds it AND that the row can display it** *(§4D's ceiling rule)*.
 - 🔵 **JULIA TELLS YOU A BRIEFING MISSED SOMETHING SHE NEEDED IN ORDER TO REVIEW.** §4C is written
   from Lilian's side of the handover — what the *preparer* thinks a reviewer needs. **Only Julia knows
   what she actually reached for and did not find. Her corrections are the standard for §4C exactly as
