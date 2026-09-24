@@ -2134,7 +2134,8 @@ the software's own figures, and it is where the half-up rule bites.
 > deliverable was missing, and she was right to say so.**
 >
 > 🛑 **AND THE SECOND HALF, WHICH IS WHY YOU CANNOT JUST MAKE THE ROW TALLER: Excel's hard ceiling on a
-> row is 409.5pt** *(8190 twips; the Row Height dialog refuses more)*. **38 lines at 12pt need ~460.**
+> row is 409.5pt** *(8190 twips; the Row Height dialog refuses more)*. **38 lines of Arial 10 need
+> ~485.**
 > 🔑 **So the ceiling is not the bug — it is the reason a long block CANNOT live in a narrow column and
 > has to move to a wide one.**
 >
@@ -2142,23 +2143,40 @@ the software's own figures, and it is where the half-up rule bites.
 >
 > | The wrong fix | Why it fails |
 > |---|---|
-> | Set a taller fixed height *(`height = 450`)* | Excel clamps it at 409.5 and the text is clipped anyway. ⚠️ **A `min(405, …)` cap is the same failure with better manners** — past ~33 lines it starts hiding content again, silently |
+> | Set a taller fixed height | Excel clamps it at 409.5 and the text is clipped anyway. ⚠️ **A `min(405, …)` cap is the same failure with better manners** — past ~33 lines it starts hiding content again, silently. ⓘ *A first guess capped that way is fine as a starting height **provided the fit check below runs afterwards and can override it** — that is what makes it safe, and a generator that keeps such caps should say so at each one* |
 > | Replace the block with a pointer to another sheet | 🗣️ **That is what produced her message.** She works down `The return` at the keyboard; **a pointer where a text used to be reads as a deletion** |
 >
 > ✅ **THE FIX IS A FIT CHECK THAT RUNS AND CAN FAIL THE BUILD** — not a formula at each call site,
-> because there are a dozen of those and the next one will be forgotten. **After the workbook is built,
+> because there are a dozen of those and the next one will be forgotten. ⓘ *Two of them were already
+> wrong in the same commit that added the first version of this rule.* **After the workbook is built,
 > walk every wrapped cell, measure what it needs, and grow the row; where it cannot fit under the
-> ceiling, RAISE:**
+> ceiling, RAISE — for a cell she ACTS on:**
 >
 > ```python
 > MAX_ROW_PT = 409.5
+> # the columns a person types from, per sheet - a clipped cell here fails the build;
+> # clipped reference prose in a "why" column is reported and does not
+> ACTIONABLE = {'The return': {5, 6, 8, 9}, ...}
+>
 > need = wrapped_lines(cell.value, merged_width_chars, cell.font) * line_pt(cell.font) + 4
 > have = ws.row_dimensions[cell.row].height or 15.0
 > if need > have:
->     if need <= MAX_ROW_PT:  ws.row_dimensions[cell.row].height = need   # just grow it
->     else:                   fatal.append(f'{ws.title}!{cell.coordinate} needs {need:.0f}pt')
+>     if need <= MAX_ROW_PT:
+>         ws.row_dimensions[cell.row].height = need          # just grow it
+>     elif cell.column in ACTIONABLE.get(ws.title, set()):
+>         fatal.append(f'{ws.title}!{cell.coordinate} needs {need:.0f}pt')
+>     else:
+>         problems.append(...)                               # printed, not fatal
 > if fatal: raise SystemExit(...)      # a clipped deliverable must not be shippable
 > ```
+>
+> ⚠️ **Two details in that code carry the whole point.** ⛔ **Never set a height BELOW what the cell
+> needs** — not even by a point, not as a `min(ceiling - 1, need)` tidy-up: that is the original defect
+> with a better number on it. **And the failure message must name the COLUMN and its width**, because
+> the only useful next move is to decide where the block goes instead.
+> 📌 **`ACTIONABLE` is a judgement and it should be put to Lilian, not guessed.** ✅ **Include the
+> column that says WHAT TO TYPE, not only the value** — §4D's own rule is that a defect flag without its
+> correct value is not a deliverable, and that detail lives in the *Action - detail* column.
 >
 > 🔑 **Three things that make the measurement honest**, each of which was wrong on the first attempt:
 > **wrap on WORDS, not characters** *(Excel does, so a character split under-counts lines)*; **measure
