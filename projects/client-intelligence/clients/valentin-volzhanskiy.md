@@ -1127,8 +1127,7 @@ lines describe different homes.
 **post-move** electricity — the exact months he said not to claim — and the pre-move figure is
 slightly larger. 💵 **The money is trivial, about one dollar.** 🛑 **The reason to fix it is not the
 money: the months are printed NOWHERE on the return**, so nothing on paper would ever reveal that the
-form is claiming the electricity of the home he moved OUT of against the rent of the home he moved out
-of it. ⓘ *His electricity account ran all year because he kept the account through the move; the
+form carries **rent from before he moved and electricity from after it**. ⓘ *His electricity account ran all year because he kept the account through the move; the
 postings in his file are not one a month — two of them carry two each.*
 
 📞 **The phone split she applied is OURS, NOT HIS — and an earlier version of this entry said the
