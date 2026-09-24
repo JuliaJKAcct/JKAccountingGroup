@@ -300,10 +300,29 @@ EIN = re.compile(
 # text layer produces from a form's separate boxes.
 SSN = re.compile(r"(?<!\d)\d{3}[-\s.]\d{2}[-\s.]\d{4}(?!\d)")
 
-# The same shape with ANY run of separators. A form's boxes can extract with
-# several spaces between them, and a column of figures can collide with it, so
-# this is too loose to mask on blindly — but see SSN_LABELLED and GUARD below.
-SSN_LOOSE = re.compile(r"(?<!\d)\d{3}[-\s.]{1,10}\d{2}[-\s.]{1,10}\d{4}(?!\d)")
+# The same shape with ANY run of separators ON ONE LINE. A form's boxes can
+# extract with several spaces between them, and a column of figures can collide
+# with it, so this is too loose to mask on blindly — but see SSN_LABELLED and
+# GUARD below.
+#
+# 🛑 The separator class is `[-\t .]`, NOT `[-\s.]`, and the difference is the
+# whole of a false alarm this cost an afternoon (2026-09-24, Melnyk's finished
+# 1040). With `\s` the run may span a NEWLINE, and then the three groups are on
+# two different visual lines of a layout extraction — which makes them, BY
+# CONSTRUCTION, different values. What triggered it was Schedule 8812 Part II-B:
+# an amount ending one line, then the next line's number gutter and the literal
+# "1040" of "1040 and 1040-SR filers". Shape `NNN\n NN       NNNN`. Nothing was
+# wrong with the document and nothing was wrong with refusing — the pattern was.
+# ⚠️ A real SSN still cannot slip through here: on a layout extraction it is one
+# field on one line, wide spacing included, and that is exactly what this still
+# catches. Cross-line candidates are counted separately and REPORTED (see
+# `cross_line` below) so the narrowing is never silent.
+SSN_LOOSE = re.compile(r"(?<!\d)\d{3}[-\t .]{1,10}\d{2}[-\t .]{1,10}\d{4}(?!\d)")
+
+# The runs the narrowing above lets go: the same shape but broken by a newline.
+# Never a leak on its own — reported so a real one could still be noticed.
+SSN_CROSS_LINE = re.compile(
+    r"(?<!\d)\d{3}[-\s.]{1,10}\d{2}[-\s.]{1,10}\d{4}(?!\d)")
 
 # Loose shape, but only where the page says what it is. This is what catches a
 # real SSN that extracted with wide spacing, without eating a table of amounts.
@@ -396,7 +415,7 @@ def redact(text: str) -> tuple[str, dict]:
     text = normalise(text)
     counts: dict = {"ssn_itin": 0, "long_digits": 0, "dob": 0, "licence": 0,
                     "account": 0, "street": 0, "ein_kept": 0, "glyph": 0,
-                    "leaks": []}
+                    "leaks": [], "cross_line": []}
 
     # Undecodable glyph names go FIRST, before any other rule can see them. They
     # are unreadable by construction, so they are masked rather than judged —
@@ -486,6 +505,10 @@ def redact(text: str) -> tuple[str, dict]:
     #   already. **Its silence is not evidence of anything** — do not read a
     #   clean guard as confirmation that the digit rules ran.
     counts["leaks"] = SSN_LOOSE.findall(text) + LONG_DIGITS.findall(text)
+    # Same shape, broken by a newline: a table gutter, not an identifier. Counted
+    # so the narrowing above is visible in the report rather than silent.
+    counts["cross_line"] = [m for m in SSN_CROSS_LINE.findall(text)
+                            if "\n" in m]
 
     text = re.sub(r"\x00EIN(\d+)\x00", lambda m: eins[int(m.group(1))], text)
     return text, counts
@@ -706,6 +729,13 @@ def _run(src: Path, dst: Path) -> int:
     )
     print(f"  kept:   {counts['ein_kept']} EIN (public — Lilian, 2026-08-11)")
     print("  names are NOT masked, by the same ruling.")
+    if counts.get("cross_line"):
+        print(
+            f"  ⓘ  {len(counts['cross_line'])} run(s) matched the SSN shape only by spanning a\n"
+            "      LINE BREAK, so the groups sit on two different lines of the layout and are\n"
+            "      different values. Not treated as leaks (see SSN_LOOSE). Reported so the\n"
+            "      narrowing is never silent — a real one would be a first."
+        )
     return 0
 
 

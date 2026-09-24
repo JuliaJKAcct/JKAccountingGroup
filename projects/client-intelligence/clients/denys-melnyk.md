@@ -2421,6 +2421,43 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   snapshot taken earlier the same day. **The lesson went into the tax-return skill: check a root cause
   against evidence, not against the shape of the fix.**
 
+### 2026-09-24 (fourth pass) — the finished return was read, and it ties
+
+- 🗣️ **Lilian finished the three disclosure forms and asked for the whole return to be checked against
+  the worksheet.** ✅ **Done — the finished return was read page by page through the redactor.** ⛔ **Not
+  committed anywhere.**
+- 🟢 **The amount on her screen finally reconciles.** For a week the firm's own model could not reproduce
+  it; the finished return simply states it, and it is the total tax less the refundable child credit plus
+  the penalty. **The gap was that we were modelling and she was keying.**
+- 🟢 **One figure she keyed is BETTER than what the firm told her to key.** The prior-year business-loss
+  carryforward on the QBI form: our note named only the largest of his three companies, and she entered the
+  **full total from the prior year's own worksheet** — all three companies and the spouse. **Hers is right;
+  ours was incomplete.** It wipes out the deduction either way, but the figure that carries into next year
+  depends on it.
+- 🔴 **Two defects, both of them the firm's, and both with a fix:** the **loss carryforward applied this
+  year is too high** — the 80% ceiling is measured on this year's profit, and the profit fell when the car
+  interest was corrected, so the ceiling fell with it and nothing recomputed it; and the **estimated-tax
+  penalty is not owed at all**, because the prior year's tax after refundable credits was nothing. ⚠️ **Net,
+  he owes LESS than the return says** — the first costs him a little, the second saves more.
+- ⚖️ **On the disclosure forms she made a drafting choice the firm had argued both ways, and on the main
+  company it is coherent** — she described the item as the money he received and reported that amount, with
+  the explanation saying where it went. **That was always one of the two defensible packages.** ⛔ **What
+  does not hold is on the two silent companies:** the description promises an estimate while the boxes report
+  nothing, and one box the explanation calls zero is actually empty. **One keystroke each.**
+- ⚠️ **And two sentences are now FILED that nobody has put to him** — that he received nothing from the two
+  silent companies, and that he is still an owner of all three. 🔑 **They go with the address request.**
+- 🔴 **The largest open question is the home office.** It is claimed, and **every figure behind it belongs
+  to the house in another state** — the one the mortgage statement describes. He moved mid-year and the
+  return's own address is in Florida. ⚠️ **Removing it RAISES his tax, which is why it has to be asked and
+  not assumed.**
+- ✅ **The worksheet was rebuilt against the finished return and now ties to it:** every line carries a
+  value rather than "the software computes this", every computation is a live formula with an independently
+  verified result, and no superseded figure is stated anywhere as current.
+- 🛠️ **A firm tool was fixed in passing.** The document reader refused this return — correctly, it fails
+  closed — because a column of figures on one form matched the shape of an identifier across a line break.
+  **Inspected by hand, the pattern was the fault, not the document.** It now requires such a match to sit on
+  a single line, and reports the ones it lets go.
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
