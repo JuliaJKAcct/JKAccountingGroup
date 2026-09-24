@@ -324,22 +324,23 @@ SSN_LOOSE = re.compile(r"(?<!\d)\d{3}[-\t .]{1,10}\d{2}[-\t .]{1,10}\d{4}(?!\d)"
 SSN_CROSS_LINE = re.compile(
     r"(?<!\d)\d{3}[-\s.]{1,10}\d{2}[-\s.]{1,10}\d{4}(?!\d)")
 
-# Corroboration that a cross-line run is an identifier: the page saying so, within
-# 400 characters EITHER SIDE. Deliberately the same vocabulary as SSN_LABELLED but
-# WITHOUT its no-newline restriction, because a label on its own line above the
-# value is the case this exists for.
-#
-# 🛑 THIS IS CORROBORATION, NOT THE TEST, and the difference is a leak. An earlier
-#    version treated a cross-line run as safe UNLESS a label sat within 160
-#    characters before it. Measured against this firm's own 29-page 1040: of its
-#    33 SSN sites, 16 have their nearest label FURTHER than 160 characters away
-#    and 13 carry NO label at all - continuation-page headers print the number
-#    with no caption. So the common case was the unprotected one. The default is
-#    now REFUSE, and a run is let through only on positive evidence of a table
-#    gutter (a wide column gap after the line break) with no label in sight.
-IDENT_LABEL = re.compile(
-    r"(social\s*security|\bSSN\b|\bITIN\b|\bTIN\b|"
-    r"taxpayer\s+identif\w*|identifying\s+number)", re.IGNORECASE)
+# ⓘ HISTORY, kept because three attempts were made and two of them leaked.
+#    There is no label vocabulary here any more and there is no geometric test.
+#    A cross-line run is simply MASKED. What was tried and why it failed:
+#      1. narrow the guard's separators to one line - silently PASSED a split
+#         SSN, which is how a 1040 prints a label above its value;
+#      2. refuse a cross-line run when an SSN/ITIN/TIN label sits within 160
+#         characters before it - measured on this firm's own 29-page 1040,
+#         32 of its 33 SSN sites have their nearest label FURTHER away than
+#         that and 14 have none within 400, because continuation-page headers
+#         print the number with no caption at all;
+#      3. add "a wide column gap after the break" as evidence of a table
+#         gutter - defeated by `123-45-\n     6789` (a trailing hyphen cannot
+#         be a gutter), by a three-line split where a wide SECOND gap excused
+#         a narrow first one, and by any unlabelled SSN padded with 5 spaces.
+#    The lesson is in the shape of the problem, not in the patterns: the two
+#    cases are not distinguishable from the text alone, so the tool stops
+#    guessing and pays the over-masking cost instead.", re.IGNORECASE)
 
 # Loose shape, but only where the page says what it is. This is what catches a
 # real SSN that extracted with wide spacing, without eating a table of amounts.
@@ -554,11 +555,22 @@ def redact(text: str) -> tuple[str, dict]:
     #    The job still completes, so a legitimate gutter never blocks the work.
     for m in SSN_CROSS_LINE.finditer(text):
         run = m.group(0)
-        if "\n" in run:
+        # 🛑 THE TEST IS "SSN_LOOSE DID NOT ALREADY SEE THIS", NOT "there is a
+        #    newline in it". Those are not the same set, and the difference was
+        #    a leak: SSN_LOOSE's separators are `[-\t .]` while this pattern's
+        #    are `[-\s.]`, so a run broken by \r, \v, \f, U+0085, U+2028,
+        #    U+2029 or \x1c-\x1f matched HERE (keeping it out of the guard) and
+        #    failed a `"\n" in run` test (keeping it out of the mask) - and nine
+        #    digits went to disk with exit 0 and "0 masked". A font's ToUnicode
+        #    map emitting one of those is exactly what normalise() exists for.
+        if not SSN_LOOSE.fullmatch(run):
             counts["cross_line"].append(run)
     if counts["cross_line"]:
         def _cross(m: re.Match) -> str:
-            return f"[{tag_ssn(re.sub(chr(10), ' ', m.group(0)))}]" if "\n" in m.group(0) else m.group(0)
+            run = m.group(0)
+            if SSN_LOOSE.fullmatch(run):
+                return run                      # one-line: the digit rules had it
+            return f"[{tag_ssn(re.sub(r'[^0-9]+', ' ', run))}]"
         text = SSN_CROSS_LINE.sub(_cross, text)
 
     text = re.sub(r"\x00EIN(\d+)\x00", lambda m: eins[int(m.group(1))], text)

@@ -722,6 +722,25 @@ for _name, _probe in [
     if not _c["cross_line"]:
         FAILURES.append(f"CROSS-LINE · a split SSN with {_name} was not reported")
 
+# 🛑 AND EVERY WHITESPACE CHARACTER THAT IS NOT \n. The mask used to test for a
+#    newline while the guard's separators were `[-\t .]`, so a run broken by any
+#    OTHER whitespace fell between the two: matched by SSN_CROSS_LINE (so the
+#    guard never saw it) and rejected by the newline test (so it was never
+#    masked). Nine digits went to disk with exit 0 and "0 masked". A font's
+#    ToUnicode map emitting one of these is exactly the case normalise() exists
+#    for, so this is not hypothetical.
+for _name, _sep in [
+    ("carriage returns", "\r\r"), ("vertical tabs", "\v\v"), ("form feeds", "\f\f"),
+    ("a form feed and a space", "\f "), ("a carriage return and a space", "\r "),
+    ("U+2028 line separator", "\u2028\u2028"), ("U+2029 paragraph separator", "\u2029\u2029"),
+    ("U+0085 NEL", "\u0085\u0085"), ("an ASCII file separator", "\x1c\x1c"),
+    ("an ASCII unit separator", "\x1f\x1f"),
+]:
+    _p = f"MELNYK  DENYS\n412{_sep}78{_sep}3906\n"
+    _o, _c = redact(normalise(_p))
+    if "412" in _o and "3906" in _o:
+        FAILURES.append(f"CROSS-LINE · an SSN separated by {_name} reached the output")
+
 # ⚠️ And the deliberate cost: a real table gutter is masked too, and SAID SO.
 _g_out, _g_c = redact(normalise("Add lines 22 and 23 .  .  . 230\n 24       1040 and\n"))
 if "1040" in _g_out:
