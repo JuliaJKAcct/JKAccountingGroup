@@ -110,7 +110,9 @@ a reply, sent to an address he may not read, is a filing delay with a deadline a
 > ✅ **What was kept from the recap it replaces:** his facts are **attributed** to him (*"as you have
 > told us"*), which is what preserves the record without asking him to confirm anything (§0); the
 > **$200,053** appears (§5 row 1); and the Midwest Form 8082 clause is the **softened** *"shows how the
-> $200,053 is reported"* (§5 row 4), so it is true under either §4F-iv-b package.
+> $200,053 is reported"* (§5 row 4), so it is true under either §4F-iv-b package. 🟢 **And 4F-iv-b is
+> now settled at `0 · 0 · 0` (§4L-ii, 2026-09-24), so that clause needs no further change** — the
+> 200,053 is shown in Part III.
 >
 > ⚠️ **One line changed its footing — the Marketplace.** It is back in, as *his* statement ("you did
 > not have Marketplace health coverage", under *"as you have told us"*). 📖 **He did say it**
@@ -184,7 +186,7 @@ JK Accounting Group
 | 1 | ✅ **No placeholder, and only ONE figure: the $200,053, which appears twice.** ⛔ **An earlier version of this row said "no figure at all" — that was false about the letter directly beside it.** 🔑 **The 200,053 is the one number that must be there**: it is what the recap is a recap OF. ⛔ **Do not add a second** — a letter that quotes the tax invites an argument about the tax. *(The row before that read "FILL `[[SE TAX]]`".)* |
 | 2 | 🛑 **THE DEADLINE IS THE REAL RISK.** ⛔ **Nobody knows whether a 2025 extension was filed** (§8). **Establish that before the letter goes out**, because the letter says filing is imminent |
 | 3 | 🔴 **PUT THE "we agreed" QUESTION TO JULIA FIRST.** Lilian's words were *"lo que **acordó** Julia con el cliente"*. ⚠️ **The recap deliberately does NOT say the approach was discussed or agreed** — there is no record of a client conversation. ✅ **If Julia says there WAS one, that is worth one added sentence and she should supply it in her words** |
-| 4 | 🔴 **RE-READ IT AGAINST THE FINISHED RETURN.** ⚠️ **It asserts a form COUNT** *("a Form 8082 for each of the three corporations")* **and names the Midwest one as showing where the money is reported.** ⛔ **Both depend on §4F-iv-b, which is UNSETTLED** — under Package A the Midwest form shows the money in Part III, not Part II. 🔑 **Either settle 4F-iv-b first, or soften that one clause to "shows how the $200,053 is reported"** |
+| 4 | 🔴 **RE-READ IT AGAINST THE FINISHED RETURN.** ⚠️ **It asserts a form COUNT** *("a Form 8082 for each of the three corporations")* **and names the Midwest one as showing where the money is reported.** 🟢 **BOTH ARE NOW SETTLED — §4L-ii, 2026-09-24:** the count is **three** *(she has `8082`, `8082:02` and `8082:03` open in ATX)*, and all three carry **`0 · 0 · 0`** on line 8, ⛔ ~~**depends on §4F-iv-b, which is UNSETTLED**~~. 🔑 **So the Midwest form shows the 200,053 in PART III, not in Part II** — ✅ **use the wording `shows how the $200,053 is reported`**, which is true of Part III and of Part II alike |
 | 5 | 🛑 **Send it AFTER the return is prepared and BEFORE it is transmitted.** Early invites renegotiation of the fee; after transmission it is not a recap, it is a defence |
 | 6 | ⚠️ **Do not attach the return.** The return and the Form 8879 go separately |
 | 7 | 📧 **Confirm the email address in Double first**, and send a short text saying the email is coming |

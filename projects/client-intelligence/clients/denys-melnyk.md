@@ -2376,10 +2376,11 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   nothing.** 🔑 **Reporting zero WITH a full explanation is the honest position** — *I am reporting
   nothing because nothing was given to me and I have no way to find out* — and the text commits him to
   reporting a schedule if one ever arrives.
-- 🛑 **A correction to what this firm told her, recorded because she caught it:** she was told that
-  reporting zero would leave the explanation uncovered. ⛔ **That was wrong on both halves.** The
-  explanation is **mandatory and always printed**, and the disclosure is given by **ticking the notice
-  box**, not by a figure. ✅ **What actually governs is that the figures must describe the same item the
+- 🛑 **A correction to what this firm told her, recorded because she caught it.** ⓘ *She read our note
+  as saying a zero would leave the explanation uncovered; what we had actually written was that the
+  **protection** would not reach the figure.* ⛔ **Both readings are wrong.** The explanation is
+  **mandatory** whatever the figures say *(and on this return it is missing from the package, which is
+  a separate defect)*, and the disclosure is given by **ticking the notice box**, not by a figure. ✅ **What actually governs is that the figures must describe the same item the
   description names** — and on that rule her own instinct was the more coherent one, so the firm's
   recommendation changed to match it.
 - ⌨️ **The pass-through input screen is to be emptied**: nothing from any of the three companies is
