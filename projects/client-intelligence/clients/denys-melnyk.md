@@ -2364,6 +2364,30 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 - ⚠️ **One thing unreconciled and recorded as such:** the amount-due on her screen does not match what
   this firm's own chain computes from the same inputs. 📌 **Not guessed at — put back to her.**
 
+### 2026-09-24 (second pass) — the disclosure forms for the two silent corporations
+
+- 📄 **All three disclosure forms now exist**, and the two for the corporations he received nothing
+  from are written. ✅ **They report ZERO and carry the whole story in the explanation** — that he was
+  locked out, that no schedule and no wage statement were issued, and that he cannot tell whether
+  those companies even had results for the year.
+- ⚖️ **Lilian made the sharpest point in this matter herself, and it is why those two forms are worth
+  filing at all:** a shareholder of this kind of company is taxed on his share of its profit **whether
+  or not a single dollar reaches him**. ⛔ **So "he took no money" does not establish that he owes
+  nothing.** 🔑 **Reporting zero WITH a full explanation is the honest position** — *I am reporting
+  nothing because nothing was given to me and I have no way to find out* — and the text commits him to
+  reporting a schedule if one ever arrives.
+- 🛑 **A correction to what this firm told her, recorded because she caught it:** she was told that
+  reporting zero would leave the explanation uncovered. ⛔ **That was wrong on both halves.** The
+  explanation is **mandatory and always printed**, and the disclosure is given by **ticking the notice
+  box**, not by a figure. ✅ **What actually governs is that the figures must describe the same item the
+  description names** — and on that rule her own instinct was the more coherent one, so the firm's
+  recommendation changed to match it.
+- ⌨️ **The pass-through input screen is to be emptied**: nothing from any of the three companies is
+  reported there, which also removes two basis forms that were being filed with zeros on a figure
+  nobody knows. **The disclosure forms do not depend on it.**
+- 🔴 **Still blocked on her:** the **addresses** of the two silent corporations. Nothing in the firm's
+  records holds them.
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
