@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(the expense side rebuilt from the client's own transaction package; the QBI form is fixed and the home office is on the return)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(the credit-card interest answered — claim none, and why; the new car-loan-interest deduction ruled out; the client ask went out)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -915,6 +915,48 @@ its origin and its arithmetic, and a column that says what to enter rather than 
 document nobody had searched to the end.** The session read the return partway through and stated
 that a form was absent; it was there, a few pages later. ✅ **Caught in review before anything was
 filed — but it reached her desk first.**
+
+### 2026-09-24 (later) — the client's question about his card interest, and one answer settled early
+
+📧 **Lilian wrote to him that morning, copying Julia**, with the vehicle questions, the subcontractor
+1099 question and — asked properly this time, as two separate measurements rather than a percentage —
+the apartment and office areas. ⭐ **One question in it is new and is a good one: does he have another
+vehicle for personal use?** That is the fact that makes a high business-use claim credible, and the
+tax form asks it too.
+
+⛔ **THREE ASKS ARE MISSING FROM IT, and one blocks work already scheduled.** He has still never been
+asked to reconcile the months he says he paid rent against the months the statements show payments —
+and the home-office form cannot be completed without that, whatever areas he sends back. The
+employer-health-coverage question is not in it either, nor the date he first used the car for work,
+which he was asked once and did not answer.
+
+💳 **THE CARD INTEREST — HE ASKED US TO DIVIDE IT BETWEEN HIS TWO BUSINESSES, AND THE DIVISION TURNED
+OUT NOT TO BE THE QUESTION.** The rule allocates interest by tracing what the borrowed money bought,
+and his own year answers that: **on six of his nine cards he paid more interest during 2025 than he
+charged to the card all year**, and on one of them he paid interest with no charges at all. **The
+balances predate the year**, so the year's spending cannot describe them. Of the charges that are
+there, **almost none is confirmed by him** — the file marks the rest as still needing review, and
+reading those descriptions turns up a soap subscription, an aquarium ticket, a vape shop and, in the
+bank-fee pool, **late-payment penalties**.
+
+⚖️ **So the recommendation is to claim none of it — a position for Lilian and Julia to take, not a
+computation** — with a defensible split ready if they claim it anyway: **about 52 / 48**, built from
+allocations the firm had already decided, which lands close enough to half-and-half that the simple
+answer and the principled one agree. 🔑 **And one correction was put to her: the SPLIT really is
+tax-neutral as she assumed, but the AMOUNT is not** — it moves his income, and through it his
+Marketplace repayment.
+
+✅ **A separate question was settled before it could be got wrong.** 2025 is the first year with a
+federal deduction for car-loan interest on its own line, and his does **not** qualify — the loan is
+too old and he claims the car as predominantly business, which that deduction expressly excludes.
+**It belongs on his business schedule instead, at the business-use share**, and that answer holds
+whichever vehicle method is chosen, so it does not wait on the mileage.
+
+📤 **The worksheet was re-delivered with the new section, and then re-delivered AGAIN in the same
+session** — the first copy understated the business-classified charges because two pools had been
+left out of a subtotal without saying so. ✅ **Caught by the sheet's own tie-out before she worked
+from it**, and correcting it strengthened the case rather than weakening it: it is what surfaced the
+late-payment penalties. ⛔ **Client figures, so handed over and not committed.**
 
 ### Outstanding items (CI-only — never in the SOP)
 
