@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-23 *(the return now carries TWO Schedule C forms, keyed from his own statements — and the QBI form has dropped one of them)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(the expense side rebuilt from the client's own transaction package; the QBI form is fixed and the home office is on the return)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -851,6 +851,56 @@ fixing our own errors gets him there — is wrong.**
 his own figures, the vehicle pool, the home office, a live model of the return, and the open items
 ranked. ⛔ **It carries client figures, so it was handed over and not committed** *(the full detail is
 in the working paper)*.
+
+### 2026-09-24 — the expenses were rebuilt from the client's own transaction file
+
+🔁 **A change of method, and it is the right one.** Where the earlier passes worked from the two
+profit-and-loss statements the client sent, Lilian went back to the **1,519-row transaction package
+behind them** and rebuilt the expense side from its own category totals — annotating both statements
+as she went with where each figure came from.
+
+✅ **THREE OF HER FINDINGS CHECK OUT EXACTLY** against the package's own summary sheet: the meals
+pool, the rent pool and the combined utilities-and-phone pool all tie to the cent, and the business
+percentage she applied to the meals is the client's own, printed in his file rather than assumed.
+
+✅ **AND THREE THINGS ON THE RETURN ARE NOW RIGHT THAT WERE NOT.** The qualified-business-income form
+carries **both** businesses, so the deduction is live and the loss carryforward into next year has
+gone. The vehicle claim is held back **whole** instead of half-in — the car insurance came off the
+general-insurance line, which was the inconsistency the last pass flagged. And the home office is on
+the return for the first time, on the simplified method.
+
+🔴 **ONE ERROR SURVIVES, AND IT IS THE SAME ONE.** The home's electricity is still inside the ordinary
+utilities line on the credit-repair form. ⚠️ **It is now worse than a misplacement:** the simplified
+method the return uses **replaces** actual home expenses, so claiming the electricity separately
+counts the same home twice.
+
+⚠️ **AND THE NEW UTILITIES CALCULATION DOES NOT FIX IT — it reproduces it.** The percentage she
+applied appears nowhere in the client's file; it lands within two dollars of his own combined total,
+which is the tell. 🔑 **The pool it is applied to mixes two things that follow different rules and
+belong on different lines: the phone, which is a business expense, and the home's electricity, which
+is business use of the home.** Strip the electricity out and his own split between the two businesses
+was an even one, not the uneven one now in use.
+
+⚠️ **The rent figure behind the alternative method has a hole in it.** The package's rent pool
+contains **nothing at all for April or May** and only a fraction of March, because the rent reached
+the landlord by five different payment routes and a total built from one of them cannot see the
+others. 🔑 **That matters because the regular method is worth several times the simplified one here** —
+five months of a real apartment at his stated allocation beats the simplified ceiling by a wide margin — **so it is
+worth asking him for the month-by-month rent schedule, not just the two measurements.**
+
+🔑 **AND THE ORDER OF THE TWO OUTSTANDING CLIENT QUESTIONS IS NOW SETTLED: the vehicle first.** It is
+the only pending answer that carries him below the subsidy-repayment threshold, and it is worth
+roughly three times the home office.
+
+ⓘ **One assignment worth remembering:** all the business meals are now on the credit-repair activity.
+Two thirds of them fall in the last quarter of the year — which is exactly when his real-estate
+licence activity appears in the records, and his own note describes the meals as being with realtors.
+**It changes no tax while the return carries two activities, but it is the same open question as the
+title company's commission.**
+
+📤 **A rebuilt worksheet was delivered to Lilian** — nine tabs, every figure with its origin and its
+arithmetic, and a column that says what to enter rather than what is already there. ⛔ **Client
+figures, so it was handed over and not committed.**
 
 ### Outstanding items (CI-only — never in the SOP)
 
