@@ -2124,38 +2124,58 @@ the software's own figures, and it is where the half-up rule bites.
 - 🔒 **The identity block never enters it**: no SSN/ITIN, no date of birth, no home street address, no
   bank or card number. **A business EIN is fine.**
 
-> ### 🛑 A ROW CANNOT BE TALLER THAN **409.5 POINTS**, AND A ROW THAT ASKS FOR MORE **HIDES ITS OWN TEXT**
+> ### 🛑 A CELL CAN HOLD TEXT THAT THE ROW WILL NOT SHOW — AND NOTHING ANYWHERE SAYS SO
 >
 > 🗣️ **Lilian, 2026-09-24:** *"En esta última versión del Excel no me diste la explicación que debo poner
 > en la parte 3 para ninguna de las tres S-Corp. Eso estaba en versiones anteriores, pero en esta no me
-> lo diste."* ⛔ **All three texts were in the file.** 🔑 **The row asking to hold them was set to 450pt,
-> Excel clamped it to its 409.5pt ceiling, and `wrap_text` clipped the rest away — silently, with no
-> error anywhere.** ⚠️ **From her side the deliverable was simply missing, and she was right to say so.**
+> lo diste."* ⛔ **The text was in the cell.** 🔑 **The row was FIXED at 44pt and the column was 30
+> characters wide, so a 1,198-character block showed 3 of its ~38 wrapped lines and the rest was
+> invisible — no error, no marker, nothing in the file to show for it.** ⚠️ **From her side the
+> deliverable was missing, and she was right to say so.**
 >
-> 📌 **So whenever a generated cell holds a long block** — a statement, an explanation, a pasteable text —
-> **compute the height from the WRAPPED lines and cap it below the ceiling:**
+> 🛑 **AND THE SECOND HALF, WHICH IS WHY YOU CANNOT JUST MAKE THE ROW TALLER: Excel's hard ceiling on a
+> row is 409.5pt** *(8190 twips; the Row Height dialog refuses more)*. **38 lines at 12pt need ~460.**
+> 🔑 **So the ceiling is not the bug — it is the reason a long block CANNOT live in a narrow column and
+> has to move to a wide one.**
+>
+> ⛔ **TWO WRONG FIXES, BOTH OF WHICH THIS FIRM SHIPPED IN ONE DAY:**
+>
+> | The wrong fix | Why it fails |
+> |---|---|
+> | Set a taller fixed height *(`height = 450`)* | Excel clamps it at 409.5 and the text is clipped anyway. ⚠️ **A `min(405, …)` cap is the same failure with better manners** — past ~33 lines it starts hiding content again, silently |
+> | Replace the block with a pointer to another sheet | 🗣️ **That is what produced her message.** She works down `The return` at the keyboard; **a pointer where a text used to be reads as a deletion** |
+>
+> ✅ **THE FIX IS A FIT CHECK THAT RUNS AND CAN FAIL THE BUILD** — not a formula at each call site,
+> because there are a dozen of those and the next one will be forgotten. **After the workbook is built,
+> walk every wrapped cell, measure what it needs, and grow the row; where it cannot fit under the
+> ceiling, RAISE:**
 >
 > ```python
-> WIDTH = sum(col_widths)                 # the MERGED width, in characters
-> lines = sum(max(1, -(-len(l) // WIDTH)) for l in text.split('\n'))
-> ws.row_dimensions[r].height = min(405, 12.5 * (lines + 1))
+> MAX_ROW_PT = 409.5
+> need = wrapped_lines(cell.value, merged_width_chars, cell.font) * line_pt(cell.font) + 4
+> have = ws.row_dimensions[cell.row].height or 15.0
+> if need > have:
+>     if need <= MAX_ROW_PT:  ws.row_dimensions[cell.row].height = need   # just grow it
+>     else:                   fatal.append(f'{ws.title}!{cell.coordinate} needs {need:.0f}pt')
+> if fatal: raise SystemExit(...)      # a clipped deliverable must not be shippable
 > ```
 >
-> ⚠️ **And check the whole workbook, not the cell you just wrote** — a fixed `height = 28` on a subtitle
-> that later grew is the same bug in a quieter place:
+> 🔑 **Three things that make the measurement honest**, each of which was wrong on the first attempt:
+> **wrap on WORDS, not characters** *(Excel does, so a character split under-counts lines)*; **measure
+> the MERGED span, not the one column**; and **measure in the CELL's font** — Courier New is ~16% wider
+> per character than the Arial the column-width unit is calibrated for, so summing raw column widths
+> over-states capacity and leaves rows too short.
+> ⚠️ **And two tables on one sheet must share one set of column widths** — widths are per SHEET, so the
+> second `header_row` silently re-lays-out the first table against columns it was never designed for.
 >
-> ```python
-> [(s, r, d.height) for s in wb.sheetnames
->  for r, d in wb[s].row_dimensions.items() if d.height and d.height > 409.5]   # must be []
-> ```
->
-> 🔑 **The design rule behind it: a block that will not fit under the ceiling in a narrow column does not
-> belong in that column.** ⛔ **Do not "solve" it by pointing at another sheet and deleting the text** —
-> that is what produced her message, when a cross-reference replaced a text she had been reading. ✅ **Put
-> the block where the row is WIDE — a merged full-width cell on the form's own sheet — keep it in ONE cell
-> so a single copy carries the line breaks, and then make the pointer name the exact heading and say
-> "PASTE the block headed …".** 🗺️ **Say where it is in the `Read me` sheet AND in the target sheet's own
-> subtitle**, because a text nobody can find is a text that is not there.
+> 📌 **Where the block goes once it will not fit:** a **merged full-width cell** on the form's own sheet,
+> **in ONE cell** so a single copy carries the line breaks. 🔑 **Then the pointer is not a substitute for
+> it, it is a route to it — and it has to earn that:** ✅ **built from the SAME heading constant** *(a
+> pointer written with a hyphen against a heading with an em dash finds nothing in Ctrl-F)*, ✅ **saying
+> what to DO** *("PASTE the block headed … It is ONE cell: click it, copy, paste")*, ✅ **itself checked
+> by the fit rule** — *the pointer rows added to fix this were themselves clipped at a hard-coded 76pt* —
+> and ✅ **announced in the `Read me` sheet AND the target sheet's own subtitle**, because a text nobody
+> can find is a text that is not there.
 
 ---
 
@@ -2306,10 +2326,16 @@ is how an SOP becomes confidently wrong.**
   with her words**, so the NEXT return's workbook is built that way instead of being corrected again.
   🛑 **AND WHEN SHE SAYS SOMETHING IS *MISSING* FROM THE WORKBOOK, DO NOT ASSUME SHE DID NOT FIND IT —
   OPEN THE FILE AND CHECK WHETHER IT RENDERS.** ⛔ **The 2026-09-24 case looked like a search problem
-  and was a RENDERING one:** three Part III texts were present in the cells and invisible on screen,
-  because the row asked for 450pt against Excel's 409.5pt ceiling. 🔑 **"It is there, scroll down" would
-  have been wrong, and would have sent her back to a file that genuinely could not show it.** ✅ **Verify
-  the cell holds it AND that the row can display it** *(§4D's ceiling rule)*.
+  and was a RENDERING one:** the text was in the cell and invisible on screen, because the row was fixed
+  at 44pt against a block needing ~38 lines in a 30-character column. 🔑 **"It is there, scroll down"
+  would have been wrong, and would have sent her back to a file that genuinely could not show it.**
+  ✅ **Verify the cell holds it AND that the row can display it** *(§4D's fit check)*.
+  ⚠️ **And be as sceptical of your own account of the cause as of the file.** ⛔ *The first write-up of
+  this one named the wrong mechanism — Excel's 409.5pt ceiling — and back-computed a "450pt" that no
+  shipped file ever had. The real defect was in a different sheet, in a different column, at 44pt. A
+  review caught it from a dump taken earlier the same day.* 🔑 **A root cause written into a skill and a
+  client file is read as established fact by everyone after you: check it against an artefact, not
+  against the shape of the fix.**
 - 🔵 **JULIA TELLS YOU A BRIEFING MISSED SOMETHING SHE NEEDED IN ORDER TO REVIEW.** §4C is written
   from Lilian's side of the handover — what the *preparer* thinks a reviewer needs. **Only Julia knows
   what she actually reached for and did not find. Her corrections are the standard for §4C exactly as

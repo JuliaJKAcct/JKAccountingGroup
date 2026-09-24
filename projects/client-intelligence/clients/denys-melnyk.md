@@ -2403,20 +2403,23 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 ### 2026-09-24 (third pass) — the workbook was hiding the three explanations
 
 - 🗣️ **Lilian: the Part III explanations for the three disclosure forms were not in the version of
-  the workbook she was given, and they had been in earlier ones.** ✅ **She was right, and the cause was
-  not what it looked like.**
-- 🛑 **All three texts WERE in the file.** ⛔ **The row holding them had been set taller than Excel
-  allows a row to be, so Excel shrank it and the text below the cut simply did not appear** — silently,
-  with no error. 🔑 **From her side the deliverable was missing, which is the only side that counts.**
-- ✅ **Fixed at the root, not at the cell:** the generator now measures how many lines a block will
-  actually occupy and keeps every row inside the limit, and the whole workbook is checked for the same
-  fault before it is handed over. 📌 **The three texts are also announced in two places now** — on the
-  first sheet and at the top of the sheet that holds them — because a text nobody can find is a text
-  that is not there.
-- ⚠️ **A second cause, worth recording because it was self-inflicted:** an earlier fix that day replaced
-  one of those texts with a cross-reference to another tab. ⛔ **She works down the main sheet at the
-  keyboard, so a pointer where a text used to be reads as a deletion.** 🔑 **The rule now written into
-  the firm's tax-return skill: never swap a deliverable for a pointer to it.**
+  the workbook she was given, and they had been in earlier ones.** ✅ **She was right.**
+- 🛑 **The text was in the file. The row was not tall enough to show it.** The explanation sat in a
+  narrow column in a row of fixed height, so the first three lines appeared and the rest did not —
+  silently, with nothing in the file to say anything was cut. 🔑 **From her side the deliverable was
+  missing, which is the only side that counts.**
+- ⚠️ **A second cause, and it was ours:** a fix made earlier the same day replaced that text with a
+  cross-reference to another tab. ⛔ **She works down the main sheet at the keyboard, so a pointer where
+  a text used to be reads as a deletion.**
+- ✅ **Fixed so it cannot recur quietly:** the workbook now **refuses to be generated** if any cell she
+  has to act on would be cut off — every block is measured against the width it will be shown in, and
+  the row is grown to fit or the build stops. 📌 **The three texts are also announced on the first
+  sheet and at the top of the sheet that holds them**, and the pointer to them now names the exact
+  heading, because a text nobody can find is a text that is not there.
+- ⓘ **Worth recording because it cost a round:** the firm's first account of this named the wrong
+  cause — a different limit, on a different sheet — and an independent review disproved it from a
+  snapshot taken earlier the same day. **The lesson went into the tax-return skill: check a root cause
+  against evidence, not against the shape of the fix.**
 
 ## 7. Links
 
