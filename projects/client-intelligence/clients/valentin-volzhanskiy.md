@@ -1196,13 +1196,13 @@ written instructions to leave pools alone, the judgements the firm made, and the
 evidence. **An absence needs a reason as much as a figure does.**
 
 ⛔ **THE EMPLOYER HEALTH-COVERAGE QUESTION IS DROPPED ON HER INSTRUCTION** — *"olvida la pregunta
-acerca de la cobertura médica"*. It is in no email, nobody chases it, and **no figure on the return
-depends on it**, because that deduction was never claimed. **Closed, not resolved** — the same shape as
+acerca de la cobertura médica"*. It is in none of the emails the firm has sent him, nobody chases it,
+and **no figure on the return depends on it**, because that deduction was never claimed. **Closed, not resolved** — the same shape as
 the rent questions she closed earlier in the day.
 
 🔴 **ONE THING IS OPEN, and it is with the client: THE MILEAGE.** Odometer at both ends of the year,
 business miles, the first-business-use date, and whether any log exists. **It is the largest number
-left in this return by a wide margin** — it crosses two thresholds at once, neither of them a tax rate:
+still WITH THE CLIENT** *(the tips deduction below is larger, and also open)* — it crosses two thresholds at once, neither of them a tax rate:
 the subsidy repayment cap drops a band, and his self-employment earnings fall under the floor where
 that tax disappears entirely. The worksheet has it built and priced so the day he answers it is
 arithmetic and not analysis.
@@ -1210,7 +1210,7 @@ arithmetic and not analysis.
 ⚠️ **AND ONE FIGURE THAT HAD GONE STALE IN THE WORKING PAPER WAS CORRECTED: what the tips deduction is
 worth.** It had been carried unchanged since 13 September, through five sections, priced against a
 version of the return that no longer existed. Recomputed on the return as filed it is materially
-larger — and it is the largest single figure on this return, while **its eligibility is still not
+larger — and it is the largest single DEDUCTION on this return, while **its eligibility is still not
 established**. The price is corrected; the open question is not touched.
 
 ### Outstanding items (CI-only — never in the SOP)
