@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(we take his numbers, not audit them — the card interest now has a figure for Julia, and his home-office rent turned out to be half of what he paid)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(the rent gap explained — it is a filing label, not a fact; the card interest is keyed; two keystrokes left before this can pause)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1017,6 +1017,51 @@ reproduces line for line. 🛑 **The one disagreement was the CHECKER's fault** 
 Marketplace figure down where the software correctly rounded it up, because of how binary arithmetic
 stores a number ending in 5. **A control that disagrees with the return is not evidence against the
 return until you know which side is wrong.**
+
+### 2026-09-24 — the rent question was the right one, and the answer is a filing label
+
+🔑 **Lilian pushed back on the home-office rent finding, and she was right to.** The client's own file
+shows one figure and the working paper asserted roughly double it, without ever explaining the gap.
+**A finding nobody can follow is a finding nobody should act on**, so this is written out properly now.
+
+📋 **The explanation is mundane: his transaction file sorts every payment into a category by reading
+the BANK DESCRIPTION.** Rent paid through the rent-payment app arrives with the word "rent" in the
+text and got the rent label. **Rent paid by card straight to the landlord arrives with only the
+building's name in it** — so the two largest rent payments of the year were filed under "other,
+needs review", where they sit as the two biggest rows in that whole bucket.
+
+✅ **And the arithmetic settles which figure is real.** His own notes put the apartment at roughly
+what a two-bedroom costs in that area, and the complete months each come to about that. The smaller
+figure would work out at less than half a month's rent per month. **It is a labelling artefact, not a
+fact about what he paid.**
+
+✅ **Her instinct — ask him to confirm — is the right move and is now written out as three questions**,
+two of which are **his own**: he flags in his note that one month may be double-counted and that a
+month's payment cannot be found at all. **Those go in the next email; they are in none of the ones
+sent so far.**
+
+✅ **She was also right about the revenue figure.** It comes from the Forms 1099 and is what was
+reported to the IRS, which is the right place to start; the difference from his own statement was
+already decomposed weeks ago and is not an open item.
+
+📋 **She has keyed the card interest and nothing else, and asked where she stands.** The answer: **two
+keystrokes left that are hers** — the home-office form and the phone — and after those the return is
+as finished as his information allows. **What remains waits on him, on Julia, or on one firm action of
+ours** *(confirming whether an information return we prepared for a payer was actually transmitted —
+it decides whether a payment he excludes from income is an exposure or just an internal
+contradiction)*. 🔑 **A status board now leads the worksheet so that question can be answered at a
+glance next time.**
+
+⚠️ **And one of the questions still to put to him turns out to be worth far more than the file had
+been saying — not less.** The employer-health-coverage question was being carried at the size of the
+*deduction* rather than what it saves. Priced properly it is **five times more valuable once those two
+keystrokes are in**, because at that point it pushes him across the subsidy threshold and the
+repayment cap drops with it. **It gets better while she waits, not worse.**
+
+⚠️ **One small thing turned up in passing: a fee inside the licence pool he classified as business
+reads as a DRIVER'S licence.** Not on the return, so nothing is wrong today — but it should not be
+added. ⓘ *It is an inference from a bank description and is recorded as one; his own file is not
+unqualified about that pool either.*
 
 ### Outstanding items (CI-only — never in the SOP)
 
