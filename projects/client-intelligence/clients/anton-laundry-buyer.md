@@ -253,6 +253,25 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-25 — 🔄 **THE INSPECTION IS OFF — the buyer's SON is going instead, and he has no equipment
+  background.** *(Julia, relaying the client's decision.)* The scope changed from a technical inspection to an
+  **inventory count**: how many washers, how many dryers, what other equipment is standing there. 🧰 **A
+  non-technical walk-round sheet was issued** — counting and photographing only, one page per store with tally
+  boxes filled in on site, plus how to find a machine's data plate. ⛔ **What is LOST with the technician, and
+  it must not be papered over:** condition (bearings, seals, burners, **dryer venting — the building's main
+  fire risk**), remaining useful life and the capex forecast, and 🔴 **the CYCLE COUNTS** — which were the
+  route to checking machine use against the water and gas bills, and the only thing that would have told
+  efficiency from lost volume at Palmetto W&F. **That question is now unanswerable from this visit.** ✅ **What
+  a non-technical visit still delivers, and some of it is genuinely new:** the **true machine count** (nobody
+  has one — the seller's own schedule foots to 218 against a stated 216); **photographs of every data plate**,
+  which reconstructs models and serials *including at **Select**, where the seller supplied neither*; the
+  **uninstalled CENTS cartons** verified, which was deliberately cut from the technician's scope as not his
+  job and **is exactly right for a non-technical visitor**; and an inventory of **ancillary equipment nobody
+  has listed** — water heaters, card kiosks and readers, vending, arcade, seating, carts, cameras. 🔑 **One
+  instruction carries a real finding:** the binder records ancillary income as *"paid by vendors, mostly in
+  cash, seller-stated"*, so the vending and arcade machines are **probably third-party property and not part
+  of the asset sale** — the sheet has him photograph any vendor sticker or phone number, which settles it.
+  ⚠️ **The §1060 allocation still wants a USPAP/ASA appraiser; a count is not a valuation.**
 - 2026-09-23 — 🧾 **THE EQUIPMENT MODELS ARE NOW READ OFF THE INVOICES, STORE BY STORE.** Julia reported a
   page where a part code sat on one page and its description on the next, and asked for it consolidated.
   ⓘ *The page she meant is the SELLER's Vol 2 (none of the firm's own PDFs runs to 34 pages) — and Vol 2
