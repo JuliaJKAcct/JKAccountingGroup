@@ -331,6 +331,31 @@ it here; these never go into the client SOP.
 - [ ] Fiscal year-end (calendar year assumed, not established)
 - [ ] Sales-tax position — whether the company is registered at all
 
+- _(2026-09-25)_ — **THE 1099 QUESTION IS ANSWERED FROM OUR OWN RECORDS, AND THE ORGANIZER'S CONTRADICTION DISSOLVES.**
+  The firm prepares this client's 1099s, and Double holds them by year. **Five of the six drivers on
+  the client's own 2025 driver list have a 2025 Form 1099-NEC on file; one does not** — and that one
+  is the only driver recorded under a person's name rather than a company's, while all five filed
+  forms are companies. ✅ **That is exactly what the client wrote on his organizer** *("there are some
+  people who didn't have a corp name — I can provide names and addresses")*, so his two answers were
+  never in conflict. ☑️ **What remains is the firm's: decide whether that sixth driver is owed a 2025
+  form and prepare it.** ⚠️ **It does not change the company's deduction** — the driver payments are
+  deductible either way; a missing information return is a separate exposure, and whether to raise it
+  with the signer is the reviewer's call. 🔑 **Nothing was asked of the client to establish any of
+  this.**
+- _(2026-09-25)_ — **AND A FILE THE PAPER HAD MISREAD.** The document named as the year's *1099
+  preparation* is **not a vendor list** — it is **the firm's request letter to the client**, asking him
+  to supply what the forms need. It names no vendor, so it could never have answered who was filed
+  for. **What answers that is which folder each form sits in.**
+- _(2026-09-25 — the principal's rulings, recorded because they change the work)_ — **The missed
+  deadline is accepted and the aim is to finish before October**, since the late-filing penalty runs
+  per month. **The owner's second vehicle is treated as disposed of** on the strength of his own
+  passing note, which she read as clear. **A consumer loan document uploaded to the company's folder
+  is the shareholder's WIFE's** and belongs to their personal return, not this one — that open
+  question closes. **Unreadable documents from years we are not filing are stood down**, unless a
+  specific question needs them. **Officer compensation is deliberately deferred** until every other
+  figure exists. 🛑 **And nothing is asked of the client for now** — the firm settles what it can by
+  itself first.
+
 ## 7. Links
 
 - **Double client:** [`Zakom Incorporated` — id `710612`](https://app.doublehq.com/close?cid=710612)
