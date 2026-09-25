@@ -1,6 +1,6 @@
 # MENDELEEV INC — C-corporation (Gridin)
 
-> **Status:** Prospect — first-year tax engagement letter drafted 2026-09-25 · **Owner:** Julia · **Last updated:** 2026-09-25
+> **Status:** Prospect — MONTHLY proposal drafted 2026-09-25, service start 2026-10-01 · **Owner:** Julia · **Last updated:** 2026-09-25
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -33,14 +33,16 @@
   office block; suite number pending)_
 - **Industry / what they do:** _(pending)_
 - **Primary language:** _(pending — the owner's name suggests Russian-speaking)_
-- **Our engagement (services we provide):** **PROSPECT.** First-year tax engagement
-  letter drafted 2026-09-25 on the engagement-letter template (the standing routing:
-  tax engagements go on the letter, not the monthly proposal): **Form 1120** for tax
-  year 2026 _(assumed — see §6)_, plus an itemized additional-service line for a
-  **one-time onboarding: cleanup of the 2026 books, work beginning 2026-10-01**
-  (Julia's explicit instruction to include it in this letter — a deliberate deviation
-  from the cleanup-is-never-in-the-proposal default, see §5). Fees live in the
-  delivered letter, not here
+- **Our engagement (services we provide):** **PROSPECT.** ⚠️ **A MONTHLY engagement,
+  not a tax letter** — Julia corrected the template mid-session (2026-09-25: "This is
+  not a tax engagement. This will be a monthly engagement starting October 1"). The
+  bilingual RU/EN monthly proposal covers: monthly bookkeeping and reconciliation,
+  monthly financial statements (the foundation), the annual **Form 1120** corporate
+  return and year-round tax coordination — plus a **one-time onboarding: cleanup of
+  the 2026 books, starting 2026-10-01**, shown as a one-time service card. Personal
+  returns excluded. Fees live in the delivered proposal, not here (the monthly figure
+  went through three dictated corrections in a row — the final one stands in the
+  document)
 - **Fiscal year-end:** December 31 (calendar assumed)
 - **Accounting platform:** _(pending — cleanup implies books exist somewhere)_
 
@@ -98,41 +100,41 @@ the actual details.
   reportable transactions with the foreign owner, and the penalty for missing it is
   five figures. The drafted letter does NOT include a 5472 line — flagged to Julia
   2026-09-25, unresolved. Ownership percentage itself is also unconfirmed
-- **The cleanup is INSIDE the engagement letter at Julia's explicit instruction**
-  (2026-09-25): a one-time onboarding line for the 2026 books, work beginning
-  2026-10-01. This deviates from the standing default (cleanup goes out as its own
-  invoice, never in a tax proposal — Lilian, Aug 2026); the deviation is Julia's call
-  for this client and was flagged when made
-- **First-year engagement, TY2026 assumed:** if the company's first return turns out
-  to be a different year (formation date unknown), the letter's year, due date and
-  info-by date must be redone before signing
-- **The 1120 fee in the draft is the firm's default rate, not a quote Julia set:**
-  she named only the cleanup fee; the return-preparation line was filled from the
-  pricing calculator's standard 1120 rate and flagged for her confirmation
+- **The engagement type went through a full correction cycle in one session — read §6
+  before touching the document:** it began as a first-year tax engagement letter (with
+  a bilingual rebuild and two fee corrections) and ended as the standing MONTHLY
+  proposal with the cleanup as a one-time onboarding card. The letter versions are
+  superseded; the artifact link shows the monthly proposal
+- **The onboarding cleanup is one-time and REQUIRED, not an optional add-on:** the
+  tool's add-on card says "Optional add-on" and appends "/mo" — both were overridden
+  post-render ("One-time service", no period suffix). If this pattern recurs, the tool
+  deserves a native one-time-service mode
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
-- 2026-09-25 — **Intake (Julia, dictated) + first-year engagement letter drafted and
-  delivered.** Inputs: company name and St. Petersburg FL address, owner Dmitrii Gridin
-  (Yerevan, Armenia — address held out of the repo), "first layer" read as **"first
-  year"** (dictation; flagged for confirmation), Form 1120, then mid-draft: plus a
-  one-time onboarding fee for cleanup of the 2026 books, start October 1. Delivered as
-  PDF + private artifact. Open flags: the 5472 question, the default 1120 fee, the
-  signer's title (blank), TY2026 assumption
-- 2026-09-25 (same session) — **Made bilingual at Julia's request ("In Russian and
-  English"):** the letter tool is English-only, so a full Russian courtesy translation
-  of the letter body was composed on the tool's own styles and placed FIRST, banner-marked
-  "для ознакомления" with English governing and the signature only in the English part
-  (the house bilingual convention). System words and form names stay in English inside
-  the Russian text. Redelivered as an 18-page PDF + the same artifact
+- 2026-09-25 — **Intake (Julia, dictated), one session, five corrections — final form:
+  a bilingual MONTHLY proposal.** The sequence, kept because it explains the artifacts:
+  (1) intake read as a first-year tax engagement ("first layer" = "first year", Form
+  1120) and drafted on the letter template with the firm's default 1120 rate; (2) plus
+  a one-time onboarding fee for cleanup of the 2026 books, start October 1; (3) made
+  bilingual — a full Russian courtesy translation of the letter on the tool's styles,
+  English governing; (4) the return fee corrected twice by dictation (the calculator's
+  default was wrong ⚠️ — see Outstanding); (5) then the frame correction: **not a tax
+  engagement — a monthly engagement from October 1** at the corrected monthly figure,
+  with the cleanup as a one-time service. Rebuilt on the monthly-proposal template
+  (bilingual mode native), the onboarding card de-optionalized post-render, cover date
+  fixed (ISO input) and the "e" email prefix stripped per Julia's standing preference.
+  Owner Dmitrii Gridin, Yerevan (address held out of the repo). Delivered as PDF + one
+  private artifact (same link across all versions)
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- **Julia to confirm:** "first year" reading; the 1120 preparation fee (default rate
-  used); whether Form 5472 joins the scope (its own line/fee); the signer's title;
-  TY2026 vs a different first year
+- **Julia to confirm:** whether Form 5472 joins the annual filings (foreign owner —
+  see §5 lead flag); the first monthly invoice timing vs the onboarding; ⚠️ whether the
+  pricing calculator's default 1120 rate should be corrected to match the rate she
+  quoted here (a shared-tool change — needs her word, then a rebuild + Hub republish)
 - **Pending:** Sunbiz document number, EIN, suite number, industry, owner's email
 
 ### Information still needed
