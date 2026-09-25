@@ -665,6 +665,17 @@ in that folder.
   request, run an independent review against it first — spawn a review agent, run
   `/code-review`, or rely on the GitHub Action if one is configured — address any
   blocking findings, then merge. Never merge an unreviewed PR.
+  🛑 **AND STOP AT TWO ROUNDS. Lilian's ruling, 2026-09-25: *"me parece que con dos revisiones es
+  suficiente. No tienen que ser diez, doce, ocho."*** ⛔ **Nothing ever configured a number** — a
+  session looped because each round returned findings and "don't merge while a finding stands" has
+  no stopping rule in it, so twelve rounds ran on one PR and the work did not advance. 🔑 **The cap
+  is TWO: the review, and one confirming round on the fixes.** ✅ **If round 2 still finds something,
+  fix ONLY what is blocking in the sense that matters — a wrong figure, a client-data leak, a broken
+  structure — and write everything else into [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) or the working paper
+  as an open item, then MERGE.** ⚠️ **And scope the review to what can actually hurt:** across
+  seventeen rounds on two PRs, **two** findings mattered *(an asset that would have been depreciated
+  twice, and a table row that silently dropped a cell)*; **every other one was prose precision in a
+  working paper.** ⛔ **A review that hunts wording is a review that costs hours and finds nothing.**
   **One deliberate carve-out:** the unattended **weekend Client-Intelligence sweep** merges its own
   work without a review, because Lilian removed that gate for CI on 2026-08-11 and because a
   Routine has no reviewer to wait for. It holds **only** while the run's diff stays inside
