@@ -115,9 +115,9 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Process notes (→ future SOP):** _(pending)_
 
 ### 1099 preparation
-- **Applies?** **Yes** — `1099 Preparation` ✓, and the firm has done it before: `Zakom Incorporated - 1099 Preparation 2024.pdf` and `… 2025.pdf` are in Double, with recipient copies filed by year
+- **Applies?** **Yes** — `1099 Preparation` ✓, and the firm has done it before: `Zakom Incorporated - 1099 Preparation 2024.pdf` and `… 2025.pdf` are in Double, and the forms themselves are filed by year under the firm's own `1099` folder. ⚠️ **The migrated folder named for 2025 recipient copies is EMPTY** — do not cite it as evidence either way. ⛔ **And the file named for the year's *1099 preparation* is NOT a vendor list: it is the firm's request letter to the client, and names no vendor** *(read 2026-09-25)*
 - **What & when:** the firm prepares the 1099s; the recipients are the company's drivers
-- **Process notes (→ future SOP):** the client answered **yes** to making 1099-MISC payments and **yes** that they were filed, but then wrote on the same organizer that **some payees had no corporate name and he can supply names and addresses** — so more may be owed than were issued. That contradiction is open (§6)
+- **Process notes (→ future SOP):** the client answered **yes** to making 1099-MISC payments and **yes** that they were filed, but then wrote on the same organizer that **some payees had no corporate name and he can supply names and addresses** — so more may be owed than were issued. ✅ **RESOLVED 2026-09-25 FOR THE SIX DRIVERS (§6 log): five have a 2025 form on file, the sixth is the only entry recorded under a person's name rather than a company's, and his two organizer answers were never in conflict.** ⚠️ **STILL OPEN for payees who are NOT on the driver list** — the payments to named individuals through a cash-transfer app (§6). ⛔ **And "a copy on file" is not the same as "transmitted"** — no transmittal or acknowledgement has been seen
 
 ## 5. Key facts & quirks
 
@@ -262,6 +262,31 @@ A running, dated record as we build this profile.
 - 🔴 **THE CARD RECONCILIATION IS COMPLETE — every bank debit matched, one by one, and the three buckets sum to the bank's own total exactly.** *(2026-09-15)* **Thirty-nine payments left the company's account captioned as card payments; NINETEEN of them are on the card, every one clearing one to four days after the card recorded it. TWO more are still in transit at year end. The remaining EIGHTEEN never reached this card at all** — a little over a third of everything paid out under that caption. ✅ **This is a line-by-line match, not an estimate — and the check that earns that is the CARD side: the card's own statements record twenty payments, nineteen of them match a bank debit, and the one left over is a single payment that arrived with no bank debit behind it.** ⚠️ **The three buckets adding up to the bank's total is NOT the check — they partition the same debits by construction, so that sum holds however the matching falls.** *(This file's own lesson, a few bullets above: when two of your own numbers agree, check whether they COULD have disagreed.)* ⚠️ **And one piece is an assumption rather than a measurement: two December debits are taken to post in the following cycle, and only one of them is corroborated.** 🔑 **And the eighteen have two clean shapes: NINE small, roughly monthly amounts — the signature of a second card's minimum payment — and NINE large round paydowns.** ⛔ **Nothing identifies whose second card, and the firm does not guess.** ⚠️ **One item runs the other way: a payment reached the company's card from a source that is NOT the company's bank account, so this is not a closed system in either direction.**
 - 🔑 **AND THE READ NEEDED NOTHING FROM THE CLIENT.** **The bank statements were already on file and readable; the firm had simply never extracted the individual payments from them.** ⚠️ **The lesson is worth more than the finding: before asking a client for anything, check whether the answer is inside a document already held — and "already read" is not the same as "everything in it has been extracted."**
 
+- _(2026-09-25)_ — **THE 1099 QUESTION IS ANSWERED FROM OUR OWN RECORDS, AND THE ORGANIZER'S CONTRADICTION DISSOLVES.**
+  The firm prepares this client's 1099s, and Double holds them by year. **Five of the six drivers on
+  the client's own 2025 driver list have a 2025 Form 1099-NEC on file; one does not** — and that one
+  is the only driver recorded under a person's name rather than a company's, while all five filed
+  forms are companies. ✅ **That is exactly what the client wrote on his organizer** *("there are some
+  people who didn't have a corp name — I can provide names and addresses")*, so his two answers were
+  never in conflict. ☑️ **What remains is the firm's: decide whether that sixth driver is owed a 2025
+  form and prepare it.** ⚠️ **It does not change the company's deduction** — the driver payments are
+  deductible either way; a missing information return is a separate exposure, and whether to raise it
+  with the signer is the reviewer's call. 🔑 **Nothing was asked of the client to establish any of
+  this.**
+- _(2026-09-25)_ — **AND A FILE THE PAPER HAD MISREAD.** The document named as the year's *1099
+  preparation* is **not a vendor list** — it is **the firm's request letter to the client**, asking him
+  to supply what the forms need. It names no vendor, so it could never have answered who was filed
+  for. **What answers that is which folder each form sits in.**
+- _(2026-09-25 — the principal's rulings, recorded because they change the work)_ — **The missed
+  deadline is accepted and the aim is to finish before October**, since the late-filing penalty runs
+  per month. **The owner's second vehicle is treated as disposed of** on the strength of his own
+  passing note, which she read as clear. **A consumer loan document uploaded to the company's folder
+  is the shareholder's WIFE's** and belongs to their personal return, not this one — that open
+  question closes. **Unreadable documents from years we are not filing are stood down**, unless a
+  specific question needs them. **Officer compensation is deliberately deferred** until every other
+  figure exists. 🛑 **And nothing is asked of the client for now** — the firm settles what it can by
+  itself first.
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
@@ -324,37 +349,12 @@ it here; these never go into the client SOP.
 - [ ] The digital-asset question (required, unanswered)
 - [ ] Corrected shareholder-count answer
 - [ ] Which tax year `2025 7004 EXT.pdf` actually extends
-- [ ] Whether `2024 ZAKOMINCORPORATED.pdf` in `1099 > 2024` is the filed 2024 return, and refiling it under `Tax Return Filed > 2024`
+- [x] ✅ **CLOSED — it WAS the filed 2024 return, and Lilian moved it to `Tax Return Filed > 2024` on 2026-09-13** *(§5 records the move; a listing of `1099 > 2024` on 2026-09-25 shows only 1099 forms, confirming it is gone from there)*
 - [ ] ✅ 🆕 **ANSWERED for the Audi — LEASED** *(the contract was read 2026-09-15)*; ⛔ **the Macan is still open**, and it is the one the client labels personal, and business versus personal use
 - [ ] Whether the company really operated in one state only, for interstate trucking
 - [ ] Primary language of correspondence
 - [ ] Fiscal year-end (calendar year assumed, not established)
 - [ ] Sales-tax position — whether the company is registered at all
-
-- _(2026-09-25)_ — **THE 1099 QUESTION IS ANSWERED FROM OUR OWN RECORDS, AND THE ORGANIZER'S CONTRADICTION DISSOLVES.**
-  The firm prepares this client's 1099s, and Double holds them by year. **Five of the six drivers on
-  the client's own 2025 driver list have a 2025 Form 1099-NEC on file; one does not** — and that one
-  is the only driver recorded under a person's name rather than a company's, while all five filed
-  forms are companies. ✅ **That is exactly what the client wrote on his organizer** *("there are some
-  people who didn't have a corp name — I can provide names and addresses")*, so his two answers were
-  never in conflict. ☑️ **What remains is the firm's: decide whether that sixth driver is owed a 2025
-  form and prepare it.** ⚠️ **It does not change the company's deduction** — the driver payments are
-  deductible either way; a missing information return is a separate exposure, and whether to raise it
-  with the signer is the reviewer's call. 🔑 **Nothing was asked of the client to establish any of
-  this.**
-- _(2026-09-25)_ — **AND A FILE THE PAPER HAD MISREAD.** The document named as the year's *1099
-  preparation* is **not a vendor list** — it is **the firm's request letter to the client**, asking him
-  to supply what the forms need. It names no vendor, so it could never have answered who was filed
-  for. **What answers that is which folder each form sits in.**
-- _(2026-09-25 — the principal's rulings, recorded because they change the work)_ — **The missed
-  deadline is accepted and the aim is to finish before October**, since the late-filing penalty runs
-  per month. **The owner's second vehicle is treated as disposed of** on the strength of his own
-  passing note, which she read as clear. **A consumer loan document uploaded to the company's folder
-  is the shareholder's WIFE's** and belongs to their personal return, not this one — that open
-  question closes. **Unreadable documents from years we are not filing are stood down**, unless a
-  specific question needs them. **Officer compensation is deliberately deferred** until every other
-  figure exists. 🛑 **And nothing is asked of the client for now** — the firm settles what it can by
-  itself first.
 
 ## 7. Links
 
