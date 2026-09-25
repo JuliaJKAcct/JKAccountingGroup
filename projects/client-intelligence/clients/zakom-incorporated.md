@@ -271,9 +271,11 @@ A running, dated record as we build this profile.
   contract numbers.** ☑️ **So the fourth letter is a fourth contract**, the blocker that had suspended the
   whole interest line since 2026-09-15 is closed, and both totals are established *(they live in the
   return's working paper, never here)*. 🔴 **One thing is recorded rather than smoothed away: four
-  contracts show only THREE payment streams in the bank account.** ⛔ **Three readings, none picked** — one
-  debit paying two contracts, payments from one of the company's four other accounts at the same bank, or a
-  parse that missed a stream. **It does not move either figure**, because the lender's letter is the
+  contracts show only THREE payment streams in the bank account.** ⛔ **FOUR readings, none picked** — one
+  debit paying two contracts, payments from one of the company's four other accounts at the same bank, a
+  parse that missed a stream, **or it was paid on a card or by the owner personally** — ⚠️ **which Lilian's
+  own personal-card ruling the same day makes live, and which is the only one of the four with a free
+  in-house test, since the company card's twelve statements are already read.** **It does not move either figure**, because the lender's letter is the
   authority; it is an understanding gap, not a keying one. ☑️ **And the route to naming which contract
   finances which vehicle is now known: every one of the four letters points at its own
   `Loan and Security Agreement`, which describes the collateral, and several of those contracts are already
@@ -284,10 +286,13 @@ A running, dated record as we build this profile.
   the client uses a different series, and mapping one onto the other is still an open item. ⛔ **The software's own serial
   field is EMPTY on the asset whose detail is visible**, so the prior year offers a unit-number convention to
   follow and **no VIN mapping to inherit.** ⚠️ **Which means the two same-year, same-make, same-model trucks
-  this client owns are still separable only by VIN, and the prior year does not help.** 🔴 **And one unit the
-  client names on a loan document is NOT among the prior year's eight assets at all** — the ordinary reading
-  is that it was acquired in the year under review, **marked as a reading; the loan agreement dates the
-  purchase and would settle it.** — Lilian
+  this client owns are still separable only by VIN, and the prior year does not help.** ✅ 🆕 **AND THE UNIT THE CLIENT NAMES ON A LOAN DOCUMENT *IS* ON THE PRIOR YEAR'S SCHEDULE — corrected
+  the same day.** It is the **2022 truck, in service September 2024**, identified **on the lender letter's own
+  FIGURES** *(not on its filename)*, and it is one of the prior year's eight assets. ⛔ **WITHDRAWN:** *"one
+  unit the client names on a loan document is NOT among the prior year's eight assets at all — the ordinary
+  reading is that it was acquired in the year under review."* 🛑 **That reading would have put an asset
+  already being depreciated into the current year's additions a SECOND time**, and it rested on a name list
+  that could not carry it: **only three of the eight asset names hold a unit number at all.** — Lilian
 - _(2026-09-25, later)_ — **FOUR STANDING RULINGS FROM LILIAN THAT CHANGE HOW THIS RETURN IS BUILT — and one of them closes a branch instead of opening one.**
   ① 🔑 **BUSINESS SPENDING ON THE OWNER'S PERSONAL CARD IS ASSUMED NOT TO EXIST.** *"El cliente sabe que
   no somos sus contadores y que toda la información que no sé es como si no existiera… si el cliente hizo
