@@ -286,9 +286,10 @@ A running, dated record as we build this profile.
   and the forms on file are what carry the finding.**
   ✅ **That is exactly what the client wrote on his organizer** *("there are some
   people who didn't have a corp name — I can provide names and addresses")*, so his two answers were
-  never in conflict. ☑️ **What remains is the firm's, and it is TWO things: decide whether that sixth
-  driver is owed a 2025 form and prepare it, and establish whether the five on file were ever
-  transmitted.** ⚠️ **And the question is NOT closed: payments to named individuals through a
+  never in conflict. ☑️ **TWO THINGS TO DO ON THE DRIVER QUESTION, both the firm's: decide whether that
+  sixth driver is owed a 2025 form and prepare it, and establish whether the five on file were ever
+  transmitted.** ⚠️ **That "two" counts the DRIVER question only — the cash-transfer-app payees named below
+  are a further open item and are also ours.** ⚠️ **And the question is NOT closed: payments to named individuals through a
   cash-transfer app are a second population that may be 1099-reportable — still open, and still an
   in-house search.** ⛔ **Nor is "a copy on file" the same as "transmitted"** — no transmittal or
   acknowledgement has been seen, and prepared-but-never-sent would be five exposures rather than one. ⚠️ **It does not change the company's deduction** — the driver payments are
