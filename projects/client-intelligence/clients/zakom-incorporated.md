@@ -284,7 +284,9 @@ A running, dated record as we build this profile.
 - _(2026-09-25 — the principal's rulings, recorded because they change the work)_ — **The missed
   deadline is accepted and the aim is to finish before October**, since the late-filing penalty runs
   per month. **The owner's second vehicle is treated as disposed of** on the strength of his own
-  passing note, which she read as clear. **A consumer loan document uploaded to the company's folder NAMES the
+  passing note, which she read as clear. ⚠️ **What stays unconfirmed is the IDENTIFICATION — that the
+  depreciation schedule's entry and the vehicle in his note are the same one — and that is what gates
+  removing the row.** **A consumer loan document uploaded to the company's folder NAMES the
   shareholder's WIFE** — ✅ **that she is his wife is established.** ⚠️ **That the document is therefore
   personal and was uploaded by mistake is her reading, prefaced *"probablemente"* twice, and an
   unextracted co-borrower field leaves open that the shareholder is himself on the note.** ☑️ **So the
@@ -313,7 +315,7 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- 🛑 **THE EXTENSION AND THE DEADLINE** — the 1120-S was due 2026-03-16, extended **2026-09-15**; Double's project shows the wrong date and the 7004 in Double is an unreadable scan. **Nothing else matters until this is settled.**
+- 🛑 **THE EXTENSION AND THE DEADLINE** — the 1120-S was due 2026-03-16, extended **2026-09-15**; Double's project shows the wrong date and the 7004 in Double is an unreadable scan. **Nothing else matters until this is settled — ✅ 🆕 **SUPERSEDED 2026-09-25: the date PASSED and Lilian accepted it; the aim is now to finish before October, since the late-filing penalty runs per month**.**
 - 🔴 **The balance sheet has to be rebuilt** — `#REF!` errors, zero fixed assets, no equity. This is the gate on the return, and it is bookkeeping work nobody has scoped.
 - 🔴 **Reasonable compensation for 2025** — no W-2, no officer compensation, a full year of operations. Julia's call.
 - 🔴 **The home office on an S corporation** — accountable-plan reimbursement, rent to the shareholder, or out. Julia's call.
@@ -331,7 +333,7 @@ it here; these never go into the client SOP.
 ⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**
 
 - [x] **Which account the 2025 "stmnt" files belong to** — **Fifth Third Bank business checking (`5/3 BUS ELITE CKG`)**, established 2026-09-13 by opening January through the redactor; the two January copies are the same document. ✅ All twelve opened 2026-09-13; complete and consecutive
-- [ ] 🛑 **THE EXTENSION — is the 7004 for 2025, was it accepted, and what is the real due date?** The copy in Double is an unreadable scan. **This gates everything**
+- [ ] 🛑 **THE EXTENSION — is the 7004 for 2025, was it accepted, and what is the real due date?** The copy in Double is an unreadable scan. **This gates everything — ✅ 🆕 **SUPERSEDED 2026-09-25: the date PASSED and Lilian accepted it; the aim is now to finish before October, since the late-filing penalty runs per month****
 - [ ] 🔴 **The balance sheet has to be rebuilt** — the `#REF!` errors, the zero fixed assets, the absent equity
 - [ ] 🔴 **Split the equipment line into principal and interest** against the finance schedules
 - [ ] 🔴 **The home-office position on an S corporation** — Julia rules: accountable-plan reimbursement, rent to the shareholder, or out
