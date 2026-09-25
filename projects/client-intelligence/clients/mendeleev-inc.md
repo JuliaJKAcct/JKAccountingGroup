@@ -121,6 +121,12 @@ the actual details.
   one-time onboarding fee for cleanup of the 2026 books, start October 1. Delivered as
   PDF + private artifact. Open flags: the 5472 question, the default 1120 fee, the
   signer's title (blank), TY2026 assumption
+- 2026-09-25 (same session) — **Made bilingual at Julia's request ("In Russian and
+  English"):** the letter tool is English-only, so a full Russian courtesy translation
+  of the letter body was composed on the tool's own styles and placed FIRST, banner-marked
+  "для ознакомления" with English governing and the signature only in the English part
+  (the house bilingual convention). System words and form names stay in English inside
+  the Russian text. Redelivered as an 18-page PDF + the same artifact
 
 ### Outstanding items (CI-only — never in the SOP)
 
