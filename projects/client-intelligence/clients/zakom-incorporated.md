@@ -303,9 +303,10 @@ A running, dated record as we build this profile.
 - _(2026-09-25, later)_ — **AND ONE ATTRIBUTION IS FLAGGED BECAUSE SHE ASKED WHERE IT CAME FROM.**
   **This file and the working paper both record that the other principal ruled, in August 2025, that the
   owner's car is 100% the company's.** ✅ **What is first-hand and checkable is the FILED RETURN**, which
-  carries that vehicle at full business use with no personal miles. ⚠️ **The quoted ruling itself has NO
-  SOURCE NAMED anywhere** — most likely an email or a call transcript picked up in a sweep and never cited.
-  ⛔ **So rely on the return, and treat the attribution as unsourced until someone names its origin.**
+  carries that vehicle at full business use with no personal miles. ⚠️ **The quoted ruling IS cited — but only to
+  the first Gmail-and-Drive sweep of this client, logged above, which lists it among that sweep's results.**
+  ⛔ **No specific email, thread or date is named, so nobody can go and read it.** ☑️ **So rely on the
+  return, and locate and cite the underlying email before anyone leans on the wording.**
   🔑 **Nothing turns on the difference for this return** — but a ruling attributed to a named person has to
   carry its source, which is this firm's own rule after a session once signed four points with Lilian's name
   when only two were hers. — Lilian
