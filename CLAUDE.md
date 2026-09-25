@@ -665,8 +665,13 @@ in that folder.
   request, run an independent review against it first — spawn a review agent, run
   `/code-review`, or rely on the GitHub Action if one is configured — address any
   blocking findings, then merge. Never merge an unreviewed PR.
-  🛑 **AND STOP AT TWO ROUNDS. Lilian's ruling, 2026-09-25: *"me parece que con dos revisiones es
-  suficiente. No tienen que ser diez, doce, ocho."*** ⛔ **Nothing ever configured a number** — a
+  🛑 **AND STOP AT TWO ROUNDS. Lilian, 2026-09-25, in her words:** *"Me parece que 12 revisiones son en
+  exceso, innecesarias… ¿No hay una manera de que lleguemos a un punto medio en cuanto a las cantidades de
+  revisiones? Pienso que tal vez con dos revisiones es suficiente. No tienen que ser diez, doce, ocho."*
+  ⚠️ **Read the hedge honestly: *"pienso que tal vez"* is a proposal, and she asked for a MIDDLE GROUND
+  rather than dictating a number** — **what is unhedged is *"no tienen que ser diez, doce, ocho"*, and that
+  is the part this rule rests on. The cap of two is the firm ADOPTING her proposal, and she can move it.**
+  ⛔ **Nothing ever configured a number** — a
   session looped because each round returned findings and "don't merge while a finding stands" has
   no stopping rule in it, so twelve rounds ran on one PR and the work did not advance. 🔑 **The cap
   is TWO: the review, and one confirming round on the fixes.** ✅ **If round 2 still finds something,

@@ -23,10 +23,12 @@ claude-session-*.txt
 # matches none of the three, and `git check-ignore` said so only because someone thought to ask.
 # A spreadsheet in this repo is a client's figures until proven otherwise, so the DEFAULT is now to
 # ignore every one and un-ignore the firm's own templates by name.
-*.xlsx
-*.xls
-*.xlsm
-*.csv
+# Case-insensitive on purpose: git patterns are case-sensitive on Linux, and export dialogs
+# DO produce `.XLSX` and `.CSV`. A fail-closed rule that an uppercase extension walks through
+# is not fail-closed. (The three original patterns had the same hole.)
+*.[xX][lL][sS]
+*.[xX][lL][sS][xXmMbB]
+*.[cC][sS][vV]
 # ...and the firm's own templates, which carry no client data:
 !projects/sops/assets/S-Corp-COA-master.xlsx
 # (the three original patterns, kept so the intent is still readable)
