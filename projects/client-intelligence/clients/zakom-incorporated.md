@@ -166,7 +166,7 @@ watch-outs, one-off arrangements, history that affects the work.
 - 🟠 **2025 has disposals, a casualty and personal vehicles moving through the business.** A truck was **totalled and settled by insurance** *(a Form 4797 disposition, possibly a §1033 involuntary conversion — nothing about it is in the P&L)*; three more units were sold; a **personal car the client labels as such** was bought and another **sold with the proceeds wired into the business account**; a car was traded in; and a **loan from another company was borrowed and repaid inside the year**. None of it reaches the equity section, which is empty.
 - **The owner has a second, personal client record** — `Oleg Zakala & Milana Podrugina` (Double `710652`). A document uploaded to the company's organizer on 2026-09-13, `MilanaPodrugina-LoanDocs.pdf`, **names his wife.** ⚠️ 🆕 **Corrected 2026-09-25: that it therefore belongs to the personal side rather than the company return is a READING, hedged twice when it was given, and an unextracted co-borrower field leaves open that the shareholder is himself on the note.** ☑️ **Downgraded, not settled.**
 - **Method of accounting is unsettled:** the client answered **"Not sure"**. Read it off the prior-year return rather than asking him again.
-- **Vehicles — and one ruling already on record.** The 2025 uploads carry an Audi Q6 **lease** and Porsche Macan financing, and the client answered **"yes"** to purchasing an alternative-fuel vehicle. 🔑 **Julia ruled in Aug 2025 that the 2021 Audi is 100% in use for Zakom Incorporated**, which is why she refused car usage on his personal real-estate 1099; the client confirmed he *"never accounted personal vehicle under Zakom operation in 2024"* and gave the Audi's mileage at 12/31/24. Whether the 2025 Audi Q6 replaces that vehicle, and leased vs purchased, is not established.
+- **Vehicles — and one ruling already on record.** The 2025 uploads carry an Audi Q6 **lease** and Porsche Macan financing, and the client answered **"yes"** to purchasing an alternative-fuel vehicle. 🔑 **Julia ruled in Aug 2025 that the 2021 Audi is 100% in use for Zakom Incorporated** ⚠️ 🆕 *(cited only to the 2026-09-13 sweep below, with no message named; what is first-hand is the filed return, which carries the vehicle at full business use with no personal miles)*, which is why she refused car usage on his personal real-estate 1099; the client confirmed he *"never accounted personal vehicle under Zakom operation in 2024"* and gave the Audi's mileage at 12/31/24. Whether the 2025 Audi Q6 replaces that vehicle, and leased vs purchased, is not established.
 - **§179 was used before:** the firm took section 179 on the equipment purchased in 2022, and the equipment is financed with the figures taken from the annual amortisation schedule (the client, Aug 2025). Relevant to how 2025's truck and trailer additions are treated.
 
 - 🔴 **THE PRIOR YEAR DID NOT REPORT ZERO OWNER DISTRIBUTIONS — and how that figure was built is NOT recoverable from any document the firm holds.** The K-1 reported a distribution; the balance sheet reported a **smaller** amount in the equity reconciliation, and the difference was parked as **negative additional paid-in capital**. ⚠️ **Re-reading the return on 2026-09-14 CORROBORATED something that had been an open inference — and a first draft of this bullet called it PROVEN, which it is not.** That negative paid-in-capital line reads as nil at the start of the year and appears at the end in **exactly** the amount of the excess, and **both balance-sheet columns tie to their own reported totals to the dollar** — ⛔ **but that arithmetic constrains only the SUM of the two equity lines, not which of them moved; the opposite assignment balances identically.** ✅ **What does point at the split is the equity reconciliation's own opening and closing figures, whose shape matches the retained-earnings column.** ⛔ **What is still NOT established is the INTENT** — the movement may be described; what the preparer meant by it may not. 🔑 **And the distribution figure itself has no derivation anywhere:** the return's own attached statement says only *"Cash"* and one number, with no breakdown. ⚠️ **The obvious candidate is NOT eliminated, and a first draft of this bullet said it was.** The year's card CHARGES are nowhere near it — ⛔ **but the residual theory is built from what left the BANK, and the PAYMENTS to that card reach within about a tenth of the figure in only two-thirds of the year.** ⚠️ **That payment figure is approximate in both directions, with a downward bias.** ⛔ **It cannot be called "the closest candidate" either — it is the ONLY prior-year counterparty this firm has ever totalled. The rest are counted, never summed, and one very large flow has never been measured for that year at all.** **The bank statements cannot close it either: four of the twelve months are still unreadable** because the firm's redaction tool refuses them on a false positive, and eight months cannot settle a twelve-month figure. ⓘ **The likely method, marked as reasoning rather than fact: a preparer with no books derives the owner's draw as a RESIDUAL** — total cash out, less the uses identified as the company's. **Two things support it.** It is exactly the construction Lilian described on 2026-09-14 for building this client's balance sheet from scratch; and **a residual cannot know about the equity account it is supposed to fit inside**, which is consistent with the figure overshooting it. ⛔ **What the preparer actually DID with the excess still may not be stated — the firm's own rule releases that only when Lilian is asked, and nobody has asked.** 🛑 **The consequence for the current year is the uncomfortable one: if the same method is used, the account-inventory ruling makes the owner's draw BIGGER, because every payment to a non-company card and every transfer to a non-company account is now an unidentified use of company cash — which is what a residual sweeps up.**
@@ -280,7 +280,8 @@ A running, dated record as we build this profile.
   in the client's own uploads.** — Lilian
 - _(2026-09-25, later)_ — **HOW THE PRIOR YEAR IDENTIFIED THE VEHICLES: A UNIT NUMBER INSIDE THE ASSET NAME — NOT A VIN.**
   **Lilian sent the tax software's asset screen for the prior-year return.** ✅ **It carries eight assets, and
-  three of them have the client's unit number written into the asset's NAME.** ⛔ **The software's own serial
+  three of them have A UNIT NUMBER written into the asset's NAME.** ⚠️ **NOT the client's own numbering** —
+  the client uses a different series, and mapping one onto the other is still an open item. ⛔ **The software's own serial
   field is EMPTY on the asset whose detail is visible**, so the prior year offers a unit-number convention to
   follow and **no VIN mapping to inherit.** ⚠️ **Which means the two same-year, same-make, same-model trucks
   this client owns are still separable only by VIN, and the prior year does not help.** 🔴 **And one unit the
@@ -308,7 +309,7 @@ A running, dated record as we build this profile.
   🔑 **Nothing turns on the difference for this return** — but a ruling attributed to a named person has to
   carry its source, which is this firm's own rule after a session once signed four points with Lilian's name
   when only two were hers. — Lilian
-- _(2026-09-25)_ — **WHICH DRIVERS HAVE A 1099 IS ANSWERED FROM OUR OWN RECORDS — WHETHER ANY WAS TRANSMITTED IS NOT, AND THE QUESTION STAYS OPEN FOR EVERYONE ELSE.**
+- _(2026-09-25)_ — **WHICH DRIVERS HAVE A 1099 IS ANSWERED FROM OUR OWN RECORDS — ✅ AND LATER THE SAME DAY, SO IS WHETHER THEY WERE TRANSMITTED. THE QUESTION STAYS OPEN FOR EVERYONE ELSE.**
   The firm prepares this client's 1099s, and Double holds them by year. **Five of the six drivers on
   the client's own 2025 driver list have a 2025 Form 1099-NEC on file; one does not** — and **because he has NO 2025
   FORM AT ALL, the 2025 forms give the firm no corporate name for that sixth driver.** ⛔ **An earlier wording
@@ -331,13 +332,18 @@ A running, dated record as we build this profile.
   and the forms on file are what carry the finding.**
   ✅ **That is exactly what the client wrote on his organizer** *("there are some
   people who didn't have a corp name — I can provide names and addresses")*, so his two answers were
-  never in conflict. ☑️ **TWO THINGS TO DO ON THE DRIVER QUESTION, both the firm's: decide whether that
-  sixth driver is owed a 2025 form and prepare it, and establish whether the five on file were ever
-  transmitted.** ⚠️ **That "two" counts the DRIVER question only — the cash-transfer-app payees referred to below
-  are a further open item and are also ours.** ⚠️ **And the question is NOT closed: payments to named individuals through a
-  cash-transfer app are a second population that may be 1099-reportable — still open, and still an
-  in-house search.** ⛔ **Nor is "a copy on file" the same as "transmitted"** — no transmittal or
-  acknowledgement has been seen, and prepared-but-never-sent would be five exposures rather than one. ⚠️ **It does not change the company's deduction** — the driver payments are
+  never in conflict. ✅ 🆕 **AND LATER THE SAME DAY LILIAN CLOSED BOTH OF THE DRIVER QUESTION'S
+  REMAINING ITEMS.** ① **The five on file WERE transmitted** — the firm does not create these forms and
+  archive them; they are created and filed automatically. ② **The sixth gets NO form** — the firm does not
+  issue one late to a payee who was not issued one at the time; what is owed instead is his identity and, if
+  establishable, the amount, for the other principal. ⛔ **So the driver question is CLOSED IN FULL**, and
+  ⚠️ **only ONE 1099 item is left and it is ours: payments to named individuals through a cash-transfer app,
+  a second population that may be reportable — an in-house search, nothing asked of the client.**
+  ⛔ **WITHDRAWN:** *"two things to do on the driver question — decide whether that sixth driver is owed a
+  form, and establish whether the five were ever transmitted… nor is 'a copy on file' the same as
+  'transmitted': no transmittal or acknowledgement has been seen, and prepared-but-never-sent would be five
+  exposures rather than one."* ⚠️ **That last sentence was a session's inference about a firm practice only
+  a principal could state.** ⚠️ **It does not change the company's deduction** — the driver payments are
   deductible either way; a missing information return is a separate exposure, and whether to raise it
   with the signer is the reviewer's call. 🔑 **Nothing was asked of the client to establish any of
   this.**
@@ -347,7 +353,7 @@ A running, dated record as we build this profile.
   for. **What answers that is which folder each form sits in.**
 - _(2026-09-25 — the principal's rulings, recorded because they change the work)_ — **The missed
   deadline is accepted and the aim is to finish before October**, since the late-filing penalty runs
-  per month. **The `AUDI` on the 2024 depreciation schedule is treated as disposed of** ⚠️ *(not "the owner's" — it sits on the company's own Form 4562 at 100% business use, ruled 100% the company's by the other principal in August 2025)*, on the strength of his own
+  per month. **The `AUDI` on the 2024 depreciation schedule is treated as disposed of** ⚠️ *(not "the owner's" — it sits on the company's own Form 4562 at 100% business use, ruled 100% the company's by the other principal in August 2025 — ⚠️ an attribution cited only to a sweep; the filed return is the first-hand part)*, on the strength of his own
   passing note, which she read as clear. ⚠️ **What stays unconfirmed is the IDENTIFICATION — that the
   depreciation schedule's entry and the vehicle in his note are the same one — and that is what gates
   removing the row.** **A consumer loan document uploaded to the company's folder NAMES the
