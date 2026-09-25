@@ -300,10 +300,51 @@ EIN = re.compile(
 # text layer produces from a form's separate boxes.
 SSN = re.compile(r"(?<!\d)\d{3}[-\s.]\d{2}[-\s.]\d{4}(?!\d)")
 
-# The same shape with ANY run of separators. A form's boxes can extract with
-# several spaces between them, and a column of figures can collide with it, so
-# this is too loose to mask on blindly — but see SSN_LABELLED and GUARD below.
-SSN_LOOSE = re.compile(r"(?<!\d)\d{3}[-\s.]{1,10}\d{2}[-\s.]{1,10}\d{4}(?!\d)")
+# The same shape with ANY run of separators ON ONE LINE. A form's boxes can
+# extract with several spaces between them, and a column of figures can collide
+# with it, so this is too loose to mask on blindly — but see SSN_LABELLED and
+# GUARD below.
+#
+# 🛑 The separator class is `[-\t .]`, NOT `[-\s.]`, and the difference is the
+# whole of a false alarm this cost an afternoon (2026-09-24, Melnyk's finished
+# 1040). With `\s` the run may span a NEWLINE, and then the three groups are on
+# two different visual lines of a layout extraction — which makes them, BY
+# CONSTRUCTION, different values. What triggered it was Schedule 8812 Part II-B:
+# an amount ending one line, then the next line's number gutter and the literal
+# "1040" of "1040 and 1040-SR filers". Shape `NNN\n NN       NNNN`. Nothing was
+# wrong with the document and nothing was wrong with refusing — the pattern was.
+# ⚠️ A real SSN still cannot slip through here: on a layout extraction it is one
+# field on one line, wide spacing included, and that is exactly what this still
+# catches. Everything the wider pattern below matches and this one does not is
+# MASKED and REPORTED, so the narrowing is never silent.
+SSN_LOOSE = re.compile(r"(?<!\d)\d{3}[-\t .]{1,10}\d{2}[-\t .]{1,10}\d{4}(?!\d)")
+
+# The same shape with ANY whitespace between the groups, not just a space or a
+# tab. 🛑 THE DIFFERENCE BETWEEN THE TWO PATTERNS IS THE SET THAT GETS MASKED —
+# and it is wider than "broken by a newline", which is what an earlier version
+# tested for. A run separated by \r, \v, \f, U+0085, U+2028, U+2029 or
+# \x1c-\x1f fell between the two and reached disk. Never compare against \n;
+# compare against SSN_LOOSE itself.
+SSN_CROSS_LINE = re.compile(
+    r"(?<!\d)\d{3}[-\s.]{1,10}\d{2}[-\s.]{1,10}\d{4}(?!\d)")
+
+# ⓘ HISTORY, kept because three attempts were made and two of them leaked.
+#    There is no label vocabulary here any more and there is no geometric test.
+#    A cross-line run is simply MASKED. What was tried and why it failed:
+#      1. narrow the guard's separators to one line - silently PASSED a split
+#         SSN, which is how a 1040 prints a label above its value;
+#      2. refuse a cross-line run when an SSN/ITIN/TIN label sits within 160
+#         characters before it - measured on this firm's own 29-page 1040,
+#         32 of its 33 SSN sites have their nearest label FURTHER away than
+#         that and 14 have none within 400, because continuation-page headers
+#         print the number with no caption at all;
+#      3. add "a wide column gap after the break" as evidence of a table
+#         gutter - defeated by `123-45-\n     6789` (a trailing hyphen cannot
+#         be a gutter), by a three-line split where a wide SECOND gap excused
+#         a narrow first one, and by any unlabelled SSN padded with 5 spaces.
+#    The lesson is in the shape of the problem, not in the patterns: the two
+#    cases are not distinguishable from the text alone, so the tool stops
+#    guessing and pays the over-masking cost instead.
 
 # Loose shape, but only where the page says what it is. This is what catches a
 # real SSN that extracted with wide spacing, without eating a table of amounts.
@@ -396,7 +437,7 @@ def redact(text: str) -> tuple[str, dict]:
     text = normalise(text)
     counts: dict = {"ssn_itin": 0, "long_digits": 0, "dob": 0, "licence": 0,
                     "account": 0, "street": 0, "ein_kept": 0, "glyph": 0,
-                    "leaks": []}
+                    "leaks": [], "cross_line": []}
 
     # Undecodable glyph names go FIRST, before any other rule can see them. They
     # are unreadable by construction, so they are masked rather than judged —
@@ -486,6 +527,55 @@ def redact(text: str) -> tuple[str, dict]:
     #   already. **Its silence is not evidence of anything** — do not read a
     #   clean guard as confirmation that the digit rules ran.
     counts["leaks"] = SSN_LOOSE.findall(text) + LONG_DIGITS.findall(text)
+
+    # Same shape, broken by a newline. USUALLY a table gutter - but not always,
+    # and the difference is whether the page SAYS what the digits are.
+    #
+    # 🛑 The narrowing that let these through was nearly a leak. On a layout
+    #    extraction a label routinely sits on its OWN line above its value:
+    #        Your social security number
+    #        123 45
+    #           6789
+    #    SSN_LABELLED cannot reach it (its gap is `[^\n\d]{0,40}`, which stops at
+    #    a newline) and SSN allows only one separator per gap. Before the
+    #    narrowing, SSN_LOOSE caught it and the job REFUSED to write.
+    #
+    # 🛑 TWO LATER ATTEMPTS TO TELL THE TWO CASES APART BOTH LEAKED, and the
+    #    second one is why this rule no longer tries.
+    #      · gate on a label within 160 characters before the run - defeated:
+    #        of the 33 SSN sites in this firm's own 29-page 1040, 32 have their
+    #        nearest label further away than that and 14 have none within 400.
+    #        Continuation-page headers print the number with no caption at all.
+    #      · add "a wide column gap after the break" as positive evidence of a
+    #        gutter - defeated by `123-45-\n     6789` (a trailing hyphen cannot
+    #        be a gutter), by a three-line split where a wide SECOND gap excuses
+    #        a narrow first one, and by any unlabelled SSN padded with 5 spaces.
+    #
+    # ✅ SO THE RUN IS MASKED, NOT PASSED AND NOT REFUSED. Masking a column of
+    #    figures costs three numbers out of a redacted working copy, which the
+    #    report names and a human can check against the PDF in seconds. Passing
+    #    an SSN costs an SSN. This file's own doctrine settles which way to err:
+    #    "A false alarm here is cheap ... A miss is not recoverable."
+    #    The job still completes, so a legitimate gutter never blocks the work.
+    for m in SSN_CROSS_LINE.finditer(text):
+        run = m.group(0)
+        # 🛑 THE TEST IS "SSN_LOOSE DID NOT ALREADY SEE THIS", NOT "there is a
+        #    newline in it". Those are not the same set, and the difference was
+        #    a leak: SSN_LOOSE's separators are `[-\t .]` while this pattern's
+        #    are `[-\s.]`, so a run broken by \r, \v, \f, U+0085, U+2028,
+        #    U+2029 or \x1c-\x1f matched HERE (keeping it out of the guard) and
+        #    failed a `"\n" in run` test (keeping it out of the mask) - and nine
+        #    digits went to disk with exit 0 and "0 masked". A font's ToUnicode
+        #    map emitting one of those is exactly what normalise() exists for.
+        if not SSN_LOOSE.fullmatch(run):
+            counts["cross_line"].append(run)
+    if counts["cross_line"]:
+        def _cross(m: re.Match) -> str:
+            run = m.group(0)
+            if SSN_LOOSE.fullmatch(run):
+                return run                      # one-line: the digit rules had it
+            return f"[{tag_ssn(re.sub(r'[^0-9]+', ' ', run))}]"
+        text = SSN_CROSS_LINE.sub(_cross, text)
 
     text = re.sub(r"\x00EIN(\d+)\x00", lambda m: eins[int(m.group(1))], text)
     return text, counts
@@ -706,6 +796,19 @@ def _run(src: Path, dst: Path) -> int:
     )
     print(f"  kept:   {counts['ein_kept']} EIN (public — Lilian, 2026-08-11)")
     print("  names are NOT masked, by the same ruling.")
+    if counts.get("cross_line"):
+        shapes = sorted({re.sub(r"\d", "N", x).replace("\n", "\\n")
+                         for x in counts["cross_line"]})
+        print(
+            f"  ⚠️  {len(counts['cross_line'])} run(s) matched the SSN shape across a LINE BREAK and were\n"
+            "      MASKED as [SSN-n]. Some of these are NOT identifiers — a column of figures\n"
+            "      collides with the shape when an amount ends one row and the next row's\n"
+            "      number gutter follows. They are masked anyway: two attempts to tell the\n"
+            "      two cases apart both leaked, and losing three numbers out of a working\n"
+            "      copy is cheaper than writing out an SSN. CHECK THESE AGAINST THE PAGE —\n"
+            "      if a figure you need is inside one, read it off the PDF:\n"
+            + "".join(f"        {sh}\n" for sh in shapes[:5])
+        )
     return 0
 
 

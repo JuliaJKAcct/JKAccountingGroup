@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-17 *(the return re-read — nothing keyed since 13 Sep, and the signature-date gap has widened)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(the 2025 return is finished and reproduces line for line; one item open — the mileage, with the client; the employer-coverage question dropped on her instruction)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -791,6 +791,428 @@ set of items the source file had actually confirmed to the full figure now propo
 file's rule sheet to everything it had left unclassified. **The note presents that as expected. It
 does not make the figures wrong — it does say what kind of figures they are.**
 
+### 2026-09-23 — the return was re-read with two Schedule C forms, and one thing the software dropped
+
+🔁 **The return has changed shape since the last read: the one Schedule C became TWO**, one for each
+activity, with all of the revenue on the credit-repair form and none on the catering one. **What he
+owes came down accordingly.**
+
+✅ **The EXPENSE keying is faithful.** Both of his draft profit-and-loss workbooks were traced line
+by line onto the return and every expense reconciles **to the cent** — nothing was mis-typed and
+nothing was invented. ⚠️ **The one line that does NOT tie is the revenue**, and that is deliberate:
+the return takes the information returns as issued, while he proposes a figure that excludes one
+payment and adds another nobody reported. 🔑 **What else is at issue is what was left OUT** — the
+vehicle fuel and repairs on both activities, the credit-repair share of the car insurance, and the
+home-office rent. ⛔ **Nothing on the return says why**, and leaving the vehicle out pending a
+mileage record may well be deliberate.
+🔴 **AND ONE THING WENT IN THAT SHOULD NOT HAVE, which the first read of this return missed:** the
+electricity share of the home office is deducted among the ordinary utilities. **Business use of a
+home may only ever go on its own line**, through one of the two dedicated routes. ⚠️ **Correcting it
+RAISES his tax**, which is exactly why that kind of error survives a read.
+
+🔴 **THE ONE REAL DEFECT IS THE SOFTWARE'S, NOT ANYONE'S JUDGEMENT.** The qualified-business-income
+form now lists only the **catering** activity. **The profitable one is simply absent from it**, so
+the deduction comes out at zero and a business-loss carryforward is pushed into next year that should
+not exist. 🔑 **Before the activities were split, the same form worked.** ⚠️ **The carryforward is the
+half that costs twice** — nobody re-derives one; it is typed across from last year's return.
+
+⚖️ **A ruling of Lilian's is recorded so nobody re-derives it later.** In his workbook he put the car
+policy on a row labelled only *"insurance"*. **She read it as the car policy and moved it out of the
+general-insurance line and into the vehicle line** — which is right, and she annotated both of his
+workbooks to say so. ✅ **His own reconciliation note then corroborates her**: it sets that amount
+inside a table headed with the car, alongside the same splits she reached independently. 🔑 **So the
+ruling rests on the document, not only on a reading of an ambiguous label.** 🔑 **Doing that exposes an inconsistency:**
+the car insurance is claimed on one activity while the fuel and repairs are claimed on neither, and
+all of it rests on the same unsupported business-use percentage. ⚖️ **The claim has to be taken whole
+or held back whole.**
+
+✅ **ANSWERED — the credit-repair activity qualifies for the small-business income deduction.** It is
+not one of the specified service trades the statute excludes, **and the point is academic at his
+income level**, because that exclusion only begins to apply far above where he is.
+
+🔴 **ANSWERED, and the answer is no — the home-office measurements are in nothing he has sent.** His
+reconciliation note and both workbooks were searched in full for any floor area, room dimension or
+room count. **There is none.** 📨 **And this is the SECOND time of asking** — both numbers were put to
+him on 20 September and he answered with the percentage again. ✏️ **The message carries two numbers
+and nothing else**; the follow-ups that usually go with them are already answered in his own words.
+🔑 **Worth chasing hard, and not for the size of the deduction:** he is sitting just above a step in
+the Marketplace-subsidy repayment cap, and **even the smallest version of this deduction carries him
+under it** — the band is worth more than the deduction.
+
+🔑 **AND THE THING THAT MOVES THE MOST MONEY IS NOT A DEDUCTION AT ALL — BUT THE FIRM CANNOT REACH
+IT ALONE.** He is sitting just above a step in the Marketplace-subsidy repayment cap. **The
+corrections that are purely ours do NOT carry him across it** — they stop just short. ⚖️ **The two
+things that do both need an answer from outside the firm:** the self-employed health-insurance
+deduction, which is gated on a question nobody has put to him about his employers' coverage, and the
+home office, which is gated on the two measurements. ⛔ **Recorded because the obvious reading — that
+fixing our own errors gets him there — is wrong.**
+
+📤 **An Excel working worksheet was delivered to Lilian** — the two activities line by line against
+his own figures, the vehicle pool, the home office, a live model of the return, and the open items
+ranked. ⛔ **It carries client figures, so it was handed over and not committed** *(the full detail is
+in the working paper)*.
+
+### 2026-09-24 — the expenses were rebuilt from the client's own transaction file
+
+🔁 **A change of method, and it is the right one.** Where the earlier passes worked from the two
+profit-and-loss statements the client sent, Lilian went back to the **1,519-row transaction package
+behind them** and rebuilt the expense side from its own category totals — annotating both statements
+as she went with where each figure came from.
+
+✅ **THREE OF HER FINDINGS CHECK OUT EXACTLY** against the package's own summary sheet: the meals
+pool, the rent pool and the combined utilities-and-phone pool all tie to the cent, and the business
+percentage she applied to the meals is the client's own, printed in his file rather than assumed.
+
+✅ **AND THREE THINGS ON THE RETURN ARE NOW RIGHT THAT WERE NOT.** The qualified-business-income form
+carries **both** businesses, so the deduction is live and the loss carryforward into next year has
+gone. The vehicle claim is held back **whole** instead of half-in — the car insurance came off the
+general-insurance line, which was the inconsistency the last pass flagged. And the home office is on
+the return for the first time, on the simplified method.
+
+🔴 **THE HOME OFFICE IS WHERE THE REAL PROBLEM IS, and the first version of this entry got it wrong.**
+⛔ *It said the return used the simplified method. It does not — it carries a separate home-office
+form for EACH business, on the regular method, and the session had not read that far into the
+document before saying so.*
+🔴 **What is actually happening: the business percentage is applied TWICE.** The figures entered on
+those forms had already been reduced to the business share and split between the two activities — and
+the form then applies the percentage again, because the column they sit in is for the expense of the
+**whole** home. **That is why the deduction came out at a fraction of what it should be.**
+🔴 **And two things are on the wrong forms, each deducted twice.** The **telephone** is on the
+home-office form, where it cannot go at all — it is an ordinary business expense. The **home's
+electricity** is on the ordinary utilities line, where it cannot go either. **They are the wrong way
+round.**
+
+⚠️ **AND THE NEW UTILITIES CALCULATION DOES NOT FIX IT — it reproduces it.** The percentage she
+applied appears nowhere in the client's file; it lands within two dollars of his own combined total,
+which is the tell. 🔑 **The pool it is applied to mixes two things that follow different rules and
+belong on different lines: the phone, which is a business expense, and the home's electricity, which
+is business use of the home.** Strip the electricity out and his own split between the two businesses
+was an even one, not the uneven one now in use.
+
+⚠️ **The rent figure still has to be settled, and the two open questions are narrower than they
+looked.** The package's own rent total is missing several months — the rent reached the landlord by
+five different payment routes and a total built from one of them cannot see the others — **but the
+client's own note itemises the full schedule**, so the material is not missing from the firm.
+🔑 **What is genuinely open is what HIS note flags: a possible double-count in March, and one month
+that is not identified in the statements at all.** ✏️ **Ask for the month-by-month rent schedule
+alongside the two measurements** — that is what settles both.
+
+🔑 **AND THE ORDER OF THE OUTSTANDING CLIENT QUESTIONS IS NOW SETTLED: the vehicle first.** It is the
+only pending answer that carries him below the subsidy-repayment threshold, and it is worth roughly
+**2.7 times** the home-office work.
+
+ⓘ **One assignment worth remembering:** all the business meals are now on the credit-repair activity.
+Two thirds of them fall in the last quarter of the year — which is exactly when his real-estate
+licence activity appears in the records, and his own note describes the meals as being with realtors.
+**It changes no tax while the return carries two activities, but it is the same open question as the
+title company's commission.**
+
+📤 **A rebuilt worksheet was delivered to Lilian, then RE-ISSUED the same day** once an independent
+review found that its home-office section rested on the wrong premise. — nine tabs, every figure with
+its origin and its arithmetic, and a column that says what to enter rather than what is already there.
+⛔ **Client figures, so it was handed over and not committed.**
+🛑 **The failure is recorded because it is the kind that matters: a negative was asserted about a
+document nobody had searched to the end.** The session read the return partway through and stated
+that a form was absent; it was there, a few pages later. ✅ **Caught in review before anything was
+filed — but it reached her desk first.**
+
+### 2026-09-24 (later) — the client's question about his card interest, and one answer settled early
+
+📧 **Lilian wrote to him that morning, copying Julia**, with the vehicle questions, the subcontractor
+1099 question and — asked properly this time, as two separate measurements rather than a percentage —
+the apartment and office areas. 🔴 **One question in it, though, is one he has already answered — and his answer works
+against us.** Asked whether he has another vehicle for personal use, his own package says of the car:
+**"only vehicle in 2025; used for work daily."** A taxpayer with one car has done his personal
+driving in it, so that answer **undercuts** the high business-use share the return claims rather than
+supporting it. The tax form asks the same question, and we should expect to answer it **No**.
+
+⛔ **THREE ASKS ARE MISSING FROM IT, and one blocks work already scheduled.** He has still never been
+asked to reconcile the months he says he paid rent against the months the statements show payments —
+and the home-office form cannot be completed without that, whatever areas he sends back. The
+employer-health-coverage question is not in it either, nor the date he first used the car for work,
+which he was asked once and did not answer.
+
+💳 **THE CARD INTEREST — HE ASKED US TO DIVIDE IT BETWEEN HIS TWO BUSINESSES, AND THE DIVISION TURNED
+OUT NOT TO BE THE QUESTION.** The rule allocates interest by tracing what the borrowed money bought,
+and the statements answer that: **on six of his nine cards he paid more interest than he charged to
+that card across the whole period the statements cover**, and on one of them four interest postings
+sit against not a single purchase. ⚠️ **Scoped deliberately — only one of these nine accounts covers
+the whole year**, so this is what the records the firm holds show, not a statement about his year.
+**The balances arrived before those records open**, so the spending in them cannot describe what the
+debt bought. And of the charges that are there, **only a small part is backed by anything he actually
+told us** — the rest the file still marks as needing review, and reading those descriptions turns up
+a soap subscription, an aquarium ticket, a vape shop and, in the bank-fee pool, **late-payment
+penalties**.
+
+⚖️ **So the recommendation is to claim none of it — a position for Lilian and Julia to take, not a
+computation** — with a defensible split ready if they claim it anyway: **about 52 / 48**, built from
+allocations the firm had already decided, which lands close enough to half-and-half that the simple
+answer and the principled one agree. 🔑 **And one correction was put to her: the SPLIT really is
+tax-neutral as she assumed, but the AMOUNT is not** — it moves his income, and through it his
+Marketplace repayment.
+
+✅ **A separate question was settled before it could be got wrong.** 2025 is the first year with a
+federal deduction for car-loan interest on its own line, and his does **not** qualify — the loan is
+too old and he claims the car as predominantly business, which that deduction expressly excludes.
+**It belongs on his business schedule instead, at the business-use share** — and *where* it goes
+holds whichever vehicle method is chosen, so that much is settled. **The amount still waits on the
+mileage**, because the share is business miles over total miles rather than the percentage he
+asserted.
+
+📤 **The worksheet was re-delivered with the new section, and then re-delivered AGAIN in the same
+session** — the first copy understated the business-classified charges because two pools had been
+left out of a subtotal without saying so. ✅ **Caught by the sheet's own tie-out before she worked
+from it**, and correcting it strengthened the case rather than weakening it: it is what surfaced the
+late-payment penalties. ⛔ **Client figures, so handed over and not committed.**
+
+🛑 **And the independent review of the write-up found four more, all confirmed and all fixed before
+anything was filed — three of them the same mistake in different clothes.** Each was a claim about
+**the world** where the file only supported a claim about **the search**: that the interest exceeded
+the charges *for the year* rather than for the months on file; that nobody had asked about a second
+vehicle, when the client's own sheet answers it; and that he had *confirmed* charges the package
+itself flags with "confirm". ⚠️ **The arithmetic was right in every case and the framing was not** —
+which is the second time in two sessions on this client, and it is written into the working paper as
+a pattern rather than as four separate slips.
+
+### 2026-09-24 (later still) — the posture changed, and it moved three numbers
+
+🔑 **Lilian set a standing rule for this client, and it is the right one for what he is:** *"nuestro
+trabajo no es auditar los números del cliente. Él no es nuestro cliente de bookkeeping… tenemos que
+confiar, en cierta medida, en lo que cabe en la información que él nos da."* **He is a tax-preparation
+client, not a bookkeeping client. We take his figures and his percentages and put them in the right
+place.** ⓘ *Which percentages are his and which are ours is now written out explicitly in the
+worksheet he is billed against, so the distinction survives this session.*
+
+⚖️ **And she ruled on the card interest: it is not to be zero.** She asked for a defensible figure to
+put to Julia with an explanation, and Julia decides. **That is exactly the right shape** — the earlier
+recommendation of zero was a recommendation, and the signer overruled it.
+
+✅ **THE ANSWER CAME OUT OF HIS OWN FILE.** His handoff sheet does not leave the interest open at all:
+it says **"Allocate based on underlying business purchases"** and **"Do not deduct all card
+interest."** So applying **his own percentages** — the vehicle at 80%, the meals at 75%, his software at 100% —
+to everything he charged to those nine cards gives a business share of about **29%**, and that share
+of the interest is the figure. **The buckets he told us not to force are left at nothing, on his
+instruction** — though one of the three we zeroed is our own earlier ruling about card penalties, not
+his, and the working paper now says so. ⓘ *The split between his two activities works out at essentially half and half, and it
+cannot change his tax either way.*
+
+🔴 **AND THE BIGGEST FIND OF THE DAY WAS NOT THE INTEREST.** His home-office form is carrying about
+**half the rent he actually paid** — his own reconciliation note totals it in one line, and his
+transaction file had filed the two largest payments of the year under "other". **That is not
+second-guessing his classification; it is reading what he wrote.** The same pool also contains
+renter's insurance from the months after he had already moved, which he explicitly does not claim.
+
+🏠 **Two more corrections went with it.** The home office is on **two** forms where the IRS
+instruction says to compute **one** and allocate the result — and because the catering activity has no
+revenue, half of it is being suspended to next year for nothing. And the **phone** is buried inside
+the home-office form at 30% when he told us it is **85%** business and the IRS says telephone is never
+a cost of the home.
+
+💰 **Together the three corrections are worth about a third of what he currently owes, and the
+mileage he has not yet sent is worth about twice that again** — it is the only answer that takes him
+under the subsidy-repayment threshold. **Chase the miles first.**
+
+✅ **Her own keying was clean.** The whole return was rebuilt from her two business figures and
+reproduces line for line. 🛑 **The one disagreement was the CHECKER's fault** — it rounded a
+Marketplace figure down where the software correctly rounded it up, because of how binary arithmetic
+stores a number ending in 5. **A control that disagrees with the return is not evidence against the
+return until you know which side is wrong.**
+
+### 2026-09-24 — the rent question was the right one, and the answer is a filing label
+
+🔑 **Lilian pushed back on the home-office rent finding, and she was right to.** The client's own file
+shows one figure and the working paper asserted roughly double it, without ever explaining the gap.
+**A finding nobody can follow is a finding nobody should act on**, so this is written out properly now.
+
+📋 **The explanation is mundane: his transaction file sorts every payment into a category by reading
+the BANK DESCRIPTION.** Rent paid through the rent-payment app arrives with the word "rent" in the
+text and got the rent label. **Rent paid by card straight to the landlord arrives with only the
+building's name in it** — so the two largest rent payments of the year were filed under "other,
+needs review", where they sit as the two biggest rows in that whole bucket.
+
+✅ **And the arithmetic settles which figure is real.** His own notes put the apartment at roughly
+what a two-bedroom costs in that area, and the complete months each come to about that. The smaller
+figure would work out at less than half a month's rent per month. **It is a labelling artefact, not a
+fact about what he paid.**
+
+✅ **Her instinct — ask him to confirm — is the right move and is now written out as three questions**,
+two of which are **his own**: he flags in his note that one month may be double-counted and that a
+month's payment cannot be found at all. **Those go in the next email; they are in none of the ones
+sent so far.**
+
+✅ **She was also right about the revenue figure.** It comes from the Forms 1099 and is what was
+reported to the IRS, which is the right place to start; the difference from his own statement was
+already decomposed weeks ago and is not an open item.
+
+📋 **She has keyed the card interest and nothing else, and asked where she stands.** The answer: **two
+keystrokes left that are hers** — the home-office form and the phone — and after those the return is
+as finished as his information allows. **What remains waits on him, on Julia, or on one firm action of
+ours** *(confirming whether an information return we prepared for a payer was actually transmitted —
+it decides whether a payment he excludes from income is an exposure or just an internal
+contradiction)*. 🔑 **A status board now leads the worksheet so that question can be answered at a
+glance next time.**
+
+⚠️ **And one of the questions still to put to him turns out to be worth far more than the file had
+been saying — not less.** The employer-health-coverage question was being carried at the size of the
+*deduction* rather than what it saves. Priced properly it is **five times more valuable once those two
+keystrokes are in**, because at that point it pushes him across the subsidy threshold and the
+repayment cap drops with it. **It gets better while she waits, not worse.**
+
+⚠️ **One small thing turned up in passing: a fee inside the licence pool he classified as business
+reads as a DRIVER'S licence.** Not on the return, so nothing is wrong today — but it should not be
+added. ⓘ *It is an inference from a bank description and is recorded as one; his own file is not
+unqualified about that pool either.*
+
+### 2026-09-24 (later) — the instruction was the defect, not her keying
+
+🛑 **She could not follow an instruction of ours, and she was right not to.** We told her to move the
+phone "to line 25" and to change "line 21" — **without ever saying those are two different forms.**
+Her software puts a home's utilities and a business's telephone on lines with almost the same name,
+and she reasonably read one instruction as being about one place. **Written down because the failure
+was in how it was said, not in what she did.**
+
+📖 **The distinction that matters:** a home-office worksheet's utilities line is for utilities **of the
+home**, and everything on it is reduced to the business-use percentage. A business schedule's utilities
+line is for the **business's own** telephone and internet, at their own percentage, with no reduction.
+**The IRS booklet on business use of the home says plainly that telephone is never a cost of the home
+and must be deducted separately.** Left where it is, his phone is being reduced twice over.
+
+🏠 **And her screen settled something we had got structurally wrong.** We had been describing the home
+office as two independent forms and telling her to delete one. **Her software holds ONE worksheet that
+allocates across both activities** — the two forms that print are its output. So the instruction is to
+**detach** the activity that cannot use it, not to delete a form that does not exist as a separate
+thing.
+
+🔴 **That matters in money:** the worksheet is giving **45% of the home-office pool to the activity with
+no revenue**, where the law's income limit disallows every dollar of it and parks it for a future year
+that may never come. **Roughly a fifth of what he currently owes.**
+
+📋 **One keying slip, worth nothing and still worth fixing:** the card interest went onto the
+**insurance** line rather than the interest line. **Not a dollar changes** — but that is the very line
+the earlier passes cleared of a vehicle cost that did not belong there, and on the face of the return
+he now shows insurance he never paid and no interest when he paid some.
+
+⚠️ **And one of our own recommendations turned out to be two recommendations pulling opposite ways.**
+Moving the phone off the home-office form is required by the IRS booklet and gains money. Trimming the
+home's electricity to the months he actually lived there is **his own rule** and **costs** money. They
+had been bundled as one change with one figure; separated, the phone is worth about six times the net
+and the other half is a small price for following what he told us. **Written down because a net figure
+hides a decision.**
+
+✅ **Her arithmetic is clean.** The whole return rebuilds from her two business figures and reproduces
+line for line.
+
+🛑 **AND THE RENT IS CLOSED ON HER INSTRUCTION.** *"Vamos a dejarlo así y no vamos a seguir buscando
+meses."* **His figure is keyed; the questions drafted for him are withdrawn and nobody chases them.**
+🔑 **Closed, not answered** — the evidence stays in the working paper for whoever asks later.
+
+### 2026-09-24 (later still) — why there are no utilities for the rest of the year, and the two halves are reversed
+
+🗣️ **Her question, and it is the right one to have asked:** *"¿por qué no tenemos gastos de utilidades
+del resto del año?"* — **and she asked us to look for a client note before answering.** ✅ **There is
+one, in three separate documents of his.**
+
+🔑 **THE ANSWER IS SUBSTANTIVE, NOT AN OVERSIGHT: there is no home office for the rest of the year.**
+The home office is the **first apartment, January to May**. In June he moved, and **he told us three
+times not to claim the new place** — his rules sheet marks it OUT as personal/mixed housing, his
+handoff sheet says the allocation applies **only during the first apartment's period**, and his own
+email says **January–May only**. 🔑 **And he gives the reason each time: it is a STUDIO, the work area
+is mixed personal use, and a COWORKING SPACE IS INCLUDED IN THE RENT.** The law needs an area used
+regularly and **exclusively** for business; a studio with a coworking membership paid inside the rent
+has neither. ✅ **The form already corroborates it on the line above** — there is **no post-move rent on it
+at all**, so the form carries **rent from before he moved and electricity from after it**. The two
+lines describe different homes.
+
+🔴 **BUT THE TWO HALVES OF THE YEAR ARE THE WRONG WAY ROUND.** The figure on the form is the
+**post-move** electricity — the exact months he said not to claim — and the pre-move figure is
+slightly larger. 💵 **The money is trivial, about one dollar.** 🛑 **The reason to fix it is not the
+money: the months are printed NOWHERE on the return**, so nothing on paper would ever reveal that the
+form carries **rent from before he moved and electricity from after it**. ⓘ *His electricity account ran all year because he kept the account through the move; the
+postings in his file are not one a month — two of them carry two each.*
+
+📞 **The phone split she applied is OURS, NOT HIS — and an earlier version of this entry said the
+opposite.** She asked what we thought of the 55/45. The argument that it was **his** came from two
+figures in his draft profit-and-loss that differ from each other **only because one of them had the
+home-office electricity folded into it** — **the very electricity this same pass was moving onto the
+home-office form.** 🔑 **His own note states his split in his own words, and it is FIFTY-FIFTY — the
+same amount to each business.** ⛔ **The split cannot change the tax at all** *(both activities' results
+are added together before anything else happens)*, **so nothing on the return changes and it stays** —
+**but it is a FIRM allocation and must be put to Julia as ours, not as his.** ⚠️ **One flag,
+unchanged:** it deepens the loss on the activity with **no revenue at all**, which makes that
+activity's status — a trade or business, or start-up costs — the open question for her. **The split
+did not create that question; it enlarged it.**
+
+🔴 **AND THAT ERROR WAS HIDING A REAL ONE: THE PHONE TOTAL ITSELF IS SHORT.** His own phone base
+includes a second carrier's March and April bills, which his file had parked under *"other expense —
+needs review"* and **his own note pulls back in.** The return is built on the smaller base, so it is
+missing a real slice of deduction — **worth roughly ten times the electricity fix, and it is one more
+keystroke.** ✏️ **The cleanest keying is his own equal split.** ⓘ *The superseded note that covered
+this pool was stamped for a different reason — the percentage and the line had changed, not the base —
+which is exactly how it got through.*
+
+✅ **AND SHE PUT THE PHONE SOMEWHERE BETTER THAN WE TOLD HER TO.** We said the business utilities
+line; she listed it in the schedule's *other expenses* part, described **"Phone"**. **Identical
+arithmetic, identical tax — and a line that says "Phone" cannot be misread the way "Utilities" was,
+which is the exact word that caused the confusion the day before.** 🛑 **Recorded so nobody raises it
+as a correction. It stays.**
+
+✅ **All three of the changes from the previous pass are keyed, and her return rebuilds line for line
+from her two business figures.** The interest is on the interest line and the insurance line is clear;
+the home office is ONE worksheet on the activity that actually traded, and **nothing is parked for a
+future year any more.**
+
+ⓘ **One thing that was NOT checked and is not being chased:** the IRS booklet's non-deductible piece is
+the basic charge for the **first landline** into a home. His phone pool is a mobile carrier plus a
+second carrier, and **nobody has established whether either is a landline at the apartment.** Written
+down so no later session assumes it was tested.
+
+📤 **The worksheet was rebuilt on the return she sent and delivered to her** *(and delivered twice —
+the first build said the phone was on the business utilities line, which the return does not support;
+reading the form itself caught it)*. ⛔ **Never committed.**
+
+### 2026-09-24 (last) — the return is finished, and the worksheet was rebuilt to explain every figure on it
+
+✅ **BOTH REMAINING CHANGES ARE KEYED AND THE RETURN REPRODUCES LINE FOR LINE.** The home office now
+carries the pre-move electricity, and the phone carries his full base rather than the short one. Read
+off the return itself, not modelled: rebuilt from her two business figures alone, every line of the
+return comes out exactly as the software printed it — the poverty-line percentage and the applicable
+figure included, which are the two most easily got wrong.
+
+🔑 **She took the firm's split on the corrected phone base rather than the client's own equal split,
+and it is worth EXACTLY the same tax** — one dollar of deduction between them, inside the same tax band
+and the same subsidy band. ⛔ **Nothing to change, and it is not a defect.** ⚠️ *It does mean the firm's
+split stays on the list of allocations that are ours rather than his.*
+
+🗣️ **Her instruction for the worksheet, and it changed its shape completely:** *"que explique de dónde
+salió cada cosa… **no puede quedar nada como en el limbo.** Todos los números tienen que tener su
+justificación y su explicación de dónde salieron."*
+🔑 **The old worksheet was built around WHAT TO CHANGE — a "now" column and an "after" column — and
+there is nothing left to change.** So it was rebuilt from zero around the opposite question: **why is
+every figure on a finished return the figure it is.** Every tab now carries the same five columns, two
+of them new: **how it was computed** *(the arithmetic, to the cent)* and **where the figure comes
+from** *(which document, or whose decision, in their words)*.
+🆕 **And one tab is new in kind: what is NOT on the return, and why each one is off it** — his own
+written instructions to leave pools alone, the judgements the firm made, and the one thing waiting on
+evidence. **An absence needs a reason as much as a figure does.**
+
+⛔ **THE EMPLOYER HEALTH-COVERAGE QUESTION IS DROPPED ON HER INSTRUCTION** — *"olvida la pregunta
+acerca de la cobertura médica"*. It is in none of the emails the firm has sent him, nobody chases it,
+and **no figure on the return depends on it**, because that deduction was never claimed. **Closed, not resolved** — the same shape as
+the rent questions she closed earlier in the day.
+
+🔴 **ONE THING IS OPEN, and it is with the client: THE MILEAGE.** Odometer at both ends of the year,
+business miles, the first-business-use date, and whether any log exists. **It is the largest number
+still WITH THE CLIENT** *(the tips deduction below is larger, and also open)* — it crosses two thresholds at once, neither of them a tax rate:
+the subsidy repayment cap drops a band, and his self-employment earnings fall under the floor where
+that tax disappears entirely. The worksheet has it built and priced so the day he answers it is
+arithmetic and not analysis.
+
+⚠️ **AND ONE FIGURE THAT HAD GONE STALE IN THE WORKING PAPER WAS CORRECTED: what the tips deduction is
+worth.** It had been carried unchanged since 13 September, through five sections, priced against a
+version of the return that no longer existed. Recomputed on the return as filed it is materially
+larger — and it is the largest single DEDUCTION on this return, while **its eligibility is still not
+established**. The price is corrected; the open question is not touched.
+
 ### Outstanding items (CI-only — never in the SOP)
 
 
@@ -860,6 +1282,13 @@ does not make the figures wrong — it does say what kind of figures they are.**
 - [ ] 🆕 🔴 **The DATE he first used the car for the business, the odometer at both ends of the year,
       and the miles by category** — **asked 2026-09-20 and NOT answered**; he sent percentages
       instead. **The forms require the dates and the miles, not a percentage.**
+- [ ] 🆕 🔴 **THE HOME OFFICE'S TWO MEASUREMENTS — the apartment's total floor area and the office
+      room's, in square feet.** **Confirmed 2026-09-23 to be absent from everything he has sent**:
+      his reconciliation note and both workbooks were searched in full and contain no floor area at
+      all. ⛔ **He gave a percentage, and neither of the two forms that compute this has anywhere to
+      put one.** ⓘ *Ask in the same message whether the room was used **exclusively** for business,
+      **which** activity it served, and whether he kept a home office after moving mid-year — each
+      changes the answer more than the percentage does.*
 - [ ] 🆕 Whether any **other bank or card account** was used in 2025 that is not in the workbook.
 - [ ] 🆕 🔴 **Which months he lived at each address** — his own dates and his own payments disagree, and
       the home-office months cannot be computed until they are reconciled *(2026-09-20)*.
@@ -903,3 +1332,10 @@ does not make the figures wrong — it does say what kind of figures they are.**
   own file never will:** [`voicecapital.md`](./voicecapital.md) ·
   [`pro-title-agency.md`](./pro-title-agency.md) · **Maxratings LLC** *(no Client Intelligence file
   yet — FOLLOW-UPS row 109)*.
+- 🔴 **THE WORKING WORKSHEET — and there are TWO files, one of which must be discarded.**
+  ✅ **LIVE: `Volzhanskiy-2025-worksheet.xlsx`** *(first issued 2026-09-23, extended tab by tab since;
+  the tabs are numbered)*. ⛔ **DISCARD: `Volzhanskiy-2025-working-paper.xlsx`** *(2026-09-24)* — it was
+  built from a state of the working paper that was **five merged PRs and one open PR behind**, so its
+  figures **contradict** the live one rather than merely lagging it. 🔗 **The working paper's §24 has
+  the whole account.** ⓘ *Neither file is in the repo — they carry client figures and are handed over,
+  never committed.*

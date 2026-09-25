@@ -2319,6 +2319,187 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   claims no earned income credit. He is far over the income limit, correctly, so nothing is claimed —
   but a schedule that exists only to support a claim should not travel with a return that makes none.
 
+### 2026-09-23 (third pass) — Lilian reshaped the Excel she types from, and the rules are now firm
+
+- 📊 **THE WORKBOOK'S MAIN COLUMN WAS THE WRONG THING, AND SHE SAID SO PLAINLY.** It showed the value
+  **already on the return**, with a `DEFECT` flag beside the wrong ones. 🗣️ *"Si cometí un error y tú
+  simplemente me pones el valor que ya está en la declaración, eso no me sirve de ninguna ayuda… ¿pero
+  qué es lo correcto? Eso no me sirve. Así no necesito que me ayudes. **No es la forma.**"*
+  ✅ **The sheet now leads with `WHAT TO ENTER`** — the value that belongs there, filled on every row —
+  and an `Action` column that says whether a keystroke is needed. **The wrong value survives only
+  inside a `CHANGE` instruction**, because that is how she finds the box.
+- ⛔ **She does not want a "previous version" column at all** — *"lo que necesito es la versión final"*.
+  Comparing ATX versions is the session's working material and belongs in the working paper, not in the
+  file she types from.
+- 🧊 **And a layout bug: the disclosure-form sheet had rows 1–24 frozen** and could barely be scrolled.
+  The generator set the freeze inside its shared header helper, so on a three-table sheet the last
+  header won and pinned everything above it.
+- 🔑 **All three are now written into the [`tax-return-sop`](../../../.claude/skills/tax-return-sop/)
+  skill as §4D**, so the next return's workbook is built that way rather than corrected again. ⓘ *She
+  asked for exactly that: "quiero que guardes las cosas que vas aprendiendo acerca de cómo quiero este
+  Excel… en el skill de este tax preparation que hemos creado."*
+
+### 2026-09-24 — what she actually keyed, read off her ATX screen
+
+- 🖥️ **Three ATX screens were shown and they closed five open items**: the car-loan interest is in
+  *(via the vehicle worksheet, not the interest line — same Schedule C, same result, and it is the
+  software's own route)*; the disclosure form's entity **address**, **IRS centre**, **tax years** and
+  both **column (b) boxes** are done. 🔑 **She supplied the street line this repo could not obtain** —
+  the redactor masks street lines by design.
+- 🛑 **One risk created by our own earlier instruction:** we had told her to type the interest on the
+  Schedule C interest line, and she keyed it into the worksheet instead. ⛔ **If both were done the
+  deduction is taken TWICE, and the software flags nothing.** 📌 Raised as the top blocking item.
+- 🗺️ **An entry route nobody had written down:** the five Schedule C vehicle questions are answered on
+  the **worksheet**, not on the form — and **two of them are in the opposite order to the form**, which
+  is exactly how a correct answer gets ticked into the wrong box.
+- ⚖️ **She asked whether disclosing the amount on the pass-through form would DOUBLE the income.**
+  ✅ **It cannot** — that form is a notice, nothing on it reaches any line of the return, and the
+  instructions require it even for items that never appear on a return at all. 🔑 **The money is taxed
+  once, on the Schedule C.** ⓘ *Her alternative — disclosing zero — stays defensible and is hers to
+  choose; what it costs is that the figure itself is then not covered by the notice.*
+- ✅ **Her Part III explanation was checked against the IRS instructions and holds**: it opens with the
+  exact sentence the IRS prescribes, carries the item number on every line, gives the reasons and the
+  treatment, and **correctly avoids** the sibling phrase that would assert the corporation did not file
+  — which nobody knows.
+- ⚠️ **One thing unreconciled and recorded as such:** the amount-due on her screen does not match what
+  this firm's own chain computes from the same inputs. 📌 **Not guessed at — put back to her.**
+
+### 2026-09-24 (second pass) — the disclosure forms for the two silent corporations
+
+- 📄 **All three disclosure forms now exist**, and the two for the corporations he is believed to
+  have received nothing from are written. ✅ **They report ZERO and carry the whole story in the explanation** — that he was
+  locked out, that no schedule and no wage statement were issued, and that he cannot tell whether
+  those companies even had results for the year.
+- ⚖️ **Lilian made the sharpest point in this matter herself, and it is why those two forms are worth
+  filing at all:** a shareholder of this kind of company is taxed on his share of its profit **whether
+  or not a single dollar reaches him**. ⛔ **So "he took no money" does not establish that he owes
+  nothing.** 🔑 **Reporting zero WITH a full explanation is the honest position** — *I am reporting
+  nothing because nothing was given to me and I have no way to find out* — and the text commits him to
+  **acting** on a schedule if one ever arrives. ⛔ **Deliberately NOT to agreeing with it:** an earlier
+  draft promised he would report whatever a later schedule showed, which would have given away in advance
+  the exact right the form exists to preserve — to the other owner, who controls the books and is in
+  dispute with him.
+- 🛑 **A correction to what this firm told her, recorded because she caught it.** ⓘ *She read our note
+  as saying a zero would leave the explanation uncovered; what we had actually written was that the
+  **protection** would not reach the figure.* ⛔ **Both readings are wrong.** The explanation is
+  **mandatory** whatever the figures say *(and on this return it is missing from the package, which is
+  a separate defect)*, and the disclosure is given by **ticking the notice box**, not by a figure. ✅ **What actually governs is that the figures must describe the same item the
+  description names** — and on that rule her own instinct was the more coherent one, so the firm's
+  recommendation changed to match it.
+- ⌨️ **The pass-through input screen is to be emptied**: nothing from any of the three companies is
+  reported there, which also removes two basis forms that were being filed with zeros on a figure
+  nobody knows. **The disclosure forms do not depend on it.**
+- 🔴 **TWO THINGS TO ASK HIM BEFORE THOSE TWO FORMS ARE FILED, both because the explanation is
+  signed under penalty of perjury and neither is established anywhere:** ① **what he actually owns of
+  the two silent companies, and whether he is still an owner at all** — the only percentage in the prior
+  year's papers is a loss-allocation ratio that would read the same whatever he holds, so it proves
+  nothing; and ② **whether either of them gave him anything during the year** — money, property, a
+  vehicle, costs paid for him. ⛔ **The firm has been told neither.** ✅ **If he confirms, both statements
+  are his; if he does not answer, the second one comes out of both forms and the position still stands**,
+  because reporting zero rests on nothing having been furnished to him, which IS established.
+- 🔴 **Still blocked on her:** the **addresses** of the two silent corporations. Nothing in the firm's
+  records holds them.
+
+### 2026-09-24 (third pass) — the workbook was hiding the three explanations
+
+- 🗣️ **Lilian: the Part III explanations for the three disclosure forms were not in the version of
+  the workbook she was given, and they had been in earlier ones.** ✅ **She was right.**
+- 🛑 **The text was in the file. The row was not tall enough to show it.** The explanation sat in a
+  narrow column in a row of fixed height, so the first three lines appeared and the rest did not —
+  silently, with nothing in the file to say anything was cut. 🔑 **From her side the deliverable was
+  missing, which is the only side that counts.**
+- ⚠️ **A second cause, and it was ours:** a fix made earlier the same day replaced that text with a
+  cross-reference to another tab. ⛔ **She works down the main sheet at the keyboard, so a pointer where
+  a text used to be reads as a deletion.**
+- ✅ **Fixed so it cannot recur quietly:** the workbook now **refuses to be generated** if any cell she
+  has to act on would be cut off — every block is measured against the width it will be shown in, and
+  the row is grown to fit or the build stops. 📌 **The three texts are also announced on the first
+  sheet and at the top of the sheet that holds them**, and the pointer to them now names the exact
+  heading, because a text nobody can find is a text that is not there.
+- ⓘ **Worth recording because it cost a round:** the firm's first account of this named the wrong
+  cause — a different limit, on a different sheet — and an independent review disproved it from a
+  snapshot taken earlier the same day. **The lesson went into the tax-return skill: check a root cause
+  against evidence, not against the shape of the fix.**
+
+### 2026-09-24 (fourth pass) — the finished return was read, and it ties
+
+- 🗣️ **Lilian finished the three disclosure forms and asked for the whole return to be checked against
+  the worksheet.** ✅ **Done — the finished return was read page by page through the redactor.** ⛔ **Not
+  committed anywhere.**
+- 🟢 **The amount on her screen finally reconciles.** For a week the firm's own model could not reproduce
+  it; the finished return simply states it, and it is the total tax less the refundable child credit plus
+  the penalty. **The gap was that we were modelling and she was keying.**
+- 🟢 **One figure she keyed is BETTER than what the firm told her to key.** The prior-year business-loss
+  carryforward on the QBI form: our note named only the largest of his three companies, and she entered the
+  **full total from the prior year's own worksheet** — all three companies and the spouse. **Hers is right;
+  ours was incomplete.** It wipes out the deduction either way, but the figure that carries into next year
+  depends on it.
+- 🔴 **Two defects, both of them the firm's, and both with a fix:** the **loss carryforward applied this
+  year is too high** — the 80% ceiling is measured on this year's profit, and the profit fell when the car
+  interest was corrected, so the ceiling fell with it and nothing recomputed it; and the **estimated-tax
+  penalty is not owed at all**, because the prior year's tax after refundable credits was nothing. ⚠️ **Net,
+  he owes LESS than the return says** — the first costs him a little, the second saves more.
+- ⚖️ **On the disclosure forms she made a drafting choice the firm had argued both ways, and on the main
+  company it is coherent** — she described the item as the money he received and reported that amount, with
+  the explanation saying where it went. **That was always one of the two defensible packages.** ⛔ **What
+  does not hold is on the two silent companies:** the description promises an estimate while the boxes report
+  nothing, and one box the explanation calls zero is actually empty. **One keystroke each.**
+- ⚠️ **And two sentences are now FILED that nobody has put to him** — that he received nothing from the two
+  silent companies, and that he is still an owner of all three. 🔑 **They go with the address request.**
+- 🔴 **The largest open question is the home office.** It is claimed, and **every figure behind it belongs
+  to the house in another state** — the one the mortgage statement describes. He moved mid-year and the
+  return's own address is in Florida. ⚠️ **Removing it RAISES his tax, which is why it has to be asked and
+  not assumed.**
+- ✅ **The worksheet was rebuilt against the finished return and now ties to it:** every line carries a
+  value rather than "the software computes this", every computation is a live formula with an independently
+  verified result, and no superseded figure is stated anywhere as current.
+- 🔴 **The independent review then found something neither of us had seen: on TWO of the three
+  disclosure forms, the very first box — the one that says the form is a notice of inconsistent treatment —
+  is NOT ticked.** ⛔ **Without it those two forms state no purpose at all**, and the protection they exist
+  to give is not given. ✅ **It is one tick each.** ⓘ *The box below it, the entity type, IS ticked on all
+  three, so it is a real blank rather than a reading error.*
+- ⚠️ **And the attached statement explaining the loss limitation recites the superseded figures**, so it
+  has to move together with the deduction or the return contradicts itself on its own face.
+- 🛠️ **One question nobody has put to him, and it is the one an examiner reaches for on a trucking
+  client:** the simplified per-mile method **cannot be used for a vehicle driven for hire**. ✅ **His
+  pickup is plainly a support vehicle** — his income is for services performed for the corporation and no
+  freight revenue runs through his own business — **but it has never been asked.** 📌 **It goes with the
+  other questions.**
+- 🛠️ **A firm tool was fixed in passing.** The document reader refused this return — correctly, it fails
+  closed — because a column of figures on one form matched the shape of an identifier across a line break.
+  **Inspected by hand, the pattern was the fault, not the document.** It now requires such a match to sit on
+  a single line, and reports the ones it lets go.
+
+### 2026-09-24 (fifth pass) — the vehicle answers, and two addresses he cannot get
+
+- ✅ **He answered every remaining question about the vehicle by Google Voice, and Lilian keyed it the
+  same day.** It is a **Ford F-150**, he started using it in his own business on **1 January 2025**, there
+  are **no commuting miles**, he has **no second vehicle**, he does use it privately outside working hours,
+  and **he keeps written records supporting the deduction.** 🔑 **That closes the whole vehicle section
+  of his Schedule C**, which had been the largest block of unanswered questions on the return.
+- 🟢 **One of those answers is worth more than it looks.** Starting to use the truck in his business on
+  1 January 2025 is what **keeps the simplified per-mile deduction available at all** — that method can
+  only be chosen in the first year a vehicle goes into a business. He bought the truck in 2023, but 2025
+  is the first year it was in a business of his. **Had it been otherwise, the whole vehicle deduction
+  would have had to be rebuilt from actual costs.**
+- ⚠️ **One thing to check on screen, and it is a trap the firm has already documented:** two of those
+  questions appear on the software's worksheet in the **opposite order** to the printed form. A correct
+  answer in the wrong box reads as the opposite claim.
+- 📬 **He cannot supply the addresses of the two companies he was locked out of, and has no way to get
+  them.** ✅ **The return does not need them.** The instruction for that block asks for the legal **name**
+  and the **identifying number** — it never names the address — and the rule for this exact situation says
+  to complete the form to the best of your knowledge. **The name and the tax ID identify each company
+  without ambiguity, and the explanation says why nothing more is held.** ⛔ **Nothing is to be invented,
+  and the third company's address must not be copied across.**
+  ⓘ *If anyone wants to try anyway: a state business registry publishes an address for every registered
+  entity, and Illinois is where to look first — that is where the third company sits. A general web search
+  on 2026-09-24 found neither.*
+- 🔁 **The order of the last steps, set by Lilian and recorded so nobody jumps it:** enter the
+  corrections → **Julia reviews and approves** → **then** ask him for his banking details → then a fresh
+  signature form, then file. ⛔ **He is not to be asked for the bank details before Julia has signed off**
+  — if she changes something he gets asked twice. ⓘ *He owes on this return, so the account is for paying
+  rather than for a refund.*
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785

@@ -503,6 +503,9 @@ crédito… para no volver a cometer el mismo error que hemos visto en estos lib
 
 ### 4B · The delivery format
 
+🔄 **Before you build ANY of what follows, run §4E's three steps** — re-fetch, list the OPEN PRs, and
+re-read the working paper. **A delivery built on a stale paper is worse than no delivery.**
+
 **This is what the SOP is for, and the format matters as much as the figures.**
 
 > 🔑 **The standard, in Lilian's own words (2026-08-19):** *"las tablas por cada formulario · el flujo
@@ -1831,6 +1834,9 @@ is a list of changes like any other — it gets boxes too.
 
 ### 4C · 🔴 WHEN THE RETURN COMES BACK FOR **REVIEW** — brief the reviewer, do not audit her
 
+🔄 **§4E first — this is the highest-stakes stale-paper risk in the skill.** The whole method below is
+*read the working paper, then answer*, and the answer goes to **the person who signs**.
+
 🛑 **A return this firm prepared will come back, and the person reviewing it was NOT in the room when
 it was built.** 🔑 **This section is what a session does then, and it is not the same job as preparing.**
 
@@ -1996,6 +2002,294 @@ like every repo artifact, and the briefing is delivered in the language of the p
 [CLAUDE.md](../../../CLAUDE.md) reply-in-kind rule. ⓘ *Which is also why the paper carries the reasoning
 in full: it has to survive being read by someone who was not in the conversation that produced it.*
 
+### 4D · 📊 THE EXCEL WORKING-PAPER WORKBOOK — Lilian's evidence file, and the rules she set for it
+
+🔄 **§4E first, every time.** A workbook is the deliverable most likely to be built from a paper the
+session read hours ago — and the one she types from.
+
+🔑 **What it is.** Alongside the working paper and the chat delivery, a prepared return ships an
+**`.xlsx` workbook** that holds every figure on the return with its origin, its arithmetic, its
+source and what is still open. 🗣️ **Its purpose is Lilian's, in her words** *(2026-09-23)*: *"esto va
+a ser la evidencia que voy a subir… si Julia, dentro de un tiempo, quiere saber qué sucedió con el
+cliente y de dónde salió determinado número, simplemente puede abrir ese Excel."*
+🔒 **Delivered to her, NEVER committed** — it carries client dollar figures and is covered by a
+`.gitignore` pattern. The generator script may live in the session scratchpad; the workbook does not
+go in the repo, into an artifact, or into a Double note.
+
+> ## 🛑 THE ONE THAT MATTERS MOST: THE VALUE COLUMN SAYS **WHAT TO ENTER**, NOT WHAT IS THERE
+>
+> 🗣️ **Lilian, 2026-09-23, after being handed a workbook whose main column was the value already on
+> the return:** *"no necesito que me pongas lo que está en la declaración. Eso no es lo que necesito.
+> Lo que necesito es que me digas **qué es lo que debo poner, qué es el valor correcto**, porque si
+> cometí un error y tú simplemente me pones el valor que ya está en la declaración, eso no me sirve
+> de ninguna ayuda. Al lado pones 'defecto'. Sí, está bien, es un defecto, **pero ¿qué es lo
+> correcto?** Eso no me sirve. Así no necesito que me ayudes. **No es la forma.**"*
+>
+> 🔑 **She reads this file WITH ATX OPEN, to type from it.** A column of what the software already
+> shows tells her nothing she cannot see on her own screen — and pairing it with a `DEFECT` flag is
+> worse than useless, because it names a problem and withholds the answer. ⛔ **"It is wrong" is not a
+> deliverable. "Type this" is.**
+>
+> ✅ **So the workbook's principal column is `What to enter`**, and it is filled on **every** row —
+> including the rows that are already right, where it simply repeats the value that belongs there.
+> ⓘ *This is the §4B rule "every finding delivered WITH ITS FIX" applied to the column itself rather
+> than to a note further down the page. It was already firm policy; the workbook was not obeying it.*
+
+#### The action vocabulary — one word per row, and the current value travels INSIDE it
+
+⚠️ **She still needs to know which rows require a keystroke** — otherwise she re-reads 140 lines to
+find the dozen that moved. 🔑 **That is what the `Action` column is for, and the wrong value belongs
+HERE, as part of the instruction, never as a column of its own:**
+
+| `Action` | What it means | What `Action detail` must say |
+|---|---|---|
+| **OK** | Already correct. Nothing to type. | — |
+| **CHANGE** | A value is there and it is wrong. | 🔴 **Name what is there now** — *"the return has `Ogden` — replace it"*. Without it she cannot tell she has found the right box. 🔴 **AND SAY WHETHER "WHAT IS THERE NOW" WAS READ OFF THE RETURN OR MODELLED** from a stated change — where both exist, **the read-off value governs** *(§4E)*. ⓘ *A delivery once quoted a modelled balance due as what the return said, and the return was materially lower.* |
+| **ADD** | The field is blank and must be filled. | Where the blank is, if the line is easy to miss. |
+| **CONFIRM** | Probably right; must be checked on screen before filing. | **Why it cannot be read off a text extract** — a ticked Yes and a ticked No extract identically. |
+| **DECIDE** | Blocked on the client's answer or on a ruling by Lilian or Julia. | **Who has to answer what.** |
+| **COMPUTED** | ATX derives it; she types nothing. | The value it **should** show, and that a wrong one means a wrong input upstream. |
+
+⛔ **On a `DECIDE` row, `What to enter` is an INSTRUCTION, never a guessed number** — *"ASK THE CLIENT,
+then type his answer"*. 🛑 **A confident figure nobody actually knows is the worst possible cell in
+this file**, because the whole document exists to be typed from without re-deriving anything.
+
+#### ⛔ NO "WHAT IT USED TO SAY" COLUMN. EVER.
+
+🗣️ **Lilian, 2026-09-23:** *"si quieres decir que son los números que tenía anteriormente en versiones
+anteriores de esta declaración antes de hacer ciertos cambios, pues **eso no es algo que me interese**.
+Obviamente, lo que necesito es **la versión final**. Si estoy en lo correcto, por favor, elimina eso."*
+
+🔑 **She is preparing a return, not auditing its history.** A column comparing this ATX version against
+the previous one is the session's own working material — it belongs in the **working paper**, where the
+reasoning lives, and nowhere in the file she types from. ⓘ *It also ages badly: the moment she rebuilds
+the return the column describes a document that no longer exists.*
+✅ **The one legitimate place a superseded value appears is inside a `CHANGE` row's `Action detail`**,
+because there it is not history — it is how she finds the box.
+
+#### 🧊 Freeze ONE header, near the top, or none at all
+
+🗣️ **Lilian, 2026-09-23, on the Form 8082 sheet:** *"las filas de la 1 a la 24 están fijas y no puedo
+desplazarme por el Excel porque se quedan fijas. Casi no tengo espacio para ver qué hay debajo."*
+
+🔑 **The bug is structural and it will recur in any generator that sets `freeze_panes` inside a
+shared "write a header row" helper.** On a sheet with **three** stacked tables the helper runs three
+times and **the LAST call wins**, pinning every table above it — so two-thirds of the window is frozen
+and the sheet cannot be scrolled. ✅ **The rule: freeze only a header that sits in the top few rows,
+and only the FIRST one on a sheet. A multi-table sheet freezes nothing.**
+
+#### 🔢 A trap that produced FOUR wrong figures on one sheet: `round()` is not the IRS's rounding
+
+🛑 **Python's built-in `round()` does BANKER'S rounding — it sends `.5` to the nearest EVEN number.**
+⛔ **The IRS tax table, and tax arithmetic generally, round `.5` UP.** 🔑 **The two agree about half the
+time, which is exactly what makes this dangerous:**
+
+```
+round(1247.5) -> 1248   # agrees, so the check against the filed return PASSES
+round(1512.5) -> 1512   # disagrees - and this is the figure nobody can check
+```
+
+⚠️ **A generator that validates itself by reproducing the filed return will sail straight through.**
+*(It did: the chain rebuilt the return's own 16,626 / 8,313 / 77,860 / 62,288 / 12,458 / 1,248 exactly,
+and then produced a tax of 1,512 where the table says 1,513 — carrying a wrong ACTC and a wrong amount
+due onto the summary sheet.)*
+
+✅ **Use explicit half-up rounding everywhere a figure is computed:**
+
+```python
+from decimal import Decimal, ROUND_HALF_UP
+def r(x): return int(Decimal(str(x)).quantize(Decimal('1'), rounding=ROUND_HALF_UP))
+```
+
+🔑 **And validate the generator against a figure the filed return does NOT already contain**, because
+a self-check that only reproduces known outputs cannot distinguish a right method from a lucky one.
+📌 **The tax on a bracket line is read off the table's `$50` row midpoint** — that is what reproduces
+the software's own figures, and it is where the half-up rule bites.
+
+#### The rest of the shape, as it stands
+
+- **Sheets:** `Read me` · `The return` *(the line-by-line, the one she types from)* · `Computations`
+  *(live formulas **and** a separately verified value, because the container has no spreadsheet engine
+  to check them)* · `Client answers` *(what was asked, what he said, in his words, and what was done
+  with it — plus what has NOT been asked)* · `Sources` · `Decisions` · `Open items` · a sheet per
+  disclosure form where one is needed · `Entry order`.
+- ☑️ **`Open items` is sorted by severity, actually sorted.** ⛔ *A sheet whose subtitle says "ordered by
+  severity" and is not is worse than an unsorted one — it was shipped that way once, with a `Medium`
+  above seven `BLOCKING` rows, because the severities were edited and the order was not.*
+- 🇬🇧 **Everything in the file is in ENGLISH — sheet names, headers, findings, the filename** — even
+  when the session runs in Spanish. [`CLAUDE.md`](../../../CLAUDE.md) carries the standing rule and the
+  reason: **Julia reads this file and does not speak Spanish.**
+- 🗺️ **Every row keeps the full address** — form · page · part · line, and the **column** on a grid
+  form — and the **TYPED / COMPUTED** mark (§4B).
+- 🔒 **The identity block never enters it**: no SSN/ITIN, no date of birth, no home street address, no
+  bank or card number. **A business EIN is fine.**
+
+> ### 🛑 A CELL CAN HOLD TEXT THAT THE ROW WILL NOT SHOW — AND NOTHING ANYWHERE SAYS SO
+>
+> 🗣️ **Lilian, 2026-09-24:** *"En esta última versión del Excel no me diste la explicación que debo poner
+> en la parte 3 para ninguna de las tres S-Corp. Eso estaba en versiones anteriores, pero en esta no me
+> lo diste."* ⛔ **The text was in the cell.** 🔑 **The row was FIXED at 44pt and the column was 30
+> characters wide, so a 1,198-character block showed 3 of its ~38 wrapped lines and the rest was
+> invisible — no error, no marker, nothing in the file to show for it.** ⚠️ **From her side the
+> deliverable was missing, and she was right to say so.**
+>
+> 🛑 **AND THE SECOND HALF, WHICH IS WHY YOU CANNOT JUST MAKE THE ROW TALLER: Excel's hard ceiling on a
+> row is 409.5pt** *(8190 twips; the Row Height dialog refuses more)*. **38 lines of Arial 10 need
+> ~485.**
+> 🔑 **So the ceiling is not the bug — it is the reason a long block CANNOT live in a narrow column and
+> has to move to a wide one.**
+>
+> ⛔ **TWO WRONG FIXES, BOTH OF WHICH THIS FIRM SHIPPED IN ONE DAY:**
+>
+> | The wrong fix | Why it fails |
+> |---|---|
+> | Set a taller fixed height | Excel clamps it at 409.5 and the text is clipped anyway. ⚠️ **A `min(405, …)` cap is the same failure with better manners** — past ~33 lines it starts hiding content again, silently. ⓘ *A first guess capped that way is fine as a starting height **provided the fit check below runs afterwards and can override it** — that is what makes it safe, and a generator that keeps such caps should say so at each one* |
+> | Replace the block with a pointer to another sheet | 🗣️ **That is what produced her message.** She works down `The return` at the keyboard; **a pointer where a text used to be reads as a deletion** |
+>
+> ✅ **THE FIX IS A FIT CHECK THAT RUNS AND CAN FAIL THE BUILD** — not a formula at each call site,
+> because there are a dozen of those and the next one will be forgotten. ⓘ *Two of them were already
+> wrong in the same commit that added the first version of this rule.* **After the workbook is built,
+> walk every wrapped cell, measure what it needs, and grow the row; where it cannot fit under the
+> ceiling, RAISE — for a cell she ACTS on:**
+>
+> ```python
+> MAX_ROW_PT = 409.5
+> # the columns a person types from, per sheet - a clipped cell here fails the build;
+> # clipped reference prose in a "why" column is reported and does not
+> ACTIONABLE = {'The return': {5, 6, 8, 9}, ...}
+>
+> need = wrapped_lines(cell.value, merged_width_chars, cell.font) * line_pt(cell.font) + 4
+> have = ws.row_dimensions[cell.row].height or 15.0
+> if need > have:
+>     if need <= MAX_ROW_PT:
+>         ws.row_dimensions[cell.row].height = need          # just grow it
+>     elif cell.column in ACTIONABLE.get(ws.title, set()):
+>         fatal.append(f'{ws.title}!{cell.coordinate} needs {need:.0f}pt')
+>     else:
+>         problems.append(...)                               # printed, not fatal
+> if fatal: raise SystemExit(...)      # a clipped deliverable must not be shippable
+> ```
+>
+> ⚠️ **Two details in that code carry the whole point.** ⛔ **Never set a height BELOW what the cell
+> needs** — not even by a point, not as a `min(ceiling - 1, need)` tidy-up: that is the original defect
+> with a better number on it. **And the failure message must name the COLUMN and its width**, because
+> the only useful next move is to decide where the block goes instead.
+> 📌 **`ACTIONABLE` is a judgement and it should be put to Lilian, not guessed.** ✅ **Include the
+> column that says WHAT TO TYPE, not only the value** — §4D's own rule is that a defect flag without its
+> correct value is not a deliverable, and that detail lives in the *Action - detail* column.
+>
+> 🔑 **Three things that make the measurement honest**, each of which was wrong on the first attempt:
+> **wrap on WORDS, not characters** *(Excel does, so a character split under-counts lines)*; **measure
+> the MERGED span, not the one column**; and **measure in the CELL's font** — Courier New is ~16% wider
+> per character than the Arial the column-width unit is calibrated for, so summing raw column widths
+> over-states capacity and leaves rows too short.
+> ⚠️ **And two tables on one sheet must share one set of column widths** — widths are per SHEET, so the
+> second `header_row` silently re-lays-out the first table against columns it was never designed for.
+>
+> 📌 **Where the block goes once it will not fit:** a **merged full-width cell** on the form's own sheet,
+> **in ONE cell** so a single copy carries the line breaks. 🔑 **Then the pointer is not a substitute for
+> it, it is a route to it — and it has to earn that:** ✅ **built from the SAME heading constant** *(a
+> pointer written with a hyphen against a heading with an em dash finds nothing in Ctrl-F)*, ✅ **saying
+> what to DO** *("PASTE the block headed … It is ONE cell: click it, copy, paste")*, ✅ **itself checked
+> by the fit rule** — *the pointer rows added to fix this were themselves clipped at a hard-coded 76pt* —
+> and ✅ **announced in the `Read me` sheet AND the target sheet's own subtitle**, because a text nobody
+> can find is a text that is not there.
+
+---
+
+### 4E · 🔄 RE-READ THE WORKING PAPER BEFORE YOU BUILD ANYTHING FROM IT — **and check what is IN FLIGHT, not just `main`**
+
+🔑 **A live return's working paper moves faster than a session does.** Valentin Volzhanskiy's moved
+**six sections in two days**. A session that read it once and then worked for a long stretch is
+holding a picture of the return that no longer exists — and it will hand that picture to Lilian
+without noticing.
+
+> 🛑 **THE FAILURE THIS RULE EXISTS FOR — 2026-09-24.** A session read the paper at §17, worked, and
+> delivered **an Excel workbook and a chat analysis** built on that state. In between, **five PRs had
+> merged and a sixth was open**. 🗣️ **Lilian's reply is the whole of it:** *"Sinceramente, no entendí
+> nada de la explicación que me diste… Pensaba que la declaración estaba prácticamente bien… Me estás
+> hablando de cosas rarísimas que no hemos conversado."*
+> 💸 **What it cost her:** an amount owed that was badly wrong; a Schedule C shape presented as
+> an open decision that she had **chosen and keyed the day before**; a required reconciling statement
+> that had been made **moot**; and a **second workbook** with the same client's name on it, whose
+> figures contradict the live one. 🔗 *The account is §24 of that client's working paper.*
+
+⛔ **NEITHER EXISTING CONTROL FIRES HERE, and that is the point.**
+[`CLAUDE.md`](../../../CLAUDE.md)'s drift check runs **before a commit**; a file handed over and a
+chat message are neither. The [session-start hook](../../../.claude/hooks/session-start.sh) briefs
+**once**, at session start.
+
+🛑 **AND RE-FETCHING `main` IS NOT ENOUGH.** The section that corrected the delivery was sitting in an
+**open, unmerged PR**. ⓘ *§24's own first draft was written after a fresh `git fetch origin main` and
+was still wrong, for exactly that reason — it had to be corrected in review.*
+
+ⓘ **This is a RE-TIMING, not a discovery.** [`CLAUDE.md`](../../../CLAUDE.md) already carries the
+habit — *"Check what's in flight before starting — open PRs (`list_pull_requests`)"* — but it is timed
+**before starting** and written **for people editing shared guidance**. 🔑 **§4E re-times it to before
+every deliverable, for the person building one.** ⛔ *A session reading §4E alone must not conclude the
+repo's existing guidance is `main`-only. It is not — it is correctly scoped guidance fired at the wrong
+moment, which is the actual argument for this section.*
+
+#### ✅ The four steps, and they take under a minute
+
+```
+git fetch origin main && git log --oneline HEAD..origin/main
+```
+1. **What merged** — anything returned means re-read before you build.
+
+2. **What is IN FLIGHT.** ⛔ **`list_pull_requests` alone does NOT answer this** — it returns numbers,
+   titles and branches, **never file paths**, so there is no way to filter it to this client's paper,
+   and a title tells you nothing *(the PR that superseded the 2026-09-24 delivery was titled "The
+   instruction was the defect — 'line 21' and 'line 25' are different forms"; it names neither the
+   client nor the file)*. ✅ **Ask git instead — and it also catches a branch pushed BEFORE its PR
+   exists, which a PR list cannot:**
+
+   ```
+   git fetch origin --prune
+   for b in $(git branch -r --no-merged origin/main | grep 'origin/claude/'); do
+     git log origin/main..$b --oneline -- projects/tax-returns/<client>/
+   done
+   ```
+   ⓘ *Same idiom [`session-start.sh`](../../../.claude/hooks/session-start.sh) uses, for the same
+   reason.* **Anything it prints, read before you build** — `git show <branch>:<path>`. *(The PR route
+   works too, but costs two calls: `list_pull_requests` then `pull_request_read` with
+   `method: get_files` on each one.)*
+
+3. **Re-read the working paper's LAST sections**, not your memory of them.
+
+4. 🗣️ **SAY WHAT IT FOUND — IN ONE LINE, AT THE TOP OF THE DELIVERABLE, INCLUDING WHEN IT FOUND
+   NOTHING.** e.g. *"Drift check: `main` at `23daa94`; no unmerged branch touches this paper; paper
+   re-read to §24."* ⛔ **A delivery without that line has not had the check run** — because a session
+   that skipped the check and a session that ran it and found nothing produce **identical
+   output**, and the person reading cannot tell them apart. 🔑 **That is the standing rule for every
+   scan in this skill** *(see "update this skill when…")*, and it is why §4A-M prints two lines for an
+   account with no mirrors.
+
+🔑 **WHEN: immediately before building EVERY deliverable** — the workbook *(§4D)*, the chat or
+artifact delivery *(§4B)*, a message to the client, a briefing for the reviewer *(§4C)*.
+⛔ **Not once per session. Once per deliverable.**
+
+#### 🔴 The second rule, and it is what made the corrected version wrong too
+
+🛑 **A FIGURE THE WORKING PAPER *MODELS* IS NOT A FIGURE READ OFF THE RETURN.** ✅ **Say which it is,
+every time. When both exist, the one READ OFF THE RETURN governs.**
+
+ⓘ *The case: one section computed the amount owed from Lilian's stated change and the very next
+subsection said so in terms — "No new return PDF was supplied." A later section read the actual
+return through the redactor and landed materially lower. A session took the modelled figure,
+labelled it "what the return actually says", and told her a wrong balance due.*
+
+- ⌨️ **In the workbook it is enforced by §4D's `CHANGE` row** — *"name what is there now"* is exactly
+  the cell this defect lands in, so that row carries the mark. ⛔ **Do not invent a column for it;
+  §4D forbids that.**
+- 🗺️ **In the working paper**, a section that MODELS says so in its own heading or opening line.
+
+#### 🗂️ And if two versions of a deliverable end up in her hands
+
+⛔ **Do not leave it to her to work out which is real.** ✅ **Name the live one and the one to discard
+in the client's [Client Intelligence](../../../projects/client-intelligence/) file** — that is where
+the next session looks first, and it holds no figures, so the pointer is safe there.
+
 ---
 
 ## §5 · Every prepared return leaves a working paper
@@ -2043,6 +2337,23 @@ is how an SOP becomes confidently wrong.**
   — first that the tables never located Form 8829, then that she needs the flow, the explanations
   and the checkboxes as well. **Her corrections ARE the standard; write them in rather than
   remembering them.**
+- 📊 **LILIAN TELLS YOU SOMETHING ABOUT THE EXCEL WORKBOOK — a column she does not want, a column she
+  does, a thing she cannot scroll past.** ⛔ **That is not a cosmetic note to apply once and forget.**
+  She types a filed tax return out of that file, so the way it is laid out is part of the work, and
+  §4D exists because three of her corrections arrived in a single message. 🔑 **Write each one in,
+  with her words**, so the NEXT return's workbook is built that way instead of being corrected again.
+  🛑 **AND WHEN SHE SAYS SOMETHING IS *MISSING* FROM THE WORKBOOK, DO NOT ASSUME SHE DID NOT FIND IT —
+  OPEN THE FILE AND CHECK WHETHER IT RENDERS.** ⛔ **The 2026-09-24 case looked like a search problem
+  and was a RENDERING one:** the text was in the cell and invisible on screen, because the row was fixed
+  at 44pt against a block needing ~38 lines in a 30-character column. 🔑 **"It is there, scroll down"
+  would have been wrong, and would have sent her back to a file that genuinely could not show it.**
+  ✅ **Verify the cell holds it AND that the row can display it** *(§4D's fit check)*.
+  ⚠️ **And be as sceptical of your own account of the cause as of the file.** ⛔ *The first write-up of
+  this one named the wrong mechanism — Excel's 409.5pt ceiling — and back-computed a "450pt" that no
+  shipped file ever had. The real defect was in a different sheet, in a different column, at 44pt. A
+  review caught it from a dump taken earlier the same day.* 🔑 **A root cause written into a skill and a
+  client file is read as established fact by everyone after you: check it against an artefact, not
+  against the shape of the fix.**
 - 🔵 **JULIA TELLS YOU A BRIEFING MISSED SOMETHING SHE NEEDED IN ORDER TO REVIEW.** §4C is written
   from Lilian's side of the handover — what the *preparer* thinks a reviewer needs. **Only Julia knows
   what she actually reached for and did not find. Her corrections are the standard for §4C exactly as
@@ -2051,7 +2362,9 @@ is how an SOP becomes confidently wrong.**
   an attention failure** — and the fix is never "be more careful", which cannot be executed. Work out
   what sort would have made it visible, write the sort down as a step that RUNS, and require it to be
   **reported even when it finds nothing**, because a silent session and a session that never looked
-  read identically. **§4A-M is the first of these; there will be others.**
+  read identically. **§4A-M is the first of these; §4E is the second** — a session that had read the working paper hours
+  earlier delivered a workbook built on a state of the return that was five merged PRs and one OPEN PR
+  behind, and the fix is a re-read that RUNS before every deliverable, not a resolution to be careful.
 - **Someone reports how the SOFTWARE behaves** — which worksheet feeds which form, which screen an
   entry has to be made on, which error it throws. That is knowledge no IRS document carries, and
   rule 9 says to record it.
