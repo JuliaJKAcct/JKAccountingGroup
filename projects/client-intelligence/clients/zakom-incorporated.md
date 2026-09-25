@@ -265,15 +265,20 @@ A running, dated record as we build this profile.
 
 - _(2026-09-25)_ — **WHICH DRIVERS HAVE A 1099 IS ANSWERED FROM OUR OWN RECORDS — WHETHER ANY WAS TRANSMITTED IS NOT, AND THE QUESTION STAYS OPEN FOR EVERYONE ELSE.**
   The firm prepares this client's 1099s, and Double holds them by year. **Five of the six drivers on
-  the client's own 2025 driver list have a 2025 Form 1099-NEC on file; one does not** — and because every
-  one of those five forms is named for a company, **the 2025 forms give the firm no corporate name for that
-  sixth driver.** ✅ **The firm's 2024 folder was compared too, the same day — its three non-2025 recipients produced
+  the client's own 2025 driver list have a 2025 Form 1099-NEC on file; one does not** — and **because HE HAS NO
+  FORM AT ALL, the 2025 forms give the firm no corporate name for that sixth driver.** ⛔ **An earlier wording
+  rested this on the other five being named for companies instead; that is WITHDRAWN — see the naming point
+  below, and it is beside the question anyway: what the OTHER five are called says nothing about the sixth.** ✅ **The firm's 2024 folder was compared too, the same day — its three non-2025 recipients produced
   NO MATCHING form for him either, so there is no form for him in either year under any name resembling the
   client's own heading for him.** ⛔ **It does NOT exclude him, and all three of those recipients remain
   possible** — none of them resembles any driver, so none can be singled out or ruled out. 🔴 **And the check
   narrowed the reading: NEITHER year's filename may be read as evidence of corporate status** — the same three
-  recipients carry a corporate suffix in one year's filenames and none at all in the other's, **so at least one
-  of the two is not the recipient's legal name, and which one is not established.** ☑️ **So "is this payee a
+  recipients carry a corporate suffix in one year's filenames and none at all in the other's, **and a listing
+  cannot say which naming is the legal name — nor whether the recipient's OWN name changed between the years,
+  which is the case where BOTH filenames are right.** ⛔ **An earlier wording said at least one year must be
+  misnaming the recipient; that needs the premise that the legal name was the same in both years, and is
+  WITHDRAWN.** ⚠️ **Only ONE of the five forms has been opened, and it was read through the redactor, so no
+  recipient's name was seen at all — corporate status is unestablished for all five, not four.** ☑️ **So "is this payee a
   corporation?" is open for the other five too** — **which changes nothing on the return.** ⛔ **And it is scoped to the DRIVER LIST and no wider** — the payments
   to named individuals through a cash-transfer app stay open, and ⚠️ **nothing establishes whether any of
   those payees is one of the six.** ⛔ **An earlier wording, "the only driver recorded under a person's
