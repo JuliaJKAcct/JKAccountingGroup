@@ -1,6 +1,6 @@
 # Zakom Incorporated
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-15
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-25
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -163,7 +163,7 @@ watch-outs, one-off arrangements, history that affects the work.
 - 🟢 **The `ZAKOM 7807` question is CLOSED, and the answer is reassuring.** `7807` is the **trailing digits of Zakom's own Fifth Third checking account** (the full number was emailed to Julia in 2023 and stays in Gmail, never here). So January's thirteen `CASH DISB … OFFSET TRANSACTION` entries are movements on **this** account, **not** a second account nobody knew about. ⚠️ The **line of credit is still separately real** — the statement answers "Business Loan or Line of Credit? Yes", and the firm holds line-of-credit and SBA documents for 2024 but none for 2025.
 - ✅ **The 2024 filed return is now in `JK Accounting Group > Tax Return Filed > 2024`** — it had been sitting in `1099 > 2024` since the 2026-06-02 migration, and **Lilian moved it back on 2026-09-13 at 21:35 UTC**, twenty minutes after the misfiling was reported. `Tax Return Filed > 2023` holds the 2023 return.
 - 🟠 **2025 has disposals, a casualty and personal vehicles moving through the business.** A truck was **totalled and settled by insurance** *(a Form 4797 disposition, possibly a §1033 involuntary conversion — nothing about it is in the P&L)*; three more units were sold; a **personal car the client labels as such** was bought and another **sold with the proceeds wired into the business account**; a car was traded in; and a **loan from another company was borrowed and repaid inside the year**. None of it reaches the equity section, which is empty.
-- **The owner has a second, personal client record** — `Oleg Zakala & Milana Podrugina` (Double `710652`). A document uploaded to the company's organizer on 2026-09-13, `MilanaPodrugina-LoanDocs.pdf`, belongs to that personal side, not to the 1120-S.
+- **The owner has a second, personal client record** — `Oleg Zakala & Milana Podrugina` (Double `710652`). A document uploaded to the company's organizer on 2026-09-13, `MilanaPodrugina-LoanDocs.pdf`, **names his wife.** ⚠️ 🆕 **Corrected 2026-09-25: that it therefore belongs to the personal side rather than the company return is a READING, hedged twice when it was given, and an unextracted co-borrower field leaves open that the shareholder is himself on the note.** ☑️ **Downgraded, not settled.**
 - **Method of accounting is unsettled:** the client answered **"Not sure"**. Read it off the prior-year return rather than asking him again.
 - **Vehicles — and one ruling already on record.** The 2025 uploads carry an Audi Q6 **lease** and Porsche Macan financing, and the client answered **"yes"** to purchasing an alternative-fuel vehicle. 🔑 **Julia ruled in Aug 2025 that the 2021 Audi is 100% in use for Zakom Incorporated**, which is why she refused car usage on his personal real-estate 1099; the client confirmed he *"never accounted personal vehicle under Zakom operation in 2024"* and gave the Audi's mileage at 12/31/24. Whether the 2025 Audi Q6 replaces that vehicle, and leased vs purchased, is not established.
 - **§179 was used before:** the firm took section 179 on the equipment purchased in 2022, and the equipment is financed with the figures taken from the annual amortisation schedule (the client, Aug 2025). Relevant to how 2025's truck and trailer additions are treated.
@@ -262,14 +262,17 @@ A running, dated record as we build this profile.
 - 🔴 **THE CARD RECONCILIATION IS COMPLETE — every bank debit matched, one by one, and the three buckets sum to the bank's own total exactly.** *(2026-09-15)* **Thirty-nine payments left the company's account captioned as card payments; NINETEEN of them are on the card, every one clearing one to four days after the card recorded it. TWO more are still in transit at year end. The remaining EIGHTEEN never reached this card at all** — a little over a third of everything paid out under that caption. ✅ **This is a line-by-line match, not an estimate — and the check that earns that is the CARD side: the card's own statements record twenty payments, nineteen of them match a bank debit, and the one left over is a single payment that arrived with no bank debit behind it.** ⚠️ **The three buckets adding up to the bank's total is NOT the check — they partition the same debits by construction, so that sum holds however the matching falls.** *(This file's own lesson, a few bullets above: when two of your own numbers agree, check whether they COULD have disagreed.)* ⚠️ **And one piece is an assumption rather than a measurement: two December debits are taken to post in the following cycle, and only one of them is corroborated.** 🔑 **And the eighteen have two clean shapes: NINE small, roughly monthly amounts — the signature of a second card's minimum payment — and NINE large round paydowns.** ⛔ **Nothing identifies whose second card, and the firm does not guess.** ⚠️ **One item runs the other way: a payment reached the company's card from a source that is NOT the company's bank account, so this is not a closed system in either direction.**
 - 🔑 **AND THE READ NEEDED NOTHING FROM THE CLIENT.** **The bank statements were already on file and readable; the firm had simply never extracted the individual payments from them.** ⚠️ **The lesson is worth more than the finding: before asking a client for anything, check whether the answer is inside a document already held — and "already read" is not the same as "everything in it has been extracted."**
 
-- _(2026-09-25)_ — **THE 1099 QUESTION IS ANSWERED FROM OUR OWN RECORDS, AND THE ORGANIZER'S CONTRADICTION DISSOLVES.**
+- _(2026-09-25)_ — **THE 1099 QUESTION IS ANSWERED FROM OUR OWN RECORDS FOR THE SIX DRIVERS — AND STAYS OPEN FOR EVERYONE ELSE.**
   The firm prepares this client's 1099s, and Double holds them by year. **Five of the six drivers on
   the client's own 2025 driver list have a 2025 Form 1099-NEC on file; one does not** — and that one
   is the only driver recorded under a person's name rather than a company's, while all five filed
   forms are companies. ✅ **That is exactly what the client wrote on his organizer** *("there are some
   people who didn't have a corp name — I can provide names and addresses")*, so his two answers were
   never in conflict. ☑️ **What remains is the firm's: decide whether that sixth driver is owed a 2025
-  form and prepare it.** ⚠️ **It does not change the company's deduction** — the driver payments are
+  form and prepare it.** ⚠️ **And the question is NOT closed: payments to named individuals through a
+  cash-transfer app are a second population that may be 1099-reportable — still open, and still an
+  in-house search.** ⛔ **Nor is "a copy on file" the same as "transmitted"** — no transmittal or
+  acknowledgement has been seen, and prepared-but-never-sent would be five exposures rather than one. ⚠️ **It does not change the company's deduction** — the driver payments are
   deductible either way; a missing information return is a separate exposure, and whether to raise it
   with the signer is the reviewer's call. 🔑 **Nothing was asked of the client to establish any of
   this.**
@@ -280,9 +283,12 @@ A running, dated record as we build this profile.
 - _(2026-09-25 — the principal's rulings, recorded because they change the work)_ — **The missed
   deadline is accepted and the aim is to finish before October**, since the late-filing penalty runs
   per month. **The owner's second vehicle is treated as disposed of** on the strength of his own
-  passing note, which she read as clear. **A consumer loan document uploaded to the company's folder
-  is the shareholder's WIFE's** and belongs to their personal return, not this one — that open
-  question closes. **Unreadable documents from years we are not filing are stood down**, unless a
+  passing note, which she read as clear. **A consumer loan document uploaded to the company's folder NAMES the
+  shareholder's WIFE** — ✅ **that she is his wife is established.** ⚠️ **That the document is therefore
+  personal and was uploaded by mistake is her reading, prefaced *"probablemente"* twice, and an
+  unextracted co-borrower field leaves open that the shareholder is himself on the note.** ☑️ **So the
+  question is DOWNGRADED, not closed** — no longer one for her, and ours only if a company-return line
+  turns on it. **Unreadable documents from years we are not filing are stood down**, unless a
   specific question needs them. **Officer compensation is deliberately deferred** until every other
   figure exists. 🛑 **And nothing is asked of the client for now** — the firm settles what it can by
   itself first.
@@ -329,8 +335,8 @@ it here; these never go into the client SOP.
 - [ ] 🔴 **WHICH STATES the 2025 return covers** — the firm filed FL + IL for 2022; the client answered "no" to multi-state on the 2025 organizer. Settle it before preparing, and check whether an Illinois return is owed for 2023 and 2024 too
 - [ ] 🔴 **Is Mema Colors LLC a live engagement, and is Zakom paying its Amex?** No Double record, no CI file, yet the firm filed its BOI and an amendment. Same question for **Palm Terra LLC**. **Lilian decides whether either gets its own file**
 - [ ] 🔴 **Statements for EVERY account and contract we now know exist** — the four other Fifth Third accounts, **plus the credit line and the credit card**, plus ✅ 🆕 **NARROWED 2026-09-15:** ⛔ **the three contracts with that bank are CLOSED — the firm already held all three interest letters and did not know it**, and ⛔ **the new vehicle is a LEASE, so it has no year-end balance at all**; **the premium-finance agreement is still open.** _(As written: BMO's three contracts, the Audi lease and IPFS.)_ **None has ever been provided, for any year**
-- [ ] 🟠 **Ask what `Statement2023-01-31 (4).pdf` and `Statement2023-12-31.pdf` are** — the only documents on file whose institution is unknown; the guard refused both
-- [ ] 🛠️ **Fix the redactor's guard false positive** *(`NNN.NN` + wide gap + `NNNN` on a money column)* **with a test**, then read `Jan24`–`April24` and the two `Statement2023-*` files. ⛔ **It is a safety control — fix it, never bypass it**
+- [ ] ⏸️ 🆕 **STOOD DOWN 2026-09-25 — not auditing years we are not filing, unless a question needs them.** _(As written:)_ 🟠 **Ask what `Statement2023-01-31 (4).pdf` and `Statement2023-12-31.pdf` are** — the only documents on file whose institution is unknown; the guard refused both
+- [ ] 🛠️ ✅ 🆕 **NO LONGER A BLOCKER ON THE 2025 RETURN 2026-09-25 — it stays a TOOL task, and the documents it would unlock are stood down.** _(As written:)_ **Fix the redactor's guard false positive** *(`NNN.NN` + wide gap + `NNNN` on a money column)* **with a test**, then read `Jan24`–`April24` and the two `Statement2023-*` files. ⛔ **It is a safety control — fix it, never bypass it**
 - [x] ✅ 🆕 **DONE 2026-09-15 — the principal opened the two disaster-loan statements herself and sent them in; no text PDF was needed.** _(As written:)_ 🟠 **Ask for TEXT PDFs** of the two SBA statements and ✅ 🆕 **CLOSED — the card statements were all read on 2026-09-15** *(the principal opened them and sent them in)*; _(as written: the December Amex balance statement)_ — the copies on file are scans
 - [ ] 🔴 **The 2025 Amex statements.** ✅ **Now fully established:** all twelve `stmnt` files are the bank's, nothing card-named exists in Double, the balance sheet carries a year-end card balance, and **the bank shows 39 Amex payments across the year**. ⛔ **✅ 🆕 **SUPERSEDED — the full year of card statements was read on 2026-09-15.** _(As written: No statement exists for any of it.)_** Ask for the full 2025 statements of **every card**, **and establish whether the cards are the company's or the owner's personally** — the payments carry his name, which makes company-paid personal cards a distribution question
 - [x] **What `ZAKOM 7807 CASH DISB … OFFSET TRANSACTION` is** — **movements on Zakom's own Fifth Third account** (`7807` is its trailing digits, from the 2023 email). Not a second account. The line-of-credit statements are still owed
