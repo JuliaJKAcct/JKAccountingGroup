@@ -84,6 +84,7 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
 - **Applies?** Yes — **Form 1120-S** _(Double)_; **1099 preparation** included.
 - **Organizer Status property:** "N/A (we have QBO access)" _(Double client properties, 2026-08-15, re-confirmed 2026-09-19)_ — the firm has direct QBO access, so no organizer is issued for this client.
 - 🟢 **2025 return — FILED 2026-09-16.** Double's `list_activity_log` shows the "2025 Taxes" project moving `notStarted` → **`readyForReview`** (2026-09-15, by Irina Jandieri) → **`Waiting on Client Approval`** (2026-09-16 00:46, Lilian) → **`Filed`** (2026-09-16 01:07, Lilian) — all inside one overnight window. A file "Sunoma Inc_Profit and Loss& BS 2025.xlsx" was created/renamed into the client's "2025" folder the same day (2026-09-15, by Irina). This is new movement since the 2026-07-31 organizer-reversion-to-draft note below; that note is a **separate Double entity** (the organizer) and is left unresolved on purpose, but the tax *project* itself is now Filed. _(Double `list_activity_log`, 2026-09-15/16)_
+- A **"Signature" client property now reads "Signed"** (read live 2026-09-26, not previously catalogued in this file) — consistent with the 2025 return having gone through e-signature ahead of filing; noted as a fact, not independently investigated. _(Double client properties, 2026-09-26)_
 
 ### Licenses & other filings
 - _(pending)_
@@ -98,6 +99,7 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
 - **PaymentsHub (Merch) deposit/fee dates** routinely need correcting during the close.
 - **Bank-feed note:** "Teller Cashed" items — check the attachments.
 - Store inventory/POS on **Bravo**; **Truist** + **Chase** banking; recurring Bravo access/license friction (the person who managed it left).
+- 🆕 **Bravo access is currently running on a workaround, not a fix:** on 2026-09-21 Maria told the owner the team has been using **"Bill's" login** for Bravo the whole time, because the license created for the firm a few months earlier has never worked — the same recurring access/license friction already on file, now with a concrete cause. _(Gmail "Paperwork request," 2026-09-21)_
 - **Owner-directed inventory donation in progress:** old, unsold-but-working pawn-store inventory is being donated to a charity for a tax deduction — booked at **fair market value**, not cost basis, contingent on the charity issuing a donation receipt. Not yet finalized as of 2026-07-23 (still gathering items, pickup not yet scheduled). Flagged as an SOP-proposal candidate — see the SOP for the categorization rule to add. _(Gmail, 2026-07-20→23)_
 
 ## 6. History & open questions

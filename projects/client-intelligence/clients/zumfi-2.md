@@ -376,6 +376,12 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   `7004 2025 Ext.pdf` in Double is a **scan with no text layer**. Confirm acceptance from ATX or
   the e-file acknowledgment. **If no extension was accepted, the return has been late since March
   and the small-partnership relief it rests on is gone.**
+  ⚠️ **CHASED 2026-09-26, and NOT closed by what was found:** Double now shows the 1065 itself as
+  **filed 2026-09-15** (§4, §6 log) — meaning the firm went ahead and filed **without** this session
+  finding a recorded confirmation of the 7004's acceptance anywhere reachable (Gmail, Double's file
+  library, activity log or comments). Either that confirmation exists only in ATX/the preparer's own
+  knowledge, or the return was filed on the strength of the deadline alone. **Still needs a person to
+  close it, from ATX or the e-file acknowledgment.**
 - 🔴 **TENNESSEE — ANSWERED 2026-09-17, AND NOW A LIVE FILING RATHER THAN A QUESTION.** It is no
   longer "not established either way": **a return is owed and it is late.** ✅ **The penalty is
   nominal, so this is a job to do, not an alarm.** **Next, in order:** ① **Lilian creates the online

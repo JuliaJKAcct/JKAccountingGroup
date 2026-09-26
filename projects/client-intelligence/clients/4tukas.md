@@ -2,10 +2,11 @@
 
 > **Status:** Prospect — engagement letter drafted and delivered 2026-08-27; a paid
 > consultation for the client's remaining planning questions was proposed for 2026-09-17.
-> ⚠️ **Mindaugas followed up 2026-09-14 asking for next steps on the two open engagement-
-> letter questions and a consultation date; Julia replied 2026-09-15 promising an answer
-> "by the end of this week" — not yet confirmed as sent (2026-09-19 sweep)** · **Owner:**
-> Julia · **Last updated:** 2026-09-19
+> 🔴 **Mindaugas followed up 2026-09-14 asking for next steps; Julia replied 2026-09-15
+> promising an answer "by the end of this week" — that reply was NEVER SENT: Mindaugas
+> followed up a SECOND time on 2026-09-22 ("please let us know if there are any updates")
+> and it remains unanswered as of the 2026-09-26 sweep** · **Owner:**
+> Julia · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,

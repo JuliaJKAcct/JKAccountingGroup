@@ -284,7 +284,11 @@ link). Never write the credential itself here.
   follow-up call ever took place, and no reply from Dmytro on any channel in the **25 days**
   since the 2026-08-25 call. 🔴 **The proposal's 30-day validity (through ~2026-09-18) has
   now elapsed** — as of this sweep there is no record of it being accepted, declined, or
-  extended
+  extended. **A fourth search (`after:2026/09/19`, on 2026-09-26) also found nothing** —
+  **32 days** since the 2026-08-25 call with zero contact from Dmytro or Kompozit on any
+  channel, and the proposal's 30-day window is now **8 days past expiry** with no
+  acceptance, decline or extension on record. This prospect should be treated as gone
+  quiet unless Julia has a channel outside Gmail (phone/WhatsApp) that this sweep cannot see
 
 ### Information still needed
 
