@@ -1,6 +1,6 @@
 # Kolo Florida Inc
 
-> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -72,6 +72,7 @@ the actual details.
 - **Applies?** Yes — filed **monthly** through the Florida DOR e-Services portal _(Double client property "Sales Tax" = Monthly, 2026-08-01)_. The firm's internal Double recurring task "Monthly Sales tax" is scheduled around the **5th** of each month (changed from the 1st on 2026-07-20). Filing confirmations arrive by e-mail from the Florida DOR e-Services system. _(Double activity log + Gmail, 2026-08-01)_
 - **Cadence — settled by Lilian, 2026-08-11: MONTHLY.** The Drive recurring-expense watchlist (2026-07-07) and some 2025 correspondence describe it as quarterly; that is stale and should not be relied on.
 - 🛑 **ENDING: the July 2026 return is the LAST sales-tax filing the firm makes for this client.** Lilian files it herself; after that the sales-tax account is closed as part of the wind-down (§5). _(Lilian, 2026-08-11.)_
+- ✅ **THE JULY 2026 RETURN IS CONFIRMED FILED AND PAID** _(Gmail, FL DOR e-Services e-Notices, both 2026-09-21: "Return Filed" and "Payment Confirmation" for KOLO FLORIDA INC; Double `list_activity_log`, 2026-09-21: the "Sales Tax" task moved In Progress → Done)_. **The filing half of the wind-down item is done; closing the FL DOR account itself is still not confirmed** — no correspondence about account closure was found in the same window (§6, Wind-down checklist).
 
 ### Payroll
 - 🛑 **STOPPED — no payrolls have been run since. Settled by Lilian, 2026-08-14.** Everything below is **historical**, not a live obligation.
@@ -104,6 +105,7 @@ the actual details.
   return has to be exported by Lilian by hand.** The work left is the **final 2025 Form 1120-S**
   and the account closures; **nothing here is a live recurring obligation** without checking it
   against the wind-down list in §6 first.
+- 🔴 **THE SHOPIFY STORE HAS BEEN FROZEN — escalated from a warning to an actual freeze, 2026-09-23.** _(Gmail, `billing@shopify.com`, "Urgent: KOLO HOUSE is frozen," 2026-09-23: "Our final attempt to process your last bill payment of $144.00 USD for KOLO HOUSE has failed... your store has been frozen.")_ The failure streak first seen 2026-08-23 ran through repeated retries and a "will be frozen" warning (2026-09-18) before the account was actually frozen five days later. **This settles nothing about the wind-down decision in §6 ("does Shopify close with the company or belong to the owner") — it takes the decision out of the firm's hands**, since Shopify has now acted unilaterally. 🔴 **AND THE QUICKBOOKS/INTUIT SUBSCRIPTION BILLING FAILURE CONTINUES, STILL UNRECONCILED WITH `platform: none`.** Further "subscription will be canceled" notices arrived **2026-09-19 and 2026-09-24** (Intuit, VISA ending 3807, billed to **Vasile Bivol**, a JK staff member, for "Kolo Florida Inc," $38 due), each time bundled in the same notification email as a **different company, "2115 NE 54th CT LLC"** (Julia's own AMEX). Whether the two subscriptions are the same billing account or coincidentally bundled remains **not established** — flagged since 2026-09-12, still open. 🟠 **The weekly Gusto payroll-late notice pattern for KOLO FLORIDA INC also continues**, with further notices **2026-09-20, 09-22, 09-24** (pay period Sep 12–18) — the "payroll stopped" (2026-08-14) vs. "Gusto still billing weekly" contradiction is now unresolved across **at least 43 days** (2026-08-14 → 2026-09-24).
 - 🧾 **The 1125-A "purchases" figure is REAL, and it is the pass-through door business — settled
   from the 2025 general ledger, 2026-08-17.** No inventory merchandise was bought in 2025 (Lilian),
   and the `Inventory` account has **exactly one entry all year**: the 31-Dec journal relieving it

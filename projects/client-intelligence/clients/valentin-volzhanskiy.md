@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-24 *(the 2025 return is finished and reproduces line for line; one item open — the mileage, with the client; the employer-coverage question dropped on her instruction)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26 *(first full-historical Client-Intelligence sweep — Ping/Double/Gmail/Drive read end to end; no new client response since 2026-09-24, both chased items still open)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -190,8 +190,10 @@ watch-outs, one-off arrangements, history that affects the work.
 - ⓘ **The firm published a second, much better 2025 organizer in Double in June 2026** — it asks
   about tips, how they were reported, the tipped occupation, overtime and business income — and
   **he never completed it**, because he had already completed the older TaxDome-style organizer in
-  April. The Double organizer therefore reads `in progress` and looks abandoned; the `Organizer
-  Status` property reading `Completed` refers to the TaxDome one.
+  April. 🔄 **UPDATE (Double activity log, 2026-09-26): that Double organizer was unpublished and
+  then DELETED on 2026-09-13 by Lilian** — it no longer merely "looks abandoned", it does not exist
+  any more. The `Organizer Status` property reading `Completed` still refers to the TaxDome one,
+  unaffected by the deletion.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -1212,6 +1214,55 @@ worth.** It had been carried unchanged since 13 September, through five sections
 version of the return that no longer existed. Recomputed on the return as filed it is materially
 larger — and it is the largest single DEDUCTION on this return, while **its eligibility is still not
 established**. The price is corrected; the open question is not touched.
+
+### 2026-09-26 — first full historical Client-Intelligence sweep (no CI file baseline existed)
+
+🔍 **Ran his first full-historical CI sweep** *(client-intelligence skill, 2026-09-26)* — Double
+(`get_client`, `list_client_properties`, `list_notes` — both notes' bodies re-read in full,
+`list_contacts`, `list_activity_log`, 47 entries), Ping Assistant (`resolve_person`,
+`search_contacts`, org-wide `search_meetings`), Gmail (`in:inbox`/`in:sent` by his name and by
+`Compass Group`), and Google Drive (`search_files`, `excludeContentSnippets:true`). QuickBooks not
+applicable (`platform: none`).
+
+✅ **Nothing contradicts the file, and no new client information has arrived since the last entry
+above (2026-09-24).** Two things turned up that the file did not yet have, both from Double's
+activity log (not previously read by name in this file's history):
+- The Double-native 2025 organizer's **deletion** on 2026-09-13 — folded into §5 above.
+- **The `2025 Taxes` Double tax-project status**: `Not Started` → `In Progress` (2026-06-29,
+  Lilian) → `Waiting on Client Approval` → `Waiting on Client` (2026-08-04, Julia) → `In Progress`
+  (2026-09-13, Lilian) → **`Waiting on Client` (2026-09-21, Lilian)** — and **no status change is
+  logged after that**, even though he replied 2026-09-22 and the return was reworked through
+  2026-09-24. 🔑 **Worth a look before anyone reads the Double status alone**: as of this sweep the
+  project still shows `Waiting on Client`, which no longer describes where the work actually stands
+  — it is now waiting on the client for the vehicle/mileage/square-footage answers, not for what
+  triggered the 09-21 change. Not corrected here — a status change is Lilian's judgment call
+  (`double-mcp` §6), only reported.
+- ⓘ Two Google Drive folders named "Valentin Volzhanskiy" exist — one under Julia's tree (already
+  in §7) and a second under **Maria Zavarce's** tree (created 2026-05-12, contents not inspected).
+  He is not Maria's client; the second folder's purpose is unconfirmed and not chased further this
+  pass — flagging only so it isn't mistaken for a duplicate/error if noticed later.
+
+📭 **A search of Ping Assistant, bounded to org-wide semantic search on his name, found no meeting
+beyond the single 2026-07-16 Zoom call already on file** (heavily garbled, low confidence, as
+already noted). **A search of Gmail, bounded to his name and to "Compass Group", found no message
+after the 2026-09-24 reply-request already logged, and no thread of any kind with or about Compass
+Group beyond the one line naming it as a W-2 payer** in the firm's own 09-20 email to him.
+
+### Chasing his own open items (2026-09-26)
+
+- 🔴 **MILEAGE — still not arrived.** Asked 2026-09-20, re-asked 2026-09-24 (both already logged
+  above). **A targeted Gmail search (`Volzhanskiy after:2026/09/24`, and separately for
+  "mileage"/"odometer") found no reply.** ⏳ **6 days outstanding since the first ask (2026-09-20 →
+  2026-09-26), 2 days since the most recent one.** No hard deadline is on file for this item alone;
+  the operative outer bound remains the firm's own 15 October extended-filing date.
+- 🟠 **TIPS ELIGIBILITY — the question has not yet been PUT to anyone.** The file is clear this goes
+  to the **employer** (Compass Group), not the client. **A search of Gmail and Ping, bounded to
+  "Compass Group" and to his name, found no outreach to that employer at all** — no email sent, no
+  meeting or call about it. ⏳ **13 days since the question was identified as needed (Double note
+  524890, 2026-09-13) with no chase action found in any source searched.** No deadline is on file.
+  Per the file's own 2026-09-24 entries this is the **larger deduction in dollar terms** of his two
+  open items, while the mileage above is the larger number still with the client specifically —
+  both are open, for different reasons, and neither has arrived.
 
 ### Outstanding items (CI-only — never in the SOP)
 
