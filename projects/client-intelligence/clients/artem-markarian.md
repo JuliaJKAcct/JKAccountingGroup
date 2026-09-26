@@ -1,6 +1,6 @@
 # Artem Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -144,6 +144,32 @@ the actual details.
 
 ### Log
 
+- 2026-09-26 (tenth pass — weekly CI sweep, corroboration, bound 2026-09-19→2026-09-26) —
+  🔎 **NO MOVEMENT FOUND ON THIS RECORD.** Double `list_client_properties` re-read: unchanged
+  (`Income Tax: true`, `Tax Return Type: 1040`, `Organizer Status: Sent`, `Bookkeeping: N/A`,
+  `1099 Preparation: false`, `Annual Report: false`, `Assigned Staff: Lilian Gonzalez`) — Double,
+  2026-09-26. `list_activity_log` (bound ≥2026-09-19): **zero entries.** `list_notes`: note `510952`
+  re-read in full — **`updatedAt` still 2026-09-01, unchanged**, still reads Open with the same two
+  pending items. `list_contacts`: unchanged (one contact, Artem, on both his own record and the
+  company's).
+  🔴 **Chase pass on §6 Outstanding items (Gmail `(Turo) after:2026/09/01`, Ping org-wide semantic
+  search, bound-appropriate):**
+  - **Per-car Turo breakdown** — requested 2026-09-01, **no new Turo correspondence found** in
+    Gmail (inbox + sent) searched broadly for "Turo" with no end date, from 2026-09-01 to today.
+    **25 days pending, still not received, no deadline set.**
+  - **Whose Turo account is it** — unconfirmed; no new registration document or correspondence found.
+  - **The Kona / possible 1099-MISC** — unchanged, no new information found.
+  - **Turo login access** — no message found about it being restored.
+  - **His residence / state** — still not recorded in Double; not re-searched this pass (no new
+    lead to chase it from).
+  🟢 **Sources reached:** Double (properties, activity log, notes, contacts) — exhaustive for the
+  bound window. Gmail — searched `(Markarian OR Ecoorganic OR Corganix OR Turo)` and `(Turo)`
+  broadly; nothing dated 2026-09-19→2026-09-26 concerns him individually beyond what is already in
+  §5/§6 of the company file. Ping — org-wide semantic search on his name/Turo terms returned no new
+  client-scoped result; `list_client_meetings` still needs a client context this tool call doesn't
+  supply, so meeting coverage stays **not established as exhaustive**, consistent with prior passes.
+  Drive — not searched this pass specifically for him (his open items are all Turo/Gmail-sourced,
+  not document-sourced); no new lead pointed at Drive.
 - 2026-09-19 (ninth pass — weekly CI sweep, corroboration) — 🔎 **CORROBORATION PASS, NOT A FIRST READ:
   the file already carried substantial content from concurrent tax-prep sessions, so this pass focused
   on Ping / Gmail / Drive against §6's open items.**

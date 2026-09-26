@@ -1,6 +1,6 @@
 # BEST BROKER REALTY LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -65,6 +65,7 @@ the actual details.
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — cadence: Quarterly _(Double client properties, 2026-07-25)_. **Assigned staff in Double: Liudmyla Kazannik** _(2026-08-01 sweep)_.
+- 🆕 **The June 2026 month-end close was toggled twice in one day, 2026-09-21.** Double's activity log shows its status flipped **Not Started → In Progress → Not Started**, both changes made by Liudmyla Kazannik within five minutes on 2026-09-21 — i.e. it ended the day back at **Not Started**, three months after period-end. Not itself evidence of a problem (a close can be reopened and reset deliberately), but worth Lilian/Liudmyla confirming the June close's actual status, since "Not Started" this late doesn't match the quarterly cadence. _(Double activity log, 2026-09-21; read 2026-09-26)_
 - **Recurring process quirk — the realtors are 1099 subcontractors, usually paid by Zelle.** Before or alongside payment, a signed contractor agreement (with W-9) has to be matched to the agent and the agent's legal name + EIN entered in QuickBooks for accurate 1099 filing. The recurring difficulty is confirming whether a given realtor already has a contract on file **before** they are paid, and catching new realtors paid without one _(Ping, 2026-07-22 — legible portion of a garbled transcript)_.
 
 ### Income tax
