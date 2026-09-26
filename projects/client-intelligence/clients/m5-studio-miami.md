@@ -438,29 +438,33 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
+- 🆕🔴 **URGENT, CLIENT-FACING (raised 2026-09-22, 4 days old): file — or confirm filing of — the
+  Sunbiz Statement of Change the client requested**, moving M5 Studio Miami's principal/mailing
+  address off a PMB in Miramar to the firm's own Miami office, and reply to him on cost/timing and
+  whether he needs to sign anything. **He called it urgent — a Bank of America business account and
+  a capital transfer into the company both depend on it.** No reply to the client and no filing
+  confirmation was found in Gmail this sweep (2026-09-26). See §6.
 - ✅ ~~CHASE THE EIN.~~ **CLOSED 2026-09-19: EIN `30-1507078` assigned 2026-09-10, sent to the firm and forwarded to the client 2026-09-15.** See §5/§6. ❓ **Still open, lower stakes now:** why the SS-4 needed a second fax on 2026-08-27 — never established, and now unlikely to matter. 🔴 **NEW: chase the CP575 verification notice** — due ~10 business days from assignment (~2026-09-24), not yet on file as of this sweep. Once it arrives, save it; it is the only replaceable-by-147C-only confirmation. Update [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 67 to reflect the EIN's arrival (out of this sweep's merge scope to edit that file directly).
   🔄 **CHASED 2026-09-26 — CP575 STILL NOT ON FILE, now 2 days past its own ~2026-09-24 estimate.**
   Gmail searched again for `CP575`/`CP 575` after 2026-09-19, nothing found. Not yet a firm alarm
   (the estimate is soft — "should follow within 10 business days") but worth another check next
   week if it still hasn't shown.
-- 🆕 **NEW ITEM (2026-09-26): file (or confirm filing of) the Sunbiz Statement of Change the client
-  requested 2026-09-22**, moving M5 Studio Miami's principal/mailing address off a PMB in Miramar to
-  the firm's Miami office, and reply to him on cost/timing and whether he needs to sign anything.
-  **4 days old as of this sweep, and he called it urgent** (a bank account and capital transfer
-  depend on it). No reply or filing confirmation found in Gmail this sweep. See §6.
-- 🆕 **NEW (2026-09-26): ask Lilian about the SIGNED Form 2848 file's changed metadata** —
-  created/modified now reads 2026-09-22, not the 2026-08-27 timestamps previously recorded. Was the
-  file replaced, or is this a search/API artifact? Do not open the PDF to investigate.
 - 🔴 **Ask Lilian whether a Form 2848 was SIGNED AND SENT for this client on 2026-08-27** — the file
   sits in Drive's `Tax information authorization - form 2848 IRS → SIGNED` folder, created 17:08 and
   modified 19:44 GMT that afternoon (§5, §6). The form is dated 2026-08-12, before the 2026-08-14 finding
   that a 2848 may only name someone eligible to practice before the IRS. **Lilian → invalid, and hers is the
   Form 8821; a 2848 must name Julia.** And neither form works until the EIN exists — while the
   application is pending, the SS-4 designee block is the authorization that works.
+  🆕 **NEW, 2026-09-26 — the SAME file's metadata now reads created/modified 2026-09-22**, not the
+  2026-08-27 timestamps recorded above. Not established whether it was replaced/re-uploaded or this
+  is a search-API artifact — **ask Lilian; do not open the PDF to investigate.**
 - **Read back what was actually filed** — line 16, and which investor signed as responsible party —
   off the final SS-4 in Drive, and record both here. 🔄 **CHASED 2026-09-26 — still not read back;**
   targeted Gmail search for "line 16"/"responsible party"/wholesale/retail terms after 2026-09-19
   found nothing new. Still open.
+
+_(Below the published-card cutoff — still tracked, unchanged this week.)_
+
 - 🟡 **Confirm SS-4 line 16 — TWO questions, one of them never asked.** The install question is
   answered (no → not Construction). Left: **(1)** materials or design fees (→ Other if design);
   **(2)** if materials, **who buys them** — the general public (**Retail**) or contractors and

@@ -228,30 +228,33 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
+- 🔴 **The owner's OWN 2025 Form 1040 is `Not Started`** in Double, while all nine of his companies' 2025 returns are now filed (first found 2026-09-19). The project's `dueDate` field shows 2026-04-15 (157 days past as of 2026-09-19) — but that field is known elsewhere in this repo to not reliably reflect an actual extended deadline, so whether an extension was filed is an **open question**, not an established lateness. No email or activity-log trace of an extension was found on 2026-09-19.
+  🔄 **CHASED 2026-09-26 — STILL `Not Started`, now 164 days past the on-file (possibly stale) due
+  date.** Second consecutive weekly sweep with zero movement — no extension evidence, no activity,
+  no email, no Ping meeting. **This is now the group's single largest open item.**
 - 🔴 **Three invoices from 2026-03-25 are still unpaid** (`2097`, `2101`, `2104`) — now **SEVEN** rounds of reminders (last confirmed 2026-09-08), **178 days outstanding as of 2026-09-19**, no deadline (collection matter). The work was delivered and the charges are clean — **so this is a collection question, not a billing question.** Two new invoices (`2293` SYS 1, `2294` Remodel Master, both issued 2026-09-08) are too recent to call late.
   🔄 **CHASED 2026-09-26 — UNCHANGED.** No new reminder round or payment-received email found
   (Gmail searched for the three invoice numbers plus the two new ones, bounded after 2026-09-19).
   **185 days outstanding as of today**, still 7 rounds, still a collection question. `2293`/`2294`
   are now 18 days old — old enough to be worth a first reminder if one hasn't gone yet, but no
   reminder for either was found this session.
-- ⚠️ **SYS 1 Realty AND Remodel Master Realty each have a CHANGE OF ADDRESS to report** (Lilian → Julia, 2026-09-07) — raised **12 days ago** as of today, no deadline found, and **not confirmed filed with Sunbiz**. 🔴 **Widened 2026-09-19: Lilian's 09-12 email to Julia says the SAME new address applies to every company in the group except Zumfi 2** — so this may be a group-wide filing, not just these two. Both companies' 2025 returns were filed 2026-09-13 regardless (a "zero" return, signed and transmitted) — the address change looks like a separate, still-open filing.
+- ⚠️ **SYS 1 Realty AND Remodel Master Realty each have a CHANGE OF ADDRESS to report** (Lilian → Julia, 2026-09-07) — raised **12 days ago** as of 2026-09-19, no deadline found, and **not confirmed filed with Sunbiz**. 🔴 **Widened 2026-09-19: Lilian's 09-12 email to Julia says the SAME new address applies to every company in the group except Zumfi 2** — so this may be a group-wide filing, not just these two. Both companies' 2025 returns were filed 2026-09-13 regardless (a "zero" return, signed and transmitted) — the address change looks like a separate, still-open filing.
   🔄 **CHASED 2026-09-26 — STILL UNCONFIRMED, now 19 days open.** `list_activity_log` on SYS 1 and
   Remodel Master individually, bounded from 2026-09-19, returned zero entries — no filing action
-  logged this week either. Still not established whether this was ever filed with Sunbiz.
+  logged this week either. Still not established whether this was ever filed with Sunbiz. (Whether
+  the broader 2026-09-12 group-wide address change was filed is the same open question — 14 days
+  open, unchanged.)
 - ⚠️ **Zumfi 1 LLC is to be closed** (Lilian → Julia, 2026-09-07; repeated in the 2026-09-13 status email as *"NEED TO CLOSE"*). **Still nothing filed as of 2026-09-19** (12 days open, no deadline) — its 2025 return was filed 2026-09-15 as a going concern in the meantime. Compare with Tropical Coast 1's dissolution for the route and what it costs.
   🔄 **CHASED 2026-09-26 — STILL NOTHING FILED, now 19 days open.** `list_activity_log` on Zumfi 1,
   bounded from 2026-09-19, returned zero entries. No deadline attaches, but the item is aging.
+
+_(Below the published-card cutoff — still tracked, none of it new this week except the last line.)_
+
 - ⚠️ **The Zumfi 2 organizer is missing the partner's identifiers and has a wrong email** — it blocks that return, **and Vitaliy has already said where to get them: the Zumfi 1 and Fizum 1 records.** (Tracked in [`zumfi-2.md`](./zumfi-2.md); not re-chased here, out of this session's scope.)
-- 🔴 **NEW (2026-09-19): the owner's OWN 2025 Form 1040 is `Not Started`** in Double, while all nine of his companies' 2025 returns are now filed. The project's `dueDate` field shows 2026-04-15 (157 days past as of today) — but that field is known elsewhere in this repo to not reliably reflect an actual extended deadline, so whether an extension was filed is an **open question**, not an established lateness. No email or activity-log trace of an extension was found this session.
-  🔄 **CHASED 2026-09-26 — STILL `Not Started`, now 164 days past the on-file (possibly stale) due
-  date.** Second consecutive weekly sweep with zero movement — no extension evidence, no activity,
-  no email, no Ping meeting. This is now the group's single largest open item.
-- ⚠️ **Whether the 2026-09-12 group-wide address change was actually filed with Sunbiz (vs. just recorded internally) is unconfirmed** (raised 7 days ago as of today).
-  🔄 **CHASED 2026-09-26 — STILL UNCONFIRMED, now 14 days open.**
+- **Nine of the ten companies have no file of their own.** This file is the owner-level map; per-company facts still need routing into per-company files (see below).
 - 🆕 **NEW (2026-09-26): the shared portal contact `567527`'s `updatedAt` moved again (now
   2026-09-23), with no corresponding activity-log entry** — what changed and by whom is
   unestablished; see §6 log.
-- **Nine of the ten companies have no file of their own.** This file is the owner-level map; per-company facts still need routing into per-company files (see below).
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
