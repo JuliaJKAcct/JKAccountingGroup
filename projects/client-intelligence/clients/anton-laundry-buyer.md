@@ -1,6 +1,6 @@
 # Anton & Olga Stenin — laundry portfolio buyers
 
-> **Status:** Prospect — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02; the underlying property acquisition progressed to a Letter of Intent (a "FINAL" LOI document dated 2026-09-11 is on file, and Julia's own 2026-09-16 email refers to a 30-day DD term "established by the seller" as already running) — DD itself is now ACTIVE: a large seller document binder arrived 2026-09-17 and QuickBooks access to the seller's books remains blocked as of 2026-09-18 (see §6) · **Owner:** Julia · **Last updated:** 2026-09-19
+> **Status:** Prospect — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02; the underlying property acquisition progressed to a Letter of Intent (a "FINAL" LOI document dated 2026-09-11 is on file, and Julia's own 2026-09-16 email refers to a 30-day DD term "established by the seller" as already running) — DD is ACTIVE and moving: the broker introduced an equipment inspector 2026-09-21 and Julia engaged him 2026-09-23; the seller's QuickBooks Desktop view-only access is still not resolved, and as of 2026-09-24 Julia has pivoted to asking the seller/broker/CPA to obtain the IRS 4506-C transcripts directly, since she has no IVES account of her own to run them (see §6) · **Owner:** Julia · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -209,13 +209,19 @@ the actual details.
   three entities — plus Forms 8821 being prepared per entity for the seller's accountant to
   sign. Julia is also asking to be introduced directly to the **seller's own accountant** — the
   route flagged as fastest in the 2026-08-30 kick-off sequence (§6)
-- 🔴 **DD is now ACTIVE and QuickBooks access to the seller's books is BLOCKED (2026-09-19
-  update, see §6).** The seller's QuickBooks Desktop version has no view-only user, so the
-  read-only login Julia asked for cannot be set up; the broker is routing around it through
-  the seller's own accountant (based in Maui) instead, and as of the last message found
-  (2026-09-16) Julia still had no access with the 30-day DD clock already running. In the
-  meantime the broker delivered a large document binder (four volumes + per-property
-  appendices) on 2026-09-17, which Julia acknowledged as genuinely useful on 2026-09-18
+- 🔴 **DD is ACTIVE and MOVING, but QuickBooks access to the seller's books is STILL
+  UNRESOLVED (2026-09-26 update, see §6).** The seller's QuickBooks Desktop version has no
+  view-only user, so the read-only login Julia asked for could not be set up; as of the
+  last message on this specific point (2026-09-16) she still had no access, routed via the
+  seller's own accountant (Maui-based). No later message confirms it was ever fixed — the
+  correspondence since has moved to two adjacent tracks instead: (1) **an equipment
+  inspector, Craig Witt, was sourced by the broker 2026-09-21 and engaged by Julia
+  2026-09-23** (the manager "Cherio" handles routine maintenance, per the broker); and (2)
+  **Julia told the broker 2026-09-24 she has no IVES account to run the three Form 4506-C
+  IRS-transcript requests herself**, and asked the seller/broker/CPA to obtain them instead
+  — a pivot on who actually pulls the tax transcripts. In the meantime the broker delivered
+  a large document binder (four volumes + per-property appendices) on 2026-09-17, which
+  Julia acknowledged as genuinely useful on 2026-09-18
 - ⚠️ **A name error surfaced on a Form 8821 draft, 2026-09-18 — do NOT read the name that
   appeared as Anton's surname.** The broker asked Julia who a specific name appearing on a
   draft 8821 (sent for the seller's signature) was; Julia replied it was "probably on the
@@ -230,6 +236,46 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-26 — **Bounded PROSPECT sweep (cheap pass — Gmail in:inbox+in:sent since
+  2026-09-19; Google Drive full-text search; no Ping/Double — no Double account exists.
+  Per the PROSPECT batch rule, no `sweep-state.md` row is ever added for this client — this
+  run's pass is noted here only.)** Searched Gmail for "Anton" combined with
+  "laundry"/"Bradenton"/"Palmetto"/"Ruskin"/"Merritt Realty"/"Riordan"/"Trayber"/
+  "laundromat"/"Bayshore", and separately for "QuickBooks"/"view-only"/"Maui"/"4506-C"/
+  "IVES" combined with "Stenin"/"Riordan"/"laundry", both `after:2026/09/19`. Found
+  continued, active movement on the DD engagement, all in the same
+  "Bradenton–Palmetto–Ruskin Laundry Portfolio — QuickBooks financials in Dropbox" thread:
+  - **2026-09-21** — Kevin Riordan introduced **Craig Witt** (Laundry tech equipment and
+    repairs, 40+ years' experience) as an equipment inspector for Olga, cc'ing Olesya
+    Trayber and the same fourth address already flagged as unidentified (see §2 and
+    Outstanding items — the address itself stays out of this file; role still not
+    confirmed by name in any message read)
+  - **2026-09-23** — Julia emailed Craig Witt directly requesting a quote for a
+    pre-purchase equipment inspection of the five laundromats, identifying herself as
+    "the buyer-side accountant" — the first documented instance of Julia personally
+    engaging one of the third-party specialists the engagement sources and coordinates
+    (§5). Same day, Julia asked Kevin whether the seller's businesses have an employee who
+    does routine equipment maintenance; Kevin confirmed **yes, the manager, "Cherio"**
+  - **2026-09-24** — Julia told Kevin she had looked into third-party IVES providers and
+    does **not have an account through which to run the three Form 4506-C requests
+    herself**, and asked whether the seller or the seller's CPA could obtain the IRS
+    transcripts instead. Kevin replied he would ask the seller and the seller's CPA about
+    obtaining the records. Olesya acknowledged with a one-line "Thank you." **This is a
+    material pivot on the 4506-C/tax-transcript route (§5's "tax data comes straight from
+    the IRS on a seller-signed Form 4506-C") — it is no longer clear the firm itself will
+    pull the transcripts; that may now fall to the seller's side**
+  - **No message was found confirming the seller's QuickBooks Desktop view-only access has
+    been resolved** — the 2026-09-16 blocker (no view-only user on their QuickBooks
+    Desktop, workaround via the Maui-based accountant "in progress") is UNCHANGED as far as
+    this sweep can tell; the conversation since 09-19 has moved on to the equipment
+    inspection and the 4506-C/IVES question instead, without returning to QuickBooks access
+    by name
+  - Searched Drive full-text for "Stenin" / "laundromat" (`excludeContentSnippets: true`)
+    — same known deal-documents folder, no new files beyond what the 2026-09-19 sweep
+    already found (LOI FINAL, DD-binder volumes, the Accountant Request List, the Bayshore
+    Form 8821 template)
+  - **Anton's last name still did not surface**; the Lemon Squeeze filing-status question
+    (asked 2026-09-11) still shows no answer in any thread found this pass
 - 2026-09-19 — **Bounded prospect sweep (cheap pass — Gmail in:inbox+in:sent since
   2026-09-12; Google Drive full-text search; no Ping/Double — no Double account exists,
   and per this sweep's scope no `sweep-state.md` row is being added).** Searched Gmail for
@@ -492,13 +538,22 @@ the actual details.
   seller's broker (2026-09-11) where the Lemon Squeeze LLC files, on which return, and
   whether it has an S-election, plus how occupancy/rent between it and Bayshore is
   recorded. **8 days old, no answer found** in this sweep's search of the active threads
-- **New, 2026-09-19 — QuickBooks access to the seller's books is blocked.** The seller's
-  QuickBooks Desktop has no view-only user; the broker is routing around it via the
-  seller's own accountant (Maui-based). **As of the last message found (2026-09-16), Julia
-  still had no access**, with the 30-day DD clock already running — worth a deadline watch
-  since DD analysis cannot proceed on QuickBooks without it
-- **New, 2026-09-19 — the fourth, unidentified cc'd party** on the active document-request
-  correspondence (see §2) — not yet identified by role
+- **QuickBooks access to the seller's books — still blocked, now 10 days stale on this
+  specific point (2026-09-26 sweep).** No message since 2026-09-16 addresses it directly;
+  the correspondence has moved on to the equipment inspection and the 4506-C/IVES pivot
+  instead (see §5/§6) — worth asking Julia directly whether it was quietly resolved off
+  Gmail or is genuinely still open, since DD analysis cannot proceed on QuickBooks without it
+- **New, 2026-09-26 — the 4506-C/IRS-transcript route has shifted.** Julia has no IVES
+  account to pull the three transcripts herself (told the broker 2026-09-24); the ask is
+  now for the seller or the seller's CPA to obtain them. Worth confirming this doesn't
+  compromise §5's standing rule that "tax data comes straight from the IRS... never from
+  the seller's own copies" — if the seller's CPA pulls and hands over the transcripts,
+  that is closer to the seller's own copy than an independent IRS pull
+- **The fourth, unidentified cc'd party** on the active document-request correspondence
+  (see §2) — still not identified by role as of 2026-09-26; the same address recurs on
+  every message in the thread (including the 2026-09-21 equipment-inspector introduction)
+  but no message names who it belongs to. The address itself is personal contact data and
+  stays in Gmail, not here — ask Julia directly who it is
 
 ### Information still needed
 

@@ -1,6 +1,6 @@
 # AXDIGITAL LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-09-26
 >
 > ✅ **First full historical sweep completed 2026-08-22** — Double (client record — 0 notes,
 > contacts, activity log — 191 entries), Gmail (full history, business name + both owner-contact
@@ -129,7 +129,8 @@ watch-outs, one-off arrangements, history that affects the work.
 
 - Named in [`best-broker-realty.md`](./best-broker-realty.md) §5 as one of the entities in the **same owner-group** (the serial-entity owner).
 - **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6.
-- Two Double portal contacts (both full access); one signs consistently as the business's "Project manager," the other is linked in Ping to a combined personal-return client record with the first — consistent with the operating pair being spouses/co-owners. _(Double + Ping, 2026-08-22)_
+- ⚠️ **SETTLED, 2026-09-26 — the "two Double portal contacts" description below is likely wrong: `list_contacts` has now returned only ONE contact (Oleksiy Bereznyak, linked to client ids 706681 and 710625) on TWO consecutive weekly sweeps (2026-09-19 and 2026-09-26).** Treat this file's earlier "two portal contacts, consistent with spouses/co-owners" claim (next bullet, kept for the record) as superseded unless a further check finds a second contact was removed rather than never existing as described. _(Double `list_contacts`, 2026-09-19 and 2026-09-26.)_
+- Two Double portal contacts (both full access); one signs consistently as the business's "Project manager," the other is linked in Ping to a combined personal-return client record with the first — consistent with the operating pair being spouses/co-owners. _(Double + Ping, 2026-08-22 — see the bullet above; not reproduced by `list_contacts` in either of the last two sweeps.)_
 - A term loan (~$25,000 per a 2026-05 email subject line — figure not otherwise recorded here) exists on the books; several loan-related close tasks ("Uncapped Loan," "AMAZON FIXED RATE LOAN") were marked Done in the same period.
 - ✅ **RESOLVED — the 2025 return went from "actively being prepared" to FILED, with both the company AND the owner's personal returns done together.** The progression: `list_projects`/activity log now shows **In Progress → Ready for Review (2026-09-03, Irina Jandieri) → Waiting on Client Approval (2026-09-07, Lilian) → Filed (2026-09-08, Lilian; `filedAt` 2026-09-08T22:53:16Z)**, with the signed PDF (`AXDIGITALLLC2025.pdf`) filed into Drive the same day. A 2026-09-06 email from Julia to the client and Lilian says the tax return is ready for both "Ax Digital and Personal," with a Loom video walkthrough prepared for the client — confirming the owner's individual 1040 was prepared alongside the company return in the same push (not a separate later engagement). Along the way (2026-09-01), the **"Prepare and send organizer"** and **"Prepare and send engagement letter"** tax-project tasks were both marked Done, and a 2026-09-03 email thread shows Julia and the client resolving a home-office square-footage question. _(Double `list_activity_log`/`list_projects` + Gmail, 2026-09-12.)_
 - ✅ **A 2026-09-02 client-flagged duplicate-payment appearance on a QuickBooks invoice was investigated and confirmed resolved by 2026-09-08** — the payment had posted once; the duplicate was a QuickBooks display artifact, not an actual double payment. _(Gmail, "invoice 1393" thread, 2026-09-02/08.)_

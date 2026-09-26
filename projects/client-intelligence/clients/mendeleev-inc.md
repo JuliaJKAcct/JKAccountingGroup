@@ -1,6 +1,6 @@
 # MENDELEEV INC — C-corporation (Gridin)
 
-> **Status:** Prospect — MONTHLY proposal drafted 2026-09-25, service start 2026-10-01 · **Owner:** Julia · **Last updated:** 2026-09-25
+> **Status:** Prospect — MONTHLY proposal drafted 2026-09-25, service start 2026-10-01 · **Owner:** Julia · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,

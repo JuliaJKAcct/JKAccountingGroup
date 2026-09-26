@@ -1,6 +1,13 @@
 # Vitaliy Vasyutyk — property & renovation LLC group
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+
+> 🔴 **2026-09-26 SWEEP: THE OWNER'S OWN 2025 FORM 1040 IS STILL `Not Started`**, one week after the
+> 2026-09-19 finding, while all nine of his companies' 2025 returns remain `Filed`. No email,
+> activity-log entry, Ping meeting or Double note found anywhere touching his personal return this
+> week. The three 2026-03-25 invoices (`2097`, `2101`, `2104`) are now **185 days** unpaid with no
+> new reminder round found since the seventh (2026-09-08). The SYS 1 / Remodel Master address change
+> and the Zumfi 1 closing are both still open, unconfirmed as filed. See §4/§6.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,

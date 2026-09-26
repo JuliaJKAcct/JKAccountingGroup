@@ -385,14 +385,19 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 - 🔴 **TENNESSEE — ANSWERED 2026-09-17, AND NOW A LIVE FILING RATHER THAN A QUESTION.** It is no
   longer "not established either way": **a return is owed and it is late.** ✅ **The penalty is
   nominal, so this is a job to do, not an alarm.** **Next, in order:** ① **Lilian creates the online
-  account from the EIN** (she said she would, 2026-09-17) — 🔑 **and the FIRST thing to do in it
-  is READ THE CORRESPONDENCE ALREADY THERE, before anything is prepared.** **The firm has never had
-  a login**, so whatever Tennessee has already sent this company has gone somewhere nobody
-  monitors — **and on the sibling company Zumfi 1 exactly that cost ten months of interest** (§5).
-  A notice, an assessment or a registration letter sitting in that inbox may answer the agency and
-  form questions outright; ② **prepare the 2025 Tennessee return**; ③ **file it online if the new
-  account allows it** — **posting it means waiting roughly six months for the account number.** ⚠️ **Confirm which form and which year(s) the state means
-  before preparing anything** — the call is relayed, not documented.
+  account from the EIN** (she said she would, 2026-09-17) — ✅ **DONE, PARTIALLY: a TNTAP request was
+  submitted the same day** (confirmation email, code on file — Gmail, checked 2026-09-26). ⚠️ **NOT
+  CONFIRMED COMPLETE — chased 2026-09-26, 9 days later, no follow-up TNTAP email found**, past the
+  "1-2 business days" the confirmation itself quoted. 🔑 **The FIRST thing to do once access is
+  confirmed is still READ THE CORRESPONDENCE ALREADY THERE, before anything is prepared.** **The
+  firm has never had a login**, so whatever Tennessee has already sent this company has gone
+  somewhere nobody monitors — **and on the sibling company Zumfi 1 exactly that cost ten months of
+  interest** (§5). A notice, an assessment or a registration letter sitting in that inbox may answer
+  the agency and form questions outright; ② **prepare the 2025 Tennessee return**; ③ **file it online
+  if the account allows it** — **posting it means waiting roughly six months for the account
+  number.** ⚠️ **Confirm which form and which year(s) the state means before preparing anything** —
+  the call is relayed, not documented. **Next action: check `tn.gov` directly for the account's
+  status, since email has gone quiet.**
 - 🔴 **Check the Hamilton County Trustee's mailing address for this parcel** before the next bill
   goes astray, as Zumfi 1's did.
 - ✅ **RULED 2026-09-13 by Lilian: question 33 = NO, and VITALIY VASYUTYK is the Partnership
@@ -405,9 +410,12 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 
 ### Information still needed
 
-- [ ] **Bank statements** — the firm has never seen one. Whether the purchase was funded by
-      **capital contributions or partner loans** is unanswerable without them, and it decides both
-      partners' outside basis.
+- [ ] **Bank statements** — the firm has never seen one, but the account now has a name:
+      **"Business checking Zumfi 2 LLC"** (client's answer to a Double question, 2026-09-15), and a
+      company account is confirmed to have existed since at least **Nov 2025** (a canceled/re-tried
+      ACH payment of the firm's own invoice — §6 log). Whether the purchase was funded by
+      **capital contributions or partner loans** is unanswerable without the statements themselves,
+      and it decides both partners' outside basis.
 - [ ] **Who paid the TN formation costs**, and whether the company reimbursed them
       (organizational expenditures under §709).
 - [ ] **Whether a HELOC exists**, in whose name, and whether the company services it.
@@ -424,8 +432,15 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 ## 7. Links
 
 - **Double client:** [Zumfi 2 LLC `710614`](https://app.doublehq.com/close?cid=710614)
-- **2025 tax project:** [`219305`](https://app.doublehq.com/tax-return?cid=710614&projectId=219305)
+- **2025 tax project:** [`219305`](https://app.doublehq.com/tax-return?cid=710614&projectId=219305) — **status: filed, 2026-09-15** (§4, §6)
+- **Double case note:** none (checked 2026-09-26 — `list_notes` returns zero notes on this client)
 - **Owner-level group file:** [`vitaliy-vasyutyk.md`](./vitaliy-vasyutyk.md)
 - **2025 working paper (the figures live here, and only here):**
-  [`tax-returns/zumfi-2-llc/2025-form-1065.md`](../../tax-returns/zumfi-2-llc/2025-form-1065.md)
+  [`tax-returns/zumfi-2-llc/2025-form-1065.md`](../../tax-returns/zumfi-2-llc/2025-form-1065.md) —
+  ⚠️ **last updated 2026-09-13, so it still reads the return as unfiled/blocked; needs a closing
+  update to match Double's `filed` status (§4, §6)**
+- **Google Drive folder(s):** **two separate "Zumfi 2 LLC" folders found, 2026-09-26, under
+  different parents** — `10rDO7QyyDKynccg-WeDTUCIog8CBWHyn` and
+  `1pgI1StmMnce3x-942IwLmcdXbJ6U_ghf`. Which is canonical is **not established** — the same
+  ambiguity already flagged on the owner-group file's own Drive folders
 - **The acquisition method:** the `hud-acquisition-allocation` skill — ⚠️ **no link yet: it is on an unmerged branch** and the path does not resolve on `main`
