@@ -1,6 +1,6 @@
 # Kompozit USA
 
-> **Status:** Prospect — proposal sent 2026-08-19, now in active negotiation (a 30-day trial period was floated 2026-08-25 as an alternative to the firm's standard annual contract; outcome of the follow-up call pending). ⚠️ **The proposal's 30-day validity window (through ~2026-09-18) has now elapsed with no reply found on either side (2026-09-19 sweep)** · **Owner:** Julia · **Last updated:** 2026-09-19
+> **Status:** Prospect — proposal sent 2026-08-19, now in active negotiation (a 30-day trial period was floated 2026-08-25 as an alternative to the firm's standard annual contract; outcome of the follow-up call pending). ⚠️ **The proposal's 30-day validity window (through ~2026-09-18) elapsed 8 days ago with STILL no reply found on either side (2026-09-26 sweep)** · **Owner:** Julia · **Last updated:** 2026-09-26
 >
 > ✅ **Coverage gap CLOSED, 2026-08-24 (reconfirmed 2026-09-19).** The 2026-08-22 sweep found this
 > client absent from both `weekend-ci-sweep.md` tables (coverage check 2b) — but a scope-table row
@@ -173,6 +173,21 @@ link). Never write the credential itself here.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-26 — **Bounded PROSPECT sweep (cheap pass — Gmail in:inbox+in:sent since
+  2026-09-19; Google Drive full-text search; no Ping/Double — no Double account exists.
+  Per the PROSPECT batch rule, no `sweep-state.md` row is ever added for this client — this
+  run's pass is noted here only.)** Searched Gmail for "Kompozit" / "Ostapenko" / "Dmytro",
+  both in:inbox and in:sent, `after:2026/09/19`. The only two matches were the firm's own
+  automated emails (the 2026-09-21 weekly repo-coherence-audit notice and the 2026-09-19
+  weekly CI-sweep digest, both keyword false positives, unrelated to this client) —
+  **no message from Dmytro Ostapenko or anyone at Kompozit was found on either side since
+  2026-08-25**, now **32 days** with no reply. Searched Drive full-text for "Kompozit" /
+  "Ostapenko" (`excludeContentSnippets: true`) — results were unrelated files only (Voice
+  Capital, Best Broker Realty and other clients' bank exports/spreadsheets) — no Kompozit
+  folder or document found. **Material change: the proposal's 30-day validity window
+  (elapsed ~2026-09-18) is now 8 days expired** with no acceptance, decline, or further
+  contact recorded on either side — the 2026-08-25 30-day-trial negotiation remains
+  unresolved and this prospect now reads as gone quiet
 - 2026-09-19 — **Bounded prospect sweep (cheap pass — Gmail in:inbox+in:sent since
   2026-09-12; Google Drive full-text search; no Ping/Double — no Double account exists,
   and per this sweep's scope no `sweep-state.md` row is being added).** Searched Gmail for
@@ -269,7 +284,11 @@ link). Never write the credential itself here.
   follow-up call ever took place, and no reply from Dmytro on any channel in the **25 days**
   since the 2026-08-25 call. 🔴 **The proposal's 30-day validity (through ~2026-09-18) has
   now elapsed** — as of this sweep there is no record of it being accepted, declined, or
-  extended
+  extended. **A fourth search (`after:2026/09/19`, on 2026-09-26) also found nothing** —
+  **32 days** since the 2026-08-25 call with zero contact from Dmytro or Kompozit on any
+  channel, and the proposal's 30-day window is now **8 days past expiry** with no
+  acceptance, decline or extension on record. This prospect should be treated as gone
+  quiet unless Julia has a channel outside Gmail (phone/WhatsApp) that this sweep cannot see
 
 ### Information still needed
 

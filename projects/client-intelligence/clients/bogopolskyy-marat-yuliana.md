@@ -1,6 +1,6 @@
 # BOGOPOLSKYY, MARAT and YULIANA — the joint individual return
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -166,6 +166,17 @@ Anything the team must know to serve this client well.
   file's own rule, a permission or a conclusion is never assumed into existence. *(Source: Double
   `list_activity_log` on client 710627, and Gmail thread `1a0a5b19a138fe42` / `1a0a5f21037cb948`,
   both read 2026-09-19.)*
+  🟡 **RE-VERIFIED 2026-09-26, still unresolved.** Double `list_activity_log` bounded ≥2026-09-19 on
+  cid 710627: **zero new entries** — no status change, no new file event since the 2026-09-15 filing
+  day. `list_notes`: **still zero notes on this client** (unchanged). A fresh read of the Wolters
+  Kluwer/ATX support case (thread `1a0a5f21037cb948`) confirms the same text as before: closed
+  2026-09-15 16:41:39, the abbreviated-name fix explicitly **"partially resolved during the chat,"**
+  customer to apply/verify. **No Gmail correspondence dated 2026-09-19→2026-09-26 was found discussing
+  whether items 17, 19 or 22 closed before transmission**, and the working paper
+  ([`2025-form-1040.md`](../../tax-returns/bogopolskyy-marat-yuliana/2025-form-1040.md)) was not
+  re-opened this pass (no budget spent re-reading it; that remains the next step if this needs
+  settling). **STILL CONTRADICTORY — position unchanged from 2026-09-19**, not newly resolved and not
+  newly contradicted.
 - 🔴 **WHAT STOPPED THE 2025 RETURN BEING TRANSMITTED, AS OF THE WORKING PAPER'S LAST EDIT
   (2026-09-13) — THREE things, and only ONE of them is a question
   for the client.** ⚠️ **See the bullet above: Double says this return was filed 2026-09-15, and
@@ -341,6 +352,39 @@ Anything the team must know to serve this client well.
 ## 6. History & open questions
 
 ### Log
+- 🔴 **2026-09-26 — WEEKLY CI SWEEP (baseline 2026-09-19→2026-09-26): NO NEW MOVEMENT, AND YULIANA'S
+  BUSINESS DESCRIPTION IS STILL UNANSWERED FIVE DAYS AFTER THE RETURN WENT OUT.** Double
+  `get_client` + `list_client_properties` re-read: unchanged (`Tax Return Type: 1040`, `Organizer
+  Status: Completed`, `Signature: Signed`, `Invoice: Paid`, `Preferred language: Only Russian`).
+  `list_activity_log` bounded ≥2026-09-19: **zero entries.** `list_notes`: **still zero notes on this
+  client** (confirmed again — the family's two running notes remain on Gossip Miami, see that file).
+  Ping `resolve_person` re-confirmed both spouses' records (Marat as a contact under both entities;
+  Yuliana under "Yuliana Bogopolska," at a distinct email address — a different address than the shared
+  `jamvabo@gmail.com` this file's §2 already flags as unsettled).
+  🔴 **CONTRADICTION RE-VERIFICATION — see the top §5 bullet for the full account: STILL
+  UNCONFIRMED**, not newly resolved and not newly contradicted.
+  🔴🔴 **URGENT — Yuliana's Schedule C business description/code, chased again and still open.**
+  Searched Gmail (`Yuliana (business OR "what do you do" OR profession OR occupation OR
+  description)`, no date bound because nothing narrower returned results) and Ping (org-wide semantic
+  search on "Yuliana Bogopolska Schedule C business description"): **no message or meeting found in
+  which she was ever asked, or in which she answered, what her post-salon work actually is.** This is
+  now **11 days after the return was filed (2026-09-15) with a description already keyed on the
+  draft** whose source nobody recorded. **If it was chosen at the keyboard rather than given by her,
+  the return has already gone out under a description she never supplied — and it cannot be corrected
+  before filing any more, only amended.** This is escalated from "open item" to a flagged, unresolved
+  risk on an already-filed return; see the top of "Information still needed" below.
+  🔎 **Other chase items, no new movement:** Marat Boxing LLC's own obligations (sales tax, licences,
+  annual report) — not re-examined this pass, no budget; whether the household has one vehicle or two
+  — unchanged, still a working assumption; tips — unchanged, still unasked; Form 8821/2848 — unchanged,
+  none on record.
+  🟢 **Sources reached:** Double (client, properties, activity log, notes) — exhaustive. Gmail —
+  targeted searches on the ATX case, the household names, and the business-description question, all
+  bound `after:2026/09/19` except the description search (unbounded, since a bounded version returned
+  nothing to confirm the negative more strongly). Ping — `resolve_person` for both spouses plus one
+  org-wide semantic search; no client-scoped meeting/action-item search specific to this household's
+  own record was re-run this pass (the 2026-09-19 sweep's gap notes on Ping coverage for this client
+  — no contact match for "Yuliana Bogopolskyy," no usable `list_client_meetings` — are not re-tested
+  and should be treated as still standing). Drive — not searched this pass; no new lead pointed at it.
 - 🔴 **2026-09-19 — CI SWEEP: THE RETURN WAS FILED 2026-09-15, HIT AN E-FILE NAME-LENGTH REJECTION
   ON THE WAY, AND NOBODY RECONCILED IT AGAINST THE WORKING PAPER'S OPEN BLOCKERS.** Full detail in
   the new top bullet of §5; not repeated here. **Sources swept, bound 2026-09-12 → 2026-09-19:**
@@ -751,6 +795,9 @@ Anything the team must know to serve this client well.
       on 2026-09-19 found no record of her ever being asked.** If she was not asked before filing,
       the return may already carry a description she never supplied — ask her now, after the fact,
       and be ready to amend if her own words don't match what was keyed.
+      🔴🔴 **STILL UNANSWERED AS OF 2026-09-26 — 11 days after filing.** Chased again (Gmail + Ping,
+      see the 2026-09-26 log entry): no record found that she has been asked, or has answered, in
+      the week since the last sweep. This is the single most time-sensitive open item on this file.
 - [ ] **Marat Boxing LLC's own obligations** — sales tax, local licences, annual report. Never examined.
 - [ ] 🟠 **Whether the household has ONE vehicle or two.** ⚠️ **One car is the WORKING ASSUMPTION,
       not an established fact** — the three "proofs" this row once claimed *(the same finance document,

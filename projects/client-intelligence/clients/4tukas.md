@@ -2,10 +2,11 @@
 
 > **Status:** Prospect — engagement letter drafted and delivered 2026-08-27; a paid
 > consultation for the client's remaining planning questions was proposed for 2026-09-17.
-> ⚠️ **Mindaugas followed up 2026-09-14 asking for next steps on the two open engagement-
-> letter questions and a consultation date; Julia replied 2026-09-15 promising an answer
-> "by the end of this week" — not yet confirmed as sent (2026-09-19 sweep)** · **Owner:**
-> Julia · **Last updated:** 2026-09-19
+> 🔴 **Mindaugas followed up 2026-09-14 asking for next steps; Julia replied 2026-09-15
+> promising an answer "by the end of this week" — that reply was NEVER SENT: Mindaugas
+> followed up a SECOND time on 2026-09-22 ("please let us know if there are any updates")
+> and it remains unanswered as of the 2026-09-26 sweep** · **Owner:**
+> Julia · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -137,6 +138,21 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-26 — **Bounded PROSPECT sweep (cheap pass — Gmail in:inbox+in:sent since
+  2026-09-19; Google Drive full-text search; no Ping/Double — no Double account exists.
+  Per the PROSPECT batch rule, no `sweep-state.md` row is ever added for this client — this
+  run's pass is noted here only.)** Searched Gmail for "4TUKAS" / "Mindaugas" / "Kezys",
+  `after:2026/09/19`, both in:inbox and in:sent — the thread search surfaced the full
+  correspondence thread ("Following up — Alina's investors group (Miami)") including one
+  message NOT yet in this file: **Mindaugas Kezys followed up a SECOND time, 2026-09-22**
+  ("Hello, Please let us know if there are any updates."), replying directly to his own
+  2026-09-15 thank-you. **No reply from Julia was found after her 2026-09-15 message** —
+  so her promised "by the end of this week" answer was **not sent**, and Mindaugas's second,
+  more pointed follow-up (now **4 days old**) is also unanswered as of this sweep. Searched
+  Drive full-text for "4TUKAS" / "Mindaugas Kezys" (`excludeContentSnippets: true`) — no
+  results at all. This client's file is materially more overdue than the banner previously
+  read: both the §1446/8804-8805 scope question and the TY2026-vs-2027 timing question are
+  unchanged and unanswered, and the client has now chased twice with silence both times
 - 2026-09-19 — **Bounded prospect sweep (cheap pass — Gmail in:inbox+in:sent since
   2026-09-12; Google Drive full-text search; no Ping/Double — no Double account exists,
   and per this sweep's scope no `sweep-state.md` row is being added).** Searched Gmail for
@@ -187,21 +203,22 @@ the actual details.
 ### Outstanding items (CI-only — never in the SOP)
 
 - [x] **Julia to decide: the tax-planning exclusion** — RESOLVED 2026-08-27, see §5.
-- 🔴 **Still open, and now DIRECTLY chased by the client:** the §1446/8804-8805 withholding
-  scope question (flagged 2026-08-27) — Mindaugas's own 2026-09-14 email asks about "the
-  two questions on the engagement letter," which this file reads as this question plus one
-  other unidentified item; **23 days old** as of the 2026-09-19 sweep. Julia told him
-  2026-09-15 she'd answer "by the end of this week" (i.e., by ~2026-09-19) — **whether that
-  reply has gone out is not established by this sweep**
+- 🔴 **Still open, and now chased TWICE by the client with zero reply either time:** the
+  §1446/8804-8805 withholding scope question (flagged 2026-08-27) — Mindaugas's 2026-09-14
+  email asked about "the two questions on the engagement letter"; Julia promised an answer
+  "by the end of this week" (2026-09-15) and **never sent one** — Mindaugas followed up
+  again 2026-09-22 ("please let us know if there are any updates") and that too is
+  unanswered. **30 days old** as of the 2026-09-26 sweep (12 days since the first chase,
+  11 days since Julia's unfulfilled promise, 4 days since the second chase)
 - [x] **Before signing: Mindaugas Kezys' email** — on file since 2026-08-12, see §2.
 - **Still open — before signing:** confirm TY2026 vs 2027 (purchase timing) — his own
-  2026-08-27 words say the property is not yet under contract; **still unresolved, 23 days
-  since last checked** (2026-09-19 sweep: no message on this topic found since 2026-08-27);
+  2026-08-27 words say the property is not yet under contract; **still unresolved, 30 days
+  since last checked** (2026-09-26 sweep: no message on this topic found since 2026-08-27);
   the info-needed-by date (2027-02-15 assumed)
-- **New, 2026-09-19 — the proposed 2026-09-17 paid consultation date's outcome is
-  unconfirmed.** Mindaugas's 2026-09-14 email references "a consultation date" while asking
-  for next steps, which reads as though the 2026-09-17 date proposed by Julia (see §5) may
-  not have been confirmed or held; no message either way was found
+- **The proposed 2026-09-17 paid consultation date's outcome is STILL unconfirmed as of
+  2026-09-26.** Neither of Mindaugas's two follow-ups (2026-09-14, 2026-09-22) nor Julia's
+  2026-09-15 reply settles whether that date was held, rescheduled, or dropped — it reads
+  as folded into "next steps" that Julia has not yet answered
 
 ### Information still needed
 

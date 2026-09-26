@@ -1,6 +1,6 @@
 # MENDELEEV INC — C-corporation (Gridin)
 
-> **Status:** Prospect — MONTHLY proposal drafted 2026-09-25, service start 2026-10-01 · **Owner:** Julia · **Last updated:** 2026-09-25
+> **Status:** Prospect — MONTHLY proposal drafted 2026-09-25, service start 2026-10-01 · **Owner:** Julia · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -114,6 +114,26 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-26 — **First-ever PROSPECT sweep — Gmail searched with NO date bound (this
+  client's whole history, since it is brand new, created 2026-09-25, and Gmail search is
+  cheap; Google Drive full-text search also unbounded). No Ping/Double — no Double account
+  exists, and per the PROSPECT batch rule no `sweep-state.md` row is ever added for this
+  client; this run's pass is noted here only.** Searched Gmail for "Mendeleev" OR "Gridin"
+  across the whole mailbox — found a **Discovery Call booking with Dmitrii Gridin**, held
+  via the firm's Odoo-integrated scheduler on **2026-09-23, 3:00–3:10pm EDT**: the booking
+  confirmation, an Odoo CRM lead-assignment notice, and an Odoo calendar invitation all
+  landed the same day, and the lead was assigned to Julia in Odoo CRM as "Dmitrii Gridin -
+  Discovery Call." This is almost certainly the intake call that produced the 2026-09-25
+  proposal (two days later) — the file's Snapshot previously implied a purely dictated
+  intake with no recorded call. ⚠️ **A discrepancy worth flagging, not resolving:** the
+  phone number captured on the booking form carries a different country code than the
+  "Based in Yerevan, Armenia" fact already on file (§2) — the number itself is personal
+  contact data and stays in the booking record / Odoo, not here, but it is worth Julia or
+  Lilian double-checking his actual location before anything address-dependent (state
+  nexus, treaty position) is assumed from "Armenia" alone. His **email is now on file** via
+  the same booking (Odoo/Gmail) — see the booking record or Double once the client record
+  is created; not written here per the personal-contact-details rule. Searched Drive
+  full-text for "Mendeleev" / "Gridin" (`excludeContentSnippets: true`) — no results at all
 - 2026-09-25 — **Intake (Julia, dictated), one session, five corrections — final form:
   a bilingual MONTHLY proposal.** The sequence, kept because it explains the artifacts:
   (1) intake read as a first-year tax engagement ("first layer" = "first year", Form
@@ -135,14 +155,21 @@ the actual details.
   see §5 lead flag); the first monthly invoice timing vs the onboarding; ⚠️ whether the
   pricing calculator's default 1120 rate should be corrected to match the rate she
   quoted here (a shared-tool change — needs her word, then a rebuild + Hub republish)
-- **Pending:** Sunbiz document number, EIN, suite number, industry, owner's email
+- **New, 2026-09-26 — worth a direct question, not an assumption:** the phone number on
+  Dmitrii Gridin's 2026-09-23 Discovery Call booking has a different country code than the
+  "Yerevan, Armenia" home-country fact already on file. Could simply be a number registered
+  in another country while he lives in Armenia — but ask before treating "Armenia" as
+  settled for anything jurisdiction-dependent
+- **Pending:** Sunbiz document number, EIN, suite number, industry
 
 ### Information still needed
 
 - [ ] Sunbiz registration + EIN (or is formation still ahead?)
 - [ ] Ownership split (is Gridin 100%?) — drives the 5472 answer
 - [ ] What the company does; where the 2026 books live today
-- [ ] Owner's email for the letter and Double
+- [x] Owner's email — **now on file** via the 2026-09-23 Discovery Call booking (Odoo CRM
+  lead + Gmail booking confirmation); see those records or Double once the client record
+  is created — not written here per the personal-contact-details rule
 
 ## 7. Links
 

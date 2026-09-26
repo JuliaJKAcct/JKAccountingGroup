@@ -1,6 +1,6 @@
 # Iurii Iakovenko & Alina Yakovenko
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -146,6 +146,19 @@ the actual details (and Claude can pull them live when a task needs them).
   now well over two years old), and who files each LLC's annual report/franchise tax — **none
   moved; all three remain open with no source explaining the delay.** No 2025 Form 1095-A found
   (unchanged from the last sweep's genuine negative).
+- 2026-09-26 — **Batch sweep (incremental, baseline 2026-09-19→2026-09-26).** Double: `list_notes`
+  still 0; `list_activity_log` bounded `fromTimestamp=2026-09-19` returned **zero entries** — the
+  "2025 Taxes" project remains `inProgress`, unfiled. Gmail (every name variant + Semalt/
+  YourSeoBoard, after:2026/09/19): no hits beyond the firm's own weekly-sweep meta-email — no client
+  correspondence. Google Drive (`fullText contains 'Iakovenko'`, modified after 2026-09-19): the one
+  hit returned is an unrelated shared business-formation intake spreadsheet (full-text false
+  positive) — no client document. Ping (org-wide `search_meetings`, his name + "Semalt"/
+  "YourSeoBoard" + "extension status" + "PrivatBank"): no results specific to him — same confirmed-
+  empty pattern as every prior run. **Chase pass:** re-checked what is blocking the return on the
+  firm's side — **now over SIX MONTHS (~198 days) since the client's side finished, 2026-03-12, with
+  no source anywhere explaining the delay** — the Ukrainian PrivatBank-account lead (unchased since
+  2024-03-19, now well over two years old), and who files each LLC's annual report/franchise tax —
+  **none moved this window.** No 2025 Form 1095-A found (unchanged, genuine negative).
 
 ### Tax year 2025 — the review
 
@@ -157,7 +170,7 @@ the actual details (and Claude can pull them live when a task needs them).
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **Establish how `YourSeoBoard LLC` (FL) and `Semalt LLC` (DE) are taxed** — disregarded, partnership or S-corp — and which schedules the 1040 therefore carries. States are now confirmed (2026-09-12); classification is not. Everything else about this return follows.
-- 🔴 **Find out what is blocking the return on our side** and record it. The client finished in March; **now over five months of silence, confirmed still undocumented after a full unbounded search (2026-09-12).**
+- 🔴 **Find out what is blocking the return on our side** and record it. The client finished in March; **now over SIX MONTHS (~198 days as of 2026-09-26) of silence, confirmed still undocumented after a full unbounded search (2026-09-12) and re-chased with no result on 2026-09-19 and 2026-09-26.**
 - [x] **Check for a 2025 Form 1095-A** — **checked 2026-09-12: not reuploaded for 2025**, unlike 2024. Confirm directly with the client before relying on this as an all-clear.
 - [x] **Confirm the 2025 Form 4868 is on file** — **YES, confirmed 2026-09-12** via the Double task record (done 2026-05-27). Deadline 2026-10-15.
 - **Follow up on the possible Ukrainian bank account** (uah-privat document, 2023) — never asked about since it was submitted; FBAR/FATCA relevance unconfirmed.
