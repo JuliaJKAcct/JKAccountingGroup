@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -298,6 +298,17 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - **Applies?** Yes — CT Annual Report, due March 31 annually; 2026 filing accepted _(Gmail, 2026-03-20 → 2026-04-07)_.
 - Client carries commercial General Liability + Workers' Comp — carrier **Atlantic Casualty Insurance Co.**, placed via broker **JMG Insurance Corp**, annual policy term ~April 16 to April 16. Renewal triggers an **annual GL/payroll premium audit** (a remote auditor) requiring the firm to supply the P&L and a contractor/1099 listing — an audit cycle ran May–July 2026 _(Gmail; 2026-08-01 sweep)_.
 - **One-time cleanup filings (April 2026):** a **Form 8822-B** (IRS address change) was prepared and sent for review (source: Gmail, Lilian → Julia, 2026-04-09), and a **Connecticut Secretary of State business filing / registered-agent update** was processed around the same time, per CT SOS correspondence (source: Gmail, Apr 2026). Whether either recurs annually is **not established** — treat as a one-time cleanup unless a pattern shows up in a future sweep.
+- 🆕 **A SECOND CT Secretary of State filing — a Business Address Change — was filed and Approved on
+  2026-09-23** (filing # `0014271709`, filed 12:34 PM, Business ALEI `US-CT.BER:3133412`) _(Gmail,
+  `do-not-reply-business@notifications.ct.gov`, 2026-09-23; found by the 2026-09-26 CI sweep)_. **The
+  new address itself is not opened here** (it was an unopened attachment) — only the fact and date of
+  the filing. Whether this connects to the 2026-04-07 principal-agent change (§6) or is a further,
+  separate move is **not established**; worth asking Lilian/Julia which address it reflects. The firm
+  billed this work as **JK Accounting Group invoice #2305**, sent to Ishkhan's email
+  (`ECOORGANIC777@gmail.com`) on 2026-09-23 _(Gmail, QuickBooks notification; dollar amount withheld
+  per the two-data-homes rule)_. A **Zelle payment from ECOORGANIC USA LLC to Julia's account** was
+  received 2026-09-25 _(Gmail, Chase notification; amount withheld)_ — presumably satisfying that
+  invoice or a related one; not confirmed which.
 
 ## 5. Key facts & quirks
 

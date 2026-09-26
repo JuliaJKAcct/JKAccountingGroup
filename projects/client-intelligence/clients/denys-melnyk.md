@@ -2500,6 +2500,37 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   — if she changes something he gets asked twice. ⓘ *He owes on this return, so the account is for paying
   rather than for a refund.*
 
+- 2026-09-26 — **Weekend sweep (incremental, baseline 2026-09-19). Both notes (485225, 490984) re-read
+  in full per the standing rule, not just their `updatedAt`.** 485225: `updatedAt` **Wed Sep 23 2026
+  03:01:58** (moved since the last sweep's read of Aug 17 — re-read in full, as required for any note
+  that moved); body now also carries the **2026-09-22 Google-Voice mileage/vehicle detail** (opening/
+  closing odometer, purchase year/price, loan interest) that the file's own 2026-09-23 log entry
+  already digests — no content found in the note that is not already reflected here. 490984:
+  `updatedAt` unchanged since Aug 20; body identical. `list_activity_log` from 2026-09-19 and again
+  from 2026-09-24: **zero entries after 2026-09-22** (the two 2024 Midwest Expedited source documents
+  and the income-and-expenses PDF, both already on file). 🔴 **THE K-1 CHASE, SPECIFICALLY: no arrival
+  from the ex-partner, by any route, as of today.** Gmail bounded `after:2026/09/19` on "Melnyk"/
+  "Midwest Expedited"/"Midwest Truck Leasing"/"AVDM Holdings"/"K-1" (8 threads, none from the
+  ex-partner: two NATP newsletters, the 09-19 weekly-sweep digest, and five threads that are this
+  client's own tax-prep correspondence already logged above — the 09-24 "return ready for review", the
+  09-23 "TO REVIEW" draft, and the 09-22 questions-to-Denys email); and separately "Andrii" AND
+  ("K-1" OR "Midwest" OR "1120-S" OR "Schedule K-1") to catch the ex-partner by first name without
+  writing it here — **one hit, and it is the 09-19 internal sweep digest, not a message from or about
+  him.** Ping: `resolve_person` for "Denys Melnyk" — no match, consistent with every prior run; a
+  targeted `search_meetings` (K-1/Midwest Expedited/bankruptcy phrasing) returned only cross-client
+  noise, nothing legible about this client. Google Drive: a title search for "Melnyk" bounded to
+  `modifiedTime > 2026-09-19`, run **with** `excludeContentSnippets: true`, returned **zero files** —
+  no dedicated Drive folder for this client, as every prior sweep has found.
+  ⚠️ **Read this alongside the 2026-09-21 entries above, not instead of them: by the time this sweep
+  ran, the firm had already stopped waiting on the K-1s.** Julia ruled on 2026-09-21 to **file without
+  them** (Form 8082, one per corporation, reporting zero for the two silent companies and the received
+  sum on Schedule C for the third), and by 2026-09-24 the return itself was drafted, questioned, revised
+  and read back page by page (the dated passes above). **So the escalation this file was recommending
+  as of last week's sweep — "flag it to Lilian/Julia rather than let another week pass" — was already
+  overtaken by their own decision two days later, not by this sweep.** Nothing found today changes
+  that: no K-1 has arrived, the amended-return-if-they-arrive fallback (working paper §4, Form 8082)
+  remains the live position, and there is nothing new to chase on this line this week.
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785

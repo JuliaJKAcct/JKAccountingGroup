@@ -61,9 +61,9 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 | System | What it's for | Where credentials live | Non-sensitive reference |
 |---|---|---|---|
 | **Tennessee Secretary of State** | formation + the annual report | firm-level, not client-specific | control number `002 059 868`; reminders come from `tnsos.gov` to Julia's mailbox — **never from Sunbiz** |
-| 🔴 **The Tennessee tax agency** *(the Department of Revenue — **inferred**, §4)* | the state return — correspondence **and filing returns** | 🟠 **the online account is being created by Lilian (2026-09-17)**; it opens from the **EIN** alone. Credentials go to the firm's password store, never here | 🔴 **the company has NO TN account number yet** — the state issues one when it processes the first return (§4) |
+| 🔴 **The Tennessee tax agency** *(the Department of Revenue — **inferred**, §4)* | the state return — correspondence **and filing returns** | 🟡 **an ONLINE ACCOUNT REQUEST was submitted 2026-09-17** (TNTAP — Tennessee's Taxpayer Access Point) — confirmation email from `NoReply_Revenue_TNTAP@tn.gov`, subject *"ZUMFI 2 LLC: Request Submitted"*, quoting "most requests are processed within 1-2 business days" _(Gmail, checked 2026-09-26)_. ⚠️ **No follow-up TNTAP email has arrived as of 2026-09-26** — 9 days later, past the quoted window — so the account's completion/access is **not confirmed**; check `tn.gov` directly rather than assuming it is live. Credentials, once it exists, go to the firm's password store, never here | 🔴 **the company has NO TN account number yet** — the state issues one when it processes the first return (§4) |
 | **Hamilton County Trustee** (TN) | the parcel's property-tax bill | public record | ⚠️ **not yet checked for this parcel** — §5 |
-| Bank | funding the purchase | _(pending — no statement has ever been provided)_ | 🔴 **the firm has never seen a bank statement for this company** |
+| Bank | funding the purchase | _(pending — no statement has ever been provided)_ | 🔴 **the firm has never seen a bank statement** — but an account is now named: on **2026-09-15** the client answered a Double portal question ("Banking information") with **"Business checking Zumfi 2 LLC"** as the account name (routing/account numbers are NOT recorded here — barred). ⚠️ **A company bank account already existed by Nov 2025**: a QuickBooks Payments notice shows a bank transfer *from* Zumfi 2 LLC paying the firm's own invoice #1945 was **canceled 2025-11-12** ("a problem with ZUMFI 2 LLC's bank account"), then paid successfully **2025-11-14** _(Gmail, checked 2026-09-26)_. **Next step: request statements from this named account** — it may finally answer the capital-vs-loan question in §5/§6 |
 | Double | client record, files, organizers | — | client `710614` |
 
 ## 4. Obligations & recurring processes
@@ -84,6 +84,21 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
 - **Deadline:** 15 March, **extended to 15 September** by Form 7004.
 - **First return:** **tax year 2025** — the organizer's *"Has the company filed a tax return
   before?"* is **No**.
+- 🔴 **2025 RETURN STATUS — FILED, established 2026-09-26 from Double.** The tax project
+  (`219305`, "2025 Taxes") reads `status: filed`, `filedAt` **2026-09-15T19:21:38 UTC**, preparer
+  Lilian Gonzalez. The same-day activity log shows the sequence: Ready for Review (Julia,
+  09-13 22:06 UTC) → Waiting on Client Approval (Lilian, 09-15 18:28 UTC, right after a client
+  e-signature request `signedSignatureRequest-191514` was completed and a signed
+  `ZUMFI2LLC2025.pdf` was added to the file library at 19:17 UTC) → **Filed** (Lilian, 09-15
+  19:21 UTC) — i.e. **on the extended due date itself.**
+  ⚠️ **This is NEWER than the working paper's own last update (2026-09-13) and than this file's
+  own text below**, both of which still read the return as *unfiled*, blocked on confirming the
+  Form 7004's acceptance. **That language is now stale — see §6.** ⛔ **This sweep did NOT find
+  independent confirmation that the Form 7004 itself was IRS-accepted** (no e-file acknowledgment
+  for the 7004 specifically, in Gmail or in Double's file library) — only that the 1065 return was
+  transmitted. **Whether the extension's acceptance was confirmed by some other means (ATX,
+  a phone call) before filing, or the return was simply filed without full confirmation, is not
+  established from what this sweep could reach.**
 - 🔵 **The Tennessee state return is a SEPARATE return to a separate agency** — its own heading
   below. ⛔ **The federal Form 7004 does not extend it**, which is exactly what went wrong.
 
@@ -120,6 +135,17 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   one year or includes interest, and **whether the FONCE exemption was ever raised.** 🔑 **The
   working paper had carried FONCE as the possible escape route — the call establishes that a return
   is OWED, not that the exemption was considered and rejected.**
+- ✅ **LILIAN FOLLOWED THROUGH THE SAME DAY: an ONLINE ACCOUNT REQUEST was submitted to TNTAP
+  (Tennessee's Taxpayer Access Point) on 2026-09-17** — confirmation email from
+  `NoReply_Revenue_TNTAP@tn.gov`, *"ZUMFI 2 LLC: Request Submitted"*, with a confirmation code and
+  "most requests are processed within 1-2 business days" _(Gmail, checked 2026-09-26)_.
+  ⚠️ **CHASED 2026-09-26 — no follow-up TNTAP email has arrived, 9 days past the quoted window.**
+  Whether the account is now live, and — critically — **whether it holds correspondence already
+  sitting there** (the outstanding-items list below says this is the first thing to read once it
+  exists), is **not confirmed by anything this sweep could reach.** Check `tn.gov` directly.
+  🔴 **AND SEPARATELY: DOUBLE NOW SHOWS THE 2025 FORM 1065 ITSELF AS FILED (2026-09-15)** — see §4.
+  That is progress on the FEDERAL return, not the Tennessee one, and does not by itself confirm
+  which Tennessee return is owed or that the online account is working.
 
 ### Licenses & other filings
 - 🔴 **TN annual report — due 1 APRIL**, a month before the nine Florida companies' 1 May Sunbiz
@@ -260,13 +286,76 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   Revenue** is the inference, from an account number and a return; the Secretary of State takes the
   annual report, which is already filed for 2026.*
 
+- _(2026-09-17, established 2026-09-26)_ — 🔑 **TNTAP request submitted the same day Lilian said she
+  would create the online account.** Confirmation email from `NoReply_Revenue_TNTAP@tn.gov`
+  ("ZUMFI 2 LLC: Request Submitted"), confirmation code on file in Gmail, "1-2 business days" to
+  process. **No further TNTAP email as of 2026-09-26** — checked by a full Gmail search for
+  `from:tn.gov after:2026/09/17`, one hit only (this same email). _(Source: Gmail.)_
+- _(2026-09-15, established 2026-09-26)_ — 🔴 **THE 2025 FORM 1065 WAS FILED.** Double's tax project
+  `219305` reads `status: filed`, `filedAt` 2026-09-15T19:21:38 UTC. The same day: a client
+  e-signature request (`signedSignatureRequest-191514`) completed, a signed `ZUMFI2LLC2025.pdf` was
+  added to the file library (19:17 UTC), and the project moved Ready for Review → Waiting on Client
+  Approval → Filed within about an hour. **Filed on the extended due date itself.** ⚠️ **This
+  supersedes the "not yet filed, blocked on the 7004" language elsewhere in this file and in the
+  working paper (last updated 2026-09-13)** — that language needs a closing update by whoever next
+  opens the working paper; this CI sweep does not edit it. No independent confirmation that the
+  Form 7004 itself was IRS-accepted was found (no e-file acknowledgment for it, in Gmail or Double).
+  _(Source: Double `list_projects`, `list_activity_log`, `list_files`.)_
+- _(2026-09-15, established 2026-09-26)_ — The client answered a Double portal question ("Banking
+  information": routing number, account number, savings-or-checking, business-or-personal) with
+  **"Business checking Zumfi 2 LLC"** as the account name. Account/routing numbers are **not**
+  recorded here (barred). Likely for the return's refund or EFW/direct-debit info. _(Source: Double
+  `get_questions`, question `22594226`.)_
+- _(2025-11-12 / 2025-11-14, established 2026-09-26)_ — A QuickBooks Payments notice shows a bank
+  transfer **from Zumfi 2 LLC**, paying the **firm's own invoice #1945**, was **canceled 2025-11-12**
+  ("a problem with ZUMFI 2 LLC's bank account"); a second "Payment received" notice for the same
+  invoice followed **2025-11-14**. **Confirms a company bank account already existed by Nov 2025** —
+  unrelated to the ALTA closing funds, but the first direct evidence of an account, ahead of the
+  Sept 2026 "Business checking Zumfi 2 LLC" name. _(Source: Gmail.)_
+- _(2026-09-07, established 2026-09-26)_ — A second Double question thread that day, **"Aдрес
+  компании Zumfi 2"** (Address of the Zumfi 2 company), separate from the SSN/land-purchase
+  comments already logged above: the client gave a current Chattanooga TN business address, a
+  former Chattanooga TN business address, and a Deerfield Beach FL mailing address. **Street
+  addresses are not recorded here** (barred, both personal and business per this file's header) —
+  see Double question `22447609` for the detail. Not established whether this resolves the
+  Hamilton County Trustee mailing-address check below (§6 outstanding items) — that is a different
+  agency and was not asked about here. _(Source: Double `get_questions`.)_
+- _(2026-09-26)_ — 🔴 **FIRST-EVER FULL CLIENT-LEVEL SWEEP (unbounded — no prior `sweep-state.md`
+  row).** Sources: Double (`get_client`, `list_client_properties`, `list_notes` — **zero notes on
+  this client, ever** — `list_contacts`, `list_activity_log` — all 48 entries, the client's full
+  history — `get_questions`, `list_projects`, `list_comments`, `list_files`); Ping (`resolve_person`
+  on Vitaliy Vasyutyk — single match; org-wide `search_meetings`, several phrasings of "Zumfi 2 LLC
+  Tennessee land purchase tax return" — **zero usable hits** across 182 accessible meetings / 116
+  recorded events, every result an unrelated or garbled multilingual transcript; `list_client_meetings`
+  could not be run bare — it requires a client-scoped context this session did not have); Gmail
+  (`in:anywhere Zumfi` — 50 of 53 threads read by subject/date, the Tennessee/TNTAP-specific ones
+  and the 2025-11 bank-transfer one opened in full; a second query for Tennessee/franchise/FONCE
+  terms returned nothing); Google Drive (`excludeContentSnippets: true` — **two separate "Zumfi 2
+  LLC" folders found under different Drive parents**, ids in §7; which is canonical is not
+  established, the same ambiguity already flagged on the owner-group file). **Not exhaustive:** the
+  3 of 53 Gmail "Zumfi" threads not individually opened were routine invoice/task-assignment emails
+  already fully described by their subject lines (1099-prep task notifications, payment reminders);
+  the TaxDome notes backfill was not run (out of this sweep's scope — a separate, attended job).
+  ⛔ **Per the client-intelligence skill: this client is NOT added to `sweep-state.md`** — a row
+  would bound the next run to searching only after today and skip this full history permanently.
+  It stays out of that ledger until Lilian/Julia's process adds the group's per-company files to the
+  weekend sweep's scope table (see the coverage-gap note below).
+
 ### Tax year 2025 — the review
 
 - **Prepared 2026-09-13, by Lilian with a Claude Code session.** **Block A verdict: YES.** The return computes in full,
   **and Lilian keyed it in ATX on 2026-09-13.** ✅ **The 65% partner's identifier is in** — that
-  blocker is closed. 🔴 **One thing still blocks transmission:** confirmation that the **Form 7004
-  was accepted**, since the copy in Double is an unreadable scan and the small-partnership relief
-  that lets this return be filed without a balance sheet depends on the extension existing.
+  blocker is closed. 🔴 **AS OF THIS FILE'S PRIOR VERSION, one thing still blocked transmission:**
+  confirmation that the **Form 7004 was accepted**, since the copy in Double is an unreadable scan
+  and the small-partnership relief that lets this return be filed without a balance sheet depends on
+  the extension existing.
+  ✅ **SUPERSEDED 2026-09-26: DOUBLE SHOWS THE RETURN WAS FILED 2026-09-15** (project `219305`,
+  `filedAt` 19:21 UTC, same day as a completed client e-signature request) — see §6 log. ⛔ **This
+  does not independently confirm the Form 7004's IRS acceptance** (no e-file acknowledgment for it
+  was found anywhere reachable this session); it confirms the 1065 itself was transmitted, on the
+  extended due date. **Whoever next opens the working paper should reconcile this** — either close
+  the 7004 item with whatever confirmation exists in ATX, or record that it was never independently
+  confirmed before filing.
   🔴 **And THREE things in the keyed draft must change first, with TWO more to confirm** — the worst
   being a **Schedule L asserting zero total assets** on a company holding the parcel. The three changes, with their
   fixes, are in the working paper's §10A; **the two confirmations are §6 items ⑱ and ⑲**, not §10A. Sources read: the ALTA

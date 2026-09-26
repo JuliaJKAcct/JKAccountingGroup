@@ -1,6 +1,6 @@
 # Pro Title Agency
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -186,6 +186,30 @@ _(Double notes — live status lives in Double.)_
     2026-09-09.
   - **Reconciling the file's "Owner" (Lilian) against Double's "Assigned Staff" (Liudmyla Kazannik) —
     not chased this run (budget), same as the last three runs.**
+- 2026-09-26 — **Incremental sweep (baseline 2026-09-19→2026-09-26).** Double: all 3 notes unchanged
+  (`updatedAt` still 2026-07-15/07-15/07-23); `list_activity_log` bounded ≥2026-09-19 returns no entries.
+  Gmail (Pro Title/Karpenko/"40698"/"Coral Springs"/WLTIC/"Plant Search Statement"/A12495,
+  `after:2026/09/19`): 🆕 a solicitation email from a notary-services vendor (`partnerships@ussignpro.com`,
+  2026-09-25) addressed to Julia asking about the firm's signing/notary coverage — cold outreach, not from
+  an existing vendor or the client, and not actioned; not treated as a fact about this client. **No further
+  chase from WLTIC and no payment confirmation found** on the 09-09 invoice. No correspondence found on the
+  Coral Springs address change, the IRS 1065-vs-Schedule-C mismatch, or the payroll (Gusto) vs.
+  Double-property discrepancy — a broad Gmail sweep for Gusto/payroll activity this week (run for another
+  client's watch item) also surfaced nothing naming Pro Title Agency, consistent with no payroll movement.
+  Ping (`search_meetings`, scoped clientId 706716): no legible, on-topic hits dated on/after 2026-09-19.
+  **Chase pass:**
+  - **WLTIC "Plant Search Statement" invoice (ref A12495) — a search of Gmail, bounded ≥2026-09-19, on
+    2026-09-26, found no further chase from the vendor and no payment confirmation.** **17 days pending
+    since 2026-09-09.**
+  - **Coral Springs address change (DFS/Sunbiz) — a search of Gmail, bounded ≥2026-09-19, on 2026-09-26,
+    found nothing further.** Pending since unknown — no start date recorded beyond "in progress" (Jul
+    2026); no deadline.
+  - **IRS Form 1065-vs-Schedule-C filing-requirement mismatch — no movement found.** Pending since unknown.
+  - **Payroll (Gusto) vs. Double-property (N/A) discrepancy — no movement found.** Pending since unknown.
+  - 🔵 **Reconciling the file's "Owner" (Lilian) against Double's "Assigned Staff" (Liudmyla Kazannik) —
+    not chased this run either (budget), the FOURTH run running with no external search possible.** This
+    is not really a document-search question — nothing in Gmail/Ping/Drive will settle which one is
+    current. **Recommend putting it directly to Lilian/Julia rather than searching for it again next week.**
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end

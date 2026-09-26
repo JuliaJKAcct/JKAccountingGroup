@@ -529,9 +529,11 @@ the actual details.
   the company's return is past the review's blockers and its gate is the QuickBooks worklist, with a
   **2026-09-15** deadline.
 - 🔴 **The per-car earnings breakdown from Turo** — requested 2026-09-01, not yet received. 🔎 **Chased
-  2026-09-19: still not received — 18 days pending, no deadline set.**
+  2026-09-19: still not received — 18 days pending, no deadline set. Chased again 2026-09-26: still
+  not received — 25 days pending, no deadline set.**
 - 🔴 **Whose Turo account is it?** Not confirmed from the registration. With no 1099-K there is no
-  name-and-TIN to read. 🔎 **Chased 2026-09-19: a Gmail + Drive search found nothing new.**
+  name-and-TIN to read. 🔎 **Chased 2026-09-19: a Gmail + Drive search found nothing new. Chased again
+  2026-09-26: a Gmail search found nothing new.**
 - 🔴 **The Kona:** what he received, what he paid the friend, and whether a **Form 1099-MISC box 1** question — 🔑 **paying for the USE of a car is RENT**, not services; 1099-NEC only for a service element *(an operator, cleaning, detailing)*, prorated out. **$600 threshold for 2025** — ⚠️ *OBBBA raises §6041 to **$2,000** for payments made after 31 Dec 2025* was owed. ⚠️ **And he cannot depreciate a car that is not his** — *"his" is benefits and burdens, not the title (Pub 946 incidents of ownership; Helvering v. Lazarus, 308 U.S. 252; Grodt & McKay, 77 T.C. 1221)*.
 - 🔴 **Form 7203 — a 2026 matter now, not 2025.** His opening basis is created by the transfer at the **close of 2025-12-31**, so the first Form 7203 he files is with his **2026** return. How the transfer happened is the question, and **Lilian is putting it to Julia herself (2026-09-02)**. Not urgent for the company's return: no capital gain on any reading.
 - ⚠️ **Turo account access** — he cannot log in. Restore it before the next season.
