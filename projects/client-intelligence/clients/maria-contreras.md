@@ -1,6 +1,6 @@
 # Maria Contreras
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -132,6 +132,16 @@ the actual details (and Claude can pull them live when a task needs them).
   finding. **Chase pass:** re-checked for movement on the vehicle/internet/repair deduction pattern,
   her home state, and whether "Affordable Interior Systems Inc" is confirmed as her employer —
   **none moved; all three remain open**, no deadline attached to any of them.
+- 2026-09-26 — **Batch sweep (incremental, baseline 2026-09-19→2026-09-26).** Double: `list_notes`
+  still 0; `list_activity_log` bounded `fromTimestamp=2026-09-19` returned **zero entries**. Gmail
+  (`"Maria Contreras"`, after:2026/09/19): no hits beyond the firm's own weekly-sweep meta-email —
+  no client correspondence. Google Drive (`fullText contains 'Maria Contreras'`, modified after
+  2026-09-19): the one hit returned is an unrelated shared business-formation intake spreadsheet
+  (full-text false positive) — no client document. Ping (org-wide `search_meetings`, her name +
+  "vehicle internet repair deductions" + "Affordable Interior Systems"): no results specific to her
+  — same confirmed-empty pattern as every prior run. **Chase pass:** re-checked the vehicle/
+  internet/repair deduction pattern, her home state, and the "Affordable Interior Systems Inc"
+  employer question — **none moved this window; all three remain open, no deadline attached.**
 
 ### Tax year 2025 — the review
 

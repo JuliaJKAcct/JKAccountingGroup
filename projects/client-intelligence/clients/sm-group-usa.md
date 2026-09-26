@@ -1,6 +1,6 @@
 # SM Group USA Inc. — e-commerce (Kostetskyi)
 
-> **Status:** Prospect — PRICE AGREED, start 2026-11-01; final proposal redrafted for signature 2026-09-24 · **Owner:** Julia · **Last updated:** 2026-09-24
+> **Status:** Prospect — PRICE AGREED, start 2026-11-01; final proposal redrafted for signature 2026-09-24, still awaiting the client's signature as of 2026-09-26 · **Owner:** Julia · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -53,7 +53,7 @@ the actual details.
 | Role | Where to find them |
 |---|---|
 | Signer / owner | **Sergii Kostetskyi** — the proposal's signature block carries his name (Julia, 2026-09-21) |
-| Finance contact / negotiator | **Olha** (Bereziuk?) — writes for the company in the WhatsApp group "Kostetskyi \| Finance & Accounting"; led the pricing discussion; attended the 2026-09-16 Zoom meeting with Julia |
+| Finance contact / negotiator | **Olha Bereziuk** — surname CONFIRMED 2026-09-26 sweep (her own email domain on the 2026-09-16 Zoom-recap correspondence; the domain itself hints at an affiliated company, possibly the "second company" in §5 — not yet confirmed, ask her/Sergii directly). Writes for the company in the WhatsApp group "Kostetskyi \| Finance & Accounting"; led the pricing discussion; attended the 2026-09-16 Zoom meeting with Julia |
 
 - **Double client:** _(pending — not in Double yet)_
 
@@ -122,6 +122,24 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-26 — **First-ever PROSPECT sweep — Gmail searched with NO date bound (this
+  client's log already ran to 2026-09-24 from direct session work, but no Gmail/Drive sweep
+  had been run against it yet, so the whole mailbox was searched; cheap and unbounded since
+  there is no `sweep-state.md` row and never will be for a PROSPECT). No Ping/Double — no
+  Double account exists.** Searched Gmail for "Kostetskyi" / "SM Group USA" / "SM Group" —
+  found ONE genuinely new fact predating everything already in this file: an earlier
+  **"Sergey Kostetskyi Introduction" Zoom call took place 2026-09-09, 11:00am–12:00pm ET**
+  (Ping Assistant joined; Sergii accepted the calendar invite from his own address the day
+  before) — this is very likely the actual FIRST intake/discovery call, a full week before
+  the 2026-09-16 pricing-quote meeting this file already recorded, and this file's Snapshot/
+  Log previously had no record of any contact before 09-16. Also **confirmed Olha's
+  surname as Bereziuk** (§2) via the 2026-09-16 Zoom-recap correspondence — resolves the
+  "(Bereziuk?)" placeholder. Searched Drive full-text for "Kostetskyi" / "SM Group" — the
+  results were all unrelated files (other clients' bank statements, an unrelated Google Form
+  responses sheet, the firm's own Passwords vault by title only, `excludeContentSnippets:
+  true` throughout — no content was returned or read) — **no SM Group folder or document
+  found in Drive.** No message was found after 2026-09-24 (the redraft-for-signature date)
+  on either side — the signed proposal has not yet come back as of this sweep
 - 2026-09-16 — **Zoom meeting (Julia + Olha):** the transcript PDF was shared into the
   WhatsApp group afterwards; the meeting produced the initial monthly quote
 - 2026-09-18 — **Olha's counter (WhatsApp, Ukrainian):** the quote far exceeds their
@@ -175,9 +193,13 @@ the actual details.
 - **From Julia:** Sergii's email for the cover (blank now); the second company's name and
   scope for its own quote
 - **Waiting on the client:** the signed proposal (final version sent for signature
-  2026-09-24; service starts 2026-11-01)
+  2026-09-24; service starts 2026-11-01) — **still not returned as of 2026-09-26 (2 days)**,
+  no news either way found in this sweep's full-mailbox search
 - **Before onboarding:** entity state + S election, sales channels and platforms, sales
   tax nexus, current provider handoff
+- **New, 2026-09-26 — worth asking, not assuming:** Olha's email domain (confirmed via the
+  2026-09-16 correspondence) may name the "second company" mentioned in §5/§6 — ask her or
+  Sergii directly rather than guess from the domain
 
 ### Information still needed
 

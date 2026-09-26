@@ -304,8 +304,8 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   new address itself is not opened here** (it was an unopened attachment) — only the fact and date of
   the filing. Whether this connects to the 2026-04-07 principal-agent change (§6) or is a further,
   separate move is **not established**; worth asking Lilian/Julia which address it reflects. The firm
-  billed this work as **JK Accounting Group invoice #2305**, sent to Ishkhan's email
-  (`ECOORGANIC777@gmail.com`) on 2026-09-23 _(Gmail, QuickBooks notification; dollar amount withheld
+  billed this work as **JK Accounting Group invoice #2305**, sent to Ishkhan's on-file contact
+  address on 2026-09-23 _(Gmail, QuickBooks notification; dollar amount withheld
   per the two-data-homes rule)_. A **Zelle payment from ECOORGANIC USA LLC to Julia's account** was
   received 2026-09-25 _(Gmail, Chase notification; amount withheld)_ — presumably satisfying that
   invoice or a related one; not confirmed which.

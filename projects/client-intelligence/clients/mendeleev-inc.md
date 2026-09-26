@@ -155,14 +155,21 @@ the actual details.
   see §5 lead flag); the first monthly invoice timing vs the onboarding; ⚠️ whether the
   pricing calculator's default 1120 rate should be corrected to match the rate she
   quoted here (a shared-tool change — needs her word, then a rebuild + Hub republish)
-- **Pending:** Sunbiz document number, EIN, suite number, industry, owner's email
+- **New, 2026-09-26 — worth a direct question, not an assumption:** the phone number on
+  Dmitrii Gridin's 2026-09-23 Discovery Call booking has a different country code than the
+  "Yerevan, Armenia" home-country fact already on file. Could simply be a number registered
+  in another country while he lives in Armenia — but ask before treating "Armenia" as
+  settled for anything jurisdiction-dependent
+- **Pending:** Sunbiz document number, EIN, suite number, industry
 
 ### Information still needed
 
 - [ ] Sunbiz registration + EIN (or is formation still ahead?)
 - [ ] Ownership split (is Gridin 100%?) — drives the 5472 answer
 - [ ] What the company does; where the 2026 books live today
-- [ ] Owner's email for the letter and Double
+- [x] Owner's email — **now on file** via the 2026-09-23 Discovery Call booking (Odoo CRM
+  lead + Gmail booking confirmation); see those records or Double once the client record
+  is created — not written here per the personal-contact-details rule
 
 ## 7. Links
 
