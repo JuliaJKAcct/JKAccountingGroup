@@ -277,13 +277,11 @@ the actual details.
   `after:2026/08/22`, on 2026-08-29, for FDOR/reemployment-tax correspondence on this client found
   nothing new.
 - **Reconcile the payroll flag / Gusto cancellation decision (owner asked 2026-08-05)** — STILL
-  UNSETTLED, **~38 days pending as at 2026-09-12, and the evidence keeps pointing the OTHER way.** Gusto has sent "Action
-  required: Payroll is late/due" reminders for **DEEP TECH DEVELOPMENT GROUP LLC** on **2026-08-27, 2026-09-08 and 2026-09-10** (the last two for the
-  **Aug 31–Sep 13, 2026** pay period), addressed to Julia, Lilian, Maria and the owner
-  (`willivanoff@gmail.com`) — a repeated, ongoing biweekly payroll pattern, not a lapsed one. This reverses
-  the 2026-08-22 negative finding (no Gusto emails naming this client 08-15→08-21) and strengthens the
+  UNSETTLED, **~52 days pending as at 2026-09-26, and the evidence is now overwhelming that it was never actioned.** Gusto has sent "Action
+  required: Payroll is late/due" reminders for **DEEP TECH DEVELOPMENT GROUP LLC** continuously since 2026-08-27 — most recently **2026-09-20, 2026-09-22 and 2026-09-24** (all for the **Sep 14–27, 2026** pay period), addressed to Julia, Lilian, Maria and the owner
+  (`willivanoff@gmail.com`) — an unbroken, ongoing biweekly payroll pattern for eight weeks running, not a lapsed one. This strengthens (does not newly establish) the
   reading that the cancellation was never actioned, rather than that payroll quietly stopped. _(Gmail,
-  2026-08-27/09-08/09-10.)_
+  2026-08-27 through 2026-09-24, most recently checked 2026-09-26.)_
 - **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30) — STILL OPEN, ~30 days pending as at 2026-08-29 (~35 on 2026-09-03), no deadline. A search of Gmail bounded `after:2026/08/22`, on 2026-08-29, for "Safe Guard Self Storage" did not find any results.
 - **New toll balance appeared** at Penn Credit after the last payment brought it to zero — STILL OPEN, no deadline (recurring item). A search of Gmail bounded `after:2026/08/22`, on 2026-08-29, for "Penn Credit" did not find any results (the portal itself was not logged into — out of scope for this sweep).
 - Confirm the **sales-tax state / registration** and what's taxed (Shopify goods).

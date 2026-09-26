@@ -359,7 +359,7 @@ Anything the team must know to serve this client well.
   `list_activity_log` bounded ≥2026-09-19: **zero entries.** `list_notes`: **still zero notes on this
   client** (confirmed again — the family's two running notes remain on Gossip Miami, see that file).
   Ping `resolve_person` re-confirmed both spouses' records (Marat as a contact under both entities;
-  Yuliana under "Yuliana Bogopolska," `ybog2303@gmail.com` — a different address than the shared
+  Yuliana under "Yuliana Bogopolska," at a distinct email address — a different address than the shared
   `jamvabo@gmail.com` this file's §2 already flags as unsettled).
   🔴 **CONTRADICTION RE-VERIFICATION — see the top §5 bullet for the full account: STILL
   UNCONFIRMED**, not newly resolved and not newly contradicted.
@@ -795,6 +795,9 @@ Anything the team must know to serve this client well.
       on 2026-09-19 found no record of her ever being asked.** If she was not asked before filing,
       the return may already carry a description she never supplied — ask her now, after the fact,
       and be ready to amend if her own words don't match what was keyed.
+      🔴🔴 **STILL UNANSWERED AS OF 2026-09-26 — 11 days after filing.** Chased again (Gmail + Ping,
+      see the 2026-09-26 log entry): no record found that she has been asked, or has answered, in
+      the week since the last sweep. This is the single most time-sensitive open item on this file.
 - [ ] **Marat Boxing LLC's own obligations** — sales tax, local licences, annual report. Never examined.
 - [ ] 🟠 **Whether the household has ONE vehicle or two.** ⚠️ **One car is the WORKING ASSUMPTION,
       not an established fact** — the three "proofs" this row once claimed *(the same finance document,
