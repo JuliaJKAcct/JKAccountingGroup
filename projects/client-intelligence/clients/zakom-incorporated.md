@@ -380,6 +380,62 @@ A running, dated record as we build this profile.
   ✅ **Both Zakom Google Drive folders located** (§7 Links) — the pending gap there is now closed.
   ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
 
+- _(2026-09-27)_ — **THE THREE FREE IN-HOUSE SEARCHES WERE RUN OVER THE TWELVE 2025 BANK STATEMENTS, at
+  Lilian's instruction** *(`haz las tres búsquedas gratis en los statements`)*. ⛔ **Nothing was asked of
+  the client; every extract was deleted in the same pass.**
+  🔑 **THE DURABLE PART IS A METHOD LESSON, not any single figure. The firm had been searching these
+  statements BY EXACT AMOUNT** — grouping the year's debits by value and tracing each recurring value to
+  its months. ⛔ **That is blind to a lender who varies the draft** — a documentation fee on the first
+  payment, interim interest between funding and the first due date, a late charge, a tax adjustment.
+  ✅ **THE RELIABLE KEY IS THE CAPTION**, which does not move when the amount does. **Both open items were
+  re-run on the caption and BOTH REVERSED** — and in both, the finding that fell was of the shape *"the
+  client's figures are wrong"*. ⚠️ **This is [`method.md`](../../pre-return-review/method.md) rule 1b in a
+  new place: a negative belongs to the search that produced it.**
+  ✅ **THE UTILITY-TRAILER LENDER WAS PAID EVERY MONTH OF 2025.** Its own amortization report is correct and
+  its figures are now usable; the firm's *"nine payments, not twelve"* is **withdrawn** — three months were
+  paid under the same caption at a different amount. ⚠️ **AND A NEW QUESTION TAKES ITS PLACE: the bank
+  caption on that contract reads `LEASE PYMT`.** **Whether it is a financing note or a TRUE LEASE is
+  unsettled, and it decides whether those payments are interest or rent** — which changes both the
+  deduction line and whether the contract is a balance-sheet liability at all.
+  ✅ **THE REITNOUER-TRAILER NOTE RAN NINE PAYMENTS, not the seven the firm computed** — the first two
+  months are in the account under the note's own caption, each above the contract payment. ✅ **The
+  client's own interest and payoff figures are the nine-payment ones and they are right; the firm's
+  computation is withdrawn.** ⚠️ **What the two higher first payments were is open** — a fee plus interim
+  interest *(the trailer went into service weeks before the first payment, so that is ordinary)*, or extra
+  principal. **The Loan and Security Agreement for that note is already in the client's own uploads and
+  would settle it.**
+  🔴 **AND THE SWEEP FOUND SOMETHING NOBODY HAD MEASURED: AN IRS MONTHLY AUTOMATIC WITHDRAWAL, in eleven
+  of the twelve months.** 🔑 **The client TOLD the firm about it on 2026-09-14** — he said he is paying a
+  2024 balance to the IRS by automatic monthly withdrawal — ⛔ **and nobody had ever looked for it or
+  measured it.** ⛔ **A payment of a PRIOR-YEAR tax balance is not deductible.** ⚠️ **And whose balance it
+  is decides the treatment: an S corporation normally pays no federal income tax, so a company balance is
+  more likely payroll or excise than income tax — while a payment of the SHAREHOLDER's personal tax out of
+  the company account is a DISTRIBUTION.** ⛔ **Not established** — 🛑 **and the ask is NOT reopened by the measurement: Lilian PARKED this
+  exact subject on 2026-09-14**, on the ground that it was part of his personal return and not of
+  interest for now. ☑️ **What the figure does is split the matter in two: whose balance it is stays
+  parked and is hers; whether it sits inside the client's own expense base was never parked and is the
+  firm's own work on this return's deduction lines.** ✅ **And that half is already narrowed for free —
+  his expense total reconciles exactly against named captions with no residual bucket and no tax
+  caption, so if it is in his base it is inside a named one.**
+  ✅ **THE LINE-OF-CREDIT DISCREPANCY IS EXPLAINED.** December carries two debits on that facility, and the
+  round difference between what left the account on the first of them and what the lender credited to
+  interest is the WHOLE of the year's bank-versus-lender gap — **one fee, in one month.** **It is not
+  principal:** the lender's own December statement shows the principal balance unmoved all year. ✅ **So the
+  deduction the paper had chosen now stands EXPLAINED rather than merely chosen.**
+- _(2026-09-27)_ — **THE FILED 2024 SCHEDULE L AND M-2 WERE READ IN FULL**, at Lilian's instruction
+  *(`revisa también el Schedule L / M-2 de 2024`)*, through [`tools/redact-doc/`](../../../tools/redact-doc/),
+  **and the extract deleted in the same pass.** 🔑 **THE DISTRIBUTION MECHANISM IS ON THE FACE OF THE
+  RETURN, not an inference any more.** **2024 reported its distributions against an accumulated adjustments
+  account it took to exactly zero**, and the excess went to **additional paid-in capital**, which the 2024
+  balance sheet carries **NEGATIVE**. ✅ **Every step of that column's arithmetic checks, and both sides of
+  the 2024 balance sheet balance exactly** — so the base the firm was told to stand on for 2025 is
+  internally consistent. ✅ **AND THE 2025 ACCUMULATED ADJUSTMENTS ACCOUNT OPENS AT ZERO.** ⚠️ **FLAGGED FOR
+  JULIA, not decided here: driving paid-in capital negative is not the ordinary treatment**, and 2025 will
+  have to either repeat it or depart from it — **which is the signer's call.** ⓘ *The 2024 reconciliation
+  schedule also labels its non-deductible line `Travel and entertainment`, which bears on the unexamined
+  meals rate in the working paper.*
+  ⛔ **No identifier, address or dollar figure was written into this file from either of these entries.**
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
