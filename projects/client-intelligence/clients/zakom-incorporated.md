@@ -785,9 +785,13 @@ A running, dated record as we build this profile.
   WORKBOOK DIRECTLY INTO THE SESSION AFTER THE TOOLING REFUSED IT, AND IT ANSWERED THE QUESTION THAT HAD BEEN
   BLOCKING EVERY DISPOSAL FOR TWO WEEKS.** ✅ **All seven sheets read cell by cell.** 🔑 **The truck
   identification was in the client's OWN OLDER asset sheet, which still carries the unit numbers that his newer
-  sheet stripped off the same three rows — and it is corroborated twice over: that sheet's own
-  financed-equipment table names the same units and their fates, and all three match the firm's filed
-  depreciation schedule on BOTH the month and the cost.** ⇒ ✅ **THE CLIENT IS ASKED NOTHING. The vehicle whose
+  sheet stripped off the same three rows — and what CARRIES it is the COST PAIRING: two of his
+  purchase prices against a filed schedule holding two costs a few hundred apart can only pair one way, and
+  the third follows by elimination.** ⛔ **NOT *"corroborated twice on month and cost"* — an earlier version of
+  this entry said that and it is wrong twice over: one truck's month differs from the schedule's by a few
+  weeks, one carries no cost at all, and the financed-equipment table is CONSISTENT with the map rather than a
+  second support for it — which is exactly what an earlier review of this same file had already established
+  and what this entry then re-asserted 100 lines later.** ⇒ ✅ **THE CLIENT IS ASKED NOTHING. The vehicle whose
   identity decided which cost goes onto the casualty form turns out to be the CHEAPER of the two.**
   🛑 **AND THE LESSON IS THE ONE THIS CLIENT HAS NOW TAUGHT THREE TIMES: the sheet was in the file library the
   whole time, and *"our tool cannot read it"* had been recorded as *"we do not have it."*** ⚠️ **The home
@@ -820,7 +824,7 @@ A running, dated record as we build this profile.
   recognising one without the other overstates the deduction; if it is not in there, both sides are off the
   return and cancel.** 🛑 **Either way it reframes the casualty: the proceeds allocable to the TRUCK are what
   his own note says, not the insurer's whole payment — which is what the paper had been carrying.**
-  ☑️ **It is the one client question this reading produced, and the list went from SEVEN to THREE.**
+  ☑️ **It is the one client question this reading produced, and the list went from SEVEN to THREE.** ⚠️ **CORRECTED: it is SIX — three that move a figure now and three that ride along — and a round-2 review then found a SEVENTH that had been dropped.**
 - _(2026-09-27, evening)_ — **THREE RULINGS OF LILIAN'S, recorded because each narrows how the work is done.**
   ① **The other entity had NO activity in the year — the client confirmed it, and she directed that he is not
   asked again on a generic possibility.** ⚠️ **What replaces that question is a different one and it is not
@@ -836,8 +840,11 @@ A running, dated record as we build this profile.
   total less five named removals, exactly.** ✅ **And the long-term debt line's whole convention is now PROVEN
   rather than assumed: the client's own year-end balance cells for the prior year reproduce the figure on the
   FILED return to within a quarter of a dollar — so his equivalent cells for this year give that line in full,
-  one document short.** 🔑 **The balance sheet now closes on a SINGLE unknown, the accumulated depreciation;
-  once that is keyed the owner's withdrawals fall out as the only figure left.** 🛑 **Which is the route both
+  one document short.** 🔑 **The balance sheet now closes on TWO unknowns — the accumulated depreciation and
+  the one financing document still to arrive — and BOTH ARE NAMED, which is the whole difference from where
+  this return started.** ⚠️ **An earlier version of this sentence said a single unknown and stated the equity
+  residual as though the missing document were zero.** ✅ **Once both are keyed the owner's withdrawals fall
+  out as the only figure left.** 🛑 **Which is the route both
   principals directed, and the alternative would have been catastrophic here: deriving withdrawals as
   everything-that-left-less-identified-uses would have swept most of a million dollars into the capital
   account, because three quarters of the outflow sits under one opaque bank caption that turned out to be
