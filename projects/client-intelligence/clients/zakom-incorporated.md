@@ -633,14 +633,22 @@ A running, dated record as we build this profile.
   ✅ **The card question — where the firm's own rule and its own reasoning had been pointing in opposite
   directions for two weeks, and the paper had refused to pick — is settled: it IS the company's card.** ⇒ **It
   belongs on the balance sheet, its charges are the company's expenses, and the payments from checking to it
-  are transfers between two company accounts rather than expenses or owner draws.** ⇒ **A large measured gap
-  between what left the bank and what reached the card stops being an owner-draw residual and becomes an
-  ordinary reconciling item.**
+  are transfers between two company accounts rather than expenses or owner draws.** ⚠️ **BUT ONLY FOR THE PAYMENTS THAT ARRIVED — and the first version of this entry had the rest
+  BACKWARDS.** **The large measured gap between what left the bank and what reached the card is money that went
+  somewhere else** — **and since every other account is now established as PERSONAL, her clarification makes that
+  gap MORE clearly an owner-draw classification, not less.** ⛔ **It stays a decision for the signing principal:
+  a distribution, a receivable from the shareholder, or officer compensation.**
   ✅ **ALL 51 OPEN ITEMS WERE RE-SORTED into her four groups — the datum is already in the documents · it is
   ours to calculate · it is an accounting or tax decision · it is genuinely missing.** 🔑 **THE CLIENT LIST
-  WENT FROM EIGHT ITEMS TO ONE.** **One was dissolved outright by the new approach, six moved to internal work,
-  and only the insurance premium-finance figures remain genuinely missing — three unknowns that cannot be
-  solved from the one equation the bank gives, with no document on file carrying any of them.** ⛔ **Nothing
+  WENT FROM EIGHT ITEMS TO TWO** ⚠️ *(the first version of this entry said ONE; the independent review
+  caught that one of the moves was wishful — a search it proposed had already been run and failed, and it went
+  back)*. **One was dissolved outright by the new approach, five moved to internal work,
+  and TWO remain genuinely missing: the insurance premium-finance figures — which cannot be solved from the one
+  equation the bank gives, and cannot be amortised out of the only document we hold because that document does
+  not foot against itself — and the map from the client's own truck numbers to the rows of the depreciation
+  schedule, where every route the firm holds has been tried and none of them carries a truck identity.**
+  ⚠️ **AND THE WHOLE COLLAPSE IS CONTINGENT ON THE OTHER PRINCIPAL'S ANSWER: the dissolved item rests entirely
+  on the rebuild, so if she upholds her own earlier ruling it comes back.** ⛔ **Nothing
   goes to the client until the internal work is finished; that is her instruction in terms.**
   ☑️ **AND A DISTINCTION SHE ASKED FOR THAT THE FIRM HAD BEEN BLURRING: a document that is genuinely missing
   versus one a session cannot reach at this moment.** **Everything in the practice-management platform is
