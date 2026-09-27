@@ -781,6 +781,77 @@ A running, dated record as we build this profile.
   refuses a document, the principal sending it in directly closes in minutes what the tooling cannot.**
   ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
 
+- _(2026-09-27, evening — and this is the entry that unblocked the return)_ — 🔴 **LILIAN SENT THE CLIENT'S OWN
+  WORKBOOK DIRECTLY INTO THE SESSION AFTER THE TOOLING REFUSED IT, AND IT ANSWERED THE QUESTION THAT HAD BEEN
+  BLOCKING EVERY DISPOSAL FOR TWO WEEKS.** ✅ **All seven sheets read cell by cell.** 🔑 **The truck
+  identification was in the client's OWN OLDER asset sheet, which still carries the unit numbers that his newer
+  sheet stripped off the same three rows — and what CARRIES it is the COST PAIRING: two of his
+  purchase prices against a filed schedule holding two costs a few hundred apart can only pair one way, and
+  the third follows by elimination.** ⛔ **NOT *"corroborated twice on month and cost"* — an earlier version of
+  this entry said that and it is wrong twice over: one truck's month differs from the schedule's by a few
+  weeks, one carries no cost at all, and the financed-equipment table is CONSISTENT with the map rather than a
+  second support for it — which is exactly what an earlier review of this same file had already established
+  and what this entry then re-asserted 100 lines later.** ⇒ ✅ **THE CLIENT IS ASKED NOTHING. The vehicle whose
+  identity decided which cost goes onto the casualty form turns out to be the CHEAPER of the two.**
+  🛑 **AND THE LESSON IS THE ONE THIS CLIENT HAS NOW TAUGHT THREE TIMES: the sheet was in the file library the
+  whole time, and *"our tool cannot read it"* had been recorded as *"we do not have it."*** ⚠️ **The home
+  street address appears in two of those sheets and is recorded nowhere.**
+- _(2026-09-27, evening — and it REVERSED a conclusion this firm had been carrying for two weeks)_ —
+  🔴 **THE CLIENT'S CATEGORY IS NOT CALLED WHAT EVERY ANALYSIS HAD BEEN CALLING IT.** The paper had been
+  reasoning about an *"automobile and truck expenses"* line. ⛔ **No such line exists in his books.** ✅ **His
+  caption says REPAIRS AND MAINTENANCE — which is a far poorer home for a finance instalment or a car lease
+  than the name that had been assumed.** ✅ **And his other caption states his whole convention in its own
+  title: it says, in his words, that the line holds financed-equipment payments INCLUDING interest and
+  principal.** 🔑 **His three-year series then proves when he adopted it: the dedicated line did not exist two
+  years ago, was one contract last year, and this year it carries nearly everything — while the repairs caption
+  fell by about half in the same step.** ⇒ 🛑 **THE INTERNAL RECONCILIATION CLOSED TO FOUR CENTS.** The sum of
+  his own per-asset interest cells, excluding one lender, reproduces a figure the firm had measured
+  independently from lender letters and bank statements. ⛔ **AND THE FIRST VERSION OF THIS ENTRY CLAIMED THE TWO
+  FIGURES SHARE NO INPUTS AND *"COULD HAVE DISAGREED". THAT WAS FALSE — the THIRD overstated corroboration
+  this session produced in one day, and the working paper already held the correct verdict on this very
+  comparison.*** ✅ **The truth is PARTIAL: three of the four components are independent of his sheet — one
+  lender's four letters, one computed figure and one lender's own schedule — while the fourth IS his own cell
+  adopted by an earlier ruling, so it contributes nothing to the agreement by construction.**
+  🔑 **The conclusion below does not rest on it and is unaffected.** ⇒ 🔑 **So the one lender's
+  payments were simply LEFT OUT when he totalled the line, not hidden in another category — which means the
+  firm is UNDER-deducting there rather than over.** ⛔ **Three of the four amounts that had been called an
+  over-deduction risk now run in the client's favour or are neutral.**
+- _(2026-09-27, evening)_ — 🔴 **AND A NEW FINDING THAT IS NOW THE LARGEST OPEN FIGURE ON THE RETURN: a TOWING
+  BILL.** **His own asset sheet says he paid a towing service, in cash from the business line of credit, on the
+  truck that was destroyed — and that the insurer covered it.** 🔑 **The amount is roughly two thirds of his
+  entire repairs caption.** ⚠️ **AND IT CUTS BOTH WAYS, which is why it is a question and not an adjustment:
+  if the expense is inside that caption then the insurance reimbursement is income or reduces it, and
+  recognising one without the other overstates the deduction; if it is not in there, both sides are off the
+  return and cancel.** 🛑 **Either way it reframes the casualty: the proceeds allocable to the TRUCK are what
+  his own note says, not the insurer's whole payment — which is what the paper had been carrying.**
+  ☑️ **It is the one client question this reading produced, and the list went from SEVEN to THREE.** ⚠️ **CORRECTED: it is SIX — three that move a figure now and three that ride along — and a round-2 review then found a SEVENTH that had been dropped.**
+- _(2026-09-27, evening)_ — **THREE RULINGS OF LILIAN'S, recorded because each narrows how the work is done.**
+  ① **The other entity had NO activity in the year — the client confirmed it, and she directed that he is not
+  asked again on a generic possibility.** ⚠️ **What replaces that question is a different one and it is not
+  his: the entity's only asset was bought for cash and sold at a loss two years ago, so the receivable's
+  COLLECTABILITY is a question for the signing principal.** ② **Prior-year assets keep their history in the tax
+  software and the firm does NOT re-audit his historical methods.** ③ 🔑 **AND THE ONE THAT CHANGES THE SHAPE OF
+  THE WHOLE JOB: one open decision does not stop the return.** Her own line: *not knowing which vehicle matches
+  an earlier record can stop a disposal — that is a real block — but a depreciation decision the signer must
+  review does not stop entering the basic data of every other asset.* ⇒ **It narrows a ruling this session had
+  written too widely that morning.**
+- _(2026-09-27, evening)_ — **THE ADJUSTED PROFIT-AND-LOSS AND THE ROLLED-FORWARD BALANCE SHEET WERE BUILT, AND
+  BOTH TIE TO SOMETHING OUTSIDE THEMSELVES.** ✅ **The deductions figure reconciles to the client's OWN stated
+  total less five named removals, exactly.** ✅ **And the long-term debt line's whole convention is now PROVEN
+  rather than assumed: the client's own year-end balance cells for the prior year reproduce the figure on the
+  FILED return to within a quarter of a dollar — so his equivalent cells for this year give that line in full,
+  one document short.** 🔑 **The balance sheet now closes on TWO unknowns — the accumulated depreciation and
+  the one financing document still to arrive — and BOTH ARE NAMED, which is the whole difference from where
+  this return started.** ⚠️ **An earlier version of this sentence said a single unknown and stated the equity
+  residual as though the missing document were zero.** ✅ **Once both are keyed the owner's withdrawals fall
+  out as the only figure left.** 🛑 **Which is the route both
+  principals directed, and the alternative would have been catastrophic here: deriving withdrawals as
+  everything-that-left-less-identified-uses would have swept most of a million dollars into the capital
+  account, because three quarters of the outflow sits under one opaque bank caption that turned out to be
+  payments to contract drivers.** ⛔ **No difference was closed with a distribution, a contribution or a
+  retained-earnings adjustment, and none may be.**
+  ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
