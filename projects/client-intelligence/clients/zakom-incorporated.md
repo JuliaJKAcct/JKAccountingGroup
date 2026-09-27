@@ -657,6 +657,43 @@ A running, dated record as we build this profile.
   request to HER, never to the client.**
   ⛔ **No identifier, address or dollar figure was written into this file from the above.**
 
+- _(2026-09-28, later — Lilian narrowed her own reset, and then ordered a prior-year sweep that found the firm
+  had been wrong)_ — 🔑 **THE LINE IS THE DOCUMENT, NOT THE LINE ITEM.** Her rule, and it is the one to keep:
+  **where the firm holds a document stating a figure, the document governs; where it does not, the client's
+  figure governs and we do not audit it.** ⇒ **Liabilities, interest paid, debt balances and assets are OURS to
+  reconstruct. Fuel, telephone, office expenses and the rest of the soft profit-and-loss are HIS, unaudited.**
+  ✅ **AND THAT LARGELY DISSOLVES THE COLLISION THE FIRM HAD JUST ESCALATED TO THE OTHER PRINCIPAL** — because it
+  is that principal's own two rulings read together: one says do not audit the client's profit and loss, the
+  other says the lender's letter is the authority on interest. **Lilian drew the line exactly where the firm had
+  already drawn it.** ⚠️ **What survives for her is narrow — which captions the deduction statement takes from
+  the client's sheet.**
+  🔴 **AND THEN SHE ORDERED THE PRIOR-YEAR DOCUMENTS SEARCHED, and the firm's own conclusion did not survive
+  it.** The paper had asserted that every route to the truck-numbering map had been tried. ⛔ **FOUR documents
+  in the platform had never been opened at all** — among them the client's own workbook from an earlier year,
+  and a completed business organizer.
+  🛑 **THE LESSON IS THE SAME ONE TWICE IN TWO DAYS: a filename listing is not a reading.** **The day before,
+  the firm listed all 66 documents BY NAME and concluded from the names that none of them helped — and then
+  wrote that conclusion as though the files had been opened.** ⚠️ **The section that did it even warned about
+  itself, saying it could not see inside a file whose name does not say what it is, and the conclusion was
+  written anyway.**
+  ✅ **WHAT THE OLD WORKBOOK ACTUALLY CARRIES: the client's own financed-equipment table, listed BY HIS OWN UNIT
+  NUMBERS, with payments, interest and payoff balances for that year.** 🔑 **And it cross-checks TO THE CENT
+  against a lender's own amortization report for the same year** — **which is real evidence for the rule she set
+  the same day: where he reports DEBT figures he is copying a lender and is reliable, so a disagreement reads as
+  his arithmetic error rather than as a different fact.**
+  ✅ **IT DID NOT SOLVE THE MAP, BUT IT SHRANK THE QUESTION FROM A MAPPING EXERCISE TO ONE SENTENCE HE CAN ANSWER
+  FROM MEMORY.** **The exclusion it appears to give — only two of the three trucks are in his financed table, and his own
+  description row for the third says "paid off" — had ALREADY been drawn in this paper months of work ago, and
+  drawn better: the two observations are the SAME one (paid off means no longer financed), not two supports, and
+  both rest on that financed list being complete, which nothing establishes.** ⛔ **A first version of this entry
+  said the paper had never drawn it and that the truck was now corroborated twice over. Both were wrong and the
+  independent review caught them.** ⇒ **What is left to ask is which of his two remaining trucks carries which
+  number — and the third one goes back into the same question, because it costs nothing to ask.**
+  ⛔ **AND ONE INFERENCE WAS DELIBERATELY NOT MADE: the interest figures would point at an order, but the
+  payment amounts contradict it, so the figures do not hold together well enough to name it — and naming it
+  wrong would put a wrong cost basis on a sale.**
+  ⛔ **No identifier, address or dollar figure was written into this file from the above.**
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
