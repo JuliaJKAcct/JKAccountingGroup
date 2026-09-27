@@ -424,17 +424,78 @@ A running, dated record as we build this profile.
   deduction the paper had chosen now stands EXPLAINED rather than merely chosen.**
 - _(2026-09-27)_ — **THE FILED 2024 SCHEDULE L AND M-2 WERE READ IN FULL**, at Lilian's instruction
   *(`revisa también el Schedule L / M-2 de 2024`)*, through [`tools/redact-doc/`](../../../tools/redact-doc/),
-  **and the extract deleted in the same pass.** 🔑 **THE DISTRIBUTION MECHANISM IS ON THE FACE OF THE
-  RETURN, not an inference any more.** **2024 reported its distributions against an accumulated adjustments
-  account it took to exactly zero**, and the excess went to **additional paid-in capital**, which the 2024
-  balance sheet carries **NEGATIVE**. ✅ **Every step of that column's arithmetic checks, and both sides of
+  **and the extract deleted in the same pass.** 🔑 **THE THREE FIGURES ARE PRINTED ON THE 2024 RETURN AND THE
+  IDENTITY IS EXACT TO THE DOLLAR.** **2024 reported total distributions larger than the accumulated
+  adjustments account it took to exactly zero**, and the difference equals the **additional paid-in capital**
+  the 2024 balance sheet carries **NEGATIVE**. ⛔ **THAT IS AS FAR AS IT GOES, AND THE LIMIT MATTERS: the
+  identity constrains only the SUM of the two equity lines, not which of them moved** — the opposite
+  assignment balances identically. ⛔ **So "the preparer parked the excess in paid-in capital" MAY NOT be
+  stated. It is a question for Lilian, and on 2026-09-27 she DEFERRED it** *("vamos a dejar esa pregunta más
+  para adelante, cuando estemos más avanzados en la declaración")*, **with an instruction attached: when the
+  return is further along, explain it to her properly, because she does not follow what is being asked.** ✅ **Every step of that column's arithmetic checks, and both sides of
   the 2024 balance sheet balance exactly** — so the base the firm was told to stand on for 2025 is
-  internally consistent. ✅ **AND THE 2025 ACCUMULATED ADJUSTMENTS ACCOUNT OPENS AT ZERO.** ⚠️ **FLAGGED FOR
-  JULIA, not decided here: driving paid-in capital negative is not the ordinary treatment**, and 2025 will
-  have to either repeat it or depart from it — **which is the signer's call.** ⓘ *The 2024 reconciliation
+  internally consistent. ✅ **AND THE 2025 ACCUMULATED ADJUSTMENTS ACCOUNT OPENS AT ZERO.** ⚠️ **FLAGGED, not decided here: carrying paid-in capital negative is not the ordinary treatment**, and
+  2025 will have to either repeat it or depart from it — **which is the signer's call.** ⏸️ **AND IT IS
+  PARKED UNTIL THE RETURN IS FURTHER ALONG, at Lilian's instruction of 2026-09-27** — so no session should
+  raise it again before then, and when it is raised it is to be EXPLAINED from the beginning rather than
+  asked. ⓘ *The 2024 reconciliation
   schedule also labels its non-deductible line `Travel and entertainment`, which bears on the unexamined
   meals rate in the working paper.*
   ⛔ **No identifier, address or dollar figure was written into this file from either of these entries.**
+
+- _(2026-09-27, later — Lilian's rulings and what reading one more document settled)_ —
+  🔑 **THE "UTILITY TRAILER" IS TWO DIFFERENT TRAILERS, AND THE FIRM NEARLY TREATED THEM AS ONE.** ⚠️ **This
+  is the two-Benson-trailers trap on a new pair, and it is now written down:** the **2023** utility trailer
+  is a **capitalised asset on the 2024 return's own depreciation schedule**, financed by Financial Pacific
+  and still being paid through 2025; the **2015** utility trailer is on **neither filed return**, was never
+  capitalised, has no lender, and **was sold in 2025**. ⛔ **So "the utility trailer" must never be used
+  unqualified on this client.**
+  ✅ **AND THAT SETTLED A REAL QUESTION IN THE CLIENT'S FAVOUR.** The bank caption on the Financial Pacific
+  payments reads `LEASE PYMT`, which had opened the question of whether the whole payment is rent rather
+  than interest plus principal. **Lilian ruled it is an owned asset and the caption is set aside** — and
+  **her premise checks out against the filed return, not just her recollection: a true lease is never on a
+  depreciation schedule, and this trailer is on it at full business use.** 🔑 **The firm's own prior-year
+  treatment already answered it.**
+  ⓘ **Where the 2015 trailer's facts come from, because it was asked:** BOTH of them — that it existed and
+  that it was sold — come from **one source, the client's own workbook uploaded to the 2025 organizer**, in
+  two different sheets of it *(the current asset list's disposals block, and an older asset list carried
+  forward inside the same file, where it is marked "paid off")*. ⛔ **There is no firm document and no lender
+  document behind either fact.** ⇒ **Never capitalised means no basis to recover, so the whole sale price is
+  gain — and a disposal of something never capitalised is invisible to the usual schedule check while still
+  needing a Form 4797.**
+  ✅ **THE EQUIPMENT-PAYMENTS LINE IN HIS BOOKS IS NOW IDENTIFIED: it is SIX lenders' full-year payments**,
+  and it ties to his own figure to within a small rounding residue. 🛑 **AND THAT TIE IS THE STRONGEST
+  INDEPENDENT CHECK ON THE TWO PAYMENT-COUNT REVERSALS OF THIS MORNING** — on yesterday's figures the same
+  six lenders fell materially short of his line; correcting the counts closed it, **and neither correction
+  was made in order to close it.**
+  🔴 **IT ALSO EXPOSED A DOUBLE DEDUCTION WAITING TO HAPPEN, and it is the most valuable thing found today.**
+  The whole equipment-payments line comes OUT of the deduction statement *(it contains principal)* and its
+  interest goes onto the interest line — **correct for those six.** ⛔ **But the trailer financed by
+  Mitsubishi is NOT one of the six**, so its interest is about to be added to the interest line while its
+  payments have been removed from nothing. **If those payments sit inside a caption that stays in the
+  deduction statement, the interest is deducted twice and the principal once.** ⚠️ **The same structure
+  threatens the insurance premium-finance payments and the car lease.** ☑️ **One sentence to the client
+  covers all three, and it is now on his list: where in your books are these payments?**
+  ✅ **READ AT LILIAN'S INSTRUCTION: the finance documents for the 2026 trailer.** They settle the larger of
+  the two unexplained first-payment amounts — **it is a documentation fee, invoiced as due with the first
+  payment** — which means **the client's year-end balance is right as it stands on that half**, and it
+  **corrects a reading this paper had carried since 2026-09-13** *(the fee was recorded as "financed", from a
+  column header wrapped out of position in the extraction; the bank agrees with the corrected reading,
+  because the fee really did leave the account)*. ⛔ **The smaller amount is NOT settled** — the agreement
+  names no fee of that size, but it does charge interest from the date of disbursement and allows the lender
+  to pre-fund the supplier before delivery, **so odd-days interest is the reading that fits; it does not
+  compute to a whole number of days and the document never states the disbursement date.** ☑️ **One lender
+  statement closes it, and it is not a blocker.**
+  🛠️ **The redaction tool let the company's own street line through again — the SEVENTH instance on this
+  client, same unfixed cause** *(the pattern requires each word of a street name to begin with a letter, and
+  this street is named after a number)*. ✅ **The line was written nowhere and the extract was deleted in the
+  same pass that read it.**
+  ⏸️ **AND ONE QUESTION IS PARKED BY HER, WITH AN INSTRUCTION ATTACHED.** The question about the prior year
+  carrying paid-in capital negative is **deferred until the return is further along** — and when it comes
+  back it is to be **explained from the beginning rather than asked**, because she said plainly that she does
+  not follow what is being asked. ⛔ **No session should raise it before then, and the standing ban on stating
+  what the prior preparer did is NOT lifted by the deferral.**
+  ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
 
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
