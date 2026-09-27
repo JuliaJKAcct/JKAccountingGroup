@@ -136,12 +136,14 @@ the end.**
 
 1. **The prior return** — §1's answer key, and here it is also the opening balance sheet.
 2. **THE LIABILITIES FIRST.** **Every lender: its own documents, principal and interest separated, balance at
-   year end.** 🔑 **Include financings that never touched the bank** — a lender who pays the vendor direct
-   never appears in the statements, and the asset and the debt both arrive off-book.
+   year end** — ⚠️ **but read §1B.1's split before you key a BALANCE: the lender governs the INTEREST, and
+   where the client gives an ending balance, HIS governs.** 🔑 **Include financings that never touched the
+   bank** — a lender who pays the vendor direct never appears in the statements, and the asset and the debt
+   both arrive off-book.
 3. **The bank and the card, reconciled to each other.** ⚠️ **Payments between two company accounts are
    TRANSFERS, not expenses — but only the ones that ARRIVED.** **Money that left captioned as a card payment
    and never reached the card is an equity question.**
-4. **The assets** — cost, acquisition date, in-service date and source document, one row each.
+4. **The assets** — cost, acquisition date, in-service date, **the Table B-1 class and the life DERIVED from it**, and the source document, one row each. ⛔ **Never carry a life forward from last year's schedule** — §4D's asset rules say why, and on the pilot engagement that transcription ran four over-the-road tractors at the wrong recovery period for years.
 5. **The soft P&L** — his captions, less anything ② or ①'s tie shows is document-backed.
 6. **The equity section LAST**, and 🛑 **never as a plug.** ⛔ **Do not force a balance with distributions,
    contributions or retained earnings.** **Explain each movement with a documented operation, or leave it
