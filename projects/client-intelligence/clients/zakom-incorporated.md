@@ -852,6 +852,68 @@ A running, dated record as we build this profile.
   retained-earnings adjustment, and none may be.**
   ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
 
+- _(2026-09-27, night — and the LEASE DOCUMENT answered two things nobody expected it to)_ — **Lilian sent
+  the signed closed-end vehicle lease into the session.** ✅ **It settles what she was unsure of, and her own
+  guess was right: it is simply a BUSINESS EXPENSE.** 🔑 **The COMPANY is named as the lessee** *(the owner is
+  co-lessee)* **and the `Primary Use` box is ticked `business`.** ⇒ **A closed-end lease is a RENTAL: no
+  depreciable asset, nothing on the depreciation schedule, nothing on the balance sheet — no asset and no
+  liability — and the payments are a deduction.** ⚠️ **AND A CASH-BASIS TRAP THAT WOULD HAVE BEEN MISSED: the
+  amount due at signing, which INCLUDED the first monthly payment, was settled entirely by rebates and
+  non-cash credits, so the company paid nothing that month — the year's deduction is one payment SHORT of
+  what the calendar suggests.** ✅ 🆕 **AND IT SETTLED SOMETHING ELSE ENTIRELY: the lease records NO trade-in
+  allowance, which proves the older car the client described as *"traded in"* was actually SOLD to the dealer
+  — and that is why the money appears as a bank deposit rather than a credit against the new vehicle.**
+  🔑 **The confusion about a *"personal Audi"* is real but it is a DIFFERENT VEHICLE: his own sheet calls the
+  PORSCHE personal, never an Audi.** ⚠️ **Two things the document does NOT settle and one of them got BIGGER:
+  the statutory leased-luxury-vehicle inclusion amount is now material because the agreed value is known and
+  is far above the threshold — the escape is the weight rating and nobody has read the door-jamb sticker — and
+  the business-use percentage, which the lessor's tick-box does NOT establish.**
+- _(2026-09-27, night — and this one answers a question about JULIA'S OWN METHOD without asking her)_ —
+  **Lilian asked whether the firm takes a vehicle's cost from the purchase document or from the client's
+  figure, because she wants to follow Julia's pattern and did not know what it was.** 🔑 **THE ANSWER IS IN
+  THE FILED RETURN AND IT DOES NOT NEED ASKING: compare each carried-forward asset's cost on the filed
+  schedule against what the client wrote for that same vehicle.** ✅ **THREE of them DIFFER — and the
+  differences are small, odd and fee-shaped, while the client's own figures are round.** 🛑 **A client
+  remembers a ROUND number; a DOCUMENT produces an odd one.** ⇒ 🔑 **So the prior-year pattern is
+  DOCUMENT-FIRST: the preparer capitalized the price PLUS the sales tax PLUS the registration fees, which is
+  correct and could only have come off a bill of sale.** ✅ **And on one of the three the client's OWN note
+  names the sales tax he paid, which very nearly closes the difference exactly.** ⚠️ **THE CONSEQUENCE RUNS
+  IN THE CLIENT'S FAVOUR: if that pattern governs, three of this year's vehicle costs are UNDERSTATED by the
+  tax and fees, and the depreciation with them.** ⛔ **But it collides with three rulings already taken on
+  this return, so it goes to JULIA and nothing is asked of the client until she rules.** 🔑 **AND ONE
+  APPARENT CONTRADICTION DISSOLVED: a lender note for less than a booked cost is NOT a defect — a FINANCED
+  AMOUNT IS NOT A PURCHASE PRICE.** ⛔ 🆕 **AN EARLIER VERSION OF THIS ENTRY ADDED *"and the lease shows this client puts money down, which closes the gap cleanly"*. THAT IS FALSE, AND THE SAME DOCUMENT DISPROVES IT: the entry above records that the WHOLE amount due at signing was settled by rebates and non-cash credits, and the price reduction was a COMPONENT of that amount.** 🔑 **A price reduction tells you the price was reduced; it does NOT tell you who paid for it, and the answer is two lines further down the same form.** ✅ **So the gap is UNEVIDENCED, and the free test nobody has run is a bank search for a payment to the dealer around the purchase date.**
+  
+- _(2026-09-27, night)_ — 🔑 **LILIAN WORKED OUT THE CASUALTY TREATMENT HERSELF AND SHE IS RIGHT.** She asked
+  whether the insurance reimbursement has to be split between the vehicle and the towing, and whether the
+  disposition takes only the vehicle's part. ✅ **Yes — the casualty form computes the gain on the PROPERTY,
+  and its reimbursement line takes only what was received FOR that property. A payment reimbursing a towing
+  bill is a recovery of an EXPENSE, not proceeds for the truck.** 🛑 **So the paper had been carrying the
+  insurer's WHOLE settlement as the proceeds, which overstates the casualty gain.** ⚠️ **AND THE TWO SIDES
+  MUST MOVE TOGETHER: if the towing was deducted its reimbursement is income; if it was not, it is not. One
+  side without the other is wrong in whichever direction it is taken.** ☑️ **She also proposed the right next
+  step and it is free: look in the bank for the credit, because the money must have reached the company.**
+  ⛔ **IT HAS NEVER BEEN RUN, and the paper's existing credit list cannot substitute — it is filtered to
+  lender and payroll captions, so its silence on insurance is silence by construction, not evidence.**
+  🔑 **Two separate credits would split the settlement for us and DELETE TWO CLIENT QUESTIONS; nothing at all
+  in the year would mean the gain belongs to next year and the whole form comes off this return.**
+- _(2026-09-27, night)_ — **THREE MORE RULINGS, and one closes a question that had been holding a whole line
+  of the return.** ① ✅ **THE MEALS ARE ALL WORKING MEALS — nothing with clients** *(her words)* ⇒ **the 50%
+  rate is correct, the figure stops being provisional, and the question comes OFF the client list.** ② ☑️ **The
+  older car's disposal date is fixed at the day the deposit arrived — and she directed that it be recorded AS
+  AN ASSUMPTION, with its evidence, rather than as a fact.** 🔑 **That is the right instinct and it is now
+  written that way: the amount matches to the dollar and no other credit that year does, but the DATE is
+  taken, not documented.** ③ ✅ **The uncapitalized trailer: basis ZERO and the proceeds are ordinary income
+  — and that answer holds on EVERY plausible history, because an old asset's recovery period has expired
+  whether or not anyone recorded it, and recapture runs on depreciation *allowed OR ALLOWABLE*.**
+  🔑 **So it is keyable with no document, and zero is the LEAST favourable assumption available — the only
+  objection possible is that the firm was too conservative.** ⚠️ **She also asked for the safety check and it
+  was run: that trailer is NOT among the assets on the filed schedule, so nothing is being overlooked — but
+  there are TWO trailers with almost the same name, one on the schedule and financed and one on neither
+  return, and neither may ever be written unqualified.** ⛔ **And his sheet's *"value"* columns are his
+  estimates of WORTH, never basis — a reviewer glancing at them could take one for one.**
+  ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 

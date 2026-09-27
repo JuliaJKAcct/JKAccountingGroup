@@ -167,6 +167,17 @@ reviewed · why it cannot be determined from them · what calculation it blocks.
 *(Lilian: "No quiero una lista preventiva… Quiero una lista mínima y justificada de lo que realmente
 necesitamos.")*
 
+🛑 **AND ONE PROCEDURAL RULE THAT COST A WHOLE DAY: A CLIENT LIST IS REWRITTEN IN PLACE, NEVER SUPERSEDED BY
+A NEW SECTION BESIDE IT.** ⛔ **On the pilot engagement two lists headed *"FINAL"* were written hours apart and
+the older one was left standing, saying *"everything in ONE send"* and *"this section governs"*. Between them
+they dropped FIVE asks, and the live risk was a session sending the stale list.** ✅ **ONE list, ONE place,
+edited.**
+
+☑️ **AND BEFORE CALLING A CLIENT LIST FINAL, RUN THE CHECK THAT FINDS WHAT IT DROPPED — it is mechanical and
+takes a minute:** **walk the working paper's LIVE, UNTICKED open items and ask of each one, *can only HE
+answer this?*** ⚠️ **Twice that check was not run and twice a review found the omission rather than the pass
+that wrote it.**
+
 ### §1B.5 · 🔴 AND THE FAILURE THAT COST THIS FIRM THE MOST DAYS — a filename listing is not a reading
 
 🛑 **IT HAPPENED TWICE IN TWO DAYS ON THE SAME ENGAGEMENT.** **The file library was listed BY NAME, the names
@@ -259,6 +270,200 @@ honestly labelled is worth more than a total one that cannot fail** — ⛔ **an
   for the figure before you present it as new.** _(The correct verdict — "that is corroboration, not
   independence" — was sitting in the working paper, in a section the new one cited.)_
 
+
+### §1B.9 · 🚗 VEHICLES AND DISPOSALS ON A NO-BOOKS CLIENT — five things that were each learned the hard way
+
+🔑 **A trucking or delivery client with no books will hand you vehicles, leases, financings and disposals in
+one spreadsheet, and every one of these five was got wrong once before it was got right.**
+
+#### ① 🔑 HOW TO TELL WHETHER THE PRIOR PREPARER USED THE PURCHASE DOCUMENT OR THE CLIENT'S FIGURE
+
+🛑 **You do not have to ask anyone. Compare the FILED return's cost for each carried-forward asset against
+what the client wrote for that same asset.**
+
+> ✅ **A client remembers a ROUND number. A document produces an ODD one.**
+
+⇒ **Where the filed cost exceeds his figure by a small odd amount — 145, 245, 3,299 — the preparer worked
+from a bill of sale and capitalized the price PLUS the sales tax and the registration fees, which is
+correct.** ⇒ **Where the two agree exactly on a round number, his figure went in unchanged.**
+🔑 **That comparison IS the firm's pattern, read off its own work product, and it settles a question the
+person directing you cannot answer from memory.** ⚠️ **Then put it to the SIGNER before acting, because it
+will usually collide with a *"his figures govern"* ruling already taken on the current return.**
+
+#### ② ⛔ A FINANCED AMOUNT IS NOT A PURCHASE PRICE — and the gap needs EVIDENCE, not a plausible story
+
+**A lender note for less than the booked cost is NOT a contradiction: the difference is usually a down
+payment.** ⛔ **BUT DO NOT CLOSE IT WITH A STORY. Say the gap is UNEVIDENCED until something evidences it,
+and name the free test** — **a bank debit to the dealer near the purchase date, a deposit line on the
+invoice, the `Cash down payment` field on the finance agreement.**
+
+🛑 **AND THE WORKED EXAMPLE HERE IS A WARNING, NOT A MODEL, because an earlier draft of this very subsection
+got it wrong.** **On the pilot client a 95,550 note against a 105,550 cost read as a defect for two weeks.
+A session then argued the gap was a down payment *"because the lease shows an 11,000 capitalized cost
+reduction"*.** ⛔ **THAT WAS FALSE, and the SAME document disproved it: the whole amount due at signing was
+settled by `Rebates and noncash credits`, and the 11,000 was a COMPONENT of it — so it was neither the
+client's cash nor a trade-in.** 🔑 **A capitalized cost reduction tells you the price was reduced. It does
+NOT tell you WHO paid for the reduction, and the answer is two lines further down the same form.**
+
+#### ③ ✅ A CLOSED-END LEASE IS A RENTAL, AND THE CASH-BASIS TRAP IS IN THE SIGNING SHEET
+
+⛔ **No depreciable asset, nothing on Form 4562, nothing on the balance sheet — no asset AND no liability.**
+✅ **The payments are a deduction.** 🛑 **BUT ON THE CASH BASIS, COUNT THE PAYMENTS THE COMPANY ACTUALLY
+MADE:** **read the *Itemization of Amount Due at Lease Signing* and then read *How the Amount Due Will Be
+Paid*.** ⚠️ **Where it says `Rebates and noncash credits`, the company paid NOTHING — and the first monthly
+payment is usually inside that amount, so the year's deduction is one payment SHORT of what the calendar
+suggests.**
+
+☑️ **Three more fields on a lease that matter and are easy to skip:** **the `Agreed upon value of the
+vehicle`** *(it decides whether a §280F(c) inclusion amount is material, and reading the lease can make that
+question BIGGER)*; **the `Primary Use` box** — ⛔ **which is the lessor's consumer-disclosure classification
+and is NOT a tax business-use percentage**; and **`Net trade-in allowance`** — 🔑 **which can settle a
+completely different question, because `N/A` proves a vehicle the client called *"traded in"* was actually
+SOLD, and explains why the money appears as a bank deposit.**
+
+#### ④ 🔴 A CASUALTY'S PROCEEDS ARE THE PROPERTY'S SHARE, NOT THE WHOLE SETTLEMENT
+
+**An insurer often pays one amount covering the asset AND costs the client incurred — towing, recovery,
+storage.** 🔑 **Form 4684 takes only what was received FOR THE PROPERTY.** ⛔ **The rest is a recovery of an
+expense, not proceeds** ⇒ **and the two sides must move TOGETHER: if the expense was deducted, the
+reimbursement is income; if it was not, the reimbursement is not income either.** 🛑 **One side without the
+other is wrong in whichever direction it is taken.**
+
+☑️ **AND BEFORE ASKING THE CLIENT TO ALLOCATE IT, LOOK IN THE BANK.** **The money reached the company
+somehow.** ✅ **Two separate credits split the settlement for you and delete the question; one combined
+credit leaves only the allocation; NOTHING in the year means the gain is next year's and the whole form comes
+off the return.** ⚠️ **Do not treat a previous credit sweep as having covered it — a sweep filtered to lender
+and payroll captions is silent on insurance by construction, and that silence is not evidence** *(rule 1b)*.
+
+#### ⑤ ✅ AN ASSET THAT WAS NEVER CAPITALIZED — the answer is usually the same on every history
+
+**When the client sells something that is on NO filed return:** 🔑 **basis is ZERO and the proceeds are
+ORDINARY under §1245 — and this holds whether the company expensed the purchase or simply never recorded it,
+because recapture runs on depreciation *allowed OR ALLOWABLE* and an old asset's recovery period has expired
+either way.** ✅ **So it is keyable with no document, and zero is the LEAST favourable assumption available,
+which means the only possible objection is that you were too conservative.**
+
+⚠️ **ONE alternative, and it is the signer's:** **if the SHAREHOLDER owned it rather than the company, it is
+not the company's sale at all and the proceeds are a capital contribution.**
+⛔ **AND NEVER READ THE CLIENT'S *"VALUE"* COLUMNS AS BASIS.** **A no-books client's asset sheet often
+carries a *"2023 value"* and a *"2024 value"* — those are his estimates of WORTH. A reviewer glancing at the
+sheet can take one for a basis, so say so on the face of the working paper.**
+
+🔑 **AND THE SAFETY CHECK THAT GOES WITH ALL OF THIS: when two assets share a description, write NEITHER of
+them unqualified, ever.** _(The pilot client had two utility trailers — one on the schedule and financed, one
+on no return and sold — and two Benson trailers. Both pairs cost real time.)_
+
+
+---
+
+## §1C · 🛑 THE DOCUMENT LEDGER — why a document you ALREADY READ keeps producing questions it already answered
+
+> **Lilian, 2026-09-27, and this is the most important thing she has raised about the process itself:**
+> *"Te he dado acceso a los documentos y te he subido los documentos en el chat, y siento que hay información
+> que has pasado por alto… lo que nos sucedió con el mapeo de los assets era una pregunta que tenías desde
+> hace varios días, y sin embargo su respuesta está dentro de un archivo que te compartí desde el inicio…
+> Me confunde mucho el hecho de que me preguntes cosas que supuestamente ya debería saber porque ya te di la
+> información. Entonces me pongo a buscar la información por todos lados, a pedirle al cliente, y resulta que
+> son cosas que ya tenemos. Esto no puede suceder."*
+
+🔴 **SHE IS RIGHT, IT HAS HAPPENED REPEATEDLY, AND IT IS NOT A MEMORY PROBLEM. IT IS A RECORDING PROBLEM, AND
+IT HAS FOUR DISTINCT CAUSES.** ⛔ **Fixing three of them and not the fourth leaves the failure intact.**
+
+### §1C.0 · 🔑 THE FOUR CAUSES, and each needs its own fix
+
+**① A DOCUMENT IS READ TO ANSWER THE QUESTION OF THE HOUR, AND EVERYTHING ELSE ON THE PAGE IS NEVER WRITTEN
+DOWN.**
+🛑 **It is not forgotten — IT NEVER ENTERED THE RECORD.** **A session's context is finite and is compacted;
+the working paper IS the memory.** ⇒ **A document opened on day 1 for question A contributes only the answer
+to A, and the answers to B, C and D that were on the same page are gone when the session moves on.**
+_(The pilot engagement: the client's workbook was opened for the year's asset ADDITIONS. The unit numbers that
+became the single blocking question for two weeks were in the OLDER sheet's description column, two columns
+from what was being read. Nobody hid them. They were outside the question.)_
+
+**② THE INVENTORY MARKS A *FILE* AS READ, WHEN READING IS PER-QUESTION.**
+⛔ **`✅ opened 2026-09-13` then reads, forever after, as *"this file has been mined."* It means *"this file was
+queried once."*** 🔑 **THIS IS §1B.5'S LESSON ONE LEVEL UP: a filename listing is not a reading — and
+"opened" is not "exhausted."**
+
+**③ NOTHING MAKES A *NEW* QUESTION GO BACK TO *OLD* DOCUMENTS.**
+**When a question becomes blocking, the search goes OUTWARD — to lender letters, to bank captions, to the
+platform — because that is where the question seems to point.** ⛔ **It does not go back to the file already
+ticked.** _(That is exactly how the unit-number map was searched for four times in the wrong places while the
+answer sat in a file the inventory called read.)_
+
+**④ AN IMAGE PASTED INTO CHAT IS A ONE-SHOT READ, AND WHATEVER IS NOT TRANSCRIBED IS LOST PERMANENTLY.**
+🛑 **A later session cannot re-open it at all** *(§1B.6)*. ⇒ **So for an image, cause ① is not recoverable.**
+_(The pilot's lease arrived as an image and was read for "is this a lease or a purchase?". Three other answers
+were on the same page — the LESSEE's name, a `Primary Use` checkbox, and a `Net trade-in allowance: N/A` that
+resolved an unrelated bank deposit — and none was written down. When it was read again two weeks later they
+fell out in one pass.)_
+
+### §1C.1 · ✅ THE FIX, AND IT IS ALL AT READ TIME — because that is the only cheap moment
+
+🔑 **RE-READING A DOCUMENT LATER IS EXPENSIVE: it needs a fetch, it needs permission, and on an image it is
+impossible. TRANSCRIBING IT ONCE, IN FULL, COSTS ONE PASS.**
+
+> 🛑 **TRANSCRIBE THE DOCUMENT. DO NOT SUMMARISE IT.**
+
+✅ **Every document that is opened gets ONE BLOCK in the working paper, and the block is a FIELD LIST, not
+prose:**
+
+| Put in the block | Why this and not less |
+|---|---|
+| **Every PARTY named, and its ROLE** | *lessee · co-lessee · lessor · assignee · borrower · seller*. 🔑 **On the pilot, WHICH party was the lessee was the whole answer to "is this the company's?"** |
+| **Every DATE printed on it** | contract date, first-payment date, in-service date, disbursement date |
+| **EVERY FIGURE WITH ITS PRINTED LABEL, verbatim** | ⛔ **Not the ones you need — ALL of them.** ✅ **`Agreed upon value 63,935` · `Residual 36,400` · `Rent charge 1,317.88`.** 🔑 **A figure you have no use for today is the one that answers next week's question** |
+| 🔴 **Every CHECKBOX and its state** | **`Primary Use: ☒ business`.** ⛔ **Checkboxes are the single most-skipped field on a form and they carry the classification** |
+| 🔴 **Every `N/A` AND EVERY ZERO** | 🛑 **AN ABSENCE ON A FORM IS A FACT.** **`Net trade-in allowance: N/A` PROVED a vehicle had been sold rather than traded, and explained a bank deposit nobody could place** |
+| **Every identifier that is SAFE to hold** | ⛔ **Never an SSN/ITIN, bank or card number, street address, DOB or VIN** *(the VIN question is open — see the firm's follow-up list)*. ✅ **A masked last-four, a contract's own internal sequence, a stock or deal reference are ordinary working data** |
+| **And a one-line note of what the document CANNOT tell you** | ✅ **"states a LOAN amount, not a purchase price"** — 🔑 **which stops the next session mistaking one for the other** |
+
+⚠️ **AND CROSS-FOOT IT WHILE IT IS OPEN.** **A form's own internal identities take a minute and they either
+confirm the transcription or catch a mis-read.** _(The pilot's lease closed seven ways; that is what made the
+transcription trustworthy.)_
+
+### §1C.2 · ✅ THE INVENTORY RECORDS WHAT WAS *TAKEN*, NEVER THAT IT WAS OPENED
+
+⛔ **BAN the bare `✅ opened <date>`.** ✅ **Two states and only two:**
+
+| | |
+|---|---|
+| ✅ **`TRANSCRIBED IN FULL <date> → §X`** | **Done. Nothing in it needs re-opening** |
+| ⚠️ **`READ FOR <what> ONLY <date> — NOT TRANSCRIBED`** | 🔑 **THIS IS A TO-DO, and it is the line that would have flagged the pilot's client workbook for two weeks** |
+
+🛑 **AND A THIRD STATE IS A DEFECT, NOT A STATE: a file listed with a tick and no §-reference.** ⛔ **If you
+cannot point at the block, it was not transcribed.**
+
+### §1C.3 · ✅ EVERY OPEN QUESTION NAMES THE DOCUMENTS THAT MIGHT ANSWER IT
+
+✅ **Each open item carries a *"held documents that bear on this"* clause.** ⇒ 🔑 **So a new question's FIRST
+move is a text search of the working paper's own transcription blocks — seconds, no fetch, no permission —
+and only then an outward search.**
+
+🛑 **AND THE RULE WITH TEETH, because the general form of *look before you ask* has proved too soft:**
+
+> ⛔ **NO QUESTION REACHES THE CLIENT UNTIL THE WORKING PAPER STATES, FOR THAT QUESTION, WHICH HELD DOCUMENTS
+> WERE CHECKED AND WHAT THEY SAID.**
+
+⚠️ **"We looked everywhere" does not satisfy it. NAMED documents do** — and naming them is what makes the
+negative honest *([`method.md`](../../../projects/pre-return-review/method.md) rule 1b)*.
+
+### §1C.4 · 🛑 AND THE ONE THAT IS NOT ABOUT DOCUMENTS AT ALL — a closed QUESTION does not close the ITEM
+
+🔴 **The same engagement, the same day, a fifth instance in a different shape.** **A ruling closed one question
+about an asset — *is its booked cost contradicted by its lender note?* — and a later pass read that as closing
+EVERY question about that asset's cost, and dropped it from a list of purchase documents to request.**
+⛔ **The new question was different: *does the booked figure include the sales tax and the fees, or is it the
+sticker price?*** 🔑 **Nothing had answered that one.**
+
+✅ **THE RULE: when a decision closes a question, write WHICH QUESTION it closed.** ⛔ **A decision titled
+*"the 1839 is settled"* invites exactly this error; one titled *"the 1839's YEAR and its lender-note
+discrepancy are settled"* does not.** ⚠️ **And when an item comes off a list, say which decision took it off
+and what that decision actually decided.**
+
+_(All five instances are from one engagement in one fortnight, and the client's principal found the fifth one
+herself by asking a question this session could not answer: "if five or six vehicles were bought, why do you
+only need the documents for three?")_
 
 ---
 

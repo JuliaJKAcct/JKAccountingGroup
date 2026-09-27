@@ -339,6 +339,25 @@ in that folder.
   covers **Double's own on-screen labels** *(`Qs for us`, `Submit`)*, because a client has to find that
   button — it says nothing about a registry, an agency or a form. 🔑 **What §3 DOES govern for both: wrap
   them in «guillemets» in Russian prose.**
+- 🛑 **A CLIENT DOCUMENT IS TRANSCRIBED ONCE, IN FULL — NEVER SUMMARISED FOR THE QUESTION OF THE HOUR.**
+  _(Lilian, 2026-09-27, after it cost the Zakom return two weeks: **"me pongo a buscar la información por todos
+  lados, a pedirle al cliente, y resulta que son cosas que ya tenemos. Esto no puede suceder."**)_
+  🔑 **This is NOT a memory problem, it is a RECORDING problem.** A session's context is finite and gets
+  compacted; **the working paper is the memory.** ⇒ **A document opened to answer one question contributes only
+  that answer, and everything else on the page is gone when the session ends.** ⛔ **And an image pasted into a
+  chat cannot be re-opened by a later session AT ALL, so whatever is not transcribed from it is lost for good.**
+  ✅ **So when any client document is opened, write ONE BLOCK for it — a FIELD LIST, not prose: every party and
+  its role, every date, every figure with its printed label, every checkbox and its state, and
+  🔴 every `N/A` and every zero, because an absence on a form is a fact.** *(On Zakom, `Net trade-in
+  allowance: N/A` proved a vehicle had been SOLD rather than traded and explained a bank deposit nobody could
+  place; a `Primary Use: ☒ business` checkbox settled whose lease it was.)* **Cross-foot the form's own
+  identities while it is open.** ⛔ **Never an SSN/ITIN, bank or card number, street address, DOB or VIN.**
+  ⛔ **AND BAN THE BARE `✅ opened <date>` FROM AN INVENTORY** — it reads as *"mined"* and means *"queried
+  once"*. ✅ **Two states only: `TRANSCRIBED IN FULL → §X`, or `READ FOR <what> ONLY — NOT TRANSCRIBED`, which
+  is a TO-DO.** 🔑 **And no question goes to a client until the paper NAMES which held documents were checked
+  for it and what they said** — *"we looked everywhere"* does not satisfy it. ⚠️ **Nor does a closed QUESTION
+  close the ITEM: when a decision settles something, write WHICH question it settled.** The full diagnosis,
+  with all five instances, is [`tax-return-sop`](./.claude/skills/tax-return-sop/) **§1C**.
 - **Analytical work follows the firm's method — it is not organizer-specific, and it always applies.**
   When a session **reviews, reconciles, or works out what to ask** — a client before their return, a
   bookkeeping cleanup, a matter with an agency, books that disagree with a bank —
