@@ -737,6 +737,50 @@ A running, dated record as we build this profile.
   sheet says so on its face rather than balancing itself with a plug.
   ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
 
+- _(2026-09-27, later — and this is the finding that reaches every trucking client the firm has)_ — 🔴 **THE
+  FLEET'S DEPRECIATION LIFE WAS TRANSCRIBED FROM THE PRIOR YEAR AND NEVER DERIVED, AND FOR THE TRACTORS IT IS
+  WRONG.** Lilian asked the session to read the IRS rules and work out the classification properly rather than
+  just hand over a name, a date and a cost. ✅ **Read from the CURRENT edition of the IRS depreciation
+  publication, downloaded from the agency's own site — not from memory, which is this firm's standing rule for
+  anything that moves a figure.** 🔑 **An OVER-THE-ROAD TRACTOR UNIT — the fifth-wheel vehicle that pulls a
+  semi-trailer — is its own asset class with a THREE-year recovery period. A semi-trailer is a different class
+  at FIVE. The prior year put the entire fleet, tractors included, at five.** ⚠️ **The model name does not
+  decide it**: the same nameplate is built as a tractor and as a straight truck, and the title or registration
+  body-type field is what settles it. ⛔ **AND THE SESSION DID NOT ACT ON IT, because it may not:** a recovery
+  period used on two or more consecutive filed returns is a **method of accounting**, so correcting the
+  existing fleet is a formal change with a catch-up adjustment, not a line edit — **and it collides head-on
+  with the standing ruling that depreciation follows the prior year exactly.** ☑️ **It went to Julia as three
+  questions**, with the honest caveat that a shorter life is **not automatically better**: it deducts faster
+  and it also produces more recapture as ordinary income when a tractor is sold, **and this client sells
+  them.** 🔑 **A separate limit was also identified for the one ordinary CAR on the schedule** — it is
+  statutorily capped in a way the trucks are not, the car is being disposed of this year, and whether the caps
+  were applied in earlier years changes the gain.
+- _(2026-09-27, later)_ — **LILIAN SET A STANDING REQUIREMENT FOR EVERY WORKSHEET THE FIRM EVER BUILDS, AND IT
+  IS NOT ABOUT THIS CLIENT.** Her words: *"Necesito saber de dónde sale cada número y, si está en un documento,
+  necesito saber cuál es el documento… si no, queda como un número y tengo que confiar plenamente en ti."*
+  ✅ **Every figure now carries its own SOURCE column, and it holds three things: what KIND of evidence it is**
+  *(a client document · his own spreadsheet · a prior-year filed return · a bank statement · a lender letter ·
+  a text message · a screenshot he sent · an email · computed · a firm decision)*, **WHICH document by its
+  exact filename, and WHERE it lives plus where inside it** — the page and line, or the sheet and cell.
+  🔑 **The test she set is not "is the number right" but "can she reach the evidence WITHOUT ASKING THE
+  SESSION"** — because the session that could explain it gets deleted, and a figure supported only by that
+  session is not a working paper. 🛑 **Three rules make it honest rather than decorative: a figure given in
+  chat or in a photo is labelled as that and never dressed up as a document; a CORRECT figure whose source
+  cannot be named is a DEFECT, not a rounding issue; and where two sources disagree the column names BOTH and
+  says which governs.** ✅ **Written into the firm's tax skill so it never has to be asked for again**, together
+  with her second requirement: **an asset is never delivered as just a name, a date and a cost** — it carries
+  what it physically is, its class, its derived life, the method and convention, the business-use basis, and
+  whether the statutory vehicle caps touch it. **Plus one table for putting an asset in and one for taking it
+  out** — ⛔ **and taking one out is never deleting the row.**
+- _(2026-09-27, and it is an ACCESS note rather than a finding)_ — **LILIAN ASKED FOR THE CLIENT'S OWN
+  SPREADSHEET TO BE RE-READ END TO END so no loose note is lost. ⛔ The download was BLOCKED by this session's
+  own automated safety layer, not by any rule of the firm's** — her ask is itself the permission under the
+  standing document rule. ✅ **The specific note she asked about had in fact already been audited line by line
+  in the working paper, and only one figure in it had been new at the time.** 🔑 **The route that has worked
+  twice before on this client is recorded again because it is the practical answer: when the firm's tooling
+  refuses a document, the principal sending it in directly closes in minutes what the tooling cannot.**
+  ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
