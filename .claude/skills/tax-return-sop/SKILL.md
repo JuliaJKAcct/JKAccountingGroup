@@ -2922,8 +2922,11 @@ are not obvious.**
 
 1. 🔴 **A REGISTER ORDERED *BY MONEY* AND A TRANSCRIPTION THAT POINTS INTO IT MUST BE RENUMBERED TOGETHER.**
    **The transcription's *"see row N"* pointers were written against an earlier, document-order numbering;
-   re-sorting the register by money left ELEVEN of them pointing at the wrong row** — *the address-block typo
-   pointed at the 245,900 bonus election, and so did the officer-compensation row.* ⛔ **That breaks the one
+   re-sorting the register by money left ELEVEN of them pointing at the wrong row** — *the
+   officer-compensation row pointed at the 245,900 bonus election, and the address-block typo pointed at an
+   acquisition-date question about a truck.* ⚠️ **Corrected in the round-2 review: a first version of this
+   example said BOTH pointed at the bonus election, which overstated it — the count was right, the
+   illustration was not.** ⛔ **That breaks the one
    link this whole method depends on: transcription → fix.** ☑️ **Number the register LAST, or point by
    heading text rather than by number; and before pushing, follow every pointer once.**
 2. 🔴 **A FIX THAT SAYS WHERE A FIGURE IS *REPORTED* IS NOT A FIX IF IT NEVER LANDS ON THE LINE THAT BALANCES.**
