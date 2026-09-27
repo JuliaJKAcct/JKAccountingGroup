@@ -681,11 +681,14 @@ A running, dated record as we build this profile.
   against a lender's own amortization report for the same year** — **which is real evidence for the rule she set
   the same day: where he reports DEBT figures he is copying a lender and is reliable, so a disagreement reads as
   his arithmetic error rather than as a different fact.**
-  ✅ **IT DID NOT SOLVE THE MAP, BUT IT SHRANK THE QUESTION FROM A MAPPING EXERCISE TO ONE SENTENCE.** **A
-  logical exclusion the paper had never drawn: only two of the three trucks appear in his financed table, and
-  his own description row for the third says "paid off" — so the third is neither of the two numbered ones.**
-  ⇒ **One truck is now corroborated twice over, and what is left to ask is which of his two remaining trucks
-  carries which number — something he knows from memory about his own fleet.**
+  ✅ **IT DID NOT SOLVE THE MAP, BUT IT SHRANK THE QUESTION FROM A MAPPING EXERCISE TO ONE SENTENCE HE CAN ANSWER
+  FROM MEMORY.** **The exclusion it appears to give — only two of the three trucks are in his financed table, and his own
+  description row for the third says "paid off" — had ALREADY been drawn in this paper months of work ago, and
+  drawn better: the two observations are the SAME one (paid off means no longer financed), not two supports, and
+  both rest on that financed list being complete, which nothing establishes.** ⛔ **A first version of this entry
+  said the paper had never drawn it and that the truck was now corroborated twice over. Both were wrong and the
+  independent review caught them.** ⇒ **What is left to ask is which of his two remaining trucks carries which
+  number — and the third one goes back into the same question, because it costs nothing to ask.**
   ⛔ **AND ONE INFERENCE WAS DELIBERATELY NOT MADE: the interest figures would point at an order, but the
   payment amounts contradict it, so the figures do not hold together well enough to name it — and naming it
   wrong would put a wrong cost basis on a sale.**
