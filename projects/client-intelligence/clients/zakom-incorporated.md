@@ -802,8 +802,13 @@ A running, dated record as we build this profile.
   years ago, was one contract last year, and this year it carries nearly everything — while the repairs caption
   fell by about half in the same step.** ⇒ 🛑 **THE INTERNAL RECONCILIATION CLOSED TO FOUR CENTS.** The sum of
   his own per-asset interest cells, excluding one lender, reproduces a figure the firm had measured
-  independently from lender letters and bank statements. ⚠️ **And unlike an earlier claim this session had to
-  withdraw, these two genuinely share no inputs — they COULD have disagreed.** ⇒ 🔑 **So the one lender's
+  independently from lender letters and bank statements. ⛔ **AND THE FIRST VERSION OF THIS ENTRY CLAIMED THE TWO
+  FIGURES SHARE NO INPUTS AND *"COULD HAVE DISAGREED". THAT WAS FALSE — the THIRD overstated corroboration
+  this session produced in one day, and the working paper already held the correct verdict on this very
+  comparison.*** ✅ **The truth is PARTIAL: three of the four components are independent of his sheet — one
+  lender's four letters, one computed figure and one lender's own schedule — while the fourth IS his own cell
+  adopted by an earlier ruling, so it contributes nothing to the agreement by construction.**
+  🔑 **The conclusion below does not rest on it and is unaffected.** ⇒ 🔑 **So the one lender's
   payments were simply LEFT OUT when he totalled the line, not hidden in another category — which means the
   firm is UNDER-deducting there rather than over.** ⛔ **Three of the four amounts that had been called an
   over-deduction risk now run in the client's favour or are neutral.**
