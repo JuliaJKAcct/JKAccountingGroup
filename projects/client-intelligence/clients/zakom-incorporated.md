@@ -551,6 +551,70 @@ A running, dated record as we build this profile.
   the client's figure IS the equipment price.**
   ⛔ **No identifier, address or dollar figure was written into this file from the above.**
 
+- _(2026-09-27, last — the vehicle disposals, and the ask got SMALLER)_ — ⛔ **THE 2025 VEHICLE SALES CANNOT BE
+  RECORDED YET, and one thing blocks all of them: which row of the depreciation schedule each sale disposed of.**
+  🔑 **The reason is arithmetic, not procedure: the gain is the sale price minus what is left of the asset's cost
+  after the depreciation already taken — so with no row there is no cost, no depreciation and no gain.** **The
+  client names his trucks by unit number, the filed return names them a third way, and nobody has mapped the
+  two.**
+  🛑 **AND A TRAP IS NOW WRITTEN DOWN, because it is the error that would put a wrong figure on the form.** His
+  sheet disposes of three trucks of one model year and the prior return happens to carry exactly three of that
+  model year. ⛔ **Matching them three-to-three is NOT identity: a FOURTH of the same model year joined the
+  fleet in 2025, and one of the disposals is of a trailer that was never capitalised at all — so the two
+  populations are known to differ.**
+  ✅ **THE ASK GOT SMALLER, WHICH IS WHAT MATTERS FOR GETTING AN ANSWER: the MONTHS came off it.** **The date
+  moves the disposal-year depreciation only under the alternative convention, and the ordinary one is now
+  established; the deferral clock for the destroyed truck runs from the close of the tax year rather than the
+  month; and the holding-period question does not arise because every disposed asset went into service years
+  earlier.** ⇒ **Ask for the MAP and nothing else.**
+  ✅ **AND ONE MONTH WAS ESTABLISHED FOR FREE INSTEAD OF ASKED: the older Audi left in AUGUST.** Two independent
+  coincidences: a plain deposit with no counterparty landed on 21 August matching the figure he states for it,
+  **and the REPLACEMENT Audi's lease is dated 10 August with its first payment in September.** ⚠️ **An inference,
+  not a document** — and the file's own earlier objection stands, that a trade-in credit is normally applied
+  against the new vehicle rather than deposited, so this may have been a cash sale rather than a trade-in.
+  ⓘ **It changes no figure; it fills the date box and the record.**
+  🔴 **AND A QUESTION NOBODY HAD ASKED, which could remove the destroyed truck from this return altogether: DID
+  THE INSURANCE MONEY ARRIVE IN 2025?** 🔑 **The firm's own earlier finding is why it matters — the gain is
+  realized when the PROCEEDS ARE RECEIVED, which can fall in a different tax year from the loss.** ⛔ **No credit
+  of that size is NAMED in the money-in analysis of the bank statements** — ⚠️ **but that is not evidence of
+  absence: dozens of smaller credits sit inside an unitemised remainder.** ☑️ **A free in-house re-read of the
+  twelve statements would answer it, and the insurance settlement letter already on his list states when the
+  insurer paid.** ⇒ **This adds a REASON to an existing ask, not a new ask.**
+  ⛔ **No identifier, address or dollar figure was written into this file from the above.**
+
+- _(2026-09-27, final — Lilian ordered the ask list audited against what the firm already holds, and the audit
+  found one real error of ours)_ — 🔑 **HER INSTRUCTION, and it is now a standing one: nothing goes on a list to
+  the client until it has been checked against the firm's own documents, and the check is written down beside
+  it.** *"Por favor, recuerda que tenemos mucha documentación. No podemos pedirle cosas al cliente que ya
+  tengamos."*
+  ✅ **WHAT PROMPTED IT WAS A MISREADING, AND THE FAULT IS THE FIRM'S PRESENTATION, NOT HERS.** She sent back the
+  trailer lender's own year-end email and asked why the firm says it does not have that information. ⛔ **It does
+  not — that lender has been closed since 2026-09-15, its figures are on the return, and three separate places
+  say nothing is asked of it.** 🛑 **But one ROW of the ask list NAMES that lender**, because the question is
+  about which line of the CLIENT's own books a payment sits in — **and a person reading the list sees the
+  lender's name against an open row and reads it as a chase.** ✅ **Every row now opens by saying what is NOT
+  being asked.**
+  🔴 **AND THE AUDIT SHE ORDERED FOUND A GENUINE ONE: the list asked for the insurance settlement letter on the
+  destroyed truck, which a ruling had CLOSED twelve days earlier** *(his own asset list gives the proceeds and
+  the firm relies on his figure)*. ⛔ **Struck.** ☑️ **What survives of that row is not a document request at
+  all: ask him to reconcile his OWN two figures for the loss, and ask WHEN he was paid** — **and run the free
+  in-house re-read of the bank statements first, because it may answer the second outright.**
+  ☑️ **THE INVENTORY ITSELF, recorded as the search that produced it:** the Double **file library** was listed in
+  full — **66 documents, all from the platform migration except two** — and ⛔ **not one of the remaining asks is
+  answered by anything in it.** ⚠️ **That is a FILENAME-level listing of ONE source: it does not cover the
+  current-year organizer attachments, Julia's email, or Drive, and it cannot see inside a file whose name does
+  not say what it is.** ✅ **What it DID confirm is how much is already done — both contracts and both breakout
+  letters for one lender, a full year of prior bank statements, the disaster-loan statements, the line-of-credit
+  images, three card documents, the prior two returns, and every 1099.**
+  🔴 **ONE MORE THING THE DAY PRODUCED, and it is about assets that STAY rather than assets that leave: a
+  depreciation CONVENTION question on a prior year.** **The convention for an asset is fixed in the year it went
+  into service, and on the firm's own table one earlier year looks as though it crossed the threshold that
+  changes it.** **If so, two assets still on the books run on different tables for their whole life — and this
+  return is rebuilding that schedule from scratch.** ⛔ **It cannot be settled from what has been extracted,
+  because the table shows only the additions of that year that SURVIVED to the last return.** ✅ **The earlier
+  return itself answers it and is in the file library.** ⛔ **A rebuild question, never a client ask.**
+  ⛔ **No identifier, address or dollar figure was written into this file from the above.**
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
