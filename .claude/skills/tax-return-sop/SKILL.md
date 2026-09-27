@@ -349,6 +349,117 @@ on no return and sold — and two Benson trailers. Both pairs cost real time.)_
 
 ---
 
+## §1C · 🛑 THE DOCUMENT LEDGER — why a document you ALREADY READ keeps producing questions it already answered
+
+> **Lilian, 2026-09-27, and this is the most important thing she has raised about the process itself:**
+> *"Te he dado acceso a los documentos y te he subido los documentos en el chat, y siento que hay información
+> que has pasado por alto… lo que nos sucedió con el mapeo de los assets era una pregunta que tenías desde
+> hace varios días, y sin embargo su respuesta está dentro de un archivo que te compartí desde el inicio…
+> Me confunde mucho el hecho de que me preguntes cosas que supuestamente ya debería saber porque ya te di la
+> información. Entonces me pongo a buscar la información por todos lados, a pedirle al cliente, y resulta que
+> son cosas que ya tenemos. Esto no puede suceder."*
+
+🔴 **SHE IS RIGHT, IT HAS HAPPENED REPEATEDLY, AND IT IS NOT A MEMORY PROBLEM. IT IS A RECORDING PROBLEM, AND
+IT HAS FOUR DISTINCT CAUSES.** ⛔ **Fixing three of them and not the fourth leaves the failure intact.**
+
+### §1C.0 · 🔑 THE FOUR CAUSES, and each needs its own fix
+
+**① A DOCUMENT IS READ TO ANSWER THE QUESTION OF THE HOUR, AND EVERYTHING ELSE ON THE PAGE IS NEVER WRITTEN
+DOWN.**
+🛑 **It is not forgotten — IT NEVER ENTERED THE RECORD.** **A session's context is finite and is compacted;
+the working paper IS the memory.** ⇒ **A document opened on day 1 for question A contributes only the answer
+to A, and the answers to B, C and D that were on the same page are gone when the session moves on.**
+_(The pilot engagement: the client's workbook was opened for the year's asset ADDITIONS. The unit numbers that
+became the single blocking question for two weeks were in the OLDER sheet's description column, two columns
+from what was being read. Nobody hid them. They were outside the question.)_
+
+**② THE INVENTORY MARKS A *FILE* AS READ, WHEN READING IS PER-QUESTION.**
+⛔ **`✅ opened 2026-09-13` then reads, forever after, as *"this file has been mined."* It means *"this file was
+queried once."*** 🔑 **THIS IS §1B.5'S LESSON ONE LEVEL UP: a filename listing is not a reading — and
+"opened" is not "exhausted."**
+
+**③ NOTHING MAKES A *NEW* QUESTION GO BACK TO *OLD* DOCUMENTS.**
+**When a question becomes blocking, the search goes OUTWARD — to lender letters, to bank captions, to the
+platform — because that is where the question seems to point.** ⛔ **It does not go back to the file already
+ticked.** _(That is exactly how the unit-number map was searched for four times in the wrong places while the
+answer sat in a file the inventory called read.)_
+
+**④ AN IMAGE PASTED INTO CHAT IS A ONE-SHOT READ, AND WHATEVER IS NOT TRANSCRIBED IS LOST PERMANENTLY.**
+🛑 **A later session cannot re-open it at all** *(§1B.6)*. ⇒ **So for an image, cause ① is not recoverable.**
+_(The pilot's lease arrived as an image and was read for "is this a lease or a purchase?". Three other answers
+were on the same page — the LESSEE's name, a `Primary Use` checkbox, and a `Net trade-in allowance: N/A` that
+resolved an unrelated bank deposit — and none was written down. When it was read again two weeks later they
+fell out in one pass.)_
+
+### §1C.1 · ✅ THE FIX, AND IT IS ALL AT READ TIME — because that is the only cheap moment
+
+🔑 **RE-READING A DOCUMENT LATER IS EXPENSIVE: it needs a fetch, it needs permission, and on an image it is
+impossible. TRANSCRIBING IT ONCE, IN FULL, COSTS ONE PASS.**
+
+> 🛑 **TRANSCRIBE THE DOCUMENT. DO NOT SUMMARISE IT.**
+
+✅ **Every document that is opened gets ONE BLOCK in the working paper, and the block is a FIELD LIST, not
+prose:**
+
+| Put in the block | Why this and not less |
+|---|---|
+| **Every PARTY named, and its ROLE** | *lessee · co-lessee · lessor · assignee · borrower · seller*. 🔑 **On the pilot, WHICH party was the lessee was the whole answer to "is this the company's?"** |
+| **Every DATE printed on it** | contract date, first-payment date, in-service date, disbursement date |
+| **EVERY FIGURE WITH ITS PRINTED LABEL, verbatim** | ⛔ **Not the ones you need — ALL of them.** ✅ **`Agreed upon value 63,935` · `Residual 36,400` · `Rent charge 1,317.88`.** 🔑 **A figure you have no use for today is the one that answers next week's question** |
+| 🔴 **Every CHECKBOX and its state** | **`Primary Use: ☒ business`.** ⛔ **Checkboxes are the single most-skipped field on a form and they carry the classification** |
+| 🔴 **Every `N/A` AND EVERY ZERO** | 🛑 **AN ABSENCE ON A FORM IS A FACT.** **`Net trade-in allowance: N/A` PROVED a vehicle had been sold rather than traded, and explained a bank deposit nobody could place** |
+| **Every identifier that is SAFE to hold** | ⛔ **Never an SSN/ITIN, bank or card number, street address, DOB or VIN** *(the VIN question is open — see the firm's follow-up list)*. ✅ **A masked last-four, a contract's own internal sequence, a stock or deal reference are ordinary working data** |
+| **And a one-line note of what the document CANNOT tell you** | ✅ **"states a LOAN amount, not a purchase price"** — 🔑 **which stops the next session mistaking one for the other** |
+
+⚠️ **AND CROSS-FOOT IT WHILE IT IS OPEN.** **A form's own internal identities take a minute and they either
+confirm the transcription or catch a mis-read.** _(The pilot's lease closed seven ways; that is what made the
+transcription trustworthy.)_
+
+### §1C.2 · ✅ THE INVENTORY RECORDS WHAT WAS *TAKEN*, NEVER THAT IT WAS OPENED
+
+⛔ **BAN the bare `✅ opened <date>`.** ✅ **Two states and only two:**
+
+| | |
+|---|---|
+| ✅ **`TRANSCRIBED IN FULL <date> → §X`** | **Done. Nothing in it needs re-opening** |
+| ⚠️ **`READ FOR <what> ONLY <date> — NOT TRANSCRIBED`** | 🔑 **THIS IS A TO-DO, and it is the line that would have flagged the pilot's client workbook for two weeks** |
+
+🛑 **AND A THIRD STATE IS A DEFECT, NOT A STATE: a file listed with a tick and no §-reference.** ⛔ **If you
+cannot point at the block, it was not transcribed.**
+
+### §1C.3 · ✅ EVERY OPEN QUESTION NAMES THE DOCUMENTS THAT MIGHT ANSWER IT
+
+✅ **Each open item carries a *"held documents that bear on this"* clause.** ⇒ 🔑 **So a new question's FIRST
+move is a text search of the working paper's own transcription blocks — seconds, no fetch, no permission —
+and only then an outward search.**
+
+🛑 **AND THE RULE WITH TEETH, because the general form of *look before you ask* has proved too soft:**
+
+> ⛔ **NO QUESTION REACHES THE CLIENT UNTIL THE WORKING PAPER STATES, FOR THAT QUESTION, WHICH HELD DOCUMENTS
+> WERE CHECKED AND WHAT THEY SAID.**
+
+⚠️ **"We looked everywhere" does not satisfy it. NAMED documents do** — and naming them is what makes the
+negative honest *([`method.md`](../../../projects/pre-return-review/method.md) rule 1b)*.
+
+### §1C.4 · 🛑 AND THE ONE THAT IS NOT ABOUT DOCUMENTS AT ALL — a closed QUESTION does not close the ITEM
+
+🔴 **The same engagement, the same day, a fifth instance in a different shape.** **A ruling closed one question
+about an asset — *is its booked cost contradicted by its lender note?* — and a later pass read that as closing
+EVERY question about that asset's cost, and dropped it from a list of purchase documents to request.**
+⛔ **The new question was different: *does the booked figure include the sales tax and the fees, or is it the
+sticker price?*** 🔑 **Nothing had answered that one.**
+
+✅ **THE RULE: when a decision closes a question, write WHICH QUESTION it closed.** ⛔ **A decision titled
+*"the 1839 is settled"* invites exactly this error; one titled *"the 1839's YEAR and its lender-note
+discrepancy are settled"* does not.** ⚠️ **And when an item comes off a list, say which decision took it off
+and what that decision actually decided.**
+
+_(All five instances are from one engagement in one fortnight, and the client's principal found the fifth one
+herself by asking a question this session could not answer: "if five or six vehicles were bought, why do you
+only need the documents for three?")_
+
+---
+
 ## §2 · The section spine
 
 Follow it in this order; a preparer works the document top-down.
