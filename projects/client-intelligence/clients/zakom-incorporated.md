@@ -882,8 +882,8 @@ A running, dated record as we build this profile.
   tax and fees, and the depreciation with them.** ⛔ **But it collides with three rulings already taken on
   this return, so it goes to JULIA and nothing is asked of the client until she rules.** 🔑 **AND ONE
   APPARENT CONTRADICTION DISSOLVED: a lender note for less than a booked cost is NOT a defect — a FINANCED
-  AMOUNT IS NOT A PURCHASE PRICE, and the lease shows this client puts money down, which closes the gap
-  cleanly.**
+  AMOUNT IS NOT A PURCHASE PRICE.** ⛔ 🆕 **AN EARLIER VERSION OF THIS ENTRY ADDED *"and the lease shows this client puts money down, which closes the gap cleanly"*. THAT IS FALSE, AND THE SAME DOCUMENT DISPROVES IT: the entry above records that the WHOLE amount due at signing was settled by rebates and non-cash credits, and the price reduction was a COMPONENT of that amount.** 🔑 **A price reduction tells you the price was reduced; it does NOT tell you who paid for it, and the answer is two lines further down the same form.** ✅ **So the gap is UNEVIDENCED, and the free test nobody has run is a bank search for a payment to the dealer around the purchase date.**
+  
 - _(2026-09-27, night)_ — 🔑 **LILIAN WORKED OUT THE CASUALTY TREATMENT HERSELF AND SHE IS RIGHT.** She asked
   whether the insurance reimbursement has to be split between the vehicle and the towing, and whether the
   disposition takes only the vehicle's part. ✅ **Yes — the casualty form computes the gain on the PROPERTY,

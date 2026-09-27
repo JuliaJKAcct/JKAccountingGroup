@@ -290,13 +290,20 @@ correct.** ⇒ **Where the two agree exactly on a round number, his figure went 
 person directing you cannot answer from memory.** ⚠️ **Then put it to the SIGNER before acting, because it
 will usually collide with a *"his figures govern"* ruling already taken on the current return.**
 
-#### ② ⛔ A FINANCED AMOUNT IS NOT A PURCHASE PRICE — and a down payment is the usual reason
+#### ② ⛔ A FINANCED AMOUNT IS NOT A PURCHASE PRICE — and the gap needs EVIDENCE, not a plausible story
 
-**A lender note for less than the booked cost is NOT a contradiction.** 🔑 **Look for independent evidence
-that the client puts money down** — **a capitalized cost reduction on a lease, a deposit on an invoice** —
-**and if you find it, the note CORROBORATES the cost instead of disputing it.** _(On the pilot client a
-95,550 note against a 105,550 cost read as a defect for two weeks; the same client's lease showed an 11,000
-cash-down reduction, and 95,550 + 10,000 closes it.)_
+**A lender note for less than the booked cost is NOT a contradiction: the difference is usually a down
+payment.** ⛔ **BUT DO NOT CLOSE IT WITH A STORY. Say the gap is UNEVIDENCED until something evidences it,
+and name the free test** — **a bank debit to the dealer near the purchase date, a deposit line on the
+invoice, the `Cash down payment` field on the finance agreement.**
+
+🛑 **AND THE WORKED EXAMPLE HERE IS A WARNING, NOT A MODEL, because an earlier draft of this very subsection
+got it wrong.** **On the pilot client a 95,550 note against a 105,550 cost read as a defect for two weeks.
+A session then argued the gap was a down payment *"because the lease shows an 11,000 capitalized cost
+reduction"*.** ⛔ **THAT WAS FALSE, and the SAME document disproved it: the whole amount due at signing was
+settled by `Rebates and noncash credits`, and the 11,000 was a COMPONENT of it — so it was neither the
+client's cash nor a trade-in.** 🔑 **A capitalized cost reduction tells you the price was reduced. It does
+NOT tell you WHO paid for the reduction, and the answer is two lines further down the same form.**
 
 #### ③ ✅ A CLOSED-END LEASE IS A RENTAL, AND THE CASH-BASIS TRAP IS IN THE SIGNING SHEET
 
