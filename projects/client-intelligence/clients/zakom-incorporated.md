@@ -615,7 +615,7 @@ A running, dated record as we build this profile.
   return itself answers it and is in the file library.** ⛔ **A rebuild question, never a client ask.**
   ⛔ **No identifier, address or dollar figure was written into this file from the above.**
 
-- _(2026-09-28 — Lilian reset the approach to this return, and it changed more than any single finding has)_ —
+- _(2026-09-27 — Lilian reset the approach to this return, and it changed more than any single finding has)_ —
   🛑 **THE WORK IS NOW TO REBUILD THE YEAR'S ACCOUNTING FROM THE SOURCE DOCUMENTS and use the client's own
   spreadsheet only as a comparison.** ⛔ **It is not to take his expense summary as the income statement and
   correct the lines we can prove wrong, which is what the firm had been doing for two weeks.** 🔑 **Her worked
@@ -657,7 +657,7 @@ A running, dated record as we build this profile.
   request to HER, never to the client.**
   ⛔ **No identifier, address or dollar figure was written into this file from the above.**
 
-- _(2026-09-28, later — Lilian narrowed her own reset, and then ordered a prior-year sweep that found the firm
+- _(2026-09-27, later — Lilian narrowed her own reset, and then ordered a prior-year sweep that found the firm
   had been wrong)_ — 🔑 **THE LINE IS THE DOCUMENT, NOT THE LINE ITEM.** Her rule, and it is the one to keep:
   **where the firm holds a document stating a figure, the document governs; where it does not, the client's
   figure governs and we do not audit it.** ⇒ **Liabilities, interest paid, debt balances and assets are OURS to

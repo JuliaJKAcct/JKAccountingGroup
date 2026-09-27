@@ -50,7 +50,7 @@ default.
 
 ## §1B · 🔴 THE CLIENT WITH NO BOOKS — a spreadsheet, a pile of documents, and no QuickBooks
 
-> **Written 2026-09-28, out of Zakom Incorporated's 2025 Form 1120-S**, which cost the firm **two weeks**
+> **Written 2026-09-27, out of Zakom Incorporated's 2025 Form 1120-S**, which cost the firm **two weeks**
 > mostly because nobody had written this down. **Lilian:** *"es la primera vez que voy a hacer una declaración
 > de impuestos de este tipo donde no tenemos los libros del cliente en QuickBooks… necesito que tú comprendas
 > cómo es que hacemos las cosas y que lo recuerdes para que no perdamos días y días en lo mismo."*
