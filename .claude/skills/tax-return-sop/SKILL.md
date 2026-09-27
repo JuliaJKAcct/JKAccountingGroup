@@ -188,6 +188,19 @@ date.** 🛑 **The working paper does not replace the document.**
 ☑️ **And close with a practical order for the software: what can be entered now, what needs internal review,
 and what genuinely waits on the client.**
 
+🔗 **THE WORKBOOK ITSELF HAS ITS OWN RULES AND THEY ARE NOT HERE — READ §4D BEFORE BUILDING ONE.** The three that
+a no-books rebuild breaks most easily: it is written in **ENGLISH**, always, whatever language the chat is in
+*(Julia reads it and does not speak Spanish)*; the value column says **WHAT TO ENTER**, never what is already on
+the return, so **a defect flag without its correct value is not a deliverable** and there is **no "what it used to
+say" column**; and **the build FAILS when a cell she acts on would be clipped**, because a row can hold text it
+will not show. ⚠️ **A no-books rebuild is exactly where the clipping bites**, since its cells carry the
+document trail and the arithmetic rather than a figure.
+
+⛔ **AND ONE THING THIS SECTION'S OWN DELIVERABLE MUST NOT DO: balance itself.** Where the closing column cannot
+be completed, **say so on the face of the sheet and leave the line open.** A total that ties because equity
+absorbed the difference is worse than one that visibly does not tie, because nobody re-checks a sheet that
+balances.
+
 ---
 
 ## §2 · The section spine
