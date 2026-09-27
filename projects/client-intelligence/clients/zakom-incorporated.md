@@ -1,6 +1,6 @@
 # Zakom Incorporated
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-27
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -615,7 +615,7 @@ A running, dated record as we build this profile.
   return itself answers it and is in the file library.** ⛔ **A rebuild question, never a client ask.**
   ⛔ **No identifier, address or dollar figure was written into this file from the above.**
 
-- _(2026-09-28 — Lilian reset the approach to this return, and it changed more than any single finding has)_ —
+- _(2026-09-27 — Lilian reset the approach to this return, and it changed more than any single finding has)_ —
   🛑 **THE WORK IS NOW TO REBUILD THE YEAR'S ACCOUNTING FROM THE SOURCE DOCUMENTS and use the client's own
   spreadsheet only as a comparison.** ⛔ **It is not to take his expense summary as the income statement and
   correct the lines we can prove wrong, which is what the firm had been doing for two weeks.** 🔑 **Her worked
@@ -657,7 +657,7 @@ A running, dated record as we build this profile.
   request to HER, never to the client.**
   ⛔ **No identifier, address or dollar figure was written into this file from the above.**
 
-- _(2026-09-28, later — Lilian narrowed her own reset, and then ordered a prior-year sweep that found the firm
+- _(2026-09-27, later — Lilian narrowed her own reset, and then ordered a prior-year sweep that found the firm
   had been wrong)_ — 🔑 **THE LINE IS THE DOCUMENT, NOT THE LINE ITEM.** Her rule, and it is the one to keep:
   **where the firm holds a document stating a figure, the document governs; where it does not, the client's
   figure governs and we do not audit it.** ⇒ **Liabilities, interest paid, debt balances and assets are OURS to
@@ -693,6 +693,93 @@ A running, dated record as we build this profile.
   payment amounts contradict it, so the figures do not hold together well enough to name it — and naming it
   wrong would put a wrong cost basis on a sale.**
   ⛔ **No identifier, address or dollar figure was written into this file from the above.**
+
+- _(2026-09-27, and this is the one that outlives the client)_ — **LILIAN ASKED THAT EVERYTHING THIS CASE TAUGHT US BE WRITTEN INTO THE FIRM'S TAX-RETURN SKILL, BECAUSE IT IS THE FIRST OF ITS KIND AND WILL NOT BE THE LAST.** Her words: *"es la primera vez que lo voy a hacer de este tipo… necesito que tú comprendas cómo es que hacemos las cosas y que lo recuerdes."*
+  ✅ **A new section was written for the case of a client who arrives with NO BOOKS** — no accounting system, no
+  defined ledger, just a spreadsheet and a pile of documents — **so the next session does not spend days
+  rediscovering the method.** 🔑 **Its centre is the rule she set on this return and it is one sentence: where the
+  firm HOLDS a document that states a figure, the DOCUMENT governs; where it does not, the CLIENT'S figure governs
+  and we do not audit it.** ⚠️ **It also carries the tell that identifies the case at intake — there is no equity
+  section anywhere in what the client sent — the order to rebuild in (prior return, then liabilities, then the
+  bank and card, then the assets, then the soft captions, and equity LAST, never as a plug), the three traps this
+  client sprang, and the distinction that cost this engagement the most time: a document we do not hold, a document
+  our tool cannot read, and a document nobody has opened yet are three different sentences.**
+  🔑 **One lesson in it is not tax-specific at all and is worth reading whatever the client: a filename listing is
+  not a reading.** This paper had marked a file ✅ in an inventory that nobody had opened.
+- _(2026-09-27)_ — **LILIAN CLOSED THE LAST OPEN QUESTION ON THE NEW TRUCK AND TOLD THE SESSION TO STOP ASKING.**
+  Her reasoning, and it is sound: it is in none of the two prior years' books, so it is new; the year the client
+  typed on his own sheet is a slip; and she believes he listed it among the current year's additions. ✅ **Recorded
+  as a decision of hers, with her reasoning, so no later session re-opens it** — the working paper carries it.
+  ⚠️ **What it does NOT settle is which physical truck carries which internal number**, which is a different
+  question and still on the client list, because a disposal's cost basis turns on it.
+- _(2026-09-27)_ — **SHE CHALLENGED THE SESSION'S OWN EMPHASIS, AND THE CHALLENGE WAS RIGHT.** The paper had
+  singled out three lenders' payments as possibly hidden inside two of the client's expense captions, and she asked
+  the obvious question: *"¿cuál es la diferencia con el resto?"* — the client has many loans, so why these three?
+  ✅ **The honest answer was written out: there is no difference in KIND. Six lenders' payments have been LOCATED in
+  the bank account and three have not, so the three are simply the residual — and the three are not alike either.**
+  🔑 **And the finding that came out of answering her properly: the likelihoods run OPPOSITE to the amounts.** The
+  one most likely to be hiding is the cheapest to resolve, and the one least likely is the dearest — which is
+  exactly backwards from where a session would naturally spend its effort. ⛔ **A session that had not been asked to
+  justify its emphasis would have kept it.**
+- _(2026-09-27)_ — **THE ASSET SIDE WAS AUDITED FOR COMPLETENESS BEFORE ANY OF IT WAS KEYED, WHICH IS WHAT SHE
+  ASKED FOR.** ✅ **Every one of the year's additions can be keyed today** — each has a cost, a date and a document
+  behind it, and none needs the client. ⛔ **Not one of the year's disposals can be**, and they are all blocked on
+  the SAME single question: which physical unit carries which internal number. 🔑 **That is the shape of the answer
+  she wanted — not a list of gaps, but which gaps share one cause**, because one question to the client unblocks
+  all of them at once. ⚠️ **One of the disposals is the totalled unit, so the same answer also decides which cost
+  goes onto the casualty form — and getting it wrong would put a wrong basis on a return.**
+- _(2026-09-27)_ — **THE RECONSTRUCTION ITSELF BEGAN: the year's profit-and-loss and the balance sheet were built
+  from the documents, and the keying workbook now carries both as their own sheets with live formulas.** ✅ **The
+  opening balance sheet balances on both sides from the prior year's filed return** — the immovable base the other
+  principal set. 🔑 **Each line is marked with WHERE it came from and whether it is document-derived or the
+  client's own figure**, which is the rule above made visible at the point of keying. ⛔ **The closing column is
+  deliberately not complete** — it cannot be until the residual lenders and the disposals are settled, and the
+  sheet says so on its face rather than balancing itself with a plug.
+  ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
+
+- _(2026-09-27, later — and this is the finding that reaches every trucking client the firm has)_ — 🔴 **THE
+  FLEET'S DEPRECIATION LIFE WAS TRANSCRIBED FROM THE PRIOR YEAR AND NEVER DERIVED, AND FOR THE TRACTORS IT IS
+  WRONG.** Lilian asked the session to read the IRS rules and work out the classification properly rather than
+  just hand over a name, a date and a cost. ✅ **Read from the CURRENT edition of the IRS depreciation
+  publication, downloaded from the agency's own site — not from memory, which is this firm's standing rule for
+  anything that moves a figure.** 🔑 **An OVER-THE-ROAD TRACTOR UNIT — the fifth-wheel vehicle that pulls a
+  semi-trailer — is its own asset class with a THREE-year recovery period. A semi-trailer is a different class
+  at FIVE. The prior year put the entire fleet, tractors included, at five.** ⚠️ **The model name does not
+  decide it**: the same nameplate is built as a tractor and as a straight truck, and the title or registration
+  body-type field is what settles it. ⛔ **AND THE SESSION DID NOT ACT ON IT, because it may not:** a recovery
+  period used on two or more consecutive filed returns is a **method of accounting**, so correcting the
+  existing fleet is a formal change with a catch-up adjustment, not a line edit — **and it collides head-on
+  with the standing ruling that depreciation follows the prior year exactly.** ☑️ **It went to Julia as three
+  questions**, with the honest caveat that a shorter life is **not automatically better**: it deducts faster
+  and it also produces more recapture as ordinary income when a tractor is sold, **and this client sells
+  them.** 🔑 **A separate limit was also identified for the one ordinary CAR on the schedule** — it is
+  statutorily capped in a way the trucks are not, the car is being disposed of this year, and whether the caps
+  were applied in earlier years changes the gain.
+- _(2026-09-27, later)_ — **LILIAN SET A STANDING REQUIREMENT FOR EVERY WORKSHEET THE FIRM EVER BUILDS, AND IT
+  IS NOT ABOUT THIS CLIENT.** Her words: *"Necesito saber de dónde sale cada número y, si está en un documento,
+  necesito saber cuál es el documento… si no, queda como un número y tengo que confiar plenamente en ti."*
+  ✅ **Every figure now carries its own SOURCE column, and it holds three things: what KIND of evidence it is**
+  *(a client document · his own spreadsheet · a prior-year filed return · a bank statement · a lender letter ·
+  a text message · a screenshot he sent · an email · computed · a firm decision)*, **WHICH document by its
+  exact filename, and WHERE it lives plus where inside it** — the page and line, or the sheet and cell.
+  🔑 **The test she set is not "is the number right" but "can she reach the evidence WITHOUT ASKING THE
+  SESSION"** — because the session that could explain it gets deleted, and a figure supported only by that
+  session is not a working paper. 🛑 **Three rules make it honest rather than decorative: a figure given in
+  chat or in a photo is labelled as that and never dressed up as a document; a CORRECT figure whose source
+  cannot be named is a DEFECT, not a rounding issue; and where two sources disagree the column names BOTH and
+  says which governs.** ✅ **Written into the firm's tax skill so it never has to be asked for again**, together
+  with her second requirement: **an asset is never delivered as just a name, a date and a cost** — it carries
+  what it physically is, its class, its derived life, the method and convention, the business-use basis, and
+  whether the statutory vehicle caps touch it. **Plus one table for putting an asset in and one for taking it
+  out** — ⛔ **and taking one out is never deleting the row.**
+- _(2026-09-27, and it is an ACCESS note rather than a finding)_ — **LILIAN ASKED FOR THE CLIENT'S OWN
+  SPREADSHEET TO BE RE-READ END TO END so no loose note is lost. ⛔ The download was BLOCKED by this session's
+  own automated safety layer, not by any rule of the firm's** — her ask is itself the permission under the
+  standing document rule. ✅ **The specific note she asked about had in fact already been audited line by line
+  in the working paper, and only one figure in it had been new at the time.** 🔑 **The route that has worked
+  twice before on this client is recorded again because it is the practical answer: when the firm's tooling
+  refuses a document, the principal sending it in directly closes in minutes what the tooling cannot.**
+  ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
 
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->

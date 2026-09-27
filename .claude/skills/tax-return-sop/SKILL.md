@@ -40,9 +40,188 @@ guessed. Repeat it, or this year's return is not comparable to last year's.
 ⚠️ **Reproducing is not auditing.** A filed return is closed. You are reading it as an answer key.
 If something looks wrong, raise it — never change this year's approach on your own initiative.
 
+🔴 **AND IF THE CLIENT HAS NO BOOKS AT ALL — a spreadsheet and a pile of documents, no QuickBooks — READ §1B BEFORE ANYTHING ELSE.** **The prior return is still the answer key, but the job changes shape: you are building a set of books before you prepare a return, and §1B carries the rule that organises it, the three traps that cost the most, the order to work in, and the bar a question has to pass before it reaches the client.**
+
 **What it catches, every time:** which accounts a subtotal really covers · how equity was mapped ·
 which boxes were ticked · whether a figure was netted or grossed · what the software chose by
 default.
+
+---
+
+## §1B · 🔴 THE CLIENT WITH NO BOOKS — a spreadsheet, a pile of documents, and no QuickBooks
+
+> **Written 2026-09-27, out of Zakom Incorporated's 2025 Form 1120-S**, which cost the firm **two weeks**
+> mostly because nobody had written this down. **Lilian:** *"es la primera vez que voy a hacer una declaración
+> de impuestos de este tipo donde no tenemos los libros del cliente en QuickBooks… necesito que tú comprendas
+> cómo es que hacemos las cosas y que lo recuerdes para que no perdamos días y días en lo mismo."*
+
+### §1B.0 · 🛑 Recognise the case in the first ten minutes
+
+**You are in it when ALL of these are true:**
+
+- ⛔ **No QuickBooks, no bookkeeper, no trial balance.** `platform: none` on the Double client record, or a
+  `Bookkeeping` property that is blank or paused.
+- **What the client sends instead:** a spreadsheet of income and expenses, an asset list, and a folder of
+  statements, notes, invoices and letters.
+- 🔑 **THE TELL THAT MATTERS: there is no EQUITY section anywhere.** **His spreadsheet has revenue, expenses
+  and maybe a balance sheet — but nothing states what he took out of the company.**
+
+⚠️ **SAY SO OUT LOUD, AT THE START, TO WHOEVER IS DIRECTING THE WORK.** **The job is not "prepare a return
+from books"; it is "build a set of books, then prepare a return."** **Scope it before it is quoted.**
+
+### §1B.1 · 🔑 THE ONE RULE THAT ORGANISES EVERYTHING ELSE — the line is the DOCUMENT, not the line item
+
+🛑 **DO NOT frame the job as "do we trust the client or not". That question has no stable answer and it will
+be re-litigated every day.** ✅ **Frame it by the document:**
+
+> 🔑 **Where the firm HOLDS a document that states a figure, the DOCUMENT governs.**
+> 🔑 **Where it does not, the CLIENT'S figure governs and we do not audit it.**
+
+| Almost always document-backed → **REBUILD IT** | Almost never → **TAKE HIS FIGURE** |
+|---|---|
+| Interest paid, lender by lender | Fuel |
+| Loan principal, and the split of every payment | Telephone and internet |
+| Fixed assets: cost, date acquired, date in service | Office expenses and supplies |
+| The bank and card balances | Tolls, parking, lumper fees |
+| Everything in the equity section | Meals *(the AMOUNT; the RATE is a firm decision)* |
+| *(the year-end liability BALANCE is its own case — below)* | Repairs and maintenance |
+
+🛑 **AND ONE ROW IS DELIBERATELY NOT IN EITHER COLUMN, because a review caught this section generalising a
+sentence the working paper had already corrected. A YEAR-END LIABILITY BALANCE THE CLIENT SUPPLIES STAYS
+HIS.** **On the pilot engagement Julia ruled it in terms — *"if the client puts in the ending balances, we
+should rely on it"* — so the split is: the LENDER's letter governs the INTEREST, the CLIENT governs the ENDING
+BALANCE.** ✅ **Where he gives no figure, the lender's is used.** ⚠️ **Where a lender document DISAGREES with
+his balance, that is RAISED with the preparer — never substituted silently.** ⛔ **And the wider version —
+*may the firm take the debt BALANCES from the lender documents rather than from his sheet?* — is an OPEN
+QUESTION to the signing principal, not settled method.** 🔑 **Put it; do not reason around it.**
+
+⚠️ **AND THE WORKED EXAMPLE THAT MAKES IT CONCRETE** *(Lilian's own)*: **if he says he paid X of interest and
+the lenders' own statements sum to Y, we key Y.** *"En ese caso, se pudo haber equivocado."* ⛔ **That is not
+auditing him. It is preferring the better evidence, which the firm's own rules already require.**
+
+🔑 **AND IT IS USUALLY CONSISTENT WITH A "RELY ON THE CLIENT'S P&L" RULING, NOT AGAINST IT** — because such a
+ruling means *do not audit his operating expenses*, while a separate ruling almost always already says *the
+lender's letter is the authority on interest*. **Read them together before escalating a collision.**
+
+### §1B.2 · ⛔ THE THREE TRAPS THAT COST THE MOST, in the order they bite
+
+**① A DOCUMENT-BACKED AMOUNT HIDING INSIDE A SOFT CAPTION. This is the expensive one.**
+
+**His expense captions are keyed as given. But if a LOAN PAYMENT is sitting inside one of them, you will
+deduct principal (never deductible) and deduct the interest a second time on the interest line.**
+
+✅ **HOW TO FIND IT WITHOUT ASKING: tie his financed-equipment caption to the lenders.** **Sum every lender's
+full-year payments from the bank and compare to that one caption.** **If they tie, you know where those
+lenders are. Whatever does NOT tie is unlocated** — and *that* is the question to the client, not a general
+"how did you classify things".
+
+⚠️ **AND RANK THE UNLOCATED ONES BY LIKELIHOOD, NOT BY SIZE.** **A financed-equipment payment missing from his
+financed-equipment caption is probably not expensed at all, which is CORRECT. An insurance premium-finance
+payment is probably inside `Insurance`, because the premium genuinely belongs there.** ⛔ **The biggest number
+is usually the least likely.**
+
+**② A CLIENT'S "PAYOFF" IS NOT ALWAYS A PRINCIPAL BALANCE.**
+
+🔑 **Test it: divide it by the monthly payment.** **If it comes out a whole number of payments, he has copied
+the lender's GROSS REMAINING PAYMENTS, which includes unearned interest.** ⛔ **Keying that to the balance
+sheet overstates the liability.** ⚠️ **The same client can use the word both ways in different years.**
+
+**③ THE THREE NAMING SYSTEMS.** **A client with rolling stock will have one name in his description list, a
+second in his unit numbers, and the return will carry a third.** ⛔ **Nothing connects them, the software's
+serial field is usually empty, and MATCHING BY COUNT IS NOT IDENTITY** — he disposes of things that were
+never capitalised, so the two populations differ. 🔑 **Establish the map EARLY, before it blocks Form 4797 at
+the end.**
+
+### §1B.3 · ☑️ THE ORDER TO WORK IN
+
+1. **The prior return** — §1's answer key, and here it is also the opening balance sheet.
+2. **THE LIABILITIES FIRST.** **Every lender: its own documents, principal and interest separated, balance at
+   year end** — ⚠️ **but read §1B.1's split before you key a BALANCE: the lender governs the INTEREST, and
+   where the client gives an ending balance, HIS governs.** 🔑 **Include financings that never touched the
+   bank** — a lender who pays the vendor direct never appears in the statements, and the asset and the debt
+   both arrive off-book.
+3. **The bank and the card, reconciled to each other.** ⚠️ **Payments between two company accounts are
+   TRANSFERS, not expenses — but only the ones that ARRIVED.** **Money that left captioned as a card payment
+   and never reached the card is an equity question.**
+4. **The assets** — cost, acquisition date, in-service date, **the Table B-1 class and the life DERIVED from it**, and the source document, one row each. ⛔ **Never carry a life forward from last year's schedule** — §4D's asset rules say why, and on the pilot engagement that transcription ran four over-the-road tractors at the wrong recovery period for years.
+5. **The soft P&L** — his captions, less anything ② or ①'s tie shows is document-backed.
+6. **The equity section LAST**, and 🛑 **never as a plug.** ⛔ **Do not force a balance with distributions,
+   contributions or retained earnings.** **Explain each movement with a documented operation, or leave it
+   open and say so.**
+
+### §1B.4 · 🛑 BEFORE ANY QUESTION GOES TO THE CLIENT — the bar, and the four groups
+
+**Sort every open item into one of four, and NOTHING reaches the client until the first three are worked:**
+
+| Group | What to do |
+|---|---|
+| **① The datum is already in a document we hold** | Extract it, cite where, close the item |
+| **② A calculation or reconciliation** | Resolve it internally and SHOW the calculation |
+| **③ An accounting or tax decision** | Put it to the responsible preparer, never to the client |
+| **④ Genuinely missing** | ONE concrete question — after ①–③ are done |
+
+🔑 **THE BAR FOR A GROUP-4 ROW, and write it IN the row:** **what datum is missing · which sources were
+reviewed · why it cannot be determined from them · what calculation it blocks.**
+
+⛔ **NOT a preventive list of every document it would be nice to have.** **A minimal, justified list.**
+*(Lilian: "No quiero una lista preventiva… Quiero una lista mínima y justificada de lo que realmente
+necesitamos.")*
+
+### §1B.5 · 🔴 AND THE FAILURE THAT COST THIS FIRM THE MOST DAYS — a filename listing is not a reading
+
+🛑 **IT HAPPENED TWICE IN TWO DAYS ON THE SAME ENGAGEMENT.** **The file library was listed BY NAME, the names
+were judged unhelpful, and the conclusion "we have looked everywhere" was written — while four documents had
+never been opened, and one of them was the client's own workbook from an earlier year carrying exactly the
+table that was being chased.** ⚠️ **The audit that did it had even marked that file with a ✅.**
+
+⛔ **THE RULE IS A PROHIBITION, NOT A PERMISSION — and an earlier draft of this very section got that
+backwards, which is why the wording is now exact.** ⛔ **Never write *"we have looked everywhere"*, or any
+negative, off a filename listing.** ✅ **Instead, NAME THE UNOPENED CANDIDATES to the person directing the
+work and ASK for them** — a prior-year client workbook, a file whose name does not say what it is, anything
+listed but never opened. 🔑 **A prior-year workbook is the highest-value unread document on a no-books
+client, because it is where his own conventions and his own unit numbers live** — ⛔ **which is a reason to
+ASK for it, not a licence to open it.**
+
+🛑 **THE SCOPE IS NOT A SESSION'S TO SET.** **The latest prior year's filed return and its organizer are
+already inside the standing document permission** *(see [`organizer-review`](../organizer-review/) §1 source
+9)*. ⛔ **An EARLIER year, or a document that is not part of a filed return — which is exactly what a
+prior-year client workbook is — needs Lilian's or Julia's ask, EACH TIME.** ⛔ **A session may never decide
+it has been asked**, and CLAUDE.md's standing rule is absolute: **a permission is widened by ASKING, never by
+reasoning.** ⓘ *(On the pilot engagement the sweep that produced this lesson was one Lilian ORDERED. That is
+what made it permissible — not the strength of the argument for it.)*
+
+### §1B.6 · ⚠️ TELL THE DIRECTING PERSON WHAT YOU CANNOT REACH — do not convert it into a client request
+
+**Distinguish three states and never collapse them:**
+
+- ✅ **Re-readable** — in the practice platform. **An extract deleted after reading is not the document being
+  gone.**
+- ⚠️ **Not reachable from a session** — anything pasted into a chat as an image. **The figures are recorded;
+  the picture went with the message.** ⇒ **Ask the PERSON, not the client.**
+- 🔴 **Genuinely absent** — and only this one becomes a Group-4 question.
+
+### §1B.7 · ✅ WHAT TO DELIVER, AND WHAT IT LOOKS LIKE
+
+**A reconstructed P&L · a reconciled balance sheet · a loan detail · an asset table** — **each figure marked
+VERIFIED or PROVISIONAL, accounting figures kept separate from tax adjustments, sums carried by FORMULA rather
+than retyped between sheets, and every material amount pointing at the document behind it by name, page and
+date.** 🛑 **The working paper does not replace the document.**
+
+☑️ **And close with a practical order for the software: what can be entered now, what needs internal review,
+and what genuinely waits on the client.**
+
+🔗 **THE WORKBOOK ITSELF HAS ITS OWN RULES AND THEY ARE NOT HERE — READ §4D BEFORE BUILDING ONE.** The three that
+a no-books rebuild breaks most easily: it is written in **ENGLISH**, always, whatever language the chat is in
+*(Julia reads it and does not speak Spanish)*; the value column says **WHAT TO ENTER**, never what is already on
+the return, so **a defect flag without its correct value is not a deliverable** and there is **no "what it used to
+say" column**; and **the build FAILS when a cell she acts on would be clipped**, because a row can hold text it
+will not show. ⚠️ **A no-books rebuild is exactly where the clipping bites**, since its cells carry the
+document trail and the arithmetic rather than a figure.
+
+⛔ **AND ONE THING THIS SECTION'S OWN DELIVERABLE MUST NOT DO: balance itself.** Where the closing column cannot
+be completed, **say so on the face of the sheet and leave the line open.** A total that ties because equity
+absorbed the difference is worse than one that visibly does not tie, because nobody re-checks a sheet that
+balances.
 
 ---
 
@@ -2105,6 +2284,92 @@ def r(x): return int(Decimal(str(x)).quantize(Decimal('1'), rounding=ROUND_HALF_
 a self-check that only reproduces known outputs cannot distinguish a right method from a lucky one.
 📌 **The tax on a bracket line is read off the table's `$50` row midpoint** — that is what reproduces
 the software's own figures, and it is where the half-up rule bites.
+
+#### 🔴 EVERY FIGURE CARRIES ITS SOURCE, IN ITS OWN COLUMN — ALWAYS, ON EVERY WORKSHEET
+
+> **Lilian, 2026-09-27, and it is a STANDING requirement, not a preference for one client:**
+> *"Necesito saber de dónde sale cada número y, si está en un documento, necesito saber cuál es el documento…
+> cuando voy a revisar algo que no entiendo, tengo que preguntarte de dónde sacaste eso y pierdo mucho tiempo…
+> si no, queda como un número y tengo que confiar plenamente en ti… La idea de WorkSheet es que una persona, si
+> habla contigo, pueda revisarlo de punta a cabo y entender todo lo que pase y de dónde salió cada cosa."*
+
+🔑 **THE TEST IS NOT "is the number right". IT IS: can she get to the evidence WITHOUT ASKING YOU?** ⛔ **A
+figure whose only support is the session that produced it is not a working paper — it is a number she has to
+take on trust, and the session that could explain it will be deleted.**
+
+✅ **So every sheet that carries figures carries a `Source` column, and it holds THREE things:**
+
+| | What goes in it | Why that and not less |
+|---|---|---|
+| **1 · WHAT KIND of evidence** | `Client document` · `Client's own spreadsheet` · `Prior-year filed return` · `Bank statement` · `Lender letter` · `Text message / WhatsApp` · `Screenshot the client sent` · `Email` · `Computed — see the formula` · `Firm decision — see Decisions` | **She reads the KIND first and stops there most of the time.** A `Client's own spreadsheet` needs no chasing; a `Computed` sends her to the arithmetic |
+| **2 · WHICH document, by its EXACT FILENAME** | `2022 Benson trl Contract__9827076-001.pdf`, not "the Mitsubishi contract" | 🔑 **She searches by filename.** A description is not findable |
+| **3 · WHERE IT LIVES, and WHERE IN IT** | The platform folder path — `Double › TaxDome › <client> › Tax › 2023` — **and the locator inside the document**: page and line for a PDF, `sheet › cell` for a spreadsheet, date for a bank line | ⛔ **"It is in Double" is not a location.** ✅ **A 40-page contract needs the page** |
+
+⚠️ **AND FOUR RULES THAT MAKE THE COLUMN HONEST RATHER THAN DECORATIVE:**
+
+- 🛑 **A figure the client gave in CHAT, in a text or in a photo is marked as that, by name and date** —
+  *"Client sent by WhatsApp, 2026-09-15"*. ⛔ **Never dressed up as a document.** 🔑 **And per §1B.6 that
+  source is NOT re-readable by a later session: the figure survives, the picture does not. Say so.**
+- 🛑 **A figure that is CORRECT but whose source you cannot name is a DEFECT.** ⛔ **Do not ship it with an
+  empty Source cell and do not write "per prior analysis".** ✅ **Go and find where it came from, or mark it
+  `UNSOURCED — do not key`.**
+- 🛑 **Where TWO sources disagree, the column names BOTH and says which governs and why.** *(`Client's sheet
+  105,550 · lender note 95,550 · HIS governs — decision 60`.)*
+- ✅ **A figure the FIRM computed points at the computation, not at a conclusion** — the cell with the
+  formula, or the section of the working paper that derives it.
+
+#### 🔴 AN ASSET IS NEVER DELIVERED AS JUST A NAME, A DATE AND A COST
+
+> **Lilian, 2026-09-27:** *"no simplemente decirme el nombre del vehículo, la fecha y el costo, sino que tienes
+> que decirme qué tipo de vehículo es y qué poner en ATX para su depreciación: si es a 3 años, a 5 años, qué
+> categoría es."*
+
+⛔ **Name + date + cost is not enough to key an asset, and a preparer holding only those three has to guess the
+life.** ✅ **EVERY asset row carries these, and the `Source` column above applies to each:**
+
+| Field | What it must say | 🛑 The trap |
+|---|---|---|
+| **What the asset physically IS** | `Over-the-road tractor unit (fifth wheel, pulls semi-trailers)` — **not** `2018 Freightliner` | **The MODEL NAME DOES NOT DECIDE THE CLASS.** The same nameplate is built as a tractor and as a straight truck |
+| **The asset class from Pub. 946 Table B-1** | The code AND its printed title — `00.26 · Tractor Units for Use Over-the-Road` | ⛔ **Read it off the CURRENT-YEAR Pub. 946 PDF from irs.gov, never from memory** *(the skill's standing rule, and it is exactly the kind of table that gets transcribed wrong)* |
+| **GDS recovery period** | `3 years` / `5 years` / `7 years` — **and it is DERIVED from the class, never copied from last year's schedule** | 🔴 **The pilot engagement ran four over-the-road tractors at 5 years for years because the life was transcribed. `00.26` is THREE.** ⚠️ **Trailers — `00.27` — really are 5** |
+| **Method and convention** | `200% DB` / `SL`, and `half-year` or `mid-quarter` — ⚠️ **the convention is fixed in the asset's OWN placed-in-service year** and governs it for the whole recovery period | **Testing the CURRENT year's additions answers nothing about an asset placed in service three years ago** |
+| **Business-use %** | The figure and where it came from | **A tick-box on a finance application does not establish it** |
+| **§280F / listed property** | **Is it a passenger automobile?** *(≤6,000 lb unloaded GVW, or ≤6,000 lb GVW for trucks and vans — Pub. 946)* **If yes, the year's caps, quoted.** If no, say so and say why | 🔑 **The door-jamb sticker settles it.** ⛔ **A heavy tractor or trailer is never listed property; an SUV usually is not; a car always is** |
+| **§179 and bonus** | Whether each is available, whether elected, and **the election the prior year made** | ⚠️ **The SUV §179 cap only bites 6,000–14,000 lb GVWR sport-utilities** |
+
+🛑 **AND THE RULE THAT STOPS A SESSION "FIXING" THE FLEET ON ITS OWN AUTHORITY.** ✅ **A wrong recovery period
+used on TWO OR MORE consecutive filed returns is a METHOD OF ACCOUNTING.** ⛔ **Correcting it is a Form 3115
+with a §481(a) adjustment — NOT a line edit on this year's return, and NOT something a session decides.**
+☑️ **Deliver it as a decision for the signer, with the cost both ways** — ⚠️ **and say plainly that a shorter
+life is not automatically better: it deducts faster AND it produces more §1245 recapture on sale.**
+
+#### ☑️ AND THE WORKSHEET SAYS HOW TO PUT AN ASSET IN AND HOW TO TAKE ONE OUT
+
+> **Lilian, 2026-09-27:** *"necesito que me digas cómo introducir los assets y cómo excluir los assets. Todo eso
+> tiene que estar incluido."*
+
+✅ **TWO tables per return that touches fixed assets, and they are separate because the software treats them as
+separate jobs:**
+
+**ADD — one row per new asset, in the order the entry screen asks:** description *(as it should READ on the
+return)* · date placed in service · cost or other basis · the asset class and its GDS life · method and
+convention · business-use % · §179 amount *(often zero, and say so deliberately)* · the bonus election ·
+**and the `Source` column for every one of those.**
+
+**REMOVE — one row per disposal, and it is NOT deleting the asset:** ⛔ **never delete a row from the
+depreciation schedule — the asset is DISPOSED of, so the year's depreciation up to disposal is still taken
+and the accumulated figure still carries.** ✅ **The row gives:** which schedule line it is *(by the name the
+SOFTWARE shows, which is often not the client's name for it)* · date of disposal · gross sales price ·
+expenses of sale · whether it was a sale, a trade-in, an abandonment or a **casualty** — 🔴 **a casualty goes
+to Form 4684 FIRST and only then to 4797** · and **what the disposal is expected to produce** *(§1245
+recapture as ordinary income up to depreciation taken, the remainder §1231)*, **so a wrong figure is visible
+instead of silently accepted.**
+
+⚠️ **AND BE HONEST ABOUT THE ENTRY ROUTE.** 🔑 **The FIELDS above are form-driven and certain — they come off
+Form 4562 and Form 4797.** ⛔ **The SOFTWARE'S menu path is not, unless this firm has recorded it.** ✅ **Say
+which of the two you are giving, and never invent a screen.** ☑️ **Whoever keys it first writes the real route
+back into the working paper** — *"most lines on a computed form cannot be typed where they appear"* is §4B's
+rule, and the asset screen is the clearest case of it.
 
 #### The rest of the shape, as it stands
 
