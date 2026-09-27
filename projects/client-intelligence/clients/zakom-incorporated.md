@@ -497,6 +497,35 @@ A running, dated record as we build this profile.
   what the prior preparer did is NOT lifted by the deferral.**
   ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
 
+- _(2026-09-27, last — Lilian challenged how a question was being asked, and the challenge improved it)_ —
+  🔑 **A GENERAL PRINCIPLE, AND IT IS HERS: AN ASK IS FOR THE DOCUMENT THAT STATES THE FIGURE, NOT FOR AN
+  ANSWER.** Her words: *"no creo que la pregunta correcta sería preguntarle al cliente dónde están estos pagos
+  en los libros, sino pedirle los documentos que dicen cuánto se pagó durante el año de principal y de
+  intereses."*
+  ✅ **SHE IS RIGHT ON THE INSURANCE PREMIUM FINANCE, AND THE ASK IS NOW BETTER FOR IT.** The firm had been
+  asking for the **finance agreement**; it now asks for a **2025 year-end statement giving principal paid,
+  finance charge paid and the year-end balance**, with the agreement as a fallback. 🔑 **The reason is the
+  accounting method: the agreement states the finance charge of the WHOLE CONTRACT, scheduled — and this
+  client is on the CASH basis, where the deduction is what was PAID in the year.** ⛔ **The weaker ask would
+  have produced a figure that had to be amortised out of a contract total.**
+  ⛔ **SHE IS NOT RIGHT ON THE OTHER TWO, AND THAT IS THE CARVE-OUT WORTH KEEPING.** One trailer's lender
+  **has already sent its own year-end figures**, cross-footed to the cent — asking again would be asking for
+  what the firm holds, which the method calls worse than not reviewing at all. **And the car is a LEASE: there
+  is no principal and no interest for any document to state.**
+  🛑 **BUT THE ROW SHE CHALLENGED WAS GENUINELY WRONG — it had merged TWO questions**, and separating them is
+  what the challenge produced: ⓐ **what interest was paid and what is owed** → a **lender** document, and only
+  for the premium finance; ⓑ **is that payment already inside the client's own expense base, and in which
+  line** → **his books**, for all three, and ⛔ **no lender knows which line of his profit-and-loss he used.**
+  ✅ **AND ⓑ BECOMES A DOCUMENT TOO, which is the half of her point that survives everywhere: ask for the
+  BREAKDOWN OF TWO EXPENSE CAPTIONS rather than asking him to reason.** **He keeps his figures in a
+  spreadsheet, so a breakdown of two lines is a modest ask and it settles all three at once.**
+  ⓘ **A free check was run before asking, and it narrows without settling — which is why it does not replace
+  the ask.** The client's own interest line is **already over-subscribed** by the non-equipment interest the
+  firm has measured, so on that reading it cannot also be holding the trailer's interest. ⛔ **It collapses if
+  the credit card's interest is NOT inside that line — itself an open question — and it says nothing at all
+  about the PRINCIPAL, which is the larger half of the exposure and would never sit in an interest line.**
+  ⛔ **No identifier, address or dollar figure was written into this file from the above.**
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
