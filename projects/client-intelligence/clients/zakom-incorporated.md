@@ -926,6 +926,52 @@ A running, dated record as we build this profile.
 - **What January 2025 establishes about the year** _(figures stay out of the repo — they are in the statement itself)_: the company's deposits are dominated by ACH and RTP receipts from a single payer, **OWL LAND OF ILLINOIS INC**, so revenue concentration is a question worth asking and a 1099 from that payer worth looking for; the account pays **FPL**, **Verizon** and fuel at **Costco**; and it carries a **monthly service charge with waiver criteria**, one of which the statement answers as "Business Loan or Line of Credit? **Yes**".
 - **Live activity to be aware of:** the client removed two attachments on 2026-09-13 (`1840 trt invoice 263894.pdf` at 19:10 UTC and `Balance Sheet & P&L Templates (2) (1).xlsx` at 20:01 UTC) and both names are present again in the responses read at 20:12 UTC — he is swapping files as he goes. **Nothing here should be treated as final until he submits.**
 
+#### 2026-09-27 — the 2025 Form 1120-S was KEYED into ATX, and the keyed draft was reviewed line by line
+- **Lilian keyed the 2025 return and sent the 21-page draft into the session for review.** The full
+  transcription, the defect register and every figure live in the
+  [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md) §3AW–§3BC — ⛔ **no dollar figures
+  here, by the two-data-homes rule.**
+- **What the review found, in kinds rather than amounts:** the **keying arithmetic is clean** — eight
+  independent cross-foots tie, the opening balance sheet reproduces the 2024 filed return, and the four new
+  tractors carry the **3-year** life the firm derived from Pub. 946 rather than the 5-year the prior return
+  used. **Every finding is a treatment question or an omission, not a mis-typed number.**
+- 🔴 **The company's own asset schedule has been applying the §280F luxury-automobile limits to Class-8
+  tractors and semi-trailers**, because those assets were entered as *listed property*. **The 2024 filed
+  return does the same on two of them**, so this is an inherited treatment, not a 2025 slip. **§280F cannot
+  reach a vehicle rated above its unloaded-gross-weight threshold, and a semi-trailer is not a passenger
+  automobile at all** _(the threshold itself is quoted in the working paper, §3AY ①)_.
+- 🔴 **The truck that was totalled in 2025 is still on the depreciation schedule and the casualty is not
+  reported.** **No Form 4684.** The insurance settlement covered both the vehicle and a towing bill, and
+  only the vehicle's share belongs on the disposition.
+- 🔴 **The 2015 utility trailer's 2025 sale is absent from the draft** — the company sold a trailer its books
+  never carried. ⚠️ **There are TWO utility trailers on this client and only one is on the schedule; never
+  write *"the utility trailer"* unqualified.**
+- 🔴 **Schedule L does not balance on the draft** — capital stock and the additional paid-in capital carried
+  from 2024 were left out of the closing column, and no distributions were recorded. 🔑 **The imbalance
+  decomposes exactly into those three, which is what makes the distribution figure arithmetic rather than a
+  plug; it still has to be tested against the bank, because an owner LOAN and an owner withdrawal look
+  identical in a residual.**
+- 🛑 **The draft takes 100% bonus depreciation, which reverses Lilian's own earlier ruling that 2025 would
+  follow 2024 exactly — and 2024 elected OUT of bonus.** **Procedurally the draft is valid: bonus is the
+  default and needs no statement.** ⚖️ **It is hers to confirm or supersede, and it is the largest single
+  figure on the return.**
+- ✅ **Two open questions CLOSED from IRS sources rather than from the client:** the **meals rate for this
+  client is 80%, not 50%** — Publication 463 (2025) gives the rate for individuals subject to the
+  Department of Transportation's hours-of-service limits, and the population it names is *"interstate truck
+  operators"*; **the return's own IFTA and IRP registrations are the evidence that the operation is
+  interstate**, since neither regime exists for a purely local carrier. And **Form 8990 does not belong on
+  this return at all** — the company is a small business taxpayer and §163(j) does not apply, which the
+  draft's own Schedule B answers correctly while still attaching the form.
+- ⚠️ **The page-1 activity code the firm reuses from 2024 describes LOCAL freight trucking**, which sits
+  awkwardly beside both the over-the-road tractor classification and the DOT meals rate. **A question, not a
+  defect.**
+- ⚠️ **The draft's address block pairs the client's city with the FIRM's own ZIP code.** One of the two is
+  wrong and it prints on the K-1 as well — worth settling against Double and Sunbiz.
+- 🔑 **THE PROCESS LESSON, and it is the one that recurs:** 🛑 **four purchase documents the firm ALREADY
+  HOLDS were read for COST and never read for ACQUISITION DATE** — and the acquisition date is what decides
+  whether 2025 bonus depreciation is 100% or 40%. **This is the §1C failure exactly**, one week after the
+  rule was written. ⇒ **the in-house re-read is queued ahead of any new client question.**
+
 ### Outstanding items (CI-only — never in the SOP)
 
 ⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**

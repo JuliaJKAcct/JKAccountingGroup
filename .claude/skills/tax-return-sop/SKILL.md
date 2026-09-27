@@ -1,6 +1,6 @@
 ---
 name: tax-return-sop
-description: 🔴 PREPARE A CLIENT'S TAX RETURN — load this the moment anyone says "prepare X's tax return", "prepárame el Tax Return de X cliente", "hazme la declaración de X", "do X's 1120-S / 1040 / 1065", or asks for a return's figures as line-by-line tables. §4A is the entry point and it runs TWO PHASES from one sentence: PHASE 1 · LA REVISIÓN — call the `organizer-review` skill in full, ALWAYS and without being asked separately, to check the prior-year return against this year and find missing documents, contradictions and anything that raises an alarm; its Block A verdict is THE GATE. PHASE 2 · LA PREPARACIÓN — only if the gate says yes, deliver the line-by-line tables. Along the way: go to Double and gather it yourself — the client's BOOKS, the completed tax organizer, every file the client uploaded, the prior-year return through the redactor — and report what was found before computing anything. ALSO: write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. 🔵 AND WHEN A PREPARED RETURN COMES BACK FOR REVIEW — someone brings back a return the firm prepared and starts asking why a line is what it is — the financial statements, OR a copy of the return, OR just the question; any ONE of those is the trigger: that is §4C, and the job is to BRIEF the reviewer from the working paper before reading the PDF (the reasoning behind each decision, who made it, where every figure came from) rather than to audit her. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, when a return the firm prepared comes back to be reviewed or signed, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear — and it is DELIVERED AS AN ARTIFACT by default, a page carrying MORE detail than the chat did rather than less, with anything destined to be typed into the return written in ENGLISH ready to paste, and any list of changes shipped as tickable CHECKBOXES so she can see what is left), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
+description: 🔴 PREPARE A CLIENT'S TAX RETURN — load this the moment anyone says "prepare X's tax return", "prepárame el Tax Return de X cliente", "hazme la declaración de X", "do X's 1120-S / 1040 / 1065", or asks for a return's figures as line-by-line tables. §4A is the entry point and it runs TWO PHASES from one sentence: PHASE 1 · LA REVISIÓN — call the `organizer-review` skill in full, ALWAYS and without being asked separately, to check the prior-year return against this year and find missing documents, contradictions and anything that raises an alarm; its Block A verdict is THE GATE. PHASE 2 · LA PREPARACIÓN — only if the gate says yes, deliver the line-by-line tables. Along the way: go to Double and gather it yourself — the client's BOOKS, the completed tax organizer, every file the client uploaded, the prior-year return through the redactor — and report what was found before computing anything. ALSO: write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. 🔵 AND WHEN LILIAN HANDS BACK THE DRAFT SHE HAS JUST KEYED AND ASKS "¿hay errores?" — that is §4F, where you DO audit, and it starts by transcribing the draft in full. 🔵 AND WHEN A PREPARED RETURN COMES BACK FOR REVIEW — someone brings back a return the firm prepared and starts asking why a line is what it is — the financial statements, OR a copy of the return, OR just the question; any ONE of those is the trigger: that is §4C, and the job is to BRIEF the reviewer from the working paper before reading the PDF (the reasoning behind each decision, who made it, where every figure came from) rather than to audit her. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, when a return the firm prepared comes back to be reviewed or signed, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear — and it is DELIVERED AS AN ARTIFACT by default, a page carrying MORE detail than the chat did rather than less, with anything destined to be typed into the return written in ENGLISH ready to paste, and any list of changes shipped as tickable CHECKBOXES so she can see what is left), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
 ---
 
 # Tax-return SOPs — and preparing a return from one
@@ -2255,6 +2255,8 @@ is a list of changes like any other — it gets boxes too.
 
 ### 4C · 🔴 WHEN THE RETURN COMES BACK FOR **REVIEW** — brief the reviewer, do not audit her
 
+⛔ 🆕 **DO NOT CONFUSE THIS WITH §4F.** 🔑 **§4C is the SIGNER bringing back a return the firm already prepared — brief her, never audit her. §4F is the PREPARER handing you her own keyed draft and asking to be checked before anybody signs — there you DO audit.** ⚠️ **Same document, opposite job, and the tell is WHO IS ASKING.**
+
 🔄 **§4E first — this is the highest-stakes stale-paper risk in the skill.** The whole method below is
 *read the working paper, then answer*, and the answer goes to **the person who signs**.
 
@@ -2799,6 +2801,147 @@ the next session looks first, and it holds no figures, so the pointer is safe th
 
 ---
 
+### 4F · 🔴 REVIEWING A RETURN **THE FIRM HAS JUST KEYED** — the preparer hands you the draft PDF and asks *"¿hay errores?"*
+
+> **Lilian, 2026-09-27, sending the keyed 1120-S draft into the session:** *"Revisa lo que he hecho hasta ahora
+> en la declaración. Dime si hay errores y dime si hay algo más que podamos adelantar en lo que el cliente
+> responde."*
+
+⛔ **THIS IS NOT §4C.** **§4C is a return coming back from the SIGNER — brief her, never audit her.**
+🔑 **THIS is the preparer asking to be checked before anybody signs anything, and here you DO audit — the
+whole point is to find what she cannot see from inside the software.** ✅ **Say what is RIGHT as well as what
+is wrong: a review that lists only faults misrepresents a draft whose arithmetic ties eight ways.**
+
+#### ① 📄 FIRST, TRANSCRIBE IT IN FULL — §1C applies to the firm's OWN output, not only the client's
+
+🛑 **A draft return uploaded into a chat is exactly the document §1C was written about: no later session can
+reopen it.** ⇒ **Write ONE BLOCK for it before analysing anything** — **every line that carries a value, every
+line that is BLANK, every checkbox and its state, every zero.** ⛔ **The blanks are where the findings are**:
+on the Zakom draft, *officer compensation blank*, *4797 line 14 blank*, *Schedule L line 22 closing blank*,
+*4562 line 24a unanswered* and *Schedule K 16d blank* were each a finding — **and a summary written for the
+question of the hour would have recorded none of them, because a blank line does not look like an answer to
+anything.**
+
+⚠️ **AND A CHECKBOX CANNOT BE READ FROM EXTRACTED TEXT.** 🔑 **On Schedule B every Yes and every No prints the
+same `X` at the end of the same line — the answer is the COLUMN.** ☑️ **Locate the marks by COORDINATE**
+*(pypdf's `visitor_text` gives each fragment's x/y)*. 🛑 **AND LOCATE THEM ON EVERY PAGE SEPARATELY — the
+columns SHIFT: on the 2025 Form 1120-S the Yes/No pair sits at x≈493/516 on page 2 and x≈490/512 on page 3.**
+⛔ **Carrying one page's pair to the next would mis-read exactly the answers this step exists to protect.**
+☑️ **Every page prints its own `Yes` and `No` headers — read the pair off them, never from a constant.**
+⛔ **And never report a Yes/No answer read off the line text: on that draft it would have inverted all
+fifteen of Schedule B's Yes/No answers.**
+
+#### ② ✅ RUN THE FREE CROSS-FOOTS BEFORE LOOKING FOR ANYTHING CLEVER
+
+**They cost nothing, they either tie or they do not, and on a sound draft they tell you where NOT to look:**
+
+1. **Every subtotal and total on the face of the return** — page 1 line 21 from its components, line 22, the
+   Schedule K reconciliation, M-1 line 4 and line 8, M-2 line 6.
+2. **The depreciation schedule's total cost against opening gross assets plus the year's additions.**
+3. **Its prior accumulated depreciation against the OPENING Schedule L line 10b.**
+4. 🔑 **The cost and accumulated depreciation REMOVED against the named disposals' own figures** — this is the
+   one that catches a missing disposal, because the difference IS an asset's cost. *(On Zakom the gap was
+   78,145 to the dollar: one truck.)*
+5. **Current-year depreciation = bonus + MACRS = page 1's depreciation line.**
+6. **The OPENING Schedule L column against the prior year's filed closing column** — if it reproduces it, the
+   roll-forward was done properly and the closing column is where to look.
+7. 🛑 **Schedule L line 15 against line 27.** **An 1120-S whose balance sheet does not balance is the loudest
+   finding on the return and it is one subtraction.**
+
+#### ③ 🔴 THE DEFECT THAT HIDES IN PLAIN SIGHT: **A CAP MASQUERADING AS A COMPUTATION**
+
+🔑 **The tell is free and it is the single most useful thing in this subsection: TWO ASSETS OF DIFFERENT COST
+SHOWING THE SAME DEPRECIATION.** ⛔ **That cannot be a computation. It can only be a LIMIT.**
+
+*(Zakom: a tractor costing 85,500 and a trailer costing 67,050 both showed prior accumulated 12,400 and a
+current-year charge of 19,800 — the §280F first- and second-year passenger-automobile limits. A third asset's
+"bonus" was exactly 20,200, the current-year first-year limit. None of the three is a passenger automobile.)*
+
+🛑 **AND THE CAUSE IS ONE ATTRIBUTE, NOT THREE ERRORS: the assets were entered as LISTED PROPERTY.** ⇒ **the
+software puts them in Form 4562 Part V → Part V applies the passenger-automobile limit → the deduction stops
+at the table figure.** ☑️ **So the fix is one checkbox per asset, and it also clears the Part V mileage table
+and the 24a/24b evidence questions at the same time.**
+
+⚠️ **HEAVY TRUCKS AND TRAILERS ARE QUALIFIED NONPERSONAL-USE VEHICLES AND DO NOT BELONG IN PART V AT ALL.**
+📄 **Read the passenger-automobile definition off the CURRENT-YEAR Form 4562 instructions before saying so —
+§3's rule** *(and quote it, because this reverses what the software did)*.
+
+🔴 **A SECOND IMPOSSIBILITY WORTH ONE PASS DOWN THE SCHEDULE: accumulated depreciation GREATER THAN COST.**
+*(Zakom had one, over by 15,238.)* ⚠️ **Then ask WHICH YEAR put it there — the prior filed return answers it,
+and it decides whether the fix is one cell or Julia's.**
+
+#### ④ 🔑 A BALANCE SHEET THAT DOES NOT BALANCE IS AN OPPORTUNITY, NOT JUST A DEFECT — **decompose it, never plug it**
+
+☑️ **Compute the equity the assets and liabilities REQUIRE, subtract the equity that was keyed, and then name
+the gap's components from the PRIOR YEAR's filed equity section.** **What is left after the named components
+is the year's distributions.**
+
+*(Zakom: required closing equity −407,948 against −262,536 keyed = a gap of 145,412, which decomposed into
+capital stock 1,000 omitted, additional paid-in capital 61,169 omitted, and 85,243 of distributions never
+recorded — with nothing left over.)*
+
+🛑 **"WITH NOTHING LEFT OVER" IS WHAT MAKES IT ARITHMETIC RATHER THAN A PLUG, AND IT IS STILL NOT PROOF:**
+⚠️ **an owner LOAN and an owner WITHDRAWAL are indistinguishable in a residual** — **check whether the
+loans-from-shareholders line is blank in both columns before calling the residual a distribution**, and test
+it against the bank.
+
+⚠️ **AND BEFORE REPORTING IT, KNOW WHICH PENDING ITEMS MOVE IT.** **The rule is short:** **a change to the
+CURRENT-year depreciation charge does NOT move it** *(accumulated depreciation and the book loss fall
+together)*; **removing an asset at zero adjusted basis does NOT move it** *(gross cost and accumulated fall by
+the same amount)*; **a change to PRIOR-year accumulated depreciation moves it one-for-one and opposite**
+*(opening equity is fixed by the filed return)*; **and extra current-year INCOME moves it one-for-one**
+*(the proceeds are already inside the documented closing cash)*. ⇒ ⛔ **Key the residual LAST.**
+
+#### ⑤ ⚖️ LABEL EVERY FINDING, AND CHECK A KEYED POSITION AGAINST THE **DECISIONS TABLE** BEFORE CALLING IT ANYTHING
+
+🔑 **§4C's three labels govern here too — DECISION · OPEN ITEM · DEFECT — and a fourth case appears only on
+your own firm's draft: A KEYED POSITION THAT CONTRADICTS A DECISION THE WORKING PAPER RECORDS.**
+
+⛔ **That is not a defect and must not be raised as one.** *(Zakom: the draft took 100% bonus depreciation
+where Lilian's own recorded decision was to elect out as the prior year did — a ≈245,900 swing. The keyed
+position was procedurally valid: bonus is the default and needs no statement. What made it reportable was the
+contradiction, not the position.)*
+
+☑️ **So the output is: *"this reverses your decision N — confirm it and the paper records the supersession, or
+re-key it."*** ⛔ **A session never decides which.** ⚠️ **And read the decisions table BEFORE the return, or you
+will not know a reversal when you see one.**
+
+#### ⑥ ⛔ AND ONE NON-FINDING THAT A FIRST PASS WILL WANT TO REPORT
+
+🛑 **A BLANK OPENING BALANCE ON SCHEDULE M-2 IS NOT AUTOMATICALLY WRONG.** ⚠️ **On Zakom the first pass had it
+listed as a defect, and it was correct: the prior return's M-2 line 8 printed ZERO.** 🔑 **Check the prior
+year's printed closing figure before flagging any opening balance** — **and the same guard applies to a
+carried-forward life, a convention, or an accumulated-depreciation figure that merely looks odd.**
+✅ **A REVIEW'S FALSE POSITIVE COSTS THE PREPARER AN HOUR AT THE KEYBOARD, WHICH IS THE SAME CURRENCY AS A
+MISSED DEFECT.**
+
+#### ⑥-bis 🛑 TWO WAYS THIS SUBSECTION'S OWN FIRST RUN FAILED ITS REVIEW — both are mechanical and both are cheap to prevent
+
+🔑 **Recorded because a review caught them in the very commit that created §4F, which is the best evidence they
+are not obvious.**
+
+1. 🔴 **A REGISTER ORDERED *BY MONEY* AND A TRANSCRIPTION THAT POINTS INTO IT MUST BE RENUMBERED TOGETHER.**
+   **The transcription's *"see row N"* pointers were written against an earlier, document-order numbering;
+   re-sorting the register by money left ELEVEN of them pointing at the wrong row** — *the
+   officer-compensation row pointed at the 245,900 bonus election, and the address-block typo pointed at an
+   acquisition-date question about a truck.* ⚠️ **Corrected in the round-2 review: a first version of this
+   example said BOTH pointed at the bonus election, which overstated it — the count was right, the
+   illustration was not.** ⛔ **That breaks the one
+   link this whole method depends on: transcription → fix.** ☑️ **Number the register LAST, or point by
+   heading text rather than by number; and before pushing, follow every pointer once.**
+2. 🔴 **A FIX THAT SAYS WHERE A FIGURE IS *REPORTED* IS NOT A FIX IF IT NEVER LANDS ON THE LINE THAT BALANCES.**
+   **The Schedule L row's fix named Schedule K line 16d, the K-1 and the M-2 — none of which is a Schedule L
+   equity line — so keying exactly what it said left the balance sheet out by the whole residual, and the row
+   read as complete.** ☑️ **For any fix that is supposed to make a statement TIE, re-run the tie with only the
+   entries the row names.** 🔑 **If it still does not close, the row is missing an entry — and where the
+   missing entry is a presentation choice, SAY the fix cannot be completed without the signer.**
+
+#### ⑦ ☑️ CLOSE THE REVIEW BY ANSWERING THE SECOND HALF OF HER QUESTION — *"¿qué podemos adelantar?"*
+
+🔑 **A defect list is not the deliverable; the deliverable is a defect list AND a queue of work that needs
+nobody.** ✅ **Sort what is left into IN-HOUSE and WAITING-ON-A-PERSON, and say who each person is and what
+they owe.** ⛔ **Never leave a "pending" that is really a document the firm already holds — §1C.**
+
 ## §5 · Every prepared return leaves a working paper
 
 **Writing it is part of preparing the return** — [`projects/tax-returns/`](../../../projects/tax-returns/),
@@ -2839,6 +2982,14 @@ is how an SOP becomes confidently wrong.**
 ---
 
 ## Update this skill when…
+
+- 🔴 **A PREPARER HANDS YOU HER OWN KEYED DRAFT AND ASKS *"¿hay errores?"*** — **§4F**, added 2026-09-27 from
+  the Zakom 1120-S. 🔑 **Write in every check that actually FOUND something and every one that produced a false
+  positive**, because both cost the same currency: her time at the keyboard. **What §4F is built on:** the free
+  cross-foots, **a cap masquerading as a computation** *(two assets of different cost showing the same
+  depreciation)*, **decomposing a Schedule L imbalance instead of plugging it**, **checking a keyed position
+  against the DECISIONS TABLE before calling it anything**, and 🛑 **transcribing the draft IN FULL first —
+  §1C applies to the firm's own output, and on that return five separate findings were BLANK LINES.**
 
 - **Lilian tells you the delivery missed something she needed.** §4 exists because she said so twice
   — first that the tables never located Form 8829, then that she needs the flow, the explanations
