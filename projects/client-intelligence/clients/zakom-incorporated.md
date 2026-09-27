@@ -694,6 +694,49 @@ A running, dated record as we build this profile.
   wrong would put a wrong cost basis on a sale.**
   ⛔ **No identifier, address or dollar figure was written into this file from the above.**
 
+- _(2026-09-27, and this is the one that outlives the client)_ — **LILIAN ASKED THAT EVERYTHING THIS CASE TAUGHT US BE WRITTEN INTO THE FIRM'S TAX-RETURN SKILL, BECAUSE IT IS THE FIRST OF ITS KIND AND WILL NOT BE THE LAST.** Her words: *"es la primera vez que lo voy a hacer de este tipo… necesito que tú comprendas cómo es que hacemos las cosas y que lo recuerdes."*
+  ✅ **A new section was written for the case of a client who arrives with NO BOOKS** — no accounting system, no
+  defined ledger, just a spreadsheet and a pile of documents — **so the next session does not spend days
+  rediscovering the method.** 🔑 **Its centre is the rule she set on this return and it is one sentence: where the
+  firm HOLDS a document that states a figure, the DOCUMENT governs; where it does not, the CLIENT'S figure governs
+  and we do not audit it.** ⚠️ **It also carries the tell that identifies the case at intake — there is no equity
+  section anywhere in what the client sent — the order to rebuild in (prior return, then liabilities, then the
+  bank and card, then the assets, then the soft captions, and equity LAST, never as a plug), the three traps this
+  client sprang, and the distinction that cost this engagement the most time: a document we do not hold, a document
+  our tool cannot read, and a document nobody has opened yet are three different sentences.**
+  🔑 **One lesson in it is not tax-specific at all and is worth reading whatever the client: a filename listing is
+  not a reading.** This paper had marked a file ✅ in an inventory that nobody had opened.
+- _(2026-09-27)_ — **LILIAN CLOSED THE LAST OPEN QUESTION ON THE NEW TRUCK AND TOLD THE SESSION TO STOP ASKING.**
+  Her reasoning, and it is sound: it is in none of the two prior years' books, so it is new; the year the client
+  typed on his own sheet is a slip; and she believes he listed it among the current year's additions. ✅ **Recorded
+  as a decision of hers, with her reasoning, so no later session re-opens it** — the working paper carries it.
+  ⚠️ **What it does NOT settle is which physical truck carries which internal number**, which is a different
+  question and still on the client list, because a disposal's cost basis turns on it.
+- _(2026-09-27)_ — **SHE CHALLENGED THE SESSION'S OWN EMPHASIS, AND THE CHALLENGE WAS RIGHT.** The paper had
+  singled out three lenders' payments as possibly hidden inside two of the client's expense captions, and she asked
+  the obvious question: *"¿cuál es la diferencia con el resto?"* — the client has many loans, so why these three?
+  ✅ **The honest answer was written out: there is no difference in KIND. Six lenders' payments have been LOCATED in
+  the bank account and three have not, so the three are simply the residual — and the three are not alike either.**
+  🔑 **And the finding that came out of answering her properly: the likelihoods run OPPOSITE to the amounts.** The
+  one most likely to be hiding is the cheapest to resolve, and the one least likely is the dearest — which is
+  exactly backwards from where a session would naturally spend its effort. ⛔ **A session that had not been asked to
+  justify its emphasis would have kept it.**
+- _(2026-09-27)_ — **THE ASSET SIDE WAS AUDITED FOR COMPLETENESS BEFORE ANY OF IT WAS KEYED, WHICH IS WHAT SHE
+  ASKED FOR.** ✅ **Every one of the year's additions can be keyed today** — each has a cost, a date and a document
+  behind it, and none needs the client. ⛔ **Not one of the year's disposals can be**, and they are all blocked on
+  the SAME single question: which physical unit carries which internal number. 🔑 **That is the shape of the answer
+  she wanted — not a list of gaps, but which gaps share one cause**, because one question to the client unblocks
+  all of them at once. ⚠️ **One of the disposals is the totalled unit, so the same answer also decides which cost
+  goes onto the casualty form — and getting it wrong would put a wrong basis on a return.**
+- _(2026-09-27)_ — **THE RECONSTRUCTION ITSELF BEGAN: the year's profit-and-loss and the balance sheet were built
+  from the documents, and the keying workbook now carries both as their own sheets with live formulas.** ✅ **The
+  opening balance sheet balances on both sides from the prior year's filed return** — the immovable base the other
+  principal set. 🔑 **Each line is marked with WHERE it came from and whether it is document-derived or the
+  client's own figure**, which is the rule above made visible at the point of keying. ⛔ **The closing column is
+  deliberately not complete** — it cannot be until the residual lenders and the disposals are settled, and the
+  sheet says so on its face rather than balancing itself with a plug.
+  ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 

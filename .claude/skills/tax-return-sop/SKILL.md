@@ -40,9 +40,153 @@ guessed. Repeat it, or this year's return is not comparable to last year's.
 ⚠️ **Reproducing is not auditing.** A filed return is closed. You are reading it as an answer key.
 If something looks wrong, raise it — never change this year's approach on your own initiative.
 
+🔴 **AND IF THE CLIENT HAS NO BOOKS AT ALL — a spreadsheet and a pile of documents, no QuickBooks — READ §1B BEFORE ANYTHING ELSE.** **The prior return is still the answer key, but the job changes shape: you are building a set of books before you prepare a return, and §1B carries the rule that organises it, the three traps that cost the most, the order to work in, and the bar a question has to pass before it reaches the client.**
+
 **What it catches, every time:** which accounts a subtotal really covers · how equity was mapped ·
 which boxes were ticked · whether a figure was netted or grossed · what the software chose by
 default.
+
+---
+
+## §1B · 🔴 THE CLIENT WITH NO BOOKS — a spreadsheet, a pile of documents, and no QuickBooks
+
+> **Written 2026-09-28, out of Zakom Incorporated's 2025 Form 1120-S**, which cost the firm **two weeks**
+> mostly because nobody had written this down. **Lilian:** *"es la primera vez que voy a hacer una declaración
+> de impuestos de este tipo donde no tenemos los libros del cliente en QuickBooks… necesito que tú comprendas
+> cómo es que hacemos las cosas y que lo recuerdes para que no perdamos días y días en lo mismo."*
+
+### §1B.0 · 🛑 Recognise the case in the first ten minutes
+
+**You are in it when ALL of these are true:**
+
+- ⛔ **No QuickBooks, no bookkeeper, no trial balance.** `platform: none` on the Double client record, or a
+  `Bookkeeping` property that is blank or paused.
+- **What the client sends instead:** a spreadsheet of income and expenses, an asset list, and a folder of
+  statements, notes, invoices and letters.
+- 🔑 **THE TELL THAT MATTERS: there is no EQUITY section anywhere.** **His spreadsheet has revenue, expenses
+  and maybe a balance sheet — but nothing states what he took out of the company.**
+
+⚠️ **SAY SO OUT LOUD, AT THE START, TO WHOEVER IS DIRECTING THE WORK.** **The job is not "prepare a return
+from books"; it is "build a set of books, then prepare a return."** **Scope it before it is quoted.**
+
+### §1B.1 · 🔑 THE ONE RULE THAT ORGANISES EVERYTHING ELSE — the line is the DOCUMENT, not the line item
+
+🛑 **DO NOT frame the job as "do we trust the client or not". That question has no stable answer and it will
+be re-litigated every day.** ✅ **Frame it by the document:**
+
+> 🔑 **Where the firm HOLDS a document that states a figure, the DOCUMENT governs.**
+> 🔑 **Where it does not, the CLIENT'S figure governs and we do not audit it.**
+
+| Almost always document-backed → **REBUILD IT** | Almost never → **TAKE HIS FIGURE** |
+|---|---|
+| Liabilities and their year-end balances | Fuel |
+| Interest paid, lender by lender | Telephone and internet |
+| Loan principal, and the split of every payment | Office expenses and supplies |
+| Fixed assets: cost, date acquired, date in service | Tolls, parking, lumper fees |
+| The bank and card balances | Meals *(the AMOUNT; the RATE is a firm decision)* |
+| Everything in the equity section | Repairs and maintenance |
+
+⚠️ **AND THE WORKED EXAMPLE THAT MAKES IT CONCRETE** *(Lilian's own)*: **if he says he paid X of interest and
+the lenders' own statements sum to Y, we key Y.** *"En ese caso, se pudo haber equivocado."* ⛔ **That is not
+auditing him. It is preferring the better evidence, which the firm's own rules already require.**
+
+🔑 **AND IT IS USUALLY CONSISTENT WITH A "RELY ON THE CLIENT'S P&L" RULING, NOT AGAINST IT** — because such a
+ruling means *do not audit his operating expenses*, while a separate ruling almost always already says *the
+lender's letter is the authority on interest*. **Read them together before escalating a collision.**
+
+### §1B.2 · ⛔ THE THREE TRAPS THAT COST THE MOST, in the order they bite
+
+**① A DOCUMENT-BACKED AMOUNT HIDING INSIDE A SOFT CAPTION. This is the expensive one.**
+
+**His expense captions are keyed as given. But if a LOAN PAYMENT is sitting inside one of them, you will
+deduct principal (never deductible) and deduct the interest a second time on the interest line.**
+
+✅ **HOW TO FIND IT WITHOUT ASKING: tie his financed-equipment caption to the lenders.** **Sum every lender's
+full-year payments from the bank and compare to that one caption.** **If they tie, you know where those
+lenders are. Whatever does NOT tie is unlocated** — and *that* is the question to the client, not a general
+"how did you classify things".
+
+⚠️ **AND RANK THE UNLOCATED ONES BY LIKELIHOOD, NOT BY SIZE.** **A financed-equipment payment missing from his
+financed-equipment caption is probably not expensed at all, which is CORRECT. An insurance premium-finance
+payment is probably inside `Insurance`, because the premium genuinely belongs there.** ⛔ **The biggest number
+is usually the least likely.**
+
+**② A CLIENT'S "PAYOFF" IS NOT ALWAYS A PRINCIPAL BALANCE.**
+
+🔑 **Test it: divide it by the monthly payment.** **If it comes out a whole number of payments, he has copied
+the lender's GROSS REMAINING PAYMENTS, which includes unearned interest.** ⛔ **Keying that to the balance
+sheet overstates the liability.** ⚠️ **The same client can use the word both ways in different years.**
+
+**③ THE THREE NAMING SYSTEMS.** **A client with rolling stock will have one name in his description list, a
+second in his unit numbers, and the return will carry a third.** ⛔ **Nothing connects them, the software's
+serial field is usually empty, and MATCHING BY COUNT IS NOT IDENTITY** — he disposes of things that were
+never capitalised, so the two populations differ. 🔑 **Establish the map EARLY, before it blocks Form 4797 at
+the end.**
+
+### §1B.3 · ☑️ THE ORDER TO WORK IN
+
+1. **The prior return** — §1's answer key, and here it is also the opening balance sheet.
+2. **THE LIABILITIES FIRST.** **Every lender: its own documents, principal and interest separated, balance at
+   year end.** 🔑 **Include financings that never touched the bank** — a lender who pays the vendor direct
+   never appears in the statements, and the asset and the debt both arrive off-book.
+3. **The bank and the card, reconciled to each other.** ⚠️ **Payments between two company accounts are
+   TRANSFERS, not expenses — but only the ones that ARRIVED.** **Money that left captioned as a card payment
+   and never reached the card is an equity question.**
+4. **The assets** — cost, acquisition date, in-service date and source document, one row each.
+5. **The soft P&L** — his captions, less anything ② or ①'s tie shows is document-backed.
+6. **The equity section LAST**, and 🛑 **never as a plug.** ⛔ **Do not force a balance with distributions,
+   contributions or retained earnings.** **Explain each movement with a documented operation, or leave it
+   open and say so.**
+
+### §1B.4 · 🛑 BEFORE ANY QUESTION GOES TO THE CLIENT — the bar, and the four groups
+
+**Sort every open item into one of four, and NOTHING reaches the client until the first three are worked:**
+
+| Group | What to do |
+|---|---|
+| **① The datum is already in a document we hold** | Extract it, cite where, close the item |
+| **② A calculation or reconciliation** | Resolve it internally and SHOW the calculation |
+| **③ An accounting or tax decision** | Put it to the responsible preparer, never to the client |
+| **④ Genuinely missing** | ONE concrete question — after ①–③ are done |
+
+🔑 **THE BAR FOR A GROUP-4 ROW, and write it IN the row:** **what datum is missing · which sources were
+reviewed · why it cannot be determined from them · what calculation it blocks.**
+
+⛔ **NOT a preventive list of every document it would be nice to have.** **A minimal, justified list.**
+*(Lilian: "No quiero una lista preventiva… Quiero una lista mínima y justificada de lo que realmente
+necesitamos.")*
+
+### §1B.5 · 🔴 AND THE FAILURE THAT COST THIS FIRM THE MOST DAYS — a filename listing is not a reading
+
+🛑 **IT HAPPENED TWICE IN TWO DAYS ON THE SAME ENGAGEMENT.** **The file library was listed BY NAME, the names
+were judged unhelpful, and the conclusion "we have looked everywhere" was written — while four documents had
+never been opened, and one of them was the client's own workbook from an earlier year carrying exactly the
+table that was being chased.** ⚠️ **The audit that did it had even marked that file with a ✅.**
+
+✅ **THE RULE: before telling anyone a document does not exist, OPEN the candidates.** **A prior-year client
+workbook, a completed prior-year organizer and any file whose name does not say what it is are candidates by
+default.** 🔑 **And a prior-year workbook is the highest-value unread document on a no-books client, because
+it is where his own conventions and his own unit numbers live.**
+
+### §1B.6 · ⚠️ TELL THE DIRECTING PERSON WHAT YOU CANNOT REACH — do not convert it into a client request
+
+**Distinguish three states and never collapse them:**
+
+- ✅ **Re-readable** — in the practice platform. **An extract deleted after reading is not the document being
+  gone.**
+- ⚠️ **Not reachable from a session** — anything pasted into a chat as an image. **The figures are recorded;
+  the picture went with the message.** ⇒ **Ask the PERSON, not the client.**
+- 🔴 **Genuinely absent** — and only this one becomes a Group-4 question.
+
+### §1B.7 · ✅ WHAT TO DELIVER, AND WHAT IT LOOKS LIKE
+
+**A reconstructed P&L · a reconciled balance sheet · a loan detail · an asset table** — **each figure marked
+VERIFIED or PROVISIONAL, accounting figures kept separate from tax adjustments, sums carried by FORMULA rather
+than retyped between sheets, and every material amount pointing at the document behind it by name, page and
+date.** 🛑 **The working paper does not replace the document.**
+
+☑️ **And close with a practical order for the software: what can be entered now, what needs internal review,
+and what genuinely waits on the client.**
 
 ---
 
