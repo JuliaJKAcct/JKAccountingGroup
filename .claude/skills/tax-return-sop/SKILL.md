@@ -223,6 +223,43 @@ be completed, **say so on the face of the sheet and leave the line open.** A tot
 absorbed the difference is worse than one that visibly does not tie, because nobody re-checks a sheet that
 balances.
 
+### §1B.8 · 🛑 WHEN YOUR FIGURE AND HIS AGREE, ASK WHETHER THEY COULD HAVE DISAGREED
+
+🔴 **THIS SECTION EXISTS BECAUSE ONE SESSION MADE THE SAME MISTAKE THREE TIMES IN ONE DAY, on three different
+figures, after withdrawing it the first time.** ⛔ **It is the most persuasive kind of wrong, and a no-books
+rebuild is where it breeds: you are comparing your reconstruction against the client's sheet all day long.**
+
+> 🔑 **An agreement between two of YOUR OWN numbers is evidence ONLY if the two could have come out
+> different. If they share their inputs, the agreement is ARITHMETIC — and it will read as confirmation.**
+
+🛑 **AND THE VERSION THAT IS SPECIFIC TO THIS CASE, because it is invisible and it was what caught the session
+out twice:** ⛔ **WHERE THE FIRM HAS *ADOPTED* THE CLIENT'S FIGURE FOR A COMPONENT — under §1B.1, or under any
+ruling that says *"his figure governs this row"* — THAT COMPONENT CONTRIBUTES **NOTHING** TO ANY LATER
+AGREEMENT WITH HIS TOTAL.** **It is his number handed back to him.** ⚠️ **A four-component reconciliation in
+which one component was adopted from him is a THREE-component test, and saying so is the difference between a
+real check and a decorative one.**
+
+✅ **SO BEFORE WRITING THE WORD *"corroborates"*, *"confirms"*, *"independent"* or *"cross-check"*, LIST THE
+COMPONENTS AND MARK EACH ONE:**
+
+| | |
+|---|---|
+| ✅ **Independent** | **a lender's letter · an agency transcript · a bank debit · a figure the firm COMPUTED from a rate and a term** |
+| ⛔ **NOT independent** | **any component taken from the same document you are now testing · any figure the firm ADOPTED from the client · anything derived from a subtotal that already contains the term you are checking** |
+
+⇒ ☑️ **Then say **partial** corroboration and name which components carried it.** 🔑 **A partial check
+honestly labelled is worth more than a total one that cannot fail** — ⛔ **and the second kind gets keyed.**
+
+⚠️ **TWO MORE TELLS, both from the same day:**
+
+- 🛑 **A "SECOND ROUTE" TO A FIGURE IS USUALLY THE FIRST ROUTE REARRANGED.** **Before claiming one, write both
+  computations out term by term.** _(The session claimed a page-1 subtotal had been reproduced independently;
+  the working paper's own code block already ended in the same three terms in a different order.)_
+- 🛑 **AND WHERE A PRIOR SECTION ALREADY RAN YOUR COMPARISON, IT PROBABLY ALREADY RULED ON IT.** ⛔ **Search
+  for the figure before you present it as new.** _(The correct verdict — "that is corroboration, not
+  independence" — was sitting in the working paper, in a section the new one cited.)_
+
+
 ---
 
 ## §2 · The section spine
