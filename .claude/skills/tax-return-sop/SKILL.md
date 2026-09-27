@@ -167,6 +167,17 @@ reviewed · why it cannot be determined from them · what calculation it blocks.
 *(Lilian: "No quiero una lista preventiva… Quiero una lista mínima y justificada de lo que realmente
 necesitamos.")*
 
+🛑 **AND ONE PROCEDURAL RULE THAT COST A WHOLE DAY: A CLIENT LIST IS REWRITTEN IN PLACE, NEVER SUPERSEDED BY
+A NEW SECTION BESIDE IT.** ⛔ **On the pilot engagement two lists headed *"FINAL"* were written hours apart and
+the older one was left standing, saying *"everything in ONE send"* and *"this section governs"*. Between them
+they dropped FIVE asks, and the live risk was a session sending the stale list.** ✅ **ONE list, ONE place,
+edited.**
+
+☑️ **AND BEFORE CALLING A CLIENT LIST FINAL, RUN THE CHECK THAT FINDS WHAT IT DROPPED — it is mechanical and
+takes a minute:** **walk the working paper's LIVE, UNTICKED open items and ask of each one, *can only HE
+answer this?*** ⚠️ **Twice that check was not run and twice a review found the omission rather than the pass
+that wrote it.**
+
 ### §1B.5 · 🔴 AND THE FAILURE THAT COST THIS FIRM THE MOST DAYS — a filename listing is not a reading
 
 🛑 **IT HAPPENED TWICE IN TWO DAYS ON THE SAME ENGAGEMENT.** **The file library was listed BY NAME, the names
@@ -258,6 +269,82 @@ honestly labelled is worth more than a total one that cannot fail** — ⛔ **an
 - 🛑 **AND WHERE A PRIOR SECTION ALREADY RAN YOUR COMPARISON, IT PROBABLY ALREADY RULED ON IT.** ⛔ **Search
   for the figure before you present it as new.** _(The correct verdict — "that is corroboration, not
   independence" — was sitting in the working paper, in a section the new one cited.)_
+
+
+### §1B.9 · 🚗 VEHICLES AND DISPOSALS ON A NO-BOOKS CLIENT — five things that were each learned the hard way
+
+🔑 **A trucking or delivery client with no books will hand you vehicles, leases, financings and disposals in
+one spreadsheet, and every one of these five was got wrong once before it was got right.**
+
+#### ① 🔑 HOW TO TELL WHETHER THE PRIOR PREPARER USED THE PURCHASE DOCUMENT OR THE CLIENT'S FIGURE
+
+🛑 **You do not have to ask anyone. Compare the FILED return's cost for each carried-forward asset against
+what the client wrote for that same asset.**
+
+> ✅ **A client remembers a ROUND number. A document produces an ODD one.**
+
+⇒ **Where the filed cost exceeds his figure by a small odd amount — 145, 245, 3,299 — the preparer worked
+from a bill of sale and capitalized the price PLUS the sales tax and the registration fees, which is
+correct.** ⇒ **Where the two agree exactly on a round number, his figure went in unchanged.**
+🔑 **That comparison IS the firm's pattern, read off its own work product, and it settles a question the
+person directing you cannot answer from memory.** ⚠️ **Then put it to the SIGNER before acting, because it
+will usually collide with a *"his figures govern"* ruling already taken on the current return.**
+
+#### ② ⛔ A FINANCED AMOUNT IS NOT A PURCHASE PRICE — and a down payment is the usual reason
+
+**A lender note for less than the booked cost is NOT a contradiction.** 🔑 **Look for independent evidence
+that the client puts money down** — **a capitalized cost reduction on a lease, a deposit on an invoice** —
+**and if you find it, the note CORROBORATES the cost instead of disputing it.** _(On the pilot client a
+95,550 note against a 105,550 cost read as a defect for two weeks; the same client's lease showed an 11,000
+cash-down reduction, and 95,550 + 10,000 closes it.)_
+
+#### ③ ✅ A CLOSED-END LEASE IS A RENTAL, AND THE CASH-BASIS TRAP IS IN THE SIGNING SHEET
+
+⛔ **No depreciable asset, nothing on Form 4562, nothing on the balance sheet — no asset AND no liability.**
+✅ **The payments are a deduction.** 🛑 **BUT ON THE CASH BASIS, COUNT THE PAYMENTS THE COMPANY ACTUALLY
+MADE:** **read the *Itemization of Amount Due at Lease Signing* and then read *How the Amount Due Will Be
+Paid*.** ⚠️ **Where it says `Rebates and noncash credits`, the company paid NOTHING — and the first monthly
+payment is usually inside that amount, so the year's deduction is one payment SHORT of what the calendar
+suggests.**
+
+☑️ **Three more fields on a lease that matter and are easy to skip:** **the `Agreed upon value of the
+vehicle`** *(it decides whether a §280F(c) inclusion amount is material, and reading the lease can make that
+question BIGGER)*; **the `Primary Use` box** — ⛔ **which is the lessor's consumer-disclosure classification
+and is NOT a tax business-use percentage**; and **`Net trade-in allowance`** — 🔑 **which can settle a
+completely different question, because `N/A` proves a vehicle the client called *"traded in"* was actually
+SOLD, and explains why the money appears as a bank deposit.**
+
+#### ④ 🔴 A CASUALTY'S PROCEEDS ARE THE PROPERTY'S SHARE, NOT THE WHOLE SETTLEMENT
+
+**An insurer often pays one amount covering the asset AND costs the client incurred — towing, recovery,
+storage.** 🔑 **Form 4684 takes only what was received FOR THE PROPERTY.** ⛔ **The rest is a recovery of an
+expense, not proceeds** ⇒ **and the two sides must move TOGETHER: if the expense was deducted, the
+reimbursement is income; if it was not, the reimbursement is not income either.** 🛑 **One side without the
+other is wrong in whichever direction it is taken.**
+
+☑️ **AND BEFORE ASKING THE CLIENT TO ALLOCATE IT, LOOK IN THE BANK.** **The money reached the company
+somehow.** ✅ **Two separate credits split the settlement for you and delete the question; one combined
+credit leaves only the allocation; NOTHING in the year means the gain is next year's and the whole form comes
+off the return.** ⚠️ **Do not treat a previous credit sweep as having covered it — a sweep filtered to lender
+and payroll captions is silent on insurance by construction, and that silence is not evidence** *(rule 1b)*.
+
+#### ⑤ ✅ AN ASSET THAT WAS NEVER CAPITALIZED — the answer is usually the same on every history
+
+**When the client sells something that is on NO filed return:** 🔑 **basis is ZERO and the proceeds are
+ORDINARY under §1245 — and this holds whether the company expensed the purchase or simply never recorded it,
+because recapture runs on depreciation *allowed OR ALLOWABLE* and an old asset's recovery period has expired
+either way.** ✅ **So it is keyable with no document, and zero is the LEAST favourable assumption available,
+which means the only possible objection is that you were too conservative.**
+
+⚠️ **ONE alternative, and it is the signer's:** **if the SHAREHOLDER owned it rather than the company, it is
+not the company's sale at all and the proceeds are a capital contribution.**
+⛔ **AND NEVER READ THE CLIENT'S *"VALUE"* COLUMNS AS BASIS.** **A no-books client's asset sheet often
+carries a *"2023 value"* and a *"2024 value"* — those are his estimates of WORTH. A reviewer glancing at the
+sheet can take one for a basis, so say so on the face of the working paper.**
+
+🔑 **AND THE SAFETY CHECK THAT GOES WITH ALL OF THIS: when two assets share a description, write NEITHER of
+them unqualified, ever.** _(The pilot client had two utility trailers — one on the schedule and financed, one
+on no return and sold — and two Benson trailers. Both pairs cost real time.)_
 
 
 ---
