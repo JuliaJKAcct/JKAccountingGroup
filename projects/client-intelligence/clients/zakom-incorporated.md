@@ -865,8 +865,8 @@ A running, dated record as we build this profile.
   — and that is why the money appears as a bank deposit rather than a credit against the new vehicle.**
   ⛔ 🆕 **CORRECTED 2026-09-28: "proves" was too strong.** The lease is the NEW car's document and shows only
   that no trade-in was credited on it; **that the old car was sold to a dealer is an inference from that plus
-  a matching bank deposit — the best reading, not a documented fact. No sale document for the old car is on
-  file** *(see the 2026-09-28 entry below)*.
+  a matching bank deposit — the best reading, not a documented fact. No sale document for the old car in
+  anything read** *(see the 2026-09-28 entries below — two items are still unread)*.
   🔑 **The confusion about a *"personal Audi"* is real but it is a DIFFERENT VEHICLE: his own sheet calls the
   PORSCHE personal, never an Audi.** ⚠️ **Two things the document does NOT settle and one of them got BIGGER:
   the statutory leased-luxury-vehicle inclusion amount is now material because the agreed value is known and
@@ -923,15 +923,14 @@ A running, dated record as we build this profile.
   text are in the working paper §3W ③.** ⛔ **Two negatives, each scoped to its search:** the workbook carries
   **no mileage anywhere**, and a name search of the client's Double files finds **no sale document for the old
   Audi** — the only Audi document is the NEW car's lease, which records no trade-in. ⇒ **The old car's mileage
-  at sale is not in anything read** *(see the later entry — the chat history was not read)*; only the client's or the dealer's paperwork from the sale would
-  have it. ⛔ **Nothing was asked of the client.**
+  at sale is not in anything read** *(see the later entry — the chat history was not read)*. ⛔ **Nothing was asked of the client.**
 - _(2026-09-28, later — and it corrects the firm's own claim)_ — **LILIAN CAUGHT AN OVERSTATEMENT: the file said
-  the old Audi's SALE had been "confirmed by a document", and she went looking for that document.** ⛔ **There is
-  none.** The document was the **new** car's lease, which proves only that no trade-in was credited on the new
+  the old Audi's SALE had been "confirmed by a document", and she went looking for that document.** ⛔ **In
+  anything read, there is none.** The document was the **new** car's lease, which proves only that no trade-in was credited on the new
   lease; **the sale is an inference** from that plus a matching bank deposit. It stays the best reading and
   **no figure moves**, but it is now written as an inference everywhere it appeared. 🔎 **The search was then
-  done properly, by CONTENT and not by file name**, as she asked: every file on the client in Double, the 2025
-  documents read inside, Drive, and Julia's Gmail. **No sale document anywhere in what was read**, ⚠️ **with two
+  done properly, by CONTENT and not only by file name**, as she asked: every Double file on the client listed by
+  name, the 2025 documents read inside, Drive, and Julia's Gmail. **No sale document anywhere in what was read**, ⚠️ **with two
   gaps: one image whose file name says nothing (`attachment.jpg`), and — the likelier source — the client's
   whole TaxDome CHAT history, exported to Drive (`3. Chats > Zakom Incorporated`) during the migration and never
   read by any session.** Drive's search index matches it for the Audi and for "sold"; it was not opened because
