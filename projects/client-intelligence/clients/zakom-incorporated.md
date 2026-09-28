@@ -972,6 +972,43 @@ A running, dated record as we build this profile.
   whether 2025 bonus depreciation is 100% or 40%. **This is the §1C failure exactly**, one week after the
   rule was written. ⇒ **the in-house re-read is queued ahead of any new client question.**
 
+#### 2026-09-28 — two in-house reads Lilian asked for: the bank search for the casualty money, and the acquisition dates
+- **Both ran. The detail and every figure live in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BD–§3BE — ⛔ no dollar figures here.**
+- 🔴 **THE CASUALTY MONEY IS ON THE BANK, AND IT DID NOT COME FROM AN INSURER.** It arrived on
+  **9 April 2025** as **one** credit from **OWL LAND OF ILLINOIS INC.** — the company's freight customer —
+  captioned by the bank as *"2 Checks for truck incident"*. ⇒ **the casualty belongs on the 2025 return**
+  *(the "maybe the insurer paid in 2026" branch is closed)*, **the bank did not split it into a vehicle share
+  and a towing share**, and **the caption's "2 Checks" says the two amounts exist on paper** — which turns the
+  open client question from *"how does it break down?"* into *"what were the two check amounts?"*.
+  ⚠️ **Whether OWL LAND passed through their own insurer or paid it themselves is NOT established, and it
+  matters: a payment from a customer is not a recovery on the company's own policy.**
+- 🛑 **A METHOD LESSON WORTH MORE THAN THE FIGURE.** The working paper had told the next session to search
+  the statements for an **insurance-shaped** caption. **That search returns nothing** — the money carries the
+  freight customer's caption. **What found it was structural: parse the deposits block of all twelve
+  statements and read every credit.** ⇒ **when a caption search comes back empty, the answer is to drop the
+  caption, not to widen the word list.**
+- ⛔ **AND AN INFERENCE THAT LOOKED PERFECT AND WAS WRONG, recorded so nobody repeats it.** A June credit
+  captioned *"For Truck 1834 and Trailer 1011"* matches the two June disposals' proceeds **exactly** when
+  added together. **It is a coincidence:** trailer `1011` is the utility trailer that is still financed to
+  2027 and is correctly kept on the books, so the credit is an ordinary freight settlement labelled by the
+  tractor and trailer that pulled the load — which is how a broker labels one.
+- 🔴 **THE DEALER DOCUMENT FOR ONE OF THE 2025 TRUCKS IS NOT WHAT THE FILE SAID IT WAS.** It had been recorded
+  as *"the retail purchase agreement"* and *"the acquisition document"*. **It is an unexecuted invoice form:
+  no purchaser named, no signatures, every date line blank, and its own terms say it is not binding until
+  signed.** ✅ **The dealer-printed price still corroborates what the client booked.** ⛔ **The buyer and the
+  date it does not establish** — so if an acquisition document is wanted, it has to be asked for.
+- ✅ **The acquisition dates settled two of the six 2025 equipment additions outright from documents already
+  in hand, and narrowed two more.** **The client is now needed for exactly ONE truck** — the one that went
+  into service six days after the rule's cut-off date and for which the firm holds nothing at all.
+- ✅ **A free corroboration along the way:** the deposit behind the Audi's assumed sale date is documented on
+  the bank statement for that day. **The sale date remains an assumption, now anchored to a documented
+  deposit rather than to a recollection.**
+- ⚠️ **What is still open and is the next in-house read:** the firm holds thirteen itemised card statements
+  and has only ever read the **payment** side of them. **The towing charge, if it is anywhere, is on the
+  charge side** — and the money moved from the operating account to the card two days after the settlement
+  arrived, which contradicts what the client said about how the towing was paid.
+
 ### Outstanding items (CI-only — never in the SOP)
 
 ⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**
