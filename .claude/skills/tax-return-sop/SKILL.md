@@ -3055,7 +3055,34 @@ at once: the recovery period, which PART of Form 4562 the asset lands in, and wh
 passenger-automobile caps apply.** ⇒ ⛔ **So the instruction is never *"turn off listed property"* — it is
 *"change the asset type code"*, and you say which code to change it TO.**
 
-**The mapping, read off one real return's own printed statement** *(Zakom 2025 — the codes appear beside
+🔑 **THE LIST ITSELF, sent by Lilian on 2026-09-28** — ✅ **this is ATX's own dropdown, not a
+reconstruction:**
+
+| Code | ATX's label | Listed property? |
+|---|---|---|
+| **1** | `3-yr Tractor (over-the-road use)` | ⛔ no |
+| **2** | `5-yr Qual nonpersonal use veh` | ⛔ no |
+| **4** | `5-yr Heavy duty truck or OTR trailer` | ⛔ no |
+| **5** | `5-yr Passenger vehicle` | ✅ **yes — §280F-capped** |
+| **6** | `5-yr SUV/truck/van > 6,000 lbs` | ✅ yes *(not §280F-capped — over 6,000 lb)* |
+| 🔴 **7** | `5-yr Truck, van, auto on trk chassis` | ✅ **yes — §280F-capped** |
+| **8** | `10-yr Water transport equipment` | ⛔ no |
+| **9** | `5-yr Other Vehicle (listed)` | ✅ yes |
+| **10** | `5-yr Buses` | ⛔ no |
+
+⚠️ **Code 3 was not visible in the crop and is deliberately not recorded — fill it the next time the list
+is open.** 🛑 **AND THE TRAP CODE 7 SETS, because it reads harmless: on the pilot SEVEN of eight
+prior-year assets sat on it, and that ONE choice produced the §280F caps, an eight-vehicle zero-mileage
+table, the 24a/24b questions AND a 5-year life on tractors that are 3-year property.** ⇒ ☑️ **On a freight
+fleet, treat code 7 as a red flag, not a default.**
+
+📄 **The authority for taking a working fleet OUT of listed property — Form 4562 (2025) instructions,
+`Listed Property → Exceptions`, verbatim:** *"Listed property does not include: … **3. An ambulance,
+hearse, or vehicle used for transporting persons or property for compensation or hire;** or **4. Any
+truck or van placed in service after July 6, 2003, that is a qualified nonpersonal use vehicle.**"*
+🔑 **A freight carrier's tractors and trailers meet BOTH, and either alone is enough.**
+
+**The mapping as SEEN on a real return's printed statement** *(Zakom 2025 — the codes appear beside
 every asset)*:
 
 | Code | What carried it | Recovery | Where it lands | §280F caps? |

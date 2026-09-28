@@ -1252,6 +1252,51 @@ it here; these never go into the client SOP.
   direction.** ⛔ **It deliberately does NOT recite the figure the firm derived and ask him to confirm it:
   that invites a "yes" that proves nothing. It asks what MOVED, which is the fact he actually holds.**
 
+#### 2026-09-28 (sixth pass) — one wrong vehicle category explains almost every problem we have had with this fleet
+- **Figures and detail in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BR–§3BV and decisions 100–103 — ⛔ none here.**
+- 🚚 **LILIAN ASKED THE RIGHT QUESTION AND THE ANSWER IS YES.** She asked whether the trouble with the
+  vehicles comes from assets added in earlier years being categorised wrongly — and whether there is a
+  category for a vehicle that cannot realistically be used personally *"por sus características, sus
+  dimensiones"*. ✅ **There is, she had the concept exactly right, and it is called a QUALIFIED
+  NONPERSONAL USE VEHICLE.**
+- 🛑 **SEVEN OF THE EIGHT assets added before 2025 sit on the software's category 7,
+  *"Truck, van, auto on trk chassis"* — which is a LISTED-PROPERTY category.** 🔑 **That single choice,
+  repeated across the fleet, is what causes the luxury-auto caps on two of them, the eight-vehicle
+  zero-mileage table, the two unanswered evidence questions, AND the tractors being depreciated over five
+  years instead of three.** ⇒ **Four symptoms this firm had been treating as four separate problems.**
+- ✅ **The authority is not an argument, it is a list.** The depreciation form's own instructions exclude
+  from listed property both *"a vehicle used for transporting persons or property for compensation or
+  hire"* and a qualified nonpersonal use vehicle. **A freight carrier's tractors and trailers meet both,
+  and either alone is enough.**
+- 🔑 **AND IT EXPLAINS WHY HER 2025 CLASSIFICATIONS DIFFER FROM THE PRIOR YEARS' — she got them right.**
+  She put the new tractors on the over-the-road tractor category and the trailers on the heavy-duty
+  trailer one. ⇒ **The difference is not an inconsistency she introduced; it is the earlier error showing
+  next to a correct entry.** ⛔ **Nothing is keyed — all seven are on returns already filed, so her own
+  rule applies and it goes to Julia as ONE ruling covering all of them.**
+- ✅ **THE ALTERNATIVE-MINIMUM-TAX WARNING IS ONLY THE CAR, AND ON THE EVIDENCE IT IS CORRECT.** She
+  checked every asset and only the Audi shows a difference. 🔑 **The reason is on the return itself: the
+  trucks either took bonus depreciation (which removes the adjustment) or were placed in service in a
+  year that elected out of it (which also removes it). The car did neither — and it CANNOT have elected
+  out, because two other five-year assets bought that same year DID take bonus, and the election covers a
+  whole class.** ⇒ **Its zero bonus is the luxury-auto limit, not an election, so the adjustment genuinely
+  applies.** ✅ **Corroborated twice on the shareholder's K-1.** ⇒ ☑️ **RECOMMENDATION: leave it — it is
+  small, it touches only his own return, and the car was disposed of in 2025 anyway.**
+- 🔑 **THE NEGATIVE PAID-IN CAPITAL IS NOT A BOOKKEEPING ERROR.** **Over the years the company has paid
+  the owner far more than it has earned or he has contributed, and the prior year parked the excess in
+  that line — which is why a figure whose job is to measure what he PUT IN prints as a negative.**
+  🛑 **The real exposure is not on the company's return at all: money taken above his stock basis is
+  taxable to him as capital gain, and the firm does not hold his basis form.** ⚠️ **And if part of it is a
+  LOAN from the company rather than a distribution, it belongs on the asset side of the balance sheet
+  instead — the shareholder-loan lines are blank in both columns, so the return currently says no owner
+  loan exists in either direction.**
+- 📧 **AND A LETTER TO JULIA, drafted from Lilian's own points.** 🔑 **Four of her points were corrected
+  rather than polished** — most importantly, she had *"confirm when the insurance company paid"* as
+  pending, and it is answered: the money arrived in April and it came from the freight CUSTOMER, not an
+  insurer. ✅ **Four things her draft did not have were added, two of them bigger than anything on it: the
+  balance-sheet decision that is the only real blocker, and the missing shareholder qualified-income
+  reporting.**
+
 ### Information still needed
 
 ⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**
