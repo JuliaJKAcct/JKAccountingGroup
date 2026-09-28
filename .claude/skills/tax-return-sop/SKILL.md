@@ -2712,9 +2712,16 @@ rule, and the asset screen is the clearest case of it.
 > comes out as the *soft, not fatal* line — which is exactly the category meaning *"she only reads
 > this one"*. ⛔ **On the Zakom workbook the missing sheet was `Fix the keyed return`, the sheet whose
 > own subtitle says START HERE**, and a clipped cell on it printed as one word of reassurance:
-> `fit check: OK (1 soft)`. 🔑 **A sheet with no entry should be the LOUD case, not the quiet one** —
-> so either give every sheet a row, or make a missing row fatal. ⚠️ **And read the count: `OK (n soft)`
-> is not OK for n > 0, it is n cells nobody has looked at.**
+> `fit check: OK (1 soft)`. 🔑 **A sheet with no entry must be the LOUD case, not the quiet one.**
+> ✅ **So DECLARE EVERY SHEET and make a missing one RAISE** — `set()` is a declaration that nothing on
+> that sheet is typed from, and it is not the same as leaving the sheet out. ⚠️ **And read the count:
+> `OK (n soft)` is not OK for n > 0, it is n cells nobody has looked at.**
+> ⓘ **Declaring all fifteen immediately found a SECOND hole of the same kind, in the sheet that HAD a
+> row:** `The return` protected *Action*, *Action - detail* and an unused column — and **not `What to
+> enter`, the column that carries the value she keys.** 🔑 **The rule above says include the WHAT-TO-TYPE
+> detail column *as well as* the value; it was read as *instead of*.** ⛔ **A partial `ACTIONABLE` row is
+> the same silent failure as a missing one — check the set against the sheet's own header labels, not
+> against memory of what the columns were.**
 >
 > **② CODE THE MOVE IN THE ROW LOOP, NOT ON THE CELL THAT OVERFLOWED.** The move to a full-width cell
 > is a rule about a COLUMN, not about a sentence: the cell that failed here crossed the ceiling the
