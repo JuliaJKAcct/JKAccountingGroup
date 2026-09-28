@@ -3006,6 +3006,99 @@ hand it back.** ⚠️ **This is the same rule CLAUDE.md sets for a journal-entr
 has to ask about** — *"a description she has to ask about has failed, however accurate it is"* — **and it
 applies to an explanation exactly as it applies to a string.**
 
+### 4H · ⌨️ ATX — the entry routes the firm has ACTUALLY VERIFIED, screen by screen
+
+> **Lilian, 2026-09-28, sending the ATX asset screen unprompted:** *"Te mando una imagen para que sepas, en
+> ATX, cómo se hace este cambio de tipo de vehículo. Se hace en esa área que dice 'Asset Information' allá
+> arriba… solo para que los registres en este skill de Tax Preparation, para que sepas cómo funciona ATX."*
+
+🔑 **THIS SECTION EXISTS BECAUSE §4B ITEM 11 REQUIRES THE ENTRY ROUTE AND A SESSION CANNOT SEE THE
+SOFTWARE.** ⛔ **A route that has not been seen is a GUESS, and §4B says to label it as one.** ✅ **Only
+routes the firm has confirmed on a real screen or read off a real printed return go in here.**
+☑️ **When she shows a screen, write it down the same day — she is the only source for this.**
+
+#### ① 🚗 THE ASSET SCREEN — and the control that does NOT exist
+
+**Path: the asset list → open an asset → the `Asset Information` block across the top.**
+
+**What is in that header:** `Item #` · **Description** · **Date in service** · the **return form**
+*(`1120S`)* · **two dropdowns on the left** · `New asset` *(Yes/No)* · a **category** dropdown
+*(`B-Bldgs and other d…`)* · `IRC Section` · `AMT Adj. Type` · **`Bus percent`** · a `COGS` checkbox ·
+`Serial #` · a `Multiple Asset Account` checkbox.
+**Tabs below it:** **`Depreciation and Section 179` · `Auto/Listed` · `Dispositions` · `Asset History`.**
+
+🛑 **THE ONE THAT MATTERS, AND IT REVERSES HOW THIS SKILL USED TO SAY IT:**
+⛔ **THERE IS NO "LISTED PROPERTY" CHECKBOX IN ATX.** ✅ **Listed-vs-not is a CONSEQUENCE of the asset
+TYPE CODE — the second of the two dropdowns**, which on the pilot read
+**`7 - 5-yr Truck, van, auto on tr…`** *(the first dropdown is the broad class, `V-Vehicles`)*.
+
+🔑 **That code prints on the `Form 4562 Statement` as the `Asset Code` column, and it decides THREE things
+at once: the recovery period, which PART of Form 4562 the asset lands in, and whether the §280F
+passenger-automobile caps apply.** ⇒ ⛔ **So the instruction is never *"turn off listed property"* — it is
+*"change the asset type code"*, and you say which code to change it TO.**
+
+**The mapping, read off one real return's own printed statement** *(Zakom 2025 — the codes appear beside
+every asset)*:
+
+| Code | What carried it | Recovery | Where it lands | §280F caps? |
+|---|---|---|---|---|
+| **`V-1`** | the four 2025 **over-the-road tractors** | **3-year**, 200DB, HY | **Part III line 19a** | ⛔ **no** |
+| **`V-4`** | the **trailers** *(Reitnouer, both Bensons)* | **5-year**, 200DB, HY | **Part III line 19b** *(or line 17 if a prior-year asset)* | ⛔ **no** |
+| **`V-5`** | the **Audi** — a genuine passenger car | 5-year | **Part V** | ✅ **YES** |
+| **`V-7`** | *"5-yr Truck, van, auto on tr…"* | 5-year | **Part V** | ✅ **YES** |
+
+⚠️ **Treat this table as THIS FIRM'S OBSERVED MAPPING, not as ATX documentation** — **it was derived from
+one return plus one screenshot.** ☑️ **Extend it the next time a different code is seen.**
+
+✅ **PROOF THAT THE ROUTE WORKS, which is why it is stated as verified rather than guessed:** **two assets
+were moved from `V-7` to `V-4` between two drafts of the same return, and on the new draft they had left
+Part V, left the Part V Section B mileage table, lost their caps and picked up their full MACRS figures —
+`70,540 × 20% = 14,108` and `67,050 × 32% = 21,456`, both to the dollar.**
+
+#### ② 🔴 THE DISPOSITIONS TAB — and the two red warnings ATX prints on the screen
+
+**Path: the asset → the `Dispositions` tab → `Disposition\\Bulk Disposition`, which has TWO sub-tabs on the
+left: `Disposition Info` and `Casualty/Loss Info`.**
+
+**On `Disposition Info`:** **`Type of disposition`** *(a dropdown — `Casualty/theft` and
+`Sale/abandonment` are both confirmed)* · **`Date of disposition`** · **`Business use percentage`** ·
+then **three columns — `Federal`, `Federal AMT`, `State`** — for **`Cost or other basis`**,
+**`Basis adjustment`**, **`Accumulated depreciation`** and **`Gain/loss`** · then
+**`Force 4797 section`**, **`Holding period`** and **`Type of property`**.
+
+🛑 **THE TRAP: THE PROCEEDS ARE NOT ON THAT SCREEN FOR A CASUALTY.** ⛔ **On the pilot, `Gain/loss` showed
+`0` in all three columns with the disposal fully entered, because a casualty's money goes on the OTHER
+sub-tab — `Casualty/Loss Info` — as `Insurance or other reimbursment`.** ✅ **It prints under exactly that
+label on the §179 disposition report.** 🔑 **A session reading a screenshot of `Disposition Info` alone
+would conclude the proceeds were never entered.**
+
+⚠️ **Two fields on that sub-tab were left blank on the pilot and are worth prompting for:**
+**`Type of property`** *(the same report shows `1245` for the other disposal)* **and
+`FMV before / after casualty or theft`.** ⓘ **Neither is needed to COMPUTE a casualty GAIN — proceeds less
+adjusted basis settles it — but the inconsistency between two rows of one report is visible.**
+
+**🔴 THE TWO RED WARNINGS ATX PRINTS, AND WHAT EACH ONE MEANS:**
+
+| The warning, verbatim from the screen | What it is telling you |
+|---|---|
+| *"This disposition will NOT be reported on the 4797 per the form instructions. Please see report on the 179 Dispo tab on Schedule K-1"* | 🔑 **THE ASSET TOOK §179, SO ITS DISPOSAL IS THE SHAREHOLDER'S ITEM, NOT THE CORPORATION'S.** **It goes to `Dispositions of Property with Section 179 Deductions` → Schedule K line 17d → K-1 BOX 17 CODE K.** ⛔ **Page 1 line 4 does NOT move, and Form 4684 stays empty even on a casualty** |
+| *"(DO NOT force to Part III unless LT Gains)"*, beside `Force 4797 section` | ☑️ **Leave `Force 4797 section` BLANK unless there is a long-term gain that genuinely belongs in Part III** |
+
+🛑 **THE FIRST ONE COST THIS FIRM A WRONG PREDICTION.** **A session told the preparer to expect
+*"+≈20,000 on page 1 line 4"* from a casualty; the asset had taken 50,000 of §179, so the gain went to box
+17K and line 4 never moved** *(Zakom, 2026-09-28)*. ⇒ ✅ **BEFORE PROMISING WHAT A DISPOSAL MOVES, CHECK
+WHETHER THE ASSET TOOK §179** — **the depreciation detail's `Sec. 179 Deduction` column answers it in one
+look.** ⚠️ **And the same question decides whether Form 4684 will carry anything at all.**
+
+#### ③ ☑️ THE OTHER ROUTES CONFIRMED SO FAR
+
+| What | Where in ATX |
+|---|---|
+| **The §179 / bonus elections** | **the `Elections` page.** 🔴 **An election OUT of bonus needs a STATEMENT there — turning the allowance off asset by asset produces the right figures with no election behind them** *(Form 4562 (2025) instructions: *"attach a statement to your timely filed return… indicating the class of property"*)*, **and it is made BY CLASS, covering ALL property in that class** |
+| **The meals limit** | **inside the line-20 `Other Deductions` statement** — the row reads `Meals, subject to 50% limit`, then `Less disallowed`, then `Total meals and entertainment`. ⚠️ **Changing it moves FIVE other places: page 1 line 20, M-1 line 3b, M-2 line 5, Schedule K 16c and K-1 box 16C** |
+| **A disposal with no depreciation history** *(an asset the books never capitalized)* | **straight onto Form 4797 Part II line 10 as its own row** — ⛔ **never added to the depreciation schedule** |
+| **The §448(c) gross-receipts figure** *(K-1 box 17 code AC)* | **the K-1 line 17 input / the §448(c) worksheet.** ⚠️ **ATX computes it; find out what it computed before overwriting** |
+
 ## §5 · Every prepared return leaves a working paper
 
 **Writing it is part of preparing the return** — [`projects/tax-returns/`](../../../projects/tax-returns/),
@@ -3061,6 +3154,13 @@ is how an SOP becomes confidently wrong.**
   to REWRITE the finding in §4G's five steps — never to explain the same thing again with more words around
   it.** 🔑 **Write in whichever step was the one that was missing**, because the failure mode repeats: a
   session holding a chain of causes for an hour compresses it into one sentence and cannot feel the gap.
+
+- ⌨️ 🔴 **LILIAN SHOWS YOU AN ATX SCREEN, OR A KEYED RETURN PROVES A ROUTE WRONG.** **§4H**, started
+  2026-09-28 when she sent the asset screen unprompted *"para que sepas cómo funciona ATX"*. 🔑 **She is
+  the ONLY source for this — a session cannot see the software — so write it down the same day.**
+  🛑 **And write in every route that turned out to be WRONG, with what it cost:** the firm has already
+  promised *"+20,000 on line 4"* for a disposal that ATX correctly sent to K-1 box 17K, and named a
+  *"listed property"* checkbox that does not exist in the product.
 
 - **Lilian tells you the delivery missed something she needed.** §4 exists because she said so twice
   — first that the tables never located Form 8829, then that she needs the flow, the explanations
