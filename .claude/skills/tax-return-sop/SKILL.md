@@ -3003,6 +3003,51 @@ the current-year PDF is untouched — this governs WHERE the quote is placed, ne
    compression devices — they work in a table and they defeat a reader in prose.** ✅ **In the explanation,
    one idea per sentence and one pointer per finding.**
 
+#### ③-bis 🛑 AN **OPEN ITEM** IS NOT A FINDING, AND THE FIVE STEPS DO NOT FIT IT — tell it in TIME ORDER
+
+> **Lilian, 2026-09-28 EVENING, twelve hours after ① was written from her first complaint:**
+> *"Tus explicaciones son extremadamente escuetas y compactas. No entiendo prácticamente nada. Por ejemplo,
+> no entiendo qué pasa con el seguro y el IPFS. No entiendo qué pasa con Mitsubishi."*
+
+🛑 **THE SAME COMPLAINT, THE SAME DAY, ABOUT PROSE WRITTEN AFTER ① EXISTED.** ⛔ **So ① is not wrong —
+it is NOT APPLICABLE, and that is the finding.** 🔑 **①'s five steps are built for a DEFECT ON A COMPUTED
+FORM:** *the return shows X · the input caused it · that is wrong · type Z here · these lines move.*
+⛔ **NEITHER of the two items she named has that shape.** **Nothing on the return is wrong; nothing is hers
+to type. They are SITUATIONS — a fact we do not yet know, and what each answer would mean.**
+⇒ **With no shape to follow, the writing fell back on the register's density, which is exactly what ①
+forbids.**
+
+✅ **SO AN OPEN ITEM GETS ITS OWN SHAPE, AND IT IS NARRATIVE, NOT A TABLE:**
+
+| | The question | ⛔ What breaks it |
+|---|---|---|
+| **1** | **What HAPPENED, in the real world, in the order it happened?** *"In September the client took out the insurance. The premium for the year is 35,593. He did not pay it in one go…"* | **Starting with the accounting.** 🔑 **She can picture a company buying insurance; she cannot picture a *"premium finance mechanism"*** |
+| **2** | **What do we NOT know?** ONE sentence, phrased as a question | **Burying it inside a paragraph of consequences** |
+| **3** | **What would each answer MEAN?** Name them **ANSWER A / POSSIBILITY 1**, each with the figure and the entry it produces | ⛔ **Naming the GAP between them and not the answers themselves** — *"a 6,541 swing"* is not an explanation, it is a summary of one |
+| **4** | **Whose is it, and what does SHE do now?** One sentence | **Leaving her to work out whether she is blocked** |
+
+🛑 **AND SIX HABITS TO STOP, each one observed in the two paragraphs she could not read:**
+
+1. ⛔ **NO ABSTRACTION SHE DID NOT INTRODUCE.** *"Model A / Model B"*, *"the plug"*, *"the residual"*,
+   *"the swing"*. 🔑 **She has to learn the vocabulary before she can learn the fact, and she did not ask
+   for a vocabulary.** ✅ **Use the thing itself: *the whole premium* · *what left the bank*.**
+2. ⛔ **NO § CROSS-REFERENCE INSIDE AN EXPLANATION.** **Each one is an invitation to stop reading and go
+   somewhere else, and she is at a keyboard.** ✅ **They go at the END, once.**
+3. ⛔ **NO TABLE FOR A MECHANISM.** 🔑 **A table compares things that are ALIKE. A mechanism is a SEQUENCE
+   and must be numbered 1, 2, 3.**
+4. ⛔ **NEVER THE CONCLUSION BEFORE THE ROAD TO IT.** **She cannot check an answer she has not been walked to.**
+5. ⛔ **BOLD BELONGS ON THE NUMBER AND THE ACTION, NOWHERE ELSE.** **A paragraph in which every sentence is
+   bold has no emphasis in it at all.**
+6. ⛔ **NEVER NAME A FIGURE WITHOUT SAYING WHAT IT IS.** **`6,541.29` is not *"a swing"* — it is the
+   DISTANCE BETWEEN TWO POSSIBILITIES, and saying so IS the explanation.**
+
+✅ **THE WORKED PAIR IS IN THE ZAKOM WORKING PAPER, §3BZ** — **the same two items, rewritten to this shape,
+beside the diagnosis of what the first version did.**
+
+☑️ **AND ONE TEST THAT CATCHES IT BEFORE SHE DOES:** 🔑 **read the paragraph back and ask *"what does the
+reader have to already know for this sentence to mean anything?"*** ⛔ **If the answer is anything this
+session worked out in the last hour, the sentence has to be unpacked.**
+
 #### ③ ☑️ THE FREE TELL THAT IS WORTH MORE THAN THE ARITHMETIC
 
 🔑 **Wherever a finding can be SEEN without computing anything, lead with that.** ✅ **On the pilot: two assets
@@ -3152,7 +3197,78 @@ missed.** ✅ **Ask for the list — it is one screenshot — and work it warnin
 | *"<asset> has different federal and state recovery basis, please review amounts for state disposition"* | **ATX keeps a separate STATE basis per asset because states decouple from bonus and §179** | 🟡 **Ask FIRST whether a state return is part of the engagement — if none is filed it is informational** |
 | *"<asset> - Prior accumulated depreciation, 179 and bonus cannot exceed cost"* | ✅ **A real impossibility, and an independent corroboration when the firm has already found it by hand** | ⚠️ **It will NOT clear until the number changes — so if a clean list is wanted before filing, the prior-year owner has to rule** |
 
-#### ④ ☑️ THE OTHER ROUTES CONFIRMED SO FAR
+#### ④ 🔴 FORM 4797 — **LINE 10 IS NOT A FIELD.** The route is the `Input` tab, and it is a RECORD-BASED sheet
+
+> **Lilian, 2026-09-28, sending the screen unprompted:** *"la línea 10 no es un campo de entrada, sino que
+> hay que ir a la pestaña de input y ahí llenar esto. Quiero que lo guardes en este skill para un futuro,
+> para que ahorremos tiempo."*
+
+🛑 **THE MISTAKE THIS SUBSECTION EXISTS TO STOP:** **this firm told her to key a disposal *"on Form 4797
+Part II line 10"*.** ⛔ **That line is COMPUTED and cannot be typed into.** ✅ **Every 4797 entry goes through
+the form's own `Input` worksheet, which builds the lines.**
+
+✅ **PATH: open Form 4797 → the worksheet tabs along the bottom → `Input`.**
+**The tab strip observed, left to right:** `Pages & Worksheets` · `1` · `2` · **`Input`** · `Detail` ·
+`Sec 179 Dispositions` · `Part I Cont` · `Part II Cont` · `Part III, pg 2 Cont` · `Ln 2 - Sec 1231` ·
+`Ln 10 - Ord Gains` · `Unrecap 1250 Gain` · `AMT Page 1` …
+
+🔑 **IT IS ONE RECORD PER DISPOSAL, NOT A GRID.** **The toolbar across the top carries
+`|◀◀` `◀` `Record: 1` `▶` `▶▶|` plus `Add New Record` and `Delete Record`.**
+⚠️ **So a second disposal is a NEW RECORD — not another row on the same screen** — **and `Detail` is the
+tab that shows them all at once.**
+
+**The fields on the `Input Sheet (4797)`, in the order they appear:**
+
+| Block | Fields |
+|---|---|
+| **Top row** | `Description of property` · `F/S/J` · `Date acquired` · `Date sold` |
+| **Second row** | `Type of property` · 🔑 **`Force 4797 section`** · `State postal code or Situs` · `Gross sales price` · `Holding period` *(computed)* |
+| **Three columns — `Fed` · `AMT` · `State`** | `Cost or other basis, plus improvements and expense of sale` · `Depreciation allowed (excluding Sec. 179 if from pass-through)` · `Gain or (Loss)` *(computed)* |
+| **Checkboxes** | `Elective Partial Asset Disposition` · `Required Partial Asset Disposition` · `sale to related party - disallow loss (IRC Sec 267)` · `residential rental property` · `Part III Assets are due to Casualty/Theft` · `sale is from a pass-through entity` · `Do not send to state tab` · `Use Fed amounts on state tab` · `Qualified Opportunity Fund Asset Gain Deferral (QOF)` |
+| **Foot** | 🔴 **`Select activity:`** |
+
+🔑 **FOUR THINGS ON THAT SHEET THAT ARE NOT OBVIOUS, AND EACH ONE HAS COST SOMETHING:**
+
+1. ✅ **`Force 4797 section` is how an asset reaches Part II.** **Typing `Part II` there sends the record to
+   Part II line 10 as ordinary gain.** ⚠️ **ATX will then WARN that the dates indicate a long-term holding
+   period — that warning is the FORCE working, not an error.**
+2. 🛑 **AN ASSET THE BOOKS NEVER CARRIED IS FORCED TO PART II — AND THE REASON IS EVIDENTIARY, NOT
+   ARITHMETIC.** ⚠️ 🆕 **CORRECTED 2026-09-28 EVENING AGAINST THE IRS SOURCE; the first version of this
+   item was wrong twice and is withdrawn** *(decision 113; it read: "PART III WOULD GIVE THE WRONG ANSWER —
+   ATX computes §1245 recapture as min(gain, depreciation RECORDED)")*.
+   🔑 **(a) IT IS THE IRS FORM'S ARITHMETIC, NOT THE SOFTWARE'S.** 📄 **Form 4797 line 25b: *"Enter the
+   smaller of line 24 or 25a"*, and line 25a is *"Depreciation allowed or allowable from line 22"*.**
+   ⛔ **Never tell a reviewer the software mis-computes Part III — it invites her to override it, and it is
+   not true.**
+   🔑 **(b) PART III IS NOT THE WRONG SECTION. IT IS AN UNFILLABLE ONE.** **Filled properly for a fully
+   depreciated asset — line 21 = its cost, line 22 = the same cost — Part III returns the whole gain as
+   ordinary through line 25b, the SAME destination as Part II line 10.** ⇒ **The reason to force Part II is
+   that lines 21 and 22 DEMAND A COST, and for an asset the books never carried there is no supportable
+   figure for either.** ✅ **Line 10 needs none: its column (g) is *(d) + (e) − (f)*, which returns the
+   proceeds whether the cost is entered on both sides or left blank.**
+   ⛔ **AND ZEROS IN LINES 21/22 ARE NOT A NEUTRAL CHOICE — they are an answer the form did not ask for, and
+   they produce recapture of ZERO, which sends the whole gain to Part I → §1231 → the K-1 as CAPITAL GAIN.**
+   ☑️ **THE TEACHING CASE IS USUALLY ON THE SAME RETURN: find a fully depreciated asset already in Part III
+   and show that its gain became ordinary ONLY because line 22 carried its cost.**
+3. 📄 **THE SHEET PRINTS TWO NOTES AT THE TOP, in blue, AND THE FIRST ONE IS THE IRS INSTRUCTION VERBATIM:**
+   *"Report the sale of property previously deducted under the tangible property de minimis safe harbor on
+   Part II (line 10) as ordinary gain. See Form 4797 instructions."* · *"Please enter Section 1244 Stock
+   Losses on Form 8949."*
+   ⚠️ 🆕 **BUT IT IS A SUPPORTING CITATION, NOT AN AUTHORITY YOU CAN LEAN ON — added 2026-09-28 evening.**
+   🔑 **Every version of that rule is CONDITIONAL: Form 4797 (2025) Line 10 says *"and DEDUCTED the cost of
+   the property under the tangible property de minimis safe harbor"*, and Pub. 544 says *"IF YOU DEDUCTED"*.**
+   **The safe harbor is an ELECTION, made annually, and it requires accounting procedures in place at the
+   start of the year** — ⚠️ **WRITTEN procedures only where the taxpayer has an applicable financial
+   statement; a small S-corp without one needs procedures, not written ones.** ⇒ ⛔ **Quoting the banner as though it settled the matter overstates it, unless the firm can show
+   the election was actually made.** ✅ **On a fully depreciated asset the stronger ground is §1245 itself —
+   recapture runs on depreciation *allowed OR allowable*, so nobody has to have recorded it.**
+4. 🔴 **`Select activity:` AT THE FOOT IS EASY TO LEAVE BLANK AND SHOULD NOT BE.** **ATX warns
+   *"If applicable, enter an activity for calculation of business income limitation or passive gain
+   (loss)"*.** ⚠️ **Once a §199A activity exists on the return this matters: §1245 ORDINARY gain from a
+   business asset IS qualified business income, and an unlinked 4797 record may never reach the §199A
+   computation.**
+
+#### ⑤ ☑️ THE OTHER ROUTES CONFIRMED SO FAR
 
 | What | Where in ATX |
 |---|---|
