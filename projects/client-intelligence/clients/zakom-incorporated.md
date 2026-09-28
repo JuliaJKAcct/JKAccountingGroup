@@ -1103,7 +1103,8 @@ it here; these never go into the client SOP.
   company: a shareholder can only deduct a loss up to his stock and debt basis, the accumulated adjustments
   account opens at zero, and his prior-year basis form is not in the firm's hands** — **so most of the large
   loss would not have been usable by him anyway.**
-- 🔴 **AND IT IS ONLY HALF DONE UNTIL AN ELECTION STATEMENT IS ATTACHED.** **Removing the allowance asset by
+- ⛔ **WITHDRAWN 2026-09-28 — SEE THE LATER ENTRY: the election statement WAS attached all along, on the
+  return's last page. This bullet was wrong.** _(As written:)_ **AND IT IS ONLY HALF DONE UNTIL AN ELECTION STATEMENT IS ATTACHED.** **Removing the allowance asset by
   asset produces the right figures with no valid election behind them.** **The election is made by CLASS of
   property and covers ALL property in that class placed in service that year — and this return's 2025
   additions span TWO classes**, so the statement has to name both. **It is annual, and once made it cannot be
@@ -1198,6 +1199,58 @@ it here; these never go into the client SOP.
 - ☑️ **She has put the Audi's mileage to the client and is waiting, and will ask him whether the towing
   cost went into his vehicle expenses** — which is the fact that decides whether its reimbursement is
   income at all.
+
+#### 2026-09-28 (fifth pass) — ATX's own warning list, and a finding of ours that was simply wrong
+- **Figures and detail in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BN–§3BQ and decisions 93–99 — ⛔ none here.**
+- 🛑 **WE TOLD LILIAN TWICE THAT THE BONUS ELECTION STATEMENT WAS MISSING FROM THE RETURN. IT WAS NOT.**
+  **It is on the LAST page, under a heading of its own, and it covers every class of property including
+  both the ones this return needs.** 🔑 **The cause is worth keeping: a keyword search of the extracted
+  text was truncated, and its silence was written up as a statement about all twenty pages.** ✅ **The
+  guard is now in the skill — walk the page count before calling anything absent from a return.**
+- 🖥️ **SHE SENT THE SOFTWARE'S OWN WARNING LIST, and it earned its place.** **Six warnings. Two are
+  informational, one is the balance sheet we already knew about, one is the impossible accumulated
+  depreciation on the 2022 trailer that this firm had already found by hand — and TWO WERE NEW TO US.**
+- 🔴 **THE IMPORTANT ONE: the return carries NO qualified-business-income information for the
+  shareholder at all.** **An S corporation does not take that deduction — the owner does, on his own
+  return — but the company has to hand him the numbers on a statement attached to his Schedule K-1.**
+  🛑 **And it matters even though the company has a loss — though NOT for the reason we first wrote: a
+  qualified business loss carries forward and REDUCES next year's qualified income, so the carryforward is
+  adverse to him rather than an asset.** ✅ **The reason to report it is that it is required, the K-1 is
+  incomplete without it, and his own return must carry the correct figure — omitting it would overstate
+  his future deduction.** ⚠️ **The firm's own review had never raised this in any pass.**
+- ✅ **THE SECOND NEW ONE is the reverse of what most people assume: because the company elected OUT of
+  bonus depreciation, its 2025 assets are NOT subject to an alternative-minimum-tax depreciation
+  adjustment at all, so the two methods must match.** **The company itself pays no AMT; this only changes
+  what the owner gets for his own return.**
+- 🔵 **LILIAN REVERTED ONE TRAILER to the classification it carried on the filed 2024 return**, on the
+  same principle she applied to the tractor: **an asset that was on the prior filed return keeps its
+  treatment until Julia rules; only assets NEW this year are classified correctly from the start.**
+  ✅ **That makes the rule consistent, which it was not before.** 💵 **The price is real and one ruling
+  from Julia releases it.** 🔑 **And a useful check held: a depreciation change lifts total assets and book
+  retained earnings by the same amount, so it cannot move the owner-account residual — and it did not.**
+- ✅ **THE MEALS QUESTION IS CLOSED ON THE HALF THAT MATTERED.** Lilian: *"son del dueño, son de Oleg,
+  porque él no paga las comidas de sus contratistas."* ⇒ **Both tests are now answered — the occupation
+  test on the company's own interstate permits, and whose meals they are.** 🛑 **The higher rate still
+  waits on Julia, because the prior year used the lower one and consistency between two returns is hers,
+  but the reason to hold it is gone.**
+- 🔑 **THE ZIP CODE IS A REAL CLIENT ISSUE, NOT A TYPO ON THE RETURN.** **Lilian checked the state
+  registration: it pairs the company's city with a ZIP belonging to a different city, and the
+  registration itself is what is wrong.** ⇒ ☑️ **Two separate jobs: what goes on the return (Julia's, and
+  it prints on the K-1) and correcting the Sunbiz record, which is worth doing whatever the return does
+  because every agency that reads Sunbiz inherits the error.** ⚠️ **Nobody has checked which ZIP the IRS
+  holds for this EIN, and a notice going to the wrong address is how that becomes expensive.**
+- 🚗 **ON THE VEHICLE MILEAGE she was right and the file confirmed it without re-opening anything:** the
+  prior year listed all the same assets and put the trucks at zero. **The one difference is the car —
+  the prior return carried a real business-mileage figure for it and this draft carries zero.** 🔑 **The
+  mileage changes no number: the car is claimed at 100% business use and that is what drives the
+  deduction. It is EVIDENCE for that claim, and the trucks are far less exposed because nobody drives a
+  semi-trailer home.**
+- 📨 **AND THE PRACTICAL OUTPUT: ONE consolidated message to the client, eight numbered questions**, built
+  so the profit and loss and the balance sheet can be closed. 🔑 **The first question is the largest open
+  item on the whole return — what moved between him and the company during the year, and in which
+  direction.** ⛔ **It deliberately does NOT recite the figure the firm derived and ask him to confirm it:
+  that invites a "yes" that proves nothing. It asks what MOVED, which is the fact he actually holds.**
 
 ### Information still needed
 
