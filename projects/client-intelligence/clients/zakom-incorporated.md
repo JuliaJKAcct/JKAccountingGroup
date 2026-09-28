@@ -913,6 +913,14 @@ A running, dated record as we build this profile.
   return, and neither may ever be written unqualified.** ⛔ **And his sheet's *"value"* columns are his
   estimates of WORTH, never basis — a reviewer glancing at them could take one for one.**
   ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
+- _(2026-09-28)_ — **WHERE THE OWNER WROTE THAT THE OLD AUDI WAS "TRADED IN": not in an email, in his OWN BOOKS
+  WORKBOOK** — a block of free-text lines at the foot of the `Asset List 2025` sheet, column B *(the Audi line is
+  `B47`)*. Lilian had remembered the wording and asked where it was. ✅ **The cell references and the verbatim
+  text are in the working paper §3W ③.** ⛔ **Two negatives, each scoped to its search:** the workbook carries
+  **no mileage anywhere**, and a name search of the client's Double files finds **no sale document for the old
+  Audi** — the only Audi document is the NEW car's lease, which records no trade-in. ⇒ **The old car's mileage
+  at sale is not in anything the firm holds**; only the client's or the dealer's paperwork from the sale would
+  have it. ⛔ **Nothing was asked of the client.**
 
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
