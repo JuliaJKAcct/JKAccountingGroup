@@ -3152,7 +3152,57 @@ missed.** ✅ **Ask for the list — it is one screenshot — and work it warnin
 | *"<asset> has different federal and state recovery basis, please review amounts for state disposition"* | **ATX keeps a separate STATE basis per asset because states decouple from bonus and §179** | 🟡 **Ask FIRST whether a state return is part of the engagement — if none is filed it is informational** |
 | *"<asset> - Prior accumulated depreciation, 179 and bonus cannot exceed cost"* | ✅ **A real impossibility, and an independent corroboration when the firm has already found it by hand** | ⚠️ **It will NOT clear until the number changes — so if a clean list is wanted before filing, the prior-year owner has to rule** |
 
-#### ④ ☑️ THE OTHER ROUTES CONFIRMED SO FAR
+#### ④ 🔴 FORM 4797 — **LINE 10 IS NOT A FIELD.** The route is the `Input` tab, and it is a RECORD-BASED sheet
+
+> **Lilian, 2026-09-28, sending the screen unprompted:** *"la línea 10 no es un campo de entrada, sino que
+> hay que ir a la pestaña de input y ahí llenar esto. Quiero que lo guardes en este skill para un futuro,
+> para que ahorremos tiempo."*
+
+🛑 **THE MISTAKE THIS SUBSECTION EXISTS TO STOP:** **this firm told her to key a disposal *"on Form 4797
+Part II line 10"*.** ⛔ **That line is COMPUTED and cannot be typed into.** ✅ **Every 4797 entry goes through
+the form's own `Input` worksheet, which builds the lines.**
+
+✅ **PATH: open Form 4797 → the worksheet tabs along the bottom → `Input`.**
+**The tab strip observed, left to right:** `Pages & Worksheets` · `1` · `2` · **`Input`** · `Detail` ·
+`Sec 179 Dispositions` · `Part I Cont` · `Part II Cont` · `Part III, pg 2 Cont` · `Ln 2 - Sec 1231` ·
+`Ln 10 - Ord Gains` · `Unrecap 1250 Gain` · `AMT Page 1` …
+
+🔑 **IT IS ONE RECORD PER DISPOSAL, NOT A GRID.** **The toolbar across the top carries
+`|◀◀` `◀` `Record: 1` `▶` `▶▶|` plus `Add New Record` and `Delete Record`.**
+⚠️ **So a second disposal is a NEW RECORD — not another row on the same screen** — **and `Detail` is the
+tab that shows them all at once.**
+
+**The fields on the `Input Sheet (4797)`, in the order they appear:**
+
+| Block | Fields |
+|---|---|
+| **Top row** | `Description of property` · `F/S/J` · `Date acquired` · `Date sold` |
+| **Second row** | `Type of property` · 🔑 **`Force 4797 section`** · `State postal code or Situs` · `Gross sales price` · `Holding period` *(computed)* |
+| **Three columns — `Fed` · `AMT` · `State`** | `Cost or other basis, plus improvements and expense of sale` · `Depreciation allowed (excluding Sec. 179 if from pass-through)` · `Gain or (Loss)` *(computed)* |
+| **Checkboxes** | `Elective Partial Asset Disposition` · `Required Partial Asset Disposition` · `sale to related party - disallow loss (IRC Sec 267)` · `residential rental property` · `Part III Assets are due to Casualty/Theft` · `sale is from a pass-through entity` · `Do not send to state tab` · `Use Fed amounts on state tab` · `Qualified Opportunity Fund Asset Gain Deferral (QOF)` |
+| **Foot** | 🔴 **`Select activity:`** |
+
+🔑 **FOUR THINGS ON THAT SHEET THAT ARE NOT OBVIOUS, AND EACH ONE HAS COST SOMETHING:**
+
+1. ✅ **`Force 4797 section` is how an asset reaches Part II.** **Typing `Part II` there sends the record to
+   Part II line 10 as ordinary gain.** ⚠️ **ATX will then WARN that the dates indicate a long-term holding
+   period — that warning is the FORCE working, not an error.**
+2. 🛑 **AN ASSET THE BOOKS NEVER CARRIED MUST BE FORCED, AND PART III WOULD GIVE THE WRONG ANSWER.**
+   **ATX computes §1245 recapture as *min(gain, depreciation RECORDED)*.** ⛔ **With no recorded
+   depreciation it computes recapture of ZERO and sends the whole gain to Part I as a §1231 LONG-TERM
+   gain**, **which lands on the K-1 as capital gain instead of ordinary income.**
+   ✅ **The force to Part II is what produces the right answer from a system that never held the asset.**
+3. 📄 **THE SHEET PRINTS ITS OWN AUTHORITY AT THE TOP, in blue, and it is worth quoting to a reviewer:**
+   *"Report the sale of property previously deducted under the tangible property de minimis safe harbor on
+   Part II (line 10) as ordinary gain. See Form 4797 instructions."* · *"Please enter Section 1244 Stock
+   Losses on Form 8949."*
+4. 🔴 **`Select activity:` AT THE FOOT IS EASY TO LEAVE BLANK AND SHOULD NOT BE.** **ATX warns
+   *"If applicable, enter an activity for calculation of business income limitation or passive gain
+   (loss)"*.** ⚠️ **Once a §199A activity exists on the return this matters: §1245 ORDINARY gain from a
+   business asset IS qualified business income, and an unlinked 4797 record may never reach the §199A
+   computation.**
+
+#### ⑤ ☑️ THE OTHER ROUTES CONFIRMED SO FAR
 
 | What | Where in ATX |
 |---|---|

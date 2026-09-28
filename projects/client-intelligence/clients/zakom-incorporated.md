@@ -980,6 +980,24 @@ A running, dated record as we build this profile.
   ☑️ **This closed a question about unidentified card travel that had been on the ask list.** Working paper
   §3BX ⑤, decision 105.
 
+- **2026-09-28 (evening) — ⌨️ A TRAILER THE COMPANY'S BOOKS NEVER CARRIED WAS SOLD IN THE YEAR, AND IT IS NOW
+  ON THE RETURN.** An older utility trailer — not the financed one, which stays — appears on neither filed
+  return and was disposed of during the year. 🔑 **The firm's position needs no document from the client:
+  whatever the history, the basis is zero and the proceeds are ORDINARY income**, because an asset of that
+  age on a five-year life is fully written off whether or not anyone recorded it, and the recapture rule runs
+  on depreciation *allowed OR allowable*. ⚠️ **Two utility trailers exist on this client and they are easy to
+  confuse — never write *"the utility trailer"* unqualified.** ☑️ **Also recorded for next time: the sale
+  date on the return must match the Disposals block of his own asset sheet.** Working paper §3BY.
+
+- **2026-09-28 (evening) — 📌 HOW THE FIRM DECIDED TO PRESENT THE OWNER'S CAPITAL MOVEMENT, and that the
+  amount is still moving.** The characterisation is settled — it is distributions, with no shareholder loan
+  in either direction — and the presentation follows the route the prior year's return used, with Julia to
+  confirm or overturn at review. 🔑 **What is NOT settled is the amount, and that is by construction: the
+  residual is the last figure on the return, so anything that moves an asset, a liability or income moves it.**
+  ☑️ **Seven items still do, and they are named in the working paper with their directions.** ⚠️ **For anyone
+  answering a question about this client: quote the figure as current-on-today's-inputs, never as final.**
+  Working paper §3BY ② and §3BX ⑦.
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
