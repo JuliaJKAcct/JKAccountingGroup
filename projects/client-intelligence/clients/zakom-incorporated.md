@@ -944,6 +944,18 @@ A running, dated record as we build this profile.
   return needed it nobody knew it was on hand. 🔑 **Worth keeping for the method: a fact recorded here without
   its figure has to be carried into the working paper WITH the figure, or it is lost to the return.**
 
+- **2026-09-28 — ⚖️ LILIAN RULED ON HOW THE OWNER'S CAPITAL MOVEMENT IS CHARACTERISED, AND SHE HAD RULED IT BEFORE.**
+  Her rule: **everything the firm can compute is computed — the liabilities, the business expenses, everything
+  derivable from documents — and whatever remains in the capital account is DISTRIBUTIONS.** She also stated as a
+  fact about this client that **there is no shareholder loan in either direction** *("de ser así, yo te lo hubiese
+  informado")* — her knowledge of the client, not an inference from the books — and that **nothing on the equity
+  side holds the return up.** ⚠️ **She was correcting a repeat:** she had set the same rule earlier in the
+  preparation, the working paper recorded the METHOD but never the RULING, and three later sessions re-opened the
+  characterisation and put it back to her — the last one through a PR review that measured a drafted email against
+  the stale paper. 🔑 **For the next person: the owner-capital question on this client is SETTLED, and asking it
+  again is going backwards.** ✅ **What survives is one narrow question for the client — whether he put his own money
+  INTO the company during the year — and it does not block anything.** Working paper §3BW, decision 104.
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
