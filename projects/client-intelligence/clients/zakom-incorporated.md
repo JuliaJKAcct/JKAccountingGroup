@@ -1009,6 +1009,40 @@ A running, dated record as we build this profile.
   charge side** — and the money moved from the operating account to the card two days after the settlement
   arrived, which contradicts what the client said about how the towing was paid.
 
+#### 2026-09-28 (later) — the card's CHARGE side read: the towing is not on it, and the personal-charge pass is done
+- **Figures and detail in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BF–§3BG — ⛔ none here.**
+- ⛔ **THE TOWING CHARGE IS NOT ON THE COMPANY CARD, IN EITHER YEAR.** Read from the **Amex year-end
+  summaries for 2025 and 2024**, both of which sit in Double and itemise every charge by date, merchant and
+  category. **2024 was checked as well as 2025 because the loss is dated to the very start of January**, so a
+  December charge was the live alternative. **The largest single charge in 2025 is a fraction of the towing
+  figure, and the eleven towing-and-recovery merchants that do appear are all small roadside jobs.**
+- 🔑 **PUT THAT BESIDE THE BANK AND THE TOWING WAS PAID FROM NEITHER OF THE COMPANY'S TWO PAYMENT RAILS** —
+  not the card, and not the operating account, whose only two large debits all year are a card payment and an
+  outgoing wire. ⇒ **The client's own account — that he paid it from the line of credit — survives**, and the
+  other live reading is that **whoever settled the claim paid the tow company directly and the company never
+  bore the cost at all.** ✅ **That second reading is the clean outcome: never deducted means its recovery is
+  not income, and both sides come off and cancel.** ⚠️ **Money still landed in the company's account for it,
+  so what that money IS remains the client's to answer.**
+- ⛔ **AND A READING THIS FILE CARRIED FOR ONE DAY IS WITHDRAWN.** The note that the settlement arriving and a
+  card payment leaving two days later *"contradicts"* what the client said was **mine and it was wrong** — the
+  card payment is an ordinary payment on a card with a large annual charge volume. **The two-day gap stays on
+  the record as a coincidence, not as evidence.**
+- ☑️ **THE PERSONAL-CHARGE PASS IS RUN** — it had been open since the card's charges were ruled the company's
+  expenses. **Self-evidently personal: a trip to ITALY between late August and early September 2025** (Rome,
+  Florence, Siena — restaurants, three hotels, a guided tour, a scooter rental), **a designer-fashion charge
+  on Christmas Eve, and small recurring club and five-a-side-soccer subscriptions.** ⚠️ **A further block of
+  airline and travel-agency spend can only be split by the owner**, including one European airline ticket
+  bought three months before the trip.
+- ⚠️ **AND THE CARD'S OWN CATEGORY IS THE CARD'S GUESS, PROVED TWICE HERE:** the **DOT medical and
+  drug-testing vendor is filed under *Health Care Services***, and **the firm's own fee is filed under
+  *Banking Services***. **Neither category can be carried into an expense caption unread.**
+- 🟡 **One check that does not tie and is now written down rather than rediscovered:** the card account's own
+  identity — opening balance plus charges less payments equals closing balance — **disagrees with the
+  payments figure taken from the bank by a substantial amount.** **Two candidate causes: the bank figure was
+  a caption string-match rather than an identified set, and the two sources use different period boundaries.**
+  ⛔ **Not a blocker — the balance-sheet figure is documented at both ends.**
+
 ### Outstanding items (CI-only — never in the SOP)
 
 ⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**
