@@ -544,6 +544,15 @@ on the latest return, that is a finding to report — not a licence to open the 
 get_file(fileId)  →  presigned URL  →  tools/redact-doc/redact.py  →  redacted text
 ```
 
+⛔ 🔴 🆕 **AND THERE IS NOW A ONE-CALL WAY TO BREAK THIS, SO IT IS NAMED HERE RATHER THAN ONLY IN §2 —
+2026-09-28: `load_attachments_to_chat` LOADS THE DOCUMENT ITSELF INTO THE CONVERSATION.** 🛑 **Do NOT
+use it on a client document.** 🔑 **It is not a shortcut through the route above — it is the route
+deleted:** every control below lives in `redact.py`, and **none of them is in that path.**
+⚠️ **Where it is exposed from is NOT established** — the name appears in the **descriptions of
+`list_files` and `get_file`**, and it is **absent from this session's `mcp__Double__*` inventory**, so it
+is host-level or newly shipped rather than a Double MCP tool the firm has called. ☑️ **The ban is by
+NAME, whatever exposes it**; the prefix gets settled in the re-audit *(FOLLOW-UPS row 135)*.
+
 **Never read the PDF directly.** [`redact.py`](../../../tools/redact-doc/) exists so the identity
 block cannot reach the transcript even by accident: it never prints the document's text, it writes
 redacted text to a file, and it deletes the raw download on every path out. Read its

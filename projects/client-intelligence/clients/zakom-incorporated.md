@@ -1,6 +1,6 @@
 # Zakom Incorporated
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-27
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-28
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1103,6 +1103,51 @@ it here; these never go into the client SOP.
 - [ ] Primary language of correspondence
 - [ ] Fiscal year-end (calendar year assumed, not established)
 - [ ] Sales-tax position — whether the company is registered at all
+
+#### 2026-09-28 (third pass) — Lilian removed the 2025 bonus depreciation, and she told us the explanations were failing her
+- **Figures and detail in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BH–§3BJ and decisions 81–85 — ⛔ none here.**
+- ✅ **THE BONUS IS OUT.** **Lilian re-keyed the return to remove bonus depreciation on the 2025 vehicle
+  additions**, which honours the decision she took on 2026-09-14 — that this return would follow the same
+  treatment Julia used for 2024. 🔑 **This closes the single largest open item on the return**, and it takes
+  the company from a large loss to roughly break-even. ⚠️ **Why that matters for the OWNER, not just the
+  company: a shareholder can only deduct a loss up to his stock and debt basis, the accumulated adjustments
+  account opens at zero, and his prior-year basis form is not in the firm's hands** — **so most of the large
+  loss would not have been usable by him anyway.**
+- 🔴 **AND IT IS ONLY HALF DONE UNTIL AN ELECTION STATEMENT IS ATTACHED.** **Removing the allowance asset by
+  asset produces the right figures with no valid election behind them.** **The election is made by CLASS of
+  property and covers ALL property in that class placed in service that year — and this return's 2025
+  additions span TWO classes**, so the statement has to name both. **It is annual, and once made it cannot be
+  revoked without IRS consent.**
+- 📅 **THE CASUALTY'S DISPOSAL DATE IS SETTLED, AND IT IS THE CLIENT'S OWN.** The file had carried two dates
+  for the destroyed truck. **The settlement money reached the bank on 9 April 2025, and a payment for a
+  destroyed vehicle cannot arrive two months before the vehicle was destroyed** — **so the January date on
+  the client's own asset list survives and the mid-year one on our internal surfaces does not.** ✅ **It
+  changes no figure on the return** *(the truck was fully written off in its first year, both candidate dates
+  fall in 2025, and it was held well over a year)* — **it is a field to fill, not a computation.**
+- 🔑 **HOW THE TOW REIMBURSEMENT IS REPORTED, ANSWERED.** **It is not proceeds for the truck, so it never goes
+  on the casualty form or in the asset disposition — the casualty form takes only what was received FOR THE
+  PROPERTY.** **It is the recovery of an EXPENSE, and a recovered expense is income only if the expense was
+  deducted.** ⇒ **Two outcomes: deducted ⇒ net the recovery against the same expense caption; never deducted
+  ⇒ nothing is entered and both sides cancel.** ⚠️ **The two sides must be treated the same way or the return
+  is wrong in one direction.** 🔵 **Three independent readings point at NOT DEDUCTED** — it is not on the
+  card, it is not on the operating account, **and the repairs-and-maintenance caption FELL by half between
+  2024 and 2025**, which a tow of that size would have made rise.
+- ⚖️ **AN OPTION RAISED AND RECOMMENDED AGAINST: deferring the casualty gain into the replacement tractors**
+  *(the company bought several in the same year, so it is legally available)*. **Recommended against because
+  the return is already near break-even — deferral would buy a loss the owner's basis cannot absorb, cut the
+  new tractors' depreciable basis, and lock the position.** ⛔ **Julia's call if anyone wants it.**
+- 🔵 **LILIAN'S RULING ON THE 2023 UTILITY TRAILER:** *"no es un asset que añadimos en este año, por tanto, es
+  algo de declaraciones pasadas… eso lo incluyó Julia."* ✅ **Accepted — its impossible prior accumulated
+  depreciation is a prior-year matter and goes to Julia as a question, not into this return as a fix.** **It
+  touches 2025 income not at all.**
+- 🗣️ 🔴 **AND THE MOST IMPORTANT THING IN THIS ENTRY IS NOT ABOUT THE CLIENT AT ALL.** **Lilian said she could
+  not follow the depreciation-form findings:** *"Siento que tus explicaciones son muy densas, a veces
+  escuetas, te saltas pasos y siento todo como en una nebulosa… pierdo mucho tiempo tratando de
+  entenderte."* 🛑 **Every figure in those findings was correct and not one of them was usable.** ✅ **The
+  five-step shape she needs is now written into the [`tax-return-sop`](../../../.claude/skills/tax-return-sop/)
+  skill as §4G** — what the return shows now, the input that produced it, one plain sentence on why it is
+  wrong, what to type and where, and what moves — **with the IRS authority LAST rather than first.**
 
 ## 7. Links
 
