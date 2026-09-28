@@ -3003,6 +3003,51 @@ the current-year PDF is untouched — this governs WHERE the quote is placed, ne
    compression devices — they work in a table and they defeat a reader in prose.** ✅ **In the explanation,
    one idea per sentence and one pointer per finding.**
 
+#### ③-bis 🛑 AN **OPEN ITEM** IS NOT A FINDING, AND THE FIVE STEPS DO NOT FIT IT — tell it in TIME ORDER
+
+> **Lilian, 2026-09-28 EVENING, twelve hours after ① was written from her first complaint:**
+> *"Tus explicaciones son extremadamente escuetas y compactas. No entiendo prácticamente nada. Por ejemplo,
+> no entiendo qué pasa con el seguro y el IPFS. No entiendo qué pasa con Mitsubishi."*
+
+🛑 **THE SAME COMPLAINT, THE SAME DAY, ABOUT PROSE WRITTEN AFTER ① EXISTED.** ⛔ **So ① is not wrong —
+it is NOT APPLICABLE, and that is the finding.** 🔑 **①'s five steps are built for a DEFECT ON A COMPUTED
+FORM:** *the return shows X · the input caused it · that is wrong · type Z here · these lines move.*
+⛔ **NEITHER of the two items she named has that shape.** **Nothing on the return is wrong; nothing is hers
+to type. They are SITUATIONS — a fact we do not yet know, and what each answer would mean.**
+⇒ **With no shape to follow, the writing fell back on the register's density, which is exactly what ①
+forbids.**
+
+✅ **SO AN OPEN ITEM GETS ITS OWN SHAPE, AND IT IS NARRATIVE, NOT A TABLE:**
+
+| | The question | ⛔ What breaks it |
+|---|---|---|
+| **1** | **What HAPPENED, in the real world, in the order it happened?** *"In September the client took out the insurance. The premium for the year is 35,593. He did not pay it in one go…"* | **Starting with the accounting.** 🔑 **She can picture a company buying insurance; she cannot picture a *"premium finance mechanism"*** |
+| **2** | **What do we NOT know?** ONE sentence, phrased as a question | **Burying it inside a paragraph of consequences** |
+| **3** | **What would each answer MEAN?** Name them **ANSWER A / POSSIBILITY 1**, each with the figure and the entry it produces | ⛔ **Naming the GAP between them and not the answers themselves** — *"a 6,541 swing"* is not an explanation, it is a summary of one |
+| **4** | **Whose is it, and what does SHE do now?** One sentence | **Leaving her to work out whether she is blocked** |
+
+🛑 **AND SIX HABITS TO STOP, each one observed in the two paragraphs she could not read:**
+
+1. ⛔ **NO ABSTRACTION SHE DID NOT INTRODUCE.** *"Model A / Model B"*, *"the plug"*, *"the residual"*,
+   *"the swing"*. 🔑 **She has to learn the vocabulary before she can learn the fact, and she did not ask
+   for a vocabulary.** ✅ **Use the thing itself: *the whole premium* · *what left the bank*.**
+2. ⛔ **NO § CROSS-REFERENCE INSIDE AN EXPLANATION.** **Each one is an invitation to stop reading and go
+   somewhere else, and she is at a keyboard.** ✅ **They go at the END, once.**
+3. ⛔ **NO TABLE FOR A MECHANISM.** 🔑 **A table compares things that are ALIKE. A mechanism is a SEQUENCE
+   and must be numbered 1, 2, 3.**
+4. ⛔ **NEVER THE CONCLUSION BEFORE THE ROAD TO IT.** **She cannot check an answer she has not been walked to.**
+5. ⛔ **BOLD BELONGS ON THE NUMBER AND THE ACTION, NOWHERE ELSE.** **A paragraph in which every sentence is
+   bold has no emphasis in it at all.**
+6. ⛔ **NEVER NAME A FIGURE WITHOUT SAYING WHAT IT IS.** **`6,541.29` is not *"a swing"* — it is the
+   DISTANCE BETWEEN TWO POSSIBILITIES, and saying so IS the explanation.**
+
+✅ **THE WORKED PAIR IS IN THE ZAKOM WORKING PAPER, §3BZ** — **the same two items, rewritten to this shape,
+beside the diagnosis of what the first version did.**
+
+☑️ **AND ONE TEST THAT CATCHES IT BEFORE SHE DOES:** 🔑 **read the paragraph back and ask *"what does the
+reader have to already know for this sentence to mean anything?"*** ⛔ **If the answer is anything this
+session worked out in the last hour, the sentence has to be unpacked.**
+
 #### ③ ☑️ THE FREE TELL THAT IS WORTH MORE THAN THE ARITHMETIC
 
 🔑 **Wherever a finding can be SEEN without computing anything, lead with that.** ✅ **On the pilot: two assets
