@@ -1138,6 +1138,66 @@ it here; these never go into the client SOP.
   skill as §4G** — what the return shows now, the input that produced it, one plain sentence on why it is
   wrong, what to type and where, and what moves — **with the IRS authority LAST rather than first.**
 
+#### 2026-09-28 (fourth pass) — Lilian re-keyed the return, and the draft corrected TWO things this firm had told her
+- **Figures and detail in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BL–§3BM and decisions 86–92 — ⛔ none here.**
+- ✅ **WHAT SHE KEYED, all verified against the new draft:** the bonus is out; the two trailers were
+  reclassified out of listed property and now depreciate from their own cost; the destroyed truck is
+  disposed of as a casualty; Form 8990 is gone; the officer's percentage of time is filled in; and the
+  closing balance-sheet capital-stock line is populated. 🔑 **The depreciation total lands on the figure
+  this firm's model predicted, to within a dollar of rounding** — which is what makes the rest of the
+  review reliable.
+- 📅 **SHE MOVED THE CASUALTY DATE, and her reasoning is better than ours.** We had settled on the date
+  the client's own asset list carries — the first day of the tax year. **She pointed out that a truck is
+  unlikely to have been destroyed on the very day it appears on the list, and used the date the money
+  arrived instead.** ⚠️ **She has ASKED THE CLIENT, and keyed both the date and a provisional
+  reimbursement figure to keep the return moving — both are unverified and both change when he answers.**
+- 🛑 **AND THE DRAFT PROVED THIS FIRM WRONG ON WHERE A CASUALTY IS REPORTED.** We told her to expect the
+  recovery on page 1 of the corporation's return. **It does not go there.** 🔑 **The destroyed truck had
+  taken a Section 179 deduction, and an S-corporation does not report the disposal of Section 179 property
+  on its own Form 4797 at all — it goes to the SHAREHOLDER on his Schedule K-1, who computes the gain on
+  his own return.** **The software says so on screen, in red, at the moment of entry.** ✅ **The gain is
+  still taxed; it simply never passes through the company's ordinary income.** ⚠️ **The same is true of the
+  other truck disposed of this year, and this file had already recorded THAT treatment as correct — the
+  error was not checking whether the second asset was in the same position.**
+- 🔵 **HER RULING ON THE REMAINING TRACTOR:** she will not change the classification of an asset that was
+  on the return Julia already filed. ✅ **Sound, and the caution is right.** ⚠️ **Two things belong in that
+  decision: changing this year's classification does not change or amend the prior return; and the same
+  reasoning covers the trailer she DID change, which was also on that filed return.** ⇒ ☑️ **So the clean
+  ask to Julia is ONE ruling covering both assets, not two.**
+- 🔴 **THE BALANCE SHEET STILL DOES NOT BALANCE, and it is the only thing that actually blocks filing.**
+  **Two things are missing from the closing column: the paid-in-capital figure carried forward from the
+  prior year, and the owner's distributions.** 🔑 **The residual GREW this year, and the reason is
+  informative: the insurance money is now recognised as income with no asset behind it — cash did not
+  move — so on this balance sheet it is already gone.** ✅ **That is the first independent corroboration
+  the distributions figure has had.** ⛔ **It is still a plug and still rests on the client's own cash and
+  loan balances.**
+- 🗣️ **SHE ASKED FOR THREE EXPLANATIONS AND THEY ARE WRITTEN OUT IN THE WORKING PAPER** *(§3BM)*: the
+  difference between **retained earnings** and **additional paid-in capital** and what actually changes if
+  you charge a distribution to one rather than the other *(nothing on the tax — it is consistency with the
+  prior year and what the balance sheet says to a reader)*; the **80% meals rule**, what the Department of
+  Transportation's "hours of service" limits are *(a SAFETY rule that forces a driver to stop and sleep
+  away from home, which is why Congress allowed him a bigger meal deduction)*, and whether this client
+  qualifies; and **why we told her to tick a box on Schedule K that she was right to question.**
+- ⛔ **ON THE MEALS: she is keeping 50% pending Julia and that is safe.** 🟢 **The company DOES qualify for
+  80% on the face of its own return — it deducts interstate operating permits that exist only for
+  multi-jurisdiction running, and its tractors are classified as over-the-road units.** 🛑 **But the prior
+  question is not the rate: the drivers are contractors, and a contractor's own meals are HIS deduction,
+  not the company's.** ☑️ **Both halves go to Julia together.**
+- ⛔ **ON THE SCHEDULE K BOX: our advice was too simple and she was right to push.** **Ticking it requires
+  a notification to the shareholder BEFORE the return is filed and a statement attached explaining the
+  qualification; neither exists, so ticking it would assert something untrue.** ✅ **Leave it blank,
+  matching the prior year.**
+- ⌨️ **AND SHE TAUGHT US THE SOFTWARE.** She sent the asset screen unprompted so the firm would have it on
+  record. 🔑 **There is no "listed property" checkbox in ATX — the asset TYPE CODE in the header decides
+  the recovery period, which part of the depreciation form the asset lands in, and whether the luxury-auto
+  caps apply.** ⛔ **Our instruction named a control that does not exist in the product.** ✅ **Written into
+  the [`tax-return-sop`](../../../.claude/skills/tax-return-sop/) skill as §4H, together with the
+  disposition screens and the two on-screen warnings the software prints.**
+- ☑️ **She has put the Audi's mileage to the client and is waiting, and will ask him whether the towing
+  cost went into his vehicle expenses** — which is the fact that decides whether its reimbursement is
+  income at all.
+
 ### Information still needed
 
 ⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**
