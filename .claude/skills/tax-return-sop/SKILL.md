@@ -1178,7 +1178,7 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > abstract without knowing where it was.)_
 > 🛑 **AND HERE IS THE LIMIT A SCREENSHOT CANNOT CROSS: it establishes the LABELS, never what a box
 > DOES.** ⛔ **Write the consequence as `inferred` unless the screen itself states it or someone has
-> watched the output change.** ⚠️ *(Caught in review: three consequences were written inside a block
+> watched the output change.** ⚠️ _(Caught in review: three consequences were written inside a block
 > stamped "observed from the screenshot", and one of them — "without `Calculate basis limitation` there is
 > no Form 7203" — was contradicted by the person's own earlier screenshot, where `7203, BASIS WKST` was
 > already in the return before any K-1 form existed. **The screen says the box supports Form 7203; it does
@@ -2156,7 +2156,7 @@ WORKSHEET, not a summary.**
 > voy a pedir en forma de artefacto"*, and the standing [`bookkeeping-kpis`](../bookkeeping-kpis/) rule that
 > **a real client's figures ship as an artifact, never in the repo.** ⛔ **What is NOT written anywhere is
 > whether the redacted TEXT could go on a page — and nothing needs it to, so the question stays unopened
-> rather than answered by a session.**)*, **a platform, the working paper** — which is most of an
+> rather than answered by a session.**), **a platform, the working paper** — which is most of an
 > entity return *(an entity return has no organizer at all)*, and was all of the first artifact — ⓘ *which was a **1040**, and clean for a different reason: that client's organizer had been discarded.*
 
 🛑 **THE FAILURE THIS EXISTS TO STOP, and it is the one that actually happened:** the first artifact
@@ -2703,6 +2703,25 @@ rule, and the asset screen is the clearest case of it.
 > by the fit rule** — *the pointer rows added to fix this were themselves clipped at a hard-coded 76pt* —
 > and ✅ **announced in the `Read me` sheet AND the target sheet's own subtitle**, because a text nobody
 > can find is a text that is not there.
+>
+> 🛑 **AND TWO THINGS THE CHECK GETS WRONG ON ITS OWN, BOTH FOUND ON 2026-09-28 — on the ONE SHEET
+> WHERE NOTHING IS REFERENCE PROSE.**
+>
+> **① `ACTIONABLE` MUST NAME THE SHEET SHE WORKS FROM, OR THE CHECK REPORTS ITS WORST FAILURE AS ITS
+> MILDEST.** A sheet absent from that table has **no** actionable columns, so every clipped cell on it
+> comes out as the *soft, not fatal* line — which is exactly the category meaning *"she only reads
+> this one"*. ⛔ **On the Zakom workbook the missing sheet was `Fix the keyed return`, the sheet whose
+> own subtitle says START HERE**, and a clipped cell on it printed as one word of reassurance:
+> `fit check: OK (1 soft)`. 🔑 **A sheet with no entry should be the LOUD case, not the quiet one** —
+> so either give every sheet a row, or make a missing row fatal. ⚠️ **And read the count: `OK (n soft)`
+> is not OK for n > 0, it is n cells nobody has looked at.**
+>
+> **② CODE THE MOVE IN THE ROW LOOP, NOT ON THE CELL THAT OVERFLOWED.** The move to a full-width cell
+> is a rule about a COLUMN, not about a sentence: the cell that failed here crossed the ceiling the
+> moment **one sentence** was added to it by an unrelated review fix, and it had fitted the day before.
+> ✅ **So measure all of a row's cells as the row is written, replace any that will not fit with the
+> pointer, and emit the full-width row underneath — once, generically.** ⛔ **Fixing the one cell by
+> hand leaves the next sentence to find the same hole**, and the person who finds it is Lilian.
 
 ---
 
