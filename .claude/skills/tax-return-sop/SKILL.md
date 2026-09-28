@@ -2940,6 +2940,24 @@ are not obvious.**
    entries the row names.** 🔑 **If it still does not close, the row is missing an entry — and where the
    missing entry is a presentation choice, SAY the fix cannot be completed without the signer.**
 
+#### ⑥-ter 🛑 NEVER CALL A FORM OR A STATEMENT **ABSENT** WITHOUT HAVING READ EVERY PAGE
+
+⛔ **A keyword search of an extract is evidence about the SEARCH, not about the return.**
+🔑 **[`method.md`](../../../projects/pre-return-review/method.md) rule 1b applies to the firm's own output
+exactly as it applies to a client's: a negative belongs to the search that produced it.**
+
+✅ **THE GUARD, and it costs a minute: WALK THE PAGE COUNT.** **Before writing that anything is missing
+from a return — an election, a statement, a schedule, a form — confirm you have actually read every page,
+and say which page each conclusion rests on.**
+
+🛑 **THE COST WHEN IT IS SKIPPED, from the pilot:** **a session searched a redacted extract for
+`Election`, read the first twenty hits (all of them page 1's *"S election effective date"* and Schedule
+B's §163(j) question), and wrote *"the 20 pages carry only the line-20, K-1, Schedule L and M-1
+statements — there is no elections page."*** ⛔ **Page 20 WAS the elections page.** ⇒ **The preparer was
+told twice she had to build a statement that was already attached, and a FOLLOW-UPS row carried the false
+finding.** ⚠️ **§1C is the other half of it: pages 1–19 were read for specific questions and page 20 was
+never opened at all.**
+
 #### ⑦ ☑️ CLOSE THE REVIEW BY ANSWERING THE SECOND HALF OF HER QUESTION — *"¿qué podemos adelantar?"*
 
 🔑 **A defect list is not the deliverable; the deliverable is a defect list AND a queue of work that needs
@@ -3090,7 +3108,24 @@ adjusted basis settles it — but the inconsistency between two rows of one repo
 WHETHER THE ASSET TOOK §179** — **the depreciation detail's `Sec. 179 Deduction` column answers it in one
 look.** ⚠️ **And the same question decides whether Form 4684 will carry anything at all.**
 
-#### ③ ☑️ THE OTHER ROUTES CONFIRMED SO FAR
+#### ③ 🖥️ ATX'S OWN `Re-Check` WARNING LIST — read it, and know which ones are real
+
+🔑 **ATX has a check-return button that prints a warning list, and the preparer sees it before anyone
+else does.** ⛔ **Do not treat it as noise: on the pilot it caught a whole topic the firm's own review had
+missed.** ✅ **Ask for the list — it is one screenshot — and work it warning by warning.**
+
+**The ones seen so far, and what each is worth:**
+
+| Warning | What it is | Stakes |
+|---|---|---|
+| *"Ending total assets should equal ending total liabilities and shareholders' equity"* | **Schedule L does not balance** | 🔴 **Blocks filing** |
+| *"Entertainment expenses are no longer deductible per TCJA"* | ⚠️ **Informational — ATX prints it whenever anything is in the meals block. It is NOT saying it found entertainment** | ✅ **None, once the firm has established there is none** |
+| 🔴 *"No activities have been marked as 'qualified' for Sec. 199A purposes"* | 🛑 **THE ONE THAT MATTERS MOST, AND THE EASIEST TO WAVE AWAY ON A LOSS YEAR.** **No K-1 box 17 code V and no Statement A means the shareholder gets no QBI information at all** | 🔴 **A qualified business LOSS still has to be reported — it carries forward against his future QBI. Omitting it does not save anything; it COSTS him the carryforward** |
+| *"Assets placed in service after 2015 electing out of bonus depreciation should use the same Fed/AMT depreciation method"* | ✅ **Correct, and it surprises people:** the Form 4562 instructions say property that elects OUT of bonus *"will not be subject to an AMT adjustment for depreciation"* — **so Fed and AMT must match** | 🟡 **No corporate figure (corporate AMT is repealed) — it changes K-1 box 15, which the shareholder needs for his own Form 6251** |
+| *"<asset> has different federal and state recovery basis, please review amounts for state disposition"* | **ATX keeps a separate STATE basis per asset because states decouple from bonus and §179** | 🟡 **Ask FIRST whether a state return is part of the engagement — if none is filed it is informational** |
+| *"<asset> - Prior accumulated depreciation, 179 and bonus cannot exceed cost"* | ✅ **A real impossibility, and an independent corroboration when the firm has already found it by hand** | ⚠️ **It will NOT clear until the number changes — so if a clean list is wanted before filing, the prior-year owner has to rule** |
+
+#### ④ ☑️ THE OTHER ROUTES CONFIRMED SO FAR
 
 | What | Where in ATX |
 |---|---|
@@ -3161,6 +3196,12 @@ is how an SOP becomes confidently wrong.**
   🛑 **And write in every route that turned out to be WRONG, with what it cost:** the firm has already
   promised *"+20,000 on line 4"* for a disposal that ATX correctly sent to K-1 box 17K, and named a
   *"listed property"* checkbox that does not exist in the product.
+
+- 🖥️ 🆕 **THE PREPARER SENDS ATX'S OWN WARNING LIST.** **§4H ③.** 🔑 **Write in every warning seen, what it
+  actually means and whether it is real** — **on the pilot, six warnings included one (§199A) that the
+  firm's own review had entirely missed, and one that reads alarming and is informational.**
+  ☑️ **Ask for that screenshot as a matter of course once a return is keyed; it is free and it is the
+  software checking the firm's work.**
 
 - **Lilian tells you the delivery missed something she needed.** §4 exists because she said so twice
   — first that the tables never located Form 8829, then that she needs the flow, the explanations
