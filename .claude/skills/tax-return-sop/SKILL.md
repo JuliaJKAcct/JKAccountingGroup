@@ -3257,8 +3257,9 @@ tab that shows them all at once.**
    ⚠️ 🆕 **BUT IT IS A SUPPORTING CITATION, NOT AN AUTHORITY YOU CAN LEAN ON — added 2026-09-28 evening.**
    🔑 **Every version of that rule is CONDITIONAL: Form 4797 (2025) Line 10 says *"and DEDUCTED the cost of
    the property under the tangible property de minimis safe harbor"*, and Pub. 544 says *"IF YOU DEDUCTED"*.**
-   **The safe harbor is an ELECTION and needs written accounting procedures in place at the start of the
-   year.** ⇒ ⛔ **Quoting the banner as though it settled the matter overstates it, unless the firm can show
+   **The safe harbor is an ELECTION, made annually, and it requires accounting procedures in place at the
+   start of the year** — ⚠️ **WRITTEN procedures only where the taxpayer has an applicable financial
+   statement; a small S-corp without one needs procedures, not written ones.** ⇒ ⛔ **Quoting the banner as though it settled the matter overstates it, unless the firm can show
    the election was actually made.** ✅ **On a fully depreciated asset the stronger ground is §1245 itself —
    recapture runs on depreciation *allowed OR allowable*, so nobody has to have recorded it.**
 4. 🔴 **`Select activity:` AT THE FOOT IS EASY TO LEAVE BLANK AND SHOULD NOT BE.** **ATX warns
