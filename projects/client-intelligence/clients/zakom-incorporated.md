@@ -1,6 +1,6 @@
 # Zakom Incorporated
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-27
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-28
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -972,6 +972,77 @@ A running, dated record as we build this profile.
   whether 2025 bonus depreciation is 100% or 40%. **This is the §1C failure exactly**, one week after the
   rule was written. ⇒ **the in-house re-read is queued ahead of any new client question.**
 
+#### 2026-09-28 — two in-house reads Lilian asked for: the bank search for the casualty money, and the acquisition dates
+- **Both ran. The detail and every figure live in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BD–§3BE — ⛔ no dollar figures here.**
+- 🔴 **THE CASUALTY MONEY IS ON THE BANK, AND IT DID NOT COME FROM AN INSURER.** It arrived on
+  **9 April 2025** as **one** credit from **OWL LAND OF ILLINOIS INC.** — the company's freight customer —
+  captioned by the bank as *"2 Checks for truck incident"*. ⇒ **the casualty belongs on the 2025 return**
+  *(the "maybe the insurer paid in 2026" branch is closed)*, **the bank did not split it into a vehicle share
+  and a towing share**, and **the caption's "2 Checks" says the two amounts exist on paper** — which turns the
+  open client question from *"how does it break down?"* into *"what were the two check amounts?"*.
+  ⚠️ **Whether OWL LAND passed through their own insurer or paid it themselves is NOT established, and it
+  matters: a payment from a customer is not a recovery on the company's own policy.**
+- 🛑 **A METHOD LESSON WORTH MORE THAN THE FIGURE.** The working paper had told the next session to search
+  the statements for an **insurance-shaped** caption. **That search returns nothing** — the money carries the
+  freight customer's caption. **What found it was structural: parse the deposits block of all twelve
+  statements and read every credit.** ⇒ **when a caption search comes back empty, the answer is to drop the
+  caption, not to widen the word list.**
+- ⛔ **AND AN INFERENCE THAT LOOKED PERFECT AND WAS WRONG, recorded so nobody repeats it.** A June credit
+  captioned *"For Truck 1834 and Trailer 1011"* matches the two June disposals' proceeds **exactly** when
+  added together. **It is a coincidence:** trailer `1011` is the utility trailer that is still financed to
+  2027 and is correctly kept on the books, so the credit is an ordinary freight settlement labelled by the
+  tractor and trailer that pulled the load — which is how a broker labels one.
+- 🔴 **THE DEALER DOCUMENT FOR ONE OF THE 2025 TRUCKS IS NOT WHAT THE FILE SAID IT WAS.** It had been recorded
+  as *"the retail purchase agreement"* and *"the acquisition document"*. **It is an unexecuted invoice form:
+  no purchaser named, no signatures, every date line blank, and its own terms say it is not binding until
+  signed.** ✅ **The dealer-printed price still corroborates what the client booked.** ⛔ **The buyer and the
+  date it does not establish** — so if an acquisition document is wanted, it has to be asked for.
+- ✅ **The acquisition dates settled two of the six 2025 equipment additions outright from documents already
+  in hand, and narrowed two more.** **The client is now needed for exactly ONE truck** — the one that went
+  into service six days after the rule's cut-off date and for which the firm holds nothing at all.
+- ✅ **A free corroboration along the way:** the deposit behind the Audi's assumed sale date is documented on
+  the bank statement for that day. **The sale date remains an assumption, now anchored to a documented
+  deposit rather than to a recollection.**
+- ⚠️ **What is still open and is the next in-house read:** the firm holds thirteen itemised card statements
+  and has only ever read the **payment** side of them. **The towing charge, if it is anywhere, is on the
+  charge side** — and the money moved from the operating account to the card two days after the settlement
+  arrived, which contradicts what the client said about how the towing was paid.
+
+#### 2026-09-28 (later) — the card's CHARGE side read: the towing is not on it, and the personal-charge pass is done
+- **Figures and detail in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BF–§3BG — ⛔ none here.**
+- ⛔ **THE TOWING CHARGE IS NOT ON THE COMPANY CARD, IN EITHER YEAR.** Read from the **Amex year-end
+  summaries for 2025 and 2024**, both of which sit in Double and itemise every charge by date, merchant and
+  category. **2024 was checked as well as 2025 because the loss is dated to the very start of January**, so a
+  December charge was the live alternative. **The largest single charge in 2025 is a fraction of the towing
+  figure, and the eleven towing-and-recovery merchants that do appear are all small roadside jobs.**
+- 🔑 **PUT THAT BESIDE THE BANK AND THE TOWING WAS PAID FROM NEITHER OF THE COMPANY'S TWO PAYMENT RAILS** —
+  not the card, and not the operating account, whose only two large debits all year are a card payment and an
+  outgoing wire. ⇒ **The client's own account — that he paid it from the line of credit — survives**, and the
+  other live reading is that **whoever settled the claim paid the tow company directly and the company never
+  bore the cost at all.** ✅ **That second reading is the clean outcome: never deducted means its recovery is
+  not income, and both sides come off and cancel.** ⚠️ **Money still landed in the company's account for it,
+  so what that money IS remains the client's to answer.**
+- ⛔ **AND A READING THIS FILE CARRIED FOR ONE DAY IS WITHDRAWN.** The note that the settlement arriving and a
+  card payment leaving two days later *"contradicts"* what the client said was **mine and it was wrong** — the
+  card payment is an ordinary payment on a card with a large annual charge volume. **The two-day gap stays on
+  the record as a coincidence, not as evidence.**
+- ☑️ **THE PERSONAL-CHARGE PASS IS RUN** — it had been open since the card's charges were ruled the company's
+  expenses. **Self-evidently personal: a trip to ITALY between late August and early September 2025** (Rome,
+  Florence, Siena — restaurants, three hotels, a guided tour, a scooter rental), **a designer-fashion charge
+  on Christmas Eve, and small recurring club and five-a-side-soccer subscriptions.** ⚠️ **A further block of
+  airline and travel-agency spend can only be split by the owner**, including one European airline ticket
+  bought three months before the trip.
+- ⚠️ **AND THE CARD'S OWN CATEGORY IS THE CARD'S GUESS, PROVED TWICE HERE:** the **DOT medical and
+  drug-testing vendor is filed under *Health Care Services***, and **the firm's own fee is filed under
+  *Banking Services***. **Neither category can be carried into an expense caption unread.**
+- 🟡 **One check that does not tie and is now written down rather than rediscovered:** the card account's own
+  identity — opening balance plus charges less payments equals closing balance — **disagrees with the
+  payments figure taken from the bank by a substantial amount.** **Two candidate causes: the bank figure was
+  a caption string-match rather than an identified set, and the two sources use different period boundaries.**
+  ⛔ **Not a blocker — the balance-sheet figure is documented at both ends.**
+
 ### Outstanding items (CI-only — never in the SOP)
 
 ⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**
@@ -991,6 +1062,51 @@ it here; these never go into the client SOP.
 - 🔴 **TO LILIAN — the Amex.** Her account-inventory ruling's rule keeps it *(the prior return reported it)* and her stated reason disqualifies it *(paid dozens of times a year from the business account, in the owner's own name)*. **The largest single outflow of the year, and whether the balance sheet carries a card liability at all, turn on which governs.**
 - 🔴 **TO JULIA — what did the prior year do with the same card payments?** The ruling adopts that year, and that year paid the same non-company cards from the same account. **Either they are already inside its reported distributions, or that return has an unbooked one — a candidate defect on a return she signed.** **The file cannot tell which.**
 - ✅ **ANSWERED 2026-09-13 — the returned spreadsheets ARE filled in**, and that is not the good news it sounds like: the P&L is workable, the **balance sheet is structurally unusable**. The gate is now rebuilding it, not obtaining a document.
+
+#### 2026-09-28 (third pass) — Lilian removed the 2025 bonus depreciation, and she told us the explanations were failing her
+- **Figures and detail in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BH–§3BJ and decisions 81–85 — ⛔ none here.**
+- ✅ **THE BONUS IS OUT.** **Lilian re-keyed the return to remove bonus depreciation on the 2025 vehicle
+  additions**, which honours the decision she took on 2026-09-14 — that this return would follow the same
+  treatment Julia used for 2024. 🔑 **This closes the single largest open item on the return**, and it takes
+  the company from a large loss to roughly break-even. ⚠️ **Why that matters for the OWNER, not just the
+  company: a shareholder can only deduct a loss up to his stock and debt basis, the accumulated adjustments
+  account opens at zero, and his prior-year basis form is not in the firm's hands** — **so most of the large
+  loss would not have been usable by him anyway.**
+- 🔴 **AND IT IS ONLY HALF DONE UNTIL AN ELECTION STATEMENT IS ATTACHED.** **Removing the allowance asset by
+  asset produces the right figures with no valid election behind them.** **The election is made by CLASS of
+  property and covers ALL property in that class placed in service that year — and this return's 2025
+  additions span TWO classes**, so the statement has to name both. **It is annual, and once made it cannot be
+  revoked without IRS consent.**
+- 📅 **THE CASUALTY'S DISPOSAL DATE IS SETTLED, AND IT IS THE CLIENT'S OWN.** The file had carried two dates
+  for the destroyed truck. **The settlement money reached the bank on 9 April 2025, and a payment for a
+  destroyed vehicle cannot arrive two months before the vehicle was destroyed** — **so the January date on
+  the client's own asset list survives and the mid-year one on our internal surfaces does not.** ✅ **It
+  changes no figure on the return** *(the truck was fully written off in its first year, both candidate dates
+  fall in 2025, and it was held well over a year)* — **it is a field to fill, not a computation.**
+- 🔑 **HOW THE TOW REIMBURSEMENT IS REPORTED, ANSWERED.** **It is not proceeds for the truck, so it never goes
+  on the casualty form or in the asset disposition — the casualty form takes only what was received FOR THE
+  PROPERTY.** **It is the recovery of an EXPENSE, and a recovered expense is income only if the expense was
+  deducted.** ⇒ **Two outcomes: deducted ⇒ net the recovery against the same expense caption; never deducted
+  ⇒ nothing is entered and both sides cancel.** ⚠️ **The two sides must be treated the same way or the return
+  is wrong in one direction.** 🔵 **Three independent readings point at NOT DEDUCTED** — it is not on the
+  card, it is not on the operating account, **and the repairs-and-maintenance caption FELL by half between
+  2024 and 2025**, which a tow of that size would have made rise.
+- ⚖️ **AN OPTION RAISED AND RECOMMENDED AGAINST: deferring the casualty gain into the replacement tractors**
+  *(the company bought several in the same year, so it is legally available)*. **Recommended against because
+  the return is already near break-even — deferral would buy a loss the owner's basis cannot absorb, cut the
+  new tractors' depreciable basis, and lock the position.** ⛔ **Julia's call if anyone wants it.**
+- 🔵 **LILIAN'S RULING ON THE 2023 UTILITY TRAILER:** *"no es un asset que añadimos en este año, por tanto, es
+  algo de declaraciones pasadas… eso lo incluyó Julia."* ✅ **Accepted — its impossible prior accumulated
+  depreciation is a prior-year matter and goes to Julia as a question, not into this return as a fix.** **It
+  touches 2025 income not at all.**
+- 🗣️ 🔴 **AND THE MOST IMPORTANT THING IN THIS ENTRY IS NOT ABOUT THE CLIENT AT ALL.** **Lilian said she could
+  not follow the depreciation-form findings:** *"Siento que tus explicaciones son muy densas, a veces
+  escuetas, te saltas pasos y siento todo como en una nebulosa… pierdo mucho tiempo tratando de
+  entenderte."* 🛑 **Every figure in those findings was correct and not one of them was usable.** ✅ **The
+  five-step shape she needs is now written into the [`tax-return-sop`](../../../.claude/skills/tax-return-sop/)
+  skill as §4G** — what the return shows now, the input that produced it, one plain sentence on why it is
+  wrong, what to type and where, and what moves — **with the IRS authority LAST rather than first.**
 
 ### Information still needed
 

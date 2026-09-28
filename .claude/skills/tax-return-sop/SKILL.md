@@ -2807,6 +2807,10 @@ the next session looks first, and it holds no figures, so the pointer is safe th
 > en la declaración. Dime si hay errores y dime si hay algo más que podamos adelantar en lo que el cliente
 > responde."*
 
+🔑 **AND §4G IS HOW EVERY FINDING BELOW IS WRITTEN — five steps, authority last.** ⛔ **The register this
+section builds is the RECORD; it is not an explanation, and on the pilot Lilian could not act on findings
+that were entirely correct.**
+
 ⛔ **THIS IS NOT §4C.** **§4C is a return coming back from the SIGNER — brief her, never audit her.**
 🔑 **THIS is the preparer asking to be checked before anybody signs anything, and here you DO audit — the
 whole point is to find what she cannot see from inside the software.** ✅ **Say what is RIGHT as well as what
@@ -2942,6 +2946,66 @@ are not obvious.**
 nobody.** ✅ **Sort what is left into IN-HOUSE and WAITING-ON-A-PERSON, and say who each person is and what
 they owe.** ⛔ **Never leave a "pending" that is really a document the firm already holds — §1C.**
 
+### 4G · 🗣️ HOW A FINDING ON A COMPUTED FORM IS WRITTEN — the five steps, and the authority goes LAST
+
+> **Lilian, 2026-09-28, on a set of Form 4562 findings in which every figure was correct:**
+> *"Necesito explicaciones más detalladas, más simples. No consigo que me expliques de forma que pueda
+> entender fácilmente. Siento que tus explicaciones son muy densas, a veces escuetas, **te saltas pasos** y
+> siento todo como en una nebulosa. No entiendo qué pasa, cuál es la situación… **pierdo mucho tiempo
+> tratando de entenderte.**"*
+
+🛑 **THIS IS A DELIVERY DEFECT AND IT IS AS REAL AS A WRONG NUMBER.** ⛔ **A finding she cannot act on has not
+been delivered.** 🔑 **And the cause is specific enough to fix: the findings were written as a REGISTER — a
+row per defect, ordered by money, every clause compressed — which is the right form for the record and the
+wrong form for a person at the keyboard.** ⚠️ **§4F builds that register and §4B's item 13 turns it into
+checkboxes; NEITHER of them makes a finding explicable.** ✅ **That is this section's job.**
+
+#### ① ✅ THE FIVE STEPS, IN THIS ORDER, FOR EVERY FINDING
+
+| Step | The question it answers | ⛔ What breaks it |
+|---|---|---|
+| **1** | **What does the return show TODAY?** The figure as printed, with its form, page, part and line | Leading with the corrected figure, so she cannot find the row she is looking at |
+| **2** | **What MADE it show that?** The input, the attribute, the checkbox — **the cause inside the software** | Naming the tax rule here. 🔑 **She cannot type a rule** |
+| **3** | **Why is that wrong?** ONE sentence, ⛔ **with no code section in it** | Three clauses and a citation |
+| **4** | **What do I type, and where?** The screen, the field, the value | *"Correct the classification"* — which is a verdict, not an instruction |
+| **5** | **What MOVES when I type it?** The lines that change, and by how much | Leaving her to work out whether it mattered |
+
+⛔ **NEVER OPEN WITH THE AUTHORITY.** ✅ **The IRS quote is EVIDENCE: it goes at the END of the finding, or in
+a footnote.** 🔑 **Opening with §280F or a Pub. 946 table answers a question she did not ask, before the one
+she did — and that is what produces the fog.** ⚠️ **§3's rule that a figure-changing answer must be read off
+the current-year PDF is untouched — this governs WHERE the quote is placed, never whether it is obtained.**
+
+#### ② 🔑 THE TWO HABITS THAT CAUSE IT, because naming the form is not enough
+
+1. ⛔ **WRITING FOR A READER WHO ALREADY KNOWS THE ANSWER.** **A session that has held a chain of three causes
+   for an hour compresses it into one sentence with two implications in it, and cannot feel the gap.**
+   ✅ **Three causes get THREE sentences.** 🔑 **The test: could someone who has never seen this return act on
+   this paragraph without asking a question?**
+2. ⛔ **THE REGISTER'S DENSITY LEAKING INTO THE EXPLANATION.** **Bold, arrows, emoji and section pointers are
+   compression devices — they work in a table and they defeat a reader in prose.** ✅ **In the explanation,
+   one idea per sentence and one pointer per finding.**
+
+#### ③ ☑️ THE FREE TELL THAT IS WORTH MORE THAN THE ARITHMETIC
+
+🔑 **Wherever a finding can be SEEN without computing anything, lead with that.** ✅ **On the pilot: two assets
+of unequal cost — 85,500 and 67,050 — printed identical depreciation of 19,800.** ⇒ **Identical figures on
+unequal costs can only be a CAP, never a computation.** 🔑 **That one observation explains the defect, proves
+it, and needs no table** — **and it is what she remembered.**
+
+#### ④ ⚠️ AND SAY WHEN A FINDING MOVES NOTHING
+
+✅ **A finding whose effect is *"no figure changes"* is still worth raising** — **an unanswered question on a
+form, zero business miles on a trucking fleet, a form attached with every line blank.** ⛔ **But SAY SO in
+step 5**, **so she can sort the three-minute jobs from the ones that move the return.** 🔑 **Unlabelled, they
+read as equally urgent and the list becomes something to postpone rather than work.**
+
+#### ⑤ 🔑 WHEN SHE SAYS SHE DOES NOT UNDERSTAND, THE ANSWER IS TO REWRITE — NEVER TO EXPLAIN AGAIN
+
+⛔ **Do not restate the same finding with more words around it.** ✅ **Rebuild it in the five steps above and
+hand it back.** ⚠️ **This is the same rule CLAUDE.md sets for a journal-entry description or a field value she
+has to ask about** — *"a description she has to ask about has failed, however accurate it is"* — **and it
+applies to an explanation exactly as it applies to a string.**
+
 ## §5 · Every prepared return leaves a working paper
 
 **Writing it is part of preparing the return** — [`projects/tax-returns/`](../../../projects/tax-returns/),
@@ -2990,6 +3054,13 @@ is how an SOP becomes confidently wrong.**
   depreciation)*, **decomposing a Schedule L imbalance instead of plugging it**, **checking a keyed position
   against the DECISIONS TABLE before calling it anything**, and 🛑 **transcribing the draft IN FULL first —
   §1C applies to the firm's own output, and on that return five separate findings were BLANK LINES.**
+
+- 🗣️ 🔴 **LILIAN SAYS SHE CANNOT FOLLOW AN EXPLANATION — *"muy densas… te saltas pasos… una nebulosa."***
+  **§4G**, added 2026-09-28 from the Zakom 1120-S, **where every Form 4562 figure was correct and none of them
+  was usable.** 🛑 **Treat that as a defect in the delivery, never as a gap in her.** ⛔ **And the response is
+  to REWRITE the finding in §4G's five steps — never to explain the same thing again with more words around
+  it.** 🔑 **Write in whichever step was the one that was missing**, because the failure mode repeats: a
+  session holding a chain of causes for an hour compresses it into one sentence and cannot feel the gap.
 
 - **Lilian tells you the delivery missed something she needed.** §4 exists because she said so twice
   — first that the tables never located Form 8829, then that she needs the flow, the explanations
