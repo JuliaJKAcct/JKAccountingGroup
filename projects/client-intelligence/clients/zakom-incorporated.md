@@ -1179,9 +1179,10 @@ it here; these never go into the client SOP.
   Transportation's "hours of service" limits are *(a SAFETY rule that forces a driver to stop and sleep
   away from home, which is why Congress allowed him a bigger meal deduction)*, and whether this client
   qualifies; and **why we told her to tick a box on Schedule K that she was right to question.**
-- ⛔ **ON THE MEALS: she is keeping 50% pending Julia and that is safe.** 🟢 **The company DOES qualify for
-  80% on the face of its own return — it deducts interstate operating permits that exist only for
-  multi-jurisdiction running, and its tractors are classified as over-the-road units.** 🛑 **But the prior
+- ⛔ **ON THE MEALS: she is keeping 50% pending Julia and that is safe.** 🟢 **The company meets the OCCUPATION test for 80% on the face of its own return — it deducts interstate operating permits that exist only for
+  multi-jurisdiction running, and its tractors are classified as over-the-road units.** ⚠️ **The second
+  test — that the meals were taken away from the tax home during such a period — is not documented meal by
+  meal.** 🛑 **But the prior
   question is not the rate: the drivers are contractors, and a contractor's own meals are HIS deduction,
   not the company's.** ☑️ **Both halves go to Julia together.**
 - ⛔ **ON THE SCHEDULE K BOX: our advice was too simple and she was right to push.** **Ticking it requires
