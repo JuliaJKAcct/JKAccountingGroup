@@ -956,6 +956,30 @@ A running, dated record as we build this profile.
   again is going backwards.** ✅ **What survives is one narrow question for the client — whether he put his own money
   INTO the company during the year — and it does not block anything.** Working paper §3BW, decision 104.
 
+- **2026-09-28 — 📌 THE COMPANY'S COMMERCIAL INSURANCE IS FINANCED, AND THE ARRANGEMENT IS NEW IN 2025.**
+  The trucking cover is placed through **AssuredPartners** and financed through **IPFS**, a premium finance
+  company: IPFS pays the insurer the whole annual premium up front and the company repays IPFS monthly, so
+  each payment is part insurance and part interest and there is a **balance owed to IPFS at each year end**.
+  🔑 **There was no such arrangement in the prior year** — no IPFS line on the prior return and no IPFS
+  debit in that year's bank statements — **so the prior year cannot be used as the guide for how to present
+  it.** ⚠️ **And the financed policy covers AUTO PHYSICAL DAMAGE ONLY: auto liability, motor truck cargo
+  and general liability are listed on the schedule and priced at nothing.** ⇒ **The company therefore
+  carries liability and cargo cover somewhere else, paid by another route, and its insurance expense is
+  nowhere near all IPFS.** ☑️ **Two things follow for anyone working this client again: the year-end IPFS
+  balance is a balance-sheet liability that has to be obtained from IPFS, and whether the deduction is the
+  cash paid or the whole premium is an open question for Julia.** Working paper §3BX.
+
+- **2026-09-28 — 🛑 THE SCOPE RULE FOR THIS CLIENT'S EXPENSES, restated by Lilian and now the standing one.**
+  The firm **reconstructs from documents** what documents can state — loans, debt balances, interest, assets,
+  liabilities — and **uses the client's own figures, unaudited, for the soft expense lines** (travel, meals,
+  fuel, telephone, office). 🔑 **Her test: where the firm holds a document that contradicts a figure he
+  reported, the document governs; everywhere else his figure stands.** ⛔ **The firm does NOT search his bank
+  statements to complete a caption he under-reported** — *"el objetivo no es hacer completo el profit and
+  loss, sino reconstruir las cuentas para las cuales tenemos documentos"* — **because an expense he does not
+  claim simply stays in his profit and he pays more tax, which is his choice and not the firm's exposure.**
+  ☑️ **This closed a question about unidentified card travel that had been on the ask list.** Working paper
+  §3BX ⑤, decision 105.
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
