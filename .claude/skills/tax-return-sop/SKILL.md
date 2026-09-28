@@ -3232,15 +3232,35 @@ tab that shows them all at once.**
 1. ✅ **`Force 4797 section` is how an asset reaches Part II.** **Typing `Part II` there sends the record to
    Part II line 10 as ordinary gain.** ⚠️ **ATX will then WARN that the dates indicate a long-term holding
    period — that warning is the FORCE working, not an error.**
-2. 🛑 **AN ASSET THE BOOKS NEVER CARRIED MUST BE FORCED, AND PART III WOULD GIVE THE WRONG ANSWER.**
-   **ATX computes §1245 recapture as *min(gain, depreciation RECORDED)*.** ⛔ **With no recorded
-   depreciation it computes recapture of ZERO and sends the whole gain to Part I as a §1231 LONG-TERM
-   gain**, **which lands on the K-1 as capital gain instead of ordinary income.**
-   ✅ **The force to Part II is what produces the right answer from a system that never held the asset.**
-3. 📄 **THE SHEET PRINTS ITS OWN AUTHORITY AT THE TOP, in blue, and it is worth quoting to a reviewer:**
+2. 🛑 **AN ASSET THE BOOKS NEVER CARRIED IS FORCED TO PART II — AND THE REASON IS EVIDENTIARY, NOT
+   ARITHMETIC.** ⚠️ 🆕 **CORRECTED 2026-09-28 EVENING AGAINST THE IRS SOURCE; the first version of this
+   item was wrong twice and is withdrawn** *(decision 113; it read: "PART III WOULD GIVE THE WRONG ANSWER —
+   ATX computes §1245 recapture as min(gain, depreciation RECORDED)")*.
+   🔑 **(a) IT IS THE IRS FORM'S ARITHMETIC, NOT THE SOFTWARE'S.** 📄 **Form 4797 line 25b: *"Enter the
+   smaller of line 24 or 25a"*, and line 25a is *"Depreciation allowed or allowable from line 22"*.**
+   ⛔ **Never tell a reviewer the software mis-computes Part III — it invites her to override it, and it is
+   not true.**
+   🔑 **(b) PART III IS NOT THE WRONG SECTION. IT IS AN UNFILLABLE ONE.** **Filled properly for a fully
+   depreciated asset — line 21 = its cost, line 22 = the same cost — Part III returns the whole gain as
+   ordinary through line 25b, the SAME destination as Part II line 10.** ⇒ **The reason to force Part II is
+   that lines 21 and 22 DEMAND A COST, and for an asset the books never carried there is no supportable
+   figure for either.** ✅ **Line 10 needs none: its column (g) is *(d) + (e) − (f)*, which returns the
+   proceeds whether the cost is entered on both sides or left blank.**
+   ⛔ **AND ZEROS IN LINES 21/22 ARE NOT A NEUTRAL CHOICE — they are an answer the form did not ask for, and
+   they produce recapture of ZERO, which sends the whole gain to Part I → §1231 → the K-1 as CAPITAL GAIN.**
+   ☑️ **THE TEACHING CASE IS USUALLY ON THE SAME RETURN: find a fully depreciated asset already in Part III
+   and show that its gain became ordinary ONLY because line 22 carried its cost.**
+3. 📄 **THE SHEET PRINTS TWO NOTES AT THE TOP, in blue, AND THE FIRST ONE IS THE IRS INSTRUCTION VERBATIM:**
    *"Report the sale of property previously deducted under the tangible property de minimis safe harbor on
    Part II (line 10) as ordinary gain. See Form 4797 instructions."* · *"Please enter Section 1244 Stock
    Losses on Form 8949."*
+   ⚠️ 🆕 **BUT IT IS A SUPPORTING CITATION, NOT AN AUTHORITY YOU CAN LEAN ON — added 2026-09-28 evening.**
+   🔑 **Every version of that rule is CONDITIONAL: Form 4797 (2025) Line 10 says *"and DEDUCTED the cost of
+   the property under the tangible property de minimis safe harbor"*, and Pub. 544 says *"IF YOU DEDUCTED"*.**
+   **The safe harbor is an ELECTION and needs written accounting procedures in place at the start of the
+   year.** ⇒ ⛔ **Quoting the banner as though it settled the matter overstates it, unless the firm can show
+   the election was actually made.** ✅ **On a fully depreciated asset the stronger ground is §1245 itself —
+   recapture runs on depreciation *allowed OR allowable*, so nobody has to have recorded it.**
 4. 🔴 **`Select activity:` AT THE FOOT IS EASY TO LEAVE BLANK AND SHOULD NOT BE.** **ATX warns
    *"If applicable, enter an activity for calculation of business income limitation or passive gain
    (loss)"*.** ⚠️ **Once a §199A activity exists on the return this matters: §1245 ORDINARY gain from a

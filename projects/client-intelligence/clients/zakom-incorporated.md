@@ -998,6 +998,25 @@ A running, dated record as we build this profile.
   answering a question about this client: quote the figure as current-on-today's-inputs, never as final.**
   Working paper §3BY ② and §3BX ⑦.
 
+- **2026-09-28 (evening) — 📄 WHAT THE FIRM ACTUALLY HOLDS FOR THE VEHICLES THIS CLIENT BOUGHT DURING THE YEAR,
+  established asset by asset.** Six were added. **For three of them the firm holds a document that establishes the
+  PRICE** — one trailer's lender package contains a disbursement authorisation naming the whole amount paid to the
+  seller, another trailer has its own signed finance contract carrying an invoice figure, and one truck has a
+  dealer-printed invoice form. **For the other three it holds nothing on price**: one has only a lender letter
+  giving interest and a balance, one has a promissory note whose loan is smaller than the booked cost, and one was
+  paid in cash so no lender document exists at all. 🛑 **The important correction for anyone working this client:
+  the truck document is an UNEXECUTED, UNDATED invoice form** — no purchaser named, no signatures, every date line
+  blank, and its own terms say it is not binding until signed. **Its price figures still stand because they are
+  dealer-printed, but it does not establish who bought the truck or when.** ☑️ **So the firm holds no acquisition
+  document for any truck bought that year.** Working paper §3CA.
+
+- **2026-09-28 (evening) — ⚖️ A FIRM-WIDE QUESTION THIS CLIENT HAS BROUGHT TO A HEAD: does a vehicle's basis come
+  from the purchase document or from the client's own figure?** 🔑 **The prior year's filed return answers it
+  DOCUMENT** — its capitalised amounts are each a little above the round numbers the client reported, which is what
+  price plus sales tax and registration looks like. **If that convention governs, this year's costs are understated
+  on the three vehicles with no document, and depreciation with them — which runs in the client's favour.**
+  ⚠️ **It is Julia's ruling and it gates a client ask that had fallen off every list.** Working paper §3CA ④.
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
