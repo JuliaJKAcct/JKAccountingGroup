@@ -3058,7 +3058,7 @@ passenger-automobile caps apply.** ⇒ ⛔ **So the instruction is never *"turn 
 🔑 **THE LIST ITSELF, sent by Lilian on 2026-09-28** — ✅ **this is ATX's own dropdown, not a
 reconstruction:**
 
-| Code | ATX's label | Listed property? |
+| Code | ATX's label *(verbatim from the screen)* | ⚠️ **Listed property?** *(the FIRM's determination, not ATX's — this column is not on the dropdown)* |
 |---|---|---|
 | **1** | `3-yr Tractor (over-the-road use)` | ⛔ no |
 | **2** | `5-yr Qual nonpersonal use veh` | ⛔ no |
