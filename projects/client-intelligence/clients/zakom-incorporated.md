@@ -1103,7 +1103,8 @@ it here; these never go into the client SOP.
   company: a shareholder can only deduct a loss up to his stock and debt basis, the accumulated adjustments
   account opens at zero, and his prior-year basis form is not in the firm's hands** — **so most of the large
   loss would not have been usable by him anyway.**
-- 🔴 **AND IT IS ONLY HALF DONE UNTIL AN ELECTION STATEMENT IS ATTACHED.** **Removing the allowance asset by
+- ⛔ **WITHDRAWN 2026-09-28 — SEE THE LATER ENTRY: the election statement WAS attached all along, on the
+  return's last page. This bullet was wrong.** _(As written:)_ **AND IT IS ONLY HALF DONE UNTIL AN ELECTION STATEMENT IS ATTACHED.** **Removing the allowance asset by
   asset produces the right figures with no valid election behind them.** **The election is made by CLASS of
   property and covers ALL property in that class placed in service that year — and this return's 2025
   additions span TWO classes**, so the statement has to name both. **It is annual, and once made it cannot be
@@ -1213,9 +1214,11 @@ it here; these never go into the client SOP.
 - 🔴 **THE IMPORTANT ONE: the return carries NO qualified-business-income information for the
   shareholder at all.** **An S corporation does not take that deduction — the owner does, on his own
   return — but the company has to hand him the numbers on a statement attached to his Schedule K-1.**
-  🛑 **And it matters even though the company has a loss: a qualified business LOSS is still reported and
-  carries forward against his future profits, so leaving it off does not save anything — it costs him
-  that carryforward.** ⚠️ **The firm's own review had never raised this in any pass.**
+  🛑 **And it matters even though the company has a loss — though NOT for the reason we first wrote: a
+  qualified business loss carries forward and REDUCES next year's qualified income, so the carryforward is
+  adverse to him rather than an asset.** ✅ **The reason to report it is that it is required, the K-1 is
+  incomplete without it, and his own return must carry the correct figure — omitting it would overstate
+  his future deduction.** ⚠️ **The firm's own review had never raised this in any pass.**
 - ✅ **THE SECOND NEW ONE is the reverse of what most people assume: because the company elected OUT of
   bonus depreciation, its 2025 assets are NOT subject to an alternative-minimum-tax depreciation
   adjustment at all, so the two methods must match.** **The company itself pays no AMT; this only changes
