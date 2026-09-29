@@ -259,6 +259,105 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-29 — 🔑 **THE ENTITY MAP IS SETTLED, AND IT IS NOT WHAT THE PAPERWORK SAYS.** Three taxpayers, not
+  six: **Bayshore Laundromat, Inc.** (Select + 15th Street/Samoset), **Samoset Florida, Inc.** (Palmetto 9th St
+  + Palmetto 8th Ave + Ruskin), **Lemon Squeeze Commercial Laundry, LLC** (the delivery/ironing service). The
+  seller's own owner-payroll schedule presents *five* employers — "71 Samoset", "PL Samoset" and "Samoset
+  Florida Inc." — but **all three carry ONE EIN**: they are one corporation running three separate payrolls.
+  ⛔ **The consequence is a filing defect: two people each hold THREE Forms W-2 from a single EIN.** One
+  employer issues one W-2 per employee per year. The dollars are trivial; what it proves is that the three
+  store payrolls are **never combined at entity level** — which is precisely the roll-up our request list §3.15
+  asks for, and precisely where a figure can move without appearing in any store's ledger.
+  🛑 **AND THE NAMING IS A TRAP THAT HAS ALREADY COST TIME.** The Ruskin machine-system report is headed
+  **"Ruskin Laundromat Inc"** while that same address runs payroll as **"71 Samoset Florida Inc."**; **three
+  entity names contain "Samoset" and NONE of them is the Samoset store**; and Laundrylux billed the 8th Ave W
+  equipment to a customer called **"Palmetto Coin Laundry"** when 8th Ave W is Palmetto **Wash & Fold**.
+  🔑 **Read every document in this deal BY ADDRESS, never by the name printed on it.**
+
+- 2026-09-29 — 🔴 **A SYSTEM'S "TOTAL" IS THE SYSTEM'S ARITHMETIC, NOT THE BUSINESS'S REVENUE — and getting
+  that wrong had already produced a wrong finding of mine.** The Ruskin FasCard "Sales Total Report" total
+  **adds promotional loyalty bonus and staff machine use on employee cards** to real customer revenue.
+  Comparing that total to the books made Ruskin look like it was under-recording; **comparing the loyalty-card
+  balance alone shows Ruskin agrees with its books to within half a percent.** The portfolio's
+  system-over-books gap is **roughly half** what I first reported, and Ruskin comes off the list entirely.
+  ⚠️ **The three systems in this portfolio each count something different**: LaundryPay explicitly *excludes*
+  free runs and loyalty value, FasCard *includes* promo bonus and employee cards, and Huebsch Command's basis
+  is undocumented while the seller states in writing that it under-records. 🔑 **Read what a total is MADE OF
+  before comparing it to anything.**
+
+- 2026-09-29 — 🔴 **THE OWNER PAYROLL SCHEDULE DOCUMENTS A SEVEN-MONTH CONTROL FAILURE, AND THAT IS WORTH FAR
+  MORE THAN THE MONEY IN IT.** At one entity the weekly owner payroll ran until mid-February 2025, **stopped,
+  and did not resume until mid-September** — 36 of 52 scheduled pay dates missed, cleaned up with a single
+  catch-up run on 30 December. The broker's own words: *"The owners did not identify the gap during the year."*
+  🔑 **A recurring weekly payroll vanished for seven months and nobody noticed. The same month-end process is
+  what is supposed to catch a missing coin collection** — so this is corroboration for the machine-vs-books
+  gaps at the other two stores, not a separate curiosity. ⚠️ **And the pattern repeats in the revenue data**:
+  one store's system dumped a backlog into April in both 2024 and 2025, and another posted revenue with no
+  cycles behind it for two months in late 2024. 🛑 **Conclusion for the whole engagement: monthly figures from
+  any of these systems or from these books are unreliable. Only annual figures are.**
+
+- 2026-09-29 — 🔴 **THE OWNER ADD-BACK CANNOT BE THE OWNER PAYROLL LINE, AND THE SCHEDULE MAKES THAT VISIBLE.**
+  Five family members are on payroll, but **only two of them are the owners** — the other three are working
+  store management at two of the stores, and they take the clear majority of the total. ⛔ **An add-back
+  schedule that returns the whole owner-payroll line to earnings is wrong**: the buyers must replace those
+  three people or keep paying them, which is a forward operating cost. ⚠️ **And the service manager who runs
+  hiring, training, scheduling, purchasing and driving across all six operations appears on the staffing
+  schedule and NOT on the pay-rate list at all** — an unpriced position in the buyers' go-forward payroll.
+  🔑 **The honest build is: replacement cost of the working family members stays a cost; the two owners' wages
+  add back; then SUBTRACT the payroll that should have run and didn't.**
+
+- 2026-09-29 — 🔴 **THE FIRST FILED RETURN ARRIVED, AND IT DOES NOT CARRY ITS OWN WAGES.** One entity's 2025
+  Form 1120-S (cash basis, two 50% shareholders, **paper-filed by certified mail**, business address = the
+  owners' home) shows **officer compensation and salaries-and-wages BOTH at zero** — and the deduction lines
+  foot exactly, so the zeros are real — while **that same entity issued two Forms W-2** and the return's own
+  §199A statement claims a third, different wage figure. **Three answers to one question.** The largest single
+  deduction on the return is an undetailed **"payroll service"** line at over half of all deductions and half of
+  gross receipts, with **no Form 1125-E filed**. ⚠️ **Gross receipts on the return also disagree with the
+  broker's revenue schedule for the same entity by a round, exact amount** — not a rounding or timing shape.
+  ⓘ **Distributions were reported at zero while the company repaid a large shareholder loan**, so the cash the
+  owners actually drew is several times the compensation reported. 🔑 **Any SDE built off this return has to
+  state that.** ✅ **And the return gave us the two identifiers that were blocking us: the exact legal name,
+  EIN and front-page address needed for the Form 8821, and THE SELLER'S ACCOUNTANT BY NAME, FIRM, PTIN AND
+  PHONE** — a faster route to the eight outstanding returns than the broker.
+
+- 2026-09-29 — 🔑 **WHY THE SELLER WILL FIGHT HARDEST OVER THE EQUIPMENT, WHICH IS NOT THE ARGUMENT THEY ARE
+  MAKING.** The allocation dispute is live: our split puts roughly half the price in the buildings, theirs puts
+  most of it in the business, and the difference moving to goodwill is worth a large year-one deduction to the
+  buyer. The broker's own one-pager argues our side and correctly notes the county resets market value after a
+  sale, so **the seller's property-tax rationale is worth nothing**. 🛑 **The unstated driver is §1245: NOTHING
+  WAS EVER CAPITALISED at any of the five stores** *(Furniture & Equipment and Accumulated Depreciation are zero
+  everywhere, and the one return we hold shows almost no depreciation on a substantial business)*. **With no
+  remaining basis, every dollar allocated to equipment is ordinary recapture to the seller while goodwill is
+  capital gain.** 🔑 **That also means our evidence is strong and theirs is empty**: we hold the purchase
+  invoices *with serial numbers*, extended warranties running to 2035, and a physical inventory count in
+  progress, while the seller has no depreciation schedule to argue against any of it. ⚠️ **Form 8594 must be
+  agreed BEFORE signing.**
+
+- 2026-09-29 — 🔴 **THE MERCHANT STATEMENTS DO NOT COVER THE PERIOD THE PRICE IS BUILT ON — and at two stores
+  they could never have helped anyway.** What arrived is **thirteen months, three stores** (and one of those
+  runs on CleanTie, not Clover): **nothing before August 2025, and nothing at all for the two Palmetto stores.**
+  Our review period is FY2023–FY2025 plus 2026, so **the card-settlement link in the reconciliation chain does
+  not exist for 2023, 2024 or most of 2025.** ⛔ **And it is a smaller link than it looks**: one store's own
+  system shows coin at **91–95% of revenue across three years**, and another store is **coin-only with no system
+  at all**, so a processor statement sees under a tenth of the money there. 🔑 **For roughly a third of 2025
+  machine revenue the chain therefore STARTS at the bank deposit** — which makes the bank statements, not the
+  merchant statements, the record this engagement actually turns on. ⚠️ **One store is the mirror image —
+  100% loyalty card, zero coin — and that creates a separate assumed liability nobody has quantified: the
+  unspent balances customers are holding on their cards at closing are washing the buyers must do at their own
+  cost.** It is on no clearance certificate and no new registration avoids it.
+
+- 2026-09-29 — 📄 **DELIVERED: the Financial Verification Plan** — twelve tests along the chain *machine system
+  → merchant settlement → bank deposit → books → filed return*, each naming what it proves, the record it runs
+  on, and whether the firm holds that record today; plus payroll and owner-add-back tests, the tax/successor
+  items (Forms 8821, DR-842, DR-405, card float, Form 8594), a priority ordering of what is still outstanding
+  **keyed to Accountant Request List v10 rather than duplicating it**, and six questions that need an answer
+  rather than a document. ⚠️ **It also flags that two documents in the seller's file were never meant to reach
+  us** — one headed *"Broker file… Not for release to the buyer"*, one *"Prepared for the Seller's review"* —
+  **to be decided before either is quoted back to the broker.** 🔑 **And it separates VALUATION from
+  VERIFICATION**: both stores with three years of system data are shrinking, the decline is in **volume**, and
+  **rising prices per cycle are masking it**. Not a verification finding — but a price built on a trailing year
+  needs it said out loud. ⛔ **Delivered to Julia, not committed** (client figures).
+
 - 2026-09-29 — 🔴 **THE SELLER HAS DISCLOSED, IN WRITING, THAT PART OF THE REVENUE IS NOT IN THE BOOKS.**
   A broker-prepared revenue page splits 2025 receipts into **Section A — in the books**, which reconciles
   cleanly *(machines-and-deposits plus four counter lines equals gross sales at every store, footing to within
