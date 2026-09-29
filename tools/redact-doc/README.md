@@ -194,6 +194,11 @@ Three changes close it, and they are different jobs:
 **If you see the UNREADABLE EXTRACTION message, do not re-run and trust a "0 masked" report.**
 Ask for a properly generated PDF from the tax software.
 
+⚠️ **The same lie of omission came back through a second door on 2026-09-29: fillable form
+fields.** A filled W-9 extracted as its own blank template and reported `0 SSN · 0 EIN`. Field
+values are now read, masked and counted — see **Known limits** below for how, and for what is
+still not read.
+
 ## It fails closed, four ways
 
 1. **A scan exits 2 and writes nothing.** No text layer means no OCR here, and the answer is
@@ -230,6 +235,10 @@ solve a reading problem by sending the document somewhere else to be read.
 | **4** | `REFUSING TO WRITE` | An identifier-shaped run survived redaction | Read the reported *shapes*. Either a pattern missed a real identifier or a column of figures collided with the shape. Inspect the PDF by hand, decide which, and **fix the patterns** — never weaken the guard to get the job done |
 | **0** | + `glyph-name token(s) were decoded` | Recovered from a broken font | Fine to use, but **layout came through worse than usual.** Read column alignment with suspicion and prefer figures you can corroborate arithmetically (on a return: does line 8 equal line 6 minus line 7?) |
 | **0** | + `barely extracted: [n, m]` | Those pages gave nothing up | **An absence is not evidence.** Name the pages instead of reporting "X is not on the return" |
+| **0** | + `fields: 0 of N` **and** `NONE of its N fillable field(s) carried a value` | An IRS form with fillable fields, none of which held a value | Blank — **or** filled in software that stored the values where this tool cannot read them (XFA-only). **A person opens the file.** ⛔ Never report it as blank from this output |
+| **0** | + `no SSN, ITIN or EIN was found` | A W-9 with no tax ID anywhere | Part I was left empty, or the TIN sits somewhere unreadable (typed with *Add Text*, or an image). Check by eye before relying on it |
+| **0** | + `form field(s) could NOT be read` | Some fields' values were unreadable, or the walk of the form was cut short | An absence there is not evidence — the typed values are missing from the output |
+| **0** | + `XFA form data, which this tool does NOT read` | The form also (or only) stores its data as XFA | With field values read: usually a copy — but a value missing may be there. With **none** read: the values may live only in the XFA. **A person opens the file** |
 
 ### ✅ What a restricted environment has had to allow so far (2026-09-01/02)
 
@@ -405,6 +414,75 @@ masked` on a document that carried one.)_
 - **Unlabelled bank accounts of 4–8 digits are not masked.** Only labelled ones (`Account no…`,
   `Routing…`) and bare runs of 9+ digits are. `Chase ending 45566778` survives.
 - **It reads PDFs only.** A `.docx` or an image is not handled.
+- ✅ **FILLABLE FORM FIELDS ARE READ — since 2026-09-29, and not before.** _(Found that day on
+  two W-9s in a client's `TaxDome > Client uploaded documents > W9s` folder.)_ A payee who fills a
+  W-9 in a PDF viewer types into **AcroForm fields**, which live outside the page text that
+  `extract_text()` returns. Both files exited **0**, reported **0 SSN · 0 EIN**, and produced text
+  **identical, character for character, to a blank IRS W-9**: the name and the tax ID were never
+  seen, and nothing in the report said so.
+  **Now:** every field's value is appended after the page text, in reading order (per page, top to
+  bottom, one line per row of fields, left to right), and goes through **the same masking and the
+  same refuse-to-write guard** as page text. The report **always** prints a `fields:` line —
+  `8 of 23 fillable form field(s) carried a value`, or `none` — so a blind read shows as
+  **`0 of N`** instead of passing for a clean one. Values are never printed.
+  - 🔑 **A split tax ID is rejoined BEFORE masking — this is the part that is not "just read `/V`".**
+    The IRS W-9 holds the SSN in **three** boxes (3 · 2 · 4 digits) and the EIN in **two** (2 · 7).
+    Appended as-is they would be `123   45   6789` — refused by the guard on every filled W-9 — or
+    three lines no pattern recognises. So on each row, **every** run of adjacent digit-only fields
+    totalling **exactly nine** digits is found, and **every field inside any such run is masked**.
+    A run that overlaps no other keeps its shape: 3 · 2 · 4 → masked and counted as an **SSN**;
+    2 · 7 → **kept** and counted as an **EIN** (Lilian's ruling) — **but only with evidence**: comb
+    boxes whose MaxLen matches each piece (how the W-9 builds them), or a tooltip/name saying EIN or
+    TIN, because it is the one join that writes a value unmasked. Anything else — overlapping runs,
+    nine single-digit boxes, two plain amount boxes — is masked whole, with `⟨joined⟩` placeholders
+    so the row keeps its column count.
+    ⛔ **"Every run", never "the first run" — the first version was a leak.** Joining greedily from
+    the left, `2024 | 123 | 45 | 6789` took `2024 · 123 · 45` (also nine digits) and wrote `6789` in
+    clear with the guard silent. An identifier made of whole fields *is* one of these runs, so a field
+    outside every run cannot be part of one. _(Independent review of PR #485.)_
+    ⚠️ **Only nine:** dollars and cents in two boxes stay two values, because `150000` is a wrong
+    figure that never sends anyone back to the PDF.
+  - 🔑 **A field whose own tooltip or name says what it is gets masked by that label.** The page
+    rules for dates of birth, licence/ID and account numbers read the words printed *beside* a value,
+    and a field value is written alone — so a field labelled *"Date of birth"* holding `04/17/1982`
+    came through verbatim until this was added. Fields labelled date of birth, driver's licence,
+    passport, state ID, visa, account, routing, IBAN or card number are masked whole (only when the
+    value has a digit) and counted in the same `masked:` line. Names are split into words first, so
+    `SpouseDOB` and `bank_acct_no` both count.
+  - 🔴 **AND THE LIMIT THAT FOLLOWS FROM IT — A FIELD WITH NO TOOLTIP AND A NAME LIKE `f1_10` IS
+    MASKED BY SHAPE ALONE, AND ON AN IRS FORM THAT IS EVERY FIELD.** _(Checked 2026-09-29: the IRS
+    W-9 and W-7 give their fields **no tooltips at all** — 69 on the W-7's first page, not one.)_
+    SSN/ITIN shapes, 9+ digit runs and street lines are still caught; **a date of birth, a passport,
+    licence or visa number, or a short account number is NOT** — so a filled **W-7** run through
+    this tool puts the applicant's date of birth and passport number in the output. The page rules
+    have the same limit (*"dates of birth only where the page says so"*, *"passport numbers are not
+    caught unlabelled"*), but on a page the label is usually beside the value; in a field it never
+    is. **The report says so every time field values are read.** ⚠️ **Treat those values as present
+    in the file.** Closing it is a masking-policy decision — [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md)
+    row 164.
+  - 🛑 **A bare nine-digit field value is written `#123456789`** — still masked by the bare-digit
+    rule, and never claimable by the EIN rules, which keep nine digits that follow the word *EIN*.
+    Without the `#`, an **unchecked** `[ ] EIN` box beside an SSN typed into one field made the
+    tool keep the SSN in clear, hidden from the guard. _(Round 2 of the review of PR #485.)_ The
+    only EIN a field yields is the evidenced 2 · 7 join.
+  - **Values only, no labels between them** — the printed labels are already in the page text, and
+    letters between the pieces of a split number are what would stop the cross-line rule from
+    seeing it. A checkbox is written `[X]` or `[ ]`, with its tooltip where the form has one. **The
+    IRS W-9's have none**, so read the row against the printed labels: `[ ]   [ ]   [X]   [ ]   [ ]`
+    on line 3a is the third box, S corporation.
+  - ⚠️ **Two warnings replace the old manual tell.** A known IRS form whose fillable fields all came
+    back empty prints **`NONE of its N fillable field(s) carried a value`** — it is blank, or its
+    values are stored where this tool cannot read them; **a person opens the file**, and nobody
+    reports it as blank from the output. A W-9 with no SSN, ITIN or EIN anywhere prints **`no SSN,
+    ITIN or EIN was found`** — Part I was left empty, or the TIN sits somewhere unreadable.
+  - ⓘ **XFA form data is never read, and the report says so whenever it is present** — a note when
+    field values were also read (the real W-9 carries both, and the XFA is normally a copy), a ⚠️
+    when none were, because the typed values may live **only** there.
+  - ⛔ **Still NOT read:** text typed with a viewer's *Add Text* tool (a **FreeText annotation**,
+    not a field), stamps and drawn signatures — those come through as blank as a filled W-9 used
+    to, and the W-9 warning above is the only thing that will notice. **XFA-only form data.** And a
+    TIN split across fields on **different rows** is caught only when nothing sits between its
+    pieces (the cross-line rule then masks it).
 - **It is a backstop, not the control.** The control is still deleting the session when the
   work is done — and for a document that matters more than for organizer responses, because
   `get_file` puts a **presigned download URL** in the transcript by itself. That URL downloads the
@@ -430,6 +508,20 @@ Two lessons from getting this wrong twice:
   `redact()`. Deleting it entirely left the suite green — which is precisely why the EIN/guard
   collision shipped. `_run()` is now exercised end to end against generated PDFs: the guard, the
   scan detection, and the figures surviving a full pass.
+
+**Fillable form fields** are exercised against generated fillable PDFs laid out like the real
+W-9: the SSN in three boxes (name kept, SSN masked and counted as one), the EIN in two (kept),
+**the guard refusing when the SSN pattern is neutered** — which is what proves field values reach
+the guard and not only the masker — both blind-read warnings, and the join's edge shapes (dollars
+and cents, nine single-digit boxes, an SSN stacked over three rows, a rotated page, a field on no
+page, a checkbox whose value is `/3`, a radio group, a push button, a NUL in a value, the field
+reader itself failing). The **independent review's reproducers** are pinned too: digit fields
+beside the SSN boxes (the greedy-join leak), label-only values (date of birth, licence, account,
+a DOB in three boxes), a widget listed twice, XFA-only and XFA-plus-fields forms, two amount boxes
+that must not become an EIN, a walk stopped by its cap, an unchecked "EIN" box before a nine-digit
+value (on the same row and on the row above), and camelCase names. **Twenty-seven mutants of that
+code are caught**, among them "the greedy join restored", "values appended after masking" and
+"labels interleaved with values".
 
 ## Who set this
 
