@@ -28,8 +28,7 @@
 
 - **Business name:** ANIMAL EXPERTS LLC — 330 Sunny Isles Blvd, Sunny Isles Beach, FL
   _(Sunbiz document number and EIN pending)_
-- **Entity type:** LLC — **tax classification pending** ⚠️ (see §5: owner payroll was
-  quoted, which presumes an S election or W-2 employees; confirm before onboarding)
+- **Entity type:** LLC taxed as an **S-corporation** (Julia, 2026-09-29: "both s corp" — Animal Experts and Grateful Pups). Files Form 1120-S; owner payroll is proper
 - **Home state:** Florida
 - **Industry / what they do:** **Amazon e-commerce brand** (pet niche, per the name).
   A **second brand exists: GRATEFUL PUPS LLC**, 5900 Balcones Dr, Austin, TX 78731 —
@@ -98,11 +97,9 @@ the actual details.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- ⚠️ **Owner payroll was quoted for an LLC whose tax classification is unknown.** If the
-  LLC is not an S-corporation (and the "owner" is a member, not a W-2 employee), owner
-  payroll is not allowed — members take draws, not wages. Confirm the classification
-  (and who is actually on payroll) before the payroll line is performed; the proposal's
-  wording is generic "payroll processing" on purpose
+- ✅ **Both LLCs are S-corporations** (Julia, 2026-09-29) — the earlier owner-payroll
+  classification flag is resolved: payroll is proper, and both proposals name **Form
+  1120-S** in the annual bundle. Reasonable-compensation review belongs to onboarding
 - **The sale is against a tax-only accountant:** the current provider files the return
   and goes quiet — no closed books, no payroll, no 1099s, no planning. The offer leads
   with the **close-by-the-10th** promise and "tax planning built in"; keep that framing
@@ -128,18 +125,24 @@ the actual details.
   bilingual RU/EN, pain-led intro against the tax-only status quo, foundation box =
   close by the 10th. Fee drafted at the standard e-commerce anchor, flagged. Delivered
   as PDF + private artifact
+- 2026-09-29 (same session) — **Onboarding added, the twin cloned, S-corp confirmed.**
+  Julia added a one-time onboarding (cleanup of the 2026 books) as a one-time service
+  card at her stated price; approved cloning the identical offer for GRATEFUL PUPS LLC
+  (same scope, same fees, same contact — own proposal number and artifact); and
+  confirmed BOTH LLCs are S-corporations, so both documents now name Form 1120-S. The
+  drafted monthly fee remains the anchor pending her confirmation
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- **Julia to set:** the monthly fee (anchor used in the draft); whether Grateful Pups
-  gets its own proposal now and at what price; Marianna's email for the cover
-- **Before onboarding:** LLC tax classification + who is on payroll (§5 lead flag);
-  sales channels beyond Amazon; the Grateful Pups ZIP+4 ("78731 57" fragment)
+- **Julia to set:** the monthly fee (anchor used in both drafts — confirm or change);
+  Marianna's email for the cover
+- **Before onboarding:** payroll headcount and provider; sales channels beyond Amazon;
+  the Grateful Pups ZIP+4 ("78731 57" fragment); reasonable compensation for the owner
 
 ### Information still needed
 
 - [ ] Sunbiz/EIN for Animal Experts; Texas registration for Grateful Pups
-- [ ] Tax classification of each LLC (S-corp election? partnership? disregarded?)
+- [x] Tax classification: both S-corporations (Julia, 2026-09-29)
 - [ ] Payroll headcount and provider; accounting platform
 - [ ] Marianna's email and preferred language (RU assumed for the bilingual draft)
 
