@@ -1167,6 +1167,52 @@ with tempfile.TemporaryDirectory() as td:
     if "could NOT be read" not in report:
         FAILURES.append("FIELDS · R6 · a field walk stopped by its node cap was not reported")
 
+    # ══ ROUND 2 OF THE REVIEW. A bare nine-digit value after a cell ending in
+    #    "EIN" was CLAIMED by the EIN rule — kept in clear and hidden from the
+    #    guard — though the box saying EIN was the UNCHECKED one.
+    _box = lambda t, x, tu, on: {"t": t, "ft": "/Btn", "tu": tu, "on": "/1",  # noqa: E731
+                                 "v": "/1" if on else "/Off", "as_": "/1" if on else "/Off",
+                                 "rect": (x, 500, x + 8, 514)}
+    _digits = lambda vals, y=500, x0=200: [  # noqa: E731
+        {"t": f"d{y}_{i}", "v": v, "rect": (x0 + 30 * i, y, x0 + 25 + 30 * i, y + 14)}
+        for i, v in enumerate(vals)]
+    for label, fields, secret in (
+        ("an unchecked EIN box before nine single-digit boxes",
+         [_box("k1", 60, "SSN", True), _box("k2", 120, "EIN", False), *_digits("123456789")],
+         "123456789"),
+        ("'Employer identification number' before a 5 · 4 split",
+         [_box("k3", 60, "Employer identification number", False), *_digits(("12345", "6789"))],
+         "123456789"),
+        ("an unchecked EIN box before ONE nine-digit field",
+         [_box("k4", 60, "EIN", False), *_digits(("123456789",))], "123456789"),
+        ("an EIN box ending the row ABOVE a nine-digit field",
+         [_box("k5", 400, "EIN", False), *_digits(("123456789",), y=470, x0=60)], "123456789"),
+    ):
+        (tmp / "claim.pdf").write_bytes(_fillable_pdf(_filler, fields))
+        rc, report = _run_quiet(tmp / "claim.pdf", tmp / "r7.txt")
+        got = (tmp / "r7.txt").read_text() if rc == 0 else ""
+        (tmp / "r7.txt").unlink(missing_ok=True)
+        if secret in got or "1 EIN" in report:
+            FAILURES.append(f"FIELDS · R7 LEAK · {label}: the EIN rule claimed a field value")
+
+    # …and camelCase names label a field as well as underscored ones do.
+    (tmp / "camel.pdf").write_bytes(_fillable_pdf(_filler, [
+        {"t": "SpouseDOB", "v": "04/17/1982", "rect": (59, 660, 300, 674)},
+        {"t": "BankAcctNo", "v": "12345678", "rect": (59, 630, 300, 644)}]))
+    rc, report = _run_quiet(tmp / "camel.pdf", tmp / "r8.txt")
+    got = (tmp / "r8.txt").read_text() if rc == 0 else ""
+    if "04/17/1982" in got or "12345678" in got:
+        FAILURES.append("FIELDS · R8 LEAK · a camelCase field name did not label its value")
+
+    # …and the standing limit — unlabelled fields are masked by shape alone — is
+    #    SAID whenever field values were read, because on an IRS form it is every field.
+    rc, report = _run_quiet(tmp / "w9.pdf", tmp / "r9.txt")
+    if "masked by their SHAPE, or by the field's own tooltip or name" not in report:
+        FAILURES.append("FIELDS · the unlabelled-field limit was not stated when values were read")
+    rc, report = _run_quiet(tmp / "plain.pdf", tmp / "r10.txt")
+    if "masked by their SHAPE" in report:
+        FAILURES.append("FIELDS · the unlabelled-field note printed on a PDF with no fields")
+
 if FAILURES:
     print(f"FAILED — {len(FAILURES)} problem(s):")
     for f in FAILURES:

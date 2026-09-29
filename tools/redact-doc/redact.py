@@ -645,6 +645,17 @@ TIN_DIGITS = 9
 SSN_SHAPE, EIN_SHAPE = (3, 2, 4), (2, 7)
 JOINED = "⟨joined⟩"
 
+# 🛑 AND NO BARE NINE-DIGIT FIELD VALUE MAY FOLLOW WHITESPACE. The EIN rules
+#    keep nine digits that come right after "EIN", "FEIN" or "Employer
+#    identification number" — and a field row can put exactly that before a
+#    value that is NOT an EIN: an UNCHECKED "[ ] EIN" box beside the number,
+#    or at the end of the row above. The digits were parked as an EIN, kept in
+#    clear, and hidden from the guard. (Found in round 2 of the review of PR
+#    #485.) So a digit-only field value of nine or more digits is written as
+#    `#123456789`: LONG_DIGITS still masks it, no EIN rule can claim it. The
+#    only EIN a field can yield is the evidenced 2·7 join below.
+BARE_MARK = "#"
+
 # /Ff bits (PDF 32000-1, tables 226 and 228). Bit positions are 1-based.
 FF_RADIO = 1 << 15
 FF_PUSHBUTTON = 1 << 16
@@ -799,7 +810,7 @@ def _render(widget) -> tuple[str | None, bool | None, bool, str | None]:
     text = _clean(_as_text(value).replace("\r\n", "\n").replace("\r", "\n"))
     if not text:
         return None, False, False, None
-    label = f"{_clean(_as_text(_inherited(widget, '/TU')))} {_field_name(widget)}"
+    label = _words(f"{_clean(_as_text(_inherited(widget, '/TU')))} {_field_name(widget)}")
     if any(c.isdigit() for c in text):
         for kind, mask, pattern in LABEL_MASKS:
             if pattern.search(label):
@@ -807,6 +818,13 @@ def _render(widget) -> tuple[str | None, bool | None, bool, str | None]:
     maxlen = _inherited(widget, "/MaxLen")
     comb = bool(flags & FF_COMB) and maxlen is not None and int(maxlen) == len(text)
     return text, True, comb or bool(TIN_LABEL.search(label)), None
+
+
+def _words(label: str) -> str:
+    """`SpouseDOB` → `Spouse DOB`, `bank_acct_no` → `bank acct no`: field NAMES
+    are written as identifiers, and the label patterns need word boundaries."""
+    label = re.sub(r"(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])", " ", label)
+    return re.sub(r"[_.\[\]0-9]+", " ", label)
 
 
 def _clean(text: str) -> str:
@@ -854,7 +872,14 @@ def _join_row(cells: list[tuple[str, bool]]) -> str:
         i = b
     out.extend(texts[i:])
     # Three spaces, like a layout extraction's gap between boxes.
-    return "   ".join(out)
+    return "   ".join(_unclaimable(t) for t in out)
+
+
+def _unclaimable(value: str) -> str:
+    """Mark a bare 9+ digit value so no EIN rule can claim it — see BARE_MARK."""
+    if _DIGITS_ONLY.fullmatch(value) and len(value) >= TIN_DIGITS:
+        return BARE_MARK + value
+    return value
 
 
 def _placed(widget, rotate: int) -> tuple[float, float, float]:
@@ -943,7 +968,7 @@ def read_form_fields(reader) -> tuple[str, dict]:
                 entries.append((*_placed(w, rotate), text, tin_ok))
             except Exception:  # noqa: BLE001 — no geometry is not a reason to drop a value
                 if has_value:
-                    unplaced.append(text)
+                    unplaced.append(_unclaimable(text))
         if entries:
             blocks.append(f"--- form fields · page {n} ---\n" + "\n".join(_rows(entries)))
 
@@ -984,7 +1009,7 @@ def read_form_fields(reader) -> tuple[str, dict]:
                         stats["masked"][masked] += 1
                     if has_value:
                         filled.add(field)
-                        unplaced.append(text)
+                        unplaced.append(_unclaimable(text))
             except Exception:  # noqa: BLE001
                 stats["errors"] += 1
         if stack:
@@ -1242,6 +1267,16 @@ def _run(src: Path, dst: Path) -> int:
         kind = "AcroForm" if fields["xfa"] else "fillable"
         print(f"  fields: none — this PDF has no {kind} form fields")
     print("  names are NOT masked, by the same ruling.")
+    if fields["values"]:
+        # ⚠️ The page rules for dates of birth and ID numbers read the label
+        #    printed BESIDE a value; a field value never has one. IRS forms give
+        #    their fields no tooltip and names like `f1_10` (W-9 and W-7 checked,
+        #    2026-09-29), so on them this is the normal case, not the edge.
+        print(
+            "  ⚠️  Field values are masked by their SHAPE, or by the field's own tooltip or name.\n"
+            "      A date of birth, passport or licence number in a field with neither — every\n"
+            "      field on an IRS form — is NOT masked. Treat such values as present."
+        )
     if fields["errors"]:
         print(
             f"  ⚠️  {fields['errors']} form field(s) could NOT be read. Whatever was typed into\n"

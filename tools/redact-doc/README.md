@@ -447,9 +447,24 @@ masked` on a document that carried one.)_
     and a field value is written alone — so a field labelled *"Date of birth"* holding `04/17/1982`
     came through verbatim until this was added. Fields labelled date of birth, driver's licence,
     passport, state ID, visa, account, routing, IBAN or card number are masked whole (only when the
-    value has a digit) and counted in the same `masked:` line. ⚠️ **A field with no tooltip and a
-    meaningless name (`f1_10`) cannot be recognised** — the IRS forms name their fields that way,
-    so on those only the shape rules apply.
+    value has a digit) and counted in the same `masked:` line. Names are split into words first, so
+    `SpouseDOB` and `bank_acct_no` both count.
+  - 🔴 **AND THE LIMIT THAT FOLLOWS FROM IT — A FIELD WITH NO TOOLTIP AND A NAME LIKE `f1_10` IS
+    MASKED BY SHAPE ALONE, AND ON AN IRS FORM THAT IS EVERY FIELD.** _(Checked 2026-09-29: the IRS
+    W-9 and W-7 give their fields **no tooltips at all** — 69 on the W-7's first page, not one.)_
+    SSN/ITIN shapes, 9+ digit runs and street lines are still caught; **a date of birth, a passport,
+    licence or visa number, or a short account number is NOT** — so a filled **W-7** run through
+    this tool puts the applicant's date of birth and passport number in the output. The page rules
+    have the same limit (*"dates of birth only where the page says so"*, *"passport numbers are not
+    caught unlabelled"*), but on a page the label is usually beside the value; in a field it never
+    is. **The report says so every time field values are read.** ⚠️ **Treat those values as present
+    in the file.** Closing it is a masking-policy decision — [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md)
+    row 164.
+  - 🛑 **A bare nine-digit field value is written `#123456789`** — still masked by the bare-digit
+    rule, and never claimable by the EIN rules, which keep nine digits that follow the word *EIN*.
+    Without the `#`, an **unchecked** `[ ] EIN` box beside an SSN typed into one field made the
+    tool keep the SSN in clear, hidden from the guard. _(Round 2 of the review of PR #485.)_ The
+    only EIN a field yields is the evidenced 2 · 7 join.
   - **Values only, no labels between them** — the printed labels are already in the page text, and
     letters between the pieces of a split number are what would stop the cross-line rule from
     seeing it. A checkbox is written `[X]` or `[ ]`, with its tooltip where the form has one. **The
@@ -503,9 +518,10 @@ page, a checkbox whose value is `/3`, a radio group, a push button, a NUL in a v
 reader itself failing). The **independent review's reproducers** are pinned too: digit fields
 beside the SSN boxes (the greedy-join leak), label-only values (date of birth, licence, account,
 a DOB in three boxes), a widget listed twice, XFA-only and XFA-plus-fields forms, two amount boxes
-that must not become an EIN, and a walk stopped by its cap. **Twenty-three mutants of that code are
-caught**, among them "the greedy join restored", "values appended after masking" and "labels
-interleaved with values".
+that must not become an EIN, a walk stopped by its cap, an unchecked "EIN" box before a nine-digit
+value (on the same row and on the row above), and camelCase names. **Twenty-seven mutants of that
+code are caught**, among them "the greedy join restored", "values appended after masking" and
+"labels interleaved with values".
 
 ## Who set this
 
