@@ -405,6 +405,17 @@ masked` on a document that carried one.)_
 - **Unlabelled bank accounts of 4–8 digits are not masked.** Only labelled ones (`Account no…`,
   `Routing…`) and bare runs of 9+ digits are. `Chase ending 45566778` survives.
 - **It reads PDFs only.** A `.docx` or an image is not handled.
+- 🔴 **It does NOT read FILLABLE FORM FIELDS — and the result looks like a clean read.** _(Found
+  2026-09-29, on two W-9s in a client's `TaxDome > Client uploaded documents > W9s` folder.)_ A
+  payee who fills a W-9 in a PDF viewer types into **AcroForm fields**, which live outside the page
+  text that `extract_text()` returns. Both files exited **0**, reported **0 SSN · 0 EIN**, and
+  produced text **identical, character for character, to a blank IRS W-9** — so the name, the tax ID
+  and the signature date were never seen, and nothing in the report said so. 🔑 **The tell: a W-9
+  (or any filled form) with 0 SSN AND 0 EIN is BLIND, not clean** — a filled W-9 always carries one
+  of the two. ✅ **Confirm it by comparing against the blank form from irs.gov**, printing only
+  the boolean. ⛔ **Do not work around it with an ad-hoc field reader** — that would skip every
+  control this tool exists for. Until the tool reads fields (masked and guarded like page text,
+  with a test), the answer is that **a person opens the file**.
 - **It is a backstop, not the control.** The control is still deleting the session when the
   work is done — and for a document that matters more than for organizer responses, because
   `get_file` puts a **presigned download URL** in the transcript by itself. That URL downloads the
