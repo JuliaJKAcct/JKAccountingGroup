@@ -756,13 +756,16 @@ if not _g_c["cross_line"]:
 #    counted, so a blind read says "0 of N" instead of passing for a clean one.
 #    Every name and number below is INVENTED.
 
-def _fillable_pdf(text: str, fields: list, rotate: int = 0, unplaced: list = ()) -> bytes:
+def _fillable_pdf(text: str, fields: list, rotate: int = 0, unplaced: list = (),
+                  xfa: bool = False, twice: tuple = ()) -> bytes:
     """One page of `text` plus AcroForm widgets.
 
     A field is a dict: t (name), v (value; a str, or a /Name for a box), rect,
-    ft ("/Tx" default, "/Btn"), tu (tooltip), as_ (appearance state), on (the
-    box's on-state, which gives it an /AP), kids (for a radio group: a list of
-    (rect, on-state)). `unplaced` fields are in the form but on no page.
+    ft ("/Tx" default, "/Btn"), tu (tooltip), ff (/Ff flags), maxlen, as_
+    (appearance state), on (the box's on-state, which gives it an /AP), kids
+    (for a radio group: a list of (rect, on-state)). `unplaced` fields are in
+    the form but on no page; `xfa` adds an /XFA entry; field names in `twice`
+    are listed twice in the page's /Annots.
     """
     def lit(s: str) -> bytes:
         return b"(" + s.replace("\\", "\\\\").replace("(", "\\(").replace(")", "\\)").encode("latin-1") + b")"
@@ -786,6 +789,10 @@ def _fillable_pdf(text: str, fields: list, rotate: int = 0, unplaced: list = ())
             common += b" /V " + val(f["v"])
         if f.get("tu"):
             common += b" /TU " + lit(f["tu"])
+        if f.get("ff"):
+            common += b" /Ff %d" % f["ff"]
+        if f.get("maxlen"):
+            common += b" /MaxLen %d" % f["maxlen"]
         if "kids" in f:  # a radio group: the field is the parent, the widgets are kids
             parent = add(b"")
             kid_refs = []
@@ -809,6 +816,8 @@ def _fillable_pdf(text: str, fields: list, rotate: int = 0, unplaced: list = ())
         top.append(n)
         if placed:
             annots.append(n)
+            if f["t"] in twice:
+                annots.append(n)
 
     stream = b"BT /F1 12 Tf 40 700 Td " + lit(text) + b" Tj ET"
     refs = lambda ns: b" ".join(b"%d 0 R" % n for n in ns)  # noqa: E731
@@ -819,7 +828,7 @@ def _fillable_pdf(text: str, fields: list, rotate: int = 0, unplaced: list = ())
                % (rotate, refs(annots)))
     objs[3] = b"<< /Length %d >>\nstream\n%s\nendstream" % (len(stream), stream)
     objs[4] = b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>"
-    objs[5] = b"<< /Fields [%s] >>" % refs(top)
+    objs[5] = b"<< /Fields [%s]%s >>" % (refs(top), b" /XFA []" if xfa else b"")
     out, offsets = bytearray(b"%PDF-1.4\n"), []
     for i, o in enumerate(objs, 1):
         offsets.append(len(out))
@@ -849,6 +858,9 @@ _PAYEE = "ZEPHYRFAKE TESTPAYEE"
 _BUSINESS = "QUARRY TESTWORKS LLC"
 
 
+_COMB = (1 << 24) | (1 << 23)  # comb + do-not-spellcheck — the real W-9's TIN boxes
+
+
 def _w9_fields(name=_PAYEE, ssn=("123", "45", "6789"), ein=("", ""), street="1234 Elm Rd"):
     """A W-9 laid out like the real one: the SSN in three comb boxes on ONE row, the EIN in two."""
     return [
@@ -859,11 +871,11 @@ def _w9_fields(name=_PAYEE, ssn=("123", "45", "6789"), ein=("", ""), street="123
         {"t": "c1_2", "ft": "/Btn", "v": "/Off", "as_": "/Off", "on": "/2", "rect": (180, 604, 188, 612)},
         {"t": "f1_07", "v": street, "rect": (59, 492, 388, 506)},
         {"t": "f1_08", "v": "Bozeman, MT 59715" if name else "", "rect": (59, 468, 388, 482)},
-        {"t": "f1_11", "v": ssn[0], "rect": (418, 396, 461, 420)},
-        {"t": "f1_12", "v": ssn[1], "rect": (475, 396, 504, 420)},
-        {"t": "f1_13", "v": ssn[2], "rect": (518, 396, 576, 420)},
-        {"t": "f1_14", "v": ein[0], "rect": (418, 348, 446, 372)},
-        {"t": "f1_15", "v": ein[1], "rect": (461, 348, 562, 372)},
+        {"t": "f1_11", "v": ssn[0], "ff": _COMB, "maxlen": 3, "rect": (418, 396, 461, 420)},
+        {"t": "f1_12", "v": ssn[1], "ff": _COMB, "maxlen": 2, "rect": (475, 396, 504, 420)},
+        {"t": "f1_13", "v": ssn[2], "ff": _COMB, "maxlen": 4, "rect": (518, 396, 576, 420)},
+        {"t": "f1_14", "v": ein[0], "ff": _COMB, "maxlen": 2, "rect": (418, 348, 446, 372)},
+        {"t": "f1_15", "v": ein[1], "ff": _COMB, "maxlen": 7, "rect": (461, 348, 562, 372)},
     ]
 
 
@@ -1034,11 +1046,8 @@ with tempfile.TemporaryDirectory() as td:
     #    value holding NUL must not forge redact()'s `\x00EIN<n>\x00` placeholder
     #    — with no EIN parked, restoring one would crash mid-job.
     (tmp / "misc.pdf").write_bytes(_fillable_pdf(_filler, [
-        {"t": "print", "ft": "/Btn", "rect": (500, 700, 560, 720), "v": None},
+        {"t": "print", "ft": "/Btn", "ff": 1 << 16, "rect": (500, 700, 560, 720), "v": None},
         {"t": "note", "v": "FAKE\x00EIN0\x00TAIL", "rect": (59, 660, 576, 674)}]))
-    # The push button needs its /Ff; patch it into the bytes rather than widen the builder.
-    (tmp / "misc.pdf").write_bytes((tmp / "misc.pdf").read_bytes().replace(
-        b"/FT /Btn /T (print)", b"/FT /Btn /Ff %d /T (print)" % (1 << 16)))
     try:
         rc, report = _run_quiet(tmp / "misc.pdf", tmp / "f14.txt")
     except Exception as exc:  # noqa: BLE001
@@ -1065,6 +1074,98 @@ with tempfile.TemporaryDirectory() as td:
         FAILURES.append("FIELDS · a failed field read was not reported as such")
     if "FAKE-VALUE" in report or "6789" in report:
         FAILURES.append("FIELDS · LEAK: the report quoted the field reader's exception message")
+
+    # ══ FROM THE INDEPENDENT REVIEW OF PR #485 — each of these got through the
+    #    first version of the field reader.
+
+    # R1 · THE GREEDY JOIN. It took the FIRST nine-digit run from the left, so a
+    #      digit-only field before the SSN boxes pulled part of the SSN into the
+    #      wrong run and the rest was written in clear — with the guard silent,
+    #      where WITHOUT any join it would have refused.
+    for label, vals, secret in (
+        ("a year before the SSN boxes", ("2024", "123", "45", "6789"), "6789"),
+        ("date boxes before the SSN boxes", ("04", "17", "1982", "123", "45", "6789"), "6789"),
+        ("a year before nine single-digit boxes", ("2024", *"123456789"), "6789"),
+        ("a year before two SSNs", ("2024", "123", "45", "6789", "987", "65", "4321"), "4321"),
+    ):
+        (tmp / "greedy.pdf").write_bytes(_fillable_pdf(_filler, _row(*vals)))
+        rc, _ = _run_quiet(tmp / "greedy.pdf", tmp / "r1.txt")
+        got = (tmp / "r1.txt").read_text() if rc == 0 else ""
+        (tmp / "r1.txt").unlink(missing_ok=True)
+        tail = r"\D{0,12}".join(secret)
+        if rc == 0 and re.search(r"(?<!\d)" + tail + r"(?!\d)", got):
+            FAILURES.append(f"FIELDS · R1 LEAK · {label}: {secret!r} reached the written file")
+    # …and the SSN on its own is still read as an SSN, not merely masked.
+    (tmp / "greedy.pdf").write_bytes(_fillable_pdf(_filler, _row("123", "45", "6789")))
+    rc, report = _run_quiet(tmp / "greedy.pdf", tmp / "r1b.txt")
+    if rc != 0 or "1 SSN/ITIN" not in report:
+        FAILURES.append("FIELDS · R1 · three SSN boxes alone were not counted as one SSN")
+
+    # R2 · MASKS THAT NEED A LABEL. A value is written alone, so DOB_CONTEXT and
+    #      friends can never fire on it; the field's OWN tooltip or name must.
+    #      Includes a DOB split into three boxes, which no page rule would see.
+    labelled = [
+        {"t": "a1", "tu": "Date of birth (MM/DD/YYYY)", "v": "04/17/1982", "rect": (59, 660, 300, 674)},
+        {"t": "a2", "tu": "Driver's license number", "v": "D123-4567-8901", "rect": (59, 630, 300, 644)},
+        {"t": "a3", "tu": "Account number", "v": "12345678", "rect": (59, 600, 300, 614)},
+        {"t": "applicant_dob_mm", "v": "07", "rect": (59, 570, 80, 584)},
+        {"t": "applicant_dob_dd", "v": "22", "rect": (90, 570, 110, 584)},
+        {"t": "applicant_dob_yyyy", "v": "1979", "rect": (120, 570, 160, 584)},
+        {"t": "a4", "tu": "Passport number", "v": "N/A", "rect": (59, 540, 300, 554)},
+    ]
+    (tmp / "lab.pdf").write_bytes(_fillable_pdf(_filler, labelled))
+    rc, report = _run_quiet(tmp / "lab.pdf", tmp / "r2.txt")
+    got = (tmp / "r2.txt").read_text() if rc == 0 else ""
+    for secret in ("04/17/1982", "4567-8901", "12345678", "1979"):
+        if secret in got:
+            FAILURES.append(f"FIELDS · R2 LEAK: a labelled field value {secret!r} reached the file")
+    if "4 dates of birth" not in report or "1 licence" not in report or "1 labelled account" not in report:
+        FAILURES.append("FIELDS · R2 · label-masked field values were not counted in the report")
+    if "N/A" not in got:
+        FAILURES.append("FIELDS · R2 · a digit-free value under an ID label was masked — nothing to hide")
+
+    # R3 · A WIDGET LISTED TWICE in /Annots put its value in the row twice —
+    #      `123 45 45 6789` — which is no nine-digit run, so nothing masked it.
+    (tmp / "dup.pdf").write_bytes(_fillable_pdf(_W9_TEXT, _w9_fields(), twice=("f1_12",)))
+    rc, report = _run_quiet(tmp / "dup.pdf", tmp / "r3.txt")
+    got = (tmp / "r3.txt").read_text() if rc == 0 else ""
+    if rc != 0 or "6789" in got or "[SSN-1]" not in got:
+        FAILURES.append(f"FIELDS · R3 · a widget listed twice broke the SSN join (exit {rc})")
+
+    # R4 · XFA IS NOT READ, AND MUST SAY SO. An XFA-only form (empty /Fields)
+    #      reported "no fillable form fields" — a blind read passing for clean.
+    (tmp / "xfa.pdf").write_bytes(_fillable_pdf(_filler, [], xfa=True))
+    rc, report = _run_quiet(tmp / "xfa.pdf", tmp / "r4.txt")
+    if rc != 0 or "XFA form data, which this tool does NOT read" not in report:
+        FAILURES.append("FIELDS · R4 · an XFA-only form did not say its data was not read")
+    if "no fillable form fields" in report:
+        FAILURES.append("FIELDS · R4 · an XFA-only form was reported as having no fillable fields")
+    # …and a form carrying BOTH, whose fields WERE read, still says XFA was not —
+    #    the real IRS W-9 is built this way.
+    (tmp / "xfa2.pdf").write_bytes(_fillable_pdf(_W9_TEXT, _w9_fields(), xfa=True))
+    rc, report = _run_quiet(tmp / "xfa2.pdf", tmp / "r4b.txt")
+    if rc != 0 or "also carries XFA form data, which this tool does NOT read" not in report:
+        FAILURES.append("FIELDS · R4 · a filled form that also carries XFA did not say XFA was not read")
+
+    # R5 · 2·7 IS THE ONE JOIN THAT WRITES A VALUE UNMASKED, so it needs evidence.
+    #      Two amount boxes `50 | 1250000` are not an EIN.
+    (tmp / "amt.pdf").write_bytes(_fillable_pdf(_filler, _row("50", "1250000", "5556")))
+    rc, report = _run_quiet(tmp / "amt.pdf", tmp / "r5.txt")
+    got = (tmp / "r5.txt").read_text() if rc == 0 else ""
+    if "50-1250000" in got or "1 EIN" in report:
+        FAILURES.append("FIELDS · R5 · two plain amount boxes were kept and counted as an EIN")
+    if "⟨joined⟩   5556" not in got:
+        FAILURES.append("FIELDS · R5 · a masked span lost its column count — 5556 shifted a column")
+
+    # R6 · A WALK CUT SHORT BY ITS SAFETY CAP must be reported, not look complete.
+    _real_cap = _rmod.MAX_FIELD_NODES
+    _rmod.MAX_FIELD_NODES = 1
+    try:
+        rc, report = _run_quiet(tmp / "unpl.pdf", tmp / "r6.txt")
+    finally:
+        _rmod.MAX_FIELD_NODES = _real_cap
+    if "could NOT be read" not in report:
+        FAILURES.append("FIELDS · R6 · a field walk stopped by its node cap was not reported")
 
 if FAILURES:
     print(f"FAILED — {len(FAILURES)} problem(s):")
