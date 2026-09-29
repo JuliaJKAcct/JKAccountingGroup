@@ -1,6 +1,6 @@
 # Zakom Incorporated
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-15
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-28
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -64,7 +64,7 @@ link). Never write the credential itself here.
 | American Express — Mema Colors LLC | A SECOND Amex, on a different entity | n/a | ⚠️ **The client said so himself** — Mema Colors has no activity except its Amex. ⛔ **But nothing evidences that ZAKOM'S account pays it:** the "two references = two cards" reading is withdrawn *(above)*. **Still worth asking; no longer supported by the bank** |
 | Other Fifth Third accounts | 🔴 **FOUR MORE EXIST** | n/a | **CK …1409 · SV …3196 · SV …2975 · CK …5830** — traffic both ways all year, **netting to almost nothing**, which reads as a sweep rather than withdrawals. ⛔ **The firm holds statements for none and whose they are is unknown** — and **if any is the company's, its balance belongs on the balance sheet.** Figures in the working paper *(§3E ③)* |
 | Fifth Third — **a CREDIT LINE and a CREDIT CARD** | Two more counterparties, on top of the four above | n/a | 🔴 **Established 2026-09-13 from the 2024 statements.** The bank labels the transfer with its own type code: **CL** (credit line) in **Nov and Dec 2024** — which is when the client's own Asset List says the **business line of credit started** — and **CC** (credit card) in May 2024 and again in Aug–Sep 2025. Both extract in the **16-digit** masked form where checking and savings extract in 10. ⚠️ **The card is NOT the Amex**, and `FIFTH THIRD BANK WEB PAY` is debited **once every month from June 2024 onward** |
-| BMO Bank | Equipment/term loans | n/a | First payment **Nov 2024**; **2 a month from Mar 2025, 3 a month from Aug 2025** → **three contracts**. The payments reference `ZAKOM INCORPORATED` |
+| BMO Bank | Equipment/term loans | n/a | First payment **Nov 2024**; **2 a month from Mar 2025, 3 a month from Aug 2025** → ✅ 🆕 **FOUR contracts, established 2026-09-25 from the four lender letters** — ⛔ **the stream count is NOT the contract count: only THREE payment streams appear in this account and why is unsettled** *(§6 log)*. _(As written: → three contracts.)_ The payments reference `ZAKOM INCORPORATED` |
 | Financial Pacific Leasing | Equipment leases | n/a | Contracts `001-1733069-301` and `-302` (amortization schedules in `Tax > 2023`). **2 payments a month to Jun 2024, 1 a month after** — one contract ended mid-2024 |
 | AP Equipment Financing | Secured promissory notes | n/a | ✅ **Both notes READ IN FULL 2026-09-13** — loan amount, term, payment, rate and the equipment VIN are on each. Notes `160544` (the 1839 Freightliner) and `160562` (the Reitnouer trailer) — contract packs in the 2025 organizer |
 | Mitsubishi HC Capital America | Trailer finance | n/a | 2022 Benson trailer, contract `9827076-001` |
@@ -115,9 +115,9 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Process notes (→ future SOP):** _(pending)_
 
 ### 1099 preparation
-- **Applies?** **Yes** — `1099 Preparation` ✓, and the firm has done it before: `Zakom Incorporated - 1099 Preparation 2024.pdf` and `… 2025.pdf` are in Double, with recipient copies filed by year
+- **Applies?** **Yes** — `1099 Preparation` ✓, and the firm has done it before: `Zakom Incorporated - 1099 Preparation 2024.pdf` and `… 2025.pdf` are in Double, and the forms themselves are KEPT by year under the firm's own `1099` folder. ⚠️ **The migrated folder named for 2025 recipient copies is EMPTY** — do not cite it as evidence either way. ⛔ **And the file named for the year's *1099 preparation* is NOT a vendor list: it is the firm's request letter to the client, and names no vendor** *(read 2026-09-25)*
 - **What & when:** the firm prepares the 1099s; the recipients are the company's drivers
-- **Process notes (→ future SOP):** the client answered **yes** to making 1099-MISC payments and **yes** that they were filed, but then wrote on the same organizer that **some payees had no corporate name and he can supply names and addresses** — so more may be owed than were issued. That contradiction is open (§6)
+- **Process notes (→ future SOP):** the client answered **yes** to making 1099-MISC payments and **yes** that they were filed, but then wrote on the same organizer that **some payees had no corporate name and he can supply names and addresses** — so more may be owed than were issued. ✅ **ANSWERED 2026-09-25 ON *WHICH DRIVERS HAVE A FORM* (§6 log): five of the six have a 2025 form on file; the sixth has NONE, so the 2025 forms give the firm no corporate name for him, and his two organizer answers were never in conflict.** ✅ **The 2024 folder was compared too, the same day — no MATCHING form there either, so there is no form for him in either year under any name resembling the client's own heading for him** ⛔ *(it does NOT exclude him — all three of that folder's 2024-only recipients remain possible)*. 🔴 **And it showed NEITHER year's filename may be read as evidence of corporate status** — the same recipients carry a corporate suffix in one year's filenames and none at all in the other's, and a listing cannot say which naming is the legal name — nor whether the recipient's OWN name changed between the years, which is the case where BOTH filenames are right — **so whether a payee is a corporation is open for the other five as well, which changes nothing on the return.** ⛔ **The earlier wording "the only entry recorded under a person's name" is WITHDRAWN — the client's six column headings are ALL bare names and distinguish nothing.** ✅ 🆕 **AND ANSWERED ON TRANSMISSION TOO, 2026-09-25 — they WERE filed.** 🔑 **Lilian stated the firm's own process: the firm does not create 1099s and archive them; they are created and filed automatically.** ⛔ **So the earlier "a copy on file is not the same as transmitted" is WITHDRAWN — it was a session's inference about a firm practice only a principal could state.** ⚠️ **STILL OPEN for payees BEYOND the driver list** — the payments to named individuals through a cash-transfer app (§6), ⚠️ **and nothing establishes whether any of those payees is one of the six drivers.** ✅ 🆕 **AND THE SIXTH GETS NO FORM: the firm does not issue a 1099 late to a payee who was not issued one at the time** *(Lilian, 2026-09-25)*. **What is owed instead is his identity and, if it can be established, the amount — as information for the other principal, not as a form**
 
 ## 5. Key facts & quirks
 
@@ -139,20 +139,21 @@ watch-outs, one-off arrangements, history that affects the work.
 - ✅ **THE CLIENT SENT A CARD DOCUMENT ON 2026-09-14 — and it is the SPENDING record, not the BALANCE the firm asked for.** He uploaded **one** file: the **American Express 2025 Year-End Summary**, which itemises every charge of the year by category, merchant and date. 🔑 **That ends the biggest blind spot on this return** — the card spending had no detail behind it at all. ⛔ **But three points stand.** ① **It reports spending, NOT a year-end balance**, which is the one figure Julia's ruling actually asked for — so that request is still open, for this card and the three others. ② **Nothing arrived for the Fifth Third credit card, the Macy's card or the Fifth Third credit line.** ③ **It is still in the SHAREHOLDER's name with the company named nowhere**, exactly like the 2023 and 2024 summaries.
 - 🟠 **AND THE CARD RAISES THREE THINGS THAT MOVE MONEY — each of them a QUESTION, and a first pass at all three had to be corrected against the document itself.** ① **Some of the year's charges may be personal** — a designer-clothing purchase on Christmas Eve, a ten-day trip through five Italian cities at the turn of August and September, and two sports-club subscriptions. ⛔ **No total is quoted, deliberately:** the first attempt picked Amex's own category captions, which swept in budget-motel lodging that reads like ordinary overnight-on-the-road business, counted flights that were paid with points and credited back, missed Italy charges sitting in two other categories, and never looked at recurring home-security, car-wash and cleaning charges whose captions looked businesslike. 🔑 **The category is not a proxy for the answer — only the client can classify these**, and whatever is personal is a **distribution**, not an expense, against an accumulated adjustments account that opens at zero. ② **The card carried revolving interest all year.** ⛔ **An earlier version of this line said it "has no home in the client's books." Withdrawn** — the working paper's own preferred reading is that the client's interest line is the interest on his OTHER debt, and a revolving card is exactly that; how much of it is even *business* interest depends on ①. ③ 🔴 **The payments out of the bank do NOT reconcile to the charges plus the prior year's reported balance** — and the gap is a **floor**, not a size, because the card plainly closed the year with a balance. ⚠️ **Four candidate causes — one tested and eliminated, three open:** the prior return's figure understates *(it is a return figure, not a statement balance)*; the summary is on a charge-processing basis while a balance is on a billing basis, **which the document states on its own second page**; ~~a different card~~ ✅ **tested and eliminated the same day — the 2025 summary is the SAME card as 2024, though the card did change between 2023 and 2024**; or some payments went to another Amex account, **the shareholder's own as readily as the other entity's.**
 - 🔑 **RE-READING THE 2023 AND 2024 FILED RETURNS MOVED SIX BLOCKING QUESTIONS — and the lesson is how far a prior year actually carries.** ✅ **What it SETTLED:** an unexplained balance-sheet asset the firm has carried for two years is named on the prior return's own statement as a **loan to the owner's other company** — an intercompany receivable, and a related-party question in its own right; and the other-current-liability line is the **Amex card balance**, which also gives 2025 its opening figure for that one card. ⚠️ **What it NARROWED without settling:** an asset the client dated to an earlier year is on **neither** prior schedule, which leaves two branches — a typo, or an asset acquired earlier and **never capitalised**, and those need completely different treatment; and the prior year's cash line covered **one bank account**, which may record what the preparer HAD rather than what the company owns, since the firm has never held a statement for the others in any year. 🔴 **What it REVERSED:** the prior year did **not** report zero distributions — it reported the full amount on the K-1 while capping Schedule M-2 at the available balance — **and it ran no contributions at all, which FAILS one of the firm's netting-policy gates and forces this year to be prepared gross**, the opposite of the earlier reading. ⛔ **And what it could NOT answer:** whether any disposal form was ever filed, because the two pages that would carry it produce no text in any extraction.
-- 🟡 **THE CLIENT USES SEVERAL NAMING SYSTEMS FOR HIS TRUCKS AND THE RETURNS USE ANOTHER — the gap is narrowed to one pair and one inference.** Two of his three sold Freightliners cannot be told apart on any document the firm holds, **and one of that pair is the truck that was destroyed**, so which is which changes the casualty's basis. ⛔ **Neither filed return carries a unit number anywhere**, so the prior year cannot supply the map. ⚠️ **A third truck is matched on a single inference**, not two, and the description-level matches behind all of them remain *consistent-with rather than confirmed*. 🔑 **Ask for VINs** — the finance documents show two trucks of identical year, make and model. ⚠️ **And a trailer he sold this year appears on no prior return at all** — never capitalised, so no basis to recover, **and that kind of disposal is invisible to any check against the schedule while still needing its own form.**
+- 🟡 **THE CLIENT USES SEVERAL NAMING SYSTEMS FOR HIS TRUCKS AND THE RETURNS USE ANOTHER — the gap is narrowed to one pair and one inference.** Two of his three sold Freightliners cannot be told apart on any document the firm holds, **and one of that pair is the truck that was destroyed**, so which is which changes the casualty's basis. ⛔ **Neither filed return carries one of the CLIENT'S unit numbers ⚠️ 🆕 *(they carry their own — three of the eight asset names do; the two series are different, which is the open item)* anywhere**, so the prior year cannot supply the map. ⚠️ **A third truck is matched on a single inference**, not two, and the description-level matches behind all of them remain *consistent-with rather than confirmed*. 🔑 **Ask for VINs** — the finance documents show two trucks of identical year, make and model. ⚠️ **And a trailer he sold this year appears on no prior return at all** — never capitalised, so no basis to recover, **and that kind of disposal is invisible to any check against the schedule while still needing its own form.**
 - 🔴 **THE ACCOUNT-INVENTORY RULING — Lilian, 2026-09-14, and its main consequence runs OPPOSITE to how it feels.** She ruled that **the only business accounts are the ones the prior year's return reported**, on the stated ground that monthly payments leaving the business bank account to a credit card do not make that card a business account. ✅ **What it closes is real:** the year-end cash figure becomes unconditional, the card liability is one card rather than four accounts, and a rebuild of the balance sheet loses a branch it would otherwise have had to chase. 🛑 **What travels with it is bigger:** if those other cards are not the company's, then **every payment the business account made to them during the year was the company discharging someone else's liability** — and this file's own rule says such a debit has to land as a **distribution, a receivable from the owner, or wages**, with nothing evidencing the last two. ⚠️ **The same logic MIGHT reach the property tax the company paid to the county — and the condition is NOT closed:** the firm has never established that those payments are a property tax on the owner's home at all, rather than **commercial vehicle registrations** on the fleet, which the same county office issues, and the owner's own address on the prior return is in another state. ⛔ **And the "sweep" reading of the other bank accounts dies with it** — a sweep is movement between a company's *own* accounts, and the premise is gone. ⚠️ **But the ruling establishes only that those accounts are NOT the company's; it does not establish WHOSE they are** — if they are the owner's own accounts used as a conduit, a round trip is still a round trip, and the refusal to net then rests on the firm's netting-policy gate rather than on the ruling. 🔑 **So MORE money has to move THROUGH the owner's capital account, by an amount nobody has measured** *(the payments to two of those cards are counted in this file and never totalled)*. ⚠️ **Not that the account grows — distributions make it smaller; what grows is how much passes through it.** ⚠️ **The objection reaches the signer with the decision** — this paper had already written that copying a prior year's *presentation* cannot cure an *ownership* question. **It is a decision, not a defect; Julia may confirm it.** ⛔ **And three limits: it adopts the prior year's account INVENTORY, not its BALANCES; it does NOT bar accounts that first existed this year (the vehicle lease, the financed insurance, the fuel account, every new equipment note); and the card it keeps is the one account where her RULE and her stated REASON point opposite ways — the return keeps it, her own test would fail it.** 🔑 **That is a question back to her, not something a working paper decides: the payments on that card are the largest single outflow of the year, and whether the balance sheet carries a card liability at all turns on the answer.**
 - 📨 **THE CLIENT WROTE ON 2026-09-14, AND ONE HALF IS NEW.** ① He says the other entity *"had no activity in 2025 again."* ⛔ **That does not answer what the firm asked** — the prior return carries a **loan FROM this company TO that entity** on its balance sheet, unchanged across both columns, and **a dormant company can still owe it.** **The question is whether any of it was repaid.** ② 🔴 **He is paying a 2024 balance to the IRS by automatic monthly withdrawal and wants to know whether it is paid off.** **Nothing in this firm's file explains what that balance is** — an S corporation pays no federal income tax itself. ⚠️ **And before any of this reaches him, two cheaper steps the firm has not taken: search the bank statements it already holds for IRS payment strings** *(the whole question turns on which account the debits leave)*, **and ask WHEN the debits ran** — the message gives no date, and next-year debits cannot touch this return at all. **Candidates, none established:** a **late-filing penalty on the company's own return**, the strongest fit on its shape *(small and recurring, because the penalty runs per shareholder per month — and nothing in the firm's file evidences an extension for that year)*; **company payroll tax** *(the prior year DID run payroll — the officer's salary)*; his **personal return** *(the prior year passed him a large amount with no withholding)*; or a **state** balance, which touches the open two-states question **and which the firm's own file corroborates structurally, since JK itself filed the second state for 2022.** ⚠️ **TWO of those four are the company's — the penalty and the payroll tax — which is part of why the question cannot be closed from our own file, and it decides which taxpayer any authorization has to name.** ✅ **The route is settled by the firm's own identity SOP: to be TOLD an IRS balance the firm files a Form 8821, on which LILIAN may be named; a Form 2848 may name only Julia.** ⚠️ **But an 8821 is signed by whoever owes — so which taxpayer it names depends on question ② being answered first.** **And the client can simply check his own IRS online account.**
 - ✅ **DEPRECIATION IS SETTLED AND THE SALARY HAS A DIRECTION — Lilian, 2026-09-14. ⚠️ Neither is one of the three positions listed further down as Julia's.** **Depreciation: exactly what the prior year did** — no immediate write-off of the new equipment, and the annual election out of bonus depreciation re-attached *(the re-attaching itself is still to do)*. **The owner's salary: handle it like another client of the firm's, amount still undefined, left pending** — ⚠️ **and the OWNER of that decision has not spoken; it is Julia's on both returns.** ✅ **That other return was read the same day: it reported the officer line at ZERO and WROTE THE POSITION DOWN, with three routes set out for whoever signs** — so "similar" means report zero **and document it**, and the documenting is the part not yet done. ⛔ **An earlier version of this line said the comparison had to be verified because that client's K-1 went to a different schedule. Withdrawn — that routing is how EVERY return of this type travels, and officer pay is not a K-1 item at all.** 🔑 **Of Julia's own three positions, TWO are still open: the home office and the personal vehicles.**
-- ✅ **THE PRIOR-YEAR FOLDERS HELD FOUR LENDER DOCUMENTS NOBODY HAD OPENED — and one of them closes a 2025 figure with no client involved.** One finance company issued a *"tax breakout letter"* per contract **and a full-term amortization schedule per contract**. 🔑 **Reading them settled three things:** one of its two contracts is **paid off** *(its schedule shows the final payment, in the very month the bank stopped paying twice a month)*; the other **runs to late 2027**; and **that second contract's schedule projects every month of 2025, so its year-end balance and the year's interest are now known without asking anybody** — subject to confirming no early payoff. 🛑 **But the lender's own letters end by disclaiming the split:** it says principal-and-interest separation **does not apply** to its products and the monthly payment **is not split**. ⛔ **So whether that interest is deductible the way the firm's ruling assumes is a question for Julia — and so is whether this equipment was ever capitalised at all.** ⚠️ **Separately, a projection test showed the three 2025 letters the client did send do NOT belong to the two equipment notes signed in February 2025** *(a first version of that test used a wrong principal and was rebuilt)*. **It says nothing about a third contract, which cannot be tested at all.**- 🔑 **JULIA SETTLED FOUR THINGS ABOUT HOW THIS RETURN IS BUILT — 2026-09-13, relayed by Lilian, and three of them read as firm practice rather than a Zakom exception** *(queued for the SOP as `SOP-2026-09-13-01` and `-02`)*. ① **The client's P&L is the income statement and we do not verify it against anything.** ⚠️ **Two limits, and both matter here.** It does **not** touch the **equity side** — distributions, contributions and the capital account are not on a P&L, and this client's books have no equity section at all. And it does **not** close the **USA Florida Freight** question: that is not only about revenue, because the client's own sheet calls the relationship a loan, and a loan is a **balance-sheet liability and a related-party disclosure**. ⓘ *There is also no record that Julia was shown either that figure or the credit-card figure; her ruling covers them by its terms, which is not the same as deciding them.* ② **The principal/interest split IS required**, and the authority for it is the **lender's own interest letter** plus the year-end loan balance — the client's ending balances are relied on when he gives them. ③ **Every disposal needs its document** — a sale agreement, or for a totalled asset **the insurer's letter stating what it paid**. ④ **What the year-end actually needs is the ending balance on every bank and card account.** ⛔ **What she has NOT settled is unchanged and is still hers: reasonable compensation, the home office, and the personal vehicles moving through the business account** *(below)*.
+- ✅ **THE PRIOR-YEAR FOLDERS HELD FOUR LENDER DOCUMENTS NOBODY HAD OPENED — and one of them closes a 2025 figure with no client involved.** One finance company issued a *"tax breakout letter"* per contract **and a full-term amortization schedule per contract**. 🔑 **Reading them settled three things:** one of its two contracts is **paid off** *(its schedule shows the final payment, in the very month the bank stopped paying twice a month)*; the other **runs to late 2027**; and **that second contract's schedule projects every month of 2025, so its year-end balance and the year's interest are now known without asking anybody** — subject to confirming no early payoff. 🛑 **But the lender's own letters end by disclaiming the split:** it says principal-and-interest separation **does not apply** to its products and the monthly payment **is not split**. ⛔ **So whether that interest is deductible the way the firm's ruling assumes is a question for Julia — and so is whether this equipment was ever capitalised at all.** ⚠️ **Separately, a projection test showed the three 2025 letters the client did send do NOT belong to the two equipment notes signed in February 2025** *(a first version of that test used a wrong principal and was rebuilt)*. **It says nothing about a third contract, which cannot be tested at all.**
+- 🔑 **JULIA SETTLED FOUR THINGS ABOUT HOW THIS RETURN IS BUILT — 2026-09-13, relayed by Lilian, and three of them read as firm practice rather than a Zakom exception** *(queued for the SOP as `SOP-2026-09-13-01` and `-02`)*. ① **The client's P&L is the income statement and we do not verify it against anything.** ⚠️ **Two limits, and both matter here.** It does **not** touch the **equity side** — distributions, contributions and the capital account are not on a P&L, and this client's books have no equity section at all. And it does **not** close the **USA Florida Freight** question: that is not only about revenue, because the client's own sheet calls the relationship a loan, and a loan is a **balance-sheet liability and a related-party disclosure**. ⓘ *There is also no record that Julia was shown either that figure or the credit-card figure; her ruling covers them by its terms, which is not the same as deciding them.* ② **The principal/interest split IS required**, and the authority for it is the **lender's own interest letter** plus the year-end loan balance — the client's ending balances are relied on when he gives them. ③ **Every disposal needs its document** — a sale agreement, or for a totalled asset **the insurer's letter stating what it paid**. ④ **What the year-end actually needs is the ending balance on every bank and card account.** ⛔ **What she has NOT settled is unchanged and is still hers: reasonable compensation, the home office, and the personal vehicles moving through the business account** *(below)*.
 - 🔴 **This company files in TWO states — Florida and Illinois — and the 2025 organizer says otherwise.** The firm itself established the split when it prepared 2022 (Julia: *"It has to be separated as we are doing 2 state reporting"*, with an Illinois tax deduction on that return and nothing paid to Florida), and the bank's own banking centre is in Illinois. The client then answered **"no"** to operating in more than one state on the 2025 organizer, which suppressed the follow-up asking *which* states. **Anyone working this return off the organizer alone would file Florida only.**
 - 🔴 **THREE POSITIONS ONLY JULIA CAN SETTLE, and none of them is a keying decision.** **① Reasonable compensation** — no W-2 employees and no officer compensation across a full year of trucking operations, which is the exposure and the condition [`form-1120s-preparation.md`](../../sops/form-1120s-preparation.md) §5C-v is written around. **② The home office** — the workbook allocates a third of the whole home, **including the shareholder's mortgage interest and property taxes**, into the company's P&L, and an **1120-S has no Form 8829**: it is an accountable-plan reimbursement or rent to the shareholder, and **§280A(c)(6)** bars him from deducting against that rent. **③ Personal vehicles moving through the business account in both directions** — a car he labels personal bought, another sold with the proceeds wired in, one traded in.
 - 🔴 **The company HAS a credit card, the firm has always known it, and 2025 is the first year nothing was sent.** Established 2026-09-13 from Gmail, in the client's own words: he uploaded `Amex 2024 Zakom.pdf` with the message *"Hi, Zakom Amex 2024"* and filed it separately from *"Zakom Checking acc 24 Stmnts"*. A 2023 Amex year-end summary and a December Amex balance statement are also on file, and **the firm's own annual request has asked for "the December Bank AND Credit card statement to confirm balances" since at least February 2023.** ⛔ **For 2025 no card statement has been IDENTIFIED** — nothing card-named anywhere in Double, and the balance sheet reports a **card balance at the year end** while January's bank statement shows **two Amex ACH payments in one day under two different Amex references.** ✅ **SETTLED 2026-09-13: all twelve `stmnt` files were opened and all twelve are the bank's**, so "no 2025 card statement was uploaded" is now established file by file, not inferred.
-  🟠 **And a SECOND entity has its own Amex.** The client, twice in Aug 2025 (by email to Julia and in the portal): **Mema Colors LLC** *"had no activity/revenue in 2024 again just Amex expenses"* and *"I only used its Amex for expenses."* ⛔ **THAT ZAKOM'S ACCOUNT PAYS IT IS NOT ESTABLISHED AND THE EARLIER READING IS WITHDRAWN:** the differing references on the bank's Amex payments are **per-payment confirmation numbers**, not card identifiers *(all 39 differ)*, so the bank evidences nothing about whose card was paid. **The question is still worth asking; the evidence for it is gone.** **Mema Colors has no Double record and no CI file**, yet the firm filed its **BOI report** (Dec 2024) and prepared an **amendment** (Nov 2024). A third entity, **Palm Terra LLC**, also exists — the firm sent its articles, EIN and operating agreement in May 2024, copied to a second person. **Whether either is a live engagement is unestablished — put it to Lilian.**
+  🟠 **And a SECOND entity has its own Amex.** The client, twice in Aug 2025 (by email to Julia and in the portal): **Mema Colors LLC** *"had no activity/revenue in 2024 again just Amex expenses"* and *"I only used its Amex for expenses."* ⛔ **THAT ZAKOM'S ACCOUNT PAYS IT IS NOT ESTABLISHED AND THE EARLIER READING IS WITHDRAWN:** the differing references on the bank's Amex payments are **per-payment confirmation numbers**, not card identifiers *(all 39 differ)*, so the bank evidences nothing about whose card was paid. **The question is still worth asking; the evidence for it is gone.** **Mema Colors has no Double record and no CI file**, yet the firm filed its **BOI report** (Dec 2024) and prepared an **amendment** (Nov 2024). ✅ 🆕 **2026-09-26: Mema Colors LLC has its own Google Drive folder** (`MEMA COLORS LLC`, created 2023-09-07) holding the two 2024 BOI e-filing PDFs — a separate vault from Zakom's own, which is more evidence of a real (if inactive) engagement, not a decision on whether it is a live one. A third entity, **Palm Terra LLC**, also exists — the firm sent its articles, EIN and operating agreement in May 2024, copied to a second person, **identified 2026-09-26 as `talentkosta@gmail.com`** (cc'd on the May 2024 documents and the customer contact on a paid invoice (amount withheld), April 2024) — a person not previously named anywhere in this file. 🔴 **AND PALM TERRA LLC IS DISSOLVED — found 2026-09-26, not previously in this file.** Florida's Division of Corporations confirmed by email (2024-12-03, to Julia, forwarded to Oleg the same day) that **Articles of Dissolution for PALM TERRA LLC were filed 2024-11-25, effective 2024-12-31** (document `L24000197396`). ✅ **The firm DID do final-year filing work for it**: a **Form 7004 extension for PALM TERRA LLC was filed and confirmed by the firm to the client on 2025-03-17** (`irina@jkaccountinggroup.com`, same firm template as Zakom's own 2024 extension email) — presumably covering its final (2024) return. ⛔ **Whether that final Palm Terra return was ever actually prepared/filed is NOT established** — no filed-return confirmation email was found in this sweep, and it has no Double record to check a project status on. **Palm Terra has its own Google Drive folder** (`PALM TERRA LLC`, created 2024-05-06) with its Articles, EIN letter and Operating Agreement. ✅ **So: Palm Terra is NOT a live/current engagement (dissolved end of 2024), but WAS a real one through its final year — Lilian should decide whether it and Mema Colors warrant their own CI files** (flagged, not created — outside this sweep's scope).
   🔴 **AND THE MONEY HAS RUN THE OTHER WAY TOO.** The client's own 2023 asset sheet records a **Zakom business line of credit "used for auction property under Mema Colors LLC"** — **this company's credit funded the other entity's property purchase.** *(Established 2026-09-13; figures in the working paper §3G ③.)* **That is an intercompany item with a balance-sheet consequence, and it is the second direction in which these two entities touch.**
 - 🔴 **2024 HAS NO SECOND ACCOUNT EITHER — and the 2024 statements name a CREDIT LINE and a CREDIT CARD that 2025's four do not.** Eight of the twelve 2024 statements were opened on 2026-09-13 *(Jan–Apr were refused by the redactor's guard)*: every one is the same `…7807` checking account. What 2024 adds is two counterparties the 2025 scan did not list — the **Fifth Third credit line**, whose transfers begin in **November 2024**, exactly when the client's own Asset List says the line started, and a **Fifth Third credit card**, which is **not the Amex** and which the account has paid **every month since June 2024**. 🔑 **So the answer to "how many accounts does he have?" is: we hold statements for ONE, and the ledger names at least SIX more at that bank** *(the four in the working paper, plus the line and the card)* **and eleven credit relationships outside it** — BMO ×3, Financial Pacific ×2, AP Equipment Financing ×2, Mitsubishi HC, Tropical FCU, Audi Financial, the SBA EIDL, IPFS, a **Macy's store card paid monthly from the business account**, and a Huntington/BP fuel account from November 2025. Full evidence: [`tax-returns/…/2025-form-1120s.md` §3E ⑦–⑧](../../tax-returns/zakom-incorporated/2025-form-1120s.md). ⚠️ **Counted by distinct masked last-four — a floor, not a ceiling.**
 - 🔴 **Both Amex year-end summaries are in OLEG ZAKALA's name, and 2023 and 2024 carry DIFFERENT card numbers.** They are Business Gold Card Year-End Summaries "Prepared for OLEG ZAKALA", and **the word ZAKOM appears in neither** _(opened 2026-09-13)_. A reissue and a second card are indistinguishable from here. This is the evidence behind the standing question of whether the card the company pays every month is the company's at all.
 - 🟠 **The client's own 2025 workbook carries a `MEMA COLORS LLC 2023` sheet** — an expense schedule for the other entity, with real-estate fees and a property bought and sold, sitting in the same file as Zakom's books _(opened 2026-09-13)_. It is more support for the Mema question than anything the bank statements give, and the bank evidence for it was withdrawn.
-- ✅ **THE 2025 INTEREST LETTERS EXIST AND HAD NEVER BEEN OPENED FOR THEIR FIGURES.** Three of them sat in the 2025 organizer all along; read 2026-09-13, each carries the **exact 2025 interest AND the 31 December principal balance** for one contract. ⛔ **The lender's name is a logo rather than text and the contract numbers were masked by the redactor's guard, so which letter belongs to which contract is NOT established** — the client's filenames are all that link them, and one names a unit (`1838`) that appears on no asset table. **Figures in the working paper §3H.**
+- ✅ **THE 2025 INTEREST LETTERS EXIST AND HAD NEVER BEEN OPENED FOR THEIR FIGURES.** Three of them sat in the 2025 organizer all along; read 2026-09-13, each carries the **exact 2025 interest AND the 31 December principal balance** for one contract. ⛔ **The lender's name is a logo rather than text and the contract numbers were masked by the redactor's guard, so which letter belongs to which contract is NOT established** — ✅ 🆕 **BOTH HALVES SUPERSEDED 2026-09-25:** ✅ **every letter is now matched to a named asset — on the letters' own FIGURES, not on the filenames** — and ✅ **the unit `1838` IS on the prior year's schedule: it is the 2022 truck, in service September 2024, one of that year's eight assets.** _(As written:)_ the client's filenames are all that link them, and one names a unit (`1838`) that appears on no asset table. ✅ **(end of the as-written region.)** **Figures in the working paper §3H.**
 - ⛔ **AND THE LETTERS RAISE ONE QUESTION THAT DECIDES A REAL DEDUCTION:** the three letters' total interest is within 4% of the client's own separate `Interest` line, **and nothing follows from that.** ⛔ **An earlier version of this line called it "likely" that his interest line already IS those letters. Withdrawn** — the working paper's own figures falsify it: the SBA's interest alone is of the order of the whole difference, at least eight other interest-bearing relationships exist, and the equipment line's own label says the interest is inside it. 🔑 **What the arithmetic DOES flag is a risk to rule out — that the same interest could end up deducted twice — and only the client can rule it out** *(working paper §3H ②)*.
 - ✅ **A RETAIL PURCHASE AGREEMENT IS ON FILE for one 2025 truck** — with its VIN and a total that matches the client's asset sheet exactly. 🔑 **It is the only acquisition document of its kind on file, and it is the shape Julia's ruling ③ says every asset movement needs.**
 - 🔑 **THE COMPANY USES TWO ADDRESSES, AND BOTH ARE REAL — which bears directly on the two-states question.** Its lenders write to it at a **Plantation, Florida** address on two 2025 letters and at a **Chicago, Illinois** address on a third; the Florida one is also the shareholder's own address on the 2025 organizer and the property carrying the mortgage on his 2023 asset sheet. ⛔ **The street address is deliberately not written here or anywhere in the repo.** ⛔ **AND IT DOES NOT SETTLE THE COUNTY.** A fourth document carries the same street with a **different ZIP, which belongs to a different city**, and *"Plantation is in Broward County"* has never been read off any source — it is stated from knowledge. ⚠️ **An earlier version of this line said the finding "settles that the home the office sits in IS in Broward County." Withdrawn: it corroborates, it does not settle** — and the payments to the county tax collector could still be commercial vehicle registrations rather than a property tax. 🔑 **The test that WOULD settle it is a document the firm already holds:** the company address printed on the filed 2024 return.
@@ -163,12 +164,12 @@ watch-outs, one-off arrangements, history that affects the work.
 - 🟢 **The `ZAKOM 7807` question is CLOSED, and the answer is reassuring.** `7807` is the **trailing digits of Zakom's own Fifth Third checking account** (the full number was emailed to Julia in 2023 and stays in Gmail, never here). So January's thirteen `CASH DISB … OFFSET TRANSACTION` entries are movements on **this** account, **not** a second account nobody knew about. ⚠️ The **line of credit is still separately real** — the statement answers "Business Loan or Line of Credit? Yes", and the firm holds line-of-credit and SBA documents for 2024 but none for 2025.
 - ✅ **The 2024 filed return is now in `JK Accounting Group > Tax Return Filed > 2024`** — it had been sitting in `1099 > 2024` since the 2026-06-02 migration, and **Lilian moved it back on 2026-09-13 at 21:35 UTC**, twenty minutes after the misfiling was reported. `Tax Return Filed > 2023` holds the 2023 return.
 - 🟠 **2025 has disposals, a casualty and personal vehicles moving through the business.** A truck was **totalled and settled by insurance** *(a Form 4797 disposition, possibly a §1033 involuntary conversion — nothing about it is in the P&L)*; three more units were sold; a **personal car the client labels as such** was bought and another **sold with the proceeds wired into the business account**; a car was traded in; and a **loan from another company was borrowed and repaid inside the year**. None of it reaches the equity section, which is empty.
-- **The owner has a second, personal client record** — `Oleg Zakala & Milana Podrugina` (Double `710652`). A document uploaded to the company's organizer on 2026-09-13, `MilanaPodrugina-LoanDocs.pdf`, belongs to that personal side, not to the 1120-S.
+- **The owner has a second, personal client record** — `Oleg Zakala & Milana Podrugina` (Double `710652`). A document uploaded to the company's organizer on 2026-09-13, `MilanaPodrugina-LoanDocs.pdf`, **names his wife.** ⚠️ 🆕 **Corrected 2026-09-25: that it therefore belongs to the personal side rather than the company return is a READING, hedged twice when it was given, and an unextracted co-borrower field leaves open that the shareholder is himself on the note.** ☑️ **Downgraded, not settled.**
 - **Method of accounting is unsettled:** the client answered **"Not sure"**. Read it off the prior-year return rather than asking him again.
-- **Vehicles — and one ruling already on record.** The 2025 uploads carry an Audi Q6 **lease** and Porsche Macan financing, and the client answered **"yes"** to purchasing an alternative-fuel vehicle. 🔑 **Julia ruled in Aug 2025 that the 2021 Audi is 100% in use for Zakom Incorporated**, which is why she refused car usage on his personal real-estate 1099; the client confirmed he *"never accounted personal vehicle under Zakom operation in 2024"* and gave the Audi's mileage at 12/31/24. Whether the 2025 Audi Q6 replaces that vehicle, and leased vs purchased, is not established.
+- **Vehicles — and one ruling already on record.** The 2025 uploads carry an Audi Q6 **lease** and Porsche Macan financing, and the client answered **"yes"** to purchasing an alternative-fuel vehicle. 🔑 **Julia ruled in Aug 2025 that the 2021 Audi is 100% in use for Zakom Incorporated** ⚠️ 🆕 *(cited only to the 2026-09-13 sweep below, with no message named; what is first-hand is the filed return, which carries the vehicle at full business use with no personal miles)* ✅ 🆕 *(TRACED 2026-09-28 — Julia's email to the client of 2025-08-14, working paper §3BK ④)*, which is why she refused car usage on his personal real-estate 1099; the client confirmed he *"never accounted personal vehicle under Zakom operation in 2024"* and gave the Audi's mileage at 12/31/24. Whether the 2025 Audi Q6 replaces that vehicle, and leased vs purchased, is not established.
 - **§179 was used before:** the firm took section 179 on the equipment purchased in 2022, and the equipment is financed with the figures taken from the annual amortisation schedule (the client, Aug 2025). Relevant to how 2025's truck and trailer additions are treated.
 
-- 🔴 **THE PRIOR YEAR DID NOT REPORT ZERO OWNER DISTRIBUTIONS — and how that figure was built is NOT recoverable from any document the firm holds.** The K-1 reported a distribution; the balance sheet reported a **smaller** amount in the equity reconciliation, and the difference was parked as **negative additional paid-in capital**. ⚠️ **Re-reading the return on 2026-09-14 CORROBORATED something that had been an open inference — and a first draft of this bullet called it PROVEN, which it is not.** That negative paid-in-capital line reads as nil at the start of the year and appears at the end in **exactly** the amount of the excess, and **both balance-sheet columns tie to their own reported totals to the dollar** — ⛔ **but that arithmetic constrains only the SUM of the two equity lines, not which of them moved; the opposite assignment balances identically.** ✅ **What does point at the split is the equity reconciliation's own opening and closing figures, whose shape matches the retained-earnings column.** ⛔ **What is still NOT established is the INTENT** — the movement may be described; what the preparer meant by it may not. 🔑 **And the distribution figure itself has no derivation anywhere:** the return's own attached statement says only *"Cash"* and one number, with no breakdown. ⚠️ **The obvious candidate is NOT eliminated, and a first draft of this bullet said it was.** The year's card CHARGES are nowhere near it — ⛔ **but the residual theory is built from what left the BANK, and the PAYMENTS to that card reach within about a tenth of the figure in only two-thirds of the year.** ⚠️ **That payment figure is approximate in both directions, with a downward bias.** ⛔ **It cannot be called "the closest candidate" either — it is the ONLY prior-year counterparty this firm has ever totalled. The rest are counted, never summed, and one very large flow has never been measured for that year at all.** **The bank statements cannot close it either: four of the twelve months are still unreadable** because the firm's redaction tool refuses them on a false positive, and eight months cannot settle a twelve-month figure. ⓘ **The likely method, marked as reasoning rather than fact: a preparer with no books derives the owner's draw as a RESIDUAL** — total cash out, less the uses identified as the company's. **Two things support it.** It is exactly the construction Lilian described on 2026-09-14 for building this client's balance sheet from scratch; and **a residual cannot know about the equity account it is supposed to fit inside**, which is consistent with the figure overshooting it. ⛔ **What the preparer actually DID with the excess still may not be stated — the firm's own rule releases that only when Lilian is asked, and nobody has asked.** 🛑 **The consequence for the current year is the uncomfortable one: if the same method is used, the account-inventory ruling makes the owner's draw BIGGER, because every payment to a non-company card and every transfer to a non-company account is now an unidentified use of company cash — which is what a residual sweeps up.**
+- 🔴 **THE PRIOR YEAR DID NOT REPORT ZERO OWNER DISTRIBUTIONS — and how that figure was built is NOT recoverable from any document the firm holds.** The K-1 reported a distribution; the balance sheet reported a **smaller** amount in the equity reconciliation, and the difference **EQUALS** the **negative additional paid-in capital** on that balance sheet. ⚠️ **CORRECTED 2026-09-27: this read "was parked as", which states what the preparer DID — the working paper bars that and Lilian deferred it as a question. The identity constrains only the SUM of the two equity lines, and the opposite assignment balances identically.** ⚠️ **Re-reading the return on 2026-09-14 CORROBORATED something that had been an open inference — and a first draft of this bullet called it PROVEN, which it is not.** That negative paid-in-capital line reads as nil at the start of the year and appears at the end in **exactly** the amount of the excess, and **both balance-sheet columns tie to their own reported totals to the dollar** — ⛔ **but that arithmetic constrains only the SUM of the two equity lines, not which of them moved; the opposite assignment balances identically.** ✅ **What does point at the split is the equity reconciliation's own opening and closing figures, whose shape matches the retained-earnings column.** ⛔ **What is still NOT established is the INTENT** — the movement may be described; what the preparer meant by it may not. 🔑 **And the distribution figure itself has no derivation anywhere:** the return's own attached statement says only *"Cash"* and one number, with no breakdown. ⚠️ **The obvious candidate is NOT eliminated, and a first draft of this bullet said it was.** The year's card CHARGES are nowhere near it — ⛔ **but the residual theory is built from what left the BANK, and the PAYMENTS to that card reach within about a tenth of the figure in only two-thirds of the year.** ⚠️ **That payment figure is approximate in both directions, with a downward bias.** ⛔ **It cannot be called "the closest candidate" either — it is the ONLY prior-year counterparty this firm has ever totalled. The rest are counted, never summed, and one very large flow has never been measured for that year at all.** **The bank statements cannot close it either: four of the twelve months are still unreadable** because the firm's redaction tool refuses them on a false positive, and eight months cannot settle a twelve-month figure. ⓘ **The likely method, marked as reasoning rather than fact: a preparer with no books derives the owner's draw as a RESIDUAL** — total cash out, less the uses identified as the company's. **Two things support it.** It is exactly the construction Lilian described on 2026-09-14 for building this client's balance sheet from scratch; and **a residual cannot know about the equity account it is supposed to fit inside**, which is consistent with the figure overshooting it. ⛔ **What the preparer actually DID with the excess still may not be stated — the firm's own rule releases that only when Lilian is asked, and nobody has asked.** 🛑 **The consequence for the current year is the uncomfortable one: if the same method is used, the account-inventory ruling makes the owner's draw BIGGER, because every payment to a non-company card and every transfer to a non-company account is now an unidentified use of company cash — which is what a residual sweeps up.**
 - 🟠 **THE CREDIT-CARD PAYMENT GAP IS STRUCTURAL, NOT A ONE-YEAR ANOMALY.** The firm already knew that in the current year the payments leaving the bank to the card exceed the charges the issuer itemised. **Reading the prior year's statements on 2026-09-14 showed the same shape, in the same direction, in that year too** — and in only eight of its twelve months. ⚠️ **The payment figure is approximate: it comes from a row-level parse that recovers about 89% of the statements' own totals and is column-misaligned in places, so it is a floor rather than a measurement.** 🔑 **Even so it moves one of the four candidate explanations from a single year's residual to a two-year pattern: that some of those payments went to a DIFFERENT card account on the same issuer — the owner's own, or the other entity's.** ⛔ **It does not establish it; the other three explanations survive.**
 - ✅ **THE OTHER ENTITY — what the prior year actually did with it, and why "the same treatment" is now a complete instruction.** The client said the other entity had no activity again. ⛔ **That answers operations; the open item was a BALANCE.** ✅ **The prior return did exactly ONE thing: it carried the loan TO that entity as an other current asset, unchanged across both columns, with nothing on the income statement and nothing on the shareholder's schedule** — and the entity's name matches in **none** of the eight prior-year bank statements that could be read — ⚠️ **four of that year's twelve are still unreadable and were not searched**. 🔑 **So repeating that treatment is fully specified**, and asking the client is confirmation rather than a blocker. ⚠️ **Two items travel with it for whoever signs, neither of them blocking: a related-party loan reported with NO interest at all, which has an imputed-interest rule behind it; and an asset classified as CURRENT that has not moved in two years.** ⛔ **Copy the classification — it is the analogy — and raise the question rather than reclassifying it quietly.**
 - 🔑 **THE FIRM BUILDS THIS CLIENT'S BALANCE SHEET ITSELF — Lilian, 2026-09-14, and it reframes what is actually blocking.** *"No lo vas a encontrar en un documento; tenemos que construirlo nosotros… El cliente no lleva la contabilidad, pues no tiene los financial statements. Eso fue lo que hizo Julia en el año pasado."* **So the broken spreadsheet is not a client defect — it was only ever the income statement.** 🔑 **What is genuinely blocked on other people is much narrower than it looked: the year-end BALANCES we cannot derive** — the loans and the cards. ✅ **Two more rulings the same day:** a **sale agreement is no longer a gate** on a disposal — the client's own sale price is relied on, and the return is not held for a document he has not sent *(the insurer's letter for the destroyed vehicle is NOT narrowed, because it states the settlement figure itself)*; and the **monthly tax-agency debits are parked** as the owner's personal matter. ⚠️ **On that last one, one fact was found while reading the prior year's statements and is recorded rather than pursued: those debits leave the COMPANY's account, not a personal one** — so whosever liability it is, the company's cash is paying it. ⛔ **That does NOT make it an equity item: this firm's own rule says such a debit lands in one of THREE places — a draw, a receivable from the owner, or wages — and nothing establishes which.** ⚠️ **The figures behind it come from a row-level parse the working paper calls column-misaligned; they are approximate.** **Her call, and she has made it.**
@@ -176,7 +177,7 @@ watch-outs, one-off arrangements, history that affects the work.
 
 - 📥 **TWELVE MORE DOCUMENTS WERE FOUND ON 2026-09-15 ⚠️ *(found then — the evidence is that their ids run above the previous batch's, which fixes an order and not a send date)* AND THE FIRM'S TOOL CANNOT READ ANY OF THEM — but one other document that arrived with them corroborates a figure the firm had computed.** ⛔ **All twelve are SCANS with no text layer**, eight to ten pages each, a hundred and six pages in total, one per month of the year. ⚠️ **Their dates fall in the middle of each month, while the company's bank statements run to the calendar month end — so they are not a second copy of those, and a mid-month cycle is what a card or credit-line statement looks like.** ⛔ **Which account they belong to is NOT established: the filenames carry only a date and not one page produced text.** 🔑 **AND THE PRACTICAL ANSWER IS SMALL: Lilian can open the December file in the portal herself and read the account name and the closing balance.** ⛔ **But that balance is a CYCLE-CLOSE figure, not a year-end one — if the mid-month reading is right it closes twelve days short of the year, on an account that revolves, and nothing establishes there was no activity in between.** ☑️ **Reaching year end would need the following January's statement, which is not among the twelve.** ☑️ **Reading the account name and its last four off page one at the same time settles which account the twelve are**, and that decides what they are worth. ⚠️ **NO branch is clean, and a first draft said one was.** Even if they were the company's credit LINE, **a credit line revolves exactly as a card does** — so a cycle-close balance twelve days before the year end is not the year-end figure there either. ⛔ **If they are the card, they do NOT settle it** — a separate open question is whether the balance sheet carries a card liability at all, and the prior year's card figure is itself unproven. ⛔ **And if they are the other cards they do not hand over the payment totals either, because twelve mid-month cycles do not span a calendar year.** ⚠️ **Nor is that a closed list: a non-company bank account, a lender statement or a processor statement are all live, and eight to ten pages a month is long for a card.** ⚠️ **What to ask him for either way: the issuer's own downloaded PDF, not a scan or a photograph — and say why, because otherwise every figure has to be typed by hand.**
 - ⚠️ **A FRESH LENDER REPORT DOES NOT CLOSE THE LAST DOUBT ON ONE CONTRACT — and a first draft of this bullet said it did.** One of the documents that arrived readable is **not a new loan**: it is a **freshly generated amortization report, run the day before, for a finance contract the firm already held two documents for.** 🔑 **It reproduces the firm's own computed figures for the year exactly — the interest and the year-end balance — and shows the contract still amortizing on schedule into the following year.** ⛔ **That does NOT close the "unless he paid it off early" caveat, and a first draft of this bullet said it did.** 🔑 **An amortization schedule prints its future rows whether or not a payment was made** — reproducing the earlier projection shows the two documents are the same projection. ✅ **What actually supports it was already on file: twelve monthly debits to that lender in the year's bank statements.** ⚠️ **And a separate caveat stands untouched — the lender says its products do not separate principal from interest, so whether that interest is deductible at all is the signer's question.** ⚠️ **One thing his FILENAME adds that the lender's report does not: he names the asset behind that contract. The report itself names no asset — so the identification is his label, to be confirmed rather than relied on.**
-- ⚠️ **AND A DOCUMENT HAD BEEN SITTING UNREAD AND UNRECORDED FOR TWO DAYS.** In the same batch as everything the firm inventoried on 2026-09-13 there was a **thirteen-page consumer loan agreement from the owner's credit union, whose FILENAME is a third party's**, that no inventory had listed. ⛔ **It carries no usable figure — its Truth-in-Lending disclosures produced no values, which is the identical failure the firm already recorded on a different document from the same lender, so the reading is that the extractor cannot read that form's value layer rather than that the document is blank.** 🛑 **Why a consumer loan whose FILENAME is someone other than the owner's ⚠️ *(the borrower values never extracted, so whether the owner is the CO-borrower is unestablished — and that would change the question)* is in this COMPANY's organizer is a question for Lilian, not a tax question.** 🔑 **The transferable lesson, and this much is TESTED: neither route of the file-listing tool reaches the portal's organizer attachments** — the folder tree returns no organizer folder to point it at, and its source filter accepts only two values, neither of which is the one these files report. ⛔ **Whether that makes them a THIRD store or the SAME store under two names is NOT established, and a first draft asserted the former** — the two vocabularies route to the same write tools, so the competing reading is live and is logged as its own follow-up. ✅ **What works is a name search.** 🛑 **So that tool answering "nothing new" is not evidence — and the firm's own operating guide for the platform does not yet say so, which is logged as its own follow-up.**
+- ⚠️ **AND A DOCUMENT HAD BEEN SITTING UNREAD AND UNRECORDED FOR TWO DAYS.** In the same batch as everything the firm inventoried on 2026-09-13 there was a **thirteen-page consumer loan agreement from the owner's credit union, whose FILENAME is a third party's**, that no inventory had listed. ⛔ **It carries no usable figure — its Truth-in-Lending disclosures produced no values, which is the identical failure the firm already recorded on a different document from the same lender, so the reading is that the extractor cannot read that form's value layer rather than that the document is blank.** ✅ 🆕 **ANSWERED 2026-09-25 — the person the filename names is the shareholder's WIFE, and that the document is therefore personal and was uploaded by mistake is HER READING, hedged twice when she gave it.** ☑️ **DOWNGRADED, not closed — no longer a question for her, ours only if a return line turns on it** *(and see the key fact above on the owner's second, personal client record: an unextracted co-borrower field still leaves open that the shareholder is himself on the note)*. _(As written:)_ 🛑 **Why a consumer loan whose FILENAME is someone other than the owner's ⚠️ *(the borrower values never extracted, so whether the owner is the CO-borrower is unestablished — and that would change the question)* is in this COMPANY's organizer is a question for Lilian, not a tax question.** 🔑 **The transferable lesson, and this much is TESTED: neither route of the file-listing tool reaches the portal's organizer attachments** — the folder tree returns no organizer folder to point it at, and its source filter accepts only two values, neither of which is the one these files report. ⛔ **Whether that makes them a THIRD store or the SAME store under two names is NOT established, and a first draft asserted the former** — the two vocabularies route to the same write tools, so the competing reading is live and is logged as its own follow-up. ✅ **What works is a name search.** 🛑 **So that tool answering "nothing new" is not evidence — and the firm's own operating guide for the platform does not yet say so, which is logged as its own follow-up.**
 - ⓘ **TWO OF THE "NEW" FILES WERE DUPLICATES, AND CHECKING MATTERED.** A name-based count saw one more monthly bank statement and one more lender interest letter than the firm had recorded. **Both were opened and both are the same content as documents already read ⚠️ *(same figures, same period — not compared byte for byte)*.** ✅ **So there is no fourth interest letter and no thirteenth bank statement, and the totals the firm has built on them do not move.**
 
 
@@ -199,7 +200,7 @@ A running, dated record as we build this profile.
 - _(2026-05-19)_ — Client record created in Double by Maria Zavarce; the firm's folder structure built 2026-05-28 and the TaxDome material migrated 2026-06-02.
 - _(2026-07-30)_ — Lilian set the 2025 tax project to In Progress and **published the `JK 2025 Business Tax Organizer`** to the portal. Julia moved the project back to **Not Started** on 2026-08-04.
 - _(2026-09-12)_ — Lilian uploaded `Business Tax Organizer 2023.pdf` and `Business Tax Organizer 2024.pdf` into `JK Accounting Group > Others` (copies of the two already in the migrated `1. Completed organizers` folder).
-- _(2026-09-13, later)_ — **Lilian directed the preparation to start despite the gate**, having confirmed the extension. The **2024 filed return was opened** and became the answer key: activity code, the cash method, one shareholder, that the officer WAS paid compensation that year, **zero §179 elected on a substantial block of additions**, the line-20 convention, and — the two that govern 2025 — **the AAA closed at ZERO and shareholder equity closed NEGATIVE**, because the K-1 reported distributions the M-2 could not absorb and the excess was parked as negative paid-in capital. **Working paper started: [`tax-returns/zakom-incorporated/2025-form-1120s.md`](../../tax-returns/zakom-incorporated/2025-form-1120s.md)** — deliberately partial, and nothing in it is fileable.
+- _(2026-09-13, later)_ — **Lilian directed the preparation to start despite the gate**, having confirmed the extension. The **2024 filed return was opened** and became the answer key: activity code, the cash method, one shareholder, that the officer WAS paid compensation that year, **zero §179 elected on a substantial block of additions**, the line-20 convention, and — the two that govern 2025 — **the AAA closed at ZERO and shareholder equity closed NEGATIVE**, because the K-1 reported distributions the M-2 could not absorb and the excess EQUALS the negative paid-in capital on the balance sheet ⚠️ *(corrected 2026-09-27 — see the note above: what the preparer actually did is not established)*. **Working paper started: [`tax-returns/zakom-incorporated/2025-form-1120s.md`](../../tax-returns/zakom-incorporated/2025-form-1120s.md)** — deliberately partial, and nothing in it is fileable.
 - _(2026-09-13)_ — **Asked to prepare the 2025 return; PHASE 1 RAN AND THE GATE CLOSED.** The workbook, the home-office sheet and the extension were opened at Lilian's request. **Block A: ⛔ No — blocked**, on the deadline, the broken balance sheet, the principal-in-expenses line, the home-office position, reasonable compensation, the two states, and the missing card statements. **No preparation tables were built** — [`tax-return-sop`](../../../.claude/skills/tax-return-sop/) §4A's gate. The figures behind the verdict were delivered in chat. ⓘ **SUPERSEDED THE SAME DAY** — the entry above records that Lilian then directed the preparation to start and a working paper was opened.
 - _(2026-09-13)_ — **The 2024 IRS transcript was searched for and NOT found** — not in Double's file library, not in Julia's Drive under any title containing "transcript" or "Record of Account", and not in Julia's Gmail. ⚠️ **Ping Assistant was NOT searched** — this client's first full historical pass is still owed. ⚠️ **That is the result of those three searches, not proof it does not exist** *(it could be saved under another name)*. ✅ **The 2024 FILED RETURN is held** and is the better source for the prior-year map anyway.
 - _(2026-09-13)_ — **Gmail and Drive swept for the first time** (this client had never been swept). What it settled is in §5: the **two-state FL + IL** filing history, that the **Amex is real and asked for every year**, the **Mema Colors LLC** second Amex, **Palm Terra LLC**, Julia's **2021 Audi = 100% Zakom** ruling, and **§179 on the 2022 equipment**. It also showed the firm chasing the 2023 return in **August 2025** in a portal thread called *"2023 Zakom Tax Preparation - Documents Needed by 8/23"*, and the 2024 organizer completed 2025-08-13 — **this client runs late every year.** ⚠️ The client's **bank account and routing numbers were emailed in plain text in Sep 2023**; they stay in Gmail and are recorded nowhere here.
@@ -262,50 +263,1129 @@ A running, dated record as we build this profile.
 - 🔴 **THE CARD RECONCILIATION IS COMPLETE — every bank debit matched, one by one, and the three buckets sum to the bank's own total exactly.** *(2026-09-15)* **Thirty-nine payments left the company's account captioned as card payments; NINETEEN of them are on the card, every one clearing one to four days after the card recorded it. TWO more are still in transit at year end. The remaining EIGHTEEN never reached this card at all** — a little over a third of everything paid out under that caption. ✅ **This is a line-by-line match, not an estimate — and the check that earns that is the CARD side: the card's own statements record twenty payments, nineteen of them match a bank debit, and the one left over is a single payment that arrived with no bank debit behind it.** ⚠️ **The three buckets adding up to the bank's total is NOT the check — they partition the same debits by construction, so that sum holds however the matching falls.** *(This file's own lesson, a few bullets above: when two of your own numbers agree, check whether they COULD have disagreed.)* ⚠️ **And one piece is an assumption rather than a measurement: two December debits are taken to post in the following cycle, and only one of them is corroborated.** 🔑 **And the eighteen have two clean shapes: NINE small, roughly monthly amounts — the signature of a second card's minimum payment — and NINE large round paydowns.** ⛔ **Nothing identifies whose second card, and the firm does not guess.** ⚠️ **One item runs the other way: a payment reached the company's card from a source that is NOT the company's bank account, so this is not a closed system in either direction.**
 - 🔑 **AND THE READ NEEDED NOTHING FROM THE CLIENT.** **The bank statements were already on file and readable; the firm had simply never extracted the individual payments from them.** ⚠️ **The lesson is worth more than the finding: before asking a client for anything, check whether the answer is inside a document already held — and "already read" is not the same as "everything in it has been extracted."**
 
+- _(2026-09-25, later)_ — **THE FOUR LENDER INTEREST LETTERS ARE RESOLVED: FOUR SEPARATE CONTRACTS, NOT THREE — AND THE CHECK THAT SETTLED IT NEEDED A PERSON.**
+  **Lilian sent all four letters as images.** ✅ **All three checks passed at once: ONE lender** *(the same
+  logo, the same processing address, the same date on all four — and the logo is why only a person could
+  run this check; the firm's reading tool cannot see it)*; **all four addressed to the COMPANY** *(not to
+  the shareholder and not to another of his entities, which was the real danger)*; **and four DIFFERENT
+  contract numbers.** ☑️ **So the fourth letter is a fourth contract**, the blocker that had suspended the
+  whole interest line since 2026-09-15 is closed, and both totals are established *(they live in the
+  return's working paper, never here)*. 🔴 **One thing is recorded rather than smoothed away: four
+  contracts show only THREE payment streams in the bank account.** ⛔ **FOUR readings, none picked** — one
+  debit paying two contracts, payments from one of the company's four other accounts at the same bank, a
+  parse that missed a stream, **or it was paid on a card or by the owner personally** — ⚠️ **which Lilian's
+  own personal-card ruling the same day makes live, and which has a free in-house test, since the company
+  card's twelve statements are already read.** **It does not move either figure**, because the lender's letter is the
+  authority; it is an understanding gap, not a keying one. ☑️ **And the route to naming which contract
+  finances which vehicle is now known: every one of the four letters points at its own
+  `Loan and Security Agreement`, which describes the collateral, and several of those contracts are already
+  in the client's own uploads.** — Lilian
+- _(2026-09-25, later)_ — **HOW THE PRIOR YEAR IDENTIFIED THE VEHICLES: A UNIT NUMBER INSIDE THE ASSET NAME — NOT A VIN.**
+  **Lilian sent the tax software's asset screen for the prior-year return.** ✅ **It carries eight assets, and
+  three of them have A UNIT NUMBER written into the asset's NAME.** ⚠️ **NOT the client's own numbering** —
+  the client uses a different series, and mapping one onto the other is still an open item. ⛔ **The software's own serial
+  field is EMPTY on the asset whose detail is visible**, so the prior year offers a unit-number convention to
+  follow and **no VIN mapping to inherit.** ⚠️ **Which means the two same-year, same-make, same-model trucks
+  this client owns are still separable only by VIN, and the prior year does not help.** ✅ 🆕 **AND THE UNIT THE CLIENT NAMES ON A LOAN DOCUMENT *IS* ON THE PRIOR YEAR'S SCHEDULE — corrected
+  the same day.** It is the **2022 truck, in service September 2024**, identified **on the lender letter's own
+  FIGURES** *(not on its filename)*, and it is one of the prior year's eight assets. ⛔ **WITHDRAWN:** *"one
+  unit the client names on a loan document is NOT among the prior year's eight assets at all — the ordinary
+  reading is that it was acquired in the year under review."* 🛑 **That reading would have put an asset
+  already being depreciated into the current year's additions a SECOND time**, and it rested on a name list
+  that could not carry it: **only three of the eight asset names hold a unit number at all.** — Lilian
+- _(2026-09-25, later)_ — **FOUR STANDING RULINGS FROM LILIAN THAT CHANGE HOW THIS RETURN IS BUILT — and one of them closes a branch instead of opening one.**
+  ① 🔑 **BUSINESS SPENDING ON THE OWNER'S PERSONAL CARD IS ASSUMED NOT TO EXIST.** *"El cliente sabe que
+  no somos sus contadores y que toda la información que no sé es como si no existiera… si el cliente hizo
+  algún gasto del negocio con su tarjeta personal y no lo comentó con nosotros, para nosotros eso no existe
+  y se considera una distribución."* ☑️ **The firm does not hunt for it and does not hold the return for
+  it.** ② **NO LATE INFORMATION RETURNS** — see the 1099 entry above. ③ **A FORM IN THE FIRM'S OWN FOLDER
+  WAS FILED** — same entry. ④ 🔑 **DISTRIBUTIONS ARE BUILT LAST, FROM THE BALANCE SHEET, AND ONLY AFTER
+  EVERY BUSINESS EXPENSE IS CLOSED** — and she defined "residual" against the obvious misreading: **everything
+  the client reported** *(payments to his contractors, fuel, and the rest)* **has to be accounted for first,
+  and it all had to leave the bank account or the card.** ⛔ **The bank outflow is NOT the distributions** —
+  most of it is the contractor-payment block. ☑️ **Consistent with her earlier ruling that the firm must not
+  overstate distributions.** — Lilian
+- _(2026-09-25, later)_ — **AND ONE ATTRIBUTION IS FLAGGED BECAUSE SHE ASKED WHERE IT CAME FROM.**
+  **This file and the working paper both record that the other principal ruled, in August 2025, that the
+  owner's car is 100% the company's.** ✅ **What is first-hand and checkable is the FILED RETURN**, which
+  carries that vehicle at full business use with no personal miles. ⚠️ **The quoted ruling IS cited — but only to
+  the first Gmail-and-Drive sweep of this client, logged above, which lists it among that sweep's results.**
+  ⛔ **No specific email, thread or date is named, so nobody can go and read it.** ☑️ **So rely on the
+  return, and locate and cite the underlying email before anyone leans on the wording.**
+  🔑 **Nothing turns on the difference for this return** — but a ruling attributed to a named person has to
+  carry its source, which is this firm's own rule after a session once signed four points with Lilian's name
+  when only two were hers. — Lilian
+- _(2026-09-25)_ — **WHICH DRIVERS HAVE A 1099 IS ANSWERED FROM OUR OWN RECORDS — ✅ AND LATER THE SAME DAY, SO IS WHETHER THEY WERE TRANSMITTED. THE QUESTION STAYS OPEN FOR EVERYONE ELSE.**
+  The firm prepares this client's 1099s, and Double holds them by year. **Five of the six drivers on
+  the client's own 2025 driver list have a 2025 Form 1099-NEC on file; one does not** — and **because he has NO 2025
+  FORM AT ALL, the 2025 forms give the firm no corporate name for that sixth driver.** ⛔ **An earlier wording
+  rested this on the other five being named for companies instead; that is WITHDRAWN — see the naming point
+  below, and it is beside the question anyway: what the OTHER five are called says nothing about the sixth.** ✅ **The firm's 2024 folder was compared too, the same day — its three non-2025 recipients produced
+  NO MATCHING form for him either, so there is no form for him in either year under any name resembling the
+  client's own heading for him.** ⛔ **It does NOT exclude him, and all three of those recipients remain
+  possible** — none of them resembles any driver, so none can be singled out or ruled out. 🔴 **And the check
+  narrowed the reading: NEITHER year's filename may be read as evidence of corporate status** — the same three
+  recipients carry a corporate suffix in one year's filenames and none at all in the other's, **and a listing
+  cannot say which naming is the legal name — nor whether the recipient's OWN name changed between the years,
+  which is the case where BOTH filenames are right.** ⛔ **An earlier wording said at least one year must be
+  misnaming the recipient; that needs the premise that the legal name was the same in both years, and is
+  WITHDRAWN.** ⚠️ **Only ONE of the five forms has been opened, and it was read through the redactor, so no
+  recipient's name was seen at all — corporate status is unestablished for all five, not four.** ☑️ **So "is this payee a
+  corporation?" is open for the other five too** — **which changes nothing on the return.** ⛔ **And it is scoped to the DRIVER LIST and no wider** — the payments
+  to named individuals through a cash-transfer app stay open, and ⚠️ **nothing establishes whether any of
+  those payees is one of the six.** ⛔ **An earlier wording, "the only driver recorded under a person's
+  name", is WITHDRAWN: the client's six column headings are ALL bare names, so they distinguish nothing
+  and the forms on file are what carry the finding.**
+  ✅ **That is exactly what the client wrote on his organizer** *("there are some
+  people who didn't have a corp name — I can provide names and addresses")*, so his two answers were
+  never in conflict. ✅ 🆕 **AND LATER THE SAME DAY LILIAN CLOSED BOTH OF THE DRIVER QUESTION'S
+  REMAINING ITEMS.** ① **The five on file WERE transmitted** — the firm does not create these forms and
+  archive them; they are created and filed automatically. ② **The sixth gets NO form** — the firm does not
+  issue one late to a payee who was not issued one at the time; what is owed instead is his identity and, if
+  establishable, the amount, for the other principal. ⛔ **So the driver question is CLOSED IN FULL**, and
+  ⚠️ **only ONE 1099 item is left and it is ours: payments to named individuals through a cash-transfer app,
+  a second population that may be reportable — an in-house search, nothing asked of the client.**
+  ⛔ **WITHDRAWN:** *"two things to do on the driver question — decide whether that sixth driver is owed a
+  form, and establish whether the five were ever transmitted… nor is 'a copy on file' the same as
+  'transmitted': no transmittal or acknowledgement has been seen, and prepared-but-never-sent would be five
+  exposures rather than one."* ⚠️ **That last sentence was a session's inference about a firm practice only
+  a principal could state.** ⚠️ **It does not change the company's deduction** — the driver payments are
+  deductible either way; a missing information return is a separate exposure, and whether to raise it
+  with the signer is the reviewer's call. 🔑 **Nothing was asked of the client to establish any of
+  this.**
+- _(2026-09-25)_ — **AND A FILE THE PAPER HAD MISREAD.** The document named as the year's *1099
+  preparation* is **not a vendor list** — it is **the firm's request letter to the client**, asking him
+  to supply what the forms need. It names no vendor, so it could never have answered who was filed
+  for. **What answers that is which folder each form sits in.**
+- _(2026-09-25 — the principal's rulings, recorded because they change the work)_ — **The missed
+  deadline is accepted and the aim is to finish before October**, since the late-filing penalty runs
+  per month. **The `AUDI` on the 2024 depreciation schedule is treated as disposed of** ⚠️ *(not "the owner's" — it sits on the company's own Form 4562 at 100% business use, ruled 100% the company's by the other principal in August 2025 — ⚠️ an attribution cited only to a sweep; the filed return is the first-hand part)*, on the strength of his own
+  passing note, which she read as clear. ⚠️ **What stays unconfirmed is the IDENTIFICATION — that the
+  depreciation schedule's entry and the vehicle in his note are the same one — and that is what gates
+  removing the row.** **A consumer loan document uploaded to the company's folder NAMES the
+  shareholder's WIFE** — ✅ **that she is his wife is established.** ⚠️ **That the document is therefore
+  personal and was uploaded by mistake is her reading, prefaced *"probablemente"* twice, and an
+  unextracted co-borrower field leaves open that the shareholder is himself on the note.** ☑️ **So the
+  question is DOWNGRADED, not closed** — no longer one for her, and ours only if a company-return line
+  turns on it. **Unreadable documents from years we are not filing are stood down**, unless a
+  specific question needs them. **Officer compensation is deliberately deferred** until every other
+  figure exists. 🛑 **And nothing is asked of the client for now** — the firm settles what it can by
+  itself first.
+
+- _(2026-09-26)_ — **WEEKLY CI SWEEP — FIRST FULL HISTORICAL PASS ON BOTH DOUBLE RECORDS (710612 and 710652). Unbounded, no prior `sweep-state.md` baseline.** Sources run: Ping (`resolve_person` on Oleg Zakala/Milana Podrugina, org-wide `search_meetings` for "Zakom"/"Oleg Zakala"/"Mema Colors"/"Palm Terra", client-scoped `search_client_meetings`, `list_action_items`), Double (`get_client`, `list_client_properties`, `list_notes`, `list_contacts`, `list_activity_log` on both 710612 and 710652), Gmail (`Zakom`, `"Oleg Zakala"`, `"Mema Colors"`, `"Palm Terra"`, `Zakom 7004`, `Zakom after:2026/09/13`), Google Drive (`Zakom`, `Amex + 25`, `Palm Terra`, `Mema Colors`, all with `excludeContentSnippets:true`).
+  ⚪ **PING: NEGATIVE RESULT, RECORDED AS ITS OWN FINDING, NOT AS "NOTHING HAPPENED."** This closes the gap flagged 2026-09-13 ("Ping Assistant was NOT searched"). `resolve_person("Oleg Zakala")` resolves only to the Double client record itself (no separate Ping contact). `list_action_items` for that resolved client id returns **zero**. `search_client_meetings` scoped to that id returns **zero** results on three queries. The org-wide semantic search for "Zakom"/"Oleg Zakala"/"Mema Colors"/"Palm Terra" surfaced no legible, on-topic hits — only unrelated garbled multilingual transcripts and other clients' meetings that scored above the noise floor. ✅ **Conclusion: this client has no meeting or call history in Ping at all, as far as these searches can tell** — not proof none exists, but every reasonable query came up empty.
+  ✅ **DOUBLE: NO NEW NOTES on either record (both still zero)**, no new contacts, and no activity logged on either client since **2026-09-16** (710612) / **2026-09-14** (710652). ✅ **NEW FACT — the "2025 Taxes" project (710612, id 219303) was moved from `In Progress` to `Waiting on Client` by Lilian on 2026-09-15T19:18 UTC**, immediately after the organizer's twelfth-and-final client open that day — not previously logged in this file. Both `Organizer Status` properties still read the hand-maintained **`Sent`** (behind reality on 710612, as already noted; also stale on 710652, whose organizer the client opened as recently as 2026-09-14).
+  ✅ **GMAIL/DRIVE: nothing client-specific found after 2026-09-13** except the firm's own automated weekly Client-Intelligence-sweep digest (2026-09-19, to Lilian, listing Zakom among clients needing attention — no new substance). 🔴 **THE 2025 (CURRENT-YEAR) 7004 HAS NO EMAIL CONFIRMATION, UNLIKE 2024's.** A `Zakom 7004` search surfaces only `irina@jkaccountinggroup.com`'s **2025-03-17** "Form 7004_ZAKOM INCORPORATED" email — that is the confirmation for the **2024** tax year's on-time extension (filed ~March 2025), not the 2025 one. **No equivalent email exists for the 2025 return's extension** (which would be expected ~March 2026). ⚠️ **So the file's "extension CONFIRMED FILED" rests entirely on Lilian's word (2026-09-13) plus the unreadable Double scan — there is no independent firm-generated confirmation email for THIS year, the way there is for 2024's.** This does not contradict Lilian's confirmation; it narrows what corroborates it.
+  🔴 **PALM TERRA LLC AND MEMA COLORS LLC — NEW FACTS (§5, and the "Information still needed" item above).** Palm Terra is confirmed **dissolved effective 2024-12-31**, with a firm-filed 2025-03-17 extension for its final year; a previously-unnamed contact, `talentkosta@gmail.com`, is tied to it; both entities have their own Google Drive folders, distinct from Zakom's. **Flagged to Lilian/Julia per the sweep's scope — no new CI file created for either.**
+  ✅ **Both Zakom Google Drive folders located** (§7 Links) — the pending gap there is now closed.
+  ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
+
+- _(2026-09-27)_ — **THE THREE FREE IN-HOUSE SEARCHES WERE RUN OVER THE TWELVE 2025 BANK STATEMENTS, at
+  Lilian's instruction** *(`haz las tres búsquedas gratis en los statements`)*. ⛔ **Nothing was asked of
+  the client; every extract was deleted in the same pass.**
+  🔑 **THE DURABLE PART IS A METHOD LESSON, not any single figure. The firm had been searching these
+  statements BY EXACT AMOUNT** — grouping the year's debits by value and tracing each recurring value to
+  its months. ⛔ **That is blind to a lender who varies the draft** — a documentation fee on the first
+  payment, interim interest between funding and the first due date, a late charge, a tax adjustment.
+  ✅ **THE RELIABLE KEY IS THE CAPTION**, which does not move when the amount does. **Both open items were
+  re-run on the caption and BOTH REVERSED** — and in both, the finding that fell was of the shape *"the
+  client's figures are wrong"*. ⚠️ **This is [`method.md`](../../pre-return-review/method.md) rule 1b in a
+  new place: a negative belongs to the search that produced it.**
+  ✅ **THE UTILITY-TRAILER LENDER WAS PAID EVERY MONTH OF 2025.** Its own amortization report is correct and
+  its figures are now usable; the firm's *"nine payments, not twelve"* is **withdrawn** — three months were
+  paid under the same caption at a different amount. ⚠️ **AND A NEW QUESTION TAKES ITS PLACE: the bank
+  caption on that contract reads `LEASE PYMT`.** **Whether it is a financing note or a TRUE LEASE is
+  unsettled, and it decides whether those payments are interest or rent** — which changes both the
+  deduction line and whether the contract is a balance-sheet liability at all.
+  ✅ **THE REITNOUER-TRAILER NOTE RAN NINE PAYMENTS, not the seven the firm computed** — the first two
+  months are in the account under the note's own caption, each above the contract payment. ✅ **The
+  client's own interest and payoff figures are the nine-payment ones and they are right; the firm's
+  computation is withdrawn.** ⚠️ **What the two higher first payments were is open** — a fee plus interim
+  interest *(the trailer went into service weeks before the first payment, so that is ordinary)*, or extra
+  principal. **The Loan and Security Agreement for that note is already in the client's own uploads and
+  would settle it.**
+  🔴 **AND THE SWEEP FOUND SOMETHING NOBODY HAD MEASURED: AN IRS MONTHLY AUTOMATIC WITHDRAWAL, in eleven
+  of the twelve months.** 🔑 **The client TOLD the firm about it on 2026-09-14** — he said he is paying a
+  2024 balance to the IRS by automatic monthly withdrawal — ⛔ **and nobody had ever looked for it or
+  measured it.** ⛔ **A payment of a PRIOR-YEAR tax balance is not deductible.** ⚠️ **And whose balance it
+  is decides the treatment: an S corporation normally pays no federal income tax, so a company balance is
+  more likely payroll or excise than income tax — while a payment of the SHAREHOLDER's personal tax out of
+  the company account is a DISTRIBUTION.** ⛔ **Not established** — 🛑 **and the ask is NOT reopened by the measurement: Lilian PARKED this
+  exact subject on 2026-09-14**, on the ground that it was part of his personal return and not of
+  interest for now. ☑️ **What the figure does is split the matter in two: whose balance it is stays
+  parked and is hers; whether it sits inside the client's own expense base was never parked and is the
+  firm's own work on this return's deduction lines.** ✅ **And that half is already narrowed for free —
+  his expense total reconciles exactly against named captions with no residual bucket and no tax
+  caption, so if it is in his base it is inside a named one.**
+  ✅ **THE LINE-OF-CREDIT DISCREPANCY IS EXPLAINED.** December carries two debits on that facility, and the
+  round difference between what left the account on the first of them and what the lender credited to
+  interest is the WHOLE of the year's bank-versus-lender gap — **one fee, in one month.** **It is not
+  principal:** the lender's own December statement shows the principal balance unmoved all year. ✅ **So the
+  deduction the paper had chosen now stands EXPLAINED rather than merely chosen.**
+- _(2026-09-27)_ — **THE FILED 2024 SCHEDULE L AND M-2 WERE READ IN FULL**, at Lilian's instruction
+  *(`revisa también el Schedule L / M-2 de 2024`)*, through [`tools/redact-doc/`](../../../tools/redact-doc/),
+  **and the extract deleted in the same pass.** 🔑 **THE THREE FIGURES ARE PRINTED ON THE 2024 RETURN AND THE
+  IDENTITY IS EXACT TO THE DOLLAR.** **2024 reported total distributions larger than the accumulated
+  adjustments account it took to exactly zero**, and the difference equals the **additional paid-in capital**
+  the 2024 balance sheet carries **NEGATIVE**. ⛔ **THAT IS AS FAR AS IT GOES, AND THE LIMIT MATTERS: the
+  identity constrains only the SUM of the two equity lines, not which of them moved** — the opposite
+  assignment balances identically. ⛔ **So "the preparer parked the excess in paid-in capital" MAY NOT be
+  stated. It is a question for Lilian, and on 2026-09-27 she DEFERRED it** *("vamos a dejar esa pregunta más
+  para adelante, cuando estemos más avanzados en la declaración")*, **with an instruction attached: when the
+  return is further along, explain it to her properly, because she does not follow what is being asked.** ✅ **Every step of that column's arithmetic checks, and both sides of
+  the 2024 balance sheet balance exactly** — so the base the firm was told to stand on for 2025 is
+  internally consistent. ✅ **AND THE 2025 ACCUMULATED ADJUSTMENTS ACCOUNT OPENS AT ZERO.** ⚠️ **FLAGGED, not decided here: carrying paid-in capital negative is not the ordinary treatment**, and
+  2025 will have to either repeat it or depart from it — **which is the signer's call.** ⏸️ **AND IT IS
+  PARKED UNTIL THE RETURN IS FURTHER ALONG, at Lilian's instruction of 2026-09-27** — so no session should
+  raise it again before then, and when it is raised it is to be EXPLAINED from the beginning rather than
+  asked. ⓘ *The 2024 reconciliation
+  schedule also labels its non-deductible line `Travel and entertainment`, which bears on the unexamined
+  meals rate in the working paper.*
+  ⛔ **No identifier, address or dollar figure was written into this file from either of these entries.**
+
+- _(2026-09-27, later — Lilian's rulings and what reading one more document settled)_ —
+  🔑 **THE "UTILITY TRAILER" IS TWO DIFFERENT TRAILERS, AND THE FIRM NEARLY TREATED THEM AS ONE.** ⚠️ **This
+  is the two-Benson-trailers trap on a new pair, and it is now written down:** the **2023** utility trailer
+  is a **capitalised asset on the 2024 return's own depreciation schedule**, financed by Financial Pacific
+  and still being paid through 2025; the **2015** utility trailer is on **neither filed return**, was never
+  capitalised, has no lender, and **was sold in 2025**. ⛔ **So "the utility trailer" must never be used
+  unqualified on this client.**
+  ✅ **AND THAT SETTLED A REAL QUESTION IN THE CLIENT'S FAVOUR.** The bank caption on the Financial Pacific
+  payments reads `LEASE PYMT`, which had opened the question of whether the whole payment is rent rather
+  than interest plus principal. **Lilian ruled it is an owned asset and the caption is set aside** — and
+  **her premise checks out against the filed return, not just her recollection: a true lease is never on a
+  depreciation schedule, and this trailer is on it at full business use.** 🔑 **The firm's own prior-year
+  treatment already answered it.**
+  ⓘ **Where the 2015 trailer's facts come from, because it was asked:** BOTH of them — that it existed and
+  that it was sold — come from **one source, the client's own workbook uploaded to the 2025 organizer**, in
+  two different sheets of it *(the current asset list's disposals block, and an older asset list carried
+  forward inside the same file, where it is marked "paid off")*. ⛔ **There is no firm document and no lender
+  document behind either fact.** ⇒ **Never capitalised means no basis to recover, so the whole sale price is
+  gain — and a disposal of something never capitalised is invisible to the usual schedule check while still
+  needing a Form 4797.**
+  ✅ **THE EQUIPMENT-PAYMENTS LINE IN HIS BOOKS IS NOW IDENTIFIED: it is SIX lenders' full-year payments**,
+  and it ties to his own figure to within a small rounding residue. 🛑 **AND THAT TIE IS THE STRONGEST
+  INDEPENDENT CHECK ON THE TWO PAYMENT-COUNT REVERSALS OF THIS MORNING** — on yesterday's figures the same
+  six lenders fell materially short of his line; correcting the counts closed it, **and neither correction
+  was made in order to close it.**
+  🔴 **IT ALSO EXPOSED A DOUBLE DEDUCTION WAITING TO HAPPEN, and it is the most valuable thing found today.**
+  The whole equipment-payments line comes OUT of the deduction statement *(it contains principal)* and its
+  interest goes onto the interest line — **correct for those six.** ⛔ **But the trailer financed by
+  Mitsubishi is NOT one of the six**, so its interest is about to be added to the interest line while its
+  payments have been removed from nothing. **If those payments sit inside a caption that stays in the
+  deduction statement, the interest is deducted twice and the principal once.** ⚠️ **The same structure
+  threatens the insurance premium-finance payments and the car lease.** ☑️ **One sentence to the client
+  covers all three, and it is now on his list: where in your books are these payments?**
+  ✅ **READ AT LILIAN'S INSTRUCTION: the finance documents for the 2026 trailer.** They settle the larger of
+  the two unexplained first-payment amounts — **it is a documentation fee, invoiced as due with the first
+  payment** — which means **the client's year-end balance is right as it stands on that half**, and it
+  **corrects a reading this paper had carried since 2026-09-13** *(the fee was recorded as "financed", from a
+  column header wrapped out of position in the extraction; the bank agrees with the corrected reading,
+  because the fee really did leave the account)*. ⛔ **The smaller amount is NOT settled** — the agreement
+  names no fee of that size, but it does charge interest from the date of disbursement and allows the lender
+  to pre-fund the supplier before delivery, **so odd-days interest is the reading that fits; it does not
+  compute to a whole number of days and the document never states the disbursement date.** ☑️ **One lender
+  statement closes it, and it is not a blocker.**
+  🛠️ **The redaction tool let the company's own street line through again — the SEVENTH instance on this
+  client, same unfixed cause** *(the pattern requires each word of a street name to begin with a letter, and
+  this street is named after a number)*. ✅ **The line was written nowhere and the extract was deleted in the
+  same pass that read it.**
+  ⏸️ **AND ONE QUESTION IS PARKED BY HER, WITH AN INSTRUCTION ATTACHED.** The question about the prior year
+  carrying paid-in capital negative is **deferred until the return is further along** — and when it comes
+  back it is to be **explained from the beginning rather than asked**, because she said plainly that she does
+  not follow what is being asked. ⛔ **No session should raise it before then, and the standing ban on stating
+  what the prior preparer did is NOT lifted by the deferral.**
+  ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
+
+- _(2026-09-27, last — Lilian challenged how a question was being asked, and the challenge improved it)_ —
+  🔑 **A GENERAL PRINCIPLE, AND IT IS HERS: AN ASK IS FOR THE DOCUMENT THAT STATES THE FIGURE, NOT FOR AN
+  ANSWER.** Her words: *"no creo que la pregunta correcta sería preguntarle al cliente dónde están estos pagos
+  en los libros, sino pedirle los documentos que dicen cuánto se pagó durante el año de principal y de
+  intereses, ¿no crees?"*
+  ✅ **SHE IS RIGHT ON THE INSURANCE PREMIUM FINANCE, AND THE ASK IS NOW BETTER FOR IT.** The firm had been
+  asking for the **finance agreement**; it now asks for a **2025 year-end statement giving principal paid,
+  finance charge paid and the year-end balance**, with the agreement as a fallback. 🔑 **The reason is the
+  accounting method: the agreement states the finance charge of the WHOLE CONTRACT, scheduled — and this
+  client is on the CASH basis, where the deduction is what was PAID in the year.** ⛔ **The weaker ask would
+  have produced a figure that had to be amortised out of a contract total.**
+  ⛔ **SHE IS NOT RIGHT ON THE OTHER TWO, AND THAT IS THE CARVE-OUT WORTH KEEPING.** One trailer's lender
+  **has already sent its own year-end figures**, cross-footed to the cent — asking again would be asking for
+  what the firm holds, which the method calls worse than not reviewing at all. **And the car — the Q6 leased in August 2025, ⚠️ NOT the older Audi on the 2024 depreciation schedule that
+  was ruled disposed of — is a LEASE: there is no principal and no interest for any document to state.**
+  🛑 **BUT THE ROW SHE CHALLENGED WAS GENUINELY WRONG — it had merged TWO questions**, and separating them is
+  what the challenge produced: ⓐ **what interest was paid and what is owed** → a **lender** document, and only
+  for the premium finance; ⓑ **is that payment already inside the client's own expense base, and in which
+  line** → **his books**, for all three, and ⛔ **no lender knows which line of his profit-and-loss he used.**
+  ✅ **AND ⓑ BECOMES A DOCUMENT TOO, which is the half of her point that survives everywhere: ask for the
+  BREAKDOWN OF TWO EXPENSE CAPTIONS rather than asking him to reason.** **He keeps his figures in a
+  spreadsheet, so a breakdown of two lines is a modest ask and it settles all three at once.**
+  ⓘ **A free check was run before asking, and it narrows without settling — which is why it does not replace
+  the ask.** The client's own interest line is **already over-subscribed** by the non-equipment interest the
+  firm has measured, so on that reading it cannot also be holding the trailer's interest. ⛔ **It collapses if
+  the credit card's interest is NOT inside that line — itself an open question — and it says nothing at all
+  about the PRINCIPAL, which is the larger half of the exposure and would never sit in an interest line.**
+  ⛔ **No identifier, address or dollar figure was written into this file from the above.**
+
+- _(2026-09-27, closing the day)_ — ✅ **THE YEAR'S NEW ASSETS CAN ALL BE ENTERED IN THE TAX SOFTWARE TODAY,
+  and nothing about them waits on the client.** Everything the asset screen asks for is on file — description,
+  date in service, cost, a five-year life, full business use, the expensing election at zero and the election
+  out of bonus depreciation, both exactly as the prior year did them.
+  🛑 **AND A CHECK NOBODY HAD RUN, which is the part worth keeping: THE DEPRECIATION CONVENTION.** If more than
+  40% of a year's additions go into service in the last three months, the convention changes for **every**
+  addition of the year and every depreciation figure moves. ✅ **Here only ONE asset falls in that window and it
+  is a small share, so the ordinary half-year convention applies** — ✅ **and it holds in BOTH branches of the
+  open question about one asset's in-service year, so it does not wait on the client either.** ⚠️ **The
+  threshold itself is to be read off the current-year form before keying, not from memory.**
+  🔴 **ONE COST IS CONTRADICTED BY A DOCUMENT THE FIRM ALREADY HOLDS, and that is a different thing from a
+  missing document.** For one truck the client booked a figure and the lender's own note states a smaller loan.
+  🔑 **That distinction is why it went on his list while two OTHER costs — which rest on his word alone with no
+  document either way — did not: the firm's own rules say his figure governs where nothing contradicts it.**
+  ☑️ **Two readings, neither evidenced: part of the price paid to the dealer in cash or trade, or his figure is
+  wrong.** ⛔ **Not a gate — key his figure and correct it if the invoice arrives.** ✅ **And another truck in
+  the same year HAS exactly that document, so the ask has a precedent in his own file.**
+  ✅ **AND ONE COST BECAME CONFIRMED as a by-product of the finance agreement Lilian authorised earlier the
+  same day.** The firm had refused to treat the client's figure as confirmed because the loan was thought to
+  include a financed fee, which would have meant he capitalised the financed amount rather than the price.
+  🔑 **The agreement shows the fee is NOT financed — it is invoiced as due with the first payment — and its
+  disbursement page sends the whole loan to the supplier.** ⇒ **The loan equals what the seller was paid, so
+  the client's figure IS the equipment price.**
+  ⛔ **No identifier, address or dollar figure was written into this file from the above.**
+
+- _(2026-09-27, last — the vehicle disposals, and the ask got SMALLER)_ — ⛔ **THE 2025 VEHICLE SALES CANNOT BE
+  RECORDED YET, and one thing blocks all of them: which row of the depreciation schedule each sale disposed of.**
+  🔑 **The reason is arithmetic, not procedure: the gain is the sale price minus what is left of the asset's cost
+  after the depreciation already taken — so with no row there is no cost, no depreciation and no gain.** **The
+  client names his trucks by unit number, the filed return names them a third way, and nobody has mapped the
+  two.**
+  🛑 **AND A TRAP IS NOW WRITTEN DOWN, because it is the error that would put a wrong figure on the form.** His
+  sheet disposes of three trucks of one model year and the prior return happens to carry exactly three of that
+  model year. ⛔ **Matching them three-to-three is NOT identity: a FOURTH of the same model year joined the
+  fleet in 2025, and one of the disposals is of a trailer that was never capitalised at all — so the two
+  populations are known to differ.**
+  ✅ **THE ASK GOT SMALLER, WHICH IS WHAT MATTERS FOR GETTING AN ANSWER: the MONTHS came off it.** **The date
+  moves the disposal-year depreciation only under the alternative convention, and the ordinary one is now
+  established; the deferral clock for the destroyed truck runs from the close of the tax year rather than the
+  month; and the holding-period question does not arise because every disposed asset went into service years
+  earlier.** ⇒ **Ask for the MAP and nothing else.**
+  ✅ **AND ONE MONTH WAS ESTABLISHED FOR FREE INSTEAD OF ASKED: the older Audi left in AUGUST.** Two independent
+  coincidences: a plain deposit with no counterparty landed on 21 August matching the figure he states for it,
+  **and the REPLACEMENT Audi's lease is dated 10 August with its first payment in September.** ⚠️ **An inference,
+  not a document** — and the file's own earlier objection stands, that a trade-in credit is normally applied
+  against the new vehicle rather than deposited, so this may have been a cash sale rather than a trade-in.
+  ⓘ **It changes no figure; it fills the date box and the record.**
+  🔴 **AND A QUESTION NOBODY HAD ASKED, which could remove the destroyed truck from this return altogether: DID
+  THE INSURANCE MONEY ARRIVE IN 2025?** 🔑 **The firm's own earlier finding is why it matters — the gain is
+  realized when the PROCEEDS ARE RECEIVED, which can fall in a different tax year from the loss.** ⛔ **No credit
+  of that size is NAMED in the money-in analysis of the bank statements** — ⚠️ **but that is not evidence of
+  absence: dozens of smaller credits sit inside an unitemised remainder.** ☑️ **A free in-house re-read of the
+  twelve statements would answer it, and the insurance settlement letter already on his list states when the
+  insurer paid.** ⇒ **This adds a REASON to an existing ask, not a new ask.**
+  ⛔ **No identifier, address or dollar figure was written into this file from the above.**
+
+- _(2026-09-27, final — Lilian ordered the ask list audited against what the firm already holds, and the audit
+  found one real error of ours)_ — 🔑 **HER INSTRUCTION, and it is now a standing one: nothing goes on a list to
+  the client until it has been checked against the firm's own documents, and the check is written down beside
+  it.** *"Por favor, recuerda que tenemos mucha documentación. No podemos pedirle cosas al cliente que ya
+  tengamos."*
+  ✅ **WHAT PROMPTED IT WAS A MISREADING, AND THE FAULT IS THE FIRM'S PRESENTATION, NOT HERS.** She sent back the
+  trailer lender's own year-end email and asked why the firm says it does not have that information. ⛔ **It does
+  not — that lender has been closed since 2026-09-15, its figures are on the return, and three separate places
+  say nothing is asked of it.** 🛑 **But one ROW of the ask list NAMES that lender**, because the question is
+  about which line of the CLIENT's own books a payment sits in — **and a person reading the list sees the
+  lender's name against an open row and reads it as a chase.** ✅ **Every row now opens by saying what is NOT
+  being asked.**
+  🔴 **AND THE AUDIT SHE ORDERED FOUND A GENUINE ONE: the list asked for the insurance settlement letter on the
+  destroyed truck, which a ruling had CLOSED twelve days earlier** *(his own asset list gives the proceeds and
+  the firm relies on his figure)*. ⛔ **Struck.** ☑️ **What survives of that row is not a document request at
+  all: ask him to reconcile his OWN two figures for the loss, and ask WHEN he was paid** — **and run the free
+  in-house re-read of the bank statements first, because it may answer the second outright.**
+  ☑️ **THE INVENTORY ITSELF, recorded as the search that produced it:** the Double **file library** was listed in
+  full — **66 documents, all from the platform migration except two** — and ⛔ **not one of the remaining asks is
+  answered by anything in it.** ⚠️ **That is a FILENAME-level listing of ONE source: it does not cover the
+  current-year organizer attachments, Julia's email, or Drive, and it cannot see inside a file whose name does
+  not say what it is.** ✅ **What it DID confirm is how much is already done — both contracts and both breakout
+  letters for one lender, a full year of prior bank statements, the disaster-loan statements, the line-of-credit
+  images, three card documents, the prior two returns, and every 1099.**
+  🔴 **ONE MORE THING THE DAY PRODUCED, and it is about assets that STAY rather than assets that leave: a
+  depreciation CONVENTION question on a prior year.** **The convention for an asset is fixed in the year it went
+  into service, and on the firm's own table one earlier year looks as though it crossed the threshold that
+  changes it.** **If so, two assets still on the books run on different tables for their whole life — and this
+  return is rebuilding that schedule from scratch.** ⛔ **It cannot be settled from what has been extracted,
+  because the table shows only the additions of that year that SURVIVED to the last return.** ✅ **The earlier
+  return itself answers it and is in the file library.** ⛔ **A rebuild question, never a client ask.**
+  ⛔ **No identifier, address or dollar figure was written into this file from the above.**
+
+- _(2026-09-27 — Lilian reset the approach to this return, and it changed more than any single finding has)_ —
+  🛑 **THE WORK IS NOW TO REBUILD THE YEAR'S ACCOUNTING FROM THE SOURCE DOCUMENTS and use the client's own
+  spreadsheet only as a comparison.** ⛔ **It is not to take his expense summary as the income statement and
+  correct the lines we can prove wrong, which is what the firm had been doing for two weeks.** 🔑 **Her worked
+  example carries the whole rule: we do not ask him which category he put a lender in — we have the payments
+  and the loan documents, so we post the principal and the interest ourselves, and his classification stops
+  mattering.**
+  ⚠️ **IT COLLIDES WITH A RULING OF THE OTHER PRINCIPAL'S and a session may not resolve that.** The earlier
+  ruling was to rely on the client's own profit-and-loss figures and do no verification. **The new instruction
+  builds the firm's own set from source. In practice the figures that reach the return are the firm's either
+  way — which is exactly why the other principal has to see it.** ☑️ **Carried to her as a decision, not as a
+  defect.**
+  🔴 **AND HER CLARIFICATIONS CLOSED THE LARGEST OPEN QUESTION ON THIS RETURN.** **The company uses ONE
+  business checking account and ONE business credit card; every other account mentioned is personal and its
+  balances do not enter the company's balance sheet; and no business costs were paid with personal money.**
+  ✅ **The card question — where the firm's own rule and its own reasoning had been pointing in opposite
+  directions for two weeks, and the paper had refused to pick — is settled: it IS the company's card.** ⇒ **It
+  belongs on the balance sheet, its charges are the company's expenses, and the payments from checking to it
+  are transfers between two company accounts rather than expenses or owner draws.** ⚠️ **BUT ONLY FOR THE PAYMENTS THAT ARRIVED — and the first version of this entry had the rest
+  BACKWARDS.** **The large measured gap between what left the bank and what reached the card is money that went
+  somewhere else** — **and since every other account is now established as PERSONAL, her clarification makes that
+  gap MORE clearly an owner-draw classification, not less.** ⛔ **It stays a decision for the signing principal:
+  a distribution, a receivable from the shareholder, or officer compensation.**
+  ✅ **ALL 51 OPEN ITEMS WERE RE-SORTED into her four groups — the datum is already in the documents · it is
+  ours to calculate · it is an accounting or tax decision · it is genuinely missing.** 🔑 **THE CLIENT LIST
+  WENT FROM EIGHT ITEMS TO TWO** ⚠️ *(the first version of this entry said ONE; the independent review
+  caught that one of the moves was wishful — a search it proposed had already been run and failed, and it went
+  back)*. **One was dissolved outright by the new approach, five moved to internal work,
+  and TWO remain genuinely missing: the insurance premium-finance figures — which cannot be solved from the one
+  equation the bank gives, and cannot be amortised out of the only document we hold because that document does
+  not foot against itself — and the map from the client's own truck numbers to the rows of the depreciation
+  schedule, where every route the firm holds has been tried and none of them carries a truck identity.**
+  ⚠️ **AND THE WHOLE COLLAPSE IS CONTINGENT ON THE OTHER PRINCIPAL'S ANSWER: the dissolved item rests entirely
+  on the rebuild, so if she upholds her own earlier ruling it comes back.** ⛔ **Nothing
+  goes to the client until the internal work is finished; that is her instruction in terms.**
+  ☑️ **AND A DISTINCTION SHE ASKED FOR THAT THE FIRM HAD BEEN BLURRING: a document that is genuinely missing
+  versus one a session cannot reach at this moment.** **Everything in the practice-management platform is
+  re-readable. What is NOT re-reachable is anything a principal pasted into a session as an image — the
+  figures are recorded, the pictures are gone with the message. If one of those has to be read again, it is a
+  request to HER, never to the client.**
+  ⛔ **No identifier, address or dollar figure was written into this file from the above.**
+
+- _(2026-09-27, later — Lilian narrowed her own reset, and then ordered a prior-year sweep that found the firm
+  had been wrong)_ — 🔑 **THE LINE IS THE DOCUMENT, NOT THE LINE ITEM.** Her rule, and it is the one to keep:
+  **where the firm holds a document stating a figure, the document governs; where it does not, the client's
+  figure governs and we do not audit it.** ⇒ **Liabilities, interest paid, debt balances and assets are OURS to
+  reconstruct. Fuel, telephone, office expenses and the rest of the soft profit-and-loss are HIS, unaudited.**
+  ✅ **AND THAT LARGELY DISSOLVES THE COLLISION THE FIRM HAD JUST ESCALATED TO THE OTHER PRINCIPAL** — because it
+  is that principal's own two rulings read together: one says do not audit the client's profit and loss, the
+  other says the lender's letter is the authority on interest. **Lilian drew the line exactly where the firm had
+  already drawn it.** ⚠️ **What survives for her is narrow — which captions the deduction statement takes from
+  the client's sheet.**
+  🔴 **AND THEN SHE ORDERED THE PRIOR-YEAR DOCUMENTS SEARCHED, and the firm's own conclusion did not survive
+  it.** The paper had asserted that every route to the truck-numbering map had been tried. ⛔ **FOUR documents
+  in the platform had never been opened at all** — among them the client's own workbook from an earlier year,
+  and a completed business organizer.
+  🛑 **THE LESSON IS THE SAME ONE TWICE IN TWO DAYS: a filename listing is not a reading.** **The day before,
+  the firm listed all 66 documents BY NAME and concluded from the names that none of them helped — and then
+  wrote that conclusion as though the files had been opened.** ⚠️ **The section that did it even warned about
+  itself, saying it could not see inside a file whose name does not say what it is, and the conclusion was
+  written anyway.**
+  ✅ **WHAT THE OLD WORKBOOK ACTUALLY CARRIES: the client's own financed-equipment table, listed BY HIS OWN UNIT
+  NUMBERS, with payments, interest and payoff balances for that year.** 🔑 **And it cross-checks TO THE CENT
+  against a lender's own amortization report for the same year** — **which is real evidence for the rule she set
+  the same day: where he reports DEBT figures he is copying a lender and is reliable, so a disagreement reads as
+  his arithmetic error rather than as a different fact.**
+  ✅ **IT DID NOT SOLVE THE MAP, BUT IT SHRANK THE QUESTION FROM A MAPPING EXERCISE TO ONE SENTENCE HE CAN ANSWER
+  FROM MEMORY.** **The exclusion it appears to give — only two of the three trucks are in his financed table, and his own
+  description row for the third says "paid off" — had ALREADY been drawn in this paper months of work ago, and
+  drawn better: the two observations are the SAME one (paid off means no longer financed), not two supports, and
+  both rest on that financed list being complete, which nothing establishes.** ⛔ **A first version of this entry
+  said the paper had never drawn it and that the truck was now corroborated twice over. Both were wrong and the
+  independent review caught them.** ⇒ **What is left to ask is which of his two remaining trucks carries which
+  number — and the third one goes back into the same question, because it costs nothing to ask.**
+  ⛔ **AND ONE INFERENCE WAS DELIBERATELY NOT MADE: the interest figures would point at an order, but the
+  payment amounts contradict it, so the figures do not hold together well enough to name it — and naming it
+  wrong would put a wrong cost basis on a sale.**
+  ⛔ **No identifier, address or dollar figure was written into this file from the above.**
+
+- _(2026-09-27, and this is the one that outlives the client)_ — **LILIAN ASKED THAT EVERYTHING THIS CASE TAUGHT US BE WRITTEN INTO THE FIRM'S TAX-RETURN SKILL, BECAUSE IT IS THE FIRST OF ITS KIND AND WILL NOT BE THE LAST.** Her words: *"es la primera vez que lo voy a hacer de este tipo… necesito que tú comprendas cómo es que hacemos las cosas y que lo recuerdes."*
+  ✅ **A new section was written for the case of a client who arrives with NO BOOKS** — no accounting system, no
+  defined ledger, just a spreadsheet and a pile of documents — **so the next session does not spend days
+  rediscovering the method.** 🔑 **Its centre is the rule she set on this return and it is one sentence: where the
+  firm HOLDS a document that states a figure, the DOCUMENT governs; where it does not, the CLIENT'S figure governs
+  and we do not audit it.** ⚠️ **It also carries the tell that identifies the case at intake — there is no equity
+  section anywhere in what the client sent — the order to rebuild in (prior return, then liabilities, then the
+  bank and card, then the assets, then the soft captions, and equity LAST, never as a plug), the three traps this
+  client sprang, and the distinction that cost this engagement the most time: a document we do not hold, a document
+  our tool cannot read, and a document nobody has opened yet are three different sentences.**
+  🔑 **One lesson in it is not tax-specific at all and is worth reading whatever the client: a filename listing is
+  not a reading.** This paper had marked a file ✅ in an inventory that nobody had opened.
+- _(2026-09-27)_ — **LILIAN CLOSED THE LAST OPEN QUESTION ON THE NEW TRUCK AND TOLD THE SESSION TO STOP ASKING.**
+  Her reasoning, and it is sound: it is in none of the two prior years' books, so it is new; the year the client
+  typed on his own sheet is a slip; and she believes he listed it among the current year's additions. ✅ **Recorded
+  as a decision of hers, with her reasoning, so no later session re-opens it** — the working paper carries it.
+  ⚠️ **What it does NOT settle is which physical truck carries which internal number**, which is a different
+  question and still on the client list, because a disposal's cost basis turns on it.
+- _(2026-09-27)_ — **SHE CHALLENGED THE SESSION'S OWN EMPHASIS, AND THE CHALLENGE WAS RIGHT.** The paper had
+  singled out three lenders' payments as possibly hidden inside two of the client's expense captions, and she asked
+  the obvious question: *"¿cuál es la diferencia con el resto?"* — the client has many loans, so why these three?
+  ✅ **The honest answer was written out: there is no difference in KIND. Six lenders' payments have been LOCATED in
+  the bank account and three have not, so the three are simply the residual — and the three are not alike either.**
+  🔑 **And the finding that came out of answering her properly: the likelihoods run OPPOSITE to the amounts.** The
+  one most likely to be hiding is the cheapest to resolve, and the one least likely is the dearest — which is
+  exactly backwards from where a session would naturally spend its effort. ⛔ **A session that had not been asked to
+  justify its emphasis would have kept it.**
+- _(2026-09-27)_ — **THE ASSET SIDE WAS AUDITED FOR COMPLETENESS BEFORE ANY OF IT WAS KEYED, WHICH IS WHAT SHE
+  ASKED FOR.** ✅ **Every one of the year's additions can be keyed today** — each has a cost, a date and a document
+  behind it, and none needs the client. ⛔ **Not one of the year's disposals can be**, and they are all blocked on
+  the SAME single question: which physical unit carries which internal number. 🔑 **That is the shape of the answer
+  she wanted — not a list of gaps, but which gaps share one cause**, because one question to the client unblocks
+  all of them at once. ⚠️ **One of the disposals is the totalled unit, so the same answer also decides which cost
+  goes onto the casualty form — and getting it wrong would put a wrong basis on a return.**
+- _(2026-09-27)_ — **THE RECONSTRUCTION ITSELF BEGAN: the year's profit-and-loss and the balance sheet were built
+  from the documents, and the keying workbook now carries both as their own sheets with live formulas.** ✅ **The
+  opening balance sheet balances on both sides from the prior year's filed return** — the immovable base the other
+  principal set. 🔑 **Each line is marked with WHERE it came from and whether it is document-derived or the
+  client's own figure**, which is the rule above made visible at the point of keying. ⛔ **The closing column is
+  deliberately not complete** — it cannot be until the residual lenders and the disposals are settled, and the
+  sheet says so on its face rather than balancing itself with a plug.
+  ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
+
+- _(2026-09-27, later — and this is the finding that reaches every trucking client the firm has)_ — 🔴 **THE
+  FLEET'S DEPRECIATION LIFE WAS TRANSCRIBED FROM THE PRIOR YEAR AND NEVER DERIVED, AND FOR THE TRACTORS IT IS
+  WRONG.** Lilian asked the session to read the IRS rules and work out the classification properly rather than
+  just hand over a name, a date and a cost. ✅ **Read from the CURRENT edition of the IRS depreciation
+  publication, downloaded from the agency's own site — not from memory, which is this firm's standing rule for
+  anything that moves a figure.** 🔑 **An OVER-THE-ROAD TRACTOR UNIT — the fifth-wheel vehicle that pulls a
+  semi-trailer — is its own asset class with a THREE-year recovery period. A semi-trailer is a different class
+  at FIVE. The prior year put the entire fleet, tractors included, at five.** ⚠️ **The model name does not
+  decide it**: the same nameplate is built as a tractor and as a straight truck, and the title or registration
+  body-type field is what settles it. ⛔ **AND THE SESSION DID NOT ACT ON IT, because it may not:** a recovery
+  period used on two or more consecutive filed returns is a **method of accounting**, so correcting the
+  existing fleet is a formal change with a catch-up adjustment, not a line edit — **and it collides head-on
+  with the standing ruling that depreciation follows the prior year exactly.** ☑️ **It went to Julia as three
+  questions**, with the honest caveat that a shorter life is **not automatically better**: it deducts faster
+  and it also produces more recapture as ordinary income when a tractor is sold, **and this client sells
+  them.** 🔑 **A separate limit was also identified for the one ordinary CAR on the schedule** — it is
+  statutorily capped in a way the trucks are not, the car is being disposed of this year, and whether the caps
+  were applied in earlier years changes the gain.
+- _(2026-09-27, later)_ — **LILIAN SET A STANDING REQUIREMENT FOR EVERY WORKSHEET THE FIRM EVER BUILDS, AND IT
+  IS NOT ABOUT THIS CLIENT.** Her words: *"Necesito saber de dónde sale cada número y, si está en un documento,
+  necesito saber cuál es el documento… si no, queda como un número y tengo que confiar plenamente en ti."*
+  ✅ **Every figure now carries its own SOURCE column, and it holds three things: what KIND of evidence it is**
+  *(a client document · his own spreadsheet · a prior-year filed return · a bank statement · a lender letter ·
+  a text message · a screenshot he sent · an email · computed · a firm decision)*, **WHICH document by its
+  exact filename, and WHERE it lives plus where inside it** — the page and line, or the sheet and cell.
+  🔑 **The test she set is not "is the number right" but "can she reach the evidence WITHOUT ASKING THE
+  SESSION"** — because the session that could explain it gets deleted, and a figure supported only by that
+  session is not a working paper. 🛑 **Three rules make it honest rather than decorative: a figure given in
+  chat or in a photo is labelled as that and never dressed up as a document; a CORRECT figure whose source
+  cannot be named is a DEFECT, not a rounding issue; and where two sources disagree the column names BOTH and
+  says which governs.** ✅ **Written into the firm's tax skill so it never has to be asked for again**, together
+  with her second requirement: **an asset is never delivered as just a name, a date and a cost** — it carries
+  what it physically is, its class, its derived life, the method and convention, the business-use basis, and
+  whether the statutory vehicle caps touch it. **Plus one table for putting an asset in and one for taking it
+  out** — ⛔ **and taking one out is never deleting the row.**
+- _(2026-09-27, and it is an ACCESS note rather than a finding)_ — **LILIAN ASKED FOR THE CLIENT'S OWN
+  SPREADSHEET TO BE RE-READ END TO END so no loose note is lost. ⛔ The download was BLOCKED by this session's
+  own automated safety layer, not by any rule of the firm's** — her ask is itself the permission under the
+  standing document rule. ✅ **The specific note she asked about had in fact already been audited line by line
+  in the working paper, and only one figure in it had been new at the time.** 🔑 **The route that has worked
+  twice before on this client is recorded again because it is the practical answer: when the firm's tooling
+  refuses a document, the principal sending it in directly closes in minutes what the tooling cannot.**
+  ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
+
+- _(2026-09-27, evening — and this is the entry that unblocked the return)_ — 🔴 **LILIAN SENT THE CLIENT'S OWN
+  WORKBOOK DIRECTLY INTO THE SESSION AFTER THE TOOLING REFUSED IT, AND IT ANSWERED THE QUESTION THAT HAD BEEN
+  BLOCKING EVERY DISPOSAL FOR TWO WEEKS.** ✅ **All seven sheets read cell by cell.** 🔑 **The truck
+  identification was in the client's OWN OLDER asset sheet, which still carries the unit numbers that his newer
+  sheet stripped off the same three rows — and what CARRIES it is the COST PAIRING: two of his
+  purchase prices against a filed schedule holding two costs a few hundred apart can only pair one way, and
+  the third follows by elimination.** ⛔ **NOT *"corroborated twice on month and cost"* — an earlier version of
+  this entry said that and it is wrong twice over: one truck's month differs from the schedule's by a few
+  weeks, one carries no cost at all, and the financed-equipment table is CONSISTENT with the map rather than a
+  second support for it — which is exactly what an earlier review of this same file had already established
+  and what this entry then re-asserted 100 lines later.** ⇒ ✅ **THE CLIENT IS ASKED NOTHING. The vehicle whose
+  identity decided which cost goes onto the casualty form turns out to be the CHEAPER of the two.**
+  🛑 **AND THE LESSON IS THE ONE THIS CLIENT HAS NOW TAUGHT THREE TIMES: the sheet was in the file library the
+  whole time, and *"our tool cannot read it"* had been recorded as *"we do not have it."*** ⚠️ **The home
+  street address appears in two of those sheets and is recorded nowhere.**
+- _(2026-09-27, evening — and it REVERSED a conclusion this firm had been carrying for two weeks)_ —
+  🔴 **THE CLIENT'S CATEGORY IS NOT CALLED WHAT EVERY ANALYSIS HAD BEEN CALLING IT.** The paper had been
+  reasoning about an *"automobile and truck expenses"* line. ⛔ **No such line exists in his books.** ✅ **His
+  caption says REPAIRS AND MAINTENANCE — which is a far poorer home for a finance instalment or a car lease
+  than the name that had been assumed.** ✅ **And his other caption states his whole convention in its own
+  title: it says, in his words, that the line holds financed-equipment payments INCLUDING interest and
+  principal.** 🔑 **His three-year series then proves when he adopted it: the dedicated line did not exist two
+  years ago, was one contract last year, and this year it carries nearly everything — while the repairs caption
+  fell by about half in the same step.** ⇒ 🛑 **THE INTERNAL RECONCILIATION CLOSED TO FOUR CENTS.** The sum of
+  his own per-asset interest cells, excluding one lender, reproduces a figure the firm had measured
+  independently from lender letters and bank statements. ⛔ **AND THE FIRST VERSION OF THIS ENTRY CLAIMED THE TWO
+  FIGURES SHARE NO INPUTS AND *"COULD HAVE DISAGREED". THAT WAS FALSE — the THIRD overstated corroboration
+  this session produced in one day, and the working paper already held the correct verdict on this very
+  comparison.*** ✅ **The truth is PARTIAL: three of the four components are independent of his sheet — one
+  lender's four letters, one computed figure and one lender's own schedule — while the fourth IS his own cell
+  adopted by an earlier ruling, so it contributes nothing to the agreement by construction.**
+  🔑 **The conclusion below does not rest on it and is unaffected.** ⇒ 🔑 **So the one lender's
+  payments were simply LEFT OUT when he totalled the line, not hidden in another category — which means the
+  firm is UNDER-deducting there rather than over.** ⛔ **Three of the four amounts that had been called an
+  over-deduction risk now run in the client's favour or are neutral.**
+- _(2026-09-27, evening)_ — 🔴 **AND A NEW FINDING THAT IS NOW THE LARGEST OPEN FIGURE ON THE RETURN: a TOWING
+  BILL.** **His own asset sheet says he paid a towing service, in cash from the business line of credit, on the
+  truck that was destroyed — and that the insurer covered it.** 🔑 **The amount is roughly two thirds of his
+  entire repairs caption.** ⚠️ **AND IT CUTS BOTH WAYS, which is why it is a question and not an adjustment:
+  if the expense is inside that caption then the insurance reimbursement is income or reduces it, and
+  recognising one without the other overstates the deduction; if it is not in there, both sides are off the
+  return and cancel.** 🛑 **Either way it reframes the casualty: the proceeds allocable to the TRUCK are what
+  his own note says, not the insurer's whole payment — which is what the paper had been carrying.**
+  ☑️ **It is the one client question this reading produced, and the list went from SEVEN to THREE.** ⚠️ **CORRECTED: it is SIX — three that move a figure now and three that ride along — and a round-2 review then found a SEVENTH that had been dropped.**
+- _(2026-09-27, evening)_ — **THREE RULINGS OF LILIAN'S, recorded because each narrows how the work is done.**
+  ① **The other entity had NO activity in the year — the client confirmed it, and she directed that he is not
+  asked again on a generic possibility.** ⚠️ **What replaces that question is a different one and it is not
+  his: the entity's only asset was bought for cash and sold at a loss two years ago, so the receivable's
+  COLLECTABILITY is a question for the signing principal.** ② **Prior-year assets keep their history in the tax
+  software and the firm does NOT re-audit his historical methods.** ③ 🔑 **AND THE ONE THAT CHANGES THE SHAPE OF
+  THE WHOLE JOB: one open decision does not stop the return.** Her own line: *not knowing which vehicle matches
+  an earlier record can stop a disposal — that is a real block — but a depreciation decision the signer must
+  review does not stop entering the basic data of every other asset.* ⇒ **It narrows a ruling this session had
+  written too widely that morning.**
+- _(2026-09-27, evening)_ — **THE ADJUSTED PROFIT-AND-LOSS AND THE ROLLED-FORWARD BALANCE SHEET WERE BUILT, AND
+  BOTH TIE TO SOMETHING OUTSIDE THEMSELVES.** ✅ **The deductions figure reconciles to the client's OWN stated
+  total less five named removals, exactly.** ✅ **And the long-term debt line's whole convention is now PROVEN
+  rather than assumed: the client's own year-end balance cells for the prior year reproduce the figure on the
+  FILED return to within a quarter of a dollar — so his equivalent cells for this year give that line in full,
+  one document short.** 🔑 **The balance sheet now closes on TWO unknowns — the accumulated depreciation and
+  the one financing document still to arrive — and BOTH ARE NAMED, which is the whole difference from where
+  this return started.** ⚠️ **An earlier version of this sentence said a single unknown and stated the equity
+  residual as though the missing document were zero.** ✅ **Once both are keyed the owner's withdrawals fall
+  out as the only figure left.** 🛑 **Which is the route both
+  principals directed, and the alternative would have been catastrophic here: deriving withdrawals as
+  everything-that-left-less-identified-uses would have swept most of a million dollars into the capital
+  account, because three quarters of the outflow sits under one opaque bank caption that turned out to be
+  payments to contract drivers.** ⛔ **No difference was closed with a distribution, a contribution or a
+  retained-earnings adjustment, and none may be.**
+  ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
+
+- _(2026-09-27, night — and the LEASE DOCUMENT answered two things nobody expected it to)_ — **Lilian sent
+  the signed closed-end vehicle lease into the session.** ✅ **It settles what she was unsure of, and her own
+  guess was right: it is simply a BUSINESS EXPENSE.** 🔑 **The COMPANY is named as the lessee** *(the owner is
+  co-lessee)* **and the `Primary Use` box is ticked `business`.** ⇒ **A closed-end lease is a RENTAL: no
+  depreciable asset, nothing on the depreciation schedule, nothing on the balance sheet — no asset and no
+  liability — and the payments are a deduction.** ⚠️ **AND A CASH-BASIS TRAP THAT WOULD HAVE BEEN MISSED: the
+  amount due at signing, which INCLUDED the first monthly payment, was settled entirely by rebates and
+  non-cash credits, so the company paid nothing that month — the year's deduction is one payment SHORT of
+  what the calendar suggests.** ✅ 🆕 **AND IT SETTLED SOMETHING ELSE ENTIRELY: the lease records NO trade-in
+  allowance, which proves the older car the client described as *"traded in"* was actually SOLD to the dealer
+  — and that is why the money appears as a bank deposit rather than a credit against the new vehicle.**
+  ⛔ 🆕 **CORRECTED 2026-09-28: "proves" was too strong.** The lease is the NEW car's document and shows only
+  that no trade-in was credited on it; **that the old car was sold to a dealer is an inference from that plus
+  a matching bank deposit — the best reading, not a documented fact. No sale document for the old car in
+  anything read** *(see the 2026-09-28 entries below — two items are still unread)*.
+  🔑 **The confusion about a *"personal Audi"* is real but it is a DIFFERENT VEHICLE: his own sheet calls the
+  PORSCHE personal, never an Audi.** ⚠️ **Two things the document does NOT settle and one of them got BIGGER:
+  the statutory leased-luxury-vehicle inclusion amount is now material because the agreed value is known and
+  is far above the threshold — the escape is the weight rating and nobody has read the door-jamb sticker — and
+  the business-use percentage, which the lessor's tick-box does NOT establish.**
+- _(2026-09-27, night — and this one answers a question about JULIA'S OWN METHOD without asking her)_ —
+  **Lilian asked whether the firm takes a vehicle's cost from the purchase document or from the client's
+  figure, because she wants to follow Julia's pattern and did not know what it was.** 🔑 **THE ANSWER IS IN
+  THE FILED RETURN AND IT DOES NOT NEED ASKING: compare each carried-forward asset's cost on the filed
+  schedule against what the client wrote for that same vehicle.** ✅ **THREE of them DIFFER — and the
+  differences are small, odd and fee-shaped, while the client's own figures are round.** 🛑 **A client
+  remembers a ROUND number; a DOCUMENT produces an odd one.** ⇒ 🔑 **So the prior-year pattern is
+  DOCUMENT-FIRST: the preparer capitalized the price PLUS the sales tax PLUS the registration fees, which is
+  correct and could only have come off a bill of sale.** ✅ **And on one of the three the client's OWN note
+  names the sales tax he paid, which very nearly closes the difference exactly.** ⚠️ **THE CONSEQUENCE RUNS
+  IN THE CLIENT'S FAVOUR: if that pattern governs, three of this year's vehicle costs are UNDERSTATED by the
+  tax and fees, and the depreciation with them.** ⛔ **But it collides with three rulings already taken on
+  this return, so it goes to JULIA and nothing is asked of the client until she rules.** 🔑 **AND ONE
+  APPARENT CONTRADICTION DISSOLVED: a lender note for less than a booked cost is NOT a defect — a FINANCED
+  AMOUNT IS NOT A PURCHASE PRICE.** ⛔ 🆕 **AN EARLIER VERSION OF THIS ENTRY ADDED *"and the lease shows this client puts money down, which closes the gap cleanly"*. THAT IS FALSE, AND THE SAME DOCUMENT DISPROVES IT: the entry above records that the WHOLE amount due at signing was settled by rebates and non-cash credits, and the price reduction was a COMPONENT of that amount.** 🔑 **A price reduction tells you the price was reduced; it does NOT tell you who paid for it, and the answer is two lines further down the same form.** ✅ **So the gap is UNEVIDENCED, and the free test nobody has run is a bank search for a payment to the dealer around the purchase date.**
+  
+- _(2026-09-27, night)_ — 🔑 **LILIAN WORKED OUT THE CASUALTY TREATMENT HERSELF AND SHE IS RIGHT.** She asked
+  whether the insurance reimbursement has to be split between the vehicle and the towing, and whether the
+  disposition takes only the vehicle's part. ✅ **Yes — the casualty form computes the gain on the PROPERTY,
+  and its reimbursement line takes only what was received FOR that property. A payment reimbursing a towing
+  bill is a recovery of an EXPENSE, not proceeds for the truck.** 🛑 **So the paper had been carrying the
+  insurer's WHOLE settlement as the proceeds, which overstates the casualty gain.** ⚠️ **AND THE TWO SIDES
+  MUST MOVE TOGETHER: if the towing was deducted its reimbursement is income; if it was not, it is not. One
+  side without the other is wrong in whichever direction it is taken.** ☑️ **She also proposed the right next
+  step and it is free: look in the bank for the credit, because the money must have reached the company.**
+  ⛔ **IT HAS NEVER BEEN RUN, and the paper's existing credit list cannot substitute — it is filtered to
+  lender and payroll captions, so its silence on insurance is silence by construction, not evidence.**
+  🔑 **Two separate credits would split the settlement for us and DELETE TWO CLIENT QUESTIONS; nothing at all
+  in the year would mean the gain belongs to next year and the whole form comes off this return.**
+- _(2026-09-27, night)_ — **THREE MORE RULINGS, and one closes a question that had been holding a whole line
+  of the return.** ① ✅ **THE MEALS ARE ALL WORKING MEALS — nothing with clients** *(her words)* ⇒ **the 50%
+  rate is correct, the figure stops being provisional, and the question comes OFF the client list.** ② ☑️ **The
+  older car's disposal date is fixed at the day the deposit arrived — and she directed that it be recorded AS
+  AN ASSUMPTION, with its evidence, rather than as a fact.** 🔑 **That is the right instinct and it is now
+  written that way: the amount matches to the dollar and no other credit that year does, but the DATE is
+  taken, not documented.** ③ ✅ **The uncapitalized trailer: basis ZERO and the proceeds are ordinary income
+  — and that answer holds on EVERY plausible history, because an old asset's recovery period has expired
+  whether or not anyone recorded it, and recapture runs on depreciation *allowed OR ALLOWABLE*.**
+  🔑 **So it is keyable with no document, and zero is the LEAST favourable assumption available — the only
+  objection possible is that the firm was too conservative.** ⚠️ **She also asked for the safety check and it
+  was run: that trailer is NOT among the assets on the filed schedule, so nothing is being overlooked — but
+  there are TWO trailers with almost the same name, one on the schedule and financed and one on neither
+  return, and neither may ever be written unqualified.** ⛔ **And his sheet's *"value"* columns are his
+  estimates of WORTH, never basis — a reviewer glancing at them could take one for one.**
+  ⛔ **No identifier, address or dollar figure was written into this file from any of the above.**
+- _(2026-09-28)_ — **WHERE THE OWNER WROTE THAT THE OLD AUDI WAS "TRADED IN": not in an email, in his OWN BOOKS
+  WORKBOOK** — a block of free-text lines at the foot of the `Asset List 2025` sheet, column B *(the Audi line is
+  `B47`)*. Lilian had remembered the wording and asked where it was. ✅ **The cell references and the verbatim
+  text are in the working paper §3W ③.** ⛔ **Two negatives, each scoped to its search:** the workbook carries
+  **no mileage anywhere**, and a name search of the client's Double files finds **no sale document for the old
+  Audi** — the only Audi document is the NEW car's lease, which records no trade-in. ⇒ **The old car's mileage
+  at sale is not in anything read** *(see the later entry — the chat history was not read)*. ⛔ **Nothing was asked of the client.**
+- _(2026-09-28, later — and it corrects the firm's own claim)_ — **LILIAN CAUGHT AN OVERSTATEMENT: the file said
+  the old Audi's SALE had been "confirmed by a document", and she went looking for that document.** ⛔ **In
+  anything read, there is none.** The document was the **new** car's lease, which proves only that no trade-in was credited on the new
+  lease; **the sale is an inference** from that plus a matching bank deposit. It stays the best reading and
+  **no figure moves**, but it is now written as an inference everywhere it appeared. 🔎 **The search was then
+  done properly, by CONTENT and not only by file name**, as she asked: every Double file on the client listed by
+  name, the 2025 documents read inside, Drive, and Julia's Gmail. **No sale document anywhere in what was read**, ⚠️ **with two
+  gaps: one image whose file name says nothing (`attachment.jpg`), and — the likelier source — the client's
+  whole TaxDome CHAT history, exported to Drive (`3. Chats > Zakom Incorporated`) during the migration and never
+  read by any session.** Drive's search index matches it for the Audi and for "sold"; it was not opened because
+  no written rule covers the chat exports, and the question went to Lilian. ✅ **Two things came back on the way:**
+  the owner's **TaxDome chat message of August 2025 giving the old Audi's odometer at the end of the prior year**
+  — so only the reading at the sale is missing now — and **Julia's August 2025 ruling that the old Audi is 100%
+  the company's, now traced to a dated email**, closing a flag the working paper had carried. The figures and
+  quotations are in the working paper §3BK. ⚠️ **The mileage message was NOT unknown to the firm:** §5 of this
+  file has said since the first sweep (2026-09-13) that he *"gave the Audi's mileage at 12/31/24"* — **without
+  the figure, as this file's rules require — and the figure never reached the working paper**, so when the
+  return needed it nobody knew it was on hand. 🔑 **Worth keeping for the method: a fact recorded here without
+  its figure has to be carried into the working paper WITH the figure, or it is lost to the return.**
+
+- **2026-09-28 — ⚖️ LILIAN RULED ON HOW THE OWNER'S CAPITAL MOVEMENT IS CHARACTERISED, AND SHE HAD RULED IT BEFORE.**
+  Her rule: **everything the firm can compute is computed — the liabilities, the business expenses, everything
+  derivable from documents — and whatever remains in the capital account is DISTRIBUTIONS.** She also stated as a
+  fact about this client that **there is no shareholder loan in either direction** *("de ser así, yo te lo hubiese
+  informado")* — her knowledge of the client, not an inference from the books — and that **nothing on the equity
+  side holds the return up.** ⚠️ **She was correcting a repeat:** she had set the same rule earlier in the
+  preparation, the working paper recorded the METHOD but never the RULING, and three later sessions re-opened the
+  characterisation and put it back to her — the last one through a PR review that measured a drafted email against
+  the stale paper. 🔑 **For the next person: the owner-capital question on this client is SETTLED, and asking it
+  again is going backwards.** ✅ **What survives is one narrow question for the client — whether he put his own money
+  INTO the company during the year — and it does not block anything.** Working paper §3BW, decision 104.
+
+- **2026-09-28 — 📌 THE COMPANY'S COMMERCIAL INSURANCE IS FINANCED, AND THE ARRANGEMENT IS NEW IN 2025.**
+  The trucking cover is placed through **AssuredPartners** and financed through **IPFS**, a premium finance
+  company: IPFS pays the insurer the whole annual premium up front and the company repays IPFS monthly, so
+  each payment is part insurance and part interest and there is a **balance owed to IPFS at each year end**.
+  🔑 **There was no such arrangement in the prior year** — no IPFS line on the prior return and no IPFS
+  debit in that year's bank statements — **so the prior year cannot be used as the guide for how to present
+  it.** ⚠️ **And the financed policy covers AUTO PHYSICAL DAMAGE ONLY: auto liability, motor truck cargo
+  and general liability are listed on the schedule and priced at nothing.** ⇒ **The company therefore
+  carries liability and cargo cover somewhere else, paid by another route, and its insurance expense is
+  nowhere near all IPFS.** ☑️ **Two things follow for anyone working this client again: the year-end IPFS
+  balance is a balance-sheet liability that has to be obtained from IPFS, and whether the deduction is the
+  cash paid or the whole premium is an open question for Julia.** Working paper §3BX.
+
+- **2026-09-28 — 🛑 THE SCOPE RULE FOR THIS CLIENT'S EXPENSES, restated by Lilian and now the standing one.**
+  The firm **reconstructs from documents** what documents can state — loans, debt balances, interest, assets,
+  liabilities — and **uses the client's own figures, unaudited, for the soft expense lines** (travel, meals,
+  fuel, telephone, office). 🔑 **Her test: where the firm holds a document that contradicts a figure he
+  reported, the document governs; everywhere else his figure stands.** ⛔ **The firm does NOT search his bank
+  statements to complete a caption he under-reported** — *"el objetivo no es hacer completo el profit and
+  loss, sino reconstruir las cuentas para las cuales tenemos documentos"* — **because an expense he does not
+  claim simply stays in his profit and he pays more tax, which is his choice and not the firm's exposure.**
+  ☑️ **This closed a question about unidentified card travel that had been on the ask list.** Working paper
+  §3BX ⑤, decision 105.
+
+- **2026-09-28 (evening) — ⌨️ A TRAILER THE COMPANY'S BOOKS NEVER CARRIED WAS SOLD IN THE YEAR, AND IT IS NOW
+  ON THE RETURN.** An older utility trailer — not the financed one, which stays — appears on neither filed
+  return and was disposed of during the year. 🔑 **The firm's position needs no document from the client:
+  whatever the history, the basis is zero and the proceeds are ORDINARY income**, because an asset of that
+  age on a five-year life is fully written off whether or not anyone recorded it, and the recapture rule runs
+  on depreciation *allowed OR allowable*. ⚠️ **Two utility trailers exist on this client and they are easy to
+  confuse — never write *"the utility trailer"* unqualified.** ☑️ **Also recorded for next time: the sale
+  date on the return must match the Disposals block of his own asset sheet.** Working paper §3BY.
+
+- **2026-09-28 (evening) — 📌 HOW THE FIRM DECIDED TO PRESENT THE OWNER'S CAPITAL MOVEMENT, and that the
+  amount is still moving.** The characterisation is settled — it is distributions, with no shareholder loan
+  in either direction — and the presentation follows the route the prior year's return used, with Julia to
+  confirm or overturn at review. 🔑 **What is NOT settled is the amount, and that is by construction: the
+  residual is the last figure on the return, so anything that moves an asset, a liability or income moves it.**
+  ☑️ **Seven items still do, and they are named in the working paper with their directions.** ⚠️ **For anyone
+  answering a question about this client: quote the figure as current-on-today's-inputs, never as final.**
+  Working paper §3BY ② and §3BX ⑦.
+
+- **2026-09-28 (evening) — 📄 WHAT THE FIRM ACTUALLY HOLDS FOR THE VEHICLES THIS CLIENT BOUGHT DURING THE YEAR,
+  established asset by asset.** Six were added. **For three of them the firm holds a document that establishes the
+  PRICE** — one trailer's lender package contains a disbursement authorisation naming the whole amount paid to the
+  seller, another trailer has its own signed finance contract carrying an invoice figure, and one truck has a
+  dealer-printed invoice form. **For the other three it holds nothing on price**: one has only a lender letter
+  giving interest and a balance, one has a promissory note whose loan is smaller than the booked cost, and one was
+  paid in cash so no lender document exists at all. 🛑 **The important correction for anyone working this client:
+  the truck document is an UNEXECUTED, UNDATED invoice form** — no purchaser named, no signatures, every date line
+  blank, and its own terms say it is not binding until signed. **Its price figures still stand because they are
+  dealer-printed, but it does not establish who bought the truck or when.** ☑️ **So the firm holds no acquisition
+  document for any truck bought that year.** Working paper §3CA.
+
+- **2026-09-28 (evening) — ⚖️ A FIRM-WIDE QUESTION THIS CLIENT HAS BROUGHT TO A HEAD: does a vehicle's basis come
+  from the purchase document or from the client's own figure?** 🔑 **The prior year's filed return answers it
+  DOCUMENT** — its capitalised amounts are each a little above the round numbers the client reported, which is what
+  price plus sales tax and registration looks like. **If that convention governs, this year's costs are understated
+  on the three vehicles with no document, and depreciation with them — which runs in the client's favour.**
+  ⚠️ **It is Julia's ruling and it gates a client ask that had fallen off every list.** Working paper §3CA ④.
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
 - **Organizer:** `JK 2025 Business Tax Organizer - Zakom Incorporated` (id `147762`), published 2026-07-30, **in progress at 75% and NOT submitted** as of 2026-09-13. Visibility is `admins_only`. Double's hand-maintained `Organizer Status` still reads **Sent**, which is behind what the client has actually done.
 - **What the client uploaded himself (all into the one "books" question):** **twelve monthly statement files covering January to December 2025** — ⚠️ **and "statement" is all their names say — which is why the test in the next bullet was run.** None carries an institution, an account or a card name, so **whether they are bank statements, credit-card statements or a mix is NOT established**, and nobody has opened one. In 2023 and 2024 this client named his bank files and his **Amex** files differently and explicitly; the 2025 set uses a third convention (`<mon>25 stmnt.pdf`) that identifies nothing. 🔴 **No 2025 credit-card statement is identifiable, and no 2025 line-of-credit or SBA statement was uploaded either** — all three exist for earlier years. **That is a question for the client, not a conclusion.** ✅ **That test was RUN on 2026-09-13 and settled it** — the two January copies are the same document, so the file opened is the bank's *(next bullet)*. Then: equipment and truck **interest** statements; trailer and truck **invoices and financing contracts** (Benson trailer 2022, Reitnouer 2026, a 2023 freight document); **vehicle** documents (Audi Q6 lease, Macan financing); the firm's own **Balance Sheet & P&L** and **Home Office Deduction** templates returned; and one **consumer loan document whose FILENAME carries a third party's name** — ⚠️ **the borrower and co-borrower values on the document itself never extracted, so the relationship to the owner is NOT established and must not be asserted**. Several are duplicates and three sit outside tax year 2025 (2022, 2023 and 2026 dates).
 - **What the organizer still does not have:** the **EIN / SS-4 letter** and the **driver's licence or passport** — both required, and both answered with the text *"na"* instead of a file; the **state incorporation documents** (required, empty — but the firm already holds articles of incorporation in the migrated `Client uploaded documents` folder, so **do not ask him for it**); the **date the business started**, the **dates of the federal and state S-corporation elections**, the **date of incorporation** and the **percentage of ownership**, all blank; and the **digital-asset question**, which is required and unanswered.
-- **Answered, and worth having recorded:** no W-2 employees; 1099-MISC payments made and filed, with a written note that some payees had no corporate name; no inventory; no foreign financial accounts and no foreign taxes paid; no cancelled or renegotiated debt; no estimated tax payments made for the year; not a member of a controlled group, not a subsidiary, not a personal holding company, not a qualified personal service corporation; no dividends paid or received; no tax-exempt interest; no research or experimental expenditure; no low-income housing; one state only; accounting method **"Not sure"**; **yes** to an alternative-fuel vehicle purchase but **no** to the fuel credits.
+- **Answered, and worth having recorded:** no W-2 employees; he ANSWERED that 1099-MISC payments were made and filed, with a written note that some payees had no corporate name; no inventory; no foreign financial accounts and no foreign taxes paid; no cancelled or renegotiated debt; no estimated tax payments made for the year; not a member of a controlled group, not a subsidiary, not a personal holding company, not a qualified personal service corporation; no dividends paid or received; no tax-exempt interest; no research or experimental expenditure; no low-income housing; one state only; accounting method **"Not sure"**; **yes** to an alternative-fuel vehicle purchase but **no** to the fuel credits.
 - 🔑 **The firm's own request letter names what is missing.** Julia's standing template email to this client _(Feb 2023, and the pattern every year since)_ asks for the completed **Profit & Loss, Balance Sheet and Asset List**, plus **the December bank AND credit-card statement to confirm balances**. Measured against that list, 2025 has the bank statements and **neither a completed P&L/balance sheet nor any credit-card statement** — so the gap is not a judgement call, it is the firm's own checklist unfilled.
 - **Statement identity — SETTLED 2026-09-13.** `Jan 25 Zakom.pdf` (migrated `Client uploaded documents`) and `Jan 25 stmnt.pdf` (the organizer upload) were both opened through [`tools/redact-doc/`](../../../tools/redact-doc/) at Lilian's request: the redacted text is **byte-for-byte identical** (same page count, same character count, same mask counts, same checksum). **They are the same document, so the same account** — **Fifth Third Bank `5/3 BUS ELITE CKG`**, a business checking account, one account on the statement. ✅ **ALL TWELVE were opened on 2026-09-13** — complete, consecutive, one account, and January's opening cash ties to the 2024 return to the dollar *(working paper §3E)*. ⚠️ **Pages 4–6 of the statement carry only a repeated page header in the extraction** — the substantive content (summary, debits, deposits, daily balances) is on pages 1–3 and did come through, but **nothing may be reported as absent on the basis of those three pages**.
 - **What January 2025 establishes about the year** _(figures stay out of the repo — they are in the statement itself)_: the company's deposits are dominated by ACH and RTP receipts from a single payer, **OWL LAND OF ILLINOIS INC**, so revenue concentration is a question worth asking and a 1099 from that payer worth looking for; the account pays **FPL**, **Verizon** and fuel at **Costco**; and it carries a **monthly service charge with waiver criteria**, one of which the statement answers as "Business Loan or Line of Credit? **Yes**".
 - **Live activity to be aware of:** the client removed two attachments on 2026-09-13 (`1840 trt invoice 263894.pdf` at 19:10 UTC and `Balance Sheet & P&L Templates (2) (1).xlsx` at 20:01 UTC) and both names are present again in the responses read at 20:12 UTC — he is swapping files as he goes. **Nothing here should be treated as final until he submits.**
 
+#### 2026-09-27 — the 2025 Form 1120-S was KEYED into ATX, and the keyed draft was reviewed line by line
+- **Lilian keyed the 2025 return and sent the 21-page draft into the session for review.** The full
+  transcription, the defect register and every figure live in the
+  [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md) §3AW–§3BC — ⛔ **no dollar figures
+  here, by the two-data-homes rule.**
+- **What the review found, in kinds rather than amounts:** the **keying arithmetic is clean** — eight
+  independent cross-foots tie, the opening balance sheet reproduces the 2024 filed return, and the four new
+  tractors carry the **3-year** life the firm derived from Pub. 946 rather than the 5-year the prior return
+  used. **Every finding is a treatment question or an omission, not a mis-typed number.**
+- 🔴 **The company's own asset schedule has been applying the §280F luxury-automobile limits to Class-8
+  tractors and semi-trailers**, because those assets were entered as *listed property*. **The 2024 filed
+  return does the same on two of them**, so this is an inherited treatment, not a 2025 slip. **§280F cannot
+  reach a vehicle rated above its unloaded-gross-weight threshold, and a semi-trailer is not a passenger
+  automobile at all** _(the threshold itself is quoted in the working paper, §3AY ①)_.
+- 🔴 **The truck that was totalled in 2025 is still on the depreciation schedule and the casualty is not
+  reported.** **No Form 4684.** The insurance settlement covered both the vehicle and a towing bill, and
+  only the vehicle's share belongs on the disposition.
+- 🔴 **The 2015 utility trailer's 2025 sale is absent from the draft** — the company sold a trailer its books
+  never carried. ⚠️ **There are TWO utility trailers on this client and only one is on the schedule; never
+  write *"the utility trailer"* unqualified.**
+- 🔴 **Schedule L does not balance on the draft** — capital stock and the additional paid-in capital carried
+  from 2024 were left out of the closing column, and no distributions were recorded. 🔑 **The imbalance
+  decomposes exactly into those three, which is what makes the distribution figure arithmetic rather than a
+  plug; it still has to be tested against the bank, because an owner LOAN and an owner withdrawal look
+  identical in a residual.**
+- 🛑 **The draft takes 100% bonus depreciation, which reverses Lilian's own earlier ruling that 2025 would
+  follow 2024 exactly — and 2024 elected OUT of bonus.** **Procedurally the draft is valid: bonus is the
+  default and needs no statement.** ⚖️ **It is hers to confirm or supersede, and it is the largest single
+  figure on the return.**
+- ✅ **Two open questions CLOSED from IRS sources rather than from the client:** the **meals rate for this
+  client is 80%, not 50%** — Publication 463 (2025) gives the rate for individuals subject to the
+  Department of Transportation's hours-of-service limits, and the population it names is *"interstate truck
+  operators"*; **the return's own IFTA and IRP registrations are the evidence that the operation is
+  interstate**, since neither regime exists for a purely local carrier. And **Form 8990 does not belong on
+  this return at all** — the company is a small business taxpayer and §163(j) does not apply, which the
+  draft's own Schedule B answers correctly while still attaching the form.
+- ⚠️ **The page-1 activity code the firm reuses from 2024 describes LOCAL freight trucking**, which sits
+  awkwardly beside both the over-the-road tractor classification and the DOT meals rate. **A question, not a
+  defect.**
+- ⚠️ **The draft's address block pairs the client's city with the FIRM's own ZIP code.** One of the two is
+  wrong and it prints on the K-1 as well — worth settling against Double and Sunbiz.
+- 🔑 **THE PROCESS LESSON, and it is the one that recurs:** 🛑 **four purchase documents the firm ALREADY
+  HOLDS were read for COST and never read for ACQUISITION DATE** — and the acquisition date is what decides
+  whether 2025 bonus depreciation is 100% or 40%. **This is the §1C failure exactly**, one week after the
+  rule was written. ⇒ **the in-house re-read is queued ahead of any new client question.**
+
+#### 2026-09-28 — two in-house reads Lilian asked for: the bank search for the casualty money, and the acquisition dates
+- **Both ran. The detail and every figure live in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BD–§3BE — ⛔ no dollar figures here.**
+- 🔴 **THE CASUALTY MONEY IS ON THE BANK, AND IT DID NOT COME FROM AN INSURER.** It arrived on
+  **9 April 2025** as **one** credit from **OWL LAND OF ILLINOIS INC.** — the company's freight customer —
+  captioned by the bank as *"2 Checks for truck incident"*. ⇒ **the casualty belongs on the 2025 return**
+  *(the "maybe the insurer paid in 2026" branch is closed)*, **the bank did not split it into a vehicle share
+  and a towing share**, and **the caption's "2 Checks" says the two amounts exist on paper** — which turns the
+  open client question from *"how does it break down?"* into *"what were the two check amounts?"*.
+  ⚠️ **Whether OWL LAND passed through their own insurer or paid it themselves is NOT established, and it
+  matters: a payment from a customer is not a recovery on the company's own policy.**
+- 🛑 **A METHOD LESSON WORTH MORE THAN THE FIGURE.** The working paper had told the next session to search
+  the statements for an **insurance-shaped** caption. **That search returns nothing** — the money carries the
+  freight customer's caption. **What found it was structural: parse the deposits block of all twelve
+  statements and read every credit.** ⇒ **when a caption search comes back empty, the answer is to drop the
+  caption, not to widen the word list.**
+- ⛔ **AND AN INFERENCE THAT LOOKED PERFECT AND WAS WRONG, recorded so nobody repeats it.** A June credit
+  captioned *"For Truck 1834 and Trailer 1011"* matches the two June disposals' proceeds **exactly** when
+  added together. **It is a coincidence:** trailer `1011` is the utility trailer that is still financed to
+  2027 and is correctly kept on the books, so the credit is an ordinary freight settlement labelled by the
+  tractor and trailer that pulled the load — which is how a broker labels one.
+- 🔴 **THE DEALER DOCUMENT FOR ONE OF THE 2025 TRUCKS IS NOT WHAT THE FILE SAID IT WAS.** It had been recorded
+  as *"the retail purchase agreement"* and *"the acquisition document"*. **It is an unexecuted invoice form:
+  no purchaser named, no signatures, every date line blank, and its own terms say it is not binding until
+  signed.** ✅ **The dealer-printed price still corroborates what the client booked.** ⛔ **The buyer and the
+  date it does not establish** — so if an acquisition document is wanted, it has to be asked for.
+- ✅ **The acquisition dates settled two of the six 2025 equipment additions outright from documents already
+  in hand, and narrowed two more.** **The client is now needed for exactly ONE truck** — the one that went
+  into service six days after the rule's cut-off date and for which the firm holds nothing at all.
+- ✅ **A free corroboration along the way:** the deposit behind the Audi's assumed sale date is documented on
+  the bank statement for that day. **The sale date remains an assumption, now anchored to a documented
+  deposit rather than to a recollection.**
+- ⚠️ **What is still open and is the next in-house read:** the firm holds thirteen itemised card statements
+  and has only ever read the **payment** side of them. **The towing charge, if it is anywhere, is on the
+  charge side** — and the money moved from the operating account to the card two days after the settlement
+  arrived, which contradicts what the client said about how the towing was paid.
+
+#### 2026-09-28 (later) — the card's CHARGE side read: the towing is not on it, and the personal-charge pass is done
+- **Figures and detail in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BF–§3BG — ⛔ none here.**
+- ⛔ **THE TOWING CHARGE IS NOT ON THE COMPANY CARD, IN EITHER YEAR.** Read from the **Amex year-end
+  summaries for 2025 and 2024**, both of which sit in Double and itemise every charge by date, merchant and
+  category. **2024 was checked as well as 2025 because the loss is dated to the very start of January**, so a
+  December charge was the live alternative. **The largest single charge in 2025 is a fraction of the towing
+  figure, and the eleven towing-and-recovery merchants that do appear are all small roadside jobs.**
+- 🔑 **PUT THAT BESIDE THE BANK AND THE TOWING WAS PAID FROM NEITHER OF THE COMPANY'S TWO PAYMENT RAILS** —
+  not the card, and not the operating account, whose only two large debits all year are a card payment and an
+  outgoing wire. ⇒ **The client's own account — that he paid it from the line of credit — survives**, and the
+  other live reading is that **whoever settled the claim paid the tow company directly and the company never
+  bore the cost at all.** ✅ **That second reading is the clean outcome: never deducted means its recovery is
+  not income, and both sides come off and cancel.** ⚠️ **Money still landed in the company's account for it,
+  so what that money IS remains the client's to answer.**
+- ⛔ **AND A READING THIS FILE CARRIED FOR ONE DAY IS WITHDRAWN.** The note that the settlement arriving and a
+  card payment leaving two days later *"contradicts"* what the client said was **mine and it was wrong** — the
+  card payment is an ordinary payment on a card with a large annual charge volume. **The two-day gap stays on
+  the record as a coincidence, not as evidence.**
+- ☑️ **THE PERSONAL-CHARGE PASS IS RUN** — it had been open since the card's charges were ruled the company's
+  expenses. **Self-evidently personal: a trip to ITALY between late August and early September 2025** (Rome,
+  Florence, Siena — restaurants, three hotels, a guided tour, a scooter rental), **a designer-fashion charge
+  on Christmas Eve, and small recurring club and five-a-side-soccer subscriptions.** ⚠️ **A further block of
+  airline and travel-agency spend can only be split by the owner**, including one European airline ticket
+  bought three months before the trip.
+- ⚠️ **AND THE CARD'S OWN CATEGORY IS THE CARD'S GUESS, PROVED TWICE HERE:** the **DOT medical and
+  drug-testing vendor is filed under *Health Care Services***, and **the firm's own fee is filed under
+  *Banking Services***. **Neither category can be carried into an expense caption unread.**
+- 🟡 **One check that does not tie and is now written down rather than rediscovered:** the card account's own
+  identity — opening balance plus charges less payments equals closing balance — **disagrees with the
+  payments figure taken from the bank by a substantial amount.** **Two candidate causes: the bank figure was
+  a caption string-match rather than an identified set, and the two sources use different period boundaries.**
+  ⛔ **Not a blocker — the balance-sheet figure is documented at both ends.**
+
 ### Outstanding items (CI-only — never in the SOP)
+
+⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- 🛑 **THE EXTENSION AND THE DEADLINE** — the 1120-S was due 2026-03-16, extended **2026-09-15**; Double's project shows the wrong date and the 7004 in Double is an unreadable scan. **Nothing else matters until this is settled.**
+- 🛑 **THE EXTENSION AND THE DEADLINE** — the 1120-S was due 2026-03-16, extended **2026-09-15**; Double's project shows the wrong date and the 7004 in Double is an unreadable scan. **Nothing else matters until this is settled.** ✅ 🆕 **SUPERSEDED 2026-09-25: the date PASSED and Lilian accepted it; the aim is now to finish before October, since the late-filing penalty runs per month.**
 - 🔴 **The balance sheet has to be rebuilt** — `#REF!` errors, zero fixed assets, no equity. This is the gate on the return, and it is bookkeeping work nobody has scoped.
 - 🔴 **Reasonable compensation for 2025** — no W-2, no officer compensation, a full year of operations. Julia's call.
 - 🔴 **The home office on an S corporation** — accountable-plan reimbursement, rent to the shareholder, or out. Julia's call.
 - **The shareholder-count answer** has to be corrected with the client (the shareholder-count key fact in §5).
-- **The 1099 contradiction** — filed, yet payees without a corporate name remain and he offered names and addresses. Ask what is still owed.
+- **The 1099 contradiction** — ✅ 🆕 **ANSWERED IN-HOUSE 2026-09-25 ON WHICH DRIVERS HAVE A FORM — do NOT ask him** *(§6 log)*. ✅ 🆕 **CLOSED IN FULL 2026-09-25 except ONE search:** the five on file were transmitted *(the firm files automatically)*, and the sixth gets no late form *(both Lilian's rulings)*. ⛔ **Still ours: the payments to named individuals through a cash-transfer app.** 🛑 **And nothing is asked of the client at all for now** *(Lilian, 2026-09-25)*. _(As written: filed, yet payees without a corporate name remain and he offered names and addresses. Ask what is still owed.)_
 - ✅ **ANSWERED 2026-09-14 without the client — the prior year carried the loan to the other entity unchanged, as an other current asset, with nothing anywhere else.** Repeating that treatment is fully specified. ⚠️ **Still worth confirming with him, as confirmation and not a blocker** — and put the contradiction to him: he has separately said that entity *"only has Amex expenses"*, which does not sit with *"no activity"*.
-- 🔴 **THE LENDER LETTERS ARE THE REMAINING ASK, AND THE LIST IS NOW WRITTEN OUT LENDER BY LENDER.** ✅ 🆕 **SUPERSEDED — see the "Information still needed" list below, which is the current one.** ⛔ **The three contracts with one bank are CLOSED (we held the letters), the vehicle is a LEASE with no balance at all, and the government disaster loan is CLOSED (2026-09-15).** _(As written:)_ **Still needed: the three contracts with one bank (the largest gap), the line of credit, the government disaster loan, the vehicle lease and the financed insurance premium.** ✅ **One lender needs nothing at all** — its own amortization schedules answered both of its contracts. ⚠️ **One more is UNKNOWN rather than missing** — the firm holds no rate, term or payment for it, so it cannot even be tested. **Ask in the format one lender already uses — and SAY THE YEAR**, because that letter's own model line carries the year and a prior one meant the year before.
+- 🔴 **THE LENDER LETTERS ARE THE REMAINING ASK, AND THE LIST IS NOW WRITTEN OUT LENDER BY LENDER.** ✅ 🆕 **SUPERSEDED — see the "Information still needed" list below, which is the current one.** ⛔ **⚠️ 🆕 *(FOUR, not three — corrected 2026-09-25, §6 log)* The three contracts with one bank are CLOSED (we held the letters), the vehicle is a LEASE with no balance at all, and the government disaster loan is CLOSED (2026-09-15).** _(As written:)_ **Still needed: the three contracts with one bank (the largest gap), the line of credit, the government disaster loan, the vehicle lease and the financed insurance premium.** ✅ **One lender needs nothing at all** — its own amortization schedules answered both of its contracts. ⚠️ **One more is UNKNOWN rather than missing** — the firm holds no rate, term or payment for it, so it cannot even be tested. **Ask in the format one lender already uses — and SAY THE YEAR**, because that letter's own model line carries the year and a prior one meant the year before.
 - ⏸️ ~~**TO THE CLIENT — the IRS automatic monthly withdrawals**~~ — **PARKED 2026-09-14 by Lilian** as the owner's personal matter. ⚠️ **One fact recorded rather than chased: those debits leave the COMPANY's account.** *(His "no activity in 2025" answers operations, not the balance.)* ⚠️ **And put the contradiction to him: he has separately said that entity "only has Amex expenses."**
 - 🔴 **TO LILIAN — the Amex.** Her account-inventory ruling's rule keeps it *(the prior return reported it)* and her stated reason disqualifies it *(paid dozens of times a year from the business account, in the owner's own name)*. **The largest single outflow of the year, and whether the balance sheet carries a card liability at all, turn on which governs.**
 - 🔴 **TO JULIA — what did the prior year do with the same card payments?** The ruling adopts that year, and that year paid the same non-company cards from the same account. **Either they are already inside its reported distributions, or that return has an unbooked one — a candidate defect on a return she signed.** **The file cannot tell which.**
 - ✅ **ANSWERED 2026-09-13 — the returned spreadsheets ARE filled in**, and that is not the good news it sounds like: the P&L is workable, the **balance sheet is structurally unusable**. The gate is now rebuilding it, not obtaining a document.
 
+#### 2026-09-28 (third pass) — Lilian removed the 2025 bonus depreciation, and she told us the explanations were failing her
+- **Figures and detail in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BH–§3BJ and decisions 81–85 — ⛔ none here.**
+- ✅ **THE BONUS IS OUT.** **Lilian re-keyed the return to remove bonus depreciation on the 2025 vehicle
+  additions**, which honours the decision she took on 2026-09-14 — that this return would follow the same
+  treatment Julia used for 2024. 🔑 **This closes the single largest open item on the return**, and it takes
+  the company from a large loss to roughly break-even. ⚠️ **Why that matters for the OWNER, not just the
+  company: a shareholder can only deduct a loss up to his stock and debt basis, the accumulated adjustments
+  account opens at zero, and his prior-year basis form is not in the firm's hands** — **so most of the large
+  loss would not have been usable by him anyway.**
+- ⛔ **WITHDRAWN 2026-09-28 — SEE THE LATER ENTRY: the election statement WAS attached all along, on the
+  return's last page. This bullet was wrong.** _(As written:)_ **AND IT IS ONLY HALF DONE UNTIL AN ELECTION STATEMENT IS ATTACHED.** **Removing the allowance asset by
+  asset produces the right figures with no valid election behind them.** **The election is made by CLASS of
+  property and covers ALL property in that class placed in service that year — and this return's 2025
+  additions span TWO classes**, so the statement has to name both. **It is annual, and once made it cannot be
+  revoked without IRS consent.**
+- 📅 **THE CASUALTY'S DISPOSAL DATE IS SETTLED, AND IT IS THE CLIENT'S OWN.** The file had carried two dates
+  for the destroyed truck. **The settlement money reached the bank on 9 April 2025, and a payment for a
+  destroyed vehicle cannot arrive two months before the vehicle was destroyed** — **so the January date on
+  the client's own asset list survives and the mid-year one on our internal surfaces does not.** ✅ **It
+  changes no figure on the return** *(the truck was fully written off in its first year, both candidate dates
+  fall in 2025, and it was held well over a year)* — **it is a field to fill, not a computation.**
+- 🔑 **HOW THE TOW REIMBURSEMENT IS REPORTED, ANSWERED.** **It is not proceeds for the truck, so it never goes
+  on the casualty form or in the asset disposition — the casualty form takes only what was received FOR THE
+  PROPERTY.** **It is the recovery of an EXPENSE, and a recovered expense is income only if the expense was
+  deducted.** ⇒ **Two outcomes: deducted ⇒ net the recovery against the same expense caption; never deducted
+  ⇒ nothing is entered and both sides cancel.** ⚠️ **The two sides must be treated the same way or the return
+  is wrong in one direction.** 🔵 **Three independent readings point at NOT DEDUCTED** — it is not on the
+  card, it is not on the operating account, **and the repairs-and-maintenance caption FELL by half between
+  2024 and 2025**, which a tow of that size would have made rise.
+- ⚖️ **AN OPTION RAISED AND RECOMMENDED AGAINST: deferring the casualty gain into the replacement tractors**
+  *(the company bought several in the same year, so it is legally available)*. **Recommended against because
+  the return is already near break-even — deferral would buy a loss the owner's basis cannot absorb, cut the
+  new tractors' depreciable basis, and lock the position.** ⛔ **Julia's call if anyone wants it.**
+- 🔵 **LILIAN'S RULING ON THE 2023 UTILITY TRAILER:** *"no es un asset que añadimos en este año, por tanto, es
+  algo de declaraciones pasadas… eso lo incluyó Julia."* ✅ **Accepted — its impossible prior accumulated
+  depreciation is a prior-year matter and goes to Julia as a question, not into this return as a fix.** **It
+  touches 2025 income not at all.**
+- 🗣️ 🔴 **AND THE MOST IMPORTANT THING IN THIS ENTRY IS NOT ABOUT THE CLIENT AT ALL.** **Lilian said she could
+  not follow the depreciation-form findings:** *"Siento que tus explicaciones son muy densas, a veces
+  escuetas, te saltas pasos y siento todo como en una nebulosa… pierdo mucho tiempo tratando de
+  entenderte."* 🛑 **Every figure in those findings was correct and not one of them was usable.** ✅ **The
+  five-step shape she needs is now written into the [`tax-return-sop`](../../../.claude/skills/tax-return-sop/)
+  skill as §4G** — what the return shows now, the input that produced it, one plain sentence on why it is
+  wrong, what to type and where, and what moves — **with the IRS authority LAST rather than first.**
+
+#### 2026-09-28 (fourth pass) — Lilian re-keyed the return, and the draft corrected TWO things this firm had told her
+- **Figures and detail in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BL–§3BM and decisions 86–92 — ⛔ none here.**
+- ✅ **WHAT SHE KEYED, all verified against the new draft:** the bonus is out; the two trailers were
+  reclassified out of listed property and now depreciate from their own cost; the destroyed truck is
+  disposed of as a casualty; Form 8990 is gone; the officer's percentage of time is filled in; and the
+  closing balance-sheet capital-stock line is populated. 🔑 **The depreciation total lands on the figure
+  this firm's model predicted, to within a dollar of rounding** — which is what makes the rest of the
+  review reliable.
+- 📅 **SHE MOVED THE CASUALTY DATE, and her reasoning is better than ours.** We had settled on the date
+  the client's own asset list carries — the first day of the tax year. **She pointed out that a truck is
+  unlikely to have been destroyed on the very day it appears on the list, and used the date the money
+  arrived instead.** ⚠️ **She has ASKED THE CLIENT, and keyed both the date and a provisional
+  reimbursement figure to keep the return moving — both are unverified and both change when he answers.**
+- 🛑 **AND THE DRAFT PROVED THIS FIRM WRONG ON WHERE A CASUALTY IS REPORTED.** We told her to expect the
+  recovery on page 1 of the corporation's return. **It does not go there.** 🔑 **The destroyed truck had
+  taken a Section 179 deduction, and an S-corporation does not report the disposal of Section 179 property
+  on its own Form 4797 at all — it goes to the SHAREHOLDER on his Schedule K-1, who computes the gain on
+  his own return.** **The software says so on screen, in red, at the moment of entry.** ✅ **The gain is
+  still taxed; it simply never passes through the company's ordinary income.** ⚠️ **The same is true of the
+  other truck disposed of this year, and this file had already recorded THAT treatment as correct — the
+  error was not checking whether the second asset was in the same position.**
+- 🔵 **HER RULING ON THE REMAINING TRACTOR:** she will not change the classification of an asset that was
+  on the return Julia already filed. ✅ **Sound, and the caution is right.** ⚠️ **Two things belong in that
+  decision: changing this year's classification does not change or amend the prior return; and the same
+  reasoning covers the trailer she DID change, which was also on that filed return.** ⇒ ☑️ **So the clean
+  ask to Julia is ONE ruling covering both assets, not two.**
+- 🔴 **THE BALANCE SHEET STILL DOES NOT BALANCE, and it is the only thing that actually blocks filing.**
+  **Two things are missing from the closing column: the paid-in-capital figure carried forward from the
+  prior year, and the owner's distributions.** 🔑 **The residual GREW this year, and the reason is
+  informative: the insurance money is now recognised as income with no asset behind it — cash did not
+  move — so on this balance sheet it is already gone.** ✅ **That is the first independent corroboration
+  the distributions figure has had.** ⛔ **It is still a plug and still rests on the client's own cash and
+  loan balances.**
+- 🗣️ **SHE ASKED FOR THREE EXPLANATIONS AND THEY ARE WRITTEN OUT IN THE WORKING PAPER** *(§3BM)*: the
+  difference between **retained earnings** and **additional paid-in capital** and what actually changes if
+  you charge a distribution to one rather than the other *(nothing on the tax — it is consistency with the
+  prior year and what the balance sheet says to a reader)*; the **80% meals rule**, what the Department of
+  Transportation's "hours of service" limits are *(a SAFETY rule that forces a driver to stop and sleep
+  away from home, which is why Congress allowed him a bigger meal deduction)*, and whether this client
+  qualifies; and **why we told her to tick a box on Schedule K that she was right to question.**
+- ⛔ **ON THE MEALS: she is keeping 50% pending Julia and that is safe.** 🟢 **The company meets the OCCUPATION test for 80% on the face of its own return — it deducts interstate operating permits that exist only for
+  multi-jurisdiction running, and its tractors are classified as over-the-road units.** ⚠️ **The second
+  test — that the meals were taken away from the tax home during such a period — is not documented meal by
+  meal.** 🛑 **But the prior
+  question is not the rate: the drivers are contractors, and a contractor's own meals are HIS deduction,
+  not the company's.** ☑️ **Both halves go to Julia together.**
+- ⛔ **ON THE SCHEDULE K BOX: our advice was too simple and she was right to push.** **Ticking it requires
+  a notification to the shareholder BEFORE the return is filed and a statement attached explaining the
+  qualification; neither exists, so ticking it would assert something untrue.** ✅ **Leave it blank,
+  matching the prior year.**
+- ⌨️ **AND SHE TAUGHT US THE SOFTWARE.** She sent the asset screen unprompted so the firm would have it on
+  record. 🔑 **There is no "listed property" checkbox in ATX — the asset TYPE CODE in the header decides
+  the recovery period, which part of the depreciation form the asset lands in, and whether the luxury-auto
+  caps apply.** ⛔ **Our instruction named a control that does not exist in the product.** ✅ **Written into
+  the [`tax-return-sop`](../../../.claude/skills/tax-return-sop/) skill as §4H, together with the
+  disposition screens and the two on-screen warnings the software prints.**
+- ☑️ **She has put the Audi's mileage to the client and is waiting, and will ask him whether the towing
+  cost went into his vehicle expenses** — which is the fact that decides whether its reimbursement is
+  income at all.
+
+#### 2026-09-28 (fifth pass) — ATX's own warning list, and a finding of ours that was simply wrong
+- **Figures and detail in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BN–§3BQ and decisions 93–99 — ⛔ none here.**
+- 🛑 **WE TOLD LILIAN TWICE THAT THE BONUS ELECTION STATEMENT WAS MISSING FROM THE RETURN. IT WAS NOT.**
+  **It is on the LAST page, under a heading of its own, and it covers every class of property including
+  both the ones this return needs.** 🔑 **The cause is worth keeping: a keyword search of the extracted
+  text was truncated, and its silence was written up as a statement about all twenty pages.** ✅ **The
+  guard is now in the skill — walk the page count before calling anything absent from a return.**
+- 🖥️ **SHE SENT THE SOFTWARE'S OWN WARNING LIST, and it earned its place.** **Six warnings. Two are
+  informational, one is the balance sheet we already knew about, one is the impossible accumulated
+  depreciation on the 2022 trailer that this firm had already found by hand — and TWO WERE NEW TO US.**
+- 🔴 **THE IMPORTANT ONE: the return carries NO qualified-business-income information for the
+  shareholder at all.** **An S corporation does not take that deduction — the owner does, on his own
+  return — but the company has to hand him the numbers on a statement attached to his Schedule K-1.**
+  🛑 **And it matters even though the company has a loss — though NOT for the reason we first wrote: a
+  qualified business loss carries forward and REDUCES next year's qualified income, so the carryforward is
+  adverse to him rather than an asset.** ✅ **The reason to report it is that it is required, the K-1 is
+  incomplete without it, and his own return must carry the correct figure — omitting it would overstate
+  his future deduction.** ⚠️ **The firm's own review had never raised this in any pass.**
+- ✅ **THE SECOND NEW ONE is the reverse of what most people assume: because the company elected OUT of
+  bonus depreciation, its 2025 assets are NOT subject to an alternative-minimum-tax depreciation
+  adjustment at all, so the two methods must match.** **The company itself pays no AMT; this only changes
+  what the owner gets for his own return.**
+- 🔵 **LILIAN REVERTED ONE TRAILER to the classification it carried on the filed 2024 return**, on the
+  same principle she applied to the tractor: **an asset that was on the prior filed return keeps its
+  treatment until Julia rules; only assets NEW this year are classified correctly from the start.**
+  ✅ **That makes the rule consistent, which it was not before.** 💵 **The price is real and one ruling
+  from Julia releases it.** 🔑 **And a useful check held: a depreciation change lifts total assets and book
+  retained earnings by the same amount, so it cannot move the owner-account residual — and it did not.**
+- ✅ **THE MEALS QUESTION IS CLOSED ON THE HALF THAT MATTERED.** Lilian: *"son del dueño, son de Oleg,
+  porque él no paga las comidas de sus contratistas."* ⇒ **Both tests are now answered — the occupation
+  test on the company's own interstate permits, and whose meals they are.** 🛑 **The higher rate still
+  waits on Julia, because the prior year used the lower one and consistency between two returns is hers,
+  but the reason to hold it is gone.**
+- 🔑 **THE ZIP CODE IS A REAL CLIENT ISSUE, NOT A TYPO ON THE RETURN.** **Lilian checked the state
+  registration: it pairs the company's city with a ZIP belonging to a different city, and the
+  registration itself is what is wrong.** ⇒ ☑️ **Two separate jobs: what goes on the return (Julia's, and
+  it prints on the K-1) and correcting the Sunbiz record, which is worth doing whatever the return does
+  because every agency that reads Sunbiz inherits the error.** ⚠️ **Nobody has checked which ZIP the IRS
+  holds for this EIN, and a notice going to the wrong address is how that becomes expensive.**
+- 🚗 **ON THE VEHICLE MILEAGE she was right and the file confirmed it without re-opening anything:** the
+  prior year listed all the same assets and put the trucks at zero. **The one difference is the car —
+  the prior return carried a real business-mileage figure for it and this draft carries zero.** 🔑 **The
+  mileage changes no number: the car is claimed at 100% business use and that is what drives the
+  deduction. It is EVIDENCE for that claim, and the trucks are far less exposed because nobody drives a
+  semi-trailer home.**
+- 📨 **AND THE PRACTICAL OUTPUT: ONE consolidated message to the client, eight numbered questions**, built
+  so the profit and loss and the balance sheet can be closed. 🔑 **The first question is the largest open
+  item on the whole return — what moved between him and the company during the year, and in which
+  direction.** ⛔ **It deliberately does NOT recite the figure the firm derived and ask him to confirm it:
+  that invites a "yes" that proves nothing. It asks what MOVED, which is the fact he actually holds.**
+
+#### 2026-09-28 (sixth pass) — one wrong vehicle category explains almost every problem we have had with this fleet
+- **Figures and detail in the [working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md)
+  §3BR–§3BV and decisions 100–103 — ⛔ none here.**
+- 🚚 **LILIAN ASKED THE RIGHT QUESTION AND THE ANSWER IS YES.** She asked whether the trouble with the
+  vehicles comes from assets added in earlier years being categorised wrongly — and whether there is a
+  category for a vehicle that cannot realistically be used personally *"por sus características, sus
+  dimensiones"*. ✅ **There is, she had the concept exactly right, and it is called a QUALIFIED
+  NONPERSONAL USE VEHICLE.**
+- 🛑 **SEVEN OF THE EIGHT assets added before 2025 sit on the software's category 7,
+  *"Truck, van, auto on trk chassis"* — which is a LISTED-PROPERTY category.** 🔑 **That single choice,
+  repeated across the fleet, is what causes the luxury-auto caps on two of them, the eight-vehicle
+  zero-mileage table, the two unanswered evidence questions, AND the tractors being depreciated over five
+  years instead of three.** ⇒ **Four symptoms this firm had been treating as four separate problems.**
+- ✅ **The authority is not an argument, it is a list.** The depreciation form's own instructions exclude
+  from listed property both *"a vehicle used for transporting persons or property for compensation or
+  hire"* and a qualified nonpersonal use vehicle. **A freight carrier's tractors and trailers meet both,
+  and either alone is enough.**
+- 🔑 **AND IT EXPLAINS WHY HER 2025 CLASSIFICATIONS DIFFER FROM THE PRIOR YEARS' — she got them right.**
+  She put the new tractors on the over-the-road tractor category and the trailers on the heavy-duty
+  trailer one. ⇒ **The difference is not an inconsistency she introduced; it is the earlier error showing
+  next to a correct entry.** ⛔ **Nothing is keyed — all seven are on returns already filed, so her own
+  rule applies and it goes to Julia as ONE ruling covering all of them.**
+- ✅ **THE ALTERNATIVE-MINIMUM-TAX WARNING IS ONLY THE CAR, AND ON THE EVIDENCE IT IS CORRECT.** She
+  checked every asset and only the Audi shows a difference. 🔑 **The reason is on the return itself: the
+  trucks either took bonus depreciation (which removes the adjustment) or were placed in service in a
+  year that elected out of it (which also removes it). The car did neither — and it CANNOT have elected
+  out, because two other five-year assets bought that same year DID take bonus, and the election covers a
+  whole class.** ⇒ **Its zero bonus is the luxury-auto limit, not an election, so the adjustment genuinely
+  applies.** ✅ **Corroborated twice on the shareholder's K-1.** ⇒ ☑️ **RECOMMENDATION: leave it — it is
+  small, it touches only his own return, and the car was disposed of in 2025 anyway.**
+- 🔑 **THE NEGATIVE PAID-IN CAPITAL IS NOT A BOOKKEEPING ERROR.** **Over the years the company has paid
+  the owner far more than it has earned or he has contributed, and the prior year parked the excess in
+  that line — which is why a figure whose job is to measure what he PUT IN prints as a negative.**
+  🛑 **The real exposure is not on the company's return at all: money taken above his stock basis is
+  taxable to him as capital gain, and the firm does not hold his basis form.** ⚠️ **And if part of it is a
+  LOAN from the company rather than a distribution, it belongs on the asset side of the balance sheet
+  instead — the shareholder-loan lines are blank in both columns, so the return currently says no owner
+  loan exists in either direction.**
+- 📧 **AND A LETTER TO JULIA, drafted from Lilian's own points.** 🔑 **Four of her points were corrected
+  rather than polished** — most importantly, she had *"confirm when the insurance company paid"* as
+  pending, and it is answered: the money arrived in April and it came from the freight CUSTOMER, not an
+  insurer. ✅ **Four things her draft did not have were added, two of them bigger than anything on it: the
+  balance-sheet decision that is the only real blocker, and the missing shareholder qualified-income
+  reporting.**
+
 ### Information still needed
 
+⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**
+
 - [x] **Which account the 2025 "stmnt" files belong to** — **Fifth Third Bank business checking (`5/3 BUS ELITE CKG`)**, established 2026-09-13 by opening January through the redactor; the two January copies are the same document. ✅ All twelve opened 2026-09-13; complete and consecutive
-- [ ] 🛑 **THE EXTENSION — is the 7004 for 2025, was it accepted, and what is the real due date?** The copy in Double is an unreadable scan. **This gates everything**
+- [ ] 🛑 **THE EXTENSION — is the 7004 for 2025, was it accepted, and what is the real due date?** The copy in Double is an unreadable scan. **This gates everything.** ✅ 🆕 **SUPERSEDED 2026-09-25: the date PASSED and Lilian accepted it; the aim is now to finish before October, since the late-filing penalty runs per month.** ⚠️ 🆕 **NOTED 2026-09-26: unlike 2024's extension (which has a firm confirmation email, 2025-03-17), no equivalent confirmation email exists in Gmail for the 2025 extension — the only support for "filed" is Lilian's word and the unreadable scan**
 - [ ] 🔴 **The balance sheet has to be rebuilt** — the `#REF!` errors, the zero fixed assets, the absent equity
 - [ ] 🔴 **Split the equipment line into principal and interest** against the finance schedules
 - [ ] 🔴 **The home-office position on an S corporation** — Julia rules: accountable-plan reimbursement, rent to the shareholder, or out
 - [ ] 🟠 **The totalled truck** — insurance settlement, Form 4797, and whether §1033 applies
 - [ ] 🟠 **Identify USA Florida Freight LLC** — a loan borrowed and repaid within 2025; related party or not
 - [ ] 🔴 **WHICH STATES the 2025 return covers** — the firm filed FL + IL for 2022; the client answered "no" to multi-state on the 2025 organizer. Settle it before preparing, and check whether an Illinois return is owed for 2023 and 2024 too
-- [ ] 🔴 **Is Mema Colors LLC a live engagement, and is Zakom paying its Amex?** No Double record, no CI file, yet the firm filed its BOI and an amendment. Same question for **Palm Terra LLC**. **Lilian decides whether either gets its own file**
-- [ ] 🔴 **Statements for EVERY account and contract we now know exist** — the four other Fifth Third accounts, **plus the credit line and the credit card**, plus ✅ 🆕 **NARROWED 2026-09-15:** ⛔ **the three contracts with that bank are CLOSED — the firm already held all three interest letters and did not know it**, and ⛔ **the new vehicle is a LEASE, so it has no year-end balance at all**; **the premium-finance agreement is still open.** _(As written: BMO's three contracts, the Audi lease and IPFS.)_ **None has ever been provided, for any year**
-- [ ] 🟠 **Ask what `Statement2023-01-31 (4).pdf` and `Statement2023-12-31.pdf` are** — the only documents on file whose institution is unknown; the guard refused both
-- [ ] 🛠️ **Fix the redactor's guard false positive** *(`NNN.NN` + wide gap + `NNNN` on a money column)* **with a test**, then read `Jan24`–`April24` and the two `Statement2023-*` files. ⛔ **It is a safety control — fix it, never bypass it**
+- [ ] 🔴 **Is Mema Colors LLC a live engagement, and is Zakom paying its Amex?** No Double record, no CI file, yet the firm filed its BOI and an amendment; it has its own Drive folder (found 2026-09-26). ✅ 🆕 **Palm Terra LLC is ANSWERED, in part, 2026-09-26: it is DISSOLVED effective 2024-12-31 (Sunbiz Articles of Dissolution `L24000197396`), and the firm filed a 2025-03-17 Form 7004 extension for it — presumably its final year.** ⛔ **Still open: whether that final return was ever prepared/filed** — no confirmation found, no Double record to check. **Lilian decides whether either gets its own file**
+- [ ] 🔴 **Statements for EVERY account and contract we now know exist** — the four other Fifth Third accounts, **plus the credit line and the credit card**, plus ✅ 🆕 **NARROWED 2026-09-15:** ⛔ **⚠️ 🆕 *(FOUR, not three — corrected 2026-09-25, §6 log)* the three contracts with that bank are CLOSED — the firm already held all three interest letters and did not know it**, and ⛔ **the new vehicle is a LEASE, so it has no year-end balance at all**; **the premium-finance agreement is still open.** _(As written: BMO's three contracts, the Audi lease and IPFS.)_ **None has ever been provided, for any year**
+- [ ] ⏸️ 🆕 **STOOD DOWN 2026-09-25 — not auditing years we are not filing, unless a question needs them.** _(As written:)_ 🟠 **Ask what `Statement2023-01-31 (4).pdf` and `Statement2023-12-31.pdf` are** — the only documents on file whose institution is unknown; the guard refused both
+- [ ] 🛠️ ✅ 🆕 **NO LONGER A BLOCKER ON THE 2025 RETURN 2026-09-25 — it stays a TOOL task, and the documents it would unlock are stood down.** _(As written:)_ **Fix the redactor's guard false positive** *(`NNN.NN` + wide gap + `NNNN` on a money column)* **with a test**, then read `Jan24`–`April24` and the two `Statement2023-*` files. ⛔ **It is a safety control — fix it, never bypass it**
 - [x] ✅ 🆕 **DONE 2026-09-15 — the principal opened the two disaster-loan statements herself and sent them in; no text PDF was needed.** _(As written:)_ 🟠 **Ask for TEXT PDFs** of the two SBA statements and ✅ 🆕 **CLOSED — the card statements were all read on 2026-09-15** *(the principal opened them and sent them in)*; _(as written: the December Amex balance statement)_ — the copies on file are scans
 - [ ] 🔴 **The 2025 Amex statements.** ✅ **Now fully established:** all twelve `stmnt` files are the bank's, nothing card-named exists in Double, the balance sheet carries a year-end card balance, and **the bank shows 39 Amex payments across the year**. ⛔ **✅ 🆕 **SUPERSEDED — the full year of card statements was read on 2026-09-15.** _(As written: No statement exists for any of it.)_** Ask for the full 2025 statements of **every card**, **and establish whether the cards are the company's or the owner's personally** — the payments carry his name, which makes company-paid personal cards a distribution question
 - [x] **What `ZAKOM 7807 CASH DISB … OFFSET TRANSACTION` is** — **movements on Zakom's own Fifth Third account** (`7807` is its trailing digits, from the 2023 email). Not a second account. The line-of-credit statements are still owed
@@ -313,7 +1393,7 @@ it here; these never go into the client SOP.
 - [ ] **2025 line-of-credit and SBA loan statements** — both on file for 2024, neither for 2025, and the January statement confirms a facility is still in place
 - [x] **Whether the returned spreadsheets contain figures — YES**, opened 2026-09-13. The P&L is workable; the balance sheet is not, and rebuilding it is now its own open item above
 - [ ] 🔴 **Year-end balances for the rest of the debt — ✅ 🆕 NARROWED AGAIN ON 2026-09-15 (evening) TO FOUR ITEMS.** ✅ 🆕 **The GOVERNMENT DISASTER LOAN is now CLOSED too** — its own statements show every payment going to interest and none to principal, so the balance is the one already known and nothing is asked. ✅ **And the bank line of credit's request is RE-SPECIFIED rather than open-ended, then NARROWED AGAIN: it is now ONE document — the year-end commercial loan statement — because most of the year's interest has since been measured from statements the firm already holds.** ⛔ **Two earlier claims in this row are withdrawn: it is not "two documents", and the loan is not established to pay no principal — "no principal due" is a scheduled-payment field, and the evidence is that the balance moved late in the year.** ⛔ **The "two may be sitting unread in the client's library" step below is DONE — all of them were opened.** _(As written: NARROWED HARD ON 2026-09-15 TO FIVE ITEMS.)_ ✅ **Closed: the three letters the firm already held are all from one bank, confirmed by opening them; both equipment-finance notes signed in February are COMPUTED from the notes themselves, which carry amount, rate, term and payment; and the new vehicle is a LEASE, so it has no principal, no interest and no year-end balance at all.** 🔴 **Still open: the bank line of credit · the federal disaster loan · the insurance-premium finance agreement · one trailer lender's rate and term · and a balance letter from the equipment lessor whose own schedule assumes more payments than the bank shows.** ☑️ **Two of those five may already be sitting unread in the client's own document library as images and scans — worth opening before writing to him.**
-- [ ] 🔴 **Sale agreements for the three trucks sold, and the INSURER'S letter for the totalled one** — Julia's standing requirement, 2026-09-13
+- [ ] 🔴 ✅ 🆕 **SUPERSEDED — the sale AGREEMENT is no longer a gate (his own sale PRICE is what we need), and the INSURER'S letter came OFF the ask list when his asset sheet gave the proceeds.** _(As written:)_ **Sale agreements for the three trucks sold, and the INSURER'S letter for the totalled one** — Julia's standing requirement, 2026-09-13
 - [ ] 🟠 **Ask for the asset mapping against VINs, not descriptions** — the finance documents hold two different trucks of the same year, make and model
 - [ ] 🟠 **The uncompleted Florida DR-1** — sales tax paid on a trailer that should have been exempt, and the exemption application was never filed
 - [ ] 🔴 **Map the client's truck UNIT NUMBERS onto the depreciation schedule's own numbers** — he uses three different naming systems and the return's is a fourth-party one; without the map there is no basis and no Form 4797
@@ -324,7 +1404,7 @@ it here; these never go into the client SOP.
 - [ ] The digital-asset question (required, unanswered)
 - [ ] Corrected shareholder-count answer
 - [ ] Which tax year `2025 7004 EXT.pdf` actually extends
-- [ ] Whether `2024 ZAKOMINCORPORATED.pdf` in `1099 > 2024` is the filed 2024 return, and refiling it under `Tax Return Filed > 2024`
+- [x] ✅ **CLOSED — it WAS the filed 2024 return, and Lilian moved it to `Tax Return Filed > 2024` on 2026-09-13** *(§5 records the move; a listing of `1099 > 2024` on 2026-09-25 shows only 1099 forms, confirming it is gone from there)*
 - [ ] ✅ 🆕 **ANSWERED for the Audi — LEASED** *(the contract was read 2026-09-15)*; ⛔ **the Macan is still open**, and it is the one the client labels personal, and business versus personal use
 - [ ] Whether the company really operated in one state only, for interstate trucking
 - [ ] Primary language of correspondence
@@ -337,7 +1417,7 @@ it here; these never go into the client SOP.
 - **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ none — no notes exist on this client
 - **Double 2025 organizer:** [`JK 2025 Business Tax Organizer - Zakom Incorporated` — id `147762`](https://app.doublehq.com/clients/710612/portal/organizers/147762)
 - **Double 2025 tax project:** [`2025 Taxes` — id `219303`](https://app.doublehq.com/tax-return?cid=710612&projectId=219303)
-- **Google Drive folder (sensitive vault):** _(pending — none located)_
+- **Google Drive folder (sensitive vault):** ✅ **LOCATED 2026-09-26 (first full sweep).** Two folders exist, both owned by `julia@jkaccountinggroup.com` — **current:** [`Zakom Incorporated`](https://drive.google.com/drive/folders/1ENPq3PL7Ck4yXt0lQwCrXSS5m1Z7ScI2) (created 2026-05-09, the post-TaxDome-migration one), and a **legacy** pre-migration folder, [`ZAKOM Incorporated`](https://drive.google.com/drive/folders/1rU1DHfLJF38dIQdDAR3ng8M47A8k9G6M) (created 2023-02-13, last modified 2023-09-11) — not yet checked against each other for duplicate/unique content, so treat both as live vaults for now
 - **Related clients:** [`Oleg Zakala & Milana Podrugina`](https://app.doublehq.com/close?cid=710652) — Double `710652`, the owner's personal record; no CI file yet
 - **Working papers:** [`tax-returns/zakom-incorporated/2025-form-1120s.md`](../../tax-returns/zakom-incorporated/2025-form-1120s.md) — 2025 Form 1120-S, in progress
 - **Related SOPs:** [`form-1120s-preparation.md`](../../sops/form-1120s-preparation.md) — the return method for this client's form

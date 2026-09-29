@@ -1,6 +1,6 @@
 ---
 name: tax-return-sop
-description: 🔴 PREPARE A CLIENT'S TAX RETURN — load this the moment anyone says "prepare X's tax return", "prepárame el Tax Return de X cliente", "hazme la declaración de X", "do X's 1120-S / 1040 / 1065", or asks for a return's figures as line-by-line tables. §4A is the entry point and it runs TWO PHASES from one sentence: PHASE 1 · LA REVISIÓN — call the `organizer-review` skill in full, ALWAYS and without being asked separately, to check the prior-year return against this year and find missing documents, contradictions and anything that raises an alarm; its Block A verdict is THE GATE. PHASE 2 · LA PREPARACIÓN — only if the gate says yes, deliver the line-by-line tables. Along the way: go to Double and gather it yourself — the client's BOOKS, the completed tax organizer, every file the client uploaded, the prior-year return through the redactor — and report what was found before computing anything. ALSO: write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. 🔵 AND WHEN A PREPARED RETURN COMES BACK FOR REVIEW — someone brings back a return the firm prepared and starts asking why a line is what it is — the financial statements, OR a copy of the return, OR just the question; any ONE of those is the trigger: that is §4C, and the job is to BRIEF the reviewer from the working paper before reading the PDF (the reasoning behind each decision, who made it, where every figure came from) rather than to audit her. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, when a return the firm prepared comes back to be reviewed or signed, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear — and it is DELIVERED AS AN ARTIFACT by default, a page carrying MORE detail than the chat did rather than less, with anything destined to be typed into the return written in ENGLISH ready to paste, and any list of changes shipped as tickable CHECKBOXES so she can see what is left), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
+description: 🔴 PREPARE A CLIENT'S TAX RETURN — load this the moment anyone says "prepare X's tax return", "prepárame el Tax Return de X cliente", "hazme la declaración de X", "do X's 1120-S / 1040 / 1065", or asks for a return's figures as line-by-line tables. §4A is the entry point and it runs TWO PHASES from one sentence: PHASE 1 · LA REVISIÓN — call the `organizer-review` skill in full, ALWAYS and without being asked separately, to check the prior-year return against this year and find missing documents, contradictions and anything that raises an alarm; its Block A verdict is THE GATE. PHASE 2 · LA PREPARACIÓN — only if the gate says yes, deliver the line-by-line tables. Along the way: go to Double and gather it yourself — the client's BOOKS, the completed tax organizer, every file the client uploaded, the prior-year return through the redactor — and report what was found before computing anything. ALSO: write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. 🔵 AND WHEN LILIAN HANDS BACK THE DRAFT SHE HAS JUST KEYED AND ASKS "¿hay errores?" — that is §4F, where you DO audit, and it starts by transcribing the draft in full. 🔵 AND WHEN A PREPARED RETURN COMES BACK FOR REVIEW — someone brings back a return the firm prepared and starts asking why a line is what it is — the financial statements, OR a copy of the return, OR just the question; any ONE of those is the trigger: that is §4C, and the job is to BRIEF the reviewer from the working paper before reading the PDF (the reasoning behind each decision, who made it, where every figure came from) rather than to audit her. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, when a return the firm prepared comes back to be reviewed or signed, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear — and it is DELIVERED AS AN ARTIFACT by default, a page carrying MORE detail than the chat did rather than less, with anything destined to be typed into the return written in ENGLISH ready to paste, and any list of changes shipped as tickable CHECKBOXES so she can see what is left), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
 ---
 
 # Tax-return SOPs — and preparing a return from one
@@ -40,9 +40,430 @@ guessed. Repeat it, or this year's return is not comparable to last year's.
 ⚠️ **Reproducing is not auditing.** A filed return is closed. You are reading it as an answer key.
 If something looks wrong, raise it — never change this year's approach on your own initiative.
 
+🔴 **AND IF THE CLIENT HAS NO BOOKS AT ALL — a spreadsheet and a pile of documents, no QuickBooks — READ §1B BEFORE ANYTHING ELSE.** **The prior return is still the answer key, but the job changes shape: you are building a set of books before you prepare a return, and §1B carries the rule that organises it, the three traps that cost the most, the order to work in, and the bar a question has to pass before it reaches the client.**
+
 **What it catches, every time:** which accounts a subtotal really covers · how equity was mapped ·
 which boxes were ticked · whether a figure was netted or grossed · what the software chose by
 default.
+
+---
+
+## §1B · 🔴 THE CLIENT WITH NO BOOKS — a spreadsheet, a pile of documents, and no QuickBooks
+
+> **Written 2026-09-27, out of Zakom Incorporated's 2025 Form 1120-S**, which cost the firm **two weeks**
+> mostly because nobody had written this down. **Lilian:** *"es la primera vez que voy a hacer una declaración
+> de impuestos de este tipo donde no tenemos los libros del cliente en QuickBooks… necesito que tú comprendas
+> cómo es que hacemos las cosas y que lo recuerdes para que no perdamos días y días en lo mismo."*
+
+### §1B.0 · 🛑 Recognise the case in the first ten minutes
+
+**You are in it when ALL of these are true:**
+
+- ⛔ **No QuickBooks, no bookkeeper, no trial balance.** `platform: none` on the Double client record, or a
+  `Bookkeeping` property that is blank or paused.
+- **What the client sends instead:** a spreadsheet of income and expenses, an asset list, and a folder of
+  statements, notes, invoices and letters.
+- 🔑 **THE TELL THAT MATTERS: there is no EQUITY section anywhere.** **His spreadsheet has revenue, expenses
+  and maybe a balance sheet — but nothing states what he took out of the company.**
+
+⚠️ **SAY SO OUT LOUD, AT THE START, TO WHOEVER IS DIRECTING THE WORK.** **The job is not "prepare a return
+from books"; it is "build a set of books, then prepare a return."** **Scope it before it is quoted.**
+
+### §1B.1 · 🔑 THE ONE RULE THAT ORGANISES EVERYTHING ELSE — the line is the DOCUMENT, not the line item
+
+🛑 **DO NOT frame the job as "do we trust the client or not". That question has no stable answer and it will
+be re-litigated every day.** ✅ **Frame it by the document:**
+
+> 🔑 **Where the firm HOLDS a document that states a figure, the DOCUMENT governs.**
+> 🔑 **Where it does not, the CLIENT'S figure governs and we do not audit it.**
+
+| Almost always document-backed → **REBUILD IT** | Almost never → **TAKE HIS FIGURE** |
+|---|---|
+| Interest paid, lender by lender | Fuel |
+| Loan principal, and the split of every payment | Telephone and internet |
+| Fixed assets: cost, date acquired, date in service | Office expenses and supplies |
+| The bank and card balances | Tolls, parking, lumper fees |
+| Everything in the equity section | Meals *(the AMOUNT; the RATE is a firm decision)* |
+| *(the year-end liability BALANCE is its own case — below)* | Repairs and maintenance |
+
+🛑 **AND ONE ROW IS DELIBERATELY NOT IN EITHER COLUMN, because a review caught this section generalising a
+sentence the working paper had already corrected. A YEAR-END LIABILITY BALANCE THE CLIENT SUPPLIES STAYS
+HIS.** **On the pilot engagement Julia ruled it in terms — *"if the client puts in the ending balances, we
+should rely on it"* — so the split is: the LENDER's letter governs the INTEREST, the CLIENT governs the ENDING
+BALANCE.** ✅ **Where he gives no figure, the lender's is used.** ⚠️ **Where a lender document DISAGREES with
+his balance, that is RAISED with the preparer — never substituted silently.** ⛔ **And the wider version —
+*may the firm take the debt BALANCES from the lender documents rather than from his sheet?* — is an OPEN
+QUESTION to the signing principal, not settled method.** 🔑 **Put it; do not reason around it.**
+
+⚠️ **AND THE WORKED EXAMPLE THAT MAKES IT CONCRETE** *(Lilian's own)*: **if he says he paid X of interest and
+the lenders' own statements sum to Y, we key Y.** *"En ese caso, se pudo haber equivocado."* ⛔ **That is not
+auditing him. It is preferring the better evidence, which the firm's own rules already require.**
+
+🔑 **AND IT IS USUALLY CONSISTENT WITH A "RELY ON THE CLIENT'S P&L" RULING, NOT AGAINST IT** — because such a
+ruling means *do not audit his operating expenses*, while a separate ruling almost always already says *the
+lender's letter is the authority on interest*. **Read them together before escalating a collision.**
+
+### §1B.2 · ⛔ THE THREE TRAPS THAT COST THE MOST, in the order they bite
+
+**① A DOCUMENT-BACKED AMOUNT HIDING INSIDE A SOFT CAPTION. This is the expensive one.**
+
+**His expense captions are keyed as given. But if a LOAN PAYMENT is sitting inside one of them, you will
+deduct principal (never deductible) and deduct the interest a second time on the interest line.**
+
+✅ **HOW TO FIND IT WITHOUT ASKING: tie his financed-equipment caption to the lenders.** **Sum every lender's
+full-year payments from the bank and compare to that one caption.** **If they tie, you know where those
+lenders are. Whatever does NOT tie is unlocated** — and *that* is the question to the client, not a general
+"how did you classify things".
+
+⚠️ **AND RANK THE UNLOCATED ONES BY LIKELIHOOD, NOT BY SIZE.** **A financed-equipment payment missing from his
+financed-equipment caption is probably not expensed at all, which is CORRECT. An insurance premium-finance
+payment is probably inside `Insurance`, because the premium genuinely belongs there.** ⛔ **The biggest number
+is usually the least likely.**
+
+**② A CLIENT'S "PAYOFF" IS NOT ALWAYS A PRINCIPAL BALANCE.**
+
+🔑 **Test it: divide it by the monthly payment.** **If it comes out a whole number of payments, he has copied
+the lender's GROSS REMAINING PAYMENTS, which includes unearned interest.** ⛔ **Keying that to the balance
+sheet overstates the liability.** ⚠️ **The same client can use the word both ways in different years.**
+
+**③ THE THREE NAMING SYSTEMS.** **A client with rolling stock will have one name in his description list, a
+second in his unit numbers, and the return will carry a third.** ⛔ **Nothing connects them, the software's
+serial field is usually empty, and MATCHING BY COUNT IS NOT IDENTITY** — he disposes of things that were
+never capitalised, so the two populations differ. 🔑 **Establish the map EARLY, before it blocks Form 4797 at
+the end.**
+
+### §1B.3 · ☑️ THE ORDER TO WORK IN
+
+1. **The prior return** — §1's answer key, and here it is also the opening balance sheet.
+2. **THE LIABILITIES FIRST.** **Every lender: its own documents, principal and interest separated, balance at
+   year end** — ⚠️ **but read §1B.1's split before you key a BALANCE: the lender governs the INTEREST, and
+   where the client gives an ending balance, HIS governs.** 🔑 **Include financings that never touched the
+   bank** — a lender who pays the vendor direct never appears in the statements, and the asset and the debt
+   both arrive off-book.
+3. **The bank and the card, reconciled to each other.** ⚠️ **Payments between two company accounts are
+   TRANSFERS, not expenses — but only the ones that ARRIVED.** **Money that left captioned as a card payment
+   and never reached the card is an equity question.**
+4. **The assets** — cost, acquisition date, in-service date, **the Table B-1 class and the life DERIVED from it**, and the source document, one row each. ⛔ **Never carry a life forward from last year's schedule** — §4D's asset rules say why, and on the pilot engagement that transcription ran four over-the-road tractors at the wrong recovery period for years.
+5. **The soft P&L** — his captions, less anything ② or ①'s tie shows is document-backed.
+6. **The equity section LAST**, and 🛑 **never as a plug.** ⛔ **Do not force a balance with distributions,
+   contributions or retained earnings.** **Explain each movement with a documented operation, or leave it
+   open and say so.**
+
+### §1B.4 · 🛑 BEFORE ANY QUESTION GOES TO THE CLIENT — the bar, and the four groups
+
+**Sort every open item into one of four, and NOTHING reaches the client until the first three are worked:**
+
+| Group | What to do |
+|---|---|
+| **① The datum is already in a document we hold** | Extract it, cite where, close the item |
+| **② A calculation or reconciliation** | Resolve it internally and SHOW the calculation |
+| **③ An accounting or tax decision** | Put it to the responsible preparer, never to the client |
+| **④ Genuinely missing** | ONE concrete question — after ①–③ are done |
+
+🔑 **THE BAR FOR A GROUP-4 ROW, and write it IN the row:** **what datum is missing · which sources were
+reviewed · why it cannot be determined from them · what calculation it blocks.**
+
+⛔ **NOT a preventive list of every document it would be nice to have.** **A minimal, justified list.**
+*(Lilian: "No quiero una lista preventiva… Quiero una lista mínima y justificada de lo que realmente
+necesitamos.")*
+
+🛑 **AND ONE PROCEDURAL RULE THAT COST A WHOLE DAY: A CLIENT LIST IS REWRITTEN IN PLACE, NEVER SUPERSEDED BY
+A NEW SECTION BESIDE IT.** ⛔ **On the pilot engagement two lists headed *"FINAL"* were written hours apart and
+the older one was left standing, saying *"everything in ONE send"* and *"this section governs"*. Between them
+they dropped FIVE asks, and the live risk was a session sending the stale list.** ✅ **ONE list, ONE place,
+edited.**
+
+☑️ **AND BEFORE CALLING A CLIENT LIST FINAL, RUN THE CHECK THAT FINDS WHAT IT DROPPED — it is mechanical and
+takes a minute:** **walk the working paper's LIVE, UNTICKED open items and ask of each one, *can only HE
+answer this?*** ⚠️ **Twice that check was not run and twice a review found the omission rather than the pass
+that wrote it.**
+
+### §1B.5 · 🔴 AND THE FAILURE THAT COST THIS FIRM THE MOST DAYS — a filename listing is not a reading
+
+🛑 **IT HAPPENED TWICE IN TWO DAYS ON THE SAME ENGAGEMENT.** **The file library was listed BY NAME, the names
+were judged unhelpful, and the conclusion "we have looked everywhere" was written — while four documents had
+never been opened, and one of them was the client's own workbook from an earlier year carrying exactly the
+table that was being chased.** ⚠️ **The audit that did it had even marked that file with a ✅.**
+
+⛔ **THE RULE IS A PROHIBITION, NOT A PERMISSION — and an earlier draft of this very section got that
+backwards, which is why the wording is now exact.** ⛔ **Never write *"we have looked everywhere"*, or any
+negative, off a filename listing.** ✅ **Instead, NAME THE UNOPENED CANDIDATES to the person directing the
+work and ASK for them** — a prior-year client workbook, a file whose name does not say what it is, anything
+listed but never opened. 🔑 **A prior-year workbook is the highest-value unread document on a no-books
+client, because it is where his own conventions and his own unit numbers live** — ⛔ **which is a reason to
+ASK for it, not a licence to open it.**
+
+🛑 **THE SCOPE IS NOT A SESSION'S TO SET.** **The latest prior year's filed return and its organizer are
+already inside the standing document permission** *(see [`organizer-review`](../organizer-review/) §1 source
+9)*. ⛔ **An EARLIER year, or a document that is not part of a filed return — which is exactly what a
+prior-year client workbook is — needs Lilian's or Julia's ask, EACH TIME.** ⛔ **A session may never decide
+it has been asked**, and CLAUDE.md's standing rule is absolute: **a permission is widened by ASKING, never by
+reasoning.** ⓘ *(On the pilot engagement the sweep that produced this lesson was one Lilian ORDERED. That is
+what made it permissible — not the strength of the argument for it.)*
+
+### §1B.6 · ⚠️ TELL THE DIRECTING PERSON WHAT YOU CANNOT REACH — do not convert it into a client request
+
+**Distinguish three states and never collapse them:**
+
+- ✅ **Re-readable** — in the practice platform. **An extract deleted after reading is not the document being
+  gone.**
+- ⚠️ **Not reachable from a session** — anything pasted into a chat as an image. **The figures are recorded;
+  the picture went with the message.** ⇒ **Ask the PERSON, not the client.**
+- 🔴 **Genuinely absent** — and only this one becomes a Group-4 question.
+
+### §1B.7 · ✅ WHAT TO DELIVER, AND WHAT IT LOOKS LIKE
+
+**A reconstructed P&L · a reconciled balance sheet · a loan detail · an asset table** — **each figure marked
+VERIFIED or PROVISIONAL, accounting figures kept separate from tax adjustments, sums carried by FORMULA rather
+than retyped between sheets, and every material amount pointing at the document behind it by name, page and
+date.** 🛑 **The working paper does not replace the document.**
+
+☑️ **And close with a practical order for the software: what can be entered now, what needs internal review,
+and what genuinely waits on the client.**
+
+🔗 **THE WORKBOOK ITSELF HAS ITS OWN RULES AND THEY ARE NOT HERE — READ §4D BEFORE BUILDING ONE.** The three that
+a no-books rebuild breaks most easily: it is written in **ENGLISH**, always, whatever language the chat is in
+*(Julia reads it and does not speak Spanish)*; the value column says **WHAT TO ENTER**, never what is already on
+the return, so **a defect flag without its correct value is not a deliverable** and there is **no "what it used to
+say" column**; and **the build FAILS when a cell she acts on would be clipped**, because a row can hold text it
+will not show. ⚠️ **A no-books rebuild is exactly where the clipping bites**, since its cells carry the
+document trail and the arithmetic rather than a figure.
+
+⛔ **AND ONE THING THIS SECTION'S OWN DELIVERABLE MUST NOT DO: balance itself.** Where the closing column cannot
+be completed, **say so on the face of the sheet and leave the line open.** A total that ties because equity
+absorbed the difference is worse than one that visibly does not tie, because nobody re-checks a sheet that
+balances.
+
+### §1B.8 · 🛑 WHEN YOUR FIGURE AND HIS AGREE, ASK WHETHER THEY COULD HAVE DISAGREED
+
+🔴 **THIS SECTION EXISTS BECAUSE ONE SESSION MADE THE SAME MISTAKE THREE TIMES IN ONE DAY, on three different
+figures, after withdrawing it the first time.** ⛔ **It is the most persuasive kind of wrong, and a no-books
+rebuild is where it breeds: you are comparing your reconstruction against the client's sheet all day long.**
+
+> 🔑 **An agreement between two of YOUR OWN numbers is evidence ONLY if the two could have come out
+> different. If they share their inputs, the agreement is ARITHMETIC — and it will read as confirmation.**
+
+🛑 **AND THE VERSION THAT IS SPECIFIC TO THIS CASE, because it is invisible and it was what caught the session
+out twice:** ⛔ **WHERE THE FIRM HAS *ADOPTED* THE CLIENT'S FIGURE FOR A COMPONENT — under §1B.1, or under any
+ruling that says *"his figure governs this row"* — THAT COMPONENT CONTRIBUTES **NOTHING** TO ANY LATER
+AGREEMENT WITH HIS TOTAL.** **It is his number handed back to him.** ⚠️ **A four-component reconciliation in
+which one component was adopted from him is a THREE-component test, and saying so is the difference between a
+real check and a decorative one.**
+
+✅ **SO BEFORE WRITING THE WORD *"corroborates"*, *"confirms"*, *"independent"* or *"cross-check"*, LIST THE
+COMPONENTS AND MARK EACH ONE:**
+
+| | |
+|---|---|
+| ✅ **Independent** | **a lender's letter · an agency transcript · a bank debit · a figure the firm COMPUTED from a rate and a term** |
+| ⛔ **NOT independent** | **any component taken from the same document you are now testing · any figure the firm ADOPTED from the client · anything derived from a subtotal that already contains the term you are checking** |
+
+⇒ ☑️ **Then say **partial** corroboration and name which components carried it.** 🔑 **A partial check
+honestly labelled is worth more than a total one that cannot fail** — ⛔ **and the second kind gets keyed.**
+
+⚠️ **TWO MORE TELLS, both from the same day:**
+
+- 🛑 **A "SECOND ROUTE" TO A FIGURE IS USUALLY THE FIRST ROUTE REARRANGED.** **Before claiming one, write both
+  computations out term by term.** _(The session claimed a page-1 subtotal had been reproduced independently;
+  the working paper's own code block already ended in the same three terms in a different order.)_
+- 🛑 **AND WHERE A PRIOR SECTION ALREADY RAN YOUR COMPARISON, IT PROBABLY ALREADY RULED ON IT.** ⛔ **Search
+  for the figure before you present it as new.** _(The correct verdict — "that is corroboration, not
+  independence" — was sitting in the working paper, in a section the new one cited.)_
+
+
+### §1B.9 · 🚗 VEHICLES AND DISPOSALS ON A NO-BOOKS CLIENT — five things that were each learned the hard way
+
+🔑 **A trucking or delivery client with no books will hand you vehicles, leases, financings and disposals in
+one spreadsheet, and every one of these five was got wrong once before it was got right.**
+
+#### ① 🔑 HOW TO TELL WHETHER THE PRIOR PREPARER USED THE PURCHASE DOCUMENT OR THE CLIENT'S FIGURE
+
+🛑 **You do not have to ask anyone. Compare the FILED return's cost for each carried-forward asset against
+what the client wrote for that same asset.**
+
+> ✅ **A client remembers a ROUND number. A document produces an ODD one.**
+
+⇒ **Where the filed cost exceeds his figure by a small odd amount — 145, 245, 3,299 — the preparer worked
+from a bill of sale and capitalized the price PLUS the sales tax and the registration fees, which is
+correct.** ⇒ **Where the two agree exactly on a round number, his figure went in unchanged.**
+🔑 **That comparison IS the firm's pattern, read off its own work product, and it settles a question the
+person directing you cannot answer from memory.** ⚠️ **Then put it to the SIGNER before acting, because it
+will usually collide with a *"his figures govern"* ruling already taken on the current return.**
+
+#### ② ⛔ A FINANCED AMOUNT IS NOT A PURCHASE PRICE — and the gap needs EVIDENCE, not a plausible story
+
+**A lender note for less than the booked cost is NOT a contradiction: the difference is usually a down
+payment.** ⛔ **BUT DO NOT CLOSE IT WITH A STORY. Say the gap is UNEVIDENCED until something evidences it,
+and name the free test** — **a bank debit to the dealer near the purchase date, a deposit line on the
+invoice, the `Cash down payment` field on the finance agreement.**
+
+🛑 **AND THE WORKED EXAMPLE HERE IS A WARNING, NOT A MODEL, because an earlier draft of this very subsection
+got it wrong.** **On the pilot client a 95,550 note against a 105,550 cost read as a defect for two weeks.
+A session then argued the gap was a down payment *"because the lease shows an 11,000 capitalized cost
+reduction"*.** ⛔ **THAT WAS FALSE, and the SAME document disproved it: the whole amount due at signing was
+settled by `Rebates and noncash credits`, and the 11,000 was a COMPONENT of it — so it was neither the
+client's cash nor a trade-in.** 🔑 **A capitalized cost reduction tells you the price was reduced. It does
+NOT tell you WHO paid for the reduction, and the answer is two lines further down the same form.**
+
+#### ③ ✅ A CLOSED-END LEASE IS A RENTAL, AND THE CASH-BASIS TRAP IS IN THE SIGNING SHEET
+
+⛔ **No depreciable asset, nothing on Form 4562, nothing on the balance sheet — no asset AND no liability.**
+✅ **The payments are a deduction.** 🛑 **BUT ON THE CASH BASIS, COUNT THE PAYMENTS THE COMPANY ACTUALLY
+MADE:** **read the *Itemization of Amount Due at Lease Signing* and then read *How the Amount Due Will Be
+Paid*.** ⚠️ **Where it says `Rebates and noncash credits`, the company paid NOTHING — and the first monthly
+payment is usually inside that amount, so the year's deduction is one payment SHORT of what the calendar
+suggests.**
+
+☑️ **Three more fields on a lease that matter and are easy to skip:** **the `Agreed upon value of the
+vehicle`** *(it decides whether a §280F(c) inclusion amount is material, and reading the lease can make that
+question BIGGER)*; **the `Primary Use` box** — ⛔ **which is the lessor's consumer-disclosure classification
+and is NOT a tax business-use percentage**; and **`Net trade-in allowance`** — 🔑 **which can settle a
+completely different question, because `N/A` proves a vehicle the client called *"traded in"* was actually
+SOLD, and explains why the money appears as a bank deposit.**
+
+#### ④ 🔴 A CASUALTY'S PROCEEDS ARE THE PROPERTY'S SHARE, NOT THE WHOLE SETTLEMENT
+
+**An insurer often pays one amount covering the asset AND costs the client incurred — towing, recovery,
+storage.** 🔑 **Form 4684 takes only what was received FOR THE PROPERTY.** ⛔ **The rest is a recovery of an
+expense, not proceeds** ⇒ **and the two sides must move TOGETHER: if the expense was deducted, the
+reimbursement is income; if it was not, the reimbursement is not income either.** 🛑 **One side without the
+other is wrong in whichever direction it is taken.**
+
+☑️ **AND BEFORE ASKING THE CLIENT TO ALLOCATE IT, LOOK IN THE BANK.** **The money reached the company
+somehow.** ✅ **Two separate credits split the settlement for you and delete the question; one combined
+credit leaves only the allocation; NOTHING in the year means the gain is next year's and the whole form comes
+off the return.** ⚠️ **Do not treat a previous credit sweep as having covered it — a sweep filtered to lender
+and payroll captions is silent on insurance by construction, and that silence is not evidence** *(rule 1b)*.
+
+#### ⑤ ✅ AN ASSET THAT WAS NEVER CAPITALIZED — the answer is usually the same on every history
+
+**When the client sells something that is on NO filed return:** 🔑 **basis is ZERO and the proceeds are
+ORDINARY under §1245 — and this holds whether the company expensed the purchase or simply never recorded it,
+because recapture runs on depreciation *allowed OR ALLOWABLE* and an old asset's recovery period has expired
+either way.** ✅ **So it is keyable with no document, and zero is the LEAST favourable assumption available,
+which means the only possible objection is that you were too conservative.**
+
+⚠️ **ONE alternative, and it is the signer's:** **if the SHAREHOLDER owned it rather than the company, it is
+not the company's sale at all and the proceeds are a capital contribution.**
+⛔ **AND NEVER READ THE CLIENT'S *"VALUE"* COLUMNS AS BASIS.** **A no-books client's asset sheet often
+carries a *"2023 value"* and a *"2024 value"* — those are his estimates of WORTH. A reviewer glancing at the
+sheet can take one for a basis, so say so on the face of the working paper.**
+
+🔑 **AND THE SAFETY CHECK THAT GOES WITH ALL OF THIS: when two assets share a description, write NEITHER of
+them unqualified, ever.** _(The pilot client had two utility trailers — one on the schedule and financed, one
+on no return and sold — and two Benson trailers. Both pairs cost real time.)_
+
+
+---
+
+## §1C · 🛑 THE DOCUMENT LEDGER — why a document you ALREADY READ keeps producing questions it already answered
+
+> **Lilian, 2026-09-27, and this is the most important thing she has raised about the process itself:**
+> *"Te he dado acceso a los documentos y te he subido los documentos en el chat, y siento que hay información
+> que has pasado por alto… lo que nos sucedió con el mapeo de los assets era una pregunta que tenías desde
+> hace varios días, y sin embargo su respuesta está dentro de un archivo que te compartí desde el inicio…
+> Me confunde mucho el hecho de que me preguntes cosas que supuestamente ya debería saber porque ya te di la
+> información. Entonces me pongo a buscar la información por todos lados, a pedirle al cliente, y resulta que
+> son cosas que ya tenemos. Esto no puede suceder."*
+
+🔴 **SHE IS RIGHT, IT HAS HAPPENED REPEATEDLY, AND IT IS NOT A MEMORY PROBLEM. IT IS A RECORDING PROBLEM, AND
+IT HAS FOUR DISTINCT CAUSES.** ⛔ **Fixing three of them and not the fourth leaves the failure intact.**
+
+### §1C.0 · 🔑 THE FOUR CAUSES, and each needs its own fix
+
+**① A DOCUMENT IS READ TO ANSWER THE QUESTION OF THE HOUR, AND EVERYTHING ELSE ON THE PAGE IS NEVER WRITTEN
+DOWN.**
+🛑 **It is not forgotten — IT NEVER ENTERED THE RECORD.** **A session's context is finite and is compacted;
+the working paper IS the memory.** ⇒ **A document opened on day 1 for question A contributes only the answer
+to A, and the answers to B, C and D that were on the same page are gone when the session moves on.**
+_(The pilot engagement: the client's workbook was opened for the year's asset ADDITIONS. The unit numbers that
+became the single blocking question for two weeks were in the OLDER sheet's description column, two columns
+from what was being read. Nobody hid them. They were outside the question.)_
+
+**② THE INVENTORY MARKS A *FILE* AS READ, WHEN READING IS PER-QUESTION.**
+⛔ **`✅ opened 2026-09-13` then reads, forever after, as *"this file has been mined."* It means *"this file was
+queried once."*** 🔑 **THIS IS §1B.5'S LESSON ONE LEVEL UP: a filename listing is not a reading — and
+"opened" is not "exhausted."**
+
+**③ NOTHING MAKES A *NEW* QUESTION GO BACK TO *OLD* DOCUMENTS.**
+**When a question becomes blocking, the search goes OUTWARD — to lender letters, to bank captions, to the
+platform — because that is where the question seems to point.** ⛔ **It does not go back to the file already
+ticked.** _(That is exactly how the unit-number map was searched for four times in the wrong places while the
+answer sat in a file the inventory called read.)_
+
+**④ AN IMAGE PASTED INTO CHAT IS A ONE-SHOT READ, AND WHATEVER IS NOT TRANSCRIBED IS LOST PERMANENTLY.**
+🛑 **A later session cannot re-open it at all** *(§1B.6)*. ⇒ **So for an image, cause ① is not recoverable.**
+_(The pilot's lease arrived as an image and was read for "is this a lease or a purchase?". Three other answers
+were on the same page — the LESSEE's name, a `Primary Use` checkbox, and a `Net trade-in allowance: N/A` that
+resolved an unrelated bank deposit — and none was written down. When it was read again two weeks later they
+fell out in one pass.)_
+
+### §1C.1 · ✅ THE FIX, AND IT IS ALL AT READ TIME — because that is the only cheap moment
+
+🔑 **RE-READING A DOCUMENT LATER IS EXPENSIVE: it needs a fetch, it needs permission, and on an image it is
+impossible. TRANSCRIBING IT ONCE, IN FULL, COSTS ONE PASS.**
+
+> 🛑 **TRANSCRIBE THE DOCUMENT. DO NOT SUMMARISE IT.**
+
+✅ **Every document that is opened gets ONE BLOCK in the working paper, and the block is a FIELD LIST, not
+prose:**
+
+| Put in the block | Why this and not less |
+|---|---|
+| **Every PARTY named, and its ROLE** | *lessee · co-lessee · lessor · assignee · borrower · seller*. 🔑 **On the pilot, WHICH party was the lessee was the whole answer to "is this the company's?"** |
+| **Every DATE printed on it** | contract date, first-payment date, in-service date, disbursement date |
+| **EVERY FIGURE WITH ITS PRINTED LABEL, verbatim** | ⛔ **Not the ones you need — ALL of them.** ✅ **`Agreed upon value 63,935` · `Residual 36,400` · `Rent charge 1,317.88`.** 🔑 **A figure you have no use for today is the one that answers next week's question** |
+| 🔴 **Every CHECKBOX and its state** | **`Primary Use: ☒ business`.** ⛔ **Checkboxes are the single most-skipped field on a form and they carry the classification** |
+| 🔴 **Every `N/A` AND EVERY ZERO** | 🛑 **AN ABSENCE ON A FORM IS A FACT.** **`Net trade-in allowance: N/A` PROVED a vehicle had been sold rather than traded, and explained a bank deposit nobody could place** |
+| **Every identifier that is SAFE to hold** | ⛔ **Never an SSN/ITIN, bank or card number, street address, DOB or VIN** *(the VIN question is open — see the firm's follow-up list)*. ✅ **A masked last-four, a contract's own internal sequence, a stock or deal reference are ordinary working data** |
+| **And a one-line note of what the document CANNOT tell you** | ✅ **"states a LOAN amount, not a purchase price"** — 🔑 **which stops the next session mistaking one for the other** |
+
+⚠️ **AND CROSS-FOOT IT WHILE IT IS OPEN.** **A form's own internal identities take a minute and they either
+confirm the transcription or catch a mis-read.** _(The pilot's lease closed seven ways; that is what made the
+transcription trustworthy.)_
+
+### §1C.2 · ✅ THE INVENTORY RECORDS WHAT WAS *TAKEN*, NEVER THAT IT WAS OPENED
+
+⛔ **BAN the bare `✅ opened <date>`.** ✅ **Two states and only two:**
+
+| | |
+|---|---|
+| ✅ **`TRANSCRIBED IN FULL <date> → §X`** | **Done. Nothing in it needs re-opening** |
+| ⚠️ **`READ FOR <what> ONLY <date> — NOT TRANSCRIBED`** | 🔑 **THIS IS A TO-DO, and it is the line that would have flagged the pilot's client workbook for two weeks** |
+
+🛑 **AND A THIRD STATE IS A DEFECT, NOT A STATE: a file listed with a tick and no §-reference.** ⛔ **If you
+cannot point at the block, it was not transcribed.**
+
+### §1C.3 · ✅ EVERY OPEN QUESTION NAMES THE DOCUMENTS THAT MIGHT ANSWER IT
+
+✅ **Each open item carries a *"held documents that bear on this"* clause.** ⇒ 🔑 **So a new question's FIRST
+move is a text search of the working paper's own transcription blocks — seconds, no fetch, no permission —
+and only then an outward search.**
+
+🛑 **AND THE RULE WITH TEETH, because the general form of *look before you ask* has proved too soft:**
+
+> ⛔ **NO QUESTION REACHES THE CLIENT UNTIL THE WORKING PAPER STATES, FOR THAT QUESTION, WHICH HELD DOCUMENTS
+> WERE CHECKED AND WHAT THEY SAID.**
+
+⚠️ **"We looked everywhere" does not satisfy it. NAMED documents do** — and naming them is what makes the
+negative honest *([`method.md`](../../../projects/pre-return-review/method.md) rule 1b)*.
+
+### §1C.4 · 🛑 AND THE ONE THAT IS NOT ABOUT DOCUMENTS AT ALL — a closed QUESTION does not close the ITEM
+
+🔴 **The same engagement, the same day, a fifth instance in a different shape.** **A ruling closed one question
+about an asset — *is its booked cost contradicted by its lender note?* — and a later pass read that as closing
+EVERY question about that asset's cost, and dropped it from a list of purchase documents to request.**
+⛔ **The new question was different: *does the booked figure include the sales tax and the fees, or is it the
+sticker price?*** 🔑 **Nothing had answered that one.**
+
+✅ **THE RULE: when a decision closes a question, write WHICH QUESTION it closed.** ⛔ **A decision titled
+*"the 1839 is settled"* invites exactly this error; one titled *"the 1839's YEAR and its lender-note
+discrepancy are settled"* does not.** ⚠️ **And when an item comes off a list, say which decision took it off
+and what that decision actually decided.**
+
+_(All five instances are from one engagement in one fortnight, and the client's principal found the fifth one
+herself by asking a question this session could not answer: "if five or six vehicles were bought, why do you
+only need the documents for three?")_
 
 ---
 
@@ -757,7 +1178,7 @@ columns, and **the FORM, the PAGE, the PART, the LINE NUMBER and — on a grid f
 > abstract without knowing where it was.)_
 > 🛑 **AND HERE IS THE LIMIT A SCREENSHOT CANNOT CROSS: it establishes the LABELS, never what a box
 > DOES.** ⛔ **Write the consequence as `inferred` unless the screen itself states it or someone has
-> watched the output change.** ⚠️ *(Caught in review: three consequences were written inside a block
+> watched the output change.** ⚠️ _(Caught in review: three consequences were written inside a block
 > stamped "observed from the screenshot", and one of them — "without `Calculate basis limitation` there is
 > no Form 7203" — was contradicted by the person's own earlier screenshot, where `7203, BASIS WKST` was
 > already in the return before any K-1 form existed. **The screen says the box supports Form 7203; it does
@@ -1735,7 +2156,7 @@ WORKSHEET, not a summary.**
 > voy a pedir en forma de artefacto"*, and the standing [`bookkeeping-kpis`](../bookkeeping-kpis/) rule that
 > **a real client's figures ship as an artifact, never in the repo.** ⛔ **What is NOT written anywhere is
 > whether the redacted TEXT could go on a page — and nothing needs it to, so the question stays unopened
-> rather than answered by a session.**)*, **a platform, the working paper** — which is most of an
+> rather than answered by a session.**), **a platform, the working paper** — which is most of an
 > entity return *(an entity return has no organizer at all)*, and was all of the first artifact — ⓘ *which was a **1040**, and clean for a different reason: that client's organizer had been discarded.*
 
 🛑 **THE FAILURE THIS EXISTS TO STOP, and it is the one that actually happened:** the first artifact
@@ -1833,6 +2254,8 @@ is where "this was keyed and verified" is written down.
 is a list of changes like any other — it gets boxes too.
 
 ### 4C · 🔴 WHEN THE RETURN COMES BACK FOR **REVIEW** — brief the reviewer, do not audit her
+
+⛔ 🆕 **DO NOT CONFUSE THIS WITH §4F.** 🔑 **§4C is the SIGNER bringing back a return the firm already prepared — brief her, never audit her. §4F is the PREPARER handing you her own keyed draft and asking to be checked before anybody signs — there you DO audit.** ⚠️ **Same document, opposite job, and the tell is WHO IS ASKING.**
 
 🔄 **§4E first — this is the highest-stakes stale-paper risk in the skill.** The whole method below is
 *read the working paper, then answer*, and the answer goes to **the person who signs**.
@@ -2106,6 +2529,92 @@ a self-check that only reproduces known outputs cannot distinguish a right metho
 📌 **The tax on a bracket line is read off the table's `$50` row midpoint** — that is what reproduces
 the software's own figures, and it is where the half-up rule bites.
 
+#### 🔴 EVERY FIGURE CARRIES ITS SOURCE, IN ITS OWN COLUMN — ALWAYS, ON EVERY WORKSHEET
+
+> **Lilian, 2026-09-27, and it is a STANDING requirement, not a preference for one client:**
+> *"Necesito saber de dónde sale cada número y, si está en un documento, necesito saber cuál es el documento…
+> cuando voy a revisar algo que no entiendo, tengo que preguntarte de dónde sacaste eso y pierdo mucho tiempo…
+> si no, queda como un número y tengo que confiar plenamente en ti… La idea de WorkSheet es que una persona, si
+> habla contigo, pueda revisarlo de punta a cabo y entender todo lo que pase y de dónde salió cada cosa."*
+
+🔑 **THE TEST IS NOT "is the number right". IT IS: can she get to the evidence WITHOUT ASKING YOU?** ⛔ **A
+figure whose only support is the session that produced it is not a working paper — it is a number she has to
+take on trust, and the session that could explain it will be deleted.**
+
+✅ **So every sheet that carries figures carries a `Source` column, and it holds THREE things:**
+
+| | What goes in it | Why that and not less |
+|---|---|---|
+| **1 · WHAT KIND of evidence** | `Client document` · `Client's own spreadsheet` · `Prior-year filed return` · `Bank statement` · `Lender letter` · `Text message / WhatsApp` · `Screenshot the client sent` · `Email` · `Computed — see the formula` · `Firm decision — see Decisions` | **She reads the KIND first and stops there most of the time.** A `Client's own spreadsheet` needs no chasing; a `Computed` sends her to the arithmetic |
+| **2 · WHICH document, by its EXACT FILENAME** | `2022 Benson trl Contract__9827076-001.pdf`, not "the Mitsubishi contract" | 🔑 **She searches by filename.** A description is not findable |
+| **3 · WHERE IT LIVES, and WHERE IN IT** | The platform folder path — `Double › TaxDome › <client> › Tax › 2023` — **and the locator inside the document**: page and line for a PDF, `sheet › cell` for a spreadsheet, date for a bank line | ⛔ **"It is in Double" is not a location.** ✅ **A 40-page contract needs the page** |
+
+⚠️ **AND FOUR RULES THAT MAKE THE COLUMN HONEST RATHER THAN DECORATIVE:**
+
+- 🛑 **A figure the client gave in CHAT, in a text or in a photo is marked as that, by name and date** —
+  *"Client sent by WhatsApp, 2026-09-15"*. ⛔ **Never dressed up as a document.** 🔑 **And per §1B.6 that
+  source is NOT re-readable by a later session: the figure survives, the picture does not. Say so.**
+- 🛑 **A figure that is CORRECT but whose source you cannot name is a DEFECT.** ⛔ **Do not ship it with an
+  empty Source cell and do not write "per prior analysis".** ✅ **Go and find where it came from, or mark it
+  `UNSOURCED — do not key`.**
+- 🛑 **Where TWO sources disagree, the column names BOTH and says which governs and why.** *(`Client's sheet
+  105,550 · lender note 95,550 · HIS governs — decision 60`.)*
+- ✅ **A figure the FIRM computed points at the computation, not at a conclusion** — the cell with the
+  formula, or the section of the working paper that derives it.
+
+#### 🔴 AN ASSET IS NEVER DELIVERED AS JUST A NAME, A DATE AND A COST
+
+> **Lilian, 2026-09-27:** *"no simplemente decirme el nombre del vehículo, la fecha y el costo, sino que tienes
+> que decirme qué tipo de vehículo es y qué poner en ATX para su depreciación: si es a 3 años, a 5 años, qué
+> categoría es."*
+
+⛔ **Name + date + cost is not enough to key an asset, and a preparer holding only those three has to guess the
+life.** ✅ **EVERY asset row carries these, and the `Source` column above applies to each:**
+
+| Field | What it must say | 🛑 The trap |
+|---|---|---|
+| **What the asset physically IS** | `Over-the-road tractor unit (fifth wheel, pulls semi-trailers)` — **not** `2018 Freightliner` | **The MODEL NAME DOES NOT DECIDE THE CLASS.** The same nameplate is built as a tractor and as a straight truck |
+| **The asset class from Pub. 946 Table B-1** | The code AND its printed title — `00.26 · Tractor Units for Use Over-the-Road` | ⛔ **Read it off the CURRENT-YEAR Pub. 946 PDF from irs.gov, never from memory** *(the skill's standing rule, and it is exactly the kind of table that gets transcribed wrong)* |
+| **GDS recovery period** | `3 years` / `5 years` / `7 years` — **and it is DERIVED from the class, never copied from last year's schedule** | 🔴 **The pilot engagement ran four over-the-road tractors at 5 years for years because the life was transcribed. `00.26` is THREE.** ⚠️ **Trailers — `00.27` — really are 5** |
+| **Method and convention** | `200% DB` / `SL`, and `half-year` or `mid-quarter` — ⚠️ **the convention is fixed in the asset's OWN placed-in-service year** and governs it for the whole recovery period | **Testing the CURRENT year's additions answers nothing about an asset placed in service three years ago** |
+| **Business-use %** | The figure and where it came from | **A tick-box on a finance application does not establish it** |
+| **§280F / listed property** | **Is it a passenger automobile?** *(≤6,000 lb unloaded GVW, or ≤6,000 lb GVW for trucks and vans — Pub. 946)* **If yes, the year's caps, quoted.** If no, say so and say why | 🔑 **The door-jamb sticker settles it.** ⛔ **A heavy tractor or trailer is never listed property; an SUV usually is not; a car always is** |
+| **§179 and bonus** | Whether each is available, whether elected, and **the election the prior year made** | ⚠️ **The SUV §179 cap only bites 6,000–14,000 lb GVWR sport-utilities** |
+
+🛑 **AND THE RULE THAT STOPS A SESSION "FIXING" THE FLEET ON ITS OWN AUTHORITY.** ✅ **A wrong recovery period
+used on TWO OR MORE consecutive filed returns is a METHOD OF ACCOUNTING.** ⛔ **Correcting it is a Form 3115
+with a §481(a) adjustment — NOT a line edit on this year's return, and NOT something a session decides.**
+☑️ **Deliver it as a decision for the signer, with the cost both ways** — ⚠️ **and say plainly that a shorter
+life is not automatically better: it deducts faster AND it produces more §1245 recapture on sale.**
+
+#### ☑️ AND THE WORKSHEET SAYS HOW TO PUT AN ASSET IN AND HOW TO TAKE ONE OUT
+
+> **Lilian, 2026-09-27:** *"necesito que me digas cómo introducir los assets y cómo excluir los assets. Todo eso
+> tiene que estar incluido."*
+
+✅ **TWO tables per return that touches fixed assets, and they are separate because the software treats them as
+separate jobs:**
+
+**ADD — one row per new asset, in the order the entry screen asks:** description *(as it should READ on the
+return)* · date placed in service · cost or other basis · the asset class and its GDS life · method and
+convention · business-use % · §179 amount *(often zero, and say so deliberately)* · the bonus election ·
+**and the `Source` column for every one of those.**
+
+**REMOVE — one row per disposal, and it is NOT deleting the asset:** ⛔ **never delete a row from the
+depreciation schedule — the asset is DISPOSED of, so the year's depreciation up to disposal is still taken
+and the accumulated figure still carries.** ✅ **The row gives:** which schedule line it is *(by the name the
+SOFTWARE shows, which is often not the client's name for it)* · date of disposal · gross sales price ·
+expenses of sale · whether it was a sale, a trade-in, an abandonment or a **casualty** — 🔴 **a casualty goes
+to Form 4684 FIRST and only then to 4797** · and **what the disposal is expected to produce** *(§1245
+recapture as ordinary income up to depreciation taken, the remainder §1231)*, **so a wrong figure is visible
+instead of silently accepted.**
+
+⚠️ **AND BE HONEST ABOUT THE ENTRY ROUTE.** 🔑 **The FIELDS above are form-driven and certain — they come off
+Form 4562 and Form 4797.** ⛔ **The SOFTWARE'S menu path is not, unless this firm has recorded it.** ✅ **Say
+which of the two you are giving, and never invent a screen.** ☑️ **Whoever keys it first writes the real route
+back into the working paper** — *"most lines on a computed form cannot be typed where they appear"* is §4B's
+rule, and the asset screen is the clearest case of it.
+
 #### The rest of the shape, as it stands
 
 - **Sheets:** `Read me` · `The return` *(the line-by-line, the one she types from)* · `Computations`
@@ -2194,6 +2703,32 @@ the software's own figures, and it is where the half-up rule bites.
 > by the fit rule** — *the pointer rows added to fix this were themselves clipped at a hard-coded 76pt* —
 > and ✅ **announced in the `Read me` sheet AND the target sheet's own subtitle**, because a text nobody
 > can find is a text that is not there.
+>
+> 🛑 **AND TWO THINGS THE CHECK GETS WRONG ON ITS OWN, BOTH FOUND ON 2026-09-28 — on the ONE SHEET
+> WHERE NOTHING IS REFERENCE PROSE.**
+>
+> **① `ACTIONABLE` MUST NAME THE SHEET SHE WORKS FROM, OR THE CHECK REPORTS ITS WORST FAILURE AS ITS
+> MILDEST.** A sheet absent from that table has **no** actionable columns, so every clipped cell on it
+> comes out as the *soft, not fatal* line — which is exactly the category meaning *"she only reads
+> this one"*. ⛔ **On the Zakom workbook the missing sheet was `Fix the keyed return`, the sheet whose
+> own subtitle says START HERE**, and a clipped cell on it printed as one word of reassurance:
+> `fit check: OK (1 soft)`. 🔑 **A sheet with no entry must be the LOUD case, not the quiet one.**
+> ✅ **So DECLARE EVERY SHEET and make a missing one RAISE** — `set()` is a declaration that nothing on
+> that sheet is typed from, and it is not the same as leaving the sheet out. ⚠️ **And read the count:
+> `OK (n soft)` is not OK for n > 0, it is n cells nobody has looked at.**
+> ⓘ **Declaring all fifteen immediately found a SECOND hole of the same kind, in the sheet that HAD a
+> row:** `The return` protected *Action*, *Action - detail* and an unused column — and **not `What to
+> enter`, the column that carries the value she keys.** 🔑 **The rule above says include the WHAT-TO-TYPE
+> detail column *as well as* the value; it was read as *instead of*.** ⛔ **A partial `ACTIONABLE` row is
+> the same silent failure as a missing one — check the set against the sheet's own header labels, not
+> against memory of what the columns were.**
+>
+> **② CODE THE MOVE IN THE ROW LOOP, NOT ON THE CELL THAT OVERFLOWED.** The move to a full-width cell
+> is a rule about a COLUMN, not about a sentence: the cell that failed here crossed the ceiling the
+> moment **one sentence** was added to it by an unrelated review fix, and it had fitted the day before.
+> ✅ **So measure all of a row's cells as the row is written, replace any that will not fit with the
+> pointer, and emit the full-width row underneath — once, generically.** ⛔ **Fixing the one cell by
+> hand leaves the next sentence to find the same hole**, and the person who finds it is Lilian.
 
 ---
 
@@ -2292,6 +2827,482 @@ the next session looks first, and it holds no figures, so the pointer is safe th
 
 ---
 
+### 4F · 🔴 REVIEWING A RETURN **THE FIRM HAS JUST KEYED** — the preparer hands you the draft PDF and asks *"¿hay errores?"*
+
+> **Lilian, 2026-09-27, sending the keyed 1120-S draft into the session:** *"Revisa lo que he hecho hasta ahora
+> en la declaración. Dime si hay errores y dime si hay algo más que podamos adelantar en lo que el cliente
+> responde."*
+
+🔑 **AND §4G IS HOW EVERY FINDING BELOW IS WRITTEN — five steps, authority last.** ⛔ **The register this
+section builds is the RECORD; it is not an explanation, and on the pilot Lilian could not act on findings
+that were entirely correct.**
+
+⛔ **THIS IS NOT §4C.** **§4C is a return coming back from the SIGNER — brief her, never audit her.**
+🔑 **THIS is the preparer asking to be checked before anybody signs anything, and here you DO audit — the
+whole point is to find what she cannot see from inside the software.** ✅ **Say what is RIGHT as well as what
+is wrong: a review that lists only faults misrepresents a draft whose arithmetic ties eight ways.**
+
+#### ① 📄 FIRST, TRANSCRIBE IT IN FULL — §1C applies to the firm's OWN output, not only the client's
+
+🛑 **A draft return uploaded into a chat is exactly the document §1C was written about: no later session can
+reopen it.** ⇒ **Write ONE BLOCK for it before analysing anything** — **every line that carries a value, every
+line that is BLANK, every checkbox and its state, every zero.** ⛔ **The blanks are where the findings are**:
+on the Zakom draft, *officer compensation blank*, *4797 line 14 blank*, *Schedule L line 22 closing blank*,
+*4562 line 24a unanswered* and *Schedule K 16d blank* were each a finding — **and a summary written for the
+question of the hour would have recorded none of them, because a blank line does not look like an answer to
+anything.**
+
+⚠️ **AND A CHECKBOX CANNOT BE READ FROM EXTRACTED TEXT.** 🔑 **On Schedule B every Yes and every No prints the
+same `X` at the end of the same line — the answer is the COLUMN.** ☑️ **Locate the marks by COORDINATE**
+*(pypdf's `visitor_text` gives each fragment's x/y)*. 🛑 **AND LOCATE THEM ON EVERY PAGE SEPARATELY — the
+columns SHIFT: on the 2025 Form 1120-S the Yes/No pair sits at x≈493/516 on page 2 and x≈490/512 on page 3.**
+⛔ **Carrying one page's pair to the next would mis-read exactly the answers this step exists to protect.**
+☑️ **Every page prints its own `Yes` and `No` headers — read the pair off them, never from a constant.**
+⛔ **And never report a Yes/No answer read off the line text: on that draft it would have inverted all
+fifteen of Schedule B's Yes/No answers.**
+
+#### ② ✅ RUN THE FREE CROSS-FOOTS BEFORE LOOKING FOR ANYTHING CLEVER
+
+**They cost nothing, they either tie or they do not, and on a sound draft they tell you where NOT to look:**
+
+1. **Every subtotal and total on the face of the return** — page 1 line 21 from its components, line 22, the
+   Schedule K reconciliation, M-1 line 4 and line 8, M-2 line 6.
+2. **The depreciation schedule's total cost against opening gross assets plus the year's additions.**
+3. **Its prior accumulated depreciation against the OPENING Schedule L line 10b.**
+4. 🔑 **The cost and accumulated depreciation REMOVED against the named disposals' own figures** — this is the
+   one that catches a missing disposal, because the difference IS an asset's cost. *(On Zakom the gap was
+   78,145 to the dollar: one truck.)*
+5. **Current-year depreciation = bonus + MACRS = page 1's depreciation line.**
+6. **The OPENING Schedule L column against the prior year's filed closing column** — if it reproduces it, the
+   roll-forward was done properly and the closing column is where to look.
+7. 🛑 **Schedule L line 15 against line 27.** **An 1120-S whose balance sheet does not balance is the loudest
+   finding on the return and it is one subtraction.**
+
+#### ③ 🔴 THE DEFECT THAT HIDES IN PLAIN SIGHT: **A CAP MASQUERADING AS A COMPUTATION**
+
+🔑 **The tell is free and it is the single most useful thing in this subsection: TWO ASSETS OF DIFFERENT COST
+SHOWING THE SAME DEPRECIATION.** ⛔ **That cannot be a computation. It can only be a LIMIT.**
+
+*(Zakom: a tractor costing 85,500 and a trailer costing 67,050 both showed prior accumulated 12,400 and a
+current-year charge of 19,800 — the §280F first- and second-year passenger-automobile limits. A third asset's
+"bonus" was exactly 20,200, the current-year first-year limit. None of the three is a passenger automobile.)*
+
+🛑 **AND THE CAUSE IS ONE ATTRIBUTE, NOT THREE ERRORS: the assets were entered as LISTED PROPERTY.** ⇒ **the
+software puts them in Form 4562 Part V → Part V applies the passenger-automobile limit → the deduction stops
+at the table figure.** ☑️ **So the fix is one checkbox per asset, and it also clears the Part V mileage table
+and the 24a/24b evidence questions at the same time.**
+
+⚠️ **HEAVY TRUCKS AND TRAILERS ARE QUALIFIED NONPERSONAL-USE VEHICLES AND DO NOT BELONG IN PART V AT ALL.**
+📄 **Read the passenger-automobile definition off the CURRENT-YEAR Form 4562 instructions before saying so —
+§3's rule** *(and quote it, because this reverses what the software did)*.
+
+🔴 **A SECOND IMPOSSIBILITY WORTH ONE PASS DOWN THE SCHEDULE: accumulated depreciation GREATER THAN COST.**
+*(Zakom had one, over by 15,238.)* ⚠️ **Then ask WHICH YEAR put it there — the prior filed return answers it,
+and it decides whether the fix is one cell or Julia's.**
+
+#### ④ 🔑 A BALANCE SHEET THAT DOES NOT BALANCE IS AN OPPORTUNITY, NOT JUST A DEFECT — **decompose it, never plug it**
+
+☑️ **Compute the equity the assets and liabilities REQUIRE, subtract the equity that was keyed, and then name
+the gap's components from the PRIOR YEAR's filed equity section.** **What is left after the named components
+is the year's distributions.**
+
+*(Zakom: required closing equity −407,948 against −262,536 keyed = a gap of 145,412, which decomposed into
+capital stock 1,000 omitted, additional paid-in capital 61,169 omitted, and 85,243 of distributions never
+recorded — with nothing left over.)*
+
+🛑 **"WITH NOTHING LEFT OVER" IS WHAT MAKES IT ARITHMETIC RATHER THAN A PLUG, AND IT IS STILL NOT PROOF:**
+⚠️ **an owner LOAN and an owner WITHDRAWAL are indistinguishable in a residual** — **check whether the
+loans-from-shareholders line is blank in both columns before calling the residual a distribution**, and test
+it against the bank.
+
+⚠️ **AND BEFORE REPORTING IT, KNOW WHICH PENDING ITEMS MOVE IT.** **The rule is short:** **a change to the
+CURRENT-year depreciation charge does NOT move it** *(accumulated depreciation and the book loss fall
+together)*; **removing an asset at zero adjusted basis does NOT move it** *(gross cost and accumulated fall by
+the same amount)*; **a change to PRIOR-year accumulated depreciation moves it one-for-one and opposite**
+*(opening equity is fixed by the filed return)*; **and extra current-year INCOME moves it one-for-one**
+*(the proceeds are already inside the documented closing cash)*. ⇒ ⛔ **Key the residual LAST.**
+
+#### ⑤ ⚖️ LABEL EVERY FINDING, AND CHECK A KEYED POSITION AGAINST THE **DECISIONS TABLE** BEFORE CALLING IT ANYTHING
+
+🔑 **§4C's three labels govern here too — DECISION · OPEN ITEM · DEFECT — and a fourth case appears only on
+your own firm's draft: A KEYED POSITION THAT CONTRADICTS A DECISION THE WORKING PAPER RECORDS.**
+
+⛔ **That is not a defect and must not be raised as one.** *(Zakom: the draft took 100% bonus depreciation
+where Lilian's own recorded decision was to elect out as the prior year did — a ≈245,900 swing. The keyed
+position was procedurally valid: bonus is the default and needs no statement. What made it reportable was the
+contradiction, not the position.)*
+
+☑️ **So the output is: *"this reverses your decision N — confirm it and the paper records the supersession, or
+re-key it."*** ⛔ **A session never decides which.** ⚠️ **And read the decisions table BEFORE the return, or you
+will not know a reversal when you see one.**
+
+#### ⑥ ⛔ AND ONE NON-FINDING THAT A FIRST PASS WILL WANT TO REPORT
+
+🛑 **A BLANK OPENING BALANCE ON SCHEDULE M-2 IS NOT AUTOMATICALLY WRONG.** ⚠️ **On Zakom the first pass had it
+listed as a defect, and it was correct: the prior return's M-2 line 8 printed ZERO.** 🔑 **Check the prior
+year's printed closing figure before flagging any opening balance** — **and the same guard applies to a
+carried-forward life, a convention, or an accumulated-depreciation figure that merely looks odd.**
+✅ **A REVIEW'S FALSE POSITIVE COSTS THE PREPARER AN HOUR AT THE KEYBOARD, WHICH IS THE SAME CURRENCY AS A
+MISSED DEFECT.**
+
+#### ⑥-bis 🛑 TWO WAYS THIS SUBSECTION'S OWN FIRST RUN FAILED ITS REVIEW — both are mechanical and both are cheap to prevent
+
+🔑 **Recorded because a review caught them in the very commit that created §4F, which is the best evidence they
+are not obvious.**
+
+1. 🔴 **A REGISTER ORDERED *BY MONEY* AND A TRANSCRIPTION THAT POINTS INTO IT MUST BE RENUMBERED TOGETHER.**
+   **The transcription's *"see row N"* pointers were written against an earlier, document-order numbering;
+   re-sorting the register by money left ELEVEN of them pointing at the wrong row** — *the
+   officer-compensation row pointed at the 245,900 bonus election, and the address-block typo pointed at an
+   acquisition-date question about a truck.* ⚠️ **Corrected in the round-2 review: a first version of this
+   example said BOTH pointed at the bonus election, which overstated it — the count was right, the
+   illustration was not.** ⛔ **That breaks the one
+   link this whole method depends on: transcription → fix.** ☑️ **Number the register LAST, or point by
+   heading text rather than by number; and before pushing, follow every pointer once.**
+2. 🔴 **A FIX THAT SAYS WHERE A FIGURE IS *REPORTED* IS NOT A FIX IF IT NEVER LANDS ON THE LINE THAT BALANCES.**
+   **The Schedule L row's fix named Schedule K line 16d, the K-1 and the M-2 — none of which is a Schedule L
+   equity line — so keying exactly what it said left the balance sheet out by the whole residual, and the row
+   read as complete.** ☑️ **For any fix that is supposed to make a statement TIE, re-run the tie with only the
+   entries the row names.** 🔑 **If it still does not close, the row is missing an entry — and where the
+   missing entry is a presentation choice, SAY the fix cannot be completed without the signer.**
+
+#### ⑥-ter 🛑 NEVER CALL A FORM OR A STATEMENT **ABSENT** WITHOUT HAVING READ EVERY PAGE
+
+⛔ **A keyword search of an extract is evidence about the SEARCH, not about the return.**
+🔑 **[`method.md`](../../../projects/pre-return-review/method.md) rule 1b applies to the firm's own output
+exactly as it applies to a client's: a negative belongs to the search that produced it.**
+
+✅ **THE GUARD, and it costs a minute: WALK THE PAGE COUNT.** **Before writing that anything is missing
+from a return — an election, a statement, a schedule, a form — confirm you have actually read every page,
+and say which page each conclusion rests on.**
+
+🛑 **THE COST WHEN IT IS SKIPPED, from the pilot:** **a session searched a redacted extract for
+`Election`, read the first twenty hits (all of them page 1's *"S election effective date"* and Schedule
+B's §163(j) question), and wrote *"the 20 pages carry only the line-20, K-1, Schedule L and M-1
+statements — there is no elections page."*** ⛔ **Page 20 WAS the elections page.** ⇒ **The preparer was
+told twice she had to build a statement that was already attached, and a FOLLOW-UPS row carried the false
+finding.** ⚠️ **§1C is the other half of it: pages 1–19 were read for specific questions and page 20 was
+never opened at all.**
+
+#### ⑦ ☑️ CLOSE THE REVIEW BY ANSWERING THE SECOND HALF OF HER QUESTION — *"¿qué podemos adelantar?"*
+
+🔑 **A defect list is not the deliverable; the deliverable is a defect list AND a queue of work that needs
+nobody.** ✅ **Sort what is left into IN-HOUSE and WAITING-ON-A-PERSON, and say who each person is and what
+they owe.** ⛔ **Never leave a "pending" that is really a document the firm already holds — §1C.**
+
+### 4G · 🗣️ HOW A FINDING ON A COMPUTED FORM IS WRITTEN — the five steps, and the authority goes LAST
+
+> **Lilian, 2026-09-28, on a set of Form 4562 findings in which every figure was correct:**
+> *"Necesito explicaciones más detalladas, más simples. No consigo que me expliques de forma que pueda
+> entender fácilmente. Siento que tus explicaciones son muy densas, a veces escuetas, **te saltas pasos** y
+> siento todo como en una nebulosa. No entiendo qué pasa, cuál es la situación… **pierdo mucho tiempo
+> tratando de entenderte.**"*
+
+🛑 **THIS IS A DELIVERY DEFECT AND IT IS AS REAL AS A WRONG NUMBER.** ⛔ **A finding she cannot act on has not
+been delivered.** 🔑 **And the cause is specific enough to fix: the findings were written as a REGISTER — a
+row per defect, ordered by money, every clause compressed — which is the right form for the record and the
+wrong form for a person at the keyboard.** ⚠️ **§4F builds that register and §4B's item 13 turns it into
+checkboxes; NEITHER of them makes a finding explicable.** ✅ **That is this section's job.**
+
+#### ① ✅ THE FIVE STEPS, IN THIS ORDER, FOR EVERY FINDING
+
+| Step | The question it answers | ⛔ What breaks it |
+|---|---|---|
+| **1** | **What does the return show TODAY?** The figure as printed, with its form, page, part and line | Leading with the corrected figure, so she cannot find the row she is looking at |
+| **2** | **What MADE it show that?** The input, the attribute, the checkbox — **the cause inside the software** | Naming the tax rule here. 🔑 **She cannot type a rule** |
+| **3** | **Why is that wrong?** ONE sentence, ⛔ **with no code section in it** | Three clauses and a citation |
+| **4** | **What do I type, and where?** The screen, the field, the value | *"Correct the classification"* — which is a verdict, not an instruction |
+| **5** | **What MOVES when I type it?** The lines that change, and by how much | Leaving her to work out whether it mattered |
+
+⛔ **NEVER OPEN WITH THE AUTHORITY.** ✅ **The IRS quote is EVIDENCE: it goes at the END of the finding, or in
+a footnote.** 🔑 **Opening with §280F or a Pub. 946 table answers a question she did not ask, before the one
+she did — and that is what produces the fog.** ⚠️ **§3's rule that a figure-changing answer must be read off
+the current-year PDF is untouched — this governs WHERE the quote is placed, never whether it is obtained.**
+
+#### ② 🔑 THE TWO HABITS THAT CAUSE IT, because naming the form is not enough
+
+1. ⛔ **WRITING FOR A READER WHO ALREADY KNOWS THE ANSWER.** **A session that has held a chain of three causes
+   for an hour compresses it into one sentence with two implications in it, and cannot feel the gap.**
+   ✅ **Three causes get THREE sentences.** 🔑 **The test: could someone who has never seen this return act on
+   this paragraph without asking a question?**
+2. ⛔ **THE REGISTER'S DENSITY LEAKING INTO THE EXPLANATION.** **Bold, arrows, emoji and section pointers are
+   compression devices — they work in a table and they defeat a reader in prose.** ✅ **In the explanation,
+   one idea per sentence and one pointer per finding.**
+
+#### ③-bis 🛑 AN **OPEN ITEM** IS NOT A FINDING, AND THE FIVE STEPS DO NOT FIT IT — tell it in TIME ORDER
+
+> **Lilian, 2026-09-28 EVENING, twelve hours after ① was written from her first complaint:**
+> *"Tus explicaciones son extremadamente escuetas y compactas. No entiendo prácticamente nada. Por ejemplo,
+> no entiendo qué pasa con el seguro y el IPFS. No entiendo qué pasa con Mitsubishi."*
+
+🛑 **THE SAME COMPLAINT, THE SAME DAY, ABOUT PROSE WRITTEN AFTER ① EXISTED.** ⛔ **So ① is not wrong —
+it is NOT APPLICABLE, and that is the finding.** 🔑 **①'s five steps are built for a DEFECT ON A COMPUTED
+FORM:** *the return shows X · the input caused it · that is wrong · type Z here · these lines move.*
+⛔ **NEITHER of the two items she named has that shape.** **Nothing on the return is wrong; nothing is hers
+to type. They are SITUATIONS — a fact we do not yet know, and what each answer would mean.**
+⇒ **With no shape to follow, the writing fell back on the register's density, which is exactly what ①
+forbids.**
+
+✅ **SO AN OPEN ITEM GETS ITS OWN SHAPE, AND IT IS NARRATIVE, NOT A TABLE:**
+
+| | The question | ⛔ What breaks it |
+|---|---|---|
+| **1** | **What HAPPENED, in the real world, in the order it happened?** *"In September the client took out the insurance. The premium for the year is 35,593. He did not pay it in one go…"* | **Starting with the accounting.** 🔑 **She can picture a company buying insurance; she cannot picture a *"premium finance mechanism"*** |
+| **2** | **What do we NOT know?** ONE sentence, phrased as a question | **Burying it inside a paragraph of consequences** |
+| **3** | **What would each answer MEAN?** Name them **ANSWER A / POSSIBILITY 1**, each with the figure and the entry it produces | ⛔ **Naming the GAP between them and not the answers themselves** — *"a 6,541 swing"* is not an explanation, it is a summary of one |
+| **4** | **Whose is it, and what does SHE do now?** One sentence | **Leaving her to work out whether she is blocked** |
+
+🛑 **AND SIX HABITS TO STOP, each one observed in the two paragraphs she could not read:**
+
+1. ⛔ **NO ABSTRACTION SHE DID NOT INTRODUCE.** *"Model A / Model B"*, *"the plug"*, *"the residual"*,
+   *"the swing"*. 🔑 **She has to learn the vocabulary before she can learn the fact, and she did not ask
+   for a vocabulary.** ✅ **Use the thing itself: *the whole premium* · *what left the bank*.**
+2. ⛔ **NO § CROSS-REFERENCE INSIDE AN EXPLANATION.** **Each one is an invitation to stop reading and go
+   somewhere else, and she is at a keyboard.** ✅ **They go at the END, once.**
+3. ⛔ **NO TABLE FOR A MECHANISM.** 🔑 **A table compares things that are ALIKE. A mechanism is a SEQUENCE
+   and must be numbered 1, 2, 3.**
+4. ⛔ **NEVER THE CONCLUSION BEFORE THE ROAD TO IT.** **She cannot check an answer she has not been walked to.**
+5. ⛔ **BOLD BELONGS ON THE NUMBER AND THE ACTION, NOWHERE ELSE.** **A paragraph in which every sentence is
+   bold has no emphasis in it at all.**
+6. ⛔ **NEVER NAME A FIGURE WITHOUT SAYING WHAT IT IS.** **`6,541.29` is not *"a swing"* — it is the
+   DISTANCE BETWEEN TWO POSSIBILITIES, and saying so IS the explanation.**
+
+✅ **THE WORKED PAIR IS IN THE ZAKOM WORKING PAPER, §3BZ** — **the same two items, rewritten to this shape,
+beside the diagnosis of what the first version did.**
+
+☑️ **AND ONE TEST THAT CATCHES IT BEFORE SHE DOES:** 🔑 **read the paragraph back and ask *"what does the
+reader have to already know for this sentence to mean anything?"*** ⛔ **If the answer is anything this
+session worked out in the last hour, the sentence has to be unpacked.**
+
+#### ③ ☑️ THE FREE TELL THAT IS WORTH MORE THAN THE ARITHMETIC
+
+🔑 **Wherever a finding can be SEEN without computing anything, lead with that.** ✅ **On the pilot: two assets
+of unequal cost — 85,500 and 67,050 — printed identical depreciation of 19,800.** ⇒ **Identical figures on
+unequal costs can only be a CAP, never a computation.** 🔑 **That one observation explains the defect, proves
+it, and needs no table** — **and it is what she remembered.**
+
+#### ④ ⚠️ AND SAY WHEN A FINDING MOVES NOTHING
+
+✅ **A finding whose effect is *"no figure changes"* is still worth raising** — **an unanswered question on a
+form, zero business miles on a trucking fleet, a form attached with every line blank.** ⛔ **But SAY SO in
+step 5**, **so she can sort the three-minute jobs from the ones that move the return.** 🔑 **Unlabelled, they
+read as equally urgent and the list becomes something to postpone rather than work.**
+
+#### ⑤ 🔑 WHEN SHE SAYS SHE DOES NOT UNDERSTAND, THE ANSWER IS TO REWRITE — NEVER TO EXPLAIN AGAIN
+
+⛔ **Do not restate the same finding with more words around it.** ✅ **Rebuild it in the five steps above and
+hand it back.** ⚠️ **This is the same rule CLAUDE.md sets for a journal-entry description or a field value she
+has to ask about** — *"a description she has to ask about has failed, however accurate it is"* — **and it
+applies to an explanation exactly as it applies to a string.**
+
+### 4H · ⌨️ ATX — the entry routes the firm has ACTUALLY VERIFIED, screen by screen
+
+> **Lilian, 2026-09-28, sending the ATX asset screen unprompted:** *"Te mando una imagen para que sepas, en
+> ATX, cómo se hace este cambio de tipo de vehículo. Se hace en esa área que dice 'Asset Information' allá
+> arriba… solo para que los registres en este skill de Tax Preparation, para que sepas cómo funciona ATX."*
+
+🔑 **THIS SECTION EXISTS BECAUSE §4B ITEM 11 REQUIRES THE ENTRY ROUTE AND A SESSION CANNOT SEE THE
+SOFTWARE.** ⛔ **A route that has not been seen is a GUESS, and §4B says to label it as one.** ✅ **Only
+routes the firm has confirmed on a real screen or read off a real printed return go in here.**
+☑️ **When she shows a screen, write it down the same day — she is the only source for this.**
+
+#### ① 🚗 THE ASSET SCREEN — and the control that does NOT exist
+
+**Path: the asset list → open an asset → the `Asset Information` block across the top.**
+
+**What is in that header:** `Item #` · **Description** · **Date in service** · the **return form**
+*(`1120S`)* · **two dropdowns on the left** · `New asset` *(Yes/No)* · a **category** dropdown
+*(`B-Bldgs and other d…`)* · `IRC Section` · `AMT Adj. Type` · **`Bus percent`** · a `COGS` checkbox ·
+`Serial #` · a `Multiple Asset Account` checkbox.
+**Tabs below it:** **`Depreciation and Section 179` · `Auto/Listed` · `Dispositions` · `Asset History`.**
+
+🛑 **THE ONE THAT MATTERS, AND IT REVERSES HOW THIS SKILL USED TO SAY IT:**
+⛔ **THERE IS NO "LISTED PROPERTY" CHECKBOX IN ATX.** ✅ **Listed-vs-not is a CONSEQUENCE of the asset
+TYPE CODE — the second of the two dropdowns**, which on the pilot read
+**`7 - 5-yr Truck, van, auto on tr…`** *(the first dropdown is the broad class, `V-Vehicles`)*.
+
+🔑 **That code prints on the `Form 4562 Statement` as the `Asset Code` column, and it decides THREE things
+at once: the recovery period, which PART of Form 4562 the asset lands in, and whether the §280F
+passenger-automobile caps apply.** ⇒ ⛔ **So the instruction is never *"turn off listed property"* — it is
+*"change the asset type code"*, and you say which code to change it TO.**
+
+🔑 **THE LIST ITSELF, sent by Lilian on 2026-09-28** — ✅ **this is ATX's own dropdown, not a
+reconstruction:**
+
+| Code | ATX's label *(verbatim from the screen)* | ⚠️ **Listed property?** *(the FIRM's determination, not ATX's — this column is not on the dropdown)* |
+|---|---|---|
+| **1** | `3-yr Tractor (over-the-road use)` | ⛔ no |
+| **2** | `5-yr Qual nonpersonal use veh` | ⛔ no |
+| **4** | `5-yr Heavy duty truck or OTR trailer` | ⛔ no |
+| **5** | `5-yr Passenger vehicle` | ✅ **yes — §280F-capped** |
+| **6** | `5-yr SUV/truck/van > 6,000 lbs` | ✅ yes *(not §280F-capped — over 6,000 lb)* |
+| 🔴 **7** | `5-yr Truck, van, auto on trk chassis` | ✅ **yes — §280F-capped** |
+| **8** | `10-yr Water transport equipment` | ⛔ no |
+| **9** | `5-yr Other Vehicle (listed)` | ✅ yes |
+| **10** | `5-yr Buses` | ⛔ no |
+
+⚠️ **Code 3 was not visible in the crop and is deliberately not recorded — fill it the next time the list
+is open.** 🛑 **AND THE TRAP CODE 7 SETS, because it reads harmless: on the pilot SEVEN of eight
+prior-year assets sat on it, and that ONE choice produced the §280F caps, an eight-vehicle zero-mileage
+table, the 24a/24b questions AND a 5-year life on tractors that are 3-year property.** ⇒ ☑️ **On a freight
+fleet, treat code 7 as a red flag, not a default.**
+
+📄 **The authority for taking a working fleet OUT of listed property — Form 4562 (2025) instructions,
+`Listed Property → Exceptions`, verbatim:** *"Listed property does not include: … **3. An ambulance,
+hearse, or vehicle used for transporting persons or property for compensation or hire;** or **4. Any
+truck or van placed in service after July 6, 2003, that is a qualified nonpersonal use vehicle.**"*
+🔑 **A freight carrier's tractors and trailers meet BOTH, and either alone is enough.**
+
+**The mapping as SEEN on a real return's printed statement** *(Zakom 2025 — the codes appear beside
+every asset)*:
+
+| Code | What carried it | Recovery | Where it lands | §280F caps? |
+|---|---|---|---|---|
+| **`V-1`** | the four 2025 **over-the-road tractors** | **3-year**, 200DB, HY | **Part III line 19a** | ⛔ **no** |
+| **`V-4`** | the **trailers** *(Reitnouer, both Bensons)* | **5-year**, 200DB, HY | **Part III line 19b** *(or line 17 if a prior-year asset)* | ⛔ **no** |
+| **`V-5`** | the **Audi** — a genuine passenger car | 5-year | **Part V** | ✅ **YES** |
+| **`V-7`** | *"5-yr Truck, van, auto on tr…"* | 5-year | **Part V** | ✅ **YES** |
+
+⚠️ **Treat this table as THIS FIRM'S OBSERVED MAPPING, not as ATX documentation** — **it was derived from
+one return plus one screenshot.** ☑️ **Extend it the next time a different code is seen.**
+
+✅ **PROOF THAT THE ROUTE WORKS, which is why it is stated as verified rather than guessed:** **two assets
+were moved from `V-7` to `V-4` between two drafts of the same return, and on the new draft they had left
+Part V, left the Part V Section B mileage table, lost their caps and picked up their full MACRS figures —
+`70,540 × 20% = 14,108` and `67,050 × 32% = 21,456`, both to the dollar.**
+
+#### ② 🔴 THE DISPOSITIONS TAB — and the two red warnings ATX prints on the screen
+
+**Path: the asset → the `Dispositions` tab → `Disposition\\Bulk Disposition`, which has TWO sub-tabs on the
+left: `Disposition Info` and `Casualty/Loss Info`.**
+
+**On `Disposition Info`:** **`Type of disposition`** *(a dropdown — `Casualty/theft` and
+`Sale/abandonment` are both confirmed)* · **`Date of disposition`** · **`Business use percentage`** ·
+then **three columns — `Federal`, `Federal AMT`, `State`** — for **`Cost or other basis`**,
+**`Basis adjustment`**, **`Accumulated depreciation`** and **`Gain/loss`** · then
+**`Force 4797 section`**, **`Holding period`** and **`Type of property`**.
+
+🛑 **THE TRAP: THE PROCEEDS ARE NOT ON THAT SCREEN FOR A CASUALTY.** ⛔ **On the pilot, `Gain/loss` showed
+`0` in all three columns with the disposal fully entered, because a casualty's money goes on the OTHER
+sub-tab — `Casualty/Loss Info` — as `Insurance or other reimbursment`.** ✅ **It prints under exactly that
+label on the §179 disposition report.** 🔑 **A session reading a screenshot of `Disposition Info` alone
+would conclude the proceeds were never entered.**
+
+⚠️ **Two fields on that sub-tab were left blank on the pilot and are worth prompting for:**
+**`Type of property`** *(the same report shows `1245` for the other disposal)* **and
+`FMV before / after casualty or theft`.** ⓘ **Neither is needed to COMPUTE a casualty GAIN — proceeds less
+adjusted basis settles it — but the inconsistency between two rows of one report is visible.**
+
+**🔴 THE TWO RED WARNINGS ATX PRINTS, AND WHAT EACH ONE MEANS:**
+
+| The warning, verbatim from the screen | What it is telling you |
+|---|---|
+| *"This disposition will NOT be reported on the 4797 per the form instructions. Please see report on the 179 Dispo tab on Schedule K-1"* | 🔑 **THE ASSET TOOK §179, SO ITS DISPOSAL IS THE SHAREHOLDER'S ITEM, NOT THE CORPORATION'S.** **It goes to `Dispositions of Property with Section 179 Deductions` → Schedule K line 17d → K-1 BOX 17 CODE K.** ⛔ **Page 1 line 4 does NOT move, and Form 4684 stays empty even on a casualty** |
+| *"(DO NOT force to Part III unless LT Gains)"*, beside `Force 4797 section` | ☑️ **Leave `Force 4797 section` BLANK unless there is a long-term gain that genuinely belongs in Part III** |
+
+🛑 **THE FIRST ONE COST THIS FIRM A WRONG PREDICTION.** **A session told the preparer to expect
+*"+≈20,000 on page 1 line 4"* from a casualty; the asset had taken 50,000 of §179, so the gain went to box
+17K and line 4 never moved** *(Zakom, 2026-09-28)*. ⇒ ✅ **BEFORE PROMISING WHAT A DISPOSAL MOVES, CHECK
+WHETHER THE ASSET TOOK §179** — **the depreciation detail's `Sec. 179 Deduction` column answers it in one
+look.** ⚠️ **And the same question decides whether Form 4684 will carry anything at all.**
+
+#### ③ 🖥️ ATX'S OWN `Re-Check` WARNING LIST — read it, and know which ones are real
+
+🔑 **ATX has a check-return button that prints a warning list, and the preparer sees it before anyone
+else does.** ⛔ **Do not treat it as noise: on the pilot it caught a whole topic the firm's own review had
+missed.** ✅ **Ask for the list — it is one screenshot — and work it warning by warning.**
+
+**The ones seen so far, and what each is worth:**
+
+| Warning | What it is | Stakes |
+|---|---|---|
+| *"Ending total assets should equal ending total liabilities and shareholders' equity"* | **Schedule L does not balance** | 🔴 **Blocks filing** |
+| *"Entertainment expenses are no longer deductible per TCJA"* | ⚠️ **Informational — ATX prints it whenever anything is in the meals block. It is NOT saying it found entertainment** | ✅ **None, once the firm has established there is none** |
+| 🔴 *"No activities have been marked as 'qualified' for Sec. 199A purposes"* | 🛑 **THE ONE THAT MATTERS MOST, AND THE EASIEST TO WAVE AWAY ON A LOSS YEAR.** **No K-1 box 17 code V and no Statement A means the shareholder gets no QBI information at all** | 🔴 **A qualified business LOSS still has to be reported — it carries forward against his future QBI. Omitting it does not save anything; it COSTS him the carryforward** |
+| *"Assets placed in service after 2015 electing out of bonus depreciation should use the same Fed/AMT depreciation method"* | ✅ **Correct, and it surprises people:** the Form 4562 instructions say property that elects OUT of bonus *"will not be subject to an AMT adjustment for depreciation"* — **so Fed and AMT must match** | 🟡 **No corporate figure (corporate AMT is repealed) — it changes K-1 box 15, which the shareholder needs for his own Form 6251** |
+| *"<asset> has different federal and state recovery basis, please review amounts for state disposition"* | **ATX keeps a separate STATE basis per asset because states decouple from bonus and §179** | 🟡 **Ask FIRST whether a state return is part of the engagement — if none is filed it is informational** |
+| *"<asset> - Prior accumulated depreciation, 179 and bonus cannot exceed cost"* | ✅ **A real impossibility, and an independent corroboration when the firm has already found it by hand** | ⚠️ **It will NOT clear until the number changes — so if a clean list is wanted before filing, the prior-year owner has to rule** |
+
+#### ④ 🔴 FORM 4797 — **LINE 10 IS NOT A FIELD.** The route is the `Input` tab, and it is a RECORD-BASED sheet
+
+> **Lilian, 2026-09-28, sending the screen unprompted:** *"la línea 10 no es un campo de entrada, sino que
+> hay que ir a la pestaña de input y ahí llenar esto. Quiero que lo guardes en este skill para un futuro,
+> para que ahorremos tiempo."*
+
+🛑 **THE MISTAKE THIS SUBSECTION EXISTS TO STOP:** **this firm told her to key a disposal *"on Form 4797
+Part II line 10"*.** ⛔ **That line is COMPUTED and cannot be typed into.** ✅ **Every 4797 entry goes through
+the form's own `Input` worksheet, which builds the lines.**
+
+✅ **PATH: open Form 4797 → the worksheet tabs along the bottom → `Input`.**
+**The tab strip observed, left to right:** `Pages & Worksheets` · `1` · `2` · **`Input`** · `Detail` ·
+`Sec 179 Dispositions` · `Part I Cont` · `Part II Cont` · `Part III, pg 2 Cont` · `Ln 2 - Sec 1231` ·
+`Ln 10 - Ord Gains` · `Unrecap 1250 Gain` · `AMT Page 1` …
+
+🔑 **IT IS ONE RECORD PER DISPOSAL, NOT A GRID.** **The toolbar across the top carries
+`|◀◀` `◀` `Record: 1` `▶` `▶▶|` plus `Add New Record` and `Delete Record`.**
+⚠️ **So a second disposal is a NEW RECORD — not another row on the same screen** — **and `Detail` is the
+tab that shows them all at once.**
+
+**The fields on the `Input Sheet (4797)`, in the order they appear:**
+
+| Block | Fields |
+|---|---|
+| **Top row** | `Description of property` · `F/S/J` · `Date acquired` · `Date sold` |
+| **Second row** | `Type of property` · 🔑 **`Force 4797 section`** · `State postal code or Situs` · `Gross sales price` · `Holding period` *(computed)* |
+| **Three columns — `Fed` · `AMT` · `State`** | `Cost or other basis, plus improvements and expense of sale` · `Depreciation allowed (excluding Sec. 179 if from pass-through)` · `Gain or (Loss)` *(computed)* |
+| **Checkboxes** | `Elective Partial Asset Disposition` · `Required Partial Asset Disposition` · `sale to related party - disallow loss (IRC Sec 267)` · `residential rental property` · `Part III Assets are due to Casualty/Theft` · `sale is from a pass-through entity` · `Do not send to state tab` · `Use Fed amounts on state tab` · `Qualified Opportunity Fund Asset Gain Deferral (QOF)` |
+| **Foot** | 🔴 **`Select activity:`** |
+
+🔑 **FOUR THINGS ON THAT SHEET THAT ARE NOT OBVIOUS, AND EACH ONE HAS COST SOMETHING:**
+
+1. ✅ **`Force 4797 section` is how an asset reaches Part II.** **Typing `Part II` there sends the record to
+   Part II line 10 as ordinary gain.** ⚠️ **ATX will then WARN that the dates indicate a long-term holding
+   period — that warning is the FORCE working, not an error.**
+2. 🛑 **AN ASSET THE BOOKS NEVER CARRIED IS FORCED TO PART II — AND THE REASON IS EVIDENTIARY, NOT
+   ARITHMETIC.** ⚠️ 🆕 **CORRECTED 2026-09-28 EVENING AGAINST THE IRS SOURCE; the first version of this
+   item was wrong twice and is withdrawn** *(decision 113; it read: "PART III WOULD GIVE THE WRONG ANSWER —
+   ATX computes §1245 recapture as min(gain, depreciation RECORDED)")*.
+   🔑 **(a) IT IS THE IRS FORM'S ARITHMETIC, NOT THE SOFTWARE'S.** 📄 **Form 4797 line 25b: *"Enter the
+   smaller of line 24 or 25a"*, and line 25a is *"Depreciation allowed or allowable from line 22"*.**
+   ⛔ **Never tell a reviewer the software mis-computes Part III — it invites her to override it, and it is
+   not true.**
+   🔑 **(b) PART III IS NOT THE WRONG SECTION. IT IS AN UNFILLABLE ONE.** **Filled properly for a fully
+   depreciated asset — line 21 = its cost, line 22 = the same cost — Part III returns the whole gain as
+   ordinary through line 25b, the SAME destination as Part II line 10.** ⇒ **The reason to force Part II is
+   that lines 21 and 22 DEMAND A COST, and for an asset the books never carried there is no supportable
+   figure for either.** ✅ **Line 10 needs none: its column (g) is *(d) + (e) − (f)*, which returns the
+   proceeds whether the cost is entered on both sides or left blank.**
+   ⛔ **AND ZEROS IN LINES 21/22 ARE NOT A NEUTRAL CHOICE — they are an answer the form did not ask for, and
+   they produce recapture of ZERO, which sends the whole gain to Part I → §1231 → the K-1 as CAPITAL GAIN.**
+   ☑️ **THE TEACHING CASE IS USUALLY ON THE SAME RETURN: find a fully depreciated asset already in Part III
+   and show that its gain became ordinary ONLY because line 22 carried its cost.**
+3. 📄 **THE SHEET PRINTS TWO NOTES AT THE TOP, in blue, AND THE FIRST ONE IS THE IRS INSTRUCTION VERBATIM:**
+   *"Report the sale of property previously deducted under the tangible property de minimis safe harbor on
+   Part II (line 10) as ordinary gain. See Form 4797 instructions."* · *"Please enter Section 1244 Stock
+   Losses on Form 8949."*
+   ⚠️ 🆕 **BUT IT IS A SUPPORTING CITATION, NOT AN AUTHORITY YOU CAN LEAN ON — added 2026-09-28 evening.**
+   🔑 **Every version of that rule is CONDITIONAL: Form 4797 (2025) Line 10 says *"and DEDUCTED the cost of
+   the property under the tangible property de minimis safe harbor"*, and Pub. 544 says *"IF YOU DEDUCTED"*.**
+   **The safe harbor is an ELECTION, made annually, and it requires accounting procedures in place at the
+   start of the year** — ⚠️ **WRITTEN procedures only where the taxpayer has an applicable financial
+   statement; a small S-corp without one needs procedures, not written ones.** ⇒ ⛔ **Quoting the banner as though it settled the matter overstates it, unless the firm can show
+   the election was actually made.** ✅ **On a fully depreciated asset the stronger ground is §1245 itself —
+   recapture runs on depreciation *allowed OR allowable*, so nobody has to have recorded it.**
+4. 🔴 **`Select activity:` AT THE FOOT IS EASY TO LEAVE BLANK AND SHOULD NOT BE.** **ATX warns
+   *"If applicable, enter an activity for calculation of business income limitation or passive gain
+   (loss)"*.** ⚠️ **Once a §199A activity exists on the return this matters: §1245 ORDINARY gain from a
+   business asset IS qualified business income, and an unlinked 4797 record may never reach the §199A
+   computation.**
+
+#### ⑤ ☑️ THE OTHER ROUTES CONFIRMED SO FAR
+
+| What | Where in ATX |
+|---|---|
+| **The §179 / bonus elections** | **the `Elections` page.** 🔴 **An election OUT of bonus needs a STATEMENT there — turning the allowance off asset by asset produces the right figures with no election behind them** *(Form 4562 (2025) instructions: *"attach a statement to your timely filed return… indicating the class of property"*)*, **and it is made BY CLASS, covering ALL property in that class** |
+| **The meals limit** | **inside the line-20 `Other Deductions` statement** — the row reads `Meals, subject to 50% limit`, then `Less disallowed`, then `Total meals and entertainment`. ⚠️ **Changing it moves FIVE other places: page 1 line 20, M-1 line 3b, M-2 line 5, Schedule K 16c and K-1 box 16C** |
+| **A disposal with no depreciation history** *(an asset the books never capitalized)* | **straight onto Form 4797 Part II line 10 as its own row** — ⛔ **never added to the depreciation schedule** |
+| **The §448(c) gross-receipts figure** *(K-1 box 17 code AC)* | **the K-1 line 17 input / the §448(c) worksheet.** ⚠️ **ATX computes it; find out what it computed before overwriting** |
+
 ## §5 · Every prepared return leaves a working paper
 
 **Writing it is part of preparing the return** — [`projects/tax-returns/`](../../../projects/tax-returns/),
@@ -2332,6 +3343,34 @@ is how an SOP becomes confidently wrong.**
 ---
 
 ## Update this skill when…
+
+- 🔴 **A PREPARER HANDS YOU HER OWN KEYED DRAFT AND ASKS *"¿hay errores?"*** — **§4F**, added 2026-09-27 from
+  the Zakom 1120-S. 🔑 **Write in every check that actually FOUND something and every one that produced a false
+  positive**, because both cost the same currency: her time at the keyboard. **What §4F is built on:** the free
+  cross-foots, **a cap masquerading as a computation** *(two assets of different cost showing the same
+  depreciation)*, **decomposing a Schedule L imbalance instead of plugging it**, **checking a keyed position
+  against the DECISIONS TABLE before calling it anything**, and 🛑 **transcribing the draft IN FULL first —
+  §1C applies to the firm's own output, and on that return five separate findings were BLANK LINES.**
+
+- 🗣️ 🔴 **LILIAN SAYS SHE CANNOT FOLLOW AN EXPLANATION — *"muy densas… te saltas pasos… una nebulosa."***
+  **§4G**, added 2026-09-28 from the Zakom 1120-S, **where every Form 4562 figure was correct and none of them
+  was usable.** 🛑 **Treat that as a defect in the delivery, never as a gap in her.** ⛔ **And the response is
+  to REWRITE the finding in §4G's five steps — never to explain the same thing again with more words around
+  it.** 🔑 **Write in whichever step was the one that was missing**, because the failure mode repeats: a
+  session holding a chain of causes for an hour compresses it into one sentence and cannot feel the gap.
+
+- ⌨️ 🔴 **LILIAN SHOWS YOU AN ATX SCREEN, OR A KEYED RETURN PROVES A ROUTE WRONG.** **§4H**, started
+  2026-09-28 when she sent the asset screen unprompted *"para que sepas cómo funciona ATX"*. 🔑 **She is
+  the ONLY source for this — a session cannot see the software — so write it down the same day.**
+  🛑 **And write in every route that turned out to be WRONG, with what it cost:** the firm has already
+  promised *"+20,000 on line 4"* for a disposal that ATX correctly sent to K-1 box 17K, and named a
+  *"listed property"* checkbox that does not exist in the product.
+
+- 🖥️ 🆕 **THE PREPARER SENDS ATX'S OWN WARNING LIST.** **§4H ③.** 🔑 **Write in every warning seen, what it
+  actually means and whether it is real** — **on the pilot, six warnings included one (§199A) that the
+  firm's own review had entirely missed, and one that reads alarming and is informational.**
+  ☑️ **Ask for that screenshot as a matter of course once a return is keyed; it is free and it is the
+  software checking the firm's work.**
 
 - **Lilian tells you the delivery missed something she needed.** §4 exists because she said so twice
   — first that the tables never located Form 8829, then that she needs the flow, the explanations

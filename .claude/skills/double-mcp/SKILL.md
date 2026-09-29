@@ -117,7 +117,7 @@ Re-verified **2026-08-06** (the categorization row: **2026-08-26**). Don't burn 
 | **Publishing an organizer** to the client portal | `create_organizer` + `update_organizer` build the draft; a human presses publish. Never promise the client will receive one — §2.2 |
 | **Editing a published organizer's** slides or logic | Frozen at publish. Only `name` and `responsesVisibility` still move |
 | **Saved views** (e.g. "Tax Returns – View 2") | The definition can't be read. Either rebuild the logic from properties + projects, or get the CSV export (§2.1) |
-| **File contents** | `get_file` returns a **download link for the user** — it does not load the file for you. See the privacy rule below |
+| **File contents** | 🔴 🆕 **THIS ROW IS NO LONGER TRUE AND THE CHANGE IS A SAFETY ONE — 2026-09-28.** **`list_files` and `get_file` now both point at a tool called `load_attachments_to_chat`, which LOADS THE DOCUMENT ITSELF into the conversation.** ⛔ **Do NOT use it on a client document.** 🔑 **It bypasses every control the document rule rests on: the redactor's three — never print the text, mask the identity block, delete the download — are all in `redact.py`, and none of them is in that path.** ✅ **The route is unchanged: `get_file` → presigned URL → [`redact.py`](../../../tools/redact-doc/) for a PDF with a text layer, or the §3R ⑥ render rule for a scan.** ⚠️ **`get_file` itself still only returns a link.** ☑️ **The full re-audit this implies is a FOLLOW-UPS row, not a patch** |
 | **Loan tools** (`list_loans`, `get_loan`, schedules…) | ⛔ `BILLING_ACCESS_DENIED` — the client needs a Scale subscription. Gated **per client**, so check before building on them |
 | **Merging duplicate clients** | No tool, and duplicates already exist in the roster. Prevention only — confirm before `create_client` |
 | **Categorizing a transaction** — pending bank-feed item *or* already posted | Not exposed. A session reads, decides and hands over a worklist; a person applies it. 🔴 **The `Intuit_QuickBooks` connector is NOT the way round it — it is authenticated to the firm's own books, not a client's** (audited 2026-08-26; re-check with `company_info`, it is one free call). ⚠️ **`quickbooks_transaction_import` CREATES transactions — never aim it at a correction list.** [Capability map](./references/capability-map.md) §9 |
@@ -543,6 +543,15 @@ on the latest return, that is a finding to report — not a licence to open the 
 ```
 get_file(fileId)  →  presigned URL  →  tools/redact-doc/redact.py  →  redacted text
 ```
+
+⛔ 🔴 🆕 **AND THERE IS NOW A ONE-CALL WAY TO BREAK THIS, SO IT IS NAMED HERE RATHER THAN ONLY IN §2 —
+2026-09-28: `load_attachments_to_chat` LOADS THE DOCUMENT ITSELF INTO THE CONVERSATION.** 🛑 **Do NOT
+use it on a client document.** 🔑 **It is not a shortcut through the route above — it is the route
+deleted:** every control below lives in `redact.py`, and **none of them is in that path.**
+⚠️ **Where it is exposed from is NOT established** — the name appears in the **descriptions of
+`list_files` and `get_file`**, and it is **absent from this session's `mcp__Double__*` inventory**, so it
+is host-level or newly shipped rather than a Double MCP tool the firm has called. ☑️ **The ban is by
+NAME, whatever exposes it**; the prefix gets settled in the re-audit *(FOLLOW-UPS row 135)*.
 
 **Never read the PDF directly.** [`redact.py`](../../../tools/redact-doc/) exists so the identity
 block cannot reach the transcript even by accident: it never prints the document's text, it writes

@@ -1,6 +1,14 @@
 # Mikayel Shakhyan
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+
+> 🔴🚨 **2026-09-26 SWEEP: THE DEADLINE IS NOW 11 DAYS OVERDUE AND NOTHING HAS MOVED AT ALL SINCE
+> 2026-09-19.** `Prepare tax return` is still `wip`; every downstream task (`Review`, `Send draft`,
+> `File`, `Follow up on tax payments`, `Send final returns`) is still `notStarted`. **Zero** new
+> Double notes, files, activity-log entries, Ping meetings/action items, or client emails were found
+> for this client in the full week 2026-09-19 → 2026-09-26 — checked exhaustively (see §6). The 5472
+> has **not** been filed. All five client questions, the transaction summary for Julia, and the "tell
+> him to keep records" item are **unchanged and now 19–21 days old**. See §6 and Outstanding items.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -189,6 +197,35 @@
 
 ### Log
 
+- _(2026-09-26)_ — **Weekly CI sweep, baseline 2026-09-19 — TOP-PRIORITY CHASE, exhaustive, nothing
+  moved.** Sources and what each showed:
+  - **Double:** `get_client` unchanged (`platform: none`). `list_client_properties` — unchanged,
+    still `Tax Return Type: 1120 Proforma`. `list_notes` — **0**, reconfirmed. `list_tasks`
+    (category `project`) — `Prepare tax return` still `wip`, every task after it in the pipeline
+    (`Review tax return`, `Send draft return & e-file authorization`, `File tax return`, `Follow up
+    on tax payments`, `Send final returns to client`) still `notStarted`, all carrying the
+    **2026-09-15** due date. `list_projects` — the "2025 Taxes" project itself still reads
+    `status: inProgress`, `filedAt: null`. `list_activity_log` bounded from 2026-09-19 — **0**
+    entries (nothing logged on this client all week). `list_files` bounded from 2026-09-19 —
+    **0** new files (no CP575-equivalent, no new image scan, nothing).
+  - **Gmail:** `(Shakhyan OR "Lum and Ari" OR Lumari OR "5472" OR dissolution) after:2026/09/19` — 6
+    hits, but the "dissolution" matches are all **AIRTOUCH FLORIDA LLC** (an unrelated client's
+    admin-dissolution warning emails) — a false-positive keyword collision, not this client. The
+    only genuine hit is the firm's own internal weekly CI-sweep notification (2026-09-19). **No
+    email from or about this client exists in the window.**
+  - **Ping:** `search_meetings` scoped to his resolved client id (`fd7aa395-…`), six queries on the
+    5472/update theme — **0 results**. `list_action_items` scoped to his client id — **0 items**.
+    Consistent with the 2026-09-19 finding that this client has no recorded meeting in Ping at all.
+  - **Google Drive:** `search_files` for "Mikayel Shakhyan" and separately `fullText contains
+    'Shakhyan'`, both bounded `modifiedTime > 2026-09-19` — **0 results each.** No new or modified
+    document in any of the three candidate folders (§7) this week.
+  - **Net result:** every one of the outstanding items below is **unchanged**, now roughly three
+    weeks old, and the return's own extended due date is **11 days overdue** with the preparation
+    task still `wip`. Nothing in this sweep's reach can move any of the five client-only questions —
+    only he can.
+  - ⚠️ **Reconfirming the 2026-09-19 finding: this client is STILL named in neither the scope table
+    nor the exclusion table of** [`automation/weekend-ci-sweep.md`](../automation/weekend-ci-sweep.md)
+    **— a human still needs to add his scope-table row.** Not edited by this session (out of scope).
 - _(2026-09-19)_ — **Weekly CI sweep — Ping and Drive read for the FIRST time; Gmail/Double
   re-checked; nothing new from the client.** ⚠️ **Coverage gap found (separate from this client):
   Mikayel Shakhyan is named in neither the scope table nor the exclusion table of**
@@ -330,6 +367,9 @@
   update).** No confirmation of receipt in Julia's Gmail (searched, found nothing); `FOLLOW-UPS.md`
   row 85 itself reads unchanged since 2026-09-07. Then put the two signer positions to her **only
   if the client's answers do not come** (working paper §6D). `FOLLOW-UPS.md` row 85.
+  🔄 **CHASED AGAIN 2026-09-26 — STILL UNCHANGED, now 20 days old.** Still no receipt confirmation
+  found in Gmail. Unchecked directly: `FOLLOW-UPS.md` row 85 itself (out of this sweep's scope to
+  edit; not re-read this pass).
 - **Ask the client the FOUR still-outstanding questions in one message — Q1, Q3, Q4 and Q5** (working
   paper §6A). ⚠️ **Q2 is already in the Russian message drafted 2026-09-07 and sitting with Lilian —
   do not re-ask its money half.** ⛔ **But Q2 is only HALF covered:** the message asks what he paid, and
@@ -343,6 +383,9 @@
   unbounded on his address), no Ping meeting/call for him exists (searched, none found), no Double
   note recording it (0 notes). **No deadline of its own**, but it gates the return, whose own
   extended due date (2026-09-15) has now passed — see §5.
+  🔄 **CHASED AGAIN 2026-09-26 — STILL UNCHANGED.** Now **20 days** since first raised (2026-09-06),
+  Q2 draft **19 days** old. Same exhaustive search (Gmail, Ping, Double) found nothing new. The
+  return's extended due date is now **11 days** overdue.
 - ✅ **`Tax Return Type` mismatch — RESOLVED (or at least changed) as of 2026-09-19.** Was `1040` for
   a nonresident; now reads **`1120 Proforma`** (Double `list_client_properties`, read 2026-09-19).
   No activity-log entry for the change was found (bounded search from 2026-09-05), so who changed it
@@ -353,6 +396,7 @@
   so the bank statements plus the receipts behind Q2 are the entire record. This is a *tell*, not
   an ask (working paper §6C). 🔄 **CHASED 2026-09-19 — no evidence this has been told to him yet**
   (same search of Gmail/Ping/Double as above); **14 days** since first raised (2026-09-05).
+  🔄 **CHASED AGAIN 2026-09-26 — still no evidence, now 21 days** since first raised.
 - ✅ **Ping and Google Drive — BOTH SEARCHED for the first time, 2026-09-19.** ⚠️ **Superseding the
   line below, which is now stale.** **Ping:** `resolve_person` found a Ping client record for him
   (created 2026-06-24) but `get_client_details` shows **`recentMeetingCount: 0`** and
@@ -394,21 +438,29 @@ him, ever), Ping (his resolved client record — 0 meetings), and Double (0 note
 2026-09-07). None of these five is answerable from the sources this sweep can reach; only he can
 close them.
 
+🔄 **Chase pass, 2026-09-26 — all FIVE still unanswered, now ages 20–21 days.** Same sources
+re-checked (Gmail unbounded on his address, Ping client-scoped search + action items, Double notes/
+tasks/activity from 2026-09-19) — nothing new from him. The return's extended due date is now
+**11 days overdue** with `Prepare tax return` still `wip`.
+
 **Ours to settle, without asking him** _(§6B)_:
 
 - [ ] 🔴 Confirm by eye that Parts II and III of the prepared 5472 really are blank. _(Chased
       2026-09-19 — still open, 14 days; none of this sweep's sources can settle it, it needs an
-      actual on-screen read.)_
+      actual on-screen read. Chased again 2026-09-26 — still open, 21 days; still needs an on-screen
+      read, which this sweep cannot perform.)_
 - [ ] 🔴 **The dissolution date** — on **sunbiz.org**, where it is public and readable; the Sunbiz PDF in Double is one of the six unreadable scans, so it is only the fallback. _(Chased 2026-09-19 —
-      still open, 14 days; sunbiz.org remains outside this session's reachable sources.)_
+      still open, 14 days; sunbiz.org remains outside this session's reachable sources. Chased again
+      2026-09-26 — still open, 21 days; sunbiz.org still unreachable from this session.)_
 - [ ] 🔍 **His country of citizenship — on his own Form 8843 in Double.** Do not ask him for it.
 - [ ] 🔍 Whether he holds an ITIN.
 - [x] ✅ **Who owns the LUMARI trademark — MIKAYEL PERSONALLY, CONFIRMED 2026-09-07** from the mark's
       public record, independently of the decoding. ⛔ **The "confirm by eye" step is done.**
 - [ ] 🟠 Whether the Form 7004 actually went, and by which route. _(Chased 2026-09-19 — still open,
-      14 days.)_
+      14 days. Chased again 2026-09-26 — still open, 21 days; no new document or activity found.)_
 - [ ] 🟠 **Read the six image-only documents by eye.** _(Asking him for text-based PDFs is a fallback, and that half would go in a later message — not the one carrying the five questions.)_
-      _(Chased 2026-09-19 — still open, 14 days.)_
+      _(Chased 2026-09-19 — still open, 14 days. Chased again 2026-09-26 — still open, 21 days; no
+      new upload found — `list_files` bounded from 2026-09-19 returned zero new files.)_
 
 ## 7. Links
 

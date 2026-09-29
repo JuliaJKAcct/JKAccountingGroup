@@ -1,6 +1,6 @@
 # GOSSIP MIAMI LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -381,6 +381,45 @@ duplicate it here; a request list goes stale, this list doesn't.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 🔍 **2026-09-26 — Weekly CI sweep (baseline 2026-09-19→2026-09-26).** Double `list_client_properties`
+  re-read for cid 710577: unchanged (`Tax Return Type: 1120-S`, `Organizer Status: Sent`, `Ext. Filed:
+  true`, `Signature: Signed`, `Invoice: Paid`, `Preferred language: Only Russian`). `list_activity_log`
+  bounded ≥2026-09-19: **zero entries** — no movement since the 2026-09-15/09-17 filing events already
+  on file. `list_notes`: both case notes re-read in full — **`491858` (FDOR) still `updatedAt`
+  2026-08-13, unchanged; `485291` (2025 tax prep) still `updatedAt` 2026-08-21, unchanged.** Neither
+  note reflects the return having been filed — both are stale against the filing, consistent with the
+  2026-09-12 sweep's flag.
+  🆕 **One new, minor fact:** a QuickBooks subscription **price-change notice** for "GOSSIP MIAMI, LLC"
+  arrived 2026-09-24 (effective 2026-10-29) — administrative only, but it corroborates the company's
+  QuickBooks connection is still active under the firm's access _(Gmail, 2026-09-24)_.
+  🔴 **Chase pass on §6 Outstanding items (Gmail `(Bogopolskyy OR "Gossip Miami" OR Makalendra OR
+  Kopyrin) after:2026/09/19`; `(DR-26S OR Sunbiz OR "L23000059008") after:2026/09/19`; `(W-9 OR
+  "1099-NEC") (Gossip OR Bogopolskyy) after:2026/09/19`; Drive title search for "DR-26S"/"W-9"):**
+  - 💰 **FDOR DR-26S credit claim — still not filed. 219 days pending** since the credit was confirmed
+    available (2026-02-19). No new correspondence found this pass.
+  - **W-9 for the 1099-NEC contractor — still not requested.** No start date recorded beyond "not yet
+    asked"; the underlying 1099-NEC due date (2 Feb 2026) is now **236 days** past. No new
+    correspondence found.
+  - 🛑 **Victoria Sapa's Sunbiz status (L23000059008) — NOT re-attempted this pass.** Prior sweeps
+    (2026-08-29, 2026-09-12) confirmed `search.sunbiz.org` is blocked at the network-egress-proxy
+    level in this environment, not merely undone; re-testing the same structural block each week
+    spends budget for no new information, so this pass relied on that standing finding rather than
+    retrying. **Flagged as unchased-by-design, not as a clear.**
+  🟠 **A discovery outside this sweep's bound, flagged but NOT written into this file's Operating/CI
+  content and NOT treated as "found this pass":** a broader, unbounded Gmail search (run in error while
+  chasing the Sapa question) surfaced a 2025-11-04 thread in which Yuliana relays Victoria Sapa's own
+  words — that she held a stated minority percentage "по документам на сан бизе" (on Sunbiz's own
+  records) — which may bear directly on the open "does Sapa hold units?" question in §2. **This predates
+  the 2026-09-19 baseline and the sweep rule is to never re-read earlier history**, so it is not folded
+  into §2 here; flagging it in the sweep report for Lilian/Julia to decide whether a dedicated,
+  deliberate re-read of that thread is warranted — this is a discovery to hand off, not a finding of
+  this bounded sweep.
+  🟢 **Sources reached:** Double (properties, activity log, both notes) — exhaustive. Gmail — the four
+  targeted queries above, all bound `after:2026/09/19` except the accidental broader one noted above.
+  Drive — title search only (`excludeContentSnippets: true`); no DR-26S or W-9 document for this client
+  surfaced (the hits were all other clients' W-9 files). Ping — not re-run this pass beyond the
+  `resolve_person` calls already made for Marat and Yuliana (see the Bogopolskyy file); no
+  client-scoped meeting search specific to Gossip Miami's own open items this pass.
 - 🔍 **2026-09-12 — Incremental CI sweep (baseline 2026-08-29→2026-09-12).** This client is under very active direct tax-prep work (see the entries below, most recent 2026-09-11) — this pass adds only what those sessions had not already captured, plus the chase pass on this file's own open items.
   - 🆕 **The 2025 Business Tax Organizer — previously "ZERO answers, never started" — was OPENED BY THE CLIENT (Marat Bogopolskyy) on 2026-09-10** (Double activity log, `organizer_opened`). Whether it now holds any actual answers is **not established** — reading its responses is gated by the [`double-mcp`](../../../.claude/skills/double-mcp/) §2.2 routine (tell the person first, delete the session after) and was not done in this sweep. Worth checking directly next time this client is worked, since it may now hold the client's own account of the sale.
   - ⚠️ **Double case note 485291 (2025 tax preparation) is STALE — still `updatedAt` 2026-08-21**, unchanged despite the return reaching "Ready for Review" (project status changed 2026-09-09) and substantial further work logged below through 2026-09-11. Note 491858 (FDOR) is also unchanged since 2026-08-13. Both are flagged for whoever next touches this client to mirror.

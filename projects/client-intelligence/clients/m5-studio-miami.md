@@ -1,6 +1,22 @@
 # M5 Studio Miami
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+
+> 🟢 **2026-09-26 SWEEP — NEW CLIENT CONTACT, AND IT ANSWERS AN OLD QUESTION.** On 2026-09-22 the
+> client emailed Julia asking the firm to file a Sunbiz **Statement of Change** moving the
+> company's principal/mailing address off a PMB address in **Miramar, FL** to the firm's own Miami
+> office — because **Bank of America will not open the company's business bank account** while a
+> PMB address is on file, and he needs the account urgently to move capital into the company.
+> Forwarded to Lilian the same day. **This corroborates, for the first time, that the entity's own
+> prior address was in Florida** (Miramar, Broward County) — closing (as "consistent with", not a
+> confirmation of the fax record itself) the long-open question of whether the domestic SS-4 fax
+> routing was correctly assumed (§5). ⚠️ **No reply to the client and no confirmation that the
+> Statement of Change was filed was found this sweep** — open action, see §6/Outstanding items.
+> The **CP575 verification notice is still not on file** (due ~2026-09-24 — 2 days ago as of this
+> sweep). ⚠️ **Also found: the SIGNED Form 2848 file's metadata NOW reads created/modified
+> 2026-09-22 — a NEW timestamp, different from the 2026-08-27 creation previously recorded.**
+> Not established whether the file was replaced/re-uploaded, or this is a search artifact — flag
+> for Lilian, do not open the PDF. See §6.
 
 > 🟢 **THE EIN ARRIVED — 2026-09-19 incremental sweep.** The IRS assigned **EIN `30-1507078`** to
 > **M5 STUDIO MIAMI LLC** on **2026-09-10** (IRS EIN Unit fax to the firm's fax (786) 866-6298,
@@ -74,7 +90,7 @@ link). Never write the credential itself here.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| Sunbiz | Entity formation / status | n/a (public) | **Document number `L26000418311`.** Articles of Organization filed **2026-08-07**, effective **2026-08-03**; state tracking number `4004 7953 0504` — ⚠️ **written in groups of four; the state's own email has it unspaced, and twelve bare digits abort the published-page build** (and `W26000112020`, the document number the state gave the **rejected** first submission — §6) |
+| Sunbiz | Entity formation / status | n/a (public) | **Document number `L26000418311`.** Articles of Organization filed **2026-08-07**, effective **2026-08-03**; state tracking number `4004 7953 0504` — ⚠️ **written in groups of four; the state's own email has it unspaced, and twelve bare digits abort the published-page build** (and `W26000112020`, the document number the state gave the **rejected** first submission — §6). **Registered Agent: the firm** (confirmed by the client, 2026-09-22). 🆕 **A Statement of Change is now requested (2026-09-22, unconfirmed as filed)** moving the principal/mailing address off a PMB in Miramar, FL to the firm's own Miami office — §6 |
 | IRS | EIN application | n/a | **SS-4 faxed 2026-08-18 to 855-641-6935** (the domestic fax — chosen on where the *entity* is; ⚠️ assumed, see §5), **and faxed again 2026-08-27 as a "second attempt"**. ✅ **EIN assigned: `30-1507078`**, dated **2026-09-10**, entity name `M5 STUDIO MIAMI LLC` — read off the IRS EIN Unit's fax to the firm's fax (786) 866-6298 (2026-09-19 sweep). **The official CP575 verification notice is separate and was due ~10 business days after assignment (~2026-09-24) — not yet on file.** |
 | Google Drive | The client's document folder — the Articles and **both** SS-4s | _(pending — link the folder here)_ | Folder **"M5 Studio Miami"**, created 2026-08-03, holds `Articles of Incorporation - M5 Studio Miami LLC.pdf` (filed in Drive 2026-08-12), the SS-4 "for signature" draft (2026-08-14) and the final SS-4 (2026-08-18) — confirmed present, unchanged, 2026-09-12. ⚠️ **The Form 2848 is NOT in it** — it sits in `Tax information authorization - form 2848 IRS → SIGNED` (§5) |
 | Email / web | The business's own domain | n/a | 🔎 **New, found 2026-09-12:** the owner now corresponds from **`alex@m5miami.com`**, alongside his personal `alexshtefan@gmail.com` — the business has its own domain (`m5miami.com`) as of at least early August 2026 |
@@ -138,7 +154,12 @@ watch-outs, one-off arrangements, history that affects the work.
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
 - 🟢 **THE EIN IS IN: `30-1507078`, assigned 2026-09-10** — closing the item that was 10 days overdue at the last sweep. See §6 for the full trail (which fax, which date, who it went to).
-- 🔴 **THE SS-4 WENT BY FAX, NOT ONLINE — because the owners are foreign investors with no SSN or ITIN, and the online tool refuses that.** The IRS EIN Assistant requires the **responsible party** to hold an SSN, ITIN or EIN; both investors are **foreign investors whose E-2 visa cases were still being filed** through Julia's referral counsel in August 2026 _(nationality is not stated in any source the firm holds — do not assume it from the names)_ (Julia's own introduction, 2026-07-13: *"international investors looking to open a business in the US for E2 visa purposes"*), so **on the firm's understanding there was no number to enter — and that understanding has NOT been checked against the filed form.** That is the go/no-go fork in [EIN SOP §1](../../sops/ein-application-irs.md) → **Path B: Form SS-4 by fax, `Foreign` on line 7b.** ⚠️ **Where it was sent is a SECOND, separate test:** it went to **855-641-6935**, the **domestic** fax, because the test is where *the entity* is, and this is a Florida company — the owner living abroad does not make it an international filing. ⚠️ **Applied on an assumption, because this client's own address is recorded NOWHERE** (§4, and the checklist below): [EIN SOP §3](../../sops/ein-application-irs.md) names the exception — *a Sunbiz registration whose only US address is the registered agent's, with the office and operations abroad* — which would have been the other fax. **Settle the address and this stops being an assumption.** **Faxed 2026-08-18, 3 pages**, and **FAXED AGAIN on 2026-08-27, 8 pages, subject `… - Second attempt`** — both to the same number, both confirmed sent by MyFax in Julia's mailbox. ⏳ **The ~4-business-day clock runs from the SECOND attempt: due about 2026-09-02**, and as of **2026-09-01** no EIN had been recorded as arriving. ❓ **Why it was re-sent is not recorded anywhere** — no delivery failure was found; the page count went from 3 to 8, which suggests something was added (the Form 2848?), not that the first was rejected. **Ask Lilian before assuming either.** It comes back to the **designee's fax, (786) 866-6298**, not to the client. ⓘ Confirming the reason on the form itself takes one look: **line 7b of the filed SS-4 in the client's Drive folder should read `Foreign`.**
+- 🔴 **THE SS-4 WENT BY FAX, NOT ONLINE — because the owners are foreign investors with no SSN or ITIN, and the online tool refuses that.** The IRS EIN Assistant requires the **responsible party** to hold an SSN, ITIN or EIN; both investors are **foreign investors whose E-2 visa cases were still being filed** through Julia's referral counsel in August 2026 _(nationality is not stated in any source the firm holds — do not assume it from the names)_ (Julia's own introduction, 2026-07-13: *"international investors looking to open a business in the US for E2 visa purposes"*), so **on the firm's understanding there was no number to enter — and that understanding has NOT been checked against the filed form.** That is the go/no-go fork in [EIN SOP §1](../../sops/ein-application-irs.md) → **Path B: Form SS-4 by fax, `Foreign` on line 7b.** ⚠️ **Where it was sent is a SECOND, separate test:** it went to **855-641-6935**, the **domestic** fax, because the test is where *the entity* is, and this is a Florida company — the owner living abroad does not make it an international filing. ⚠️ **Applied on an assumption, because this client's own address is recorded NOWHERE** (§4, and the checklist below): [EIN SOP §3](../../sops/ein-application-irs.md) names the exception — *a Sunbiz registration whose only US address is the registered agent's, with the office and operations abroad* — which would have been the other fax. **Settle the address and this stops being an assumption.**
+  🟢 **2026-09-26 — corroborated, not fully settled:** the client's 2026-09-22 email (§6) confirms
+  the entity's own Sunbiz address was a PMB in **Miramar, FL** — a Florida address, consistent with
+  the domestic-fax assumption. This is corroboration from a new, independent source, not a read of
+  the SS-4 itself, so the checklist item below (read line 7b/the address off the filed form) is
+  still open. **Faxed 2026-08-18, 3 pages**, and **FAXED AGAIN on 2026-08-27, 8 pages, subject `… - Second attempt`** — both to the same number, both confirmed sent by MyFax in Julia's mailbox. ⏳ **The ~4-business-day clock runs from the SECOND attempt: due about 2026-09-02**, and as of **2026-09-01** no EIN had been recorded as arriving. ❓ **Why it was re-sent is not recorded anywhere** — no delivery failure was found; the page count went from 3 to 8, which suggests something was added (the Form 2848?), not that the first was rejected. **Ask Lilian before assuming either.** It comes back to the **designee's fax, (786) 866-6298**, not to the client. ⓘ Confirming the reason on the form itself takes one look: **line 7b of the filed SS-4 in the client's Drive folder should read `Foreign`.**
 - 🔴 **THE SS-4 DESIGNEE'S AUTHORITY IS NOW DEAD — the EIN was assigned and released to it on
   2026-09-10.** The designee block was the only working authorization while the EIN was pending;
   by its own terms it *"terminates at the time the EIN is assigned and released to the
@@ -337,6 +358,50 @@ A running, dated record as we build this profile.
   - **Google Drive** (`excludeContentSnippets: true`): the `M5 Studio Miami` folder additionally holds `Articles of Incorporation - M5 Studio Miami LLC.pdf`, filed **2026-08-12** — the state's own filed Articles, not just its confirmation email. The SIGNED Form 2848 file's metadata was re-checked and is **unchanged** from the 2026-09-01 entry below (created 2026-08-27 17:08 GMT, modified 19:44 GMT) — **not opened**, per this sweep's instruction not to surface an identifier from it.
   - **Repo** (`grep` across `projects/sops/`, `FOLLOW-UPS.md`, `BACKLOG.md`): `firm-identity.md` §4 is referenced (the general Form 2848/8821 eligibility rule already cited in §5 — no new content). **`FOLLOW-UPS.md` row 67** already tracks this exact matter (the double fax, the overdue EIN, and the SIGNED Form 2848 question) as Lilian's own open task, dated 2026-09-01 — now 11 days old, unchanged, and not edited here (out of this sweep's scope). No hits in `BACKLOG.md`.
 
+- _(2026-09-26)_ — 🟢 **INCREMENTAL SWEEP, baseline 2026-09-19.** Double: `list_clients(name: "M5
+  Studio")` again returned zero — reconfirms no Double account exists (fourth confirmation).
+  Gmail (`(M5 OR Shtefan OR Dydenko OR "CP575" OR "CP 575" OR "2848") after:2026/09/19`, plus a
+  second targeted query for Sunbiz/line-16/wholesale/retail/responsible-party terms, plus
+  `from:alex@m5miami.com after:2026/09/19`): found **one new thread, 2026-09-22** — Oleksii
+  ("Alex") Shtefan emailed Julia directly (`M5 STUDIO MIAMI LLC — смена адреса на Sunbiz`), read in
+  full (a business filing request, not an identifier — safe to read per the redaction rule):
+  - **The company's Sunbiz address on file is a PMB address in Miramar, FL.** Bank of America will
+    not open the company's business bank account while that address stands, and he needs the
+    account urgently to move capital into the company.
+  - **He asked the firm to file a Sunbiz Statement of Change** moving both the principal and
+    mailing address to the firm's own Miami office (Ironside) — the street address itself is not
+    repeated here (barred content) — and confirmed the **registered agent stays as the firm**
+    (previously not stated explicitly in any source read for this file).
+  - He asked two direct questions: whether the firm can file the Statement of Change itself (and at
+    what cost/timing), and whether he needs to sign anything.
+  - Julia forwarded the email to Lilian six minutes later, same day (2026-09-22 14:33 GMT). **No
+    reply to the client, and no confirmation that the Statement of Change was actually filed, was
+    found in this sweep.**
+  - 🔑 **This is the first source to establish, even indirectly, where the entity's own address
+    actually was** — closing (as corroborating, not as independent confirmation of the SS-4 fax
+    record itself) the §5 question of whether the domestic-fax routing assumption was sound: Miramar
+    is in Florida, so the entity was Florida-based as assumed.
+  - **A second Gmail query for `CP 575`/`CP575` after 2026-09-19 found nothing new** — the official
+    CP575 verification notice is still not on file, now **2 days past** its own ~10-business-day
+    estimate (due ~2026-09-24).
+  - **No answer was found on line 16, which investor signed as responsible party, or the designee
+    matching check** — none of the targeted queries surfaced anything on these.
+  Google Drive (`title contains 'M5 Studio' and modifiedTime > 2026-09-19`, bounded,
+  `excludeContentSnippets: true`): **one hit** — but it is the **already-known SIGNED Form 2848
+  file**, and its metadata now reads **`createdTime: 2026-09-22T15:09:50Z`, `modifiedTime:
+  2026-09-22T15:10:10Z`** — ⚠️ **a NEW pair of timestamps, different from the 2026-08-27 17:08/19:44
+  GMT creation previously recorded in this file (2026-09-01, 2026-09-12 entries).** Not established
+  whether the file was replaced/re-uploaded around the same time as the address-change request, or
+  this is some artifact of how the search API reports `createdTime` on a moved/touched file — **ask
+  Lilian; do not open the PDF to investigate.** This sits on top of, and does not resolve, the
+  already-open question of whether a Form 2848 was validly signed and sent for this client.
+  Ping (`resolve_person` unchanged NO_MATCH for both investors; org-wide `search_meetings`, six
+  queries on the EIN/CP575/Form-2848 theme): **0 relevant results** — the only two hits mentioning
+  "M5"/"Studio Miami" are the same 2026-07-13 Zoom call already read on 2026-09-12, re-surfaced by
+  the search, nothing new.
+  **Chase pass (Step 6, this file's own open items):** see the updated Outstanding items below —
+  net result, one genuinely new development (the address-change request) and everything else
+  unchanged.
 - _(2026-09-19)_ — 🟢 **INCREMENTAL SWEEP, baseline 2026-09-12. THE EIN CHASE CLOSES.** Double: a
   direct name search for "M5 Studio" returned zero results again (`list_clients`, status: all) —
   re-confirms no Double account exists; not re-searched further per the standing instruction not
@@ -373,15 +438,33 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
+- 🆕🔴 **URGENT, CLIENT-FACING (raised 2026-09-22, 4 days old): file — or confirm filing of — the
+  Sunbiz Statement of Change the client requested**, moving M5 Studio Miami's principal/mailing
+  address off a PMB in Miramar to the firm's own Miami office, and reply to him on cost/timing and
+  whether he needs to sign anything. **He called it urgent — a Bank of America business account and
+  a capital transfer into the company both depend on it.** No reply to the client and no filing
+  confirmation was found in Gmail this sweep (2026-09-26). See §6.
 - ✅ ~~CHASE THE EIN.~~ **CLOSED 2026-09-19: EIN `30-1507078` assigned 2026-09-10, sent to the firm and forwarded to the client 2026-09-15.** See §5/§6. ❓ **Still open, lower stakes now:** why the SS-4 needed a second fax on 2026-08-27 — never established, and now unlikely to matter. 🔴 **NEW: chase the CP575 verification notice** — due ~10 business days from assignment (~2026-09-24), not yet on file as of this sweep. Once it arrives, save it; it is the only replaceable-by-147C-only confirmation. Update [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 67 to reflect the EIN's arrival (out of this sweep's merge scope to edit that file directly).
+  🔄 **CHASED 2026-09-26 — CP575 STILL NOT ON FILE, now 2 days past its own ~2026-09-24 estimate.**
+  Gmail searched again for `CP575`/`CP 575` after 2026-09-19, nothing found. Not yet a firm alarm
+  (the estimate is soft — "should follow within 10 business days") but worth another check next
+  week if it still hasn't shown.
 - 🔴 **Ask Lilian whether a Form 2848 was SIGNED AND SENT for this client on 2026-08-27** — the file
   sits in Drive's `Tax information authorization - form 2848 IRS → SIGNED` folder, created 17:08 and
   modified 19:44 GMT that afternoon (§5, §6). The form is dated 2026-08-12, before the 2026-08-14 finding
   that a 2848 may only name someone eligible to practice before the IRS. **Lilian → invalid, and hers is the
   Form 8821; a 2848 must name Julia.** And neither form works until the EIN exists — while the
   application is pending, the SS-4 designee block is the authorization that works.
+  🆕 **NEW, 2026-09-26 — the SAME file's metadata now reads created/modified 2026-09-22**, not the
+  2026-08-27 timestamps recorded above. Not established whether it was replaced/re-uploaded or this
+  is a search-API artifact — **ask Lilian; do not open the PDF to investigate.**
 - **Read back what was actually filed** — line 16, and which investor signed as responsible party —
-  off the final SS-4 in Drive, and record both here.
+  off the final SS-4 in Drive, and record both here. 🔄 **CHASED 2026-09-26 — still not read back;**
+  targeted Gmail search for "line 16"/"responsible party"/wholesale/retail terms after 2026-09-19
+  found nothing new. Still open.
+
+_(Below the published-card cutoff — still tracked, unchanged this week.)_
+
 - 🟡 **Confirm SS-4 line 16 — TWO questions, one of them never asked.** The install question is
   answered (no → not Construction). Left: **(1)** materials or design fees (→ Other if design);
   **(2)** if materials, **who buys them** — the general public (**Retail**) or contractors and
@@ -405,7 +488,11 @@ reports for this client.
 - [x] Exact legal name (`M5 STUDIO MIAMI LLC`), **document number `L26000418311`** and formation/effective dates — all three from the 2026-08-11 state filing email
 - [x] Entity type — **Florida LLC**; **[ ] single- or multi-member is still open** (two investors), and whether an S-election is planned
 - [ ] Whether the responsible party holds an SSN/ITIN — **understood to be neither** (foreign investors, E-2 pending), which is why the SS-4 went by fax, but **nobody has confirmed it against line 7b of the filed form**. **[ ] WHICH of the two investors signed as responsible party is still not recorded** — read it off the filed SS-4
-- [ ] Mailing and physical addresses, with county
+- [~] Mailing and physical addresses, with county — **partially answered 2026-09-26**: the entity's
+  *prior* Sunbiz address was a PMB in Miramar, FL (Broward County), and a change to the firm's own
+  Miami office is now requested and pending (§5/§6). The client's own physical/mailing address is
+  otherwise still not on file — street-level detail is barred content regardless (two-data-homes
+  rule)
 - [x] Whether the firm goes in the SS-4 Third Party Designee block — **yes, done** (Lilian's name, the FIRM's address, her work line, the JK fax; now the firm's standing pattern — [EIN SOP §4D](../../sops/ein-application-irs.md))
 - [x] Does the client have a Double account? — **No.** Settled 2026-08-29, re-confirmed 2026-09-19 (a direct Double search for "M5 Studio" again returned zero results)
 - [x] The EIN — **`30-1507078`, assigned 2026-09-10** (2026-09-19 sweep, read off the IRS EIN Unit's fax). **[ ] The CP575 verification notice is separate and still not on file**, due ~2026-09-24

@@ -54,7 +54,7 @@ Writes are marked **W**. Everything unmarked is a read. Nothing in this file ove
 | …read the team's **time tracking**? | **Yes** — `list_timers` (410 entries), `list_workstreams` |
 | …change a **monthly close's** due date or assignees? | Yes, but both have irreversible side effects — see §7 |
 | …work with **loans**? | **No** — billing-gated, needs a Scale subscription per client |
-| …read a **file's contents**? | **No** — `get_file` returns a download link for the human, not the text |
+| …read a **file's contents**? | ⚠️ **Not the answer it used to be — 2026-09-28.** `get_file` still returns only a **download link**, ⛔ **but `list_files` and `get_file` now both point at a tool named `load_attachments_to_chat`, which DOES load the document into the conversation.** 🛑 **Do NOT use it on a client document** — it bypasses the redactor's three controls entirely. ✅ **The sanctioned route is unchanged: link → [`redact.py`](../../../../tools/redact-doc/), or the render rule for a scan.** See §6 and [SKILL §2](../SKILL.md) |
 | …read a **saved view** ("Tax Returns – View 2")? | **No** — ask for a CSV export instead |
 | …make the firm's **Metrics** dashboards? | Yes for QuickBooks/Xero clients — tabs, variables, visuals are all writable |
 
@@ -243,7 +243,8 @@ Other hard edges:
 |---|---|---|
 | `list_file_library` | ✅ (Jul) | **Folders only** |
 | `list_files` | ✅ (Jul) | Documents in a folder, plus its subfolders. Read each file's `source` before acting on its id |
-| `get_file` | ✅ (Jul) | Searches by `clientId` + **name**, not by a `list_files` id. Returns a **download link for the user** — it does not load contents |
+| `get_file` | ✅ (Jul) | Searches by `clientId` + **name**, not by a `list_files` id. Returns a **download link for the user** — **it** does not load contents |
+| `load_attachments_to_chat` | ⛔ 🆕 **DO NOT USE ON A CLIENT DOCUMENT — 2026-09-28** | 🔴 **This one DOES load the document itself into the conversation**, which is why the "no tool reads contents" answer above is no longer the whole truth. ⛔ **It bypasses every control the document rule rests on** — never print the text, mask the identity block, delete the download are all in [`redact.py`](../../../../tools/redact-doc/) and **none of them is in this path.** ⚠️ **Where it lives is NOT established:** the name appears in the **descriptions of `list_files` and `get_file`**, and it is **absent from this session's `mcp__Double__*` inventory** — so it is a host-level or newly-shipped surface, not a Double MCP tool we have called. ☑️ **Establish the prefix during the re-audit** *(FOLLOW-UPS row 135)*; until then the ban is by NAME, whatever exposes it |
 | `add_file_folder` | ◻︎ **W** | |
 | `add_file_to_client` | ◻︎ **W** | Needs a `fileKey` from a confirmed upload |
 | `internal_upload_file` | ◻︎ **W** | Opens an **interactive picker the user must operate** — a session cannot upload by itself. Never pass a `postUpload` that writes a property |
@@ -527,7 +528,7 @@ tested was not. Don't build anything on loan tools without checking first.
 | **Publishing an organizer** to the client portal | Build the draft, then Lilian publishes — §5 |
 | **Editing a published organizer's** slides or logic | Frozen once published |
 | **Saved views** ("Tax Returns – View 2") | Rebuild from properties + projects, or ask for the CSV export (SKILL §2.1) |
-| **File contents** | `get_file` gives a link for the human |
+| **File contents** | `get_file` gives a link for the human — ⚠️ 🆕 **but `load_attachments_to_chat` loads the document itself, so this row is no longer a capability gap; it is a RULE.** ⛔ **Do not use it on a client document** — §6 |
 | **Loan tools** | Billing-gated — §13 |
 | **Merging duplicate clients** | No tool. Prevention only |
 | **Bank Feeds** — listing or categorizing a client's feed | Not exposed; the ledger endpoint shows posted entries only — §9 |

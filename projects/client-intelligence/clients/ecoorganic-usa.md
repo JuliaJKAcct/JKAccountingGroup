@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -298,6 +298,17 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - **Applies?** Yes — CT Annual Report, due March 31 annually; 2026 filing accepted _(Gmail, 2026-03-20 → 2026-04-07)_.
 - Client carries commercial General Liability + Workers' Comp — carrier **Atlantic Casualty Insurance Co.**, placed via broker **JMG Insurance Corp**, annual policy term ~April 16 to April 16. Renewal triggers an **annual GL/payroll premium audit** (a remote auditor) requiring the firm to supply the P&L and a contractor/1099 listing — an audit cycle ran May–July 2026 _(Gmail; 2026-08-01 sweep)_.
 - **One-time cleanup filings (April 2026):** a **Form 8822-B** (IRS address change) was prepared and sent for review (source: Gmail, Lilian → Julia, 2026-04-09), and a **Connecticut Secretary of State business filing / registered-agent update** was processed around the same time, per CT SOS correspondence (source: Gmail, Apr 2026). Whether either recurs annually is **not established** — treat as a one-time cleanup unless a pattern shows up in a future sweep.
+- 🆕 **A SECOND CT Secretary of State filing — a Business Address Change — was filed and Approved on
+  2026-09-23** (filing # `0014271709`, filed 12:34 PM, Business ALEI `US-CT.BER:3133412`) _(Gmail,
+  `do-not-reply-business@notifications.ct.gov`, 2026-09-23; found by the 2026-09-26 CI sweep)_. **The
+  new address itself is not opened here** (it was an unopened attachment) — only the fact and date of
+  the filing. Whether this connects to the 2026-04-07 principal-agent change (§6) or is a further,
+  separate move is **not established**; worth asking Lilian/Julia which address it reflects. The firm
+  billed this work as **JK Accounting Group invoice #2305**, sent to Ishkhan's on-file contact
+  address on 2026-09-23 _(Gmail, QuickBooks notification; dollar amount withheld
+  per the two-data-homes rule)_. A **Zelle payment from ECOORGANIC USA LLC to Julia's account** was
+  received 2026-09-25 _(Gmail, Chase notification; amount withheld)_ — presumably satisfying that
+  invoice or a related one; not confirmed which.
 
 ## 5. Key facts & quirks
 
@@ -932,6 +943,51 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   - **Nine months of 2025 with no sales-tax return on file / two unopened DRS notices — no update found
     this run; now joined by the 2026-09-18 alert above.** The zero-filing-basis question stays parked
     per Lilian's 2026-08-13 instruction (not chased, by design).
+- 2026-09-26 — **Weekly CI sweep (baseline 2026-09-19→2026-09-26).** Double `list_client_properties`
+  re-read: unchanged. `list_activity_log` bounded ≥2026-09-19: **zero entries** — no filing-related
+  events, no property changes recorded there since the 2026-09-15 filing day. `list_notes`: case note
+  `485258` (QuickBooks primary-admin handover) re-read in full — **still `updatedAt` 2026-08-06,
+  unchanged.**
+  🆕 **Two new facts, both from Gmail, neither previously in this file:** a **second CT Secretary of
+  State filing — a Business Address Change, filing # `0014271709`, filed and Approved 2026-09-23** (see
+  §4 Licenses & other filings for detail and sourcing) — the underlying address itself was not opened;
+  and the firm's own **invoice #2305, sent to Ishkhan's email 2026-09-23**, followed by a **Zelle
+  payment from ECOORGANIC USA LLC to Julia 2026-09-25** (dollar amounts withheld). Whether the payment
+  satisfies invoice #2305 specifically is not confirmed.
+  🔴 **Chase pass on §6 Outstanding items (Gmail `(Markarian OR Ecoorganic OR Corganix OR Turo)
+  after:2026/09/19` and `(Turo) after:2026/09/01`; Ping org-wide semantic search; Drive title search on
+  "Ecoorganic"):**
+  - **CT-941 past-due notice (arrived 2026-08-18)** — no reply, filing or other action found this pass
+    either. **39 days pending, still not actioned.** The 2026-09-18 DRS correspondence alert (found last
+    pass) also has no follow-up visible — still unopened, still unread through myconneCT.
+  - **QuickBooks primary-admin handover (case note 485258)** — unchanged. **51 days pending** since
+    2026-08-06, no deadline. (Same matter as `ishkhan-markarian.md`'s outstanding item; see that file
+    for the parallel chase.)
+  - **Turo per-car breakdown / Turo escalation** — no new correspondence found (see
+    `artem-markarian.md` §6 for the full chase — this is his open item, routed there per the
+    sweep-by-owner rule; the Turo activity itself is reported on his return, not the company's, per
+    Julia's 2026-09-01 ruling).
+  - **Nine months of 2025 with no sales-tax return on file / two unopened DRS notices** — no update
+    found. **The zero-filing-basis question stays parked** per Lilian's 2026-08-13 instruction.
+  🟡 **CONTRADICTION RE-VERIFICATION (per this sweep's instructions) — Ecoorganic's 2025 Form 1120-S,
+  filed 2026-09-15.** Re-confirmed the Filed status stands (Double properties + the 2026-09-15
+  activity-log events already on file; no new activity since). **Nothing new corroborates OR
+  contradicts whether the prior blockers this file records as open before filing — the bonus-
+  depreciation-removal election statement, the per-shareholder K-1/basis split, the ≥13 unresolved
+  1099 findings, the `Outside services` classification briefing for Julia — were actually resolved
+  before transmission.** No Double activity-log entry, no note, and no Gmail correspondence found this
+  pass discusses the return's resolution one way or the other. **STILL UNCONFIRMED — the position is
+  unchanged from the 2026-09-19 sweep:** silence in the activity log is not evidence of resolution,
+  per this file's and the firm's method's own standing rule (a negative belongs to the search that
+  produced it). No budget was spent this pass re-reading the working paper itself
+  ([`2025-form-1120s.md`](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md)) to check whether it
+  was updated post-filing — that would be the next step if this needs settling.
+  🟢 **Sources reached:** Double (properties, activity log, notes, contacts) — exhaustive for the bound
+  window. Gmail — broad name/topic searches, unbounded on Turo since 2026-09-01 — found the two new
+  facts above and nothing else. Ping — org-wide semantic search returned no client-scoped hit dated in
+  the window (consistent with this client having no indexed Ping meetings). Drive — title search only
+  (`excludeContentSnippets: true`); no document dated after 2026-09-19 surfaced; the CT filing PDFs
+  themselves sit as Gmail attachments and were not opened or pulled into Drive by this sweep.
 - 2026-09-02 (evening) — 📗 **The 2025 GENERAL LEDGER arrived, the reconciliation is done, and the
   reclassification entry is finished (Lilian).** She supplied the client's own General Ledger, P&L and
   Balance Sheet and asked for the reconciliation of the discrepancies this firm had flagged. **All 51

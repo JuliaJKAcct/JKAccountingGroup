@@ -1,6 +1,6 @@
 # Ishkhan Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-19
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -110,6 +110,27 @@ the actual details.
 
 ### Log
 
+- 2026-09-26 — 🔎 **CORROBORATION PASS (weekly CI sweep, bound 2026-09-19→2026-09-26) — NO MOVEMENT
+  FOUND.** Double `get_client` + `list_client_properties` re-read: unchanged (joint record `cid
+  710638`, `Income Tax: true`, `Tax Return Type: 1040`, `Organizer Status: Sent`, `Assigned Staff:
+  Lilian Gonzalez`). `list_activity_log` (bound ≥2026-09-19): **zero entries.** `list_notes`:
+  **still zero notes on this record** (confirming §2's "no case note here"). Ping `resolve_person`
+  re-confirmed the same joint client record.
+  🔴 **Chase pass on §6 Outstanding items:**
+  - **How did the transfer happen (sale / gift / redemption)?** — Lilian's 2026-09-04 email to Julia
+    was searched for again in Gmail (thread `1a06e415c737bd63`): **still no reply from Julia found in
+    that thread.** Still open, **22 days pending** (2026-09-04 → 2026-09-26), no deadline set.
+  - **QuickBooks primary-admin handover** — searched Gmail for `(QuickBooks OR "QR code") (Ishkhan OR
+    Ecoorganic OR Corganix) after:2026/08/06`: the only hits are the firm's own routine QuickBooks
+    invoice notifications to the company (unrelated to the handover — see the Ecoorganic entry below).
+    **No message found about Ishkhan's ID verification / QR code being completed.** Case note `485258`
+    confirmed unchanged (see the Ecoorganic file). Still open, **51 days pending** since 2026-08-06,
+    no deadline.
+  🟢 **Sources reached:** Double (client, properties, activity log, notes) — exhaustive. Gmail —
+  searched by name and by the two specific open threads; nothing new found. Ping — `resolve_person`
+  only this pass (a client-scoped meeting/action-item search was not re-run; treat Ping coverage as
+  **not re-verified**, not as "checked and clear," this pass). Drive — not searched this pass; no new
+  lead pointed at it.
 - 2026-09-19 — 🔎 **CORROBORATION PASS (weekly CI sweep) — NOT a first read; this file already carried
   substantial content from concurrent tax-prep sessions, so this pass focused on Ping / Gmail / Drive
   against the outstanding items below, plus a light Double re-check.**
@@ -227,10 +248,10 @@ the actual details.
 ### Outstanding items (CI-only — never in the SOP)
 
 - ✅ **Double client id recorded 2026-09-02 (cid 710638, joint with his wife).** ✅ **RESOLVED 2026-09-19: the firm DOES prepare his 1040** — Double properties (`Income Tax: true`, `Tax Return Type: 1040`, `Assigned Staff: Lilian`). It matters — his 2025 K-1 lands on it.
-- 🔴 **How did the transfer at the close of 2025 happen — sale, gift, or redemption?** 📌 **Sharpened 2026-09-02 (evening):** a **sale** is a 2025 stock sale on HIS Schedule D, measured against his basis **after** all 2025 K-1 adjustments; a **gift** raises a **Form 709** *(and, if he is a nonresident alien, US-corporation stock may be outside the US gift tax — status not established)* and carries his basis to his son; a **redemption by the company** is a §302 question needing a family-attribution waiver, and it is the only version that touches the company's own return. It decides his own 2025 reporting **and** his son's 2026 opening basis. **One question, three returns.** 🛠️ **Lilian put it to Julia by email 2026-09-04** ("How did Artem get his 50%? Did he buy the shares from Ishkhan?"). 🔎 **Chased 2026-09-19: no reply found in that Gmail thread — 15 days pending, no deadline.**
+- 🔴 **How did the transfer at the close of 2025 happen — sale, gift, or redemption?** 📌 **Sharpened 2026-09-02 (evening):** a **sale** is a 2025 stock sale on HIS Schedule D, measured against his basis **after** all 2025 K-1 adjustments; a **gift** raises a **Form 709** *(and, if he is a nonresident alien, US-corporation stock may be outside the US gift tax — status not established)* and carries his basis to his son; a **redemption by the company** is a §302 question needing a family-attribution waiver, and it is the only version that touches the company's own return. It decides his own 2025 reporting **and** his son's 2026 opening basis. **One question, three returns.** 🛠️ **Lilian put it to Julia by email 2026-09-04** ("How did Artem get his 50%? Did he buy the shares from Ishkhan?"). 🔎 **Chased 2026-09-19: no reply found in that Gmail thread — 15 days pending, no deadline. Chased again 2026-09-26: still no reply in that thread — 22 days pending.**
 - 🔴 **Get his 2024 Form 7203 line 15 — it is now on the critical path**, not a nice-to-have: it is the opening basis for the 2025 distributions test on the company's return. ✅ **Already recorded as IN HAND as of 2026-09-05 (§6) — not re-opened.**
 - 🔴 **Whose are the two personal checking accounts that funded and received the company's owner accounts in 2025, and whose apartment rent did the company pay?** (§5.) Julia's call, with one question to the client. ✅ **Already recorded as settled 2026-09-02 ("todo es de Ishkhan") — not re-opened.**
-- ⚠️ **The QuickBooks primary-admin handover is waiting on him personally.** 🔎 **Chased 2026-09-19: a Ping search (client-scoped) and a Gmail search for "QuickBooks handover" found no update — still open, age not established.**
+- ⚠️ **The QuickBooks primary-admin handover is waiting on him personally.** 🔎 **Chased 2026-09-19: a Ping search (client-scoped) and a Gmail search for "QuickBooks handover" found no update — still open, age not established. Chased again 2026-09-26: a Gmail search for "QuickBooks"/"QR code" found no update (only routine firm invoice emails to the company) — case note 485258 confirmed unchanged since 2026-08-06, so age is now established at 51 days pending.**
 
 ### Information still needed
 
