@@ -51,6 +51,14 @@ always gets the same tag, so two values stay distinguishable — which is all th
 analysis ever needed — while no digit of either is learned. An earlier version
 emitted the last four digits; name-plus-last-four is the standard identity-
 verification pair, and names are not masked here.
+
+FILLABLE FORM FIELDS (AcroForm) are read too, and go through the SAME masking
+and the SAME refuse-to-write guard as page text. What someone types into a
+fillable PDF — a W-9 filled in a viewer — is not page text, and
+`extract_text()` never returns it: before 2026-09-29 a filled W-9 came out
+identical to a blank one, with "0 SSN · 0 EIN" and exit 0. The values are
+appended after the pages, in reading order, and the report says how many were
+read, so a blind read shows as "0 of N" instead of passing for a clean one.
 """
 
 import re
@@ -581,6 +589,321 @@ def redact(text: str) -> tuple[str, dict]:
     return text, counts
 
 
+# ── Fillable form fields (AcroForm). What a person types into a fillable PDF
+#    lives in the field dictionaries (`/V`), OUTSIDE the page content stream —
+#    and `extract_text()` reads only the content stream. So a filled form
+#    extracted as its own blank template, and the redactor had nothing to mask.
+#    Found 2026-09-29 on two filled W-9s from a client's Double folder: both
+#    exited 0, reported "0 SSN · 0 EIN", and their text was identical, character
+#    for character, to the blank W-9 on irs.gov. The report gave no hint the
+#    read was blind.
+#
+#    The values are appended to the raw text BEFORE redact() runs, so every
+#    pattern and the final guard see them exactly as they see page text. They
+#    are laid out in READING ORDER — per page, top to bottom, one line per row
+#    of fields, left to right — because that is the only order in which the
+#    patterns' own assumptions hold (a value's neighbours are the ones beside
+#    it on the page).
+#
+# ⚠️ VALUES ONLY — NO LABELS BETWEEN THEM, and that is deliberate. A field's
+#    printed label is already in the page text above. Interleaving labels here
+#    would put LETTERS between the segments of a split identifier, and letters
+#    are what stop SSN_CROSS_LINE from seeing `123 / 45 / 6789` as one number.
+#    The one exception is a checkbox's tooltip (`/TU`): a box carries no digits
+#    of its own, and "[X]" alone says nothing.
+
+# 🛑 THE SPLIT TIN — the reason this cannot be "just append /V". A form does not
+#    hold an SSN in one field. The IRS W-9 (Rev. March 2024) holds it in THREE
+#    comb fields of 3, 2 and 4 digits on one row, and the EIN in TWO of 2 and 7.
+#    Appended naively those become `123   45   6789` — which SSN (one separator
+#    per gap) does not mask and SSN_LOOSE then refuses, so every filled W-9
+#    would exit 4 — or three separate lines that nothing recognises at all.
+#
+#    So adjacent digit-only fields on one row whose digits total NINE are joined
+#    into one run first: nine is an SSN, an ITIN and an EIN however a form cuts
+#    its boxes. 3·2·4 is written as `NNN-NN-NNNN` (masked, counted as SSN), 2·7
+#    as `NN-NNNNNNN` (kept and counted as EIN, per Lilian's ruling), and any
+#    other split — nine single-digit boxes, 5·4 — as nine bare digits, which
+#    LONG_DIGITS masks. Over-masking a ZIP+4 is the accepted cost.
+#    ⚠️ Only a window of EXACTLY nine is joined. Dollars and cents in two boxes
+#    (`1500` · `00`) must stay two values: welded together they read as 150000,
+#    and a wrong figure never sends anyone back to the PDF.
+TIN_DIGITS = 9
+TIN_SHAPES = {(3, 2, 4), (2, 7)}  # SSN/ITIN · EIN — written hyphenated so the patterns name them
+
+# /Ff bits for buttons (PDF 32000-1, table 226). Bit positions are 1-based.
+FF_RADIO = 1 << 15
+FF_PUSHBUTTON = 1 << 16
+
+# A field tree is a graph from an untrusted file. Bound every walk.
+MAX_TREE_DEPTH = 64
+MAX_FIELD_NODES = 20_000
+
+_DIGITS_ONLY = re.compile(r"[0-9]+")
+
+# An IRS form says so on its first page: "Department of the Treasury Internal
+# Revenue Service", beside "Form W-9" / "Form 1040" / "Form SS-4".
+IRS_AGENCY = re.compile(r"Internal\s+Revenue\s+Service", re.IGNORECASE)
+IRS_FORM_ID = re.compile(r"\bForm\s+(W-\d+[A-Z]*(?:-[A-Z]+)?|SS-\d+|\d{3,4}(?:-[A-Z]{1,3})?)\b")
+
+
+def irs_form(first_page: str) -> str | None:
+    """Which IRS form this is — "W-9", "1040" — or None. Page 1 only."""
+    text = normalise(first_page)
+    if not IRS_AGENCY.search(text):
+        return None
+    m = IRS_FORM_ID.search(text)
+    return m.group(1) if m else "unidentified"
+
+
+def _obj(x):
+    """Resolve an indirect reference; pass anything else through."""
+    return x.get_object() if hasattr(x, "get_object") else x
+
+
+def _key(node) -> tuple | int:
+    ref = getattr(node, "indirect_reference", None)
+    return (ref.idnum, ref.generation) if ref is not None else id(node)
+
+
+def _lineage(node):
+    """The node, then its /Parent chain — bounded, because a cycle is possible."""
+    seen = set()
+    while node is not None and len(seen) < MAX_TREE_DEPTH and _key(node) not in seen:
+        seen.add(_key(node))
+        yield node
+        node = _obj(node.get("/Parent"))
+
+
+def _inherited(node, name: str):
+    for n in _lineage(node):
+        if name in n:
+            return _obj(n[name])
+    return None
+
+
+def _terminal(widget):
+    """The FIELD a widget belongs to — itself when merged (it has /T), else its parent."""
+    if "/T" in widget or widget.get("/Parent") is None:
+        return widget
+    return _obj(widget["/Parent"])
+
+
+def _as_text(v) -> str:
+    """A field value as plain text. Never a name object's slash — see _render."""
+    from pypdf.generic import ArrayObject, ByteStringObject, NameObject, StreamObject
+
+    v = _obj(v)
+    if v is None:
+        return ""
+    if isinstance(v, NameObject):
+        return str(v)[1:]
+    if isinstance(v, ArrayObject):
+        return ", ".join(t for t in (_as_text(x) for x in v) if t)
+    if isinstance(v, StreamObject):  # a rich-text value
+        return v.get_data().decode("utf-8", "replace")
+    if isinstance(v, ByteStringObject):
+        return bytes(v).decode("latin-1")
+    return str(v)
+
+
+def _on_states(widget) -> set[str]:
+    ap = _obj(widget.get("/AP"))
+    states: set[str] = set()
+    if ap is not None:
+        for kind in ("/N", "/D"):
+            d = _obj(ap.get(kind))
+            if hasattr(d, "keys"):
+                states.update(str(k) for k in d.keys())
+    states.discard("/Off")
+    return states
+
+
+def _render(widget) -> tuple[str | None, bool | None]:
+    """(text to emit, carries a value?) for one widget — (None, None) for a
+    push button, which is part of the form's machinery and holds no data.
+
+    A checkbox's value is a NAME — `/1`, `/Yes` — and a slash-name carrying a
+    digit is exactly what GLYPH_TOKEN masks as unreadable. So a box is written
+    as [X] or [ ], never as its value.
+    """
+    ft = _inherited(widget, "/FT")
+    flags = int(_inherited(widget, "/Ff") or 0)
+    value = _inherited(widget, "/V")
+
+    if ft == "/Btn":
+        if flags & FF_PUSHBUTTON:
+            return None, None  # a button, not data — not counted as a field
+        on, state = _on_states(widget), _obj(widget.get("/AS"))
+        if on:
+            # /V decides when present (a radio group shares one /V across its
+            # kids); a widget whose own on-state is not /V is the unchosen kid.
+            checked = str(value) in on if value is not None else (
+                state is not None and str(state) in on)
+        else:
+            chosen = state if state is not None else value
+            checked = chosen is not None and str(chosen) != "/Off"
+        label = _clean(_as_text(_inherited(widget, "/TU")))
+        box = "[X]" if checked else "[ ]"
+        return (f"{box} {label}" if label else box), checked
+
+    if ft == "/Sig":
+        return ("[digital signature]", True) if value is not None else (None, False)
+
+    text = _clean(_as_text(value).replace("\r\n", "\n").replace("\r", "\n"))
+    return (text or None), bool(text)
+
+
+def _clean(text: str) -> str:
+    # NUL is stripped because redact() parks EINs behind `\x00EIN<n>\x00`
+    # placeholders — a value must never be able to forge one.
+    return normalise(text).replace("\x00", "").strip()
+
+
+def _join_row(values: list[str]) -> str:
+    """One row of field values, with split TINs rejoined — see TIN_SHAPES."""
+    out, i = [], 0
+    while i < len(values):
+        j, total = i, 0
+        while j < len(values) and _DIGITS_ONLY.fullmatch(values[j]) and total < TIN_DIGITS:
+            total += len(values[j])
+            j += 1
+        if total == TIN_DIGITS and j - i >= 2:
+            seg = values[i:j]
+            shape = tuple(len(s) for s in seg)
+            out.append("-".join(seg) if shape in TIN_SHAPES else "".join(seg))
+            i = j
+        else:
+            out.append(values[i])
+            i += 1
+    # Three spaces, like a layout extraction's gap between boxes.
+    return "   ".join(out)
+
+
+def _placed(widget, rotate: int) -> tuple[float, float, float]:
+    """(x, y-centre, height) of a widget in DISPLAY space, so rows read as a person sees them."""
+    x1, y1, x2, y2 = (float(n) for n in widget["/Rect"])
+    x1, x2 = sorted((x1, x2))
+    y1, y2 = sorted((y1, y2))
+    cx, cy = (x1 + x2) / 2, (y1 + y2) / 2
+    rotate %= 360
+    if rotate == 90:
+        return y1, -cx, x2 - x1
+    if rotate == 180:
+        return -x2, -cy, y2 - y1
+    if rotate == 270:
+        return -y2, cx, x2 - x1
+    return x1, cy, y2 - y1
+
+
+def _rows(entries: list[tuple[float, float, float, str]]) -> list[str]:
+    """Group (x, y-centre, height, text) into rows, top to bottom, left to right."""
+    entries = sorted(entries, key=lambda e: (-e[1], e[0]))
+    rows: list[list[tuple]] = []
+    for e in entries:
+        if rows:
+            first = rows[-1][0]
+            if abs(first[1] - e[1]) <= max(1.0, 0.5 * min(first[2], e[2])):
+                rows[-1].append(e)
+                continue
+        rows.append([e])
+    return [_join_row([e[3] for e in sorted(r, key=lambda e: e[0])]) for r in rows]
+
+
+def read_form_fields(reader) -> tuple[str, dict]:
+    """Every fillable field's value, as text laid out in reading order.
+
+    Returns (text, stats). stats: "fields" = fillable fields found, "values" =
+    how many carried a value, "errors" = widgets that could not be read,
+    "xfa" = the form also carries XFA data (which is NOT read).
+    Never prints anything: the caller reports counts only.
+    """
+    stats = {"fields": 0, "values": 0, "errors": 0, "xfa": False}
+    fields: set = set()
+    filled: set = set()
+    seen_widgets: set = set()
+    blocks: list[str] = []
+
+    # Values that cannot be put on a row — no usable /Rect, or no page at all.
+    # They are still read; losing one here would be the blind read again.
+    unplaced: list[str] = []
+
+    for n, page in enumerate(reader.pages, 1):
+        entries = []
+        try:
+            annots = _obj(page.get("/Annots")) or []
+            rotate = int(page.rotation or 0)  # inherited from the page tree
+        except Exception:  # noqa: BLE001 — a broken page is counted, not fatal
+            stats["errors"] += 1
+            continue
+        for ref in annots:
+            try:
+                w = _obj(ref)
+                if w is None or w.get("/Subtype") != "/Widget":
+                    continue
+                seen_widgets.add(_key(w))
+                text, has_value = _render(w)
+                if has_value is None:
+                    continue
+                field = _key(_terminal(w))
+                fields.add(field)
+                if has_value:
+                    filled.add(field)
+            except Exception:  # noqa: BLE001
+                stats["errors"] += 1
+                continue
+            if text is None:
+                continue
+            try:
+                entries.append((*_placed(w, rotate), text))
+            except Exception:  # noqa: BLE001 — no geometry is not a reason to drop a value
+                if has_value:
+                    unplaced.append(text)
+        if entries:
+            blocks.append(f"--- form fields · page {n} ---\n" + "\n".join(_rows(entries)))
+
+    # A field whose widget sits on no page's /Annots still holds a value. The
+    # page walk above never meets it, so walk the form's own tree for those —
+    # otherwise a value could go unread with the count still looking complete.
+    try:
+        acro = _obj(_obj(reader.trailer["/Root"]).get("/AcroForm"))
+    except Exception:  # noqa: BLE001
+        acro, stats["errors"] = None, stats["errors"] + 1
+    if acro is not None:
+        stats["xfa"] = "/XFA" in acro
+        stack = [(_obj(f), 0) for f in (_obj(acro.get("/Fields")) or [])]
+        visited: set = set()
+        while stack and len(visited) < MAX_FIELD_NODES:
+            node, depth = stack.pop()
+            try:
+                if node is None or _key(node) in visited or depth > MAX_TREE_DEPTH:
+                    continue
+                visited.add(_key(node))
+                kids = [_obj(k) for k in (_obj(node.get("/Kids")) or [])]
+                if any("/T" in k for k in kids):  # an intermediate node, not a field
+                    stack.extend((k, depth + 1) for k in kids)
+                    continue
+                widgets = kids or [node]
+                if any(_key(w) in seen_widgets for w in widgets):
+                    continue
+                field = _key(node)
+                for w in widgets:
+                    text, has_value = _render(w)
+                    if has_value is None:
+                        continue
+                    fields.add(field)
+                    if has_value:
+                        filled.add(field)
+                        unplaced.append(text)
+            except Exception:  # noqa: BLE001
+                stats["errors"] += 1
+    if unplaced:
+        blocks.append("--- form fields · not placed on any page ---\n" + "\n".join(unplaced))
+
+    stats["fields"], stats["values"] = len(fields), len(filled)
+    return "\n\n".join(blocks), stats
+
+
 def main() -> int:
     if len(sys.argv) != 3:
         print(__doc__.strip())
@@ -693,6 +1016,19 @@ def _run(src: Path, dst: Path) -> int:
         )
         return 5
 
+    # Fillable-form values, appended BEFORE redact() so every pattern and the
+    # guard below treat them exactly like page text. They join AFTER the two
+    # gates above on purpose: those judge the PDF's text layer, and a field
+    # value — a PDF text string, no font involved — cannot vouch for a scan.
+    try:
+        field_text, fields = read_form_fields(reader)
+    except Exception as exc:  # noqa: BLE001 — reported below; the page text is still safe to write
+        field_text = ""
+        fields = {"fields": 0, "values": 0, "errors": 0, "xfa": False, "failed": type(exc).__name__}
+    if field_text:
+        raw = f"{raw}\n\n{field_text}"
+    form = irs_form(pages[0]) if pages else None
+
     redacted, counts = redact(raw)
 
     # A document that is mostly wreckage is refused rather than masked: a page
@@ -795,7 +1131,52 @@ def _run(src: Path, dst: Path) -> int:
         f"{counts['licence']} licence/state ID"
     )
     print(f"  kept:   {counts['ein_kept']} EIN (public — Lilian, 2026-08-11)")
+    # ⚠️ Printed EVERY time, including "none", so the absence of this line can
+    # never be mistaken for "the tool looked and found nothing".
+    if fields.get("failed"):
+        # The type only: an exception's message can quote the document.
+        print(
+            f"  fields: ⚠️  COULD NOT BE READ ({fields['failed']}) — anything typed into this\n"
+            "          PDF's form fields is missing from the output; an absence is not evidence."
+        )
+    elif fields["fields"]:
+        print(
+            f"  fields: {fields['values']} of {fields['fields']} fillable form field(s) carried "
+            "a value — read and masked like page text"
+        )
+    else:
+        print("  fields: none — this PDF has no fillable form fields")
     print("  names are NOT masked, by the same ruling.")
+    if fields["errors"]:
+        print(
+            f"  ⚠️  {fields['errors']} form field(s) could NOT be read. Whatever was typed into\n"
+            "      them is missing from the output — an absence there is not evidence."
+        )
+    # 🔑 THE BLIND READ THIS SECTION EXISTS FOR. A filled W-9 once came out
+    #    identical to a blank one with exit 0. Now a form that HAS fields and
+    #    yielded no values says so — it is blank, or its values live somewhere
+    #    this tool does not read, and the output cannot tell those apart.
+    if form and fields["fields"] and not fields["values"]:
+        xfa = (
+            "\n      This PDF also carries XFA form data, which this tool does NOT read —\n"
+            "      a form filled in software that writes only XFA looks exactly like this."
+            if fields["xfa"] else ""
+        )
+        print(
+            f"  ⚠️  This reads as IRS Form {form}, and NONE of its {fields['fields']} fillable\n"
+            "      field(s) carried a value. Either it was never filled in, or its values are\n"
+            f"      stored where this tool cannot read them.{xfa}\n"
+            "      DO NOT report it as blank from this output — a person opens the file."
+        )
+    # ⓘ A hint, not a proof: a 9+ digit account number on line 6 counts as
+    #   "something TIN-shaped" and silences this even when Part I is empty.
+    elif form == "W-9" and not (counts["ssn_itin"] or counts["ein_kept"]
+                                or counts["long_digits"] or counts["cross_line"]):
+        print(
+            "  ⚠️  This reads as a Form W-9, and no SSN, ITIN or EIN was found on it. A completed\n"
+            "      W-9 always carries one: either Part I was left empty, or the tax ID sits where\n"
+            "      this tool cannot read it. A person checks the file before anyone relies on it."
+        )
     if counts.get("cross_line"):
         shapes = sorted({re.sub(r"\d", "N", x).replace("\n", "\\n")
                          for x in counts["cross_line"]})

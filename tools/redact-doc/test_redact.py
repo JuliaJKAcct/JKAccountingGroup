@@ -748,6 +748,324 @@ if "1040" in _g_out:
 if not _g_c["cross_line"]:
     FAILURES.append("CROSS-LINE · a masked table gutter was not reported, so nobody could check it")
 
+# ══ FILLABLE FORM FIELDS (AcroForm). What a person types into a fillable PDF is
+#    not page text, and extract_text() never returns it. On 2026-09-29 two filled
+#    W-9s came out identical to the blank IRS form — exit 0, "0 SSN · 0 EIN" —
+#    and nothing in the report said the read was blind. These cases pin the fix:
+#    field values are read, masked like page text, guarded like page text, and
+#    counted, so a blind read says "0 of N" instead of passing for a clean one.
+#    Every name and number below is INVENTED.
+
+def _fillable_pdf(text: str, fields: list, rotate: int = 0, unplaced: list = ()) -> bytes:
+    """One page of `text` plus AcroForm widgets.
+
+    A field is a dict: t (name), v (value; a str, or a /Name for a box), rect,
+    ft ("/Tx" default, "/Btn"), tu (tooltip), as_ (appearance state), on (the
+    box's on-state, which gives it an /AP), kids (for a radio group: a list of
+    (rect, on-state)). `unplaced` fields are in the form but on no page.
+    """
+    def lit(s: str) -> bytes:
+        return b"(" + s.replace("\\", "\\\\").replace("(", "\\(").replace(")", "\\)").encode("latin-1") + b")"
+
+    def val(v) -> bytes:
+        return v.encode() if v.startswith("/") else lit(v)
+
+    objs: list[bytes] = [b"", b"", b"", b"", b"", b""]  # 1-6 are filled in below
+    annots, top = [], []
+
+    def add(o: bytes) -> int:
+        objs.append(o)
+        return len(objs)
+
+    def ap(on: str) -> bytes:
+        return b" /AP << /N << %s 5 0 R /Off 5 0 R >> >>" % on.encode()
+
+    for f, placed in [(f, True) for f in fields] + [(f, False) for f in unplaced]:
+        common = b"/FT %s /T %s" % (f.get("ft", "/Tx").encode(), lit(f["t"]))
+        if f.get("v") is not None:
+            common += b" /V " + val(f["v"])
+        if f.get("tu"):
+            common += b" /TU " + lit(f["tu"])
+        if "kids" in f:  # a radio group: the field is the parent, the widgets are kids
+            parent = add(b"")
+            kid_refs = []
+            for rect, on in f["kids"]:
+                k = add(b"<< /Type /Annot /Subtype /Widget /Parent %d 0 R /Rect [%s] /P 3 0 R%s >>"
+                        % (parent, " ".join(map(str, rect)).encode(), ap(on)))
+                kid_refs.append(k)
+                if placed:
+                    annots.append(k)
+            objs[parent - 1] = b"<< %s /Ff %d /Kids [%s] >>" % (
+                common, 1 << 15, b" ".join(b"%d 0 R" % k for k in kid_refs))
+            top.append(parent)
+            continue
+        w = b"<< /Type /Annot /Subtype /Widget %s /Rect [%s] /P 3 0 R" % (
+            common, " ".join(map(str, f["rect"])).encode())
+        if f.get("as_"):
+            w += b" /AS " + f["as_"].encode()
+        if f.get("on"):
+            w += ap(f["on"])
+        n = add(w + b" >>")
+        top.append(n)
+        if placed:
+            annots.append(n)
+
+    stream = b"BT /F1 12 Tf 40 700 Td " + lit(text) + b" Tj ET"
+    refs = lambda ns: b" ".join(b"%d 0 R" % n for n in ns)  # noqa: E731
+    objs[0] = b"<< /Type /Catalog /Pages 2 0 R /AcroForm 6 0 R >>"
+    objs[1] = b"<< /Type /Pages /Kids [3 0 R] /Count 1 >>"
+    objs[2] = (b"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Rotate %d "
+               b"/Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R /Annots [%s] >>"
+               % (rotate, refs(annots)))
+    objs[3] = b"<< /Length %d >>\nstream\n%s\nendstream" % (len(stream), stream)
+    objs[4] = b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>"
+    objs[5] = b"<< /Fields [%s] >>" % refs(top)
+    out, offsets = bytearray(b"%PDF-1.4\n"), []
+    for i, o in enumerate(objs, 1):
+        offsets.append(len(out))
+        out += b"%d 0 obj\n" % i + o + b"\nendobj\n"
+    xref = len(out)
+    out += b"xref\n0 %d\n0000000000 65535 f \n" % (len(objs) + 1)
+    for off in offsets:
+        out += b"%010d 00000 n \n" % off
+    out += b"trailer\n<< /Size %d /Root 1 0 R >>\nstartxref\n%d\n%%%%EOF\n" % (len(objs) + 1, xref)
+    return bytes(out)
+
+
+def _run_quiet(src: Path, dst: Path) -> tuple[int, str]:
+    """_run() with stdout AND stderr captured — the report is part of what is tested."""
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf), contextlib.redirect_stderr(buf):
+        rc = _run(src, dst)
+    return rc, buf.getvalue()
+
+
+# The template a blank IRS W-9 extracts as — invented wording, the real header shape.
+_W9_TEXT = ("Form W-9 (Rev. March 2024) Department of the Treasury Internal Revenue Service "
+            "Request for Taxpayer Identification Number and Certification. Name of entity or "
+            "individual; business name; federal tax classification; address; Part I Taxpayer "
+            "Identification Number; social security number; employer identification number.")
+_PAYEE = "ZEPHYRFAKE TESTPAYEE"
+_BUSINESS = "QUARRY TESTWORKS LLC"
+
+
+def _w9_fields(name=_PAYEE, ssn=("123", "45", "6789"), ein=("", ""), street="1234 Elm Rd"):
+    """A W-9 laid out like the real one: the SSN in three comb boxes on ONE row, the EIN in two."""
+    return [
+        {"t": "f1_01", "v": name, "rect": (59, 660, 576, 674)},
+        {"t": "f1_02", "v": _BUSINESS if name else "", "rect": (59, 636, 576, 650)},
+        {"t": "c1_1", "ft": "/Btn", "v": "/1" if name else "/Off", "as_": "/1" if name else "/Off",
+         "on": "/1", "tu": "Individual/sole proprietor", "rect": (73, 604, 81, 612)},
+        {"t": "c1_2", "ft": "/Btn", "v": "/Off", "as_": "/Off", "on": "/2", "rect": (180, 604, 188, 612)},
+        {"t": "f1_07", "v": street, "rect": (59, 492, 388, 506)},
+        {"t": "f1_08", "v": "Bozeman, MT 59715" if name else "", "rect": (59, 468, 388, 482)},
+        {"t": "f1_11", "v": ssn[0], "rect": (418, 396, 461, 420)},
+        {"t": "f1_12", "v": ssn[1], "rect": (475, 396, 504, 420)},
+        {"t": "f1_13", "v": ssn[2], "rect": (518, 396, 576, 420)},
+        {"t": "f1_14", "v": ein[0], "rect": (418, 348, 446, 372)},
+        {"t": "f1_15", "v": ein[1], "rect": (461, 348, 562, 372)},
+    ]
+
+
+with tempfile.TemporaryDirectory() as td:
+    tmp = Path(td)
+
+    # ── THE CASE THAT WAS BLIND: a filled W-9 with the SSN in three boxes. The
+    #    name must come through, the SSN must be masked AS AN SSN, the report
+    #    must count the fields — and must never print a value.
+    (tmp / "w9.pdf").write_bytes(_fillable_pdf(_W9_TEXT, _w9_fields()))
+    rc, report = _run_quiet(tmp / "w9.pdf", tmp / "f1.txt")
+    if rc != 0:
+        FAILURES.append(f"FIELDS · a filled W-9 did not exit 0 (got {rc})")
+    else:
+        got = (tmp / "f1.txt").read_text()
+        for wanted, why in ((_PAYEE, "the payee name"), (_BUSINESS, "the business name"),
+                            ("Bozeman, MT 59715", "city/state/ZIP"), ("[SSN-1]", "the SSN tag"),
+                            ("[X] Individual/sole proprietor", "the checked box and its tooltip"),
+                            ("[ ]", "the unchecked box")):
+            if wanted not in got:
+                FAILURES.append(f"FIELDS · {why} is missing from a filled W-9's output")
+        for leak in ("6789", "123-45", "Elm Rd"):
+            if leak in got:
+                FAILURES.append(f"FIELDS · LEAK: {leak!r} from a form field reached the written file")
+        if "fields: 8 of 11 fillable form field(s)" not in report:
+            FAILURES.append("FIELDS · the report did not count 8 of 11 field values")
+        if "1 SSN/ITIN" not in report:
+            FAILURES.append("FIELDS · the three-box SSN was not counted as ONE SSN")
+        for value in (_PAYEE, "6789", "Elm"):
+            if value in report:
+                FAILURES.append(f"FIELDS · LEAK: the report printed a field value ({value!r})")
+        if "no SSN, ITIN or EIN" in report or "NONE of its" in report:
+            FAILURES.append("FIELDS · a filled W-9 with an SSN was flagged as blank or blind")
+
+    # ── The EIN in two boxes (2 · 7) is KEPT, hyphenated, and counted as an EIN.
+    (tmp / "w9e.pdf").write_bytes(_fillable_pdf(
+        _W9_TEXT, _w9_fields(ssn=("", "", ""), ein=("12", "3456789"))))
+    rc, report = _run_quiet(tmp / "w9e.pdf", tmp / "f2.txt")
+    if rc != 0 or "12-3456789" not in (tmp / "f2.txt").read_text():
+        FAILURES.append("FIELDS · an EIN in two boxes was not kept as NN-NNNNNNN")
+    elif "1 EIN" not in report:
+        FAILURES.append("FIELDS · an EIN in two boxes was kept but not counted")
+
+    # ── THE GUARD. Masking bypassed — the SSN pattern neutered — and the field
+    #    value must still stop the job: refuse, write nothing, print no digits.
+    #    This is what proves field values reach the guard and not just the masker.
+    import redact as _rmod  # noqa: E402
+    _real_ssn = _rmod.SSN
+    _rmod.SSN = re.compile(r"(?!x)x")  # matches nothing
+    try:
+        rc, report = _run_quiet(tmp / "w9.pdf", tmp / "f3.txt")
+    finally:
+        _rmod.SSN = _real_ssn
+    if rc != 4 or (tmp / "f3.txt").exists():
+        FAILURES.append(f"FIELDS · GUARD: with masking bypassed a field SSN was not refused (exit {rc})")
+    if "6789" in report:
+        FAILURES.append("FIELDS · GUARD: the refusal printed the digits it refused")
+
+    # ── THE BLIND READ MADE VISIBLE. A known IRS form with fillable fields and no
+    #    values is blank OR unreadable — the output cannot tell which, so it says so.
+    (tmp / "w9blank.pdf").write_bytes(_fillable_pdf(
+        _W9_TEXT, _w9_fields(name="", ssn=("", "", ""), street="")))
+    rc, report = _run_quiet(tmp / "w9blank.pdf", tmp / "f4.txt")
+    if rc != 0:
+        FAILURES.append("FIELDS · a blank W-9 was refused — blank is a valid document")
+    elif "IRS Form W-9, and NONE of its 11" not in report or "fields: 0 of 11" not in report:
+        FAILURES.append("FIELDS · a W-9 whose fields yielded nothing was not flagged as blank-or-blind")
+
+    # ── A W-9 WITH values but no TIN is incomplete or half-read — also said.
+    (tmp / "w9notin.pdf").write_bytes(_fillable_pdf(_W9_TEXT, _w9_fields(ssn=("", "", ""))))
+    rc, report = _run_quiet(tmp / "w9notin.pdf", tmp / "f5.txt")
+    if rc != 0 or "no SSN, ITIN or EIN was found" not in report:
+        FAILURES.append("FIELDS · a W-9 with no tax ID was not flagged")
+
+    # ── …and neither warning fires on a fillable form that is not an IRS form.
+    (tmp / "other.pdf").write_bytes(_fillable_pdf(
+        "Zephyr Quarry Junction LLC internal intake sheet, filled by the client at onboarding, "
+        "listing contacts and the services requested this year.",
+        [{"t": "a", "v": "", "rect": (59, 660, 576, 674)}]))
+    rc, report = _run_quiet(tmp / "other.pdf", tmp / "f6.txt")
+    if rc != 0 or "NONE of its" in report or "Form W-9" in report:
+        FAILURES.append("FIELDS · a blank non-IRS fillable form raised the IRS warning")
+
+    # ── A PDF with no fields at all SAYS so — silence would read as "looked, found nothing".
+    (tmp / "plain.pdf").write_bytes(_minimal_pdf(
+        "Zephyr Quarry Junction LLC Form 1120-S ordinary business income 22,100 and enough "
+        "narrative text to clear the hundred-character floor comfortably here."))
+    rc, report = _run_quiet(tmp / "plain.pdf", tmp / "f7.txt")
+    if rc != 0 or "fields: none" not in report:
+        FAILURES.append("FIELDS · a PDF with no fillable fields did not say so in the report")
+
+    # ── SHAPES THE TIN JOIN MUST GET RIGHT, both ways.
+    _row = lambda *vals: [{"t": f"r{i}", "v": v, "rect": (60 + 80 * i, 500, 130 + 80 * i, 514)}  # noqa: E731
+                          for i, v in enumerate(vals)]
+    _filler = ("Zephyr Quarry Junction LLC client worksheet with boxed entries for the amounts "
+               "and identifiers requested by the preparer this season.")
+    for label, fields, secret, wanted in (
+        # Dollars and cents in two boxes must NOT be welded: 150000 is a wrong
+        # figure, and a wrong figure never sends anyone back to the PDF.
+        ("dollars and cents stay apart", _row("1500", "00"), None, "1500   00"),
+        # Nine single-digit boxes: every pattern here needs digit GROUPS, so
+        # spaced single digits would pass all of them. Joined, LONG_DIGITS has it.
+        ("nine single-digit boxes", _row(*"123456789"), "123456789", "[NUM-1]"),
+        # Any other nine-digit split is masked whole — a ZIP+4 in 5 · 4 boxes too, by design.
+        ("an unhyphenated 3-3-3 split", _row("123", "456", "789"), "456", "[NUM-1]"),
+    ):
+        (tmp / "shape.pdf").write_bytes(_fillable_pdf(_filler, fields))
+        rc, _ = _run_quiet(tmp / "shape.pdf", tmp / "f8.txt")
+        got = (tmp / "f8.txt").read_text() if rc == 0 else ""
+        (tmp / "f8.txt").unlink(missing_ok=True)
+        if rc != 0 or wanted not in got:
+            FAILURES.append(f"FIELDS · {label}: expected {wanted!r} in the output (exit {rc})")
+        if secret and re.search(r"(?<!\d)" + r"\D{0,3}".join(secret) + r"(?!\d)", got):
+            FAILURES.append(f"FIELDS · LEAK · {label}: the digits reached the written file")
+
+    # ── THE SAME SSN ON THREE ROWS — boxes stacked, nothing between them. Not
+    #    joined (different rows), so the cross-line rule is the net, and it holds
+    #    only because field LABELS are never interleaved with the values.
+    stacked = [{"t": f"s{i}", "v": v, "rect": (418, 500 - 30 * i, 476, 514 - 30 * i)}
+               for i, v in enumerate(("123", "45", "6789"))]
+    (tmp / "stack.pdf").write_bytes(_fillable_pdf(_filler, stacked))
+    rc, _ = _run_quiet(tmp / "stack.pdf", tmp / "f9.txt")
+    if rc == 0 and "6789" in (tmp / "f9.txt").read_text():
+        FAILURES.append("FIELDS · LEAK: an SSN split across three rows of fields reached the file")
+
+    # ── A ROTATED PAGE. Boxes stacked vertically in the file are ONE row on the
+    #    screen of a page turned 90°; read in file order they would come out
+    #    `6789 / 45 / 123`, which no pattern recognises.
+    turned = [{"t": f"t{i}", "v": v, "rect": (100, 400 + 60 * i, 130, 450 + 60 * i)}
+              for i, v in enumerate(("123", "45", "6789"))]
+    (tmp / "rot.pdf").write_bytes(_fillable_pdf(_filler, turned, rotate=90))
+    rc, report = _run_quiet(tmp / "rot.pdf", tmp / "f10.txt")
+    got = (tmp / "f10.txt").read_text() if rc == 0 else ""
+    if rc != 0 or "6789" in got or "[SSN-1]" not in got:
+        FAILURES.append(f"FIELDS · a three-box SSN on a ROTATED page was not read as one SSN (exit {rc})")
+
+    # ── A FIELD ON NO PAGE still holds a value, and still gets read and counted.
+    (tmp / "unpl.pdf").write_bytes(_fillable_pdf(
+        _filler, _row("PLACEDFAKE"), unplaced=[{"t": "ghost", "v": "UNPLACEDFAKE 123-45-6789",
+                                               "rect": (0, 0, 0, 0)}]))
+    rc, report = _run_quiet(tmp / "unpl.pdf", tmp / "f11.txt")
+    got = (tmp / "f11.txt").read_text() if rc == 0 else ""
+    if "UNPLACEDFAKE" not in got or "fields: 2 of 2" not in report:
+        FAILURES.append("FIELDS · a field whose widget is on no page was not read and counted")
+    if "6789" in got:
+        FAILURES.append("FIELDS · LEAK: an SSN in an unplaced field reached the file")
+
+    # ── A BOX'S VALUE IS A NAME like /1 — a slash-token with a digit, exactly what
+    #    GLYPH_TOKEN masks as unreadable. It must be written [X], never as itself.
+    (tmp / "box.pdf").write_bytes(_fillable_pdf(_filler, [
+        {"t": "b", "ft": "/Btn", "v": "/3", "as_": "/3", "on": "/3", "rect": (73, 604, 81, 612)}]))
+    rc, report = _run_quiet(tmp / "box.pdf", tmp / "f12.txt")
+    got = (tmp / "f12.txt").read_text() if rc == 0 else ""
+    if "[X]" not in got or "[GLYPH]" in got or "MASKED as [GLYPH]" in report:
+        FAILURES.append("FIELDS · a checkbox's /N value was emitted as a token instead of [X]")
+
+    # ── A RADIO GROUP shares one /V across its kids: only the kid whose on-state
+    #    IS that value is chosen. Getting this wrong ticks every box in the group.
+    (tmp / "radio.pdf").write_bytes(_fillable_pdf(_filler, [
+        {"t": "grp", "ft": "/Btn", "v": "/2",
+         "kids": [((73, 604, 81, 612), "/1"), ((180, 604, 188, 612), "/2")]}]))
+    rc, report = _run_quiet(tmp / "radio.pdf", tmp / "f13.txt")
+    got = (tmp / "f13.txt").read_text() if rc == 0 else ""
+    if "[ ]   [X]" not in got or "fields: 1 of 1" not in report:
+        FAILURES.append("FIELDS · a radio group did not mark exactly its chosen kid")
+
+    # ── A PUSH BUTTON ("Print", "Clear form") is machinery, not a field, and a
+    #    value holding NUL must not forge redact()'s `\x00EIN<n>\x00` placeholder
+    #    — with no EIN parked, restoring one would crash mid-job.
+    (tmp / "misc.pdf").write_bytes(_fillable_pdf(_filler, [
+        {"t": "print", "ft": "/Btn", "rect": (500, 700, 560, 720), "v": None},
+        {"t": "note", "v": "FAKE\x00EIN0\x00TAIL", "rect": (59, 660, 576, 674)}]))
+    # The push button needs its /Ff; patch it into the bytes rather than widen the builder.
+    (tmp / "misc.pdf").write_bytes((tmp / "misc.pdf").read_bytes().replace(
+        b"/FT /Btn /T (print)", b"/FT /Btn /Ff %d /T (print)" % (1 << 16)))
+    try:
+        rc, report = _run_quiet(tmp / "misc.pdf", tmp / "f14.txt")
+    except Exception as exc:  # noqa: BLE001
+        rc, report = -1, f"{type(exc).__name__}"
+    if rc != 0:
+        FAILURES.append(f"FIELDS · a NUL in a field value broke the run ({report if rc == -1 else rc})")
+    elif "fields: 1 of 1" not in report:
+        FAILURES.append("FIELDS · a push button was counted as a fillable field")
+
+    # ── IF THE FIELD READER ITSELF FAILS, the page text is still safe to write —
+    #    but the report must say the fields were NOT read, and must not quote the
+    #    exception, whose message can carry document text.
+    _real_reader = _rmod.read_form_fields
+
+    def _broken(_reader):
+        raise RuntimeError("FAKE-VALUE 123-45-6789")
+
+    _rmod.read_form_fields = _broken
+    try:
+        rc, report = _run_quiet(tmp / "w9.pdf", tmp / "f15.txt")
+    finally:
+        _rmod.read_form_fields = _real_reader
+    if rc != 0 or "COULD NOT BE READ (RuntimeError)" not in report:
+        FAILURES.append("FIELDS · a failed field read was not reported as such")
+    if "FAKE-VALUE" in report or "6789" in report:
+        FAILURES.append("FIELDS · LEAK: the report quoted the field reader's exception message")
+
 if FAILURES:
     print(f"FAILED — {len(FAILURES)} problem(s):")
     for f in FAILURES:
