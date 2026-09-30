@@ -3233,7 +3233,12 @@ one return plus one screenshot.** ☑️ **Extend it the next time a different c
 ✅ **PROOF THAT THE ROUTE WORKS, which is why it is stated as verified rather than guessed:** **two assets
 were moved from `V-7` to `V-4` between two drafts of the same return, and on the new draft they had left
 Part V, left the Part V Section B mileage table, lost their caps and picked up their full MACRS figures —
-`70,540 × 20% = 14,108` and `67,050 × 32% = 21,456`, both to the dollar.**
+`70,540 × 20% = 14,108` and `43,650 × 20% = 8,730`, both to the dollar.**
+⛔ **CORRECTED 2026-09-30, and the correction is itself the lesson: an earlier version of this line cited
+`67,050 × 32% = 21,456` as the second asset. `67,050` is a DIFFERENT trailer that was still on `V-7` and
+still capped at 19,800 on the very next draft** *(Zakom's 2025 paper §3CH ④ⓐ)*. 🔑 **Two assets on one
+client sharing the word *Benson* is exactly the collision §1B.9's closing rule warns about — when two
+assets share a description, write NEITHER of them unqualified.**
 
 #### ② 🔴 THE DISPOSITIONS TAB — and the two red warnings ATX prints on the screen
 
