@@ -259,6 +259,93 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-09-30 — 🛑 **A CORRECTION TO YESTERDAY'S §1245 FINDING, AND IT MATTERS BECAUSE THE CONCLUSION SURVIVED A WRONG
+  PREMISE.** I recorded that **nothing was ever capitalised** at any store and that the seller therefore has no
+  depreciation schedule to argue with on the equipment allocation. ⛔ **That is wrong for the larger S-corp.** Its IRS
+  transcript shows depreciation rising more than twelvefold between 2023 and 2024 — footed against the return's own
+  printed total, it reconciles exactly — and the jump is the new fleet at one store, installed that autumn and
+  expensed rather than carried. 🔑 **The conclusion holds and is STRONGER: cost recovery already taken means minimal
+  remaining basis, so nearly every dollar allocated to equipment is ordinary §1245 recapture to the seller while
+  goodwill is capital gain.** ⚠️ **The other S-corp shows no such jump**, so the no-capitalisation reading is right
+  there. 🔑 **The lesson is the one that keeps recurring on this deal: a portfolio-wide statement built from a few
+  stores' balance sheets is not a portfolio-wide fact — check it per entity, against the return.**
+
+- 2026-09-30 — 🟢 **THE SELLER'S QUICKBOOKS ARRIVED AND IT IS THE BOOKS THEMSELVES, NOT A BACKUP.** Julia unzipped the
+  second-response archive into a Drive folder: **six businesses × General Ledger for each of four years, Balance
+  Sheet, Account Listing, Deposit Detail and Audit Trail — 45 files.** That answers four of the request list's
+  Section 3 items and most of §7.1 in one delivery. ⛔ **There are still NO bank statements** — but the **Deposit
+  Detail is the link that was missing**: every deposit with its date, its bank, its amount and the account it was
+  coded to. ⓘ **The entities bank separately** *(two banks across the six books, plus a third for the delivery
+  company)*, which changes how the statement request has to be worded.
+
+- 2026-09-30 — 🟢 **THE TIE-OUT WORKS FOR ONE YEAR AND FAILS FOR ANOTHER, AND BOTH RESULTS ARE USEFUL.** Rolling each
+  store's Sales-coded deposits into its tax entity and comparing to gross receipts as filed: 🔑 **2024 ties TO THE
+  PENNY at all three entities** — a strong result that validates the Deposit Detail as a source and proves the store
+  books genuinely roll into the returns. 🔴 **2023 does NOT tie: both S-corps report MORE revenue on the return than
+  reached the bank.** That is revenue on a filed return with no deposit behind it, and it needs a source. ⚠️ **2025
+  cannot be tied for either S-corp — no filed return and no transcript is in the file**, which is itself a question
+  *(request item 4.2)*. ✅ **And the broker's own revenue schedule IS the deposit total**: five of six stores agree to
+  the dollar. **The one exception is the delivery company, where the offering material sits a round amount ABOVE the
+  company's own ledger AND above its filed return — so that discrepancy was created in the marketing document, not
+  lost from the return.** 🛑 **That reverses what I told Julia the day before**, when I had read it as a return defect.
+
+- 2026-09-30 — 🔴 **A FIFTH TO A HALF OF SOME STORES' REVENUE ARRIVES AS ONE ENTRY A MONTH, NOT AS A BANKED DEPOSIT —
+  AND THE INNOCENT EXPLANATION FITS THE DATES EXACTLY.** The five laundromats bank weekly, on a fixed weekday, in
+  varied non-round amounts, with no gap over a fortnight — genuine transaction-level evidence. **But each also
+  carries a separate entry dated the last day of the month, and at TWO stores that entry has taken over.** At one it
+  jumps from a few hundred dollars to more than a week's banking in a single month and stays there; at the other the
+  same thing happens a year later. ⏰ **Both switches land in the month a CARD SYSTEM WENT LIVE at that store** — a
+  kiosk-load system at the first, a new POS at the second — and at the first store the machine system independently
+  reports **zero coin**, so the weekly deposit is kiosk cash and the month-end entry is plausibly the card-funded
+  half settling. 🔑 **The split implied by that reading is ordinary and moves in the direction you would expect.**
+  ✅ **So this is probably not manipulation — it is revenue arriving as a single monthly figure with NO supporting
+  document in the production.** 🎯 **And the document that settles it is identifiable: each of those two stores has a
+  SECOND merchant account for the machine/kiosk loads, and neither has a monthly statement series anywhere in the
+  file** — one lone statement for one month, buried in a binder. ⛔ **The delivery company is the different case: one
+  entry per month for its whole life, most dated the last calendar day, several falling on weekends, footing to its
+  tax return to the penny both years — that is a month-end write-up, not a deposit record, and no Audit Trail was
+  produced for it at all.**
+
+- 2026-09-30 — 🔴 **THE BOOKS HAVE ONE USER, AND REVENUE IS EDITED AFTER THE PERIOD CLOSES.** Every transaction in all
+  five Audit Trails is attributed to a single `Admin` login — the same login enters the bills, enters the deposits,
+  modifies them and deletes them, with nobody else in the system. ⚠️ **And the reports appear grouped to that one
+  user, so "one user" cannot be distinguished from "one user shown" — ask for the unfiltered trail.** 🔑 **Three
+  month-end revenue entries were cut down weeks after the fact** *(one by 97%, one by an exactly round amount 29
+  minutes after entry, one recoded out of revenue into a transfer)*, and **eight revenue entries had their dates
+  changed** — including one across a year-end and one back a full quarter, and a set of early deposits that were all
+  originally dated month-end and later spread across the month, which means that store's weekly-looking pattern in
+  that period was partly constructed afterwards. ✅ **The reassuring half, and it should be said: no large block of
+  revenue was deleted and abandoned** — the two big deleted Sales deposits both have surviving duplicates and are
+  cleanup. 🔑 **The concern is the practice, not the net amount**, which is small. ⓘ **Everything is recorded roughly
+  six weeks after the fact, every month, in every store** — nothing is contemporaneous — and one session rewrote
+  fifteen prior-year transactions in a single sitting. ⛔ **The Audit Trails contain ONLY bills, bill payments and
+  deposits: if the General Ledgers show journal entries, the trail the seller produced is incomplete** — that is the
+  first question the GL extraction is set to answer.
+
+- 2026-09-30 — 📊 **DELIVERED: four working-paper WORKBOOKS — one per tax entity plus a portfolio consolidation** *(Julia's
+  own shape: "probably one for entity", with consolidated financials by store tying back to the tax return)*. Each
+  entity book runs **README · TIE-OUT (the spine: store books → entity → filed return → IRS transcript, per year,
+  with the difference named) · revenue by store split between banked-weekly and month-end · monthly detail · the
+  three revenue tests with their status · a framed P&L by store awaiting the ledgers · add-backs with an
+  ACCEPT/REJECT/REDUCE/QUERY column · payroll and total labour, including an assumed-hours cell that drives the
+  build-up · balance sheet against the transcript · open items**. The portfolio book adds consolidation with the
+  inter-company items to eliminate, what the price implies, the §1060 allocation, and **scope against status**.
+  🔑 **Live formulas throughout, sourced inputs in blue, awaiting-data cells in yellow** — it recalculates as the
+  outstanding records arrive rather than having to be rebuilt. ⛔ **Delivered to Julia, never committed** (client figures).
+
+- 2026-09-30 — ⚖️ **THE SCOPE WAS REVIEWED AGAINST THE PROPOSAL AND THE ANSWER IS UNCOMFORTABLE: of ELEVEN
+  workstreams, NONE is complete** — six partial, one in progress, four not started — against a **30-day
+  due-diligence clock and a deposit that goes non-refundable when it expires.** 🛑 **And TWO scoped items cannot be
+  delivered as written, which is a conversation with the client, not a task to work harder at:** ① **the COIN
+  COLLECTION half of revenue test 2** — the binder itself records that no collection logs, route sheets,
+  changer-fill records or cash-count records exist or have ever been kept, so there is nothing to reconcile
+  against; **the only substitute is the supervised observation period the seller has already OFFERED and the firm
+  has not taken up**, and the clock makes that urgent. ② **the transcripts came by a different route than the
+  seller-signed authorization the proposal describes** — fine in itself, **but the EMPLOYMENT-tax transcripts are
+  still outstanding and they are the ones that would settle the payroll-bureau question from the IRS side.**
+  ⚠️ **Not started at all: sales-tax and employment-tax compliance, hidden operating costs and impact fees, the
+  buyer's tax structuring, and the written findings report** — the last being the engagement's actual deliverable.
+
 - 2026-09-29 — 🔑 **THE ENTITY MAP IS SETTLED, AND IT IS NOT WHAT THE PAPERWORK SAYS.** Three taxpayers, not
   six: **Bayshore Laundromat, Inc.** (Select + 15th Street/Samoset), **Samoset Florida, Inc.** (Palmetto 9th St
   + Palmetto 8th Ave + Ruskin), **Lemon Squeeze Commercial Laundry, LLC** (the delivery/ironing service). The
