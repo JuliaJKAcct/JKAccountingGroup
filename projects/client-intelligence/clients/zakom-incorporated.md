@@ -1455,7 +1455,12 @@ been destroyed. That is the prior return's presentation, it is immovable, and wi
 off it affected neither 2024's income nor its net assets. No amendment is indicated.**
 
 ⚖️ **AND LILIAN RULED ON THE REVENUE: the client's own gross-receipts figure is NOT touched.** 🗣️ *"No vamos
-a tocar esa cifra de ingresos que dio el cliente… Eso fue lo que dio el cliente y vamos a mantenerla así."*
+a tocar esa cifra de ingresos que dio el cliente. Vamos a mantenerla como [figure]. Eso fue lo que dio el
+cliente y vamos a mantenerla así."* ⚠️ **THE FIGURE SHE DICTATED WAS NOT THE ONE ON THE RETURN — the two
+differ in one digit, by an order of a hundred thousand.** ✅ **It was put to her and she confirmed the figure
+on the client's own income statement, which is also the only one the prior-year comparison foots on.** 🔑 **A
+voice-to-text slip, ASKED rather than assumed** *(the figures and the confirmation are in the working paper,
+§3CD ⑥)*.
 ⇒ **The question raised earlier the same day — whether his revenue was stated net of the insurance his freight
 partner withholds at source — is CLOSED without being answered.** 🔑 **It is Julia's own standing rule applied
 to the income side: the firm relies on the client's profit-and-loss figures and does not verify them.**
