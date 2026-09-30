@@ -465,6 +465,30 @@ _(All five instances are from one engagement in one fortnight, and the client's 
 herself by asking a question this session could not answer: "if five or six vehicles were bought, why do you
 only need the documents for three?")_
 
+### §1C.5 · 🛑 A SWEEP IS A CLAIM, SO IT NAMES ITS LIST — and the table recording the sweep is inside the sweep
+
+🔴 **When a ruling lands on a working paper of any size it leaves debris — every surface that named the old
+figure, the old date, the old open question. Sweeping them is part of applying the ruling, and it is normal to
+say so in the paper.** ⛔ **What is NOT normal, and cost two rounds of review on the pilot: writing *"swept end
+to end"* and listing only some of the files.**
+
+| | |
+|---|---|
+| ⛔ **What the first pass did** | **Swept the WORKBOOK and `FOLLOW-UPS.md`, listed those rows, and wrote *"swept end to end"*** |
+| 🔑 **Where the debris actually was** | **The WORKING PAPER ITSELF — eleven date surfaces, nine calling a settled figure PROVISIONAL, three still routing a client question the same ruling had struck** |
+| ✅ **The rule** | **A sweep row exists for EVERY surface changed, named by section, and the paper it is written in is the FIRST place swept — not the last, and never the assumed-clean one** |
+
+🛑 **AND THE SECOND ONE IS SHARPER, because it defeats the first: THE ROW THAT RECORDS A CORRECTION IS ITSELF A
+SURFACE, AND IT CAN CARRY THE ERROR IT WAS WRITTEN TO RECORD.** ⛔ **On the pilot, ONE commit narrowed an
+over-broad stamp in place — and then re-stated the same over-reach in the sweep row describing the narrowing.**
+**The stamp was right and its own description was wrong, in the same commit, by the same hand.**
+✅ **So after writing a sweep table, re-read each row as a STATEMENT OF CURRENT STATE and check it against the
+surface it describes** — ⚠️ **the summary of a correction is not covered by the correction.**
+
+⚠️ **AND WHAT MAKES THIS WORTH A RULE RATHER THAN A HABIT: every one of these was found by an INDEPENDENT
+review, never by the session that wrote them.** 🔑 **A session cannot sweep its own claim, because the claim is
+the thing it believes.**
+
 ---
 
 ## §2 · The section spine

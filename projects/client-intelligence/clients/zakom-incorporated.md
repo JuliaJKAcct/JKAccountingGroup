@@ -1193,9 +1193,13 @@ it here; these never go into the client SOP.
   PROPERTY.** **It is the recovery of an EXPENSE, and a recovered expense is income only if the expense was
   deducted.** ⇒ **Two outcomes: deducted ⇒ net the recovery against the same expense caption; never deducted
   ⇒ nothing is entered and both sides cancel.** ⚠️ **The two sides must be treated the same way or the return
-  is wrong in one direction.** 🔵 **Three independent readings point at NOT DEDUCTED** — it is not on the
+  is wrong in one direction.** ⚠️ **Three in-house readings point at NOT DEDUCTED** — it is not on the
   card, it is not on the operating account, **and the repairs-and-maintenance caption FELL by half between
-  2024 and 2025**, which a tow of that size would have made rise.
+  2024 and 2025**, which a tow of that size would have made rise. 🔴 **BUT ALL THREE ARE ABOUT 2025, AND THE
+  TRUCK IS NOW KNOWN TO HAVE BEEN DESTROYED IN DECEMBER 2024** — so the recovery work was probably paid, and
+  possibly deducted, in **2024**, which none of them reaches. ⛔ **Not a confirmation. The free check is the
+  2024 return's own attached statement to the other-deductions line, which this firm prepared** — and the
+  client is not written to before that is read.
 - ⚖️ **AN OPTION RAISED AND RECOMMENDED AGAINST: deferring the casualty gain into the replacement tractors**
   *(the company bought several in the same year, so it is legally available)*. **Recommended against because
   the return is already near break-even — deferral would buy a loss the owner's basis cannot absorb, cut the
@@ -1429,6 +1433,41 @@ in fact names Zakom as the purchaser and carries a contract date — in the PDF'
   **the Mitsubishi agreement finances a fee on top of the trailer's price** — so the amount financed is not the
   asset's cost. 🔑 **Both are traps that would have mis-stated basis, and both are now written into the
   working paper.**
+
+#### 2026-09-30 (later) — the truck was destroyed in the PRIOR year, and Lilian ruled on the revenue
+
+🔑 **THE FACT, from the client by voice on 29 September and relayed by Lilian: the 2018 Freightliner was
+totalled on 17 DECEMBER 2024.** ⛔ **Every surface of the firm's file had assumed the loss fell in 2025** —
+his own asset list said 1 January, three other places said 1 June, and the disposal was keyed at the date the
+money arrived. ⚠️ **His 1 January is the closest of the three, and the likeliest reading — THE FIRM'S, not his — is
+that he took the truck off his own books on the first day of the new year, fifteen days after it was
+destroyed.** ⛔ **He did not say that, and nothing establishes it; recorded as an inference so nobody cites
+it back as his statement.**
+
+✅ **AND NOTHING ON THE 2025 RETURN MOVES BECAUSE OF IT**, which is worth knowing before anyone reopens it.
+**The gain still belongs to 2025 because a casualty gain is realised when the property is turned INTO MONEY,
+and the money arrived in April 2025** — 🔑 **a rule this firm had already written down months earlier and had
+never had the fact to apply.** **The truck was fully written off in 2021, so there is no depreciation to
+change in either year; the opening balance sheet reproduces the filed 2024 return and cannot move; and the
+replacement period for a deferral runs from the year the gain is realised, not from the wreck.**
+⚠️ **One thing to say to Julia before she asks: the opening balance sheet carries a truck that had already
+been destroyed. That is the prior return's presentation, it is immovable, and with the asset fully written
+off it affected neither 2024's income nor its net assets. No amendment is indicated.**
+
+⚖️ **AND LILIAN RULED ON THE REVENUE: the client's own gross-receipts figure is NOT touched.** 🗣️ *"No vamos
+a tocar esa cifra de ingresos que dio el cliente. Vamos a mantenerla como [figure]. Eso fue lo que dio el
+cliente y vamos a mantenerla así."* ⚠️ **THE FIGURE SHE DICTATED WAS NOT THE ONE ON THE RETURN — the two
+differ in one digit, by an order of a hundred thousand.** ✅ **It was put to her and she confirmed the figure
+on the client's own income statement, which is also the only one the prior-year comparison foots on.** 🔑 **A
+voice-to-text slip, ASKED rather than assumed** *(the figures and the confirmation are in the working paper,
+§3CD ⑥)*.
+⇒ **The question raised earlier the same day — whether his revenue was stated net of the insurance his freight
+partner withholds at source — is CLOSED without being answered.** 🔑 **It is Julia's own standing rule applied
+to the income side: the firm relies on the client's profit-and-loss figures and does not verify them.**
+🛑 **The objection is recorded rather than erased, because it travels to whoever signs:** **if his revenue is
+the money that reached his account rather than the freight he billed, gross receipts and net income are each
+understated by the amount the partner withheld, and that runs AGAINST the client.** ✅ **It is written into
+the working paper as a position somebody took, with its reason — not as a thing nobody noticed.**
 
 ### Information still needed
 
