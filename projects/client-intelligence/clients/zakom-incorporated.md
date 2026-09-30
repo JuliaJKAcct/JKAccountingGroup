@@ -1370,6 +1370,64 @@ it here; these never go into the client SOP.
   balance-sheet decision that is the only real blocker, and the missing shareholder qualified-income
   reporting.**
 
+
+#### 2026-09-30 — Oleg sent six finance documents and answered five questions, and one answer changes how we read his revenue
+
+**Lilian forwarded the client's reply with six attachments. All six were transcribed in full into the
+[working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md) §3CC** *(figures live there, never
+here)*.
+
+🔑 **THE STRUCTURAL FACT WORTH KEEPING, and it is new: HIS FREIGHT PARTNER WITHHOLDS HIS LIABILITY AND CARGO
+INSURANCE PREMIUMS FROM THE FREIGHT IT PAYS HIM — weekly.** **He carries physical-damage coverage himself,
+financed through IPFS; the liability and cargo side rides on the partner's own policy and the partner deducts
+it at source.** ⚠️ **So the cash he receives from that customer is NET of an expense he nonetheless records.**
+🔴 **That raises a question nobody had asked: whether the revenue figure on his income statement is the freight
+he BILLED or the money that REACHED him.** ⛔ **It is unanswered, it runs against the client, and it is now the
+largest open item on the 2025 return** *(working paper decision 119)*.
+
+🛠️ **AND A TOOLING FAILURE THAT COST A RULING.** **Two days earlier the firm ruled the dealer invoice for one
+truck *"unexecuted and undated"* and concluded it held no acquisition document for any 2025 truck. The invoice
+in fact names Zakom as the purchaser and carries a contract date — in the PDF's FILLABLE FORM FIELDS, which
+[`tools/redact-doc/`](../../../tools/redact-doc/) did not read until a fix landed on `main` the following day.**
+⚠️ **The ruling was faithful to what the tool returned.** 🔴 **Every form-style document this firm read before
+2026-09-29 is now suspect in the same way** — logged firm-wide in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
+
+**What the client settled:**
+
+- ✅ **The towing after the truck was destroyed is NOT in his profit and loss.** **That closes what the working
+  paper had called the single largest open figure on the return, at nothing** *(decision 117)*.
+- ✅ **His `Insurance` caption splits in two: the physical-damage policy he finances through IPFS, and the
+  liability and cargo premiums the partner withholds** *(above)*. ✅ **That confirms what the firm had only
+  inferred from the policy proposal — the liability and cargo cover sits somewhere else.** 🔴 **It does NOT
+  settle the treatment question Julia is carrying: his books take the whole annual premium, so the return has
+  the deduction and is still missing the matching liability on the balance sheet** *(decision 118)*.
+- ✅ **He deals with insurance through AGENTS, not with IPFS directly, and says no interest breakdown exists.**
+  ⛔ **Stop asking for one.**
+- ✅ **One truck was bought for CASH from a friend. No document exists; he has offered to draft a bill of sale**
+  — which the firm should accept, asking that it carry the seller's name, the date, the VIN and the price.
+- ✅ **The Audi's mileage at disposal.** ⚠️ **He again called it a *"trade in"*; the lease document and the bank
+  both say he sold it, and the firm's earlier reading stands** *(decision 124)*. 🔑 ***"Traded in" is simply how
+  this client says "sold it to the dealer"*** — worth knowing before somebody re-opens it.
+
+**What the documents settled, without asking him anything:**
+
+- ✅ **Three of the six 2025 asset additions now have their cost stated by a seller's or a lender's own
+  document** — two disbursement authorizations naming the supplier, and the dealer invoice above. **The basis
+  question Julia was carrying shrinks to ONE truck** *(decision 120)*.
+- ✅ **The equipment lenders and intermediaries are now on record:** **AP Equipment Financing / Allegiant
+  Partners (Bend, Oregon)** for two units, **Mitsubishi HC Capital America** for the drop-deck trailer
+  (dealer **Star Trailer Sales**, Minnesota), **Interstate 365 LLC** as the trailer supplier, and
+  **Southport Truck Group / Tampa Truck Center LLC** (Tampa) as the truck dealer on both Cascadias.
+  **Titling on the Allegiant notes runs through MS Safety Partners LLC, Bensenville IL; the Mitsubishi
+  titling through Staab Agency Inc, Maine. The insurance agent named on the Mitsubishi file is Assured
+  Partners.**
+- ⚠️ **The owner PERSONALLY GUARANTEES the equipment finance** — a continuing personal guaranty is in every
+  package. **Relevant to any future engagement discussion, and to his own return.**
+- ✅ **A documentation fee on each Allegiant note was billed with the first payment rather than financed**, and
+  **the Mitsubishi agreement finances a fee on top of the trailer's price** — so the amount financed is not the
+  asset's cost. 🔑 **Both are traps that would have mis-stated basis, and both are now written into the
+  working paper.**
+
 ### Information still needed
 
 ⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**
