@@ -1193,9 +1193,13 @@ it here; these never go into the client SOP.
   PROPERTY.** **It is the recovery of an EXPENSE, and a recovered expense is income only if the expense was
   deducted.** ⇒ **Two outcomes: deducted ⇒ net the recovery against the same expense caption; never deducted
   ⇒ nothing is entered and both sides cancel.** ⚠️ **The two sides must be treated the same way or the return
-  is wrong in one direction.** 🔵 **Three independent readings point at NOT DEDUCTED** — it is not on the
+  is wrong in one direction.** ⚠️ **Three in-house readings point at NOT DEDUCTED** — it is not on the
   card, it is not on the operating account, **and the repairs-and-maintenance caption FELL by half between
-  2024 and 2025**, which a tow of that size would have made rise.
+  2024 and 2025**, which a tow of that size would have made rise. 🔴 **BUT ALL THREE ARE ABOUT 2025, AND THE
+  TRUCK IS NOW KNOWN TO HAVE BEEN DESTROYED IN DECEMBER 2024** — so the recovery work was probably paid, and
+  possibly deducted, in **2024**, which none of them reaches. ⛔ **Not a confirmation. The free check is the
+  2024 return's own attached statement to the other-deductions line, which this firm prepared** — and the
+  client is not written to before that is read.
 - ⚖️ **AN OPTION RAISED AND RECOMMENDED AGAINST: deferring the casualty gain into the replacement tractors**
   *(the company bought several in the same year, so it is legally available)*. **Recommended against because
   the return is already near break-even — deferral would buy a loss the owner's basis cannot absorb, cut the
@@ -1435,8 +1439,10 @@ in fact names Zakom as the purchaser and carries a contract date — in the PDF'
 🔑 **THE FACT, from the client by voice on 29 September and relayed by Lilian: the 2018 Freightliner was
 totalled on 17 DECEMBER 2024.** ⛔ **Every surface of the firm's file had assumed the loss fell in 2025** —
 his own asset list said 1 January, three other places said 1 June, and the disposal was keyed at the date the
-money arrived. ✅ **His 1 January was the closest of the three, and it is now explained: he took the truck off
-his own books on the first day of the new year, a fortnight after it was destroyed.**
+money arrived. ⚠️ **His 1 January is the closest of the three, and the likeliest reading — THE FIRM'S, not his — is
+that he took the truck off his own books on the first day of the new year, fifteen days after it was
+destroyed.** ⛔ **He did not say that, and nothing establishes it; recorded as an inference so nobody cites
+it back as his statement.**
 
 ✅ **AND NOTHING ON THE 2025 RETURN MOVES BECAUSE OF IT**, which is worth knowing before anyone reopens it.
 **The gain still belongs to 2025 because a casualty gain is realised when the property is turned INTO MONEY,
