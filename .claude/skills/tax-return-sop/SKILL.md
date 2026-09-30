@@ -2277,6 +2277,46 @@ is where "this was keyed and verified" is written down.
 📌 **The same shape serves the review side.** A §4C briefing that ends in *"here is what to change"*
 is a list of changes like any other — it gets boxes too.
 
+#### 🗣️ 23 · A CHAIN OF FIGURES IS NEVER DELIVERED AS A LIST — the derivation travels with them
+
+> 🗣️ **LILIAN, 2026-09-30, the SECOND time she has said it:** *"Este es el tipo de cosas por las cuales yo
+> digo que eres muy escueto en tus explicaciones. Me pones esto así, no entiendo de dónde salen estos
+> números. ¿Por qué tengo que cambiarlo? ¿Cómo llegaste a esta cifra? No entiendo nada… te pido nuevamente
+> que me hables como a una persona que no tiene conocimientos avanzados de accounting y taxes. Te comes
+> demasiados pasos."*
+
+🛑 **THE COMPLAINT IS NOT ABOUT LENGTH. It is about DELETED STEPS.** ⛔ **What set it off was a line of this
+shape:**
+
+> ⛔ ***"the five riders together: 17K 28,000 · M-2 3/6/7 28,000/10,849/10,849, line 8 ZERO · L23 (173,912) ·
+> residual 112,743"***
+
+**Every figure in it is right. It is still unusable, because it is a LIST OF ANSWERS with the reasoning
+deleted** — 🔑 **and a person cannot CHECK an answer she cannot DERIVE.** ⚠️ **She is the last control before
+the return is filed; a figure she cannot check is a figure nobody checks.**
+
+✅ **SO, WHENEVER ONE CHANGE CAUSES OTHERS:**
+
+| | |
+|---|---|
+| **1 · Name the ONE change** | **and say it is the only thing being typed — everything else is a consequence** |
+| **2 · Number the steps** | **one figure per step, in the order they fall out** |
+| **3 · Say what each field IS** | ⚠️ **one plain sentence before the number.** *"The M-2 is the running record of the company's accumulated taxable profit"* costs a line and saves the whole step |
+| **4 · Mark TYPED or COMPUTED** | **on every step — *"this one ATX works out for you"* is half the instruction** |
+| **5 · End with the CHECK** | **the identity that tells her it worked, and what it should read** |
+| **6 · Flag the one that gets forgotten** | **and say what happens if it is missed — a figure that goes wrong SILENTLY needs its own warning** |
+
+⛔ **BANNED SHAPES:** **a `·`-separated run of figures · a field addressed by number alone with no name ·
+*"re-derive the equity section"* with the result but not the arithmetic · a term the firm invented
+(*"the five riders"*, *"Model A"*) used before it is defined · an instruction whose first word is a
+figure.**
+
+🔑 **AND THE TEST, because "explain more" is not actionable:** ***could she reproduce this figure from what
+is written, without asking?*** **If not, a step is missing.**
+
+⚠️ **IT APPLIES TO THE CHAT, THE WORKBOOK AND THE WORKING PAPER ALIKE** — **the chat is where she reads it
+first, and the workbook is where she reads it while typing.**
+
 ### 4C · 🔴 WHEN THE RETURN COMES BACK FOR **REVIEW** — brief the reviewer, do not audit her
 
 ⛔ 🆕 **DO NOT CONFUSE THIS WITH §4F.** 🔑 **§4C is the SIGNER bringing back a return the firm already prepared — brief her, never audit her. §4F is the PREPARER handing you her own keyed draft and asking to be checked before anybody signs — there you DO audit.** ⚠️ **Same document, opposite job, and the tell is WHO IS ASKING.**
