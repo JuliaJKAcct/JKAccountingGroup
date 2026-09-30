@@ -3327,6 +3327,72 @@ tab that shows them all at once.**
 | **A disposal with no depreciation history** *(an asset the books never capitalized)* | **straight onto Form 4797 Part II line 10 as its own row** — ⛔ **never added to the depreciation schedule** |
 | **The §448(c) gross-receipts figure** *(K-1 box 17 code AC)* | **the K-1 line 17 input / the §448(c) worksheet.** ⚠️ **ATX computes it; find out what it computed before overwriting** |
 
+### 4I · 📗 THE FINAL WORKSHEET — the one that is KEPT, and the only rule about it that is absolute
+
+> 🗣️ **LILIAN, 2026-09-30:** *"cuando terminemos todo y la declaración esté ya a punto de ser enviada y
+> revisada por el cliente, hagamos un worksheet final. Ese worksheet final, obviamente, no haga ninguna
+> comparación con versiones anteriores, porque ese es el que va a quedar guardado en Double para revisar en
+> años futuros si es necesario. No tiene ningún sentido que esté hablando de versiones anteriores: qué
+> cambió, etcétera. Debería ser un documento completo donde explique, de inicio a fin, cómo se trabajó al
+> cliente."*
+
+🔑 **THIS IS A SECOND DOCUMENT, NOT A TIDY-UP OF THE FIRST.** ⛔ **The working workbook of §4D and the final
+worksheet have OPPOSITE jobs, and trying to make one file do both produces a file that does neither.**
+
+| | **§4D — THE WORKING WORKBOOK** | **§4I — THE FINAL WORKSHEET** |
+|---|---|---|
+| **Who reads it** | **The preparer, at the keyboard, while the return is being built** | **Whoever opens this client in a FUTURE YEAR — the reviewer, or a preparer who was never here** |
+| **When it is built** | **Every day the return moves** | 🔑 **ONCE — when the return is finished and about to go to the client** |
+| **What it is FOR** | **What to CHANGE, and what is left to do** | **What the return IS, and WHY** |
+| **Version history** | ✅ **ESSENTIAL** — *"it read 20,000 until 30 September"* **is how she finds her place** | 🛑 **BANNED** |
+| **Open items** | ✅ **The spine of it** | ⚠️ **Only those that SURVIVED into the filed return, written as what next year must carry forward** |
+| **Where it lives** | **Handed over each time it changes; never committed** | 🔑 **SAVED IN DOUBLE, on the client** |
+
+#### 🛑 THE ONE ABSOLUTE RULE: NO VERSION HISTORY, ANYWHERE IN IT
+
+⛔ **BANNED, without exception:** *"(As written:)"* · *"was:"* · *"it read X until…"* · *"SUPERSEDED"* ·
+*"CORRECTED IN REVIEW"* · *"an earlier version of this row said…"* · **any struck-through text** · **any
+figure that is not the final one.**
+
+🔑 **AND THE REASON IS NOT TIDINESS.** **The working paper's layering convention exists so the PREPARER can
+see her own history while she works. A reader a year from now has no history to place it against** — **every
+superseded figure is a live figure to them, and every *"corrected in review"* is a fact about a document
+they cannot see.** ⇒ ⛔ **The layering that makes the working paper trustworthy makes the final worksheet
+unreadable.**
+
+⚠️ **THE TEST, when a sentence is borderline:** ***would this sentence still make sense to somebody who had
+never seen any earlier version of this file?*** **If it needs one, it does not go in.**
+
+#### ☑️ WHAT IT CONTAINS — her list, in order
+
+| § | What |
+|---|---|
+| **1 · The client and the return** | **Who they are, what they do, what entity, what form, what year, who prepared and who signed** |
+| **2 · Where their numbers came from** | 🔑 **WHERE THEIR PROFIT AND LOSS IS AND WHERE THEIR BALANCE SHEET IS** — **named files, named folders, named dates. She asked for this by name and it is the single most useful line in the document a year later** |
+| **3 · Every document used** | **One row per document: what it is, where it is, what it STATED, and what it settled.** ⛔ **Not a file list — a list of what each one CONTRIBUTED** |
+| **4 · What the client told us outside the documents** | **By email, by portal message, by voice, in a meeting — with the date and the words. This is the material that disappears first** |
+| **5 · The return, form by form** | **Every figure with its form, page, part and line, and the arithmetic that produced it** |
+| **6 · The decisions** | **Each one: what was decided, WHO decided it, when, and what the alternative was.** ⚠️ **Including the ones overruled — the objection travels with the decision** *(§4C)* |
+| **7 · What is assumed, and what would change it** | **Every position resting on an assumption rather than a document, with the consequence if the assumption is wrong** |
+| **8 · What carries forward** | 🔑 **What next year needs: basis, carryovers, elections made, replacement periods running, balances, unfinished items** |
+
+#### ⏱️ WHEN IT IS BUILT — last, and only once
+
+☑️ **Trigger: the return is finished and about to go to the client for review.** ⛔ **NOT while items are
+open, because a final worksheet with open items in it is just the working workbook with the useful part
+removed.** ✅ **If something is genuinely still open when the return is filed, it goes in section 7 or 8 as a
+carry-forward, not as a to-do.**
+
+#### 🔒 AND THE RULES THAT DO NOT CHANGE
+
+✅ **IT IS IN ENGLISH** *(the standing rule — Julia reads it, and she does not speak Spanish)*.
+✅ **IT IS NEVER COMMITTED TO THE REPO** — **it holds the client's figures, and figures live in
+[`projects/tax-returns/`](../../../projects/tax-returns/) or in the client's systems, not in a second place.**
+🔑 **IT IS SAVED IN DOUBLE, on the client**, **which is what makes it findable in a future year.**
+⛔ **AND IT IS NOT AN ARTIFACT** — **an artifact is a URL that travels onward with no further act by the firm**
+*(§4B)*.
+
+
 ## §5 · Every prepared return leaves a working paper
 
 **Writing it is part of preparing the return** — [`projects/tax-returns/`](../../../projects/tax-returns/),

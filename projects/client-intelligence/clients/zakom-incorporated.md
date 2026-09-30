@@ -1469,6 +1469,52 @@ the money that reached his account rather than the freight he billed, gross rece
 understated by the amount the partner withheld, and that runs AGAINST the client.** ✅ **It is written into
 the working paper as a position somebody took, with its reason — not as a thing nobody noticed.**
 
+#### 2026-09-30 (later still) — the 2024 statement is read directly, the insurance financing is worked out, and one ruling is reopened
+
+📄 **THE PRIOR-YEAR OTHER-DEDUCTIONS STATEMENT WAS READ FROM THE SOFTWARE ITSELF.** **Until now the firm held
+it only through a redacted extraction in which four caption values were unreadable and had been recovered by
+arithmetic.** ✅ **All four are confirmed, the fifteen captions foot exactly to the return's own total, and one
+caption NAME the file had matched by elimination turns out to be a trailer rent-and-lease line rather than the
+heavy-haul equipment line it was assumed to be.** 🔑 **Worth keeping because the client's own book captions and
+the captions on his return are not the same words, and that mapping is what every year's preparation runs on.**
+
+⛔ **AND THE QUESTION IT WAS OPENED FOR IS ONLY HALF ANSWERED.** **There is no towing or recovery caption on the
+2024 statement at any amount — but a bill of that size would never have been its own caption; it would sit
+inside the automobile-and-truck line, and a caption total cannot be seen inside.** ⚖️ **LILIAN RULED: prepare on
+the assumption that the towing was NOT deducted in 2024, record the assumption with what supports it and what
+each support fails to reach, and leave the decision to Julia.**
+
+💳 **THE INSURANCE FINANCING IS NOW UNDERSTOOD END TO END, AND IT IS WORTH KEEPING FOR EVERY FUTURE YEAR.** **The
+company's truck physical-damage policy is billed as one annual premium and is financed: the company pays a
+down payment to the agency and the finance company pays the carrier the rest, at inception. So from the day the
+policy starts the company does not owe a PREMIUM — it owes a LOAN.** ⇒ ✅ **The whole premium is the year's
+insurance deduction; the monthly instalments are debt service, of which only the interest is deductible; and
+the unpaid balance at year end is a CURRENT liability on the balance sheet, because the plan runs under twelve
+months.** 🔑 **Two separate tests have to pass and they are usually confused: whether the expense was PAID
+(it was — a third party paid the provider) and whether it is a prepaid that must be spread (it is not — the
+12-month rule covers a 12-month policy).** ⚖️ **The first of the two is Julia's to confirm; the second is quoted
+from the IRS's own publication.**
+
+⚠️ **THE SIGNED PROPOSAL THE CLIENT UPLOADED STATES THE PREMIUM, THE DOWN PAYMENT AND THE MONTHLY PAYMENT — AND
+NOTHING ELSE.** ⛔ **No payment count, no finance charge, no interest rate, no due dates, no policy period.**
+☑️ **So the schedule had to be derived, and the firm is asking the finance company for a year-end statement and
+the insurer for the declarations page.** 🔑 **For future years: ask for both at the same time as the proposal.**
+
+🔄 **AND ONE RULING REOPENED.** **The question of whether the client's stated revenue is the freight he billed or
+the money that reached him after his freight partner withheld insurance at source had been recorded as closed.**
+🗣️ **Lilian, on understanding it: *"Eso es algo que tengo que hablar con Julia porque necesito que me dé
+orientación en cómo tratar esto."*** ⇒ **It is an open item for Julia. Nothing on the return moves either way.**
+
+🔍 **A SEARCH THAT FOUND NOTHING, RECORDED SO NOBODY RUNS IT AGAIN.** **The client's own 2025 workbook — all seven
+sheets, every cell and every cell comment — carries NO note about a down payment on the tractor whose stated cost
+exceeds its finance note.** ⛔ **Every comment in that file is the template's own boilerplate, authored in 2023 by
+the template's publisher, not by him.** ⚠️ **What was not searched: his emails, the portal messages and any text
+message.**
+
+📗 **AND A NEW STANDING DELIVERABLE FOR EVERY RETURN, NOT JUST THIS ONE.** 🗣️ **Lilian asked that when a return is
+finished the firm build a FINAL worksheet — standalone, with no comparison to any earlier version — to be saved in
+Double so a future year can see how the client was worked from beginning to end.** ✅ **Written up as a firm rule.**
+
 ### Information still needed
 
 ⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**
