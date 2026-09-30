@@ -1412,8 +1412,10 @@ in fact names Zakom as the purchaser and carries a contract date — in the PDF'
 **What the documents settled, without asking him anything:**
 
 - ✅ **Three of the six 2025 asset additions now have their cost stated by a seller's or a lender's own
-  document** — two disbursement authorizations naming the supplier, and the dealer invoice above. **The basis
-  question Julia was carrying shrinks to ONE truck** *(decision 120)*.
+  document** — two disbursement authorizations naming the supplier, and the dealer invoice above. ⛔ **That does
+  NOT shrink the basis question Julia is carrying: none of those three was ever inside it, and two units stay
+  wholly undocumented.** 🔑 **What changes is ONE truck — it stops being an evidential vacuum and becomes a
+  factual disagreement with the lender's own figure** *(decision 120)*.
 - ✅ **The equipment lenders and intermediaries are now on record:** **AP Equipment Financing / Allegiant
   Partners (Bend, Oregon)** for two units, **Mitsubishi HC Capital America** for the drop-deck trailer
   (dealer **Star Trailer Sales**, Minnesota), **Interstate 365 LLC** as the trailer supplier, and
