@@ -1,6 +1,6 @@
 # Zakom Incorporated
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-28
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-30
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1193,9 +1193,13 @@ it here; these never go into the client SOP.
   PROPERTY.** **It is the recovery of an EXPENSE, and a recovered expense is income only if the expense was
   deducted.** ⇒ **Two outcomes: deducted ⇒ net the recovery against the same expense caption; never deducted
   ⇒ nothing is entered and both sides cancel.** ⚠️ **The two sides must be treated the same way or the return
-  is wrong in one direction.** 🔵 **Three independent readings point at NOT DEDUCTED** — it is not on the
+  is wrong in one direction.** ⚠️ **Three in-house readings point at NOT DEDUCTED** — it is not on the
   card, it is not on the operating account, **and the repairs-and-maintenance caption FELL by half between
-  2024 and 2025**, which a tow of that size would have made rise.
+  2024 and 2025**, which a tow of that size would have made rise. 🔴 **BUT ALL THREE ARE ABOUT 2025, AND THE
+  TRUCK IS NOW KNOWN TO HAVE BEEN DESTROYED IN DECEMBER 2024** — so the recovery work was probably paid, and
+  possibly deducted, in **2024**, which none of them reaches. ⛔ **Not a confirmation. The free check is the
+  2024 return's own attached statement to the other-deductions line, which this firm prepared** — and the
+  client is not written to before that is read.
 - ⚖️ **AN OPTION RAISED AND RECOMMENDED AGAINST: deferring the casualty gain into the replacement tractors**
   *(the company bought several in the same year, so it is legally available)*. **Recommended against because
   the return is already near break-even — deferral would buy a loss the owner's basis cannot absorb, cut the
@@ -1370,6 +1374,193 @@ it here; these never go into the client SOP.
   balance-sheet decision that is the only real blocker, and the missing shareholder qualified-income
   reporting.**
 
+
+#### 2026-09-30 — Oleg sent six finance documents and answered five questions, and one answer changes how we read his revenue
+
+**Lilian forwarded the client's reply with six attachments. All six were transcribed in full into the
+[working paper](../../tax-returns/zakom-incorporated/2025-form-1120s.md) §3CC** *(figures live there, never
+here)*.
+
+🔑 **THE STRUCTURAL FACT WORTH KEEPING, and it is new: HIS FREIGHT PARTNER WITHHOLDS HIS LIABILITY AND CARGO
+INSURANCE PREMIUMS FROM THE FREIGHT IT PAYS HIM — weekly.** **He carries physical-damage coverage himself,
+financed through IPFS; the liability and cargo side rides on the partner's own policy and the partner deducts
+it at source.** ⚠️ **So the cash he receives from that customer is NET of an expense he nonetheless records.**
+🔴 **That raises a question nobody had asked: whether the revenue figure on his income statement is the freight
+he BILLED or the money that REACHED him.** ⛔ **It is unanswered, it runs against the client, and it is now the
+largest open item on the 2025 return** *(working paper decision 119)*.
+
+🛠️ **AND A TOOLING FAILURE THAT COST A RULING.** **Two days earlier the firm ruled the dealer invoice for one
+truck *"unexecuted and undated"* and concluded it held no acquisition document for any 2025 truck. The invoice
+in fact names Zakom as the purchaser and carries a contract date — in the PDF's FILLABLE FORM FIELDS, which
+[`tools/redact-doc/`](../../../tools/redact-doc/) did not read until a fix landed on `main` the following day.**
+⚠️ **The ruling was faithful to what the tool returned.** 🔴 **Every form-style document this firm read before
+2026-09-29 is now suspect in the same way** — logged firm-wide in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
+
+**What the client settled:**
+
+- ✅ **The towing after the truck was destroyed is NOT in his profit and loss.** **That closes what the working
+  paper had called the single largest open figure on the return, at nothing** *(decision 117)*.
+- ✅ **His `Insurance` caption splits in two: the physical-damage policy he finances through IPFS, and the
+  liability and cargo premiums the partner withholds** *(above)*. ✅ **That confirms what the firm had only
+  inferred from the policy proposal — the liability and cargo cover sits somewhere else.** 🔴 **It does NOT
+  settle the treatment question Julia is carrying: his books take the whole annual premium, so the return has
+  the deduction and is still missing the matching liability on the balance sheet** *(decision 118)*.
+- ✅ **He deals with insurance through AGENTS, not with IPFS directly, and says no interest breakdown exists.**
+  ⛔ **Stop asking for one.**
+- ✅ **One truck was bought for CASH from a friend. No document exists; he has offered to draft a bill of sale**
+  — which the firm should accept, asking that it carry the seller's name, the date, the VIN and the price.
+- ✅ **The Audi's mileage at disposal.** ⚠️ **He again called it a *"trade in"*; the lease document and the bank
+  both say he sold it, and the firm's earlier reading stands** *(decision 124)*. 🔑 ***"Traded in" is simply how
+  this client says "sold it to the dealer"*** — worth knowing before somebody re-opens it.
+
+**What the documents settled, without asking him anything:**
+
+- ✅ **Three of the six 2025 asset additions now have their cost stated by a seller's or a lender's own
+  document** — two disbursement authorizations naming the supplier, and the dealer invoice above. ⛔ **That does
+  NOT shrink the basis question Julia is carrying: none of those three was ever inside it, and two units stay
+  wholly undocumented.** 🔑 **What changes is ONE truck — it stops being an evidential vacuum and becomes a
+  factual disagreement with the lender's own figure** *(decision 120)*.
+- ✅ **The equipment lenders and intermediaries are now on record:** **AP Equipment Financing / Allegiant
+  Partners (Bend, Oregon)** for two units, **Mitsubishi HC Capital America** for the drop-deck trailer
+  (dealer **Star Trailer Sales**, Minnesota), **Interstate 365 LLC** as the trailer supplier, and
+  **Southport Truck Group / Tampa Truck Center LLC** (Tampa) as the truck dealer on both Cascadias.
+  **Titling on the Allegiant notes runs through MS Safety Partners LLC, Bensenville IL; the Mitsubishi
+  titling through Staab Agency Inc, Maine. The insurance agent named on the Mitsubishi file is Assured
+  Partners.**
+- ⚠️ **The owner PERSONALLY GUARANTEES the equipment finance** — a continuing personal guaranty is in every
+  package. **Relevant to any future engagement discussion, and to his own return.**
+- ✅ **A documentation fee on each Allegiant note was billed with the first payment rather than financed**, and
+  **the Mitsubishi agreement finances a fee on top of the trailer's price** — so the amount financed is not the
+  asset's cost. 🔑 **Both are traps that would have mis-stated basis, and both are now written into the
+  working paper.**
+
+#### 2026-09-30 (later) — the truck was destroyed in the PRIOR year, and Lilian ruled on the revenue
+
+🔑 **THE FACT, from the client by voice on 29 September and relayed by Lilian: the 2018 Freightliner was
+totalled on 17 DECEMBER 2024.** ⛔ **Every surface of the firm's file had assumed the loss fell in 2025** —
+his own asset list said 1 January, three other places said 1 June, and the disposal was keyed at the date the
+money arrived. ⚠️ **His 1 January is the closest of the three, and the likeliest reading — THE FIRM'S, not his — is
+that he took the truck off his own books on the first day of the new year, fifteen days after it was
+destroyed.** ⛔ **He did not say that, and nothing establishes it; recorded as an inference so nobody cites
+it back as his statement.**
+
+✅ **AND NOTHING ON THE 2025 RETURN MOVES BECAUSE OF IT**, which is worth knowing before anyone reopens it.
+**The gain still belongs to 2025 because a casualty gain is realised when the property is turned INTO MONEY,
+and the money arrived in April 2025** — 🔑 **a rule this firm had already written down months earlier and had
+never had the fact to apply.** **The truck was fully written off in 2021, so there is no depreciation to
+change in either year; the opening balance sheet reproduces the filed 2024 return and cannot move; and the
+replacement period for a deferral runs from the year the gain is realised, not from the wreck.**
+⚠️ **One thing to say to Julia before she asks: the opening balance sheet carries a truck that had already
+been destroyed. That is the prior return's presentation, it is immovable, and with the asset fully written
+off it affected neither 2024's income nor its net assets. No amendment is indicated.**
+
+⚖️ **AND LILIAN RULED ON THE REVENUE: the client's own gross-receipts figure is NOT touched.** 🗣️ *"No vamos
+a tocar esa cifra de ingresos que dio el cliente. Vamos a mantenerla como [figure]. Eso fue lo que dio el
+cliente y vamos a mantenerla así."* ⚠️ **THE FIGURE SHE DICTATED WAS NOT THE ONE ON THE RETURN — the two
+differ in one digit, by an order of a hundred thousand.** ✅ **It was put to her and she confirmed the figure
+on the client's own income statement, which is also the only one the prior-year comparison foots on.** 🔑 **A
+voice-to-text slip, ASKED rather than assumed** *(the figures and the confirmation are in the working paper,
+§3CD ⑥)*.
+⇒ **The question raised earlier the same day — whether his revenue was stated net of the insurance his freight
+partner withholds at source — is CLOSED without being answered.** 🔑 **It is Julia's own standing rule applied
+to the income side: the firm relies on the client's profit-and-loss figures and does not verify them.**
+🛑 **The objection is recorded rather than erased, because it travels to whoever signs:** **if his revenue is
+the money that reached his account rather than the freight he billed, gross receipts and net income are each
+understated by the amount the partner withheld, and that runs AGAINST the client.** ✅ **It is written into
+the working paper as a position somebody took, with its reason — not as a thing nobody noticed.**
+
+#### 2026-09-30 (later still) — the 2024 statement is read directly, the insurance financing is worked out, and one ruling is reopened
+
+📄 **THE PRIOR-YEAR OTHER-DEDUCTIONS STATEMENT WAS READ FROM THE SOFTWARE ITSELF.** **Until now the firm held
+it only through a redacted extraction in which four caption values were unreadable and had been recovered by
+arithmetic.** ✅ **All four are confirmed, the fifteen captions foot exactly to the return's own total, and one
+caption NAME the file had matched by elimination turns out to be a trailer rent-and-lease line rather than the
+heavy-haul equipment line it was assumed to be.** 🔑 **Worth keeping because the client's own book captions and
+the captions on his return are not the same words, and that mapping is what every year's preparation runs on.**
+
+⛔ **AND THE QUESTION IT WAS OPENED FOR IS ONLY HALF ANSWERED.** **There is no towing or recovery caption on the
+2024 statement at any amount — but a bill of that size would never have been its own caption; it would sit
+inside the automobile-and-truck line, and a caption total cannot be seen inside.** ⚖️ **LILIAN RULED: prepare on
+the assumption that the towing was NOT deducted in 2024, record the assumption with what supports it and what
+each support fails to reach, and leave the decision to Julia.**
+
+💳 **THE INSURANCE FINANCING IS NOW UNDERSTOOD END TO END, AND IT IS WORTH KEEPING FOR EVERY FUTURE YEAR.** **The
+company's truck physical-damage policy is billed as one annual premium and is financed: the company pays a
+down payment to the agency and the finance company pays the carrier the rest, at inception. So from the day the
+policy starts the company does not owe a PREMIUM — it owes a LOAN.** ⇒ ✅ **The whole premium is the year's
+insurance deduction; the monthly instalments are debt service, of which only the interest is deductible; and
+the unpaid balance at year end is a CURRENT liability on the balance sheet, because the plan runs under twelve
+months.** 🔑 **Two separate tests have to pass and they are usually confused: whether the expense was PAID
+(it was — a third party paid the provider) and whether it is a prepaid that must be spread (it is not — the
+12-month rule covers a 12-month policy).** ⚖️ **The first of the two is Julia's to confirm; the second is quoted
+from the IRS's own publication.**
+
+⚠️ **THE SIGNED PROPOSAL THE CLIENT UPLOADED STATES THE PREMIUM, THE DOWN PAYMENT AND THE MONTHLY PAYMENT — AND
+NOTHING ELSE.** ⛔ **No payment count, no finance charge, no interest rate, no due dates, no policy period.**
+☑️ **So the schedule had to be derived, and the firm is asking the finance company for a year-end statement and
+the insurer for the declarations page.** 🔑 **For future years: ask for both at the same time as the proposal.**
+
+🔄 **AND ONE RULING REOPENED.** **The question of whether the client's stated revenue is the freight he billed or
+the money that reached him after his freight partner withheld insurance at source had been recorded as closed.**
+🗣️ **Lilian, on understanding it: *"Eso es algo que tengo que hablar con Julia porque necesito que me dé
+orientación en cómo tratar esto."*** ⇒ **It is an open item for Julia. Nothing on the return moves either way.**
+
+🔍 **A SEARCH THAT FOUND NOTHING, RECORDED SO NOBODY RUNS IT AGAIN.** **The client's own 2025 workbook — all seven
+sheets, every cell and every cell comment — carries NO note about a down payment on the tractor whose stated cost
+exceeds its finance note.** ⛔ **Every comment in that file is the template's own boilerplate, authored in 2023 by
+the template's publisher, not by him.** ⚠️ **What was not searched: his emails, the portal messages and any text
+message.**
+
+📗 **AND A NEW STANDING DELIVERABLE FOR EVERY RETURN, NOT JUST THIS ONE.** 🗣️ **Lilian asked that when a return is
+finished the firm build a FINAL worksheet — standalone, with no comparison to any earlier version — to be saved in
+Double so a future year can see how the client was worked from beginning to end.** ✅ **Written up as a firm rule.**
+
+#### 2026-09-30 (evening) — the insurance-finance account will never produce a statement, so the figures are estimated and the method is written down
+
+⛔ **THE CLIENT CANNOT OBTAIN A YEAR-END STATEMENT FROM THE PREMIUM FINANCE COMPANY, AND THERE IS NO FURTHER
+DOCUMENT.** 🗣️ **Lilian relayed it plainly: the signed proposal and one screenshot of its pricing page are
+everything that account will ever produce.** ⇒ ⚖️ **HER RULING: assume the payment count, estimate the
+year-end balance and the interest paid, and write the derivation down in full.** 🔑 **The status change is
+the point — an open document request and a settled estimate are different things on a review checklist, and
+leaving it as a request would have stalled the return indefinitely.**
+
+🏦 **AND THE BANK SETTLED MORE THAN ANYONE EXPECTED.** **The last four months of 2025 statements were read
+line by line. They show the down payment going out by WIRE the day after the proposal was signed, a small
+verification debit from the finance company four days later, and three monthly instalments at exactly the
+amount the proposal prints, on the 20th–22nd of each month.** ✅ **So the plan on the proposal is the plan
+that actually ran, and the amount financed is no longer an assumption.**
+
+🛑 **AND A LESSON THAT IS NOT ABOUT THIS CLIENT: THE DOWN PAYMENT HAS NO PAYEE.** **The bank prints it as a
+bare outgoing wire with a transaction reference and nothing else — no agency name, no insurer, no finance
+company.** ⛔ **Three earlier searches reported *"no down payment in the account"* and all three were true of
+the search and false of the world.** 🔑 **A caption sweep can only find what is captioned; the wire was
+identified by its exact amount, its date and what it sits next to.**
+
+📋 **THE 2025 VEHICLE AND TRAILER ADDITIONS NOW HAVE A STATUS EACH.** **Three of the six costs rest on a
+document; one is CONTRADICTED by its own finance note and is being keyed at the client's figure under an
+earlier ruling; and two rest on his spreadsheet alone.** ⚖️ **Lilian ruled that where no document exists the
+client's figure is used and the file records that no purchase agreement is held — the same rule the firm
+already applies to his income statement, applied to his asset list.** ✅ **Only ONE in-service date is
+documented, and the document disagrees with his sheet by a month; the document governs.**
+☑️ **AND THE DATES MOVE NO FIGURE, tested rather than assumed: the fourth-quarter share of the year's
+additions is about 5%, far under the 40% that would trigger the mid-quarter convention.**
+
+🏦 **THE BANK ALSO SPEAKS TO THE REVENUE QUESTION, AND IT FAVOURS THE FIGURE ALREADY ON THE RETURN.** **The
+open question is whether his reported revenue is the freight he BILLED or the money that reached him after
+his freight partner withheld the liability and cargo premiums at source — because if it is already net, the
+insurance cannot also be deducted.** ✅ **Comparing the year's freight-like deposits against his reported
+revenue, the billed reading leaves an unexplained remainder the size of an ordinary year-end receivable,
+while the received reading leaves a much larger one that would have to be money banked somewhere else — and
+this is the company's only account.** ⛔ **Corroboration, not proof, and every limitation is named in the
+working paper.** 🔑 **A by-product worth keeping: the same comparison is evidence that the second large payer
+is a CUSTOMER rather than the lender his own asset sheet calls it.**
+
+🚗 **AND TWO SMALL ONES.** **The client gave the mileage on the car that left in 2025; it is keyed on the
+listed-property table, where it removes one of eight vehicles showing zero miles, and it moves no figure.**
+**The difference between what the insurer paid on the wrecked truck and the client's own estimate of its two
+parts needs no separate treatment — it is already inside the ordinary income the return reports, because
+every dollar of recovery above the never-deducted towing cost is gain against a zero basis.**
+
 ### Information still needed
 
 ⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**
@@ -1410,6 +1601,41 @@ it here; these never go into the client SOP.
 - [ ] Primary language of correspondence
 - [ ] Fiscal year-end (calendar year assumed, not established)
 - [ ] Sales-tax position — whether the company is registered at all
+
+#### 2026-09-30 (late) — the review rounds corrected four things in our own analysis, one of them a figure Lilian was about to key
+
+**What happened.** Three further independent review rounds ran against the working paper for this return —
+one on the section written that morning, one on the section written that afternoon, and one on the
+explanations written that evening. Each covered material no earlier round had seen. Twelve corrections were
+applied in total.
+
+**The one that would have reached the tax software.** Lilian said in the session that she was about to enter
+the sold car's odometer reading into the depreciation schedule's listed-property table. That table asks for
+miles **driven during the year**, not the reading on the dial — and this file's own record already held the
+reading at the end of the prior year, from the owner's portal message of August 2025. The difference between
+the two is the figure that belongs in the box, and it is a small fraction of what was about to be entered.
+Entering the odometer would have asserted a full lifetime's business mileage inside the few months the
+company owned the car in 2025, on the one asset whose business-use substantiation questions are still
+unanswered on the return.
+
+**The one that reaches the owner's personal return.** Our own explanation of the two possible treatments of
+the insurance financing told the reviewer that the choice between them does not affect the shareholder's
+K-1. That was wrong on the half that matters: the **distributions** box is genuinely unchanged, but the
+shareholder's **share of the profit** moves by the whole disputed amount and changes sign — a loss under one
+treatment, income under the other. Since the company's working paper hands those figures on to the owner's
+individual return, the two treatments hand it opposite answers. The reviewer now gets that stated as
+arithmetic instead of described.
+
+**Two citation corrections worth keeping** because both point a preparer at a form: the business-use
+substantiation questions are on the depreciation form's listed-property section, not on the corporate
+return's Schedule B; and the date this file had attached to the car's disposal in one place was the totalled
+truck's casualty date, not the car's — the car's own sale date has been settled and keyed for weeks.
+
+**The pattern, which is a process fact rather than a client fact.** Every serious correction across the three
+rounds was a **correct figure in the wrong place** — an odometer in a during-the-year box, a superseded
+intermediate on a line somebody types from, a bounded search stated as a conclusion, a closed request still
+carrying an open checkbox. It is recorded here because it is how this return has been going wrong, and the
+working paper now carries the check that catches it.
 
 ## 7. Links
 

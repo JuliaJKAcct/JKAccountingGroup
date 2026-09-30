@@ -465,6 +465,30 @@ _(All five instances are from one engagement in one fortnight, and the client's 
 herself by asking a question this session could not answer: "if five or six vehicles were bought, why do you
 only need the documents for three?")_
 
+### §1C.5 · 🛑 A SWEEP IS A CLAIM, SO IT NAMES ITS LIST — and the table recording the sweep is inside the sweep
+
+🔴 **When a ruling lands on a working paper of any size it leaves debris — every surface that named the old
+figure, the old date, the old open question. Sweeping them is part of applying the ruling, and it is normal to
+say so in the paper.** ⛔ **What is NOT normal, and cost two rounds of review on the pilot: writing *"swept end
+to end"* and listing only some of the files.**
+
+| | |
+|---|---|
+| ⛔ **What the first pass did** | **Swept the WORKBOOK and `FOLLOW-UPS.md`, listed those rows, and wrote *"swept end to end"*** |
+| 🔑 **Where the debris actually was** | **The WORKING PAPER ITSELF — eleven date surfaces, nine calling a settled figure PROVISIONAL, three still routing a client question the same ruling had struck** |
+| ✅ **The rule** | **A sweep row exists for EVERY surface changed, named by section, and the paper it is written in is the FIRST place swept — not the last, and never the assumed-clean one** |
+
+🛑 **AND THE SECOND ONE IS SHARPER, because it defeats the first: THE ROW THAT RECORDS A CORRECTION IS ITSELF A
+SURFACE, AND IT CAN CARRY THE ERROR IT WAS WRITTEN TO RECORD.** ⛔ **On the pilot, ONE commit narrowed an
+over-broad stamp in place — and then re-stated the same over-reach in the sweep row describing the narrowing.**
+**The stamp was right and its own description was wrong, in the same commit, by the same hand.**
+✅ **So after writing a sweep table, re-read each row as a STATEMENT OF CURRENT STATE and check it against the
+surface it describes** — ⚠️ **the summary of a correction is not covered by the correction.**
+
+⚠️ **AND WHAT MAKES THIS WORTH A RULE RATHER THAN A HABIT: every one of these was found by an INDEPENDENT
+review, never by the session that wrote them.** 🔑 **A session cannot sweep its own claim, because the claim is
+the thing it believes.**
+
 ---
 
 ## §2 · The section spine
@@ -2253,6 +2277,46 @@ is where "this was keyed and verified" is written down.
 📌 **The same shape serves the review side.** A §4C briefing that ends in *"here is what to change"*
 is a list of changes like any other — it gets boxes too.
 
+#### 🗣️ 23 · A CHAIN OF FIGURES IS NEVER DELIVERED AS A LIST — the derivation travels with them
+
+> 🗣️ **LILIAN, 2026-09-30, the SECOND time she has said it:** *"Este es el tipo de cosas por las cuales yo
+> digo que eres muy escueto en tus explicaciones. Me pones esto así, no entiendo de dónde salen estos
+> números. ¿Por qué tengo que cambiarlo? ¿Cómo llegaste a esta cifra? No entiendo nada… te pido nuevamente
+> que me hables como a una persona que no tiene conocimientos avanzados de accounting y taxes. Te comes
+> demasiados pasos."*
+
+🛑 **THE COMPLAINT IS NOT ABOUT LENGTH. It is about DELETED STEPS.** ⛔ **What set it off was a line of this
+shape:**
+
+> ⛔ ***"the five riders together: 17K 28,000 · M-2 3/6/7 28,000/10,849/10,849, line 8 ZERO · L23 (173,912) ·
+> residual 112,743"***
+
+**Every figure in it is right. It is still unusable, because it is a LIST OF ANSWERS with the reasoning
+deleted** — 🔑 **and a person cannot CHECK an answer she cannot DERIVE.** ⚠️ **She is the last control before
+the return is filed; a figure she cannot check is a figure nobody checks.**
+
+✅ **SO, WHENEVER ONE CHANGE CAUSES OTHERS:**
+
+| | |
+|---|---|
+| **1 · Name the ONE change** | **and say it is the only thing being typed — everything else is a consequence** |
+| **2 · Number the steps** | **one figure per step, in the order they fall out** |
+| **3 · Say what each field IS** | ⚠️ **one plain sentence before the number.** *"The M-2 is the running record of the company's accumulated taxable profit"* costs a line and saves the whole step |
+| **4 · Mark TYPED or COMPUTED** | **on every step — *"this one ATX works out for you"* is half the instruction** |
+| **5 · End with the CHECK** | **the identity that tells her it worked, and what it should read** |
+| **6 · Flag the one that gets forgotten** | **and say what happens if it is missed — a figure that goes wrong SILENTLY needs its own warning** |
+
+⛔ **BANNED SHAPES:** **a `·`-separated run of figures · a field addressed by number alone with no name ·
+*"re-derive the equity section"* with the result but not the arithmetic · a term the firm invented
+(*"the five riders"*, *"Model A"*) used before it is defined · an instruction whose first word is a
+figure.**
+
+🔑 **AND THE TEST, because "explain more" is not actionable:** ***could she reproduce this figure from what
+is written, without asking?*** **If not, a step is missing.**
+
+⚠️ **IT APPLIES TO THE CHAT, THE WORKBOOK AND THE WORKING PAPER ALIKE** — **the chat is where she reads it
+first, and the workbook is where she reads it while typing.**
+
 ### 4C · 🔴 WHEN THE RETURN COMES BACK FOR **REVIEW** — brief the reviewer, do not audit her
 
 ⛔ 🆕 **DO NOT CONFUSE THIS WITH §4F.** 🔑 **§4C is the SIGNER bringing back a return the firm already prepared — brief her, never audit her. §4F is the PREPARER handing you her own keyed draft and asking to be checked before anybody signs — there you DO audit.** ⚠️ **Same document, opposite job, and the tell is WHO IS ASKING.**
@@ -3302,6 +3366,72 @@ tab that shows them all at once.**
 | **The meals limit** | **inside the line-20 `Other Deductions` statement** — the row reads `Meals, subject to 50% limit`, then `Less disallowed`, then `Total meals and entertainment`. ⚠️ **Changing it moves FIVE other places: page 1 line 20, M-1 line 3b, M-2 line 5, Schedule K 16c and K-1 box 16C** |
 | **A disposal with no depreciation history** *(an asset the books never capitalized)* | **straight onto Form 4797 Part II line 10 as its own row** — ⛔ **never added to the depreciation schedule** |
 | **The §448(c) gross-receipts figure** *(K-1 box 17 code AC)* | **the K-1 line 17 input / the §448(c) worksheet.** ⚠️ **ATX computes it; find out what it computed before overwriting** |
+
+### 4I · 📗 THE FINAL WORKSHEET — the one that is KEPT, and the only rule about it that is absolute
+
+> 🗣️ **LILIAN, 2026-09-30:** *"cuando terminemos todo y la declaración esté ya a punto de ser enviada y
+> revisada por el cliente, hagamos un worksheet final. Ese worksheet final, obviamente, no haga ninguna
+> comparación con versiones anteriores, porque ese es el que va a quedar guardado en Double para revisar en
+> años futuros si es necesario. No tiene ningún sentido que esté hablando de versiones anteriores: qué
+> cambió, etcétera. Debería ser un documento completo donde explique, de inicio a fin, cómo se trabajó al
+> cliente."*
+
+🔑 **THIS IS A SECOND DOCUMENT, NOT A TIDY-UP OF THE FIRST.** ⛔ **The working workbook of §4D and the final
+worksheet have OPPOSITE jobs, and trying to make one file do both produces a file that does neither.**
+
+| | **§4D — THE WORKING WORKBOOK** | **§4I — THE FINAL WORKSHEET** |
+|---|---|---|
+| **Who reads it** | **The preparer, at the keyboard, while the return is being built** | **Whoever opens this client in a FUTURE YEAR — the reviewer, or a preparer who was never here** |
+| **When it is built** | **Every day the return moves** | 🔑 **ONCE — when the return is finished and about to go to the client** |
+| **What it is FOR** | **What to CHANGE, and what is left to do** | **What the return IS, and WHY** |
+| **Version history** | ✅ **ESSENTIAL** — *"it read 20,000 until 30 September"* **is how she finds her place** | 🛑 **BANNED** |
+| **Open items** | ✅ **The spine of it** | ⚠️ **Only those that SURVIVED into the filed return, written as what next year must carry forward** |
+| **Where it lives** | **Handed over each time it changes; never committed** | 🔑 **SAVED IN DOUBLE, on the client** |
+
+#### 🛑 THE ONE ABSOLUTE RULE: NO VERSION HISTORY, ANYWHERE IN IT
+
+⛔ **BANNED, without exception:** *"(As written:)"* · *"was:"* · *"it read X until…"* · *"SUPERSEDED"* ·
+*"CORRECTED IN REVIEW"* · *"an earlier version of this row said…"* · **any struck-through text** · **any
+figure that is not the final one.**
+
+🔑 **AND THE REASON IS NOT TIDINESS.** **The working paper's layering convention exists so the PREPARER can
+see her own history while she works. A reader a year from now has no history to place it against** — **every
+superseded figure is a live figure to them, and every *"corrected in review"* is a fact about a document
+they cannot see.** ⇒ ⛔ **The layering that makes the working paper trustworthy makes the final worksheet
+unreadable.**
+
+⚠️ **THE TEST, when a sentence is borderline:** ***would this sentence still make sense to somebody who had
+never seen any earlier version of this file?*** **If it needs one, it does not go in.**
+
+#### ☑️ WHAT IT CONTAINS — her list, in order
+
+| § | What |
+|---|---|
+| **1 · The client and the return** | **Who they are, what they do, what entity, what form, what year, who prepared and who signed** |
+| **2 · Where their numbers came from** | 🔑 **WHERE THEIR PROFIT AND LOSS IS AND WHERE THEIR BALANCE SHEET IS** — **named files, named folders, named dates. She asked for this by name and it is the single most useful line in the document a year later** |
+| **3 · Every document used** | **One row per document: what it is, where it is, what it STATED, and what it settled.** ⛔ **Not a file list — a list of what each one CONTRIBUTED** |
+| **4 · What the client told us outside the documents** | **By email, by portal message, by voice, in a meeting — with the date and the words. This is the material that disappears first** |
+| **5 · The return, form by form** | **Every figure with its form, page, part and line, and the arithmetic that produced it** |
+| **6 · The decisions** | **Each one: what was decided, WHO decided it, when, and what the alternative was.** ⚠️ **Including the ones overruled — the objection travels with the decision** *(§4C)* |
+| **7 · What is assumed, and what would change it** | **Every position resting on an assumption rather than a document, with the consequence if the assumption is wrong** |
+| **8 · What carries forward** | 🔑 **What next year needs: basis, carryovers, elections made, replacement periods running, balances, unfinished items** |
+
+#### ⏱️ WHEN IT IS BUILT — last, and only once
+
+☑️ **Trigger: the return is finished and about to go to the client for review.** ⛔ **NOT while items are
+open, because a final worksheet with open items in it is just the working workbook with the useful part
+removed.** ✅ **If something is genuinely still open when the return is filed, it goes in section 7 or 8 as a
+carry-forward, not as a to-do.**
+
+#### 🔒 AND THE RULES THAT DO NOT CHANGE
+
+✅ **IT IS IN ENGLISH** *(the standing rule — Julia reads it, and she does not speak Spanish)*.
+✅ **IT IS NEVER COMMITTED TO THE REPO** — **it holds the client's figures, and figures live in
+[`projects/tax-returns/`](../../../projects/tax-returns/) or in the client's systems, not in a second place.**
+🔑 **IT IS SAVED IN DOUBLE, on the client**, **which is what makes it findable in a future year.**
+⛔ **AND IT IS NOT AN ARTIFACT** — **an artifact is a URL that travels onward with no further act by the firm**
+*(§4B)*.
+
 
 ## §5 · Every prepared return leaves a working paper
 
