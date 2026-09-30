@@ -1515,6 +1515,52 @@ message.**
 finished the firm build a FINAL worksheet — standalone, with no comparison to any earlier version — to be saved in
 Double so a future year can see how the client was worked from beginning to end.** ✅ **Written up as a firm rule.**
 
+#### 2026-09-30 (evening) — the insurance-finance account will never produce a statement, so the figures are estimated and the method is written down
+
+⛔ **THE CLIENT CANNOT OBTAIN A YEAR-END STATEMENT FROM THE PREMIUM FINANCE COMPANY, AND THERE IS NO FURTHER
+DOCUMENT.** 🗣️ **Lilian relayed it plainly: the signed proposal and one screenshot of its pricing page are
+everything that account will ever produce.** ⇒ ⚖️ **HER RULING: assume the payment count, estimate the
+year-end balance and the interest paid, and write the derivation down in full.** 🔑 **The status change is
+the point — an open document request and a settled estimate are different things on a review checklist, and
+leaving it as a request would have stalled the return indefinitely.**
+
+🏦 **AND THE BANK SETTLED MORE THAN ANYONE EXPECTED.** **The last four months of 2025 statements were read
+line by line. They show the down payment going out by WIRE the day after the proposal was signed, a small
+verification debit from the finance company four days later, and three monthly instalments at exactly the
+amount the proposal prints, on the 20th–22nd of each month.** ✅ **So the plan on the proposal is the plan
+that actually ran, and the amount financed is no longer an assumption.**
+
+🛑 **AND A LESSON THAT IS NOT ABOUT THIS CLIENT: THE DOWN PAYMENT HAS NO PAYEE.** **The bank prints it as a
+bare outgoing wire with a transaction reference and nothing else — no agency name, no insurer, no finance
+company.** ⛔ **Three earlier searches reported *"no down payment in the account"* and all three were true of
+the search and false of the world.** 🔑 **A caption sweep can only find what is captioned; the wire was
+identified by its exact amount, its date and what it sits next to.**
+
+📋 **THE 2025 VEHICLE AND TRAILER ADDITIONS NOW HAVE A STATUS EACH.** **Three of the six costs rest on a
+document; one is CONTRADICTED by its own finance note and is being keyed at the client's figure under an
+earlier ruling; and two rest on his spreadsheet alone.** ⚖️ **Lilian ruled that where no document exists the
+client's figure is used and the file records that no purchase agreement is held — the same rule the firm
+already applies to his income statement, applied to his asset list.** ✅ **Only ONE in-service date is
+documented, and the document disagrees with his sheet by a month; the document governs.**
+☑️ **AND THE DATES MOVE NO FIGURE, tested rather than assumed: the fourth-quarter share of the year's
+additions is about 5%, far under the 40% that would trigger the mid-quarter convention.**
+
+🏦 **THE BANK ALSO SPEAKS TO THE REVENUE QUESTION, AND IT FAVOURS THE FIGURE ALREADY ON THE RETURN.** **The
+open question is whether his reported revenue is the freight he BILLED or the money that reached him after
+his freight partner withheld the liability and cargo premiums at source — because if it is already net, the
+insurance cannot also be deducted.** ✅ **Comparing the year's freight-like deposits against his reported
+revenue, the billed reading leaves an unexplained remainder the size of an ordinary year-end receivable,
+while the received reading leaves a much larger one that would have to be money banked somewhere else — and
+this is the company's only account.** ⛔ **Corroboration, not proof, and every limitation is named in the
+working paper.** 🔑 **A by-product worth keeping: the same comparison is evidence that the second large payer
+is a CUSTOMER rather than the lender his own asset sheet calls it.**
+
+🚗 **AND TWO SMALL ONES.** **The client gave the mileage on the car that left in 2025; it is keyed on the
+listed-property table, where it removes one of eight vehicles showing zero miles, and it moves no figure.**
+**The difference between what the insurer paid on the wrecked truck and the client's own estimate of its two
+parts needs no separate treatment — it is already inside the ordinary income the return reports, because
+every dollar of recovery above the never-deducted towing cost is gain against a zero basis.**
+
 ### Information still needed
 
 ⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**
