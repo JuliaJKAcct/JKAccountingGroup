@@ -1602,6 +1602,41 @@ every dollar of recovery above the never-deducted towing cost is gain against a 
 - [ ] Fiscal year-end (calendar year assumed, not established)
 - [ ] Sales-tax position — whether the company is registered at all
 
+#### 2026-09-30 (late) — the review rounds corrected four things in our own analysis, one of them a figure Lilian was about to key
+
+**What happened.** Three further independent review rounds ran against the working paper for this return —
+one on the section written that morning, one on the section written that afternoon, and one on the
+explanations written that evening. Each covered material no earlier round had seen. Twelve corrections were
+applied in total.
+
+**The one that would have reached the tax software.** Lilian said in the session that she was about to enter
+the sold car's odometer reading into the depreciation schedule's listed-property table. That table asks for
+miles **driven during the year**, not the reading on the dial — and this file's own record already held the
+reading at the end of the prior year, from the owner's portal message of August 2025. The difference between
+the two is the figure that belongs in the box, and it is a small fraction of what was about to be entered.
+Entering the odometer would have asserted a full lifetime's business mileage inside the few months the
+company owned the car in 2025, on the one asset whose business-use substantiation questions are still
+unanswered on the return.
+
+**The one that reaches the owner's personal return.** Our own explanation of the two possible treatments of
+the insurance financing told the reviewer that the choice between them does not affect the shareholder's
+K-1. That was wrong on the half that matters: the **distributions** box is genuinely unchanged, but the
+shareholder's **share of the profit** moves by the whole disputed amount and changes sign — a loss under one
+treatment, income under the other. Since the company's working paper hands those figures on to the owner's
+individual return, the two treatments hand it opposite answers. The reviewer now gets that stated as
+arithmetic instead of described.
+
+**Two citation corrections worth keeping** because both point a preparer at a form: the business-use
+substantiation questions are on the depreciation form's listed-property section, not on the corporate
+return's Schedule B; and the date this file had attached to the car's disposal in one place was the totalled
+truck's casualty date, not the car's — the car's own sale date has been settled and keyed for weeks.
+
+**The pattern, which is a process fact rather than a client fact.** Every serious correction across the three
+rounds was a **correct figure in the wrong place** — an odometer in a during-the-year box, a superseded
+intermediate on a line somebody types from, a bounded search stated as a conclusion, a closed request still
+carrying an open checkbox. It is recorded here because it is how this return has been going wrong, and the
+working paper now carries the check that catches it.
+
 ## 7. Links
 
 - **Double client:** [`Zakom Incorporated` — id `710612`](https://app.doublehq.com/close?cid=710612)
