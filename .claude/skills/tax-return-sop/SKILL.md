@@ -489,6 +489,60 @@ surface it describes** — ⚠️ **the summary of a correction is not covered b
 review, never by the session that wrote them.** 🔑 **A session cannot sweep its own claim, because the claim is
 the thing it believes.**
 
+### §1C.6 · 🛑 SWEEP A SUPERSEDED FIGURE BY **GREP**, NOT BY MEMORY — and sort the hits into INSTRUCTIONS and ANALYSIS
+
+_(Added 2026-10-01 after the **third** occurrence on one return — the first two are in the Zakom paper's own
+decisions 143 and 159. **Lilian ordered the sweep that found it:** *"revises el working paper de principio a fin
+y trates de que no haya ninguna nota que esté obsoleta o desactualizada."*)_
+
+🔑 **THE FAILURE IS STRUCTURAL, NOT CARELESS, AND THAT IS WHY A HABIT WILL NOT FIX IT.** **A ruling closes a
+question and leaves its old answer standing on every surface that quoted it.** ⛔ **The author who applies the
+ruling sweeps the surfaces they REMEMBER — which are the ones they wrote recently — and a working paper of any
+size has more.** *(Zakom: over 15,500 lines, 35 superseded figures, 434 hits.)*
+
+✅ **THE METHOD, and it is three lines of script rather than a reading pass:**
+
+1. ☑️ **List every figure the return has SUPERSEDED, with the value that replaced it.** **Build it from the
+   decisions table, not from memory.**
+2. ☑️ **Grep each old value across the whole paper.**
+3. ☑️ **Sort every hit two ways** — **by SECTION, and by whether the line already carries a historical stamp**
+   *(`SUPERSEDED`, `_(was`, `_(As written`, `WITHDRAWN`, `this row read`)*.
+
+🛑 **AND THE SORT THAT MATTERS IS NOT *live section* versus *old section* — IT IS **INSTRUCTION** VERSUS
+**ANALYSIS**.**
+
+| | |
+|---|---|
+| ✅ **ANALYSIS may hold a superseded figure** | **A diagnosis section, a decisions row, a branch table that PRICES what was given up. Its job is to show what was keyed against what should have been** — **deleting the old value would destroy the record** |
+| 🔴 **AN INSTRUCTION MAY NOT** | **The worksheet a preparer copies from, the tie-out checks, the open-at-filing checkboxes, the handoff.** ⛔ **A stale figure here is not a record, it is a wrong keystroke** |
+
+🔴 **THE WORST CASE THE SWEEP FOUND, and it is the shape to expect: the SECTION had the ruling stamped and the
+TABLE INSIDE IT did not** — **so one subsection carried two live instructions at once, three days apart, and the
+TABLE is what gets copied.** ⇒ ✅ **Grep reaches a table cell; a reading pass skims it as already-known.**
+
+🛑 **AND THE MISTAKE THE PILOT'S OWN FIRST SWEEP MADE, caught by the review of the very commit that wrote this
+rule: IT DECIDED WHAT AN INSTRUCTION SURFACE WAS BY **SECTION NUMBER**.** ⛔ **That is wrong, and it is the one
+way this whole method fails quietly.** **The sweep scoped itself to the worksheet, the tie-outs, the open-items
+list and the handoff — and MISSED a *"what to type, and where"* table sitting inside a DIAGNOSIS section, which
+was still telling the preparer to re-code four assets three days after the signer had ruled they stay.**
+⚠️ **On the largest figure on that return.**
+
+✅ **SO THE TEST IS THE CELL'S CONTENT, NOT ITS ADDRESS.** ☑️ **Grep for the INSTRUCTION VOCABULARY as well as
+for the figures** — `what to type` · `what to enter` · `re-code` · `change X to Y` · `key` · `ENTER` ·
+`IF <person> agrees` · `- [ ]` — **and check every hit against the current rulings, wherever in the paper it
+lives.** 🔑 **A diagnosis section earns its superseded figures; the *"what to type"* table inside it does not,
+and a conditional instruction (*"IF she agrees to 80%…"*) is DEAD the moment the condition is answered —
+including when it is answered NO.**
+
+🔑 **AND A SECOND CLASS THE FIGURE GREP MISSES ENTIRELY: a tie-out check that still PASSES against an older
+draft.** ⛔ **Nothing in it is a wrong figure — it is a correct statement about a return that no longer exists**,
+**which reads as evidence about the current one.** ✅ **SO: every tie-out row NAMES THE DRAFT IT WAS RUN ON**, and
+re-running them is part of reviewing a new draft, not an occasional extra. *(Zakom: five of eleven rows were
+still showing a 28-September draft's figures.)*
+
+⚠️ **AND SWEEP THE DERIVED FIGURES TOO** — **a residual's own grep misses the four or five numbers computed
+FROM it** *(decision 159)*. ☑️ **Put them in the list in step 1.**
+
 ---
 
 ## §2 · The section spine
@@ -2986,6 +3040,134 @@ the same amount)*; **a change to PRIOR-year accumulated depreciation moves it on
 *(opening equity is fixed by the filed return)*; **and extra current-year INCOME moves it one-for-one**
 *(the proceeds are already inside the documented closing cash)*. ⇒ ⛔ **Key the residual LAST.**
 
+#### ④-bis 🔑 **THE RESIDUAL IDENTITY** — the one check that catches a wrong DISTRIBUTIONS figure with nothing but the draft on screen
+
+_(Added 2026-10-01, because **Lilian asked for the METHOD rather than the number**: *"¿Cómo pude haberme dado
+cuenta por mí misma de que esto estaba mal, que este número no encajaba en la declaración? Necesito entenderlo
+para, en un futuro, poder encontrar este tipo de errores."* ⚠️ **Answering with the right figure — which this
+firm had done three times — does not let her find the next one.** Zakom 2025, decision 157.)_
+
+☑️ **WHAT IT NEEDS BEFORE IT IS WORTH RUNNING** — **the balance sheet TIED to the documents** *(see the limit at
+the end)*, **the prior year's filed Schedule L for the opening column, and an answer on whether the shareholder
+put money IN.** ⛔ **Without the third, the result is distributions net of contributions.**
+
+🛑 **AND ONE GATE THAT COVERS EVERY REMAINING WAY THIS IDENTITY CAN BE WRONG — RUN IT FIRST, IT IS TWO NUMBERS
+OFF THE SAME PAGE:**
+
+```
+   M-2 line 6  −  M-2 line 1     MUST EQUAL     Schedule M-1 line 1  (net income per books)
+```
+
+⛔ **If they differ, the identity is wrong BY THAT DIFFERENCE — and it still closes, so nothing flags it.**
+🔑 **The reason is structural: `(line 6 − line 1)` is the AAA column ALONE, while `closing equity` is ALL of
+Schedule L equity.** **The two measure the same movement only when nothing has gone anywhere else.**
+☑️ **The two usual causes, and the gate catches both without you having to look for either:**
+
+- 🔵 **ANOTHER M-2 COLUMN CARRIES ACTIVITY.** **Tax-exempt income and the expenses related to it go to the
+  OAA, never the AAA; AE&P and PTI likewise.** **On a client with tax-exempt income the identity understates
+  the distributions by exactly that amount.**
+- 🔵 **A BOOK/TAX DIFFERENCE WAS LEFT ON M-1 INSTEAD OF RUN THROUGH M-2 lines 3 and 5.** **Schedule L is *per
+  books*; the AAA is a tax account.** **An ordinary §179 or bonus timing difference parts them.**
+
+⚠️ **A movement in Schedule L line 25 or 26 DURING the year** *(a redemption, treasury stock, a prior-period
+adjustment)* **is the same class and is absorbed silently into DISTRIBUTIONS.** ✅ **The gate does not catch
+that one, so ask: did anything happen to the share capital this year?**
+
+*(Pilot, satisfying the gate exactly: M-1 line 1 `26,038`; M-2 line 1 blank, line 6 `26,038`; columns (b), (c)
+and (d) all zero. That is WHY its worked example ties, and it is the thing to check before trusting it
+anywhere else.)*
+
+🔑 **WHY THIS CHECK EXISTS AT ALL: on a closely-held S corporation whose books have NO EQUITY SECTION, the
+distributions figure is the only number on the return that comes from no document.** ⇒ **It is DERIVED, and a
+derived figure has exactly ONE correct value** — ✅ **which is precisely what makes it checkable, while a figure
+read off a document can only be checked by going back to the document.**
+
+🧮 **THE IDENTITY. Equity can only move four ways in a year — the year's profit, what the owner put IN, what
+the company cannot deduct, and what the owner TOOK OUT:**
+
+```
+   closing equity = opening equity + (M-2 line 6 − M-2 line 1) + contributions − DISTRIBUTIONS
+
+   ⇒  DISTRIBUTIONS = opening equity + (M-2 line 6 − M-2 line 1) + contributions − closing equity
+```
+
+🛑 **TWO TERMS IN THAT LINE ARE WHERE A FIRST WRITE-UP OF THIS RULE GOT IT WRONG, and both make the
+arithmetic CLOSE while the answer is wrong, so nothing flags either:**
+
+| ⚠️ | Why it is there |
+|---|---|
+| 🔴 **`M-2 line 6` MINUS `line 1`, never line 6 alone** | **Line 1 is the AAA at the START of the year — a BALANCE, not a movement.** ⛔ **Using line 6 alone adds the opening AAA in twice and the identity is out by exactly that amount.** *(Counter-example: opening equity 100 all AAA, income 50, distributions 30. M-2 reads 1=100, 6=150, 7=30, 8=120 and closing equity is 120. Line 6 alone gives `100 + 150 − 120 = 130`; the answer is 30. With `line 6 − line 1` it is `100 + 50 − 120 = 30`.)* ✅ **The short form `line 6` is right ONLY where the prior return's line 8 printed ZERO** — which is the pilot's case and is why its worked example closes |
+| 🔴 **CONTRIBUTIONS, which are on NO line of M-2** | **A capital contribution raises paid-in capital on Schedule L and never touches the AAA.** ⛔ **Leave it out and the identity returns distributions NET of contributions, silently.** ✅ **So: establish whether the shareholder put money in before reporting the result, add it back, and read [`form-1120s-preparation.md`](../../../projects/sops/form-1120s-preparation.md) §5C-v — the firm's netting policy, whose own test CANNOT be applied to a net figure.** ⚠️ **`Schedule L line 23` is unaffected by a contribution; the DISTRIBUTIONS figure is not** |
+
+☑️ **AND THE FOUR TERMS, each read off the screen:**
+
+| Term | Where | ⚠️ The trap |
+|---|---|---|
+| **opening equity** | **Schedule L BEGINNING column: lines 22 + 23 + 24 + 25 − 26** | ⛔ **Not the prior return's "equity" caption — add the lines.** ⚠️ **25 is *adjustments to shareholders' equity* and 26 is *less cost of treasury stock*; both are blank on a simple close company and both are real lines** |
+| **M-2 line 6 − M-2 line 1** | **both printed on the form** *(line 6 is lines 1–5 combined)* | 🛑 **SUBTRACT LINE 1. It is a BALANCE, not a movement — see the table above.** ✅ **Where the prior return's line 8 printed zero, line 1 is blank and line 6 alone is right** |
+| **closing equity** | 🔴 **total assets − total liabilities. The equity the balance sheet REQUIRES** | 🛑 **THE STEP EVERYBODY SKIPS: it is NOT the equity that was keyed. Using the keyed figure makes the identity circular and it can never fail.** ✅ **And it is the ONE term that needs no equity line at all, which is what makes the check independent of the thing it is checking** |
+| **DISTRIBUTIONS** | **Schedule K line 16d, K-1 box 16d** | ⚠️ **And `M-2 line 7` and `Schedule L line 23`: see below** |
+
+🛑 **AND THE FINDING THAT MAKES THIS WORTH A SUBSECTION: RUN IT ON THE DRAFT'S *OWN* EQUITY SECTION, BEFORE ANY
+CORRECTION.**
+
+> 🔑 **A figure computed from the balance sheet CANNOT disagree with the balance sheet.** ⇒ **If `16d`
+> disagrees with the equity section that is keyed BESIDE it, `16d` was never derived — it was carried in from
+> an earlier version and left there.** ✅ **That is a finding available with no other document, no corrected
+> figure and nobody else's help.**
+
+*(Zakom 2025: the draft's keyed closing equity was −150,841, so the identity gave 116,710; the draft held
+114,243. **Out by 2,467 against its own balance sheet** — and separately out by 23,340 against the CORRECTED
+balance sheet. Two different errors, and the cheap check found the one that needed nothing.)*
+
+✅ **A SECOND, INDEPENDENT ROUTE — run both, because they fail differently:**
+
+```
+   Schedule L line 23  =  opening paid-in capital  −  ( DISTRIBUTIONS − M-2 line 7 )
+```
+
+🛑 **THE OPERATOR IS MINUS, AND A FIRST VERSION OF THIS LINE HAD IT AS PLUS** *(caught in review — the same
+failure class as the two terms above: right on the pilot read loosely, false as a signed rule)*. **The excess
+REDUCES paid-in capital.** *(Pilot: `(61,169) − 111,545 = (172,714)`, which is the figure the return uses. With
+`+` it gives `+50,376`.)* ⚠️ **A working paper may write the magnitudes — `61,169 + 111,545 = 172,714` — and be
+clear in context; a SIGNED formula with named terms may not.** ⛔ **And the error is silent on a client whose
+paid-in capital is POSITIVE, which is most of them.**
+
+🔑 **M-2 line 7 is CAPPED at line 6** — you cannot distribute out of an AAA that has nothing in it — **so
+whatever the distributions exceed line 6 by has to land in paid-in capital instead.** ✅ **The two routes
+agreeing is the proof that the figure is one calculation and not two guesses.**
+
+🛑 **THE THREE FIGURES THAT ARE ONE CALCULATION:** **`Schedule K / K-1 16d` · `Schedule L line 23` ·
+`M-2 line 7`.** ⛔ **Change any ONE and re-derive the other two. Patching one is how a return goes out
+internally inconsistent while every individual entry looks defensible.**
+
+☑️ **THE ORDER THAT MAKES IT IMPOSSIBLE TO GET WRONG, and it is the order to hand the preparer:**
+
+1. ⌨️ **Key every FACT first** — assets, liabilities, income, expenses, depreciation. ⛔ **`16d`, `line 23` and
+   `line 24` are not facts and do not belong in this step.**
+2. 🧮 **Read the REQUIRED closing equity** = total assets − total liabilities.
+3. 🧮 **Compute `16d`** by the identity.
+4. 🧮 **Compute `line 23`** = required closing equity − capital stock − `line 24` − `line 25` + `line 26`
+   *(the last two are blank on a simple close company)*.
+5. ✅ **CHECK: total liabilities + capital stock + `line 23` + `line 24` + `line 25` − `line 26` = total
+   assets** *(the last two blank on a simple close company, as in step 4)*. ⛔ **If it fails, something in step 1
+   is wrong — go back. NEVER adjust `16d` to make it close.**
+
+⚠️ **AND THE ALARM IN ONE SENTENCE, which is the part worth memorising:**
+
+> 🔴 **If Schedule L does not balance, the first suspect is NOT an asset and NOT a liability — it is the
+> DISTRIBUTIONS figure, because it is the only one on the return that came from no document at all.**
+
+⛔ **WHAT THIS CHECK DOES NOT DO, stated because a check oversold is worse than none: it proves CONSISTENCY,
+not truth.** **A wrong ASSET or LIABILITY passes it perfectly — the arithmetic simply produces a wrong `16d`
+that balances a wrong balance sheet.** *(Zakom: a missing 20,873 insurance-finance liability did NOT trip it;
+the 2,467 did.)* ⇒ ✅ **So it runs AFTER the balance sheet has been tied to the statements, never instead of
+it.** 🔑 **Tie the balance sheet to the documents first; THEN the identity gives the one distributions figure
+that fits it.**
+
+☑️ **AND IT BELONGS IN THE WORKING PAPER'S TIE-OUT CHECKS AS TWO ROWS, NOT ONE** — the identity and the
+`line 23` cross-check — **so a later session re-runs both rather than trusting that they once agreed.**
+
 #### ⑤ ⚖️ LABEL EVERY FINDING, AND CHECK A KEYED POSITION AGAINST THE **DECISIONS TABLE** BEFORE CALLING IT ANYTHING
 
 🔑 **§4C's three labels govern here too — DECISION · OPEN ITEM · DEFECT — and a fourth case appears only on
@@ -3495,6 +3677,17 @@ is how an SOP becomes confidently wrong.**
   depreciation)*, **decomposing a Schedule L imbalance instead of plugging it**, **checking a keyed position
   against the DECISIONS TABLE before calling it anything**, and 🛑 **transcribing the draft IN FULL first —
   §1C applies to the firm's own output, and on that return five separate findings were BLANK LINES.**
+
+- 🔑 🆕 **THE PREPARER ASKS *HOW* SHE COULD HAVE CAUGHT IT HERSELF, not what the right figure is** —
+  **§4F ④-bis, *THE RESIDUAL IDENTITY*, added 2026-10-01 from the Zakom 1120-S** *(Lilian: "necesito
+  entenderlo para, en un futuro, poder encontrar este tipo de errores")*. 🛑 **TREAT THAT QUESTION AS THE MORE
+  VALUABLE ONE AND ANSWER IT IN FULL, step by step with her own figures in it** — ⛔ **handing over the correct
+  number again is the easy answer and it teaches nothing.** ✅ **The check ④-bis came out of was available to
+  her with no document and no second opinion: her draft's `16d` disagreed with the equity section keyed beside
+  it, and a figure derived from a balance sheet cannot disagree with that balance sheet.** ☑️ **Write in every
+  such identity the firm finds — a figure that is DERIVED rather than read has one correct value, so it can
+  always be re-derived and checked** — ⚠️ **and write in its LIMIT at the same time, because ④-bis catches a
+  wrong residual and is blind to a wrong asset.**
 
 - 🗣️ 🔴 **LILIAN SAYS SHE CANNOT FOLLOW AN EXPLANATION — *"muy densas… te saltas pasos… una nebulosa."***
   **§4G**, added 2026-09-28 from the Zakom 1120-S, **where every Form 4562 figure was correct and none of them
