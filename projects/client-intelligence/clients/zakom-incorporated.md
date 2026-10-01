@@ -1637,6 +1637,56 @@ intermediate on a line somebody types from, a bounded search stated as a conclus
 carrying an open checkbox. It is recorded here because it is how this return has been going wrong, and the
 working paper now carries the check that catches it.
 
+#### 2026-09-30 (night) — the keyed draft came back for review, and the balance sheet was one entry short
+
+**What happened.** Lilian sent the 22-page ATX draft of the 2025 company return into the session and asked
+what is wrong, what is still pending, and why the balance sheet does not balance. She also relayed a ruling
+from Julia on the meals rate. The whole draft was transcribed field by field before anything was analysed,
+because a document uploaded into a chat cannot be reopened by a later session — the record is in the working
+paper.
+
+**The balance sheet, which is what she asked about.** It is out by exactly the amount of the insurance-premium
+loan she had just added to the liabilities. She keyed the liability and not the equity that goes with it, and
+the proof is exact: taking the loan back out gives the equity figure that is actually on the return, to the
+dollar. The fix is two entries that are really one, and both are written out in the workbook with their
+derivation. The firm's own earlier note had predicted this failure in terms, which is why it was found in one
+subtraction rather than by hunting.
+
+**The largest thing on the return, and it was visible without arithmetic.** Five vehicles are still being
+treated as passenger cars by the software, because of the asset type code they carry, and the passenger-car
+depreciation cap is therefore limiting them. The tell needed no computation at all: three trucks bought at
+three different prices are all showing the same depreciation, and two more at different prices are showing a
+second identical figure. That cannot be a calculation — it can only be a limit. None of the five is a
+passenger car; they are over-the-road tractors and a trailer, which the depreciation form's own instructions
+take out of that category outright. Correcting the codes releases a substantial deduction and turns the
+year's small profit into a loss. Two trailers had already been corrected between drafts, and on this draft
+they have picked up their full depreciation to the dollar — which is what proves the route works.
+
+**Two things for Julia.** Officer compensation is now on the return at a real figure, where the record says
+the direction was Lilian's and the amount was hers and pending; and separately, whatever figure is used, the
+employer's share of payroll tax appears nowhere on the return while this file records twice that no payroll
+ran in 2025. And the four tractors bought in 2025 are keyed at a five-year life where the firm's own research
+puts over-the-road tractor units at three — defensible either way for a first-year asset, but it has to be
+answered before the asset codes are re-keyed or they get keyed twice.
+
+**The meals.** Julia ruled to continue at 50% and the draft already matches it, so nothing changes. The
+research finding that a higher rate is available for drivers subject to federal hours-of-service limits is
+not withdrawn and travels beside her ruling, together with what the lower rate gives up and the reason the
+lower rate is defensible anyway — the drivers are contractors, and a contractor's own meals are his
+deduction, not the company's.
+
+**What is now right that was not.** Twelve items closed on this draft: the casualty figure and its five
+consequential entries, the destroyed truck's removal from the depreciation schedule, the insurance interest,
+the insurance loan on the correct balance-sheet line, the qualified-business-income disclosure that had been
+missing from the return entirely, the depreciation elections properly papered one per asset class, two
+trailers off the wrong code, the home office excluded as the prior year excluded it, an intercompany loan
+reduced, both information-return questions answered, and an asset the books never carried put on the right
+part of the disposal form. Eight of nine cross-foots tie to the dollar, and the one that does not is the
+balance sheet.
+
+**Two forms should come off before filing** — both are attached with every line blank, and one of them is
+blank precisely because the software correctly routed the casualty elsewhere.
+
 ## 7. Links
 
 - **Double client:** [`Zakom Incorporated` — id `710612`](https://app.doublehq.com/close?cid=710612)

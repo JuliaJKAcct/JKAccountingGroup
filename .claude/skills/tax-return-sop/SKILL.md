@@ -3222,8 +3222,8 @@ every asset)*:
 
 | Code | What carried it | Recovery | Where it lands | §280F caps? |
 |---|---|---|---|---|
-| **`V-1`** | the four 2025 **over-the-road tractors** | **3-year**, 200DB, HY | **Part III line 19a** | ⛔ **no** |
-| **`V-4`** | the **trailers** *(Reitnouer, both Bensons)* | **5-year**, 200DB, HY | **Part III line 19b** *(or line 17 if a prior-year asset)* | ⛔ **no** |
+| **`V-1`** | ⛔ **NOT SEEN ON ANY ASSET — it is the code the four 2025 over-the-road tractors BELONG on, and all four are keyed `V-7`** | **3-year**, 200DB, HY | **Part III line 19a** — ⚠️ **EMPTY on the keyed draft** | ⛔ **no** |
+| **`V-4`** | the **2025 trailer ADDITIONS** — `2026 Reitnouer`, `2022 Benson Trailer`. ⛔ **NOT the `2025 Benson`, which decision 94 holds on `V-7`** | **5-year**, 200DB, HY | **Part III line 19b** *(or line 17 if a prior-year asset)* | ⛔ **no** |
 | **`V-5`** | the **Audi** — a genuine passenger car | 5-year | **Part V** | ✅ **YES** |
 | **`V-7`** | *"5-yr Truck, van, auto on tr…"* | 5-year | **Part V** | ✅ **YES** |
 
@@ -3233,7 +3233,21 @@ one return plus one screenshot.** ☑️ **Extend it the next time a different c
 ✅ **PROOF THAT THE ROUTE WORKS, which is why it is stated as verified rather than guessed:** **two assets
 were moved from `V-7` to `V-4` between two drafts of the same return, and on the new draft they had left
 Part V, left the Part V Section B mileage table, lost their caps and picked up their full MACRS figures —
-`70,540 × 20% = 14,108` and `67,050 × 32% = 21,456`, both to the dollar.**
+`70,540 × 20% = 14,108` *(the `2026 Reitnouer`)* and `67,050 × 32% = 21,456` *(the `2025 Benson`)*, both to
+the dollar** — **and the mileage table went from NINE vehicles to SEVEN in the same pass** *(Zakom's 2025
+paper §3BP ① items 2, 3 and 9)*.
+⚠️ **THE `2025 BENSON` THEN WENT BACK TO `V-7` THE SAME DAY, AND THAT IS A RULING, NOT AN ERROR:** **Lilian's
+principle is that an asset on the FILED prior return keeps its classification until the signer rules; only
+assets NEW in the year are classified correctly from the start** *(that paper's decision 94)*. 🔑 **It does
+not weaken the proof — the route was observed working and then deliberately reversed — and the `1,656` the
+revert costs is the MEASURED size of a §280F cap falling away.**
+⛔ **AND DO NOT SUBSTITUTE THE `2022 Benson Trailer` (43,650) AS THE SECOND ASSET. A session did exactly that
+on 2026-09-30, believing it was correcting an error, and struck the firm's only measured observation of a cap
+releasing.** **That trailer was NEW in 2025, sat on `V-4` from the start and was never in Part V, so its
+`43,650 × 20% = 8,730` is ordinary first-year MACRS and proves nothing about the route.**
+🔑 **Two assets on one client sharing the word *Benson* is exactly the collision §1B.9's closing rule warns
+about — when two assets share a description, write NEITHER of them unqualified. The session that broke this
+rule was the one applying it.**
 
 #### ② 🔴 THE DISPOSITIONS TAB — and the two red warnings ATX prints on the screen
 
