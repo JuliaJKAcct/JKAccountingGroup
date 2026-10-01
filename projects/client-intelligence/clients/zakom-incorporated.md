@@ -1728,8 +1728,10 @@ reason-why rather than as an objection: if anyone ever asks why this return depr
 tractor over five years, the file shows a considered position taken by the person who signs. Two things make it
 an easy ruling to live with and both are recorded: it is the **conservative** side, so there is no penalty
 exposure — less depreciation means more income on the shareholder's return, and penalties follow
-understatements — and a §280F cap **defers** basis rather than forfeiting it, though the deferral here runs for
-well over a decade. **The boundary is explicit and matters for later:** the ruling covers only the assets that
+understatements — and a §280F cap **defers** basis rather than forfeiting it — the unrecovered
+cost keeps coming off in later years at the capped rate. How long that takes has deliberately **not** been
+computed: the annual release is each unit's own statutory limit rather than a flat figure, and two earlier
+attempts at a year count were both wrong. The working paper carries the position and says so. **The boundary is explicit and matters for later:** the ruling covers only the assets that
 were NEW in 2025. The two prior-year assets held because they sit on filed returns, and the seven pre-2025
 vehicles on the same wrong category, are **still open with Julia** and must not be treated as answered by it.
 **One forward consequence for 2026:** the same codes have to be carried next year or the depreciation schedule

@@ -3051,6 +3051,32 @@ firm had done three times — does not let her find the next one.** Zakom 2025, 
 the end)*, **the prior year's filed Schedule L for the opening column, and an answer on whether the shareholder
 put money IN.** ⛔ **Without the third, the result is distributions net of contributions.**
 
+🛑 **AND ONE GATE THAT COVERS EVERY REMAINING WAY THIS IDENTITY CAN BE WRONG — RUN IT FIRST, IT IS TWO NUMBERS
+OFF THE SAME PAGE:**
+
+```
+   M-2 line 6  −  M-2 line 1     MUST EQUAL     Schedule M-1 line 1  (net income per books)
+```
+
+⛔ **If they differ, the identity is wrong BY THAT DIFFERENCE — and it still closes, so nothing flags it.**
+🔑 **The reason is structural: `(line 6 − line 1)` is the AAA column ALONE, while `closing equity` is ALL of
+Schedule L equity.** **The two measure the same movement only when nothing has gone anywhere else.**
+☑️ **The two usual causes, and the gate catches both without you having to look for either:**
+
+- 🔵 **ANOTHER M-2 COLUMN CARRIES ACTIVITY.** **Tax-exempt income and the expenses related to it go to the
+  OAA, never the AAA; AE&P and PTI likewise.** **On a client with tax-exempt income the identity understates
+  the distributions by exactly that amount.**
+- 🔵 **A BOOK/TAX DIFFERENCE WAS LEFT ON M-1 INSTEAD OF RUN THROUGH M-2 lines 3 and 5.** **Schedule L is *per
+  books*; the AAA is a tax account.** **An ordinary §179 or bonus timing difference parts them.**
+
+⚠️ **A movement in Schedule L line 25 or 26 DURING the year** *(a redemption, treasury stock, a prior-period
+adjustment)* **is the same class and is absorbed silently into DISTRIBUTIONS.** ✅ **The gate does not catch
+that one, so ask: did anything happen to the share capital this year?**
+
+*(Pilot, satisfying the gate exactly: M-1 line 1 `26,038`; M-2 line 1 blank, line 6 `26,038`; columns (b), (c)
+and (d) all zero. That is WHY its worked example ties, and it is the thing to check before trusting it
+anywhere else.)*
+
 🔑 **WHY THIS CHECK EXISTS AT ALL: on a closely-held S corporation whose books have NO EQUITY SECTION, the
 distributions figure is the only number on the return that comes from no document.** ⇒ **It is DERIVED, and a
 derived figure has exactly ONE correct value** — ✅ **which is precisely what makes it checkable, while a figure
@@ -3097,8 +3123,15 @@ balance sheet. Two different errors, and the cheap check found the one that need
 ✅ **A SECOND, INDEPENDENT ROUTE — run both, because they fail differently:**
 
 ```
-   Schedule L line 23  =  opening paid-in capital  +  ( DISTRIBUTIONS − M-2 line 7 )
+   Schedule L line 23  =  opening paid-in capital  −  ( DISTRIBUTIONS − M-2 line 7 )
 ```
+
+🛑 **THE OPERATOR IS MINUS, AND A FIRST VERSION OF THIS LINE HAD IT AS PLUS** *(caught in review — the same
+failure class as the two terms above: right on the pilot read loosely, false as a signed rule)*. **The excess
+REDUCES paid-in capital.** *(Pilot: `(61,169) − 111,545 = (172,714)`, which is the figure the return uses. With
+`+` it gives `+50,376`.)* ⚠️ **A working paper may write the magnitudes — `61,169 + 111,545 = 172,714` — and be
+clear in context; a SIGNED formula with named terms may not.** ⛔ **And the error is silent on a client whose
+paid-in capital is POSITIVE, which is most of them.**
 
 🔑 **M-2 line 7 is CAPPED at line 6** — you cannot distribute out of an AAA that has nothing in it — **so
 whatever the distributions exceed line 6 by has to land in paid-in capital instead.** ✅ **The two routes
@@ -3116,8 +3149,9 @@ internally inconsistent while every individual entry looks defensible.**
 3. 🧮 **Compute `16d`** by the identity.
 4. 🧮 **Compute `line 23`** = required closing equity − capital stock − `line 24` − `line 25` + `line 26`
    *(the last two are blank on a simple close company)*.
-5. ✅ **CHECK: total liabilities + capital stock + `line 23` + `line 24` = total assets.** ⛔ **If it fails,
-   something in step 1 is wrong — go back. NEVER adjust `16d` to make it close.**
+5. ✅ **CHECK: total liabilities + capital stock + `line 23` + `line 24` + `line 25` − `line 26` = total
+   assets** *(the last two blank on a simple close company, as in step 4)*. ⛔ **If it fails, something in step 1
+   is wrong — go back. NEVER adjust `16d` to make it close.**
 
 ⚠️ **AND THE ALARM IN ONE SENTENCE, which is the part worth memorising:**
 
