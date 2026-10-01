@@ -1719,6 +1719,47 @@ two places", meaning one decision; she reasonably read it as one field. They are
 and the draft itself proved it — the two figures on it were mutually inconsistent, which could not happen if
 one computed the other.
 
+**2026-10-01 — Julia ruled on the vehicle depreciation categories, and the question that produced the ruling is
+closed.** Lilian relayed it: the change that moved the four tractors bought in 2025 onto the listed-property,
+capped category between two drafts **was Julia's, and it was deliberate** — *"Tómalo como correcto porque fue
+una decisión de ella."* So the return keeps the five-year, capped treatment. The firm's own reading of
+Publication 946 and the Form 4562 instructions took the other view and is kept in the working paper as the
+reason-why rather than as an objection: if anyone ever asks why this return depreciates a Class-8 over-the-road
+tractor over five years, the file shows a considered position taken by the person who signs. Two things make it
+an easy ruling to live with and both are recorded: it is the **conservative** side, so there is no penalty
+exposure — less depreciation means more income on the shareholder's return, and penalties follow
+understatements — and a §280F cap **defers** basis rather than forfeiting it, though the deferral here runs for
+well over a decade. **The boundary is explicit and matters for later:** the ruling covers only the assets that
+were NEW in 2025. The two prior-year assets held because they sit on filed returns, and the seven pre-2025
+vehicles on the same wrong category, are **still open with Julia** and must not be treated as answered by it.
+**One forward consequence for 2026:** the same codes have to be carried next year or the depreciation schedule
+will not agree with this filed return.
+
+**2026-10-01 — Lilian asked for the METHOD, not the figure, and that changed what the firm delivers.** After
+three rounds in which the distributions figure on this return was corrected for her, she asked how she could
+have found the error herself: *"Necesito entenderlo para, en un futuro, poder encontrar este tipo de errores."*
+The answer turned out to be better than expected — **her own draft already contradicted itself, and she needed
+no document and nobody's help to see it.** Because this company's books carry no equity section at all, the
+distributions figure is the one number on the return that comes from no document: it is derived, so it has
+exactly one correct value, and it can always be recomputed from the opening equity, the M-2 reconciliation and
+the closing equity the balance sheet requires. Run that on the figures she had keyed and it disagreed with the
+equity section sitting beside it — and a figure derived from a balance sheet cannot disagree with that balance
+sheet. The check is now a named step in the firm's tax-return skill, with its limit stated beside it: it proves
+internal consistency, not truth, so a wrong asset or liability passes it untouched. **The general lesson for
+how this client is worked: when she asks how rather than what, that is the more valuable question and it gets
+answered in full.**
+
+**2026-10-01 — the working paper was swept end to end on her instruction, and the worst find was an
+instruction surface, not an analysis one.** She asked for every obsolete note to be caught. Run mechanically
+rather than by reading — the paper is over fifteen thousand lines — the sweep found that **the one table in the
+file that exists to be copied into the tax software was still telling her to key the superseded meals rate,
+three days after Julia had ruled on it**, while the paragraph immediately above that table carried the ruling
+correctly. Five of the file's tie-out checks had also not been re-run since an earlier draft and were reporting
+passes about a return that no longer existed; every one now names the draft it was run on. The method is now a
+standing step in the firm's tax-return skill, and the distinction it turns on is worth keeping in mind for this
+client's file too: a section that DIAGNOSES something should keep the old figure, because that is the record —
+a section that INSTRUCTS may not, because there a stale figure is a wrong keystroke.
+
 ## 7. Links
 
 - **Double client:** [`Zakom Incorporated` — id `710612`](https://app.doublehq.com/close?cid=710612)

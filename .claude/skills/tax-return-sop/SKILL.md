@@ -489,6 +489,46 @@ surface it describes** — ⚠️ **the summary of a correction is not covered b
 review, never by the session that wrote them.** 🔑 **A session cannot sweep its own claim, because the claim is
 the thing it believes.**
 
+### §1C.6 · 🛑 SWEEP A SUPERSEDED FIGURE BY **GREP**, NOT BY MEMORY — and sort the hits into INSTRUCTIONS and ANALYSIS
+
+_(Added 2026-10-01 after the **third** occurrence on one return — the first two are in the Zakom paper's own
+decisions 143 and 159. **Lilian ordered the sweep that found it:** *"revises el working paper de principio a fin
+y trates de que no haya ninguna nota que esté obsoleta o desactualizada."*)_
+
+🔑 **THE FAILURE IS STRUCTURAL, NOT CARELESS, AND THAT IS WHY A HABIT WILL NOT FIX IT.** **A ruling closes a
+question and leaves its old answer standing on every surface that quoted it.** ⛔ **The author who applies the
+ruling sweeps the surfaces they REMEMBER — which are the ones they wrote recently — and a working paper of any
+size has more.** *(Zakom: over 15,500 lines, 35 superseded figures, 434 hits.)*
+
+✅ **THE METHOD, and it is three lines of script rather than a reading pass:**
+
+1. ☑️ **List every figure the return has SUPERSEDED, with the value that replaced it.** **Build it from the
+   decisions table, not from memory.**
+2. ☑️ **Grep each old value across the whole paper.**
+3. ☑️ **Sort every hit two ways** — **by SECTION, and by whether the line already carries a historical stamp**
+   *(`SUPERSEDED`, `_(was`, `_(As written`, `WITHDRAWN`, `this row read`)*.
+
+🛑 **AND THE SORT THAT MATTERS IS NOT *live section* versus *old section* — IT IS **INSTRUCTION** VERSUS
+**ANALYSIS**.**
+
+| | |
+|---|---|
+| ✅ **ANALYSIS may hold a superseded figure** | **A diagnosis section, a decisions row, a branch table that PRICES what was given up. Its job is to show what was keyed against what should have been** — **deleting the old value would destroy the record** |
+| 🔴 **AN INSTRUCTION MAY NOT** | **The worksheet a preparer copies from, the tie-out checks, the open-at-filing checkboxes, the handoff.** ⛔ **A stale figure here is not a record, it is a wrong keystroke** |
+
+🔴 **THE WORST CASE THE SWEEP FOUND, and it is the shape to expect: the SECTION had the ruling stamped and the
+TABLE INSIDE IT did not** — **so one subsection carried two live instructions at once, three days apart, and the
+TABLE is what gets copied.** ⇒ ✅ **Grep reaches a table cell; a reading pass skims it as already-known.**
+
+🔑 **AND A SECOND CLASS THE FIGURE GREP MISSES ENTIRELY: a tie-out check that still PASSES against an older
+draft.** ⛔ **Nothing in it is a wrong figure — it is a correct statement about a return that no longer exists**,
+**which reads as evidence about the current one.** ✅ **SO: every tie-out row NAMES THE DRAFT IT WAS RUN ON**, and
+re-running them is part of reviewing a new draft, not an occasional extra. *(Zakom: five of eleven rows were
+still showing a 28-September draft's figures.)*
+
+⚠️ **AND SWEEP THE DERIVED FIGURES TOO** — **a residual's own grep misses the four or five numbers computed
+FROM it** *(decision 159)*. ☑️ **Put them in the list in step 1.**
+
 ---
 
 ## §2 · The section spine
@@ -2986,6 +3026,87 @@ the same amount)*; **a change to PRIOR-year accumulated depreciation moves it on
 *(opening equity is fixed by the filed return)*; **and extra current-year INCOME moves it one-for-one**
 *(the proceeds are already inside the documented closing cash)*. ⇒ ⛔ **Key the residual LAST.**
 
+#### ④-bis 🔑 **THE RESIDUAL IDENTITY** — the one check that catches a wrong DISTRIBUTIONS figure with nothing but the draft on screen
+
+_(Added 2026-10-01, because **Lilian asked for the METHOD rather than the number**: *"¿Cómo pude haberme dado
+cuenta por mí misma de que esto estaba mal, que este número no encajaba en la declaración? Necesito entenderlo
+para, en un futuro, poder encontrar este tipo de errores."* ⚠️ **Answering with the right figure — which this
+firm had done three times — does not let her find the next one.** Zakom 2025, decision 157.)_
+
+🔑 **WHY THIS CHECK EXISTS AT ALL: on a closely-held S corporation whose books have NO EQUITY SECTION, the
+distributions figure is the only number on the return that comes from no document.** ⇒ **It is DERIVED, and a
+derived figure has exactly ONE correct value** — ✅ **which is precisely what makes it checkable, while a figure
+read off a document can only be checked by going back to the document.**
+
+🧮 **THE IDENTITY. Equity can only move four ways in a year — the year's profit, what the owner put IN, what
+the company cannot deduct, and what the owner TOOK OUT. Three of those are already on the return:**
+
+```
+   closing equity  =  opening equity  +  M-2 line 6  −  DISTRIBUTIONS
+
+   ⇒  DISTRIBUTIONS  =  opening equity  +  M-2 line 6  −  closing equity
+```
+
+☑️ **AND THE FOUR TERMS, each read off the screen:**
+
+| Term | Where | ⚠️ The trap |
+|---|---|---|
+| **opening equity** | **Schedule L BEGINNING column, lines 22 + 23 + 24 added** | ⛔ **Not the prior return's "equity" caption — add the three lines** |
+| **M-2 line 6** | **already computed on the form** *(lines 1–5 combined)* | ✅ **It is exactly "everything that moved equity except distributions", which is why the identity is short** |
+| **closing equity** | 🔴 **total assets − total liabilities. The equity the balance sheet REQUIRES** | 🛑 **THE STEP EVERYBODY SKIPS: it is NOT the equity that was keyed. Using the keyed figure makes the identity circular and it can never fail** |
+| **DISTRIBUTIONS** | **Schedule K line 16d, K-1 box 16d** | ⚠️ **And `M-2 line 7` and `Schedule L line 23`: see below** |
+
+🛑 **AND THE FINDING THAT MAKES THIS WORTH A SUBSECTION: RUN IT ON THE DRAFT'S *OWN* EQUITY SECTION, BEFORE ANY
+CORRECTION.**
+
+> 🔑 **A figure computed from the balance sheet CANNOT disagree with the balance sheet.** ⇒ **If `16d`
+> disagrees with the equity section that is keyed BESIDE it, `16d` was never derived — it was carried in from
+> an earlier version and left there.** ✅ **That is a finding available with no other document, no corrected
+> figure and nobody else's help.**
+
+*(Zakom 2025: the draft's keyed closing equity was −150,841, so the identity gave 116,710; the draft held
+114,243. **Out by 2,467 against its own balance sheet** — and separately out by 23,340 against the CORRECTED
+balance sheet. Two different errors, and the cheap check found the one that needed nothing.)*
+
+✅ **A SECOND, INDEPENDENT ROUTE — run both, because they fail differently:**
+
+```
+   Schedule L line 23  =  opening paid-in capital  +  ( DISTRIBUTIONS − M-2 line 7 )
+```
+
+🔑 **M-2 line 7 is CAPPED at line 6** — you cannot distribute out of an AAA that has nothing in it — **so
+whatever the distributions exceed line 6 by has to land in paid-in capital instead.** ✅ **The two routes
+agreeing is the proof that the figure is one calculation and not two guesses.**
+
+🛑 **THE THREE FIGURES THAT ARE ONE CALCULATION:** **`Schedule K / K-1 16d` · `Schedule L line 23` ·
+`M-2 line 7`.** ⛔ **Change any ONE and re-derive the other two. Patching one is how a return goes out
+internally inconsistent while every individual entry looks defensible.**
+
+☑️ **THE ORDER THAT MAKES IT IMPOSSIBLE TO GET WRONG, and it is the order to hand the preparer:**
+
+1. ⌨️ **Key every FACT first** — assets, liabilities, income, expenses, depreciation. ⛔ **`16d`, `line 23` and
+   `line 24` are not facts and do not belong in this step.**
+2. 🧮 **Read the REQUIRED closing equity** = total assets − total liabilities.
+3. 🧮 **Compute `16d`** by the identity.
+4. 🧮 **Compute `line 23`** = required closing equity − capital stock − `line 24`.
+5. ✅ **CHECK: total liabilities + capital stock + `line 23` + `line 24` = total assets.** ⛔ **If it fails,
+   something in step 1 is wrong — go back. NEVER adjust `16d` to make it close.**
+
+⚠️ **AND THE ALARM IN ONE SENTENCE, which is the part worth memorising:**
+
+> 🔴 **If Schedule L does not balance, the first suspect is NOT an asset and NOT a liability — it is the
+> DISTRIBUTIONS figure, because it is the only one on the return that came from no document at all.**
+
+⛔ **WHAT THIS CHECK DOES NOT DO, stated because a check oversold is worse than none: it proves CONSISTENCY,
+not truth.** **A wrong ASSET or LIABILITY passes it perfectly — the arithmetic simply produces a wrong `16d`
+that balances a wrong balance sheet.** *(Zakom: a missing 20,873 insurance-finance liability did NOT trip it;
+the 2,467 did.)* ⇒ ✅ **So it runs AFTER the balance sheet has been tied to the statements, never instead of
+it.** 🔑 **Tie the balance sheet to the documents first; THEN the identity gives the one distributions figure
+that fits it.**
+
+☑️ **AND IT BELONGS IN THE WORKING PAPER'S TIE-OUT CHECKS AS TWO ROWS, NOT ONE** — the identity and the
+`line 23` cross-check — **so a later session re-runs both rather than trusting that they once agreed.**
+
 #### ⑤ ⚖️ LABEL EVERY FINDING, AND CHECK A KEYED POSITION AGAINST THE **DECISIONS TABLE** BEFORE CALLING IT ANYTHING
 
 🔑 **§4C's three labels govern here too — DECISION · OPEN ITEM · DEFECT — and a fourth case appears only on
@@ -3495,6 +3616,17 @@ is how an SOP becomes confidently wrong.**
   depreciation)*, **decomposing a Schedule L imbalance instead of plugging it**, **checking a keyed position
   against the DECISIONS TABLE before calling it anything**, and 🛑 **transcribing the draft IN FULL first —
   §1C applies to the firm's own output, and on that return five separate findings were BLANK LINES.**
+
+- 🔑 🆕 **THE PREPARER ASKS *HOW* SHE COULD HAVE CAUGHT IT HERSELF, not what the right figure is** —
+  **§4F ④-bis, *THE RESIDUAL IDENTITY*, added 2026-10-01 from the Zakom 1120-S** *(Lilian: "necesito
+  entenderlo para, en un futuro, poder encontrar este tipo de errores")*. 🛑 **TREAT THAT QUESTION AS THE MORE
+  VALUABLE ONE AND ANSWER IT IN FULL, step by step with her own figures in it** — ⛔ **handing over the correct
+  number again is the easy answer and it teaches nothing.** ✅ **The check ④-bis came out of was available to
+  her with no document and no second opinion: her draft's `16d` disagreed with the equity section keyed beside
+  it, and a figure derived from a balance sheet cannot disagree with that balance sheet.** ☑️ **Write in every
+  such identity the firm finds — a figure that is DERIVED rather than read has one correct value, so it can
+  always be re-derived and checked** — ⚠️ **and write in its LIMIT at the same time, because ④-bis catches a
+  wrong residual and is blind to a wrong asset.**
 
 - 🗣️ 🔴 **LILIAN SAYS SHE CANNOT FOLLOW AN EXPLANATION — *"muy densas… te saltas pasos… una nebulosa."***
   **§4G**, added 2026-09-28 from the Zakom 1120-S, **where every Form 4562 figure was correct and none of them
