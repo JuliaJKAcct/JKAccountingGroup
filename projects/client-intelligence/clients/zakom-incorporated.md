@@ -1687,6 +1687,38 @@ balance sheet.
 **Two forms should come off before filing** — both are attached with every line blank, and one of them is
 blank precisely because the software correctly routed the casualty elsewhere.
 
+#### 2026-10-01 — the preparer's memory beat the current draft, and a reversed position surfaced
+
+**What happened.** Lilian said she thought an earlier version of the return had no depreciation cap on the
+trucks, that she had put them in the three-year and five-year categories herself, and that she believed the
+firm's principal had made the change. She was right, and it did not rest on anyone's memory: this file had
+already transcribed both earlier drafts field by field, and three independent figures in those transcriptions
+say the same thing. The four trucks bought in 2025 sat in the ordinary depreciation section as three-year
+property, with no cap, on both earlier drafts. On the current one they are in the listed-property section at
+five years and capped. Nothing in the file records the change, and the ruling that governs the two
+prior-year vehicles is not authority for it — that ruling says in terms that assets new in the year are
+classified correctly from the start.
+
+**Why it matters beyond this return.** The question is no longer which recovery period is right. It is
+whether the change was deliberate. If the principal made it on purpose it is her ruling and it stands, but it
+needs recording with her reason, because it reverses a documented position and costs real deduction. If
+nobody made it on purpose, the earlier state is restored. Nothing is keyed on those vehicles until she
+answers. Lilian is confirming with her.
+
+**And the record is the reason this was answerable at all.** Had the earlier drafts been summarised rather
+than transcribed, the comparison could not have been made and the answer would have been "I do not know."
+That is the transcribe-in-full rule paying for itself, on the firm's own output rather than a client's
+document.
+
+**The second question she asked.** She had already corrected the balance sheet and entered the car's mileage,
+but the shareholder's distribution figure on the K-1 had not moved. The screen she was looking at is the
+printed K-1 statement, which is an output — every figure on it arrives from the main schedule, which is why
+all the others matched the draft exactly. The field that accepts a figure is on the worksheet behind the
+schedule's own distributions line. And the two corrections she had been given were described as "one entry in
+two places", meaning one decision; she reasonably read it as one field. They are two separate manual fields,
+and the draft itself proved it — the two figures on it were mutually inconsistent, which could not happen if
+one computed the other.
+
 ## 7. Links
 
 - **Double client:** [`Zakom Incorporated` — id `710612`](https://app.doublehq.com/close?cid=710612)
