@@ -259,6 +259,62 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-01 — 🧰 **EQUIPMENT BINDER REVISION 5 ARRIVED, AND IT IS THE FIRST SELLER DOCUMENT IN THIS DEAL THAT
+  FOOTS.** Julia handed over `BPR_Laundry_Portfolio_Equipment_Binder_rev5_2026-10-01.pdf` — 18 pages, Merritt
+  Realty / Kevin T. Riordan, dated the day it arrived, marked CONFIDENTIAL and *"information furnished by the
+  Seller… not independently verified."* **Transcribed IN FULL** *(CLAUDE.md: a client document is transcribed
+  once and completely, never mined for the question of the hour)* **into the portfolio workbook sheets `04
+  Equipment & Capacity` and `05 Machine Serials`** — the fleet by size and model, the posted vend price per
+  class, the ancillary equipment per store with owned-vs-excluded marked, and **all 333 machine serials**.
+  ✅ **① THE COUNTS NOW RECONCILE AND THE EARLIER ONES WERE WRONG.** The 2026-09-22 entry below records the
+  seller's schedule as **216 washers and 141 dryers**, with the washer columns **adding to 218 against a stated
+  216** and no legible per-store dryer split. **Rev 5: 216 washers — and every per-store schedule foots exactly
+  to its own serial list, and the five stores foot to the portfolio total.** 🔑 **The dryer figure is RESTATED and
+  141 was never a meaningful number: it is 117 CABINETS / 209 POCKETS**, because a stack is one cabinet with two
+  pockets and the earlier total mixed the two. **141 is not a re-cut of either and cannot be reconciled to them**
+  — which matters because the asset schedule attached to the contract will be built per unit. 🛠️ **Also corrected:
+  Palmetto Wash & Fold is 39 washers (not 40) and Ruskin 36 (not 37).**
+  ✅ **② THE SERIAL BLOCKS CORROBORATE THE STATED FLEET AGES — and this is the only age evidence in the file
+  that does NOT come from the seller's word.** Five Electrolux washer models appear at more than one store. In
+  **every one**, the serial ranges **do not overlap** and run in exactly the order the seller states the fleets
+  were installed: **Samoset Oct 2022 → Ruskin 2024 → Palmetto W&F Dec 2025.** Zero anomalies in five independent
+  model/block groups. ⓘ It proves the SEQUENCE, not a date — but the stated ages are a direct §1060 Class V input
+  and until a technician reads the plates this is the strongest thing we have. **Also clean: 330 recorded serials,
+  not one duplicate**, and Ruskin's four plain ten-digit washer serials are **exactly** the four units described
+  as Huebsch, which the serial format confirms independently.
+  🔴 **③ THE WATER TEST FINALLY RAN, AND IT PUTS A PHYSICAL NUMBER BEHIND THE RUSKIN MONTH-END ENTRY.** R1 of the
+  Verification Plan was stalled for want of the fleet and the vend prices. Dividing booked machine revenue by
+  *(gallons × posted vend price per pound of washer capacity)* makes the gallons-per-pound-per-cycle term cancel,
+  so the index needs **no engineering constant** and is purely comparative. **Ruskin's index is 1.64× the mean of
+  the other four stores — the highest in the portfolio. Excluding the month-end true-up deposits it falls to
+  mid-pack, between Select and Samoset.** 🔑 **And the gap the water does not explain covers about 92% of that
+  true-up** *(on total deposits rather than machine revenue, 99%)*. ⛔ **For the reported figure to be fleet
+  efficiency instead, Ruskin's washers would have to use about 61% of the water per pound-cycle that the other
+  three use — and 73% of what its own sister Electrolux fleet at Samoset uses, two model years older. Neither is
+  credible.** ⚠️ **Stated limits, because they are real:** the bills are twelve months against calendar-year
+  revenue; **Ruskin's vend prices are the one store the seller did NOT state** and are proxied from Palmetto W&F;
+  Palmetto Coin's machine revenue has never been isolated so it cannot enter the index; and the index attributes
+  all machine revenue to washers, which understates every store equally. 🟠 **The second-highest index is SAMOSET
+  at 1.20× the mean against a Select / Palmetto W&F pair below it — unresolved, and on the open-items list.**
+  🆕 **④ FOUR THINGS IN IT THAT ARE NOT ABOUT MACHINES AT ALL.** ⓐ **TWO DELIVERY VANS are listed on SELECT's
+  equipment list — a Bayshore Laundromat store — attributed to LEMON SQUEEZY**, a separate EIN whose inclusion in
+  this sale is still unanswered; the vans now sit on both sides of that question. ⓑ **THREE CENTS CARD SYSTEMS ARE
+  BOUGHT AND STILL IN BOXES** at Samoset, Select and Palmetto Coin — an asset in the sale with no revenue attached,
+  on no depreciation schedule we hold, and with no invoice in the file. ⓒ **RUSKIN'S LIST INCLUDES TWO RESIDENTIAL
+  APARTMENTS' APPLIANCES** (A/C, heat, fridge, stove, microwave, washer/dryer), so the buyer is acquiring landlord
+  fixtures — and the rent they imply has still never been shown separately in any revenue figure presented. ⓓ **THE
+  9TH ST GARAGE IS THE SUPPLY HUB FOR ALL FIVE STORES**, so supplies are bought in one entity and consumed in
+  three, and the per-store cost comparison cannot be read without knowing how that is split. ⓔ **No ATM appears
+  anywhere in the binder** although ATM commission income does appear in the revenue material — on this document
+  the ATMs are not the seller's property.
+  🛠️ **⑤ WHAT TO ASK KEVIN, arising from rev 5 only** *(the rest of the ask is Accountant Request List v10,
+  unchanged)*: **Ruskin's vend prices**, the only store with the column blank; **the three pending data plates**
+  (one Ruskin washer, two Palmetto W&F dryers); **which dryer count the contract's asset schedule will use**,
+  141 or 117/209; **the CENTS purchase invoices**; and **the seller's depreciation schedules** — ⚠️ **this binder
+  is a physical inventory, not a tax fixed-asset register, and it does nothing for basis.**
+  ⛔ **Figures stay out of the repo** — the vend prices, the index values and the gap are in the workbook, which is
+  handed to Julia and never committed.
+
 - 2026-09-30 — 🛑 **A CORRECTION TO YESTERDAY'S §1245 FINDING, AND IT MATTERS BECAUSE THE CONCLUSION SURVIVED A WRONG
   PREMISE.** I recorded that **nothing was ever capitalised** at any store and that the seller therefore has no
   depreciation schedule to argue with on the equipment allocation. ⛔ **That is wrong for the larger S-corp.** Its IRS
