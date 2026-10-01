@@ -1637,6 +1637,131 @@ intermediate on a line somebody types from, a bounded search stated as a conclus
 carrying an open checkbox. It is recorded here because it is how this return has been going wrong, and the
 working paper now carries the check that catches it.
 
+#### 2026-09-30 (night) — the keyed draft came back for review, and the balance sheet was one entry short
+
+**What happened.** Lilian sent the 22-page ATX draft of the 2025 company return into the session and asked
+what is wrong, what is still pending, and why the balance sheet does not balance. She also relayed a ruling
+from Julia on the meals rate. The whole draft was transcribed field by field before anything was analysed,
+because a document uploaded into a chat cannot be reopened by a later session — the record is in the working
+paper.
+
+**The balance sheet, which is what she asked about.** It is out by exactly the amount of the insurance-premium
+loan she had just added to the liabilities. She keyed the liability and not the equity that goes with it, and
+the proof is exact: taking the loan back out gives the equity figure that is actually on the return, to the
+dollar. The fix is two entries that are really one, and both are written out in the workbook with their
+derivation. The firm's own earlier note had predicted this failure in terms, which is why it was found in one
+subtraction rather than by hunting.
+
+**The largest thing on the return, and it was visible without arithmetic.** Five vehicles are still being
+treated as passenger cars by the software, because of the asset type code they carry, and the passenger-car
+depreciation cap is therefore limiting them. The tell needed no computation at all: three trucks bought at
+three different prices are all showing the same depreciation, and two more at different prices are showing a
+second identical figure. That cannot be a calculation — it can only be a limit. None of the five is a
+passenger car; they are over-the-road tractors and a trailer, which the depreciation form's own instructions
+take out of that category outright. Correcting the codes releases a substantial deduction and turns the
+year's small profit into a loss. Two trailers had already been corrected between drafts, and on this draft
+they have picked up their full depreciation to the dollar — which is what proves the route works.
+
+**Two things for Julia.** Officer compensation is now on the return at a real figure, where the record says
+the direction was Lilian's and the amount was hers and pending; and separately, whatever figure is used, the
+employer's share of payroll tax appears nowhere on the return while this file records twice that no payroll
+ran in 2025. And the four tractors bought in 2025 are keyed at a five-year life where the firm's own research
+puts over-the-road tractor units at three — defensible either way for a first-year asset, but it has to be
+answered before the asset codes are re-keyed or they get keyed twice.
+
+**The meals.** Julia ruled to continue at 50% and the draft already matches it, so nothing changes. The
+research finding that a higher rate is available for drivers subject to federal hours-of-service limits is
+not withdrawn and travels beside her ruling, together with what the lower rate gives up and the reason the
+lower rate is defensible anyway — the drivers are contractors, and a contractor's own meals are his
+deduction, not the company's.
+
+**What is now right that was not.** Twelve items closed on this draft: the casualty figure and its five
+consequential entries, the destroyed truck's removal from the depreciation schedule, the insurance interest,
+the insurance loan on the correct balance-sheet line, the qualified-business-income disclosure that had been
+missing from the return entirely, the depreciation elections properly papered one per asset class, two
+trailers off the wrong code, the home office excluded as the prior year excluded it, an intercompany loan
+reduced, both information-return questions answered, and an asset the books never carried put on the right
+part of the disposal form. Eight of nine cross-foots tie to the dollar, and the one that does not is the
+balance sheet.
+
+**Two forms should come off before filing** — both are attached with every line blank, and one of them is
+blank precisely because the software correctly routed the casualty elsewhere.
+
+#### 2026-10-01 — the preparer's memory beat the current draft, and a reversed position surfaced
+
+**What happened.** Lilian said she thought an earlier version of the return had no depreciation cap on the
+trucks, that she had put them in the three-year and five-year categories herself, and that she believed the
+firm's principal had made the change. She was right, and it did not rest on anyone's memory: this file had
+already transcribed both earlier drafts field by field, and three independent figures in those transcriptions
+say the same thing. The four trucks bought in 2025 sat in the ordinary depreciation section as three-year
+property, with no cap, on both earlier drafts. On the current one they are in the listed-property section at
+five years and capped. Nothing in the file records the change, and the ruling that governs the two
+prior-year vehicles is not authority for it — that ruling says in terms that assets new in the year are
+classified correctly from the start.
+
+**Why it matters beyond this return.** The question is no longer which recovery period is right. It is
+whether the change was deliberate. If the principal made it on purpose it is her ruling and it stands, but it
+needs recording with her reason, because it reverses a documented position and costs real deduction. If
+nobody made it on purpose, the earlier state is restored. Nothing is keyed on those vehicles until she
+answers. Lilian is confirming with her.
+
+**And the record is the reason this was answerable at all.** Had the earlier drafts been summarised rather
+than transcribed, the comparison could not have been made and the answer would have been "I do not know."
+That is the transcribe-in-full rule paying for itself, on the firm's own output rather than a client's
+document.
+
+**The second question she asked.** She had already corrected the balance sheet and entered the car's mileage,
+but the shareholder's distribution figure on the K-1 had not moved. The screen she was looking at is the
+printed K-1 statement, which is an output — every figure on it arrives from the main schedule, which is why
+all the others matched the draft exactly. The field that accepts a figure is on the worksheet behind the
+schedule's own distributions line. And the two corrections she had been given were described as "one entry in
+two places", meaning one decision; she reasonably read it as one field. They are two separate manual fields,
+and the draft itself proved it — the two figures on it were mutually inconsistent, which could not happen if
+one computed the other.
+
+**2026-10-01 — Julia ruled on the vehicle depreciation categories, and the question that produced the ruling is
+closed.** Lilian relayed it: the change that moved the four tractors bought in 2025 onto the listed-property,
+capped category between two drafts **was Julia's, and it was deliberate** — *"Tómalo como correcto porque fue
+una decisión de ella."* So the return keeps the five-year, capped treatment. The firm's own reading of
+Publication 946 and the Form 4562 instructions took the other view and is kept in the working paper as the
+reason-why rather than as an objection: if anyone ever asks why this return depreciates a Class-8 over-the-road
+tractor over five years, the file shows a considered position taken by the person who signs. Two things make it
+an easy ruling to live with and both are recorded: it is the **conservative** side, so there is no penalty
+exposure — less depreciation means more income on the shareholder's return, and penalties follow
+understatements — and a §280F cap **defers** basis rather than forfeiting it — the unrecovered
+cost keeps coming off in later years at the capped rate. How long that takes has deliberately **not** been
+computed: the annual release is each unit's own statutory limit rather than a flat figure, and two earlier
+attempts at a year count were both wrong. The working paper carries the position and says so. **The boundary is explicit and matters for later:** the ruling covers only the assets that
+were NEW in 2025. The two prior-year assets held because they sit on filed returns, and the seven pre-2025
+vehicles on the same wrong category, are **still open with Julia** and must not be treated as answered by it.
+**One forward consequence for 2026:** the same codes have to be carried next year or the depreciation schedule
+will not agree with this filed return.
+
+**2026-10-01 — Lilian asked for the METHOD, not the figure, and that changed what the firm delivers.** After
+three rounds in which the distributions figure on this return was corrected for her, she asked how she could
+have found the error herself: *"Necesito entenderlo para, en un futuro, poder encontrar este tipo de errores."*
+The answer turned out to be better than expected — **her own draft already contradicted itself, and she needed
+no document and nobody's help to see it.** Because this company's books carry no equity section at all, the
+distributions figure is the one number on the return that comes from no document: it is derived, so it has
+exactly one correct value, and it can always be recomputed from the opening equity, the M-2 reconciliation and
+the closing equity the balance sheet requires. Run that on the figures she had keyed and it disagreed with the
+equity section sitting beside it — and a figure derived from a balance sheet cannot disagree with that balance
+sheet. The check is now a named step in the firm's tax-return skill, with its limit stated beside it: it proves
+internal consistency, not truth, so a wrong asset or liability passes it untouched. **The general lesson for
+how this client is worked: when she asks how rather than what, that is the more valuable question and it gets
+answered in full.**
+
+**2026-10-01 — the working paper was swept end to end on her instruction, and the worst find was an
+instruction surface, not an analysis one.** She asked for every obsolete note to be caught. Run mechanically
+rather than by reading — the paper is over fifteen thousand lines — the sweep found that **the one table in the
+file that exists to be copied into the tax software was still telling her to key the superseded meals rate,
+three days after Julia had ruled on it**, while the paragraph immediately above that table carried the ruling
+correctly. Five of the file's tie-out checks had also not been re-run since an earlier draft and were reporting
+passes about a return that no longer existed; every one now names the draft it was run on. The method is now a
+standing step in the firm's tax-return skill, and the distinction it turns on is worth keeping in mind for this
+client's file too: a section that DIAGNOSES something should keep the old figure, because that is the record —
+a section that INSTRUCTS may not, because there a stale figure is a wrong keystroke.
+
 ## 7. Links
 
 - **Double client:** [`Zakom Incorporated` — id `710612`](https://app.doublehq.com/close?cid=710612)
