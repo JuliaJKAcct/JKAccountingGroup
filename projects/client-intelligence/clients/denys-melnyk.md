@@ -2602,6 +2602,14 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 - 🔴 **Before anything goes out:** the **2025 extension question is still open** (a late return loses the reduced penalty rate and adds a failure-to-file penalty); whether **ATX can e-file the form** and how the spouses sign it is **not established**; the **account details are asked ONCE, after Julia reviews** — and the return's own one-time withdrawal stays **off**; and **2026 estimated tax is a condition of the agreement**, since he has no withholding.
 - 💡 **Likely qualifies for the IRS fee waiver for low-income taxpayers paying by direct debit** (family of three) — **to confirm against the AGI the IRS holds**, which may be the 2024 year.
 
+### 2026-10-02 (c) — her latest version was reviewed: the truck repairs are right, the installment form has one silent error
+
+> ⛔ **No figures here on purpose** — this file renders to a hosted page. Every figure and the transcription of the new form are in the working paper, [`§4T`](../../tax-returns/denys-melnyk/2025-form-1040.md).
+
+- ✅ **The return with the extra truck repairs and the corrected operating-loss deduction ties to the firm's own computation on every figure checked** (22), and the estimated-tax penalty worksheet reproduces itself. The software's own penalty worksheet also prints the 7% interest rate for every quarter through mid-2026, confirming the rate used in the payment estimate.
+- 🔴 **The installment request (Form 9465) was added.** It prints the whole balance on the line meant for a payment made *with* the request, so the lines for the amount owed and the minimum payment read zero — the opposite of what he wants. **Why the software filled it is not established.** Also missing: the tax year and the phone numbers; the page for defaulted agreements prints with zero dependents although he has one. The monthly payment typed is accepted but runs a month or two past 24 payments.
+- 🛑 **Still unchanged on the return:** the attached operating-loss statement still recites the figures of two versions ago (third time), the estimated-tax penalty is still printed and now also sits in the installment request, and the other defects of the earlier review.
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
