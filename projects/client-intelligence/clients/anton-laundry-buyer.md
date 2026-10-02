@@ -259,6 +259,40 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (Additional Owner Income) — 🔑 **JULIA: "$154,500 — he's probably talking owner distribution here."**
+  ✅ **SHE IS RIGHT ABOUT WHAT IT IS, and being right about that is what kills the line — by two independent
+  routes.** ⇒ **The rejection stands at the same figure, but it no longer rests on an absent account; it rests on
+  the seller's OWN pages.**
+  📄 **WHAT THE BINDER SAYS IN ITS OWN WORDS:** the category is *"the owner's $500 weekly draw from each of the six
+  businesses"*. **$154,500 = $500 × 51.5 weeks × 6.** The 2026 figure is the same construction and the binder spells
+  it out: *"Owner draw — $500 per week, 30 weeks"*, **$15,000 at each of the six = $90,000.**
+  🛑 **ROUTE ONE — THE DRAW IS ALREADY IN THE PAYROLL HE ADDS BACK ON THE LINE ABOVE IT.** Every one of the seller's
+  six 2026 add-back pages carries **BOTH** an officer-compensation line **AND** a separate $15,000 "owner draw".
+  **And the payroll register for the first of those businesses, reproduced in the same binder for the same months,
+  settles it:** headed ***"Pay Frequency: Weekly"***, **two employees, each at a rate of $500.00, 72 pays between
+  them, $36,000 — which is EXACTLY the officer compensation added back on that page.** 🔑 **The $500 a week IS the
+  payroll.** It runs through W-2 wages, it is inside the owner/family payroll we already accept, and the further
+  $15,000 per business is the same money counted twice.
+  🛑 **ROUTE TWO — AND IT HOLDS EVEN IF SOME OF IT REALLY IS A DISTRIBUTION: A DISTRIBUTION IS NOT AN ADD-BACK AT
+  ALL.** It is paid **out of** profit; it was never deducted in arriving at earnings; there is nothing to restore.
+  ⇒ Every distribution that does exist already sits **below our operating line**, and the seller's **separate**
+  category 2 ($99,089) already covers the part of it that ran through his P&L. **Adding $154,500 on top would be the
+  distributions a third time.**
+  ⓘ **His own definition on p. 72 says the same thing from the other side** — *"owner compensation the seller
+  identifies **in addition to payroll and distributions**"* — i.e. by his own words it is a THIRD stream, and no
+  third stream exists.
+  🔍 **THE FLAT AMOUNT IS THE TELL.** $15,000 is claimed at **every** business regardless of what that business's
+  payroll did — **including at the delivery business, which has NO officer payroll at all**, and at two stores whose
+  entire officer compensation for the period was $4,000 and $5,000. **A flat per-business figure is the signature of
+  a calculation, not a ledger total.**
+  📊 **AND THE LEDGER AGREES:** no account of that name in any of the six ledgers in any year (96 account names,
+  31,103 entries); **not one $500.00 entry in any operating account in 2025** *(the single hit is a repair)*; and the
+  entire owner distribution-and-loan population for 2025 is **15 payments**, where a weekly draw from six businesses
+  would need about **312**.
+  🛠️ **Written up in report §4** *(the section is now "$154,500 that is the owner's weekly draw, added back a second
+  time", with the seller's six 2026 pages as a table)* **and in the working sheet's block D5.** ⚖️ **The bridge does
+  not move — the rejection was already $154,500.** 🔑 **What changed is that it can now be SHOWN to Kevin from his
+  own binder instead of argued from an absence.**
 - 2026-10-02 (the two W-2s) — 🔴 **JULIA SENT THE MANAGER'S TWO FORMS W-2 AND THEY SETTLE THE LEASED-EMPLOYEE
   QUESTION THE WAY SHE SAID THEY WOULD** *("i also received 2 W-2 for cherio. you can see that this is not leased
   employees. w2 is issued under our own name")*. ✅ **SHE IS RIGHT, and the proof is box b and box c: the employer
