@@ -259,6 +259,89 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (the client report) — 📕 **DELIVERED: the client-facing FINANCIAL DUE DILIGENCE REPORT — 18 pages,
+  print-ready PDF + a self-contained HTML.** *(Julia: "a very nice looking report for the client for a full
+  financial diligence without mentioning too much we cannot do this or that, we don't have that, that cost 10k.")*
+  🔑 **The brief read as: FINDINGS FORWARD, no wish-list, no up-sell, no apologising.** ✅ **How it was honoured
+  without ever claiming unverified work: every section opens with what was ESTABLISHED and what it means for the
+  price; each finding names its own source in passing; and the whole scope sits in ONE confident "Basis of findings"
+  page at the back** *(sources examined · procedures performed · what this report is)*. ⛔ **The one line not
+  crossed: nothing is described as verified that was not.** 🔑 **It costs nothing to say "corroborated against 138
+  bank statements" — that is both true and stronger than a hedge.**
+  📐 **STRUCTURE:** cover · **The position** *(six numbered conclusions + the price two ways)* · §1 revenue verified
+  · §2 where the money comes from · §3 the direction of travel · §4 what the business earns · §5 what you are buying
+  · §6 four things to settle before signing · §7 how we recommend you hold it · Basis of findings.
+  🏆 **THE REPORT'S CENTRAL ARGUMENT, and it only exists because Julia asked for industry statistics:** labour at
+  **38.1% of sales against an industry 8–12%** · operating margin **11.0% against an industry EBITDA 15–20%** ·
+  and the killer — **the sellers' own ADJUSTED margin of 50.3% is ~1.4× the TOP of the published net range.**
+  **The add-backs carry this business to a profitability the benchmark data shows no laundromat achieving.**
+  🔑 **The cross-store comparison stays primary** *(same market, owner, management)*; **the industry figures are
+  what make it undeniable to a reader who is not an accountant.**
+  🛠️ **BUILD NOTES, because the next report should not re-learn them.** ⓐ **Figures are GENERATED from the data
+  modules, never typed** — a `verify.py` re-extracts every money token from the rendered HTML and traces it back to
+  source; **93 tokens, 0 untraceable**, and it runs on every rebuild. ⓑ 🔴 **THE BRAND'S `fonts-embedded.css` DOES
+  NOT WORK IN PRINT: IBM Plex Sans and Source Serif 4 ship as VARIABLE woff2 and the headless print engine rejects
+  them outright, silently falling back to DejaVu** *(IBM Plex Mono is static, which is why it alone survived and
+  masked the problem)*. ✅ **Fix: instantiate STATIC weights from those same brand files with `fontTools`
+  (`varLib.instancer`) and embed as TrueType** — `fonts/brand-static.css`, built from the brand, not from a
+  download. ⓒ **A character audit against the font cmaps caught the last fallback: a single `→` used twice**, not in
+  the latin subset. ⓓ **Fixed-height print pages SILENTLY CLIP** — several sections ran to ~1,400px against ~886px
+  of printable space; the report now flows and each section starts a fresh sheet. ⓔ **Negatives use accounting
+  parentheses, not a minus sign.**
+  ⛔ **NOT an artifact and NOT committed** — it carries the SELLERS' confidential data, disclosed to the buyers under
+  a binder marked *"for the Buyer's due-diligence use only"*, so a shareable URL would be wrong. **PDF + HTML handed
+  to Julia**, which is also the house pattern for a client-facing analytical report *(the reasonable-compensation
+  print template)*.
+
+- 2026-10-02 (three from Julia, while the client report was being built) — 🟢 **① "CHERIO" IS ANSWERED, AND IT IS THE
+  MANAGER.** *(Julia, 2026-10-02: the salary is broker-confirmed and is paid across Select and Palmetto; the amount is in the
+  workbook, not here.)* 🔑 **The open question in the Verification Plan — *"Who is
+  Cherio, what are they paid, and by which entity? They are on the staffing schedule and not on the pay-rate
+  list"* — closes, and it joins up with the add-back schedule's separate note that the manager "runs all six
+  operations and is deliberately excluded from the staff pay list."** ⇒ **The unnamed manager on the add-back schedule and
+  the un-rated name on the staffing schedule are ONE PERSON.** ⓘ **Provenance recorded honestly: BROKER-CONFIRMED,
+  not per a payroll register** — the registers are still outstanding, and the report tags it that way rather than
+  implying a document. 💵 **It sharpens the add-back:** the seller adds back a five-figure *"store manager payroll
+  allocation."* **The confirmed salary is roughly THREE TIMES the amount added back, so if the buyer needs that
+  function most of it is OPERATING LABOUR and not an add-back at all.**
+  📊 **② INDUSTRY BENCHMARKS GO IN THE CLIENT REPORT — Julia asked whether they would help, and they do more than
+  help: they are what makes the labour finding land.** Sourced, not asserted *(the brand guide bans invented
+  stats)*: **laundromat LABOUR runs 8–12% of revenue · EBITDA margin 15–20% · net margin 20–35% · SDE about 29% of
+  revenue** *(BizBuySell valuation and profitability benchmarks; Vanta Insights; Legacy Venture Group)*. 🔴 **Against
+  that: this portfolio's labour is 38.1% of sales — roughly FOUR TIMES the industry midpoint — and its operating
+  margin at 11.0% sits BELOW the bottom of the industry EBITDA range.** 🛑 **And the sharpest comparison of all: the
+  seller's own ADJUSTED net margin is 50.3% of sales, about 1.4× the TOP of the industry net range** — *the
+  add-backs carry the business to a margin that no laundromat in the benchmark data achieves.* 🔑 **The cross-store
+  comparison stays the PRIMARY evidence** *(same market, same owner, same management — it controls for everything an
+  industry average cannot)*; **the industry figures are the context that makes it undeniable.**
+  🏛️ **③ THE RECOMMENDED ACQUISITION STRUCTURE, from Julia, for the report:** **one LLC per building/location (five),
+  one S-corporation operating all five, and each location with its OWN merchant account and its OWN bank account.**
+  🔑 **Written up as responsive to the findings rather than as generic structuring advice, because each element
+  answers something this diligence found:** ⓐ **a separate LLC per parcel isolates property-specific risk** — and
+  the environmental exposure here IS property-specific *(Ruskin's recommended-but-unperformed Phase II; the 9th St
+  pair's twelve-year-old report naming two adjacent former petrol stations)* — and lets one property be sold or
+  financed alone; ⓑ **rent from the operating company to each property company creates a REAL occupancy charge**,
+  which is exactly what the sellers' P&Ls lacked *(they own the buildings, so there is no rent anywhere and the
+  presented EBITDA is a property-owner's EBITDA)*; ⓒ **one S-corp over five stores means one payroll, one set of
+  employment filings and one return** instead of three — **and it removes the inter-company web entirely**, where
+  the sellers moved a seven-figure sum between six businesses and typed much of it as income; ⓓ **a separate
+  merchant and bank account per location makes per-store revenue verifiable BY CONSTRUCTION** — ⚠️ **every revenue
+  finding in this engagement was possible only because each store banked separately, and every one we could NOT
+  resolve came from mixing** *(the cross-store "Misc Deposit Correct" transfer, Palmetto Coin's machine revenue never
+  isolated from its total deposits)*.
+  ⚠️ **ONE STRUCTURING POINT THE SESSION ADDS AND JULIA SHOULD CONFIRM BEFORE IT GOES IN: the five property LLCs
+  should be owned by Anton and Olga directly (or through a holding LLC), NOT by the S-corporation** — real estate
+  inside an S-corp cannot be distributed out later without triggering gain at fair value, and it blocks a future
+  single-property sale or refinance. 🔑 **Also worth a line for them: Opco-to-Propco rent is SELF-RENTAL under
+  §469**, so the rental income is recharacterised non-passive, and the rent has to be set at arm's length.
+  ⛔ **Legal form and deeds are Olesya's; the tax consequences are ours.**
+  🛠️ **AND A REAL ERROR CAUGHT BEFORE IT REACHED THE CLIENT REPORT.** A figure pass for the report summed the
+  portfolio P&L over the `data.py` store keys instead of the GL store names, **silently dropping TWO of the six
+  businesses** and printing a 2025 margin of 15.5% against the true 11.0%. ⓘ *It was caught only because the
+  industry-benchmark comparison made the number look wrong.* 🔑 **The lesson is the house one: a client-facing
+  figure is re-derived from source, never carried across from an earlier print** — the report's figures are now
+  generated from the data modules and checked back against them.
+
 - 2026-10-02 (the bank statements) — 🟢🔴 **THE BANK STATEMENTS ARRIVED AND THEY ARE THE MOST IMPORTANT DOCUMENTS
   IN THIS DEAL. JULIA WAS RIGHT AND THIS FILE WAS WRONG.** She sent a Drive folder with no message: **six PDFs, one
   per business, ~80 MB.** They are **Vol. 2 Tabs H-1.1 → H-1.6**, broker-prepared, **dated 23 September 2026** —
