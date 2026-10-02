@@ -2604,3 +2604,24 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   - `Tax Return Filed/2024` — his 2024 return, prepared elsewhere
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** none yet.
+
+### 2026-10-02 — the keyed return was read in full: it confirms the contractor entry, and the operating-loss deduction is wrong in three places
+
+> ⛔ **No figures here on purpose** — this file renders to a hosted page. The page-by-page transcription, every figure and the
+> fixes are in the working paper, [`§4P`](../../tax-returns/denys-melnyk/2025-form-1040.md).
+
+- 📄 **Lilian handed back the keyed 29-page return (dated 10/2/2026) and asked for errors, above all in the NOL carried into 2025.**
+  The whole document was transcribed into the working paper. ✅ **It confirms what §4O reconstructed from her report**: the contractor
+  payments are on Schedule C, the amount owed and the estimated-tax penalty tie to the printed forms, and the penalty worksheet proves the
+  method used.
+- 🔴 **The NOL problem is in THREE places.** ① The deduction on Schedule 1 still carries the previous profit's figure — the limit is 80% of
+  taxable income *before* the NOL, so it must move with the profit and the software never re-caps it. ② **The attached NOL statement
+  (page 29) did not regenerate** and still recites the figures of two versions ago; it is required, so its text must be corrected.
+  ③ Form 172 line 23 prints the whole carryforward where the instructions ask for the deduction (no tax effect — to confirm in ATX).
+  The 2026 carryforward is not settled: two candidates under the likeliest reading — read it off the ATX NOL worksheet.
+- 🛑 **Older defects still on the printed return** (each with its fix in §4P-iii): box 1(a) blank on two Forms 8082; Schedule C lines I
+  and J unanswered although contract labor is now claimed; the 'Gas' line still present; the first Form 8082 says he was a 50 percent
+  shareholder for all of 2025; the penalty still printed; a Schedule EIC attached though no earned income credit is claimed; signature
+  dates earlier than the changes; Form 8867 questions 4a/4b blank.
+- ⏳ **Still waits on a person:** the client's answer on the contractor payments (same money as the Zelle 'gas' or separate; whose
+  contractors; was a 1099-NEC sent), the home-office and insurance and travel decisions, and the two penalty gates.
