@@ -2618,7 +2618,7 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   taxable income *before* the NOL, so it must move with the profit and the software never re-caps it. ② **The attached NOL statement
   (page 29) did not regenerate** and still recites the figures of two versions ago; it is required, so its text must be corrected.
   ③ Form 172 line 23 prints the whole carryforward where the instructions ask for the deduction (no tax effect — to confirm in ATX).
-  The 2026 carryforward is not settled: two candidates under the likeliest reading — read it off the ATX NOL worksheet.
+  The 2026 carryforward is not settled: two candidates under the likeliest reading — it is read in ATX on the NOL Summary tab, not on the worksheet line that is labelled as the 2026 carryover (that line is something else).
 - 🛑 **Older defects still on the printed return** (each with its fix in §4P-iii): box 1(a) blank on two Forms 8082; Schedule C lines I
   and J unanswered although contract labor is now claimed; the 'Gas' line still present; the first Form 8082 says he was a 50 percent
   shareholder for all of 2025; the penalty still printed; a Schedule EIC attached though no earned income credit is claimed; signature
