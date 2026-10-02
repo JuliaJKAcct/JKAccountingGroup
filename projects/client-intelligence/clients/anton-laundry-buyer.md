@@ -259,6 +259,51 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 — 🔑 **JULIA: "THERE IS NO RENT BECAUSE THEY OWN THEIR OWN BUILDING."** One line, and it closes a
+  question the session had been asking the wrong way round. ✅ **TESTED AGAINST THE LEDGERS AND IT HOLDS FLATLY:
+  across all six businesses and 3½ years — 31,103 GL lines, 130 distinct account names — there is NO rent, mortgage
+  or lease EXPENSE account anywhere.** Not in Bayshore *(Select, 15th St)*, not in Samoset Florida *(both Palmetto
+  stores, Ruskin)*, not in Lemon Squeeze. 🔑 **Occupancy appears instead as OWNERSHIP cost:** `BUILDING REPAIRS`
+  *(272 lines across the two charts)*, `Insurance Expense` *(128)*, `PROPERTY TAX` / `Taxes - Property` *(26)*,
+  `LAWN SERVICE` *(7)*. ⓘ **Corroborating that title sits in the operating companies: the companies pay the property
+  tax directly** — ⚠️ **but that is corroboration, not proof, and it must come off the DEEDS.** Our own §1 already
+  records that **there is no separate real-estate company**, and the Ruskin lease in hand was **signed by an
+  individual rather than the fee owner**, so the title holder per parcel is an ask *(it is also inside Olesya's
+  title/UCC scope)*.
+  🔴 **WHAT IT CHANGES, AND IT IS NOT COSMETIC: THE BROKER'S EBITDA IS A PROPERTY-OWNER'S EBITDA.** The per-store
+  P&Ls carry no occupancy charge at all, so any comparison with a LEASED laundromat, and any lender's coverage test
+  on the business alone, needs a market-rent deduction that nobody has computed. 🔑 **And it cuts into the allocation
+  fight: with no rent anywhere there is NO INCOME APPROACH to the real estate**, so the land-and-building value has
+  to come from the appraisal rather than from a rent roll — **which makes Olesya's appraiser load-bearing**, and
+  means the broker's buildings-versus-goodwill comparison cannot be sanity-checked against rent.
+  🟠 **AND THE CHECK OPENED THREE BETTER QUESTIONS THAN THE ONE IT CLOSED.** ⓐ **PROPERTY TAX IS RECORDED IN ONE
+  STORE IN 2023, THREE IN 2024 AND ALL FIVE IN 2025**, with amounts not comparable year to year and **none at all in
+  Jan–Jul 2026**. On owned buildings the tax is annual and unavoidable, so either it is coded elsewhere in the early
+  years or it was not recorded — **either way 2023 and 2024 UNDERSTATE the cost of holding the buildings, which
+  overstates net income in exactly the years a trailing multiple is built on.** The county bills per parcel for
+  2023–2025 are now an ask. ⓑ **LEMON SQUEEZE PAYS NO RENT AND YET CARRIES `BUILDING REPAIRS` IN A BUILDING IT DOES
+  NOT OWN** — a flat, round five figures in 2024 and again in 2025. **That is the economic substitute for rent,
+  booked as a repair**, and it is a related-party charge between two separate EINs however the group holds title.
+  ⓒ **15TH ST HAS NO INSURANCE EXPENSE AT ALL FOR A FULL YEAR (2024)** on a building it owns — another
+  cross-entity-contamination candidate alongside the hurricane-parts and equipment cross-bookings already recorded.
+  🔎 **ONE EXCEPTION IN 31,103 ROWS, AND IT IS THE ONLY RENT-SHAPED ENTRY IN THE DEAL:** an account `RENTAL` on the
+  **Ruskin** ledger — **three lines, one a year, each a Bill to an INDIVIDUAL for a flat four-figure amount**, dated
+  28 Feb 2023, 31 Jan 2024, 31 Jan 2025 *(payee name is in the workbook, not here)*. **An amount that size, once a year, is not building
+  rent**; it reads like a ground, sign, parking or storage licence. **What it is for, and whether it transfers, is an
+  ask.**
+  ⛔ **WHAT JULIA'S SENTENCE DOES *NOT* ANSWER, and the session must not stretch it to:** **owning the building is
+  precisely what lets you COLLECT rent.** Rev 5 lists the appliances for **two residential apartments at Ruskin**,
+  our file records the **2,400 sq ft rear space** there, and **the books show NO rental income anywhere — zero lines
+  mentioning rent, tenant, apartment or lease on the income side in any entity.** So either the space is vacant or
+  owner-used, **or the rent is received outside the books** — which would sit beside the broker's own written
+  statement that vending, chair and taxi-signage income is **paid to the owner in CASH** and is in no revenue figure
+  presented. 🔑 **That is a question, not a conclusion** *(method.md: a disappearance is a question)* **and it is put
+  to Julia, not reasoned around.**
+  🛠️ **DELIVERABLES UPDATED:** the broker email's occupancy section was rewritten — it no longer asks for *"every
+  lease and tenancy"* as though they were tenants, and now asks title per parcel, whether any part of any property is
+  let, what the RENTAL bill is, and the property-tax recording question. ⛔ Figures and the payee name stay out of the
+  repo.
+
 - 2026-10-01 — 🧰 **EQUIPMENT BINDER REVISION 5 ARRIVED, AND IT IS THE FIRST SELLER DOCUMENT IN THIS DEAL THAT
   FOOTS.** Julia handed over `BPR_Laundry_Portfolio_Equipment_Binder_rev5_2026-10-01.pdf` — 18 pages, Merritt
   Realty / Kevin T. Riordan, dated the day it arrived, marked CONFIDENTIAL and *"information furnished by the
