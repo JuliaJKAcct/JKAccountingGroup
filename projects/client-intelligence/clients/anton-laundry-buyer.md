@@ -259,6 +259,67 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (the two W-2s) — 🔴 **JULIA SENT THE MANAGER'S TWO FORMS W-2 AND THEY SETTLE THE LEASED-EMPLOYEE
+  QUESTION THE WAY SHE SAID THEY WOULD** *("i also received 2 W-2 for cherio. you can see that this is not leased
+  employees. w2 is issued under our own name")*. ✅ **SHE IS RIGHT, and the proof is box b and box c: the employer
+  named on both forms is one of the SELLERS' OWN ENTITIES, with that entity's own EIN.** ⛔ **Under employee leasing
+  or a PEO the W-2 carries the LEASING COMPANY's EIN, not the client's.** 🔑 **So Entrust is a PAYROLL PROCESSOR, not
+  a leasing company** — the bracketed numeric prefix before the company name on one of the forms is a service-bureau
+  client code, which is what a processor does and a PEO does not. ⇒ **The sellers are the EMPLOYER OF RECORD**, so
+  federal and Florida employment-tax liability is theirs, **the Florida reemployment experience rate and the
+  successor-liability rules run to the buyer**, and the RT-6 history, the 941/940 account transcripts and the tax
+  clearance all become must-haves rather than nice-to-haves. 🛑 **The 15 payroll questions drafted for Kevin on the
+  leasing premise are superseded** — the premise is answered; what is left to ask is narrower and harder.
+  ⓘ **Two more facts the forms carry.** **① Boxes 1, 3 and 5 are identical on both and the retirement-plan box is
+  unticked — there are NO pre-tax deductions and no benefit plan running through this payroll**, which matters for
+  reading the insurance accounts. **② The two forms together are the ~$90,000 manager Julia described, and the split
+  is by ENTITY, roughly half each** — so that cost is genuinely in the books and the seller's reallocation of it to
+  a notional $15,000 a store stays rejected.
+  🔴 **AND THE NAME ON THE FORMS IS THE NAME IN THE SUPPLIES ACCOUNT.** The manager is also the individual receiving
+  roughly fortnightly payments booked to **Store Supplies at Palmetto Wash & Fold — the very store whose address is
+  on his second W-2** — three years running. ⇒ **Either a purchasing-and-delivery arrangement, or compensation paid
+  outside payroll**, and the second reading is unreported wages with an employment-tax exposure that follows the
+  business. ⚠️ **It also cuts into the seller's supplies add-back**: part of what he calls the owner's personal
+  spending is money paid to his own store manager. **The question is now on the list; it is not a conclusion.**
+- 2026-10-02 (the insurance) — ❓ **JULIA: "i was told they changed workers comp. do you see any other insurance cost
+  on the books?"** ✅ **Yes — 22 distinct carriers across four years, and three findings.**
+  🛑 **① WORKERS' COMPENSATION EXISTS AT ONLY TWO OF THE SIX BUSINESSES, in every year.** AmTrust is the only comp
+  carrier and it appears at **Select and Ruskin alone**; 15th Street, Palmetto Coin, Palmetto Wash & Fold and Lemon
+  Squeeze carry **none at all**. In 2025 the whole portfolio paid **0.59% of its labour** in comp. ⚠️ **Florida
+  requires cover for a non-construction employer with four or more employees, and the staffing schedule shows about
+  twenty-two store staff.** 🔑 **If the staff were LEASED the leasing company would carry the policy and the gap
+  would be explained — the W-2s above show they are not.** ⇒ **Certificates of insurance for every entity, and the
+  AmTrust policy and audit.** ⓘ **And nothing in the ledgers shows the change she was told about: AmTrust is still
+  billing Ruskin and Select into 2026.**
+  📈 **② INSURANCE IS RISING, NOT FALLING — 1.50%, 1.69%, 2.13% of sales, and 2.59% in 2026 to July.** ⚠️ **Two costs
+  appear for the FIRST TIME in 2026 and are therefore in no historical year the price is built on: FLOOD COVER at
+  Ruskin, and a Blue Cross / Florida Blue policy split evenly across five stores.** **That cuts against adding any
+  insurance back.**
+  ❓ **③ A HEALTH-AND-LIFE CARRIER ON A LAUNDROMAT'S BOOKS.** Freedom Life Insurance was paid monthly at Palmetto
+  Wash & Fold through 2023 and 2024, then stopped. **The W-2s show no benefit plan running through payroll**, so it
+  is not employee cover. **This is exactly the kind of line the seller's own "insurance, personal portion" add-back
+  points at — and he does not claim it.** Ask what it covered.
+  ⓘ *The rest reads as an ordinary commercial programme: Pettineo as the agency across every store, Main Street
+  America and Citizens on property, Travelers, Next Generation arriving in 2025. The personal-lines carriers
+  (Progressive, National General, GEICO) sit at Lemon Squeeze, which runs vans — legitimate there; Allstate at two
+  laundromats is less obvious.*
+- 2026-10-02 (the detail sheet) — 📊 **JULIA: "can you get me this schedule with add backs in details for me
+  personally? add it to consolidated worksheet."** ✅ **New sheet `07 Add-Back Detail` in the portfolio workbook**
+  *(Bank Reconciliation, Scope and Open Items renumbered to 08/09/10)*. **It is a working paper, not a client
+  document**: the nine categories with the four-way verdict and the test that decides each; the two-column bridge
+  with the reported-result tie business by business; 🔑 **ALL 49 FLAGGED ACCOUNTS, all six businesses, against our
+  own general ledger, with the difference on every row** *(it sums to the binder's own 1,925,174 / 1,586,851 /
+  338,323)*; then the four tests — repairs by year, property tax by year, the supplies payee mix, and every
+  inter-company transfer account; the manager block; the insurance block; and the eight documents still to ask for.
+  🔑 **WHAT THE ROW-BY-ROW TIE SHOWS, and it is why the sheet was worth building: 38 of the 49 rows tie to our ledger
+  within two dollars.** The eleven that do not fall into three kinds — **the payroll rows** *(expected: the seller
+  flags only the owner/manager portion of an account that also holds all the store staff, and the difference IS the
+  labour a buyer keeps paying)*; **four rows where the seller's "Amount" column is only the flagged portion, so his
+  Retained column understates what stayed in expenses** *(the binder's own note (2) says that column is the full
+  QuickBooks total; on those rows it is not)*; and 🛑 **ONE ROW THAT PROVES THE INTER-COMPANY ERROR ARITHMETICALLY —
+  Ruskin's "Transfer deposit (income); Business Purchase": the seller shows a POSITIVE amount where our ledger holds
+  a NET CREDIT, and the difference is 39,799, which is the $39,800 category to within a dollar.** ⇒ **The receipt
+  side has been added back as though it were a cost, and now it can be shown rather than argued.**
 - 2026-10-02 (the add-back schedule) — 🔴 **JULIA: "YOU HAVE DETAILED ADD BACK SCHEDULE FROM KEVIN THAT ARRIVED TO
   REVISED NET INCOME — DO YOU HAVE IT? … I NEED TO KNOW WHY."** *(on §4's assertion of the distance between our
   adjusted earnings and the sellers')*. ⚠️ **The honest first answer was no: we held about 39% of the FY2025
