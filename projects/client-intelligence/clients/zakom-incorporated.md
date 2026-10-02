@@ -1766,6 +1766,29 @@ standing step in the firm's tax-return skill, and the distinction it turns on is
 client's file too: a section that DIAGNOSES something should keep the old figure, because that is the record —
 a section that INSTRUCTS may not, because there a stale figure is a wrong keystroke.
 
+**2026-10-02 — the owner's own Double record holds the property documents, and nobody had ever looked.** Lilian
+asked whether Oleg had uploaded a Form 1098 for property taxes. The company's record has 124 files and no 1098
+among them — but **his personal record does: two Form 1098s and a Broward County real-estate annual bill for
+2023**, plus a property-closing package, a certificate of title, a certificate of sale, a promissory note in
+both their names, both prior individual organizers, a 1099-NEC in his name and the 2025 individual extension.
+All 63 files on that record carry the TaxDome migration date, so they came across with the client and have sat
+there since. **The gap was structural rather than anyone's oversight:** the return's document register covers
+the company only, and the weekly sweep of 2026-09-26 ran notes, contacts, properties and the activity log on the
+personal record but never its file library. **The transferable rule, now in the working paper:** on a
+closely-held company, the document register has to cover the OWNER's record too — TaxDome filed a client's
+company and personal matters together under the owner's profile, so the house, the mortgage and the county all
+land there, and those are exactly the questions a company return asks whenever a home office is in play.
+**What it changes and what it does not:** the firm had been routing *"were the two county payments the property
+tax on the house, or vehicle registrations?"* to the client as a question no held document could answer — that
+clause is withdrawn. The 2023 bill does not give the current-year amount, but it establishes that the county
+issues this shareholder a real-estate bill at all, which is the premise the vehicle-registration reading denies,
+and it names the parcel, so the current-year bill is a public look-up instead of a question to him. **It earns
+no deduction, though:** the property tax and the mortgage interest are the shareholder's own, and they reach the
+company return only through the home office, which is still Julia's open decision — and the separate question of
+the company paying the owner's personal property tax from the company account being a distribution is untouched.
+**Nothing was opened** — file names only, which is the standing default; reading any of them is a cross-client
+read of non-return documents and needs Lilian's or Julia's explicit ask.
+
 ## 7. Links
 
 - **Double client:** [`Zakom Incorporated` — id `710612`](https://app.doublehq.com/close?cid=710612)
