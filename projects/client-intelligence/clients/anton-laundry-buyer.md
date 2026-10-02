@@ -259,6 +259,38 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (payroll, corrected) — 🛑 **JULIA KILLED A FALSE PREMISE BEFORE IT REACHED THE BROKER.** *("no
+  federal employment-tax deposit and no Florida RT payment appears in any ledger — this is because they are
+  processing through a third-party payroll provider.")* ✅ **She is right and the ledger proves it: 99.2% of the
+  payroll accounts — 1,185 of 1,248 bills across all six businesses, 2023 to Jul 2026 — go to ENTRUST** *(three name
+  variants: `ENTRUST PAYROLL`, `ENTRUST SOLUTIONS`, `ENTRUST PAYROLL SOLUTIONS`)*. **A bureau draws gross PLUS taxes
+  as one debit and remits them, so there is no separate EFTPS or RT payment to find. There was never a
+  contradiction.** ⛔ **The session had written it up as "the point we cannot reconcile" and put it in a draft to
+  Kevin — asking a question whose premise is wrong would have cost credibility with the broker for nothing.**
+  🔑 **THE LESSON, and it generalises past this deal: AN ABSENCE IN A LEDGER IS ONLY A FINDING ONCE YOU KNOW WHAT
+  THE NORMAL MECHANISM WOULD HAVE PUT THERE.** *The firm's own [`method.md`](../pre-return-review/method.md) rule 1b
+  says a negative belongs to the search that produced it; this is the same error one level deeper — the search was
+  fine, the EXPECTATION was wrong.* ⚠️ **It is the second time in two days a stale or unexamined negative nearly
+  shipped** *(the first was the bank statements)*.
+  🟢 **AND CHECKING HER CORRECTION PRODUCED A REAL FINDING THAT ADVANCES HER ACTUAL QUESTION.** She doubts Entrust is
+  genuine employee leasing. **Two things in the ledger point her way:** ⓐ **TWO OF THE COMPANIES CARRY THEIR OWN
+  WORKERS' COMPENSATION WITH `AMTRUST INSURANCE`, BILLED DIRECT** — 42 bills at Ruskin *(to `WORKMANS COMP`)* and 44
+  at Select *(to `Insurance Expense`)*. 🔑 **A PEO or employee-leasing company almost always provides workers' comp
+  under its own master policy — it is one of the main reasons clients use one.** ⓑ **The FAMILY sits on the
+  companies' OWN payroll codes with Florida SUTA and FUTA on the registers**, i.e. the companies are registered
+  employers in their own right. ⇒ **Both point to PROCESSOR rather than co-employment** — which would mean **the
+  SELLERS are the employer of record, the 941s and RT-6s exist under THEIR EINs to be requested, and SUCCESSOR
+  LIABILITY runs to the buyer.** ⛔ **Still a question, not a conclusion** — the agreement and the filings settle it.
+  📧 **THE 15 QUESTIONS WERE REWRITTEN:** the false-premise item is **deleted**; a new item puts the workers' comp
+  and the SUTA-on-the-family-register evidence to Kevin and asks him to **confirm which entity is the employer of
+  record**; the Florida RT item now says **why the experience rate matters to the buyer** *(it transfers with a
+  business between parties under common control)*; and a new item asks for **any time records for the family**,
+  following the 2,080-hours finding.
+  🖥️ **AND A DELIVERY-FORMAT RULE FROM JULIA, which applies to everything from here:** *"you're drafting email in md
+  format i can't see it like this."* ⇒ **AN EMAIL DRAFT GOES IN THE CHAT AS READABLE TEXT SHE CAN COPY STRAIGHT INTO
+  GMAIL**, with a branded PDF alongside if she wants a file. ⛔ **No more `.md` drafts for anything client- or
+  counterparty-facing.** *(The `.md` draft was deleted and replaced with an on-brand PDF + the text in chat.)*
+
 - 2026-10-02 (payroll) — 🛑 **JULIA: "2,080 HOURS — WHERE ARE YOU GETTING THIS FROM, A PAYSTUB? THAT DOESN'T MAKE
   IT REAL HOURS." SHE IS RIGHT, AND THE ARITHMETIC PROVES IT.** The source is the Financial Binder §2 payroll
   register *(names, employee numbers, rates, hours, gross, FUTA/SUTA, net)*. ⛔ **A register records what was
