@@ -259,6 +259,43 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (scope) — ⚖️ **JULIA'S DECISION: STOP CHASING THE BANK STATEMENTS.** *"i don't thin at this point we
+  will be getting more bank statements, we have 18 months pretty much is plenty."* 🔑 **Taken as her call and the
+  request list is changed accordingly.** ⓘ **But what we hold is not bank statements, and she should be deciding on
+  the real inventory, so it was established before acting:** a Drive sweep found **64 `Statement_Location_<MID>_<period>.pdf`
+  files across FIVE merchant IDs — Paystri COUNTER-TERMINAL statements, not bank statements.** Four MIDs run
+  **Aug 2025 → Aug 2026 (13 months each)**; one runs **Jan → Dec 2025 (12 months)**; combined span **Jan 2025 →
+  Aug 2026, 20 distinct months.** **That 20-month merchant series is almost certainly the "18 months" she means.**
+  ⛔ **There is still NO bank statement for any entity, account or period** — two independent agents swept all four
+  volumes, the Financial Binder and the Drive folder on 2026-09-17 and found none, and the position was unchanged
+  after the QuickBooks arrived on 2026-09-30.
+  🛠️ **TWO CORRECTIONS TO OUR OWN RECORD, both from this sweep.** ⓐ **ONE OF THE FIVE MIDs DOES have a complete
+  13-month series** — an earlier entry recorded it as having *"no monthly statement series anywhere"*, which was
+  wrong *(the files carry a 28 Sep 2026 modified date, so the earlier reading may simply have predated them)*.
+  ⓑ **The RUSKIN merchant account has NO series at all** and is the one real gap — ⚠️ **and it is the
+  store whose month-end entries we most need to explain**, so it stays on the list.
+  🔴 **WHAT THE DECISION ACTUALLY COSTS, because it is not nothing and it is UNEQUAL BY YEAR.** 🔑 **The
+  GL-to-Deposit-Detail tie — which holds to the cent in all twenty store-years — is an INTERNAL check: both sides are
+  the same QuickBooks file.** It proves the books are self-consistent, **not that the money arrived.** The external
+  anchor is the filed return, and there: ✅ **2024 ties to filed gross receipts to the penny at all three entities**
+  *(against the IRS transcripts we hold)* — independently corroborated; ⚠️ **2023 does NOT tie**, with return revenue
+  having no matching deposit; 🛑 **AND 2025 HAS NO FILED RETURN AT ALL — so the TRAILING YEAR THE $12M IS BUILT ON
+  has no corroboration outside the sellers' own bookkeeping.** ⛔ **The merchant statements cannot substitute at any
+  length: they see the counter terminals, about 2.4% of the money, which the sellers' OWN binder states excludes
+  machine revenue and cash.**
+  🔁 **SO THE PRIORITY INVERTS, and this is the operative consequence: THE EIGHT OUTSTANDING FORMS 1120-S MOVE FROM
+  SECOND TO FIRST.** A filed 2025 return would anchor 2025 the way the transcripts anchor 2024, **and it is the only
+  remaining document that can.** 🔑 **Failing that, the SUPERVISED COLLECTION AND OBSERVATION PERIOD the sellers
+  offered is the only independent test of cash left** — it was already the substitute for the un-performable
+  coin-reconciliation scope, and it is now load-bearing twice over. **Dates are asked for.**
+  🛠️ **DELIVERABLES CHANGED:** the broker email's **section 1 is now the eight returns, not the bank statements**;
+  ⓘ *a deliberately small fallback was left in — the December 2025 and July 2026 month-end statements only, two pages
+  per account, with an explicit undertaking not to ask for the rest — because her stated reason is that the sellers
+  will not do the work, and that version is a job they might actually do. **One line for her to delete if she
+  disagrees.*** The workbooks' **TEST 3 note and the CRITICAL open item are rewritten**: the bank item now reads
+  **`CLOSED BY DECISION`** with her date, and the consequence is carried by the 2025-return item instead.
+  ⛔ **Figures stay out of the repo.**
+
 - 2026-10-02 (later still) — 🛑 **A DEFECT IN THE WORKBOOK I HAD JUST SHIPPED, FOUND BY JULIA'S QUESTION** *("do
   we have questions for Kevin?")*. Assembling the list meant listing **every payee** inside the capital-spend
   accounts, and the payees gave the game away: 🔴 **THE SELLERS BOOK FINANCE INSTALMENTS AND INTER-COMPANY MONEY
