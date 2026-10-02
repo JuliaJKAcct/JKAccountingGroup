@@ -259,6 +259,39 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (the allocation, CORRECTED — the attribution was backwards) — 🛑 **JULIA: "where did you get that
+  seller proposes $2,933,392 for building allocation? it is not correct."** Then, when shown the source:
+  **"they propose $6,025,000. we agree."**
+  📄 **WHERE IT CAME FROM:** one document and only one — **`Allocation_Simple_Math.pdf` in Drive, on Merritt Realty
+  letterhead, authored by Kevin T. Riordan** *(two copies, 7 and 11 Sep 2026)*. It shows two splits labelled
+  **"WE PROPOSE"** *(buildings $6,025,000)* and **"THEY PROPOSE"** *(buildings $2,933,392)*, **names neither party**,
+  and carries its own health warning: *"ESTIMATES ONLY — NOT TAX ADVICE — THE CPAs WILL CALCULATE EXACT NUMBERS."*
+  ⛔ **THE ERROR, AND IT WAS OURS:** an earlier session read **"THEY" as the sellers** and wrote `Seller proposes`
+  into the workbook as established fact. 🔑 **Kevin is the SELLERS' broker, so his "WE" is the SELLERS and his
+  "THEY" is the BUYERS' side** — which is exactly what Julia says: **the sellers propose $6,025,000 to the
+  buildings, and the $2,933,392 was an earlier BUYER-SIDE figure, now superseded.** *(It also makes the document
+  internally consistent at last: it warns that "OLGA LOSES ≈ $279,000 IN YEAR 1 WITH THEIR SPLIT" — Olga being the
+  buyer, it is telling her that her own side's lower building figure costs her.)*
+  ⚖️ **AND THE CORRECTED PICTURE IS SIMPLER AND BETTER: THERE IS NO BUILDINGS FIGHT.** Buildings $6,025,000 /
+  business $5,975,000, **agreed by both sides.** 🔑 **What is still open is the split INSIDE the $5,975,000 —
+  EQUIPMENT (Class V) against GOODWILL (Class VI/VII) — and that is now the whole tax question.** The sellers'
+  analysis treats effectively all of it as goodwill and **omits the equipment entirely**; equipment is the fastest
+  write-off in the deal and §197 goodwill is fifteen-year straight line, so every dollar moved is a dollar deducted
+  years earlier. ⓘ **Why they resist is already in our papers: they EXPENSED the equipment** *(depreciation at one
+  S-corp went from ~$50,661 in 2023 to ~$632,449 in 2024 when the Ruskin fleet went in)*, **so remaining basis is
+  minimal and nearly every equipment dollar is ordinary §1245 recapture to them while goodwill is capital gain.**
+  ⇒ **The buildings were the cheap concession.**
+  ✅ **WHAT WAS NEVER AFFECTED, checked before answering:** the $2,933,392 **never appeared in the client report**,
+  and **no other sheet in any of the four workbooks depends on it** — the earnings rebuild, the price multiple and
+  the add-back testing are all independent.
+  🛠️ **CORRECTED:** `data.py` now holds the agreed split with the superseded figure recorded beside it *(so nobody
+  re-derives it)*; **sheet 03 Allocation is rewritten** around what is actually open — block A what is agreed, block
+  B the Class V vs Class VI/VII question with each side's position and why; and **report §6 item four is rewritten**
+  from *"the price allocation has not been agreed"* to *"the buildings are agreed, the equipment is not, and that is
+  where the money is."*
+  🔑 **THE LESSON WORTH KEEPING:** a figure taken from a third party's illustration carried an attribution the
+  document never made, and it survived because the label read like a fact. ⇒ **When a source says "we" and "they"
+  without naming them, the attribution is an ASSUMPTION and must be marked as one.**
 - 2026-10-02 (the manager, corrected) — 🛑 **JULIA OVERTURNED A READING OF MINE AND THE ENTRY BELOW IS SUPERSEDED:**
   *"your assumption in added back that store manager pays more than 90k is not correct. i probably was mistaken with
   the name of the store. w2 numbers are the only comp."* ✅ **HER RULING: the store manager's compensation is the two
