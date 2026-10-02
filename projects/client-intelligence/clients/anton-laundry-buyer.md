@@ -259,6 +259,33 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (the manager, corrected) — 🛑 **JULIA OVERTURNED A READING OF MINE AND THE ENTRY BELOW IS SUPERSEDED:**
+  *"your assumption in added back that store manager pays more than 90k is not correct. i probably was mistaken with
+  the name of the store. w2 numbers are the only comp."* ✅ **HER RULING: the store manager's compensation is the two
+  Forms W-2 and nothing else — $44,900 + $44,125 = $89,025.** ⛔ **The payments to the same name through Store
+  Supplies are NOT pay.** 🔑 **What I got wrong: I saw the manager's name in the supplies account, saw he was also on
+  W-2 at two entities, and raised "compensation outside payroll" as one of two readings. The other reading was the
+  right one — he BUYS for the stores and is reimbursed** *(and the 2026 pattern already pointed that way: the same
+  name across all six businesses in small amounts against soap, food and office supplies)*.
+  🔵 **AND THE CORRECTION MAKES OUR POSITION STRONGER, NOT WEAKER.** If those payments are purchasing, then **another
+  tenth of the Store Supplies account is demonstrably REAL OPERATING SPEND** — in the very year the seller describes
+  a third of that account as the owner's personal spending. ⇒ **It cuts against his supplies add-back.**
+  ⚖️ **What does NOT change:** the manager reallocation stays rejected *(he normalises the manager to a notional
+  $15,000 a store; the role is real and the buyer must fill it)*, and the must-pay labour percentage is unmoved — the
+  $975 only shifts between the "store staff" and "manager" rows of the same total.
+  🛠️ **Corrected in four places:** the manager constant is now derived from the two W-2 figures rather than the
+  broker's rounded ~$90,000; the report's supplies section no longer raises a worker-classification question and
+  instead uses the payments as evidence the account is real; the working sheet's manager block and supplies-payee
+  note say the same; and the open-items list no longer asks what the payments are for.
+  ⓘ *Her "mistaken with the name of the store" refers to her earlier recollection that the $90,000 was paid from
+  Select and Palmetto — the forms show Bayshore and Samoset Florida, and the forms govern.*
+- 2026-10-02 (the $154,500, agreed) — ✅ **JULIA ON THE ADDITIONAL-OWNER-INCOME ANALYSIS: "i agree, you make total
+  sense. we just need to explain it in the report."** 🛠️ **Already done in the same pass** — §4 carries it as its own
+  section, *"$154,500 that is the owner's weekly draw, added back a second time"*, built on **the seller's own six
+  2026 add-back pages as a table** *(each one showing an officer-compensation line AND a separate $15,000 "owner
+  draw")* **and the Select payroll register printed in the same binder** *(headed "Pay Frequency: Weekly", two
+  employees at a $500.00 rate, 72 pays, $36,000 — which IS that page's officer compensation)*. **Both routes are
+  stated: the draw is already inside the payroll he adds back, and a distribution is not an add-back at all.**
 - 2026-10-02 (Additional Owner Income) — 🔑 **JULIA: "$154,500 — he's probably talking owner distribution here."**
   ✅ **SHE IS RIGHT ABOUT WHAT IT IS, and being right about that is what kills the line — by two independent
   routes.** ⇒ **The rejection stands at the same figure, but it no longer rests on an absent account; it rests on
