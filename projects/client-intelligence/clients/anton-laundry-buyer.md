@@ -259,6 +259,67 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (the add-back schedule) — 🔴 **JULIA: "YOU HAVE DETAILED ADD BACK SCHEDULE FROM KEVIN THAT ARRIVED TO
+  REVISED NET INCOME — DO YOU HAVE IT? … I NEED TO KNOW WHY."** *(on §4's assertion of the distance between our
+  adjusted earnings and the sellers')*. ⚠️ **The honest first answer was no: we held about 39% of the FY2025
+  add-backs by value, and more of it was unread than the distance the report was asserting.** The Financial Binder
+  was re-read from Drive and **this time extracted to binder page 80**, which carries the whole schedule: the
+  **nine categories by type**, the **flagged QuickBooks accounts store by store**, and the first of 32 line-by-line
+  pages. *(Pages 81–309 still do not extract — the open item is now narrowed to those, not to "the add-back
+  detail".)*
+  🔑 **THE FINDING THAT MADE THE REST POSSIBLE: OUR REBUILD AND THEIR SCHEDULE START FROM THE SAME PLACE.** Rebuilt
+  from the ledgers, the reported result of **five of the six businesses comes out within $11 of the figure the
+  sellers publish, four of them within 33 cents.** The sixth differs by a single round amount — a members' draw net
+  of an inbound transfer, which their P&L shows on the balance sheet and our rebuild runs through the ledger.
+  **A presentation difference, not a disagreement about what happened** — so every dollar of the distance is about
+  *which costs a buyer may stop paying*, and nothing else.
+  ✅ **ALL NINE CATEGORIES TESTED, AND THE SPLIT ADDS ACROSS TO THEIR OWN TOTAL ON EVERY ROW:** already below our
+  line (we and they agree, they simply start lower) · accepted · waiting on evidence · rejected. **Four categories
+  are supportable and were taken**, which moved OUR OWN figure UP and closed about a third of the distance. The
+  report's §4 is now four pages and the position page is rewritten around it.
+  🛑 **THE THREE REJECTIONS, each with the ledger test that settles it:**
+  **(1) "Additional Owner Income" — no account of that name exists in ANY of the six ledgers in ANY year**, across
+  96 account names and 31,103 entries, and it is **the one category in the sellers' own table with no support named
+  against it.**
+  **(2) The supplies called personal — the account is a VENDING account.** Beyond Sam's Club it runs to Mexican
+  food distributors, three ice-cream suppliers and two phone-card wholesalers. **And the proportion has not moved:
+  supplies were 11.8%, 12.4% and 11.4% of sales across three years** — if a third of it were personal in 2025 it
+  was personal in 2023 and 2024, in which case the earlier years the sellers present are understated and their own
+  trend changes. **The claim cannot apply only to the year being priced.**
+  **(3) Inter-company transfers — their own definition defeats the line.** The binder says it *"appears as an
+  expense in one and income in another and washes out across the portfolio"*; if it washes out the figure is nil.
+  **The category is exactly TWICE the one transfer that pairs in the ledgers, and the RECEIPT side has been added
+  back as though it were a cost.**
+  ⚖️ **AND THE ONE THAT WAS RE-SIZED RATHER THAN REJECTED — the storm category, their largest.** The principle is
+  right; the size is not. **Repairs ran 12.4% of sales in 2024 AND 12.6% in 2025 against 7.1% in the last pre-storm
+  year.** Two consecutive years at the same elevated level is not a one-off event. **What is non-recurring is the
+  EXCESS over a pre-storm year**, which is what we accept. *(2026 to July is 4.7% and is the one piece of evidence
+  in their favour; we used 2023 as the baseline anyway, because it produces the SMALLER add-back.)*
+  🔵 **A CORRECTION TO OUR OWN TREND STATEMENT, found while testing their property-tax line — and it reverses one
+  claim the report was making.** They add back the prior-year bills paid in January, which is correct. But the
+  reason 2025's property tax is so large is **not only timing: THREE OF THE FIVE STORES RECORDED NO PROPERTY TAX AT
+  ALL IN 2023, AND TWO RECORDED NONE IN 2024.** Put on one consistent basis the operating margin went **18.6%, then
+  11.6%, then 13.8% — a sharp fall from 2023 and then a RECOVERY**, not the three-year slide the unadjusted ledgers
+  show. ⛔ **The report had said the margin fell in each of the three years. That is now corrected.** ⚠️ **And it
+  points the other way too: Florida reassesses at a sale, so this is the one operating cost we can already say
+  rises for the buyer.**
+  🛠️ **A DEFECT IN OUR OWN P&L BUILD, FIXED — and the fix proved itself.** An account named `FIRST HAWAII STATE
+  TAX` was being read as a tax and left in operating cost. **The payee is FIRST HAWAII VENTURE — the party the
+  group bought its equipment and two of the businesses from in 2023**, every one of those payments booked to
+  equipment and business purchase. Reclassified below the operating line **on the payee, not the account name**
+  *(the genuine Hawaii tax payments in 2023 and 2024 are payable to the Hawaii tax authorities and were left where
+  they are — which is what makes the payee the test)*. **Their equipment-loan category then ties to ours within
+  $1.52**, which is how we know the reclassification is right.
+  ❓ **ONE NEW QUESTION FOR THE SELLERS, found inside the supplies account:** roughly fortnightly payments to a
+  **single named individual booked to Store Supplies**, three years running. Either a supply-and-delivery
+  arrangement or unrecorded labour — **the second carries a worker-classification exposure that follows the
+  business.**
+  📄 **DELIVERED:** the report rebuilt (27 printed pages; 325 money figures, every one traced to source by the
+  checker) and **all four workbooks rebuilt** — sheet `06 Add-Backs` now carries the sellers' complete schedule
+  (nine categories with our four-way verdict, the two-column bridge, and the flagged accounts for that entity's own
+  stores with where our rebuild puts each one), and the open-items sheet replaces "the add-back detail did not
+  extract" with **the four documents that now decide the price.** ⛔ **Not committed and not an artifact** — the
+  report carries the sellers' confidential material under a binder marked for the buyer's due-diligence use only.
 - 2026-10-02 (the appendix) — 📊 **JULIA: "YOU'RE SAYING THIS BUT THERE IS NO NUMBERS TO LOOK AT."** *(on §4's
   claims that one store was loss-making and that the decline is not an owner-compensation effect)*. ✅ **A fair hit:
   the report asserted a PER-STORE finding and showed only PORTFOLIO figures. In a due-diligence report a reader must
