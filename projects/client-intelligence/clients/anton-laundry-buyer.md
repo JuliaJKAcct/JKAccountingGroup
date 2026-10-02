@@ -259,6 +259,60 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (later) — 🔴 **THE GENERAL LEDGERS ARE NOW IN THE WORKBOOKS, AND THE P&L THEY PRODUCE IS THE WORST
+  NEWS IN THIS DEAL SO FAR.** *(Julia: "on the excels you're saying you still to be loading GL reports. did you do
+  it? it is very important." She was right to push — sheet 05 said **AWAITING EXTRACTION** for data the session was
+  already holding and querying. **A deliverable that claims a gap it does not have is worse than a gap.**)*
+  ⚙️ **HOW IT WAS BUILT, because the method is what makes it defensible.** All **31,103** parsed GL lines, six
+  businesses, 2023 → Jul 2026. **96 distinct account names across the sellers' two charts are each mapped to exactly
+  one P&L line, and the builder ASSERTS that no account falls outside the map** — there is no silent *other* bucket.
+  🔑 **Only the P&L account sections are summed; the bank, A/P and A/R sections are excluded**, which is what stops
+  every bill being counted twice *(in a QuickBooks GL each transaction prints under every account it touches)*.
+  ✅ **THE ACID TEST PASSES: the GL `Sales` account equals the Deposit Detail TO THE CENT in all twenty store-years.**
+  🔑 **And the only two variances in the portfolio are at Lemon Squeezy, in 2024 and 2025, and they are EXACTLY the
+  twelve uncollected `Invoice` lines to the one customer already identified** — the ledger is accrual there, the
+  deposits are cash, both are right. **The build reproduced a known finding without being told about it**, which is
+  the strongest evidence the mapping is sound.
+  🛑 **THE FINDING: THE OPERATING MARGIN HAS NEARLY HALVED IN TWO YEARS WHILE SALES ROSE.** Portfolio sales less the
+  sellers' OWN recorded operating cost — capital spend, financing and distributions held out below the line —
+  **20.9% (2023) → 13.0% (2024) → 11.0% (2025)**, on sales **+12.4%** across the same two years. ⛔ **This is not an
+  add-back argument and cannot be answered with one: it is the sellers' own books.** ⚠️ **And it is a far bigger
+  problem for a $12M price than the revenue-trend point already in the plan**, which was about volume; this is about
+  what is left after cost.
+  🔴 **LABOUR IS THE DRIVER AND THE RATIOS ARE NOT CREDIBLE FOR THIS INDUSTRY.** Labour **+37.8%** against sales
+  **+12.4%**, taking it from **31.0% to 38.1% of sales** portfolio-wide. **An attended laundromat normally runs
+  15–25%.** Per store 2025: **Lemon Squeezy 56.5% · Palmetto Coin 47.3% · Ruskin 41.8% · 15th St 37.0%** *(15th St
+  was 20.4% in 2023 — it nearly doubled as a share while that store's margin fell 32.0% → 13.3%)*. 🔑 **Part of this
+  IS owner compensation and therefore IS the add-back argument — but it must be identified line by line, and the
+  payroll registers that would do it are the outstanding request.** ⚠️ **Remember the labour arrives as weekly vendor
+  bills through ENTRUST, with no EFTPS and no Florida RT payment anywhere in 3½ years.**
+  🛑 **ONE BUSINESS IS LOSS-MAKING AT THE OPERATING LINE IN 2025 BEFORE ANY ADD-BACK: PALMETTO COIN 9TH, at −1.8%,
+  down from +24.5% in 2023.** ⛔ **It is also the coin-only store with NO payment system of any kind**, so it is the
+  one store whose revenue cannot be tested against a machine system at all — and its machine revenue has never been
+  isolated from total deposits, which is why it is the one store missing from the water-normalised index.
+  🔴 **THE BOOKS' OWN BOTTOM LINE IS NEGATIVE IN 2023, 2024 AND 2025** once capital spend expensed in full and owner
+  distributions run through. **That is why the returns look as they do, and it is the arithmetic behind the earlier
+  finding that these are cash-through-A/P logs rather than financial statements.**
+  ⚠️ **TWO LIMITS STATED ON THE PAGE ITSELF, because the trend is distorted by them.** ⓐ **THE TAX LINES ARE NOT A
+  FAIR COMPARISON YET:** grouping every tax account together, 2023 and 2024 sit at roughly **half** of 2025, and
+  2026 carries **no property tax at all**. ⛔ **Either Florida assessments really doubled on these commercial parcels
+  — possible over that period — or the early years are short.** 🔑 **The county bills per parcel settle it and are now
+  a request; until they arrive the early-year margins are a CEILING, not a figure.** ⓑ **2026 is seven months, has no
+  property tax in it, and must not be annualised as it stands** *(its 19.2% margin is the artefact of exactly that)*.
+  🧮 **ALSO NEW: the add-back schedule is now TESTED AGAINST THE LEDGER.** Sheet 06 gained two columns — *is this in
+  the books at all?* and *the FY2025 amount per the GL* — so each of the seller's ten categories is checked against
+  the account it claims to come from. 🔴 **The "Additional Owner Income" row now reads `NOT IN THE BOOKS` in red**,
+  which is the point: **it cannot be added back to a book net income that never contained it.**
+  📊 **DELIVERED: all four workbooks rebuilt. 1,249 formulas, 0 evaluation errors.** Entity sheet `05 P&L by Store`
+  is live and GL-fed per store per year with margin and labour-share rows *(the yellow AWAITING cells are gone)*;
+  `06 Add-Backs` carries the ledger test; the portfolio book gains `06 Consolidated P&L`. ⛔ Figures handed to Julia,
+  never committed.
+  🛠️ **ONE DEFECT CAUGHT IN SELF-CHECK AND FIXED BEFORE DELIVERY:** the portfolio consolidation was reading **one
+  store's** column group instead of the six-business total — found by reading the computed figures back out of the
+  saved file and re-deriving them from source, **not by looking at the code.** ⓘ *The formula evaluator also had
+  four real gaps of its own (empty cells did not behave as Excel's do in arithmetic; `COUNT`, and the comma-argument
+  forms of `SUM`/`AVERAGE`/`MAX`/`MIN` were unsupported). Fixed, so the 0-error result means something.*
+
 - 2026-10-02 — 🔑 **JULIA: "THERE IS NO RENT BECAUSE THEY OWN THEIR OWN BUILDING."** One line, and it closes a
   question the session had been asking the wrong way round. ✅ **TESTED AGAINST THE LEDGERS AND IT HOLDS FLATLY:
   across all six businesses and 3½ years — 31,103 GL lines, 130 distinct account names — there is NO rent, mortgage
