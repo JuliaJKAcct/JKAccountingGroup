@@ -2572,6 +2572,36 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   to ask now, which is her call. ⛔ **This is one more reason not to ask for the bank details yet:** the amount
   owed has now moved twice since she last reviewed it.
 
+### 2026-10-02 — the keyed return was read in full: it confirms the contractor entry, and the operating-loss deduction is wrong in three places
+
+> ⛔ **No figures here on purpose** — this file renders to a hosted page. The page-by-page transcription, every figure and the
+> fixes are in the working paper, [`§4P`](../../tax-returns/denys-melnyk/2025-form-1040.md).
+
+- 📄 **Lilian handed back the keyed 29-page return (dated 10/2/2026) and asked for errors, above all in the NOL carried into 2025.**
+  The whole document was transcribed into the working paper. ✅ **It confirms what §4O reconstructed from her report**: the contractor
+  payments are on Schedule C, the amount owed and the estimated-tax penalty tie to the printed forms, and the penalty worksheet proves the
+  method used.
+- 🔴 **The NOL problem is in THREE places.** ① The deduction on Schedule 1 still carries the previous profit's figure — the limit is 80% of
+  taxable income *before* the NOL, so it must move with the profit and the software never re-caps it. ② **The attached NOL statement
+  (page 29) did not regenerate** and still recites the figures of two versions ago; it is required, so its text must be corrected.
+  ③ Form 172 line 23 prints the whole carryforward where the instructions ask for the deduction (no tax effect — to confirm in ATX).
+  The 2026 carryforward is not settled: two candidates under the likeliest reading — it is read in ATX on the NOL Summary tab, not on the worksheet line that is labelled as the 2026 carryover (that line is something else).
+- 🛑 **Older defects still on the printed return** (each with its fix in §4P-iii): box 1(a) blank on two Forms 8082; Schedule C lines I
+  and J unanswered although contract labor is now claimed; the 'Gas' line still present; the first Form 8082 says he was a 50 percent
+  shareholder for all of 2025; the penalty still printed; a Schedule EIC attached though no earned income credit is claimed; signature
+  dates earlier than the changes; Form 8867 questions 4a/4b blank.
+- ⏳ **Still waits on a person:** the client's answer on the contractor payments (same money as the Zelle 'gas' or separate; whose
+  contractors; was a 1099-NEC sent), the home-office and insurance and travel decisions, and the two penalty gates.
+
+### 2026-10-02 (b) — he is adding more truck repairs, and wants to pay over two years with nothing sent now
+
+> ⛔ **No figures here on purpose** — this file renders to a hosted page. Every amount, the readings and the payment model are in the working paper, [`§4R` and `§4S`](../../tax-returns/denys-melnyk/2025-form-1040.md).
+
+- 🛻 **He told the firm he will include a further amount of truck repairs on the Schedule C.** Everything was recomputed on all four readings of the contractor question: the operating-loss limit moves again, the amount owed falls a little, and **the printed operating-loss figure is now above its limit on every reading**. ⚠️ **The which-truck question is still unanswered** — the standard mileage rate already covers repairs for the vehicle on Part IV, and a repair on the corporation's truck is not his expense — so **more deduction now rests on it**; the downside was written up for Julia as a decision. Nothing was said about which truck, when, who paid, or receipts.
+- 💳 **He wants to pay the balance over two years by monthly direct debit and send nothing with the return.** An installment agreement request (**Form 9465**) was drafted line by line, with the monthly amount sized so that 24 payments clear the balance — **a plain division by 24 would leave a balance, because interest and the late-payment penalty run from April.** Nothing is paid with the return; that was a choice, and the paper records that the cost of it should be explained to him.
+- 🔴 **Before anything goes out:** the **2025 extension question is still open** (a late return loses the reduced penalty rate and adds a failure-to-file penalty); whether **ATX can e-file the form** and how the spouses sign it is **not established**; the **account details are asked ONCE, after Julia reviews** — and the return's own one-time withdrawal stays **off**; and **2026 estimated tax is a condition of the agreement**, since he has no withholding.
+- 💡 **Likely qualifies for the IRS fee waiver for low-income taxpayers paying by direct debit** (family of three) — **to confirm against the AGI the IRS holds**, which may be the 2024 year.
+
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
@@ -2604,24 +2634,3 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   - `Tax Return Filed/2024` — his 2024 return, prepared elsewhere
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** none yet.
-
-### 2026-10-02 — the keyed return was read in full: it confirms the contractor entry, and the operating-loss deduction is wrong in three places
-
-> ⛔ **No figures here on purpose** — this file renders to a hosted page. The page-by-page transcription, every figure and the
-> fixes are in the working paper, [`§4P`](../../tax-returns/denys-melnyk/2025-form-1040.md).
-
-- 📄 **Lilian handed back the keyed 29-page return (dated 10/2/2026) and asked for errors, above all in the NOL carried into 2025.**
-  The whole document was transcribed into the working paper. ✅ **It confirms what §4O reconstructed from her report**: the contractor
-  payments are on Schedule C, the amount owed and the estimated-tax penalty tie to the printed forms, and the penalty worksheet proves the
-  method used.
-- 🔴 **The NOL problem is in THREE places.** ① The deduction on Schedule 1 still carries the previous profit's figure — the limit is 80% of
-  taxable income *before* the NOL, so it must move with the profit and the software never re-caps it. ② **The attached NOL statement
-  (page 29) did not regenerate** and still recites the figures of two versions ago; it is required, so its text must be corrected.
-  ③ Form 172 line 23 prints the whole carryforward where the instructions ask for the deduction (no tax effect — to confirm in ATX).
-  The 2026 carryforward is not settled: two candidates under the likeliest reading — it is read in ATX on the NOL Summary tab, not on the worksheet line that is labelled as the 2026 carryover (that line is something else).
-- 🛑 **Older defects still on the printed return** (each with its fix in §4P-iii): box 1(a) blank on two Forms 8082; Schedule C lines I
-  and J unanswered although contract labor is now claimed; the 'Gas' line still present; the first Form 8082 says he was a 50 percent
-  shareholder for all of 2025; the penalty still printed; a Schedule EIC attached though no earned income credit is claimed; signature
-  dates earlier than the changes; Form 8867 questions 4a/4b blank.
-- ⏳ **Still waits on a person:** the client's answer on the contractor payments (same money as the Zelle 'gas' or separate; whose
-  contractors; was a 1099-NEC sent), the home-office and insurance and travel decisions, and the two penalty gates.
