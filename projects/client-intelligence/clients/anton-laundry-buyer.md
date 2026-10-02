@@ -259,6 +259,49 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (later still) — 🛑 **A DEFECT IN THE WORKBOOK I HAD JUST SHIPPED, FOUND BY JULIA'S QUESTION** *("do
+  we have questions for Kevin?")*. Assembling the list meant listing **every payee** inside the capital-spend
+  accounts, and the payees gave the game away: 🔴 **THE SELLERS BOOK FINANCE INSTALMENTS AND INTER-COMPANY MONEY
+  INTO EQUIPMENT-PURCHASE ACCOUNTS**, so mapping on the ACCOUNT NAME alone reported debt service as capital spend.
+  ⛔ **The tell is not the account, it is the payee and the rhythm: identical amounts, monthly, never ending.**
+  🛠️ **FIXED with a payee-override layer** *(`plmap.classify`)*: a line in a capital-spend account paid to `FHB`,
+  `FHB - LOAN PAYMENT`, `FIRST HORIZON BANK`, `CLF` or `BDW WEST LLC` is **financing**; one paid to another store in
+  the group is **inter-company**. ⓘ *A second bug fell out of it — the group-level credit/debit sign flip reported an
+  inter-company payment OUT as negative income, so the sign rule is now per LINE, not per group.*
+  📉 **Restated: true capital spend is about a QUARTER LOWER than reported.** About **a sixth** of what had been
+  called capex was equipment finance instalments and about **a tenth** was money paid between the stores.
+  ✅ **THE HEADLINE FINDING IS UNAFFECTED** — all three sit BELOW the operating line, so the margin collapse
+  *(20.9% → 13.0% → 11.0%)* and the labour ratios stand exactly as reported.
+  🔴 **AND THE FIX SURFACED THE BIGGEST UNDISCLOSED ITEM IN THE DEAL SO FAR: TWO LIVE EQUIPMENT FINANCE AGREEMENTS,
+  NEITHER ON ANY BALANCE SHEET.** ⓐ **`FHB` — a four-figure monthly instalment running FEBRUARY 2025 to date,
+  unbroken** — and it is booked in **PALMETTO W&F's** ledger under an account literally named
+  **`Equipmnt Prchase Ruskin-NOT NEW`**, which is the cross-entity contamination already recorded, in writing, in the
+  account name itself. ⓑ **`CLF` — a second, larger four-figure monthly instalment from JANUARY 2026** —
+  ⚠️ **starting the month AFTER rev 5 says Palmetto Wash & Fold's 39 washers were installed (Dec 2025).**
+  🔑 **AND THE PURCHASE ITSELF IS NOWHERE IN THE LEDGER — ONLY THE INSTALMENTS ARE.** So a fleet nine months old,
+  under a five-year parts warranty, has **no recorded cost, no recorded liability and an unknown obligor.**
+  🛠️ **Asked: both agreements, the payoff balances, the collateral, the obligor, and whether each is assumed or
+  satisfied at closing.**
+  🟢 **ONE ALARM CLOSED BY THE SAME PASS, and it is the method working.** Ruskin's 2024 transfers-typed-as-income —
+  flagged earlier as unexplained — land in the **same year as a very similar amount of Ruskin EQUIPMENT PURCHASES**
+  *(`LLD MANAGEMENT`, `ELECTROLUX DIST.`, and a `PBG` installation charge)*. **The money came in to pay for the new
+  Electrolux fleet.** ⓘ *A client's mistake is work, not an alarm — [`method.md`](../pre-return-review/method.md).
+  The mis-typing is still a defect; the transaction is ordinary.*
+  🔑 **AND THAT SAME 2024 PURCHASE BLOCK IS NOW THE STRONGEST CLASS V EVIDENCE IN THE FILE** — the current Ruskin
+  fleet bought at arm's length **24 months before closing**, with named vendors. **`LLD MANAGEMENT` is the largest
+  equipment supplier across the whole period.** ✅ **It also explains the `EQUIPMENT SALE` lines: `TRIAD LAUNDRY`
+  bought Ruskin's OLD fleet in 2024** *(two deposits)*, with a further disposal in 2025 — **so rev 5 lists what
+  REMAINS, and we now have to ask what else has left since 2023.** ⓘ *Those proceeds sit slightly above what the
+  2024 return put on Form 4797 — a small difference, probably selling costs, worth one line of enquiry.*
+  📧 **THE BROKER EMAIL NOW CARRIES 21 NUMBERED ASKS IN SIX SECTIONS** — ⓵ bank statements *(still the single
+  blocker)*, ⓶ eight items already slow, ⓷ five from rev 5, ⓸ nine questions needing an answer not a document,
+  ⓹ **NINE NEW ONES FROM THE LEDGERS** *(the margin, the labour split, the loss-making store, what equipment left,
+  what the current fleet cost, the two finance agreements, the Dec-2025 fleet, the inter-company money, and the
+  fixed-asset registers)*, ⓺ the environmental gap. ⛔ Still avoids both seller-internal documents, and still tells
+  him nothing about what our analysis concluded.
+  📊 **All four workbooks rebuilt on the corrected mapping: 1,261 formulas, 0 errors.** ⛔ Figures to Julia, never
+  committed.
+
 - 2026-10-02 (later) — 🔴 **THE GENERAL LEDGERS ARE NOW IN THE WORKBOOKS, AND THE P&L THEY PRODUCE IS THE WORST
   NEWS IN THIS DEAL SO FAR.** *(Julia: "on the excels you're saying you still to be loading GL reports. did you do
   it? it is very important." She was right to push — sheet 05 said **AWAITING EXTRACTION** for data the session was
