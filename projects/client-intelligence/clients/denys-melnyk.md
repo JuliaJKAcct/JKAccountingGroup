@@ -2538,13 +2538,14 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 
 - 📨 **He wrote to the firm that he had paid contractors during 2025.** Lilian entered it on the Schedule C
   as **contract labor** and the amount owed fell. ✅ **The direction and the size of that change make
-  sense**: the deduction lowers the profit and, with it, the self-employment tax — which is the only tax
-  this return really has, because the child credit already absorbs the income tax.
+  sense**: the deduction lowers the profit and, with it, the self-employment tax and a little income tax
+  (the operating-loss limit absorbs most of what it would have saved on the income-tax side).
 - 🔴 **The question that decides the figure: is this the same money as the "gas sent by Zelle to drivers"
   he described on 2026-08-05, or different money?** The return still deducts that older item in Part V
   under the heading *Gas*. **If it is the same payments restated, the old line must come out or the
   expense is counted twice; if they are separate — pay for the drivers' work versus fuel sent to them —
-  both stay.** ⚠️ **And one gate nobody has applied yet: were those people HIS contractors or the
+  both stay.** ⚠️ **In one case — neither item is his expense — the amount owed ends up HIGHER than on the return as it
+  was filed.** ⚠️ **And one gate nobody has applied yet: were those people HIS contractors or the
   corporation's?** If the corporation's, neither item is his Schedule C expense — the same *whose?*
   question already open on the truck repairs and the insurance.
 - 🔴 **The operating-loss limit has to be redone, and it will need redoing after every future change to
@@ -2553,20 +2554,22 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   the figure Lilian had just corrected is **wrong again — too high on one reading, too low on the other.**
 - 🔴 **The two Schedule C questions about Forms 1099 are no longer optional.** Paying contractors for
   services means line I is **Yes** (unless every one of them was a corporation), and line J — *did or will
-  you file them* — is **his to answer, never ours to assume**. The forms were due **31 January 2026**, so
-  if none were sent they are **late**: that does **not** touch the deduction but carries a penalty per
-  form. ⓘ *The 2025 threshold applies — the higher threshold in the current instructions starts with 2026
+  you file them* — is **his to answer, never ours to assume**. The forms were due in **early February 2026** (31 January was a Saturday), so
+  if none were sent they are **late**. ⚠️ **What that costs, and whether it touches the deduction itself, is
+  NOT established** — the penalty rules were not read; Julia to confirm. ⓘ *The 2025 threshold applies — the higher threshold in the current instructions starts with 2026
   payments.*
 - ❓ **To ask him, in one message:** who each person was, how much each was paid and how (Zelle, cash,
   check), whether they were his or the corporation's, whether this is the same money as the earlier "gas"
   item, and whether any 1099 was sent — and for each payee **name, address and a Form W-9**. ⓘ *That one
   request is both what a late filing needs and the substantiation the deduction needs.*
 - ⚠️ **Provenance:** this was worked from Lilian's report of her screen, **not from a new copy of the
-  return.** Her figure was reproduced to within a couple of dollars by a model of the return, which showed
-  she has the corrected operating loss and the software's own penalty on screen; the working paper says
-  how to confirm that in three glances.
+  return.** Her figure was reproduced exactly by a model of the return, which **implies** — if the software's
+  penalty scales with the liability, as it did between the earlier versions — that she has the corrected
+  operating loss and the software's own penalty on screen; the working paper says how to confirm that in
+  three glances.
 - 🔁 **The order of the last steps is unchanged** — corrections, **then Julia**, then his bank details, then
-  a fresh signature form. ⛔ **This is one more reason not to ask for the bank details yet:** the amount
+  a fresh signature form. **These questions travel in that same message, after Julia** — unless Lilian chooses
+  to ask now, which is her call. ⛔ **This is one more reason not to ask for the bank details yet:** the amount
   owed has now moved twice since she last reviewed it.
 
 ## 7. Links
