@@ -1264,6 +1264,44 @@ Group beyond the one line naming it as a W-2 payer** in the firm's own 09-20 ema
   open items, while the mileage above is the larger number still with the client specifically —
   both are open, for different reasons, and neither has arrived.
 
+### 2026-10-01/02 — he answered the mileage, the home-office areas and the 1099 question
+
+📨 **He replied by email on 2026-10-01** to the 2026-09-24 ask — the longest-outstanding item on this
+return, and the one the whole vehicle claim was waiting for.
+
+**What he gave:**
+- 🚗 **The mileage.** Odometer at both ends of 2025, total business miles and the split between his two
+  activities. ⚠️ **Every figure he supplied is derived from the percentages he had already asserted on
+  2026-09-20 rather than from a log** — the arithmetic is internally perfect, which is the point. ⛔ *So
+  the item is ANSWERED, not SUBSTANTIATED, and the distinction is recorded in the working paper.*
+- 🚗 **The Tucson was his ONLY vehicle in 2025** — he confirmed he had no other car for personal use.
+  ✅ **Settles a typed Yes/No on the return.** ⚠️ **And it cuts against a high business-use share rather
+  than supporting it**, which the file already noted on 2026-09-24.
+- 🏠 **The home-office and apartment areas**, which he had been asked for twice and answered with a
+  percentage both times. ✅ **They confirm the percentage already in use — nothing on the return moves**
+  — and they close a blocker that had been open since the first review. ⚠️ **The office area is exactly
+  the percentage applied to the apartment area, so it was back-solved rather than measured.**
+- 🧾 **He issued NO Forms 1099 for 2025.** ⛔ **This settles Schedule C line J and NOT line I** — line I
+  turns on how much he paid each payee for the year, which is still unknown. 🔑 **An answer under the
+  jurat, so the firm's take-what-he-gives posture expressly does not retire it.**
+
+⏳ **Still with him:** the lender's 2025 interest total, which he is chasing.
+
+🔴 **AND WHAT HIS ANSWER DID NOT TOUCH — the question the method decision turns on.** Whether the car
+was already in business use in **2024** governs whether the standard-mileage rate can be elected for
+2025 at all *(the election has to be made in the first year the car is available for business)*. **It
+was asked on 2026-09-20 and the 2026-10-01 reply does not answer it.** ⚖️ **The method choice is the
+largest open decision on the return and it is Lilian's and Julia's.**
+
+🧮 **The firm computed the vehicle deduction and re-ran the whole return on it** — the arithmetic, every
+figure's provenance *(his, ours, or assumed)*, and what it does to each line are in §27 of the
+[working paper](../../tax-returns/valentin-volzhanskiy/2025-form-1040.md). ⛔ **Nothing is keyed yet.**
+
+🔎 **One cross-check worth knowing exists:** the fuel the firm can see supports materially fewer miles
+than he stated. ⛔ **It is an indication only** — two bank statements are still missing, cash fuel is
+invisible, and the fuel economy and pump price are the firm's assumptions. ✅ **It is a reason to ask one
+more question, not a finding against him.**
+
 ### Outstanding items (CI-only — never in the SOP)
 
 
