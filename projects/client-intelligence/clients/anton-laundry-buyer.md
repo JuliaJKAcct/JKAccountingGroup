@@ -259,6 +259,30 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (the appendix) — 📊 **JULIA: "YOU'RE SAYING THIS BUT THERE IS NO NUMBERS TO LOOK AT."** *(on §4's
+  claims that one store was loss-making and that the decline is not an owner-compensation effect)*. ✅ **A fair hit:
+  the report asserted a PER-STORE finding and showed only PORTFOLIO figures. In a due-diligence report a reader must
+  be able to check the claim against the stores.** 🛠️ **ADDED: an appendix of SUMMARISED FINANCIAL STATEMENTS BY
+  STORE — all six businesses, three years each.** **Table A** gives sales, operating result and margin for 2023,
+  2024 and 2025 side by side; **Table B** gives 2025's operating cost broken into six categories per store with a
+  portfolio column. **§4 now points to it** so the loss-making claim can be read against the others.
+  🔑 **WHAT THE PER-STORE VIEW SHOWS, now visible to the client rather than asserted:** **Palmetto Coin 24.5% → 9.5%
+  → −1.8%** *(the loss-maker, and the coin-only store holding a crated card system)*; **Samoset 32.0% → 13.3%**;
+  **Palmetto W&F 17.7% → 3.2%**; **Ruskin 21.9% → 2.0% in its re-equipment year, recovering only to 7.0%**; and
+  **SELECT IS THE ONLY LAUNDROMAT THAT IMPROVED, 13.7% → 18.7%.** ⓘ *Lemon Squeeze shows 26–29% and is the delivery
+  business, not a laundromat.* ⚠️ **Four of five laundromats fell; the one that rose is the one the trend section
+  shows down 10.1% on trailing deposits — so improving margin on falling takings, which is cost-cutting rather than
+  growth.**
+  ✅ **THREE CHECKS RUN BEFORE DELIVERY, because an appendix of per-store figures is where an arithmetic error
+  hides:** ⓐ **an assertion in the code that every one of the sellers' OPEX line names lands in EXACTLY ONE of the
+  six categories** *(the build fails otherwise)*; ⓑ **18 store-years re-footed — categories back to total cost, and
+  sales less cost back to the stated result — 0 failures**; ⓒ **the six stores' sales sum to the portfolio figure to
+  the cent.** 📈 **The figure checker now covers every appendix number too: 203 money tokens in the report, 169
+  distinct, all traceable to source.**
+  🛠️ **One presentation fix: the delivery company showed `$0` for 2023, a year it did not exist** — a zero asserts it
+  traded and earned nothing. **Now an em dash**, with the note that it began trading in April 2024.
+  📕 **Report now 22 pages.**
+
 - 2026-10-02 (payroll, corrected) — 🛑 **JULIA KILLED A FALSE PREMISE BEFORE IT REACHED THE BROKER.** *("no
   federal employment-tax deposit and no Florida RT payment appears in any ledger — this is because they are
   processing through a third-party payroll provider.")* ✅ **She is right and the ledger proves it: 99.2% of the
