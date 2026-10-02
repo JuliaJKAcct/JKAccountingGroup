@@ -2007,16 +2007,16 @@ income (loss)`.** ⛔ **A correct IRS address is not an address in the software.
 - **Line 1** (`NOL deduction from Form 1040 or 1040NR (enter as a positive number)`) **showed the same figure as 8a** *(equal values observed; the direction of the link was not tested)*. ⛔ **Do not type the deduction there as the way of changing it** *(a green arrow icon sits beside it; its behaviour was not tested)*.
 - **Line 9, `NOL carryover to 2026`, is line 1 − line 8, floored at zero.** 🔑 **By its own formula that is the part of THIS YEAR'S DEDUCTION that exceeds modified taxable income — it reads 0 whenever the deduction is within the cap — so it cannot be the remaining balance of the carryforward going into next year; confirm on `NOL Summary`.** ⛔ **Never copy it into the next year's opening NOL.** *(Where ATX shows the remaining carryforward is **not established**: the same bottom strip has a `NOL Summary` tab that was **not opened** — open it and write what it says here.)*
 
-🔴 **THE ATTACHED STATEMENT IS A SEPARATE THING AND DOES NOT FOLLOW 8a — IT IS TYPED BY HAND, AND ✅ HERE IS WHERE.** *(Established: ATX 2025, screenshot from Lilian, 2026-10-02.)*
+🔴 **THE ATTACHED STATEMENT IS A SEPARATE THING AND DOES NOT FOLLOW 8a — IT IS TYPED BY HAND, AND ✅ HERE IS WHERE.** *(Established: a screenshot from Lilian, 2026-10-02 — the taskbar icon reads `ATX 25`.)*
 
 | | |
 |---|---|
 | **Where** | `1040` → the bottom tab strip → **`NOL - Stmnt`** — it sits **immediately to the right of `Ln 8, Sch 1 - Other Inc`** *(the neighbours are `Ln 7, Sch 1 - Unemploy` · `Ln 8, Sch 1 - Other Inc` · **`NOL - Stmnt`** · `Ln 11, Sch 1 - Educator Exp` · `Ln 16, Sch 1 - SEP`; on a narrow window scroll the strip right)* |
 | **Screen title** | **`NOL Carryover Explanation (1040)`** — the same words that print on the statement page |
 | **What is on it** | a **free-text block of about nine one-line rows**, headed *"Provide explanation below if an NOL carryover is reported on Schedule 1, line 8."* and a **`Print this statement`** box **ticked on the live return** |
-| **What it holds** | **typed text, not figures ATX computes — which is why it did not reprint when 8a changed.** On the live return the text went across **two rows**, split at a sentence boundary (`2024 NOL carryforward … : $<base>.` / `80% limitation: $<cap>. NOL deduction claimed: $<cap>.`) |
+| **What it holds** | **typed rows, not figures ATX shows computing — consistent with the page not following 8a, which was seen on the PDF printed before the text was retyped.** On the live return the text went across **two rows**, split at a sentence boundary (`2024 NOL carryforward … : $<base>.` / `80% limitation: $<cap>. NOL deduction claimed: $<cap>.`) |
 
-✅ **So when 8a changes: open `NOL - Stmnt` and retype the figures — never assume the statement followed.** ⚠️ **Keep `Print this statement` ticked**, or the page does not print. 🛑 **Then confirm on the PRINTED return** that the statement page shows the new text *(the screen and the print are not the same thing — on the live return the page printed the old figures until the text was retyped)*.
+✅ **So when 8a changes: open `NOL - Stmnt` and retype the figures — never assume the statement followed.** ⚠️ **Leave `Print this statement` ticked, as found** *(what unticking does was not tested)*. 🛑 **Then confirm on the PRINTED return** that the statement page shows the new text *(on the live return the PDF printed BEFORE the retype carried the old figures; the print after the retype had not been re-read when this was written)*.
 
 🛑 **The checks that belong with it:** the printed return's **page-1 `Schedule 1` 8a**, **Form 172 line 23** *(the instructions ask for the deduction claimed there; ATX may print the whole carryforward — confirm and note it)* and **the attached statement** must all state the **same** deduction.
 
