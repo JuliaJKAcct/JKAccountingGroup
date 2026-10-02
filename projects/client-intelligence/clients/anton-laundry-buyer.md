@@ -259,6 +259,79 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (the bank statements) — 🟢🔴 **THE BANK STATEMENTS ARRIVED AND THEY ARE THE MOST IMPORTANT DOCUMENTS
+  IN THIS DEAL. JULIA WAS RIGHT AND THIS FILE WAS WRONG.** She sent a Drive folder with no message: **six PDFs, one
+  per business, ~80 MB.** They are **Vol. 2 Tabs H-1.1 → H-1.6**, broker-prepared, **dated 23 September 2026** —
+  **138 monthly statements, all at FIRST HORIZON BANK**, scanned with paid-check images, account numbers masked to
+  last four and MICR lines blacked out. **Five stores cover Jul 2024 → Apr 2026; Lemon Squeezy covers May 2024 →
+  Aug 2026.** ⛔ **Transcribed in full** *(fleet/deposit tables, the broker's notes, and his defects)* into the
+  portfolio workbook's new sheet `07 Bank Reconciliation`.
+  🛑 **CORRECTING THIS FILE'S OWN STANDING CLAIM, and the error is instructive.** Two entries below say *"there are
+  still NO bank statements"*, resting on the 2026-09-17 two-agent sweep of all four volumes, the Financial Binder and
+  the Drive folder. 🔑 **That sweep was RIGHT WHEN IT RAN — these tabs were prepared on 23 September, six days
+  later.** ⛔ **The error was repeating a 17-September negative as a PRESENT-TENSE fact on 2 October**, which is
+  exactly [`method.md`](../pre-return-review/method.md) **rule 1b: a negative belongs to the search that produced
+  it.** ⚠️ **And it was repeated to Julia twice in one day, against her own recollection.** 🔑 **The lesson is not
+  "sweep again" but "date the negative"** — a gap statement needs its as-of date attached or it silently becomes a
+  claim about the present.
+  ✅ **THE BROKER'S OWN ARITHMETIC CLAIM WAS RE-RUN AND IT HOLDS.** He states *"opening + deposits − withdrawals =
+  closing; each closing carries to the next opening."* Checked independently across **all 138 statements: ZERO
+  arithmetic failures, ZERO balance-chain breaks.** ⓘ **That is the only seller-prepared arithmetic in this deal that
+  has survived a check** *(his equipment schedule footed to 218 against a stated 216; his dryer total was
+  unreconcilable)*.
+  🟢 **AND THE TEST WE COULD NOT RUN NOW PASSES: THE REVENUE IS REAL.** Bank **operating deposits** *(his definition:
+  total less transfers in and one-time items)* against the books' **Sales-coded deposits**, calendar 2025:
+  **three of the six accounts agree to within FIFTY DOLLARS across a whole year**, and the **portfolio agrees to
+  within 0.85%.** 🔑 **Until today the GL-to-Deposit-Detail tie was an INTERNAL check — both sides are the same
+  QuickBooks file. This is the first time the money has been seen arriving from OUTSIDE it, and it covers the whole
+  of the year the price is built on.** ⓘ **The three differences are small, bounded and each a named follow-up**; one
+  is already half explained by the broker's own note — a transfer from Select to 15th Street in Oct 2025 marked
+  *"Misc Deposit Correct"*, treated as 15th Street's deposit, **which is the cross-store revenue mis-attribution this
+  file has recorded twice, now visible from the bank side.**
+  🟢 **IT ALSO SETTLES THE SINGLE BIGGEST OPEN ITEM: THE RUSKIN MONTH-END TRUE-UP IS THE CARD SETTLEMENT, AND IT IS
+  REAL MONEY.** Ruskin's 2025 **card-and-other-electronic deposits sit within about four hundred and sixty dollars
+  of the month-end true-up total computed from the Deposit Detail.** **FasCard settles monthly; the bank shows it
+  landing every month.** ⛔ **The missing settling document is no longer load-bearing** — though the Ruskin merchant
+  statement series is still worth having.
+  🛑 **AND IT CORRECTS MY OWN WATER-TEST INFERENCE FROM YESTERDAY, which Julia was given.** The index arithmetic
+  stands — Ruskin WAS the highest in the portfolio and fleet efficiency could NOT carry it. ⛔ **But the inference I
+  invited, that the money might not be there, is refuted by the bank.** 🔑 **The explanation is now visible and it is
+  the CASH/CARD MIX: cash is 86% of everything banked portfolio-wide; four stores run 91–98% cash; RUSKIN RUNS 61%.**
+  **A kiosk takes the money when value is LOADED; a water meter turns when the machine RUNS.** At a 39% card share
+  deposits can run ahead of the water; at 2–7% they cannot. ⇒ **It is a TIMING and RECOGNITION difference, not a
+  revenue shortfall.** 💵 **Which promotes a housekeeping line to a price item: UNREDEEMED CARD BALANCES are deferred
+  revenue and a liability the buyer inherits** *(request §6.2 — unused card and app balances at each year-end and
+  today)*, **and part of the card growth below may be balance build-up rather than takings.**
+  🔴 **THE VALUATION FINDING, AND IT IS FROM THE BANK: THE PORTFOLIO IS SHRINKING AND IT IS SUBSTITUTION, NOT
+  GROWTH.** September→April, **cash fell at FIVE of five stores, card rose at FIVE of five, and operating deposits
+  fell at FIVE of five** *(cash −17.1%, card +50.3%, operating −9.3%)*. 🔑 **The two stores where card grew fastest
+  are the two where the total barely moved — exactly what a new card system capturing takings that used to be coin
+  looks like.** 📉 **Trailing twelve months, Sep 2025–Aug 2026 vs the prior twelve: the five laundromats are down
+  7.3%, and the three largest are down 10.1%, 12.0% and 13.7%.** ⚠️ **At three of the five, only ONE or TWO of the
+  last twelve months beat the same month a year earlier.** ⓘ **Same direction as the machine-system trend already
+  recorded — so TWO INDEPENDENT SOURCES now say the portfolio is contracting.**
+  🟠 **LEMON SQUEEZY IS THE ONLY ONE GROWING, AND NOT FROM LAUNDRY.** Jan–Aug deposits **+38.5%**, every month of
+  2026 above 2025. **Card settlements account for little of it** *(+17.6%)*: the growth is **cheque deposits and ACH
+  receipts from two named commercial counterparties — `Well & Good Prop`, and `PMI SWFL STR Ops` starting only in May
+  2026** *(a short-term-rental operator)*. 🔑 **That is a different business with different economics and a
+  customer-concentration question of its own, and it bears directly on whether that entity is in this sale.**
+  🔴 **ONE LARGE UNEXPLAINED ITEM: a quarter-of-a-million-dollar deposit into Lemon Squeezy in August 2024**, which
+  the broker excludes from operating deposits and does not explain. **That entity's capital spend that year was of
+  the same order.** Asked.
+  ✅ **TWO EARLIER FINDINGS CONFIRMED FROM THE BANK SIDE:** the **TRIAD LAUNDRY** equipment sale arrives as **two
+  incoming wires** in Aug/Sep 2024 *(so the `EQUIPMENT SALE` lines are third-party proceeds, as read)*; and a large
+  October 2024 deposit **annotated "Eq. Purchase"** funded the new Ruskin fleet, which is the benign explanation for
+  the transfers-typed-as-income already recorded.
+  ⚠️ **FIVE DEFECTS AND CONCESSIONS IN HIS OWN FRONT MATTER, all recorded on sheet 07 block F:** a **literal question
+  mark** where one month's statement-period start should be; **note 8 conceding a currency line is illegible** so
+  that month's cash/card split is derived rather than read; **the broker's OWN open question** on a five-figure mobile
+  deposit; **the final numbered note left BLANK in all six tabs**; and — the one that matters — **his explicit
+  statement that these figures have NOT been reconciled to the monthly P&Ls.** 🔑 **That reconciliation is what we
+  just did.**
+  📊 **Portfolio workbook rebuilt with `07 Bank Reconciliation`: 1,322 formulas, 0 errors**, totals read back out of
+  the saved file and re-derived from source. ⛔ Figures and account last-fours stay out of the repo *(accounts are
+  named by STORE — FOLLOW-UPS row 113)*.
+
 - 2026-10-02 (scope) — ⚖️ **JULIA'S DECISION: STOP CHASING THE BANK STATEMENTS.** *"i don't thin at this point we
   will be getting more bank statements, we have 18 months pretty much is plenty."* 🔑 **Taken as her call and the
   request list is changed accordingly.** ⓘ **But what we hold is not bank statements, and she should be deciding on
