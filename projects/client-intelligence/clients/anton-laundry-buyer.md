@@ -259,6 +259,44 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (payroll) — 🛑 **JULIA: "2,080 HOURS — WHERE ARE YOU GETTING THIS FROM, A PAYSTUB? THAT DOESN'T MAKE
+  IT REAL HOURS." SHE IS RIGHT, AND THE ARITHMETIC PROVES IT.** The source is the Financial Binder §2 payroll
+  register *(names, employee numbers, rates, hours, gross, FUTA/SUTA, net)*. ⛔ **A register records what was
+  PROCESSED, not what was WORKED**, and three tells show which way the arithmetic ran: ⓐ **2,080 is exactly 40 × 52**,
+  the standard full-year constant every payroll system carries; ⓑ **BOTH people carry the identical figure to the
+  hour — 2,080 each in 2025 and an identical figure as each other again in 2026.** *Two people in different roles at
+  different rates do not record the same time twice.* ⓒ **The RATE is the QUOTIENT, not the input: each one's round
+  annual salary divided by 2,080 gives their register rate to the cent, exactly.** ⇒ **An annual compensation
+  decision, back-filled into an hours field.** ⛔ **No timesheet, schedule or time-clock record exists for any family
+  member.**
+  🔑 **THIS REVERSES THE SESSION'S OWN EARLIER READING** *(2026-09-17: "two family members are paid FULL-TIME HOURS
+  AT GENUINE HOURLY RATES… a large part of it is two people working full-time hours to run five stores")*. **That
+  entry treated the register as evidence of work.** ⚠️ **The one piece of genuine operating evidence SURVIVES and is
+  separate: Eric Nye demonstrably operates the business — he is the person who sent the broker the CleanTie and
+  Paystri reports.** 🔑 **But "someone runs these stores" is not "the register measured their time," and the
+  function is ALREADY separately paid for: the manager runs all five stores for about ninety thousand a year, inside
+  the labour the buyer keeps.** ✅ **§4 of the client report now ARGUES the add-back instead of conceding it**, and
+  says plainly that if time records are produced the figures change.
+  📧 **AND A NEW DELIVERABLE: 14 PAYROLL QUESTIONS FOR KEVIN, drafted at Julia's request** *("regarding leased
+  employees because i don't think it is true")*. 🔴 **Her scepticism is backed by a contradiction already in this
+  file, and the questions are built on it:** the **FAMILY** is run on the companies' OWN payroll codes **with Florida
+  reemployment tax and FUTA on the registers** — which implies each company holds its own RT account — while the
+  **~22 STORE STAFF** arrive as **weekly vendor bills from ENTRUST**, posted to accounts payable; **and across 3½
+  years and all six businesses there is NO federal employment-tax deposit and NO Florida RT payment in any ledger.**
+  ⛔ **Those three cannot all be right as they stand.**
+  🔑 **WHY IT DECIDES REAL MONEY: if Entrust is a licensed Florida EMPLOYEE LEASING COMPANY / PEO (co-employment),
+  the W-2s are under ITS EIN, the sellers' own 941s show only the family, the I-9s sit with Entrust, and the buyer
+  takes neither the workforce nor the experience rate the same way. If it is a PROCESSOR, the sellers ARE the
+  employer, full 941s and RT-6s exist to be asked for, and SUCCESSOR LIABILITY runs to the buyer.** 🛠️ **The
+  questions ask for the legal relationship and the Entrust FEIN, the written service agreement, the Florida DBPR
+  employee-leasing LICENCE NUMBER** *(Florida licenses these; it is checkable)*, **the 941s/940s/W-2s/W-3s and whose
+  EIN appears on them, the RT account numbers, RT-6s and experience rates, the roster and I-9 custody, the workers'
+  comp named insured and experience mod, and written confirmation from Entrust that employment taxes through closing
+  are paid.** ⓘ **Two specific people are asked about by role, not name: the manager** *(through Entrust, a company
+  code, or a 1099?)* **and the individual taking substantial recurring payments across several expense accounts and
+  never to payroll — a worker-classification flag.** ⛔ **Framed neutrally and as document requests; the contradiction
+  is put as "the point we cannot reconcile", not as an accusation.**
+
 - 2026-10-02 (the report, revised) — 🔑 **JULIA CHALLENGED TWO CLAIMS IN THE DRAFT AND WAS RIGHT ON BOTH. THE
   FINDINGS GOT STRONGER, NOT WEAKER.**
   🛑 **① "THIS IS A CASH BUSINESS" WAS A SNAPSHOT WRITTEN AS A STEADY STATE.** *(Julia: "this is maybe true for
