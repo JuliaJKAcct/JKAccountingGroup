@@ -259,6 +259,52 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-02 (the report, revised) — 🔑 **JULIA CHALLENGED TWO CLAIMS IN THE DRAFT AND WAS RIGHT ON BOTH. THE
+  FINDINGS GOT STRONGER, NOT WEAKER.**
+  🛑 **① "THIS IS A CASH BUSINESS" WAS A SNAPSHOT WRITTEN AS A STEADY STATE.** *(Julia: "this is maybe true for
+  2025 but didn't they replace most of the washers with card readers? and some of them still not installed?")*
+  ✅ **The monthly bank data settles it: card has gone from 3.5% of the five stores' takings in Jul 2024 to 22–24%
+  in the most recent quarter — 4.4× in 22 months — and CASH IS 85.8% FOR 2025 BUT 76.7% ON THE CURRENT RUN RATE.**
+  🔑 **And the per-store pattern is unambiguous: WHERE A SYSTEM GOES IN, CARD REACHES A THIRD TO A HALF WITHIN
+  MONTHS** — Ruskin *(FasCard, Oct 2024)* 39.2% → **48.6%**; Palmetto W&F *(Laundry Works, 7 Dec 2025)* 6.8% →
+  **34.3% in four months**. ⛔ **The three stores WITHOUT a modern system sit at 6.7%, 7.6% and 11.7% — and all
+  three have a CENTS system BOUGHT AND STILL CRATED.** 🛠️ **So §2 was rewritten from "the control problem you are
+  inheriting" to the conversion and the opportunity: the buyer is paying for three uninstalled systems, and the
+  store with most to gain is PALMETTO COIN — no card at the machines, most cash-dependent, and the one store
+  loss-making at the operating line.** 🔑 **It is also a LABOUR story — a converted store needs less collecting and
+  less attending — and a growing DEFERRED-REVENUE liability as unredeemed card balances build at every store that
+  converts.**
+  🛑 **② THE LABOUR AND MARGIN FINDINGS IGNORED THAT MUCH OF THE LABOUR IS OWNER/FAMILY PAYROLL.** *(Julia: "i think
+  because you're not taking in consideration owner family payroll you are stating the earnings are materially
+  thinner than presented… labour is 38.1% of sales against an industry norm of 8% to 12%.")* **Correct — 38.1%
+  included the family.** ✅ **Split properly: store staff (~22 people) 23.8% of sales · the manager 2.8% · OWNER AND
+  FAMILY 11.4%.** 🔑 **So the labour a buyer MUST keep paying is 26.6% of sales — still ~2.7× the industry midpoint
+  with every family member removed.** ⇒ **The finding survives on a basis the seller cannot rebut**, which is
+  stronger than the original.
+  💵 **③ AND THE REPORT NOW CARRIES THE NUMBER IT WAS MISSING: AN ADJUSTED-EARNINGS BRIDGE.** *(Julia: "i want to
+  make sure we calculate real net income with adding back owners family payroll since really they are not required
+  to be actively participating.")* **Five family members draw THIRTEEN Forms W-2 across the five payrolls.** Three
+  cases are presented: **as the ledgers stand (11.0% margin, 34.0×) · non-working family added back (14.2%, 26.3×) ·
+  ALL owner/family payroll added back (22.4%, 16.7×)** against **the sellers' presented 50.3% and 7.4×.**
+  🏆 **The decisive framing: OUR buyer-case margin lands INSIDE the published industry range (net 20–35%, SDE ~29%);
+  THEIRS is 1.44× ABOVE the top of it.** **The distance between the two positions is the negotiation, and it is now
+  quantified.**
+  ⚠️ **ONE ASSUMPTION STATED PLAINLY IN THE REPORT RATHER THAN BURIED:** two family members are **clocked at 2,080
+  hours each at genuine hourly rates**, so adding their pay back asserts the buyer will not need those hours.
+  **Defensible — the stores run on ~22 other staff plus a manager — but it is an OPERATING assumption, not a
+  bookkeeping adjustment, and the buyers should make it deliberately.**
+  🔬 **④ AND THE MARGIN DECLINE WAS TESTED AGAINST HER OWN OBJECTION, WITH A BOUND THAT NEEDS NO FURTHER DATA.**
+  Labour rose 37.8% against sales 12.4% between 2023 and 2025. **If that ENTIRE increase had been family
+  compensation, 2023 family payroll would have had to be about a thirtieth of the 2025 figure — roughly a
+  four-figure sum each across five people on five payrolls. Not credible.** ⇒ **Most of the increase is STORE labour
+  and the margin decline is real, not an owner-compensation artefact.** 🔑 **That reasoning is in the report**, so
+  the conclusion survives the obvious challenge without waiting on the payroll registers.
+  🛠️ **TWO BUILD DEFECTS CAUGHT IN THE VISUAL CHECK, both invisible to the figure checker:** a patch over-escaped
+  f-string braces so **two tables printed their own template source instead of rendering** *(the figure checker
+  still passed — it only sees rendered money tokens, so A RENDERED-OUTPUT SCREENSHOT IS A SEPARATE AND NECESSARY
+  CHECK)*; and **`<strong>` inside the dark teal panels inherited the light-mode ink colour, rendering near-black on
+  teal.** Both fixed. 📊 **Final: 20 pages, 104 money tokens all traceable to source, zero fallback fonts.**
+
 - 2026-10-02 (the client report) — 📕 **DELIVERED: the client-facing FINANCIAL DUE DILIGENCE REPORT — 18 pages,
   print-ready PDF + a self-contained HTML.** *(Julia: "a very nice looking report for the client for a full
   financial diligence without mentioning too much we cannot do this or that, we don't have that, that cost 10k.")*
