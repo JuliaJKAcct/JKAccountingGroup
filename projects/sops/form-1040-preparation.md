@@ -1659,7 +1659,7 @@ of it.**
 
 ### 🔑 In ATX — where the deduction is typed *(established 2026-10-02)*
 
-**Type it on the 1040 itself:** `1040` → bottom tab `Ln 8, Sch 1 - Other Inc` → row `8a Net operating loss carryover (NOL) (enter as a negative)`, **Filer** column — **a negative number, the ALLOWABLE deduction**. **Read the base for the cap on `NOL Wkst, 172` → tab `CY Tax Inc - NOL`, line 2 (`Taxable income without the NOL`); the cap is 80% × that line.** ATX applies the cap **nowhere** — the screen stays quiet when 8a is over it, and the attached NOL statement does not reprint when 8a changes. The full route, the two worksheet lines that look like answers and are not (line 1, line 9), and what is still unestablished are in the [`tax-return-sop` skill](../../.claude/skills/tax-return-sop/SKILL.md) item **8d**.
+**Type it on the 1040 itself:** `1040` → bottom tab `Ln 8, Sch 1 - Other Inc` → row `8a Net operating loss carryover (NOL) (enter as a negative)`, **Filer** column — **a negative number, the ALLOWABLE deduction**. **Read the base for the cap on `NOL Wkst, 172` → tab `CY Tax Inc - NOL`, line 2 (`Taxable income without the NOL`); the cap is 80% × that line.** ATX did not apply the cap anywhere on the live return — the screen stayed quiet with 8a over it, and the attached NOL statement does not reprint when 8a changes. The full route, the two worksheet lines that look like answers and are not (line 1, line 9), and what is still unestablished are in the [`tax-return-sop` skill](../../.claude/skills/tax-return-sop/SKILL.md) item **8d**.
 
 ### 🛑 The three lines of Form 172 that actually go wrong
 
