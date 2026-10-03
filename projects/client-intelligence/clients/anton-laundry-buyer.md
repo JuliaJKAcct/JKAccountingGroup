@@ -259,6 +259,24 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-03 (the memorandum closed, and one defect caught before it shipped) — ✅ **JULIA: "wonderful. this is
+  closed."** 📗 **The equipment memorandum and the covering email are delivered; the allocation thread is closed at
+  buildings $6,500,000 / business $5,500,000 with Class V put forward at about $2.6M.**
+  🛑 **ONE DEFECT CAUGHT ON A LAST READ, AND IT MATTERED BECAUSE THE DOCUMENT GOES TO THE OTHER SIDE: Palmetto Wash
+  & Fold valued ABOVE what its own December 2025 invoices came to.** ⚠️ **It is not an error — those invoices bought
+  the THIRTY-SEVEN WASHERS and not the TWENTY-ONE DRYERS already standing at that store, so the invoice is not the
+  whole fleet there, where at Samoset and Ruskin it is.** 🔑 **But a reader comparing the two columns would have
+  seen a valuation above cost and stopped reading.** ⇒ **Both documents now state it before the reader asks** — the
+  memorandum as its own short section in part three, the report as a source note in §5.
+  🔑 **THE RULE WORTH KEEPING: a document that goes to the other side must disclose its own odd-looking rows.**
+  Anything the counterparty can find and you did not name costs more than the point itself.
+  📧 **The covering email was drafted as PLAIN COPYABLE TEXT** *(never markdown — her standing instruction)*, short
+  enough to read on a phone, with the one figure on its own labelled line and the two asks as numbered blocks.
+  ⛔ **Three things deliberately kept OUT of it and flagged to her instead:** the $6.5M buildings position *(a live
+  negotiating position, and not to be sent in the same email that invites agreement on something else)*; any
+  deadline or pressure *(which is what makes the appraisal offer credible rather than a bluff)*; and the invoiced-cost
+  and replacement-cost figures *(leave them in the memorandum, or he negotiates against the email instead of
+  reading the document)*.
 - 2026-10-03 (the equipment memorandum — a SECOND, SELLER-FACING document) — 📄 **JULIA: "i would like to put value
   of equipment into a section and also get me a separate pdf on this only so i can send it to kevin. can you
   highlight sources you're getting those estimates from?"** ✅ **Both built.**
