@@ -259,6 +259,119 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-03 (the pay rates — AND THIS IS WHAT CLOSES THE LABOUR QUESTION) — 🔑 **JULIA: "and also pay rate per each
+  employee."** *(She was pointing at a seller document I had treated as a headcount list.)* ✅ **Run as arithmetic
+  instead of read as a roster, `Staff & Pay Rates by Store` (19 Sep 2026) settles the 8–12%-benchmark question
+  outright.**
+  🛑 **⛔ IT IS A BROKER FILE AND CARRIES EMPLOYEE NAMES — headed *"Broker file — includes employee names. Not for
+  release to the buyer."*** ⇒ **Nothing from it goes back to Kevin, no name reaches this repo or the client report,
+  and only the RATES were recorded.** *(Same restriction as the Machine Payment Systems overview.)*
+  🔎 **IT SETTLES THE SERVICE MANAGER TWO WAYS AT ONCE, which is what proves the file can be trusted.** Its own
+  footnote says he *"is not included in this list"* — but two of its 22 lines are unperiodised salaries of **$850.00
+  and $825.00**, at the two stores whose entities issue his two Forms W-2, and ×52 they come to **$44,200 and
+  $42,900 against W-2s of $44,900 and $44,125.** ⇒ **Both the WEEKLY reading the file left open and his STORE
+  ATTRIBUTION are confirmed from outside.** So **20** of the 22 lines are store staff.
+  📊 **THE TEST, AND IT NEEDS NO ESTIMATE AT ALL — every listed person at their own listed rate, straight full time,
+  40 hours × 52 weeks, zero overtime:** gross wages **$637,260**; grossed up for employer taxes and the Entrust
+  bureau fee (÷0.87) **$732,483 = 22.8% of 2025 sales**; against **$801,203 = 25.0%** actually charged to the stores
+  with owner *and* manager removed. **The gap is $68,720 — nine per cent, i.e. overtime.** ⇒ **Plus his two W-2s,
+  must-pay labour is $890,228 = 27.8% of sales.**
+  🔑 **THE CONCLUSION, and it is the answer to the benchmark objection: even at straight full time with NO overtime
+  these twenty people cost 22.8% of sales.** **The labour is not an accounting artefact, it is not owner
+  compensation in disguise, and it is not loose** — it is twenty people on documented rates, and the payroll ties to
+  them within nine per cent. **It is the business model: five ATTENDED stores, three of them open 24 hours, plus a
+  commercial laundry running two drivers.**
+  ✅ **AND IT INDEPENDENTLY CONFIRMS THE WITHDRAWAL BELOW.** Store by store the fit swings **−29% (Palmetto Coin) to
+  +67% (15th Street)** while the portfolio fits within **+9%** — the exact signature of staff working across
+  locations but charged to one payroll code, which is what both seller documents say in their own footnotes.
+  **The aggregate is sound; the per-store split is not, and stays withdrawn.** *(Second check on the same gap: the
+  five laundromats' gross wages buy about 636 hours a week against the 497 attended/open hours the binder states —
+  1.28×, or 42.4 hours per position.)*
+  🔴 **TWO NEW FINDINGS THE RATES HAND US FOR FREE, AND BOTH ARE FORWARD-LOOKING BUYER COSTS:**
+  🔴 **① FLORIDA'S MINIMUM WAGE WENT TO $15.00/hr ON 30 SEPTEMBER 2026 — three days ago.** Of the 19 hourly staff
+  **one is at $14.50, ELEVEN are at exactly $15.00**, seven are above. ⇒ **12 of 19 are at or below the new floor
+  and one is now below the law.** The correction itself is trivial (~$1,040 a year) — **the point is that 63% of the
+  hourly base has no cushion left**, and Florida begins indexing the floor to **CPI-W from September 2027**, so every
+  future rise lands straight on this payroll with nothing to absorb it. *(Rate per the Florida DEO notice
+  "Florida's Minimum Wage Updated September 30, 2026"; re-cite the DEO page in the report — the session could not
+  reach floridajobs.org through the egress proxy and took the figure from search results plus two news reports.)*
+  🔴 **② A $395/WEEK SALARY AT RUSKIN DOES NOT CLEAR THAT FLOOR.** At $15.00/hr, $395 buys **26.3 hours**; the
+  seller's own binder says Ruskin is attended **8 AM–9 PM, 91 hours a week across 3 positions** — about 30 hours
+  each, which puts the salary at **$13.02/hr**. ⚖️ **If that person is a non-exempt attendant it is an
+  unpaid-minimum-wage exposure, and Florida's constitutional provision carries liquidated damages and attorney's
+  fees** — and it is a LIVE PRACTICE the buyer would continue from day one. ⇒ **Ask for that person's timesheets;
+  put the classification to employment counsel, not to us.** ⓘ *The manager's $850 and $825 both clear the current
+  federal salary threshold, so he looks properly salaried — the duties test is counsel's question too.*
+  ⚠️ **AND THE TWO SELLER DOCUMENTS DISAGREE ON THE SPLIT, though not on the total:** both land on 22 heads, but
+  the staffing schedule says 15th St 2 / Palmetto Coin 3 / Lemon 6 where the pay-rate file says 3 / 4 / 5. **One
+  more reason the per-store numbers cannot carry weight.**
+- 2026-10-03 (the service manager, and he costs far more than his W-2s) — 🔑 **JULIA: "Kevin gave us summary per each
+  location. And one manager he is also repairing and maintenance of equipment who is paid on top. I think it makes
+  sense because I was told that outside repair would be very pricy."** ✅ **Both halves check out, and the second one
+  reframes the key-person risk.**
+  ✅ **KEVIN'S PER-LOCATION PAYROLL SUMMARY TIES TO OUR OWN LEDGER READ — five of the six locations to the dollar**,
+  Ruskin apart by about $1,999 *(an AmTrust workers'-comp classification difference)*. ⇒ **His payroll figures are
+  good; it is the ALLOCATION between locations that is not, for the reason in the entry above.**
+  💰 **HIS REAL COST IS ABOUT $138,494, NOT $89,025** — the two W-2s **plus $49,469 paid outside payroll in 2025**
+  (supplies $39,185 + repairs & maintenance $10,284). ⛔ **The supplies half is NOT compensation** *(Julia's earlier
+  ruling, and the staffing schedule confirms "Purchasing of supplies for all locations" is his job)* — **but it is
+  still money that stops if he leaves.**
+  📈 **AND THE REPAIR SHARE IS GROWING: $0 (2023) → $6,500 (2024) → $10,284 (2025) → $8,962 in SEVEN MONTHS of 2026,
+  now above the supplies line.** ⓘ **$10,284 across 333 machines is about $31 per machine per year.** ⇒ **Julia is
+  right that this is cheap** — one outside service call costs a multiple of that, so a buyer losing him replaces a
+  near-free maintenance function with a contractor at market rates.
+  🛑 **THE SHARPEST SINGLE RISK IN THE DEAL, AND IT IS IN THE SELLER'S OWN DOCUMENT: "There are no written
+  employment agreements at any location."** *(Staffing Schedule by Location, 14 Sep 2026.)* **One unwritten person
+  does hiring, training, scheduling across six operations, purchasing for all locations, driving, fills open shifts
+  AND all equipment repair.** ⇒ **A retention agreement for him belongs in the purchase negotiation, not in the
+  post-closing to-do list.**
+- 2026-10-03 (labour, CORRECTED — a finding of mine withdrawn, and an add-back of mine reduced) — 🛑 **JULIA: "you
+  reconciled all the labour. removing owners family and considering Cherio is paid from 2 stores, check yourself.
+  now you're saying something doesn't make sense."** ⛔ **SHE WAS RIGHT AND I WITHDREW THE FINDING.**
+  🔑 **WHAT I DID WRONG: I divided POSITION counts (which the schedule assigns by PRIMARY LOCATION) by PAYROLL
+  CHARGES (which follow the code that RAN the payroll).** Both seller documents say so in their own footnotes —
+  *"Certain employees work at more than one location… Each employee is counted once, at their primary location"* and
+  *"Some employees work at more than one store."* ⇒ **Two different bases, one division, a nonsense answer.**
+  ⛔ **WITHDRAWN: the "15th Street is an outlier" finding and ALL per-store labour percentages and cost-per-position
+  figures.** The module now carries `PER_STORE_IS_INDICATIVE_ONLY = True` and says why, so no later session quotes
+  them. ✅ **WHAT STANDS is the aggregate, and it reconciles exactly:** GL labour **$1,220,828** − owner/family
+  **$330,600** − manager **$89,025** = **$801,203** across **21 store positions** = **$38,153 each**; the five
+  laundromats hold **15** of those positions = **3.0 per store**. ⓘ *Separating LEMON SQUEEZE from the five IS sound
+  — it is its own legal entity with its own payroll — in a way that separating one laundromat from another is not.
+  Its staff cost runs about 50.9% of its own sales: labour-heavy BY DESIGN, with two drivers.*
+  🔴 **AND THE SAME INVESTIGATION CAUGHT AN ERROR OF MINE IN THE ADD-BACKS: I HAD ADDED BACK $366,600 OF OWNER
+  PAYROLL WHEN ONLY $330,600 WAS EVER PAID.** The seller's own payroll schedule reconstructs **$36,000** of Bayshore
+  weeks that did not run and says in terms those amounts *"were not paid… no wages, taxes or net pay were actually
+  disbursed."* ⛔ **Money that was never expensed cannot be added back to earnings.**
+  📉 **THE CONSEQUENCES, and they go the wrong way for the buyers:** adjusted earnings fall **$1,017,292 → $981,292**
+  *(so the $12M asking price is **12.2×**, not 11.8×)* and must-pay labour rises **26.6% → 27.8% of sales**.
+  🔑 **THE RULE WORTH KEEPING: an add-back must be a cost the books actually CARRIED.** A schedule that
+  *reconstructs* what payroll would have been is not evidence that payroll happened — and this one said so itself,
+  in a sentence that had to be read rather than totalled.
+- 2026-10-03 (property tax at $6.5M — the one cost that rises BECAUSE of the purchase) — ❓ **JULIA: "can we estimate
+  property tax on value of all properties 6.5M?"** 🏠 **ALL FIVE TRIM NOTICES ARE NOW READ** — and that
+  took a catch of hers: 🛑 **"maybe you're missing property? you only have 3 trim notices, we have 5 buildings. give
+  me addresses i will find TRIM."** ⛔ **She was right, and the gap was MINE, not the seller's** — this file recorded
+  on 2026-09-17 that *"the firm already holds all five"*, but only three had ever been extracted and my analysis was
+  silently running on three parcels out of five. ⇒ **She re-sent all five and they are now parsed**, so the estimate
+  is computed from each parcel's own millage rather than a blended guess.
+  🔑 **THE RULE WORTH KEEPING, because it is the second time this deal has produced it: an extraction that stops
+  short does not announce itself.** *(The first was Vol. 3's text ending at page 97 of 133.)* **Count the documents
+  against what the deal has — five buildings means five notices — not against what parsed.**
+  📊 **CURRENT: five parcels, taxable value about $2,844,222 at a blended 18.1459 mills = $51,611 of ad valorem tax.**
+  📈 **AT A $6,500,000 PURCHASE PRICE: about $117,948 — AN INCREASE OF ABOUT $66,337, i.e. 2.29×.** 🔑 **Florida
+  removes the 10% non-homestead assessment cap on a change of ownership (§§193.1554/193.1555 F.S.), so the new
+  owner is assessed at the sale, not at the sellers' carried-forward base.** ⚠️ **Select alone is assessed about
+  $16,095 BELOW market under that cap today — the discount is wiped on sale.**
+  🔴 **AND A SECOND THING FELL OUT OF IT THAT MATTERS FOR THE ALLOCATION: the books carry about $84,857 of property
+  tax in a normal year, which is about $33,246 MORE than the five parcels' real-estate tax.** ⇒ **The difference
+  points at FLORIDA TANGIBLE PERSONAL PROPERTY TAX on the equipment** — roughly $47,000 a year at 18.15 mills on a
+  $2.6M fleet. 🔑 **Which means the Class V allocation carries a RECURRING property-tax cost that goodwill does
+  not** — a real counterweight to the §1245/§197 argument, and it has to be said in the same breath as it.
+  ⚠️ **One earlier claim of mine corrected by the same work:** *"the margin fell in each of three years"* was wrong —
+  **three of five stores recorded no property tax at all in 2023 and two in 2024**, so on one basis the sequence is
+  **18.6% → 11.6% → 13.8%**: a fall and then a recovery. **Documents still to request: the five 2025 tax bills, the
+  DR-405 tangible-property returns, and the folio numbers on the deed.**
 - 2026-10-03 (the memorandum closed, and one defect caught before it shipped) — ✅ **JULIA: "wonderful. this is
   closed."** 📗 **The equipment memorandum and the covering email are delivered; the allocation thread is closed at
   buildings $6,500,000 / business $5,500,000 with Class V put forward at about $2.6M.**
@@ -2719,6 +2832,18 @@ the actual details.
       Section 4 store P&Ls — in hand, not yet read
 - [ ] A realistic replacement-management cost for five stores across three cities, to set against the
       owner-payroll add-backs
+- [ ] **The five 2025 property-tax BILLS with proof of payment, and the DR-405 tangible-personal-property
+      returns per location** — a TRIM notice is August's proposed value, not a bill; and the DR-405s are
+      what tell us the TPP tax the equipment itself carries (about $33k a year of the books' property tax
+      is NOT explained by the five parcels)
+- [ ] **The folio numbers on the deed for all five parcels** — they settle the 702 vs 706 9th St W question
+      and are the key to the county's own assessment records
+- [ ] **Timesheets for the Ruskin salaried position** — a $395/week salary clears Florida's new $15.00/hr
+      floor only up to 26.3 hours, and the binder says that store is attended about 30 hours per position.
+      ⚖️ The classification question goes to employment counsel, not to us
+- [ ] **A retention agreement for the service manager, raised IN the purchase negotiation** — there are no
+      written employment agreements at any location, and one unwritten person does hiring, training,
+      scheduling, purchasing, driving, shift cover AND all equipment repair
 - [ ] Whether the 2026-09-10 LOI was actually signed, and by whom — no message after
       2026-09-09 confirmed it (2026-09-12 sweep)
 - [x] ~~Lemon Squeeze's return type / S-election status and its occupancy arrangement with
