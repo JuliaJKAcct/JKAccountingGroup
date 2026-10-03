@@ -1,6 +1,6 @@
 # GOSSIP MIAMI LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -381,6 +381,8 @@ duplicate it here; a request list goes stale, this list doesn't.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+
+- 🔍 **2026-10-03 — Weekly CI sweep (baseline 2026-09-26→2026-10-03).** Double: `list_client_properties` unchanged on the substantive columns (`Ext. Filed: true`, `Signature: Signed`, `Invoice: Paid`, `Organizer Status: Sent`); both notes (485291, 491858) have `updatedAt` before the baseline (2026-08-21 and 2026-08-13) — bodies not re-read; `list_activity_log` bounded ≥2026-09-26 returned 0 entries. Gmail (`Gossip OR Bogopolsk OR Makalendra OR Kopyrin OR "Marat Boxing" OR Varavva OR jamvabo`, `after:2026/09/26`, inbox + sent): **two new threads.** ① **2026-09-29 — the client's shared address sent Lilian an item titled "From IRS GOSSIP" (a PDF attachment, not opened by this sweep)**; Lilian forwarded it to Julia the same evening. What the IRS item is, and which return it concerns, is not stated in the message bodies. ② **2026-10-01 — Lilian emailed the client's shared address a Russian-subject "for signature" message carrying a Form 2848 for Gossip Miami LLC** (Julia cc'd); Drive shows the template (10-01 16:53), the for-signature copy (10-01 17:25) and a 2848 file in the client's folder modified 2026-10-02 15:23 (contents not opened — whether it is the signed copy is **unconfirmed**). ⓘ Form 2848 may only name someone eligible to practice before the IRS (firm-identity §4) — who is named was not checked. Ping (org-wide `search_meetings`): no meeting dated on/after 2026-09-26 on this client. **Not found** in a search of Gmail bounded after 2026-09-26, on 2026-10-03: the check/deposit photos, the Vagaro 1–29 October report, the closing date/statements for the closed checking account, a W-9 request for the contractor, or any FL DOR sales-tax / DR-26S correspondence. _(Gmail, Drive, 2026-10-03)_
 - 🔍 **2026-09-26 — Weekly CI sweep (baseline 2026-09-19→2026-09-26).** Double `list_client_properties`
   re-read for cid 710577: unchanged (`Tax Return Type: 1120-S`, `Organizer Status: Sent`, `Ext. Filed:
   true`, `Signature: Signed`, `Invoice: Paid`, `Preferred language: Only Russian`). `list_activity_log`

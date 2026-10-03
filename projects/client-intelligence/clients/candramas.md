@@ -1,6 +1,6 @@
 # CANDRAMAS LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-10-03
 >
 > ✅ **First full historical sweep completed 2026-08-22** — Double (client record, notes, contacts,
 > activity log — 154 entries), Gmail (full history, business name + owner email), Ping
@@ -172,6 +172,7 @@ A running, dated record as we build this profile.
 - _(pending)_
 
 ### Outstanding items (CI-only — never in the SOP)
+- 🆕 **2026-10-03 sweep.** Form 2553 effective-date matter now **201 days** pending (since the 2026-03-16 mailing); a search of Gmail, bounded after 2026/09/26, on 2026-10-03, did not find new IRS or 2553 correspondence. WCIRCLE LLC identification decision pending since 2026-09-26 = **7 days** (not re-searched; no new evidence). **Payroll:** Gusto flagged the Sep 1–30 payroll as late on 2026-09-29 (due 09-28 7pm EDT, Gmail); the September Gusto invoice was paid 2026-10-01 (Gmail), consistent with payroll having been run — the actual run-confirmation email was not seen, so unconfirmed. Double notes list is unchanged since baseline (3 notes; the 2026-08-31 Boris tax-return review meeting note records an IRS installment agreement on the owner's 1040 and a 2025 return of the company prepared and reviewed with him — already reflected in earlier entries). The 09-26 baseline's 'client declined three monthly meetings' item: not re-chased.
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.

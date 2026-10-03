@@ -1,6 +1,6 @@
 # Artem Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -519,6 +519,11 @@ the actual details.
   and they are separate requests on separate days. 🔗 **Whoever prepares his 1040 must be told the
   compensation figure and its route by the person asking — nothing on the K-1 will say it.**
   _(Figures in the company's working paper only. Worked by Lilian.)_
+
+- 2026-10-03 — **Incremental sweep (baseline 2026-09-26→2026-10-03).** Double (cid 710623): note 510952 unchanged (`updatedAt` 2026-09-01); properties unchanged (Income Tax, 1040, Assigned Staff Lilian, Organizer Status Sent); `list_activity_log` ≥2026-09-26 empty. Gmail (`Turo`/Hyundai/Kona, Markarian/ecoorganic/Artem addresses, `after:2026/09/26`, inbox + sent): **no client or Turo correspondence**; the only on-client item is the firm's QuickBooks invoice email to the company (2026-10-01, sent and paid same day — see Ecoorganic file). Ping: no meeting ≥2026-09-26 on this client. Drive: no results.
+  - 🔴 **Per-car Turo earnings breakdown — a search of Gmail, bounded ≥2026-09-26, on 2026-10-03, did not find it. 32 days pending since 2026-09-01.** No deadline set.
+  - 🔴 **Whose Turo account — a Gmail + Drive search, bounded ≥2026-09-26, found nothing new.** (Julia ruled the activity Artem's on 2026-09-01; the registration name itself is still unseen.)
+  - 🔴 **The Kona / 1099-MISC question, Turo login access, residence/state, Form 7203 basis question, mileage records — no reply found in Gmail ≥2026-09-26.** Pending since 2026-09-01/09-02 where the file dates them; residence/state — pending since unknown — no start date in the file.
 
 ### Outstanding items (CI-only — never in the SOP)
 

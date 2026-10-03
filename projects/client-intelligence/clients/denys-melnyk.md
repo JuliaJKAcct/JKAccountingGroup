@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -2530,6 +2530,92 @@ produced; **every figure lives in the working paper and in the Excel delivered t
   overtaken by their own decision two days later, not by this sweep.** Nothing found today changes
   that: no K-1 has arrived, the amended-return-if-they-arrive fallback (working paper §4, Form 8082)
   remains the live position, and there is nothing new to chase on this line this week.
+
+### 2026-10-02 — he reported payments to contractors, and the return was changed on it
+
+> ⛔ **No figures here on purpose** — this file renders to a hosted page. Every amount, the side-by-side
+> of both readings and the arithmetic are in the working paper, [`§4O`](../../tax-returns/denys-melnyk/2025-form-1040.md).
+
+- 📨 **He wrote to the firm that he had paid contractors during 2025.** Lilian entered it on the Schedule C
+  as **contract labor** and the amount owed fell. ✅ **The direction and the size of that change make
+  sense**: the deduction lowers the profit and, with it, the self-employment tax and a little income tax
+  (the operating-loss limit absorbs most of what it would have saved on the income-tax side).
+- 🔴 **The question that decides the figure: is this the same money as the "gas sent by Zelle to drivers"
+  he described on 2026-08-05, or different money?** The return still deducts that older item in Part V
+  under the heading *Gas*. **If it is the same payments restated, the old line must come out or the
+  expense is counted twice; if they are separate — pay for the drivers' work versus fuel sent to them —
+  both stay.** ⚠️ **In one case — neither item is his expense — the amount owed ends up HIGHER than on the return as it
+  was filed.** ⚠️ **And one gate nobody has applied yet: were those people HIS contractors or the
+  corporation's?** If the corporation's, neither item is his Schedule C expense — the same *whose?*
+  question already open on the truck repairs and the insurance.
+- 🔴 **The operating-loss limit has to be redone, and it will need redoing after every future change to
+  the Schedule C.** The limit is a share of taxable income *before* the loss is used, so it moves whenever
+  the profit does; the software takes the figure **as typed** and does not recompute it. After this entry
+  the figure Lilian had just corrected is **wrong again — too high on one reading, too low on the other.**
+- 🔴 **The two Schedule C questions about Forms 1099 are no longer optional.** Paying contractors for
+  services means line I is **Yes** (unless every one of them was a corporation), and line J — *did or will
+  you file them* — is **his to answer, never ours to assume**. The forms were due in **early February 2026** (31 January was a Saturday), so
+  if none were sent they are **late**. ⚠️ **What that costs, and whether it touches the deduction itself, is
+  NOT established** — the penalty rules were not read; Julia to confirm. ⓘ *The 2025 threshold applies — the higher threshold in the current instructions starts with 2026
+  payments.*
+- ❓ **To ask him, in one message:** who each person was, how much each was paid and how (Zelle, cash,
+  check), whether they were his or the corporation's, whether this is the same money as the earlier "gas"
+  item, and whether any 1099 was sent — and for each payee **name, address and a Form W-9**. ⓘ *That one
+  request is both what a late filing needs and the substantiation the deduction needs.*
+- ⚠️ **Provenance:** this was worked from Lilian's report of her screen, **not from a new copy of the
+  return.** Her figure was reproduced exactly by a model of the return, which **implies** — if the software's
+  penalty scales with the liability, as it did between the earlier versions — that she has the corrected
+  operating loss and the software's own penalty on screen; the working paper says how to confirm that in
+  three glances.
+- 🔁 **The order of the last steps is unchanged** — corrections, **then Julia**, then his bank details, then
+  a fresh signature form. **These questions travel in that same message, after Julia** — unless Lilian chooses
+  to ask now, which is her call. ⛔ **This is one more reason not to ask for the bank details yet:** the amount
+  owed has now moved twice since she last reviewed it.
+
+### 2026-10-02 — the keyed return was read in full: it confirms the contractor entry, and the operating-loss deduction is wrong in three places
+
+> ⛔ **No figures here on purpose** — this file renders to a hosted page. The page-by-page transcription, every figure and the
+> fixes are in the working paper, [`§4P`](../../tax-returns/denys-melnyk/2025-form-1040.md).
+
+- 📄 **Lilian handed back the keyed 29-page return (dated 10/2/2026) and asked for errors, above all in the NOL carried into 2025.**
+  The whole document was transcribed into the working paper. ✅ **It confirms what §4O reconstructed from her report**: the contractor
+  payments are on Schedule C, the amount owed and the estimated-tax penalty tie to the printed forms, and the penalty worksheet proves the
+  method used.
+- 🔴 **The NOL problem is in THREE places.** ① The deduction on Schedule 1 still carries the previous profit's figure — the limit is 80% of
+  taxable income *before* the NOL, so it must move with the profit and the software never re-caps it. ② **The attached NOL statement
+  (page 29) did not regenerate** and still recites the figures of two versions ago; it is required, so its text must be corrected.
+  ③ Form 172 line 23 prints the whole carryforward where the instructions ask for the deduction (no tax effect — to confirm in ATX).
+  The 2026 carryforward is not settled: two candidates under the likeliest reading — it is read in ATX on the NOL Summary tab, not on the worksheet line that is labelled as the 2026 carryover (that line is something else).
+- 🛑 **Older defects still on the printed return** (each with its fix in §4P-iii): box 1(a) blank on two Forms 8082; Schedule C lines I
+  and J unanswered although contract labor is now claimed; the 'Gas' line still present; the first Form 8082 says he was a 50 percent
+  shareholder for all of 2025; the penalty still printed; a Schedule EIC attached though no earned income credit is claimed; signature
+  dates earlier than the changes; Form 8867 questions 4a/4b blank.
+- ⏳ **Still waits on a person:** the client's answer on the contractor payments (same money as the Zelle 'gas' or separate; whose
+  contractors; was a 1099-NEC sent), the home-office and insurance and travel decisions, and the two penalty gates.
+
+### 2026-10-02 (b) — he is adding more truck repairs, and wants to pay over two years with nothing sent now
+
+> ⛔ **No figures here on purpose** — this file renders to a hosted page. Every amount, the readings and the payment model are in the working paper, [`§4R` and `§4S`](../../tax-returns/denys-melnyk/2025-form-1040.md).
+
+- 🛻 **He told the firm he will include a further amount of truck repairs on the Schedule C.** Everything was recomputed on all four readings of the contractor question: the operating-loss limit moves again, the amount owed falls a little, and **the printed operating-loss figure is now above its limit on every reading**. ⚠️ **The which-truck question is still unanswered** — the standard mileage rate already covers repairs for the vehicle on Part IV, and a repair on the corporation's truck is not his expense — so **more deduction now rests on it**; the downside was written up for Julia as a decision. Nothing was said about which truck, when, who paid, or receipts.
+- 💳 **He wants to pay the balance over two years by monthly direct debit and send nothing with the return.** An installment agreement request (**Form 9465**) was drafted line by line, with the monthly amount sized so that 24 payments clear the balance — **a plain division by 24 would leave a balance, because interest and the late-payment penalty run from April.** Nothing is paid with the return; that was a choice, and the paper records that the cost of it should be explained to him.
+- 🔴 **Before anything goes out:** the **2025 extension question is still open** (a late return loses the reduced penalty rate and adds a failure-to-file penalty); whether **ATX can e-file the form** and how the spouses sign it is **not established**; the **account details are asked ONCE, after Julia reviews** — and the return's own one-time withdrawal stays **off**; and **2026 estimated tax is a condition of the agreement**, since he has no withholding.
+- 💡 **Likely qualifies for the IRS fee waiver for low-income taxpayers paying by direct debit** (family of three) — **to confirm against the AGI the IRS holds**, which may be the 2024 year.
+
+### 2026-10-02 (c) — her latest version was reviewed: the truck repairs are right, the installment form has one silent error
+
+> ⛔ **No figures here on purpose** — this file renders to a hosted page. Every figure and the transcription of the new form are in the working paper, [`§4T`](../../tax-returns/denys-melnyk/2025-form-1040.md).
+
+- ✅ **The return with the extra truck repairs and the corrected operating-loss deduction ties to the firm's own computation on every figure checked** (22), and the estimated-tax penalty worksheet reproduces itself. The software's own penalty worksheet also prints the 7% interest rate for every quarter through mid-2026, confirming the rate used in the payment estimate.
+- 🔴 **The installment request (Form 9465) was added.** It prints the whole balance on the line meant for a payment made *with* the request, so the lines for the amount owed and the minimum payment read zero — the opposite of what he wants. **Why the software filled it is not established.** Also missing: the tax year and the phone numbers; the page for defaulted agreements prints with zero dependents although he has one. The monthly payment typed is accepted but runs a month or two past 24 payments.
+- 🛑 **Still unchanged on the return:** the attached operating-loss statement still recites the figures of two versions ago (third time), the estimated-tax penalty is still printed and now also sits in the installment request, and the other defects of the earlier review.
+
+### 2026-10-03 — weekend sweep (incremental, bounded 2026-09-26 and later): the tax project moved to "Waiting on Client"
+
+- 🆕 **Double activity log, 2026-10-02:** the **"2025 Taxes" tax project's status was changed from `Not Started` to `Waiting on Client`** by Lilian _(Double `list_activity_log`, 2026-10-03)_. The project's tasks (gather → prepare → review → send draft → file → follow-up) still read `Not Started`, assigned to Lilian with a **2026-10-15 due date** (the extension deadline) _(Double `list_tasks`, 2026-10-03)_. Preferred-language property reads **Bilingual (EN/RU)**.
+- **Double notes 485225 and 490984:** `updatedAt` unchanged since 2026-09-23 and 2026-08-20 — not re-read (nothing moved since the last sweep's full read).
+- **K-1s:** a Gmail search bounded after 2026/09/26 (Melnyk and the three company names, all folders) found **no message from the ex-partner or any K-1** on 2026-10-03 — the only hit was the internal weekly digest. **Promised 2026-08-20 → 44 days pending as of 2026-10-03; the 2026-09-15 chase date is 18 days past; filing deadline 2026-10-15 is 12 days out.** Ping (semantic search by name) surfaced no meeting on/after 2026-09-26; Drive title search (modified on/after 2026-09-26) found nothing for him.
+- ⛔ Working paper in `projects/tax-returns/` deliberately not touched this run — it is Lilian's active work.
 
 ## 7. Links
 

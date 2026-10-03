@@ -1,12 +1,12 @@
 # 4TUKAS, LLC
 
-> **Status:** Prospect — engagement letter drafted and delivered 2026-08-27; a paid
+> **Status:** ⚠️ **2026-10-03: the withholding/fee questions were answered 2026-09-28 and Julia told him on 2026-10-02 to sign — see §6.** Prospect — engagement letter drafted and delivered 2026-08-27; a paid
 > consultation for the client's remaining planning questions was proposed for 2026-09-17.
 > 🔴 **Mindaugas followed up 2026-09-14 asking for next steps; Julia replied 2026-09-15
 > promising an answer "by the end of this week" — that reply was NEVER SENT: Mindaugas
 > followed up a SECOND time on 2026-09-22 ("please let us know if there are any updates")
 > and it remains unanswered as of the 2026-09-26 sweep** · **Owner:**
-> Julia · **Last updated:** 2026-09-26
+> Julia · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -219,6 +219,10 @@ the actual details.
   2026-09-26.** Neither of Mindaugas's two follow-ups (2026-09-14, 2026-09-22) nor Julia's
   2026-09-15 reply settles whether that date was held, rescheduled, or dropped — it reads
   as folded into "next steps" that Julia has not yet answered
+
+- **2026-10-03 sweep — the two engagement-letter questions are now ANSWERED (supersedes the "unanswered" bullets above).** Gmail thread "Following up — Alina's investors group (Miami)" (Gmail, in:inbox + in:sent, `after:2026/09/26`): the member chased a third time **2026-09-28**; Julia replied **2026-09-28** — (a) foreign-partner withholding (§1446 / 8804 / 8805 / 8813) is **included in the quoted fee** and may not be needed anyway since rental activity usually produces losses; (b) the fee is the **full package even if there is no rental income in 2026**, because the first year should be used to obtain the ITINs so the second year can be e-filed. The member replied 2026-09-29 (first said the CPA was the blocker for the operating agreement/bank account, then corrected on 2026-09-30: those run in parallel, they still want to engage the firm and set up the 2026 filings/ITINs). Julia replied **2026-10-02**: no action items now; **go ahead and sign the engagement**, the firm will invite them to Double and a tax questionnaire goes out in **February**; QuickBooks set up once a property is bought and rented, with a **bookkeeping cleanup in January** (hourly, outside the tax-prep engagement, a few hours at most) — or early 2027 if no rental starts in 2026.
+- **Property:** 2026-09-29 the member says several properties have been found but none purchased — still **not under contract** (TY2026 vs 2027 timing therefore still open; Gmail, 2026-09-29).
+- **Still open:** the member's **signature on the engagement letter** — letter was in his hands by 2026-08-31, so **pending since at-latest 2026-08-31 = at least 33 days**; Julia explicitly invited signing 2026-10-02 (1 day). The 2026-09-17 paid-consultation question is moot per the 10-02 reply (no consultation step mentioned). No Double client yet (list_clients name search "tukas", 2026-10-03: none) — **create on signing**.
 
 ### Information still needed
 

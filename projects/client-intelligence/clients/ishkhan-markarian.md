@@ -1,6 +1,6 @@
 # Ishkhan Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -244,6 +244,11 @@ the actual details.
   unchanged. 🔗 **Whoever prepares his 1040 must be told the compensation figure and its route by the
   person asking — nothing on the K-1 will say it.** _(Figures in the company's working paper only. Worked
   by Lilian.)_
+
+- 2026-10-03 — **Incremental sweep (baseline 2026-09-26→2026-10-03).** Double (cid 710638): no notes (still none); properties unchanged (Income Tax, 1040, Assigned Staff Lilian, Organizer Status Sent); portal contacts unchanged (two contacts; Ishkhan also linked to the Ecoorganic company record); `list_activity_log` ≥2026-09-26 empty. The Ecoorganic QuickBooks case note 485258 is unchanged (`updatedAt` 2026-08-06). Gmail (Markarian/Ishkhan/"shares"/"50%"/ecoorganic addresses, `after:2026/09/26`): **no reply to Lilian's 2026-09-04 transfer-mechanics email and no client correspondence**; only the firm's 2026-10-01 invoice email to the company. Ping: client-scoped search for Ecoorganic ran 2026-10-03 — no meeting ≥2026-09-26 (the meetings list shows none for this family); a Ping search scoped to this individual client was not run separately.
+  - 🔴 **How did the transfer at the close of 2025 happen (sale / gift / redemption)? — a search of Gmail, bounded ≥2026-09-26, on 2026-10-03, found no reply. 29 days pending since 2026-09-04.** No deadline.
+  - ⚠️ **QuickBooks primary-admin handover (ID verification + QR code) — case note unchanged; no Gmail update found. 58 days pending since 2026-08-06.** No deadline.
+  - The 2024 Form 7203 line 15 (recorded in hand 2026-09-05) and the whose-accounts question (settled 2026-09-02) — not re-opened.
 
 ### Outstanding items (CI-only — never in the SOP)
 

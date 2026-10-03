@@ -1981,6 +1981,45 @@ income (loss)`.** ⛔ **A correct IRS address is not an address in the software.
    ⓘ *This is item 8's rule 4 applied one level deeper: established/not-established is per LEVEL, not per
    route.*
 
+**8d · ✅ ESTABLISHED ATX ROUTE — the NOL deduction on a Form 1040: where it is TYPED, and where its cap is READ.**
+
+> ✅ **ESTABLISHED: ATX 2025, shown by Lilian on a live return, 2026-10-02 (two screenshots).** 🔑 *It
+> replaces a click path an earlier session wrote down without having seen it — that session told the
+> preparer to "set the amount on the NOL carryover worksheet", and the worksheet does not take it.*
+> ⛔ **No client figure belongs in this item — the worked figures are in that return's working paper.**
+
+**Two screens, two jobs. The deduction is TYPED on the first; the base for the cap is READ on the second.**
+
+| | Screen | What you do there |
+|---|---|---|
+| **① TYPE** | Forms list → `1040` → bottom tab `Ln 8, Sch 1 - Other Inc` *(the screen is titled `Line 8, Sch 1 (1040) - Other Income`)* → row **`8a  Net operating loss carryover (NOL) (enter as a negative)`**, column **`Filer`** | **Type the ALLOWABLE deduction as a NEGATIVE number.** 🛑 **This item covers a year with POSITIVE taxable income, where the 80% cap governs. In a LOSS year the cap computes to nil and the convention is different — follow [`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) M7 (the §172 tie-break and Form 172 line 23), not step 2 below.** The `Total` column repeats it. 🔑 **It is a plain typed field — ATX did not compute it or re-cap it on the live return.** ⚠️ The `Spouse` column sits on the same row; **which column carries a spouse's NOL has not been tested** — use the column of the person whose NOL it is and read the screen back |
+| **② READ** | Forms list → **`NOL Wkst, 172`** → bottom tab **`CY Tax Inc - NOL`** *(`Current Year Taxable Income - NOL (NOL Worksheet, 172)`)* | **Line 2, `Taxable income without the NOL`, is the base.** The cap is **80% × line 2** *(whole dollars is the return's convention, not something the screen showed)*. ✅ **Line 2 excludes the NOL by definition, so it is the same whatever 8a currently holds — read it, do not wait for 8a to be right** |
+
+**The order, and it is short:**
+1. **Read line 2** on `CY Tax Inc - NOL`. *(It is AGI before the NOL less the deductions that apply — on the live return the standard deduction only, with no QBI deduction — so recompute it by hand off the printed forms; if the two disagree, an input is wrong, not the cap.)*
+2. **Type −(80% × line 2)** in 8a, **or less** if the carryforward available is smaller — **the deduction is the LESSER of the two**.
+3. **Re-read the worksheet:** line 1 should now show the deduction — and **check by hand that it is not above 80% × line 2**, because the screen will not.
+4. **Read 8a again after ANY change to the Schedule C, the SE tax or the standard deduction** — each moves line 2, and 8a does not follow.
+
+🔴 **WHAT ATX DOES NOT DO, SEEN ON THE SCREEN:** on the live return **8a held MORE than 80% of line 2 and neither screen showed any message** — the worksheet's line 1 simply carried the typed figure, and line 9 read zero. ⛔ **So a quiet NOL screen is not evidence that the cap was applied.** The only check is the arithmetic above, run by hand.
+
+⚠️ **TWO LINES ON THE WORKSHEET THAT LOOK LIKE ANSWERS AND ARE NOT:**
+- **Line 1** (`NOL deduction from Form 1040 or 1040NR (enter as a positive number)`) **showed the same figure as 8a** *(equal values observed; the direction of the link was not tested)*. ⛔ **Do not type the deduction there as the way of changing it** *(a green arrow icon sits beside it; its behaviour was not tested)*.
+- **Line 9, `NOL carryover to 2026`, is line 1 − line 8, floored at zero.** 🔑 **By its own formula that is the part of THIS YEAR'S DEDUCTION that exceeds modified taxable income — it reads 0 whenever the deduction is within the cap — so it cannot be the remaining balance of the carryforward going into next year; confirm on `NOL Summary`.** ⛔ **Never copy it into the next year's opening NOL.** *(Where ATX shows the remaining carryforward is **not established**: the same bottom strip has a `NOL Summary` tab that was **not opened** — open it and write what it says here.)*
+
+🔴 **THE ATTACHED STATEMENT IS A SEPARATE THING AND DOES NOT FOLLOW 8a — IT IS TYPED BY HAND, AND ✅ HERE IS WHERE.** *(Established: a screenshot from Lilian, 2026-10-02 — the taskbar icon reads `ATX 25`.)*
+
+| | |
+|---|---|
+| **Where** | `1040` → the bottom tab strip → **`NOL - Stmnt`** — it sits **immediately to the right of `Ln 8, Sch 1 - Other Inc`** *(the neighbours are `Ln 7, Sch 1 - Unemploy` · `Ln 8, Sch 1 - Other Inc` · **`NOL - Stmnt`** · `Ln 11, Sch 1 - Educator Exp` · `Ln 16, Sch 1 - SEP`; on a narrow window scroll the strip right)* |
+| **Screen title** | **`NOL Carryover Explanation (1040)`** — the same words that print on the statement page |
+| **What is on it** | a **free-text block of about nine one-line rows**, headed *"Provide explanation below if an NOL carryover is reported on Schedule 1, line 8."* and a **`Print this statement`** box **ticked on the live return** |
+| **What it holds** | **typed rows, not figures ATX shows computing — consistent with the page not following 8a, which was seen on the PDF printed before the text was retyped.** On the live return the text went across **two rows**, split at a sentence boundary (`2024 NOL carryforward … : $<base>.` / `80% limitation: $<cap>. NOL deduction claimed: $<cap>.`) |
+
+✅ **So when 8a changes: open `NOL - Stmnt` and retype the figures — never assume the statement followed.** ⚠️ **Leave `Print this statement` ticked, as found** *(what unticking does was not tested)*. 🛑 **Then confirm on the PRINTED return** that the statement page shows the new text *(on the live return the PDF printed BEFORE the retype carried the old figures; the print after the retype had not been re-read when this was written)*.
+
+🛑 **The checks that belong with it:** the printed return's **page-1 `Schedule 1` 8a**, **Form 172 line 23** *(the instructions ask for the deduction claimed there; ATX may print the whole carryforward — confirm and note it)* and **the attached statement** must all state the **same** deduction.
+
 **8c-bis · 🔴 AN ENTITY-LEVEL ADJUSTMENT IS SUBTRACTED BEFORE THE OWNERSHIP SPLIT, NEVER AFTER — and the tell is a figure that comes out as an exact fraction of it.**
 
 _(**Lilian, 2026-09-10**, overruling two days of work on a live return: **"TE COMENTÉ QUE ÍBAMOS A TOMAR

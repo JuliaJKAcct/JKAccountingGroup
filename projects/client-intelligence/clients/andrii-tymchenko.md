@@ -1,6 +1,6 @@
 # Andrii Tymchenko
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-10-03
 >
 > ✅ **First full historical sweep completed 2026-08-22** — Double (client record, properties, notes, contacts, activity log — both pages, plus the linked second Double client id), Gmail ("Tymchenko"/"TRUSTBURN", full history), Ping (`resolve_person` + `search_meetings`), and Google Drive (multiple title queries) all checked.
 
@@ -122,10 +122,10 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Settle the health-coverage contradiction** between the migrated TaxDome note and native Double note 447824 (see §5) before asking him for anything else. STILL OPEN — pending since 2026-08-22 (~35 days as of 2026-09-26); no deadline. Note 447824 re-verified (not resolved) again 2026-09-26, no change.
-- 🔴 **Establish where he is tax-resident now, and whether the firm still files for him at all.** He has been out of the US since 2025-05-31 (pending 480+ days on that fact alone; as a tracked item, open since 2026-08-13, ~44 days as of 2026-09-26). No deadline. A 2026-09-26 unbounded Gmail search for Tymchenko/TRUSTBURN terms found nothing new.
-- **Check the IRS account for 2025 estimated payments** rather than asking him again — STILL OPEN, pending since 2026-08-13 (~44 days as of 2026-09-26); no source reachable by this session can check an IRS account directly, so this stays a firm-side action item, not something a search can close.
-- **Get a current photo ID** — the licence on file expired in 2025. STILL OPEN, pending since 2026-08-13 (~44 days as of 2026-09-26); not something a document search can resolve — needs to be asked of the client directly.
+- 🔴 **Settle the health-coverage contradiction** between the migrated TaxDome note and native Double note 447824 (see §5) before asking him for anything else. STILL OPEN — pending since 2026-08-22 (42 days as of 2026-10-03); no deadline. Note 447824 re-verified (not resolved) again 2026-09-26, no change.
+- 🔴 **Establish where he is tax-resident now, and whether the firm still files for him at all.** He has been out of the US since 2025-05-31 (pending 490+ days on that fact alone; as a tracked item, open since 2026-08-13, 51 days as of 2026-10-03). No deadline. A 2026-09-26 unbounded Gmail search for Tymchenko/TRUSTBURN terms found nothing new.
+- **Check the IRS account for 2025 estimated payments** rather than asking him again — STILL OPEN, pending since 2026-08-13 (51 days as of 2026-10-03); no source reachable by this session can check an IRS account directly, so this stays a firm-side action item, not something a search can close.
+- **Get a current photo ID** — the licence on file expired in 2025. STILL OPEN, pending since 2026-08-13 (51 days as of 2026-10-03); not something a document search can resolve — needs to be asked of the client directly.
 - **Confirm which document is which** — on 2026-06-22 Lilian removed "1095-A.jpg" and created "2025 1099-A.pdf" in its place, in the "2026" custom folder. Form 1099-A (Acquisition/Abandonment of Secured Property) is a different form from 1095-A (health coverage) — worth checking which document this actually is.
 
 ### Information still needed
