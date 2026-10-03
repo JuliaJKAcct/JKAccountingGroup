@@ -1,6 +1,6 @@
 # M5 Studio Miami
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
 
 > 🟢 **2026-09-26 SWEEP — NEW CLIENT CONTACT, AND IT ANSWERS AN OLD QUESTION.** On 2026-09-22 the
 > client emailed Julia asking the firm to file a Sunbiz **Statement of Change** moving the
@@ -424,6 +424,11 @@ A running, dated record as we build this profile.
   2026-09-15 email. **Nothing found bears on the still-open Form 2848 / line-16 / which-investor
   questions** — none opened, per the standing instruction on the 2848.
 
+- _(2026-10-03)_ — **Weekly CI sweep, baseline 2026-09-26. The urgent Statement of Change request was ACTED ON — filing sent, acceptance not yet confirmed.** (Gmail, Drive, Double, Ping.)
+  - **Julia sent the Amendment PDF to a Tallahassee courier on 2026-10-01** (subject "Amendment - M5 Studio Miami LLC"), asking for same-day-as-possible delivery to the Division of Corporations after a phone call that day; the courier's invoice was issued and **paid the same day (2026-10-01)** (Gmail: sent item + two payment-platform emails, 2026-10-01). The same PDF, named "Amendment - M5 Studio Miami LLC", was **saved in Drive on 2026-10-01** (metadata only; contents not opened). So the request raised 2026-09-22 went to the state **9 days later**, by courier.
+  - **Not found:** a search of Gmail, bounded after 2026-09-26, on 2026-10-03, did not find (a) a Sunbiz acceptance/filed-copy or certificate email for M5, (b) a reply to the client (the 2026-09-22 thread holds only the client's request and Julia's forward to Lilian), or (c) a CP575. A Sunbiz certificate email dated 2026-10-02 in the same search was for a different company. Whether the amendment is the Statement of Change itself (principal/mailing address) is inferred from the matching request, not read from the document.
+  - **Double:** a name search for "M5" on 2026-10-03 again returned zero clients. **Ping:** an org-wide search for the client and the address change returned nothing relevant.
+
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
      every question put to the client AND its answer once it arrives, what a prior-year
@@ -438,14 +443,16 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- 🆕🔴 **URGENT, CLIENT-FACING (raised 2026-09-22, 4 days old): file — or confirm filing of — the
+- 🔄 **2026-10-03 UPDATE: FILING SENT 2026-10-01 BY COURIER (Julia → Tallahassee courier → Division of Corporations; courier invoice paid the same day, 9 days after the request) — filed-copy/acceptance NOT yet found and no reply to the client found (Gmail, bounded after 2026-09-26). Still open until the Sunbiz confirmation is saved and the client is told.** The original entry follows.
+- 🆕🔴 **URGENT, CLIENT-FACING (raised 2026-09-22, 11 days old as of 2026-10-03): file — or confirm filing of — the
   Sunbiz Statement of Change the client requested**, moving M5 Studio Miami's principal/mailing
   address off a PMB in Miramar to the firm's own Miami office, and reply to him on cost/timing and
   whether he needs to sign anything. **He called it urgent — a Bank of America business account and
   a capital transfer into the company both depend on it.** No reply to the client and no filing
-  confirmation was found in Gmail this sweep (2026-09-26). See §6.
+  confirmation was found in Gmail this sweep (2026-09-26); see the 2026-10-03 line above. See §6.
 - ✅ ~~CHASE THE EIN.~~ **CLOSED 2026-09-19: EIN `30-1507078` assigned 2026-09-10, sent to the firm and forwarded to the client 2026-09-15.** See §5/§6. ❓ **Still open, lower stakes now:** why the SS-4 needed a second fax on 2026-08-27 — never established, and now unlikely to matter. 🔴 **NEW: chase the CP575 verification notice** — due ~10 business days from assignment (~2026-09-24), not yet on file as of this sweep. Once it arrives, save it; it is the only replaceable-by-147C-only confirmation. Update [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 67 to reflect the EIN's arrival (out of this sweep's merge scope to edit that file directly).
   🔄 **CHASED 2026-09-26 — CP575 STILL NOT ON FILE, now 2 days past its own ~2026-09-24 estimate.**
+  🔄 **CHASED 2026-10-03 — still not found (Gmail, bounded after 2026-09-26), now 9 days past the ~2026-09-24 estimate.**
   Gmail searched again for `CP575`/`CP 575` after 2026-09-19, nothing found. Not yet a firm alarm
   (the estimate is soft — "should follow within 10 business days") but worth another check next
   week if it still hasn't shown.

@@ -1,6 +1,6 @@
 # Kompozit USA
 
-> **Status:** Prospect — proposal sent 2026-08-19, now in active negotiation (a 30-day trial period was floated 2026-08-25 as an alternative to the firm's standard annual contract; outcome of the follow-up call pending). ⚠️ **The proposal's 30-day validity window (through ~2026-09-18) elapsed 8 days ago with STILL no reply found on either side (2026-09-26 sweep)** · **Owner:** Julia · **Last updated:** 2026-09-26
+> **Status:** Prospect — proposal sent 2026-08-19, now in active negotiation (a 30-day trial period was floated 2026-08-25 as an alternative to the firm's standard annual contract; outcome of the follow-up call pending). ⚠️ **The proposal's 30-day validity window (through ~2026-09-18) elapsed 8 days ago with STILL no reply found on either side (2026-09-26 sweep)** · **Owner:** Julia · **Last updated:** 2026-10-03
 >
 > ✅ **Coverage gap CLOSED, 2026-08-24 (reconfirmed 2026-09-19).** The 2026-08-22 sweep found this
 > client absent from both `weekend-ci-sweep.md` tables (coverage check 2b) — but a scope-table row
@@ -289,6 +289,8 @@ link). Never write the credential itself here.
   channel, and the proposal's 30-day window is now **8 days past expiry** with no
   acceptance, decline or extension on record. This prospect should be treated as gone
   quiet unless Julia has a channel outside Gmail (phone/WhatsApp) that this sweep cannot see
+
+- **2026-10-03 sweep (fifth search):** a Gmail search (in:inbox + in:sent, bounded `after:2026/09/26`, on 2026-10-03) for Kompozit / Ostapenko / the company site found nothing from or to the prospect (only the firm's own automated notices). A Double `list_clients` name search for "kompozit" on 2026-10-03 returned no client. **Gmail-silent for 39 days since the 2026-08-25 call; the proposal's validity lapsed ~15 days ago** with no acceptance, decline or extension on record. Unchecked: phone/WhatsApp (not visible to the sweep); Ping search for the prospect after 2026-09-26 returned no relevant meeting.
 
 ### Information still needed
 

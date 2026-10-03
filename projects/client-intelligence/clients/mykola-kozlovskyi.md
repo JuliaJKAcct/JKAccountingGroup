@@ -1,6 +1,6 @@
 # Mykola Kozlovskyi
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -103,6 +103,8 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+
+- **2026-10-03 — Incremental sweep (baseline 2026-09-26→2026-10-03).** Double (709838): properties unchanged (`Ext. Filed`, `Signature: Signed`, `Invoice: Paid`, `Organizer Status: Completed`); `list_notes` still 0; `list_activity_log` bounded ≥2026-09-26 returned 0 entries. Kolo Florida's record (706626) also unchanged in the same check. Gmail (`Kolo OR Kozlovsk OR Hlebova OR Naum OR Bivol`, `after:2026/09/26`): only automated Gusto / Shopify / Intuit notices on the company side (see [`kolo-florida.md`](./kolo-florida.md)); a search of Gmail bounded after 2026-09-26, on 2026-10-03, did not find a W-2, a Marketplace-reporting reply, confirmation of the three counter deposits, the contract-labor payee's identity, or a material-participation statement. Ping (org-wide): no meeting after 2026-09-26. **Ages as of 2026-10-03:** W-2 46 days (raised 2026-08-18); Marketplace report 45 (2026-08-19); counter deposits 45 (2026-08-19); contract-labor payee identity 46 (2026-08-18); material participation 45 (2026-08-19); filed-vs-blocked contradiction 14 (2026-09-19) — still unresolved. Not chased this run: the digital-asset item and his own bank account for a refund/payment. _(Double, Gmail, Ping, 2026-10-03)_
 
 - **2026-09-26 — Incremental sweep (baseline 2026-09-19→2026-09-26).** Double: `list_client_properties` unchanged on the substantive columns (`Tax Return Type: 1040`, `Bookkeeping: N/A`, `Organizer Status: Completed`, `Ext. Filed: true`, `Signature: Signed`, `Invoice: Paid`); `list_notes` still 0; `list_activity_log` bounded ≥2026-09-19 returns 0 entries. Ping (`resolve_person` "Mykola Kozlovskyi" — single match; org-wide `search_meetings` for "Kolo Florida Kozlovskyi Kozlovska tax return Marketplace 1095-A"): no legible, client-specific hits — consistent with the standing zero-meetings finding. Gmail (`Kozlovsk OR "Kolo Florida" OR "Kolo House" OR Hlebova`, `after:2026/09/19`; and a second targeted pass for `(W-2 OR digital asset OR material participation OR driver's licence OR contract labor) AND (Kozlovsk OR Hlebova)`, same bound): the general sweep surfaced heavy Kolo Florida company-side activity (Gusto/Shopify/Intuit/FL DOR — written up on [`kolo-florida.md`](./kolo-florida.md), not duplicated here) but **nothing addressed to or about him personally**; the targeted chase for his own five open substantiation items returned **no hits at all** beyond the standing weekly-sweep digest. Google Drive (`excludeContentSnippets: true`, "Kozlovskyi"/"Kolo Florida"): no files modified since 2026-09-19. **The filed-vs-blocked contradiction was re-verified, not resolved — see §5 above.** **Chase pass (5 items, all unbounded-scope Gmail re-runs, ages now computed to 2026-09-26):** none of the five arrived; see the Outstanding items section for updated ages. _(Budget did not reach: the 2025 digital-asset transaction on the joint organizer, and his own bank account for a refund/payment — unchanged from last sweep, still "no movement found," not "checked and clear.")_
 
@@ -318,12 +320,12 @@ the actual details.
 ### Information still needed
 
 - [x] ~~Whether he will sign **one Form 8332**~~ — ⛔ **moot from 2026-08-19**: no child lived with him
-- [ ] Whether he had a **W-2** from any source in 2025 _(chased 2026-09-19 and 2026-09-26, unbounded Gmail — not found; 39 days pending)_
-- [ ] What was reported to the Marketplace in September 2025, and when _(chased 2026-09-19 and 2026-09-26 — not found; 38 days pending)_
+- [ ] Whether he had a **W-2** from any source in 2025 _(chased 2026-09-19 and 2026-09-26, unbounded Gmail — not found; re-chased 2026-10-03 — 46 days pending)_
+- [ ] What was reported to the Marketplace in September 2025, and when _(chased 2026-09-19 and 2026-09-26 — not found; re-chased 2026-10-03 — 45 days pending)_
 - [x] ~~Whether a 1099 is owed on the company's 2025 `Contract Labor` payee~~ — **No** _(Lilian, 2026-08-18, per `FOLLOW-UPS.md` row 46)_
-- [ ] **Who** the company's 2025 `Contract Labor` payee actually was — identity alone, still open _(chased 2026-09-19 and 2026-09-26 — not found; 39 days pending)_
-- [ ] Whether **material participation** on the S-corporation loss is established in writing _(chased 2026-09-19 and 2026-09-26 — not found; 38 days pending)_
-- [ ] 🛑 **NEW 2026-09-19, RE-VERIFIED 2026-09-26 — whether the return that was actually FILED matches the working paper's last analysis**, given the filed-vs-blocked contradiction above (still open, 7 days since first raised)
+- [ ] **Who** the company's 2025 `Contract Labor` payee actually was — identity alone, still open _(chased 2026-09-19 and 2026-09-26 — not found; re-chased 2026-10-03 — 46 days pending)_
+- [ ] Whether **material participation** on the S-corporation loss is established in writing _(chased 2026-09-19 and 2026-09-26 — not found; re-chased 2026-10-03 — 45 days pending)_
+- [ ] 🛑 **NEW 2026-09-19, RE-VERIFIED 2026-09-26 — whether the return that was actually FILED matches the working paper's last analysis**, given the filed-vs-blocked contradiction above (still open, 14 days since first raised as of 2026-10-03)
 - [ ] What the 2025 **digital-asset transaction** on the joint organizer was, and whose it is
 - [ ] His own **bank account** for a refund or payment — the joint organizer carried one household account and each of them now needs their own
 - [x] ~~The 2025 Form 1095-A~~ — in hand and filed in Double

@@ -1,6 +1,6 @@
 # SM Group USA Inc. — e-commerce (Kostetskyi)
 
-> **Status:** Prospect — PRICE AGREED, start 2026-11-01; final proposal redrafted for signature 2026-09-24, still awaiting the client's signature as of 2026-09-26 · **Owner:** Julia · **Last updated:** 2026-09-26
+> **Status:** Prospect — PRICE AGREED, start 2026-11-01; final proposal redrafted for signature 2026-09-24, still awaiting the client's signature as of 2026-09-26 · **Owner:** Julia · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -200,6 +200,12 @@ the actual details.
 - **New, 2026-09-26 — worth asking, not assuming:** Olha's email domain (confirmed via the
   2026-09-16 correspondence) may name the "second company" mentioned in §5/§6 — ask her or
   Sergii directly rather than guess from the domain
+
+- **2026-10-03 sweep (Gmail in:inbox + in:sent bounded `after:2026/09/26`):**
+  - **Onboarding meeting held 2026-10-01 (Zoom, Ping-recorded; attendees: Julia and Olha — Sergii absent, travelling until the following week).** Per the Zoom AI summary (Ukrainian; partly garbled): discussed access to QuickBooks, PayPal and Bank of America; a payment-provider delay on a payment from a European contractor into the US bank account; plans to open a business in Ukraine and how Ukrainian-side costs/income are treated; **conversion to an S-corporation** (double taxation, payroll requirement, owner count/residency limits, effect of accumulated losses) and US tax residency (183-day test) — so the S election is **still being discussed, not confirmed**; an individual-return deadline of 15 October was mentioned. **Next call with Sergii planned for about 2026-10-16 or 10-19** (the summary names different dates).
+  - **Action items (summary):** Julia — invite Olha and Sergii to Double, send Olha the activity-codes register for the Ukrainian registration decision, review the Ukrainian returns and earlier correspondence about Sergii's and his spouse's joint return. Olha — send the invoice e-mail address, access details for PayPal / Bank of America / other accounts, chase the payment provider, brief Sergii, send documents discussed.
+  - **2026-10-02:** Olha emailed a link to a shared Drive folder of **letters received from the IRS at Sergii's email** (folder shared with the firm the same day) — not yet reviewed in this sweep (contents are client documents).
+  - **Signature:** no message in a bounded Gmail search (in:inbox + in:sent, `after:2026/09/26`, 2026-10-03) returns the signed proposal; the onboarding meeting suggests the engagement is proceeding but the signed copy was not found. Double: `list_clients` name search "SM Group", 2026-10-03: none yet (Julia's action item is to invite them to Double).
 
 ### Information still needed
 

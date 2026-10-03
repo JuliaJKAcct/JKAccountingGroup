@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -2609,6 +2609,13 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 - ✅ **The return with the extra truck repairs and the corrected operating-loss deduction ties to the firm's own computation on every figure checked** (22), and the estimated-tax penalty worksheet reproduces itself. The software's own penalty worksheet also prints the 7% interest rate for every quarter through mid-2026, confirming the rate used in the payment estimate.
 - 🔴 **The installment request (Form 9465) was added.** It prints the whole balance on the line meant for a payment made *with* the request, so the lines for the amount owed and the minimum payment read zero — the opposite of what he wants. **Why the software filled it is not established.** Also missing: the tax year and the phone numbers; the page for defaulted agreements prints with zero dependents although he has one. The monthly payment typed is accepted but runs a month or two past 24 payments.
 - 🛑 **Still unchanged on the return:** the attached operating-loss statement still recites the figures of two versions ago (third time), the estimated-tax penalty is still printed and now also sits in the installment request, and the other defects of the earlier review.
+
+### 2026-10-03 — weekend sweep (incremental, bounded 2026-09-26 and later): the tax project moved to "Waiting on Client"
+
+- 🆕 **Double activity log, 2026-10-02:** the **"2025 Taxes" tax project's status was changed from `Not Started` to `Waiting on Client`** by Lilian _(Double `list_activity_log`, 2026-10-03)_. The project's tasks (gather → prepare → review → send draft → file → follow-up) still read `Not Started`, assigned to Lilian with a **2026-10-15 due date** (the extension deadline) _(Double `list_tasks`, 2026-10-03)_. Preferred-language property reads **Bilingual (EN/RU)**.
+- **Double notes 485225 and 490984:** `updatedAt` unchanged since 2026-09-23 and 2026-08-20 — not re-read (nothing moved since the last sweep's full read).
+- **K-1s:** a Gmail search bounded after 2026/09/26 (Melnyk and the three company names, all folders) found **no message from the ex-partner or any K-1** on 2026-10-03 — the only hit was the internal weekly digest. **Promised 2026-08-20 → 44 days pending as of 2026-10-03; the 2026-09-15 chase date is 18 days past; filing deadline 2026-10-15 is 12 days out.** Ping (semantic search by name) surfaced no meeting on/after 2026-09-26; Drive title search (modified on/after 2026-09-26) found nothing for him.
+- ⛔ Working paper in `projects/tax-returns/` deliberately not touched this run — it is Lilian's active work.
 
 ## 7. Links
 

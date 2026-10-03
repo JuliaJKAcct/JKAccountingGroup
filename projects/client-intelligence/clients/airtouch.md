@@ -1,6 +1,6 @@
 # Airtouch LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-10-03
 >
 > ✅ **First full historical sweep completed 2026-08-22** — Double (client record — 0 notes,
 > contacts, activity log — 161 entries plus targeted Project/Organizer pulls), Gmail (full
@@ -163,6 +163,7 @@ A running, dated record as we build this profile.
 - _(pending)_
 
 ### Outstanding items (CI-only — never in the SOP)
+- 🆕 **2026-10-03 sweep (supersedes the age figures below).** Entity-ownership decision (AIRTOUCH FLORIDA LLC) pending since 2026-08-22 = **42 days**; Organizer-status reconciliation pending since 2026-08-22 = **42 days**. The vendor's reinstatement notices ("Administratively Dissolved? Reinstatement is required…") **kept arriving daily through 2026-10-02** (Gmail, bounded after 2026/09/26, searched 2026-10-03: threads dated 09-26, 09-27, 09-28, 09-29, 09-30, 10-01, 10-02, all still UNREAD, subject now "Requires Reinstatement"). A Zoom "Airtouch meeting" with Ping Assistant joined took place **2026-09-29 12:00 PM ET** (Gmail Zoom notice); a Ping search bounded 2026-09-26→10-03, on 2026-10-03, did not find a transcript of it, and no Double note was written. Gusto's September 2026 invoice for the company was paid automatically 2026-10-02 and Gusto will file its Q3 payroll filings (Gmail, 2026-09-30/10-02). A firm invoice payment from the client was received 2026-10-01 (Gmail QuickBooks notice). A search of Gmail, bounded after 2026/09/26, on 2026-10-03, did not find any reply, Sunbiz status email for AIRTOUCH FLORIDA LLC, or note of what the 09-29 meeting decided.
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.

@@ -1,6 +1,6 @@
 # AXDIGITAL LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-10-03
 >
 > ✅ **First full historical sweep completed 2026-08-22** — Double (client record — 0 notes,
 > contacts, activity log — 191 entries), Gmail (full history, business name + both owner-contact
@@ -159,6 +159,7 @@ A running, dated record as we build this profile.
 - _(pending)_
 
 ### Outstanding items (CI-only — never in the SOP)
+- 🆕 **2026-10-03 sweep.** (1) **IRS letters:** 2026-09-29 the owner's project manager forwarded an IRS letter asking for income-verification documents; Julia replied the same day that the firm will prepare the response with the documents requested, and forwarded it to Lilian to pull and print the paperwork used for income (a 2026-10-02 forward to Lilian schedules it "Monday or Tuesday"). Whether the package has been sent to the IRS: a search of Gmail, bounded after 2026/09/26, on 2026-10-03, did not find a send confirmation. A **second** IRS office letter (2026-10-01) was answered by Julia 2026-10-02 as needing no action (an address update, address unchanged). Open: IRS response package — pending since 2026-09-29 = **4 days**, no stated deadline. (2) **Client asked for a 15-30 min call** (sent 2026-09-30, "several questions about the LLC", wanted within the week **before 2026-10-09**; chased 2026-10-02 "have you received my email regarding zoom?"). No reply found in Gmail sent as of 2026-10-03 — pending since 2026-09-30 = **3 days, client-stated target 2026-10-09 (6 days)**. Topic not stated; may or may not be the work-authorization question. (3) Ukrainian employee's work-authorization/payroll question (raised 2026-08-04) = **60 days** pending; a Ping search bounded 2026-09-26→10-03, on 2026-10-03, did not find it discussed. Gusto invoice for September paid 2026-10-02; Q3 payroll filings handled by Gusto; A2X settlements continue posting (Gmail, to 10-03).
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
