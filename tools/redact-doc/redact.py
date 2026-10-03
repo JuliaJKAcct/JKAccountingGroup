@@ -400,16 +400,33 @@ ACCOUNT_CONTEXT = re.compile(
 # Lilian's identity block does not name a home address, so this is not covered by
 # her ruling either way. It is masked because losing it costs nothing and it is
 # the one field on a return that points at where a person actually sleeps.
+# ⚠️ 2026-10-03: the street-NAME token used to be [A-Z][A-Za-z0-9'.-]*, which
+# requires the token to START with a letter — so every NUMBERED street leaked:
+# the "<n> SW 5th St" / "<n> NE 2nd Ave" shape, which in South Florida is most
+# addresses. Found when a client's home address came through this tool in clear
+# while the firm's own address, on the same page, was masked. The directional
+# prefix had the same shape of bug: [NSEW] matches "N" but not "SW" or "NE".
+# (Examples are deliberately written without a house number — a real one would
+#  put the very thing this rule masks into the repo. See test_redact.py F4.)
 STREET = re.compile(
     r"(?<![\d,.])\d{1,6}[^\S\n]+"
-    r"(?:[NSEW]\.?[^\S\n]+)?"
-    r"(?:[A-Z][A-Za-z0-9'.-]*[^\S\n]+){0,4}"
+    r"(?:[NSEW]{1,2}\.?[^\S\n]+)?"
+    r"(?:(?:[A-Z][A-Za-z0-9'.-]*|\d{1,4}(?:ST|ND|RD|TH))[^\S\n]+){0,4}"
     r"(?:STREET|ST|AVENUE|AVE|ROAD|RD|DRIVE|DR|LANE|LN|BOULEVARD|BLVD|COURT|CT|"
     r"CIRCLE|CIR|PLACE|PL|WAY|TERRACE|TER|PARKWAY|PKWY|HIGHWAY|HWY|TRAIL|TRL)"
     r"\b\.?"
     r"(?:[^\S\n]*,?[^\S\n]*(?:APT|APARTMENT|UNIT|STE|SUITE|#)\.?[^\S\n]*[A-Z0-9-]{1,8})?",
     re.IGNORECASE,
 )
+
+
+# A PREPARER TAX IDENTIFICATION NUMBER. The firm's identity block names "PTIN,
+# EFIN, signature PIN", and a return prints all three - a 2026-10-03 read put the
+# firm's own PTIN into a session in clear because nothing here looked for it.
+# Only the PTIN is maskable BY SHAPE: it is P + 8 digits and nothing else on a
+# return looks like that. An EFIN is six bare digits and a signature PIN is five,
+# so neither can be masked without eating ordinary figures - see FOLLOW-UPS.
+PTIN = re.compile(r"\bP\d{8}\b")
 
 
 def _tagger(prefix: str):
@@ -445,6 +462,7 @@ def redact(text: str) -> tuple[str, dict]:
     text = normalise(text)
     counts: dict = {"ssn_itin": 0, "long_digits": 0, "dob": 0, "licence": 0,
                     "account": 0, "street": 0, "ein_kept": 0, "glyph": 0,
+                    "ptin": 0,
                     "leaks": [], "cross_line": []}
 
     # Undecodable glyph names go FIRST, before any other rule can see them. They
@@ -503,6 +521,10 @@ def redact(text: str) -> tuple[str, dict]:
         counts["street"] += 1
         return "[STREET-REDACTED]"
 
+    def _ptin(m: re.Match) -> str:
+        counts["ptin"] += 1
+        return "[PTIN-REDACTED]"
+
     def _ssn(m: re.Match) -> str:
         counts["ssn_itin"] += 1
         return f"[{tag_ssn(m.group(0))}]"
@@ -521,6 +543,7 @@ def redact(text: str) -> tuple[str, dict]:
     text = LICENCE_CONTEXT.sub(_licence, text)
     text = ACCOUNT_CONTEXT.sub(_account, text)
     text = STREET.sub(_street, text)
+    text = PTIN.sub(_ptin, text)
     text = SSN_LABELLED.sub(_ssn_labelled, text)
     text = SSN.sub(_ssn, text)
     text = LONG_DIGITS.sub(_long, text)
@@ -1246,6 +1269,7 @@ def _run(src: Path, dst: Path) -> int:
         f"{counts['account']} labelled account/routing · "
         f"{counts['long_digits']} bare 9+ digit runs · "
         f"{counts['street']} street lines · "
+        f"{counts['ptin']} PTIN · "
         f"{counts['dob']} dates of birth · "
         f"{counts['licence']} licence/state ID"
     )

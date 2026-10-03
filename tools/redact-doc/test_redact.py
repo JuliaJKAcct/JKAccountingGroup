@@ -172,6 +172,29 @@ must_hide("Street plain", "77 N Maple Street", "Maple Street")
 must_keep("City/state/ZIP survive", "1234 Elm Rd, Bozeman, MT 59715", "Bozeman, MT 59715")
 must_keep("State name survives", "Montana nonresident", "Montana")
 
+# F4 · The street-NAME token was [A-Z][A-Za-z0-9'.-]* — it had to START with a
+#      letter — and the directional prefix was a single [NSEW]. So every NUMBERED
+#      street leaked, which in South Florida is most addresses. Found 2026-10-03
+#      when a client's home address came through this tool in clear while the
+#      firm's own address, on the same page, was masked.
+must_hide("F4 numbered street", "4521 SW 142nd Ct", "142nd Ct")
+must_hide("F4 two-letter prefix", "9900 NE 2nd Avenue", "2nd Avenue")
+must_hide("F4 numbered street + apt", "88 12th St Apt 3B", "12th St")
+must_hide("F4 ordinal with suite", "1 SE 3rd Ave Suite 2900", "3rd Ave")
+must_hide("F4 long numbered name", "11300 SW 160th Street", "160th Street")
+# …and the widened pattern must still not eat a figure followed by a label.
+must_keep("F4 ordinal quarter label", "Estimated tax payments 2 ND quarter 4,000", "4,000")
+must_keep("F4 ordinal in prose", "the 4th quarter estimate 1,500", "1,500")
+must_keep("F4 line ref with ordinal", "Line 3 RD party designee", "party designee")
+
+# F5 · A PTIN printed in the preparer block came through in clear, because nothing
+#      here looked for one. Only the PTIN is maskable by shape (P + 8 digits); an
+#      EFIN is six bare digits and a signature PIN is five, so neither is - that
+#      half is a FOLLOW-UPS question, not a pattern.
+must_hide("F5 PTIN masked", "Preparer PTIN P01234567 Self-employed", "P01234567")
+must_keep("F5 a form name is not a PTIN", "See Form P11 attached", "P11")
+must_keep("F5 a figure is not a PTIN", "Line 9 is 12345678", "12345678")
+
 # ── The street rule must NOT eat ordinary return text. "ST" inside "Statement",
 #    "CT" inside a form name, a line number followed by words. ────────────────
 must_keep("Statement not eaten", "See 1 Form Statement attached", "Statement")
