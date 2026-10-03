@@ -185,7 +185,17 @@ must_hide("F4 long numbered name", "11300 SW 160th Street", "160th Street")
 # …and the widened pattern must still not eat a figure followed by a label.
 must_keep("F4 ordinal quarter label", "Estimated tax payments 2 ND quarter 4,000", "4,000")
 must_keep("F4 ordinal in prose", "the 4th quarter estimate 1,500", "1,500")
-must_keep("F4 line ref with ordinal", "Line 3 RD party designee", "party designee")
+# ...and the honest version of the third case. "ST" and "RD" are ALSO street
+# suffixes, so a digit followed by either is over-masked - and WAS before the
+# ordinal change too, so this is pre-existing and the safe direction to fail.
+# must_keep only asserts that a needle survives, so asserting "party designee"
+# here proved nothing: the string really comes back as
+# "Line [STREET-REDACTED] party designee". Assert the WHOLE thing instead, so
+# the behaviour is pinned and a future change to it has to be deliberate.
+from redact import STREET as _STREET  # noqa: E402
+_over = _STREET.sub("[STREET-REDACTED]", "Line 3 RD party designee")
+if _over != "Line [STREET-REDACTED] party designee":
+    FAILURES.append("F4 · the ST/RD over-mask changed: got " + repr(_over))
 
 # F5 · A PTIN printed in the preparer block came through in clear, because nothing
 #      here looked for one. Only the PTIN is maskable by shape (P + 8 digits); an

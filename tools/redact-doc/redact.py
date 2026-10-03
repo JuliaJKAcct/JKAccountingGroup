@@ -406,8 +406,10 @@ ACCOUNT_CONTEXT = re.compile(
 # addresses. Found when a client's home address came through this tool in clear
 # while the firm's own address, on the same page, was masked. The directional
 # prefix had the same shape of bug: [NSEW] matches "N" but not "SW" or "NE".
-# (Examples are deliberately written without a house number — a real one would
-#  put the very thing this rule masks into the repo. See test_redact.py F4.)
+# The shape is named here without a house number; test_redact.py F4 uses five
+# INVENTED addresses, none of them the one that leaked and none the firm's own.
+# A street whose name ends ST or RD is over-masked, because both are also street
+# suffixes - pre-existing, and the safe direction to fail. F4 pins it.
 STREET = re.compile(
     r"(?<![\d,.])\d{1,6}[^\S\n]+"
     r"(?:[NSEW]{1,2}\.?[^\S\n]+)?"
