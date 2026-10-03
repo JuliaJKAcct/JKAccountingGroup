@@ -259,6 +259,48 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-03 (the equipment, priced from the sellers' own invoices) — 🔑 **JULIA: "you have all of the equipment
+  invoices per store (new ones only) can you get me the value? … i also would love … to estimate market value of
+  similar equipment."** ✅ **Both done, and the Class V evidence is now the strongest thing in this file.**
+  📄 **WHAT THEY PAID — read off the invoices in Binder Vol. 2 Tabs C-1 to C-5, line by line, not from any broker
+  summary.** Three stores carry NEW Electrolux fleets: **Samoset 15th St (Oct 2022), Ruskin (Sep–Oct 2024),
+  Palmetto Wash & Fold (Nov–Dec 2025)** — **11 invoices, about $1.85M of machines and $2.03M gross with freight and
+  tax.** ⓘ *The broker's own binder calls these three fleets "roughly $1.8M of the Tab C equipment", which
+  corroborates the line-by-line reading independently.*
+  🛑 **THE TRAP THAT WOULD HAVE COST $900,000, AND IT IS WHY THIS WAS READ RATHER THAN PARSED: THREE INVOICES PRINT
+  AN "INVOICE TOTAL" OF $0.00.** They were paid by deposit beforehand, so the printed total is the *balance*, not
+  the value — **Ruskin's main invoice shows $0.00 against a deposit of $614,092.81.** ⇒ **The value is goods +
+  freight + tax**, and summing the "Invoice Total" column would have understated the fleet by more than $900,000.
+  ✅ **TWO TIE-OUTS MAKE IT TRUSTWORTHY. ①** On Ruskin's main invoice, goods + tax + freight = **$614,092.81 exactly**,
+  which is the deposit it was paid with — **to the cent**. **②** Its eight line items sum to the printed **Line
+  Total $561,832.84 to the cent**, and the machine counts on that invoice **are** the Ruskin fleet in our own
+  equipment data. ⇒ **The invoice IS the fleet.**
+  💰 **AND THE INVOICES GAVE US A PRICE BOOK** — what one machine of each size actually cost, three times over
+  (2022, 2024, Nov 2025). Washer prices rose about **9–11% between 2022 and 2025**. The Nov 2025 invoice is **ten
+  months old**, so it is effectively today's replacement cost.
+  📊 **THE WHOLE FLEET PRICED — all five stores, 333 machines: REPLACEMENT COST NEW about $3.63M, FAIR MARKET VALUE
+  about $2.60M** at each fleet's actual age *(straight line over a 15-year economic life to a 15% floor — our stated
+  convention, shown with a 12-year and a 20-year sensitivity so the assumption can be moved; **it is not an
+  appraisal**)*.
+  ✅ **THE CONTROL THAT MAKES IT CREDIBLE:** Palmetto Wash & Fold bought its washers **ten months ago** — invoice
+  $458,884 for 37 washers against our model's $475,873 for its washer fleet. **They agree within ~4%, and the gap is
+  explained**: the Sept 2026 data-plate count shows **39** washers where the invoice bought **37**.
+  ⚠️ **TWO FLEETS HAVE NO INVOICE AND ARE PRICED BY PROXY: Select Coin (Huebsch, Dec 2019) has NO purchase invoice
+  in the binder at all** — only an Alliance equipment loan of about $225,000 to be paid off at closing — and
+  **Palmetto Coin 9th (Speed Queen, 2017)** has 2017 invoices totalling roughly $550,000 gross, which at nine years
+  old is weak evidence of value. Both are priced at the Electrolux equivalent for the same machine sizes, and the
+  two sizes Electrolux does not sell here (40-lb and 100-lb) are interpolated off the Nov 2025 curve.
+  🔑 **WHY IT MATTERS, AND IT IS THE WHOLE POINT: the sellers' analysis puts NIL on the equipment.** Against a
+  $5,500,000 business half, **a Class V figure of about $2.6M leaves roughly $2.9M of goodwill** — so nearly half of
+  the business half is being treated as fifteen-year §197 intangible when the sellers' own invoices say otherwise.
+  ⓘ **A formal equipment appraisal costs a fraction of the tax at stake; sheet 11 is what an appraiser would start
+  from, not a substitute for one.**
+- 2026-10-03 (the buildings at $6.5M) — ⚖️ **JULIA: "revise that we gonna go with 6.5m."** ✅ **Buildings
+  $6,500,000 / business $5,500,000.** ⓘ **That is $475,000 ABOVE the sellers' own stated $6,025,000** — a further
+  $475,000 moved out of the business half and into depreciable real property, **so there is now a gap on the
+  buildings again, in the buyers' favour, and both sides must still file the SAME allocation on Form 8594.**
+  🛠️ Sheet 03 rewritten: block A the split and the gap to the sellers' figure, block B the equipment-against-goodwill
+  question with the Class V estimate from sheet 11 feeding straight into it.
 - 2026-10-02 (the allocation, CORRECTED — the attribution was backwards) — 🛑 **JULIA: "where did you get that
   seller proposes $2,933,392 for building allocation? it is not correct."** Then, when shown the source:
   **"they propose $6,025,000. we agree."**
