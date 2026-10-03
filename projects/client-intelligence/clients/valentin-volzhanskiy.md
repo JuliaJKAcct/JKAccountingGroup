@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26 *(first full-historical Client-Intelligence sweep — Ping/Double/Gmail/Drive read end to end; no new client response since 2026-09-24, both chased items still open)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03 *(first full-historical Client-Intelligence sweep — Ping/Double/Gmail/Drive read end to end; no new client response since 2026-09-24, both chased items still open)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1301,6 +1301,12 @@ figure's provenance *(his, ours, or assumed)*, and what it does to each line are
 than he stated. ⛔ **It is an indication only** — two bank statements are still missing, cash fuel is
 invisible, and the fuel economy and pump price are the firm's assumptions. ✅ **It is a reason to ask one
 more question, not a finding against him.**
+
+### 2026-10-03 — weekly sweep, baseline 2026-09-26
+
+- **Double** (`list_notes`, `list_activity_log` bounded from 2026-09-26): no new note (still the two: the 2026-09-13 preparation note and the 2026-07-16 meeting note), no activity-log entry; all twelve project tasks still `notStarted`.
+- ⚠️ **Source discrepancy, unsettled:** the section above records his email reply of 2026-10-01 (mileage, areas, 1099 answer). **A search of Julia's Gmail, bounded after 2026-09-26, on 2026-10-03, on his name and address and on "mileage / odometer / Tucson / home office / 1099", did not find that email or any other message from him** — so it was presumably received in another mailbox (e.g. Lilian's) or by another route. The content is taken from the working paper/session, not re-verified from Julia's Gmail.
+- **Tips question to the employer:** a search of Gmail (bounded after 2026-09-26) found no outreach — still not put to anyone, **20 days since identified (2026-09-13)**. Mileage is no longer open (answered 2026-10-01, not substantiated — see above).
 
 ### Outstanding items (CI-only — never in the SOP)
 

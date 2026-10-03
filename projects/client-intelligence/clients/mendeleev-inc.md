@@ -1,6 +1,6 @@
 # MENDELEEV INC — C-corporation (Gridin)
 
-> **Status:** Prospect — MONTHLY proposal drafted 2026-09-25, service start 2026-10-01 · **Owner:** Julia · **Last updated:** 2026-09-26
+> **Status:** Prospect — MONTHLY proposal drafted 2026-09-25, service start 2026-10-01 · **Owner:** Julia · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -161,6 +161,8 @@ the actual details.
   in another country while he lives in Armenia — but ask before treating "Armenia" as
   settled for anything jurisdiction-dependent
 - **Pending:** Sunbiz document number, EIN, suite number, industry
+
+- **2026-10-03 sweep:** a Gmail search (in:inbox + in:sent, bounded `after:2026/09/26`, on 2026-10-03) for Mendeleev / Gridin found nothing — **the planned 2026-10-01 service start passed 2 days ago with no message found** confirming signature, invoicing or onboarding. Double `list_clients` name search "mendeleev" on 2026-10-03: no client. Ping search after 2026-09-26: nothing relevant. Open items above are unchanged (Form 5472 question pending since 2026-09-25 = 8 days; phone-country-code question since 2026-09-26 = 7 days).
 
 ### Information still needed
 

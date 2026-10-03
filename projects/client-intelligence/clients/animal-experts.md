@@ -1,6 +1,6 @@
 # ANIMAL EXPERTS LLC — Amazon e-commerce (Ravitz)
 
-> **Status:** Prospect — sellable monthly offer drafted 2026-09-29 · **Owner:** Julia · **Last updated:** 2026-09-29
+> **Status:** Prospect — sellable monthly offer drafted 2026-09-29 · **Owner:** Julia · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -138,6 +138,12 @@ the actual details.
   Marianna's email for the cover
 - **Before onboarding:** payroll headcount and provider; sales channels beyond Amazon;
   the Grateful Pups ZIP+4 ("78731 57" fragment); reasonable compensation for the owner
+
+- **2026-10-03 sweep (unbounded Gmail pass — the file had never been swept; Drive title search; Double name search):**
+  - **2026-09-29 — call with Marianna (Zoom/Ping summary):** she wants to **close several of her companies** by year-end (a cosmetics company and ones held with partners), keeping the bigger ones such as the Amazon business; she asked Julia for a **written letter with how the firm helps, prices and what is needed from her**; Julia is to look at her investment structures, plan a call with Marianna and her partner, and be ready to take over bookkeeping/tax for **two active companies (Amazon and one more)** and begin syncing Amazon, bank and card accounts. **Prior-year tax returns were emailed to Julia 2026-09-29** (attachment — not opened in this sweep).
+  - **2026-09-30 — call with Marianna and her business partner "Max" (Zoom/Ping summary, RU):** their current accountant is in Chicago, minimal service and slow; Julia pitched monthly accounting, quarterly financials and tax planning (real-estate/passive-vs-active, owner payroll as a way to pre-pay instead of lump quarterly payments); **Max was sceptical about changing the current quarterly-payment approach**. **Agreed: onboarding call Monday 2026-10-05 at 2:00 PM** to connect QuickBooks to the company bank account and credit card and get Amazon Seller access; Julia creates a WhatsApp group for Max and Marianna, starts monthly bookkeeping with a **cleanup from January**, schedules a **quarterly tax-planning call in November**, and sets up a document-collection system. Max to give Julia access to the bank accounts, card and Amazon Seller account.
+  - **New party:** the second decision-maker is **Max (partner of Marianna)** — the file previously named only Marianna. Role/ownership split not yet stated.
+  - **Double:** `list_clients` name searches ("animal experts", "grateful") on 2026-10-03: none. **Drive:** a title search for both business names found no folder.
 
 ### Information still needed
 

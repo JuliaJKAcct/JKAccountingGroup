@@ -1,6 +1,6 @@
 # Pro Title Agency
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -210,6 +210,12 @@ _(Double notes — live status lives in Double.)_
     not chased this run either (budget), the FOURTH run running with no external search possible.** This
     is not really a document-search question — nothing in Gmail/Ping/Drive will settle which one is
     current. **Recommend putting it directly to Lilian/Julia rather than searching for it again next week.**
+
+- 2026-10-03 — **Incremental sweep (baseline 2026-09-26→2026-10-03).** Double: all three notes unchanged (`updatedAt` 2026-07-15/07-15/07-23); properties unchanged (Sch C, quarterly bookkeeping, Sales Tax N/A, Payroll N/A, Assigned Staff Liudmyla Kazannik); `list_activity_log` ≥2026-09-26 empty. Gmail (`Pro Title`/WLTIC/"Plant Search", `after:2026/09/26`): only an unsolicited recruiting-agency email addressed to the business name — not client correspondence. Ping: no meeting ≥2026-09-26 on this client. Drive: no results.
+  - ⏰ **City of Hollywood LBTR for this business was "valid until 09/30/2026" (§4) — a Gmail search of `hollywoodfl.org` and "business tax receipt" terms, bounded ≥2026-09-26, on 2026-10-03, found NO renewal notice and NO renewal-payment confirmation for Pro Title** (the only city receipt email in the window is Best Broker Realty's own renewal, 2026-09-28). The 2026-09-30 date has now **passed 3 days ago**; this is a bounded search of Julia's Gmail, not proof the receipt lapsed — the renewal could have been paid by the client with the email going to his own inbox (his address was the contact on the application). 🔴 **Needs a direct check of the city's status page.** A Coral Springs address move could also make a Hollywood renewal moot.
+  - **WLTIC "Plant Search Statement" invoice — a search of Gmail, bounded ≥2026-09-26, on 2026-10-03, found no further chase and no payment confirmation.** **24 days pending since 2026-09-09.**
+  - **Coral Springs address change (DFS/Sunbiz), 1065-vs-Schedule-C IRS mismatch, Payroll (Gusto) vs. Double N/A discrepancy — searches bounded ≥2026-09-26 found nothing further.** Pending since unknown — no start date in the file / "in progress" Jul 2026.
+  - 🔵 **Owner (Lilian) vs Double Assigned Staff (Liudmyla Kazannik)** — still unreconciled, still not a searchable question; Double property re-read 2026-10-03 still shows Liudmyla. Put it to Lilian/Julia directly.
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end

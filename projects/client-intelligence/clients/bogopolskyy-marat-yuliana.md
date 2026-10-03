@@ -1,6 +1,6 @@
 # BOGOPOLSKYY, MARAT and YULIANA — the joint individual return
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -352,6 +352,8 @@ Anything the team must know to serve this client well.
 ## 6. History & open questions
 
 ### Log
+
+- 🔍 **2026-10-03 — WEEKLY CI SWEEP (baseline 2026-09-26→2026-10-03).** Double (client 710627): properties unchanged (`Signature: Signed`, `Invoice: Paid`, `Organizer Status: Completed`); `list_notes` still 0; `list_activity_log` bounded ≥2026-09-26 returned 0 entries. Gmail (owner names + `jamvabo`, `after:2026/09/26`, inbox + sent): the only household traffic is the **Gossip Miami** items — a client-forwarded IRS item (2026-09-29) and a Form 2848 sent to the shared address for signature (2026-10-01) — both recorded in [`gossip-miami.md`](./gossip-miami.md); **nothing was found that is addressed to or from the household about the 1040** (no reply on Yuliana's business description, vehicle questions, or the 2025 return). Ping (org-wide): no meeting dated on/after 2026-09-26. Chase: Yuliana's business description — a search of Gmail and Ping, bounded after 2026-09-26, on 2026-10-03, did not find that she has been asked or has answered → **now 18 days since the 2026-09-15 filing** (21 days since the item was updated 2026-09-12). _(Double, Gmail, Ping, 2026-10-03)_
 - 🔴 **2026-09-26 — WEEKLY CI SWEEP (baseline 2026-09-19→2026-09-26): NO NEW MOVEMENT, AND YULIANA'S
   BUSINESS DESCRIPTION IS STILL UNANSWERED FIVE DAYS AFTER THE RETURN WENT OUT.** Double
   `get_client` + `list_client_properties` re-read: unchanged (`Tax Return Type: 1040`, `Organizer

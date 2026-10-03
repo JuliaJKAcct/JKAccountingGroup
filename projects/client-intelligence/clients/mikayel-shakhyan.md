@@ -1,6 +1,6 @@
 # Mikayel Shakhyan
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
 
 > 🔴🚨 **2026-09-26 SWEEP: THE DEADLINE IS NOW 11 DAYS OVERDUE AND NOTHING HAS MOVED AT ALL SINCE
 > 2026-09-19.** `Prepare tax return` is still `wip`; every downstream task (`Review`, `Send draft`,
@@ -355,6 +355,8 @@
   activation, and nothing else — that is what that one search found)_.
 - _(2026-04-15)_ — The client activated his Double portal account.
 
+- _(2026-10-03)_ — **Weekly CI sweep, baseline 2026-09-26 — still nothing from the client.** Double (`list_notes`, `list_activity_log` bounded from 2026-09-26): 0 notes, 0 entries; `list_client_properties` unchanged (`Tax Return Type` still `1120 Proforma`). Gmail (bounded after 2026-09-26, on his name, the company name, the trademark and "5472") found only the firm's own 2026-09-26 sweep email. 🆕 **Observed in Double's task list (not previously recorded here; creation date unknown):** two further project tasks with blank names, sections `Prepare tax return` (unassigned, no due date, `notStarted`) and `File tax return` (Lilian, due 2026-09-15, `notStarted`), alongside the original `Prepare tax return` (`wip`) — looks like a second/duplicate task set on the same project. Every downstream task is still `notStarted`.
+
 ### Tax year 2025 — the review
 
 - **In preparation, blocked on the client's five questions below.** 🔴 **And if those answers do not come, two positions fall to Julia** (working paper §6D) — ⓘ *conditional, not parallel: answer the five and they mostly dissolve.* The
@@ -367,6 +369,7 @@
   update).** No confirmation of receipt in Julia's Gmail (searched, found nothing); `FOLLOW-UPS.md`
   row 85 itself reads unchanged since 2026-09-07. Then put the two signer positions to her **only
   if the client's answers do not come** (working paper §6D). `FOLLOW-UPS.md` row 85.
+  🔄 **CHASED 2026-10-03 — STILL UNCHANGED, now 27 days old** (Gmail/Double bounded after 2026-09-26; extended due date now 18 days overdue).
   🔄 **CHASED AGAIN 2026-09-26 — STILL UNCHANGED, now 20 days old.** Still no receipt confirmation
   found in Gmail. Unchecked directly: `FOLLOW-UPS.md` row 85 itself (out of this sweep's scope to
   edit; not re-read this pass).

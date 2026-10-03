@@ -1,6 +1,6 @@
 # GRATEFUL PUPS LLC — Amazon e-commerce (Ravitz)
 
-> **Status:** Prospect — monthly proposal drafted 2026-09-29 (twin of Animal Experts) · **Owner:** Julia · **Last updated:** 2026-09-29
+> **Status:** Prospect — monthly proposal drafted 2026-09-29 (twin of Animal Experts) · **Owner:** Julia · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -118,6 +118,10 @@ the actual details.
 - **Julia to set:** the monthly fee (anchor used — one answer covers both twins);
   Marianna's email; confirm she signs for the Texas entity too
 - **Before onboarding:** TX franchise-tax status, payroll headcount, the ZIP+4 fragment
+
+- **2026-10-03 sweep (unbounded Gmail pass; the file had never been swept):** see the same-day block in [`animal-experts.md`](./animal-experts.md) §6 — the 2026-09-29 call with Marianna and the 2026-09-30 call with Marianna and her partner "Max" cover both companies; **onboarding call set for Monday 2026-10-05, 2:00 PM** (QuickBooks to bank/card, Amazon Seller access, monthly bookkeeping with cleanup from January, November tax-planning call).
+  - ⚠️ **UNSETTLED:** in the 2026-09-29 call summary Marianna named a brand called "Greatfull Pubs" (transcribed as such — evidently this company) among partnerships she is tired of and wants to **close or pause at year-end**, keeping the Amazon business. Whether Grateful Pups is one she intends to close is **not established** (AI summary, garbled); the 09-30 call nonetheless planned onboarding both companies. Ask Julia before assuming a full year of work.
+  - Double (`list_clients` "grateful", 2026-10-03): none. Drive title search: no folder.
 
 ### Information still needed
 

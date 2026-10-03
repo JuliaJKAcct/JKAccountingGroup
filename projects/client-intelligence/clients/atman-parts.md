@@ -1,6 +1,6 @@
 # Atman Parts
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -190,6 +190,13 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
   - **Texas franchise-report filing status — still unconfirmed, 40 days pending since raised (2026-08-17).** Next live deadline 2027-05-15 (low urgency — over 7 months out).
   - Sunbiz name check and the Ping coverage gap for the bookkeeping contact — **pending since unknown — no start date in the file**; not chased this run (budget; same as the last four runs).
 - 2026-08-17 — **Two corrections from Lilian the same day, both changing what the SOP claimed.** (1) 🔴 **July 2026's sales tax was NOT filed by the firm.** She went into the Texas portal to file it and **found it already submitted**; her read is that **the client did it himself**, unconfirmed. The SOP had recorded it as ours, filed on time — corrected, and it gained a standing **"check the period isn't already filed"** step at the top of §2 plus a new pitfall. The real finding underneath is that **two parties can reach this account and nobody has agreed who files**, which is now the first open question on the client. (2) ⏳ **Julia is going to connect eBay to QuickBooks**, after which **the reports come out differently** — so the "where do the figures come from" gap is now **parked on purpose** rather than open for research; Lilian delivers the new method once the connection exists, and the SOP is **provisional until then**.
+
+- 2026-10-03 — **Incremental sweep (baseline 2026-09-26→2026-10-03).** Double: `list_notes` still returns none; `list_client_properties` unchanged (Sales Tax Monthly, Bookkeeping Monthly, Tax Return Type Sch C, language Bilingual EN/RU); `list_activity_log` bounded ≥2026-09-26 shows only two bank-feed task renames on 2026-09-29 (cosmetic). 🆕 **The recurring Double "Sales Tax" task now shows due 2026-10-05 (a Monday), status Not started, assigned Lilian** — the recurrence is set to the 5th, whereas the 2026-08-22 entry recorded the 10th; the September occurrence (due 09-05) was marked done by Lilian on 2026-09-02 _(Double `list_tasks`, 2026-10-03)_. ⏰ **That is a live deadline 2 days out.** Gmail (business name/owner, `after:2026/09/26`, inbox + sent) found only the firm's own weekly-sweep email; a search for comptroller/sales-tax/eBay/Texas/PASSRDS terms, same bound, found nothing on this client. Ping: no meeting dated ≥2026-09-26 on its recent-meetings list involves this client. Drive (title search, `modifiedTime` > 2026-09-26): no results.
+  - 🔴 **"TAXES PASSRDS.txt" — a search of Gmail and Double notes, bounded ≥2026-09-26, on 2026-10-03, did not find any discussion of it.** **44 days pending since found (2026-08-20).** No deadline.
+  - 🔴 **Sch C vs 1120-S (ask Julia) — still unanswered, 47 days pending since raised (2026-08-17).** No deadline.
+  - 🔴 **Who files the sales tax — still unanswered, 47 days pending since raised (2026-08-17).** No deadline. _(Sept task done 2026-09-02 by Lilian in Double suggests the firm tracks it; who transmits the return is still not established.)_
+  - **Texas franchise-report filing status — still unconfirmed, 47 days pending since raised (2026-08-17).** Next live deadline 2027-05-15.
+  - Sunbiz name check and the Ping coverage gap for the bookkeeping contact — **pending since unknown — no start date in the file**; not chased this run (budget; same as the last five runs).
 
 ### Outstanding items (CI-only — never in the SOP)
 - 🔴 **`Sch C` or `1120-S`? → ASK JULIA.** Double's property says Schedule C; Lilian raised 1120-S on 2026-08-17 and then said she is **not sure and must confirm with Julia** (§1). It decides the return, and if it is an S-corp it drags payroll and reasonable compensation in behind it. **Nobody should act on either reading until Julia answers.**

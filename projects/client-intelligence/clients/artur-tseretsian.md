@@ -1,6 +1,6 @@
 # Artur Tseretsian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -225,16 +225,22 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   expected-arrival window has now passed, so the next step is to **confirm receipt with the
   client**. (No SSN value recorded — identity block.)
 
+- _(2026-10-03 — weekend sweep, incremental, bounded 2026-09-26 and later)_ Searches run on 2026-10-03: **Gmail** (Tseretsian / Rewhip / Operex / the platform seller name / spouse surname, all folders, after 2026/09/26), **Double** (activity log, both notes' `updatedAt`, properties, tasks), **Google Drive** (title search, modified on/after 2026-09-26, no content read), **Ping** (semantic search by name; no meeting dated on/after 2026-09-26 surfaced). **New:**
+  - 🆕 **A QuickBooks "payment failed" notice, 2026-10-01** _(Gmail)_: the **monthly recurring payment from REWHIP LLC to the firm failed on its 2026-10-01 run** (customer notified by QuickBooks). It had been confirmed as posting on 2026-09-01 (§6 outstanding items), and one transfer was canceled on 2026-09-03 — so the record now reads: one success (09-01), one cancellation (09-03), one failure (10-01). **"Reliable" is now contradicted, not merely unconfirmed.** Cause not established (the notice gives none). No reply from the client found in Gmail after it.
+  - 🆕 **A Florida Division of Corporations Certificate of Status for Rewhip LLC was ordered and received 2026-10-02** _(Gmail, Sunbiz auto-reply to Julia; filed to the Rewhip Drive folder the same day as a PDF dated 10.02.2026 — Google Drive)_. Why it was pulled is not recorded — most likely to establish the entity's good standing.
+  - Double: both notes unchanged since 2026-09-03 and 2026-07-30; **Organizer Status still `Sent`**; no activity-log entries on/after 2026-09-26; the 2023/2024/2025 tax-project tasks all still `Not Started` with no assignee or due date.
+  - **Result for the SSN:** a Gmail search bounded after 2026/09/26 for the client's name found no mention of the Social Security card; channel caveat above still applies (WhatsApp is outside the sweep).
+
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
-- **The older child's SSN** — SS card was lost. On **2026-07-31** the client went to the SSA office and was told the replacement card would be **mailed by post** (allow ~1 month), so it was expected around **late August 2026**. As of **2026-09-26** we still don't have the number — a Gmail search bounded `after:2026/09/19` for name/"Social Security" found nothing, and Double notes carry no update (~55 days pending). The client sends such items by **WhatsApp** (outside the digital sweep). **Next step:** confirm with the client that the card arrived and get the number — entered into Double, never the repo.
+- **The older child's SSN** — SS card was lost. On **2026-07-31** the client went to the SSA office and was told the replacement card would be **mailed by post** (allow ~1 month), so it was expected around **late August 2026**. As of **2026-10-03** we still don't have the number — a Gmail search bounded after 2026/09/26 for the client's name found nothing about it, and Double notes carry no update (**64 days pending since 2026-07-31**; the ~1-month window ended about 2026-08-31). The client sends such items by **WhatsApp** (outside the digital sweep). **Next step:** confirm with the client that the card arrived and get the number — entered into Double, never the repo.
 - **Year-end 2024 & 2025 addresses** — not chased this run (budget).
 - January 2026 statements (both accounts) to complete Dec 2025 — not chased this run (budget).
 - CS Float purchases/expense report — not chased this run (budget).
 - Home-office worksheet, Lendbuzz/Westlake amortization schedules, Form 1095-A, car purchase/sale documents, external-card statements, client-review items (deposits/travel/auto-transport Zelles) — not chased this run (budget).
-- ✅ **Confirmation the client completed the QuickBooks recurring-payment setup — ARRIVED 2026-09-12.** A QuickBooks "you got paid" notice shows a REWHIP LLC recurring payment posted 2026-09-01 (figure not retained). Closed as a setup question; ⚠️ **watch-item, unchanged 2026-09-19**: the single canceled transfer (invoice 2272, 2026-09-03) is still the only cancellation on record — no further cancellation and no confirmed second successful debit found this run, so "reliable" remains unconfirmed either way.
-- **Rewhip LLC — clarify scope** — STILL OPEN, ~82 days pending since raised (2026-07-15), no deadline. A targeted search bounded `after:2026/09/19` found nothing beyond what's already on file.
-- **Stripe transaction data** — STILL OPEN, ~91 days pending since raised (2026-07-06), no deadline. A targeted search bounded `after:2026/09/19` found nothing client-specific.
+- ✅ **Confirmation the client completed the QuickBooks recurring-payment setup — ARRIVED 2026-09-12.** A QuickBooks "you got paid" notice shows a REWHIP LLC recurring payment posted 2026-09-01 (figure not retained). Closed as a setup question; ⚠️ **watch-item, UPDATED 2026-10-03**: the single canceled transfer (invoice 2272, 2026-09-03) was followed by a **failed monthly run on 2026-10-01** (QuickBooks notice, Gmail) — so the 09-01 success has no confirmed successor and the October debit did not go through. **Needs a firm-side follow-up with the client** (not yet recorded as done).
+- **Rewhip LLC — clarify scope** — STILL OPEN, **80 days pending since raised (2026-07-15)** as of 2026-10-03, no deadline _(the earlier "~82 days as of 09-26" did not match this start date; recomputed)_. A targeted search bounded after 2026/09/26 found nothing beyond what's already on file — only the 2026-10-02 Certificate of Status for the entity (see log).
+- **Stripe transaction data** — STILL OPEN, **89 days pending since raised (2026-07-06)** as of 2026-10-03 (crosses 90 on 2026-10-04) _(the earlier "~91 days as of 09-26" did not match this start date; recomputed)_, no deadline. A targeted search bounded after 2026/09/26 found nothing client-specific.
 
 ### Information still needed
 - [ ] Primary language / preferred communication.

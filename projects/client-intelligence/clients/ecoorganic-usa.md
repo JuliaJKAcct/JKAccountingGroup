@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1487,6 +1487,12 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   the forklift's class is settled**, or it will contradict the amount again.
 
 - 2026-09-02/03 — 📮 **CT DRS MOVED IN BOTH DIRECTIONS, and neither side was recorded until now.** (a) **2026-09-02, 22:02 UTC — a return was SUBMITTED.** `DRS-NoReply@ct.gov`: *"Your return for ECOORGANIC USA LLC has been submitted to the CT Department of Revenue Services (DRS) myconneCT"*, addressed to Yuliia Kononova. 🛑 **Which return this is, the email does not say, and it was not established here** — only myconneCT itself shows that. It plainly bears on the tracked **CT-941 past-due** item, but it does **not** close it: treat "a return was filed" and "the CT-941 was filed" as two different facts until someone opens the account. (b) **2026-09-03, 23:44 UTC — a NEW correspondence alert**, `DRS-NoReply@ct.gov`: *"The following taxpayer(s) have received correspondence from the Department of Revenue Services (DRS)"*, contents visible only inside myconneCT. **Still unread.** That makes **three** unopened DRS communications on this client. ⓘ Found 2026-09-07 by a manual catch-up; the 2026-09-05 sweep never ran. _(Gmail, `DRS-NoReply@ct.gov`.)_
+
+- 2026-10-03 — **Incremental sweep (baseline 2026-09-26→2026-10-03).** Double (cid 719473): case note 485258 unchanged (`updatedAt` 2026-08-06); properties unchanged (1120-S, Sales Tax Monthly, Bookkeeping Monthly, 1099 Preparation on, Assigned Staff Lilian, Signature: Signed); `list_activity_log` ≥2026-09-26 empty. Gmail (business/owner names + client addresses, `after:2026/09/26`, inbox + sent): 🆕 **firm invoice no. 2321 was emailed to the company on 2026-10-01 and the QuickBooks "payment received" notice for it followed the same day** _(Gmail, 2026-10-01; no dollar figures recorded)_ — together with the 09-23 invoice / 09-25 payment already recorded, the client has paid on each firm invoice within days of sending. **No client replies, no CT DRS / myconneCT / Secretary-of-State email, and nothing on the 1120-S transmission, bonus depreciation, K-1 split or 1099 questions** in that window. Ping (client-scoped): no on-topic meeting ≥2026-09-26. Drive: no results ≥2026-09-26.
+  - ⚠️ **The 09-26 contradiction stays UNSETTLED** (1120-S shown Filed 09-15 vs no source addressing whether the blocking items were settled first) — no source this run speaks to it either way.
+  - 🔴 **CT-941 past-due notice (first seen 2026-08-18) — a search of Gmail, bounded ≥2026-09-26, found no new DRS email; no source shows it actioned. 46 days pending since 2026-08-18.** Three unopened DRS correspondences (to 2026-09-03) — **30 days pending since 2026-09-03** — still need someone to open myconneCT.
+  - **QuickBooks primary-admin handover — unchanged, 58 days pending since 2026-08-06** (waiting on the father's ID verification).
+  - Not chased this run (budget): Turo-payout-in-books check, ATM-withdrawal and cash-deposit questions to the client, Amazon store-card question, Ukraine same-name company relationship, 2026 bank-feed backlog, Artem Personal export.
 
 ### Outstanding items (CI-only — never in the SOP)
 - 🟡 **CT DRS — there IS movement, and it cuts both ways (2026-09-07).** A return was **submitted through myconneCT on 2026-09-02** (which return is unstated — see §6), and a **new DRS correspondence landed 2026-09-03 and is unread**, making three unopened. **Both need one action, and it is the same action:** open myconneCT and read what is actually there. Until someone does, the CT-941 past-due item cannot be closed *or* confirmed — the filing confirmation is not evidence about which filing.
