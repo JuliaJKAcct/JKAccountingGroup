@@ -1332,8 +1332,15 @@ audit of her own work, not a briefing, and it began by transcribing the whole 17
 - ⚠️ **The written-mileage-log box says Yes on both forms**, and what the firm actually holds is his own
   approximations with the business share back-solved from an asserted percentage. **Never asked whether
   a log exists.**
-- 🆕 **The self-employed health insurance deduction has never been considered at all.** Near-nothing on
-  the method as keyed; materially more on the other branch, where the premium-credit loop has to be run.
+- 🔁 **The self-employed health insurance deduction was ALREADY SETTLED, and it is at zero BY DECISION,
+  not by omission.** 🛑 **An earlier draft of this entry said it had "never been considered at all".
+  That was wrong:** the deduction was computed in full in September, with the publication's own
+  worksheets run, and its eligibility gate — the question to his four employers — was **closed by
+  Lilian on 2026-09-24, dropped rather than answered.** ⚠️ **The one genuinely new fact: on the
+  actual-expense branch the dropped question is worth roughly ten times what it was worth at the
+  income it was dropped at**, which is a fact she did not have when she dropped it.
+  ⚖️ **Hers to re-open or not; ⛔ no session may.** ⓘ *Caught by the second review round of PR #503 —
+  the working paper had been corrected and this mirror had not, which is the surface Julia reads.*
 - 🆕 **Catering's zero-revenue loss grew by an order of magnitude** when the mileage went in. The
   question is the one that was already open; the amount riding on it is ten times what it was.
 - 📊 **The worksheet was reissued** *(see §7 Links)*. 📄 **Working paper §28 is the full audit; §27J is
