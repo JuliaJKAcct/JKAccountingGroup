@@ -259,6 +259,38 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-03 (the equipment memorandum — a SECOND, SELLER-FACING document) — 📄 **JULIA: "i would like to put value
+  of equipment into a section and also get me a separate pdf on this only so i can send it to kevin. can you
+  highlight sources you're getting those estimates from?"** ✅ **Both built.**
+  📘 **① The main report now carries the equipment valuation as a block in §5 (What you are buying)** — the invoice
+  table, the whole fleet priced, the method with its sensitivity, the ten-month control, and what it means against
+  the $5,500,000 business half. **395 money figures in the report now, every one traced to source by the checker.**
+  📗 **② A SEPARATE 9-page memorandum for KEVIN: "Machinery and Equipment — Valuation Memorandum · What the Fleet Is
+  Worth."** 🔑 **IT IS DELIBERATELY NARROW, BECAUSE IT GOES TO THE OTHER SIDE.** It carries **only** the machinery:
+  what it is, what it cost, what it is worth, and where every figure comes from. ⛔ **NOTHING from the due-diligence
+  analysis travels into it** — no earnings rebuild, no add-back testing, no margin work, **and above all no word
+  about the sellers' own tax position** *(the §1245-recapture reasoning, "why they resist", "the buildings were the
+  cheap concession" — all of that is negotiating posture and stays in the internal workbook)*.
+  🔍 **THE SOURCES SHE ASKED FOR ARE THE WHOLE OF PAGE 2 — seven documents, each with its file name, date, page
+  count and what we take from it**, given reference numbers **S1–S7** that are then carried as a SOURCE COLUMN on
+  every table in the document. **S1** the equipment binder rev 5 (machine counts, data plates Sept 2026) · **S2**
+  Vol. 2 Tab C-1 Samoset invoice 74733 · **S3** Tab C-3 Palmetto Coin 2017 · **S4** Tab C-4 Palmetto W&F (4
+  Laundrylux invoices) · **S5** Tab C-5 Ruskin (7 Laundrylux invoices) · **S6** Tab C-6 the warranty certificates ·
+  **S7** Vol. 3 Tab I-8 the schedule of debt.
+  🔑 **THE ARGUMENT THE DOCUMENT MAKES, and it is the reason it is safe to send: every figure in it is the SELLER'S
+  OWN.** *"It is built entirely from documents the seller has already provided. Nothing in it comes from a
+  third-party price list, a trade guide or an estimate of our own invention: the prices are the prices the seller
+  paid, on the seller's own invoices, and the machine counts are the seller's own data-plate count."* ⇒ **Kevin
+  cannot dispute the inputs without disputing his own binder.**
+  ✅ **It also discloses its own weaknesses rather than hiding them** — the deposit trap is explained up front, the
+  two proxy-priced fleets are named on their rows, the 15-year life is called a convention with 12- and 20-year
+  sensitivities, and it says in terms **"this is a valuation built from primary documents, not an appraisal."**
+  🤝 **And it closes with two constructive asks**, which is what makes it a negotiating document rather than a
+  demand: **the Select purchase invoice** *(the one fleet with no primary document, and the second largest)* and **a
+  formal appraisal if either party would prefer one.**
+  🛠️ **Build note:** the shared fonts, page CSS and medallion were factored out of `build_report.py` into
+  `brandkit.py`, so both documents render identically on brand from one source. The memorandum has its own figure
+  checker (`verify_eq.py`) — **116 money tokens, 0 untraceable.**
 - 2026-10-03 (the equipment, priced from the sellers' own invoices) — 🔑 **JULIA: "you have all of the equipment
   invoices per store (new ones only) can you get me the value? … i also would love … to estimate market value of
   similar equipment."** ✅ **Both done, and the Class V evidence is now the strongest thing in this file.**
