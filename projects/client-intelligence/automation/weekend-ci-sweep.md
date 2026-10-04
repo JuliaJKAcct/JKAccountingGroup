@@ -260,6 +260,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | Denys Melnyk | 764785 |
 | Andrii Tymchenko | 710619 |
 | Artem Markarian | 710623 |
+| Artem Chursinov | 710622 |
 | Ishkhan Markarian | (none recorded — look up) |
 | VOICECAPITAL INC | 710725 |
 | VOXAGO LLC | 710606 |
@@ -283,6 +284,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | Vitaliy Vasyutyk (10-company group) | 710668 |
 | Valentin Volzhanskiy | 710663 |
 | Zakom Incorporated | 710612 |
+| Oleg Zakala & Milana Podrugina | 710652 |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
@@ -299,7 +301,7 @@ per-tool call limits._
 > had **no CI file and no Double notes at all**. ⚠️ **`platform: none` and `Bookkeeping: N/A` — there is nothing to
 > sweep in QuickBooks, and no ledger anywhere**; for this client the documents arrive **through the Double portal and
 > the organizer itself**, which is where the 2025 books turned up. 🔑 **The owner has a second, personal Double record**
-> (`Oleg Zakala & Milana Podrugina`, `710652`, no CI file yet), so a company fact can arrive under the personal one and
+> (`Oleg Zakala & Milana Podrugina`, `710652` — its own CI file since 2026-10-01, [`oleg-zakala-milana-podrugina.md`](../clients/oleg-zakala-milana-podrugina.md), and its own scope row), so a company fact can arrive under the personal one and
 > the reverse — a personal loan document was uploaded into the company's organizer. Sweep with that in mind.
 > **No `sweep-state.md` row until the first full historical pass has run.**
 
