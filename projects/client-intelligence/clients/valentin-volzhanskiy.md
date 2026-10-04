@@ -1365,9 +1365,10 @@ that mattered.**
   the cent. ⛔ **No part of it is a firm computation**, which is why it is the number to key and not
   the slightly different one the transaction package would produce.
 - 🛑 **AND THE CORRECTION: the paper had said the mileage was "typed over" it. That asserted a human
-  deletion the firm cannot see, and it is struck.** 🔑 **The evidence points the other way — the same
-  person keyed both Schedule C forms the same way in one sitting and the tolls survived on the other
-  one**, so the two were probably never in the same kind of field. ⚠️ **No read the firm has recorded shows which
+  deletion the firm cannot see, and it is struck.** 🔑 **What the evidence actually supports is narrower: the
+  tolls survived on the other Schedule C form, which is equally consistent with the two figures
+  having sat in different kinds of field and with a change confined to one form — what it rules out
+  is a change applied to both.** ⚠️ **No read the firm has recorded shows which
   field fed that line — and one of the earlier print sets was never gone through page by page, so it
   has not been ruled out.** ☑️ **So the first step is to re-read those unread pages, and only then a
   check on her own screen; whoever keys it writes the real route down.**

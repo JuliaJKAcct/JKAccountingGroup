@@ -3617,7 +3617,7 @@ worksheet have OPPOSITE jobs, and trying to make one file do both produces a fil
 | | **§4D — THE WORKING WORKBOOK** | **§4I — THE FINAL WORKSHEET** |
 |---|---|---|
 | **Who reads it** | **The preparer, at the keyboard, while the return is being built** | **Whoever opens this client in a FUTURE YEAR — the reviewer, or a preparer who was never here** |
-| **When it is built** | **Every day the return moves** | 🔑 **ONCE — when the return is finished and about to go to the client** |
+| **When it is built** | **Every day the return moves** | 🔑 **ONCE — when the return is finished and about to go to the client.** ⚠️ *One exception, stated under `WHEN IT IS BUILT`: Lilian may call for it while items are open.* |
 | **What it is FOR** | **What to CHANGE, and what is left to do** | **What the return IS, and WHY** |
 | **Version history** | ✅ **ESSENTIAL** — *"it read 20,000 until 30 September"* **is how she finds her place** | 🛑 **BANNED** |
 | **Open items** | ✅ **The spine of it** | ⚠️ **Only those that SURVIVED into the filed return, written as what next year must carry forward** |
@@ -3689,7 +3689,12 @@ the document it was read from** — the replicator cannot assume next year's fig
 handed a figure that disagrees with the client's own sheet will "correct" it back unless the paper says
 which of these happened:** the firm **re-derived** it from better evidence · the firm applied a **limit
 or a percentage** *(a 50% meals haircut, a business-use share)* · or a **decision** put it on a
-different line. ⛔ **Each needs naming, and the client's own figure named beside it.**
+different line. ⛔ **Each needs naming, and the client's own figure named beside it.** ⚠️ **AND THE FIGURE NAMED IS
+THE CLIENT'S, NEVER THE FIRM'S OWN SUPERSEDED ONE** — this is not a crack in the no-version-history
+ban above, which targets *the firm's* earlier drafts. 🔑 **The test still applies and the client's
+figure passes it: it needs HIS DOCUMENT to make sense, not an earlier version of this worksheet.**
+⓵ *§4I's own sections 3 and 6 already require it — "what each one STATED" and "what the alternative
+was".*
 
 **④ WHAT WAS DELIBERATELY *NOT* CLAIMED, AND WHY.** 🛑 **The hardest thing to replicate is an ABSENCE.**
 **A blank line looks identical whether it was considered and rejected, or forgotten** — so every
