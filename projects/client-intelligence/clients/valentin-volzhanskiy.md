@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-04 *(the tolls figure traced to the client's own P&Ls step by step; an asserted deletion withdrawn — the firm cannot see which field fed that line and now says so)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-04 *(the tolls keyed and verified against a predicted model; the vehicle's first-business-use question answered, with its two riders recorded; the final evidence worksheet built and delivered)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1376,6 +1376,42 @@ that mattered.**
   never recorded.** ✅ **Replaced with a route copied from the firm's own working example — the other
   Schedule C already does it correctly.**
 - 💵 **No figure on the return moved.** 📄 **Working paper §29; the keystroke stays where it was.**
+
+### 2026-10-04 (later) — the return is substantially done, and it now has a FINAL record
+
+🔑 **Lilian keyed the missing tolls, settled the vehicle question, and asked for the final evidence
+document — the one that is kept rather than worked from.**
+
+- ✅ **The tolls are on the return.** Read off a fresh draft: every figure the firm had projected
+  before seeing it is there, including the whole premium-tax-credit chain and the bottom line. **The
+  model is now validated against a return it predicted in advance**, which is the strongest check this
+  engagement has run.
+- ⚖️ **THE VEHICLE GATE IS ANSWERED: she states the vehicle's first business use was 2025**, which
+  opens the mileage election. ⚠️ **That answers the GATE, not the METHOD** — and the comparison it
+  fires is now priced: **the method as keyed wins on both ownership branches, so no figure on this
+  return changes, and the real stake turns out to be a later year rather than this one, because the
+  alternative would have closed the mileage rate for that vehicle permanently.** 🔑 **Three riders
+  are recorded rather than resolved:** it entails that the fuel deducted on the prior-year return was
+  not this car's — ✅ **and that is answerable from a document the firm already holds: one page of the
+  prior-year return has never been extracted and is exactly where the form that would settle it would
+  sit**; whether the fact is the CLIENT's answer or her own determination is not recorded, which
+  matters because the evidence document exists to tell a future reader whose number to go back to;
+  and the depreciation comparison rests on two estimates rather than the real purchase figures.
+  ✏️ **One line to confirm the first, one cheap read to settle the second.**
+- 🔴 **AND ONE THING SHE BELIEVES IS FIXED IS NOT:** the print set still opens with a payment voucher
+  on a return that claims a refund. ⛔ **It is a DEFECT, so it is deliberately NOT in the evidence
+  document** — a defect does not become an assumption by being written down — **and it must come off
+  before anything goes to the client.** It is the only page he reads as an instruction.
+- 📗 **THE FINAL WORKSHEET IS BUILT AND DELIVERED — twelve tabs, and it is a different document from
+  the working one: not a single reference to any earlier version of anything.** 🔑 **Her bar for it
+  was raised from "complete" to "REPLICABLE": somebody holding nothing but that file should be able
+  to rebuild the whole return.** **So it carries the step-by-step arithmetic for every figure the
+  firm calculated, a tag on each one saying whether the client stated it, we read it, we computed it,
+  we assumed it or somebody decided it, every expense he claimed that is deliberately NOT on the
+  return and why, and a stated self-test naming the five figures actually checked against the
+  document alone.** 🔒 **It is saved in Double on the client, in English, and never committed.**
+- 🔁 **AND THE BAR IS NOW FIRM POLICY, not a one-off** — it is written into the tax-return skill, so
+  every return the firm prepares from here leaves the same kind of evidence.
 
 ### Outstanding items (CI-only — never in the SOP)
 
