@@ -72,7 +72,7 @@ the actual details.
 - 🔑 **DOUBLE CANNOT TELL YOU WHEN HE LAST *CHANGED* AN ANSWER — ONLY WHEN HE *OPENED* THE ORGANIZER.** The activity log has `organizer_opened` for a client, but **no action at all for a client saving or editing a response**, and the organizer itself carries no last-modified field. So "last modified" is answered with the last **opening** plus the **completion percentage** at that moment — never as a fact about an edit. _(Established 2026-10-01 when Lilian asked.)_
 - **The 2025 organizer is 60% complete as of 2026-10-01** — not completed; `Organizer Status: Sent`.
 - 🔴 **HIS STOCK BASIS IN ZAKOM IS EXHAUSTED, AND THAT IS THE CENTRE OF HIS RETURN.** The 2024 Form 7203
-  closed the year at a stock basis of **zero**, with **no** debt basis and **no** suspended losses. 🔑 **So a
+  closed the year with his stock basis **exhausted**, and with **no** debt basis and **no** suspended losses. 🔑 **So a
   distribution from Zakom above his share of its income is NOT tax-free — the excess is a long-term capital
   gain on his 1040**, and the 2024 return already reported one that way, on Form 8949 **Part II box (F)**
   with the description `Excess Distributions (K-1 (1120S))`. ⚠️ **This is the firm's own established
@@ -95,7 +95,8 @@ the actual details.
 - ⚠️ **2024 ended with an unpaid balance and a Form 9465 instalment request**, and the return printed four
   2025 estimated-tax vouchers. **Whether any of them was paid, and whether that plan is still running, is
   not established** — it decides whether 2025 adds to an existing IRS balance _(2026-10-04)_.
-- **His company's document, uploaded to the company's organizer on 2026-09-13, names his wife** (`MilanaPodrugina-LoanDocs.pdf`) — whether it belongs to this return or the company's is a hedged reading, not settled. See [`zakom-incorporated.md`](./zakom-incorporated.md) §5.
+- ✅ **RESOLVED 2026-10-04 — `MilanaPodrugina-LoanDocs.pdf` CARRIES NO CLIENT DATA AT ALL.** It was read in full and it is **13 pages of a credit union's blank loan paperwork**, identical to the boilerplate in a second file handed over the same day; **every field is empty and there is no data page.** ⛔ **It belongs to neither this return nor the company's in any useful sense — do not chase it again.** _(Recorded on 2026-09-13 as a hedged reading because it was uploaded to the COMPANY's organizer and names his wife.)_ See [`zakom-incorporated.md`](./zakom-incorporated.md) §5.
+- 🚗 **THEY BOUGHT A `2023 PORSCHE MACAN` ON 7 AUGUST 2025**, financed by **Tropical Financial Credit Union** (lienholder control `#2032`), with **Milana as the PRIMARY buyer and Oleg as co-buyer**; they **declined** GAP, depreciation protection and mechanical-breakdown protection. 🔴 **No tax credit reaches it** — §30D, §25E and §45W all need a plug-in or fuel-cell vehicle, and the **new car-loan interest deduction needs US final assembly**, which the vehicle's own identifier contradicts. ✅ **But the SALES TAX on the purchase IS deductible**, added to the optional sales-tax table on Schedule A — and unlike 2024 it is **not** wasted, because the 2025 SALT cap is far higher. ⛔ **The firm does NOT hold the purchase document, so the tax figure has to be asked for.** _(2026-10-04; the analysis and the authorities are in the working paper §3D.)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->

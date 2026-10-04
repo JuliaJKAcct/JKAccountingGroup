@@ -273,14 +273,15 @@ they are wrong now.
 | 10 | Dependent care benefits | **Form 2441 Part III**, which can make part of it taxable on line 1e |
 | **12** | Coded amounts | see the code table below |
 | **13** | *Statutory employee* · *Retirement plan* · *Third-party sick pay* | 🔑 **three checkboxes that each change the return** |
-| 14 | Other — free text | informational; a state or local item, never a federal line |
+| 14 | Other — free text | usually informational. ⚠️ **Not always: a MANDATORY state disability or paid-family-leave contribution reported here is a deductible state tax on Schedule A line 5a.** ⓘ Irrelevant on a Florida client who elects the sales-tax table — noted because this SOP is firm-wide |
 | 15–20 | State and local | only for a state return. ⓘ Florida has none |
 
 ### Box 12 — the codes that actually move a federal figure
 
 | Code | What it is | What it does |
 |---|---|---|
-| **D / E / G / S** | elective deferrals (401(k), 403(b), 457, SIMPLE) | already **excluded from box 1** — ⛔ **never deduct it again.** Check the annual limit across *all* employers |
+| **D / E / S** | elective deferrals (401(k), 403(b), SIMPLE) | already **excluded from box 1** — ⛔ **never deduct it again.** The §402(g) limit is shared across *all* employers, so **add them up** |
+| **G** | 457(b) deferrals | also excluded from box 1 — ⚠️ **but a 457(b) has its OWN limit and is NOT aggregated with D / E / S under §402(g)**, so the add-them-up rule above does not reach it |
 | **AA / BB / EE** | **Roth** contributions | already **included in box 1** — no deduction, ever |
 | **W** | employer **HSA** contributions | 🔑 goes on **Form 8889 line 9**, and it **reduces** what the taxpayer may still deduct on Schedule 1 |
 | **DD** | cost of employer health coverage | **informational only.** It looks like a large deductible number and is not one |
@@ -1801,7 +1802,7 @@ limit from memory, it has two tiers and a cut-off date.**
 | 4 | Refund of Overpaid Interest | **reduces** the deduction, or is income if the interest was deducted in an earlier year |
 | **5** | **Mortgage Insurance Premiums** | ⛔ **NOT deductible for 2025.** Schedule A line **8d** now reads *"Reserved for future use"* |
 | 6 | Points Paid on Purchase of Principal Residence | Schedule A line 8a with box 1, **if** it is a principal-residence purchase; otherwise amortised |
-| 7 / 8 / 9 | the property securing the mortgage, and how many | a **9** greater than 1 means the interest must be split |
+| 7 / 8 / 9 | the property securing the mortgage, and how many | a **9** greater than 1 means an **allocation may be required** between a qualified residence and other property — ⛔ not that a split is automatic |
 | **10** | **Other** | 🔴 **the trap.** Servicers print **real-estate taxes paid out of escrow** here. See §M15 |
 | 11 | Mortgage Acquisition Date | when the servicer acquired the loan — not the origination date |
 
@@ -1882,9 +1883,12 @@ Form 8829 takes the business-use share; Schedule A takes the rest, and Form 8829
 **"Excess mortgage interest"** (line 16) and **"Excess real estate taxes"** (line 17) for the part that
 does not fit its own limit.
 
-✅ **So reconcile the two forms, once, in the working paper:** the whole of box 1 and the whole of the
-property-tax bill must appear **exactly once** across Form 8829 and Schedule A. ⛔ **Neither form knows
+✅ **So reconcile the two forms, once, in the working paper:** no part of box 1 or of the
+property-tax bill may appear **more than once** across Form 8829 and Schedule A. ⛔ **Neither form knows
 what the other one claimed, and the software will not tell you.**
+
+⚠️ **And *at most once* is deliberate, not sloppy: with a SALT cap, part of the tax can end up deducted
+NOWHERE.** The test is that nothing is counted twice — **not** that everything is counted.
 
 ### 🛀 Two more traps
 
