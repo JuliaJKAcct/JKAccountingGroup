@@ -1367,10 +1367,10 @@ that mattered.**
 - 🛑 **AND THE CORRECTION: the paper had said the mileage was "typed over" it. That asserted a human
   deletion the firm cannot see, and it is struck.** 🔑 **The evidence points the other way — the same
   person keyed both Schedule C forms the same way in one sitting and the tolls survived on the other
-  one**, so the two were probably never in the same kind of field. ⚠️ **No print set has ever included
-  the software's vehicle worksheet, so which field fed the line is NOT established**, and the paper
-  now says so instead of narrating a cause. ☑️ **A ten-second test on her own screen settles it, and
-  whoever keys it writes the real route down.**
+  one**, so the two were probably never in the same kind of field. ⚠️ **No read the firm has recorded shows which
+  field fed that line — and one of the earlier print sets was never gone through page by page, so it
+  has not been ruled out.** ☑️ **So the first step is to re-read those unread pages, and only then a
+  check on her own screen; whoever keys it writes the real route down.**
 - ⛔ **A second thing was struck with it: the fix instruction had named a software screen this firm has
   never recorded.** ✅ **Replaced with a route copied from the firm's own working example — the other
   Schedule C already does it correctly.**

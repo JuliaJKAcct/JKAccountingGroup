@@ -3651,12 +3651,71 @@ never seen any earlier version of this file?*** **If it needs one, it does not g
 | **7 · What is assumed, and what would change it** | **Every position resting on an assumption rather than a document, with the consequence if the assumption is wrong** |
 | **8 · What carries forward** | 🔑 **What next year needs: basis, carryovers, elections made, replacement periods running, balances, unfinished items** |
 
+#### 🔴 THE ACCEPTANCE TEST — IT MUST BE ENOUGH TO **REPLICATE** THE RETURN FROM NOTHING ELSE
+
+> 🗣️ **LILIAN, 2026-10-04, and this is the bar the eight sections exist to clear:** *"el objetivo es que
+> sea un documento con el cual se **pueda replicar esta declaración**. Incluso si **no se tiene ninguna
+> otra información**, tiene que ser suficiente para que otra persona lo pueda tomar, pueda analizarlo y
+> **rehacer esta declaración completa sin que falte nada.** Ese es el tipo de evidencia que tenemos que
+> guardar de cada declaración que hagamos."*
+
+🔑 **THIS RAISES THE BAR ON WHAT "contains" MEANS, and it is not satisfied by a complete list of
+figures.** ⛔ **A reader who can see WHAT every line says but not HOW it was reached cannot rebuild the
+return** — and that reader is the whole audience: a preparer in a future year, or Julia, with the
+session deleted and possibly the documents gone too.
+
+✅ **SO FOUR THINGS BECOME MANDATORY, and each one is a thing a figures-only worksheet leaves out:**
+
+**① EVERY FIGURE CARRIES ITS PROVENANCE TAG.** ⛔ **Not a source column that says where a document is —
+a tag that says what KIND of thing the number is**, because that is what a replicator has to know before
+they can decide whether to trust it or redo it:
+
+| Tag | What it means | What the replicator does with it |
+|---|---|---|
+| 📨 **CLIENT** | **He stated it** — in a document, an email, a message or a call | **Takes it, and knows whose it is if it turns out wrong** |
+| 📄 **READ** | **Read off a named document** — page, line, cell | **Can go and re-read it** |
+| 🧮 **COMPUTED** | **The firm's arithmetic**, with every input named | 🔑 **Can RE-RUN it — which is the whole point** |
+| ⚠️ **ASSUMED** | **The firm assumed it**, and the assumption is stated | **Knows what to test** |
+| ⚖️ **DECISION** | **Somebody chose it**, and the alternative existed | **Knows who to go back to** |
+
+**② EVERY COMPUTED FIGURE SHOWS ITS ARITHMETIC, STEP BY STEP — not its result.**
+⛔ **"Vehicle expense 5,040" is not replicable. ✅ "pool 9,000.00 = fuel 3,500.00 + insurance 3,000.00 +
+tolls 500.00 + maintenance 2,000.00 · × 80% business use = 7,200.00 · × 70% to this activity = 5,040"
+is.** ⓘ *Figures invented for the example — a skill is not a permitted home for a client's.* 🔑 **Write the chain so somebody can key it into a calculator and land on the same number**, and
+name where each input came from. ⚠️ **Where a rate, a table value or a cap is used, quote it and name
+the document it was read from** — the replicator cannot assume next year's figure is the same.
+
+**③ THE THREE KINDS OF "WHY A FIGURE IS NOT WHAT THE CLIENT SENT" ARE SEPARATED.** 🔑 **A replicator
+handed a figure that disagrees with the client's own sheet will "correct" it back unless the paper says
+which of these happened:** the firm **re-derived** it from better evidence · the firm applied a **limit
+or a percentage** *(a 50% meals haircut, a business-use share)* · or a **decision** put it on a
+different line. ⛔ **Each needs naming, and the client's own figure named beside it.**
+
+**④ WHAT WAS DELIBERATELY *NOT* CLAIMED, AND WHY.** 🛑 **The hardest thing to replicate is an ABSENCE.**
+**A blank line looks identical whether it was considered and rejected, or forgotten** — so every
+material expense the client claimed that is **not** on the return gets a row saying so and why, and so
+does every form or election the return could have used and did not.
+
+☑️ **AND A SELF-TEST BEFORE IT SHIPS, because the bar above is easy to agree with and easy to miss.**
+**Pick five figures at random from the finished return — at least two computed ones and one blank line —
+and ask of each: *holding ONLY this document, could I produce that figure and know why?*** ⛔ **If the
+answer is no for any of them, the document is not finished.** ✅ **Say in the document that the test was
+run and on which figures** — a stated test is checkable; an asserted standard is not.
+
 #### ⏱️ WHEN IT IS BUILT — last, and only once
 
 ☑️ **Trigger: the return is finished and about to go to the client for review.** ⛔ **NOT while items are
 open, because a final worksheet with open items in it is just the working workbook with the useful part
 removed.** ✅ **If something is genuinely still open when the return is filed, it goes in section 7 or 8 as a
 carry-forward, not as a to-do.**
+
+⚠️ **AND WHEN LILIAN CALLS FOR IT WHILE ITEMS ARE STILL OPEN — she did, 2026-10-04 — BUILD IT, and sort
+what is open into exactly two piles.** ✅ **A position the return TAKES that rests on something
+unestablished is section 7's business and belongs in the document** *(it is what a future reader most
+needs)*. 🔴 **A DEFECT still on the return is neither** — ⛔ **it does not become an assumption by being
+written down.** ☑️ **Say so plainly, outside the document, and name what must change before the PDF
+goes anywhere.** 🔑 **The final worksheet describes a return that is RIGHT; it cannot launder one that
+is not.**
 
 #### 🔒 AND THE RULES THAT DO NOT CHANGE
 
