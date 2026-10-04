@@ -3251,7 +3251,7 @@ are not obvious.**
    entries the row names.** 🔑 **If it still does not close, the row is missing an entry — and where the
    missing entry is a presentation choice, SAY the fix cannot be completed without the signer.**
 
-#### ⑥-ter 🛑 NEVER CALL A FORM OR A STATEMENT **ABSENT** WITHOUT HAVING READ EVERY PAGE
+#### ⑥-ter 🛑 NEVER CALL A FORM OR A STATEMENT **ABSENT** — OR **PRESENT** — WITHOUT HAVING READ EVERY PAGE
 
 ⛔ **A keyword search of an extract is evidence about the SEARCH, not about the return.**
 🔑 **[`method.md`](../../../projects/pre-return-review/method.md) rule 1b applies to the firm's own output

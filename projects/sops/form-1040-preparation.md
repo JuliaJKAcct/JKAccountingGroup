@@ -1799,7 +1799,7 @@ limit from memory, it has two tiers and a cut-off date.**
 | **1** | **Mortgage Interest Received From Payer(s)/Borrower(s)** | ✅ **Schedule A line 8a.** This is the figure |
 | **2** | **Outstanding Mortgage Principal** | 🔑 **this is what TESTS the limit below.** It is not keyed anywhere, and skipping it is how an over-limit deduction gets filed |
 | 3 | Mortgage Origination Date | decides **which** limit tier applies |
-| 4 | Refund of Overpaid Interest | **reduces** the deduction, or is income if the interest was deducted in an earlier year |
+| 4 | Refund of Overpaid Interest | ⛔ **Do NOT deduct it, and do NOT net it against box 1** — the Schedule A instructions, line 8a: *"If your Form 1098 shows any refund of overpaid interest, **don't reduce your deduction by the refund.** Instead, see the instructions for Schedule 1 (Form 1040), **line 8z**."* It refunds interest paid in a **prior** year, so if that year was itemized, part or all is **other income on Schedule 1 line 8z**. ⛔ **No amendment of the prior year.** ⚠️ **An earlier draft of this row said it *reduces* the deduction — wrong in both halves, and caught in review** |
 | **5** | **Mortgage Insurance Premiums** | ⛔ **NOT deductible for 2025.** Schedule A line **8d** now reads *"Reserved for future use"* |
 | 6 | Points Paid on Purchase of Principal Residence | Schedule A line 8a with box 1, **if** it is a principal-residence purchase; otherwise amortised |
 | 7 / 8 / 9 | the property securing the mortgage, and how many | a **9** greater than 1 means an **allocation may be required** between a qualified residence and other property — ⛔ not that a split is automatic |
