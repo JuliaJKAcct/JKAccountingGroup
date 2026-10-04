@@ -67,7 +67,7 @@ Work down the list. Every ✅ points at the module you must read. Everything unm
 
 | # | Does the client have… | If yes → read | Status |
 |---|---|---|---|
-| 1 | A **W-2** | [M1](#m1--w-2-wages) | ⬜ stub |
+| 1 | A **W-2** | [M1](#m1--w-2-wages) | ✅ written |
 | 2 | **Self-employment** — 1099-NEC, 1099-K, consulting, gig work, a sole proprietorship | [M2 · Schedule C](#m2--schedule-c--self-employment) | ✅ written |
 | 3 | A **Schedule K-1** from an S-corporation | [M3 · Schedule E + Form 7203](#m3--schedule-e-part-ii--an-s-corporation-k-1) | ✅ written |
 | 4 | A **K-1 from a partnership** | M3B | ⬜ stub |
@@ -81,8 +81,8 @@ Work down the list. Every ✅ points at the module you must read. Everything unm
 | 12 | **Retirement distributions** — 1099-R | M11 | ⬜ stub |
 | 13 | **Foreign income, or a foreign account or asset** | M12 · Forms 2555 / 1116 / FinCEN 114 / 8938 | ⬜ stub |
 | 14 | **Education costs** — 1098-T, student loan interest | M13 | ⬜ stub |
-| 15 | **A home purchase, sale, or mortgage** — 1098 | M14 | ⬜ stub |
-| 16 | **Itemized deductions** that beat the standard deduction | M15 · Schedule A | ⬜ stub |
+| 15 | **A home purchase, sale, or mortgage** — 1098 | [M14 · Form 1098](#m14--form-1098-and-the-mortgage) | ✅ written |
+| 16 | **Itemized deductions** that beat the standard deduction | [M15 · Schedule A](#m15--schedule-a--itemized-deductions) | ✅ written. 🔴 **The SALT cap and the standard deduction BOTH moved for 2025 — last year's choice does not carry forward** |
 | 17 | **A state filing requirement** | M16 | ⬜ stub. ⓘ Florida has **no individual income tax** — most of this firm's 1040s file federal only |
 | 18 | **An ITIN applicant** in the household | the [`itin-w7-preparation`](../../.claude/skills/itin-w7-preparation/) skill | ✅ elsewhere |
 
@@ -254,9 +254,66 @@ Three things that case is worth remembering for:
 
 ## M1 · W-2 wages
 
-⬜ **Stub — write this the first time the firm prepares a 1040 with a W-2 in a session.** Should
-cover: box 1 → line 1a; box 2 → line 25a; box 12 codes; multiple W-2s; excess social security
-withheld across employers; and the household-employee and statutory-employee cases.
+**The simplest module in this file, and it still has four ways to go wrong.** Written 2026-10-04 while
+preparing the Zakala / Podrugina 2025 return.
+
+### Where each box goes — the **2025** line numbers
+
+⚠️ **Form 1040 page 2 was renumbered for 2025.** The old line numbers are in every preparer's head and
+they are wrong now.
+
+| W-2 box | What it is | Where it goes on the **2025** return |
+|---|---|---|
+| **1** | Wages, tips, other compensation | **Form 1040 line 1a**, added across every W-2 in the household |
+| **2** | Federal income tax withheld | **Form 1040 line 25a** |
+| 3 / 5 | Social security wages / Medicare wages | not keyed — but **read them** (see the traps) |
+| 4 / 6 | Social security tax / Medicare tax withheld | not keyed, except for the excess-SS case below |
+| **7** | Social security tips | 🆕 **Schedule 1-A line 4a** reads this box for the new *No Tax on Tips* deduction |
+| 8 | Allocated tips | Form 4137 territory — and it feeds Schedule 1-A line 4b |
+| 10 | Dependent care benefits | **Form 2441 Part III**, which can make part of it taxable on line 1e |
+| **12** | Coded amounts | see the code table below |
+| **13** | *Statutory employee* · *Retirement plan* · *Third-party sick pay* | 🔑 **three checkboxes that each change the return** |
+| 14 | Other — free text | informational; a state or local item, never a federal line |
+| 15–20 | State and local | only for a state return. ⓘ Florida has none |
+
+### Box 12 — the codes that actually move a federal figure
+
+| Code | What it is | What it does |
+|---|---|---|
+| **D / E / G / S** | elective deferrals (401(k), 403(b), 457, SIMPLE) | already **excluded from box 1** — ⛔ **never deduct it again.** Check the annual limit across *all* employers |
+| **AA / BB / EE** | **Roth** contributions | already **included in box 1** — no deduction, ever |
+| **W** | employer **HSA** contributions | 🔑 goes on **Form 8889 line 9**, and it **reduces** what the taxpayer may still deduct on Schedule 1 |
+| **DD** | cost of employer health coverage | **informational only.** It looks like a large deductible number and is not one |
+| **P** | qualified moving expenses | only a member of the Armed Forces can exclude it |
+| **R** | Archer MSA | Form 8853 |
+| **T** | adoption benefits | Form 8839 |
+
+### 🛀 The four traps
+
+**① MULTIPLE W-2s AND EXCESS SOCIAL SECURITY.** Each employer withholds social security up to the wage
+base **independently**, so a taxpayer with two jobs can have more withheld than the law requires. **Add box
+4 across every W-2; if the total exceeds the year's maximum, the excess is a REFUNDABLE credit** on
+Schedule 3. ⛔ **Nothing on the forms flags it** — you have to add the boxes.
+
+**② THE *STATUTORY EMPLOYEE* BOX 13 TICK CHANGES WHICH FORM THE WAGES GO ON.** A ticked statutory-employee
+box means box 1 goes on **Schedule C line 1, not Form 1040 line 1a** — Schedule C's own line 1 says so — and
+the person then deducts expenses against it but pays **no** self-employment tax, because FICA was already
+withheld. ⚠️ **Two Schedule C forms may be needed**, one for the statutory-employee wages and one for
+everything else, because they cannot be mixed.
+
+**③ A W-2 WITH ZERO IN BOX 2 IS A FINDING, NOT A FORMATTING ODDITY.** It means no federal tax was withheld
+all year, which on a return that also has self-employment or passthrough income usually ends in a balance
+due and an **estimated-tax penalty**. ✅ **Say so while there is still time to do something about it.**
+_(Zakala / Podrugina 2024: a W-2 with **nothing in box 2**, and no withholding anywhere else on the return
+either — against a total tax several times the wage. The filing carried an **estimated-tax penalty** and a
+**Form 9465 instalment request**. The figures are in that client's working paper, not here.)_
+
+**④ ⛔ A W-2 PDF IS OFTEN MACHINE-UNREADABLE, AND THE NUMBERS THAT COME OUT ARE THE IRS's OWN.** The
+*Notice to Employee* and *Instructions for Employee* printed on the back of a W-2 contain the year's
+statutory thresholds — the elective-deferral limit, the EIC ceiling, the HSA limit. 🔴 **When a W-2 extract
+yields only those, you have read the BOILERPLATE, not the wages, and every figure in it is a red herring.**
+✅ The right move is §1B.6's: **the document is *not reachable from a session*, so ask the PERSON to read
+the boxes off their screen** — never the client, who already sent it.
 
 ---
 
@@ -1725,6 +1782,120 @@ income year is sheltered outright. **It is not.**
   or as a reward are **ordinary income**.
 - ⚠️ **Ask for the platform statement.** The organizer asks the yes/no question and, if an earlier
   answer closed the income branch, **never asks for anything else**.
+
+---
+
+## M14 · Form 1098 and the mortgage
+
+**Written 2026-10-04.** The box numbers and the debt limits below were read off
+`irs.gov/pub/irs-pdf/i1098.pdf`, `i1040sca.pdf` and `p936.pdf` on that date — ⛔ **never quote a mortgage
+limit from memory, it has two tiers and a cut-off date.**
+
+### The eleven boxes, and which three matter
+
+| Box | Printed caption | What to do with it |
+|---|---|---|
+| **1** | **Mortgage Interest Received From Payer(s)/Borrower(s)** | ✅ **Schedule A line 8a.** This is the figure |
+| **2** | **Outstanding Mortgage Principal** | 🔑 **this is what TESTS the limit below.** It is not keyed anywhere, and skipping it is how an over-limit deduction gets filed |
+| 3 | Mortgage Origination Date | decides **which** limit tier applies |
+| 4 | Refund of Overpaid Interest | **reduces** the deduction, or is income if the interest was deducted in an earlier year |
+| **5** | **Mortgage Insurance Premiums** | ⛔ **NOT deductible for 2025.** Schedule A line **8d** now reads *"Reserved for future use"* |
+| 6 | Points Paid on Purchase of Principal Residence | Schedule A line 8a with box 1, **if** it is a principal-residence purchase; otherwise amortised |
+| 7 / 8 / 9 | the property securing the mortgage, and how many | a **9** greater than 1 means the interest must be split |
+| **10** | **Other** | 🔴 **the trap.** Servicers print **real-estate taxes paid out of escrow** here. See §M15 |
+| 11 | Mortgage Acquisition Date | when the servicer acquired the loan — not the origination date |
+
+### The limit, both tiers
+
+| Debt incurred | Acquisition-debt ceiling |
+|---|---|
+| **after 15 December 2017** | **$750,000** — $375,000 married filing separately |
+| **before 16 December 2017** (*grandfathered*) | **$1 million** — $500,000 married filing separately |
+
+⚠️ **Schedule A line 8 has its own checkbox:** *"If you didn't use all of your home mortgage loan(s) to buy,
+build, or improve your home, see instructions and check this box."* **A cash-out refinance ticks it**, and
+the part of the interest attributable to the cashed-out money is **not** home-mortgage interest.
+
+### 🛀 The three traps
+
+**① ⛔ THE DOCUMENT THE CLIENT SENDS IS OFTEN NOT THE FORM 1098.** Servicers mail an **annual mortgage and
+escrow statement** that looks authoritative, carries interest, taxes, insurance and principal, and **is
+not the Form 1098**. Its interest figure can differ — it may be on a statement cycle rather than the
+calendar year, or include interest the lender has not reported to the IRS. ✅ **Schedule A line 8a says
+*"reported to you on Form 1098"*; line 8b is the other line and it exists for a reason.** 🔑 **Find the
+box-numbered form, or ask for it.**
+
+**② 🔴 BOX 10 AND THE COUNTY BILL ARE THE SAME TAX.** When the lender pays the property tax from escrow
+it prints the amount in box 10, **and the county also issues its own bill for the same year.** Taking both
+deducts the tax twice. ✅ **Decide which document is the source — and say so in the working paper — before
+either figure is keyed.**
+
+**③ ⚠️ ESCROW PAID ≠ TAX PAID, AND THE DIRECTION MATTERS.** What the taxpayer paid *into* escrow is not
+deductible; what the lender paid *out* of escrow to the county is. A year's escrow deposits and a year's
+escrow disbursements are routinely different figures on the same statement.
+
+---
+
+## M15 · Schedule A — itemized deductions
+
+**Written 2026-10-04.** Every amount here was read off `irs.gov/pub/irs-pdf/f1040sa.pdf`,
+`f1040.pdf` and `i1040sca.pdf` on that date. 🔴 **Two of them MOVED for 2025 and the 2024 answer is
+wrong**, which is the whole reason this module exists.
+
+### 🔴 The two 2025 changes that reverse last year's conclusion
+
+| | 2024 | **2025** |
+|---|---|---|
+| **SALT cap** — Schedule A line 5e | **$10,000** | **$40,000** — $20,000 MFS, **and phased down where Form 1040 line 11b exceeds $500,000** ($250,000 MFS) |
+| **Standard deduction, married filing jointly** | 29,200 | **31,500** — single and MFS **15,750**, head of household **23,625** |
+
+🔑 **They pull in opposite directions, so a client who itemized last year may not this year, and a client
+who took the standard deduction last year may itemize now.** ⛔ **Neither answer carries forward.**
+✅ **Compute both and keep the computation in the working paper**, because the choice is the single
+largest discretionary figure on a simple 1040.
+
+### Line by line — the 2025 form
+
+| Line | Concept | Where it comes from |
+|---|---|---|
+| 1–4 | Medical and dental | ⚠️ **line 3 is 7.5% of Form 1040 line `11b`** — below the floor the whole block is **0**, and most clients are |
+| **5a** | State and local **income taxes OR general sales taxes** — **one or the other, never both** | 🔑 **In Florida there is no individual income tax, so it is ALWAYS the general sales tax, and the box on line 5a must be CHECKED.** The amount comes from the optional sales-tax tables, not from receipts |
+| **5b** | State and local **real estate taxes** | the county bill, **or** Form 1098 box 10 — ⛔ **not both** (M14 trap ②). ⚠️ **Only on real estate that was NOT used for business**, and only where the tax is assessed uniformly at a like rate on all real property — the instructions' own words |
+| 5c | Personal property taxes | the deductible part of a vehicle registration, where the state charges by value |
+| 5d / **5e** | add 5a–5c / **the cap** | **40,000** for 2025 |
+| 6 / 7 | other taxes / add | ⛔ **federal tax, FICA and most fees do not belong on line 6** |
+| **8a** | **Home mortgage interest and points reported to you on Form 1098** | **box 1** — M14 |
+| 8b | **not** reported on a Form 1098 | seller financing: **the payee's name and identifying number must be shown** |
+| 8c | points not on a 1098 | special rules — read them |
+| **8d** | | 🔴 **"Reserved for future use" — mortgage insurance premiums are NOT deductible for 2025** |
+| 8e / 9 / 10 | add 8a–8c / investment interest / add | line 9 needs **Form 4952** if required |
+| 11–14 | **Gifts to charity** | a gift of $250 or more needs a written acknowledgement; **non-cash over $500 needs Form 8283**; line 13 is the **prior-year carryover**, which is a figure a session must look for and not assume is zero |
+| 15 | Casualty and theft | **only a federally declared disaster**, via Form 4684 |
+| 16 | Other | the short list in the instructions — ⛔ not a catch-all |
+| **17** | **Total** | → **Form 1040 line `12e`** |
+| 18 | **Electing to itemize anyway** | a checkbox. It exists for the case where itemizing less **helps a state return** — ⓘ of no use to a Florida-only client |
+
+### 🔑 The interaction a home office creates — and it is easy to double-deduct
+
+**When the client claims a home office, the home's real-estate taxes and mortgage interest are SPLIT.**
+Form 8829 takes the business-use share; Schedule A takes the rest, and Form 8829 even has lines named
+**"Excess mortgage interest"** (line 16) and **"Excess real estate taxes"** (line 17) for the part that
+does not fit its own limit.
+
+✅ **So reconcile the two forms, once, in the working paper:** the whole of box 1 and the whole of the
+property-tax bill must appear **exactly once** across Form 8829 and Schedule A. ⛔ **Neither form knows
+what the other one claimed, and the software will not tell you.**
+
+### 🛀 Two more traps
+
+**① THE STANDARD DEDUCTION IS NOT ALWAYS THE FULL AMOUNT.** Form 1040 lines **12a–12d** reduce it — someone
+claimable as a dependent, a spouse itemizing on a separate return, a dual-status alien — and **add** to it
+for age 65 and blindness. ⚠️ **Read 12a–12d before comparing the two totals**, or the comparison is
+against the wrong number.
+
+**② ⛔ A MARRIED COUPLE FILING SEPARATELY CANNOT SPLIT THE CHOICE.** If one spouse itemizes, the other's
+standard deduction is **zero**. It is on Form 1040 line 12b, and it is how a "we'll each do what suits us"
+plan produces two bad returns.
 
 ---
 
