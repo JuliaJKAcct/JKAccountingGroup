@@ -1386,13 +1386,18 @@ document — the one that is kept rather than worked from.**
   before seeing it is there, including the whole premium-tax-credit chain and the bottom line. **The
   model is now validated against a return it predicted in advance**, which is the strongest check this
   engagement has run.
-- ⚖️ **THE VEHICLE QUESTION IS ANSWERED: she states the vehicle's first business use was 2025**, which
-  opens the mileage election, so the method as keyed stands and the longest-running block on this
-  return is cleared. ⚠️ **Two riders travel with it, and both are recorded rather than resolved:** it
-  entails that the fuel deducted on the prior-year return was not this car's *(a reading the paper had
-  already offered, and nothing in the file settles which)*; and **it is not recorded whether the fact
-  is the CLIENT's answer or her own determination** — which matters because the evidence document
-  exists to tell a future reader whose number to go back to. ✏️ **One line to confirm.**
+- ⚖️ **THE VEHICLE GATE IS ANSWERED: she states the vehicle's first business use was 2025**, which
+  opens the mileage election. ⚠️ **That answers the GATE, not the METHOD** — and the comparison it
+  fires is now priced: **the method as keyed wins on both ownership branches, so no figure on this
+  return changes, and the real stake turns out to be a later year rather than this one, because the
+  alternative would have closed the mileage rate for that vehicle permanently.** 🔑 **Three riders
+  are recorded rather than resolved:** it entails that the fuel deducted on the prior-year return was
+  not this car's — ✅ **and that is answerable from a document the firm already holds: one page of the
+  prior-year return has never been extracted and is exactly where the form that would settle it would
+  sit**; whether the fact is the CLIENT's answer or her own determination is not recorded, which
+  matters because the evidence document exists to tell a future reader whose number to go back to;
+  and the depreciation comparison rests on two estimates rather than the real purchase figures.
+  ✏️ **One line to confirm the first, one cheap read to settle the second.**
 - 🔴 **AND ONE THING SHE BELIEVES IS FIXED IS NOT:** the print set still opens with a payment voucher
   on a return that claims a refund. ⛔ **It is a DEFECT, so it is deliberately NOT in the evidence
   document** — a defect does not become an assumption by being written down — **and it must come off
