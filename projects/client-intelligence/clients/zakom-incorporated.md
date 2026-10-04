@@ -1766,6 +1766,29 @@ standing step in the firm's tax-return skill, and the distinction it turns on is
 client's file too: a section that DIAGNOSES something should keep the old figure, because that is the record —
 a section that INSTRUCTS may not, because there a stale figure is a wrong keystroke.
 
+**2026-10-02 — the owner's own Double record holds the property documents, and nobody had ever looked.** Lilian
+asked whether Oleg had uploaded a Form 1098 for property taxes. The company's record has 124 files and no 1098
+among them — but **his personal record does: two Form 1098s and a Broward County real-estate annual bill for
+2023**, plus a property-closing package, a certificate of title, a certificate of sale, a promissory note in
+both their names, both prior individual organizers, a 1099-NEC in his name and the 2025 individual extension.
+All 63 files on that record carry the TaxDome migration date, so they came across with the client and have sat
+there since. **The gap was structural rather than anyone's oversight:** the return's document register covers
+the company only, and the weekly sweep of 2026-09-26 ran notes, contacts, properties and the activity log on the
+personal record but never its file library. **The transferable rule, now in the working paper:** on a
+closely-held company, the document register has to cover the OWNER's record too — TaxDome filed a client's
+company and personal matters together under the owner's profile, so the house, the mortgage and the county all
+land there, and those are exactly the questions a company return asks whenever a home office is in play.
+**What it changes and what it does not:** the firm had been routing *"were the two county payments the property
+tax on the house, or vehicle registrations?"* to the client as a question no held document could answer — that
+clause is withdrawn. The 2023 bill does not give the current-year amount, but it establishes that the county
+issues this shareholder a real-estate bill at all, which is the premise the vehicle-registration reading denies,
+and it names the parcel, so the current-year bill is a public look-up instead of a question to him. **It earns
+no deduction, though:** the property tax and the mortgage interest are the shareholder's own, and they reach the
+company return only through the home office, which is still Julia's open decision — and the separate question of
+the company paying the owner's personal property tax from the company account being a distribution is untouched.
+**Nothing was opened** — file names only, which is the standing default; reading any of them is a cross-client
+read of non-return documents and needs Lilian's or Julia's explicit ask.
+
 ## 7. Links
 
 - **Double client:** [`Zakom Incorporated` — id `710612`](https://app.doublehq.com/close?cid=710612)
@@ -1773,6 +1796,6 @@ a section that INSTRUCTS may not, because there a stale figure is a wrong keystr
 - **Double 2025 organizer:** [`JK 2025 Business Tax Organizer - Zakom Incorporated` — id `147762`](https://app.doublehq.com/clients/710612/portal/organizers/147762)
 - **Double 2025 tax project:** [`2025 Taxes` — id `219303`](https://app.doublehq.com/tax-return?cid=710612&projectId=219303)
 - **Google Drive folder (sensitive vault):** ✅ **LOCATED 2026-09-26 (first full sweep).** Two folders exist, both owned by `julia@jkaccountinggroup.com` — **current:** [`Zakom Incorporated`](https://drive.google.com/drive/folders/1ENPq3PL7Ck4yXt0lQwCrXSS5m1Z7ScI2) (created 2026-05-09, the post-TaxDome-migration one), and a **legacy** pre-migration folder, [`ZAKOM Incorporated`](https://drive.google.com/drive/folders/1rU1DHfLJF38dIQdDAR3ng8M47A8k9G6M) (created 2023-02-13, last modified 2023-09-11) — not yet checked against each other for duplicate/unique content, so treat both as live vaults for now
-- **Related clients:** [`Oleg Zakala & Milana Podrugina`](https://app.doublehq.com/close?cid=710652) — Double `710652`, the owner's personal record; no CI file yet
+- **Related clients:** [`Oleg Zakala & Milana Podrugina`](./oleg-zakala-milana-podrugina.md) — Double `710652`, the owner's personal record; CI file created 2026-10-01
 - **Working papers:** [`tax-returns/zakom-incorporated/2025-form-1120s.md`](../../tax-returns/zakom-incorporated/2025-form-1120s.md) — 2025 Form 1120-S, in progress
 - **Related SOPs:** [`form-1120s-preparation.md`](../../sops/form-1120s-preparation.md) — the return method for this client's form

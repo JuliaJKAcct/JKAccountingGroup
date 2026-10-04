@@ -3251,7 +3251,7 @@ are not obvious.**
    entries the row names.** 🔑 **If it still does not close, the row is missing an entry — and where the
    missing entry is a presentation choice, SAY the fix cannot be completed without the signer.**
 
-#### ⑥-ter 🛑 NEVER CALL A FORM OR A STATEMENT **ABSENT** WITHOUT HAVING READ EVERY PAGE
+#### ⑥-ter 🛑 NEVER CALL A FORM OR A STATEMENT **ABSENT** — OR **PRESENT** — WITHOUT HAVING READ EVERY PAGE
 
 ⛔ **A keyword search of an extract is evidence about the SEARCH, not about the return.**
 🔑 **[`method.md`](../../../projects/pre-return-review/method.md) rule 1b applies to the firm's own output
@@ -3268,6 +3268,37 @@ statements — there is no elections page."*** ⛔ **Page 20 WAS the elections p
 told twice she had to build a statement that was already attached, and a FOLLOW-UPS row carried the false
 finding.** ⚠️ **§1C is the other half of it: pages 1–19 were read for specific questions and page 20 was
 never opened at all.**
+
+🔵 **AND THE MIRROR CASE, WHICH IS THE ONE THAT ACTUALLY PUT FOUR WRONG FINDINGS IN FRONT OF A
+PERSON: NEVER CALL A FORM *PRESENT* OFF A NAME MATCH EITHER.** ⛔ **A form's number and its title appear
+all over a filed return in places that are not that form**, so a name search over-reports exactly as
+readily as it under-reports — and an over-report is worse, because it invents an income source, a
+carryforward or an entity that does not exist.
+
+🛑 **THE FOUR TRAPS, each of which produced a false *"present"* on ONE return** *(a 43-page filed
+1040, 2026-10-04)*:
+
+| The trap | What the search saw | What it actually was |
+|---|---|---|
+| **① A CROSS-REFERENCE PRINTED ON ANOTHER FORM** | `Form 8962`, `Schedule A (Form 8936)`, `Form 2441`, `Schedule 8812`, `Form 8582` | **printed LINE LABELS on Schedule 2, Schedule E and Form 1040.** ⚠️ **Not one of those five forms was in the return**, and two of them were read as *"the client had Marketplace coverage"* and *"the client claimed a clean-vehicle credit"* |
+| **② AN *AMT* COPY OF A FORM** | two Form 7203 header blocks, each naming an S corporation | **ONE corporation, with a regular and an AMT Form 7203.** 🔑 **The header reads `Form 7203AMT` and nothing else distinguishes them** — the title, the OMB number and the entity name are identical ⇒ it read as **a second S corporation**, i.e. a whole missing income source |
+| **③ A FORM PRINTED AND COMPUTING ZERO** | Form 172, *Net Operating Losses*, three pages of it | **line 24 = `0` and Part II all zeros.** ⇒ it read as **an NOL carryforward**, the exact hidden carryover §4A warns about, when there is **nothing to carry** |
+| **④ A PART PRINTED AND EMPTY** | Schedule E Part III, *Income or Loss From Estates and Trusts*, heading present | **line 37 = `0`.** ⇒ it read as **a trust or estate K-1** to go and chase |
+
+✅ **THE GUARD, and it is the same minute ① costs: IDENTIFY EVERY PAGE BY A LINE LABEL THAT EXISTS ONLY
+ON THAT FORM, and write the page-by-page inventory down.** **A form's title is not enough** — titles are
+quoted on other forms and shared between a form and its AMT copy.
+
+🔑 **AND SEPARATE THE TWO QUESTIONS, because they have different evidence:**
+
+- **Is the form THERE?** → a **line label unique to it** *(`Area used regularly and exclusively` for Form
+  8829; `Physical address of each property` for Schedule E **page 1**; `Stock basis at the beginning of the
+  corporation's tax year` for Form 7203)*.
+- **Was it USED?** → **a non-zero figure on a line only that form has.** ⛔ **Presence is not use**, and
+  three of the four traps above are forms that were genuinely present and did nothing.
+
+☑️ **The page inventory is itself a deliverable** — it belongs in the working paper beside §1C's
+transcription, because the next session reads the table instead of re-opening the client's document.
 
 #### ⑦ ☑️ CLOSE THE REVIEW BY ANSWERING THE SECOND HALF OF HER QUESTION — *"¿qué podemos adelantar?"*
 
