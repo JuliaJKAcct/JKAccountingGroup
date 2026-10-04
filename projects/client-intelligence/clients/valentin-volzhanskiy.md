@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03 *(the keyed 2025 draft audited line by line — it computes correctly, and the vehicle method rests on a question asked once and never answered; the worksheet was reissued)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-04 *(the tolls figure traced to the client's own P&Ls step by step; an asserted deletion withdrawn — the firm cannot see which field fed that line and now says so)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1350,6 +1350,32 @@ audit of her own work, not a briefing, and it began by transcribing the whole 17
   NAME is an ordinal slipped the pattern entirely, which in South Florida is most addresses.** ✅ Fixed
   with regression tests the same day; re-running it on the same document now masks what it missed.
   ⛔ **The address is not written in the repo, the worksheet or anywhere else.**
+
+### 2026-10-04 — the tolls figure traced to its source, and a cause the firm had asserted is withdrawn
+
+🗣️ **Lilian asked where the tolls-and-parking figure on the catering Schedule C came from, whether it
+had ever been keyed, and said she did not remember deleting it.** ✅ **She was right on both counts
+that mattered.**
+
+- ✅ **IT WAS KEYED, and read off the return twice** — the line-by-line tie of his own P&Ls to the
+  return recorded it, and the later read of the filed PDF found it again. ⛔ **She did not imagine it.**
+- 🔑 **THE FIGURE IS ENTIRELY HIS, in three steps that are all his own**: his raw tolls-and-parking
+  pool, times **his own** asserted business-use percentage, split by **his own** mileage ratio between
+  the two activities — and the two lines on his two profit-and-loss drafts add back to that pool to
+  the cent. ⛔ **No part of it is a firm computation**, which is why it is the number to key and not
+  the slightly different one the transaction package would produce.
+- 🛑 **AND THE CORRECTION: the paper had said the mileage was "typed over" it. That asserted a human
+  deletion the firm cannot see, and it is struck.** 🔑 **What the evidence actually supports is narrower: the
+  tolls survived on the other Schedule C form, which is equally consistent with the two figures
+  having sat in different kinds of field and with a change confined to one form — what it rules out
+  is a change applied to both.** ⚠️ **No read the firm has recorded shows which
+  field fed that line — and one of the earlier print sets was never gone through page by page, so it
+  has not been ruled out.** ☑️ **So the first step is to re-read those unread pages, and only then a
+  check on her own screen; whoever keys it writes the real route down.**
+- ⛔ **A second thing was struck with it: the fix instruction had named a software screen this firm has
+  never recorded.** ✅ **Replaced with a route copied from the firm's own working example — the other
+  Schedule C already does it correctly.**
+- 💵 **No figure on the return moved.** 📄 **Working paper §29; the keystroke stays where it was.**
 
 ### Outstanding items (CI-only — never in the SOP)
 
