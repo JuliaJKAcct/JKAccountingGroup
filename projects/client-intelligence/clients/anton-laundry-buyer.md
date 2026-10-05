@@ -259,6 +259,64 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-05 (later — JULIA'S TWO QUESTIONS ON THE REPORT, AND THE FINAL LOI READ IN FULL) — ❓ **JULIA: "What makes
+  you think that that delivery and commercial laundry is not part of the sale? Can you point out to me exactly
+  why?"** 🛑 **Nothing supports it, and the FINAL LOI says the opposite.** The claim traced back to two notes in this
+  file (2026-10-01 equipment binder: *"whose inclusion in this sale is still unanswered"*; 2026-10-02 bank
+  statements: *"bears directly on whether that entity is in this sale"*), both written after the LOI had already
+  been read and both wrong. **Corrected in the report (section 6 item Two, now about the delivery business's two
+  customers, its occupancy of Select and an unexplained August 2024 deposit) and marked at both notes below.**
+  ❓ **And JULIA on summary finding 06: "you're talking about labor, and then all of a sudden you start talking
+  about property tax out of the blue."** ✅ Right: the property-tax sentence was only a timing correction to the
+  margin trend (payments fall November to March, so 2025 carries two years and 2023 too little) and has nothing to
+  do with labor. **Finding 06 is now labor only** (must-pay labor share, the unattended benchmark, the staff at
+  their own rates, and the 2023→2025 labor rise whose family share only the 2023 W-2s can settle); the margin trend
+  and its property-tax basis stay in section 4. Delivered as `…-2026-10-05-v4.pdf` (44 pp, all links re-verified).
+  📄 **`LOI_Olga_Stenin_12M_Sep2026_FINAL.pdf` (Drive, folder LAUNDRY PURCHASE, uploaded 2026-09-11) — TRANSCRIBED
+  IN FULL → here.** It is an **unsigned copy** (every signature and date line blank), so it proves the agreed text,
+  not the date of acceptance.
+  - **Dated** September 8, 2026 · **prepared by** Kevin T. Riordan, P.A., Merritt Realty Corporation (seller's broker, ¶14).
+  - **Buyer:** Olga Stenin and/or assigns. **Sellers (collectively "Seller"):** Bayshore Laundromat, Inc. (FL
+    corporation) · Samoset Florida, Inc. (FL corporation) · **Lemon Squeeze Commercial Laundry, LLC (FL LLC)**. All
+    three signed for by Bruce R. Nye, Sr. (President) and Sonja L. Nye (Secretary/Treasurer).
+  - **¶1 Assets:** (a) fee simple title to all five parcels with improvements; (b) **all SIX operating businesses —
+    Samoset/15th Street, Select Coin, Palmetto Coin, Palmetto Wash & Fold, Soap Opera (Ruskin) AND Lemon Squeeze
+    ("Lemon Squeezy"), "a wash-dry-fold and delivery business operating from the Select location"** — each with
+    furniture, fixtures, equipment, machinery, **vehicles**, software, inventory, supplies, trade names, phone
+    numbers, websites, customer lists and accounts, transferable licenses and permits, and goodwill. **Real estate
+    and businesses are one package; neither closes without the other.**
+  - **Parcel table (owner of record):** 3119 15th St E, Bradenton — Bayshore · 105 21st Ave W, Bradenton — Bayshore ·
+    **706** 9th St W, Palmetto — Samoset Florida · 1527 8th Ave W, Palmetto — Samoset Florida · 329 N US Highway 41,
+    Ruskin — Samoset Florida. ⚠️ The LOI says **706**, the county parcel card says **702** — still open; the deed settles it.
+  - **¶2 Price:** all cash at closing; the split between real estate and business assets, and among the properties
+    and businesses, to be **mutually agreed with both sides' tax advisors before closing**.
+  - **¶3 Deposit (binding):** into escrow within 3 business days of mutual acceptance; **returned if the buyer
+    terminates in writing on or before the end of the due-diligence period; NON-REFUNDABLE after it** (released to
+    seller if the buyer fails to close), except seller default or failure to deliver insurable title; applied to
+    the price at closing.
+  - **¶4** no financing contingency; updated proof of funds with acceptance. **¶5** buyer's attorney drafts an AS-IS
+    real-estate contract and an Asset Purchase Agreement within 7 days, signed within 15; cross-defaulted, closing together.
+  - **¶6 Due diligence: 30 days from mutual acceptance**; records through the broker. **¶7 Closing: within 15 days
+    after due diligence ends**; title company chosen and paid by the buyer; time of the essence.
+  - **¶8** warranty deed and bill of sale, **free and clear of liens, open or expired permits, encumbrances and
+    equipment financing, paid from the seller's proceeds**; buyer pays title and escrow, seller the deed stamps;
+    taxes and utilities prorated at closing; **seller responsible for sales tax as of the closing day**.
+  - **¶9** non-compete: seller and principals, 5 years, 50 miles from each of the five locations (laundromat,
+    wash-dry-fold, commercial laundry). **¶10** 4 weeks on-site training plus 4 weeks phone support, no extra cost.
+  - **¶11** buyer intends to offer employment to substantially all employees, **including the general manager**;
+    no obligation to keep anyone. **¶12** ordinary course until closing; no new leases, material contracts or
+    staffing changes without the buyer's consent.
+  - **¶13 (binding)** backup offers allowed only as contingent; off the market when due diligence ends. **¶14
+    (binding)** Merritt Realty represents the seller, paid by the seller. **¶15** confidential; non-binding except
+    ¶3, 13, 14 and 15; Florida law. **¶16** void unless accepted by all parties by **5:00 pm ET, September 10, 2026**.
+  🔴 **What it changes:** ① **Lemon Squeeze is in the sale** — settled by ¶1 and the seller block. ② **The deposit
+  terms recorded on 2026-09-12 below ("non-refundable in all events … closing five days later") were an EARLIER
+  DRAFT; the FINAL returns the deposit for a termination inside the due-diligence period and allows 15 days to
+  close.** ③ **The clock:** acceptance had to happen by September 10 for this LOI to stand, so **if it was accepted,
+  the 30-day due-diligence period — and the deposit's refundability — ends by about October 10, 2026.** The
+  acceptance date itself is still not confirmed in anything we hold. ④ ¶8's *"open or expired permits"* puts the
+  15th Street open permit on the seller to clear. ⑤ ¶11 already contemplates offering the general manager
+  employment; the report's retention-agreement point stands, since there is no written agreement today.
 - 2026-10-05 (the buyer report, rewritten through the humanizer and its summary linked to the evidence) — 📄
   **JULIA: "on the page where we have the findings (I think it's called the position), cite evidence that will
   support these claims … link to it so that I can click on it and it'll take me to the page in the PDF"**, then
@@ -1036,7 +1094,7 @@ the actual details.
   2026 above 2025. **Card settlements account for little of it** *(+17.6%)*: the growth is **cheque deposits and ACH
   receipts from two named commercial counterparties — `Well & Good Prop`, and `PMI SWFL STR Ops` starting only in May
   2026** *(a short-term-rental operator)*. 🔑 **That is a different business with different economics and a
-  customer-concentration question of its own, and it bears directly on whether that entity is in this sale.**
+  customer-concentration question of its own, and it bears directly on whether that entity is in this sale.** ⛔ **CORRECTED 2026-10-05: the FINAL LOI (¶1 and the seller block) includes Lemon Squeeze in the sale — see the 2026-10-05 entry.**
   🔴 **ONE LARGE UNEXPLAINED ITEM: a quarter-of-a-million-dollar deposit into Lemon Squeezy in August 2024**, which
   the broker excludes from operating deposits and does not explain. **That entity's capital spend that year was of
   the same order.** Asked.
@@ -1272,7 +1330,7 @@ the actual details.
   at 1.20× the mean against a Select / Palmetto W&F pair below it — unresolved, and on the open-items list.**
   🆕 **④ FOUR THINGS IN IT THAT ARE NOT ABOUT MACHINES AT ALL.** ⓐ **TWO DELIVERY VANS are listed on SELECT's
   equipment list — a Bayshore Laundromat store — attributed to LEMON SQUEEZY**, a separate EIN whose inclusion in
-  this sale is still unanswered; the vans now sit on both sides of that question. ⓑ **THREE CENTS CARD SYSTEMS ARE
+  this sale is still unanswered *(⛔ CORRECTED 2026-10-05: the FINAL LOI includes it, vehicles expressly)*; the vans now sit on both sides of that question. ⓑ **THREE CENTS CARD SYSTEMS ARE
   BOUGHT AND STILL IN BOXES** at Samoset, Select and Palmetto Coin — an asset in the sale with no revenue attached,
   on no depreciation schedule we hold, and with no invoice in the file. ⓒ **RUSKIN'S LIST INCLUDES TWO RESIDENTIAL
   APARTMENTS' APPLIANCES** (A/C, heat, fridge, stove, microwave, washer/dryer), so the buyer is acquiring landlord
@@ -2462,7 +2520,7 @@ the actual details.
   80 of 309** — Section 5, the tax returns, begins at page 190 and was **not** in what could be
   read, so whether the returns are actually in hand is unconfirmed (the file is named
   *"Laundry Financials 1"*, which suggests a part 1 of several). 🛑 **Two terms of the LOI that
-  change what the diligence is FOR:** the deposit is **non-refundable in all events** except seller
+  change what the diligence is FOR:** *(⛔ SUPERSEDED 2026-10-05 by the FINAL LOI: refundable for a termination inside due diligence, non-refundable after it, 15 days to close — see the 2026-10-05 entry)* the deposit is **non-refundable in all events** except seller
   default or failure to deliver insurable title — **termination during or after due diligence does
   not return it** — and there is **no financing contingency**; so our work informs price and
   allocation, it cannot recover the deposit. **Due diligence runs 30 days from mutual acceptance,
