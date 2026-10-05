@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03 *(first full-historical Client-Intelligence sweep — Ping/Double/Gmail/Drive read end to end; no new client response since 2026-09-24, both chased items still open)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-04 *(the tolls keyed and verified against a predicted model; the vehicle's first-business-use question answered, with its two riders recorded; the final evidence worksheet built and delivered)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1308,6 +1308,111 @@ more question, not a finding against him.**
 - ⚠️ **Source discrepancy, unsettled:** the section above records his email reply of 2026-10-01 (mileage, areas, 1099 answer). **A search of Julia's Gmail, bounded after 2026-09-26, on 2026-10-03, on his name and address and on "mileage / odometer / Tucson / home office / 1099", did not find that email or any other message from him** — so it was presumably received in another mailbox (e.g. Lilian's) or by another route. The content is taken from the working paper/session, not re-verified from Julia's Gmail.
 - **Tips question to the employer:** a search of Gmail (bounded after 2026-09-26) found no outreach — still not put to anyone, **20 days since identified (2026-09-13)**. Mileage is no longer open (answered 2026-10-01, not substantiated — see above).
 
+### 2026-10-03 (later) — the keyed draft was audited, and the vehicle method is the open question
+
+🔑 **Lilian handed back the draft she had keyed and asked whether there were errors** — so this was an
+audit of her own work, not a briefing, and it began by transcribing the whole 17-page return.
+
+- ✅ **The draft is internally consistent and arithmetically correct.** Every total foots and every
+  cell of Form 8962 was re-derived independently and ties. **This is not a return full of mistakes.**
+- 🆕 **She keyed the STANDARD MILEAGE RATE for the vehicle**, with a placed-in-service date of
+  1 January 2025 on both Schedule C forms. **That turns the return from a balance due into a refund.**
+- 🔴 **It rests on a question asked once on 2026-09-20 and never answered** — whether the fuel on his
+  2024 return was this same car's. **The 2024 return carried one Schedule C reading `catering`, and the
+  catering form's "started in 2025" box is correctly UNCHECKED**, so the activity pre-dates 2025. If
+  the car was in business use then, the rate is barred for this car permanently. ⚖️ **The method choice
+  is Lilian's and Julia's.**
+- 🔴 **Two things are simply wrong and both are mechanical:** the print set still opens with a payment
+  voucher on a return that claims a refund, and the catering form's vehicle line lost the tolls and
+  parking that were already on it *(credit repair kept its share, which is how the asymmetry was
+  proven)*.
+- ⚠️ **His "I did not issue any 1099s" answers the wrong box.** It settles the line asking whether the
+  firm WILL file them; the line above asks whether the payments would have REQUIRED one, which is a
+  legal test nobody can run until he says how many people shared the subcontractor work.
+- ⚠️ **The written-mileage-log box says Yes on both forms**, and what the firm actually holds is his own
+  approximations with the business share back-solved from an asserted percentage. **Never asked whether
+  a log exists.**
+- 🔁 **The self-employed health insurance deduction was ALREADY SETTLED, and it is at zero BY DECISION,
+  not by omission.** 🛑 **An earlier draft of this entry said it had "never been considered at all".
+  That was wrong:** the deduction was computed in full in September, with the publication's own
+  worksheets run, and its eligibility gate — the question to his four employers — was **closed by
+  Lilian on 2026-09-24, dropped rather than answered.** ⚠️ **The one genuinely new fact: on the
+  actual-expense branch the dropped question is worth roughly ten times what it was worth at the
+  income it was dropped at**, which is a fact she did not have when she dropped it.
+  ⚖️ **Hers to re-open or not; ⛔ no session may.** ⓘ *Caught by the second review round of PR #503 —
+  the working paper had been corrected and this mirror had not, which is the surface Julia reads.*
+- 🆕 **Catering's zero-revenue loss grew by an order of magnitude** when the mileage went in. The
+  question is the one that was already open; the amount riding on it is ten times what it was.
+- 📊 **The worksheet was reissued** *(see §7 Links)*. 📄 **Working paper §28 is the full audit; §27J is
+  the credit-card-interest trail, written the same day after she asked where that figure came from.**
+- 🔒 **AND A CONTROL FAILED AND WAS FIXED:** the firm's document redactor passed his home street
+  address through in clear while masking the firm's own. **The cause was structural — a street whose
+  NAME is an ordinal slipped the pattern entirely, which in South Florida is most addresses.** ✅ Fixed
+  with regression tests the same day; re-running it on the same document now masks what it missed.
+  ⛔ **The address is not written in the repo, the worksheet or anywhere else.**
+
+### 2026-10-04 — the tolls figure traced to its source, and a cause the firm had asserted is withdrawn
+
+🗣️ **Lilian asked where the tolls-and-parking figure on the catering Schedule C came from, whether it
+had ever been keyed, and said she did not remember deleting it.** ✅ **She was right on both counts
+that mattered.**
+
+- ✅ **IT WAS KEYED, and read off the return twice** — the line-by-line tie of his own P&Ls to the
+  return recorded it, and the later read of the filed PDF found it again. ⛔ **She did not imagine it.**
+- 🔑 **THE FIGURE IS ENTIRELY HIS, in three steps that are all his own**: his raw tolls-and-parking
+  pool, times **his own** asserted business-use percentage, split by **his own** mileage ratio between
+  the two activities — and the two lines on his two profit-and-loss drafts add back to that pool to
+  the cent. ⛔ **No part of it is a firm computation**, which is why it is the number to key and not
+  the slightly different one the transaction package would produce.
+- 🛑 **AND THE CORRECTION: the paper had said the mileage was "typed over" it. That asserted a human
+  deletion the firm cannot see, and it is struck.** 🔑 **What the evidence actually supports is narrower: the
+  tolls survived on the other Schedule C form, which is equally consistent with the two figures
+  having sat in different kinds of field and with a change confined to one form — what it rules out
+  is a change applied to both.** ⚠️ **No read the firm has recorded shows which
+  field fed that line — and one of the earlier print sets was never gone through page by page, so it
+  has not been ruled out.** ☑️ **So the first step is to re-read those unread pages, and only then a
+  check on her own screen; whoever keys it writes the real route down.**
+- ⛔ **A second thing was struck with it: the fix instruction had named a software screen this firm has
+  never recorded.** ✅ **Replaced with a route copied from the firm's own working example — the other
+  Schedule C already does it correctly.**
+- 💵 **No figure on the return moved.** 📄 **Working paper §29; the keystroke stays where it was.**
+
+### 2026-10-04 (later) — the return is substantially done, and it now has a FINAL record
+
+🔑 **Lilian keyed the missing tolls, settled the vehicle question, and asked for the final evidence
+document — the one that is kept rather than worked from.**
+
+- ✅ **The tolls are on the return.** Read off a fresh draft: every figure the firm had projected
+  before seeing it is there, including the whole premium-tax-credit chain and the bottom line. **The
+  model is now validated against a return it predicted in advance**, which is the strongest check this
+  engagement has run.
+- ⚖️ **THE VEHICLE GATE IS ANSWERED: she states the vehicle's first business use was 2025**, which
+  opens the mileage election. ⚠️ **That answers the GATE, not the METHOD** — and the comparison it
+  fires is now priced: **the method as keyed wins on both ownership branches, so no figure on this
+  return changes, and the real stake turns out to be a later year rather than this one, because the
+  alternative would have closed the mileage rate for that vehicle permanently.** 🔑 **Three riders
+  are recorded rather than resolved:** it entails that the fuel deducted on the prior-year return was
+  not this car's — ✅ **and that is answerable from a document the firm already holds: one page of the
+  prior-year return has never been extracted and is exactly where the form that would settle it would
+  sit**; whether the fact is the CLIENT's answer or her own determination is not recorded, which
+  matters because the evidence document exists to tell a future reader whose number to go back to;
+  and the depreciation comparison rests on two estimates rather than the real purchase figures.
+  ✏️ **One line to confirm the first, one cheap read to settle the second.**
+- 🔴 **AND ONE THING SHE BELIEVES IS FIXED IS NOT:** the print set still opens with a payment voucher
+  on a return that claims a refund. ⛔ **It is a DEFECT, so it is deliberately NOT in the evidence
+  document** — a defect does not become an assumption by being written down — **and it must come off
+  before anything goes to the client.** It is the only page he reads as an instruction.
+- 📗 **THE FINAL WORKSHEET IS BUILT AND DELIVERED — twelve tabs, and it is a different document from
+  the working one: not a single reference to any earlier version of anything.** 🔑 **Her bar for it
+  was raised from "complete" to "REPLICABLE": somebody holding nothing but that file should be able
+  to rebuild the whole return.** **So it carries the step-by-step arithmetic for every figure the
+  firm calculated, a tag on each one saying whether the client stated it, we read it, we computed it,
+  we assumed it or somebody decided it, every expense he claimed that is deliberately NOT on the
+  return and why, and a stated self-test naming the five figures actually checked against the
+  document alone.** 🔒 **It is saved in Double on the client, in English, and never committed.**
+- 🔁 **AND THE BAR IS NOW FIRM POLICY, not a one-off** — it is written into the tax-return skill, so
+  every return the firm prepares from here leaves the same kind of evidence.
+
 ### Outstanding items (CI-only — never in the SOP)
 
 
@@ -1434,3 +1539,8 @@ more question, not a finding against him.**
   figures **contradict** the live one rather than merely lagging it. 🔗 **The working paper's §24 has
   the whole account.** ⓘ *Neither file is in the repo — they carry client figures and are handed over,
   never committed.*
+  🆕 **REISSUED 2026-10-03.** The LIVE file was rebuilt from the draft Lilian keyed, with eleven tabs
+  *(`Read me` · `Fix the keyed return` · `The return` · `Computations` · `Method comparison` ·
+  `Vehicle asset` · `Client answers` · `Sources` · `Decisions` · `Open items` · `Entry order`)*.
+  ⚠️ **Same filename on purpose — it replaces the previous issue rather than sitting beside it**, which
+  is the mistake the discarded file was. 🔗 **Working paper §28.**

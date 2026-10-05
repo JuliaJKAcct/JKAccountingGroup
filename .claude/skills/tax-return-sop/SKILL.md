@@ -3251,7 +3251,7 @@ are not obvious.**
    entries the row names.** 🔑 **If it still does not close, the row is missing an entry — and where the
    missing entry is a presentation choice, SAY the fix cannot be completed without the signer.**
 
-#### ⑥-ter 🛑 NEVER CALL A FORM OR A STATEMENT **ABSENT** WITHOUT HAVING READ EVERY PAGE
+#### ⑥-ter 🛑 NEVER CALL A FORM OR A STATEMENT **ABSENT** — OR **PRESENT** — WITHOUT HAVING READ EVERY PAGE
 
 ⛔ **A keyword search of an extract is evidence about the SEARCH, not about the return.**
 🔑 **[`method.md`](../../../projects/pre-return-review/method.md) rule 1b applies to the firm's own output
@@ -3268,6 +3268,37 @@ statements — there is no elections page."*** ⛔ **Page 20 WAS the elections p
 told twice she had to build a statement that was already attached, and a FOLLOW-UPS row carried the false
 finding.** ⚠️ **§1C is the other half of it: pages 1–19 were read for specific questions and page 20 was
 never opened at all.**
+
+🔵 **AND THE MIRROR CASE, WHICH IS THE ONE THAT ACTUALLY PUT FOUR WRONG FINDINGS IN FRONT OF A
+PERSON: NEVER CALL A FORM *PRESENT* OFF A NAME MATCH EITHER.** ⛔ **A form's number and its title appear
+all over a filed return in places that are not that form**, so a name search over-reports exactly as
+readily as it under-reports — and an over-report is worse, because it invents an income source, a
+carryforward or an entity that does not exist.
+
+🛑 **THE FOUR TRAPS, each of which produced a false *"present"* on ONE return** *(a 43-page filed
+1040, 2026-10-04)*:
+
+| The trap | What the search saw | What it actually was |
+|---|---|---|
+| **① A CROSS-REFERENCE PRINTED ON ANOTHER FORM** | `Form 8962`, `Schedule A (Form 8936)`, `Form 2441`, `Schedule 8812`, `Form 8582` | **printed LINE LABELS on Schedule 2, Schedule E and Form 1040.** ⚠️ **Not one of those five forms was in the return**, and two of them were read as *"the client had Marketplace coverage"* and *"the client claimed a clean-vehicle credit"* |
+| **② AN *AMT* COPY OF A FORM** | two Form 7203 header blocks, each naming an S corporation | **ONE corporation, with a regular and an AMT Form 7203.** 🔑 **The header reads `Form 7203AMT` and nothing else distinguishes them** — the title, the OMB number and the entity name are identical ⇒ it read as **a second S corporation**, i.e. a whole missing income source |
+| **③ A FORM PRINTED AND COMPUTING ZERO** | Form 172, *Net Operating Losses*, three pages of it | **line 24 = `0` and Part II all zeros.** ⇒ it read as **an NOL carryforward**, the exact hidden carryover §4A warns about, when there is **nothing to carry** |
+| **④ A PART PRINTED AND EMPTY** | Schedule E Part III, *Income or Loss From Estates and Trusts*, heading present | **line 37 = `0`.** ⇒ it read as **a trust or estate K-1** to go and chase |
+
+✅ **THE GUARD, and it is the same minute ① costs: IDENTIFY EVERY PAGE BY A LINE LABEL THAT EXISTS ONLY
+ON THAT FORM, and write the page-by-page inventory down.** **A form's title is not enough** — titles are
+quoted on other forms and shared between a form and its AMT copy.
+
+🔑 **AND SEPARATE THE TWO QUESTIONS, because they have different evidence:**
+
+- **Is the form THERE?** → a **line label unique to it** *(`Area used regularly and exclusively` for Form
+  8829; `Physical address of each property` for Schedule E **page 1**; `Stock basis at the beginning of the
+  corporation's tax year` for Form 7203)*.
+- **Was it USED?** → **a non-zero figure on a line only that form has.** ⛔ **Presence is not use**, and
+  three of the four traps above are forms that were genuinely present and did nothing.
+
+☑️ **The page inventory is itself a deliverable** — it belongs in the working paper beside §1C's
+transcription, because the next session reads the table instead of re-opening the client's document.
 
 #### ⑦ ☑️ CLOSE THE REVIEW BY ANSWERING THE SECOND HALF OF HER QUESTION — *"¿qué podemos adelantar?"*
 
@@ -3617,7 +3648,7 @@ worksheet have OPPOSITE jobs, and trying to make one file do both produces a fil
 | | **§4D — THE WORKING WORKBOOK** | **§4I — THE FINAL WORKSHEET** |
 |---|---|---|
 | **Who reads it** | **The preparer, at the keyboard, while the return is being built** | **Whoever opens this client in a FUTURE YEAR — the reviewer, or a preparer who was never here** |
-| **When it is built** | **Every day the return moves** | 🔑 **ONCE — when the return is finished and about to go to the client** |
+| **When it is built** | **Every day the return moves** | 🔑 **ONCE — when the return is finished and about to go to the client.** ⚠️ *One exception, stated under `WHEN IT IS BUILT`: Lilian may call for it while items are open.* |
 | **What it is FOR** | **What to CHANGE, and what is left to do** | **What the return IS, and WHY** |
 | **Version history** | ✅ **ESSENTIAL** — *"it read 20,000 until 30 September"* **is how she finds her place** | 🛑 **BANNED** |
 | **Open items** | ✅ **The spine of it** | ⚠️ **Only those that SURVIVED into the filed return, written as what next year must carry forward** |
@@ -3651,12 +3682,76 @@ never seen any earlier version of this file?*** **If it needs one, it does not g
 | **7 · What is assumed, and what would change it** | **Every position resting on an assumption rather than a document, with the consequence if the assumption is wrong** |
 | **8 · What carries forward** | 🔑 **What next year needs: basis, carryovers, elections made, replacement periods running, balances, unfinished items** |
 
+#### 🔴 THE ACCEPTANCE TEST — IT MUST BE ENOUGH TO **REPLICATE** THE RETURN FROM NOTHING ELSE
+
+> 🗣️ **LILIAN, 2026-10-04, and this is the bar the eight sections exist to clear:** *"el objetivo es que
+> sea un documento con el cual se **pueda replicar esta declaración**. Incluso si **no se tiene ninguna
+> otra información**, tiene que ser suficiente para que otra persona lo pueda tomar, pueda analizarlo y
+> **rehacer esta declaración completa sin que falte nada.** Ese es el tipo de evidencia que tenemos que
+> guardar de cada declaración que hagamos."*
+
+🔑 **THIS RAISES THE BAR ON WHAT "contains" MEANS, and it is not satisfied by a complete list of
+figures.** ⛔ **A reader who can see WHAT every line says but not HOW it was reached cannot rebuild the
+return** — and that reader is the whole audience: a preparer in a future year, or Julia, with the
+session deleted and possibly the documents gone too.
+
+✅ **SO FOUR THINGS BECOME MANDATORY, and each one is a thing a figures-only worksheet leaves out:**
+
+**① EVERY FIGURE CARRIES ITS PROVENANCE TAG.** ⛔ **Not a source column that says where a document is —
+a tag that says what KIND of thing the number is**, because that is what a replicator has to know before
+they can decide whether to trust it or redo it:
+
+| Tag | What it means | What the replicator does with it |
+|---|---|---|
+| 📨 **CLIENT** | **He stated it** — in a document, an email, a message or a call | **Takes it, and knows whose it is if it turns out wrong** |
+| 📄 **READ** | **Read off a named document** — page, line, cell | **Can go and re-read it** |
+| 🧮 **COMPUTED** | **The firm's arithmetic**, with every input named | 🔑 **Can RE-RUN it — which is the whole point** |
+| ⚠️ **ASSUMED** | **The firm assumed it**, and the assumption is stated | **Knows what to test** |
+| ⚖️ **DECISION** | **Somebody chose it**, and the alternative existed | **Knows who to go back to** |
+
+**② EVERY COMPUTED FIGURE SHOWS ITS ARITHMETIC, STEP BY STEP — not its result.**
+⛔ **"Vehicle expense 5,040" is not replicable. ✅ "pool 9,000.00 = fuel 3,500.00 + insurance 3,000.00 +
+tolls 500.00 + maintenance 2,000.00 · × 80% business use = 7,200.00 · × 70% to this activity = 5,040"
+is.** ⓘ *Figures invented for the example — a skill is not a permitted home for a client's.* 🔑 **Write the chain so somebody can key it into a calculator and land on the same number**, and
+name where each input came from. ⚠️ **Where a rate, a table value or a cap is used, quote it and name
+the document it was read from** — the replicator cannot assume next year's figure is the same.
+
+**③ THE THREE KINDS OF "WHY A FIGURE IS NOT WHAT THE CLIENT SENT" ARE SEPARATED.** 🔑 **A replicator
+handed a figure that disagrees with the client's own sheet will "correct" it back unless the paper says
+which of these happened:** the firm **re-derived** it from better evidence · the firm applied a **limit
+or a percentage** *(a 50% meals haircut, a business-use share)* · or a **decision** put it on a
+different line. ⛔ **Each needs naming, and the client's own figure named beside it.** ⚠️ **AND THE FIGURE NAMED IS
+THE CLIENT'S, NEVER THE FIRM'S OWN SUPERSEDED ONE** — this is not a crack in the no-version-history
+ban above, which targets *the firm's* earlier drafts. 🔑 **The test still applies and the client's
+figure passes it: it needs HIS DOCUMENT to make sense, not an earlier version of this worksheet.**
+⓵ *§4I's own sections 3 and 6 already require it — "what each one STATED" and "what the alternative
+was".*
+
+**④ WHAT WAS DELIBERATELY *NOT* CLAIMED, AND WHY.** 🛑 **The hardest thing to replicate is an ABSENCE.**
+**A blank line looks identical whether it was considered and rejected, or forgotten** — so every
+material expense the client claimed that is **not** on the return gets a row saying so and why, and so
+does every form or election the return could have used and did not.
+
+☑️ **AND A SELF-TEST BEFORE IT SHIPS, because the bar above is easy to agree with and easy to miss.**
+**Pick five figures at random from the finished return — at least two computed ones and one blank line —
+and ask of each: *holding ONLY this document, could I produce that figure and know why?*** ⛔ **If the
+answer is no for any of them, the document is not finished.** ✅ **Say in the document that the test was
+run and on which figures** — a stated test is checkable; an asserted standard is not.
+
 #### ⏱️ WHEN IT IS BUILT — last, and only once
 
 ☑️ **Trigger: the return is finished and about to go to the client for review.** ⛔ **NOT while items are
 open, because a final worksheet with open items in it is just the working workbook with the useful part
 removed.** ✅ **If something is genuinely still open when the return is filed, it goes in section 7 or 8 as a
 carry-forward, not as a to-do.**
+
+⚠️ **AND WHEN LILIAN CALLS FOR IT WHILE ITEMS ARE STILL OPEN — she did, 2026-10-04 — BUILD IT, and sort
+what is open into exactly two piles.** ✅ **A position the return TAKES that rests on something
+unestablished is section 7's business and belongs in the document** *(it is what a future reader most
+needs)*. 🔴 **A DEFECT still on the return is neither** — ⛔ **it does not become an assumption by being
+written down.** ☑️ **Say so plainly, outside the document, and name what must change before the PDF
+goes anywhere.** 🔑 **The final worksheet describes a return that is RIGHT; it cannot launder one that
+is not.**
 
 #### 🔒 AND THE RULES THAT DO NOT CHANGE
 
