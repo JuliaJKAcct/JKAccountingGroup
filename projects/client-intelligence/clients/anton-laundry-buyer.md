@@ -259,6 +259,16 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-05 (the entity explainer, in Russian) — ❓ **JULIA: "i need a quick explanation of llc vs S corp vs C corp
+  including taxation on distribution in russian, just a few pages".** 📄 Delivered as a 4-page branded PDF
+  (`JK-Spravka-LLC-S-C-korporatsii-RU.pdf`): legal form vs tax regime, a ten-row comparison (entity tax, when the
+  owner is taxed, tax on distributions, owner salary, self-employment and payroll tax, QBI, pro-rata rules, losses,
+  who may own, filings), how distributions are taxed under each, a worked example of what an owner keeps from $100
+  of profit at the 22% and 37% brackets (computed from 2026 federal rules plus Florida's 5.5% corporate tax), and
+  how it supports report §7 (each building in its own LLC owned by the buyers, the five stores in one S corporation,
+  market-rate rent between them). General rules only: no client figures. ⓘ It states the S-corporation eligibility
+  rule (owners must be US citizens or tax residents) without asserting the buyers' status, which nothing in this
+  file establishes; **the report's S-corporation recommendation depends on it.**
 - 2026-10-05 (latest — the cover, page 2, and the RUSSIAN EDITION; corrections found by translating) — ❓ **JULIA:
   "you need to fix first page - it has blue background in a white frame … page 2 … is not very readable because
   every single word is like underlined … i also need you to create me a second version in russian".** ✅ **The cover
