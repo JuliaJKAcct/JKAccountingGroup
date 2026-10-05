@@ -1,6 +1,6 @@
 # Anton & Olga Stenin — laundry portfolio buyers
 
-> **Status:** **2026-10-05: the buyer due-diligence report is delivered (43 pp, evidence-linked summary) — see §6.** 2026-10-03: transcripts received, equipment list in, contract drafting next. **ENGAGED IN PRACTICE** — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen. 🔴 **UNDER CONTRACT TRACK** — a "FINAL" Letter of Intent dated 2026-09-11 is on file and a 30-day due-diligence clock is running (Julia's 2026-09-16 email refers to the DD term "established by the seller" as already under way). ⚠️ **The equipment inspection the broker introduced on 2026-09-21 and Julia engaged on 2026-09-23 was CANCELLED by the client on 2026-09-25** — the buyer's son walks the sites instead and a non-technical inventory-count sheet was issued. **QuickBooks Desktop view-only access was never resolved**, and on 2026-09-24 Julia pivoted to asking the seller/broker/CPA to obtain the IRS 4506-C transcripts directly, having no IVES account of her own (§6). 🔴 **2026-09-29 — the seller disclosed $138,970 of 2025 receipts NOT RECORDED IN THE BOOKS, in writing, through the broker**, and delivered the machines report and merchant statements. 🔴 **2026-10-02 — the full FY2025 add-back schedule read and tested line by line; the buildings allocation settled at the buyers' figure (§6).** · **Owner:** Julia · **Last updated:** 2026-10-03
+> **Status:** **2026-10-05: the buyer due-diligence report is delivered in ENGLISH (v7, 45 pp) and RUSSIAN (51 pp), evidence-linked; one wording decision open for Julia (the buildings allocation "favors you") — see §6.** 2026-10-03: transcripts received, equipment list in, contract drafting next. **ENGAGED IN PRACTICE** — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen. 🔴 **UNDER CONTRACT TRACK** — a "FINAL" Letter of Intent dated 2026-09-11 is on file and a 30-day due-diligence clock is running (Julia's 2026-09-16 email refers to the DD term "established by the seller" as already under way). ⚠️ **The equipment inspection the broker introduced on 2026-09-21 and Julia engaged on 2026-09-23 was CANCELLED by the client on 2026-09-25** — the buyer's son walks the sites instead and a non-technical inventory-count sheet was issued. **QuickBooks Desktop view-only access was never resolved**, and on 2026-09-24 Julia pivoted to asking the seller/broker/CPA to obtain the IRS 4506-C transcripts directly, having no IVES account of her own (§6). 🔴 **2026-09-29 — the seller disclosed $138,970 of 2025 receipts NOT RECORDED IN THE BOOKS, in writing, through the broker**, and delivered the machines report and merchant statements. 🔴 **2026-10-02 — the full FY2025 add-back schedule read and tested line by line; the buildings allocation settled at the buyers' figure (§6).** · **Owner:** Julia · **Last updated:** 2026-10-05
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -259,6 +259,38 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-05 (latest — the cover, page 2, and the RUSSIAN EDITION; corrections found by translating) — ❓ **JULIA:
+  "you need to fix first page - it has blue background in a white frame … page 2 … is not very readable because
+  every single word is like underlined … i also need you to create me a second version in russian".** ✅ **The cover
+  now runs to the edge of the sheet** (the print engine had confined the teal to the page margins; the first page now
+  has no margin and the cover fills the sheet). ✅ **The summary links still work but carry no underline**; the lede
+  says how to use them. 🔎 **Found on the way: every earlier build had been shrunk to about 89%** (the PDF call's
+  fixed margins disagreed with the document's own page rules, so Chromium shrank to fit); the report now prints at its
+  designed size and runs 45 pp. 🇷🇺 **Russian edition: same figures, same evidence anchors, 51 pp** — every dollar
+  figure checked one-for-one against the English (549 of 549), all 72 evidence links verified, Russian number format.
+  The brand's font files carried no Cyrillic, so static Cyrillic instances of the same three families were made from
+  `brand/design-system/fonts-cyrillic-embedded.css`. ⓘ **To confirm with Julia:** the buyers' names written in
+  Cyrillic (*Антон и Ольга Стенины*); her own signature kept in Latin with the US credentials.
+  🛠️ **Corrections the translation surfaced, applied to BOTH editions (English is now v7):** ① §6 item Three called
+  goodwill "the slowest" write-off and equipment "faster than the buildings" — wrong: goodwill is fifteen-year (§197),
+  commercial buildings thirty-nine-year and land never; the sentence now says only what is true (equipment fastest,
+  goodwill fifteen years straight line). ② §5 said all 333 units have "a model and serial number, and three serial
+  numbers are still to come" — the sellers' list has 330 serials and three marked *pending*. ③ §5 spread the
+  two-fleet replacement reserve over "the six years in which both reach fifteen" — only Palmetto Coin does (about six
+  years); Select takes about eight. Figure unchanged, wording now says six years is the cautious end. ④ Palmetto
+  W&F's equipment invoices are November AND December 2025. ⑤ The assumptions row said the employer load is "13% on
+  gross", but the calculation takes wages as 87% of the payroll bureau's bill (about 15% on gross); label corrected,
+  no figure moves. ⑥ Stale "next page / previous page" references replaced; "customer refunds" → "refunds received"
+  (they are small credits booked as income); "the middle of the range" → "the lower half" (the rent-adjusted margin
+  against the published range); Palmetto Coin's "most cash-dependent" scoped to 2025 (in early 2026 Select is lower).
+  ❓ **OPEN FOR JULIA — §6 item Three still says the $6.5M buildings figure "favors you".** On depreciation timing
+  alone, moving money from goodwill (fifteen years) into buildings (thirty-nine, land never) slows the buyers'
+  deductions. Unless the figure rests on a cost-segregation plan or another reason, that sentence needs its reason or
+  should go. **Left as written: it is her decision of 2026-10-03, not ours to change.** ⚠️ **The Oct 3
+  payroll-reconciliation workbook's sensitivity block uses the same "13% on gross" label as ⑤** — regenerate before it
+  goes anywhere. 📎 Also delivered: the Excel backup of the add-back schedule (individuals by role only; formulas
+  checked with an independent evaluator because LibreOffice would not run in the container; Excel recalculates on
+  open). Files delivered as `…-2026-10-05-v7.pdf`, `…-RU-2026-10-05.pdf`, `JK-AddBack-Schedule-Backup-Stenin-2026-10-05.xlsx`.
 - 2026-10-05 (the add-back schedule, CORRECTED and rebuilt for explaining) — ❓ **JULIA: "i don't completely
   understand sellers add back schedule … the two earnings figures side by side it is even more confusing. you're
   saying that their PL expensed capital spend and equipment finance for 260k? equipment finance is also present at
