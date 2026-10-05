@@ -259,6 +259,18 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-05 (the structure diagram; the firm's position) — ⚖️ **JULIA: "create me a visual diagram of the structure
+  of the companies he proposes vs us … the only note is that we agree to separate delivery business into separate
+  entity for liability purposes."** ✅ **The firm's recommended structure is now: TWO family holdings** — Benefit
+  Holdings Management LLC (S corporation) owning NextGen Laundry Operations LLC and **FreshRun Logistics, LLC as its own
+  company (agreed with the client, for liability)**; and a **new holding LLC taxed as a partnership** (name for the
+  client to choose) owning the five Benefit Property LLCs. Members as the client proposed (76/6/6/6/6); NNN leases
+  at market rent from the property LLCs to NextGen. 📄 Delivered a one-page landscape diagram, client's proposal next to
+  ours, in **English and Russian** (PDF for print or email, PNG for WhatsApp): the S corporation drawn as a frame
+  around everything inside it for tax, so the buildings visibly sit inside it in the client's version and outside it
+  in ours, with the consequences listed under each. ⓘ **Report §7 still describes the earlier wording** ("one
+  operating company … through a holding company") and does not mention the separate delivery company or say that
+  the property holding must not elect S status; updating it in both editions is offered, not done.
 - 2026-10-05 (citizenship) — ✅ **JULIA: "every member is us citizen."** All five members of the proposed holding
   (Anton, Olga, Simon, Konstantin and Katherine Stenin) are **US citizens**. ⇒ **S-corporation eligibility is met for
   every member, wherever they live** (citizenship qualifies on its own), so the report's S-corporation
