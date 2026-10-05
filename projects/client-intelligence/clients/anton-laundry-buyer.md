@@ -296,6 +296,15 @@ the actual details.
   real-estate point restated as tax on the *increase* in value. ⓘ **Removed as unsupported in the report:** the
   summary's "the machine-system data points the same way" — no such evidence is in the report, and the machine
   payment overview is a restricted seller document.
+  🔗 **Same day, second round — JULIA on finding 05: "you're saying that out of the 9 categories, 4 of them are
+  supportable … we're not accepting the full amount in any of them but one category, the property taxes."** She was
+  reading the pre-rewrite copy (it said "four"; the table accepts amounts in five). ✅ **The finding now names every
+  category by what we did with it: one accepted in full (the 2024 property tax paid in 2025), four in part, one
+  already excluded from operating cost, three rejected in full** — the sentence is generated from the schedule
+  itself and repeated word for word in §4. ✅ **And her second ask: every finding's TITLE and every claim inside it
+  is now a link to the page holding that claim's evidence** (9 titles, 32 claims, 31 anchors placed on the evidence
+  table, panel or sentence itself), all checked to open the right page. Delivered as `…-2026-10-05-v3.pdf` (44 pp),
+  a new name so it cannot be confused with the two earlier copies of the day.
   🗂️ **The build (scripts and data modules) lives only in that session's scratchpad** because it holds client
   figures; **the delivered PDFs are the record.** A later edit means rebuilding from the PDF, not re-running code.
   ❓ **Still open, unchanged by this pass:** Julia's price call; the family add-back sensitivity; **whether the buyer
