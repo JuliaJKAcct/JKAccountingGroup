@@ -259,6 +259,31 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-05 (THE BUYERS' OWN STRUCTURE PROPOSAL, evaluated) — 📄 **Julia forwarded the structure the client proposes
+  (in Russian):** ① **Benefit Holdings Management LLC** — parent; members **Anton 76%, Olga 6%, Simon 6%, Konstantin 6%,
+  Katherine 6%**; manager-managed with Anton as sole perpetual "Director" (wide discretion, members waive claims for
+  business decisions); forced buyout on exit or deadlock; distributions strictly pro rata; **elects S-corporation
+  status (Form 2553)**; collects all profit; nominal salaries to Anton and Katherine; NAICS 551112. ② **NextGen Laundry
+  Operations LLC** — owns equipment, employs store staff, runs the five stores and wash-and-fold; 100% owned by the
+  holding, disregarded; Simon as director. ③ **FreshRun Logistics, LLC** — delivery (vehicles, drivers); 100% holding,
+  disregarded; Konstantin. ④–⑧ **Five Benefit Property … LLCs** (US 41, 8th Ave, West 9th St, West 21 St Ave, 15
+  Street) — each owns one building, 100% holding, disregarded; Olga as director, paid a small salary by each; NNN
+  leases to NextGen at a fixed market rent. All eight use the Ruskin store's address as principal, mailing and
+  registered-agent address.
+  ⚠️ **EVALUATION (to Julia, in chat):** the legal skeleton is sound (a wall around each building, operations and
+  delivery separated, one 1120-S for the group), but **the five property LLCs are disregarded into the S-corporation
+  holding, so for tax purposes the buildings sit INSIDE the S corporation — the exact outcome report §7 warns
+  against** (tax on appreciation to take a building out, no inside step-up at death, entity debt adds no shareholder
+  basis, every future co-owner must be S-eligible); and the NNN leases net to nothing inside one return. **Proposed
+  fix:** a second family holding LLC taxed as a partnership owns the five property LLCs; the S-corp holding keeps
+  only NextGen and FreshRun. Other points raised: salaries far below reasonable compensation; payroll in eight
+  entities (consolidate into one); all five members must be US citizens or tax residents and sign Form 2553; the
+  children's interests are gifts if the parents fund them (Form 709) and kiddie tax if any child is young; mandatory
+  tax distributions; an S-compliant operating agreement (no partnership capital-account liquidation; transfers only
+  to eligible holders); Florida law's "manager" and the limits of §605.0105 on waivers; a commercial registered
+  agent and real mailing address; the 1120-S activity code is the laundromat code (812310), and 492210 fits the
+  delivery company better. ❓ **Open with the client:** whether to adopt the two-holding fix; every member's tax
+  residency; the children's ages; who funds the purchase.
 - 2026-10-05 (the entity explainer, in Russian) — ❓ **JULIA: "i need a quick explanation of llc vs S corp vs C corp
   including taxation on distribution in russian, just a few pages".** 📄 Delivered as a 4-page branded PDF
   (`JK-Spravka-LLC-S-C-korporatsii-RU.pdf`): legal form vs tax regime, a ten-row comparison (entity tax, when the
