@@ -27,7 +27,7 @@
 ## 1. Snapshot
 
 - **Business name:** _(pending — individual buyer; an acquisition entity may follow)_
-- **Entity type:** _(pending)_
+- **Entity type:** _(pending — on 2026-10-05 the buyers proposed their own structure: an S-corporation holding LLC over seven single-member LLCs; under review, see §6)_
 - **Home state:** _(pending — the target is in Florida)_
 - **Industry / what they do:** **Buyer evaluating a business acquisition**: a card/coin
   laundry portfolio in Bradenton, Palmetto and Ruskin, Florida, sold with its real estate and
@@ -259,6 +259,14 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-05 (citizenship) — ✅ **JULIA: "every member is us citizen."** All five members of the proposed holding
+  (Anton, Olga, Simon, Konstantin and Katherine Stenin) are **US citizens**. ⇒ **S-corporation eligibility is met for
+  every member, wherever they live** (citizenship qualifies on its own), so the report's S-corporation
+  recommendation stands and Form 2553 needs all five consents. ⇒ Gifts between Anton and Olga, if they are married,
+  fall under the unlimited marital deduction because both are citizens; **the children's interests are still gifts if
+  the parents fund them** (Form 709; no tax within the lifetime exemption). The C-corporation-for-nonresidents point
+  in the explainer does not apply to this family. ❓ **Still open:** the two-holding fix, the children's ages (kiddie
+  tax), who funds the purchase, and the salaries.
 - 2026-10-05 (THE BUYERS' OWN STRUCTURE PROPOSAL, evaluated) — 📄 **Julia forwarded the structure the client proposes
   (in Russian):** ① **Benefit Holdings Management LLC** — parent; members **Anton 76%, Olga 6%, Simon 6%, Konstantin 6%,
   Katherine 6%**; manager-managed with Anton as sole perpetual "Director" (wide discretion, members waive claims for
@@ -282,8 +290,8 @@ the actual details.
   tax distributions; an S-compliant operating agreement (no partnership capital-account liquidation; transfers only
   to eligible holders); Florida law's "manager" and the limits of §605.0105 on waivers; a commercial registered
   agent and real mailing address; the 1120-S activity code is the laundromat code (812310), and 492210 fits the
-  delivery company better. ❓ **Open with the client:** whether to adopt the two-holding fix; every member's tax
-  residency; the children's ages; who funds the purchase.
+  delivery company better. ❓ **Open with the client:** whether to adopt the two-holding fix; ~~every member's tax
+  residency~~ ✅ *all five are US citizens (Julia, 2026-10-05)*; the children's ages; who funds the purchase.
 - 2026-10-05 (the entity explainer, in Russian) — ❓ **JULIA: "i need a quick explanation of llc vs S corp vs C corp
   including taxation on distribution in russian, just a few pages".** 📄 Delivered as a 4-page branded PDF
   (`JK-Spravka-LLC-S-C-korporatsii-RU.pdf`): legal form vs tax regime, a ten-row comparison (entity tax, when the
@@ -293,7 +301,8 @@ the actual details.
   how it supports report §7 (each building in its own LLC owned by the buyers, the five stores in one S corporation,
   market-rate rent between them). General rules only: no client figures. ⓘ It states the S-corporation eligibility
   rule (owners must be US citizens or tax residents) without asserting the buyers' status, which nothing in this
-  file establishes; **the report's S-corporation recommendation depends on it.**
+  file establishes; **the report's S-corporation recommendation depends on it.** ✅ *Answered the same day: all five
+  members are US citizens (Julia) — see the entry above.*
 - 2026-10-05 (latest — the cover, page 2, and the RUSSIAN EDITION; corrections found by translating) — ❓ **JULIA:
   "you need to fix first page - it has blue background in a white frame … page 2 … is not very readable because
   every single word is like underlined … i also need you to create me a second version in russian".** ✅ **The cover
