@@ -259,6 +259,24 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-05 (JULIA QUESTIONS STEP 1: "isn't it balance sheet?") — ❓ **JULIA: "i don't understand why we are adding
+  back to PL equipment payments for example. isn't it balance sheet account? same for owner distributions … what
+  you're doing doesn't make sense to me, explain".** ✅ **Answered in chat; the report is unchanged.** Her rule holds
+  for correctly kept books, and these books aren't kept that way. The sellers' balance sheets carry no equipment and
+  none of the equipment loans (the entry on the sellers' balance sheets, further down). At five of the six businesses
+  the owner's money was booked to expense accounts. So two kinds of payment are inside the sellers' reported net
+  income: the equipment-loan installments (category 3, four accounts) and the owner distributions and loan
+  repayments to the owner (category 6, seven accounts).
+  🔑 **Proof:** we rebuilt each business's net income from the ledgers, with those accounts counted as expenses. The
+  result matches the sellers' published figure: four businesses within 33 cents, Palmetto W&F within $10. The
+  exception proves the rule: the delivery company's members' draw sits on the balance sheet in the sellers' P&L, and
+  the sellers did not add it back. The binder's own definition of category 6 says the same thing: *"booked as a
+  business expense rather than as a draw"*.
+  ⇒ **Step 1 is a set of correcting entries**: debit the loan payable, the distributions or the equipment, and credit
+  the expense account. Our operating result is therefore EBITDA as correctly kept books would show it. Step 2's
+  "already taken out" column stops the sellers' identical claims from being counted a second time.
+  ❓ **Offered, not done:** two sentences in step 1 of both editions saying why these payments sit in the P&L. As
+  written, step 1 says they are not costs but never says how they got into the P&L.
 - 2026-10-05 (the structure message for the client, and HIS CPA'S POSITION) — ❓ **JULIA: "Can you shorten the message
   to client? … He will send it to a CPA who suggested the structure on a first place. He is stating that buildings
   inside LLC won't appear on s corp return which is not true."** 🔑 **New fact: the buyers' structure (the proposal
