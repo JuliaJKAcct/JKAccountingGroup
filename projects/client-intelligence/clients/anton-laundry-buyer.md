@@ -27,7 +27,7 @@
 ## 1. Snapshot
 
 - **Business name:** _(pending — individual buyer; an acquisition entity may follow)_
-- **Entity type:** _(pending — on 2026-10-05 the buyers proposed their own structure: an S-corporation holding LLC over seven single-member LLCs; under review, see §6)_
+- **Entity type:** _(pending — on 2026-10-05 the buyers proposed their own structure, **designed by their own CPA**: an S-corporation holding LLC over seven single-member LLCs, which puts the buildings inside the S corporation for tax. The firm recommends two family holdings, the buildings in one taxed as a partnership; see §6)_
 - **Home state:** _(pending — the target is in Florida)_
 - **Industry / what they do:** **Buyer evaluating a business acquisition**: a card/coin
   laundry portfolio in Bradenton, Palmetto and Ruskin, Florida, sold with its real estate and
@@ -259,6 +259,46 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-05 (the structure message for the client, and HIS CPA'S POSITION) — ❓ **JULIA: "Can you shorten the message
+  to client? … He will send it to a CPA who suggested the structure on a first place. He is stating that buildings
+  inside LLC won't appear on s corp return which is not true."** 🔑 **New fact: the buyers' structure (the proposal
+  entry below) was designed by the client's own CPA** (not named), who holds that **buildings in the single-member
+  property LLCs will not appear on the S corporation's return.** ⚖️ **The firm's answer: they will.** A single-member
+  LLC is disregarded for federal income tax (Treas. Reg. §301.7701-2(a), §301.7701-3(b)(1)(ii)). With the S
+  corporation as owner, the buildings and their depreciation are reported on its Form 1120-S, and the NNN rent between
+  its companies is a payment to itself. ⓘ The wording says *income* tax on purpose: for employment taxes each
+  single-member LLC is a separate employer (Treas. Reg. §301.7701-2(c)(2)(iv)), which matters because the proposal
+  pays Olga from each property LLC. 📄 **The message, in Russian under Julia's name, for Anton to forward to that CPA:**
+  first a long version built over several turns at Julia's direction (a worked exit-tax example, the step-up at death,
+  depreciation eroding basis so later distributions become taxable, a cost-segregation example on the buyers' own
+  real-estate allocation, and the 6% members' share of that loss), then **cut at her request to about 300 words**.
+  The short version keeps the correction and five reasons, each with its Code section so the CPA can check it:
+  ① any exit of a building is a deemed sale (§311(b)), partly ordinary income after cost segregation;
+  ② no inside step-up at death (§754 exists only for a partnership);
+  ③ depreciation is shared strictly pro rata (§1377(a)) and entity debt adds no basis (§1366(d));
+  ④ the family members' share of an immediate cost-segregation write-off is unusable if their stakes are nominal;
+  ⑤ one bad transfer turns the whole group, buildings included, into a C corporation.
+  It closes with the two-holding recommendation and "decide before closing". ⓘ **The short version corrects the long
+  draft's year-one cost-segregation figure**: the long draft had assumed a full year of straight-line depreciation,
+  but with a late-2026 closing that part is only a month or two, so the short version quotes only the amount written
+  off at once. ⓘ **It also no longer says that moving the buildings out right after closing is taxed.** Straight
+  after the purchase there is almost no gain; the tax builds with depreciation and appreciation. 🛡️ **The CPA's likely
+  reply is passive losses:** in his structure the buildings' depreciation offsets the laundromat profit inside one
+  return. In ours, the property holding's loss on rent from the family's own company is passive unless the rental is
+  grouped with the business, and grouping needs the same percentages in both holdings
+  (Treas. Reg. §1.469-4(d)(1)(i)(C)). That is why the recommendation keeps the shares identical.
+  💬 **Also answered for Julia: the children's stakes can be gifted against the parents' lifetime exemption.**
+  The conditions given:
+  - Form 709 is still filed; spouses may split gifts.
+  - A discount needs a qualified appraisal.
+  - The company is never funded and gifted on the same day.
+  - Gifted shares give up the step-up at death.
+  - The proposed sole-perpetual-director governance is a §2036(a)(2) risk; non-voting interests are the usual answer.
+  - A trust receiving S-corporation shares must be an eligible one.
+
+  ❓ **Open:** whether the client and his CPA accept the two-holding structure; who funds the purchase (equity or a
+  loan from Anton decides whether the family members' basis can absorb their share of the loss); whether report §7
+  is updated in both editions.
 - 2026-10-05 (the structure diagram; the firm's position) — ⚖️ **JULIA: "create me a visual diagram of the structure
   of the companies he proposes vs us … the only note is that we agree to separate delivery business into separate
   entity for liability purposes."** ✅ **The firm's recommended structure is now: TWO family holdings** — Benefit
