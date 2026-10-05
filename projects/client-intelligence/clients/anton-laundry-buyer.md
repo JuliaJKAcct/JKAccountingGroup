@@ -259,6 +259,41 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-05 (THE TAX RETURNS AGAINST THE BOOKS) — ❓ **JULIA: "is that same for tax reporting? you're sure? because
+  on part 4 … for you comes to 363045, so i don't get it how you got to $981 292".** ✅ **No: the returns are not
+  prepared from the store books as they stand.** The books half of the previous answer stands, on the net-income tie.
+  The bridge she asked about is step 2: our operating result plus the add-backs we accept equals our adjusted earnings.
+  What the returns show, and what reading them turned up:
+  ① **Both S corporations' 2023 and 2024 transcripts carry depreciation and interest lines, and the store books have
+  neither.** So for tax the sellers' CPA capitalizes the equipment and splits the loan installments into interest and
+  principal. Ordinary income differs from the books' result in every entity-year, by six figures in three of the four.
+  ② **Lemon Squeeze's filed 2025 return, read in full** (the certified-mail copy in the data room):
+  - The members' draw is NOT deducted, and NO distributions are reported (Schedule K line 16d and M-2 line 7 are
+    blank). The shareholder-loan balance on Schedule L falls instead. So for tax, the draw went to the balance sheet.
+  - Every other deduction ties to its book account to the dollar, with two exceptions:
+    - "automobile and truck expense" is far above the books' vehicle repairs, and the books carry no fuel at all, for a
+      delivery business;
+    - the payroll lines are below the books' payroll.
+  - Gross receipts fall short of the books' sales by exactly the invoices in ③.
+  - ⚠️ The broker's binder holds a different version of this return (REV 01/28/26), with higher ordinary income and a
+    small distribution. The certified-mail copy is the one filed.
+  ③ 🔴 **The delivery company's 2025 sales include ten monthly invoices to one commercial customer (The Floridian).**
+  They are booked to receivables, and no payment against them shows anywhere in the ledger through July 2026; two
+  more from 2024 are also still open. The deposit detail and the cash-basis return both leave them out. If the
+  customer pays and the money is deposited as ordinary sales, the books count it twice; if the customer doesn't pay,
+  it isn't earnings. **Our adjusted earnings include it.** The 2026-09-30 entry that called this excess a creation of
+  the marketing document is corrected in place.
+  ④ **Before depreciation and interest, the two S corporations' returns deduct materially more than the books'
+  operating costs, in both years.** The transcripts give line totals only, so they don't show what the extra is.
+  - If it is capital, amortization or money moved between the stores, our figure stands. One candidate: in 2024
+    Bayshore sent the other stores money booked as capital spend.
+  - If it is a running cost paid outside the store books, our earnings are overstated by that much.
+
+  ❓ **Proposed, not done:**
+  - ask the sellers' CPA for the full 2023–2024 returns with their other-deductions statements, and for what is in
+    Lemon's automobile and truck line;
+  - take the invoices out of 2025 earnings unless the sellers show payment;
+  - add the step-1 wording and a walk table from operating result to adjusted earnings to both editions.
 - 2026-10-05 (JULIA QUESTIONS STEP 1: "isn't it balance sheet?") — ❓ **JULIA: "i don't understand why we are adding
   back to PL equipment payments for example. isn't it balance sheet account? same for owner distributions … what
   you're doing doesn't make sense to me, explain".** ✅ **Answered in chat; the report is unchanged.** Her rule holds
@@ -1545,7 +1580,10 @@ the actual details.
   *(request item 4.2)*. ✅ **And the broker's own revenue schedule IS the deposit total**: five of six stores agree to
   the dollar. **The one exception is the delivery company, where the offering material sits a round amount ABOVE the
   company's own ledger AND above its filed return — so that discrepancy was created in the marketing document, not
-  lost from the return.** 🛑 **That reverses what I told Julia the day before**, when I had read it as a return defect.
+  lost from the return.** *(⛔ CORRECTED 2026-10-05: the 2025 excess is NOT a marketing-document creation. It sits in
+  the company's own QuickBooks sales account, as ten monthly invoices to one commercial customer that never show as
+  paid; the deposit detail and the cash-basis return leave them out. See the 2026-10-05 entry "THE TAX RETURNS
+  AGAINST THE BOOKS".)* 🛑 **That reverses what I told Julia the day before**, when I had read it as a return defect.
 
 - 2026-09-30 — 🔴 **A FIFTH TO A HALF OF SOME STORES' REVENUE ARRIVES AS ONE ENTRY A MONTH, NOT AS A BANKED DEPOSIT —
   AND THE INNOCENT EXPLANATION FITS THE DATES EXACTLY.** The five laundromats bank weekly, on a fixed weekday, in
