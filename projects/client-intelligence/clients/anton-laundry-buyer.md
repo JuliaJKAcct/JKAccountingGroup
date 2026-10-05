@@ -259,6 +259,30 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-05 (the add-back schedule, CORRECTED and rebuilt for explaining) — ❓ **JULIA: "i don't completely
+  understand sellers add back schedule … the two earnings figures side by side it is even more confusing. you're
+  saying that their PL expensed capital spend and equipment finance for 260k? equipment finance is also present at
+  add back schedule. this is probably the most critical schedule in entire report and it needs to be 100% accurate
+  and understood."** 🛑 **Rechecked account by account against the sellers' own store-level schedule (binder p. 74),
+  and it was NOT 100% right.** ① **The storm category (cat. 1) contains equipment purchases** — at the delivery
+  company, at 15th Street (including money sent to Palmetto W&F and booked as equipment) and at Palmetto W&F — **that
+  our rebuild had already moved below the operating line.** The old schedule computed cat. 1's "already below our
+  line" as a leftover (category total minus all repair accounts) and so recognised only part of it; **the store
+  lines rebuild cat. 1 to the dollar (rounding only) once the capital is read from the accounts.** ② **A transfer
+  to Ruskin was booked at Palmetto W&F as "hurricane parts"** (the GL memo reads *TRANSFER TO RUSKIN*; Ruskin booked
+  the same amount as income). It sat inside our storm-repair excess while the same money was rejected under
+  inter-company transfers (cat. 8). **Now it is taken out of the repairs and accepted in cat. 8; the receipt side
+  stays rejected.** ✅ **Our adjusted earnings do not move by a cent**; what moves is the split between "already
+  excluded" and "rejected", and the old "smaller differences in the starting figures" line is replaced by named
+  items (inter-company income the sellers' figure keeps, an equipment sale, interest, rounding).
+  📐 **Section 4 now runs in three steps, each tied to the next:** step 1 takes the ledgers' result to our
+  operating result, organised by the sellers' own category numbers (so the "already taken out" column visibly
+  comes from it); step 2 is the nine categories with one plain line on each; step 3 reconciles their adjusted
+  figure to ours line by line. **The "$260k" Julia asked about was three ledger lines in one row** (owner
+  distributions incl. the delivery company's members' draw, loan repayments, equipment-finance installments) — the
+  new table splits them by category. Delivered as `…-2026-10-05-v5.pdf`; every figure re-traced, every link
+  re-checked. ⚠️ **The Oct 3 portfolio workbooks still carry the old split** (they read the same add-back rows);
+  regenerate before sending them anywhere.
 - 2026-10-05 (later — JULIA'S TWO QUESTIONS ON THE REPORT, AND THE FINAL LOI READ IN FULL) — ❓ **JULIA: "What makes
   you think that that delivery and commercial laundry is not part of the sale? Can you point out to me exactly
   why?"** 🛑 **Nothing supports it, and the FINAL LOI says the opposite.** The claim traced back to two notes in this
