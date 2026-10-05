@@ -1,6 +1,6 @@
 # Anton & Olga Stenin — laundry portfolio buyers
 
-> **Status:** **2026-10-03: transcripts received, equipment list in, contract drafting next — see §6.** **ENGAGED IN PRACTICE** — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen. 🔴 **UNDER CONTRACT TRACK** — a "FINAL" Letter of Intent dated 2026-09-11 is on file and a 30-day due-diligence clock is running (Julia's 2026-09-16 email refers to the DD term "established by the seller" as already under way). ⚠️ **The equipment inspection the broker introduced on 2026-09-21 and Julia engaged on 2026-09-23 was CANCELLED by the client on 2026-09-25** — the buyer's son walks the sites instead and a non-technical inventory-count sheet was issued. **QuickBooks Desktop view-only access was never resolved**, and on 2026-09-24 Julia pivoted to asking the seller/broker/CPA to obtain the IRS 4506-C transcripts directly, having no IVES account of her own (§6). 🔴 **2026-09-29 — the seller disclosed $138,970 of 2025 receipts NOT RECORDED IN THE BOOKS, in writing, through the broker**, and delivered the machines report and merchant statements. 🔴 **2026-10-02 — the full FY2025 add-back schedule read and tested line by line; the buildings allocation settled at the buyers' figure (§6).** · **Owner:** Julia · **Last updated:** 2026-10-03
+> **Status:** **2026-10-05: the buyer due-diligence report is delivered (43 pp, evidence-linked summary) — see §6.** 2026-10-03: transcripts received, equipment list in, contract drafting next. **ENGAGED IN PRACTICE** — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen. 🔴 **UNDER CONTRACT TRACK** — a "FINAL" Letter of Intent dated 2026-09-11 is on file and a 30-day due-diligence clock is running (Julia's 2026-09-16 email refers to the DD term "established by the seller" as already under way). ⚠️ **The equipment inspection the broker introduced on 2026-09-21 and Julia engaged on 2026-09-23 was CANCELLED by the client on 2026-09-25** — the buyer's son walks the sites instead and a non-technical inventory-count sheet was issued. **QuickBooks Desktop view-only access was never resolved**, and on 2026-09-24 Julia pivoted to asking the seller/broker/CPA to obtain the IRS 4506-C transcripts directly, having no IVES account of her own (§6). 🔴 **2026-09-29 — the seller disclosed $138,970 of 2025 receipts NOT RECORDED IN THE BOOKS, in writing, through the broker**, and delivered the machines report and merchant statements. 🔴 **2026-10-02 — the full FY2025 add-back schedule read and tested line by line; the buildings allocation settled at the buyers' figure (§6).** · **Owner:** Julia · **Last updated:** 2026-10-03
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -259,6 +259,75 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-05 (the buyer report, rewritten through the humanizer and its summary linked to the evidence) — 📄
+  **JULIA: "on the page where we have the findings (I think it's called the position), cite evidence that will
+  support these claims … link to it so that I can click on it and it'll take me to the page in the PDF"**, then
+  **"install this skill [blader/humanizer] … apply the skill to the entire document. I need it to stop sounding too
+  AI-ish."** ✅ **Delivered as a file, never committed and never an artifact:**
+  `JK-Financial-Due-Diligence-Stenin-Laundry-Portfolio-2026-10-05.pdf` (43 pp; the pre-pass version kept as
+  `…-2026-10-05-before-humanizer.pdf`).
+  🔗 **The page she calls "the position" is now headed *Summary · Our findings and what they mean for the price*
+  (pp. 2–3).** Under each of the eight findings and the price panel sits an *Evidence* line: **20 internal links,
+  each checked to land on the page it prints and on a page that holds the named heading, table or panel.** The
+  build is two-pass (render → read the PDF's named destinations → rebuild with the real page numbers), and the PDF
+  now prints page numbers (none on the cover).
+  ✍️ **The humanizer pass (skill updated to v3.1.0 the same day):** no em or en dashes anywhere; not-X-but-Y
+  contrasts, one-line closers, staged run-ups and headings written for effect removed; bold cut to two table
+  columns; **US English** (labor, favor, check, percent, US dates); **no pronoun for the service manager, the
+  appraiser or the attorney** (none is stated in the sources). **Every dollar figure re-traced to source after the
+  pass (all traced) and every number diffed before/after** — each one that left the report left on purpose.
+  🛠️ **Errors corrected in the same pass, because each sat in a sentence being rewritten:** ① the trend is now the
+  **ten months both years of statements cover (July–April)**, not the broker's twelve-month chart, four of whose
+  months post-date the last statement and are total deposits — **the fall is larger like for like, and all five
+  stores fell** (the "two flat stores" reading is gone); ② Palmetto Coin's queried mobile deposit of January 5, 2026
+  is **four figures, not "five-figure"**, and the store is now shown with and without it; ③ **the claim that the fall
+  in margin since 2023 "is not owner compensation" is WITHDRAWN** — its reductio did not hold (the rise in labor
+  and the whole 2025 family payroll are almost the same size) and the ledgers book labor as one payroll-bureau bill,
+  so **the 2023 Forms W-2 decide it**; ④ the stale property-tax passages (a §4 panel projecting an uplift at the
+  building allocation, a §5 heading saying the tax rises *because* of the purchase, a TRIM table on back-solved
+  taxable values, and a note about an earlier draft) brought into line with the record-card analysis;
+  ⑤ **Ruskin runs 32 of 36 washers in the shared Electrolux models (four Huebsch, on no invoice)**, not 32 of 34,
+  and "the invoice is the fleet" is gone; ⑥ "your own physical count of all 333 units" → the sellers' schedule;
+  the warranty sentence now says the certificates are silent on transfer; the service manager's per-machine repair
+  payments now sit beside the ledger's whole equipment-repair line; ⑦ the cash/card complement (two measures in
+  adjacent clauses) and "in twenty-two months" fixed; ⑧ **the sources page now discloses the five defects in the
+  broker's bank-statement summaries**, and says transcripts cover three companies and invoices three fleets;
+  ⑨ "the control the sellers did not have" removed (each store does bank separately), and the S-corporation
+  real-estate point restated as tax on the *increase* in value. ⓘ **Removed as unsupported in the report:** the
+  summary's "the machine-system data points the same way" — no such evidence is in the report, and the machine
+  payment overview is a restricted seller document.
+  🗂️ **The build (scripts and data modules) lives only in that session's scratchpad** because it holds client
+  figures; **the delivered PDFs are the record.** A later edit means rebuilding from the PDF, not re-running code.
+  ❓ **Still open, unchanged by this pass:** Julia's price call; the family add-back sensitivity; **whether the buyer
+  report may rely on the broker's *Staff & Pay Rates* file** (headed "not for release to the buyer" — the report
+  uses rates and counts only, no names); the per-store rent / cash-flow forecast workbook (waiting on the four family
+  salaries, the children's ages and roles, the cash figure before prorations, and the rent tier); **702 vs 706 9th
+  St W** (the deed settles it).
+- 2026-10-04 (property tax, CORRECTED twice, and the Ruskin month-end entries identified) — 🛑 **JULIA: "this is a
+  false statement, purchase price doesn't necessarily become a market value for a county."** ✅ **Right.** Florida
+  just value is present cash value *"exclusive of reasonable fees and costs of purchase"* weighed on eight criteria
+  (§193.011); the non-homestead cap (§193.1555) ends on a change of ownership **or control** (a >50% transfer of the
+  entity counts) and the reassessment lands on the January 1 after closing. **The sellers' own purchases prove it:
+  the three parcels bought as running laundromats are assessed at 30%, 34% and 47% of the price paid, the two
+  bought at close to a bare real-estate price at 97% and 98%.** Only Select is capped, so the automatic cost of the
+  sale is a few hundred dollars a year; school-district millage is not capped, so one parcel carries two taxable
+  values. The rest of the "property tax" in the ledgers is **tangible personal property tax on the machines**,
+  proven by paired same-day payments in December 2025. 🛑 **And JULIA: "Three of the five stores recorded no
+  property tax whatever in 2023 … are you sure of this?" — NO, it was wrong:** two stores booked tax-collector
+  payments to general *TAX* / *LOCAL TAX* accounts, and the bills fall due November to March, so calendar years
+  carry them unevenly. **Property tax is now identified by PAYEE, not account**, and the restated margins changed.
+  🔎 **Ruskin's large month-end entries are the monthly card-kiosk settlements**, matching the bank's card deposits
+  within tens of dollars each month — not a bookkeeping true-up as an earlier draft said. The Clover/Paystri zip
+  Julia sent was checked; the January 2026 Ruskin statement is not missing (its period start is printed as "?").
+  💧 **The water test Julia asked for, done as a like-for-like comparison:** Ruskin and 15th Street run the same
+  Electrolux washer models, and Ruskin books about 37% more machine revenue per gallon — three explanations open
+  (unstated vend prices, card value loaded before use, tenant rent in "Machines & other deposits"). 🧮 **The
+  one-week cash count was done by the BUYER'S SON** (not the sellers): one store on expectation, two below, most
+  likely because the counter till and changers were not counted — a second, defined week settles it.
+  📊 **Payroll reconciliation workbook (Excel) delivered:** no document states working hours for any store employee;
+  the payroll register covers family members only. 🏢 **Rent research for the planned structure** (an LLC per
+  building renting to one S corporation; cash purchase): two market-rent anchors built, and the per-store
+  affordability forecast waits on the inputs listed above.
 - 2026-10-03 (the pay rates — AND THIS IS WHAT CLOSES THE LABOUR QUESTION) — 🔑 **JULIA: "and also pay rate per each
   employee."** *(She was pointing at a seller document I had treated as a headcount list.)* ✅ **Run as arithmetic
   instead of read as a roster, `Staff & Pay Rates by Store` (19 Sep 2026) settles the 8–12%-benchmark question

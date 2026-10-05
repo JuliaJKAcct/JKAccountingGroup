@@ -62,7 +62,7 @@ The one-liners below are just the "when to reach for it."
 | Skill | Reach for it when… |
 |---|---|
 | [`impeccable`](./impeccable/) | **Any work where how it looks matters** — design, redesign, polish, audit, layout, color, typography, motion. Load it for all visual/UI work, by default. |
-| [`humanizer`](./humanizer/) | **Client-facing prose that must not read as AI-written** — proposals, letters, emails, website copy. 35 patterns to strip (em dashes, "not X but Y", forced triads, stock AI words, chatbot leftovers), from Wikipedia's "Signs of AI writing". **Standing: run it on every proposal's text before delivery** (Julia, 2026-08-19 — she spotted the em dashes). Vendored from [blader/humanizer](https://github.com/blader/humanizer) (MIT); the firm's local notes at the end of the SKILL.md cover the two carve-outs (brand display labels keep their em dashes; Russian keeps grammatical тире). |
+| [`humanizer`](./humanizer/) | **Client-facing prose that must not read as AI-written** — proposals, letters, emails, website copy, **reports**. 26 patterns, strongest first (not-X-but-Y contrasts, one-line closers, staged run-ups, forced triads, dashes, bold labels, stock AI words, chatbot leftovers), from Wikipedia's "Signs of AI writing". **Standing: run it on every client-facing text before delivery** (Julia, 2026-08-19, for proposals — she spotted the em dashes; widened to reports 2026-10-05). Vendored from [blader/humanizer](https://github.com/blader/humanizer) (MIT), **v3.1.0** since 2026-10-05; the firm's local notes at the end of the SKILL.md cover the carve-outs (brand display labels keep their em dashes; Russian keeps grammatical тире), numbers in financial documents, and US English. |
 
 ## Automation & integrations
 
