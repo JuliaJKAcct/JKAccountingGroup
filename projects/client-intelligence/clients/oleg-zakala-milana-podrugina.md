@@ -98,13 +98,16 @@ the actual details.
 - 🔴 **RESOLVED 2026-10-06 — `MilanaPodrugina-LoanDocs.pdf` IS THE EXECUTED LOAN PACKAGE for the Porsche
   Macan, and its page 1 is the `CLOSED-END NOTE, DISCLOSURE, LOAN AND SECURITY AGREEMENT`** — the most
   informative document in the whole matter. ⛔ **A 2026-10-04 entry here said it "carries no client data at
-  all". That was WRONG and is withdrawn.** 🔑 **The cause: the typed values are not in the file's text
-  layer at all** — not in any page's content stream, not in an annotation, not in a form field — **so every
-  extraction tool reads only the blank template, and a session mistook "the reader found nothing" for "the
-  document contains nothing"** _(Lilian corrected it: "no están en blanco")_. ✅ **The figures are now
-  transcribed in the working paper §3D ②, from a screen capture she sent.** _(The 2026-09-13 hedge was right
+  all". That was WRONG and is withdrawn.** 🔑 **The cause: the firm's redactor reads PDFs with `pypdf`, which
+  cannot read this producer's pages. `pdfium` reads them perfectly** — **so the values were machine-readable
+  all along, and a session mistook "my reader found nothing" for "the document contains nothing"**
+  _(Lilian: "tal vez el lector que utilizas no pudo leer la información, pero no están en blanco")_.
+  ⚠️ **A tooling defect with a known fix — and the fix is not one line: the redactor's masks were written
+  against what `pypdf` surfaced, and on the better extract they let a VIN, two dates of birth and the
+  account numbers through.** ✅ **Both documents are now read end to end and the figures are
+  transcribed in the working paper §3D ②.** _(The 2026-09-13 hedge was right
   to hedge; it got resolved the wrong way.)_ See [`zakom-incorporated.md`](./zakom-incorporated.md) §5.
-- 🚗 **THEY BOUGHT A `2023 PORSCHE MACAN` ON 7 AUGUST 2025**, bought from **Audi Fort Lauderdale** and financed by **Tropical Financial Credit Union** (lienholder control `#2032`), with **Milana as the PRIMARY buyer and Oleg as co-buyer**; they **declined** GAP, depreciation protection and mechanical-breakdown protection. 🔴 **No tax credit reaches it** — §30D, §25E and §45W all need a plug-in or fuel-cell vehicle, and the **new car-loan interest deduction needs US final assembly**, which the vehicle's own identifier contradicts. ✅ **But the SALES TAX on the purchase IS deductible**, added to the optional sales-tax table on Schedule A — and unlike 2024 it is **not** wasted, because the 2025 SALT cap is far higher. ⛔ **The firm does NOT hold the purchase document, so the tax figure has to be asked for** — and the executed note proves **no sales tax was financed**, so the receipt is on the dealer's buyer's order. 🔴 **AND IT IS NOT A SIDE ISSUE: it is very likely what decides whether this return itemizes or takes the standard deduction** (working paper §3E). _(2026-10-04; the analysis and the authorities are in the working paper §3D.)_
+- 🚗 **THEY BOUGHT A `2023 PORSCHE MACAN` ON 7 AUGUST 2025**, bought from **Audi Fort Lauderdale** and financed by **Tropical Financial Credit Union** (lienholder control `#2032`), with **Milana as the PRIMARY buyer and Oleg as co-buyer**; they **declined** GAP, depreciation protection and mechanical-breakdown protection. 🔴 **No tax credit reaches it** — §30D, §25E and §45W all need a plug-in or fuel-cell vehicle, and the **new car-loan interest deduction needs US final assembly**, which the vehicle's own identifier contradicts. ✅ **But the SALES TAX on the purchase IS deductible**, added to the optional sales-tax table on Schedule A — and unlike 2024 it is **not** wasted, because the 2025 SALT cap is far higher. ⛔ **The firm does NOT hold the purchase document, so the tax figure has to be asked for** — and the executed note **itemizes no sales tax**, so the receipt is on the dealer's buyer's order. ⛔ **That is not the same as proving none was financed** — the payment to the dealer is a single line with no price beside it. 🔴 **AND IT IS NOT A SIDE ISSUE: it is very likely what decides whether this return itemizes or takes the standard deduction** (working paper §3E). _(2026-10-04; the analysis and the authorities are in the working paper §3D.)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->

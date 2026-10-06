@@ -365,7 +365,7 @@ A running, dated record as we build this profile.
   removing the row.** **A consumer loan document uploaded to the company's folder NAMES the
   shareholder's WIFE** — ✅ **that she is his wife is established.** ⚠️ **That the document is therefore
   personal and was uploaded by mistake is her reading, prefaced *"probablemente"* twice, and an
-  unextracted co-borrower field leaves open that the shareholder is himself on the note.** ☑️ **So the
+  unextracted co-borrower field leaves open that the shareholder is himself on the note.** ✅ **CLOSED 2026-10-06 — the document was re-read with `pdfium` and the field is populated: BORROWER Milana Podrugina, CO-BORROWER Oleg Zakala. A PERSONAL vehicle loan on a 2023 Porsche Macan, and the shareholder IS on it as co-borrower.** See [`oleg-zakala-milana-podrugina.md`](./oleg-zakala-milana-podrugina.md) and the 1040 working paper §3D. ☑️ **So the
   question is DOWNGRADED, not closed** — no longer one for her, and ours only if a company-return line
   turns on it. **Unreadable documents from years we are not filing are stood down**, unless a
   specific question needs them. **Officer compensation is deliberately deferred** until every other
