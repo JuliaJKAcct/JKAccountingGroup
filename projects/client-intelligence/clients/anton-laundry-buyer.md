@@ -259,6 +259,41 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-06 (BAYSHORE 2025 — THE FOLLOW-UP READ) — Julia ran the follow-up prompt in NotebookLM. Results:
+  - ✅ **The return now foots everywhere.**
+    - Schedule L balances on both sides in both years once the two lines the first prompt skipped are in: land and a
+      negative "adjustments to shareholders' equity", both unchanged across the year.
+    - M-2 foots too: opening AAA, plus the year's income, plus interest.
+    - Retained earnings move by exactly the year's income plus interest.
+    - ⚠️ **The first read had reported M-2's inputs as blank; that was a NotebookLM misread.** Check its "blank"
+      answers against the printed totals.
+  - 🔴 **Auto & truck has no support anywhere on the return.** Form 4562 Part V is blank in all three sections, and no
+    statement sits behind the line. ⇒ The return cannot say what the excess over the books' vehicle costs is. **The
+    question goes to the sellers, or to the preparer named on the return**, and the same question applies to Lemon
+    Squeeze's return.
+  - **No Form 1125-E, and line 7 is blank**, although receipts are well over the threshold that requires it. Officer
+    pay sits inside "payroll expenses", so the return cannot confirm officer pay; the Forms W-2 remain the evidence.
+  - **Water as printed is the books' figure with two digits transposed.** The return was keyed by hand from the books.
+  - Schedule K interest income equals the books' interest income.
+  - Nothing in the report changes from this read. The other five returns are still to come through NotebookLM.
+- 2026-10-06 (REPORT v10 — "WHY JUMP TO 2026?") — ❓ **JULIA: section 4's steps 1–3 are all 2025, so why does "Three
+  add-backs we reject" switch to 2026 for additional owner income? It was confusing.** The cause was what could be
+  read when the section was written:
+  - only binder pp. 1–80 were readable;
+  - the 2025 store-by-store lines sit on pp. 79–105;
+  - the 2025 summary (p. 74) lumps officer pay, additional owner income and the manager line into one figure per store;
+  - the 2026 pages were the only ones showing the "owner draw" line separately, next to each business's officer pay,
+    with a payroll register behind it.
+
+  ✅ **Now that NotebookLM supplied the 2025 lines, the subsection is rebuilt on 2025.** A 2025 table shows, business
+  by business, the officer pay added back (category 2), additional owner income (category 4) and the owners' 2025
+  Forms W-2 from that payroll. The argument:
+  - an add-back reverses a cost the books deducted;
+  - the owners' weekly pay is deducted only through payroll, which we already add back in full;
+  - the 2025 Select register (p. 22) shows the $500 a week inside it.
+
+  2026 is reduced to one corroborating paragraph. No amount changed; still 46 pp, with links and figures re-verified.
+  Republished to the same private review page as v10.
 - 2026-10-06 (REPORT v9 · BAYSHORE'S 2025 RETURN READ · JULIA'S 2026-TABLE QUESTION) — three things in one pass.
   - ✅ **The FY2025 owner and manager lines, confirmed.** Julia pasted NotebookLM's read of binder pp. 79–105. Every
     store's officer-pay, manager and "additional owner income" lines tie to the p. 74 store totals we read directly. So
@@ -307,6 +342,8 @@ the actual details.
         returns.
     - **Gaps caused by the prompt, not by NotebookLM.** Two Schedule L lines were never requested: an asset line,
       probably land, and a negative equity line. M-2 also prints a total with every input blank. Check p. 224 by eye.
+      *(Resolved by the follow-up read the same day: the asset line is land, the equity line is an adjustment to
+      shareholders' equity, and the M-2 inputs were a NotebookLM misread. The return foots.)*
   - ✅ **Report v9 published to the same private review page.** It covers:
     - the category 2 and category 4 wording;
     - the additional-owner-income paragraph;
@@ -3321,7 +3358,8 @@ the actual details.
       of filing.** The other five returns and the store P&Ls are not yet read
 - [ ] What makes up the auto & truck expense on Bayshore's and Lemon Squeeze's 2025 returns, far above
       the vehicle costs in the books: costs paid outside the books (the buyer's), or a tax-only deduction
-      (not the buyer's)? Form 4562 Part V should show it
+      (not the buyer's)? Bayshore's Form 4562 Part V is blank and no statement explains the line, so ask
+      the sellers or the preparer named on the return
 - [ ] A realistic replacement-management cost for five stores across three cities, to set against the
       owner-payroll add-backs
 - [ ] **The five 2025 property-tax BILLS with proof of payment, and the DR-405 tangible-personal-property
