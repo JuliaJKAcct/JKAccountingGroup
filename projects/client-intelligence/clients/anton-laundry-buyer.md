@@ -259,6 +259,31 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-06 (THE MANAGER "REALLOCATION" — JULIA CAUGHT IT) — ❓ **JULIA, reading binder pp. 86, 91 and 103: the $15,000
+  is SUBTRACTED from the add-backs, not added — "don't trust my word, but take a look at it for yourself."**
+  ⛔ **Those pages could not be opened here.** Both the Drive reader and Drive's own text index stop at p. 80, and the
+  file is over the download limit. Asked her for the pages.
+  ✅ **What the pages we do hold show agrees with her.** P. 74's store lines carry "Manager allocation (15,000)" inside
+  the owner-pay lines for Select, Palmetto Coin and Ruskin. P. 80 (15th Street) states the method: "Store manager paid
+  $90,000/yr … Add back $29,200 (excess Manager Payroll Allocation over normalized $15,000)." So the sellers put every
+  store on a standard manager cost:
+  - where his pay is booked, they add back the excess (15th Street stated; Palmetto W&F derived to the same figure);
+  - where none is booked, they subtract the standard.
+
+  **Net, the manager piece adds only a small fraction of the category-2 difference, not all of it**, which corrects
+  the earlier chat answer.
+  🔑 **Rebuilt from the p. 74 store lines** (owner draw at a flat 52 weeks at each store; the Palmetto Coin and
+  Palmetto W&F officer pay then lands exactly on their W-2 entities, which validates it), **the category-2 amount we
+  reject breaks into four parts:**
+  - the manager standard;
+  - the Bayshore payroll weeks that never ran (the sellers' own schedule: "not paid");
+  - officer pay above the W-2s at Bayshore and Ruskin, not yet traced;
+  - less the delivery company's W-2 pay, which we count in this category and the sellers appear to carry under
+    "additional owner income".
+
+  ⇒ **The amount we reject does not change; the report's explanation of it does** (it attributes all of it to the
+  manager). ❓ **Open:** confirm on pp. 86, 91 and 103 (and trace the Bayshore and Ruskin excess on the detail
+  pages), then correct the category-2 wording in both editions.
 - 2026-10-06 (WHAT IN THE DEAL FOLDER WAS USED, AND WHAT WAS NOT) — ❓ **JULIA: "list all the files that you are
   actually using, and list all the files that you are not using because you couldn't read them or for whatever
   reason."** ✅ **Inventoried the Drive folder "LAUNDRY PURCHASE" (237 files) against every file this engagement's
