@@ -1,6 +1,6 @@
 # Anton & Olga Stenin — laundry portfolio buyers
 
-> **Status:** **2026-10-05: the buyer due-diligence report is delivered in ENGLISH (v7, 45 pp) and RUSSIAN (51 pp), evidence-linked; one wording decision open for Julia (the buildings allocation "favors you") — see §6.** 2026-10-03: transcripts received, equipment list in, contract drafting next. **ENGAGED IN PRACTICE** — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen. 🔴 **UNDER CONTRACT TRACK** — a "FINAL" Letter of Intent dated 2026-09-11 is on file and a 30-day due-diligence clock is running (Julia's 2026-09-16 email refers to the DD term "established by the seller" as already under way). ⚠️ **The equipment inspection the broker introduced on 2026-09-21 and Julia engaged on 2026-09-23 was CANCELLED by the client on 2026-09-25** — the buyer's son walks the sites instead and a non-technical inventory-count sheet was issued. **QuickBooks Desktop view-only access was never resolved**, and on 2026-09-24 Julia pivoted to asking the seller/broker/CPA to obtain the IRS 4506-C transcripts directly, having no IVES account of her own (§6). 🔴 **2026-09-29 — the seller disclosed $138,970 of 2025 receipts NOT RECORDED IN THE BOOKS, in writing, through the broker**, and delivered the machines report and merchant statements. 🔴 **2026-10-02 — the full FY2025 add-back schedule read and tested line by line; the buildings allocation settled at the buyers' figure (§6).** · **Owner:** Julia · **Last updated:** 2026-10-05
+> **Status:** **2026-10-06: report v9 (46 pp) is on the private review page for Julia's approval. Bayshore's 2025 return turned up in the binder, unsigned; the other five returns are being read through NotebookLM — see §6.** **2026-10-05: the buyer due-diligence report is delivered in ENGLISH (v7, 45 pp) and RUSSIAN (51 pp), evidence-linked; one wording decision open for Julia (the buildings allocation "favors you") — see §6.** 2026-10-03: transcripts received, equipment list in, contract drafting next. **ENGAGED IN PRACTICE** — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-09-02, **first-milestone invoice issued 2026-09-02** (QuickBooks invoice 2291); the signed agreement itself has not been seen. 🔴 **UNDER CONTRACT TRACK** — a "FINAL" Letter of Intent dated 2026-09-11 is on file and a 30-day due-diligence clock is running (Julia's 2026-09-16 email refers to the DD term "established by the seller" as already under way). ⚠️ **The equipment inspection the broker introduced on 2026-09-21 and Julia engaged on 2026-09-23 was CANCELLED by the client on 2026-09-25** — the buyer's son walks the sites instead and a non-technical inventory-count sheet was issued. **QuickBooks Desktop view-only access was never resolved**, and on 2026-09-24 Julia pivoted to asking the seller/broker/CPA to obtain the IRS 4506-C transcripts directly, having no IVES account of her own (§6). 🔴 **2026-09-29 — the seller disclosed $138,970 of 2025 receipts NOT RECORDED IN THE BOOKS, in writing, through the broker**, and delivered the machines report and merchant statements. 🔴 **2026-10-02 — the full FY2025 add-back schedule read and tested line by line; the buildings allocation settled at the buyers' figure (§6).** · **Owner:** Julia · **Last updated:** 2026-10-05
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -259,6 +259,67 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-06 (REPORT v9 · BAYSHORE'S 2025 RETURN READ · JULIA'S 2026-TABLE QUESTION) — three things in one pass.
+  - ✅ **The FY2025 owner and manager lines, confirmed.** Julia pasted NotebookLM's read of binder pp. 79–105. Every
+    store's officer-pay, manager and "additional owner income" lines tie to the p. 74 store totals we read directly. So
+    the category-2 rejection now breaks down completely, and the "still being traced" remainder is closed:
+    - the manager standard;
+    - the Bayshore weeks that never ran;
+    - officer pay the sellers carry above even the reconstruction at Bayshore, and above the W-2s at Ruskin;
+    - less the delivery company's W-2 pay. The sellers carry it as "additional owner income", and **at the delivery
+      company that line equals its owners' 2025 W-2 pay to the dollar.**
+
+    The report's "51.5 weeks, six businesses" was wrong: 2025 is a flat 52 weeks at each store, and a different
+    figure at the delivery company.
+  - ❓ **JULIA: why doesn't the "Officer compensation added back" column in the 2026 table match the 2025 W-2 total?**
+    The two cover different periods: the table is the sellers' January–July 2026 pages, and the W-2 total is the full
+    year 2025.
+    🔴 **But her question found a real defect.** The paragraph under the table said the 2026 register's pay was
+    "inside" the 2025 W-2 total. Fixed:
+    - the caption and a note now state the period;
+    - the sentence now cites the binder's 2025 register for the same payroll (p. 22), which equals Bayshore's 2025 W-2
+      figure.
+
+    While checking, a second point: the Select 2026 register holds **36 weekly pays per person, not 30**. It runs to
+    its print date (2026-09-03), so the sellers' January–July figure for Select includes August pay. The report now
+    says so.
+  - 📄 **Bayshore's 2025 Form 1120-S (binder pp. 221–237), read through NotebookLM.** Page 1 and the other-deductions
+    statement cross-foot.
+    - **Unsigned and undated**: the officer's and the preparer's dates are blank, and the software revision is dated
+      January 2026. That proves nothing either way about filing, since e-filed client copies often print unsigned.
+      ⇒ **The open item becomes proof of filing (the e-file acceptance or a signed Form 8879), not the return itself.**
+    - **Prepared from the same books.** Gross receipts equal the books to the dollar and thirteen expense lines match.
+      Its opening Schedule L equals the 2024 IRS transcript's closing figures.
+    - 🔑 **It answers Julia's "is that same for tax reporting?" question: yes.** The return's interest plus the fall in
+      notes payable equals, to the dollar, the twelve Alliance payments the books expense as "Equipment Purchase - NOT
+      NEW". Distributions are blank: the owner payments show up as a fall in shareholder loans, not as a deduction.
+      That is the treatment of our step 1.
+    - 🔴 **One real difference: auto & truck on the return is far above the books' vehicle costs.** The delivery
+      company's filed return shows the same pattern. It is almost the whole gap between our operating result for the
+      two stores and the return's EBITDA. Two possible readings, which change the answer:
+      - real costs paid outside the books, which a buyer would bear;
+      - a tax-only deduction, which a buyer would not.
+
+      Ask the sellers. Form 4562 Part V should show how the figure was computed.
+    - Smaller points:
+      - the water line differs from the books by transposed digits (the preparer's or NotebookLM's);
+      - officer pay sits inside "payroll expenses" rather than on line 7, the same presentation as the filed 2023–2024
+        returns.
+    - **Gaps caused by the prompt, not by NotebookLM.** Two Schedule L lines were never requested: an asset line,
+      probably land, and a negative equity line. M-2 also prints a total with every input blank. Check p. 224 by eye.
+  - ✅ **Report v9 published to the same private review page.** It covers:
+    - the category 2 and category 4 wording;
+    - the additional-owner-income paragraph;
+    - the 2026 table;
+    - the statements about returns in section 1, "What we could not test" and the basis.
+
+    It is 46 pp; links show 0 problems and every money figure is traced. The returns-versus-books comparison itself
+    stays out, pending Julia.
+  - ⏭️ **Next:**
+    - NotebookLM for the other five returns (Bayshore 2023–2024, Samoset 2023–2025), with a wider prompt: every
+      Schedule L line, Form 4562 Part V, and Form 1125-E with no SSNs;
+    - a follow-up on Bayshore 2025;
+    - the Russian edition carries the same v9 errors and is rebuilt after approval.
 - 2026-10-06 (REPORT v8, AS A REVIEW PAGE) — ❓ **JULIA: "Can you build this as the entire document as an artifact
   so that I don't have to download it … but I can see it as an artifact first?"** ✅ **English report v8 built and
   published as a private review page** (a screen edition of the same HTML the PDF prints from, with a "what changed
@@ -3256,7 +3317,11 @@ the actual details.
       force then and is in force now
 - [ ] The support behind "Additional Owner Income" — the only add-back category with no support named
 - [ ] Bayshore's and Samoset Florida's returns for 2023-2025 (Financial Binder Section 5) and the
-      Section 4 store P&Ls — in hand, not yet read
+      Section 4 store P&Ls — in hand. **Bayshore 2025 was read 2026-10-06 and is unsigned, so ask for proof
+      of filing.** The other five returns and the store P&Ls are not yet read
+- [ ] What makes up the auto & truck expense on Bayshore's and Lemon Squeeze's 2025 returns, far above
+      the vehicle costs in the books: costs paid outside the books (the buyer's), or a tax-only deduction
+      (not the buyer's)? Form 4562 Part V should show it
 - [ ] A realistic replacement-management cost for five stores across three cities, to set against the
       owner-payroll add-backs
 - [ ] **The five 2025 property-tax BILLS with proof of payment, and the DR-405 tangible-personal-property
