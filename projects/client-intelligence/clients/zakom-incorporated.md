@@ -1624,8 +1624,11 @@ unanswered on the return.
 
 **The one that reaches the owner's personal return.** Our own explanation of the two possible treatments of
 the insurance financing told the reviewer that the choice between them does not affect the shareholder's
-K-1. That was wrong on the half that matters: the **distributions** box is genuinely unchanged, but the
-shareholder's **share of the profit** moves by the whole disputed amount and changes sign — a loss under one
+K-1. That was wrong on the half that matters — ⚠️ **and the sentence that replaced it was wrong too, in the
+opposite direction, and is corrected here on 2026-10-06:** the **distributions** box is NOT genuinely
+unchanged either. **Because this company has no books with an equity section, the distribution reported on
+the K-1 is a DERIVED residual, so it moves whenever the profit moves.** **What is true is that the shareholder's share of the profit
+moves by the whole disputed amount and changes sign** — a loss under one
 treatment, income under the other. Since the company's working paper hands those figures on to the owner's
 individual return, the two treatments hand it opposite answers. The reviewer now gets that stated as
 arithmetic instead of described.

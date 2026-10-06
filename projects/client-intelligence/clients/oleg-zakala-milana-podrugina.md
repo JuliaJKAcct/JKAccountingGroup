@@ -77,12 +77,20 @@ the actual details.
   gain on his 1040**, and the 2024 return already reported one that way, on Form 8949 **Part II box (F)**
   with the description `Excess Distributions (K-1 (1120S))`. ⚠️ **This is the firm's own established
   treatment for this client, not a theory** _(2026-10-04)_.
-- ⚠️ **AND OFFICER COMPENSATION AT ZAKOM MAKES HIS PERSONAL RETURN WORSE, NOT BETTER.** It reduces the
-  company's ordinary income, which reduces the basis that absorbs the distribution, which **raises** the
-  capital gain — while adding wages at ordinary rates and payroll tax on both sides. And at zero basis the
-  resulting company loss is **suspended on Form 7203 Part III, not deducted.** 🔑 **It is a price tag on
-  Julia's decision, not an argument against a salary** — the reasonable-compensation exposure is separate
-  and real. The arithmetic is in the working paper _(2026-10-04)_.
+- 🔴 **OFFICER COMPENSATION AT ZAKOM DOES NOT CHANGE HOW MUCH HE IS TAXED ON — and the reading that said
+  it makes his return worse is WITHDRAWN** _(2026-10-06; it stood from 2026-10-04 and was found by an
+  independent review)_. **Because that company has no books with an equity section, the distribution
+  reported on his K-1 is a DERIVED residual rather than a document figure — so booking a salary reduces the
+  company's ordinary income and reduces the distribution by the same amount, and the two cancel.**
+  🔑 **His capital gain is unchanged at any salary up to the company's income before that salary, and FALLS
+  above it; the total reaching this return from the company does not move at all.** **What the salary
+  changes is the CHARACTER: K-1 ordinary income becomes wages — same marginal rate, but payroll tax on both
+  sides and no business-income deduction on it; above that boundary it converts long-term capital gain into
+  wages, which is a real rate cost, and strands the excess as a suspended loss he cannot deduct at zero
+  basis.** ⚠️ **One exception: employer payroll tax actually PAID does raise the gain, because cash leaves
+  the company while the derived distribution does not.** 🔑 **It is still a price tag on Julia's decision —
+  payroll tax, the payroll filings, and the rate on the part above the boundary — not an argument against a
+  salary; the reasonable-compensation exposure is separate and real.** The whole table is in the working paper.
 - **He itemizes, and it is a CLOSE call that 2025 reverses.** 2024 itemized on mortgage interest and
   real-estate taxes, beating the standard deduction by a small margin — and for 2025 **the standard
   deduction rose while the SALT cap rose far more**, so the choice must be computed both ways and last
