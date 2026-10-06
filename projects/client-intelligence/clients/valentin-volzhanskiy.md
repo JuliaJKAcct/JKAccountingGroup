@@ -1413,11 +1413,89 @@ document — the one that is kept rather than worked from.**
 - 🔁 **AND THE BAR IS NOW FIRM POLICY, not a one-off** — it is written into the tax-return skill, so
   every return the firm prepares from here leaves the same kind of evidence.
 
+### 2026-10-06 — Julia took two decisions, and the return was rebuilt on ONE business activity
+
+🔑 **Julia reviewed the return and took two positions. Both are recorded as HERS, on Lilian's express
+instruction, and neither was questioned.**
+
+- ⚖️ **THE CATERING SCHEDULE C COMES OFF THE RETURN ENTIRELY.** Julia's reason: the catering activity
+  **billed nothing at all in 2025**, and a return cannot carry a business schedule with expenses and no
+  income. 🔑 **It is a REMOVAL, not a zeroing** — the form goes. 📨 **And Lilian asked the client first
+  whether those costs belong in his credit-repair expenses; he said yes**, which is what authorises
+  moving them rather than dropping them. ⛔ **Closed by decision, not answered:** the alternative
+  reading — that those costs are start-up costs of an activity that has not yet begun — was never
+  reached, and the trade-or-business question is not adjudicated anywhere.
+  🟢 **It also removes the largest exposure the return carried:** a whole year of expenses deducted
+  against his wages on an activity with no revenue, on a form that did not claim to be in its first
+  year.
+- ⚖️ **THE CREDIT-CARD INTEREST COMES OFF THE PROFIT AND LOSS ENTIRELY.** Julia's reason: the cards are
+  **personal** and he has **no company**, so their interest is not a business expense **even though
+  business charges sit inside them.** 🛑 **Lilian was explicit that this is a FIRM POSITION and not a
+  reading of an IRS instruction, and it is recorded that way rather than dressed as authority.**
+  🔵 **She drew the line herself: interest on the CAR LOAN still applies** — so the lender's figure,
+  which he is still chasing, remains wanted.
+- ⇒ 🔑 **EVERY ALLOCATION BETWEEN HIS TWO ACTIVITIES CEASES TO EXIST** — the car, the phone and the
+  firm's own fee were each being split, and with one schedule there is nothing to split. ✅ **That
+  closes four open splits that had been the firm's to settle since September.**
+
+🧮 **THE WHOLE RETURN WAS RECALCULATED, and the striking part is how little the bottom line moved.**
+**A substantial block of deduction disappears, yet the refund falls by only a small amount** — because
+his taxable income was already nil and **most of the tips deduction was being thrown away.** The extra
+income is simply absorbed by deduction that was buying nothing. ⇒ **Essentially the whole cost arrives
+through the health-insurance credit, where it is the AGI that drives everything.**
+
+⚠️ **THREE CONSEQUENCES THAT ARE NOT OBVIOUS AND ARE WORTH KNOWING:**
+
+- 🏠 **The home-office deduction disappears from this year and CARRIES FORWARD instead.** With one
+  schedule at a loss the home-office form's own gross-income limit bites, so the deduction is
+  **deferred, not forfeited** — ⚠️ **though a carryover is only worth something if next year runs at a
+  profit, and this activity lost money in both of the last two years.**
+- 🔴 **THE OPEN TIPS QUESTION IS NOW WORTH MORE, NOT LESS** — because the extra income consumes tips
+  deduction the return had been wasting. **A session skimming "the return got smaller" would assume
+  the opposite.** It is still the largest single deduction and the largest open liability on the
+  return.
+- ⚠️ **HE IS NOW MUCH CLOSER TO A THRESHOLD IN THE HEALTH-INSURANCE CREDIT where the repayment cap
+  roughly triples.** ⇒ **Three open items that could each add income now cost real money the moment
+  they land, where on the previous version of the return they could not.**
+
+🔴 **ONE DOUBT WAS RAISED BACK TO HER, BECAUSE SHE ASKED FOR DOUBTS — and it is the largest figure
+still in play on this return.** **Most of his business mileage was driven for the CATERING activity.**
+⚖️ **Two coherent readings:** take all of it onto the surviving schedule, which is what she instructed
+and what the client's own answer supports; **or** hold that **the same premise which removes the form —
+no trade or business in 2025 — also removes its driving from the surviving activity.** 🔑 **Neither is
+arithmetic, and the gap between them is worth four figures of refund.** ✅ **The return is being keyed
+her way and is NOT held pending an answer** — ✏️ **but the question goes to JULIA, not to the client**
+*(he has already answered the only part that was his)*, **and it is recorded in the evidence document's
+assumptions at its full value so that whoever signs sees it.**
+
+📗 **AND THE EVIDENCE DOCUMENT ISSUED TWO DAYS AGO IS SUPERSEDED AND MUST NOT BE THE ONE KEPT.** 🔑 **By
+the firm's own rule that document is built LAST and ONCE, as the record of the return as filed** — **and
+the return has just changed materially.** ✅ **It is rebuilt once the keystrokes are in and the
+recalculated draft has been read, and by the same rule the rebuild will carry no trace of this change.**
+**The history of it lives in the working paper, which is exactly the division of labour between the two
+documents.**
+
 ### Outstanding items (CI-only — never in the SOP)
 
 
+- 🔴 🆕 **WHOSE MILEAGE IS THE CATERING MILEAGE? — the largest figure still in play, and the question
+  goes to JULIA, not the client.** **Most of his 2025 business driving was for the catering activity,
+  whose schedule Julia has just removed for having no revenue.** ⚖️ **Either all of it moves onto the
+  surviving schedule — her instruction, and the client's own answer supports it — or the premise that
+  removed the form also removes its driving.** ✅ **Being keyed her way and NOT held** — ✏️ **but it is
+  worth four figures of refund and it is in the evidence document's assumptions at full value.**
+  ⚠️ **Three other open items ride on the same answer: the vehicle method comparison, the held-back
+  fuel/repairs/insurance, and the car-loan interest when it arrives.**
+- 📗 🆕 **THE EVIDENCE DOCUMENT ISSUED 2026-10-04 IS SUPERSEDED — do not keep it.** **The return
+  changed materially on 2026-10-06; by the firm's own rule that document is built last and once, as
+  the record of the return as filed.** ✅ **Rebuild it after the keystrokes are in and the recalculated
+  draft has been read.**
+- 🔴 🆕 **The print set still opens with a payment voucher on a return that claims a refund** — third
+  draft running. **It must come off before anything reaches him; it is the only page he reads as an
+  instruction.**
 - 🔴 **The box-14 tips are CLAIMED but not ESTABLISHED — close it before filing.** Worth **low four
-  figures** of tax. **Two questions, and they go to the EMPLOYER, not the client:** what job he
+  figures** of tax, and ⚠️ **WORTH MORE SINCE 2026-10-06 than before it**, because Julia's two
+  decisions raised his income into deduction the return had been wasting. **Two questions, and they go to the EMPLOYER, not the client:** what job he
   actually did there *(a role off the tipped-occupation list voids the whole amount)*, and how much
   of the figure the **customer chose** to pay rather than the invoice imposing it. ⛔ **Do not ask
   "was it mandatory" — a mandatory tip pool still qualifies, and that wording returns a false
@@ -1447,7 +1525,9 @@ document — the one that is kept rather than worked from.**
   repair.** *(See the log entry for that date.)* 🟡 **What survives is narrower and still open:**
   whether the **catering** activity actually **traded in 2025** — so whether the return carries one
   Schedule C or two — and whether the **real-estate** work is a third. **The two expense templates
-  are what answer both.** ⓘ *Splitting is nearly money-neutral this year* — one Schedule SE combines
+  are what answer both.** ✅ 🆕 **AND THE CATERING HALF IS ANSWERED 2026-10-06, BY JULIA: it does NOT
+  carry a 2025 schedule, because it billed nothing.** ⚠️ **The real-estate question is untouched and
+  still open.** ⓘ *Splitting is nearly money-neutral this year* — one Schedule SE combines
   them and the QBI carryforward applies to the aggregate — *except for the health-insurance
   deduction, which can sit under only one business.*
 - ✅ ~~Get the 2025 Form 1095-A read~~ — **closed 2026-09-13**, supplied directly by Lilian.
@@ -1511,7 +1591,10 @@ document — the one that is kept rather than worked from.**
       leaves it out, but it is inside an information return **the firm itself prepared for that
       payer**. **Only he can say what it was; it cannot be dropped silently.**
 
-- [ ] 🆕 ⚖️ **Four splits between the two activities need the firm's decision** — the vehicle, the
+- [x] ✅ ⚖️ **CLOSED 2026-10-06 — the four splits between the two activities no longer exist.**
+      🔑 **Julia's removal of the second business schedule abolished them rather than re-basing them:
+      with one activity there is nothing to allocate.** ⬇️ *Kept for the trail.*
+      🆕 ⚖️ **Four splits between the two activities need the firm's decision** — the vehicle, the
       meals, the phone and the home office. **None has a stated basis, and two of them pull opposite
       ways.**
 - [ ] 🆕 🔴 **Where the real-estate activity's costs go, and whether one payer's commission belongs
