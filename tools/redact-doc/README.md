@@ -219,6 +219,87 @@ still not read.
    it. This is the only gate here that protects against a *misleadingly reassuring* result
    rather than a leak.
 
+## 🔑 TWO EXTRACTORS, AND pypdf IS NO LONGER A SINGLE POINT OF FAILURE
+
+_(Added 2026-10-06, after a read Lilian asked for was blocked outright by a package.)_
+
+| | **pypdf** | **`pdftext.py`** — built in, standard library only |
+|---|---|---|
+| When it runs | **First, always** | When pypdf is missing or unusable, **or** when pypdf's own output would trip the **no-text-layer, intelligibility or glyph-mass** gates |
+| Layout mode | ✅ | ✅ — rows laid out with **spaces** at their horizontal position, the same shape pypdf's layout mode produces. ⛔ **Not delimited cells** — see the seventh lesson below |
+| **AcroForm field values** | ✅ | 🔴 **NO — and the tool SAYS SO.** On a FILLABLE PDF this path returns the labels and none of the typed values |
+| Dependencies | `pypdf` + `cryptography` | **none** |
+
+🛑 **WHY IT EXISTS.** On **2026-10-06** `pypdf` was not installed and `pip install pypdf` **panicked**
+on `cryptography.hazmat.bindings._rust` / `_cffi_backend`. The whole read was blocked on a package, in
+the middle of work that had been asked for. ⛔ **And `except ImportError` was not enough to fall back
+from:** the import gets far enough to reach cryptography's Rust bindings and raises
+**`pyo3_runtime.PanicException`, which derives from `BaseException`** and sails straight through an
+`ImportError` handler — so the tool died with a Rust backtrace instead of trying the other route.
+⚠️ **The panic's own backtrace still prints on stderr above the tool's messages.** It is written by Rust
+before Python regains control and cannot be suppressed from here. **It is noise, not a crash** — read on
+down to the tool's own `ⓘ extractor:` line.
+
+⛔ **IT SOFTENS NO GATE.** Both extractors' output goes through exactly the same four checks: the
+no-text-layer gate, the intelligibility gate, the glyph-mass limit and the final identifier guard. The
+only thing the new code decides is *whose pages to carry forward*.
+
+🔑 **AND THE CHOICE MIRRORS THREE OF THOSE FOUR, WHICH IS DELIBERATE.** `extraction_unusable()` predicts
+the no-text-layer, intelligibility and **glyph-mass** gates. ⛔ **It does NOT consider the final
+identifier guard, and must not:** a surviving identifier means the *masking* failed, not the extraction,
+and re-extracting would hide it instead of fixing it. ⚠️ **An earlier version mirrored only the first
+two**, which left the fallback blind to the very case it was built for — a glyph-subset font, whose
+tokens are full of letters and sail past both. That document died at the glyph-mass limit with the
+dependency-free extractor never tried *(`FOLLOW-UPS.md` row 68's document)*.
+
+⚠️ **On the document that prompted all of this, pypdf produced NOTHING AT ALL** — it could not be
+imported — so the read happened entirely on the new path. *(The labels-with-no-amounts failure in
+lesson 2 below was an intermediate version of `pdftext.py`, not pypdf. They are different failures and
+conflating them teaches the reader that the automatic fallback catches something it does not.)*
+
+### The five things it gets right that a naive reader does not
+
+**Each one produced output that looked like success.** They are written out in full in `pdftext.py`'s
+docstring and pinned by `test_pdftext.py`.
+
+1. **PDF 1.7 object streams.** Most objects live compressed inside an `/ObjStm`. Reading only
+   top-level objects gives **zero pages**, which reads as *"not a PDF"* rather than *"look harder"*.
+2. 🔴 **Per-font `ToUnicode` CMaps, never merged.** A page uses several subset fonts whose maps
+   **conflict**. Merging them decodes the labels and **silently drops the amounts** — a 220,000-character
+   file of a tax return with no figures in it, and nothing in the report saying so.
+3. 🔴 **`Tf` lives OUTSIDE `BT`…`ET` in some producers** (ATX among them). Reset the active font per
+   text object and every string decodes with no font — which on a subset font yields plausible letters
+   shifted by a constant and **drops every digit**.
+4. **Page order comes from the page tree's `/Kids`, never from object numbers.** They usually agree,
+   which is the trap. One real file also held an **orphan `/Page` outside the tree**, so numbering by
+   object put a phantom page 1 in front and shifted **every page reference by one**.
+5. **The graphics-state matrix.** A statements page stacks three blocks with `q … 1 0 0 1 0 -277 cm … Q`.
+   Ignore the matrix and three different tables land on the same rows and interleave as one.
+
+…and a sixth that is not about PDFs at all: **a literal string may contain balanced, unescaped
+parentheses** — `(Ordinary business income (loss))` is on every return. A pattern that cannot match it
+skips the whole `Tj`, the page comes out **empty**, and an empty page reads as *"this is a scan"*.
+
+### 🔴 …and a SEVENTH, which is a SAFETY decision disguised as a formatting one
+
+🛑 **HOW A ROW IS RENDERED DECIDES WHETHER THE REDACTOR CAN SEE ANYTHING.** The first version emitted
+each row as coordinate-prefixed cells — `40:label | 300:456 | 340:78 | 380:1234` — which reads well for
+a human and **disarmed every context-gated rule in `redact.py`**, because those patterns are calibrated
+against pypdf's **layout** mode:
+
+| What broke | What it did |
+|---|---|
+| `SSN` separates groups with `[-\s.]` | a **boxed** social security number — three boxes, three positioned runs, which is how many fillable IRS forms lay one out — came through **IN CLEAR**, with the report reading `0 SSN/ITIN` and **exit 0** |
+| `ACCOUNT_CONTEXT` matched the nearest digits | it masked the **X COORDINATE** and left the account number beside it: `40:Account number [ACCT-1]:4471982`. **A leak and a false success in the same line**, which is worse than either alone |
+| `STREET` needs `\d{1,6}` adjacent to the street name | a boxed address split across runs stopped matching |
+
+🔑 **A label and its value sit at different x positions BY DEFINITION — that is what a form is.** So this
+was never an edge case; it disarmed the redactor on every real return, on the path a session takes today.
+✅ **Rows are therefore laid out with SPACES**, reproducing layout mode, and every pattern works unchanged.
+📈 **It measurably improved the real document that prompted this work: 37 street lines masked where the
+cell format masked 21.** ⛔ **Do not "improve" it back into delimited cells**; `test_pdftext.py` pins it
+with an invented boxed SSN that must come out masked, and that test catches the regression in three places.
+
 ## 🔧 It didn't read the PDF — the runbook
 
 **Work down this table by the exit code. Do not improvise around it**, and in particular never
@@ -226,7 +307,7 @@ solve a reading problem by sending the document somewhere else to be read.
 
 | Exit | Message | What it means | What to do |
 |---|---|---|---|
-| **3** | `pypdf is not installed` | A fresh session has no pypdf | `pip install pypdf`. **If `import pypdf` then fails with `No module named '_cffi_backend'`**, that is the system `cryptography` package missing its backend, not this tool: `pip install --upgrade cffi`. A complaint that `cryptography` cannot be uninstalled because Debian installed it is expected and harmless. 🔴 **In a locked-down environment `pip install` will not work at all** — see the block below |
+| **3** | `could not read as PDF` naming **both** extractors | pypdf is unusable **and** the built-in extractor could not parse the file either | Read both reasons on the line. If pypdf is the only problem the tool will have fallen back on its own and you will not see this — look for `ⓘ extractor: built-in (pdftext.py)` instead. To get pypdf working (needed only for a **fillable** PDF): `pip install pypdf`. **If `import pypdf` then fails with `No module named '_cffi_backend'`**, that is the system `cryptography` package missing its backend, not this tool: `pip install --upgrade cffi`. A complaint that `cryptography` cannot be uninstalled because Debian installed it is expected and harmless. 🔴 **In a locked-down environment `pip install` will not work at all** — see the block below |
 | **3** | `download failed (curl exit 22)` | The environment's network policy refused the **file host**, not the tool | The proxy log names it: `connect_rejected · gateway answered 403 to CONNECT`. **Double serves its files from `keeper-attachable.s3-accelerate.amazonaws.com`** — that host has to be in the environment's allowed domains. ⛔ **Not a reason to fetch the PDF another way.** Confirm with `curl -sS "$HTTPS_PROXY/__agentproxy/status"`, which lists recent relay failures by host |
 | **3** | `could not read as PDF` | Not a PDF, or a corrupt download | Check the file. A `.docx` or an image is out of scope here |
 | **2** | `NO TEXT LAYER` | A scan | **Ask for a text PDF.** OCR is not set up here and this is not a gap to route around |
@@ -283,8 +364,9 @@ PYTHONPATH=<scratch>/pypdf-<version> python3.12 tools/redact-doc/redact.py "<url
   PanicException** — which is *not* an `ImportError`, so pypdf's own fallback chain does not catch it
   and the import dies. This is the `_cffi_backend` failure above wearing a different face.
 
-⭐ **The durable fix is to vendor pypdf under `tools/redact-doc/vendor/`** so no future review depends
-on a network policy at all.
+⭐ **Since 2026-10-06 none of this blocks a read any more:** `pdftext.py` runs with no dependencies at
+all, so a restricted environment still gets the document's page text. **The tarball route above is now
+needed for exactly one thing — a FILLABLE PDF**, whose typed field values only pypdf can read.
 
 **The single most useful habit:** before trusting any figure out of this tool, find an internal
 arithmetic check in the document itself and confirm it. On a return, `1125-A` line 6 − line 7 =
@@ -492,8 +574,14 @@ masked` on a document that carried one.)_
 ## Tests
 
 ```bash
-python3 tools/redact-doc/test_redact.py
+python3 tools/redact-doc/test_redact.py     # the redaction patterns, the gates and the guard
+python3 tools/redact-doc/test_pdftext.py    # the built-in extractor: the seven lessons above
 ```
+
+⚠️ **`test_redact.py` SKIPS its fillable-form (AcroForm) cases when pypdf is unusable, and says so on the
+last line.** It used to die on the import before running anything; now it runs everything it can and names
+what it did not exercise. **A `PASS` that mentions the skip does not vouch for the field-value half of the
+tool** — install pypdf and re-run before trusting it on a fillable PDF.
 
 Every case is **invented** — no client's data is in that file and none may be added
 ([`organizer-review`](../../.claude/skills/organizer-review/) §0 rule 7). Run it after any

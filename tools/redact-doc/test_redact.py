@@ -269,6 +269,18 @@ with tempfile.TemporaryDirectory() as td:
     if _run(tmp / "scan.pdf", tmp / "o2.txt") != 2 or (tmp / "o2.txt").exists():
         FAILURES.append("_run · a text-less PDF did not exit 2 without writing")
 
+    # 🔴 A MANY-PAGE SCAN. One textless page was already covered above, and it
+    #    passed even with the gate counting the wrong string — the `--- page N ---`
+    #    headers `raw` carries are worth 5-6 word characters each, so the HEADERS
+    #    ALONE cross the 100-character floor at 19 pages. A filed 1040 is routinely
+    #    19 to 40, so that is the realistic scan, and it was being WRITTEN rather
+    #    than refused. The gate must measure the page text, not `raw`.
+    for _n in (20, 40):
+        (tmp / f"scan{_n}.pdf").write_bytes(_minimal_pdf(["x"] * _n))
+        if _run(tmp / f"scan{_n}.pdf", tmp / f"o2_{_n}.txt") != 2 or (tmp / f"o2_{_n}.txt").exists():
+            FAILURES.append(f"_run · a {_n}-page text-less PDF did not exit 2 without writing — the "
+                            "no-text-layer gate is counting its own page headers")
+
     # A real read: identifiers masked, EIN kept, file written.
     (tmp / "ret.pdf").write_bytes(_minimal_pdf(
         "Taxpayer social security number 123-45-6789 EIN 45-6789012 "
@@ -304,8 +316,53 @@ with tempfile.TemporaryDirectory() as td:
 #    first run did not see. These cases exist so it cannot happen quietly again.
 
 from redact import (  # noqa: E402
-    GLYPH_MASS_LIMIT, MIN_DISTINCT_CHARS, decode_glyph_names, looks_like_text,
+    GLYPH_MASS_LIMIT, MIN_DISTINCT_CHARS, decode_glyph_names, extraction_unusable,
+    looks_like_text,
 )
+
+# ══ WHICH EXTRACTOR'S PAGES ARE CARRIED FORWARD. `extraction_unusable()` decides
+#    it, and it must mirror the gates in _run() — a branch it misses is a document
+#    refused outright where the other extractor would have read it. It lived as a
+#    closure inside _run() and no test could reach it; that is exactly the
+#    "unpinned branch" this file warns about elsewhere, so it is lifted and pinned.
+_GOOD = ["Zephyr Quarry Junction LLC Form 1120-S U.S. Income Tax Return for an S Corporation. "
+         "Ordinary business income (loss) 22,100. Schedule K-1 Part III box 1. " * 4]
+if extraction_unusable(_GOOD):
+    FAILURES.append("EXTRACTOR CHOICE · ordinary readable pages were judged unusable, so a good "
+                    "pypdf read would be thrown away")
+if not extraction_unusable(None) or not extraction_unusable([]) or not extraction_unusable([""]):
+    FAILURES.append("EXTRACTOR CHOICE · empty pages were not judged unusable")
+if not extraction_unusable(["a few words"]):
+    FAILURES.append("EXTRACTOR CHOICE · a page under the 100-word-character floor was not judged "
+                    "unusable (the no-text-layer gate)")
+# ⚠️ Long enough to clear DIVERSITY_MIN_LEN — the gate deliberately does not fire
+#    on a short document, so a short fixture tests nothing.
+if not extraction_unusable(["ab " * 1200]):
+    FAILURES.append("EXTRACTOR CHOICE · a long page with almost no distinct characters was not "
+                    f"judged unusable (expected < {MIN_DISTINCT_CHARS} distinct to fail)")
+
+# 🔴 THE CASE THE FALLBACK EXISTS FOR, and the one an earlier version missed: a
+#    glyph-subset font in the FILLED-IN fields while the form template reads fine.
+#    That document has a wide alphabet AND thousands of unreadable tokens, so it
+#    walks past both of the other two checks and would have been kept — then
+#    refused by the glyph-mass gate, with the dependency-free extractor never
+#    tried. The fixture must reproduce BOTH halves or it proves nothing.
+_GLYPH = [_GOOD[0] * 3 + " " + " ".join(f"/g{i}" for i in range(GLYPH_MASS_LIMIT * 3))]
+_ok, _distinct = looks_like_text(normalise(_GLYPH[0]))
+if not _ok or _distinct < MIN_DISTINCT_CHARS or len(_GLYPH[0]) < 2_000:
+    FAILURES.append("EXTRACTOR CHOICE · the glyph-subset fixture no longer walks past the "
+                    f"intelligibility gate ({_distinct} distinct, {len(_GLYPH[0])} chars), so it "
+                    "stopped testing what it was written for")
+if not extraction_unusable(_GLYPH):
+    FAILURES.append("EXTRACTOR CHOICE · a glyph-subset page past GLYPH_MASS_LIMIT was NOT judged "
+                    "unusable — the fallback stays blind to the one case it exists for "
+                    "(FOLLOW-UPS row 68)")
+# …and just under the limit it must NOT switch, or every document with a few
+#    slash-tokens would be re-extracted for nothing.
+_FEW = [_GOOD[0] + " " + " ".join(f"/g{i}" for i in range(5))]
+if extraction_unusable(_FEW):
+    FAILURES.append("EXTRACTOR CHOICE · a readable page carrying a handful of slash-tokens was "
+                    "judged unusable — the mass check is firing far too early")
 
 
 def _as_glyphs(s: str) -> str:
@@ -788,6 +845,27 @@ if not _g_c["cross_line"]:
 #    field values are read, masked like page text, guarded like page text, and
 #    counted, so a blind read says "0 of N" instead of passing for a clean one.
 #    Every name and number below is INVENTED.
+#
+# 🛑 THESE CASES NEED pypdf AND CANNOT BE FAKED. Field VALUES live in the
+#    AcroForm, and `redact.py` reads them only on the pypdf path - the built-in
+#    extractor in `pdftext.py` reads page text and nothing else, by design. In a
+#    session where pypdf is unimportable (it happens: `cryptography`'s Rust
+#    bindings panic on import in a fresh cloud container) every case below fails
+#    for that one reason.
+# ⛔ SO THEY ARE SKIPPED RATHER THAN FAILED - and the skip is ANNOUNCED. Reported
+#    as 31 failures they look like a broken tool and bury the cases that did run;
+#    reported as "not exercised" they say the true thing, which is that the
+#    fillable-form half of the redactor WAS NOT TESTED HERE.
+
+try:
+    import pypdf as _pypdf_probe  # noqa: F401
+except (KeyboardInterrupt, SystemExit):
+    raise
+except BaseException as _exc:  # noqa: BLE001 - a panicking import is not an ImportError
+    SKIPPED_FIELDS = f"{type(_exc).__name__}: {_exc}".replace("\n", " ")[:120]
+else:
+    SKIPPED_FIELDS = ""
+
 
 def _fillable_pdf(text: str, fields: list, rotate: int = 0, unplaced: list = (),
                   xfa: bool = False, twice: tuple = ()) -> bytes:
@@ -1246,10 +1324,21 @@ with tempfile.TemporaryDirectory() as td:
     if "masked by their SHAPE" in report:
         FAILURES.append("FIELDS · the unlabelled-field note printed on a PDF with no fields")
 
+if SKIPPED_FIELDS:
+    FAILURES[:] = [f for f in FAILURES if not f.startswith("FIELDS ·")]
+
 if FAILURES:
     print(f"FAILED — {len(FAILURES)} problem(s):")
     for f in FAILURES:
         print("  " + f)
     sys.exit(1)
+
+if SKIPPED_FIELDS:
+    print("PASS — all cases redacted or preserved as intended, EXCEPT the fillable-form")
+    print("       (AcroForm) cases, which were NOT EXERCISED because pypdf is unusable here:")
+    print(f"         {SKIPPED_FIELDS}")
+    print("       ⛔ So nothing here vouches for the FIELD-VALUE half of the redactor.")
+    print("       Install pypdf and re-run before trusting this tool on a FILLABLE PDF.")
+    sys.exit(0)
 
 print("PASS — all cases redacted or preserved as intended.")

@@ -3753,6 +3753,50 @@ written down.** ☑️ **Say so plainly, outside the document, and name what mus
 goes anywhere.** 🔑 **The final worksheet describes a return that is RIGHT; it cannot launder one that
 is not.**
 
+#### ✅ 4I-a · **BUILT FOR THE FIRST TIME, 2026-10-06 — what it actually took, and the two things that nearly went wrong**
+
+🔑 **The first §4I worksheet is Ecoorganic USA LLC's 2025 Form 1120-S: 13 sheets, English, no version
+history, handed over for Double.** Its shape is worth copying, because her eight sections do not map
+one-to-one onto sheets and guessing the mapping wastes a pass:
+
+| Sheet | Why it is its own sheet |
+|---|---|
+| `Read me` | The provenance-tag legend, the sheet index, **and the SELF-TEST written out** — the acceptance test says to say which five figures were tested, and a reader cannot check a claim that is not there |
+| `1 Client and return` · `2 Where the numbers are` | §4I sections 1 and 2 |
+| 🆕 `2b Adjusting entries` | **NOT one of her eight, and it earned its place.** The return is built off the books *as adjusted*, so a replicator who has the P&L but not the entries cannot reach the return at all. One row per line, with each line's own description |
+| `3 Documents` · `4 Client statements` | §4I sections 3 and 4 |
+| `5 Federal return` · `5b Connecticut` | §4I section 5, split because a state return is a second form set with its own page numbers |
+| `6 Decisions` · `7 Assumptions` · `8 Carries forward` | §4I sections 6, 7 and 8 |
+| 🆕 `9 Not claimed` | **Acceptance-test addition ④ needs its own sheet.** Buried inside section 7 nobody finds it, and *"the hardest thing to replicate is an absence"* is the reason it exists |
+| 🆕 `Tie-outs` | **The cheapest sheet to write and the most used.** It lets a reader VERIFY rather than re-derive, which is what the acceptance test is really asking for |
+
+🛑 **THE TWO THINGS THAT NEARLY WENT WRONG, and both are general:**
+
+**① A DECISION THAT WAS SUPERSEDED BY ANOTHER *DECISION* IS VERSION HISTORY. A DECISION THAT WAS
+OVERRULED BY A *PERSON* IS NOT.** The working paper had thirty numbered decisions, a third of them
+withdrawn or narrowed by later ones. ⛔ **Carrying them all over reproduces exactly the layering §4I
+bans**; ✅ **carrying only the live ones loses the objections §4I section 6 requires.** 🔑 **The cut
+that works: the firm's own earlier positions go OUT; an objection that was PUT to the signer and
+overruled stays IN, with its reasoning, because she is the one who signs.** ⚠️ **And renumber the
+survivors 1..n** — a final worksheet with gaps in its decision numbers invites *"what happened to
+4?"*, which is a question only the working paper can answer.
+
+**② THE `ACTIONABLE` DECLARATION HAS NO OBVIOUS ANSWER HERE, AND IT IS NOT A SESSION'S TO INVENT.**
+§4D's fit check marks the columns a person TYPES FROM. ⛔ **Nobody types from a final worksheet**, so
+on §4D's own terms nothing on it is actionable and **every clipped cell would report as the quiet
+case** — the opposite of what the document is for. ✅ **It was built with EVERY column of EVERY sheet
+fatal**, on the reasoning that a clipped cell anywhere is the *hueco* §4I forbids. ⚠️ **That reasoning
+is a session's, and §4D says the declaration *"should be put to Lilian, not guessed"* — so it is in
+[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 192 as a convention to confirm, not settled here.**
+
+☑️ **AND ONE MECHANICAL CHECK THAT IS WORTH THE HOUR: cross-check every figure against the page it is
+attributed to, by machine.** A final worksheet addresses hundreds of figures by form, page, part and
+line, and a page reference is the one thing in it that cannot be checked by reading. ✅ **On this one,
+93 claims were tested against the filed PDF and all 93 found** — ⚠️ **and the same check is what
+caught the page numbers being off by one** *(a `/Page` object outside the page tree had been counted
+as page 1 — [`tools/redact-doc/README.md`](../../../tools/redact-doc/README.md) lesson 4)*. ⛔ **Without
+it the whole document would have pointed one page early, consistently and invisibly.**
+
 #### 🔒 AND THE RULES THAT DO NOT CHANGE
 
 ✅ **IT IS IN ENGLISH** *(the standing rule — Julia reads it, and she does not speak Spanish)*.
