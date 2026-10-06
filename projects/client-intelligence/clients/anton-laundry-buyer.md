@@ -259,6 +259,25 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-06 (REPORT v8, AS A REVIEW PAGE) — ❓ **JULIA: "Can you build this as the entire document as an artifact
+  so that I don't have to download it … but I can see it as an artifact first?"** ✅ **English report v8 built and
+  published as a private review page** (a screen edition of the same HTML the PDF prints from, with a "what changed
+  since v7" note at the top that does not print).
+  - **v8 changes:**
+    - the category-2 explanation corrected (manager standard, the unpaid Bayshore weeks, and a small remainder
+      still being traced; the amount rejected does not move);
+    - the same correction in the labor section;
+    - step 1 now says why loan payments, owner distributions and equipment purchases sit in the sellers' P&L;
+    - a new table walks from our operating result to our adjusted earnings;
+    - the basis-of-findings notes now state that the delivery company has no account listing or audit trail, that
+      only binder pp. 1–80 were read, that scanned pages were not read, and that the utilities came from the
+      binder's schedule.
+  - **Checks:** links 0 problems; every money figure traced (three new derived figures registered); the PDF is 46 pp.
+  - **Not in v8, pending her decision or the binder:** the delivery company's unpaid invoices, its vehicle costs, the
+    returns-versus-books comparison, and the binder's 2023–2025 returns.
+  - **The binder:** Julia loaded the full PDF into NotebookLM and asked for prompts to pull pp. 81–309 (the
+    owner/manager add-back lines, and each 1120-S) rather than connect the MCP.
+  - The PDF and the Russian edition are rebuilt only after she approves.
 - 2026-10-06 (THE MANAGER "REALLOCATION" — JULIA CAUGHT IT) — ❓ **JULIA, reading binder pp. 86, 91 and 103: the $15,000
   is SUBTRACTED from the add-backs, not added — "don't trust my word, but take a look at it for yourself."**
   ⛔ **Those pages could not be opened here.** Both the Drive reader and Drive's own text index stop at p. 80, and the
