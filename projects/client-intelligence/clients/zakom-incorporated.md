@@ -1813,13 +1813,21 @@ computation.** **Eight of them either match the working paper or had already bee
 3. **That the equity-presentation question and the depreciation-recategorisation question were actually PUT to
    Julia, and when.** **A working paper records that a question is hers; it does not record that it was asked.**
 
-**Also recorded: the officer-compensation figure is the hinge of both returns.** **Page 1 ordinary business
-income is a direct function of it, and that income carries to the owner's Form 7203 and sets how much of his
-distribution is a capital gain.** **The working paper now holds the sensitivity worked out from the draft's own
-page-1 subtotals, so whatever Julia settled on can be read against it in one step.** ⚠️ **And a second-order
-point the email does not raise: officer compensation on a company the organizer says ran no payroll in 2025
-implies a W-2 and the payroll returns behind it, which nothing in the file evidences were filed. Stated for
-Julia, not acted on.**
+**Also recorded, and the review of this work reversed it: officer compensation does NOT change how much the
+owner is taxed on.** **Because this client has no books with an equity section, the distribution reported on
+the K-1 is a derived residual rather than a document figure — so booking a salary reduces the company's
+ordinary income and reduces the distribution by the same amount, and the two cancel.** 🔑 **The owner's
+capital gain is unchanged at any salary up to the company's income before that salary, and FALLS above it.**
+**What the salary changes is the CHARACTER of the income — K-1 ordinary income becomes wages, at the same
+marginal rate but carrying payroll tax on both sides and not qualifying for the business-income deduction;
+above that boundary it converts long-term capital gain into wages, which is a real rate cost — and it strands
+the excess as a suspended loss the owner cannot deduct while his basis is zero.** ⚠️ **One exception: employer
+payroll tax actually paid does raise the gain, because cash leaves the company while the derived distribution
+does not.** **The working paper carries the whole table, machine-checked.**
+
+⚠️ **A second-order point the email does not raise: officer compensation on a company the organizer says ran no
+payroll in 2025 implies a W-2 and the payroll returns behind it, which nothing in the file evidences were
+filed. Stated for Julia, not acted on.**
 
 ⏳ **THE FINAL WORKSHEET IS NOT BUILT.** **Lilian's trigger: Julia discusses both returns with the client, he
 approves, and she uploads both — then one final worksheet per return** *(governed by the
