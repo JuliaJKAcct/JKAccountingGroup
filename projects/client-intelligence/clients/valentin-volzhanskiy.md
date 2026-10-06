@@ -1526,6 +1526,106 @@ as if it meant something:** her dictation produced a word that is not a term, in
 car's expenses being summed in one worksheet. **It was read as "vehicle expenses" and she was told that
 was the reading, so she could correct it.**
 
+### 2026-10-06 (last) — she keyed the changes; nine of eleven landed, and the permanent record is built
+
+🔑 **Lilian keyed the changes and handed the draft back asking whether anything was left. That is an
+audit, so the whole return was transcribed again — every line, every blank line, and every checkbox
+read by its column position rather than from the text, because a Yes and a No come out of an extract
+identically.**
+
+- ✅ **NINE OF THE ELEVEN KEYSTROKES LANDED**, including the one the independent review had caught as
+  missing from the written list: the tolls field. **Without it the car-and-truck line would have come
+  out short by the exact amount that went missing once before on this return.**
+- 🔴 **ONE FIGURE IS STILL SHORT: the phone.** The deleted form's share went with the form instead of
+  moving onto the surviving one. ⛔ **It costs NO tax this year** — the repayment cap on the
+  health-insurance credit binds either way, which is exactly what the earlier analysis predicted —
+  🛑 **but it leaves him a very narrow margin below the threshold where that cap roughly triples,
+  where he would otherwise have had a comfortable one.** ⇒ **Worth keying for the margin, not for the
+  tax.** ⚠️ **Three open income items could each cross that threshold on their own.**
+- 🔴 **AND THE PAYMENT VOUCHER IS STILL ON PAGE 1 — fourth draft running.** **It tells him to mail
+  money on a return that refunds him, and it is the only page a client reads as an instruction.** ⛔ **It
+  must come off before anything reaches him.**
+- ✅ **EVERYTHING ELSE RECONCILES, AND THE MODEL REPRODUCED THE WHOLE DRAFT A SECOND TIME** — on both
+  the keyed figure and the corrected one. **The firm's arithmetic has now predicted this return in
+  advance twice and matched it line by line.**
+- 🔴 **ONE THING THAT WORKED AND STILL IS NOT WRITTEN DOWN:** where the mileage and the tolls are
+  actually typed in the software. **The keystroke demonstrably succeeded, so somebody knows — but the
+  firm does not, and this is the third return where that route was needed and never recorded.** ✏️ **One
+  line from whoever keyed it closes it for good.**
+
+📗 **THE PERMANENT RECORD IS BUILT AND DELIVERED — fifteen tabs, and it is the document that gets
+saved on the client for future years.** 🔑 **Her bar was that somebody holding nothing but that file
+should be able to rebuild the whole return from the beginning.** **So it carries: who he is and what
+was filed; every source document by name, including the explicit statement that there are NO books on
+this engagement; what each document stated and which figure it settled; his words and the firm's
+instructions, dated; the profit and loss row by row with his own claim beside the return; every line
+of every form including the ones deliberately left blank; the home office in full; the vehicle with
+what the method excludes and why; the step-by-step arithmetic behind every figure the firm calculated;
+every expense he claimed that is NOT on the return with the rule that keeps it off; every decision
+with the alternative that was turned down and who chose; every assumption with what changes if it is
+wrong, largest exposure first; what carries into next year; and a list of the checks that were
+actually run and what each was run against.**
+
+🛑 **AND THE RULE THAT DOCUMENT LIVES BY CAUGHT THE SESSION'S OWN WRITING.** **It must contain no
+reference to any earlier version of anything — that was her instruction, because the layering which
+makes a working paper trustworthy makes this one unreadable to somebody who never saw an earlier
+draft.** ✅ **The build enforces it mechanically and refuses to produce the file otherwise, and it was
+proved to catch planted test phrases before it was trusted.** ⇒ 🔑 **It fired on a line this session
+had written, describing an earlier position as superseded.** ⛔ **The line was REMOVED rather than
+reworded** — that history belongs in the working paper, not in the document that outlives it.
+
+⚠️ **The copy of that document issued two days ago is superseded and must not be the one kept.** ✅ **And
+if the phone is keyed, six figures move and it is reissued once.**
+
+### 2026-10-06 (later still) — the phone is keyed, and why a deduction that moves no tax is not a deduction that failed
+
+🔑 **She keyed the phone figure and then asked the right question: why did the refund not change at
+all?** **It is worth recording the answer, because it is the kind of question that will come up again
+on any client with a Marketplace subsidy.**
+
+✅ **THE DEDUCTION DID WORK. It just worked on a number he was never going to pay.** The refund is the
+withholding less the total tax, and the total tax has three parts — each of which the extra deduction
+hit a different wall in:
+
+- **Income tax was already ZERO, and more deduction cannot make it more zero.** His standard deduction
+  and his tips deduction together already exceeded his income by a wide margin, so the new deduction
+  landed in a region where deduction buys nothing. It was absorbed by tips deduction that was already
+  being wasted.
+- **Self-employment tax was already zero**, because the business runs at a loss. A larger loss creates
+  nothing.
+- 🔑 **And the health-insurance credit repayment is CAPPED.** The form makes him repay **the smaller**
+  of the excess that was advanced to him and a statutory limit. **The extra deduction genuinely reduced
+  the excess — but the limit was lower than the excess both before and after, so the repayment never
+  moved.** The whole improvement fell inside the part that was never payable.
+
+⚠️ **TWO THINGS FOLLOW, AND THEY MATTER MORE THAN THIS ONE FIGURE DID.**
+
+- ⛔ **A substantial further slice of deduction is also worth nothing** before the cap stops binding.
+  **So no small expense surfacing from here on moves his tax**, and the pools still arguable on his
+  file are collectively worth very little. ✅ **That is a reason not to spend time chasing them.**
+- 🟢 **WHAT THE CHANGE ACTUALLY BOUGHT IS THE MARGIN, and that is why it was worth keying.** He sits
+  below a threshold where that repayment cap roughly triples. **Before the change his headroom was
+  very narrow — almost any late income item would have crossed it. Now it is comfortable, and none of
+  the three open income items crosses it on its own.** ⚠️ **Crossing costs real money immediately.**
+
+✅ **TWELVE OF THE THIRTEEN KEYSTROKES ARE NOW IN**, and the one left is not a figure at all: **the
+payment voucher still has to come off the print set.** 🛑 **It must be gone before anything reaches the
+client — it tells him to mail money on a return that refunds him.**
+
+📗 **THE PERMANENT RECORD WAS REISSUED ONCE, with every figure the phone drives updated.** 🔑 **One row
+in it got SIMPLER rather than just changing: the merge check now shows that the only difference between
+the two former schedules' expenses and this return's total is the card interest Julia removed, less a
+single dollar GAINED because the mileage multiplication is now done once instead of twice.** ✅ **It
+foots on the return itself rather than on the return plus a pending keystroke.** ⛔ **The two earlier
+copies are superseded; this is the one that is saved.**
+
+⚠️ **AND THE REVIEW CAUGHT THREE COUNTING ERRORS IN THE SESSION'S OWN WRITE-UP, all now fixed:** a
+print-set inventory that claimed a missing page which had in fact been accounted for *(it would have
+sent the next session hunting for it)*; a draft count for the voucher that was one too high, and said
+so in the same sentence that listed the dates; and a sheet row count that contradicted something the
+same section said two paragraphs later. ⓘ **The voucher count is now stated as the DATES rather than
+as an ordinal, because the ordinal had drifted twice.**
+
 ### Outstanding items (CI-only — never in the SOP)
 
 
