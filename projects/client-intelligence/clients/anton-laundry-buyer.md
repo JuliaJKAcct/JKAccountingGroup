@@ -259,6 +259,45 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-06 (WHAT IN THE DEAL FOLDER WAS USED, AND WHAT WAS NOT) — ❓ **JULIA: "list all the files that you are
+  actually using, and list all the files that you are not using because you couldn't read them or for whatever
+  reason."** ✅ **Inventoried the Drive folder "LAUNDRY PURCHASE" (237 files) against every file this engagement's
+  sessions opened.** Delivered as a workbook, never committed. The count:
+  - 95 used: 79 in full, 16 in part;
+  - 72 duplicates of files that were read;
+  - 55 never opened;
+  - 1 unreadable (an .eml);
+  - 1 superseded;
+  - 13 of our own outputs.
+
+  🔴 **Three gaps that change open items:**
+  ① **The Financial Binder (309 pp) was read only through page 80.** The Drive reader stops there, and the file is over
+  the 10 MB download limit.
+  - **Pages 190–309 are Bayshore's and Samoset's Forms 1120-S for 2023, 2024 and 2025.**
+  - Pages 81–189 hold the rest of the line-by-line add-back schedule, the full-year 2025 P&L Detail for each business,
+    and the FY2024–2025 P&L by store.
+  - ⇒ Three things must be re-checked against these pages: the report treating 2025 as unsupported by any return, the
+    open item asking for the 2025 returns, and the 2026-10-05 suggestion to request the full 2023–2024 returns. The
+    returns may already be in hand; whether the 2025 ones were filed is a separate question.
+
+  ② **Never opened, though the open items ask the sellers for these same records:**
+  - 13 monthly statements for the second Palmetto W&F merchant account (the "2026" subfolder of the Palmetto 8th
+    Paystri folder);
+  - 9 CENTS monthly screenshots (Machines/Laundry Works Cents 8th Ave).
+
+  Also never opened: 33 Huebsch dashboard screenshots.
+  ③ **Vol 3 of the broker binder was read to about p. 97 of 133.** Tab E-2, the Paystri section, was not read. A full
+  download was tried once and failed on a session timeout; the file is under the size limit.
+
+  ✏️ **Two corrections owed:**
+  - the report's sources note says account listings and audit trails exist "for all six businesses", but the delivery
+    company has neither;
+  - the Oct 3 portfolio workbook's open item on the delivery company's 2025 revenue difference still says the books
+    and the return agree. They don't; see the "THE TAX RETURNS AGAINST THE BOOKS" entry.
+
+  ❓ **Next (offered):**
+  - Julia to split binder pp. 81–309 into files under 10 MB, or upload them here;
+  - read the 13 statements, the screenshots and Vol 3 Tab E-2 now.
 - 2026-10-05 (THE TAX RETURNS AGAINST THE BOOKS) — ❓ **JULIA: "is that same for tax reporting? you're sure? because
   on part 4 … for you comes to 363045, so i don't get it how you got to $981 292".** ✅ **No: the returns are not
   prepared from the store books as they stand.** The books half of the previous answer stands, on the net-income tie.
