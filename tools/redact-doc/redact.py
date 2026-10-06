@@ -1092,28 +1092,101 @@ def _run(src: Path, dst: Path) -> int:
         print(f"ERROR: no such file: {src}", file=sys.stderr)
         return 3
 
-    try:
-        from pypdf import PdfReader
-    except ImportError:
-        print(
-            "ERROR: pypdf is not installed.\n"
-            "    pip install pypdf\n"
-            "⚠️  In a fresh cloud session `import pypdf` can still fail afterwards with\n"
-            "    ModuleNotFoundError: No module named '_cffi_backend'. That is the system\n"
-            "    cryptography package missing its backend, not a problem with this tool:\n"
-            "    pip install --upgrade cffi\n"
-            "    (An 'ERROR: Cannot uninstall cryptography ... installed by debian' line\n"
-            "     while doing this is expected and harmless — pypdf imports anyway.)",
-            file=sys.stderr,
-        )
-        return 3
+    # ── TWO EXTRACTORS, AND THE SECOND IS NOT A LAST RESORT ──────────────────
+    # pypdf stays FIRST, because it has a layout mode and reads AcroForm field
+    # values, and the built-in one does neither. But pypdf is a dependency, and
+    # on 2026-10-06 it was simply not installable in a cloud session (`pip
+    # install pypdf` panicked on cryptography's `_cffi_backend`), which blocked
+    # a read Lilian had asked for. So `pdftext.py` — standard library only —
+    # runs whenever pypdf is absent, OR when pypdf comes back with something
+    # that would trip the gates below. It has rescued a real filed return that
+    # pypdf returned as labels with no amounts.
+    # ⛔ IT DOES NOT SOFTEN A SINGLE GATE. Both extractors' output goes through
+    #    exactly the same checks further down; `_unusable` here only decides
+    #    WHICH extractor's pages to carry forward.
+    reader = None
+    pages: list[str] | None = None
+    why_pypdf = ""
 
     try:
-        reader = PdfReader(str(src))
-        pages = [p.extract_text(extraction_mode="layout") or "" for p in reader.pages]
-    except Exception as exc:  # noqa: BLE001 — the reason matters more than the type
-        print(f"ERROR: could not read as PDF: {type(exc).__name__}: {exc}", file=sys.stderr)
-        return 3
+        from pypdf import PdfReader
+    except (KeyboardInterrupt, SystemExit):
+        raise
+    except BaseException as exc:  # noqa: BLE001 — see the comment: ImportError is NOT enough
+        # ⛔ CATCHING `ImportError` HERE IS NOT ENOUGH, and that is the whole
+        #    reason this branch exists. On the session that prompted it, pypdf
+        #    imported far enough to reach cryptography's Rust bindings and then
+        #    PANICKED: `pyo3_runtime.PanicException`, which derives from
+        #    BaseException and sails straight through `except ImportError`. The
+        #    tool died with a Rust backtrace instead of falling back.
+        why_pypdf = f"pypdf unusable: {type(exc).__name__}: {exc}".replace("\n", " ")[:300]
+    else:
+        try:
+            reader = PdfReader(str(src))
+            pages = [p.extract_text(extraction_mode="layout") or "" for p in reader.pages]
+        except Exception as exc:  # noqa: BLE001 — the reason matters more than the type
+            why_pypdf = f"pypdf could not read it: {type(exc).__name__}: {exc}"
+            reader = None
+            pages = None
+
+    def _unusable(candidate: list[str] | None) -> bool:
+        """Would these pages trip either gate below? Judged on the SAME transforms
+        the gates use, so this can never pass something the gates would refuse."""
+        if not candidate:
+            return True
+        joined = normalise("\n".join(decode_glyph_names(t)[0] for t in candidate))
+        if len(re.sub(r"\W", "", joined)) < 100:
+            return True
+        return not looks_like_text(joined)[0]
+
+    extractor = "pypdf"
+    orphans: list[int] = []
+    if _unusable(pages):
+        why_builtin = ""
+        builtin: list[str] | None = None
+        try:
+            sys.path.insert(0, str(Path(__file__).resolve().parent))
+            import pdftext  # noqa: PLC0415 — only needed on this branch
+
+            builtin, orphans = pdftext.extract_pages(src)
+        except Exception as exc:  # noqa: BLE001
+            why_builtin = f"{type(exc).__name__}: {exc}"
+        if builtin is not None and not _unusable(builtin):
+            if pages is not None:
+                print(
+                    "⚠️  pypdf's text layer was unusable here; the BUILT-IN extractor was\n"
+                    "    used instead. Check a figure you can see on the PDF before relying\n"
+                    "    on the output, and note that AcroForm field values are NOT read on\n"
+                    "    this path.",
+                    file=sys.stderr,
+                )
+            pages, extractor = builtin, "built-in (pdftext.py)"
+        elif pages is None:
+            if builtin is None:
+                print(
+                    "ERROR: could not read as PDF.\n"
+                    f"    {why_pypdf}\n"
+                    f"    built-in extractor: {why_builtin}",
+                    file=sys.stderr,
+                )
+                return 3
+            # ⛔ IT PARSED AND YIELDED NOTHING USABLE — WHICH IS NOT THE SAME AS
+            #    "could not read as PDF", and the difference is the whole point of
+            #    the two gates below. A scan must exit 2 with the NO TEXT LAYER
+            #    wording and an encoding failure must exit 5 with the UNREADABLE
+            #    wording; collapsing both into a bare exit 3 would throw away the
+            #    only two messages that tell the reader what to ask for instead.
+            pages, extractor = builtin, "built-in (pdftext.py)"
+
+    if orphans:
+        print(
+            f"ⓘ  {len(orphans)} page object(s) outside the page tree were SKIPPED "
+            f"(obj {', '.join(str(o) for o in orphans)}).\n"
+            "    Page numbers below are the document's own, not the object order.",
+            file=sys.stderr,
+        )
+    if extractor != "pypdf":
+        print(f"ⓘ  extractor: {extractor}", file=sys.stderr)
 
     # Recover glyph-name output BEFORE anything measures these pages, so the
     # per-page "barely extracted" count below reflects the real text and not the
@@ -1162,11 +1235,24 @@ def _run(src: Path, dst: Path) -> int:
     # guard below treat them exactly like page text. They join AFTER the two
     # gates above on purpose: those judge the PDF's text layer, and a field
     # value — a PDF text string, no font involved — cannot vouch for a scan.
-    try:
-        field_text, fields = read_form_fields(reader)
-    except Exception as exc:  # noqa: BLE001 — reported below; the page text is still safe to write
+    if reader is None:
+        # ⚠️ Said out loud rather than reported as "0 fields": a fillable PDF read
+        #    on the built-in path would hand back its LABELS and none of its
+        #    VALUES, and a silent zero here looks exactly like an empty form.
         field_text = ""
-        fields = {"fields": 0, "values": 0, "errors": 0, "xfa": False, "failed": type(exc).__name__}
+        fields = {"fields": 0, "values": 0, "errors": 0, "xfa": False, "failed": "no pypdf reader"}
+        print(
+            "⚠️  AcroForm field values were NOT read (no pypdf). If this document is a\n"
+            "    FILLABLE form, its entered values are missing from the output — the page\n"
+            "    text alone will show the labels. Install pypdf for a fillable form.",
+            file=sys.stderr,
+        )
+    else:
+        try:
+            field_text, fields = read_form_fields(reader)
+        except Exception as exc:  # noqa: BLE001 — reported below; the page text is still safe to write
+            field_text = ""
+            fields = {"fields": 0, "values": 0, "errors": 0, "xfa": False, "failed": type(exc).__name__}
     if field_text:
         raw = f"{raw}\n\n{field_text}"
     form = irs_form(pages[0]) if pages else None

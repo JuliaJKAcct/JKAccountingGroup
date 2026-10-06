@@ -788,6 +788,27 @@ if not _g_c["cross_line"]:
 #    field values are read, masked like page text, guarded like page text, and
 #    counted, so a blind read says "0 of N" instead of passing for a clean one.
 #    Every name and number below is INVENTED.
+#
+# 🛑 THESE CASES NEED pypdf AND CANNOT BE FAKED. Field VALUES live in the
+#    AcroForm, and `redact.py` reads them only on the pypdf path - the built-in
+#    extractor in `pdftext.py` reads page text and nothing else, by design. In a
+#    session where pypdf is unimportable (it happens: `cryptography`'s Rust
+#    bindings panic on import in a fresh cloud container) every case below fails
+#    for that one reason.
+# ⛔ SO THEY ARE SKIPPED RATHER THAN FAILED - and the skip is ANNOUNCED. Reported
+#    as 31 failures they look like a broken tool and bury the cases that did run;
+#    reported as "not exercised" they say the true thing, which is that the
+#    fillable-form half of the redactor WAS NOT TESTED HERE.
+
+try:
+    import pypdf as _pypdf_probe  # noqa: F401
+except (KeyboardInterrupt, SystemExit):
+    raise
+except BaseException as _exc:  # noqa: BLE001 - a panicking import is not an ImportError
+    SKIPPED_FIELDS = f"{type(_exc).__name__}: {_exc}".replace("\n", " ")[:120]
+else:
+    SKIPPED_FIELDS = ""
+
 
 def _fillable_pdf(text: str, fields: list, rotate: int = 0, unplaced: list = (),
                   xfa: bool = False, twice: tuple = ()) -> bytes:
@@ -1246,10 +1267,21 @@ with tempfile.TemporaryDirectory() as td:
     if "masked by their SHAPE" in report:
         FAILURES.append("FIELDS · the unlabelled-field note printed on a PDF with no fields")
 
+if SKIPPED_FIELDS:
+    FAILURES[:] = [f for f in FAILURES if not f.startswith("FIELDS ·")]
+
 if FAILURES:
     print(f"FAILED — {len(FAILURES)} problem(s):")
     for f in FAILURES:
         print("  " + f)
     sys.exit(1)
+
+if SKIPPED_FIELDS:
+    print("PASS — all cases redacted or preserved as intended, EXCEPT the fillable-form")
+    print("       (AcroForm) cases, which were NOT EXERCISED because pypdf is unusable here:")
+    print(f"         {SKIPPED_FIELDS}")
+    print("       ⛔ So nothing here vouches for the FIELD-VALUE half of the redactor.")
+    print("       Install pypdf and re-run before trusting this tool on a FILLABLE PDF.")
+    sys.exit(0)
 
 print("PASS — all cases redacted or preserved as intended.")
