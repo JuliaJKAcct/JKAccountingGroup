@@ -1475,6 +1475,57 @@ recalculated draft has been read, and by the same rule the rebuild will carry no
 **The history of it lives in the working paper, which is exactly the division of labour between the two
 documents.**
 
+### 2026-10-06 (later) — "as if there had only ever been one business", and the merge audited line by line
+
+🔑 **Lilian set the frame she wants the return read in: one business activity from the start, and every
+business expense the client had belongs to it — nothing split, nothing left in the air.** **Then she
+clarified the test, which is what made it checkable: the total is the SUM of what the firm had already
+included on both forms.**
+
+- ✅ **THE MERGE WAS AUDITED LINE BY LINE AND NOTHING FELL THROUGH.** Each expense line of the two
+  former schedules against the unified figure, and the arithmetic foots to the dollar: **every expense
+  on either form is in the unified total except the credit-card interest Julia removed.** 🔑 **There is
+  no third category and nothing is unassigned.**
+- ⬆️ **ONE THING CAME OUT SLIGHTLY HIGHER, not lower.** The unified mileage figure is a dollar above the
+  two forms added together, because each form had been rounding its own multiplication and doing it
+  once rounds only once.
+- 🏠 **THE HOME OFFICE IS FULLY ASSIGNED TO THE SURVIVING ACTIVITY, on the office-to-home area ratio,
+  exactly as she asked — and it still cannot be deducted this year.** 🔑 **What stops it is the LOSS,
+  not the allocation: the form has its own gross-income limit.** ✅ **It carries forward instead.**
+  ⚠️ **Worth knowing it is contingent** — the carryover only pays off if next year runs at a profit, and
+  this activity lost money in both of the last two years.
+- ✅ **AND THE HOME-OFFICE FORM NEEDS NO TYPING AT ALL.** There was only ever one of them, on the
+  surviving activity, so nothing merges; the one input that moves is taken from the business schedule
+  automatically. **Only four figures to check.**
+
+🛑 **ONE PLACE HER INSTRUCTION CANNOT REACH, and it is a METHOD rather than an allocation.** **Three of
+the client's own expense rows — fuel, repairs and vehicle insurance — produce no deduction, and the
+reason is the mileage-rate election: the rate REPLACES them, by name, in the IRS's own publication.**
+⇒ ⛔ **They cannot be added; they can only be exchanged for the rate.** 🔑 **And the exchange is a bad
+one: it surrenders roughly three and a half times as much deduction as it gains**, and costs four
+figures of refund — *even though it would free the home office this year.* ✅ **So the mileage rate
+stays. The method choice remains Lilian's and Julia's, and all four branches are priced.**
+
+🔎 **AND WHAT SITS OUTSIDE HIS OWN PROFIT AND LOSS WAS PRICED RATHER THAN CHASED.** The firm's earlier
+triage of his raw bank extract left a few pools he never carried into his own figures. **Taking them
+would run against the firm's own standing posture — we take what the client gives us and prepare the
+return — and they are worth almost nothing**, because the repayment cap on the health-insurance credit
+means a sizeable first slice of any further deduction buys him nothing at all. ⚠️ **One of those pools
+is bank charges that are actually late-payment penalties on a personal card, which are not deductible
+at all**, and another is real-estate licence costs that may belong to a third activity nobody has
+settled.
+
+📗 **THE REPLICATION DOCUMENT IS NOT BUILT YET, AND THAT IS HER OWN RULE RATHER THAN A REFUSAL.**
+**She asked for it; it is built LAST and ONCE, as the record of the return as actually filed, and the
+keystrokes are not in.** ✅ **It gets built the moment the recalculated draft confirms the check
+figures.** ⓘ **Nothing is lost by waiting — the working workbook already carries the whole replication
+content, every figure with its source.**
+
+ⓘ **One transcription note, because the firm's rule is never to write a mis-heard word into the record
+as if it meant something:** her dictation produced a word that is not a term, in a sentence about the
+car's expenses being summed in one worksheet. **It was read as "vehicle expenses" and she was told that
+was the reading, so she could correct it.**
+
 ### Outstanding items (CI-only — never in the SOP)
 
 
