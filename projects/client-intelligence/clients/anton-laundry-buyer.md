@@ -259,6 +259,46 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-06 (THE WHOLE BINDER, READ DIRECTLY — Julia split the PDF) — Julia split the 309-page Financial Binder
+  into five files. **All of it is now read directly:** pp. 2–190 as text, and the six returns (pp. 191–309, which are
+  images only) visually, page by page where it mattered. NotebookLM is no longer needed for this binder.
+  - 🔴 **Section 5 is not what the binder calls it ("the filed tax returns"). Of six returns, ONE is a signed copy:
+    Samoset 2024**, signed in August 2025, which matches its IRS transcript.
+    - **Bayshore 2023** matches its transcript, but the copy is unsigned.
+    - **Bayshore 2024 is NOT the version that was filed.** Its deductions are lower, and its income correspondingly
+      higher, than the IRS transcript of the original return. It shows two shareholders where the IRS shows three.
+      The sellers' own 2025 return carries forward from the FILED version, not from this copy.
+    - **Samoset 2023** matches on income, but its balance sheet differs from the filed one (amortization and
+      shareholder loans, by the same amount).
+    - **Both 2025 returns are unsigned and undated.**
+  - 🔴 **Vehicle costs: every return read deducts vehicle costs that the books do not carry:**
+    - Bayshore;
+    - Samoset, including a second "gas" line beside the utility gas;
+    - Lemon Squeeze.
+
+    Together they are a large share of adjusted earnings. Two possible readings: real costs paid outside the books
+    (the buyer will bear them), or a tax-only deduction. ⇒ **Ask the sellers.** This is now the biggest open
+    earnings question.
+  - 🟢 **Ruskin rent: the open question in the report is answered by the sellers' own returns.**
+    - Samoset reports rental real estate income from the Ruskin property (Form 8825) in every year read.
+    - In 2025 the books' sales exceed the return's gross receipts by almost exactly that rent.
+    - ⇒ The tenant rent sits inside Ruskin's "sales" in the books, and so inside everyone's earnings figures.
+  - 🔑 **The Palmetto W&F washers: the cost and the liability the ledgers lacked.**
+    - Samoset's 2025 Form 4562 records the equipment placed in service in 2025. Its bonus depreciation produces the
+      year's tax loss.
+    - Samoset's year-end balance sheet carries long-term notes, so the obligor looks like Samoset Florida itself.
+    - ⚠️ Caveat: the return is unsigned, and its year-end Schedule L omits every fixed asset (apparently taken from
+      QuickBooks, which carries none).
+  - **Real estate:** Samoset owns three of the five parcels, yet carries almost no land. It does carry a large
+    "1031 EXCHANGE" line under other investments, since before 2023. ⇒ The three parcels likely sit in a like-kind
+    exchange basis. That is the sellers' tax on the sale and leverage in the allocation talks, not the buyer's basis.
+  - **Smaller points:**
+    - The add-back pages confirm the owner and manager lines directly. The additional-owner-income lines are manual
+      "Adj." entries labeled "Other Income".
+    - The binder's monthly sales by store (p. 183) tie to our rebuild at every store for 2024 and 2025.
+    - NotebookLM's page numbers for the store pages ran one page early.
+  - ⏭️ **Proposed report changes put to Julia:** what Section 5 actually holds; the vehicle costs; the Ruskin rent;
+    the Samoset notes. Both K-1 sets carry shareholders' identifying numbers; **none is reproduced anywhere.**
 - 2026-10-06 (NOTEBOOKLM — THE DRAW, THE REGISTERS, "NOT RECORDED") — Julia ran the prompt across the whole binder.
   - **The draw:** the binder never says how the "owner's weekly draw" is taken or paid. Its only stated support is
     "Seller schedule".
