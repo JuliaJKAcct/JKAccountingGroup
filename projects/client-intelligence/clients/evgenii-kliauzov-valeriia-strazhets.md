@@ -27,11 +27,11 @@
 ## 1. Snapshot
 
 - **Business name:** none — a married couple, each running their own self-employed activity. One Double client for the household. _(Double, 2026-10-06)_
-- **Entity type:** Sole proprietors — **two (possibly three) Schedule C activities**, no company. _(Lilian, 2026-10-06)_
+- **Entity type:** Sole proprietors — **two Schedule C activities for 2025**, one each, no company. _(Lilian, 2026-10-06)_
   - **Evgenii:** consulting on **how to sell on Amazon**. Has a **business bank account** for this activity.
-  - **Valeriia:** **marketing**, and a second activity as a **fitness trainer**. ⚠️ Whether that is one Schedule C or two is **not established**.
+  - **Valeriia:** **fitness trainer** — **the only activity she worked in 2025** _(Lilian, 2026-10-06)_. ⚠️ Lilian first described her as doing marketing as well; she corrected that the same day — **no marketing activity in 2025**, so one Schedule C.
 - **Home state:** _(pending)_ — the firm serves Miami / Fort Lauderdale, but nothing in Double states it.
-- **Industry / what they do:** Amazon-selling consulting (him); marketing + fitness training (her).
+- **Industry / what they do:** Amazon-selling consulting (him); fitness training (her, 2025).
 - **Primary language:** **RU only** — Lilian: *"ellos hablan solo ruso"*. Anything they or their helper must read goes in Russian. _(Lilian, 2026-10-06)_
 - **Our engagement (services we provide):** 2025 individual income tax (the joint household return, filing status not yet established). **No bookkeeping**: the couple's side prepares each activity's P&L with Claude, from a prompt Julia sent them. _(Lilian, 2026-10-06; Double)_
 - **Fiscal year-end:** December 31 (individuals).
@@ -46,8 +46,8 @@ the actual details (and Claude can pull them live when a task needs them).
 | Role | Where to find them |
 |---|---|
 | Taxpayer — Evgenii (Amazon consulting) | Double portal contact, full access (admin, tax, financial, files) |
-| Taxpayer — Valeriia (marketing, fitness training) | Double portal contact, full access (admin, tax, financial, files) |
-| Person preparing the 2025 P&Ls in Claude — **Irina** | Not in Double. **She prepares BOTH workbooks** (Evgenii's, then Valeriia's), **identifies Valeriia's expenses as well as his**, and is the **go-between**: she puts the questions Claude raises to Evgenii and to Valeriia and brings the answers back _(Lilian, 2026-10-06)_. Lilian first described her as *"algo así como la asistenta de él… no estoy segura"*, so her formal role is **not confirmed**. Russian-speaking; not comfortable working with Claude, so instructions to her must be simple and step by step |
+| Taxpayer — Valeriia (fitness trainer) | Double portal contact, full access (admin, tax, financial, files) |
+| Person preparing the 2025 P&Ls in Claude — **Irina** | Not in Double. **She prepares BOTH workbooks** (Evgenii's, then Valeriia's) and is the **go-between**: she puts the questions Claude raises to Evgenii and to Valeriia and brings the answers back _(Lilian, 2026-10-06)_. Lilian first described her as *"algo así como la asistenta de él… no estoy segura"*, so her formal role is **not confirmed**. Russian-speaking. **This is her first time** doing this kind of work (a P&L and a home-office deduction from bank statements, with Claude), and she is expected to **do it again and teach other people** — so she reads what we send her chat to learn the method. 🔴 **Anything written for that chat must be something she is comfortable reading: never a remark about her ability or about finding Claude hard** _(Lilian, 2026-10-06)_ |
 
 - **Double client:** [Evgenii Kliauzov & Valeriia Strazhets — `825437`](https://app.doublehq.com/close?cid=825437)
 - **Double case note:** none.
@@ -57,7 +57,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | Bank — Evgenii's **business account** | The Amazon-consulting activity | _(pending)_ | Bank name not recorded |
-| Bank — **joint personal account** (both spouses) | Household spending **mixed with business expenses of BOTH activities**, and possibly business income | _(pending)_ | Bank name not recorded |
+| Bank — **joint personal account** (both spouses) | Household spending **mixed with Evgenii's business expenses — and only his** (Irina, after asking Evgenii, 2026-10-06), plus the shared home and car costs, and possibly business income | _(pending)_ | Bank name not recorded |
 | Claude (the clients' own account, on their computer) | Building the 2025 P&Ls from the statements | n/a — not a firm system | The chat holds the 2025 statements, the firm's prompt, and the P&L + Home Office templates |
 | Accounting software | — | — | None (no QuickBooks) |
 
@@ -83,19 +83,19 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ## 5. Key facts & quirks
 
-- 🔴 **THE JOINT PERSONAL ACCOUNT HOLDS THREE THINGS AT ONCE** — household spending, **Evgenii's** business expenses and **Valeriia's** business expenses (and possibly business income for either). Every line there has to be assigned to *one* of them before any P&L is right. **Lilian's order of work: Evgenii's business first, Valeriia's after — never mixed in the same pass.** _(Lilian, 2026-10-06)_
+- 🔴 **THE JOINT PERSONAL ACCOUNT HOLDS HOUSEHOLD SPENDING AND EVGENII'S BUSINESS EXPENSES — AND NO OTHER BUSINESS.** **Valeriia has no business expenses in it** (Irina, after asking Evgenii, relayed by Lilian 2026-10-06). The shared **home and car** costs are in it too, and possibly client income. ⚠️ **Superseded the same day:** Lilian's first understanding was that it also held Valeriia's business expenses, and version 1 of the instructions was built to separate them; it was rewritten before it was sent. **So Valeriia's P&L (part 2) needs her own statements** — which account or card she paid from is still to be asked. **Lilian's order of work: Evgenii's business first, Valeriia's after — never mixed in the same pass.** _(Lilian, 2026-10-06)_
 - 🔴 **HOME OFFICE AND CAR COSTS ARE SHARED BY BOTH ACTIVITIES — collect them as TOTALS, the firm splits them.** Both spouses work from home, each in their own space; the firm sets each activity's share **from the area each one uses**. There are **two cars**; the firm assigns **one car to each spouse's Schedule C**. Fuel, repairs, tolls and parking are paid from the joint account and cannot be told apart by car, so they are gathered **as totals by category** and the firm decides how to split them. Whether the home is **rented or owned** is not known yet. _(Lilian, 2026-10-06)_
   ⚠️ **The precedent to avoid:** on [Bogopolskyy](./bogopolskyy-marat-yuliana.md) (also a couple, two Schedule Cs, one home, cars), the clients' own P&Ls put home costs **inside** Schedule C at a percentage **and** on the Home Office worksheet (deducted twice), and both spouses' P&Ls carried **the same car's** bills. **Home-office items stay OFF the P&L** (Form 8829 applies the percentage), and **each car cost is recorded once**.
-- 🟠 **THE P&Ls ARE BEING BUILT BY THE CLIENTS' SIDE, IN THEIR OWN CLAUDE, BY SOMEONE WHO FINDS CLAUDE HARD.** Julia sent a prompt ("get my business records ready for my accountant": four steps, a five-tab workbook, a "To confirm" tab the client fills in). Irina loaded the **2025 statements** for the business account and the joint account and the firm's **P&L and Home Office templates**, and answered Claude's first questions. On 2026-10-06 Lilian added a set of instructions for that chat (Russian; the verbatim text and an English summary are in [`2025-pl-instructions-for-client-claude.md`](../../tax-returns/evgenii-kliauzov-valeriia-strazhets/2025-pl-instructions-for-client-claude.md)). **What the workbook that comes back should contain:**
+- 🟠 **THE P&Ls ARE BEING BUILT BY THE CLIENTS' SIDE, IN THEIR OWN CLAUDE, BY SOMEONE DOING IT FOR THE FIRST TIME.** Julia sent a prompt ("get my business records ready for my accountant": four steps, a five-tab workbook, a "To confirm" tab the client fills in). Irina loaded the **2025 statements** for the business account and the joint account and the firm's **P&L and Home Office templates**, and answered Claude's first questions. On 2026-10-06 Lilian added a set of instructions for that chat (Russian; the verbatim text and an English summary are in [`2025-pl-instructions-for-client-claude.md`](../../tax-returns/evgenii-kliauzov-valeriia-strazhets/2025-pl-instructions-for-client-claude.md)). **What the workbook that comes back should contain:**
   - **One workbook per spouse** — Evgenii's first, Valeriia's after, each on the same rules.
   - Julia's five tabs (`Summary`, `All transactions`, `To confirm`, `Money in by payer`, `Questions`) **plus** `Profit and Loss` (on the firm's template, confirmed business items only, each line tied to `All transactions`), `Home Office` and `Vehicles`. **No Balance Sheet** — Lilian asked for one and withdrew it the same day (*"no lo necesitamos"*).
   - **`Home Office` and `Vehicles` are household-level** — full-year totals by category from **both** accounts, no split, no percentage, kept **off** the P&L; built once, in part 1, and used for both spouses.
-  - Every joint-account line carries a **`Whose?`** mark from Irina (*Evgenii business / Valeriia business / Personal / Mixed / Not sure*); home, car and phone lines read *Shared — home / car / phone* **only when the payee settles it** — multipurpose stores (Costco, Home Depot, Amazon…) are asked first. `To confirm` has **one row per payee per account**. Valeriia's lines sit in a separate group **`V`**, as two totals, so `Summary` reconciles as *in = I1…I5 + V-in* and *out = A + B + C + D + V-out*.
-  - Under the P&L, a **`Group B — for the accountant`** block carries Evgenii's meals, equipment, phones and mixed items, which are deliberately not on the P&L lines.
+  - `To confirm` keeps Julia's `Business or personal?` column, with a bilingual dropdown (*Business (Evgenii) / Personal / Mixed / Not sure*, plus *Valeriia's client* for money in) — **"Business" always means Evgenii's**. A line Irina says is Valeriia's business goes to **D** with a question for us. Home, car and phone lines go to `B — Home / Vehicle / Phone` **only when the payee settles it** — multipurpose stores (Costco, Home Depot, Amazon…) are asked first. `To confirm` has **one row per payee per account**. Money from **Valeriia's clients**, if any lands in the joint account, sits in a group **`V`** (income only), so `Summary` reconciles as *in = I1…I5 + V* and *out = A + B + C + D*.
+  - Under the P&L, a **`Group B — for the accountant`** block carries Evgenii's meals, equipment and mixed items, which are deliberately not on the P&L lines, plus pointers to the household Home Office, Vehicles and phone totals.
   - A **mortgage payment** (if the home is owned) is its own line, not an expense in full — interest and property tax come from the 1098 and the tax bill.
   - Phones are a separate household total (whose number, and whether one is work-only, is asked). Fines are out of the car totals.
   - Tabs and headers in **English**; the `To confirm` instruction line and fill-in headers also in Russian; Irina's answers carried into `Business purpose` **in English**.
-  **Anything sent to that chat must be in simple Russian, step by step.**
+  **Anything sent to that chat must be in simple Russian, step by step — and read as something Irina is comfortable reading (§2).**
 - 🟠 **VALERIIA HAD MARKETPLACE HEALTH COVERAGE** — a file named as her **2025 Form 1095-A** is in Double (**not opened yet**). **If advance credit was paid** (1095-A column C), **Form 8962 is required and blocks e-filing** until it is reconciled. ⚠️ **The filing status matters here:** married filing separately generally cannot take the credit and still repays any advance ([`form-1040-preparation.md`](../../sops/form-1040-preparation.md)), and the filing status is still open. _(Double file, uploaded 2026-10-05)_
 
 ## 6. History & open questions
@@ -107,13 +107,16 @@ the actual details (and Claude can pull them live when a task needs them).
 - **2026-10-05** — Two documents land in the Double File Library: `2024 tax return KLIAUZOV EVGENII.pdf` and `Valeriia Strazhets Form1095a_2025.pdf`. ⚠️ **The folder they sit in was not established** (`list_files` without a folder filter); find them by name. **Neither was opened.** _(Double)_
 - **2026-10-06** — 🔑 **Lilian set out how the 2025 P&Ls are to be built**, while asking for a Russian message for the clients' Claude chat: Evgenii's activity first, then Valeriia's; the joint account separated line by line into his business / her business / personal; home-office costs (rent or mortgage, electricity, water, etc.) and car costs (repairs, tolls, parking, fuel) collected **as totals**, with the split set later by the firm (home office by each spouse's work area, one car per spouse); the workbook carries a **Profit and Loss** tab, a **Home Office** tab and the car information *(she first asked for a **Balance Sheet** tab too, then withdrew it the same day: "no lo necesitamos")*; and the chat must walk Irina through each question step by step, in bullet points, telling her where in the workbook she answers. **She approved two proposals:** mark Valeriia's joint-account lines now (without asking what they were for until part 2), and the five-value `Whose?` list. **And she settled Irina's role:** Irina prepares both workbooks and puts the questions to both spouses. _(Lilian)_
 - **2026-10-06** — The instructions were drafted in Russian as a `.txt` (too long for a WhatsApp message) with a short simple-Russian cover message for Irina, **to be sent by Lilian**: Irina uploads the file into the **same** Claude chat that holds the statements. Verbatim text and summary: [`2025-pl-instructions-for-client-claude.md`](../../tax-returns/evgenii-kliauzov-valeriia-strazhets/2025-pl-instructions-for-client-claude.md). _(Lilian)_
+- **2026-10-06 (later)** — 🔴 **IRINA CORRECTED THE PICTURE, AFTER ASKING EVGENII: the joint account's business expenses are ALL Evgenii's — Valeriia has none there.** It is a personal account, so it holds personal spending, but every business expense in it is his. Lilian called it *"un cambio grande"* and had the instructions **rewritten before they were sent** (version 1 never went out): Julia's `Business or personal?` column comes back with *Business = Evgenii*; the `Whose?` column and the two-sided `V` group are gone (V now holds only any client income of Valeriia's); a line said to be Valeriia's business goes to D with a question; part 2 asks where Valeriia paid her business expenses. **The household home-office and car totals are unchanged** — they still serve both businesses. ⛔ **This supersedes, in the 🔑 2026-10-06 entry, the two proposals about marking Valeriia's joint-account lines.** _(Irina → Lilian)_
+- **2026-10-06 (later)** — **Valeriia worked only as a fitness trainer in 2025 — no marketing.** Marketing was removed from the instructions, and the open "one Schedule C or two" question is closed: one. _(Lilian)_
+- **2026-10-06 (later)** — **Lilian set the rules for writing to Irina.** It is her **first time** doing this; she is expected to do it again and **teach other people**, so she reads the instructions to learn how the firm works with Claude. **Nothing in them may make her feel judged** — the lines about her finding Claude hard were removed. The new WhatsApp message asks her to **copy and paste** the text into the same chat **and to read it herself**, explains the one idea behind it (*Claude knows only what we tell it*), and is written **humbly** — *"for us this is a new way of working too; we are also learning"*. _(Lilian)_
 - **2026-10-06** — Searched for prior history: Julia's Gmail (both surnames, both email addresses — nothing), Ping meetings (nothing for this couple), Double notes (none), Double properties (none set). _(session search, 2026-10-06)_
 
 ### Tax year 2025 — the review
 
 - **Not started** (Double project `notStarted`). What gates it today:
   - **Evgenii's P&L** (Amazon consulting) — being built by the clients' side in Claude, from the business-account and joint-account statements.
-  - **Valeriia's P&L(s)** — after his; same joint account.
+  - **Valeriia's P&L** (fitness training, her only 2025 activity) — after his; from **her own** account or card statements, since none of her business expenses are in the joint account. Which account is still to be asked.
   - **Home-office and car totals** — then the firm's split between the two activities.
   - **Form 8962** from Valeriia's 1095-A.
 - **Prior year:** the 2024 return (in Evgenii's name) is on file and **has not been read**.
@@ -123,15 +126,16 @@ the actual details (and Claude can pull them live when a task needs them).
 
 - The instructions file + cover message — drafted 2026-10-06; **Lilian sends them to Irina on WhatsApp**. Not confirmed sent.
 - Evgenii's completed workbook (P&L, Home Office, Vehicles, the "To confirm" answers) — awaited from Irina.
-- Then Valeriia's workbook (part 2) — Irina starts it when Evgenii's is done. **Before she does, decide whether part 2 needs a short addendum**: the instructions only say "the same rules", so check that Evgenii-marked lines stay out of her P&L, that the household `Home Office` / `Vehicles` totals are counted once, and whether her marketing and fitness training are one Schedule C or two. _(review of PR #508, 2026-10-06)_
+- Then Valeriia's workbook (part 2) — Irina starts it when Evgenii's is done. **Before she does, decide whether part 2 needs a short addendum**: it needs **her own statements** (none of her business is in the joint account), and the household `Home Office` / `Vehicles` totals must be counted once. _(review of PR #508, 2026-10-06; updated the same day)_
 
 ### Information still needed
 
 - [ ] Filing status for 2025 (joint or separate).
+- [ ] Where Valeriia received her 2025 client payments (account, card, Zelle/Venmo, cash) and which account or card she paid her business expenses from — not the joint account _(Irina, 2026-10-06)_.
 - [ ] Was a 2025 extension filed? (Double shows a 2026-04-15 due date.)
 - [ ] Home: rented or owned? Total area, and the area each spouse uses as an office.
 - [ ] The two cars: which car each spouse uses; owned, financed or leased; odometer at the start and end of 2025; any mileage record.
-- [ ] Valeriia: one Schedule C or two (marketing / fitness training)?
+- [x] Valeriia: one Schedule C or two? — **One: fitness trainer.** She did no marketing work in 2025 _(Lilian, 2026-10-06)_.
 - [x] Irina's role — **she prepares both workbooks and is the go-between with both spouses** _(Lilian, 2026-10-06)_. Whether she is formally Evgenii's assistant is still not stated.
 - [ ] Home state / city.
 
