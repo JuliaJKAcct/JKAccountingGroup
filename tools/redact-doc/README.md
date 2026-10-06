@@ -226,7 +226,7 @@ _(Added 2026-10-06, after a read Lilian asked for was blocked outright by a pack
 | | **pypdf** | **`pdftext.py`** — built in, standard library only |
 |---|---|---|
 | When it runs | **First, always** | When pypdf is missing or unusable, **or** when pypdf's own output would trip the **no-text-layer, intelligibility or glyph-mass** gates |
-| Layout mode | ✅ | ⛔ — rows of `x:text` cells, top to bottom, left to right |
+| Layout mode | ✅ | ✅ — rows laid out with **spaces** at their horizontal position, the same shape pypdf's layout mode produces. ⛔ **Not delimited cells** — see the seventh lesson below |
 | **AcroForm field values** | ✅ | 🔴 **NO — and the tool SAYS SO.** On a FILLABLE PDF this path returns the labels and none of the typed values |
 | Dependencies | `pypdf` + `cryptography` | **none** |
 

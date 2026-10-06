@@ -269,6 +269,18 @@ with tempfile.TemporaryDirectory() as td:
     if _run(tmp / "scan.pdf", tmp / "o2.txt") != 2 or (tmp / "o2.txt").exists():
         FAILURES.append("_run · a text-less PDF did not exit 2 without writing")
 
+    # 🔴 A MANY-PAGE SCAN. One textless page was already covered above, and it
+    #    passed even with the gate counting the wrong string — the `--- page N ---`
+    #    headers `raw` carries are worth 5-6 word characters each, so the HEADERS
+    #    ALONE cross the 100-character floor at 19 pages. A filed 1040 is routinely
+    #    19 to 40, so that is the realistic scan, and it was being WRITTEN rather
+    #    than refused. The gate must measure the page text, not `raw`.
+    for _n in (20, 40):
+        (tmp / f"scan{_n}.pdf").write_bytes(_minimal_pdf(["x"] * _n))
+        if _run(tmp / f"scan{_n}.pdf", tmp / f"o2_{_n}.txt") != 2 or (tmp / f"o2_{_n}.txt").exists():
+            FAILURES.append(f"_run · a {_n}-page text-less PDF did not exit 2 without writing — the "
+                            "no-text-layer gate is counting its own page headers")
+
     # A real read: identifiers masked, EIN kept, file written.
     (tmp / "ret.pdf").write_bytes(_minimal_pdf(
         "Taxpayer social security number 123-45-6789 EIN 45-6789012 "

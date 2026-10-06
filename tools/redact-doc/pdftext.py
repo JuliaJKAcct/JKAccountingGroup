@@ -41,10 +41,16 @@ like success:
      at the same coordinates, so three different tables interleave row by row
      and read as one incoherent table.
 
-⚖️ WHAT IT DOES NOT DO: it has no layout mode and no AcroForm reader, so
-`redact.py` still prefers pypdf where pypdf works. It returns plain rows of
-`x:text` cells ordered top-to-bottom, left-to-right, which is enough for the
-redaction patterns and enough to read a return off.
+⚖️ WHAT IT DOES NOT DO: it has no AcroForm reader, so `redact.py` still prefers
+pypdf where pypdf works — only pypdf can read a fillable PDF's typed field values.
+
+🔴 WHAT IT EMITS, AND IT IS A SAFETY DECISION, NOT A FORMATTING ONE: rows of text
+LAID OUT WITH SPACES at their horizontal position, top to bottom and left to
+right — the same shape pypdf's layout mode produces, which is what the redaction
+patterns in `redact.py` are calibrated against. ⛔ NOT delimited cells. See
+`_lay_out()`: an earlier version emitted `40:label | 300:456 | 340:78` and that
+DISARMED every context-gated rule in the redactor, letting a boxed social
+security number through in clear with the report reading `0 SSN/ITIN`.
 
 ⛔ It prints nothing. `redact.py` owns every message and every gate.
 """
@@ -272,6 +278,13 @@ def _decode(raw: bytes, cm: dict[int, str], two_byte: bool) -> str:
 #    — and `test_pdftext.py` pins it with an invented SSN that must come out
 #    masked.
 _PT_PER_COL = 5.0          # ~5pt per character at the 8-10pt fonts a return uses
+# ⛔ AND A CEILING, because padding to a coordinate is a space BOMB without one.
+#    A US Letter page is 612pt — about 122 columns — and a stray `cm` carrying a
+#    large translation is an ordinary accident, not an attack: one such operator
+#    turned a 751-byte PDF into an 8 MB output file, and 2,000 runs at x=9999999
+#    produced 4 billion characters at 7.6 GB of RSS. Same class as the
+#    decompression bomb `_MAX_INFLATE` bounds, and an order of magnitude worse.
+_MAX_COL = 400             # generous for any real page, including landscape
 
 
 def _lay_out(cells: "list[tuple[float, str]]") -> str:
@@ -281,7 +294,7 @@ def _lay_out(cells: "list[tuple[float, str]]") -> str:
         text = text.strip()
         if not text:
             continue
-        col = int(max(0.0, x) / _PT_PER_COL)
+        col = min(_MAX_COL, int(max(0.0, x) / _PT_PER_COL))
         if col > width:
             parts.append(" " * (col - width))
             width = col
@@ -323,7 +336,16 @@ def _page_text(doc: _Doc, page_body: bytes, content: list[int]) -> str:
             #    arriving silently. Save and restore both.
             stack.append((ctm, font))
         elif tok == b"Q":
-            ctm, font = stack.pop() if stack else ((1.0, 0.0, 0.0, 1.0, 0.0, 0.0), None)
+            # ⚠️ AN UNBALANCED `Q` MUST NOT CLEAR THE FONT. Restoring `None` here
+            #    makes every later string decode with no font at all, and on a
+            #    subset font the codes fall below 0x20 and the text VANISHES —
+            #    lesson 3 arriving by the other door. And it is not a hand-made
+            #    file: `/Contents [A B]` is concatenated, so if A is unreachable
+            #    its `q` is gone while B's `Q` remains. Restore the matrix only.
+            if stack:
+                ctm, font = stack.pop()
+            else:
+                ctm = (1.0, 0.0, 0.0, 1.0, 0.0, 0.0)
         elif tok == b"BT":
             x = y = 0.0
         elif m.group(8) is not None:                                  # Tm

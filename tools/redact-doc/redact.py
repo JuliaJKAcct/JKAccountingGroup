@@ -220,8 +220,18 @@ def extraction_unusable(candidate: "list[str] | None") -> bool:
     """Would these extracted pages be REFUSED by the gates in `_run`?
 
     Used to decide WHICH extractor's pages to carry forward — pypdf's or the
-    dependency-free `pdftext.py`'s. It is judged on the SAME transforms the gates
-    use, so it can never pass something the gates would refuse.
+    dependency-free `pdftext.py`'s. It PREDICTS three of the four gates below,
+    on the same transforms they use.
+
+    ⚠️ IT IS A PREDICTION, NOT AN EQUIVALENCE, and one mismatch is known: the
+    gates measure `raw`, which carries a `--- page N ---` header per page, while
+    this measures the joined page text. So a document of MANY THIN PAGES can be
+    judged usable here and still be refused below — 120 thin pages join to under
+    the 2,000-character floor that short-circuits `looks_like_text`, while `raw`
+    crosses it with a tiny alphabet. The fallback is then skipped and, because
+    `tried_builtin` stays False, the operator is not told the other extractor
+    went untried. Tracked in `FOLLOW-UPS.md` row 195; measuring one string in
+    both places is the fix and it is not a one-line change.
 
     🛑 IT MIRRORS THREE GATES, AND THE THIRD IS THE WHOLE POINT. An earlier
     version checked only the no-text-layer and intelligibility gates, which left
@@ -1167,8 +1177,15 @@ def _run(src: Path, dst: Path) -> int:
         try:
             reader = PdfReader(str(src))
             pages = [p.extract_text(extraction_mode="layout") or "" for p in reader.pages]
-        except Exception as exc:  # noqa: BLE001 — the reason matters more than the type
-            why_pypdf = f"pypdf could not read it: {type(exc).__name__}: {exc}"
+        except Exception as exc:  # noqa: BLE001 — the TYPE, never the message
+            # ⛔ TYPE ONLY. This is the one of the three sites that is handed its
+            #    message by a parser that has ALREADY TOUCHED THE DOCUMENT, so
+            #    `{exc}` can quote bytes straight out of the PDF — and this is
+            #    printed verbatim on the exit-3 path. A round-1 fix closed the
+            #    other two and missed this one, which was the only one that
+            #    mattered: a client-data channel into the transcript is the single
+            #    thing this tool exists to prevent.
+            why_pypdf = f"pypdf could not read it: {type(exc).__name__}"
             reader = None
             pages = None
 
