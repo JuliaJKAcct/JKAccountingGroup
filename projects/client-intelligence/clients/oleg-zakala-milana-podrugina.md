@@ -87,6 +87,17 @@ the actual details.
   real-estate taxes, beating the standard deduction by a small margin — and for 2025 **the standard
   deduction rose while the SALT cap rose far more**, so the choice must be computed both ways and last
   year's answer does not carry forward _(2026-10-04)_.
+- 🔴 **THE 2025 FORM 1098 HAS BEEN READ, AND IT SETTLES THE ITEMIZE QUESTION.** The servicer is
+  **Mr. Cooper (Nationstar Mortgage LLC)**, and the mortgage interest **ROSE sharply** against 2024 — enough
+  on its own to beat the 2025 standard deduction, before any state or local tax is added. ⛔ **So the
+  standard deduction is the wrong choice for 2025, and the question is no longer close.** ✅ **It also
+  closes a double-count risk: the escrow disburses hazard insurance ONLY, no property tax, so the county
+  bill is the sole source for the real-estate-tax line.** ⚠️ **An earlier entry called this document
+  unreadable — same `pypdf` failure as the loan documents.** _(Figures in the working paper §3G.)_
+- ✅ **NO FORM 1095 OF ANY KIND IS ON HIS RECORD** — searched by name across the File Library and the
+  organizer attachments on 2026-10-06, and the 63-file library has none. **The 2025 organizer answers
+  `notApplicable` to Marketplace coverage and the 2024 filed return carries no Form 8962**, so the two
+  agree. ⛔ **There is no Form 1095-A to chase and no Form 8962 to prepare.**
 - **He claims a HOME OFFICE** — Form 8829, attached to the logistics Schedule C _(2024; the total area of
   the home carries forward and the business area does not)_.
 - ✅ **No Marketplace coverage, no dependants, no rental property, no NOL carryforward, no AMT, no net
