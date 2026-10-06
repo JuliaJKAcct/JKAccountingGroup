@@ -215,6 +215,44 @@ GLYPH_COMMA_TAIL = re.compile(r"\[GLYPH\](?:,\d{3})+(?:\.\d+)?")
 # thresholds this replaced.
 GLYPH_MASS_LIMIT = 100
 
+
+def extraction_unusable(candidate: "list[str] | None") -> bool:
+    """Would these extracted pages be REFUSED by the gates in `_run`?
+
+    Used to decide WHICH extractor's pages to carry forward — pypdf's or the
+    dependency-free `pdftext.py`'s. It is judged on the SAME transforms the gates
+    use, so it can never pass something the gates would refuse.
+
+    🛑 IT MIRRORS THREE GATES, AND THE THIRD IS THE WHOLE POINT. An earlier
+    version checked only the no-text-layer and intelligibility gates, which left
+    the fallback blind to the case it exists for: a font that names glyphs by
+    their slot in a subset (`/g11`, `/C49`, `/cid49`). pypdf renders those as
+    TOKENS, which are full of letters, so letter diversity sails past
+    `looks_like_text` and the length check — and the document then died at the
+    glyph-mass limit WITHOUT the dependency-free extractor ever being tried.
+    That is `FOLLOW-UPS.md` row 68's document.
+
+    ⛔ The fourth gate — the post-redaction identifier guard — deliberately does
+    NOT drive this choice. A surviving identifier means the MASKING failed, not
+    that the extraction did, and re-extracting would hide it rather than fix it.
+    """
+    if not candidate:
+        return True
+    joined = normalise("\n".join(decode_glyph_names(t)[0] for t in candidate))
+    if len(re.sub(r"\W", "", joined)) < 100:
+        return True
+    if not looks_like_text(joined)[0]:
+        return True
+    # The glyph-mass gate, counted the way redact() counts it: a GLYPH_TOKEN is
+    # masked only when it carries a digit (`/or` and `/Schedule` are ordinary
+    # words). This is a LOWER bound on counts["glyph"], which is the safe
+    # direction — it never switches extractor on a document the gate would have
+    # accepted.
+    mass = sum(1 for m in GLYPH_TOKEN.finditer(joined)
+               if any(c.isdigit() for c in m.group(0)))
+    return mass > GLYPH_MASS_LIMIT
+
+
 # Lone surrogates are not encodable as UTF-8. `chr()` will happily produce one
 # from `/uniD800`, and the failure would then land on dst.write_text() AFTER the
 # file was opened — breaking the "nothing was written" contract with a traceback.
@@ -1099,8 +1137,9 @@ def _run(src: Path, dst: Path) -> int:
     # install pypdf` panicked on cryptography's `_cffi_backend`), which blocked
     # a read Lilian had asked for. So `pdftext.py` — standard library only —
     # runs whenever pypdf is absent, OR when pypdf comes back with something
-    # that would trip the gates below. It has rescued a real filed return that
-    # pypdf returned as labels with no amounts.
+    # that would trip the gates below. On the document that prompted it, pypdf
+    # produced NOTHING AT ALL - it could not even be imported - so the read
+    # happened entirely on this path.
     # ⛔ IT DOES NOT SOFTEN A SINGLE GATE. Both extractors' output goes through
     #    exactly the same checks further down; `_unusable` here only decides
     #    WHICH extractor's pages to carry forward.
@@ -1119,7 +1158,11 @@ def _run(src: Path, dst: Path) -> int:
         #    PANICKED: `pyo3_runtime.PanicException`, which derives from
         #    BaseException and sails straight through `except ImportError`. The
         #    tool died with a Rust backtrace instead of falling back.
-        why_pypdf = f"pypdf unusable: {type(exc).__name__}: {exc}".replace("\n", " ")[:300]
+        # ⛔ TYPE ONLY, NEVER THE MESSAGE. A parser's exception text can quote
+        #    bytes lifted from inside the PDF, and this tool exists to keep the
+        #    document's content out of the conversation. The type is the whole
+        #    diagnostic value here anyway.
+        why_pypdf = f"pypdf unusable: {type(exc).__name__}"
     else:
         try:
             reader = PdfReader(str(src))
@@ -1129,19 +1172,13 @@ def _run(src: Path, dst: Path) -> int:
             reader = None
             pages = None
 
-    def _unusable(candidate: list[str] | None) -> bool:
-        """Would these pages trip either gate below? Judged on the SAME transforms
-        the gates use, so this can never pass something the gates would refuse."""
-        if not candidate:
-            return True
-        joined = normalise("\n".join(decode_glyph_names(t)[0] for t in candidate))
-        if len(re.sub(r"\W", "", joined)) < 100:
-            return True
-        return not looks_like_text(joined)[0]
+    _unusable = extraction_unusable
 
     extractor = "pypdf"
     orphans: list[int] = []
+    tried_builtin = False
     if _unusable(pages):
+        tried_builtin = True
         why_builtin = ""
         builtin: list[str] | None = None
         try:
@@ -1150,14 +1187,21 @@ def _run(src: Path, dst: Path) -> int:
 
             builtin, orphans = pdftext.extract_pages(src)
         except Exception as exc:  # noqa: BLE001
-            why_builtin = f"{type(exc).__name__}: {exc}"
+            # ⛔ Type only — see the note on `why_pypdf`: a parse error can carry
+            #    document bytes, and those must not reach stderr.
+            why_builtin = type(exc).__name__
         if builtin is not None and not _unusable(builtin):
             if pages is not None:
+                # ⚠️ NOTE WHAT THIS DOES *NOT* SAY. Reaching here means PdfReader
+                #    SUCCEEDED and only its text layer was unusable, so `reader`
+                #    is live and the AcroForm field values ARE still read below.
+                #    An earlier version claimed they were not — the one message
+                #    on this path, and it was false.
                 print(
                     "⚠️  pypdf's text layer was unusable here; the BUILT-IN extractor was\n"
-                    "    used instead. Check a figure you can see on the PDF before relying\n"
-                    "    on the output, and note that AcroForm field values are NOT read on\n"
-                    "    this path.",
+                    "    used for the PAGE TEXT instead. Check a figure you can see on the\n"
+                    "    PDF before relying on the output. (Form field values are still read\n"
+                    "    by pypdf and are unaffected.)",
                     file=sys.stderr,
                 )
             pages, extractor = builtin, "built-in (pdftext.py)"
@@ -1178,7 +1222,10 @@ def _run(src: Path, dst: Path) -> int:
             #    only two messages that tell the reader what to ask for instead.
             pages, extractor = builtin, "built-in (pdftext.py)"
 
-    if orphans:
+    # ⚠️ Only report the orphan pages when the built-in extractor's pages are the
+    #    ones in use. Printed otherwise it describes a numbering that is not in
+    #    force, which is worse than saying nothing.
+    if orphans and extractor != "pypdf":
         print(
             f"ⓘ  {len(orphans)} page object(s) outside the page tree were SKIPPED "
             f"(obj {', '.join(str(o) for o in orphans)}).\n"
@@ -1187,6 +1234,15 @@ def _run(src: Path, dst: Path) -> int:
         )
     if extractor != "pypdf":
         print(f"ⓘ  extractor: {extractor}", file=sys.stderr)
+    elif tried_builtin:
+        # Both came back unusable and pypdf's pages were kept so the SPECIFIC
+        # gate below can speak. Say the other one was tried, or the operator
+        # reads the refusal as pypdf's alone and goes off to install it.
+        print(
+            "ⓘ  the built-in extractor was tried too and also came back unusable;\n"
+            "    the refusal below is about the DOCUMENT, not about pypdf.",
+            file=sys.stderr,
+        )
 
     # Recover glyph-name output BEFORE anything measures these pages, so the
     # per-page "barely extracted" count below reflects the real text and not the
@@ -1196,7 +1252,13 @@ def _run(src: Path, dst: Path) -> int:
 
     raw = "\n\n".join(f"--- page {i + 1} ---\n{t}" for i, t in enumerate(pages))
 
-    if len(re.sub(r"\W", "", raw)) < 100:
+    # 🛑 COUNTED ON THE PAGE TEXT, NOT ON `raw`. `raw` carries a `--- page N ---`
+    #    header per page, each worth 5-6 word characters, so the headers ALONE
+    #    cross this floor at 19 pages — and a filed 1040 is routinely 19 to 40.
+    #    A scanned return of that length therefore walked straight past the gate
+    #    and wrote a file of nothing. Measured: 5 blank pages refused correctly,
+    #    20 blank pages written with exit 0.
+    if len(re.sub(r"\W", "", "".join(pages))) < 100:
         print(
             f"NO TEXT LAYER: {len(pages)} page(s), effectively no extractable text.\n"
             "This is a scan. It needs OCR, and OCR is NOT set up here — do not\n"

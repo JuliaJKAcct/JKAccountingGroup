@@ -304,8 +304,53 @@ with tempfile.TemporaryDirectory() as td:
 #    first run did not see. These cases exist so it cannot happen quietly again.
 
 from redact import (  # noqa: E402
-    GLYPH_MASS_LIMIT, MIN_DISTINCT_CHARS, decode_glyph_names, looks_like_text,
+    GLYPH_MASS_LIMIT, MIN_DISTINCT_CHARS, decode_glyph_names, extraction_unusable,
+    looks_like_text,
 )
+
+# ══ WHICH EXTRACTOR'S PAGES ARE CARRIED FORWARD. `extraction_unusable()` decides
+#    it, and it must mirror the gates in _run() — a branch it misses is a document
+#    refused outright where the other extractor would have read it. It lived as a
+#    closure inside _run() and no test could reach it; that is exactly the
+#    "unpinned branch" this file warns about elsewhere, so it is lifted and pinned.
+_GOOD = ["Zephyr Quarry Junction LLC Form 1120-S U.S. Income Tax Return for an S Corporation. "
+         "Ordinary business income (loss) 22,100. Schedule K-1 Part III box 1. " * 4]
+if extraction_unusable(_GOOD):
+    FAILURES.append("EXTRACTOR CHOICE · ordinary readable pages were judged unusable, so a good "
+                    "pypdf read would be thrown away")
+if not extraction_unusable(None) or not extraction_unusable([]) or not extraction_unusable([""]):
+    FAILURES.append("EXTRACTOR CHOICE · empty pages were not judged unusable")
+if not extraction_unusable(["a few words"]):
+    FAILURES.append("EXTRACTOR CHOICE · a page under the 100-word-character floor was not judged "
+                    "unusable (the no-text-layer gate)")
+# ⚠️ Long enough to clear DIVERSITY_MIN_LEN — the gate deliberately does not fire
+#    on a short document, so a short fixture tests nothing.
+if not extraction_unusable(["ab " * 1200]):
+    FAILURES.append("EXTRACTOR CHOICE · a long page with almost no distinct characters was not "
+                    f"judged unusable (expected < {MIN_DISTINCT_CHARS} distinct to fail)")
+
+# 🔴 THE CASE THE FALLBACK EXISTS FOR, and the one an earlier version missed: a
+#    glyph-subset font in the FILLED-IN fields while the form template reads fine.
+#    That document has a wide alphabet AND thousands of unreadable tokens, so it
+#    walks past both of the other two checks and would have been kept — then
+#    refused by the glyph-mass gate, with the dependency-free extractor never
+#    tried. The fixture must reproduce BOTH halves or it proves nothing.
+_GLYPH = [_GOOD[0] * 3 + " " + " ".join(f"/g{i}" for i in range(GLYPH_MASS_LIMIT * 3))]
+_ok, _distinct = looks_like_text(normalise(_GLYPH[0]))
+if not _ok or _distinct < MIN_DISTINCT_CHARS or len(_GLYPH[0]) < 2_000:
+    FAILURES.append("EXTRACTOR CHOICE · the glyph-subset fixture no longer walks past the "
+                    f"intelligibility gate ({_distinct} distinct, {len(_GLYPH[0])} chars), so it "
+                    "stopped testing what it was written for")
+if not extraction_unusable(_GLYPH):
+    FAILURES.append("EXTRACTOR CHOICE · a glyph-subset page past GLYPH_MASS_LIMIT was NOT judged "
+                    "unusable — the fallback stays blind to the one case it exists for "
+                    "(FOLLOW-UPS row 68)")
+# …and just under the limit it must NOT switch, or every document with a few
+#    slash-tokens would be re-extracted for nothing.
+_FEW = [_GOOD[0] + " " + " ".join(f"/g{i}" for i in range(5))]
+if extraction_unusable(_FEW):
+    FAILURES.append("EXTRACTOR CHOICE · a readable page carrying a handful of slash-tokens was "
+                    "judged unusable — the mass check is firing far too early")
 
 
 def _as_glyphs(s: str) -> str:

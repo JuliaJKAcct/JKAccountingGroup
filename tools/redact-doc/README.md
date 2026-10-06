@@ -225,7 +225,7 @@ _(Added 2026-10-06, after a read Lilian asked for was blocked outright by a pack
 
 | | **pypdf** | **`pdftext.py`** — built in, standard library only |
 |---|---|---|
-| When it runs | **First, always** | When pypdf is missing or unusable, **or** when pypdf's own output would trip the gates below |
+| When it runs | **First, always** | When pypdf is missing or unusable, **or** when pypdf's own output would trip the **no-text-layer, intelligibility or glyph-mass** gates |
 | Layout mode | ✅ | ⛔ — rows of `x:text` cells, top to bottom, left to right |
 | **AcroForm field values** | ✅ | 🔴 **NO — and the tool SAYS SO.** On a FILLABLE PDF this path returns the labels and none of the typed values |
 | Dependencies | `pypdf` + `cryptography` | **none** |
@@ -240,10 +240,22 @@ from:** the import gets far enough to reach cryptography's Rust bindings and rai
 before Python regains control and cannot be suppressed from here. **It is noise, not a crash** — read on
 down to the tool's own `ⓘ extractor:` line.
 
-⛔ **IT SOFTENS NO GATE.** Both extractors' output goes through exactly the same checks: the no-text-layer
-gate, the intelligibility gate, the glyph-mass limit and the final identifier guard. The only thing the
-new code decides is *whose pages to carry forward*. It has already rescued a real filed return that pypdf
-returned as **labels with no amounts**.
+⛔ **IT SOFTENS NO GATE.** Both extractors' output goes through exactly the same four checks: the
+no-text-layer gate, the intelligibility gate, the glyph-mass limit and the final identifier guard. The
+only thing the new code decides is *whose pages to carry forward*.
+
+🔑 **AND THE CHOICE MIRRORS THREE OF THOSE FOUR, WHICH IS DELIBERATE.** `extraction_unusable()` predicts
+the no-text-layer, intelligibility and **glyph-mass** gates. ⛔ **It does NOT consider the final
+identifier guard, and must not:** a surviving identifier means the *masking* failed, not the extraction,
+and re-extracting would hide it instead of fixing it. ⚠️ **An earlier version mirrored only the first
+two**, which left the fallback blind to the very case it was built for — a glyph-subset font, whose
+tokens are full of letters and sail past both. That document died at the glyph-mass limit with the
+dependency-free extractor never tried *(`FOLLOW-UPS.md` row 68's document)*.
+
+⚠️ **On the document that prompted all of this, pypdf produced NOTHING AT ALL** — it could not be
+imported — so the read happened entirely on the new path. *(The labels-with-no-amounts failure in
+lesson 2 below was an intermediate version of `pdftext.py`, not pypdf. They are different failures and
+conflating them teaches the reader that the automatic fallback catches something it does not.)*
 
 ### The five things it gets right that a naive reader does not
 
@@ -267,6 +279,26 @@ docstring and pinned by `test_pdftext.py`.
 …and a sixth that is not about PDFs at all: **a literal string may contain balanced, unescaped
 parentheses** — `(Ordinary business income (loss))` is on every return. A pattern that cannot match it
 skips the whole `Tj`, the page comes out **empty**, and an empty page reads as *"this is a scan"*.
+
+### 🔴 …and a SEVENTH, which is a SAFETY decision disguised as a formatting one
+
+🛑 **HOW A ROW IS RENDERED DECIDES WHETHER THE REDACTOR CAN SEE ANYTHING.** The first version emitted
+each row as coordinate-prefixed cells — `40:label | 300:456 | 340:78 | 380:1234` — which reads well for
+a human and **disarmed every context-gated rule in `redact.py`**, because those patterns are calibrated
+against pypdf's **layout** mode:
+
+| What broke | What it did |
+|---|---|
+| `SSN` separates groups with `[-\s.]` | a **boxed** social security number — three boxes, three positioned runs, which is how many fillable IRS forms lay one out — came through **IN CLEAR**, with the report reading `0 SSN/ITIN` and **exit 0** |
+| `ACCOUNT_CONTEXT` matched the nearest digits | it masked the **X COORDINATE** and left the account number beside it: `40:Account number [ACCT-1]:4471982`. **A leak and a false success in the same line**, which is worse than either alone |
+| `STREET` needs `\d{1,6}` adjacent to the street name | a boxed address split across runs stopped matching |
+
+🔑 **A label and its value sit at different x positions BY DEFINITION — that is what a form is.** So this
+was never an edge case; it disarmed the redactor on every real return, on the path a session takes today.
+✅ **Rows are therefore laid out with SPACES**, reproducing layout mode, and every pattern works unchanged.
+📈 **It measurably improved the real document that prompted this work: 37 street lines masked where the
+cell format masked 21.** ⛔ **Do not "improve" it back into delimited cells**; `test_pdftext.py` pins it
+with an invented boxed SSN that must come out masked, and that test catches the regression in three places.
 
 ## 🔧 It didn't read the PDF — the runbook
 
@@ -543,7 +575,7 @@ masked` on a document that carried one.)_
 
 ```bash
 python3 tools/redact-doc/test_redact.py     # the redaction patterns, the gates and the guard
-python3 tools/redact-doc/test_pdftext.py    # the built-in extractor: the six lessons above
+python3 tools/redact-doc/test_pdftext.py    # the built-in extractor: the seven lessons above
 ```
 
 ⚠️ **`test_redact.py` SKIPS its fillable-form (AcroForm) cases when pypdf is unusable, and says so on the

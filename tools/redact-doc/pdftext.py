@@ -64,7 +64,7 @@ _ROW_TOLERANCE_PT = 2.5
 #    `\(([^()]*)\)` pattern does not match such a string AT ALL, so the whole
 #    `Tj` is skipped and the page comes out EMPTY - which then reads as "this is
 #    a scan" rather than "the string pattern is wrong". Found by this tool's own
-#    test suite on text reading "Ordinary business income (loss) 22,100".
+#    test suite on text reading "Ordinary business income (loss) <amount>".
 def _literal(depth: int) -> bytes:
     """A literal-string body allowing `depth` levels of balanced nesting."""
     inner = rb"[^()\\]|\\."
@@ -93,6 +93,25 @@ _TOKENS = re.compile(
 _ARRAY_PART = re.compile(rb"<([0-9A-Fa-f]*)>|\((" + _LITERAL + rb")\)")
 
 
+_MAX_INFLATE = 64 * 1024 * 1024     # 64 MiB per stream; a return is a few hundred KB
+
+
+def _num(raw: bytes) -> float:
+    """A PDF number, or 0.0.
+
+    ⚠️ `[-\d.]+` in the token pattern matches plenty of things `float()` will not:
+    `..`, `-`, `1.2.3`, `--5`. One of those anywhere in any content stream used to
+    raise out of the whole document. And `float(b"9" * 400)` is `inf`, whose
+    product with 0 is `nan` — which then became a dictionary key and raised a
+    `KeyError: nan` two hundred lines later, with nothing naming the cause.
+    """
+    try:
+        v = float(raw)
+    except (ValueError, TypeError):
+        return 0.0
+    return v if -1e7 < v < 1e7 else 0.0
+
+
 def _stream(body: bytes) -> bytes | None:
     m = re.search(rb"stream\r?\n", body)
     if not m:
@@ -100,7 +119,10 @@ def _stream(body: bytes) -> bytes | None:
     end = body.find(b"endstream", m.end())
     raw = body[m.end():end if end != -1 else len(body)]
     try:
-        return zlib.decompress(raw)
+        # ⛔ BOUNDED. `zlib.decompress` with no limit turns a 306 KB file into
+        #    300 MB of RAM — a decompression bomb, and this tool is pointed at
+        #    documents the firm did not create.
+        return zlib.decompressobj().decompress(raw, _MAX_INFLATE)
     except Exception:
         return raw            # an uncompressed stream, or a filter we do not handle
 
@@ -125,7 +147,15 @@ def _objects(data: bytes) -> dict[int, bytes]:
                 onum, off = int(header[2 * i]), int(header[2 * i + 1])
             except (IndexError, ValueError):
                 break
-            end = int(header[2 * i + 3]) + first if 2 * i + 3 < len(header) else len(s)
+            try:
+                end = int(header[2 * i + 3]) + first if 2 * i + 3 < len(header) else len(s)
+            except (IndexError, ValueError):
+                end = len(s)
+            # ⚠️ A NEGATIVE offset would slice from the END of the stream and hand
+            #    back a wrong object body instead of raising — silently wrong is
+            #    the one outcome this file exists to avoid.
+            if off < 0 or end < 0:
+                continue
             objs.setdefault(onum, s[first + off:end])
     return objs
 
@@ -217,13 +247,59 @@ def _decode(raw: bytes, cm: dict[int, str], two_byte: bool) -> str:
     return "".join(cm.get(b, chr(b) if 32 <= b < 127 else "") for b in raw)
 
 
+# ── HOW A ROW IS RENDERED, AND IT IS A SAFETY DECISION, NOT A FORMATTING ONE ──
+#
+# 🛑 THIS FUNCTION EXISTS BECAUSE AN EARLIER VERSION DISARMED THE REDACTOR.
+#    It emitted each row as coordinate-prefixed cells — `40:label | 300:456 |
+#    340:78 | 380:1234` — which reads well for a human and is CATASTROPHIC for
+#    `redact.py`, whose patterns are calibrated against pypdf's LAYOUT mode:
+#      • `SSN` separates groups with `[-\s.]`, so `456 | 340:78 | 380:1234` is
+#        not an SSN to it. A boxed social security number — three boxes, three
+#        positioned runs, which is how many fillable IRS forms lay one out —
+#        came through IN CLEAR with the report reading `0 SSN/ITIN` and exit 0.
+#      • `ACCOUNT_CONTEXT` masked the X COORDINATE and left the account number
+#        beside it: `40:Account number [ACCT-1]:4471982`. A leak AND a false
+#        success in the same line, which is worse than either.
+#      • `STREET` needs `\d{1,6}` adjacent to the street name, so a boxed
+#        address split across runs stopped matching.
+#    🔑 A label and its value sit at different x positions BY DEFINITION — that
+#    is what a form is — so this was not an edge case; it disarmed every
+#    context-gated rule in the redactor on every real return.
+#
+# ✅ SO THE ROW IS LAID OUT WITH SPACES, reproducing layout mode, and every
+#    pattern in `redact.py` keeps working unchanged. ⛔ Do not "improve" this
+#    back into delimited cells without re-calibrating every pattern in that file
+#    — and `test_pdftext.py` pins it with an invented SSN that must come out
+#    masked.
+_PT_PER_COL = 5.0          # ~5pt per character at the 8-10pt fonts a return uses
+
+
+def _lay_out(cells: "list[tuple[float, str]]") -> str:
+    parts: list[str] = []
+    width = 0                       # characters written so far, NOT len(parts)
+    for x, text in cells:
+        text = text.strip()
+        if not text:
+            continue
+        col = int(max(0.0, x) / _PT_PER_COL)
+        if col > width:
+            parts.append(" " * (col - width))
+            width = col
+        elif parts:
+            parts.append(" ")       # never let two runs collide into one token
+            width += 1
+        parts.append(text)
+        width += len(text)
+    return "".join(parts).rstrip()
+
+
 def _page_text(doc: _Doc, page_body: bytes, content: list[int]) -> str:
     fonts = doc.page_fonts(page_body)
     stream = b"".join((_stream(doc.objs.get(c, b"")) or b"") for c in content)
     if not stream:
         return ""
     ctm = (1.0, 0.0, 0.0, 1.0, 0.0, 0.0)
-    stack: list[tuple[float, float, float, float, float, float]] = []
+    stack: list = []
     x = y = 0.0
     font: int | None = None          # tracked across the WHOLE stream (lesson 3)
     items: list[tuple[float, float, str]] = []
@@ -239,18 +315,22 @@ def _page_text(doc: _Doc, page_body: bytes, content: list[int]) -> str:
         if m.group(1) is not None:
             font = fonts.get(m.group(1).decode())
         elif m.group(2) is not None:                                  # cm (lesson 5)
-            ctm = mul(tuple(float(m.group(i)) for i in range(2, 8)), ctm)
+            ctm = mul(tuple(_num(m.group(i)) for i in range(2, 8)), ctm)
         elif tok == b"q":
-            stack.append(ctm)
+            # ⚠️ THE FONT IS PART OF THE GRAPHICS STATE, not just the matrix. A
+            #    producer writing `q /F2 Tf … Q` leaves F1 in force after the Q,
+            #    and decoding the next string with F2 is lesson 2's failure mode
+            #    arriving silently. Save and restore both.
+            stack.append((ctm, font))
         elif tok == b"Q":
-            ctm = stack.pop() if stack else (1.0, 0.0, 0.0, 1.0, 0.0, 0.0)
+            ctm, font = stack.pop() if stack else ((1.0, 0.0, 0.0, 1.0, 0.0, 0.0), None)
         elif tok == b"BT":
             x = y = 0.0
         elif m.group(8) is not None:                                  # Tm
-            x, y = float(m.group(12)), float(m.group(13))
+            x, y = _num(m.group(12)), _num(m.group(13))
         elif m.group(14) is not None:                                 # Td
-            x += float(m.group(14))
-            y += float(m.group(15))
+            x += _num(m.group(14))
+            y += _num(m.group(15))
         else:
             cm_, two = doc.cmap(font) if font is not None else ({}, False)
             if m.group(16) is not None:
@@ -268,7 +348,10 @@ def _page_text(doc: _Doc, page_body: bytes, content: list[int]) -> str:
                 text = "".join(parts)
             if text.strip():
                 a, b, c, d, e, f = ctm
-                items.append((a * x + c * y + e, b * x + d * y + f, text))
+                dx, dy = a * x + c * y + e, b * x + d * y + f
+                # a non-finite coordinate cannot be sorted or used as a row key
+                if dx == dx and dy == dy and abs(dx) < 1e7 and abs(dy) < 1e7:
+                    items.append((dx, dy, text))
 
     if not items:
         return ""
@@ -288,7 +371,7 @@ def _page_text(doc: _Doc, page_body: bytes, content: list[int]) -> str:
         rows.setdefault(anchors[round(iy, 1)], []).append((ix, text))
     out = []
     for row_y in sorted(rows, reverse=True):
-        out.append(" | ".join(f"{ix:.0f}:{t.strip()}" for ix, t in sorted(rows[row_y])))
+        out.append(_lay_out(sorted(rows[row_y])))
     return "\n".join(out)
 
 
@@ -305,4 +388,12 @@ def extract_pages(path: str | Path) -> tuple[list[str], list[int]]:
     pages, orphans = doc.pages()
     if not pages:
         raise ValueError("no page objects found (an encrypted or unusual PDF)")
-    return [_page_text(doc, body, content) for body, content in pages], orphans
+    # ⚠️ PER PAGE. Without this, one malformed operator on page 14 takes pages
+    #    1-13 down with it and the whole read reports as "not a PDF".
+    out = []
+    for body, content in pages:
+        try:
+            out.append(_page_text(doc, body, content))
+        except Exception:
+            out.append("")        # `redact.py` reports a page that came out empty
+    return out, orphans
