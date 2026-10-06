@@ -1526,6 +1526,57 @@ as if it meant something:** her dictation produced a word that is not a term, in
 car's expenses being summed in one worksheet. **It was read as "vehicle expenses" and she was told that
 was the reading, so she could correct it.**
 
+### 2026-10-06 (last) — she keyed the changes; nine of eleven landed, and the permanent record is built
+
+🔑 **Lilian keyed the changes and handed the draft back asking whether anything was left. That is an
+audit, so the whole return was transcribed again — every line, every blank line, and every checkbox
+read by its column position rather than from the text, because a Yes and a No come out of an extract
+identically.**
+
+- ✅ **NINE OF THE ELEVEN KEYSTROKES LANDED**, including the one the independent review had caught as
+  missing from the written list: the tolls field. **Without it the car-and-truck line would have come
+  out short by the exact amount that went missing once before on this return.**
+- 🔴 **ONE FIGURE IS STILL SHORT: the phone.** The deleted form's share went with the form instead of
+  moving onto the surviving one. ⛔ **It costs NO tax this year** — the repayment cap on the
+  health-insurance credit binds either way, which is exactly what the earlier analysis predicted —
+  🛑 **but it leaves him a very narrow margin below the threshold where that cap roughly triples,
+  where he would otherwise have had a comfortable one.** ⇒ **Worth keying for the margin, not for the
+  tax.** ⚠️ **Three open income items could each cross that threshold on their own.**
+- 🔴 **AND THE PAYMENT VOUCHER IS STILL ON PAGE 1 — fourth draft running.** **It tells him to mail
+  money on a return that refunds him, and it is the only page a client reads as an instruction.** ⛔ **It
+  must come off before anything reaches him.**
+- ✅ **EVERYTHING ELSE RECONCILES, AND THE MODEL REPRODUCED THE WHOLE DRAFT A SECOND TIME** — on both
+  the keyed figure and the corrected one. **The firm's arithmetic has now predicted this return in
+  advance twice and matched it line by line.**
+- 🔴 **ONE THING THAT WORKED AND STILL IS NOT WRITTEN DOWN:** where the mileage and the tolls are
+  actually typed in the software. **The keystroke demonstrably succeeded, so somebody knows — but the
+  firm does not, and this is the third return where that route was needed and never recorded.** ✏️ **One
+  line from whoever keyed it closes it for good.**
+
+📗 **THE PERMANENT RECORD IS BUILT AND DELIVERED — fifteen tabs, and it is the document that gets
+saved on the client for future years.** 🔑 **Her bar was that somebody holding nothing but that file
+should be able to rebuild the whole return from the beginning.** **So it carries: who he is and what
+was filed; every source document by name, including the explicit statement that there are NO books on
+this engagement; what each document stated and which figure it settled; his words and the firm's
+instructions, dated; the profit and loss row by row with his own claim beside the return; every line
+of every form including the ones deliberately left blank; the home office in full; the vehicle with
+what the method excludes and why; the step-by-step arithmetic behind every figure the firm calculated;
+every expense he claimed that is NOT on the return with the rule that keeps it off; every decision
+with the alternative that was turned down and who chose; every assumption with what changes if it is
+wrong, largest exposure first; what carries into next year; and a list of the checks that were
+actually run and what each was run against.**
+
+🛑 **AND THE RULE THAT DOCUMENT LIVES BY CAUGHT THE SESSION'S OWN WRITING.** **It must contain no
+reference to any earlier version of anything — that was her instruction, because the layering which
+makes a working paper trustworthy makes this one unreadable to somebody who never saw an earlier
+draft.** ✅ **The build enforces it mechanically and refuses to produce the file otherwise, and it was
+proved to catch planted test phrases before it was trusted.** ⇒ 🔑 **It fired on a line this session
+had written, describing an earlier position as superseded.** ⛔ **The line was REMOVED rather than
+reworded** — that history belongs in the working paper, not in the document that outlives it.
+
+⚠️ **The copy of that document issued two days ago is superseded and must not be the one kept.** ✅ **And
+if the phone is keyed, six figures move and it is reissued once.**
+
 ### Outstanding items (CI-only — never in the SOP)
 
 
