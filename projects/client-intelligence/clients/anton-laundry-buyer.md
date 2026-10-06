@@ -259,6 +259,31 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-06 (REPORT v11 — JULIA: "I DON'T THINK THEY ARE RUNNING THAT IN PAYROLL… ARE YOU SURE?") — ❓ **Julia
+  doubted the report's claim that "additional owner income" is the weekly payroll counted twice. ✅ She was right.**
+  - **The registers:** the binder's own 2025 and 2026 payroll registers (pp. 21–64, read directly) show the owners'
+    weekly rate on Select's payroll only. On the other four store payrolls the two owners are paid a small hourly
+    rate, a few thousand dollars a year at each.
+  - **The ledgers:** a search of every 2025 ledger account, balance-sheet accounts included, found no weekly payment
+    to an owner anywhere. The owner payments that exist are a handful of lump-sum distributions and loan checks.
+  - ⇒ **At four stores the "draw" is neither payroll nor any entry in the books.** If it was taken, it was cash taken
+    before deposit: never recorded, and so never on returns prepared from the books.
+  - **The rejection stands; its reason is rewritten.** The new heading is "which no record supports", and a
+    register-based table compares the claim with what the owners were paid on each payroll. At Select it may repeat
+    pay already counted. At the delivery company it equals the owners' Forms W-2, counted once.
+  - **One sentence is flagged to Julia** as the strongest statement the report makes about the sellers.
+  - 🔴 **A second finding from the same registers:** 15th Street's 2025 register shows owner pay (the two owners,
+    nine pays, tax withheld) on **none of the thirteen Forms W-2**.
+    - The sellers' owner payroll schedule lists five payrolls and leaves out 15th Street's. The arithmetic closes only
+      that way: the two owners' W-2 totals reconcile exactly to the other payrolls.
+    - ⚖️ **Julia's decision (2026-10-06): hold it PENDING those forms.** Adjusted earnings are unchanged; the "waiting
+      on invoices" wording became "waiting on documents".
+    - Category 2's breakdown is corrected. The earlier "above even the reconstruction at Bayshore" was an artifact of
+      the omission: Select is slightly *below* the reconstruction, and 15th Street matches its register.
+  - ⏭️ **Next:**
+    - ask the sellers for the 2025 Forms W-2 (and Forms 941) for the 15th Street payroll;
+    - ask how the weekly owner draw was taken at each business, and where it is recorded;
+    - a NotebookLM prompt is with Julia, for Lemon Squeeze's register and the binder's own explanation of the draw.
 - 2026-10-06 (BAYSHORE 2025 — THE FOLLOW-UP READ) — Julia ran the follow-up prompt in NotebookLM. Results:
   - ✅ **The return now foots everywhere.**
     - Schedule L balances on both sides in both years once the two lines the first prompt skipped are in: land and a
@@ -3352,7 +3377,11 @@ the actual details.
       documented and either paid off or excluded at closing
 - [ ] Why no insurance claim was filed for either 2024 hurricane, and whether property cover was in
       force then and is in force now
-- [ ] The support behind "Additional Owner Income" — the only add-back category with no support named
+- [ ] The support behind "Additional Owner Income" — the only add-back category with no support named.
+      **Ask HOW the "owner's weekly draw" was taken at each business** (cash, check, transfer or payroll)
+      and where it is recorded. The registers carry the weekly rate on Select's payroll only (2026-10-06)
+- [ ] The 2025 Forms W-2 (and Forms 941) for the **15th Street payroll**. Its register shows owner pay on
+      none of the thirteen forms; it is held pending in category 2 by Julia's decision of 2026-10-06
 - [ ] Bayshore's and Samoset Florida's returns for 2023-2025 (Financial Binder Section 5) and the
       Section 4 store P&Ls — in hand. **Bayshore 2025 was read 2026-10-06 and is unsigned, so ask for proof
       of filing.** The other five returns and the store P&Ls are not yet read
