@@ -1,6 +1,6 @@
 # NEVER GIVE UP KK LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-06
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -82,11 +82,13 @@ the actual details.
 - **E-2 investor-visa considerations** shape the engagement — business-operations documentation and **US tax nexus / residency** are recurring themes that bear on the entity-structure decision. _(Gmail)_
 - **Cash-heavy** — repeated emphasis on documenting cash income and receipts properly. _(Gmail)_
 - Client communication runs through a **shared WhatsApp group** set up at onboarding.
+- **First customer purchase order on record (Sep 2026) — a US defense contractor.** The buyer is **INTUITIVE** (Huntsville, AL; email domain `irtc-hq.com`), PO **2600001926** dated 2026-09-21: thermal optics (Patriot 2 H50, Patriot L50 Pro, Defender 660L) plus shipping, **drop-shipped to Redstone Arsenal, AL**, FOB destination, Net 45. It is a **DPAS-rated order (DO-C9)** under a prime Air Force contract, with FAR/DFARS flow-downs, ITAR/EAR compliance, a Certificate of Conformance per item, and a PO that must be **signed and returned before any work is authorized**. The buyer requires the **PO number on the invoice** and invoices sent to its AP mailbox. 🔑 **How the PO is built:** line 1 is a **"DOWN PAYMENT 50%"** line and the product lines carry **half** of each unit price, so the down-payment line plus the product lines together equal the PO total — the down payment is 50% of the order, not an extra charge. _(The PO itself, shared by Lilian 2026-10-06; figures are in the PO, not here.)_ This bears directly on the open **export-control / licensing** item in §4.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-06 — **Lilian brought the Intuitive PO 2600001926** (the owner did not know how to turn it into a QuickBooks invoice). The session prepared a **QuickBooks Online invoice-import CSV** mirroring the PO line by line (PO number + a 50%-advance payment term in the invoice message, non-taxable, Net 45) plus manual-entry steps; delivered to Lilian, **not committed**. The firm's QuickBooks connector points at the firm's own company, so nothing was written into the client's books. Open: confirm with the buyer that the PO total is the real order value (the down-payment line equals the sum of the half-priced product lines), the customer's legal name for the QBO customer record, and how the 50% advance will be invoiced/received.
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; entity/tax-return type; service frequencies).
 - 2026-07-20 — **Gmail + Double-note enrichment sweep:** established the thermal-optics trade profile, FL (South Florida), RU language, June-2026 onboarding, and the open structure / BOI / nexus items. Ping had **no indexed meetings**; facts from Gmail + the Double note. Ping + Gmail now swept (see sweep-state).
 - 2026-08-01 — **Incremental weekly sweep** (bounded to 2026-07-20 and later): Ping (org-wide meeting search for the business + owner, `resolve_person`), Double (`get_client`, `list_client_properties`, `list_notes`, `list_contacts`, `list_activity_log` — activity log empty since baseline), Gmail (`in:inbox`/`in:sent` after:2026/07/20), Drive (folder confirmed), and the repo (FOLLOW-UPS/BACKLOG/sops) all came up with **no new activity in the window** — the owner's Jul-14 and Jun-23 Double-note meetings predate the baseline and were already captured. Owner-level check (contact spans Boost You LLC, Goshakes LLC, The Roadside Project LLC, and the owner's individual Double profile) surfaced no post-baseline facts specific to this company either. No SOP exists yet for this client, so no SOP-proposal candidates were queued.
