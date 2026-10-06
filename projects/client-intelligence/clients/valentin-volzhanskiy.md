@@ -1577,6 +1577,55 @@ reworded** — that history belongs in the working paper, not in the document th
 ⚠️ **The copy of that document issued two days ago is superseded and must not be the one kept.** ✅ **And
 if the phone is keyed, six figures move and it is reissued once.**
 
+### 2026-10-06 (later still) — the phone is keyed, and why a deduction that moves no tax is not a deduction that failed
+
+🔑 **She keyed the phone figure and then asked the right question: why did the refund not change at
+all?** **It is worth recording the answer, because it is the kind of question that will come up again
+on any client with a Marketplace subsidy.**
+
+✅ **THE DEDUCTION DID WORK. It just worked on a number he was never going to pay.** The refund is the
+withholding less the total tax, and the total tax has three parts — each of which the extra deduction
+hit a different wall in:
+
+- **Income tax was already ZERO, and more deduction cannot make it more zero.** His standard deduction
+  and his tips deduction together already exceeded his income by a wide margin, so the new deduction
+  landed in a region where deduction buys nothing. It was absorbed by tips deduction that was already
+  being wasted.
+- **Self-employment tax was already zero**, because the business runs at a loss. A larger loss creates
+  nothing.
+- 🔑 **And the health-insurance credit repayment is CAPPED.** The form makes him repay **the smaller**
+  of the excess that was advanced to him and a statutory limit. **The extra deduction genuinely reduced
+  the excess — but the limit was lower than the excess both before and after, so the repayment never
+  moved.** The whole improvement fell inside the part that was never payable.
+
+⚠️ **TWO THINGS FOLLOW, AND THEY MATTER MORE THAN THIS ONE FIGURE DID.**
+
+- ⛔ **A substantial further slice of deduction is also worth nothing** before the cap stops binding.
+  **So no small expense surfacing from here on moves his tax**, and the pools still arguable on his
+  file are collectively worth very little. ✅ **That is a reason not to spend time chasing them.**
+- 🟢 **WHAT THE CHANGE ACTUALLY BOUGHT IS THE MARGIN, and that is why it was worth keying.** He sits
+  below a threshold where that repayment cap roughly triples. **Before the change his headroom was
+  very narrow — almost any late income item would have crossed it. Now it is comfortable, and none of
+  the three open income items crosses it on its own.** ⚠️ **Crossing costs real money immediately.**
+
+✅ **TWELVE OF THE THIRTEEN KEYSTROKES ARE NOW IN**, and the one left is not a figure at all: **the
+payment voucher still has to come off the print set.** 🛑 **It must be gone before anything reaches the
+client — it tells him to mail money on a return that refunds him.**
+
+📗 **THE PERMANENT RECORD WAS REISSUED ONCE, with every figure the phone drives updated.** 🔑 **One row
+in it got SIMPLER rather than just changing: the merge check now shows that the only difference between
+the two former schedules' expenses and this return's total is the card interest Julia removed, less a
+single dollar GAINED because the mileage multiplication is now done once instead of twice.** ✅ **It
+foots on the return itself rather than on the return plus a pending keystroke.** ⛔ **The two earlier
+copies are superseded; this is the one that is saved.**
+
+⚠️ **AND THE REVIEW CAUGHT THREE COUNTING ERRORS IN THE SESSION'S OWN WRITE-UP, all now fixed:** a
+print-set inventory that claimed a missing page which had in fact been accounted for *(it would have
+sent the next session hunting for it)*; a draft count for the voucher that was one too high, and said
+so in the same sentence that listed the dates; and a sheet row count that contradicted something the
+same section said two paragraphs later. ⓘ **The voucher count is now stated as the DATES rather than
+as an ordinal, because the ordinal had drifted twice.**
+
 ### Outstanding items (CI-only — never in the SOP)
 
 
