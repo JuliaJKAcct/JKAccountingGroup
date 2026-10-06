@@ -259,6 +259,38 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-06 (OVERNIGHT REVIEW OF REPORT v13 — 21 LOOPS, 1:09 TO 2:50 AM ET) — Julia went to sleep at 12:55 am
+  with the instruction to review every part of the report in loops until a full pass changed nothing (hard stop
+  7 am), and four decisions: an error that changes a figure is **fixed and flagged** in the page's review note with
+  the old value; the delivery company's **$20,000 of unpaid invoices come out of revenue** (reversible if the sellers
+  show payment); the **Russian edition waits** for her approval of the English; the **report date moves** to the day
+  she approves. **Done:** v13 applied her decision at the source (adjusted earnings $981,292 → $962,703; the
+  storm-repair baseline is a share of sales and moved with it), then twenty review loops, one part per loop, with a
+  ledger on disk as the memory. Every loop rebuilt, verified (0 untraceable money tokens, 0 link problems, 47 pages)
+  and republished to the same private page (v13.1 → v13.19). **Corrections flagged on the page with the old
+  values:** the fleet table's ages were a year stale and disagreed with the valuation table (now derived from the
+  same dates); the water test called its bills calendar 2025 with "two stores off" — **Binder Vol. 4 Tab K runs
+  September 2025 to August 2026 at all five stores**, set against calendar-2025 machine revenue; the Ruskin finding
+  stands because deposits in the window months run 7% and 8% below 2025 at Ruskin and 15th Street alike; **the
+  sellers' schedule of debt (Vol. 3 Tab H-3) carries a $260,000 First Horizon mortgage on the Select property**
+  beside the $375,000 and $225,000 equipment loans, $860,000 in all — section 5 had said "no rent, mortgage or
+  lease expense"; **three** properties have no environmental report, not two; the delivery company's growth
+  sentence now gives the $418,988 on its return, $524,171 banked in the twelve months to August 2026 and the 39%
+  derived from the bank series; "Four documents decide" carries the $515,091 the four documents actually settle,
+  not the $588,592 of everything rejected or pending; the binder holds purchase invoices for **four** fleets
+  (Palmetto Coin's 2017 ones too old to price from), not three; the basis page no longer lists the 2014
+  environmental excerpt as unread (its text is in Vol. 2 and section 7 relies on it). **Also:** typed figures
+  replaced by derivations wherever a data module held them (invoice totals, Samoset's depreciation from the
+  transcripts, the $17,461 2023 difference, the payroll-load cases, the storm rate, the benchmark rent, the
+  paid-versus-county ratios); plain-words glosses at first use (add-backs, EBITDA, goodwill, millage and ad valorem,
+  TRIM, recapture); the Select loan figure attributed to the sellers' schedule. ⓘ The review note's own clock had
+  been overstated by about 2.5 hours (the loops ran ten to a forty-minute stretch); the times were corrected from
+  the transcript. **For Julia this morning, not changed on the page:** the Ruskin cash panel still poses the
+  tenant-rent question Samoset's 2025 return answers ($13,200); no published price multiple sits beside the 12.5×;
+  the July 2024 family-deposit note; the "favors you" building-allocation sentence (p. 37, already her open call);
+  a **possible fourth obligation** (the ledgers' First Horizon "Ruskin equipment" instalments against the schedule's
+  three, which it calls the only loans); and where the delivery business sits in the one-S-corporation structure
+  (section 7 is silent). Then the report date, the PDF and the Russian edition.
 - 2026-10-06 (REPORT v12 — WHAT SECTION 5 HOLDS, AND THE VEHICLE COSTS) — ⚖️ **Julia chose two of the four proposed
   changes:**
   - **What the binder's returns are.** A new paragraph in section 1 says that one of the six is signed, that
