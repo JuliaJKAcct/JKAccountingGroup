@@ -259,6 +259,28 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-06 (NOTEBOOKLM — THE DRAW, THE REGISTERS, "NOT RECORDED") — Julia ran the prompt across the whole binder.
+  - **The draw:** the binder never says how the "owner's weekly draw" is taken or paid. Its only stated support is
+    "Seller schedule".
+    - On the 2025 store pages it is one typed line labeled "Other Income", with no transactions under it, while every
+      real item on those pages lists its QuickBooks entries.
+    - No account named "Other Income", or containing "owner", exists in any ledger in any year.
+    - ⇒ It is a label on the sellers' schedule, not a QuickBooks account, which supports v11's "no record supports it".
+  - ⚠️ **NotebookLM's register extraction was wrong, so do not rely on it:**
+    - it gave Select a non-owner employee and hourly rates, taken from the P&L page before the register;
+    - it gave Ruskin a weekly rate that is not on that register.
+    
+    The direct read of pp. 21–64 stands. Together with the M-2 misread, the rule is: **NotebookLM is fine for typed
+    text and weak on scanned tables; check its numbers against a direct read or the printed totals.**
+  - **No Lemon Squeeze payroll register is anywhere in the binder.** Its owner pay rests on its Forms W-2 alone.
+  - **Nothing in the binder says receipts were "not recorded in the books".** That figure came from the offering
+    material, which is how the report already attributes it.
+  - 🔴 **New, 2024 only:** the sellers' own note (p. 183) says part of Select's July 2024 sales was a family deposit,
+    not operating income.
+    - The ledger shows one round deposit that month booked to Sales, which the bank analysis already treats as a
+      transfer. The rest of the amount the sellers name cannot be identified.
+    - 2024 Select sales, and the 2024 return's gross receipts, therefore include non-operating money.
+    - 2025 and the price are untouched. ❓ Julia to decide whether the report's 2024 figures get a note.
 - 2026-10-06 (REPORT v11 — JULIA: "I DON'T THINK THEY ARE RUNNING THAT IN PAYROLL… ARE YOU SURE?") — ❓ **Julia
   doubted the report's claim that "additional owner income" is the weekly payroll counted twice. ✅ She was right.**
   - **The registers:** the binder's own 2025 and 2026 payroll registers (pp. 21–64, read directly) show the owners'
