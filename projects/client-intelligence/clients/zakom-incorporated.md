@@ -1,6 +1,6 @@
 # Zakom Incorporated
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-06
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1624,8 +1624,11 @@ unanswered on the return.
 
 **The one that reaches the owner's personal return.** Our own explanation of the two possible treatments of
 the insurance financing told the reviewer that the choice between them does not affect the shareholder's
-K-1. That was wrong on the half that matters: the **distributions** box is genuinely unchanged, but the
-shareholder's **share of the profit** moves by the whole disputed amount and changes sign — a loss under one
+K-1. That was wrong on the half that matters — ⚠️ **and the sentence that replaced it was wrong too, in the
+opposite direction, and is corrected here on 2026-10-06:** the **distributions** box is NOT genuinely
+unchanged either. **Because this company has no books with an equity section, the distribution reported on
+the K-1 is a DERIVED residual, so it moves whenever the profit moves.** **What is true is that the shareholder's share of the profit
+moves by the whole disputed amount and changes sign** — a loss under one
 treatment, income under the other. Since the company's working paper hands those figures on to the owner's
 individual return, the two treatments hand it opposite answers. The reviewer now gets that stated as
 arithmetic instead of described.
@@ -1788,6 +1791,52 @@ company return only through the home office, which is still Julia's open decisio
 the company paying the owner's personal property tax from the company account being a distribution is untouched.
 **Nothing was opened** — file names only, which is the standing default; reading any of them is a cross-client
 read of non-return documents and needs Lilian's or Julia's explicit ask.
+
+### 2026-10-06 · 🗣️ Lilian's email to Julia is captured in the working paper, and the final worksheet is DEFERRED
+
+**Lilian handed the session the email she had sent Julia with her preparation notes on this return — written
+BEFORE Julia applied her changes and decided the officer compensation.** **It is now transcribed in full in
+the working paper** *(§3CK)*, **item by item, with what the paper already holds beside each one and a
+provisional marker: still applicable · re-check on the filed return · the question is already answered.**
+**The email covered eleven topics — the insurance split and the gross-vs-net revenue assumption, the IPFS
+premium-finance estimate, the Freightliner's cost gap, the 2024 towing, the equity presentation, the Mema
+Colors receivable, the utility trailer's impossible accumulated depreciation, Julia's recategorisation of the
+2025 trucks and trailers, the officer compensation, the Audi's state-basis warning, and the shareholder-basis
+computation.** **Eight of them either match the working paper or had already been ruled on by Lilian herself.**
+
+🔴 **Three things in it the firm's own record did not hold, and the first is the sharpest:**
+
+1. **Julia put a year-end balance on the `Loan to Mema Colors LLC` receivable where the working paper carries
+   the original amount unchanged in both prior-year columns.** **Nothing in the firm's file documents any
+   movement on that receivable during 2025.** ⚠️ **It is carried as a QUESTION FOR JULIA — she may hold what
+   the file does not — and the test is one line on the filed Schedule L.**
+2. **The reason the full liability-and-cargo insurance stayed as an expense, stated in her own words: it ran
+   under the client's freight partner's policy and was deducted weekly from the freight paid to him.** **The
+   working paper had derived the split arithmetically; the email is the first place the reasoning is written.**
+3. **That the equity-presentation question and the depreciation-recategorisation question were actually PUT to
+   Julia, and when.** **A working paper records that a question is hers; it does not record that it was asked.**
+
+**Also recorded, and the review of this work reversed it: officer compensation does NOT change how much the
+owner is taxed on.** **Because this client has no books with an equity section, the distribution reported on
+the K-1 is a derived residual rather than a document figure — so booking a salary reduces the company's
+ordinary income and reduces the distribution by the same amount, and the two cancel.** 🔑 **The owner's
+capital gain is unchanged at any salary up to the company's income before that salary, and FALLS above it.**
+**What the salary changes is the CHARACTER of the income — K-1 ordinary income becomes wages, at the same
+marginal rate but carrying payroll tax on both sides and not qualifying for the business-income deduction;
+above that boundary it converts long-term capital gain into wages, which is a real rate cost — and it strands
+the excess as a suspended loss the owner cannot deduct while his basis is zero.** ⚠️ **One exception: employer
+payroll tax actually paid does raise the gain, because cash leaves the company while the derived distribution
+does not.** **The working paper carries the whole table, machine-checked.**
+
+⚠️ **A second-order point the email does not raise: officer compensation on a company the organizer says ran no
+payroll in 2025 implies a W-2 and the payroll returns behind it, which nothing in the file evidences were
+filed. Stated for Julia, not acted on.**
+
+⏳ **THE FINAL WORKSHEET IS NOT BUILT.** **Lilian's trigger: Julia discusses both returns with the client, he
+approves, and she uploads both — then one final worksheet per return** *(governed by the
+[`tax-return-sop`](../../../.claude/skills/tax-return-sop/) skill's final-worksheet section: English, no
+version history, saved in Double, and enough to replicate the return from nothing else)*. **Only the notes
+still applicable after both returns are read go into it.**
 
 ## 7. Links
 

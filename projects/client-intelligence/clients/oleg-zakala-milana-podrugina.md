@@ -1,6 +1,6 @@
 # Oleg Zakala & Milana Podrugina
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-04
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-06
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -77,12 +77,20 @@ the actual details.
   gain on his 1040**, and the 2024 return already reported one that way, on Form 8949 **Part II box (F)**
   with the description `Excess Distributions (K-1 (1120S))`. ⚠️ **This is the firm's own established
   treatment for this client, not a theory** _(2026-10-04)_.
-- ⚠️ **AND OFFICER COMPENSATION AT ZAKOM MAKES HIS PERSONAL RETURN WORSE, NOT BETTER.** It reduces the
-  company's ordinary income, which reduces the basis that absorbs the distribution, which **raises** the
-  capital gain — while adding wages at ordinary rates and payroll tax on both sides. And at zero basis the
-  resulting company loss is **suspended on Form 7203 Part III, not deducted.** 🔑 **It is a price tag on
-  Julia's decision, not an argument against a salary** — the reasonable-compensation exposure is separate
-  and real. The arithmetic is in the working paper _(2026-10-04)_.
+- 🔴 **OFFICER COMPENSATION AT ZAKOM DOES NOT CHANGE HOW MUCH HE IS TAXED ON — and the reading that said
+  it makes his return worse is WITHDRAWN** _(2026-10-06; it stood from 2026-10-04 and was found by an
+  independent review)_. **Because that company has no books with an equity section, the distribution
+  reported on his K-1 is a DERIVED residual rather than a document figure — so booking a salary reduces the
+  company's ordinary income and reduces the distribution by the same amount, and the two cancel.**
+  🔑 **His capital gain is unchanged at any salary up to the company's income before that salary, and FALLS
+  above it; the total reaching this return from the company does not move at all.** **What the salary
+  changes is the CHARACTER: K-1 ordinary income becomes wages — same marginal rate, but payroll tax on both
+  sides and no business-income deduction on it; above that boundary it converts long-term capital gain into
+  wages, which is a real rate cost, and strands the excess as a suspended loss he cannot deduct at zero
+  basis.** ⚠️ **One exception: employer payroll tax actually PAID does raise the gain, because cash leaves
+  the company while the derived distribution does not.** 🔑 **It is still a price tag on Julia's decision —
+  payroll tax, the payroll filings, and the rate on the part above the boundary — not an argument against a
+  salary; the reasonable-compensation exposure is separate and real.** The whole table is in the working paper.
 - **He itemizes, and it is a CLOSE call that 2025 reverses.** 2024 itemized on mortgage interest and
   real-estate taxes, beating the standard deduction by a small margin — and for 2025 **the standard
   deduction rose while the SALT cap rose far more**, so the choice must be computed both ways and last
@@ -203,6 +211,38 @@ in, and reminded to delete the session afterwards.
 - [ ] Whether Oleg made a capital **contribution** to Zakom in 2025 — **ours, off the company's books; it would reduce the gain dollar for dollar**
 - [ ] Whether either of them turned 65 during 2025 — **ours, from Double**; it opens Schedule 1-A Part V
 - [ ] Whether any 2025 estimated-tax voucher was paid, and whether the 2024 instalment plan is still running
+
+### 2026-10-06 · ⚖️ The return ITEMIZES, Julia has already spoken to the client, and the final worksheet is DEFERRED
+
+**Lilian ruled that this return uses ITEMIZED deductions rather than the standard deduction, relaying that
+Julia applied them after discussing the return with the client.** **It reverses the working premise of two days
+earlier and confirms what the 2025 Form 1098 had already shown on its own: the mortgage interest alone exceeds
+the married-filing-jointly standard deduction, before any state and local tax.** *(Working paper §3H ②.)*
+
+🔴 **The bigger consequence is procedural, and it changes what the firm should do next.** **Because Julia had
+the client in front of her, most of the working paper's open items are no longer questions for the firm to work
+out — they are lines to READ off the filed return.** **The paper now carries that mapping row by row** *(§3H
+③ⓐ)*, **and the client question list that was ready to send is STOPPED: asking him for what he has already
+given Julia is the failure the firm's own analysis method names first.** ☑️ **Read the filed return, then ask
+only for what it genuinely leaves blank — and ask JULIA, not him, for what he told her by phone.**
+
+**One technical point sharpened rather than closed by the ruling:** **on the standard deduction the whole
+business-use share of mortgage interest and property tax would have gone on the home-office form; on itemized
+the personal share goes to Schedule A and only the business share to the home-office form.** ⚠️ **So there are
+now two opposite ways the filed return can be wrong — the same interest counted twice, or the business share
+dropped altogether — and which one applies depends on whether the Schedule C businesses traded in 2025.**
+
+**Lilian's email to Julia on the company's return closes with this return's shareholder-basis computation, and
+it matches the working paper exactly.** ⚠️ **Recorded as the preparer's own dated statement of the position,
+not as a second route to the figure: both computations run off the same two inputs, so neither tests the
+other.**
+
+⏳ **THE FINAL WORKSHEET IS NOT BUILT.** **Lilian's trigger: Julia discusses both returns with the client, he
+approves, and she uploads both — then one final worksheet per return, never one covering both.**
+
+⚠️ **One word in her message did not parse and was NOT interpreted** — she dictates, and the firm's standing
+rule makes an unparseable word a question to put rather than a guess to write down. **The meaning of the
+sentence was not in doubt; the stray word is simply flagged.**
 
 ## 7. Links
 
