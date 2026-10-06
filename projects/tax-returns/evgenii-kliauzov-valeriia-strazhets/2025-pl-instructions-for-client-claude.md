@@ -36,19 +36,19 @@ No figures here, and none belong here until a working paper (`2025-form-1040.md`
 | 2 | **Part 1 = Evgenii only; part 2 = Valeriia, later, from her own documents.** Never mixed in one P&L | Lilian's order of work |
 | 3 | The **joint personal account** holds family spending, **Evgenii's** business expenses, the shared home and car costs, and maybe client money. **Valeriia has no business expenses in it** (Evgenii told Irina). Find as much of his business as possible, **but only from Irina's answers**, never from the bank description. A client deposit is asked openly (his client, her client, or something else — gift, repayment, family) | Irina's correction of 2026-10-06; Julia's rule 3 still governs |
 | 4 | Business ↔ joint transfers appear in both files: match them; not income, not expense | Avoid double counting |
-| 5 | **"Amazon" in a bank description proves nothing either way** — it can be family or business; ask Irina, who can check Amazon order history | His business is Amazon-related, which makes this the likeliest mistake |
-| 6 | `To confirm` keeps Julia's **`Business or personal?`** column, bilingual, with a dropdown *Business (Evgenii) / Personal / Mixed / Not sure*. **"Business" always means Evgenii's.** A line that turns out to be Valeriia's business goes to **D** with a question for the accountant. **One row per payee per account**, with an `Account` column; a Group ID spanning both accounts is split | Back to Julia's design now that only one business is in the account. One answer must never cover a payee that is business on one account and family on the other |
-| 7 | Home, car and phone lines go to `B — Home / Vehicle / Phone` (never into `To confirm`) **only when the payee settles it** (fuel station, SunPass, utility, insurer, car lender). **Multipurpose stores** (Costco, Walmart, Target, Home Depot, Lowe's, Amazon, a gas-station shop) go to `To confirm` first, and come back into the pools **only as home repair/maintenance or car costs** — ordinary household shopping ("для дома" in everyday Russian) is Personal, group C | Lilian wants Claude to find the car costs itself, without sweeping a Home Depot or Costco run into the pools |
+| 5 | **"Amazon" in a bank description proves nothing either way** — it can be family or business; ask. The Amazon order history can be checked by Irina or Evgenii | His business is Amazon-related, which makes this the likeliest mistake |
+| 6 | `To confirm` keeps Julia's **`Business or personal?`** column, bilingual, with a dropdown *Business (Evgenii) / Personal / Mixed / Not sure / Valeriia's client* (the last only for money in). **"Business" always means Evgenii's.** *Valeriia's client* → group **V**; a deposit marked *Personal* is asked about (gift, family, repayment…) before it goes to I3. A line that turns out to be Valeriia's business goes to **D** with a question for the accountant. **One row per payee per account**, with an `Account` column; a Group ID spanning both accounts is split | Back to Julia's design now that only one business is in the account. One answer must never cover a payee that is business on one account and family on the other |
+| 7 | Home, car and phone lines go to `B — Home / Vehicle / Phone` (never into `To confirm`) **only when the payee settles it** (fuel station, SunPass, a power or water utility, car lender; an insurer only when its name shows car or home cover — a home-and-auto insurer is asked; health insurance is its own B pool). **Multipurpose stores** (Costco, Walmart, Target, Home Depot, Lowe's, Amazon, a gas-station shop) go to `To confirm` first, and come back into the pools **only as home repair/maintenance or car costs** — ordinary household shopping ("для дома" in everyday Russian) is Personal, group C | Lilian wants Claude to find the car costs itself, without sweeping a Home Depot or Costco run into the pools |
 | 8 | Money from **Valeriia's clients**, if any reaches the joint account, goes to group **`V`** (income only), out of his P&L. `Summary`: *in = I1…I5 + V*, *out = A + B + C + D* | Every row stays classified and the reconciliation still closes |
 | 9 | **Home office**: household totals by category from both accounts (rent; mortgage payment; utilities; home internet; insurance; HOA; property tax; repairs; other), year + count + by month, with the payees listed under each. **No split, no percentage, never on the P&L.** A **mortgage payment is not an expense in full** (principal, interest, escrow) — its own line, `Mortgage payments (total)`. Follow the Home Office template's lines; compute totals itself because a template formula may skip a row | Both spouses still have a home office; the firm splits by the area each works in, and takes interest and property tax from the 1098 and the tax bill. On the firm's own template the total drops Insurance ([Bogopolskyy](../../client-intelligence/clients/bogopolskyy-marat-yuliana.md) §5) |
 | 10 | **Vehicles**: totals for **both cars together** from both accounts (fuel, repairs, car wash, tolls, parking, insurance, loan/lease payments, registration, other), payees listed. No split, never on the P&L; a loan payment on its own line; **fines out** (group C) | Firm still assigns one car per Schedule C and decides the division; Bogopolskyy's two P&Ls carried the same car's bills |
-| 11 | Phones: a separate household total; Claude does not assume work or personal — it asks whose each number is and whether one is work-only. Home internet goes to Home Office | Julia's prompt pooled phone + internet; the business share has to be established |
-| 12 | Workbook: Julia's 5 tabs + **`Profit and Loss`** (template lines, confirmed I1/I2/A only, each line tied to `All transactions`; template rows for home, car, meals, telephone, depreciation left blank with a pointer; a **`Group B — for the accountant`** block underneath with Evgenii's B totals; pending items shown), **`Home Office`**, **`Vehicles`** (with empty slots for areas in sq ft, exclusive-use yes/no, cars, odometers). **No Balance Sheet.** Home Office and Vehicles built once, reused in part 2 | Lilian, 2026-10-06 — the Balance Sheet was asked for and withdrawn the same day. Without the Group B block, meals and equipment would sit off the P&L with nothing showing they exist |
+| 11 | Phones: a separate **household** total (not listed as Evgenii's in the Group B block); Claude does not assume work or personal — it asks whose each number is and whether one is work-only. Home internet goes to Home Office | Julia's prompt pooled phone + internet; the business share has to be established |
+| 12 | Workbook: Julia's 5 tabs + **`Profit and Loss`** (template lines, confirmed I1/I2/A only, each line tied to `All transactions`; template rows for home, car, meals, telephone, depreciation left blank with a pointer; a **`Group B — for the accountant`** block underneath with Evgenii's B totals plus pointers to the household Home Office, Vehicles and phone totals; pending items shown), **`Home Office`**, **`Vehicles`** (with empty slots for areas in sq ft, exclusive-use yes/no, cars, odometers). **No Balance Sheet.** Home Office and Vehicles built once, reused in part 2 | Lilian, 2026-10-06 — the Balance Sheet was asked for and withdrawn the same day. Without the Group B block, meals and equipment would sit off the P&L with nothing showing they exist |
 | 13 | Language: tabs/headers English; `To confirm` instruction and fill-in headers also Russian; Irina's answers carried into `Business purpose` in English | Lilian reads the workbook in English; Irina reads Russian |
-| 14 | Working with Irina: simple Russian without tax terms **because the questions are forwarded to Evgenii and Valeriia**; bullets, one step at a time, ≤10 numbered questions per batch, biggest first; each question says **whom to ask**; she may answer in the chat or in Excel; short step-by-step file instructions. **Nothing about her ability** | She relays every question, and she reads this text to learn the method (Lilian, 2026-10-06) |
-| 15 | Extra questions: rent vs own; square footage of the home and of the room or area each spouse works in (in sq ft — metres flagged as metres) and whether it is used only for work; lease / 1098 / property-tax documents; each car's make/model/year, driver, owned/financed/leased, odometer 1 Jan and 31 Dec 2025, business-mile records, loan/lease statement; whose each phone number is; **which account or card Valeriia paid her business expenses from** | What the firm needs to allocate home office, cars and phones, and to start part 2 |
+| 14 | Working with Irina: simple Russian without tax terms **because the questions are forwarded to Evgenii and Valeriia**; bullets, one step at a time, ≤10 numbered questions per batch, biggest first; each question says **whom to ask**; she may answer in the chat or in Excel; short step-by-step file instructions; **Claude addresses her as «вы»**. **Nothing about her ability** | She relays every question, and she reads this text to learn the method (Lilian, 2026-10-06) |
+| 15 | Extra questions: rent vs own; square footage of the home and of the room or area each spouse works in (in sq ft — metres flagged as metres) and whether each space is used only for work (asked per person); lease / 1098 / property-tax documents; each car's make/model/year, driver, owned/financed/leased, odometer 1 Jan and 31 Dec 2025, business-mile records, loan/lease statement; whose each phone number is; **where Valeriia received client payments (account, card, Zelle/Venmo, cash) and which account or card she paid her business expenses from** | What the firm needs to allocate home office, cars and phones, and to start part 2 |
 | 16 | First reply: restate the instructions, say which step it is on, fix and report anything already done that conflicts, confirm it can see both templates | The chat was already under way |
-| 17 | Part 2: a separate workbook for Valeriia on the same rules, from **her own statements**, reusing `Home Office`, `Vehicles` and any `V` lines from part 1 | None of her business is in the joint account |
+| 17 | Part 2: a separate workbook for Valeriia on the same rules, from **her own statements** (income and expenses), reusing `Home Office`, `Vehicles`, the phone total and any `V` lines from part 1; home, car or phone costs found on her statements are **added to the same categories, shown separately — never a second set of totals** | None of her business is in the joint account |
 
 ## The text, verbatim
 
@@ -126,7 +126,7 @@ No figures here, and none belong here until a working paper (`2025-form-1040.md`
 ОСТОРОЖНО СО СЛОВОМ «AMAZON»
 • Бизнес Евгения связан с Amazon. Но слово «Amazon» в описании банка не значит, что это бизнес.
 • «Amazon» или «AMZN Mktp» на общем счёте может быть и покупкой для семьи, и покупкой для бизнеса. По описанию банка этого не понять — спроси Ирину.
-• Ирина может проверить такие покупки в истории заказов Amazon («Your Orders») и сказать, что было для бизнеса.
+• Такие покупки можно проверить в истории заказов Amazon («Your Orders»). Это может сделать Ирина или Евгений.
 • Если от Amazon пришли деньги на счёт, спроси, что это за деньги.
 
 
@@ -135,19 +135,24 @@ No figures here, and none belong here until a working paper (`2025-form-1040.md`
 ==================================================
 
 • Во вкладке «To confirm» колонка «FILL IN: Business or personal?» остаётся, как в первой инструкции. Напиши её заголовок на двух языках: «FILL IN: Business or personal? / Бизнес или личное?».
-• В этой колонке сделай выпадающий список. В нём четыре варианта:
+• В этой колонке сделай выпадающий список. В нём пять вариантов:
   – Business (Evgenii) / Бизнес Евгения
   – Personal / Личное
   – Mixed / Смешанное
   – Not sure / Не знаю
+  – Valeriia's client / Клиент Валерии (только для денег, которые пришли)
 • «Бизнес» здесь всегда значит бизнес Евгения.
+• Если на строке «деньги пришли» выбрано «Клиент Валерии», это группа V (см. ниже).
+• Если на строке «деньги пришли» выбрано «Личное», не ставь сразу группу I3. Спроси, что это за деньги: подарок, перевод от родных, возврат долга или что-то другое.
 • Если какой-то расход окажется расходом бизнеса Валерии, не включай его в «Profit and Loss» Евгения. Поставь его в группу D и напиши во вкладке «Questions», что это нужно уточнить у бухгалтера.
 
 ДОМ, МАШИНЫ И ТЕЛЕФОНЫ — БЕЗ ЭТОЙ ОТМЕТКИ
 • Расходы на дом, на машины и на телефоны идут в отдельные итоги (разделы 5, 6 и 7). Это группа B первой инструкции.
 • Не спрашивай Ирину, для бизнеса ли бензин или счёт за свет. Такие строки не ставь во вкладку «To confirm».
 • Во вкладке «All transactions» в колонке «Bucket» пиши для них «B — Home», «B — Vehicle» или «B — Phone».
-• Но так можно делать, только если по получателю это точно видно: заправка, SunPass, электрическая или водная компания, страховая компания, банк по кредиту за машину.
+• Но так можно делать, только если по получателю это точно видно: заправка, SunPass, поставщик электричества или воды, банк по кредиту за машину.
+• Страховая компания — только если по названию видно, что это страховка машины или страховка дома. Если одна компания страхует и машину, и дом, не клади её платежи в итоги: поставь их во вкладку «To confirm» и спроси.
+• Медицинская страховка — не дом и не машина. Это отдельный итог (группа B «Health insurance» первой инструкции).
 • Если магазин продаёт разное (Costco, Walmart, Target, Home Depot, Lowe's, Amazon, магазин при заправке), не клади его покупки в итоги дома или машин без ответа Ирины. Поставь их во вкладку «To confirm», одна строка на получателя. Если Ирина ответит, что это ремонт или обслуживание дома или расход на машину (масло, шины, запчасти), перенеси строку в итоги раздела 5 или 6. Обычные покупки для семьи (еда, вещи для дома, одежда) — это «Личное», группа C первой инструкции. Не клади их в итоги дома.
 
 ОДНА СТРОКА — ОДИН СЧЁТ
@@ -242,8 +247,8 @@ No figures here, and none belong here until a working paper (`2025-form-1040.md`
 • Сумма каждой строки должна совпадать с суммой строк во вкладке «All transactions». Покажи рядом проверку.
 • Если для расхода нет строки в шаблоне, используй «Other expenses» и коротко напиши, что это.
 • Расходы на дом и на машины в «Profit and Loss» не ставь. Если в шаблоне есть строки для них, оставь их пустыми и напиши: «see Home Office / Vehicles tab — accountant will allocate».
-• Другие расходы бизнеса Евгения из группы B (meals, equipment, телефоны, смешанные расходы) тоже не ставь в таблицу. Если в шаблоне есть строки для них (например, Meals, Telephone, Depreciation), оставь их пустыми и напиши: «see Group B below — accountant will compute».
-• Под таблицей сделай блок «Group B — for the accountant (not in the P&L above)»: по каждой группе B — итог и число строк Евгения. Отдельной строкой дай ссылку на итоги вкладок «Home Office» и «Vehicles».
+• Другие расходы бизнеса Евгения из группы B (meals, equipment, смешанные расходы) тоже не ставь в таблицу. Если в шаблоне есть строки для них (например, Meals, Telephone, Depreciation), оставь их пустыми и напиши: «see Group B below — accountant will compute».
+• Под таблицей сделай блок «Group B — for the accountant (not in the P&L above)»: по каждой группе B — итог и число строк Евгения. Отдельной строкой дай ссылку на итоги вкладок «Home Office» и «Vehicles» и общий итог по телефонам (household total — accountant will allocate).
 • Под таблицей покажи отдельно, что ещё не подтверждено (вкладка «To confirm»): число строк и сумму.
 
 ВКЛАДКА 7 «Home Office» — общая для семьи
@@ -268,7 +273,7 @@ Balance Sheet не нужен. Не делай его.
 9. КАК РАБОТАТЬ С ИРИНОЙ
 ==================================================
 
-Сделай работу удобной и понятной.
+Сделай работу удобной и понятной. С Ириной говори на «вы».
 
 • Пиши по-русски, простыми словами, без налоговых терминов: вопросы пойдут Евгению и Валерии. Если термин нужен, объясни его одной фразой.
 • Пиши короткие сообщения. Используй списки с пунктами. Один шаг за раз.
@@ -284,11 +289,11 @@ Balance Sheet не нужен. Не делай его.
   2) в файле Excel, во вкладке «To confirm».
   Ответы из чата ты сам переносишь в файл.
 • Когда даёшь файл Excel, коротко напиши по шагам, как с ним работать:
-  1. Скачай файл.
-  2. Открой вкладку «To confirm».
-  3. Заполняй только цветные колонки. (Объясни каждую цветную колонку одной фразой.)
-  4. Не удаляй строки, не меняй их порядок, не меняй Group ID.
-  5. Сохрани файл и загрузи его обратно в этот чат.
+  1. Скачайте файл.
+  2. Откройте вкладку «To confirm».
+  3. Заполняйте только цветные колонки. (Объясни каждую цветную колонку одной фразой.)
+  4. Не удаляйте строки, не меняйте их порядок, не меняйте Group ID.
+  5. Сохраните файл и загрузите его обратно в этот чат.
 • После каждого ответа скажи коротко: что изменилось и сколько вопросов осталось.
 • Не задавай один и тот же вопрос дважды.
 
@@ -303,7 +308,7 @@ Balance Sheet не нужен. Не делай его.
 • Дом в аренде или в собственности?
 • Какая общая площадь дома (в квадратных футах)?
 • Какая площадь комнаты или части дома, где работает Евгений? А где работает Валерия? Напишите в квадратных футах (sq ft). Если знаете только в метрах, так и напишите: «метры».
-• Это место используется только для работы? Или там ещё спят, отдыхают, живут гости?
+• Место, где работает Евгений, используется только для работы? А место, где работает Валерия? Ответьте для каждого отдельно: может быть, там ещё спят, отдыхают или живут гости?
 • Документы: если аренда — договор аренды. Если собственность — форма 1098 от банка (проценты по ипотеке) и счёт на налог на недвижимость за 2025 год.
 
 МАШИНЫ
@@ -317,7 +322,9 @@ Balance Sheet не нужен. Не делай его.
 • Чей каждый номер телефона? Есть ли номер только для работы?
 
 ВАЛЕРИЯ (для части 2)
-• С какого счёта или карты Валерия платила расходы своего бизнеса в 2025 году? Понадобятся выписки этого счёта или карты за 2025 год.
+• Куда Валерия получала оплату от клиентов в 2025 году: на какой счёт, карту или в какое приложение (Zelle, Venmo и т. п.)? Получала ли она наличные?
+• С какого счёта или карты Валерия оплачивала расходы своего бизнеса в 2025 году?
+• Понадобятся выписки всех этих счетов и карт за 2025 год.
 
 
 ==================================================
@@ -338,7 +345,9 @@ Balance Sheet не нужен. Не делай его.
 • Дай Ирине итоговый файл Excel для Евгения и короткий честный список того, что ещё не решено.
 • Ирина отправит файл нам.
 • Потом Ирина напишет тебе, чтобы начать часть 2 — бизнес Валерии. Тогда сделай отдельный файл Excel для Валерии по тем же правилам.
-• Расходов её бизнеса на общем счёте нет. Поэтому для части 2 нужны её собственные выписки (раздел 10). Ещё возьми из части 1 вкладки «Home Office» и «Vehicles» и строки группы V, если они есть.
+• Расходов её бизнеса на общем счёте нет. Поэтому для части 2 нужны её собственные выписки — где её доходы и где её расходы (раздел 10).
+• Ещё возьми из части 1 вкладки «Home Office» и «Vehicles», итог по телефонам и строки группы V, если они есть.
+• Если на её выписках есть расходы на дом, на машины или на телефоны, добавь их в те же категории. Отдельной строкой покажи, сколько добавлено из её выписок. Не делай вторые итоги.
 ```
 
 ## The WhatsApp message to Irina — verbatim
