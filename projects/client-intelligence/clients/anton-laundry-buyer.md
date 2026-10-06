@@ -259,6 +259,22 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-06 (REPORT v12 — WHAT SECTION 5 HOLDS, AND THE VEHICLE COSTS) — ⚖️ **Julia chose two of the four proposed
+  changes:**
+  - **What the binder's returns are.** A new paragraph in section 1 says that one of the six is signed, that
+    Bayshore's 2024 copy is not the return the IRS received, and that we rely on the IRS transcripts only. Both 2025
+    returns are unsigned.
+  - **The vehicle costs.** A new page in section 4 has a table, return against books, for all three companies. It
+    sets out the two readings and their price effect: if the costs are real, the earnings we can support fall by
+    that much. The buyer asks the sellers what each is, who paid it and whether it continues. One sentence on the
+    summary links to the page. The delivery company's books show vehicle repairs and almost no fuel: a single
+    filling-station charge is the only one in all six ledgers for the year.
+  - **Left out, as she decided:** the Ruskin rent inside sales, Samoset's notes and its 1031 line. They stay here
+    in the client file.
+  - The basis now records that all 309 pages of the financial binder are read, with Tab E-2 of Volume 3 the only
+    document still unread.
+  - **Checks:** 47 pp. (the vehicle page adds one); every money figure is traced; links show 0 problems, and the
+    new summary link lands on its evidence page. Republished to the same private review page.
 - 2026-10-06 (THE WHOLE BINDER, READ DIRECTLY — Julia split the PDF) — Julia split the 309-page Financial Binder
   into five files. **All of it is now read directly:** pp. 2–190 as text, and the six returns (pp. 191–309, which are
   images only) visually, page by page where it mattered. NotebookLM is no longer needed for this binder.
@@ -3447,10 +3463,13 @@ the actual details.
 - [ ] Bayshore's and Samoset Florida's returns for 2023-2025 (Financial Binder Section 5) and the
       Section 4 store P&Ls — in hand. **Bayshore 2025 was read 2026-10-06 and is unsigned, so ask for proof
       of filing.** The other five returns and the store P&Ls are not yet read
-- [ ] What makes up the auto & truck expense on Bayshore's and Lemon Squeeze's 2025 returns, far above
-      the vehicle costs in the books: costs paid outside the books (the buyer's), or a tax-only deduction
-      (not the buyer's)? Bayshore's Form 4562 Part V is blank and no statement explains the line, so ask
-      the sellers or the preparer named on the return
+- [ ] What makes up the vehicle costs on all three companies' 2025 returns, far above the vehicle costs
+      in the books (Samoset's includes a second "gas" line): costs paid outside the books (the buyer's),
+      or a tax-only deduction (not the buyer's)? Who paid them, from which account, and do they
+      continue? Bayshore's Form 4562 Part V is blank and no statement explains the line. **Now in the
+      report (v12, section 4)**
+- [ ] Proof that the 2025 returns were filed (e-file acceptance or signed Form 8879) for Bayshore and
+      Samoset, and **the copy of Bayshore's 2024 return as actually filed**. The binder's copy is not it
 - [ ] A realistic replacement-management cost for five stores across three cities, to set against the
       owner-payroll add-backs
 - [ ] **The five 2025 property-tax BILLS with proof of payment, and the DR-405 tangible-personal-property
