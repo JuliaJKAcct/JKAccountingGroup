@@ -76,7 +76,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Applies?** Yes — **2025 individual return**. Double tax project `262714` ("2025 Taxes"): status `notStarted`, preparer **Lilian**, reviewer **Julia**. _(Double, 2026-10-06)_
 - **Return type(s) & deadlines:** Form 1040 with one Schedule C per activity; home office and vehicle on each spouse's Schedule C, split by the firm. ⚠️ Double shows the project's due date as **2026-04-15**, which had already passed when the client was created (2026-09-18) — **whether a 2025 extension was filed is not recorded in anything searched** (Double project, notes, properties; Julia's Gmail by both surnames, 2026-10-06).
 - **Our role:** We prepare. The P&Ls come from the clients' side.
-- **Process notes (→ future SOP):** When the workbooks arrive: read `Summary` first (both reconciliations must close to the cent), then `To confirm` for what is still unanswered. **The firm then does three things the clients' side was told NOT to do:** split the `Home Office` totals between the two activities by each spouse's work area (Form 8829 per Schedule C, full amounts in, the form applies the percentage); assign **one car to each Schedule C** and decide how the combined car totals are divided, and the vehicle method (actual vs standard mileage) from the odometer readings and any business-mile record; and decide the business share of the phones. _(Lilian, 2026-10-06)_
+- **Process notes (→ future SOP):** When the workbooks arrive: read `Summary` first (both reconciliations must close to the cent), then `To confirm` for what is still unanswered, then the **`Group B` block under the P&L** — meals, equipment and the like are deliberately kept off the P&L lines and would otherwise be missed. **The firm then does three things the clients' side was told NOT to do:** split the `Home Office` totals between the two activities by each spouse's work area (Form 8829 per Schedule C, full amounts in, the form applies the percentage); assign **one car to each Schedule C** and decide how the combined car totals are divided, and the vehicle method (actual vs standard mileage) from the odometer readings and any business-mile record; and decide the business share of the phones. _(Lilian, 2026-10-06)_
 
 ### Licenses & other filings
 - **Applies?** _(pending)_
@@ -90,11 +90,13 @@ the actual details (and Claude can pull them live when a task needs them).
   - **One workbook per spouse** — Evgenii's first, Valeriia's after, each on the same rules.
   - Julia's five tabs (`Summary`, `All transactions`, `To confirm`, `Money in by payer`, `Questions`) **plus** `Profit and Loss` (on the firm's template, confirmed business items only, each line tied to `All transactions`), `Home Office` and `Vehicles`. **No Balance Sheet** — Lilian asked for one and withdrew it the same day (*"no lo necesitamos"*).
   - **`Home Office` and `Vehicles` are household-level** — full-year totals by category from **both** accounts, no split, no percentage, kept **off** the P&L; built once, in part 1, and used for both spouses.
-  - Every joint-account line carries a **`Whose?`** mark (*Evgenii business / Valeriia business / Personal / Mixed / Not sure*; home and car lines read *Shared — home / Shared — car*). Valeriia's lines sit in a separate group **`V`**, so `Summary` reconciles as *in = I1…I5 + V* and *out = A + B + C + D + V*.
-  - Phones are a separate household total. Fines are out of the car totals.
+  - Every joint-account line carries a **`Whose?`** mark from Irina (*Evgenii business / Valeriia business / Personal / Mixed / Not sure*); home, car and phone lines read *Shared — home / car / phone* **only when the payee settles it** — multipurpose stores (Costco, Home Depot, Amazon…) are asked first. `To confirm` has **one row per payee per account**. Valeriia's lines sit in a separate group **`V`**, as two totals, so `Summary` reconciles as *in = I1…I5 + V-in* and *out = A + B + C + D + V-out*.
+  - Under the P&L, a **`Group B — for the accountant`** block carries Evgenii's meals, equipment, phones and mixed items, which are deliberately not on the P&L lines.
+  - A **mortgage payment** (if the home is owned) is its own line, not an expense in full — interest and property tax come from the 1098 and the tax bill.
+  - Phones are a separate household total (whose number, and whether one is work-only, is asked). Fines are out of the car totals.
   - Tabs and headers in **English**; the `To confirm` instruction line and fill-in headers also in Russian; Irina's answers carried into `Business purpose` **in English**.
   **Anything sent to that chat must be in simple Russian, step by step.**
-- 🟠 **VALERIIA HAS MARKETPLACE HEALTH COVERAGE** — her **2025 Form 1095-A** is on file, so **Form 8962 is required and blocks filing** until it is reconciled. _(Double file, uploaded 2026-10-05)_
+- 🟠 **VALERIIA HAD MARKETPLACE HEALTH COVERAGE** — a file named as her **2025 Form 1095-A** is in Double (**not opened yet**). **If advance credit was paid** (1095-A column C), **Form 8962 is required and blocks e-filing** until it is reconciled. ⚠️ **The filing status matters here:** married filing separately generally cannot take the credit and still repays any advance ([`form-1040-preparation.md`](../../sops/form-1040-preparation.md)), and the filing status is still open. _(Double file, uploaded 2026-10-05)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -121,7 +123,7 @@ the actual details (and Claude can pull them live when a task needs them).
 
 - The instructions file + cover message — drafted 2026-10-06; **Lilian sends them to Irina on WhatsApp**. Not confirmed sent.
 - Evgenii's completed workbook (P&L, Home Office, Vehicles, the "To confirm" answers) — awaited from Irina.
-- Then Valeriia's workbook (part 2) — Irina starts it when Evgenii's is done.
+- Then Valeriia's workbook (part 2) — Irina starts it when Evgenii's is done. **Before she does, decide whether part 2 needs a short addendum**: the instructions only say "the same rules", so check that Evgenii-marked lines stay out of her P&L, that the household `Home Office` / `Vehicles` totals are counted once, and whether her marketing and fitness training are one Schedule C or two. _(review of PR #508, 2026-10-06)_
 
 ### Information still needed
 
