@@ -87,6 +87,17 @@ the actual details.
   real-estate taxes, beating the standard deduction by a small margin — and for 2025 **the standard
   deduction rose while the SALT cap rose far more**, so the choice must be computed both ways and last
   year's answer does not carry forward _(2026-10-04)_.
+- 🔴 **THE 2025 FORM 1098 HAS BEEN READ, AND IT SETTLES THE ITEMIZE QUESTION.** The servicer is
+  **Mr. Cooper (Nationstar Mortgage LLC)**, and the mortgage interest **ROSE sharply** against 2024 — enough
+  on its own to beat the 2025 standard deduction, before any state or local tax is added. ⛔ **So the
+  standard deduction is the wrong choice for 2025, and the question is no longer close.** ✅ **It also
+  closes a double-count risk: the escrow disburses hazard insurance ONLY, no property tax, so the county
+  bill is the sole source for the real-estate-tax line.** ⚠️ **An earlier entry called this document
+  unreadable — same `pypdf` failure as the loan documents.** _(Figures in the working paper §3G.)_
+- ✅ **NO FORM 1095 OF ANY KIND IS ON HIS RECORD** — searched by name across the File Library and the
+  organizer attachments on 2026-10-06, and the 63-file library has none. **The 2025 organizer answers
+  `notApplicable` to Marketplace coverage and the 2024 filed return carries no Form 8962**, so the two
+  agree. ⛔ **There is no Form 1095-A to chase and no Form 8962 to prepare.**
 - **He claims a HOME OFFICE** — Form 8829, attached to the logistics Schedule C _(2024; the total area of
   the home carries forward and the business area does not)_.
 - ✅ **No Marketplace coverage, no dependants, no rental property, no NOL carryforward, no AMT, no net
@@ -95,8 +106,19 @@ the actual details.
 - ⚠️ **2024 ended with an unpaid balance and a Form 9465 instalment request**, and the return printed four
   2025 estimated-tax vouchers. **Whether any of them was paid, and whether that plan is still running, is
   not established** — it decides whether 2025 adds to an existing IRS balance _(2026-10-04)_.
-- ✅ **RESOLVED 2026-10-04 — `MilanaPodrugina-LoanDocs.pdf` CARRIES NO CLIENT DATA AT ALL.** It was read in full and it is **13 pages of a credit union's blank loan paperwork**, identical to the boilerplate in a second file handed over the same day; **every field is empty and there is no data page.** ⛔ **It belongs to neither this return nor the company's in any useful sense — do not chase it again.** _(Recorded on 2026-09-13 as a hedged reading because it was uploaded to the COMPANY's organizer and names his wife.)_ See [`zakom-incorporated.md`](./zakom-incorporated.md) §5.
-- 🚗 **THEY BOUGHT A `2023 PORSCHE MACAN` ON 7 AUGUST 2025**, financed by **Tropical Financial Credit Union** (lienholder control `#2032`), with **Milana as the PRIMARY buyer and Oleg as co-buyer**; they **declined** GAP, depreciation protection and mechanical-breakdown protection. 🔴 **No tax credit reaches it** — §30D, §25E and §45W all need a plug-in or fuel-cell vehicle, and the **new car-loan interest deduction needs US final assembly**, which the vehicle's own identifier contradicts. ✅ **But the SALES TAX on the purchase IS deductible**, added to the optional sales-tax table on Schedule A — and unlike 2024 it is **not** wasted, because the 2025 SALT cap is far higher. ⛔ **The firm does NOT hold the purchase document, so the tax figure has to be asked for.** _(2026-10-04; the analysis and the authorities are in the working paper §3D.)_
+- 🔴 **RESOLVED 2026-10-06 — `MilanaPodrugina-LoanDocs.pdf` IS THE EXECUTED LOAN PACKAGE for the Porsche
+  Macan, and its page 1 is the `CLOSED-END NOTE, DISCLOSURE, LOAN AND SECURITY AGREEMENT`** — the most
+  informative document in the whole matter. ⛔ **A 2026-10-04 entry here said it "carries no client data at
+  all". That was WRONG and is withdrawn.** 🔑 **The cause: the firm's redactor reads PDFs with `pypdf`, which
+  cannot read this producer's pages. `pdfium` reads them perfectly** — **so the values were machine-readable
+  all along, and a session mistook "my reader found nothing" for "the document contains nothing"**
+  _(Lilian: "tal vez el lector que utilizas no pudo leer la información, pero no están en blanco")_.
+  ⚠️ **A tooling defect with a known fix — and the fix is not one line: the redactor's masks were written
+  against what `pypdf` surfaced, and on the better extract they let a VIN, two dates of birth and the
+  account numbers through.** ✅ **Both documents are now read end to end and the figures are
+  transcribed in the working paper §3D ②.** _(The 2026-09-13 hedge was right
+  to hedge; it got resolved the wrong way.)_ See [`zakom-incorporated.md`](./zakom-incorporated.md) §5.
+- 🚗 **THEY BOUGHT A `2023 PORSCHE MACAN` ON 7 AUGUST 2025**, bought from **Audi Fort Lauderdale** and financed by **Tropical Financial Credit Union** (lienholder control `#2032`), with **Milana as the PRIMARY buyer and Oleg as co-buyer**; they **declined** GAP, depreciation protection and mechanical-breakdown protection. 🔴 **No tax credit reaches it** — §30D, §25E and §45W all need a plug-in or fuel-cell vehicle, and the **new car-loan interest deduction needs US final assembly**, which the vehicle's own identifier contradicts. ✅ **But the SALES TAX on the purchase IS deductible**, added to the optional sales-tax table on Schedule A — and unlike 2024 it is **not** wasted, because the 2025 SALT cap is far higher. ⛔ **The firm does NOT hold the purchase document, so the tax figure has to be asked for** — and the executed note **itemizes no sales tax**, so the receipt is on the dealer's buyer's order. ⛔ **That is not the same as proving none was financed** — the payment to the dealer is a single line with no price beside it. 🔴 **AND IT IS NOT A SIDE ISSUE: it is very likely what decides whether this return itemizes or takes the standard deduction** (working paper §3E). _(2026-10-04; the analysis and the authorities are in the working paper §3D.)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
