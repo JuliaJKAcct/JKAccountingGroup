@@ -259,6 +259,21 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-06 (MORNING: THE ARITHMETIC UNDER EACH ADD-BACK, THEN THE RUSSIAN EDITION REBUILT) — Julia, on
+  reading the overnight version: show the math behind the rejected numbers in step 2, family payroll above all
+  (v13.20, nine worked blocks under the nine explanations, built from the same data as the table), then put
+  signs on them (v13.21: a plus for what is added, a minus for what is taken away, an equals sign on each result;
+  the report is now 48 pages). Then: **a Russian PDF of the current report, humanised, with no long dashes, at a
+  native speaker's register.** Built as a fresh translation of v13.21, not a patch of the October 5 edition: the
+  current English split into seven chunks, each translated by an agent against the brief (`ru_new/BRIEF.md`: the
+  dash rule is absolute, Julia's instruction), checked chunk by chunk (every figure expression, anchor and tag
+  must match the English), assembled on a new shared head, then one native-reader editing pass over the whole
+  text for a single voice and consistent terms («юрист» throughout, «пакет документов» for the binder,
+  «корректировки» for add-backs with the English once, «дополнительный доход владельца»). Verified like the
+  English: 685 dollar figures identical to the English build, 0 untraceable, every evidence link opens its page,
+  **0 em or en dashes in 58 pages**. Delivered as a PDF with the English PDF beside it; not published as a page.
+  ⓘ Two Russian typography choices Julia may want to reverse: ranges are written out («от 20 до 35%», «с 2019 по
+  2020 год») because the dash rule covers en dashes too, and the «−» minus sign is used in tables.
 - 2026-10-06 (OVERNIGHT REVIEW OF REPORT v13 — 21 LOOPS, 1:09 TO 2:50 AM ET) — Julia went to sleep at 12:55 am
   with the instruction to review every part of the report in loops until a full pass changed nothing (hard stop
   7 am), and four decisions: an error that changes a figure is **fixed and flagged** in the page's review note with
