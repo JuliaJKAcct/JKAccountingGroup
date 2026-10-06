@@ -1,6 +1,6 @@
 # Zakom Incorporated
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-06
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
