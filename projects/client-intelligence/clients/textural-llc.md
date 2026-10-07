@@ -38,12 +38,16 @@
 - **Primary language:** _(pending — proposal drafted bilingual RU/EN by house
   default; the owner's name is Ukrainian)_
 - **Our engagement (services we provide):** **PROSPECT.** A **quarterly** accounting
-  proposal drafted 2026-10-07 (PDF + private artifact): quarterly bookkeeping
-  (categorization, bank/card reconciliation), **P&L + Balance Sheet every quarter**,
-  year-round support. **Not included: personal tax returns** (Julia's explicit
+  proposal drafted 2026-10-07, revised same day to Julia's additions (PDF + private
+  artifact, v3): quarterly bookkeeping (categorization, bank/card reconciliation),
+  **P&L + Balance Sheet every quarter**, **Forms 1099 preparation & filing**,
+  year-round support, plus a **one-time hourly historical cleanup of the books**
+  billed separately. **Not included: personal tax returns** (Julia's explicit
   exclusion — and for this client that carries the whole tax side, because the
   business files THROUGH the owner's 1040 via Schedule C; the return is a separate
   quote). Fee figures live in the delivered proposal, not here
+- **Engagement start date:** **October 2026** (Julia, 2026-10-07 — printed as
+  October 1, the same day-of-month assumption she accepted on other proposals)
 - **Fiscal year-end:** December 31 (calendar — Schedule C follows the 1040)
 - **Accounting platform:** _(pending)_
 
@@ -82,9 +86,11 @@ the actual details.
   Balance Sheet every quarter
 
 ### Income tax
-- **Applies?** **NOT in this engagement.** The business reports on the owner's Form
-  1040 (Schedule C), and personal returns are excluded by Julia's instruction. The
-  2025 return was prepared by the incumbent (§5). GA state return rides with the 1040
+- **Applies?** **The income-tax return is NOT in this engagement.** The business
+  reports on the owner's Form 1040 (Schedule C), and personal returns are excluded by
+  Julia's instruction. The 2025 return was prepared by the incumbent (§5). GA state
+  return rides with the 1040. **Forms 1099 preparation & filing ARE quoted** — Julia
+  added them to scope on 2026-10-07
 
 ### Licenses & other filings
 - **Applies?** _(pending — GA contractor licensing not checked)_
@@ -135,15 +141,19 @@ the actual details.
   Schedule Cs, Schedule EIC, Schedule 8812, Form 8995; four pages carried a
   non-extractable font (likely the GA return or worksheets) and were not read. If
   this household becomes a tax client, the return gets a proper full ingestion then
+- 2026-10-07 (same session) — **Julia's additions applied, v3 delivered.** She added
+  **Forms 1099 to scope**, set the **start date October 2026** (printed as October 1,
+  2026 — her accepted convention), and added a **historical cleanup billed hourly and
+  separately** at her stated rate. The three open flags from the first draft (1099s,
+  start date, cleanup) are all resolved by her own words. PDF v3 + artifact v3
+  delivered
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- **Julia to confirm:** scope beyond bookkeeping — **1099s for subcontractors** are
-  the obvious gap for a general contractor and are NOT in the drafted bundle (she did
-  not name them); start date (none printed); whether a historical cleanup is needed
-  (none quoted)
 - **Before onboarding:** accounting platform and bank/card list; GA sales-tax and
-  contractor-licensing position; whether the client is in Double
+  contractor-licensing position; whether the client is in Double; the scope of the
+  historical cleanup (which periods — not bounded in the document, billed for time
+  actually spent)
 
 ### Information still needed
 
