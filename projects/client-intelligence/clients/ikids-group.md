@@ -59,6 +59,7 @@ the actual details.
 | **CFO** — group-level finance lead; **not** a member and **not** the Manager. He is the one who supplied the corporate documents at onboarding and attended the 2025 Zoom calls | Double client (contact, **no portal access**) |
 
 - **Double client:** [app.doublehq.com/close?cid=706689](https://app.doublehq.com/close?cid=706689)
+- **Related clients:** [Rest Invest Kids LLC](./rest-invest-kids.md) (same owner group)
 - **Portal-contact coverage:** two of the three members plus the CFO are registered as Double
   contacts; the **third member is not** (no email address on file anywhere — see §6). Personal
   names, emails, and phone numbers live in Double, never here.

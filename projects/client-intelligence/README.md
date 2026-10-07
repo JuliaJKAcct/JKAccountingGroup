@@ -190,7 +190,7 @@ client-intelligence/
 │   ├── email-template.html  ← the on-brand, email-safe report template the routine fills
 │   └── sweep-health-review.md ← post-run checklist for a Saturday report, + the standing
 │                                diagnosis of how this sweep fails (and two retracted findings)
-└── clients/               ← one file per client (66 so far — see the Clients index below)
+└── clients/               ← one file per client (67 so far — see the Clients index below)
 ```
 
 ## Clients
@@ -222,6 +222,7 @@ client-intelligence/
 | YES TEAM CORP | [`clients/yes-team-corp.md`](./clients/yes-team-corp.md) | Lilian | In progress — enriched (Double + Gmail) |
 | MASCIAVE DESIGN STUDIO LLC | [`clients/masciave-design-studio.md`](./clients/masciave-design-studio.md) | Lilian | In progress — enriched (Double + Gmail); **has a bookkeeping runbook** (started 2026-09-01) — how a cost is tied to a project, and the recurring outside retainer that deliberately carries none |
 | M5 Studio Miami | [`clients/m5-studio-miami.md`](./clients/m5-studio-miami.md) | Lilian | ⏳ **Company set-up — the SS-4 was FAXED 2026-08-18, re-faxed 2026-08-27, and the EIN has not been seen back** (due ~09-02 on the second attempt; why it was re-sent is unrecorded). It went by fax, not online, because the two owners are **foreign investors with E-2 cases pending — understood to hold no SSN or ITIN**, which is the [EIN SOP §1](../sops/ein-application-irs.md) Path-B fork. **M5 STUDIO MIAMI LLC**, Sunbiz `L26000418311` — and the name was **rejected once** for omitting "LLC". Design services + retail of decorative wall plaster, **no installation**. Its SS-4 designee block set the firm's standing pattern ([EIN SOP §4D](../sops/ein-application-irs.md)). 🔴 Open: **a Form 2848 sits in Drive's SIGNED folder** and may name someone who cannot be named; what went on **line 16**; **which** investor signed as responsible party; and the client's own address, which the fax routing was assumed from |
+| Rest Invest Kids LLC | [`clients/rest-invest-kids.md`](./clients/rest-invest-kids.md) | Lilian | ⚠️ **Created 2026-10-07.** Foreign-owned single-member LLC in the iKids owner group — files a **pro forma 1120 + 5472** (inferred from the filename). 🔴 **FDOR sent a DR-714 non-filing notice for a Florida F-1120 (TYE 12/2025)** — a disregarded LLC files none, **unless its owner is a corporation, in which case the owner does**. Owner type is the open fact |
 | iKids Group LLC | [`clients/ikids-group.md`](./clients/ikids-group.md) | Lilian | In progress — enriched (Double + Gmail + QuickBooks); **has a full bookkeeping runbook** — the five capitalization buckets and the role→account map, the AP mailbox we work monthly, the autopaid water bill, and the client's periodic transaction reports |
 | Deep Tech Development Group LLC | [`clients/deep-tech-development.md`](./clients/deep-tech-development.md) | Lilian | In progress — enriched (Double + Gmail). ⏸ **Bookkeeping paused** (owner's US visa). 🔴 **Live:** the **Shopify store (`gorobots.us`) is registered under Julia and the transfer to the owner is blocked** pending a permanent Shopify Balance closure — Double note **503544** |
 | AURA REMODELING LLC | [`clients/aura-remodeling.md`](./clients/aura-remodeling.md) | Lilian | In progress — enriched (Double + Gmail) |
