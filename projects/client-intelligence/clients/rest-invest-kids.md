@@ -40,7 +40,7 @@
 
 | Role | Where to find them |
 |---|---|
-| Owner (single member — **individual or corporation: _pending_**, and it decides the Florida question, §5) | Double client |
+| Owner (single member) — **a foreign INDIVIDUAL, resident in Ukraine, holds an ITIN** _(Lilian, 2026-10-07)_ | Double client |
 | Day-to-day contact | Shared with the iKids owner group — see [iKids Group LLC](./ikids-group.md) §2 |
 
 - **Double client:** https://app.doublehq.com/close?cid=710592 (client `710592`)
@@ -66,7 +66,7 @@
 ### Income tax
 - **Applies?** Yes.
 - **Return type(s) & deadlines:** federal **pro forma Form 1120 + Form 5472** (foreign-owned disregarded entity), due **April 15** for a calendar year. Double's "2025 Taxes" project reads **`filed`**, `filedAt` 2026-05-25; an e-file **acceptance** document for 2025 is in the file library.
-- **Florida:** 🔴 **open** — see §5 and §6. A disregarded single-member LLC files **no** Florida F-1120 of its own; **if its owner is a corporation, the OWNER files the F-1120** (reporting the LLC's income).
+- **Florida:** ✅ **NO Florida F-1120 is required** — disregarded single-member LLC whose owner is an **individual**, and Florida has no personal income tax (§5). The pro forma 1120 does not change that. FDOR's DR-714 for 12/2025 must still be **answered** so the corporate income tax account is closed (§6).
 - **Our role:** we prepare and file.
 
 ### Licenses & other filings
@@ -74,7 +74,7 @@
 
 ## 5. Key facts & quirks
 
-- 🔴 **FDOR sees this LLC as a CORPORATE income tax filer — and for a disregarded LLC that is normally wrong.** A DR-714 notice (dated 2026-09-09 per the filename it was saved under) says no **Florida F-1120** was received for the tax year ending 12/2025. The likely cause is that the federal filing is a **pro forma Form 1120** — an "1120" on the IRS side, though the LLC is disregarded for income tax. **Florida follows the federal classification**: a disregarded single-member LLC is **not** required to file a separate F-1120 (the notice's own page 2 says so). **The answer turns on ONE fact still to confirm: is the single owner an INDIVIDUAL or a CORPORATION?** Individual → reply "not required" and close the account. Corporation → **the owner** (foreign corporation, if it is) may owe the F-1120, reporting this LLC's income.
+- 🔴 **FDOR sees this LLC as a CORPORATE income tax filer — and for a disregarded LLC that is normally wrong.** A DR-714 notice (dated 2026-09-09 per the filename it was saved under) says no **Florida F-1120** was received for the tax year ending 12/2025. The likely cause is that the federal filing is a **pro forma Form 1120** — an "1120" on the IRS side, though the LLC is disregarded for income tax. **Florida follows the federal classification**: a disregarded single-member LLC is **not** required to file a separate F-1120 (the notice's own page 2 says so). ✅ **Settled 2026-10-07: the owner is a foreign INDIVIDUAL (Lilian), so no F-1120 is owed by anyone.** The pro forma 1120 exists only because Treas. Reg. §301.7701-2(c)(2)(vi) treats a foreign-owned disregarded entity as a corporation **solely for the Form 5472 / §6038A reporting** — for every other purpose it stays disregarded, and Florida follows the federal classification. Reply "not required" and ask FDOR to close the account.
 - ⓘ **Owner group:** related to [iKids Group LLC](./ikids-group.md) (activated alongside it). A **"Rest Invest Kyiv"** — similar name, a Ukrainian supplier — invoiced iKids for kitchen equipment in Sept 2026 (iKids §6). ⚠️ **Whether Rest Invest Kyiv is this LLC's owner is NOT known — do not assume it.**
 - ⓘ The iKids **2026-08-13 Zoom meeting note** (Double note `491708`) is filed on **this** client's record, not on iKids'.
 
@@ -82,14 +82,15 @@
 
 ### Log
 - 2026-10-07 — **File created.** Lilian brought an FDOR **DR-714** non-filing notice ("We have not received your Florida corporate tax return(s)", tax year ending 12/2025; form revision R. 08/24) and asked how to identify it on a call to FDOR and what the tax theory is. Double read the same day: properties (above), the "2025 Taxes" project (`filed`, 2026-05-25), and the file library — three files: `2024 Tax Return Documents (REST INVEST KIDS LLC) (4).pdf`, `2025 Acceptance.pdf`, `2025 RESTINVESTKIDSLLCForeignOwnedUSDEPro_1.pdf` (**names only — contents not opened**). Explanation given in chat: Florida follows the federal classification; a disregarded SMLLC files no F-1120 unless its owner is a corporation, in which case the owner files. _(Worked by Lilian.)_
+- 2026-10-07 — **Lilian confirmed the owner is a foreign individual resident in Ukraine, with an ITIN.** Conclusion given: **no Florida F-1120 is required**; answer the DR-714 under section 2 → "Other" and ask FDOR to close the corporate income tax account. _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
-- 🔴 **Answer the FDOR DR-714 (tax year 12/2025).** Confirm the owner type first (individual vs corporation). If individual: notify FDOR that the LLC is a disregarded single-member LLC not required to file F-1120 (section 2 → "Other", or online at floridarevenue.com/taxes/updateaccount) and ask them to close the corporate income tax account. Penalty language on the notice: 10% collection fee, lien, collection agency — **do not let it sit.** Talking to FDOR about the account will likely require a **DR-835** power of attorney (as on [Tsminibears](./tsminibears.md)).
+- 🔴 **Answer the FDOR DR-714 (tax year 12/2025).** Owner confirmed an individual (2026-10-07), so: notify FDOR that the LLC is a disregarded single-member LLC not required to file F-1120 (section 2 → "Other", or online at floridarevenue.com/taxes/updateaccount) and ask them to close the corporate income tax account. Penalty language on the notice: 10% collection fee, lien, collection agency — **do not let it sit.** Talking to FDOR about the account will likely require a **DR-835** power of attorney (as on [Tsminibears](./tsminibears.md)).
 - Find out **why an FDOR corporate income tax account was opened** for this LLC (a registration by someone, or the IRS 1120 data) — if it is not closed, the notice repeats every year.
 - Check whether a notice for **2024** also exists.
 
 ### Information still needed
-- [ ] Owner: individual or corporation, and which country
+- [x] Owner: a foreign **individual**, resident in **Ukraine**, with an ITIN _(Lilian, 2026-10-07)_
 - [ ] What the LLC does / whether it is operating
 - [ ] Whether the federal 2025 package included a Form 5472 (filename implies it)
 
