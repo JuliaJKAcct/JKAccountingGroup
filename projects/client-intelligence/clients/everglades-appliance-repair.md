@@ -35,13 +35,17 @@
 - **Primary language:** _(pending — proposal drafted bilingual RU/EN; the signer's
   name is Ukrainian)_
 - **Our engagement (services we provide):** **PROSPECT.** A **quarterly** engagement
-  proposal drafted 2026-10-07 (PDF + private artifact): quarterly bookkeeping
-  (categorization, bank/card reconciliation), **P&L + Balance Sheet every quarter**,
-  the **S-corporation return (Form 1120-S) inside the bundle** — its annual prep fee
-  split across the four quarterly invoices — year-round support/coordination, plus a
-  **one-time hourly cleanup of the 2026 books (January–October)** billed separately.
-  Not included: personal returns; payroll (quoted separately if needed). Fee figures
+  proposal drafted 2026-10-07, revised same day to Julia's corrections (PDF + private
+  artifact, v2): quarterly bookkeeping (categorization, bank/card reconciliation),
+  **P&L + Balance Sheet every quarter**, **owner payroll** processing and filings,
+  **Forms 1099**, the **S-corporation return (Form 1120-S) inside the bundle** — its
+  annual prep fee built into the quarterly invoices, with the **2026 return prorated**
+  (engagement starts 2026-10-01, so 2026 collects one quarterly invoice and the
+  balance of the prep fee is invoiced when that return is prepared) — year-round
+  support/coordination, plus a **one-time hourly cleanup of the 2026 books
+  (January–October)** billed separately. Not included: personal returns. Fee figures
   live in the delivered proposal, not here
+- **Engagement start date:** **October 1, 2026** (Julia, 2026-10-07)
 - **Fiscal year-end:** December 31 (calendar assumed)
 - **Accounting platform:** _(pending)_
 
@@ -70,19 +74,20 @@ the actual details.
   onboarding)_
 
 ### Payroll
-- **Applies?** **Not quoted.** Julia's intake named no payroll; the proposal lists it
-  under Not Included (quoted separately if needed). As an S-corp the owner will need
-  reasonable compensation on payroll — raise at onboarding
+- **Applies?** Quoted: **OWNER payroll** processing and payroll filings inside the
+  quarterly bundle — Julia added it mid-draft and then narrowed it ("i mean owner
+  payroll"), so staff payroll is NOT quoted. Reasonable compensation for the owner
+  belongs to onboarding
 
 ### Bookkeeping & quarterly close
 - **Applies?** Quoted: **quarterly** bookkeeping and reconciliation with P&L + Balance
   Sheet delivered every quarter — a quarterly cadence, not the firm's usual monthly one
 
 ### Income tax
-- **Applies?** Quoted: Form 1120-S inside the quarterly bundle (annual fee billed in
-  four quarterly shares) + year-round coordination. Personal returns excluded. 1099s
-  not named at intake — likely relevant for a repair business using subcontractors;
-  confirm scope
+- **Applies?** Quoted: Form 1120-S inside the quarterly bundle (annual fee built into
+  the quarterly invoices; the 2026 return prorated per the start date) + **Forms 1099
+  preparation & filing** (Julia added them to scope 2026-10-07) + year-round
+  coordination. Personal returns excluded
 
 ### Licenses & other filings
 - **Applies?** _(pending)_
@@ -97,23 +102,23 @@ the actual details.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- **The quarterly total was ASSEMBLED from Julia's dictation and needs her
-  confirmation:** she gave a quarterly service price she herself marked "assumed" and
-  said the S-corp tax-prep fee is billed "divided by 4". The draft adds the tax-prep
-  quarter-share ON TOP of the service price (shown as a two-line fee table with the
-  card as the total). If she meant the service price to already include that share,
-  the document must be rebuilt — do not send until she confirms the total
+- ✅ **The quarterly fee is Julia's own number, ALL-IN** (2026-10-07: "make it 770
+  including tax prep") — the earlier assembled-total flag is resolved; the document
+  shows one bundled quarterly fee with the 1120-S prep inside it. **The 2026 return is
+  prorated:** the engagement starts 2026-10-01, so 2026 collects only one quarterly
+  invoice and the **balance of the annual prep fee is invoiced when the 2026 return is
+  prepared** — that is the drafted reading of her "first tax prep will be prorated,"
+  stated explicitly in the document's invoicing section; she saw it flagged
+- **Owner payroll only — not staff payroll:** she first said "payroll management,"
+  then corrected to "i mean owner payroll," and the document says exactly that. If the
+  business turns out to have employees, their payroll is a separate conversation.
+  Reasonable compensation for the owner belongs to onboarding
 - **Quarterly cadence, not monthly:** the firm's first quarterly proposal, built on the
-  monthly generator with the fee period set to /quarter and the fee table carrying the
-  two components. Statements are promised every quarter, not by the 10th monthly
+  monthly generator with the fee period set to /quarter. Statements are promised every
+  quarter, not by the 10th monthly
 - **The 2026 cleanup (January–October) is hourly and separate:** billed at Julia's
-  stated hourly rate for time actually spent, invoiced apart from the quarterly fee.
-  It implies regular service effectively starts once the books are current (around
-  November) — no start date was dictated, and none is printed in the document
-- **Payroll is excluded on purpose, but the S-corp will force the question:** Julia's
-  intake named no payroll, so it sits in Not Included. An S-corp owner needs
-  reasonable compensation through payroll — this becomes an onboarding conversation,
-  not something silently absorbed into the quarterly fee
+  stated hourly rate for time actually spent, invoiced apart from the quarterly fee,
+  running alongside the engagement that starts October 1, 2026
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -129,13 +134,23 @@ the actual details.
   one-time hourly card. Bilingual RU/EN (Ukrainian-named signer; same choice as SM
   Group). Delivered as PDF + private artifact; the assembled-total reading flagged to
   Julia for confirmation before sending
+- 2026-10-07 (same session) — **Julia's corrections applied, v2 delivered.** She set
+  the quarterly total herself, all-in ("make it 770 including tax prep" — resolving
+  the assembled-total flag), set the **start date October 1, 2026**, and ruled the
+  first tax prep prorated; drafted as: 2026 collects one quarterly invoice, the
+  balance of the annual 1120-S fee is invoiced when the 2026 return is prepared. She
+  then added **1099s and payroll** to scope and immediately narrowed payroll to
+  **owner payroll**. One bundled fee card (fee table dropped); Not Included now only
+  personal returns. PDF v2 + artifact v2 delivered
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- **Julia to confirm:** the fee reading — tax-prep share ADDED to the quarterly price
-  (as drafted) vs already inside it; and the signer's email for the cover
-- **Before sending/onboarding:** start date (none printed); whether 1099s belong in
-  scope; payroll/reasonable-comp plan for the S-corp owner
+- **Julia to confirm if the drafted reading is off:** the proration mechanics — the
+  document bills the 2026 return's remaining balance at preparation time; if she
+  meant something else by "prorated," the invoicing section is one edit away
+- **Still needed for the cover:** Serhiy's email
+- **At onboarding:** reasonable compensation for the owner; whether any staff payroll
+  exists (only OWNER payroll is quoted)
 
 ### Information still needed
 
