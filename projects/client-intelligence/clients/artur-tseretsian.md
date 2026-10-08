@@ -56,7 +56,7 @@ link). Never write the credential itself here.
 | Bank — checking/debit | Statements for tax categorization | _(pending — Drive link)_ | Bank of America personal **debit/checking, ending 9561** |
 | CS Float (marketplace) | Gaming income/expense (skins) | _(pending — Drive link)_ | Seller profile **"Zeliboba_asl"** (KYC-approved) |
 
-- **Note:** the client also has **other bank accounts** and **external credit cards** (Capital One, American Express, Merrick, Credit One, FPB) whose statements we don't yet have — some business income/expense flows through those, not only the two BofA accounts above.
+- **Note:** the client also has **other bank accounts** and **external credit cards** (Capital One, American Express, Merrick, Credit One, FPB) whose statements we don't yet have — some business income/expense flows through those, not only the two BofA accounts above. ⚠️ **One of them ends 4800** — the checking account sends it regular transfers, and it has never been reviewed _(2026-10-08)_.
 
 ## 4. Obligations & recurring processes
 
@@ -328,6 +328,22 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
     kept as business pending Julia.
   - **No extension and no estimated payment found for 2025**, and the return was due 2026-04-15.
     Asked of the client.
+  - **What the independent review of the build surfaced (same day):**
+    - ⚠️ **The spouse's net pay was passed on, the same day, to one individual on almost every payday.**
+      Either that person was a household employee (a nanny — Schedule H would apply), or the job was
+      not really the spouse's. **A question for Julia first, then the client.** The person is named in
+      the workbook, not here.
+    - **He ships cars through a shipping company (Atlantic Express)**, and in January 2025 he paid it
+      right after a customer company (Ryan App LLC) paid him. It is not established whether that was his
+      own cost or a customer's money passed through. July had filed those charges as meals.
+    - **There is another bank account, ending 4800**, which receives regular transfers from the checking
+      account and has never been reviewed. Its owner is not established. Stripe and the other cards he
+      pays have not been seen either. **His income may be incomplete.**
+    - **Steam purchases** may be stock bought for resale on CS Float, not personal gaming. **HugeDomains**
+      monthly charges look like a domain purchase, possibly for Rewhip LLC.
+    - The vehicle question now matters twice. **If the car used for the business is the one sold in 2025**,
+      the sale has to be reported, and Lilian's "no car information" decision and a car-expense deduction
+      cannot both stand.
   - The question list for the client and for Julia is the working paper's §6. **Phase 1 verdict: not
     ready to file.**
 
