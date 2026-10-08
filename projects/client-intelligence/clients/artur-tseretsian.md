@@ -320,10 +320,11 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
     (auto loan, other cards, rent, auto insurance, electricity). The July summaries counted the
     returned ones as paid; they are now excluded. **The same defect sits in the 2023 and 2024
     summaries**, which must be rebuilt the same way before those returns.
-  - **Crypto is visible in the bank:** Coinbase and MoonPay charges in 2025. Recommended answer to the
-    1040 digital-asset question: **Yes** — Julia decides.
-  - **He paid a transport company over the 1099 threshold in 2025**, so a 1099-NEC question is open
-    for Julia.
+  - **Crypto in the bank is thin:** Coinbase and MoonPay appear only as verification-size lines and one
+    purchase — no sale. The recommended **Yes** on the 1040 digital-asset question rests on the firm's
+    2026-07-30 note that most Zelle are crypto sold for dollars, not on the bank. Julia decides.
+  - **He paid a transport company over the 1099 threshold in 2025 to move a vehicle** — that is
+    freight, so no 1099-NEC is required (working paper J10, line I = No).
   - **He travels to car shows** (Monterey Car Week / Pebble Beach and an auction in 2025). Travel is
     kept as business pending Julia.
   - **No extension and no estimated payment found for 2025**, and the return was due 2026-04-15.
