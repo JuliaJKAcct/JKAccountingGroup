@@ -92,6 +92,14 @@ evidence**. _(Learned 2026-08-18: a household organizer answered "None of the ab
 where one spouse held an S-corporation K-1 and the other had a year of consulting income the
 organizer therefore never asked about.)_
 
+🔑 **And the mirror rule — a DOCUMENT WE HOLD BEATS AN ORGANIZER "N/A", and it is NOT a question.**
+_(Lilian, 2026-10-08: "Si ves que hay cosas que en la declaración marca que no aplican y luego ves el
+documento, pues olvida su respuesta… Obviamente, tiene un 1095-A porque estás viendo el documento.")_
+**The client either misread the question or had already sent the document another way** — WhatsApp,
+email — and did not send it twice. **In both cases the document is the fact**: mark the row from it, note
+in the working paper that the organizer said otherwise and was set aside, and **ask the client nothing
+about it.** ⚠️ **One way only** — a *"yes"* with no document behind it is still a document to ask for.
+
 ---
 
 ## §1 · Gather this before you start
@@ -159,19 +167,26 @@ _Verified against the 2025 Instructions for Form 1040, "Standard deduction amoun
 
 ---
 
-## §2A · Gate — the extension
+## §2A · The extension — NOT a gate; what it leaves is a payment
 
-**A hard stop, and it cannot be repaired afterwards.** The individual return is due **15 April**;
+✅ **The return is prepared whether or not an extension was filed, and the client is not asked about it.**
+🗣️ *Lilian, 2026-10-08: "La extensión: no me preguntes acerca de eso. Eso no nos va a impedir hacer la
+declaración. La declaración hay que hacerla, se haya presentado la extensión o no."*
+⛔ **This section used to open "A hard stop, and it cannot be repaired afterwards" and told the preparer to
+stop and tell Lilian if none was filed. That is struck** — a session following it put the extension at the
+top of a client's question list, and it is not a question.
+
+The background, which still matters for the **money**: the individual return is due **15 April**;
 **Form 4868** moves the filing deadline six months, to **15 October**.
 
 - 🔴 **An extension extends the time to FILE, never the time to PAY.** Tax unpaid at 15 April accrues
-  interest and the failure-to-pay penalty regardless.
-- **Establish whether one was filed, and whether anything was paid with it** — a payment made with a
-  4868 is a credit on the return and is easy to lose.
-- **If none was filed and the date has passed, stop and tell Lilian.** Failure-to-file runs far
-  heavier than failure-to-pay.
-- ⚠️ **On a separated couple, check BOTH of them.** An extension filed jointly before the separation
-  may not do for each of them separately.
+  interest and the failure-to-pay penalty regardless — and **a late return without one adds the
+  failure-to-file penalty**. Neither changes how the return is prepared; both change what the client owes.
+- ✅ **What is worth establishing is whether anything was PAID** — with a 4868 *(a credit on Schedule 3,
+  line 10)* or as estimated payments *(Form 1040 line 26)*. **Confirm the two together, as credits**, from
+  the firm's records or an IRS account transcript first, and from the client only if neither shows it.
+- ⚠️ **Scope:** this is the 1040 ruling. **The 1120-S SOP's §2 has not been changed** — a company return
+  waits for Lilian's own word before it is treated the same way.
 
 ## §3 · Dependants — and the split people miss
 

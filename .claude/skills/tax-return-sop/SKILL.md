@@ -103,6 +103,17 @@ auditing him. It is preferring the better evidence, which the firm's own rules a
 ruling means *do not audit his operating expenses*, while a separate ruling almost always already says *the
 lender's letter is the authority on interest*. **Read them together before escalating a collision.**
 
+🔑 **THE SAME RULE, POINTED AT THE ORGANIZER: A DOCUMENT WE HOLD BEATS AN ORGANIZER ANSWER OF "N/A" — and it is
+NOT a question to the client.** *(Lilian, 2026-10-08: "Si ves que hay cosas que en la declaración marca que no
+aplican y luego ves el documento, pues olvida su respuesta… Obviamente, tiene un 1095-A porque estás viendo el
+documento… Cualquiera de los dos casos, continuamos con el camino del documento porque lo tenemos y existe
+porque está.")* **Either the client misread the question, or he had already sent the document another way and
+did not send it again** — and in both cases the document is the fact. ✅ **Work from the document; record in
+the working paper that the organizer said otherwise and was set aside.** ⛔ **Never put *"the organizer says no
+Marketplace, but we have a 1095-A — which is it?"* to the client.** The full wording is in
+[`organizer-review`](../organizer-review/) *("The organizer is a prompt, not a source")*. ⚠️ **It runs ONE
+way only:** a *"yes"* with no document behind it is still a document to ask for.
+
 ### §1B.2 · ⛔ THE THREE TRAPS THAT COST THE MOST, in the order they bite
 
 **① A DOCUMENT-BACKED AMOUNT HIDING INSIDE A SOFT CAPTION. This is the expensive one.**
@@ -556,7 +567,7 @@ Follow it in this order; a preparer works the document top-down.
 | **§0B · What this return actually is** | One paragraph. Who pays the tax, what the form is really saying |
 | **§0C · 🗺️ The map of the form** | 🔴 **Which PAGE every schedule and line range is on**, read off the current-year PDF (§3). ⚠️ **Forms split their schedules across page breaks in places nobody guesses**, and "it is not on the form" is almost always "it is on the next page". Note which schedules share a page and which are split |
 | **§1 · Gather this before you start** | ⚠️ **Half the list is about the prior year.** Always ask for the **general ledger**, always ask for **gross** figures where an account nets things, always **check the basis printed on every export**, and note that a books-versus-return basis mismatch is the NORMAL case, not a defect — ⛔ **it is never resolved by re-exporting on the other basis** *(the reasoning belongs in the SOP's book-to-tax section, not here: a package's cash toggle cannot change the method the entity ADOPTED, it leaves journal-entry accruals behind, and it strips the liabilities the reconciliation is found from — see the 1120-S SOP's §9A step 0)* |
-| **§2 · The extension gate** | 🛑 A hard stop before work begins |
+| **§2 · The extension and the payments** | ✅ **Not a gate** on a 1040 *(Lilian, 2026-10-08 — §4A phase 0 item 2)*: the return is prepared whether or not an extension was filed. What the section carries is **money** — an amount paid with the extension, the estimated payments — confirmed as credits. ⚠️ **A company return's §2 still reads as a stop until Lilian rules on it** |
 | **§3 · Build the map** | §1 above |
 | **§4 … §n · One section per form**, in the order they are prepared | Each with a **line table**: line · what it is · the **formula, or where you read it** |
 | 🔗 **The HANDOFF — what flows to another return** | **Any form that FEEDS another return owes this** — an 1120-S or 1065 to its owners' 1040s, a 1041 to its beneficiaries. **Walk every box that can carry a figure**, say where each is TYPED on the receiving return, name what this side **cannot** supply *(the recipient's own carryovers and basis history — they are on THEIR return, not this one)*, and what must **match** on both. ⛔ **Preparing this return is not preparing theirs** (part 10) |
@@ -721,9 +732,18 @@ either way.
    [`form-1120s-preparation.md`](../../../projects/sops/form-1120s-preparation.md),
    [`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) — because §1 of that
    SOP is the real gather list and it differs by form.
-2. 🛑 **THE EXTENSION GATE.** Before any work: is the return already late, and was an extension filed?
-   Every form SOP has this as a hard stop. **A missed deadline changes what you are doing**, not just
-   when.
+2. ✅ **THE EXTENSION IS NOT A GATE — prepare the return either way, and do not ask the client about it.**
+   🗣️ *Lilian, 2026-10-08: "La extensión: no me preguntes acerca de eso. Eso no nos va a impedir hacer la
+   declaración. La declaración hay que hacerla, se haya presentado la extensión o no."* **A late return is
+   still prepared, and the same way; lateness changes the penalties and the interest, not the work.**
+   ⛔ **This item used to read *"THE EXTENSION GATE … a hard stop"*, and a session that followed it put the
+   extension at the top of a client question list. That wording is struck.**
+   ✅ **What survives is MONEY, not a gate:** an amount paid **with** a Form 4868 is a payment on the return
+   *(Schedule 3, line 10)* — so it is confirmed **together with the estimated payments**, as a credit, and
+   never as a reason to stop.
+   ⚠️ **Scope: ruled on a 1040 and stated generally.** The 1120-S SOP's §2 (Form 7004, *"stop and tell
+   Lilian"*) has **not** been changed — **ask her before treating a company return the same way**; do not
+   reason the ruling across (*a permission is widened by asking*).
 3. 🔑 **A COMPANY RETURN RUNS OFF ITS BOOKS AND FEEDS THE OWNER'S 1040 — never the reverse.** So for a
    company, the organizer is not the centre of gravity; the **general ledger** is.
    ⛔ **BUT THAT IS THE ORDER OF DEPENDENCY, NOT A LICENCE TO DO BOTH.** **Prepare only the return
@@ -736,9 +756,9 @@ either way.
    which return has to come first.
 
 🔑 **Why these come first:** phase 1 cannot pick a prior year without knowing **which year** is being
-prepared (its source 9), cannot know which reports are the books without knowing **which form**
-(its source 10), and **the extension gate is a hard stop** — there is no point reading ten sources
-for a return that needed a different conversation three weeks ago.
+prepared (its source 9), and cannot know which reports are the books without knowing **which form**
+(its source 10). ⓘ **The extension used to be the third reason** — *"a hard stop"*. **It is not one any
+more** *(item 2)*: whether or not an extension was filed, the next step is the same.
 
 #### 🔑 IT RUNS IN TWO PHASES, AND ONE SENTENCE STARTS BOTH
 
@@ -845,7 +865,10 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
 - **A prior-year carryover is unknown** — NOL, basis, suspended losses, which states — **because the
   prior year was prepared elsewhere.** 🔑 **This is the one that hides**, because nothing in the
   current year points at it.
-- **The organizer's answers contradict the documents**, or contradict last year's return.
+- **The organizer's answers contradict the documents**, or contradict last year's return. ⛔ **Except an organizer
+  "N/A" that a document the firm HOLDS contradicts** — there the document governs, nothing is asked and nothing blocks
+  (§1B.1; [`organizer-review`](../organizer-review/) §1). ⚠️ The other direction still blocks: an organizer *"yes"*
+  with no document behind it is the second bullet above.
 - **Something is in the prior year that has silently vanished from this one** — a K-1, a rental, a
   state. ⚠️ **A disappearance is a question, never a conclusion.**
 
