@@ -1,6 +1,6 @@
 # Artur Tseretsian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -118,9 +118,23 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
 - **CS Float** = the platform's **own report is the complete figure** for the gaming
   business; **only part flows through the two BofA accounts** (the rest through his
   other accounts). Figures live in the working file / platform report, never here.
-- **Statement coverage.** 2023–2025 captured from BofA CC (7104) + debit (9561); **Dec
-  2025 runs only through the mid-December statement** — the **January 2026** statements
-  of both accounts are needed to complete December 2025.
+- **Statement coverage.** 2023–2025 captured from BofA CC (7104) + debit (9561). **The
+  workbook's December 2025 is incomplete.** Its last credit-card statement closes
+  **2025-12-12** and its last debit statement **2025-12-18**, so it is missing **Dec 13–31 on
+  the card and Dec 19–31 on the debit account**. ✅ **The January 2026 statements that close
+  that gap ARE in Drive** — `eStmt_2026-01-12.pdf` (card) and `eStmt_2026-01-20.pdf` (debit),
+  added **2026-08-06** to the `CC 2025` / `Debit 2025` folders (links in §7). ⛔ **They have
+  NOT been worked into the workbook**: its last change is dated 2026-07-30. For 2023 and 2024, the
+  December tail was taken from the following January statement into the year it belongs to.
+  The two new files fill the same slot for 2025 _(source: Drive, read 2026-10-08)_.
+  🔀 **The December 2022 tail — two sources disagree.** The 2026-07-29 working session said
+  the December 2022 rows in the January 2023 statements went on their own `2022 (partial)`
+  sheet. The copy in Drive, read 2026-10-08, has **14 tabs, no such sheet, and no
+  2022-dated rows**. Either way, those rows are outside the 2023 totals.
+- **Is the debit account really personal?** The 2025 debit statements' footer mentions
+  BofA's **"Business Fundamentals Checking"**. The working session flagged it on
+  2026-07-29 as possibly just bank advertising, but worth confirming with the client given
+  the volume of Zelle traffic through that account. **Not yet asked.**
 - **Initial consultation (2026-07-06, Zoom "Consultation").** Company-formation and tax-compliance discussion ahead of Rewhip LLC's registration. Discussed points, per the Zoom AI summary _(Gmail, "Meeting assets for Consultation are ready!", 2026-07-06 — machine-generated summary, Russian, use with the usual caution)_:
   - Artur asked about **partnership structures** and the tax consequences of a **non-resident partner** — Julia explained that a non-resident partner's share of net income is subject to **37% withholding**, with the non-resident then filing a return to claim a refund; discussed opening a bank account as a 50% owner. **Whether Rewhip LLC in fact has a non-resident partner is not yet confirmed on this file** — flagged for follow-up.
   - Discussed needing documentation for a **prior real-estate sale** and for crypto activity, as proof of the source of funds behind the company formation (figures not captured here).
@@ -130,8 +144,9 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   - Julia's follow-up items included helping the client catch up on **overdue tax returns** with a target of resolving the situation by October, and sending the organizer/portal invitation — consistent with the 2023–2025 catch-up engagement already on this file.
 - **Firm billing.** QuickBooks sent the client two automated "set up your recurring
   payment to JK Accounting Group" reminders, due **by 2026-08-01** _(source: Gmail,
-  2026-07-30 and 2026-07-31)_ — confirmation the client actually completed setup is
-  still outstanding.
+  2026-07-30 and 2026-07-31)_ — the setup was confirmed on 2026-09-12 (a payment posted
+  2026-09-01); for what has happened since, see the recurring-payment row under §6
+  *Outstanding items*.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -150,7 +165,8 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   **working-copy 1040 organizers for 2023/2024/2025** for Julia and two **Double notes**
   (tax-prep status + categorization rules). Sensitive IDs kept in Double.
 - _(2026-07-31, Lilian)_ — Spouse's **driver's license received** from the client (filed in
-  Double) — removed from the outstanding list.
+  Double) — removed from the outstanding list. ⓘ _Correction 2026-10-08: Double holds no file
+  for this client — the license is an image in the Drive folder (see the 2026-10-08 entry)._
 - _(2026-08-01, incremental sweep, baseline 2026-07-30)_ — No new client activity in
   Ping (client/contact not indexed there under this name — `resolve_person` and
   `search_contacts` returned no match; org-wide `search_meetings` hits were either
@@ -231,14 +247,57 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   - Double: both notes unchanged since 2026-09-03 and 2026-07-30; **Organizer Status still `Sent`**; no activity-log entries on/after 2026-09-26; the 2023/2024/2025 tax-project tasks all still `Not Started` with no assignee or due date.
   - **Result for the SSN:** a Gmail search bounded after 2026/09/26 for the client's name found no mention of the Social Security card; channel caveat above still applies (WhatsApp is outside the sweep).
 
+- _(2026-10-08, Lilian — "where were we on the transaction review?")_ Lilian could not find the
+  July working session and asked where the categorization stood, especially the January
+  statements. **The session still exists** (link in §7). It was read end to end with
+  `list_events`, from Lilian's first message on 2026-07-29 to the last turn on 2026-09-03. **State as that transcript leaves it:**
+  - **The categorization is finished for all three years.** No transaction is left without a
+    class. The last build was on 2026-07-30, after the gas-station rule. The workbook's open items
+    are **decisions, not extraction**: `Deposits (review)` (cash/ATM/check/ACH/wire — kept
+    **out** of income on Lilian's instruction, to review with the client and Julia), `Travel`
+    (Julia), `Business – review` (Zelle to auto/transport companies not reviewed one by one),
+    and `Operex LLC` (set aside for Lilian's own analysis).
+  - **The one extraction gap is December 2025** — the exact dates are in §5 *Statement coverage*.
+    The work that closes it: extract the two January 2026 statements, reconcile them,
+    categorize them with the same rules, keep only the December 2025 dates, and rebuild
+    `Summary 2025`.
+  - 🆕 **And the documents for it ARRIVED TWO MONTHS AGO.** The same day's live sweep found
+    both January 2026 statements in Drive, **added 2026-08-06** and never processed. Every
+    record still listed them as pending: Double note 479443, the workbook's own `Read me`,
+    and this file's outstanding list, which said *"not chased this run"*.
+    - No email carried them, so they reached Drive by another channel. **WhatsApp is likely
+      but not established.**
+    - ⚠️ **Why the sweeps missed it.** The 2026-08-08 weekly sweep reported *"nothing new"*.
+      The later sweeps checked Drive with a **title search for "Rewhip"**, but BofA statements
+      are named `eStmt_<date>.pdf`, so **a title search by client name can never find them**.
+      A file added inside a client's folder under a generic name is invisible to that method.
+  - **Double, same check:** File Library and Uploads hold **0 files** for this client. Note 479443
+    says the spouse's W-2 and the younger son's Social Security document are *"to be filed in
+    Double"*, and that SSNs and both driver's licenses *"live in Double"*. **No document is
+    filed there.** The spouse's driver's license is an image in the Drive folder.
+  - **Gmail, same check:** a QuickBooks *"Payment received"* notice dated **2026-10-05**
+    (invoice 2313, from REWHIP LLC). So after the failed 2026-10-01 run, a payment did arrive
+    (amount not retained).
+  - ⚠️ **The per-year net figures given in the chat on 2026-07-30 are SUPERSEDED.** Later rounds
+    moved deposits to their own bucket, turned unnamed Zelle and the "crypto exchange" Zelle into
+    income, and added the gas rule. The final figures were never repeated in the chat, so they
+    exist **only in the workbook's `Summary` sheets**.
+  - 🔀 **Two sources disagree on the CS Float item.** The outstanding list below reads *"CS Float
+    purchases/expense report"*. The transcript shows that **the 2025 platform totals (sales,
+    purchases, net) arrived as a photo on 2026-07-30** and were reconciled in `CS Float 2025
+    (recon)`. The same session still listed the report as pending afterwards. What is outstanding
+    is therefore the **detailed purchases history** behind those totals, plus any 2023/2024
+    platform report (the client says 2025 only) — **not the 2025 totals themselves.** Settle it
+    with Lilian when it next comes up.
+
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
 - **The older child's SSN** — SS card was lost. On **2026-07-31** the client went to the SSA office and was told the replacement card would be **mailed by post** (allow ~1 month), so it was expected around **late August 2026**. As of **2026-10-03** we still don't have the number — a Gmail search bounded after 2026/09/26 for the client's name found nothing about it, and Double notes carry no update (**64 days pending since 2026-07-31**; the ~1-month window ended about 2026-08-31). The client sends such items by **WhatsApp** (outside the digital sweep). **Next step:** confirm with the client that the card arrived and get the number — entered into Double, never the repo.
 - **Year-end 2024 & 2025 addresses** — not chased this run (budget).
-- January 2026 statements (both accounts) to complete Dec 2025 — not chased this run (budget).
+- ✅ **January 2026 statements (both accounts) — RECEIVED, in Drive since 2026-08-06** (found 2026-10-08; earlier rows here said *"not chased"*). ⛔ **Not yet processed:** December 2025 in the workbook still stops at 12-12 on the card and 12-18 on the debit account. Double note 479443 still lists them as pending from the client.
 - CS Float purchases/expense report — not chased this run (budget).
 - Home-office worksheet, Lendbuzz/Westlake amortization schedules, Form 1095-A, car purchase/sale documents, external-card statements, client-review items (deposits/travel/auto-transport Zelles) — not chased this run (budget).
-- ✅ **Confirmation the client completed the QuickBooks recurring-payment setup — ARRIVED 2026-09-12.** A QuickBooks "you got paid" notice shows a REWHIP LLC recurring payment posted 2026-09-01 (figure not retained). Closed as a setup question; ⚠️ **watch-item, UPDATED 2026-10-03**: the single canceled transfer (invoice 2272, 2026-09-03) was followed by a **failed monthly run on 2026-10-01** (QuickBooks notice, Gmail) — so the 09-01 success has no confirmed successor and the October debit did not go through. **Needs a firm-side follow-up with the client** (not yet recorded as done).
+- ✅ **Confirmation the client completed the QuickBooks recurring-payment setup — ARRIVED 2026-09-12.** A QuickBooks "you got paid" notice shows a REWHIP LLC recurring payment posted 2026-09-01 (figure not retained). Closed as a setup question; ⚠️ **watch-item, UPDATED 2026-10-03**: the single canceled transfer (invoice 2272, 2026-09-03) was followed by a **failed monthly run on 2026-10-01** (QuickBooks notice, Gmail) — so the 09-01 success has no confirmed successor and the October debit did not go through. **Needs a firm-side follow-up with the client** (not yet recorded as done). 🆕 **2026-10-08:** a QuickBooks *"Payment received"* notice of **2026-10-05** (invoice 2313, REWHIP LLC) shows a payment did arrive after the failure. Whether it was the October fee paid by hand or a repaired recurring setup is not established.
 - **Rewhip LLC — clarify scope** — STILL OPEN, **80 days pending since raised (2026-07-15)** as of 2026-10-03, no deadline _(the earlier "~82 days as of 09-26" did not match this start date; recomputed)_. A targeted search bounded after 2026/09/26 found nothing beyond what's already on file — only the 2026-10-02 Certificate of Status for the entity (see log).
 - **Stripe transaction data** — STILL OPEN, **89 days pending since raised (2026-07-06)** as of 2026-10-03 (crosses 90 on 2026-10-04) _(the earlier "~91 days as of 09-26" did not match this start date; recomputed)_, no deadline. A targeted search bounded after 2026/09/26 found nothing client-specific.
 
@@ -254,5 +313,9 @@ Live list lives in Double; mirrored here for context:
 
 - **Double client:** https://app.doublehq.com/close?cid=752202
 - **Google Drive folder (sensitive vault):** https://drive.google.com/drive/folders/1W37vrxg1TGNX4k13vzK6ECrifiJtSHg1 (top-level folder "Rewhip"; contains the "Personal taxes 2023-2025" subfolder — organizers + categorization workbooks — and a "Rewhip LLC" subfolder with the Articles of Organization and IRS EIN-assignment letter (`CP_575_B`)) _(source: Google Drive, 2026-08-01 and 2026-08-15)_
+- **The working session where the clean-up was built** (2026-07-29 → 2026-09-03, titled "Artur Tseretsian Cleanup"): https://claude.ai/code/session_017VuR6fQrPsWzZLpMn4ffQW — the full conversation: every rule agreed with the client, how each one was decided, and the workbook's build history. **Still open as of 2026-10-08.** ⚠️ It holds client figures and personal data, so it is a firm-internal link. Deleting it loses that history, **and the repo does NOT hold that detail** — before deleting, export it with [`tools/export-chat/`](../../../tools/export-chat/) **from inside that session** and file the export in Drive/Double.
+- **The deliverable:** `Tseretsian_Consolidated_Categorization_2023-2025.xlsx` (English; built 2026-07-30). It is in Drive → `Personal taxes 2023-2025` → `Transaction report- CATEGORIZED - from Claude`: https://drive.google.com/file/d/1l_JbL3Qeo9EfjNDlEh7VTFA_Wh1nIVEq/view (last modified 2026-07-30; the only categorized workbook in Drive). **14 tabs:** `Read me` · `Summary 2023/2024/2025` (credit · debit · combined) · `CS Float 2025 (recon)` · `Credit Card 2023/2024/2025` · `Debit 2023/2024/2025` · `Deposits (review)` · `To confirm` (Travel + Business-review) · `Operex LLC`. The uncategorized extractions are in the sibling folder `Transaction reports- ORIGINAL - from Claude`. Client figures — never in the repo.
+- **The `Personal taxes 2023-2025` folder:** https://drive.google.com/drive/folders/1maDy7xD-Kw_465W3GQAfNYMPfrj9Z4t3 — the statements are under `CC -7104` and `Debit - 9561`, one subfolder per year. The working-copy organizers are under `1040 Organizers`.
+- **The two January 2026 statements, not yet processed:** card https://drive.google.com/file/d/1qARwsXnOYrQ4NWfdIxcR6wzu-YD8BHM4/view · debit https://drive.google.com/file/d/16-N_3IYorTReZ5_nna12TWoe1hSEWErH/view (both added 2026-08-06).
 - **Related SOPs:** none yet — candidate: a "personal-account tax-prep categorization" SOP built from §5.
 - **Related entity (no CI file yet):** Rewhip LLC — a Florida LLC the firm formed and obtained an EIN for on Artur's behalf (2026-07-15); no Double client record or Client Intelligence file exists for it yet. See §6 outstanding items.
