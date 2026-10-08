@@ -108,12 +108,17 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
 - **Home office** = client gave a **2023 rent estimate** for a home office (figure kept in
   the working file / organizer, not here); 2024/2025 TBD. Julia to set the method
   (Form 8829 %); not 100% business.
-- **Vehicle** = the client **bought and later sold a car** during the period —
-  purchase & sale documents pending (relevant to Schedule C / any gain on sale).
-- **Health insurance** = personal; client to provide **Form 1095-A** per year. ⚠️ **2025 is
-  Marketplace coverage (Ambetter)** — the card shows its premiums early in the year, low enough that
-  advance credit was almost certainly paid. **Form 8962 is required, and without the 1095-A the 2025
-  return cannot be e-filed** _(2026-10-08)_.
+- **Vehicle** = the client **bought and later sold a car** during the period. 🔒 **Lilian, 2026-10-08:
+  the purchase and the sale are omitted from the return completely** — no documents are being chased
+  for them. She asks the client instead whether he wants to include **a car he had in 2025** as a
+  business expense; if he does, it goes in at the standard mileage rate (needs only the miles).
+- **Health insurance** = personal; client to provide **Form 1095-A** per year. ⚠️ **Marketplace
+  coverage (Ambetter) in 2023, 2024 and at least early 2025** — the card shows the premium share every
+  year, low enough that advance credit was paid. **Form 8962 is required each year.** ✅ **The 2023 and
+  2024 forms arrived in Drive on 2026-10-08** — ⚠️ **the file named "2025" is the 2024 form** (its
+  header and cover letter say 2024). 🔴 **The 2025 form is still missing, and without it the 2025 return
+  cannot be e-filed.** He was asked in July (Lilian, 2026-07-30: *"nos va a enviar el formulario 1095 A
+  para cada año"*).
 - **Pass-through** = money received and, the same day, routed to an auto vendor (e.g.
   Autotrader) on a third party's behalf → **neither income nor expense** (one confirmed
   2023 case).
@@ -327,34 +332,54 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
     freight, so no 1099-NEC is required (working paper J10, line I = No).
   - **He travels to car shows** (Monterey Car Week / Pebble Beach and an auction in 2025). Travel is
     kept as business pending Julia.
-  - **No extension and no estimated payment found for 2025**, and the return was due 2026-04-15.
-    Asked of the client.
+  - **No extension and no estimated payment found for 2025.** 🔒 **The extension is not asked**
+    (Lilian, 2026-10-08 — now a firm rule): the return is prepared anyway.
   - **What the independent review of the build surfaced (same day):**
-    - ⚠️ **The spouse's net pay was passed on, the same day, to one individual on almost every payday.**
-      Either that person was a household employee (a nanny — Schedule H would apply), or the job was
-      not really the spouse's. **A question for Julia first, then the client.** The person is named in
-      the workbook, not here.
+    - A pattern of same-day payments to one individual out of the spouse's pay was noticed. 🔒 **Lilian,
+      2026-10-08: not to be pursued** (*"olvida eso"*). The working paper keeps the finding for the
+      reviewer (its §4 L3).
     - **He ships cars through a shipping company (Atlantic Express)**, and in January 2025 he paid it
       right after a customer company (Ryan App LLC) paid him. It is not established whether that was his
       own cost or a customer's money passed through. July had filed those charges as meals.
     - **There is another bank account, ending 4800**, which receives regular transfers from the checking
       account and has never been reviewed. Its owner is not established. Stripe and the other cards he
       pays have not been seen either. **His income may be incomplete.**
-    - **Steam purchases** may be stock bought for resale on CS Float, not personal gaming. **HugeDomains**
-      monthly charges look like a domain purchase, possibly for Rewhip LLC.
-    - The vehicle question now matters twice. **If the car used for the business is the one sold in 2025**,
-      the sale has to be reported, and Lilian's "no car information" decision and a car-expense deduction
-      cannot both stand.
+    - **Steam purchases** may be stock bought for resale on CS Float, not personal gaming — a question.
+      (HugeDomains is settled by his own rule below: a merchant he never named is personal.)
   - The question list for the client and for Julia is the working paper's §6. **Phase 1 verdict: not
     ready to file.**
+
+- _(2026-10-08, later — Lilian, draft 2 of the 2025 return)_ Lilian asked whether the July rules had been
+  used, and to re-apply them. What came of it (figures in the working paper, never here):
+  - **The July rule set was reconstructed in full** from the July session — 39 rules, each traced to
+    her dated message — and the 2025 build was re-checked against it line by line. Two corrections:
+    **Zelle SENT to a counterparty whose RECEIVED Zelle the client had marked as income is personal**
+    (rule "Zelle sent = personal"; July had copied the "received" decision onto money sent), and
+    **merchants the client never named are personal** — software, a people-lookup site and local
+    parking had been left as business by the session's own July defaults, not by the client.
+  - **The client's own decisions, by counterparty**, are the 2023 rows marked `Per client review` in the
+    July workbook. Lilian's yellow cells were the sticky rules. The July first-pass files in Drive
+    (`Transaction reports- ORIGINAL - from Claude`) are what she started from, **before** her review.
+  - **New documents in Drive (2026-10-08):** the spouse's **2025 W-2** (Markstar — she worked there
+    March–August 2025; Lilian also pasted it in the chat), the **younger son's SSN card**, and the
+    **1095-A for 2023 and 2024** (see §5 — the 2025 one is still missing). **No card for the older son.**
+  - **The 2025 address:** the spouse's W-2 shows **Plantation, FL**; the 2024 1095-A shows Dania Beach.
+    To confirm with the client.
+  - **Rent:** paid by ACH from the checking account to the same landlord ("St. Tropez") — never on the
+    card. After two bounced payments in April 2025 it stops appearing for May–September, returns in
+    October–November, and December's payment bounced. In those same months **transfers to the account
+    ending 4800 rise and a new American Express card appears** (first paid June 2025). He did the same
+    with the electric bill (moved to the card after bounces). **Bounced payments are a pattern with this
+    client** — rent, insurance, utilities, loan and card payments.
+  - Lilian will ask the client about a car to include. The question list is the working paper's §6.
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
 - 🔒 **The older child's SSN — DECIDED FOR 2025 (2026-10-08): he is left off the 2025 return** (Lilian). Still worth getting for a 1040-X and for 2026. SS card was lost. On **2026-07-31** the client went to the SSA office and was told the replacement card would be **mailed by post** (allow ~1 month), so it was expected around **late August 2026**. As of **2026-10-03** we still don't have the number — a Gmail search bounded after 2026/09/26 for the client's name found nothing about it, and Double notes carry no update (**64 days pending since 2026-07-31**; the ~1-month window ended about 2026-08-31). The client sends such items by **WhatsApp** (outside the digital sweep). **Next step:** confirm with the client that the card arrived and get the number — entered into Double, never the repo.
-- **Year-end 2024 & 2025 addresses** — not chased this run (budget).
+- **Year-end 2024 & 2025 addresses** — 2025: the spouse's W-2 shows Plantation, FL (to confirm, 2026-10-08); 2024: the 2024 1095-A shows Dania Beach, FL.
 - ✅ **January 2026 statements (both accounts) — RECEIVED (in Drive since 2026-08-06) and PROCESSED 2026-10-08** into the 2025 return build. Double note 479443 still lists them as pending from the client; it was not edited (no instruction to write to Double).
 - CS Float purchases/expense report — not chased this run (budget).
-- Home-office worksheet, Lendbuzz/Westlake amortization schedules, Form 1095-A, car purchase/sale documents, external-card statements, client-review items (deposits/travel/auto-transport Zelles) — not chased this run (budget).
+- **Form 1095-A: 2023 and 2024 RECEIVED 2026-10-08; 2025 MISSING** (the file named 2025 is the 2024 form). Car purchase/sale documents: **no longer needed** (Lilian, 2026-10-08: omitted). Home-office worksheet, Lendbuzz/Westlake amortization schedules, external-card statements (incl. the account ending 4800 and the American Express card new in June 2025), client-review items (deposits/travel/auto-transport Zelles) — not chased this run (budget).
 - ✅ **Confirmation the client completed the QuickBooks recurring-payment setup — ARRIVED 2026-09-12.** A QuickBooks "you got paid" notice shows a REWHIP LLC recurring payment posted 2026-09-01 (figure not retained). Closed as a setup question; ⚠️ **watch-item, UPDATED 2026-10-03**: the single canceled transfer (invoice 2272, 2026-09-03) was followed by a **failed monthly run on 2026-10-01** (QuickBooks notice, Gmail) — so the 09-01 success has no confirmed successor and the October debit did not go through. **Needs a firm-side follow-up with the client** (not yet recorded as done). 🆕 **2026-10-08:** a QuickBooks *"Payment received"* notice of **2026-10-05** (invoice 2313, REWHIP LLC) shows a payment did arrive after the failure. Whether it was the October fee paid by hand or a repaired recurring setup is not established.
 - **Rewhip LLC — clarify scope** — STILL OPEN, **80 days pending since raised (2026-07-15)** as of 2026-10-03, no deadline _(the earlier "~82 days as of 09-26" did not match this start date; recomputed)_. A targeted search bounded after 2026/09/26 found nothing beyond what's already on file — only the 2026-10-02 Certificate of Status for the entity (see log).
 - **Stripe transaction data** — STILL OPEN, **89 days pending since raised (2026-07-06)** as of 2026-10-03 (crosses 90 on 2026-10-04) _(the earlier "~91 days as of 09-26" did not match this start date; recomputed)_, no deadline. A targeted search bounded after 2026/09/26 found nothing client-specific.
