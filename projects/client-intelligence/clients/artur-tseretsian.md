@@ -1,6 +1,6 @@
 # Artur Tseretsian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -120,7 +120,16 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   other accounts). Figures live in the working file / platform report, never here.
 - **Statement coverage.** 2023–2025 captured from BofA CC (7104) + debit (9561); **Dec
   2025 runs only through the mid-December statement** — the **January 2026** statements
-  of both accounts are needed to complete December 2025.
+  of both accounts are needed to complete December 2025. Exactly: the last credit-card
+  statement on hand closes **2025-12-12** and the last debit statement **2025-12-18**, so
+  the gap is **Dec 13–31 on the card and Dec 19–31 on the debit account**. At the other
+  end, the January 2023 statements carry a tail of **December 2022** activity, which the
+  workbook keeps on its own `2022 (partial)` sheet, outside the 2023 totals _(source: the
+  2026-07-29 working session — see §7)_.
+- **Is the debit account really personal?** The 2025 debit statements' footer mentions
+  BofA's **"Business Fundamentals Checking"**. The working session flagged it on
+  2026-07-29 as possibly just bank advertising, but worth confirming with the client given
+  the volume of Zelle traffic through that account. **Not yet asked.**
 - **Initial consultation (2026-07-06, Zoom "Consultation").** Company-formation and tax-compliance discussion ahead of Rewhip LLC's registration. Discussed points, per the Zoom AI summary _(Gmail, "Meeting assets for Consultation are ready!", 2026-07-06 — machine-generated summary, Russian, use with the usual caution)_:
   - Artur asked about **partnership structures** and the tax consequences of a **non-resident partner** — Julia explained that a non-resident partner's share of net income is subject to **37% withholding**, with the non-resident then filing a return to claim a refund; discussed opening a bank account as a 50% owner. **Whether Rewhip LLC in fact has a non-resident partner is not yet confirmed on this file** — flagged for follow-up.
   - Discussed needing documentation for a **prior real-estate sale** and for crypto activity, as proof of the source of funds behind the company formation (figures not captured here).
@@ -231,6 +240,31 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   - Double: both notes unchanged since 2026-09-03 and 2026-07-30; **Organizer Status still `Sent`**; no activity-log entries on/after 2026-09-26; the 2023/2024/2025 tax-project tasks all still `Not Started` with no assignee or due date.
   - **Result for the SSN:** a Gmail search bounded after 2026/09/26 for the client's name found no mention of the Social Security card; channel caveat above still applies (WhatsApp is outside the sweep).
 
+- _(2026-10-08, Lilian — "where were we on the transaction review?")_ Lilian could not find the
+  July working session and asked where the categorization stood, especially the January
+  statements. **The session still exists** (link in §7). It was read end to end with
+  `list_events`, from Lilian's first message on 2026-07-29 to the last turn on 2026-09-03. **State as that transcript leaves it:**
+  - **The categorization is finished for all three years.** No transaction is left without a
+    class. The last build was on 2026-07-30, after the gas-station rule. The workbook's open items
+    are **decisions, not extraction**: `Deposits (review)` (cash/ATM/check/ACH/wire — kept
+    **out** of income on Lilian's instruction, to review with the client and Julia), `Travel`
+    (Julia), `Business – review` (Zelle to auto/transport companies not reviewed one by one),
+    and `Operex LLC` (set aside for Lilian's own analysis).
+  - **The one extraction gap is December 2025** — the exact dates are in §5 *Statement coverage*.
+    When the January 2026 statements arrive, the work is: extract, reconcile, categorize with the
+    same rules, keep only the December 2025 dates, rebuild `Summary 2025`.
+  - ⚠️ **The per-year net figures given in the chat on 2026-07-30 are SUPERSEDED.** Later rounds
+    moved deposits to their own bucket, turned unnamed Zelle and the "crypto exchange" Zelle into
+    income, and added the gas rule. The final figures were never repeated in the chat, so they
+    exist **only in the workbook's `Summary` sheets**.
+  - 🔀 **Two sources disagree on the CS Float item.** The outstanding list below reads *"CS Float
+    purchases/expense report"*. The transcript shows that **the 2025 platform totals (sales,
+    purchases, net) arrived as a photo on 2026-07-30** and were reconciled in `CS Float 2025
+    (recon)`. The same session still listed the report as pending afterwards. What is outstanding
+    is therefore the **detailed purchases history** behind those totals, plus any 2023/2024
+    platform report (the client says 2025 only) — **not the 2025 totals themselves.** Settle it
+    with Lilian when it next comes up.
+
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
 - **The older child's SSN** — SS card was lost. On **2026-07-31** the client went to the SSA office and was told the replacement card would be **mailed by post** (allow ~1 month), so it was expected around **late August 2026**. As of **2026-10-03** we still don't have the number — a Gmail search bounded after 2026/09/26 for the client's name found nothing about it, and Double notes carry no update (**64 days pending since 2026-07-31**; the ~1-month window ended about 2026-08-31). The client sends such items by **WhatsApp** (outside the digital sweep). **Next step:** confirm with the client that the card arrived and get the number — entered into Double, never the repo.
@@ -254,5 +288,7 @@ Live list lives in Double; mirrored here for context:
 
 - **Double client:** https://app.doublehq.com/close?cid=752202
 - **Google Drive folder (sensitive vault):** https://drive.google.com/drive/folders/1W37vrxg1TGNX4k13vzK6ECrifiJtSHg1 (top-level folder "Rewhip"; contains the "Personal taxes 2023-2025" subfolder — organizers + categorization workbooks — and a "Rewhip LLC" subfolder with the Articles of Organization and IRS EIN-assignment letter (`CP_575_B`)) _(source: Google Drive, 2026-08-01 and 2026-08-15)_
+- **The working session where the clean-up was built** (2026-07-29 → 2026-09-03, titled "Artur Tseretsian Cleanup"): https://claude.ai/code/session_017VuR6fQrPsWzZLpMn4ffQW — the full conversation: every rule agreed with the client, how each one was decided, and the workbook's build history. **Still open as of 2026-10-08.** ⚠️ It holds client figures and personal data, so it is a firm-internal link. Deleting it loses that history, **and the repo does NOT hold that detail** — before deleting, export it with [`tools/export-chat/`](../../../tools/export-chat/) **from inside that session** and file the export in Drive/Double.
+- **The deliverable:** `Tseretsian_Consolidated_Categorization_2023-2025.xlsx` (English; built 2026-07-30). Sheets: `Read me` · `Summary 2023/2024/2025` (credit · debit · combined) · `CS Float 2025 (recon)` · `Credit Card 2023/2024/2025` · `Debit 2023/2024/2025` · `2022 (partial)` · `Operex LLC` · `Deposits (review)` · `To confirm` (Travel + Business-review). Client figures — never in the repo.
 - **Related SOPs:** none yet — candidate: a "personal-account tax-prep categorization" SOP built from §5.
 - **Related entity (no CI file yet):** Rewhip LLC — a Florida LLC the firm formed and obtained an EIN for on Artur's behalf (2026-07-15); no Double client record or Client Intelligence file exists for it yet. See §6 outstanding items.
