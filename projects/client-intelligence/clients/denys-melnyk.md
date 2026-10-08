@@ -2076,8 +2076,9 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
   describes it, **but needed if we want to test whether the mother would sign a Form 8332 release
   and move the Child Tax Credit onto his return.** Lilian's open question for Julia (§5).
 - **Was a 2025 extension (Form 4868) filed, and by whom?** The 15 April 2026 deadline has passed.
-  ⚠️ **Not a firm record** — he became a client on 2026-07-21, so JK cannot have filed it. Ask **him**,
-  his **prior preparer**, or read his **IRS account transcript** (§4).
+  ⚠️ **Not a firm record** — he became a client on 2026-07-21, so JK cannot have filed it. ~~Ask **him**,
+  his **prior preparer**, or~~ read his **IRS account transcript** (§4). ⓘ *2026-10-08 (Lilian, firm-wide): the
+  extension is not a gate and is not asked of the client; only the money it changes matters.*
 - **Whether each S corporation has filed its own 2025 return (Form 1120-S), and who prepares it.**
   For a calendar-year S corp the 2025 Form 1120-S was due **16 March 2026** (the 15th fell on a
   Sunday), extendable to **15 September 2026**; the late-filing penalty runs **per shareholder, per
@@ -2182,7 +2183,8 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
   it was the corporation's or his, whether it was ever depreciated, and **how many other vehicles he
   holds**. ⛔ His *"I didn't make any profit"* rests on the loan payoff, which is not the test (§5).
 - [ ] Whether a **2025 extension (Form 4868)** was filed — ⚠️ **not from our own records**; he became
-  a client after the deadline, so ask him, his prior preparer, or read his IRS account transcript (§4).
+  a client after the deadline. ⓘ *2026-10-08: **not asked of the client** and not a gate (Lilian, firm-wide) — read it
+  firm-side from his IRS account transcript (§4) only where the penalty figures depend on it.*
 - [ ] Whether he took a distribution from a **401(k) or any non-IRA plan** in 2025 — the IRA question
   was asked and answered; this one was not (§5).
 - [x] Whether the **MINNESOTA house** is rented out — ✅ **NO RENTAL INCOME IN 2025** _(client, by
@@ -2599,7 +2601,7 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 
 - 🛻 **He told the firm he will include a further amount of truck repairs on the Schedule C.** Everything was recomputed on all four readings of the contractor question: the operating-loss limit moves again, the amount owed falls a little, and **the printed operating-loss figure is now above its limit on every reading**. ⚠️ **The which-truck question is still unanswered** — the standard mileage rate already covers repairs for the vehicle on Part IV, and a repair on the corporation's truck is not his expense — so **more deduction now rests on it**; the downside was written up for Julia as a decision. Nothing was said about which truck, when, who paid, or receipts.
 - 💳 **He wants to pay the balance over two years by monthly direct debit and send nothing with the return.** An installment agreement request (**Form 9465**) was drafted line by line, with the monthly amount sized so that 24 payments clear the balance — **a plain division by 24 would leave a balance, because interest and the late-payment penalty run from April.** Nothing is paid with the return; that was a choice, and the paper records that the cost of it should be explained to him.
-- 🔴 **Before anything goes out:** the **2025 extension question is still open** (a late return loses the reduced penalty rate and adds a failure-to-file penalty); whether **ATX can e-file the form** and how the spouses sign it is **not established**; the **account details are asked ONCE, after Julia reviews** — and the return's own one-time withdrawal stays **off**; and **2026 estimated tax is a condition of the agreement**, since he has no withholding.
+- 🔴 **Before anything goes out:** the **2025 extension question is still open** (a late return loses the reduced penalty rate and adds a failure-to-file penalty) — ⓘ *since 2026-10-08 not a gate and not a client question (Lilian): read it firm-side from the IRS account transcript;* whether **ATX can e-file the form** and how the spouses sign it is **not established**; the **account details are asked ONCE, after Julia reviews** — and the return's own one-time withdrawal stays **off**; and **2026 estimated tax is a condition of the agreement**, since he has no withholding.
 - 💡 **Likely qualifies for the IRS fee waiver for low-income taxpayers paying by direct debit** (family of three) — **to confirm against the AGI the IRS holds**, which may be the 2024 year.
 
 ### 2026-10-02 (c) — her latest version was reviewed: the truck repairs are right, the installment form has one silent error
