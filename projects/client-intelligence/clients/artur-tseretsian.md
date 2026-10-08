@@ -27,7 +27,7 @@
 - **Home state:** Florida (South Florida)
 - **Industry / what they do:** Two income activities — (1) **used-car reselling & auto transport** — income comes through **Operex LLC** (buying/selling cars); he is linked to a car-sales business he works with, not a company of his own; (2) **online gaming** — buying and selling CS:GO / CS2 skins on the **CS Float** marketplace (**2025 only**).
 - **Household / filing status:** Married — assume **Married Filing Jointly** (confirm). Spouse is a **homemaker**: **no income in 2023–2024; received a W-2 in 2025**. **Two dependent children** — the younger was **born during 2024** (first claimed in 2024); the older is school-age. One child's SSN is **pending** (card lost, client resolving at the SSA). Names, dates of birth, and SSNs are in **Double**, not here.
-- **Primary language:** _(pending — likely RU/UA)_
+- **Primary language:** **Russian only** — Double's preferred-language property reads `Only Russian` _(Double, read 2026-10-08)_.
 - **Our engagement (services we provide):** Individual income-tax **clean-up + preparation** — **Form 1040 with Schedule C** — for tax years **2023, 2024, 2025**. New client; we reconstruct from the client's bank statements.
 - **Fiscal year-end:** December 31
 - **Accounting platform:** None (no QuickBooks; personal bank accounts only)
@@ -56,7 +56,7 @@ link). Never write the credential itself here.
 | Bank — checking/debit | Statements for tax categorization | _(pending — Drive link)_ | Bank of America personal **debit/checking, ending 9561** |
 | CS Float (marketplace) | Gaming income/expense (skins) | _(pending — Drive link)_ | Seller profile **"Zeliboba_asl"** (KYC-approved) |
 
-- **Note:** the client also has **other bank accounts** and **external credit cards** (Capital One, American Express, Merrick, Credit One, FPB) whose statements we don't yet have — some business income/expense flows through those, not only the two BofA accounts above.
+- **Note:** the client also has **other bank accounts** and **external credit cards** (Capital One, American Express, Merrick, Credit One, FPB) whose statements we don't yet have — some business income/expense flows through those, not only the two BofA accounts above. ⚠️ **One of them ends 4800** — the checking account sends it regular transfers, and it has never been reviewed _(2026-10-08)_.
 
 ## 4. Obligations & recurring processes
 
@@ -110,7 +110,10 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   (Form 8829 %); not 100% business.
 - **Vehicle** = the client **bought and later sold a car** during the period —
   purchase & sale documents pending (relevant to Schedule C / any gain on sale).
-- **Health insurance** = personal; client to provide **Form 1095-A** per year.
+- **Health insurance** = personal; client to provide **Form 1095-A** per year. ⚠️ **2025 is
+  Marketplace coverage (Ambetter)** — the card shows its premiums early in the year, low enough that
+  advance credit was almost certainly paid. **Form 8962 is required, and without the 1095-A the 2025
+  return cannot be e-filed** _(2026-10-08)_.
 - **Pass-through** = money received and, the same day, routed to an auto vendor (e.g.
   Autotrader) on a third party's behalf → **neither income nor expense** (one confirmed
   2023 case).
@@ -127,14 +130,20 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   NOT been worked into the workbook**: its last change is dated 2026-07-30. For 2023 and 2024, the
   December tail was taken from the following January statement into the year it belongs to.
   The two new files fill the same slot for 2025 _(source: Drive, read 2026-10-08)_.
+  ✅ **PROCESSED 2026-10-08.** Both were extracted and reconciled to their own totals, and their
+  December 2025 lines went into the 2025 build for the return. The July workbook in Drive was **not**
+  rebuilt; the 2025 figures now live in the tax-return working paper
+  ([`tax-returns/artur-tseretsian/2025-form-1040.md`](../../tax-returns/artur-tseretsian/2025-form-1040.md)).
   🔀 **The December 2022 tail — two sources disagree.** The 2026-07-29 working session said
   the December 2022 rows in the January 2023 statements went on their own `2022 (partial)`
   sheet. The copy in Drive, read 2026-10-08, has **14 tabs, no such sheet, and no
   2022-dated rows**. Either way, those rows are outside the 2023 totals.
-- **Is the debit account really personal?** The 2025 debit statements' footer mentions
-  BofA's **"Business Fundamentals Checking"**. The working session flagged it on
-  2026-07-29 as possibly just bank advertising, but worth confirming with the client given
-  the volume of Zelle traffic through that account. **Not yet asked.**
+- **Is the debit account really personal? — ✅ Yes, settled from the statement itself (2026-10-08).**
+  The checking statement names its product **"Adv Plus Banking"**, Bank of America's personal
+  checking. The **"Business Fundamentals Checking"** text in the 2025 statements' footer is an
+  **advertisement**. The card is a personal card too. So **both accounts are personal**, used heavily
+  for business. Lilian had believed on 2026-10-08 that both were business accounts, and was
+  corrected. _(Earlier: flagged 2026-07-29 as possibly bank advertising, not yet asked.)_
 - **Initial consultation (2026-07-06, Zoom "Consultation").** Company-formation and tax-compliance discussion ahead of Rewhip LLC's registration. Discussed points, per the Zoom AI summary _(Gmail, "Meeting assets for Consultation are ready!", 2026-07-06 — machine-generated summary, Russian, use with the usual caution)_:
   - Artur asked about **partnership structures** and the tax consequences of a **non-resident partner** — Julia explained that a non-resident partner's share of net income is subject to **37% withholding**, with the non-resident then filing a return to claim a refund; discussed opening a bank account as a 50% owner. **Whether Rewhip LLC in fact has a non-resident partner is not yet confirmed on this file** — flagged for follow-up.
   - Discussed needing documentation for a **prior real-estate sale** and for crypto activity, as proof of the source of funds behind the company formation (figures not captured here).
@@ -290,11 +299,60 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
     platform report (the client says 2025 only) — **not the 2025 totals themselves.** Settle it
     with Lilian when it next comes up.
 
+- _(2026-10-08, Lilian — the 2025 return: decisions and what the build found)_ Lilian asked for the
+  2025 ATX worksheet and a P&L built from the two bank accounts. **2025 only for now**; 2023 and 2024 wait.
+  The figures are in the working paper
+  [`tax-returns/artur-tseretsian/2025-form-1040.md`](../../tax-returns/artur-tseretsian/2025-form-1040.md),
+  never here. What the session learned about the client:
+  - 🔒 **Decision (Lilian): the older son is NOT on the 2025 return.** The client could not get his
+    Social Security number at the SSA office. *"Esta es una decisión tomada."* The child tax credit
+    for him can be recovered with a 1040-X once the number is found.
+  - 🔒 **Decision (Lilian): nothing about the car bought and sold goes on the return.**
+  - **Both BofA accounts are personal** (see §5). Lilian had believed they were business accounts.
+  - **Her instruction on personal data:** use the **2023 organizer** for what does not expire (SSNs,
+    licences); ask the client for the rest. The 2023 answers read for 2025: married, not living
+    apart; 2023 was his **first US return**; **no EIN**; no foreign accounts over the threshold;
+    and ⚠️ **he answered that the car was NOT used for business in 2023**, which conflicts with the gas
+    and parking claimed. **2025 miles have been asked for.**
+  - **The spouse's employment ran March–August 2025** (payroll deposits). Her W-2 came by WhatsApp and
+    is with Lilian, not in Double.
+  - **Bounced payments are frequent:** **47** payments in 2025 bounced and were returned by the bank
+    (auto loan, other cards, rent, auto insurance, electricity). The July summaries counted the
+    returned ones as paid; they are now excluded. **The same defect sits in the 2023 and 2024
+    summaries**, which must be rebuilt the same way before those returns.
+  - **Crypto in the bank is thin:** Coinbase and MoonPay appear only as verification-size lines and one
+    purchase — no sale. The recommended **Yes** on the 1040 digital-asset question rests on the firm's
+    2026-07-30 note that most Zelle are crypto sold for dollars, not on the bank. Julia decides.
+  - **He paid a transport company over the 1099 threshold in 2025 to move a vehicle** — that is
+    freight, so no 1099-NEC is required (working paper J10, line I = No).
+  - **He travels to car shows** (Monterey Car Week / Pebble Beach and an auction in 2025). Travel is
+    kept as business pending Julia.
+  - **No extension and no estimated payment found for 2025**, and the return was due 2026-04-15.
+    Asked of the client.
+  - **What the independent review of the build surfaced (same day):**
+    - ⚠️ **The spouse's net pay was passed on, the same day, to one individual on almost every payday.**
+      Either that person was a household employee (a nanny — Schedule H would apply), or the job was
+      not really the spouse's. **A question for Julia first, then the client.** The person is named in
+      the workbook, not here.
+    - **He ships cars through a shipping company (Atlantic Express)**, and in January 2025 he paid it
+      right after a customer company (Ryan App LLC) paid him. It is not established whether that was his
+      own cost or a customer's money passed through. July had filed those charges as meals.
+    - **There is another bank account, ending 4800**, which receives regular transfers from the checking
+      account and has never been reviewed. Its owner is not established. Stripe and the other cards he
+      pays have not been seen either. **His income may be incomplete.**
+    - **Steam purchases** may be stock bought for resale on CS Float, not personal gaming. **HugeDomains**
+      monthly charges look like a domain purchase, possibly for Rewhip LLC.
+    - The vehicle question now matters twice. **If the car used for the business is the one sold in 2025**,
+      the sale has to be reported, and Lilian's "no car information" decision and a car-expense deduction
+      cannot both stand.
+  - The question list for the client and for Julia is the working paper's §6. **Phase 1 verdict: not
+    ready to file.**
+
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
-- **The older child's SSN** — SS card was lost. On **2026-07-31** the client went to the SSA office and was told the replacement card would be **mailed by post** (allow ~1 month), so it was expected around **late August 2026**. As of **2026-10-03** we still don't have the number — a Gmail search bounded after 2026/09/26 for the client's name found nothing about it, and Double notes carry no update (**64 days pending since 2026-07-31**; the ~1-month window ended about 2026-08-31). The client sends such items by **WhatsApp** (outside the digital sweep). **Next step:** confirm with the client that the card arrived and get the number — entered into Double, never the repo.
+- 🔒 **The older child's SSN — DECIDED FOR 2025 (2026-10-08): he is left off the 2025 return** (Lilian). Still worth getting for a 1040-X and for 2026. SS card was lost. On **2026-07-31** the client went to the SSA office and was told the replacement card would be **mailed by post** (allow ~1 month), so it was expected around **late August 2026**. As of **2026-10-03** we still don't have the number — a Gmail search bounded after 2026/09/26 for the client's name found nothing about it, and Double notes carry no update (**64 days pending since 2026-07-31**; the ~1-month window ended about 2026-08-31). The client sends such items by **WhatsApp** (outside the digital sweep). **Next step:** confirm with the client that the card arrived and get the number — entered into Double, never the repo.
 - **Year-end 2024 & 2025 addresses** — not chased this run (budget).
-- ✅ **January 2026 statements (both accounts) — RECEIVED, in Drive since 2026-08-06** (found 2026-10-08; earlier rows here said *"not chased"*). ⛔ **Not yet processed:** December 2025 in the workbook still stops at 12-12 on the card and 12-18 on the debit account. Double note 479443 still lists them as pending from the client.
+- ✅ **January 2026 statements (both accounts) — RECEIVED (in Drive since 2026-08-06) and PROCESSED 2026-10-08** into the 2025 return build. Double note 479443 still lists them as pending from the client; it was not edited (no instruction to write to Double).
 - CS Float purchases/expense report — not chased this run (budget).
 - Home-office worksheet, Lendbuzz/Westlake amortization schedules, Form 1095-A, car purchase/sale documents, external-card statements, client-review items (deposits/travel/auto-transport Zelles) — not chased this run (budget).
 - ✅ **Confirmation the client completed the QuickBooks recurring-payment setup — ARRIVED 2026-09-12.** A QuickBooks "you got paid" notice shows a REWHIP LLC recurring payment posted 2026-09-01 (figure not retained). Closed as a setup question; ⚠️ **watch-item, UPDATED 2026-10-03**: the single canceled transfer (invoice 2272, 2026-09-03) was followed by a **failed monthly run on 2026-10-01** (QuickBooks notice, Gmail) — so the 09-01 success has no confirmed successor and the October debit did not go through. **Needs a firm-side follow-up with the client** (not yet recorded as done). 🆕 **2026-10-08:** a QuickBooks *"Payment received"* notice of **2026-10-05** (invoice 2313, REWHIP LLC) shows a payment did arrive after the failure. Whether it was the October fee paid by hand or a repaired recurring setup is not established.
@@ -302,7 +360,7 @@ Live list lives in Double; mirrored here for context:
 - **Stripe transaction data** — STILL OPEN, **89 days pending since raised (2026-07-06)** as of 2026-10-03 (crosses 90 on 2026-10-04) _(the earlier "~91 days as of 09-26" did not match this start date; recomputed)_, no deadline. A targeted search bounded after 2026/09/26 found nothing client-specific.
 
 ### Information still needed
-- [ ] Primary language / preferred communication.
+- [x] Primary language — **Russian only** (Double property, 2026-10-08).
 - [ ] Which other accounts the CS Float payouts land in.
 - [ ] The car-sales business relationship (his exact role; whether any 1099s are owed on payments he made).
 - [x] Second (younger) child confirmed a dependent from **2024** (born during 2024); 2023 has one dependent.
@@ -316,6 +374,6 @@ Live list lives in Double; mirrored here for context:
 - **The working session where the clean-up was built** (2026-07-29 → 2026-09-03, titled "Artur Tseretsian Cleanup"): https://claude.ai/code/session_017VuR6fQrPsWzZLpMn4ffQW — the full conversation: every rule agreed with the client, how each one was decided, and the workbook's build history. **Still open as of 2026-10-08.** ⚠️ It holds client figures and personal data, so it is a firm-internal link. Deleting it loses that history, **and the repo does NOT hold that detail** — before deleting, export it with [`tools/export-chat/`](../../../tools/export-chat/) **from inside that session** and file the export in Drive/Double.
 - **The deliverable:** `Tseretsian_Consolidated_Categorization_2023-2025.xlsx` (English; built 2026-07-30). It is in Drive → `Personal taxes 2023-2025` → `Transaction report- CATEGORIZED - from Claude`: https://drive.google.com/file/d/1l_JbL3Qeo9EfjNDlEh7VTFA_Wh1nIVEq/view (last modified 2026-07-30; the only categorized workbook in Drive). **14 tabs:** `Read me` · `Summary 2023/2024/2025` (credit · debit · combined) · `CS Float 2025 (recon)` · `Credit Card 2023/2024/2025` · `Debit 2023/2024/2025` · `Deposits (review)` · `To confirm` (Travel + Business-review) · `Operex LLC`. The uncategorized extractions are in the sibling folder `Transaction reports- ORIGINAL - from Claude`. Client figures — never in the repo.
 - **The `Personal taxes 2023-2025` folder:** https://drive.google.com/drive/folders/1maDy7xD-Kw_465W3GQAfNYMPfrj9Z4t3 — the statements are under `CC -7104` and `Debit - 9561`, one subfolder per year. The working-copy organizers are under `1040 Organizers`.
-- **The two January 2026 statements, not yet processed:** card https://drive.google.com/file/d/1qARwsXnOYrQ4NWfdIxcR6wzu-YD8BHM4/view · debit https://drive.google.com/file/d/16-N_3IYorTReZ5_nna12TWoe1hSEWErH/view (both added 2026-08-06).
+- **The two January 2026 statements (processed 2026-10-08):** card https://drive.google.com/file/d/1qARwsXnOYrQ4NWfdIxcR6wzu-YD8BHM4/view · debit https://drive.google.com/file/d/16-N_3IYorTReZ5_nna12TWoe1hSEWErH/view (both added 2026-08-06).
 - **Related SOPs:** none yet — candidate: a "personal-account tax-prep categorization" SOP built from §5.
 - **Related entity (no CI file yet):** Rewhip LLC — a Florida LLC the firm formed and obtained an EIN for on Artur's behalf (2026-07-15); no Double client record or Client Intelligence file exists for it yet. See §6 outstanding items.
