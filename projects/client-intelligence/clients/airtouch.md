@@ -36,7 +36,7 @@
 - **Business name:** Airtouch LLC
 - **Entity type:** **LLC**, taxed as an **S-corp** — Tax Return Type **1120-S** _(Double client properties, 2026-08-11)_
 - **Home state:** _(pending)_
-- **Industry / what they do:** **Hair salon — color services (the AirTouch technique), Miami-Dade.** Julia, 2026-10-08: the owner is opening a salon offering AirTouch and other coloring services and is about to hire stylists. ⚠️ **Not yet confirmed:** that this LLC is the US entity of the AirTouch education brand (`airtouch.education`, created by colorist Vladimir Sarbashev). The brand's Miami Level 2 course page names an "AIRTOUCH LLC" in Miami, which fits but was not checked against Sunbiz.
+- **Industry / what they do:** **Hair salon — color services (the AirTouch technique), Miami-Dade.** Julia, 2026-10-08: the owner is opening a salon offering AirTouch and other coloring services and is about to hire stylists. ✅ **Julia confirmed 2026-10-08 that the salon is this client (Airtouch LLC).** She gave `airtouch.education` as the owner's site: the AirTouch coloring technique and its training tour (technique created by colorist Vladimir Sarbashev; the brand's Miami Level 2 course page names an "AIRTOUCH LLC" in Miami). Not checked against Sunbiz.
 - **Primary language:** _(pending)_ <!-- EN / RU / UA / ES -->
 - **Our engagement (services we provide):** bookkeeping (**Monthly**), income tax (**1120-S**), payroll (**Automatic**), the annual report _(Double client properties, 2026-08-11)_. **Assigned staff: Liudmyla Kazannik.**
 - **Fiscal year-end:** _(pending)_
@@ -178,7 +178,7 @@ it here; these never go into the client SOP.
 The checklist of what's not captured yet — this is what the completeness audit
 reports for this client.
 
-- [x] What the business actually does — a hair-color salon (AirTouch technique), per Julia 2026-10-08 (§1); the link to the AirTouch education brand is still unconfirmed
+- [x] What the business actually does — a hair-color salon (AirTouch technique), confirmed by Julia 2026-10-08 (§1)
 - [ ] Home state — inferred from FL LLC/annual-report context only, not independently confirmed
 - [x] Contacts and their roles — four portal contacts, roles distinguished (§5)
 - [ ] Bank/card feeds and where credentials live (Drive vault link)
