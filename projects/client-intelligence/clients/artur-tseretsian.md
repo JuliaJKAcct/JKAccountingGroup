@@ -144,8 +144,9 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   - Julia's follow-up items included helping the client catch up on **overdue tax returns** with a target of resolving the situation by October, and sending the organizer/portal invitation — consistent with the 2023–2025 catch-up engagement already on this file.
 - **Firm billing.** QuickBooks sent the client two automated "set up your recurring
   payment to JK Accounting Group" reminders, due **by 2026-08-01** _(source: Gmail,
-  2026-07-30 and 2026-07-31)_ — confirmation the client actually completed setup is
-  still outstanding.
+  2026-07-30 and 2026-07-31)_ — the setup was confirmed on 2026-09-12 (a payment posted
+  2026-09-01); for what has happened since, see the recurring-payment row under §6
+  *Outstanding items*.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -164,7 +165,8 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   **working-copy 1040 organizers for 2023/2024/2025** for Julia and two **Double notes**
   (tax-prep status + categorization rules). Sensitive IDs kept in Double.
 - _(2026-07-31, Lilian)_ — Spouse's **driver's license received** from the client (filed in
-  Double) — removed from the outstanding list.
+  Double) — removed from the outstanding list. ⓘ _Correction 2026-10-08: Double holds no file
+  for this client — the license is an image in the Drive folder (see the 2026-10-08 entry)._
 - _(2026-08-01, incremental sweep, baseline 2026-07-30)_ — No new client activity in
   Ping (client/contact not indexed there under this name — `resolve_person` and
   `search_contacts` returned no match; org-wide `search_meetings` hits were either
