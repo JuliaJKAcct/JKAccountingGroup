@@ -122,7 +122,7 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
 - **Pass-through** = money received and, the same day, routed to an auto vendor (e.g.
   Autotrader) on a third party's behalf → **neither income nor expense** (one confirmed
   2023 case).
-- **Operex LLC** transfers = **handled separately** (set aside for Lilian's analysis).
+- **Operex LLC** receipts = **car-trade income** (Lilian, 2026-07-30; first set aside for her analysis). Placement on the 2025 return is in the working paper.
 - **CS Float** = the platform's **own report is the complete figure** for the gaming
   business; **only part flows through the two BofA accounts** (the rest through his
   other accounts). Figures live in the working file / platform report, never here.
@@ -319,7 +319,7 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
     apart; 2023 was his **first US return**; **no EIN**; no foreign accounts over the threshold;
     and ⚠️ **he answered that the car was NOT used for business in 2023**, which conflicts with the gas
     and parking claimed. **2025 miles have been asked for.**
-  - **The spouse's employment ran March–August 2025** (payroll deposits). Her W-2 came by WhatsApp and
+  - **The spouse's employment ran February–August 2025** (first paycheck 2025-02-23, then direct deposits). Her W-2 came by WhatsApp and
     is with Lilian, not in Double.
   - **Bounced payments are frequent:** **47** payments in 2025 bounced and were returned by the bank
     (auto loan, other cards, rent, auto insurance, electricity). The July summaries counted the
@@ -361,7 +361,7 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
     July workbook. Lilian's yellow cells were the sticky rules. The July first-pass files in Drive
     (`Transaction reports- ORIGINAL - from Claude`) are what she started from, **before** her review.
   - **New documents in Drive (2026-10-08):** the spouse's **2025 W-2** (Markstar — she worked there
-    March–August 2025; Lilian also pasted it in the chat), the **younger son's SSN card**, and the
+    February–August 2025; Lilian also pasted it in the chat), the **younger son's SSN card**, and the
     **1095-A for 2023 and 2024** (see §5 — the 2025 one is still missing). **No card for the older son.**
   - **The 2025 address:** the spouse's W-2 shows **Plantation, FL**; the 2024 1095-A shows Dania Beach.
     To confirm with the client.
