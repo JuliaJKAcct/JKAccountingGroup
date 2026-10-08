@@ -207,6 +207,14 @@ puts them on the defensive; the second recruits them.
 
 _(Lilian's own phrasing model, 2026-08-11, ending "porque aquí hay algo raro.")_
 
+⛔ **Not every mismatch is a disagreement.** When the client's **form answer** says a thing does not
+apply and the firm **holds the document** that shows it does — an organizer "N/A" for Marketplace
+coverage beside the 1095-A in the client's own files — **the document governs and nothing is asked.**
+The client misread the question or had already sent the document another way; either way the
+document is the fact. _(Lilian, 2026-10-08: "continuamos con el camino del documento porque lo
+tenemos y existe porque está.")_ This rule is for records a client has to **explain**; a held
+document explains itself. ⚠️ **One way only:** a "yes" with no document behind it is still an ask.
+
 ## 9 · When the pieces move together, question the frame — not just the pieces
 
 Several small anomalies that each look minor may be one large change nobody named. Before

@@ -176,6 +176,19 @@ this permission exists to produce.
 from the prior return and a Double note. Auditing an organizer against itself finds
 nothing.
 
+🔑 **AND A DOCUMENT WE HOLD BEATS AN ORGANIZER "N/A" — it is NOT a question for the client.**
+🗣️ *Lilian, 2026-10-08: "Si ves que hay cosas que en la declaración marca que no aplican y luego ves
+el documento, pues olvida su respuesta… cuando dijo que el seguro de Marketplace no aplicaba, pero
+después ves el 1095-A. Eso no sería una pregunta. Obviamente, tiene un 1095-A porque estás viendo el
+documento… Cualquiera de los dos casos, continuamos con el camino del documento porque lo tenemos y
+existe porque está."* **The client either misread the question, or had already sent the document
+another way (WhatsApp, email) and did not send it twice.** Either way: ✅ **work from the document,
+write in the review that the organizer said otherwise and was set aside, and put nothing about it in
+Block E.** ⛔ **It is not a "two records disagree" case** *(Block E)* — that shape is for records a
+client has to *explain*; a held document explains itself. ⚠️ **It runs one way only:** an organizer
+*"yes"* with no document behind it is still a document to ask for, and an organizer answer that
+**adds** a fact no document shows is still read.
+
 ⚠️ **AND ON AN ENTITY RETURN THERE IS NO ORGANIZER AT ALL.** A 1120-S, an 1120 or a 1065 has
 none, and **bookkeeping and Schedule-C clients are not owed one either**
 _(see [`tax-season-readiness`](../tax-season-readiness/))_. **That is not a blocked review** —
@@ -662,6 +675,11 @@ Rules that come from the firm's client-message convention:
 - **Say why** when the reason changes their answer — *"so we know whether another state
   return is needed"*.
 - **Never ask for anything in Block D.**
+- **Never ask about an organizer "N/A" that a held document contradicts** — the document governs
+  and the question is not put *(§1, "a document we hold beats an organizer N/A")*.
+- **Never ask whether an extension was filed** on an individual return — it is not a gate and
+  not a question *(Lilian, 2026-10-08; [`tax-return-sop`](../tax-return-sop/) §4A phase 0 item 2)*.
+  What may be confirmed is a **payment** made with it, alongside the estimated payments.
 - **The internal checklist is not the client message.** Categories, code sections and edge
   cases are how *we* classify an answer; the client gets a plain question and room to
   explain. Listing the possibilities at them — especially the grave ones — reads as cold,
@@ -721,7 +739,9 @@ property, and this year it isn't there")*. The first puts them on the defensive;
 second recruits them.
 
 **Use this shape wherever two records genuinely disagree** — a disappearance, a
-contradiction, anything a client has to *explain* rather than simply send. **A
+contradiction, anything a client has to *explain* rather than simply send. ⛔ **Not where the
+"disagreement" is an organizer *N/A* against a document the firm holds** — there the document
+governs and nothing is asked *(§1)*. **A
 straightforward missing document is just an ask**, not a four-move message: *(invented illustration: "please send
 your Form 1098-E")* needs no preamble. Applying the full shape to every marker in Block B
 rebuilds exactly the padded list the five-to-eight limit exists to prevent.
