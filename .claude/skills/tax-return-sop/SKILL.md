@@ -865,7 +865,10 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
 - **A prior-year carryover is unknown** — NOL, basis, suspended losses, which states — **because the
   prior year was prepared elsewhere.** 🔑 **This is the one that hides**, because nothing in the
   current year points at it.
-- **The organizer's answers contradict the documents**, or contradict last year's return.
+- **The organizer's answers contradict the documents**, or contradict last year's return. ⛔ **Except an organizer
+  "N/A" that a document the firm HOLDS contradicts** — there the document governs, nothing is asked and nothing blocks
+  (§1B.1; [`organizer-review`](../organizer-review/) §1). ⚠️ The other direction still blocks: an organizer *"yes"*
+  with no document behind it is the second bullet above.
 - **Something is in the prior year that has silently vanished from this one** — a K-1, a rental, a
   state. ⚠️ **A disappearance is a question, never a conclusion.**
 
