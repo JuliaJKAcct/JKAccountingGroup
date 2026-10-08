@@ -1,6 +1,6 @@
 # Oleg Zakala & Milana Podrugina
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-06
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-07
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -243,6 +243,55 @@ approves, and she uploads both — then one final worksheet per return, never on
 ⚠️ **One word in her message did not parse and was NOT interpreted** — she dictates, and the firm's standing
 rule makes an unparseable word a question to put rather than a guess to write down. **The meaning of the
 sentence was not in doubt; the stray word is simply flagged.**
+
+### 2026-10-07 · 📄 The 2025 Form 1040 is FILED, and the permanent worksheet is built
+
+**Julia signed and e-filed the 2025 Form 1040 on 7 October 2026.** **The whole return was read end to end and
+the firm's permanent record was built from it** *(working paper §3K)*. **It itemizes, as decided — the itemized
+total is well above the standard deduction, and the mortgage interest alone clears it before any state and
+local tax.**
+
+🔴 **THE BIGGEST THING IN THE FILED RETURN WAS NOT PREDICTED BY ANY MODEL THE FIRM HAD BUILT: the officer
+compensation from his S corporation arrived here as SCHEDULE C income under his own employer identification
+number, with self-employment tax paid on it — not as W-2 wages.** **He has no Form W-2 at all; the only wage
+figure on the return is his wife's.** **Read as a package it is coherent and deliberate: the company deducted
+the amount as compensation of officers and reported it as section 199A W-2 wages, its own taxes-and-licences
+line is blank because NO PAYROLL WAS EVER RUN, and the self-employment tax on this return collects
+substantially the same payroll tax through him instead — without filing payroll returns that were never
+filed.** ⚖️ **Recorded as JULIA'S decision, which is how Lilian asked that changes be recorded.** ⛔ **It is
+not the statutory form of it — officer compensation from an S corporation is wages — and the alternative, late
+payroll for 2025 with its penalties, is named beside it in the worksheet.**
+✅ **It also explains the nil qualified-business-income deduction, which would otherwise read as an omission:
+wages are excluded from qualified business income by statute, so excluding a figure that IS compensation is the
+consistent choice, and the conservative one.**
+
+**Three more things the filed return settles:**
+
+- ✅ **THE HOME OFFICE IS NOT CLAIMED, and the long-open question of whether the mortgage interest would be
+  double-counted or dropped is answered: DROPPED.** The home-office form is attached with its area and
+  percentage worked out and claims nothing; the whole mortgage interest and property tax went to the itemized
+  schedule. **That is the conservative side, and it avoids claiming a third of a home against an activity that
+  is in substance payment for his labour.**
+- ✅ **THE NET INVESTMENT INCOME TAX THRESHOLD on the filed form is the married-filing-jointly figure**, which
+  confirms a correction the firm made days earlier — the file had been carrying the single-filer figure on five
+  surfaces. **No tax is due; their income is below it.**
+- ✅ **Only ONE of the three business activities from the prior year is filed**, and it is the one carrying the
+  officer compensation rather than trading receipts.
+
+**What is owed was paid for by an instalment agreement covering BOTH open years in one request, by direct debit,
+at a monthly amount far above the minimum — so it clears in well under two years.** Nothing had been withheld
+on either wage figure and no estimated payments were made, so the whole liability fell due with the return,
+along with an estimated-tax penalty.
+
+🔴 **ONE ITEM NEEDS JULIA AND IS NOT A MATTER OF PRESENTATION.** **His company passed him the gain on two
+fully-expensed trucks it disposed of in 2025. Its own return reported that to him correctly. His return
+carries it NOWHERE — neither as income on his Form 4797 nor as the basis increase it also produces on his
+Form 7203.** **The two omissions cancel on the total and differ on the character: reported, part of what is now
+all long-term capital gain would instead be ordinary recapture, so correcting it RAISES the tax.** **Both IRS
+sources were read the same day and both say the shareholder reports it.** ⚖️ **The return is submitted, so the
+route is an amended return and the decision is hers. Nothing was re-keyed.**
+
+⏳ **The final worksheet is handed over and must be SAVED IN DOUBLE on this client.**
 
 ## 7. Links
 

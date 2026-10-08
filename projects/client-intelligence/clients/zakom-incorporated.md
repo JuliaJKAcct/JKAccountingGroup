@@ -1,6 +1,6 @@
 # Zakom Incorporated
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-06
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-07
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1848,6 +1848,42 @@ approves, and she uploads both — then one final worksheet per return** *(gover
 [`tax-return-sop`](../../../.claude/skills/tax-return-sop/) skill's final-worksheet section: English, no
 version history, saved in Double, and enough to replicate the return from nothing else)*. **Only the notes
 still applicable after both returns are read go into it.**
+
+### 2026-10-07 · 📄 The 2025 Form 1120-S is FILED, and the permanent worksheet is built
+
+**Julia signed and e-filed the 2025 Form 1120-S on 7 October 2026 and Lilian sent both filed returns in.** **The
+whole return was read end to end and the firm's permanent record — the final worksheet that has to let somebody
+rebuild the return from nothing else — was built from it.** *(Working paper §3CL and §3CM.)*
+
+**The two questions that had been open on the company's side are both answered, and neither needed a client:**
+
+- ✅ **OFFICER COMPENSATION: Julia kept the figure that was in the draft.** Form 1125-E supports it, naming the
+  owner at 100% of time and 100% of the stock, and the company reported the same amount as its section 199A
+  W-2 wages. ⚠️ **It bears directly on the engagement proposal logged earlier today**, whose note flagged
+  reasonable compensation as an open issue on the 2025 return: **it is no longer open on the figure, though the
+  ROUTE it travelled is the thing to know about** — see the owner's file, because no payroll was ever run and
+  the payroll tax was collected on his personal return instead.
+- ✅ **THE MEMA COLORS RECEIVABLE is unchanged on the filed return, in both columns.** Lilian's email to Julia
+  had reported a reduced year-end balance; **that was a draft state and it never reached the return.** Nothing
+  to raise.
+
+**What Julia changed from the September draft** *(each recorded as her decision, not reviewed — Lilian asked
+expressly that the submitted returns not be audited)*: **the other-deductions total rose, which turned the
+year's ordinary income into a LOSS**; the distribution figure came down slightly; and the equity presentation
+moved, continuing the prior year's route of charging distributions against paid-in capital with retained
+earnings left blank. **The balance sheet balances exactly.**
+
+🔴 **ONE THING IS SAID OUT LOUD, AND IT IS THE OWNER'S RETURN RATHER THAN THIS ONE.** **This company disposed
+of two fully-expensed trucks in 2025. Because a section 179 deduction had been passed through on both, the
+gain is NOT the company's to report — it goes to the shareholder on his K-1, and this return did that
+correctly.** ⛔ **His filed personal return does not carry it: the gain is on neither his Form 4797 nor his
+Form 7203.** **The two omissions cancel on the TOTAL and differ on the CHARACTER, so no total looks wrong -
+which is exactly why it is easy to miss.** ⚖️ **Both returns are submitted, so it is Julia's call and the only
+route is an amended personal return. Nothing on this company's return changes.** *(§3CM has the IRS authority,
+read off irs.gov the same day.)*
+
+⏳ **The final worksheet is handed over and must be SAVED IN DOUBLE on this client** — it is never committed and
+never published, so Double is its only durable home.
 
 ## 7. Links
 
