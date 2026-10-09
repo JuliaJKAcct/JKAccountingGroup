@@ -2028,7 +2028,40 @@ income (loss)`.** ⛔ **A correct IRS address is not an address in the software.
 
 ⚠️ **TWO LINES ON THE WORKSHEET THAT LOOK LIKE ANSWERS AND ARE NOT:**
 - **Line 1** (`NOL deduction from Form 1040 or 1040NR (enter as a positive number)`) **showed the same figure as 8a** *(equal values observed; the direction of the link was not tested)*. ⛔ **Do not type the deduction there as the way of changing it** *(a green arrow icon sits beside it; its behaviour was not tested)*.
-- **Line 9, `NOL carryover to 2026`, is line 1 − line 8, floored at zero.** 🔑 **By its own formula that is the part of THIS YEAR'S DEDUCTION that exceeds modified taxable income — it reads 0 whenever the deduction is within the cap — so it cannot be the remaining balance of the carryforward going into next year; confirm on `NOL Summary`.** ⛔ **Never copy it into the next year's opening NOL.** *(Where ATX shows the remaining carryforward is **not established**: the same bottom strip has a `NOL Summary` tab that was **not opened** — open it and write what it says here.)*
+- **Line 9, `NOL carryover to 2026`, is line 1 − line 8, floored at zero.** 🔑 **By its own formula that is the part of THIS YEAR'S DEDUCTION that exceeds modified taxable income — it reads 0 whenever the deduction is within the cap — so it cannot be the remaining balance of the carryforward going into next year; confirm on `NOL Summary`.** ⛔ **Never copy it into the next year's opening NOL.** *(`NOL Summary` was opened 2026-10-08 — below — but whether its used/carryover columns follow this year's 8a is **not
+established**. Until a read-back is recorded, **compute next year's opening by hand** — each year's available amount less
+the deduction, oldest year first — write it in the working paper, and treat the grid as a cross-check.)*
+
+✅ **`NOL Summary` — SEEN on a screenshot from Lilian, 2026-10-08 (ATX 2025, a 2025 Form 1040).** `NOL Wkst, 172` → bottom
+tab **`NOL Summary`**, titled *"Summary (NOL Worksheet, 172)"*. **One row per year the loss arose**: `20th Preceding Period`
+… `2nd Preceding Period`, `1st Preceding Period`, `Current Period` — on that return `1st Preceding Period` carried
+`1/1/2024`–`12/31/2024` and `Current Period` `1/1/2025`–`12/31/2025`, **so on a 2025 return the 2nd preceding row is 2023**.
+Columns: `Beginning Loss Period` · `Ending Loss Period` · `Amount of Net Operating Loss` · `Amount Used in Prior Years /
+Carrybacks` · `Adjustments` · `Amount Available This Year` · `Amount Used This Year` · `Expiring Losses` · `Net Operating
+Loss Available for Carryover` · `Cumulative Unused Net Operating Loss`, with *Modified Taxable Income* and *Total Net
+Operating Loss Used This Year* at the foot. On the screen the 2024 row held that year's loss in *Amount of NOL* and repeated it
+as available and for carryover, with 0 used; both foot figures read 0. *(No client figure here — they are in that return's
+working paper.)*
+- 🔑 **Enter each loss on the row of the year it AROSE — never one total on the latest row.** The Instructions for Form 172
+  (Rev. Dec 2024) apply the carryover *"separately to each NOL amount, starting with the amount from the earliest year"*,
+  and Form 172 line 24 is that year's loss only (line 23 adds the other-year NOL back). A total on the 2024 row would
+  contradict the prior return's line 24 and relabel an older loss as 2024's.
+- ⛔ **`Amount Used in Prior Years` is what a later year USED, not what its Schedule 1 LISTED.** 🔑 **For an NOL that arose
+  after 2017 and is carried to a year after 2020 — every live carryforward today — the amount a year used is the deduction
+  that year was ALLOWED:** the lesser of the NOL available and **80% of the excess (if any) of taxable income computed without
+  the NOL, §199A and §250 deductions** (Instructions for Form 172, Rev. Dec 2024, *How to Carry an NOL Back or Forward*: *"If
+  you do not use it up, carry the unused part to the next year"*). **So a year with no positive taxable income before NOLs
+  used nothing, and a year where the cap bound used the CAPPED amount — never its full taxable income.** What a Schedule 1
+  line 8a LISTED in a loss year (the M7 convention) is never the amount used.
+  ⓘ The **modified taxable income** measure — the capital-loss excess, the §1202 exclusion and the QBI deduction added back
+  (Form 172 Part II lines 2–8), floored at zero — is the absorption measure only where the 80% limit does **not** apply:
+  **pre-2018 NOLs and carryback years.** *(By the column headings, a figure typed in `Amount Used in Prior Years` reduces
+  `Amount Available This Year` — not tested.)*
+- ⓘ **NOT established:** who filled the 2024 row (a rollover or the preparer); whether *Amount Used This Year* follows 8a;
+  whether the grid feeds 8a, the cap or `NOL - Stmnt`. **Until it is seen, the deduction is still typed at 8a and capped by
+  hand (above)** — read the grid back after typing and write here what it did.
+- ⓘ **`AMT NOL Summary`** (further along the same strip) was not opened. Where AMT income is far below the exemption, leave it
+  blank and record that as a decision.
 
 🔴 **THE ATTACHED STATEMENT IS A SEPARATE THING AND DOES NOT FOLLOW 8a — IT IS TYPED BY HAND, AND ✅ HERE IS WHERE.** *(Established: a screenshot from Lilian, 2026-10-02 — the taskbar icon reads `ATX 25`.)*
 
