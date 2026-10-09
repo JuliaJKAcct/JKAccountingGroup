@@ -2074,7 +2074,7 @@ working paper.)*
 
 ✅ **So when 8a changes: open `NOL - Stmnt` and retype the figures — never assume the statement followed.** ⚠️ **Leave `Print this statement` ticked, as found** *(what unticking does was not tested)*. 🛑 **Then confirm on the PRINTED return** that the statement page shows the new text *(on the live return the PDF printed BEFORE the retype carried the old figures; the print after the retype had not been re-read when this was written)*.
 
-🛑 **The checks that belong with it:** the printed return's **page-1 `Schedule 1` 8a**, **Form 172 line 23** *(the instructions ask for the deduction claimed there; ATX may print the whole carryforward — confirm and note it)* and **the attached statement** must all state the **same** deduction.
+🛑 **The checks that belong with it:** the printed return's **page-1 `Schedule 1` 8a**, **Form 172 line 23** *(the instructions ask for the deduction claimed there; ATX may print the whole carryforward — ✅ **override it to the 8a figure**, as a live 2025 return did with Julia's approval on 2026-10-06; ATX support: *"You can override line 23 to display the NOL used for the current year"*)* and **the attached statement** must all state the **same** deduction.
 
 **8c-bis · 🔴 AN ENTITY-LEVEL ADJUSTMENT IS SUBTRACTED BEFORE THE OWNERSHIP SPLIT, NEVER AFTER — and the tell is a figure that comes out as an exact fraction of it.**
 
