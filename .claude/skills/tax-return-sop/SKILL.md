@@ -2046,13 +2046,17 @@ working paper.)*
   (Rev. Dec 2024) apply the carryover *"separately to each NOL amount, starting with the amount from the earliest year"*,
   and Form 172 line 24 is that year's loss only (line 23 adds the other-year NOL back). A total on the 2024 row would
   contradict the prior return's line 24 and relabel an older loss as 2024's.
-- ⛔ **`Amount Used in Prior Years` is what a later year ABSORBED, not what its Schedule 1 LISTED.** A year absorbs its
-  **MODIFIED** taxable income — taxable income figured without this NOL or any later one, **with any capital-loss deduction
-  above capital gains and any §1202 exclusion added back**, and AGI-dependent items refigured (Instructions for Form 172,
-  *Modified taxable income*; Form 172 Part II lines 2–8), **floored at zero**. ⚠️ **A negative taxable income usually means
-  zero — but add those items back before concluding it**: −1,000 that contains a 3,000 capital-loss deduction absorbs 2,000.
-  What a Schedule 1 line 8a LISTED in a loss year (the M7 convention) is never the amount used. *(By the column headings, a
-  figure typed in `Amount Used in Prior Years` reduces `Amount Available This Year` — not tested.)*
+- ⛔ **`Amount Used in Prior Years` is what a later year USED, not what its Schedule 1 LISTED.** 🔑 **For an NOL that arose
+  after 2017 and is carried to a year after 2020 — every live carryforward today — the amount a year used is the deduction
+  that year was ALLOWED:** the lesser of the NOL available and **80% of the excess (if any) of taxable income computed without
+  the NOL, §199A and §250 deductions** (Instructions for Form 172, Rev. Dec 2024, *How to Carry an NOL Back or Forward*: *"If
+  you do not use it up, carry the unused part to the next year"*). **So a year with no positive taxable income before NOLs
+  used nothing, and a year where the cap bound used the CAPPED amount — never its full taxable income.** What a Schedule 1
+  line 8a LISTED in a loss year (the M7 convention) is never the amount used.
+  ⓘ The **modified taxable income** measure — the capital-loss excess, the §1202 exclusion and the QBI deduction added back
+  (Form 172 Part II lines 2–8), floored at zero — is the absorption measure only where the 80% limit does **not** apply:
+  **pre-2018 NOLs and carryback years.** *(By the column headings, a figure typed in `Amount Used in Prior Years` reduces
+  `Amount Available This Year` — not tested.)*
 - ⓘ **NOT established:** who filled the 2024 row (a rollover or the preparer); whether *Amount Used This Year* follows 8a;
   whether the grid feeds 8a, the cap or `NOL - Stmnt`. **Until it is seen, the deduction is still typed at 8a and capped by
   hand (above)** — read the grid back after typing and write here what it did.
