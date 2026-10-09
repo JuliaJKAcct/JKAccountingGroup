@@ -399,6 +399,14 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
     sends things by WhatsApp, which the session cannot reach.
   - **Draft 3 of the workbook** has a *Client answers* sheet: Lilian types his answers there, and line 9, Part IV and
     both home-office methods fill in by themselves. The figures are in the working paper, never here.
+  - ⚠️ **The draft 3 review found that leaving the older son off the return (Lilian's decision of 2026-10-08) also
+    changes Form 8962, not only the child tax credit.** He is on the Marketplace policy. With him off the return the
+    tax family is three, and the advance credit paid for him still has to be reported. The working paper (§4 L1) says
+    to compute it both ways before the decision is final.
+  - **Also still to ask:**
+    - whether the office is used only and regularly for the business;
+    - whether his wife had a car of her own;
+    - whether her employer (Markstar) offered her health insurance.
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
