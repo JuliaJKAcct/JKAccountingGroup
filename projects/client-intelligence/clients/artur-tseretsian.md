@@ -108,6 +108,10 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
 - **Home office** = client gave a **2023 rent estimate** for a home office (figure kept in
   the working file / organizer, not here); 2024/2025 TBD. Julia to set the method
   (Form 8829 %); not 100% business.
+  🆕 **2026-10-09: the firm holds NO square footage, for the home or the office.** That is the result of
+  searching all three Double organizers (the 2023 one's home-office slide and template upload are
+  unanswered; 2024 and 2025 are at 0%), the July working-copy organizers in Drive, Double note 479443,
+  Gmail and Drive. The question goes to the client as Q6 in the 2025 working paper.
 - **Vehicle** = the client **bought and later sold a car** during the period. 🔒 **Lilian, 2026-10-08:
   the purchase and the sale are omitted from the return completely** — no documents are being chased
   for them. She asks the client instead whether he wants to include **a car he had in 2025** as a
