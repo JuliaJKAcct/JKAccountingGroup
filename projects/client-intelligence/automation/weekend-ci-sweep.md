@@ -286,6 +286,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | Zakom Incorporated | 710612 |
 | Oleg Zakala & Milana Podrugina | 710652 |
 | Evgenii Kliauzov & Valeriia Strazhets | 825437 |
+| Vitalii Piliushin (owner of Atman Parts) | 710667 |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._

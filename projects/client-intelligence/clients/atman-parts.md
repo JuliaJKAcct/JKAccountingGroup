@@ -1,6 +1,6 @@
 # Atman Parts
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-09
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -33,8 +33,10 @@
 
   ⚠️ **So this is NOT "two sources disagree" — it is one maintained field and one recollection that moved.** Lilian's settled reading now **agrees with Double**, which is worth stating plainly: the weight of what we have points at **Schedule C**. But she is explicit that she is not certain, so it stays open. Treat the `1120-S` mention as a **prompt to verify**, not as evidence against the property. **Julia is the one who knows.** On [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 41 until she answers; **rewrite this block from her answer, and record the 1120-S episode as closed rather than deleting it** — if it ever turns out to be right, that it was raised matters.
   **Why it is worth chasing rather than assuming:** an S-corp election changes the return, opens the payroll question, and brings reasonable compensation with it — none of which apply to a Schedule C.
+  🆕 **2026-10-09 — Lilian, directing the 2025 return, said it without the earlier hedge: *"Esto es un Schedule C."*** The 2025 Schedule C is being prepared on that basis, on the owner's 1040 ([`vitalii-piliushin.md`](./vitalii-piliushin.md)). ⚠️ **And a NEW reason the entity question is not fully closed, which points the other way from 1120-S:** the client's own Zelle label for a payee is **"Anton Partner"**. If Anton is a co-owner, a multi-member LLC files **Form 1065**, not Schedule C. **Asked of the client** — [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) O1.
 - **Home state:** **TEXAS — settled by Lilian, 2026-08-11.** Confirmed by the filed Texas Sales and Use Tax returns _(Google Drive, filings dated 2026-07-16)_. ⚠️ A later sweep read **New Hampshire** off the mailing address on a 2026-01-30 W-9 that predates the engagement — **that is wrong**; do not reopen it.
 - **Industry / what they do:** Confirmed **eBay marketplace auto-parts seller** (seller handle "atman.autoparts"; firm added to the seller's eBay team 2026-03-24) _(Gmail, 2026-03-24 — upgrades prior low-confidence note)_
+  🆕 **And — by volume, the main business in 2025 — buying VEHICLES TO ORDER** _(the 2025 bank statements, read in full 2026-10-09)_: a customer (US companies; buyers abroad) wires the money, and within days the business wires a **vehicle or powersports dealer or an auction**, pays **export logistics** and buys **parts** (Noma Auto Parts). **From November 2025 it also rents a shop in Kaufman County** (rent, gates, City of Terrell, Kaufman County fire, TCEQ, fire-protection service). The Texas registration (submitted 2025-10-23) gives the place of business as **Terrell, Kaufman County — not the owner's home**, and NAICS **811111 General Automotive Repair**. ⓘ The website (atman.parts) could not be reached from a session; this is read from the bank.
 - **Primary language:** **Bilingual EN/RU — confirmed.** Double's `Preferred language` property reads `Bilingual (EN/RU)` _(read 2026-08-17; upgrades the earlier medium-confidence "likely Russian" inferred from the bilingual proposal and the onboarding-call transcripts)_
 - **Our engagement (services we provide):** Bookkeeping (Monthly, per Double), sales tax (TX, confirmed active) _(Double client properties, 2026-07-25)_
 - **Fiscal year-end:** _(pending)_
@@ -72,6 +74,8 @@ link). Never write the credential itself here.
 | QuickBooks Online (via Double) | Bookkeeping ledger, Simple Start plan | _(pending — Drive link)_ | Managed through Double. Intuit's own emails show the company under **two names** — "Atman Parts" and "Project ATMAN LLC" — on the same payment method; likely legal name vs. DBA, **unconfirmed** _(Gmail, 2026-08-01 sweep)_ |
 | Business PayPal | Payments | _(pending — Drive link)_ | _(mentioned in the 2026-07-20 call — still unconfirmed by other sources, low confidence)_ |
 | eBay (marketplace) | Confirmed sales channel — seller "atman.autoparts" | _(pending)_ | _(Gmail, 2026-03-24 — confirmed)_ |
+| **Wells Fargo** — Initiate Business Checking, held as **PROJECT ATMAN LLC** | The main business account — opened **2025-04-24** | — | Statements Apr 2025 → Jan 2026 in Double under the **owner's individual client**: `JK Accounting Group › Others › 2025 › Docs for tax prep › Wells Fargo` _(uploaded by Lilian 2026-10-09)_. ⚠️ **Commingled** — the owner's personal spending runs through it |
+| **American National Bank of Texas** — Basic Business Checking, account ending 1152 | Second business account — opened **2025-12-04**; eBay payouts land here from January 2026 | — | Statements Dec 2025 and Jan 2026, same Double folder (`… › American National Bank of Texas`) |
 | Texas Comptroller **eSystems / WebFile** | Filing sales tax **and** franchise tax | [`Atman Products > Sales tax > "Sales tax"`](https://docs.google.com/document/d/1vVZxsEdYCqnhyxCrpQbk-Fo0nB0JgBA3EcwZ7UBWfjw/edit) — **one Doc holds everything**: portal address, user, password, three security answers, taxpayer number, and **two separate WebFile numbers** (sales tax · franchise tax) | **The eSystems profile is the CLIENT's own taxpayer account**, not a firm account — the name shown top-right in the portal is the client's, which is expected and not a wrong login. **The business appears TWICE on the dashboard**, one row per tax (Franchise Tax · Sales and Use Tax); they are distinguished only by the `Assigned Tax/Fee` column. Procedure: [`atman-parts-tx-sales-tax.md`](../../sops/atman-parts-tx-sales-tax.md) |
 
 ## 4. Obligations & recurring processes
@@ -100,7 +104,8 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
 
 ### Income tax
 - 🔴 **Which return this files is an OPEN question — read §1 before answering it.** The line below is what Double holds, and Lilian's own settled reading agrees with it; but she has asked for **Julia** to confirm, and until then nobody should state it flatly to a client or act on it.
-- **Applies?** **Yes** — Tax Return Type = `Sch C` in Double; on that reading there is no separate company return and income flows to the owner's individual 1040 Schedule C (source: Double `list_client_properties`, re-read 2026-08-17). ⚠️ **If it turns out to be an S-corp (`1120-S`), this bullet is wrong and payroll + reasonable compensation come into scope** — see §1.
+- **Applies?** **Yes** — Tax Return Type = `Sch C` in Double; on that reading there is no separate company return and income flows to the owner's individual 1040 Schedule C (source: Double `list_client_properties`, re-read 2026-08-17).
+- 🆕 **2025 is being prepared as a Schedule C on the owner's 1040** _(Lilian, 2026-10-09)_ — the P&L built from the bank statements, the figures and decisions in the [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md). **The owner has never filed a US return**, so nothing carries in. ⚠️ **If it turns out to be an S-corp (`1120-S`), this bullet is wrong and payroll + reasonable compensation come into scope** — see §1.
 
 ### Franchise tax (Texas)
 - **The account EXISTS — confirmed 2026-08-17.** The Comptroller's eSystems dashboard shows a second row for `ATMAN PARTS LLC` with `Assigned Tax/Fee = Franchise Tax`, and the Drive login doc holds a **separate Franchise Tax WebFile number**. This upgrades the previously unconfirmed obligation flagged from the 2026-07-20 call.
@@ -112,6 +117,7 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
 
 ## 5. Key facts & quirks
 
+- 🆕 **The 2025 business account is commingled, and the owner's Zelle LABELS are the evidence.** Groceries, restaurants, family transfers and transfers to himself run through the Wells Fargo business account. His own payee labels ("Zhenya Remont Dallas", "Rent Kaufman", "Gates for Shop", "Anton Partner", and in 2026 "Taras Noma · Packaging", "Silvia Atman") classified most payments without a question; a payee with only a first name is the one that has to be asked. _(2026-10-09, the 2025 P&L.)_
 - **A portal contact here is not an owner.** One of the two portal contacts on this
   client is the owner's **employee**, given access purely to receive documents and use
   the portal. Don't read "contact on the company" as "owner," and don't expect an
@@ -198,8 +204,11 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
   - **Texas franchise-report filing status — still unconfirmed, 47 days pending since raised (2026-08-17).** Next live deadline 2027-05-15.
   - Sunbiz name check and the Ping coverage gap for the bookkeeping contact — **pending since unknown — no start date in the file**; not chased this run (budget; same as the last five runs).
 
+- 2026-10-09 — 🆕 **The 2025 Schedule C P&L was built from the bank statements, with Lilian** — every line of the Wells Fargo (Apr 2025 → Jan 2026) and American National Bank of Texas (Dec 2025 → Jan 2026) statements, read through the redactor and tied to the printed totals. What it established about the business is written into §1, §3 and §5 above; the figures are in the [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md), never here. Lilian, the same day: *"Esto es un Schedule C"* (§1). The owner's individual client had **no Client Intelligence file** — created ([`vitalii-piliushin.md`](./vitalii-piliushin.md)).
+
 ### Outstanding items (CI-only — never in the SOP)
-- 🔴 **`Sch C` or `1120-S`? → ASK JULIA.** Double's property says Schedule C; Lilian raised 1120-S on 2026-08-17 and then said she is **not sure and must confirm with Julia** (§1). It decides the return, and if it is an S-corp it drags payroll and reasonable compensation in behind it. **Nobody should act on either reading until Julia answers.**
+- 🆕 🔴 **"Anton Partner" — co-owner or contractor?** (2026-10-09) The client labels a regular payee "Partner". A co-owner would make Atman Parts a partnership (Form 1065), not a Schedule C. Asked of the client through Lilian — [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) O1.
+- 🔴 **`Sch C` or `1120-S`? → ASK JULIA.** Double's property says Schedule C; Lilian raised 1120-S on 2026-08-17 and then said she is **not sure and must confirm with Julia** (§1). It decides the return, and if it is an S-corp it drags payroll and reasonable compensation in behind it. **Nobody should act on either reading until Julia answers.** 🆕 **2026-10-09: Lilian is preparing 2025 as a Schedule C** (*"Esto es un Schedule C"*, §1) — so the firm is now acting on that reading; Julia's confirmation is still the formal close, and the "Anton Partner" question bears on it too (a co-owner would mean Form 1065).
 - 🔴 **Who actually files the sales tax — us or the client?** (§4) July 2026 was filed by somebody outside the firm. **Nobody has asked him.** Until it is settled the firm cannot know a month is covered, and both duplicates and gaps are possible.
 - ⏳ **How the monthly sales-tax figures are derived** (§4) — **waiting on the eBay↔QuickBooks connection**, not on research. Lilian delivers it after; no action until then.
 - 🔴 **Does the firm file the Texas franchise report, and is it current?** (§4) — the account exists; the filing position does not.
@@ -220,6 +229,8 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=763909](https://app.doublehq.com/close?cid=763909)
+- **Related clients:** [`vitalii-piliushin.md`](./vitalii-piliushin.md) — the owner's individual file (Double `710667`); **the 2025 bank statements are filed on HIS Double client, not this one**
+- **2025 Schedule C working paper:** [`tax-returns/vitalii-piliushin/2025-form-1040.md`](../../tax-returns/vitalii-piliushin/2025-form-1040.md)
 - **Google Drive folder (sensitive vault):** [Atman Products folder](https://drive.google.com/drive/folders/1j28nmUpb7u18MLzVO8punGFAbXBXcxJs) _(filed under "Atman Products" — a name variant of "Atman Parts", same client)_
 - **Sales-tax login (Drive):** [`Atman Products > Sales tax > "Sales tax"`](https://docs.google.com/document/d/1vVZxsEdYCqnhyxCrpQbk-Fo0nB0JgBA3EcwZ7UBWfjw/edit) — portal, user, password, security answers, taxpayer + WebFile numbers
 - **Filed sales-tax returns, by year (Drive):** [Atman Products → Sales tax](https://drive.google.com/drive/folders/1QyyT14O-gNpn8Sn0_OuQ-LtGeL764xtG)
