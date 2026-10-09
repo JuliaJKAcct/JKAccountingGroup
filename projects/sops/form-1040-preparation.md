@@ -1726,6 +1726,21 @@ a carryforward "burns a deduction that is not allowed and understates next year'
 §172(a) half of that was right and still is; the "burns it" half was wrong**, and line 23 plus the
 modified-taxable-income floor are what refute it. Corrected 2026-08-19 after a live return.)_
 
+🟠 **OPEN QUESTION FOR LILIAN (raised 2026-10-09) — the tie-break above may be backwards for a POST-2017 NOL.**
+A research pass on irs.gov (two researchers and an adversarial judge) found that the listing instruction is limited by the
+same instructions' **"cannot exceed"** rule — *"your NOL deduction for tax years beginning after December 31, 2020, cannot
+exceed the sum of: …"* (Instructions for Form 172, Rev. Dec 2024, *Reminders*). It also found that **Pub 536 rewrote the very
+sentence the full-listing convention rests on**:
+- **Pub 536 (2017):** *"your NOL deduction is the total NOL."*
+- **Pub 536 (2022):** *"…cannot exceed the sum of: …"*
+- **Pub 536 (2022)'s only worksheet for an NOL deduction that took taxable income to zero** is limited to **pre-2018** losses:
+  *"Don't use this worksheet for NOL carryforwards from 2018, 2019, or 2020."*
+
+**On that reading, a loss year's allowable post-2017 deduction is 0, and both 8a and Form 172 line 23 should be 0.** ✅ **What
+does NOT change: line 24 and the carryover come out the same either way** — which is why this was found harmless on a live
+2024 return. **Until Lilian decides, follow the text above, and record in the working paper which entry the return carries.**
+⛔ *Not resolved by a session: it reverses written firm guidance.* → [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) row 204.
+
 🔴 **The failure mode to fear is the opposite one: carrying this loss-year convergence into a year
 with income.** It does not hold there. **The 80% cap is the rule; the convergence is a special case
 of it.**
@@ -1740,7 +1755,7 @@ of it.**
 |---|---|---|
 | **1** | *"subtract your standard deduction or itemized deductions from your **adjusted gross income (AGI)**"* — a **negative** number in a loss year | 🔴 **Reading it as Form 1040 line 15**, which is **floored at zero**. That collapses the whole computation and line 24 comes out as *"you don't have an NOL"* |
 | **6** | Nonbusiness deductions — 🔑 **the standard deduction IS one**, the instructions list it by name | Omitting it **overstates the NOL by the whole standard deduction**, and that overstatement is carried forward against real income |
-| **23** | The other-year NOL deducted on Schedule 1, as a positive number | Blank, when Schedule 1 carries a deduction → the prior NOL is **double-counted** into next year. ⚠️ **Line 23 filled and line 24 blank is NOT a contradiction** — it means the combination came out positive, which is exactly what a mis-read line 1 produces. **Both outputs are internally consistent, which is why the defect is silent** |
+| **23** | The other-year NOL deducted on Schedule 1, as a positive number — 🔑 **it must equal what Schedule 1 line 8a put into AGI** *(derived from the form's arithmetic: line 1 starts from AGI, line 23 takes it back out; no IRS sentence says it)*. ⚠️ **Reading a PRIOR return: line 23 is what that year LISTED, never what it USED** — the amount used is the allowed deduction (0 in a loss year) | Blank, when Schedule 1 carries a deduction → the prior NOL is **double-counted** into next year. ⚠️ **In an income year, software has printed the WHOLE carryforward here while 8a held the capped deduction** — an inconsistency that changes no figure (there is no NOL that year), noted rather than overridden. ⚠️ **Line 23 filled and line 24 blank is NOT a contradiction** — it means the combination came out positive, which is exactly what a mis-read line 1 produces. **Both outputs are internally consistent, which is why the defect is silent** |
 
 🛑 **THE CHECK THAT MATTERS MOST: line 24 should be a negative number when the client has a real,
 ALLOWED business loss.** The line reads *"…If the result is zero or more, you don't have an NOL."*
@@ -1993,7 +2008,7 @@ client's — and it is written from the **carryover reasoning**, which the retur
 - [ ] Form 7203 line 1 = **last year's line 15**.
 - [ ] 🛑 **Every K-1 box that feeds a Form 7203 line is actually IN the K-1 input** — **16C → line 8a**, **16D → line 6**, and the **contributions → line 2**, which is on no K-1 box. ⚠️ **A missing input leaves a blank line and the form still FOOTS** ⚠️ **On a NETTED client, 16D reads zero and line 2 carries the NET** *(§5C-v)*. (M3)
 - [ ] 🛑 **Form 7203 line 15 RECOMPUTED BY HAND on the printed form** — `line 1 + 2 + 4 − 6 − 9 − 14` — **and each input compared digit by digit with the figure that should feed it.** ⚠️ **A mistyped input produces a form that recomputes correctly and flags nothing**, so nothing in the software catches it. **Re-run after every re-key.** 🔑 **It is next year's opening basis, and on a company heading for a final return it opens the liquidation computation** (M3)
-- [ ] The NOL deduction on Schedule 1 line 8a is the **allowable** amount under the §172(a) **80%** cap, and any unused amount is carried forward. ⓘ **In a loss year the cap is nil and the whole carryforward is listed anyway** — Form 172 line 23 adds it back (M7)
+- [ ] The NOL deduction on Schedule 1 line 8a is the **allowable** amount under the §172(a) **80%** cap, and any unused amount is carried forward. ⓘ **In a loss year the cap is nil and the whole carryforward is listed anyway** — Form 172 line 23 adds it back (M7) — 🟠 **under review, M7's open question (FOLLOW-UPS row 204)**
 - [ ] **Form 8867** is complete where EIC, CTC/ACTC, AOTC or HOH is claimed.
 - [ ] The refund account belongs to **this** taxpayer.
 
