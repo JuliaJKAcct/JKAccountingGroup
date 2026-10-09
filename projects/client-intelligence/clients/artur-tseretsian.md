@@ -289,6 +289,11 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
     says the spouse's W-2 and the younger son's Social Security document are *"to be filed in
     Double"*, and that SSNs and both driver's licenses *"live in Double"*. **No document is
     filed there.** The spouse's driver's license is an image in the Drive folder.
+    🆕 **Correction 2026-10-09 — the taxpayer's own driver's license IS in Double**, just not in the File
+    Library: the client uploaded it as an image **inside the 2023 organizer** (`JK 2023 1040 Organizer`,
+    slide *"Taxpayer's driver license"*). Organizer attachments do not show in `list_files`, which is why
+    every file check reads 0. The organizer's *"Spouse's driver's license"* slide is empty; hers is the
+    Drive image. Neither image was opened (identity documents).
   - **Gmail, same check:** a QuickBooks *"Payment received"* notice dated **2026-10-05**
     (invoice 2313, from REWHIP LLC). So after the failed 2026-10-01 run, a payment did arrive
     (amount not retained).
