@@ -1,6 +1,6 @@
 # Artur Tseretsian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-08
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-09
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -73,7 +73,7 @@ link). Never write the credential itself here.
 - **Applies?** Yes.
 - **Return type(s) & deadlines:** Form **1040** (individual, **MFJ** assumed) with **Schedule C** for the business activities; tax years **2023, 2024, 2025**.
 - **Our role:** We prepare the return (clean-up from bank statements).
-- **Organizer status:** Sent (Double). Client completed **~30% of the 2023** organizer (General Info only); 2024/2025 not started. The firm prepared **working-copy organizers for 2023, 2024, 2025** (delivered to the team; sensitive IDs kept in Double).
+- **Organizer status:** Sent (Double). Client completed **~30% of the 2023** organizer (General Info only); 2024/2025 not started (**both still at 0% on 2026-10-09**). The Double tax project **`2025 Taxes` moved to `In Progress` on 2026-10-08** (Lilian, activity log). The firm prepared **working-copy organizers for 2023, 2024, 2025** (delivered to the team; sensitive IDs kept in Double).
 - **Process notes (→ future SOP):** the core of this engagement is the **categorization method** in §5 — separating business from personal on personal bank accounts to build Schedule C.
 
 ### Licenses & other filings
@@ -382,13 +382,39 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
     client** — rent, insurance, utilities, loan and card payments.
   - Lilian will ask the client about a car to include. The question list is the working paper's §6.
 
+- _(2026-10-09 — Lilian asked the client on WhatsApp)_ Lilian sent the client three questions in Russian and
+  pasted the text into the session. **He said he would send the answers.** She asked for:
+  1. the **2025 Form 1095-A** from his insurance agent (he had sent 2023 and 2024 only);
+  2. the **total square feet of the apartment** in 2025 and of the **home office** (approximate), and **the home
+     address**;
+  3. for a car as a business expense: the **odometer at the start and at the end of 2025** (or at the sale, if the
+     car was sold), the **business miles**, the **make and year**, and whether it was **his only car** in 2025.
+  - ⚠️ *"or at the sale, if it was sold"* means the car he names **may be one he sold in 2025**. The sale stays off the
+    return (Lilian, 2026-10-08), and the working paper carries the objection for Julia.
+  - **Not in that message, still to ask** (working paper §6): the 15 deposits; **how the May–September and December
+    rent was paid**; the account ending 4800 and the new American Express card; the shipping payments; the date the
+    car was first used for the business, commuting miles, a record of the trips, and business parking and tolls; and
+    the smaller items.
+  - **Checked the same day, before building draft 3:** nothing new had arrived in Drive, Gmail or Double. The client
+    sends things by WhatsApp, which the session cannot reach.
+  - **Draft 3 of the workbook** has a *Client answers* sheet: Lilian types his answers there, and line 9, Part IV and
+    both home-office methods fill in by themselves. The figures are in the working paper, never here.
+  - ⚠️ **The draft 3 review found that leaving the older son off the return (Lilian's decision of 2026-10-08) also
+    changes Form 8962, not only the child tax credit.** He is on the Marketplace policy. With him off the return the
+    tax family is three, and the advance credit paid for him still has to be reported. The working paper (§4 L1) says
+    to compute it both ways before the decision is final.
+  - **Also still to ask:**
+    - whether the office is used only and regularly for the business;
+    - whether his wife had a car of her own;
+    - whether her employer (Markstar) offered her health insurance.
+
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
 - 🔒 **The older child's SSN — DECIDED FOR 2025 (2026-10-08): he is left off the 2025 return** (Lilian). Still worth getting for a 1040-X and for 2026. SS card was lost. On **2026-07-31** the client went to the SSA office and was told the replacement card would be **mailed by post** (allow ~1 month), so it was expected around **late August 2026**. As of **2026-10-03** we still don't have the number — a Gmail search bounded after 2026/09/26 for the client's name found nothing about it, and Double notes carry no update (**64 days pending since 2026-07-31**; the ~1-month window ended about 2026-08-31). The client sends such items by **WhatsApp** (outside the digital sweep). **Next step:** confirm with the client that the card arrived and get the number — entered into Double, never the repo.
 - **Year-end 2024 & 2025 addresses** — 2025: the spouse's W-2 shows Plantation, FL (to confirm, 2026-10-08); 2024: the 2024 1095-A shows Dania Beach, FL.
 - ✅ **January 2026 statements (both accounts) — RECEIVED (in Drive since 2026-08-06) and PROCESSED 2026-10-08** into the 2025 return build. Double note 479443 still lists them as pending from the client; it was not edited (no instruction to write to Double).
 - CS Float purchases/expense report — not chased this run (budget).
-- **Form 1095-A: 2023 and 2024 RECEIVED 2026-10-08; 2025 MISSING** (the file named 2025 is the 2024 form). Car purchase/sale documents: **no longer needed** (Lilian, 2026-10-08: omitted). Home-office worksheet, Lendbuzz/Westlake amortization schedules, external-card statements (incl. the account ending 4800 and the American Express card new in June 2025), client-review items (deposits/travel/auto-transport Zelles) — not chased this run (budget).
+- **Form 1095-A: 2023 and 2024 RECEIVED 2026-10-08; 2025 MISSING** (the file named 2025 is the 2024 form). **Asked again by Lilian on WhatsApp, 2026-10-09** — he said he would send it. Car purchase/sale documents: **no longer needed** (Lilian, 2026-10-08: omitted). Home-office worksheet, Lendbuzz/Westlake amortization schedules, external-card statements (incl. the account ending 4800 and the American Express card new in June 2025), client-review items (deposits/travel/auto-transport Zelles) — not chased this run (budget).
 - ✅ **Confirmation the client completed the QuickBooks recurring-payment setup — ARRIVED 2026-09-12.** A QuickBooks "you got paid" notice shows a REWHIP LLC recurring payment posted 2026-09-01 (figure not retained). Closed as a setup question; ⚠️ **watch-item, UPDATED 2026-10-03**: the single canceled transfer (invoice 2272, 2026-09-03) was followed by a **failed monthly run on 2026-10-01** (QuickBooks notice, Gmail) — so the 09-01 success has no confirmed successor and the October debit did not go through. **Needs a firm-side follow-up with the client** (not yet recorded as done). 🆕 **2026-10-08:** a QuickBooks *"Payment received"* notice of **2026-10-05** (invoice 2313, REWHIP LLC) shows a payment did arrive after the failure. Whether it was the October fee paid by hand or a repaired recurring setup is not established.
 - **Rewhip LLC — clarify scope** — STILL OPEN, **80 days pending since raised (2026-07-15)** as of 2026-10-03, no deadline _(the earlier "~82 days as of 09-26" did not match this start date; recomputed)_. A targeted search bounded after 2026/09/26 found nothing beyond what's already on file — only the 2026-10-02 Certificate of Status for the entity (see log).
 - **Stripe transaction data** — STILL OPEN, **89 days pending since raised (2026-07-06)** as of 2026-10-03 (crosses 90 on 2026-10-04) _(the earlier "~91 days as of 09-26" did not match this start date; recomputed)_, no deadline. A targeted search bounded after 2026/09/26 found nothing client-specific.
