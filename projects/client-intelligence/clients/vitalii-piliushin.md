@@ -78,7 +78,7 @@ the actual details (and Claude can pull them live when a task needs them).
 
 - **He has never filed a US return.** Nothing carries in from a prior year; there is no prior-year return to reproduce, so the conventions are being set now ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §4).
 - **The business account is commingled.** Groceries, restaurants, family transfers and transfers to his own personal account all run through the Atman Parts business account; the 2025 P&L separates them line by line. Expect the same in 2026 unless the QuickBooks setup changes it.
-- **He labels his Zelle payees, and the labels are evidence.** "Anton Partner", "Zhenya Remont Dallas", "Rent Kaufman", "Gates for Shop", "Taras Noma Packaging", "Silvia Atman" — reading the label is what classified most payments without a question. A payee with only a first name is the one that has to be asked.
+- **He labels his Zelle payees, and the labels are evidence.** "Anton Partner", "Rent Kaufman", "Gates for Shop", "Taras Noma Packaging", "Silvia Atman" — reading the label is what classified most payments without a question. A payee with only a first name is the one that has to be asked.
 - **Russian only** on his own record — client messages from Lilian go in simple Russian (CLAUDE.md).
 
 ## 6. History & open questions
@@ -98,7 +98,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - 🔴 **"Anton Partner" — co-owner or contractor?** Decides whether Atman Parts is a Schedule C at all.
 - 🟠 **The client list (O2, O3) and other accounts (O5)** — one message from Lilian, in simple Russian.
 - 🟠 **eBay 2025 report** — Lilian pulls it (O4).
-- **The eleven images uploaded 2026-10-09 (`File_000.png` … `File_009.png`)** — not opened; Lilian to say what they are.
+- **The eleven images uploaded 2026-10-09 (`File_000.png` … `File_009.png` and `File_005 (1).png`)** — not opened; Lilian to say what they are.
 
 ### Information still needed
 - [ ] The 2025 organizer (in progress)

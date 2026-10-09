@@ -117,7 +117,7 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
 
 ## 5. Key facts & quirks
 
-- 🆕 **The 2025 business account is commingled, and the owner's Zelle LABELS are the evidence.** Groceries, restaurants, family transfers and transfers to himself run through the Wells Fargo business account. His own payee labels ("Zhenya Remont Dallas", "Rent Kaufman", "Gates for Shop", "Anton Partner", and in 2026 "Taras Noma · Packaging", "Silvia Atman") classified most payments without a question; a payee with only a first name is the one that has to be asked. _(2026-10-09, the 2025 P&L.)_
+- 🆕 **The 2025 business account is commingled, and the owner's Zelle LABELS are the evidence.** Groceries, restaurants, family transfers and transfers to himself run through the Wells Fargo business account. His own payee labels ("Rent Kaufman", "Gates for Shop", "Anton Partner", and in 2026 "Taras Noma · Packaging", "Silvia Atman") classified most payments without a question; a payee with only a first name is the one that has to be asked. _(2026-10-09, the 2025 P&L.)_
 - **A portal contact here is not an owner.** One of the two portal contacts on this
   client is the owner's **employee**, given access purely to receive documents and use
   the portal. Don't read "contact on the company" as "owner," and don't expect an
