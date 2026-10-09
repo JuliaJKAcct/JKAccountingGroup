@@ -182,7 +182,9 @@ the actual details (and Claude can pull them live when a task needs them).
 - [ ] **The Kona:** when it was bought, and whether new, used or bought out of a lease; was it already used for the business in 2024; **the lender's 2025 statement showing the interest**. _(working paper §6 item 5a)_
 - [ ] **Which business uses which car** (and the split of the Kona's business miles if both used it), **what Valeriia drove for work before November**, and the Infiniti lease's exact start date. _(§6 items 5b–5c)_
 - [ ] **A written list of the business trips** behind the mileage estimates (dates, from–to, purpose). _(§6 item 5d; D21)_
-- [ ] **How Ira Vais was paid** (Zelle, bank, cash — or card / PayPal) — decides the 1099 question on his Schedule C. _(§6 item 14)_
+- [ ] **Ira Vais — how she was paid and how she worked** (Zelle, bank, cash — or card / PayPal; her own hours and tools, other clients?) — decides the 1099 question on his Schedule C and whether she was in substance an employee: **he calls the payments "salary"**. _(§6 item 14; working paper §3K E6, for Julia)_
+- [ ] **Any bank account outside the U.S. in 2025, of any amount** — the organizer only asked about accounts of 10,000 or more, and Schedule B asks about any foreign account. _(§6 item 15)_
+- [ ] **The move and the Marketplace:** the 1095-A still carries the Hollywood address, so the move was probably not reported to HealthCare.gov — the firm checks the benchmark plan for the new ZIP (both homes are in Broward County). **For 2026 there is no cap on repaying excess advance credit**, so the clients should update their Marketplace address and income estimate. _(working paper §3K H2, §7)_
 - [ ] **The phones:** which lines the T-Mobile account (paid from THE VS CLUB LLC's account) carries, and whose; whether home internet is on it; what Evgenii's own phone line on his business list is. The T-Mobile bill answers it.
 - [ ] **Estimated tax payments for 2025** — none in either record; **to confirm** _(Lilian, 2026-10-08)_.
 - [x] **Digital assets in 2025** — **no** (organizer answer to a question wider than the 1040's) _(2026-10-08)_.
