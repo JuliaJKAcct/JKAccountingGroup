@@ -1,6 +1,6 @@
 ---
 name: tax-return-sop
-description: 🔴 PREPARE A CLIENT'S TAX RETURN — load this the moment anyone says "prepare X's tax return", "prepárame el Tax Return de X cliente", "hazme la declaración de X", "do X's 1120-S / 1040 / 1065", or asks for a return's figures as line-by-line tables. §4A is the entry point and it runs TWO PHASES from one sentence: PHASE 1 · LA REVISIÓN — call the `organizer-review` skill in full, ALWAYS and without being asked separately, to check the prior-year return against this year and find missing documents, contradictions and anything that raises an alarm; its Block A verdict is THE GATE. PHASE 2 · LA PREPARACIÓN — only if the gate says yes, deliver the line-by-line tables. Along the way: go to Double and gather it yourself — the client's BOOKS, the completed tax organizer, every file the client uploaded, the prior-year return through the redactor — and report what was found before computing anything. ALSO: write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. 🔵 AND WHEN LILIAN HANDS BACK THE DRAFT SHE HAS JUST KEYED AND ASKS "¿hay errores?" — that is §4F, where you DO audit, and it starts by transcribing the draft in full. 🔵 AND WHEN A PREPARED RETURN COMES BACK FOR REVIEW — someone brings back a return the firm prepared and starts asking why a line is what it is — the financial statements, OR a copy of the return, OR just the question; any ONE of those is the trigger: that is §4C, and the job is to BRIEF the reviewer from the working paper before reading the PDF (the reasoning behind each decision, who made it, where every figure came from) rather than to audit her. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, when a return the firm prepared comes back to be reviewed or signed, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear — and it is DELIVERED AS AN ARTIFACT by default, a page carrying MORE detail than the chat did rather than less, with anything destined to be typed into the return written in ENGLISH ready to paste, and any list of changes shipped as tickable CHECKBOXES so she can see what is left), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
+description: 🔴 PREPARE A CLIENT'S TAX RETURN — load this the moment anyone says "prepare X's tax return", "prepárame el Tax Return de X cliente", "hazme la declaración de X", "do X's 1120-S / 1040 / 1065", or asks for a return's figures as line-by-line tables. §4A is the entry point and it runs TWO PHASES from one sentence: PHASE 1 · LA REVISIÓN — call the `organizer-review` skill in full, ALWAYS and without being asked separately, to check the prior-year return against this year and find missing documents, contradictions and anything that raises an alarm; its Block A verdict is THE GATE. PHASE 2 · LA PREPARACIÓN — only if the gate says yes, deliver the line-by-line tables. Along the way: go to Double and gather it yourself — the client's BOOKS, the completed tax organizer, every file the client uploaded, the prior-year return through the redactor — and report what was found before computing anything. ALSO: write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. 🔵 AND WHEN LILIAN HANDS BACK THE DRAFT SHE HAS JUST KEYED AND ASKS "¿hay errores?" — that is §4F, where you DO audit, and it starts by transcribing the draft in full. 🔵 AND WHEN A PREPARED RETURN COMES BACK FOR REVIEW — someone brings back a return the firm prepared and starts asking why a line is what it is — the financial statements, OR a copy of the return, OR just the question; any ONE of those is the trigger: that is §4C, and the job is to BRIEF the reviewer from the working paper before reading the PDF (the reasoning behind each decision, who made it, where every figure came from) rather than to audit her. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, when a return the firm prepared comes back to be reviewed or signed, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear — and it is DELIVERED AS AN ARTIFACT by default, a page carrying MORE detail than the chat did rather than less, with anything destined to be typed into the return written in ENGLISH ready to paste, and any list of changes shipped as tickable CHECKBOXES so she can see what is left), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind. 🏦 ALSO §1B.10 — building a Schedule C P&L from the BANK STATEMENTS when there are no books and no client list: Lilian's standing sorting rules (groceries, food and very small gas-station purchases are owner draws; vehicle and home-office costs kept apart because they depend on a business-use %), the 25.00 gas line as a precedent rather than a rule, what those rules do NOT settle (unexplained deposits, Amazon, phone %, cash withdrawals — a decision per client), and her two Excel templates with their three known defects.
 ---
 
 # Tax-return SOPs — and preparing a return from one
@@ -155,7 +155,7 @@ the end.**
    TRANSFERS, not expenses — but only the ones that ARRIVED.** **Money that left captioned as a card payment
    and never reached the card is an equity question.**
 4. **The assets** — cost, acquisition date, in-service date, **the Table B-1 class and the life DERIVED from it**, and the source document, one row each. ⛔ **Never carry a life forward from last year's schedule** — §4D's asset rules say why, and on the pilot engagement that transcription ran four over-the-road tractors at the wrong recovery period for years.
-5. **The soft P&L** — his captions, less anything ② or ①'s tie shows is document-backed.
+5. **The soft P&L** — his captions, less anything ② or ①'s tie shows is document-backed. 🏦 **No captions at all — the client sent statements and nothing else? → §1B.10**, which carries Lilian's rules for sorting the bank lines.
 6. **The equity section LAST**, and 🛑 **never as a plug.** ⛔ **Do not force a balance with distributions,
    contributions or retained earnings.** **Explain each movement with a documented operation, or leave it
    open and say so.**
@@ -363,6 +363,121 @@ sheet can take one for a basis, so say so on the face of the working paper.**
 🔑 **AND THE SAFETY CHECK THAT GOES WITH ALL OF THIS: when two assets share a description, write NEITHER of
 them unqualified, ever.** _(The pilot client had two utility trailers — one on the schedule and financed, one
 on no return and sold — and two Benson trailers. Both pairs cost real time.)_
+
+
+### §1B.10 · 🏦 WHEN THERE IS NO CLIENT LIST EITHER — the P&L built from the BANK STATEMENTS, and Lilian's rules for sorting it
+
+> **Lilian, 2026-10-09**, opening a Schedule C from the statements *(Atman Parts / Vitalii Piliushin)*: *"Como ya
+> sabes, lo que sean compras en grocery store, distribuciones; lo que sean compras de comida, de fast food, compras
+> muy pequeñas en gasolineras, son distribuciones. Necesitamos poner aparte las categorías que van relacionadas con
+> los gastos del vehículo, como la gasolina, el parking, los tolls, etcétera. Es igual que las categorías que están
+> relacionadas con el home office, como las utilidades, las rentas, etcétera, porque van a depender del porcentaje
+> de uso del negocio."* And: *"Tenemos que tratar de hacer la menor cantidad de preguntas posible a este cliente."*
+> **Made standing on 2026-10-10**, when she was asked whether to save them in this skill: *"Sí, guarda esas reglas
+> en el skill."*
+
+#### ① 🛑 When this applies — and when it does NOT
+
+✅ **The firm sorts the client's bank or card statements itself, because there are no books AND no classification
+from the client.** *(Tseretsian 2025 and Atman Parts 2025 were built this way, on Lilian's request: "empecemos con
+los statements del banco".)*
+
+⛔ **Where the client HAS given his own figures or his own classification, §1B.1 governs, not this section.** **His
+fuel, phone, supplies, tolls, meals AMOUNT and repairs are his figures** *(§1B.1's right-hand column)*, and nothing
+below overrides them. *(Lilian, Kliauzov, 2026-10-08: the client's own figures are enough for a P&L.)* 🔑 **Every
+rule below starts with: "where the client has stated nothing about this line".**
+
+#### ② ✅ LILIAN'S RULES — where each kind of line goes
+
+| The line | Where it goes | Note |
+|---|---|---|
+| **Groceries / supermarket** | **Owner draw** *(distribution)* | — |
+| **Food — restaurants, cafés, coffee, fast food, delivery** | **Owner draw.** Meals on the P&L = **0** | **Where the client STATES a meal was business**, §1B.1: his amount, the firm's rate — ⛔ never imported from here |
+| **Very small gas-station purchases** | **Owner draw** — a store purchase, not a tank of fuel | "Very small" has no number of hers — see ③ |
+| **Vehicle costs** — fuel, parking, tolls, washes and dealer service, auto insurance | **NOT an expense line and NOT a draw.** A separate **VEHICLE** block, held at 100% and deducted only **× the business-use %** | ⚠️ **On the standard mileage rate, fuel, service and insurance are INSIDE the rate and are never deducted again; only business parking and tolls are added to line 9.** So the block is evidence and a fallback, not a deduction |
+| **Home costs** — rent, utilities, and the home's insurance, HOA, repairs | **NOT an expense line.** A separate **HOME-OFFICE** block → her Home Office template → **Form 8829** at the floor-area % | ⛔ **Internet is NOT here** — it goes on line 25 at its own % ([`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) M2, *IN / OUT*); a cost is never in both places. ⚠️ **A SHOP or office the business rents is NOT a home cost** — its rent is line 20b at 100% |
+| **Questions to the client** | **As few as possible** | §1B.4's four groups and its *"lista mínima y justificada"* — and ④ below |
+
+#### ③ ⚠️ "VERY SMALL" — the 25.00 line is a PRECEDENT, not her number
+
+⛔ **Lilian said *"compras muy pequeñas"* and gave no figure.** 🔑 **The line the firm has actually applied is
+25.00** — **25.00 or more at a gas station = fuel, into the vehicle block; under 25.00 = owner draw**:
+
+| Where | Who | When |
+|---|---|---|
+| Ecoorganic — bookkeeping SOP rule 2, replacing an earlier 30.00 line, *"a proxy"* | **Julia** (with Lilian) | 2026-07-21 |
+| Tseretsian — decision R5, *"her convention"* | **Lilian** | 2026-07-30 |
+| Atman Parts — decision D4 | session, citing both | 2026-10-09 |
+
+✅ **So use 25.00 as the starting line and WRITE IT IN THE DECISIONS TABLE every time**, naming the precedent. ⛔
+**It is not a firm-wide rule** — [`bookkeeping-sop`](../bookkeeping-sop/) says outright that Ecoorganic's 25.00 is
+client-specific — so **a client's own rule or figure always wins.** ☑️ **An in-store or counter charge is a draw
+whatever the amount** *(a QT receipt marked `Inside` is the store, not the pump; a charge that is plainly food is
+food)*.
+
+#### ④ 🛑 WHAT THESE RULES DO NOT SETTLE — a DECISION per client, never imported from another client
+
+🔴 **Different clients have already been decided differently on each of these, and both answers stand.** ✅ **Each is
+a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
+
+| Topic | Decided one way | Decided the other way | ✅ How to handle it |
+|---|---|---|---|
+| **Deposits with no payer** — cash, ATM, checks, Zelle from individuals | Tseretsian R7: **not income until he explains them** *(Lilian, 2026-07-30)* | Atman Parts D2: **sales until he says otherwise** *(session default, 2026-10-09, awaiting Lilian)* | **First identify every deposit the firm can** — a payroll deposit, an own-account transfer, a refund, a rebate, the client's own label. **The treatment of the remainder is a DECISION for Lilian**, priced both ways |
+| **Amazon, Temu, online marketplaces** | Tseretsian R4: **personal** *(the client's own rule, with Lilian)* | Atman Parts D5: **business supplies** on a repair shop's business account *(session default, awaiting Lilian)* | **The description proves nothing either way.** Default follows the account (personal account → personal; a goods or repair business's own account → provisional business) and it is a `DECIDE` row for Lilian |
+| **Telephone / internet business %** | 50% — a SESSION default (Tseretsian J5) | 70% — Lilian for one spouse's phone (Kliauzov, 2026-10-08) | **No firm percentage.** ⛔ **And never cite another client's SESSION default as precedent** — Atman Parts D6 did exactly that |
+| **Cash withdrawn from a BUSINESS account** | Atman Parts: owner draw *(session default)* | [`bookkeeping-sop`](../bookkeeping-sop/) firm-wide principle: **investigated, never a blanket draw** — cash can pay subcontractors | **Where the business pays people, a withdrawal is a QUESTION, not a draw** — unless the client says it was his own cash |
+| **Local parking and tolls** | Tseretsian R6: personal under the client's catch-all | Kliauzov D15: claimed *(session default, Lilian decides)* | The IRS part is fixed — business parking and tolls go on line 9 on top of the mileage amount. **Whether a given charge is business is the client's** |
+
+#### ⑤ ☑️ How the two builds that worked were run — SESSION PRACTICE, written down so the next one does not reinvent it
+
+🔑 **None of this is a ruling of Lilian's or Julia's; it is method that held up under review on Tseretsian
+(2026-10-08) and Atman Parts (2026-10-09).** Label it as such if it is ever quoted.
+
+1. **Read the account TYPE off the statement's product name, not its footer.** *(Tseretsian: "Business Fundamentals
+   Checking" was an advertisement; both accounts were personal.)* ⚠️ **It sets the default for every line:** on a
+   personal account a line is personal until a business purpose is stated *([`personal-card-reimbursement`](../personal-card-reimbursement/)
+   §0)*; on the business's own account a line is the business's until it is a personal marker from ②.
+2. **Every line of the year in exactly ONE bucket**, with **the rule that put it there written on the line** and its
+   source *(§4D's `Source` column)*. ✅ **Tie each statement to its own printed totals, and prove opening + credits −
+   debits = closing.** **The December tail comes from the January statement**, keeping only lines dated in the year.
+3. ✅ **Run the mirror scan** *(§4A-M)* — refunds, reversals and bounced pairs net inside their own line.
+4. 🔑 **The client's OWN label on a payment is his statement, and it classifies the line without a question** — a
+   Zelle memo, a payee nickname, **even the same payee's label on a LATER month's statement** *(Atman Parts: January
+   2026 labels "Silvia Atman" and "Taras Noma · Packaging" settled two 2025 payees)*. ⛔ **The BANK's description is
+   not a purpose, and a payee with only a first name is a question** — not a draw dressed as a decision, not a
+   deduction.
+5. 🛑 **A source the FIRM can reach is not a client question** *(§1B.6)* — a marketplace report on an account the firm
+   is a team member of, a platform's own totals. **Pull it.**
+6. ✅ **The client gets ONE message**, and the lines he must mark travel as **lists, not prose**: payments with no
+   stated purpose, and deposits with no payer. **The vehicle and the home office come through the organizer he is
+   already filling in**, not a separate question.
+7. ⚠️ **Spot a co-owner.** A client's own label like *"Partner"* on a regular payee is a question about **which
+   return this is** — a multi-member LLC files Form 1065, not Schedule C. **Ask it first.**
+
+#### ⑥ 📊 HER TWO TEMPLATES — fill a copy, and fix the known defects in the copy
+
+🔑 **Lilian's `PL_Statement` and `Home_Office_Deduction` workbooks** *(supplied in the chat as
+`PL_Statement_1.xlsx` and `Home_Office_Deduction_-_for_downloading_2.xlsx`)* **are filled as a COPY per client**,
+next to the §4D evidence workbook — `<Client>_<Business>_<Year>_PL_Statement.xlsx` and
+`<Client>_<Business>_<Year>_Home_Office_Deduction.xlsx`. 🔒 **Delivered and stored in Double; never committed,
+never an artifact.** 🇬🇧 **In English** *(CLAUDE.md)*.
+
+🛑 **THREE DEFECTS TRAVEL WITH THEM — fix each in the copy and say so in the working paper's tie-outs:**
+
+| # | Defect | The fix in the copy |
+|---|---|---|
+| 1 | **The P&L's net profit ignores cost of goods sold** — `C41 = C10 - C39`, revenue minus expenses. On Tseretsian that would have overstated one Schedule C by its whole purchases figure | Add a *Total Cost of Goods Sold* and *Gross Profit* row, and take the net from gross profit |
+| 2 | **The Home Office `Total` does not add every row.** In the chat copy it is `=SUM(N9:N15)`, dropping **mortgage interest, insurance, property taxes and HOA** | `=SUM(N5:N15)` and `=SUM(O5:O15)`. ⚠️ **[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 102 records a DIFFERENT broken range in the Double master `Home office.xlsx`** *(Rent and Utilities only)* — **read the formula in the copy you were given; do not assume which defect it has** |
+| 3 | **The Home Office template has an `Internet` row** — which pushes internet into Form 8829, against M2 | **Leave it empty**; internet goes on line 25. *(It has already reached a filed Form 8829 once, on a client who filled the template himself.)* |
+
+☑️ **And clear the template's SAMPLE inputs** — it ships with 1,000 and 100 square feet, which compute a 10% that
+looks like an answer. **Blank until the client gives his figures.**
+
+⚠️ **A check that the filled template agrees with the evidence workbook is a FORMULA check, not corroboration** —
+both read the same transactions *(§1B.8)*. Say *"the formulas agree"*, never *"confirms"*.
+
+☑️ **The masters themselves are still uncorrected** — FOLLOW-UPS row 102. Until they are, every copy needs these
+fixes.
 
 
 ---
@@ -3903,6 +4018,8 @@ is how an SOP becomes confidently wrong.**
 ---
 
 ## Update this skill when…
+
+- 🏦 🆕 **LILIAN SETS OR CHANGES A RULE FOR SORTING BANK LINES** — **§1B.10**, added 2026-10-10 from Atman Parts *("Sí, guarda esas reglas en el skill")*. 🔑 **Write her words in, with the date.** ⛔ **A ruling for ONE client stays in that client's working paper** and reaches §1B.10 ④ only as one side of a contested topic — **never as the default.** ☑️ **When the master templates are fixed** *(FOLLOW-UPS row 102)*, **strike §1B.10 ⑥'s defects table** instead of leaving it to be applied to a correct file.
 
 - 🔴 **A PREPARER HANDS YOU HER OWN KEYED DRAFT AND ASKS *"¿hay errores?"*** — **§4F**, added 2026-09-27 from
   the Zakom 1120-S. 🔑 **Write in every check that actually FOUND something and every one that produced a false
