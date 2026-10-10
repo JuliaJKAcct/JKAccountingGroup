@@ -1,6 +1,6 @@
 # GOSSIP MIAMI LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -381,6 +381,16 @@ duplicate it here; a request list goes stale, this list doesn't.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+
+- 🔍 **2026-10-10 — Weekly CI sweep (baseline 2026-10-03→2026-10-10).** Double: `list_notes` — both notes (485291, 491858) have `updatedAt` 2026-08-21 and 2026-08-13, i.e. before the baseline, so bodies were not re-read; properties unchanged (`Ext. Filed: true`, `Signature: Signed`, `Invoice: Paid`, `Organizer Status: Sent`, Preferred language Only Russian); `list_activity_log` ≥2026-10-03 returned 0 entries. Gmail (`Gossip`/owner surnames/`jamvabo`/`2848`/`DR-26S`/`Vagaro`, `after:2026/10/03`, metadata view): a search on 2026-10-10 found no message on this client other than the firm's own weekly-sweep email — no client reply to the 2026-10-01 Form 2848 message and nothing from the client's shared address. Drive: 🆕 **the "From IRS GOSSIP" item has been FILED — a PDF named "09.15.2026 IRS Notice" was saved into the `IRS` subfolder of this client's Drive folder on 2026-10-07 (owner Julia)**; the filename dates the notice 2026-09-15 (the same day the 2025 1120-S shows as filed). **What the notice says and which return it concerns is NOT known** — the PDF was deliberately not opened (client document; outside this sweep's scope). A Drive title search for "2848" modified ≥2026-10-03 found no file. Ping (client-scoped `search_meetings`): no legible on-topic hit dated ≥2026-10-03. _(Double, Gmail, Drive, Ping, 2026-10-10)_
+  **Chase pass (ages as of 2026-10-10):**
+  - 🔴 **IRS notice dated 2026-09-15 — filed to Drive 2026-10-07, content unread; 11 days since it reached Lilian (2026-09-29).** An IRS notice may carry a response deadline — **nobody has recorded one; open it and read the date.**
+  - **Form 2848 sent for signature 2026-10-01 — 9 days pending; a Gmail search bounded ≥2026-10-03 found no signed copy returned.** Signed status unconfirmed.
+  - **Check/deposit images — 67 days since the written ask (2026-08-04)**; a Gmail search ≥2026-10-03 found nothing received.
+  - **Florida sales-tax account status — 59 days since raised (2026-08-12)**; no new source.
+  - **FDOR DR-26S credit claim — 233 days since the credit was confirmed (2026-02-19)**; a Gmail search ≥2026-10-03 found no correspondence.
+  - **1099-NEC contractor W-9 — pending since unknown — no start date in the file** (the 2026-02-02 filing date is 250 days past); no request found ≥2026-10-03.
+  - Not chased this run: 2024 return acceptance (IRS transcript — no source), Vagaro 1–29 Oct report, closed checking-account closing date, TD reconnection, permits, Sunbiz check on the third member (egress-blocked).
 
 - 🔍 **2026-10-03 — Weekly CI sweep (baseline 2026-09-26→2026-10-03).** Double: `list_client_properties` unchanged on the substantive columns (`Ext. Filed: true`, `Signature: Signed`, `Invoice: Paid`, `Organizer Status: Sent`); both notes (485291, 491858) have `updatedAt` before the baseline (2026-08-21 and 2026-08-13) — bodies not re-read; `list_activity_log` bounded ≥2026-09-26 returned 0 entries. Gmail (`Gossip OR Bogopolsk OR Makalendra OR Kopyrin OR "Marat Boxing" OR Varavva OR jamvabo`, `after:2026/09/26`, inbox + sent): **two new threads.** ① **2026-09-29 — the client's shared address sent Lilian an item titled "From IRS GOSSIP" (a PDF attachment, not opened by this sweep)**; Lilian forwarded it to Julia the same evening. What the IRS item is, and which return it concerns, is not stated in the message bodies. ② **2026-10-01 — Lilian emailed the client's shared address a Russian-subject "for signature" message carrying a Form 2848 for Gossip Miami LLC** (Julia cc'd); Drive shows the template (10-01 16:53), the for-signature copy (10-01 17:25) and a 2848 file in the client's folder modified 2026-10-02 15:23 (contents not opened — whether it is the signed copy is **unconfirmed**). ⓘ Form 2848 may only name someone eligible to practice before the IRS (firm-identity §4) — who is named was not checked. Ping (org-wide `search_meetings`): no meeting dated on/after 2026-09-26 on this client. **Not found** in a search of Gmail bounded after 2026-09-26, on 2026-10-03: the check/deposit photos, the Vagaro 1–29 October report, the closing date/statements for the closed checking account, a W-9 request for the contractor, or any FL DOR sales-tax / DR-26S correspondence. _(Gmail, Drive, 2026-10-03)_
 - 🔍 **2026-09-26 — Weekly CI sweep (baseline 2026-09-19→2026-09-26).** Double `list_client_properties`

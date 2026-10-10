@@ -1,6 +1,6 @@
 # TEXTURAL LLC — general contractor (Honcharov)
 
-> **Status:** Prospect — quarterly proposal drafted 2026-10-07 · **Owner:** Julia · **Last updated:** 2026-10-07
+> **Status:** Prospect — quarterly proposal drafted 2026-10-07 · **Owner:** Julia · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -147,6 +147,7 @@ the actual details.
   separately** at her stated rate. The three open flags from the first draft (1099s,
   start date, cleanup) are all resolved by her own words. PDF v3 + artifact v3
   delivered
+- 2026-10-10 — **Prospect sweep (UNBOUNDED, new-file pass).** A search of Gmail (business name; owner and spouse surnames in Latin and Cyrillic spellings; the incumbent preparer's firm; the town), Google Drive (title and full-text), Ping (contact search and two org-wide semantic searches) and Double (name searches on the business and the owner) on 2026-10-10 did not find any email, Drive file, Ping contact/meeting or Double record for this household or business. The only trace in the firm's systems remains the 2026-10-07 session upload. Julia's Gmail sent folder from 2026-10-07 shows no proposal email to this household (a search of sent mail for proposal wording, bounded ≥2026-10-07) — **whether and how v3 was sent is unestablished**. Open items unchanged, pending since 2026-10-07 (3 days).
 
 ### Outstanding items (CI-only — never in the SOP)
 

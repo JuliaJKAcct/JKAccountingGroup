@@ -1,6 +1,6 @@
 # Iurii Iakovenko & Alina Yakovenko
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -159,6 +159,7 @@ the actual details (and Claude can pull them live when a task needs them).
   no source anywhere explaining the delay** — the Ukrainian PrivatBank-account lead (unchased since
   2024-03-19, now well over two years old), and who files each LLC's annual report/franchise tax —
   **none moved this window.** No 2025 Form 1095-A found (unchanged, genuine negative).
+- 2026-10-10 — **Incremental sweep (baseline 2026-10-03, inclusive) — nothing moved.** Double (710639): `list_notes` 0; `list_activity_log` from 2026-10-03 0 entries; "2025 Taxes" still `inProgress`, unfiled, `filedAt` empty; properties unchanged (Organizer Status Completed); `list_files` from 2026-10-03: none. A search of Gmail (all name variants, Semalt, YourSeoBoard, CEO address), bounded after 2026/10/03, on 2026-10-10, found no client correspondence — the only name-hit ("Alina") was an unrelated prospect thread. Targeted queries for 4868 / extension / 1095-A / FBAR / annual report / franchise tax, same bound: only generic newsletters and filing-service solicitations, none about these LLCs. Drive full-text search for the surname, modified since 2026-10-03: nothing. Ping: org-wide `search_meetings` (Iakovenko / Semalt / YourSeoBoard / extension) — garbled unrelated hits, discarded. **Chase pass:** the cause of the delay on our side is still unrecorded — **~212 days since the client finished (2026-03-12), 5 days to the 2026-10-15 extension deadline**; LLC tax classification, the PrivatBank-account lead (~935 days since the 2024-03-19 submission), who files each LLC's annual report/franchise tax, and the 1095-A confirmation did not move.
 
 ### Tax year 2025 — the review
 

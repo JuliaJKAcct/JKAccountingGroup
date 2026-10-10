@@ -1,6 +1,6 @@
 # Maria Contreras
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -142,6 +142,7 @@ the actual details (and Claude can pull them live when a task needs them).
   — same confirmed-empty pattern as every prior run. **Chase pass:** re-checked the vehicle/
   internet/repair deduction pattern, her home state, and the "Affordable Interior Systems Inc"
   employer question — **none moved this window; all three remain open, no deadline attached.**
+- 2026-10-10 — **Incremental sweep (baseline 2026-10-03, inclusive) — nothing moved.** Double (710646): `list_notes` 0; `list_activity_log` from 2026-10-03 0 entries; "2025 Taxes" still `filed` (`filedAt` 2026-05-25); properties unchanged; `list_files` from 2026-10-03: none. A search of Gmail (her name and surname alone; "Affordable Interior"; 1099), bounded after 2026/10/03, on 2026-10-10, found no correspondence from or about her. Drive full-text for her name, modified since 2026-10-03: nothing. Ping: org-wide `search_meetings` (her name, vehicle/internet deductions) — only another client's Turo discussion and garbled hits, discarded. **Chase pass:** the activity behind the vehicle/internet/repair deductions (~57 days since this file's creation on 2026-08-14; sharpened 2026-09-12, 28 days), whether "Affordable Interior Systems Inc" is her employer (28 days), her home state, and the phone bills she mentioned on 2026-02-20 (~232 days) — none moved; no deadline on any. Not chased by a separate query: dependants/spouse.
 
 ### Tax year 2025 — the review
 

@@ -1,6 +1,6 @@
 # SM Group USA Inc. — e-commerce (Kostetskyi)
 
-> **Status:** Prospect — PRICE AGREED, start 2026-11-01; final proposal redrafted for signature 2026-09-24, still awaiting the client's signature as of 2026-09-26 · **Owner:** Julia · **Last updated:** 2026-10-03
+> **Status:** Prospect — PRICE AGREED, start 2026-11-01; final proposal redrafted for signature 2026-09-24, still awaiting the client's signature as of 2026-09-26 · **Owner:** Julia · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -185,6 +185,7 @@ the actual details.
   standing preference (2026-08-28, "it can cause confusion") — the tool itself still
   prints it, left unchanged pending a deliberate tool-source change. Delivered as PDF +
   the same artifact for her to resend
+- 2026-10-10 — **Prospect pass (cheap, bounded to the file's Last updated date 2026-10-03, inclusive).** Gmail (a search of Julia's mailbox, `after:2026/10/03`, on 2026-10-10, for Kostetskyi / SM Group / Bereziuk): nothing beyond the firm's own 2026-10-03 weekly-sweep digest — **no returned signed proposal and no new message from the clients found**. Drive (title search, modified after 2026-10-02, Kostetskyi / SM Group): zero files. Double (`list_clients` by name 'SM Group' and by 'Kostetskyi', on 2026-10-10): **no account found** — still a prospect. Ping org-wide `search_meetings`: nothing legible about this client. Ages as of 2026-10-10: signed proposal pending 16 days since 2026-09-24; agreed service start 2026-11-01 is 22 days out; the second company's quote and the entity / S-election questions have no start date in the file.
 
 ### Outstanding items (CI-only — never in the SOP)
 

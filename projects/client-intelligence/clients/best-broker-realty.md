@@ -1,6 +1,6 @@
 # BEST BROKER REALTY LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -143,6 +143,12 @@ the actual details.
 
 - 2026-10-03 — **Incremental sweep (baseline 2026-09-26→2026-10-03).** ✅ **THE CITY OF HOLLYWOOD RENEWAL WAS PAID BEFORE THE DEADLINE.** Julia's inbox holds a city Treasury email of **2026-09-28**, "Print Your Local Business Tax Receipt", thanking the payer for "paying or renewing" and naming BEST BROKER REALTY LLC, the 1047 Buchanan St address, **Registration Status: Active**, with a registration number carrying the **-2027** suffix _(Gmail, `after:2026/09/26`, read in full 2026-10-03; number and amount deliberately not recorded here)_. **Who paid and how is not established** — the email went to Julia and nothing in the sources searched shows whether the client or the firm paid; no client reply appears on the renewal-notice thread (still three messages: city notice + the two firm forwards of 09-10 and 09-25). **Not yet confirmed: the printed 2026-27 receipt itself is saved in Drive** — a Drive search (`title contains 'Best Broker'` and `'LBTR'/'BTR'`, `modifiedTime` > 2026-09-26) returned no results. **Still not established: the Broward COUNTY receipt** — the county file name says "valid until 09.2027" but nobody has opened it, and a Gmail search (Broward/BTExpress/"tax receipt", `after:2026/09/20`) found no county renewal notice or payment. Double: both notes (474293, 467461) unchanged; `list_activity_log` ≥2026-09-26 empty; properties unchanged. Ping (client-scoped, 2026-10-03): nothing dated ≥2026-09-26 on-topic. Gmail from/to the client's domain and owner's personal address, `after:2026/09/26`: only an unrelated firm invoice email.
   - **Form 8822-B (IRS address update) — still unconfirmed as filed. 203 days pending** (since 2026-03-14); a Gmail search ≥2026-09-26 on 8822-B terms found nothing. No deadline.
+
+- 2026-10-10 — **Incremental sweep (baseline 2026-10-03→2026-10-10).** Double: both notes (474293, 467461) unchanged (`updatedAt` still 2026-07-23 and 2026-07-15); `list_activity_log` ≥2026-10-03 empty; properties unchanged (Assigned Staff in Double reads Liudmyla Kazannik; Tax Return Type 1065; Bookkeeping Quarterly). Gmail (business name/owner/client domain/"8822-B"/hollywoodfl.org/Broward, `after:2026/10/03`): a search on 2026-10-10 found nothing on this client — only newsletters and the firm's own weekly-sweep email. Drive (`title contains 'Best Broker'`/'LBTR', `modifiedTime` ≥2026-10-03): no results. Ping (client-scoped): no legible on-topic hit dated ≥2026-10-03. **Chase pass:**
+  - **2026-27 city receipt saved to Drive?** — a Drive search bounded ≥2026-10-03 on 2026-10-10 did not find it; unresolved **12 days since the city's 2026-09-28 "Active" email**.
+  - **County certificate expiry (SOP says Sept 30; filename says 09.2027)** — still unread, unsettled; the PDF was not opened (out of this sweep's scope). **Nothing in Gmail ≥2026-10-03 shows a county renewal notice or payment.**
+  - **Who paid the city renewal** — not established (no new source).
+  - 🔴 **Form 8822-B** — still unconfirmed as filed, **210 days pending** since 2026-03-14; a Gmail search ≥2026-10-03 on 8822-B terms found nothing.
 
 ### Outstanding items (CI-only — never in the SOP)
 - ✅ **RESOLVED 2026-09-28 — the Sept 30 City of Hollywood renewal was paid; the city issued the 2026-27 receipt as Active** _(Gmail, city Treasury email 2026-09-28; swept 2026-10-03)_. The urgent bullet below is kept for history; the live residuals are: **(a)** save the printed 2026-27 city receipt to Drive (no Drive hit as of 2026-10-03), **(b)** open the county certificate and read its true expiry (SOP says receipts expire Sept 30; filename says 09.2027), **(c)** who paid is unrecorded.

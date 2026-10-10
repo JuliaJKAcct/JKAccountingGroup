@@ -1,6 +1,6 @@
 # Pro Title Agency
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -216,6 +216,13 @@ _(Double notes — live status lives in Double.)_
   - **WLTIC "Plant Search Statement" invoice — a search of Gmail, bounded ≥2026-09-26, on 2026-10-03, found no further chase and no payment confirmation.** **24 days pending since 2026-09-09.**
   - **Coral Springs address change (DFS/Sunbiz), 1065-vs-Schedule-C IRS mismatch, Payroll (Gusto) vs. Double N/A discrepancy — searches bounded ≥2026-09-26 found nothing further.** Pending since unknown — no start date in the file / "in progress" Jul 2026.
   - 🔵 **Owner (Lilian) vs Double Assigned Staff (Liudmyla Kazannik)** — still unreconciled, still not a searchable question; Double property re-read 2026-10-03 still shows Liudmyla. Put it to Lilian/Julia directly.
+
+- 2026-10-10 — **Incremental sweep (baseline 2026-10-03→2026-10-10).** Double: all three notes unchanged (`updatedAt` 2026-07-15/07-15/07-23); properties unchanged (Sch C, Bookkeeping Quarterly, Sales Tax N/A, Payroll N/A, Assigned Staff Liudmyla Kazannik); `list_activity_log` ≥2026-10-03 empty. Gmail (`Pro Title`/WLTIC/"Plant Search"/"Coral Springs"/hollywoodfl.org/"business tax receipt"/DFS, `after:2026/10/03`; and a sent-mail search on the owner/business names): only unsolicited vendor mail addressed to the business name (a notary-services follow-up 10-08, a title-recruiting agency 10-02 and 10-06, a law-office newsletter 10-06) — not client correspondence. Drive (title/full-text "Pro Title", `modifiedTime` ≥2026-10-03): nothing on this client (hits were other clients' files). Ping (client-scoped): no legible on-topic hit dated ≥2026-10-03.
+  **Chase pass (ages as of 2026-10-10):**
+  - 🔴 **Hollywood LBTR "valid until 09/30/2026" (§4) — expiry passed 10 days ago.** A search of Gmail (`hollywoodfl.org`/"business tax receipt"), bounded ≥2026-10-03, on 2026-10-10 did not find a renewal notice or a payment confirmation for Pro Title. As on 2026-10-03 this is a search of Julia's inbox only (the client's own address was the application contact), not proof of lapse; **the city's status page was not reachable from this sweep, so it still needs a direct check.**
+  - **WLTIC "Plant Search Statement" invoice — 31 days pending since 2026-09-09;** a Gmail search ≥2026-10-03 found no chase and no payment confirmation.
+  - **Coral Springs address change, 1065-vs-Schedule-C IRS mismatch, Gusto-vs-Double N/A payroll discrepancy — pending since unknown — no start date in the file;** nothing new in a Gmail search ≥2026-10-03.
+  - 🔵 **Owner (Lilian) vs Double Assigned Staff (Liudmyla Kazannik)** — unchanged; it is a decision, not a search (6th run).
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end

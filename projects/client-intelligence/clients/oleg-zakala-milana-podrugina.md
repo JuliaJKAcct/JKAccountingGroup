@@ -1,6 +1,6 @@
 # Oleg Zakala & Milana Podrugina
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-07
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -30,7 +30,7 @@
 - **Entity type:** n/a — individual taxpayers. ✅ **The return is JOINT** — 2024 was filed **married filing jointly**, and the 2025 organizer confirms they did not live apart, so MFJ is available again _(2026-10-04)_
 - **Home state:** ✅ **Florida** (Plantation). ⛔ **No individual state income tax, and the 2025 organizer answers `notApplicable` to any other state** — so the 2025 return is **federal only** _(2026-10-04)_
 - **Industry / what they do:** he owns and runs Zakom Incorporated (an S corporation — see its file), so his K-1 from it reaches this return. 🔴 **AND HE IS NOT ONLY A SHAREHOLDER — the 2024 return carried THREE Schedule C businesses of his own**, under a **separate EIN of his own, `92-2705442`**, for a logistics/service activity, a real-estate-property activity and a realtor activity. ⚠️ **Whether any of the three traded in 2025 has never been asked** _(2026-10-04)_
-- **Primary language:** _(pending — see the Zakom file for how the firm corresponds with him)_
+- **Primary language:** _(not stated in any source — but the 2026-10-07 review call with Julia was summarised by both Ping and Zoom in Russian, which suggests the call was held in Russian; his emails to the firm are in English. A lead, not a confirmation — Ping/Zoom, 2026-10-07)_
 - **Our engagement (services we provide):** **Income tax only — Form 1040** _(Double: `Income Tax: true`, `Tax Return Type: 1040`, `Bookkeeping: N/A`, `1099 Preparation: false`, `Annual Report: false`, 2026-10-01)_. **Assigned staff and 2025 preparer: Lilian.**
 - **Fiscal year-end:** calendar year
 - **Accounting platform:** `platform: none`
@@ -180,6 +180,18 @@ the actual details.
     and papers; and whether there was any charitable giving. **Everything else on the list is ours.**
 - 2026-10-01 — **File created** at Lilian's request (*"¿cuándo fue la última vez que Oleg modificó el organizer de su cuenta individual?"*). Sources: Double only — client, properties, 2025 project, organizer metadata (incl. completion %, read without the answers), activity log. Until now this record was swept only as part of the Zakom file.
 
+- 2026-10-10 — **FIRST FULL HISTORICAL SWEEP of this owner (unbounded; Gmail, Double, Ping, Drive), run at owner level with company facts routed to [`zakom-incorporated.md`](./zakom-incorporated.md).** Findings, by source:
+  - **Gmail** (Julia's mailbox; `Zakala OR Podrugina OR "Oleg Zakala" OR Milana`, excluding "Zakom", read to the end of the result set — 46 threads, oldest 2022-07-21). **Relationship history for the PERSONAL returns, newly recorded:** engagement began around **2023-08-14** ("2022 Tax Preparation Services" thread); the **2022 return** was signed **2023-10-16** with an instalment-agreement request attached, accepted by the IRS 2023-10-18, first instalment due 2023-12-15 (amounts withheld); the **2023 return**: organizer completed **2024-09-02**, document signed **2024-10-03**; the **2024 return**: extension filed by the firm **2025-04-16**, organizer completed **2025-08-13**, document signed **2025-09-06**. (Gmail, TaxDome notifications and thread bodies, 2023-2025.)
+  - **Real-estate 1099 (first seen for tax year 2024):** on 2025-08-13/14 Oleg sent a 1099-NEC for real-estate commissions and estimated his own expenses; **Julia ruled on 2025-08-14 that car usage cannot be deducted against that 1099 because his vehicle is 100% used by Zakom (the 2021 audit position), and told him to claim actual expenses only and not double-count anything already booked under Zakom**; he agreed on 2025-08-18 that no personal vehicle was ever booked under Zakom for 2024. (Gmail thread "Oleg Zakala 1099 (real estate side)", 2025-08-13 → 08-18.) This is the firm's standing instruction for his realtor Schedule C.
+  - **2024-07-26:** Julia introduced him to a third-party law firm for a revocable living trust; the firm's reply quoted its fee. **Whether he went ahead is not recorded anywhere reachable** (Gmail, 2024-07-26 → 08-01).
+  - **2025-09-10/12:** he messaged Lilian asking about an IRS charge and had **no IRS online account then** (Lilian's 2025-09-12 update to Julia). On the 2026-10-07 call he and Julia **logged into his IRS individual online account together** and saw the 2024 instalment plan still running.
+  - **Double:** 710652 `list_notes` returns **one note, created 2026-10-07 by Julia: the Ping summary of the "Zakala Tax Return Review" call (10:30-11:00 AM)** — *the first note on this record; the file said "no note"*. `list_activity_log` (25 entries, full): the 2025 project moved **Not Started → Ready for Filing → Waiting on Client Approval on 2026-10-07 20:19 UTC (Lilian)**; Oleg opened the organizer six more times 2026-10-01 → 10-05 (last 2026-10-05); no `filedAt` on the project. Tasks: all 12 project-checklist tasks still `notStarted`, 9 of them due 2026-10-15. Contacts: Milana (portal contact, tax access) and Oleg (also linked to the company record 710612). Files: 63, none new since the 2026-06-02 migration batch.
+  - 🆕 **The 2026-10-07 call (Julia ↔ Oleg; Ping note + Zoom summary):** (1) they walked through the preliminary 2025 picture — his S-corp pay and Milana's W-2 wages, the excess-distribution capital gain, itemized deductions; (2) Julia **proposed a monthly engagement for the company** (QuickBooks bookkeeping, monthly reports, payroll set-up, 1099s, the 1120-S; personal returns excluded; one-time hourly cleanup separately) starting October 2026 with a set-up call about **2026-10-16** — **he said he would review it, no acceptance recorded** (route: Zakom file); (3) payroll to be set up so federal tax is pre-paid from about **November 2026**; (4) he proposed an **upfront payment plus a monthly instalment** for the 2025 balance — **the arrangement was still to be finalized**; the 2024 instalment plan keeps auto-debiting and he can add payments through his IRS account; (5) health: the Marketplace premium subsidy may need to be repaid if 2026 income is high — Julia advised getting the unsubsidized premium before renewing; (6) **a daughter was born 2026-09-23** (no 2025 dependant effect; a 2026 dependant), Medicaid / Florida KidCare for the newborn discussed; Milana is a graduate student and teaches ESL; (7) 2026 planning raised, not decided: company 401(k), an IRA for Milana, a 529 plan. (Ping note id on the Double note; Zoom meeting-assets email 2026-10-07.)
+  - ⚠️ **CONTRADICTION (unsettled): this file's 2026-10-07 entry says Julia SIGNED AND E-FILED the 2025 Form 1040 on 2026-10-07; Double's project reads `Waiting on Client Approval` (set 2026-10-07 20:19 UTC by Lilian) with `filedAt` empty, and Julia's call at 10:30 AM that day describes the figures as a "preliminary 2025 tax picture" with Oleg still to agree the payment arrangement.** Possible reading: the return was prepared and sent for his approval that evening, and "filed" in the 10-07 entry was written ahead of the e-file. **Not established which — ask Lilian/Julia; the 10-15 deadline makes the answer time-sensitive.** (Double activity log and project status vs this file, 2026-10-10.)
+  - **Ping:** `resolve_person` — one match (the couple's client record, linked to the household's portal address); org-wide `search_meetings` (4 queries on the review, instalment plan, Milana's return) — no meeting transcript beyond the 2026-10-07 call whose note is in Double; the hits were other clients' calls (garbled, discarded).
+  - **Google Drive** (title/full-text search for the owner names and the other entity's name, metadata only, pages 1-2 read, each hit's folder noted): the **firm filed the couple's 2021 Form 1040** (a copy dated 2023-02-27 sits in Julia's Drive), plus 2022-2024 signed return PDFs, the 2023/2024 individual organizers, the closing documents for two real-estate purchases (2023), a Broward County real-estate bill, and the Zakom/other-entity bank and card statements (Zakom's file covers those). **Two personal client folders exist** (Julia's Drive and Maria Zavarce's, both created in the 2026-05 migration) — see §7.
+  - **Company-level facts for the Zakom file (NOT edited here):** (a) the 2026-10-07 monthly-engagement proposal (already in that file's 2026-10-07 log); (b) Julia's 2025-08-14 rule that the personal vehicle is 100% Zakom's; (c) Mema Colors LLC — Florida state dissolution notice **2024-12-03** and a BOI report filed 2024-12-04 by the firm; (d) the 2023-11 IRS extension letter / instalment correspondence concerns the 2022 *personal* return, not the company.
+
 ### Tax year 2025 — the review
 
 ✅ **RUN IN FULL 2026-10-04** — phase 1 of [`tax-return-sop`](../../../.claude/skills/tax-return-sop/) §4A,
@@ -196,9 +208,9 @@ in, and reminded to delete the session afterwards.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- The organizer is at 60% and not completed.
-- Extension status for 2025 — not recorded here.
-- Joint or separate return — not established.
+- 🔴 **Confirm whether the 2025 Form 1040 is filed** — file says e-filed 2026-10-07, Double says Waiting on Client Approval with no filed date (contradiction, 2026-10-10 log). Deadline 2026-10-15 (5 days).
+- The organizer was 60% complete at last measure (2026-10-01) and was opened six more times to 2026-10-05; completion not re-measured (organizer tools not used in the weekend sweep).
+- _(Extension and joint filing are settled — see Information still needed.)_
 
 ### Information still needed
 
@@ -210,7 +222,10 @@ in, and reminded to delete the session afterwards.
 - [ ] The electric vehicle's acquisition date and papers — **a client question**
 - [ ] Whether Oleg made a capital **contribution** to Zakom in 2025 — **ours, off the company's books; it would reduce the gain dollar for dollar**
 - [ ] Whether either of them turned 65 during 2025 — **ours, from Double**; it opens Schedule 1-A Part V
-- [ ] Whether any 2025 estimated-tax voucher was paid, and whether the 2024 instalment plan is still running
+- [ ] Whether any 2025 estimated-tax voucher was paid — **partly answered 2026-10-07: the 2024 instalment plan IS still running** (auto-debit; seen in his IRS online account on the call). Estimated-voucher payments for 2025 still unestablished
+- [ ] **Whether the 2025 Form 1040 is actually filed** — this file (2026-10-07 entry) says e-filed; Double says Waiting on Client Approval, no `filedAt` (2026-10-10). Open, deadline 2026-10-15
+- [ ] Whether he signed the proposed monthly company engagement (route: Zakom file) and the final 2025 payment arrangement
+- [ ] Whether the 2024 revocable-trust referral (2024-07-26) went ahead
 
 ### 2026-10-06 · ⚖️ The return ITEMIZES, Julia has already spoken to the client, and the final worksheet is DEFERRED
 
@@ -297,7 +312,7 @@ route is an amended return and the decision is hers. Nothing was re-keyed.**
 
 - **Double client:** [cid 710652](https://app.doublehq.com/close?cid=710652) · [2025 tax project](https://app.doublehq.com/tax-return?cid=710652&projectId=219337) · [2025 organizer](https://app.doublehq.com/clients/710652/portal/organizers/141429)
 - **Double case note:** none
-- **Google Drive folder (sensitive vault):** _(pending)_
+- **Google Drive folder (sensitive vault):** [Oleg Zakala (Julia's Drive)](https://drive.google.com/drive/folders/1jPM6AzJZ5f8Vfyufax2DD9x5vvts_iW5) _(a second, separate folder of the same name from the 2026-05 migration also exists under Maria Zavarce's Drive — not merged; found 2026-10-10)_
 - **The 2025 Form 1040 working paper:** [`projects/tax-returns/oleg-zakala-milana-podrugina/2025-form-1040.md`](../../tax-returns/oleg-zakala-milana-podrugina/2025-form-1040.md) — 🔑 **the only place his dollar figures live**
 - **Related clients:** [`zakom-incorporated.md`](./zakom-incorporated.md) — his company
 - **Related SOPs:** [`form-1040-preparation.md`](../../sops/form-1040-preparation.md) — modules **M1**, **M2**, **M3**, **M14**, **M15**

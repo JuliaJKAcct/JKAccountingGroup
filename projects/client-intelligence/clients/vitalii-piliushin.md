@@ -1,6 +1,6 @@
 # Vitalii Piliushin (individual — owner of Atman Parts)
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-09
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -84,9 +84,19 @@ the actual details (and Claude can pull them live when a task needs them).
 ## 6. History & open questions
 
 ### Log
+- 2026-03-24/28 — **The firm's relationship with him starts earlier than the Double record.** On 2026-03-24 a Form 2848 for him was prepared (template and "for signature" versions in Drive); the signed copy is in Drive dated 2026-03-28, and a MyFax notice shows a 2-page fax of "Form 2848 - Vitalii Piliushin" sent 2026-03-28 (to the IRS fax line; which tax matters/years the 2848 covers was not opened). On 2026-03-26 TaxDome reported that his email address had **activated his TaxDome account** (the legacy portal). _(Drive, Gmail, found in the 2026-10-10 full pass)_
+- 2026-05-09 — A Drive client folder "VITALII PILIUSHIN" (standard subfolders: Client uploaded documents, Firm docs shared with client, Private) was created in the migration; Double individual client followed on 2026-05-19. A **2025 extension file (`2025 4868 Ext.pdf`) and a 1095-A and ID were migrated from TaxDome into Double on 2026-06-02** _(Drive, Double activity log)_.
 - 2026-05-19 — Double individual client created _(Double)_.
 - 2026-07-20 — 2024 and 2025 Form 1040 organizers published to him; onboarding follow-up call with Julia (Double note 471135 — PayPal Business and eBay named as the platforms, American National Bank of Texas named; the Ping transcript of the call is illegible).
 - 2026-10-09 — **Lilian started the 2025 return with the Schedule C P&L, from the bank statements** she uploaded to Double that day (Wells Fargo April 2025–January 2026; American National Bank of Texas December 2025–January 2026). Draft 1 delivered: three workbooks (not committed) and the [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md). Her rules for it: food, groceries, fast food and small gas-station purchases are owner draws; vehicle and home-office costs kept apart because they depend on a business-use %; ask the client as little as possible. The website she sent (atman.parts) could not be reached from the session.
+
+- 2026-10-10 — **FULL historical pass (first sweep; no ledger row before).** Sources and what each showed:
+  - **Double** (client 710667 and its activity log, all pages): one note (471135, the 2026-07-20 call; unchanged); properties `Organizer Status` = Sent, `Preferred language` = Only Russian, staff Lilian; one 2025 Taxes project (In Progress since 2026-10-09; it had been In Progress 2026-06-29, put back to Not Started by Julia 2026-08-04). The **same single portal contact is linked to both this client and Atman Parts**.
+  - **Gmail** (all of Julia's mailbox by surname, his email and the business name, paged to the end; ~39 threads): **no direct email with the client at all** — he works through WhatsApp/portal, so the channel is outside the sweep. Hits were the 2026-03 TaxDome/fax items above, firm QuickBooks invoice notices to Atman Parts (one paid 2026-08-17; payment reminders for two further invoices sent 2026-10-06, amounts withheld), Double digests and the firm's own sweep digests.
+  - **Drive:** besides the items above, an **"Atman Parts" folder** (Julia's Drive, created 2026-07-20) holds a "Sales tax - Atman Parts" doc and (new 2026-10-04) a passwords doc; "Project ATMAN LLC.txt" and a Texas Tax Registration Application Summary (copied 2026-08-20, and into the Double library 2026-10-09). Third-party Drive accounts hold a "W9 Vit Atman" (2026-01-30) and an "ATMAN" folder with a 2024 invoice and receipt — **the business, or a business of that name, was already billing in 2024**; not opened, source unclear.
+  - 🔶 **A lead worth Lilian's attention: Candramas LLC's 2025 Form 1099 naming "Vitalii Piliushin" as payee sits in the firm's 1099 folders** (two copies, file dated 2026-01-31; one of the firm's own clients, Candramas). Same-name match only — **not opened, and not confirmed to be this person**. The working paper's income side does not mention a 1099 (a text search of it for the payer name found nothing); if it is him, it is third-party-reported income that his organizer answers and the bank statements would have to agree with.
+  - **Ping:** one client record (his), one meeting (2026-07-20, already summarised in the Double note); the transcript is illegible Russian/English/Spanish mix — only the topics on the note (PayPal Business, eBay, American National Bank of Texas, sales/franchise tax, QuickBooks intake) are usable.
+  - ⚠️ **Not him:** the "Vitaliy's companies - 2025 tax return status" email thread (Sept 2026; Zumfi, Fizum, Nika Realty and similar LLCs) and the Drive folders for "Vitalii Ivanov" / "Vitalii Khomiakov" belong to different people — they matched the first-name search and are **not folded in here**.
 
 ### Tax year 2025 — the review
 - **Gate:** the P&L stands on the bank; the 1040 waits for the organizer he is filling in.
@@ -98,6 +108,9 @@ the actual details (and Claude can pull them live when a task needs them).
 - 🔴 **"Anton Partner" — co-owner or contractor?** Decides whether Atman Parts is a Schedule C at all.
 - 🟠 **The client list (O2, O3) and other accounts (O5)** — one message from Lilian, in simple Russian.
 - 🟠 **eBay 2025 report** — Lilian pulls it (O4).
+- 🔶 **Candramas LLC 2025 Form 1099 naming a "Vitalii Piliushin" (found 2026-10-10)** — in the firm's 1099 folders, not opened; confirm it is him and whether it is in the working paper's income. Pending since 2026-10-10 (found today).
+- 🟠 **Whether the firm filed a 2025 extension / what the 2848 covers** — the migrated `2025 4868 Ext.pdf` (moved 2026-06-02) and the 2026-03-28 Form 2848 fax exist; neither was opened. Not a gate (firm rule), pending since unknown.
+- **Texas franchise/sales-tax and the Atman Parts password file** belong to [`atman-parts.md`](./atman-parts.md).
 - **The eleven images uploaded 2026-10-09 (`File_000.png` … `File_009.png` and `File_005 (1).png`)** — not opened; Lilian to say what they are.
 
 ### Information still needed

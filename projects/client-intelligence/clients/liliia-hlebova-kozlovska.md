@@ -1,6 +1,6 @@
 # LILIIA HLEBOVA KOZLOVSKA
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > ✅ **First full historical CI sweep completed 2026-09-12** (Ping org-wide — zero results about
 > this client; Gmail full history, unbounded, back to 2023-12; Google Drive folder walk; Double
@@ -186,6 +186,7 @@ the actual details.
     answer as wrong because several of the organizer's other answers were wrong** — and it turned out
     to be right. **A source that is unreliable about some things is not thereby unreliable about the
     thing in front of you.**
+- 2026-10-10 — **Incremental sweep (baseline 2026-10-03, bounded to ≥2026-10-03).** Double (cid 710644): 2 notes, both last updated before the baseline (2026-08-18 and 2026-06-22); activity log ≥2026-10-03 empty; no files uploaded ≥2026-10-03; 2025 project still `filed` (2026-08-20). Gmail (names, her address, Kolo Florida; in:inbox and in:sent), Drive (modified ≥2026-10-03) and a Ping org-wide search each returned nothing about her. **Open-item chase (a search of those sources, bounded ≥2026-10-03, did not find any reply):** SSN/EAD substantiation, income substantiation, contract-labour payee, phone business-use %, home-office blanks, Jan–Aug residence/cost, digital-asset transaction, youngest dependant, own refund bank account, driver's licence, surname — all still open, **52 days since 2026-08-19** (the date the file dates them from); no deadline.
 
 ### Tax year 2025 — the review
 

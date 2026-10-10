@@ -1,6 +1,6 @@
 # BOGOPOLSKYY, MARAT and YULIANA — the joint individual return
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -353,6 +353,7 @@ Anything the team must know to serve this client well.
 
 ### Log
 
+- 🔍 **2026-10-10 — WEEKLY CI SWEEP (baseline 2026-10-03).** Double (client 710627): properties unchanged (`Signature: Signed`, `Invoice: Paid`, `Organizer Status: Completed`); tax project `219315` still `filed` (filed 2026-09-15, preparer Lilian, no reviewer recorded); `list_notes` still 0; `list_activity_log` bounded ≥2026-10-03 returned 0 entries (also 0 on Gossip Miami `710577`). Gmail (owner names, `jamvabo`, Marat Boxing, Gossip Miami; `in:anywhere` and `in:sent`, `after:2026/10/03`): the only household traffic is the Form 2848 sent to the shared address for signature on 2026-10-01, already recorded in [`gossip-miami.md`](./gossip-miami.md); **nothing addressed to or from the household about the 1040**. Ping (org-wide, one query): no meeting on/after 2026-10-03 mentioning them (hits were unrelated, garbled). Drive (title searches `Bogopolskyy`/`Gossip`/`Marat Boxing`, `modifiedTime > 2026-10-03`): no file. Chase: Yuliana's business description — a search of Gmail (bounded after 2026-10-03) on 2026-10-10 did not find that she has been asked or has answered → **25 days since the 2026-09-15 filing**. _(Double, Gmail, Ping, Drive, 2026-10-10)_
 - 🔍 **2026-10-03 — WEEKLY CI SWEEP (baseline 2026-09-26→2026-10-03).** Double (client 710627): properties unchanged (`Signature: Signed`, `Invoice: Paid`, `Organizer Status: Completed`); `list_notes` still 0; `list_activity_log` bounded ≥2026-09-26 returned 0 entries. Gmail (owner names + `jamvabo`, `after:2026/09/26`, inbox + sent): the only household traffic is the **Gossip Miami** items — a client-forwarded IRS item (2026-09-29) and a Form 2848 sent to the shared address for signature (2026-10-01) — both recorded in [`gossip-miami.md`](./gossip-miami.md); **nothing was found that is addressed to or from the household about the 1040** (no reply on Yuliana's business description, vehicle questions, or the 2025 return). Ping (org-wide): no meeting dated on/after 2026-09-26. Chase: Yuliana's business description — a search of Gmail and Ping, bounded after 2026-09-26, on 2026-10-03, did not find that she has been asked or has answered → **now 18 days since the 2026-09-15 filing** (21 days since the item was updated 2026-09-12). _(Double, Gmail, Ping, 2026-10-03)_
 - 🔴 **2026-09-26 — WEEKLY CI SWEEP (baseline 2026-09-19→2026-09-26): NO NEW MOVEMENT, AND YULIANA'S
   BUSINESS DESCRIPTION IS STILL UNANSWERED FIVE DAYS AFTER THE RETURN WENT OUT.** Double
@@ -800,6 +801,7 @@ Anything the team must know to serve this client well.
       🔴🔴 **STILL UNANSWERED AS OF 2026-09-26 — 11 days after filing.** Chased again (Gmail + Ping,
       see the 2026-09-26 log entry): no record found that she has been asked, or has answered, in
       the week since the last sweep. This is the single most time-sensitive open item on this file.
+      🔄 **CHASED 2026-10-10 — STILL UNANSWERED, 25 days after filing** (Gmail bounded after 2026-10-03: nothing).
 - [ ] **Marat Boxing LLC's own obligations** — sales tax, local licences, annual report. Never examined.
 - [ ] 🟠 **Whether the household has ONE vehicle or two.** ⚠️ **One car is the WORKING ASSUMPTION,
       not an established fact** — the three "proofs" this row once claimed *(the same finance document,

@@ -1,6 +1,6 @@
 # VOXAGO LLC
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-10-10
 >
 > ✅ **First full historical sweep completed 2026-08-22; Gmail catch-up READ TO COMPLETION 2026-08-29** — Double (client record, properties, note 491841 read in full, contacts, activity log), Gmail (full history — a plain "Voxago" search returned all ~42 estimated results in a single page, no further `nextPageToken`: exhausted, not budget-limited), Ping (`resolve_person` + `search_meetings`), and Google Drive all checked. 🔴 **This run's full-history read found a previously-unknown pair of Florida DOR tax liens from November 2025 — see §5.**
 
@@ -150,6 +150,7 @@ the actual details (and Claude can pull them live when a task needs them).
   ⌨️ **To close it properly: read what VOXAGO'S OWN 2025 books show it paid him.** 🔑 **Voxago is our
   client, so this is the firm's question to settle from the payer side — not Valentin's to answer.**
   ⓘ *The amount is in Valentin's working paper, never here.* _(Worked by Lilian.)_
+- 2026-10-10 — **Weekend sweep (incremental, baseline 2026-10-03, inclusive) — nothing new.** Double: note 491841 `updatedAt` still 2026-08-29 (body re-read, unchanged); `list_activity_log` from 2026-10-03 returned 0 entries; `list_client_properties` unchanged (Annual Report checkbox still true, Bookkeeping Quarterly). Gmail (a search of Julia's mailbox, `after:2026/10/03`, on 2026-10-10, for the name Voxago, plus a broad lien / FDOR / Department of Revenue / annual-report search, 24 estimated results page 1 read): **no thread naming Voxago**; the Department of Revenue hits were other businesses' matters. Drive (modified after 2026-10-02, full-text 'Voxago'): nothing. Ping org-wide `search_meetings` (FDOR lien): nothing legible. **Chase pass (ages as of 2026-10-10):** November 2025 DOR liens — 339 days since 2025-11-05; FDOR account / four requested items — 299 days since 2025-12-15; court fees — 299 days; tangible-goods question — 299 days; 2025 annual report filed? — 242 days since 2026-02-10; 2026-03-24 'Best Broker - Zoom' recap entity — not re-chased (no budget; no dated start beyond 2026-03-24).
 
 ### Tax year YYYY — the review
 

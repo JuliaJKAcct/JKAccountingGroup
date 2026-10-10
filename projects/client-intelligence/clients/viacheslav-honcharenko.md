@@ -1,6 +1,6 @@
 # Viacheslav Honcharenko
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -183,6 +183,7 @@ the actual details (and Claude can pull them live when a task needs them).
   network relationship, and the Broward BTR renewal assignment were all re-checked against the
   sources above — **none moved this window; all three remain open with no new deadline.** The 2025
   4868 extension (deadline 2026-10-15) is unaffected and now ~19 days away.
+- 2026-10-10 — **Incremental sweep (baseline 2026-10-03, inclusive; the file's last sweep entry was 2026-09-26).** 🆕 **Double: Julia PUBLISHED a Double-native organizer, "JK 2025 1040 Organizer", for him on 2026-10-09 (17:32 UTC)** — the only activity-log entry since 2026-10-03 (Double `list_activity_log`, 2026-10-10). The property `Organizer Status` still reads Completed (the TaxDome-era completion of 2026-03-31) — so he now has a second, Double-side organizer to complete, **5 days before the 2026-10-15 extension deadline**. Whether he has opened it is not visible (the log shows publishing only for this window). Project "2025 Taxes" still `waitingOnClient`, `filedAt` empty; `list_notes` 0; `list_files` from 2026-10-03: none. A search of Gmail (all surname spellings, Karpenko, Pro Title/Optic Gold/Best Broker), bounded after 2026/10/03, found no client correspondence — only solicitation mail addressed to Pro Title Agency LLC. A solicitation from a Florida filing service dated 2026-10-06 lists **"MAXRATINGS LLC"** as a Florida LLC (2027 annual-report offer) — this is the spelling with an `s`, matching Valentin Volzhanskiy's records and not the `Maxrating` spelling above; **it shows a Florida entity of that name exists, it does not establish that it is the payer on his 1099** (Gmail, 2026-10-06). Drive full-text for his surname, modified since 2026-10-03: nothing. Ping: org-wide search (Schedule C / Karpenko / business tax receipt) — garbled unrelated hits, discarded. ⚠️ **BTR renewal:** the file notes county BTRs run to 30 September; the receipt approved 2026-07-07 would therefore have lapsed 2026-09-30, 10 days ago — a search of Gmail bounded after 2026-10-03 found no renewal; nothing earlier was searched for it. Inference only; a person should check BTExpress.
 
 ### Tax year 2025 — the review
 

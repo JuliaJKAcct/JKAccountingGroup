@@ -1,6 +1,6 @@
 # Ishkhan Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -249,6 +249,7 @@ the actual details.
   - 🔴 **How did the transfer at the close of 2025 happen (sale / gift / redemption)? — a search of Gmail, bounded ≥2026-09-26, on 2026-10-03, found no reply. 29 days pending since 2026-09-04.** No deadline.
   - ⚠️ **QuickBooks primary-admin handover (ID verification + QR code) — case note unchanged; no Gmail update found. 58 days pending since 2026-08-06.** No deadline.
   - The 2024 Form 7203 line 15 (recorded in hand 2026-09-05) and the whose-accounts question (settled 2026-09-02) — not re-opened.
+- 2026-10-10 — **Incremental sweep (baseline 2026-10-03, bounded to ≥2026-10-03).** Double (cid 710638): 0 notes; activity log ≥2026-10-03 empty. **New:** the 2025 tax project reads `notStarted` with **preparer Irina Jandieri** (Double `list_projects`, 2026-10-10), whereas the `Assigned Staff` property read Lilian on 2026-09-19 — two Double fields naming different people; **UNSETTLED**, not asked of anyone yet. Company (cid 719473): final 1120-S worksheet saved in Double 2026-10-06 (see `artem-markarian.md`). Ping: contact search finds him linked to the Ecoorganic and joint-household clients; an org-wide semantic search for the Ecoorganic share transfer returned only older (July 2026) meetings and nothing dated ≥2026-10-03. Gmail ≥2026-10-03 (his address, Ecoorganic, name): no reply. **Chase ages as of 2026-10-10:** share-transfer mechanics (sale/gift/redemption) reply 36d (29d at 2026-10-03); QuickBooks primary-admin handover 65d (58d at 2026-10-03); 2024 suspended-losses question — pending since unknown, no start date in the file. None arrived.
 
 ### Outstanding items (CI-only — never in the SOP)
 
