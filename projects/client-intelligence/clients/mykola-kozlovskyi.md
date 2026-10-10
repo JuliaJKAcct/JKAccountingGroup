@@ -1,6 +1,6 @@
 # Mykola Kozlovskyi
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -168,6 +168,7 @@ the actual details.
   - ✅ **Nothing on the company side moved by a cent** — the K-1, Form 7203, the ending stock basis
     that opens the company's final year, the unusable net operating loss and the QBI carryforward are
     all unchanged. **The entire difference is on page 2 of the 1040.**
+- 2026-10-10 — **Incremental sweep (baseline 2026-10-03, bounded to ≥2026-10-03).** Double (cid 709838): 0 notes; activity log ≥2026-10-03 empty (also empty for Kolo Florida, cid 706626, whose notes are still 0); no new files; 2025 project still `filed` (2026-08-20). **Filed-vs-blocked contradiction re-verified — still NOT resolved** (no source moved; 21 days since first recorded 2026-09-19). Gmail ≥2026-10-03 (his address, Kolo Florida, name variants) found no client reply on any open item. **Routing note for `kolo-florida.md` (not folded in here):** Julia's Gmail ≥2026-10-03 holds Gusto reminders that Kolo Florida Inc's weekly payroll (period Sep 26–Oct 2) was due 2026-10-07 and flagged late 2026-10-08, and Shopify notices for the KOLO HOUSE store (payments/payouts re-enabled 2026-10-07; a bill payment failed 2026-10-07 and 2026-10-09, retry set 2026-10-11) (Gmail, 2026-10-10). **Chase ages as of 2026-10-10:** W-2 53d (since 2026-08-18); Marketplace Sept-2025 report 52d (08-19); counter deposits 52d (08-19); contract-labour payee identity 53d (08-18); material participation 52d (08-19); digital-asset transaction and own bank account — pending since unknown, no start date in the file, not chased this run beyond the general ≥2026-10-03 searches.
 
 ### Tax year 2025 — the review
 

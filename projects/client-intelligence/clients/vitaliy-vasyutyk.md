@@ -1,6 +1,6 @@
 # Vitaliy Vasyutyk — property & renovation LLC group
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > 🔴 **2026-09-26 SWEEP: THE OWNER'S OWN 2025 FORM 1040 IS STILL `Not Started`**, one week after the
 > 2026-09-19 finding, while all nine of his companies' 2025 returns remain `Filed`. No email,
@@ -138,6 +138,9 @@ watch-outs, one-off arrangements, history that affects the work.
 ### Log
 A running, dated record as we build this profile.
 
+- _(2026-10-10)_ — **Incremental sweep, baseline 2026-10-03 — owner-level, ALL TEN companies' activity logs read this time.** Sources: Double (`list_activity_log` bounded from 2026-10-03 on the owner AND on each of the ten companies — Nika Realty, 2 Romans, Sunshine, SYS 1, Remodel Master, Fastighet, Tropical Coast 1, Zumfi 1, Zumfi 2, Fizum 1 — **0 entries on every one**; `list_client_properties` batched across all eleven records; `list_projects` and `list_notes` and `list_contacts` on the owner); Gmail (`in:anywhere` and `in:sent`, bounded `after:2026/10/03`, for the owner's names, all ten company names, the five invoice numbers, and dissolution/address-change/4868/extension/annual-report terms); Ping (org-wide `search_meetings`, one query); Google Drive (title searches on Vasyutyk / Nika Realty / Zumfi / Fizum, `modifiedTime > 2026-10-03`).
+  - **Nothing moved.** The owner's 2025 Form 1040 project is still `notStarted` (due date field still the original 2026-04-15, **178 days** past; no extension evidence anywhere — 4th consecutive quiet sweep). The ten companies' properties are unchanged from the 2026-09-19 reading (Organizer Status still `Sent` on Fastighet, Remodel Master, Sunshine and Tropical Coast 1; `Completed` on the rest). Zero notes on the owner. Shared portal contact `567527` `updatedAt` is still 2026-09-23 (did not move again).
+  - Gmail: the only company-related message in the window is a third-party filing-service marketing email (2026-10-05) about an early 2027 annual report for Remodel Master Realty — **advertising, not a state notice** (same class as the Tropical Coast 1 "renewal" emails in §5). **No reminder round, payment confirmation, address-change confirmation or dissolution confirmation** found. Ping: no meeting mentioning the owner or his companies. Drive: no file modified. _(Double, Gmail, Ping, Drive, 2026-10-10)_
 - _(2026-09-26)_ — **Incremental sweep, baseline 2026-09-19 — owner-level, then routed by company.**
   Sources: Double (`get_client` owner + `list_client_properties` batched across owner + Nika Realty
   `710583`, SYS 1 `710600`, Remodel Master `710590`, Zumfi 1 `710613`, FIZUM 1 `710574`; `list_notes`
@@ -232,9 +235,11 @@ it here; these never go into the client SOP.
   🔄 **CHASED 2026-09-26 — STILL `Not Started`, now 164 days past the on-file (possibly stale) due
   date.** Second consecutive weekly sweep with zero movement — no extension evidence, no activity,
   no email, no Ping meeting. **This is now the group's single largest open item.**
+  🔄 **CHASED 2026-10-10 — STILL `Not Started`, 178 days past the on-file date; 4th quiet sweep.** Double project, activity log, Gmail and Ping, bounded after 2026-10-03: nothing.
 - 🔴 **Three invoices from 2026-03-25 are still unpaid** (`2097`, `2101`, `2104`) — now **SEVEN** rounds of reminders (last confirmed 2026-09-08), **178 days outstanding as of 2026-09-19**, no deadline (collection matter). The work was delivered and the charges are clean — **so this is a collection question, not a billing question.** Two new invoices (`2293` SYS 1, `2294` Remodel Master, both issued 2026-09-08) are too recent to call late.
   🔄 **CHASED 2026-09-26 — UNCHANGED.** No new reminder round or payment-received email found
   (Gmail searched for the three invoice numbers plus the two new ones, bounded after 2026-09-19).
+  🔄 **CHASED 2026-10-10 — UNCHANGED: 199 days since 2026-03-25** (a Gmail search bounded after 2026-10-03 found no reminder round and no payment for `2097`/`2101`/`2104`; `2293`/`2294` now 32 days old with no first reminder found).
   **185 days outstanding as of today**, still 7 rounds, still a collection question. `2293`/`2294`
   are now 18 days old — old enough to be worth a first reminder if one hasn't gone yet, but no
   reminder for either was found this session.
@@ -244,9 +249,11 @@ it here; these never go into the client SOP.
   logged this week either. Still not established whether this was ever filed with Sunbiz. (Whether
   the broader 2026-09-12 group-wide address change was filed is the same open question — 14 days
   open, unchanged.)
+  🔄 **CHASED 2026-10-10 — STILL UNCONFIRMED, 33 days since 2026-09-07 (28 since the group-wide 09-12 email).** Activity logs of **all ten** companies bounded after 2026-10-03: 0 entries; Gmail found no change-of-address confirmation.
 - ⚠️ **Zumfi 1 LLC is to be closed** (Lilian → Julia, 2026-09-07; repeated in the 2026-09-13 status email as *"NEED TO CLOSE"*). **Still nothing filed as of 2026-09-19** (12 days open, no deadline) — its 2025 return was filed 2026-09-15 as a going concern in the meantime. Compare with Tropical Coast 1's dissolution for the route and what it costs.
   🔄 **CHASED 2026-09-26 — STILL NOTHING FILED, now 19 days open.** `list_activity_log` on Zumfi 1,
   bounded from 2026-09-19, returned zero entries. No deadline attaches, but the item is aging.
+  🔄 **CHASED 2026-10-10 — STILL NOTHING FILED, 33 days open.** Zumfi 1's activity log (and the other nine) bounded after 2026-10-03: 0 entries; a Gmail dissolution search found nothing.
 
 _(Below the published-card cutoff — still tracked, none of it new this week except the last line.)_
 

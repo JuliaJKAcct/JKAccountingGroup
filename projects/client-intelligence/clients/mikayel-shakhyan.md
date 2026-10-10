@@ -1,6 +1,6 @@
 # Mikayel Shakhyan
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > 🔴🚨 **2026-09-26 SWEEP: THE DEADLINE IS NOW 11 DAYS OVERDUE AND NOTHING HAS MOVED AT ALL SINCE
 > 2026-09-19.** `Prepare tax return` is still `wip`; every downstream task (`Review`, `Send draft`,
@@ -356,6 +356,7 @@
 - _(2026-04-15)_ — The client activated his Double portal account.
 
 - _(2026-10-03)_ — **Weekly CI sweep, baseline 2026-09-26 — still nothing from the client.** Double (`list_notes`, `list_activity_log` bounded from 2026-09-26): 0 notes, 0 entries; `list_client_properties` unchanged (`Tax Return Type` still `1120 Proforma`). Gmail (bounded after 2026-09-26, on his name, the company name, the trademark and "5472") found only the firm's own 2026-09-26 sweep email. 🆕 **Observed in Double's task list (not previously recorded here; creation date unknown):** two further project tasks with blank names, sections `Prepare tax return` (unassigned, no due date, `notStarted`) and `File tax return` (Lilian, due 2026-09-15, `notStarted`), alongside the original `Prepare tax return` (`wip`) — looks like a second/duplicate task set on the same project. Every downstream task is still `notStarted`.
+- 2026-10-10 — **Incremental sweep (baseline 2026-10-03, bounded to ≥2026-10-03).** 🔴 **The extended Form 5472 due date (2026-09-15) is now 25 days overdue**; the 2025 project is still `inProgress` (Double `list_projects`, 2026-10-10), preparer Lilian. Double (cid 710648): 0 notes, activity log ≥2026-10-03 empty, 0 tasks created ≥2026-10-03, 0 files uploaded ≥2026-10-03. Gmail (his address, name, Lumari, 5472, the two related entities; bounded ≥2026-10-03), Drive (modified ≥2026-10-03) and Ping (contact record exists; org-wide semantic search for his name / Form 5472) found nothing about him. **Chase ages as of 2026-10-10:** transaction summary to Julia 34d (since 2026-09-06); combined client message Q1/Q3/Q4/Q5 34d (since 2026-09-06), Q2 draft 33d (since 2026-09-07); record-keeping 'tell him' 35d (since 2026-09-05); the five client-only questions 34–35d; Form 7004 route, Parts II/III check, dissolution date (sunbiz.org not reachable), six image scans, citizenship / ITIN lookup — open since 2026-09-05/06, 34–35d, none can be answered from the sources this sweep reaches. Not re-queried this run: the `FOLLOW-UPS.md` row 85 text itself; the blank-named duplicate Double tasks.
 
 ### Tax year 2025 — the review
 

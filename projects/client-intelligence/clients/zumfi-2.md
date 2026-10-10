@@ -1,6 +1,6 @@
 # Zumfi 2 LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-26
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -340,6 +340,7 @@ Names, emails, and phone numbers are **personal data** — they live in Double, 
   would bound the next run to searching only after today and skip this full history permanently.
   It stays out of that ledger until Lilian/Julia's process adds the group's per-company files to the
   weekend sweep's scope table (see the coverage-gap note below).
+- _(2026-10-10)_ — **Incremental sweep, bounded to 2026-10-03 and later: nothing new.** A search of Gmail (`Zumfi`, `TNTAP`, `tn.gov`, `Hamilton County`, owner names, inbox and sent, `after:2026/10/03`), Double (notes — still zero; activity log; files; tax project still `filed` 2026-09-15; 12 project tasks all still `notStarted`), Ping (org-wide search, no legible hit) and Drive (modified after 2026-10-03, no Zumfi 2 file) on 2026-10-10 did not find any TNTAP follow-up, any Tennessee correspondence, a Hamilton County Trustee message, or a bank statement. TNTAP access stays unconfirmed (23 days since the 2026-09-17 request). _(Gmail, Double, Ping, Drive; 2026-10-10)_
 
 ### Tax year 2025 — the review
 

@@ -1,6 +1,6 @@
 # Zakom Incorporated
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-07
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -49,7 +49,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | Bookkeeping / day-to-day contact | Not applicable — no bookkeeping engagement |
 
 - **Double client:** [`Zakom Incorporated` — id `710612`](https://app.doublehq.com/close?cid=710612)
-- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ none — **this client has no Double notes at all** (checked 2026-09-13)
+- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ none as a tracked case note — one meeting-summary note exists (2026-10-07, Julia); before that no notes at all (checked 2026-09-13)
 
 ## 3. Systems & access
 
@@ -1032,6 +1032,15 @@ A running, dated record as we build this profile.
   because reasonable compensation is already an open issue on the 2025 return (§5). Not signed; fee figures
   live in the delivered proposal, not here.
 
+- _(2026-10-10)_ — **INCREMENTAL SWEEP, bounded to 2026-10-03 and later.** Sources: Double (notes, activity log, projects, files), Gmail (`Zakom`/owner names, inbox and sent), Ping, Drive. What is new:
+  - 🔑 **A Double note now exists — the first on this client.** "Meeting: Zakala Tax Return Review", posted by Julia 2026-10-07 from the Ping/Zoom meeting held that day (Julia and the owner; ~30 minutes; Zoom meeting assets also reached Julia's inbox). The note carries the meeting analysis and Q&A and is a meeting summary, not a tracked case note. _(Double `list_notes`, 2026-10-10)_
+  - **What the meeting established** (figures withheld; they live in the working paper and the delivered proposal): Julia **presented the monthly engagement** — QuickBooks bookkeeping, monthly reports, **payroll management**, 1099 administration, tax planning and the S-corp return in one monthly fee, personal tax prep excluded, one-time cleanup billed hourly, start October with a **setup call around October 16**. The owner said he needs QuickBooks bookkeeping and wants clearer monthly visibility, and **would review the proposal — no acceptance was confirmed on the call**. Julia told him the company needs regular W-2 payroll set at a reasonable compensation level plus tax prepayments, that year-end-only records are unreliable, and that repeated excess distributions and thin payroll create S-corp audit exposure. She walked him through the 2025 preliminary personal picture (excess distributions reported as capital gain, officer wages with no actual withholding, his wife's W-2 with no federal withholding, itemised deductions) and said additional depreciation would not reduce his taxable income because his basis in the company is zero and losses are suspended. **The owner has a 2024 IRS installment plan still running** (found together in his IRS online account) and proposed an upfront payment plus a monthly amount toward the 2025 balance, **arrangement still to be finalised**. Julia also raised a company 401(k), an IRA for the spouse and a 529 plan as 2026+ planning ideas, and health-insurance subsidy repayment risk; a daughter was born to the family in September 2026. _(Double note 554824, Ping, 2026-10-07)_
+  - **Double status of the 2025 project:** `waitingClientApproval`, `filedAt` empty, set by Lilian 2026-10-07 20:20 UTC; the owner's personal 2025 project (710652) is also `waitingClientApproval`. _(Double `list_projects`, 2026-10-10)_ ⚠️ **UNSETTLED — this file's 2026-10-07 entry below says Julia signed and e-filed the 1120-S on 2026-10-07, but Double shows no `filedAt` on the project.** Not established from what this sweep could reach whether the project status simply lags the filing.
+  - ⚠️ **UNSETTLED — payroll in the proposal:** the 2026-10-07 proposal entry above records payroll as NOT in the bundle; Julia's description on the 2026-10-07 call lists payroll management as included. _(Double note 554824 vs. log, 2026-10-10)_
+  - **Firm invoice reminder:** QuickBooks sent the owner a payment reminder on 2026-10-09 for one open firm invoice (amount withheld); a search of Gmail, bounded after 2026/10/03, did not find a payment confirmation. _(Gmail, 2026-10-10)_
+  - **Working-paper file housekeeping (Double):** on 2026-10-06 Lilian removed the working-papers workbook from the company's custom folder and moved the client's organizer uploads into the "Uploaded by client" folder (names only). _(Double activity log, 2026-10-06)_
+  - A search of Gmail (client replies from the owner and spouse, bounded after 2026/10/03), Drive (Zakom/Zakala titles modified after 2026-10-03) and Ping (org-wide, no client scope) on 2026-10-10 did **not** find a signed proposal, a 7004/extension confirmation, a client reply, or a new Zakom document.
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
@@ -1888,7 +1897,7 @@ never published, so Double is its only durable home.
 ## 7. Links
 
 - **Double client:** [`Zakom Incorporated` — id `710612`](https://app.doublehq.com/close?cid=710612)
-- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ none — no notes exist on this client
+- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ none as a tracked case note — one meeting-summary note exists (2026-10-07)
 - **Double 2025 organizer:** [`JK 2025 Business Tax Organizer - Zakom Incorporated` — id `147762`](https://app.doublehq.com/clients/710612/portal/organizers/147762)
 - **Double 2025 tax project:** [`2025 Taxes` — id `219303`](https://app.doublehq.com/tax-return?cid=710612&projectId=219303)
 - **Google Drive folder (sensitive vault):** ✅ **LOCATED 2026-09-26 (first full sweep).** Two folders exist, both owned by `julia@jkaccountinggroup.com` — **current:** [`Zakom Incorporated`](https://drive.google.com/drive/folders/1ENPq3PL7Ck4yXt0lQwCrXSS5m1Z7ScI2) (created 2026-05-09, the post-TaxDome-migration one), and a **legacy** pre-migration folder, [`ZAKOM Incorporated`](https://drive.google.com/drive/folders/1rU1DHfLJF38dIQdDAR3ng8M47A8k9G6M) (created 2023-02-13, last modified 2023-09-11) — not yet checked against each other for duplicate/unique content, so treat both as live vaults for now

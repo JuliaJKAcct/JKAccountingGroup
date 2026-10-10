@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-04 *(the tolls keyed and verified against a predicted model; the vehicle's first-business-use question answered, with its two riders recorded; the final evidence worksheet built and delivered)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10 *(sweep: the 2025 project reached Ready for Filing on 2026-10-07; a new invoice issued; new LLC papers filed in his folders)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1626,6 +1626,15 @@ so in the same sentence that listed the dates; and a sheet row count that contra
 same section said two paragraphs later. ⓘ **The voucher count is now stated as the DATES rather than
 as an ordinal, because the ordinal had drifted twice.**
 
+### 2026-10-10 — weekly sweep, baseline 2026-10-03: the project reached Ready for Filing, and his folders gained LLC papers
+
+Sources: Double (`get_client` properties, `list_projects`, `list_notes` — both notes' `updatedAt` unchanged, 2026-09-13 and 2026-07-16 — and `list_activity_log` bounded ≥2026-10-03, 15 entries, all by Lilian); Gmail (`in:anywhere` and `in:sent`, `after:2026/10/03`, his name and email, plus payer/IRS terms); Ping (org-wide, one query); Google Drive (`Volzhanskiy`/`Smart Lines` titles, `modifiedTime > 2026-10-03`). _(2026-10-10)_
+
+- 🟡 **The 2025 tax project moved to `Ready for Filing` on 2026-10-07** (Double activity log): `Waiting on Client` → `Waiting on Client Approval` at 20:59, a PDF named like the 2025 return created in his `2025` folder at 21:10, then `Ready for Filing` at 21:11, all by Lilian. `Signature` property reads `Signed`. ⚠️ **What the log does not show:** whether the client approved or e-signed anything (the status names suggest it, but a Gmail search bounded after 2026-10-03 did not find a client reply — the file's earlier note that his replies may sit in another mailbox still applies), and whether the return has been transmitted — the project's `filedAt` is empty as of 2026-10-10. **The extended due date, 2026-10-15, is 5 days away.**
+- 🗂️ **2026-10-06 (Lilian, Double file library):** the permanent evidence workbook (`…FINAL-worksheet.xlsx`) was filed in his `JK documents` folder; the client's two draft P&L workbooks, a reconciliation note, his licence images, and copies of the Maxratings, VoiceCapital and Pro Title Agency 1099-NECs were filed in `Docs for tax prep`. **Also filed: formation papers for a Florida LLC opened in 2026 — "Smart Lines Group" (Sunbiz and EIN images, folder `LLC opened in 2026`) — and an EIN document for a Delaware company named "Luxury Services" (folder `2023`)** _(names read off the filenames only; contents not opened — low confidence)_. This is the first record in this file of a **2026 LLC**, and it may be the Delaware LLC the file has listed as unexplained since April 2025. Neither entity's relationship to the return is established.
+- 💲 **A new invoice (`2338`, amount withheld) was issued to him on 2026-10-07 and a first reminder went out 2026-10-09** (QuickBooks notices to Julia's mailbox). Double's `Invoice` property reads `Sent`. Unpaid as of 2026-10-10 (3 days).
+- **Chase of this file's own open items (named queries, Gmail/Double/Ping/Drive, bounded after 2026-10-03):** the **box-14 tips eligibility** question to Compass Group — a search found no message to or from that employer (item pending since 2026-09-13, **27 days**; the filing deadline now makes it time-critical); the **September 2025 and December 2025 bank statements** — no upload found in the activity log (File entries listed above are the only ones); the **taxpayer-signature-date check** — not verifiable from these sources. Ping: no meeting touching him since the 2026-07-16 call.
+
 ### Outstanding items (CI-only — never in the SOP)
 
 
@@ -1644,6 +1653,7 @@ as an ordinal, because the ordinal had drifted twice.**
 - 🔴 🆕 **The print set still opens with a payment voucher on a return that claims a refund** — third
   draft running. **It must come off before anything reaches him; it is the only page he reads as an
   instruction.**
+- ⏰ 🆕 **2026-10-10: the project is `Ready for Filing` and the extended due date is 2026-10-15 (5 days).** The items below that say "before filing" are now live gates — tips eligibility (27 days open, no employer contact found), the payment voucher on the print set, and the signature-date check.
 - 🔴 **The box-14 tips are CLAIMED but not ESTABLISHED — close it before filing.** Worth **low four
   figures** of tax, and ⚠️ **WORTH MORE SINCE 2026-10-06 than before it**, because Julia's two
   decisions raised his income into deduction the return had been wasting. **Two questions, and they go to the EMPLOYER, not the client:** what job he

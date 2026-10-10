@@ -1,6 +1,6 @@
 # Atman Parts
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-09
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -205,6 +205,13 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
   - Sunbiz name check and the Ping coverage gap for the bookkeeping contact — **pending since unknown — no start date in the file**; not chased this run (budget; same as the last five runs).
 
 - 2026-10-09 — 🆕 **The 2025 Schedule C P&L was built from the bank statements, with Lilian** — every line of the Wells Fargo (Apr 2025 → Jan 2026) and American National Bank of Texas (Dec 2025 → Jan 2026) statements, read through the redactor and tied to the printed totals. What it established about the business is written into §1, §3 and §5 above; the figures are in the [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md), never here. Lilian, the same day: *"Esto es un Schedule C"* (§1). The owner's individual client had **no Client Intelligence file** — created ([`vitalii-piliushin.md`](./vitalii-piliushin.md)).
+
+- 2026-10-10 — **Incremental sweep (baseline 2026-10-03→2026-10-10).** Double: `list_notes` still returns none; `list_client_properties` unchanged (Sch C, Sales Tax Monthly, Bookkeeping Monthly, Organizer Status N/A (SCH-C)); `list_activity_log` ≥2026-10-03 returned nothing; `list_files` ≥2026-10-03 returned nothing. Tasks: the recurring "Sales Tax" task (due 2026-10-05) is **still Not started** in Double 5 days after its due date, next occurrence on deck 2026-11-05 — a status check only; whether the October return was filed outside Double is not established by this search. Gmail (business/owner names, `after:2026/10/03`): the firm's **QuickBooks invoice reminders to the client for two open firm invoices** went out 2026-10-06 (amounts withheld; the firm is chasing its own fees). Drive: a doc titled "Passwords - Atman Parts" now sits in the Atman Products folder (created 2026-10-04, owner Julia) and a "2025 taxes" folder with a bank-activity CSV was created the same day (Drive title/`modifiedTime` search ≥2026-10-03, 2026-10-10) — **plausibly the successor to the loose "TAXES PASSRDS.txt" item, but not confirmed (contents deliberately not opened)**. Ping: `resolve_person` / `search_contacts` return only the owner's individual-client contact; an org-wide `search_meetings` surfaced no meeting dated ≥2026-10-03 for this client.
+  - 🔴 **"TAXES PASSRDS.txt"** — 51 days pending since found (2026-08-20); a new "Passwords - Atman Parts" Google Doc (2026-10-04) may supersede it — Lilian to confirm, then close.
+  - 🔴 **Sch C vs 1120-S** — 54 days since raised (2026-08-17); Lilian is acting on Schedule C (2026-10-09); Julia's formal confirmation not found in a Gmail search bounded ≥2026-10-03.
+  - 🔴 **Who files the sales tax** — 54 days since raised (2026-08-17); the October Double task is Not started past its 10-05 due date.
+  - **Texas franchise-report status** — 54 days since raised (2026-08-17); next live deadline 2027-05-15.
+  - Sunbiz name check and Ping bookkeeping-contact gap — pending since unknown — no start date in the file; not chased.
 
 ### Outstanding items (CI-only — never in the SOP)
 - 🆕 🔴 **"Anton Partner" — co-owner or contractor?** (2026-10-09) The client labels a regular payee "Partner". A co-owner would make Atman Parts a partnership (Form 1065), not a Schedule C. Asked of the client through Lilian — [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) O1.

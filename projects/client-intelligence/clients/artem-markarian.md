@@ -1,6 +1,6 @@
 # Artem Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-03
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -524,6 +524,7 @@ the actual details.
   - 🔴 **Per-car Turo earnings breakdown — a search of Gmail, bounded ≥2026-09-26, on 2026-10-03, did not find it. 32 days pending since 2026-09-01.** No deadline set.
   - 🔴 **Whose Turo account — a Gmail + Drive search, bounded ≥2026-09-26, found nothing new.** (Julia ruled the activity Artem's on 2026-09-01; the registration name itself is still unseen.)
   - 🔴 **The Kona / 1099-MISC question, Turo login access, residence/state, Form 7203 basis question, mileage records — no reply found in Gmail ≥2026-09-26.** Pending since 2026-09-01/09-02 where the file dates them; residence/state — pending since unknown — no start date in the file.
+- 2026-10-10 — **Incremental sweep (baseline 2026-10-03, bounded to ≥2026-10-03).** Double (cid 710623): case note 510952 unchanged (`updatedAt` 2026-09-01, body re-read: no change); activity log ≥2026-10-03 empty; 2025 project `readyForReview` (unchanged since 2026-09-10). **New on the company side:** Double activity log for ECOORGANIC USA LLC (cid 719473) shows Lilian saved the 2025 Form 1120-S **FINAL WORKSHEET** workbook into the company's "Docs for tax prep" folder on 2026-10-06 (Double activity log, 2026-10-10) — the company's return is now documented as finished; his own return items below are unaffected. Gmail ≥2026-10-03 (his address, Ecoorganic, Turo, name): no client reply; the only hits were Connecticut tax-agency portal alerts for the company (2026-10-06, 2026-10-08). **Open-item chase, ages as of 2026-10-10:** per-car Turo breakdown 39d (since 2026-09-01); Turo account name 39d; Kona / 1099-MISC 39d; Turo login 39d; Form 7203 basis (Lilian to Julia) 38d (since 2026-09-02); mileage records — pending since unknown, no start date in the file; residence/state — pending since unknown, no start date in the file. None arrived; none has a deadline.
 
 ### Outstanding items (CI-only — never in the SOP)
 

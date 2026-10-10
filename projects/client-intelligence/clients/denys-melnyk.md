@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-06
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -2630,6 +2630,17 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 - ⚖️ **The estimated-tax penalty was removed** — it rests on the prior-year safe harbour, which assumes the 2024 return covered the full year and that they were U.S. residents all of 2024.
 - 💳 **The installment request is on the return** — nothing paid with it, monthly direct debit. The checking-account details are on the form (never written in this file).
 - 📗 **The final worksheet was built** (English, the replication record of §4I) — **Lilian saves it in Double on the client**; it is never committed.
+
+### 2026-10-10 — weekend sweep (incremental, bounded 2026-10-03 and later): the 2025 return was FILED 2026-10-07
+
+> ⛔ **No figures here on purpose** — this file renders to a hosted page.
+
+- ✅ **Double: the "2025 Taxes" project is now `Filed` (status change by Lilian, 2026-10-07; Ready for Review 10-06 → Waiting on Client Approval 10-06 → Filed 10-07).** The filed return was saved to the client's `2025` folder in the Double file library on 2026-10-07 _(Double activity log, `list_projects`, `list_files`, 2026-10-10)_. The deadline of 2026-10-15 is therefore moot for the filing itself.
+- 📧 **Gmail, 2026-10-06:** Lilian emailed the client, cc Julia, a plain-language letter "how we have prepared it and why": the money received in 2025 is reported on a **Schedule C** (no salary or distribution reported, since nothing held says what it was); **one Form 8082** is attached for Midwest Expedited Corp; no 2025 K-1 had arrived from any of the three corporations ("nothing has arrived since" the ex-partner undertook to send them); the letter states the client had **no Marketplace coverage in 2025** (as he told the firm, and per Julia's 2026-09-21 assume-no-Marketplace ruling); **an amendment, if K-1s arrive later or the IRS receives different corporate information, is separate work billed separately.** _(Gmail, 2026-10-06)_
+- ⚠️ **The K-1 wait is not closed, only overtaken:** the return was filed without them; a search of Gmail, bounded after 2026/10/03, on 2026-10-10 found no message from the ex-partner and no K-1 (**~51 days since the 2026-08-20 promise**). If they arrive, the 10-06 letter says an amendment follows.
+- 💳 **Firm fee collection:** a QuickBooks payment request for the firm's invoice went to the client 2026-10-06 and was paid by bank transfer the same day; **on 2026-10-08 QuickBooks reported that bank transfer as canceled because of a problem with the client's bank account.** Whether it was re-paid is not established by a search of Gmail bounded after 2026/10/03 on 2026-10-10 (amount withheld). _(Gmail, QuickBooks notices 2026-10-06/08)_
+- Notes: 485225 (`updatedAt` 2026-09-23) and 490984 (`updatedAt` 2026-08-20) — neither moved since baseline; not re-read in full beyond confirming the dates. Ping/Drive: Drive title search for Melnyk modified after 2026-10-03 returned nothing; no Ping meeting on this client found.
+- ℹ️ The long "Outstanding items" list above was **not re-walked item by item** this run: most of it was written before the return was prepared and filed, and the working paper in `projects/tax-returns/` (§4U) is the record of what was decided. Nothing in the sources searched this run answers any of them.
 
 ## 7. Links
 
