@@ -1,6 +1,6 @@
 # EVERGLADES APPLIANCE REPAIR, LLC — appliance repair (Melnychenko)
 
-> **Status:** Prospect — quarterly proposal drafted 2026-10-07 · **Owner:** Julia · **Last updated:** 2026-10-10
+> **Status:** Prospect — quarterly proposal drafted and SENT 2026-10-07 · **Owner:** Julia · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,

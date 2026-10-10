@@ -6,7 +6,7 @@
 > promising an answer "by the end of this week" — that reply was NEVER SENT: Mindaugas
 > followed up a SECOND time on 2026-09-22 ("please let us know if there are any updates")
 > and it remains unanswered as of the 2026-09-26 sweep** · **Owner:**
-> Julia · **Last updated:** 2026-10-03
+> Julia · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -138,6 +138,7 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-10-10 — **Bounded PROSPECT sweep (cheap pass — Gmail in:inbox+in:sent since 2026-10-03; Google Drive full-text; Double name search; no Ping — no Double account. No `sweep-state.md` row.)** A search of Gmail for "4TUKAS" / "Mindaugas" / "Kezys" / the investors-group thread subject, bounded `after:2026/10/03`, on 2026-10-10, found only the firm's own 2026-10-03 CI digest — **no new message in the correspondence thread since Julia's 2026-10-02 "go ahead and sign" reply**, i.e. the signed engagement letter has not shown up in Gmail. A Drive full-text search for "4TUKAS" / "Kezys" modified after 2026-10-03 returned no files; a Double `list_clients` name search for "tukas" returned no client (so no Double account/invite yet). Signature wait: **40 days** since the letter was in the member's hands (at the latest 2026-08-31), **8 days** since Julia's 2026-10-02 invitation to sign. Not visible to this sweep: phone/WhatsApp, and e-signature platform notices.
 - 2026-09-26 — **Bounded PROSPECT sweep (cheap pass — Gmail in:inbox+in:sent since
   2026-09-19; Google Drive full-text search; no Ping/Double — no Double account exists.
   Per the PROSPECT batch rule, no `sweep-state.md` row is ever added for this client — this
@@ -222,7 +223,7 @@ the actual details.
 
 - **2026-10-03 sweep — the two engagement-letter questions are now ANSWERED (supersedes the "unanswered" bullets above).** Gmail thread "Following up — Alina's investors group (Miami)" (Gmail, in:inbox + in:sent, `after:2026/09/26`): the member chased a third time **2026-09-28**; Julia replied **2026-09-28** — (a) foreign-partner withholding (§1446 / 8804 / 8805 / 8813) is **included in the quoted fee** and may not be needed anyway since rental activity usually produces losses; (b) the fee is the **full package even if there is no rental income in 2026**, because the first year should be used to obtain the ITINs so the second year can be e-filed. The member replied 2026-09-29 (first said the CPA was the blocker for the operating agreement/bank account, then corrected on 2026-09-30: those run in parallel, they still want to engage the firm and set up the 2026 filings/ITINs). Julia replied **2026-10-02**: no action items now; **go ahead and sign the engagement**, the firm will invite them to Double and a tax questionnaire goes out in **February**; QuickBooks set up once a property is bought and rented, with a **bookkeeping cleanup in January** (hourly, outside the tax-prep engagement, a few hours at most) — or early 2027 if no rental starts in 2026.
 - **Property:** 2026-09-29 the member says several properties have been found but none purchased — still **not under contract** (TY2026 vs 2027 timing therefore still open; Gmail, 2026-09-29).
-- **Still open:** the member's **signature on the engagement letter** — letter was in his hands by 2026-08-31, so **pending since at-latest 2026-08-31 = at least 33 days**; Julia explicitly invited signing 2026-10-02 (1 day). The 2026-09-17 paid-consultation question is moot per the 10-02 reply (no consultation step mentioned). No Double client yet (list_clients name search "tukas", 2026-10-03: none) — **create on signing**.
+- **Still open:** the member's **signature on the engagement letter** — letter was in his hands by 2026-08-31, so **pending since at-latest 2026-08-31 = at least 33 days**; Julia explicitly invited signing 2026-10-02 (1 day). _(As of 2026-10-10: at least 40 days since 08-31; 8 days since the invitation; no signature seen in Gmail.)_ The 2026-09-17 paid-consultation question is moot per the 10-02 reply (no consultation step mentioned). No Double client yet (list_clients name search "tukas", 2026-10-03: none) — **create on signing**.
 
 ### Information still needed
 
