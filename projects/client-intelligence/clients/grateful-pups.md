@@ -1,6 +1,6 @@
 # GRATEFUL PUPS LLC — Amazon e-commerce (Ravitz)
 
-> **Status:** Prospect — monthly proposal drafted 2026-09-29 (twin of Animal Experts) · **Owner:** Julia · **Last updated:** 2026-10-03
+> **Status:** Prospect — monthly proposal drafted 2026-09-29 (twin of Animal Experts) · **Owner:** Julia · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -112,6 +112,7 @@ the actual details.
 - 2026-09-29 — **Cloned from the Animal Experts offer at Julia's "yes"** (same scope,
   same fees, same contact; own number and artifact), then "both s corp" set Form 1120-S
   in both documents. Delivered as PDF + its own private artifact
+- 2026-10-10 — **Prospect sweep (bounded to ≥2026-10-03, the file's Last-updated date).** Same searches as the twin file [`animal-experts.md`](./animal-experts.md) (Gmail, Drive, Ping, Double name search; 2026-10-10): nothing new found about this company. The 2026-10-03 unsettled item (a call summary that may place this brand among companies the owner wants to close or pause at year-end) is neither confirmed nor contradicted by anything dated ≥2026-10-03. Open items unchanged, pending since 2026-09-29 (11 days): fee, signer confirmation for the Texas entity, Texas registration/EIN, franchise-tax history, whether books are separate from the twin. No Double record.
 
 ### Outstanding items (CI-only — never in the SOP)
 

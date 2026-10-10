@@ -1,6 +1,6 @@
 # EVERGLADES APPLIANCE REPAIR, LLC — appliance repair (Melnychenko)
 
-> **Status:** Prospect — quarterly proposal drafted 2026-10-07 · **Owner:** Julia · **Last updated:** 2026-10-07
+> **Status:** Prospect — quarterly proposal drafted 2026-10-07 · **Owner:** Julia · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -32,8 +32,7 @@
   S corp"). Files Form 1120-S
 - **Home state:** Florida
 - **Industry / what they do:** appliance repair — a local service business
-- **Primary language:** _(pending — proposal drafted bilingual RU/EN; the signer's
-  name is Ukrainian)_
+- **Primary language:** **Ukrainian, most likely** — Julia wrote her 2026-10-07 cover email in Ukrainian _(Gmail, 2026-10-07)_; proposal is bilingual RU/EN; not confirmed with the client
 - **Our engagement (services we provide):** **PROSPECT.** A **quarterly** engagement
   proposal drafted 2026-10-07, revised same day to Julia's corrections (PDF + private
   artifact, v2): quarterly bookkeeping (categorization, bank/card reconciliation),
@@ -102,8 +101,7 @@ the actual details.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- ✅ **The quarterly fee is Julia's own number, ALL-IN** (2026-10-07: "make it 770
-  including tax prep") — the earlier assembled-total flag is resolved; the document
+- ✅ **The quarterly fee is Julia's own number, ALL-IN** (2026-10-07: "make it [amount withheld] including tax prep") — the earlier assembled-total flag is resolved; the document
   shows one bundled quarterly fee with the 1120-S prep inside it. **The 2026 return is
   prorated:** the engagement starts 2026-10-01, so 2026 collects only one quarterly
   invoice and the **balance of the annual prep fee is invoiced when the 2026 return is
@@ -135,13 +133,14 @@ the actual details.
   Group). Delivered as PDF + private artifact; the assembled-total reading flagged to
   Julia for confirmation before sending
 - 2026-10-07 (same session) — **Julia's corrections applied, v2 delivered.** She set
-  the quarterly total herself, all-in ("make it 770 including tax prep" — resolving
+  the quarterly total herself, all-in ("make it [amount withheld] including tax prep" — resolving
   the assembled-total flag), set the **start date October 1, 2026**, and ruled the
   first tax prep prorated; drafted as: 2026 collects one quarterly invoice, the
   balance of the annual 1120-S fee is invoiced when the 2026 return is prepared. She
   then added **1099s and payroll** to scope and immediately narrowed payroll to
   **owner payroll**. One bundled fee card (fee table dropped); Not Included now only
   personal returns. PDF v2 + artifact v2 delivered
+- 2026-10-10 — **Prospect sweep (UNBOUNDED, new-file pass).** (1) **Gmail, 2026-10-06 — the client wrote in:** the contact/signer emailed Julia with two attachments, the household's 2025 joint tax return and the LLC's own 2025 tax return (PDFs; **NOT OPENED, NOT TRANSCRIBED** — filenames only, and opening a client return needs Lilian's or Julia's ask). So the LLC existed and filed for 2025, preparer not established (Gmail, 2026-10-06). (2) **Gmail, 2026-10-07 14:42 UTC — Julia replied** in Ukrainian with the quarterly proposal PDF attached and offered a call: **the proposal has been SENT** (age 3 days as of 2026-10-10). A search of Gmail (inbox and sent, unbounded, on 2026-10-10) found no reply from the client after it. Julia wrote in Ukrainian, which is the best evidence so far of the preferred language. (3) Google Drive (title and full-text), Ping (contact search and org-wide semantic search) and Double (name searches on the business and the signer) found nothing for this company. One Ping hit mentioning a first name 'Sergey' in a July 2026 Ecoorganic review was garbled and could not be tied to this client — discarded.
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -155,7 +154,7 @@ the actual details.
 ### Information still needed
 
 - [ ] Sunbiz document number / EIN
-- [ ] Serhiy's email and preferred language (RU assumed for the bilingual draft)
+- [ ] Serhiy's email on the firm record and confirmed language (Ukrainian per Julia's cover email 2026-10-07; not confirmed with him)
 - [ ] Accounting platform and bank/card list for the cleanup
 - [ ] Whether the client is (or should be) in Double
 

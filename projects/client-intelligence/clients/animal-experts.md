@@ -1,6 +1,6 @@
 # ANIMAL EXPERTS LLC — Amazon e-commerce (Ravitz)
 
-> **Status:** Prospect — sellable monthly offer drafted 2026-09-29 · **Owner:** Julia · **Last updated:** 2026-10-03
+> **Status:** Prospect — sellable monthly offer drafted 2026-09-29 · **Owner:** Julia · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -131,6 +131,7 @@ the actual details.
   (same scope, same fees, same contact — own proposal number and artifact); and
   confirmed BOTH LLCs are S-corporations, so both documents now name Form 1120-S. The
   drafted monthly fee remains the anchor pending her confirmation
+- 2026-10-10 — **Prospect sweep (bounded to ≥2026-10-03, the file's Last-updated date).** A search of Gmail (business names, contact surname, first name; inbox and sent), Google Drive (title and full-text, modified ≥2026-10-03), Ping (org-wide semantic search) and Double (`list_clients` name search) on 2026-10-10 did not find anything new about this company or Marianna; the only Gmail hit was the firm's own 2026-10-03 sweep email. Open items unchanged: monthly fee to set (Julia), Marianna's email, Sunbiz/EIN, payroll headcount, accounting platform — all pending since 2026-09-29 (11 days). No client reply to the proposal has been found in the sources searched. Still no Double record.
 
 ### Outstanding items (CI-only — never in the SOP)
 
