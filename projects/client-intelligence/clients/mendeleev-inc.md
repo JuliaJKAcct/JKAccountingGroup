@@ -1,6 +1,6 @@
 # MENDELEEV INC — C-corporation (Gridin)
 
-> **Status:** Prospect — MONTHLY proposal drafted 2026-09-25, service start 2026-10-01 · **Owner:** Julia · **Last updated:** 2026-10-03
+> **Status:** Prospect — MONTHLY proposal drafted 2026-09-25, service start 2026-10-01 · **Owner:** Julia · **Last updated:** 2026-10-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -163,6 +163,8 @@ the actual details.
 - **Pending:** Sunbiz document number, EIN, suite number, industry
 
 - **2026-10-03 sweep:** a Gmail search (in:inbox + in:sent, bounded `after:2026/09/26`, on 2026-10-03) for Mendeleev / Gridin found nothing — **the planned 2026-10-01 service start passed 2 days ago with no message found** confirming signature, invoicing or onboarding. Double `list_clients` name search "mendeleev" on 2026-10-03: no client. Ping search after 2026-09-26: nothing relevant. Open items above are unchanged (Form 5472 question pending since 2026-09-25 = 8 days; phone-country-code question since 2026-09-26 = 7 days).
+
+- **2026-10-10 sweep (prospect, bounded `after:2026/10/03` inclusive):** a search of Gmail (all mail, by Mendeleev / Gridin), on 2026-10-10, found only the firm's own weekly sweep email — **no signed proposal, invoice, onboarding or reply found**; the planned 2026-10-01 service start passed **9 days** ago with nothing recorded. A Drive full-text/title search (modified after 2026-10-02) found nothing; Double `list_clients` name search "mendeleev": no client; Ping org-wide search: nothing relevant. Open items unchanged: Form 5472 question pending since 2026-09-25 = **15 days**; phone-country-code question since 2026-09-26 = **14 days**; Sunbiz number / EIN / suite / industry still unknown.
 
 ### Information still needed
 
