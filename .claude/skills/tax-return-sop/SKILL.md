@@ -379,13 +379,19 @@ on no return and sold — and two Benson trailers. Both pairs cost real time.)_
 #### ① 🛑 When this applies — and when it does NOT
 
 ✅ **The firm sorts the client's bank or card statements itself, because there are no books AND no classification
-from the client.** *(Tseretsian 2025 and Atman Parts 2025 were built this way, on Lilian's request: "empecemos con
-los statements del banco".)*
+from the client.** *(Atman Parts 2025 was built this way, on Lilian's request of 2026-10-09: "necesito que
+empecemos con los statements del banco". Tseretsian 2025 was also built from the statements — her request of
+2026-10-08, "que nos centremos en construir el profit and loss a partir de los bank statements" — but **under the
+client's own July rules R1–R9**, which governed wherever they spoke; that is the ⛔ case below, and only the gaps they
+left were sorted the firm's way.)*
 
 ⛔ **Where the client HAS given his own figures or his own classification, §1B.1 governs, not this section.** **His
 fuel, phone, supplies, tolls, meals AMOUNT and repairs are his figures** *(§1B.1's right-hand column)*, and nothing
-below overrides them. *(Lilian, Kliauzov, 2026-10-08: the client's own figures are enough for a P&L.)* 🔑 **Every
-rule below starts with: "where the client has stated nothing about this line".**
+below overrides them **as AMOUNTS**. *(Lilian, Kliauzov, 2026-10-08: the client's own figures are enough for a P&L.)*
+⚠️ **Whether a vehicle or home cost is deductible at all, and at what %, still follows the tax rules in ②, whoever
+supplied the figure** — on the standard mileage rate his fuel, service and insurance are not deducted, and his
+internet goes on line 25, never into Form 8829. 🔑 **Every SORTING rule below starts with: "where the client has
+stated nothing about this line".**
 
 #### ② ✅ LILIAN'S RULES — where each kind of line goes
 
@@ -394,8 +400,8 @@ rule below starts with: "where the client has stated nothing about this line".**
 | **Groceries / supermarket** | **Owner draw** *(distribution)* | — |
 | **Food — restaurants, cafés, coffee, fast food, delivery** | **Owner draw.** Meals on the P&L = **0** | **Where the client STATES a meal was business**, §1B.1: his amount, the firm's rate — ⛔ never imported from here |
 | **Very small gas-station purchases** | **Owner draw** — a store purchase, not a tank of fuel | "Very small" has no number of hers — see ③ |
-| **Vehicle costs** — fuel, parking, tolls, washes and dealer service, auto insurance | **NOT an expense line and NOT a draw.** A separate **VEHICLE** block, held at 100% and deducted only **× the business-use %** | ⚠️ **On the standard mileage rate, fuel, service and insurance are INSIDE the rate and are never deducted again; only business parking and tolls are added to line 9.** So the block is evidence and a fallback, not a deduction |
-| **Home costs** — rent, utilities, and the home's insurance, HOA, repairs | **NOT an expense line.** A separate **HOME-OFFICE** block → her Home Office template → **Form 8829** at the floor-area % | ⛔ **Internet is NOT here** — it goes on line 25 at its own % ([`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) M2, *IN / OUT*); a cost is never in both places. ⚠️ **A SHOP or office the business rents is NOT a home cost** — its rent is line 20b at 100% |
+| **Vehicle costs** — fuel, parking, tolls, washes and dealer service, auto insurance | **NOT an expense line and NOT a draw.** A separate **VEHICLE** block, held at 100% and deducted only **× the business-use %** | ⚠️ **On the standard mileage rate, fuel, service and insurance are INSIDE the rate and are never deducted again; only business parking and tolls — and the business share of car-loan INTEREST (Pub 463) — are added.** Loan principal is never deductible. So the block is evidence and the actual-method fallback, not a deduction |
+| **Home costs** — rent, utilities, and the home's insurance, HOA, repairs | **NOT an expense line.** A separate **HOME-OFFICE** block, held at 100% → her Home Office template *(the actual-method inputs; **Form 8829** at the floor-area % if the actual method wins)* | ⚠️ **[`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) M2: compute BOTH methods and take the better** — on the simplified method these costs are not deducted and there is no Form 8829. ⛔ **Internet is NOT here** — it goes on line 25 at its own % ([`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) M2, *IN / OUT*); a cost is never in both places. ⚠️ **A SHOP or office the business rents is NOT a home cost** — its rent is line 20b at 100% |
 | **Questions to the client** | **As few as possible** | §1B.4's four groups and its *"lista mínima y justificada"* — and ④ below |
 
 #### ③ ⚠️ "VERY SMALL" — the 25.00 line is a PRECEDENT, not her number
@@ -407,7 +413,7 @@ rule below starts with: "where the client has stated nothing about this line".**
 |---|---|---|
 | Ecoorganic — bookkeeping SOP rule 2, replacing an earlier 30.00 line, *"a proxy"* | **Julia** (with Lilian) | 2026-07-21 |
 | Tseretsian — decision R5, *"her convention"* | **Lilian** | 2026-07-30 |
-| Atman Parts — decision D4 | session, citing both | 2026-10-09 |
+| Atman Parts — decision D4 | session, applying **Lilian's** convention *(cites Tseretsian R5 and her rule of 2026-10-09; not Ecoorganic)* | 2026-10-09 |
 
 ✅ **So use 25.00 as the starting line and WRITE IT IN THE DECISIONS TABLE every time**, naming the precedent. ⛔
 **It is not a firm-wide rule** — [`bookkeeping-sop`](../bookkeeping-sop/) says outright that Ecoorganic's 25.00 is
@@ -422,9 +428,9 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
 
 | Topic | Decided one way | Decided the other way | ✅ How to handle it |
 |---|---|---|---|
-| **Deposits with no payer** — cash, ATM, checks, Zelle from individuals | Tseretsian R7: **not income until he explains them** *(Lilian, 2026-07-30)* | Atman Parts D2: **sales until he says otherwise** *(session default, 2026-10-09, awaiting Lilian)* | **First identify every deposit the firm can** — a payroll deposit, an own-account transfer, a refund, a rebate, the client's own label. **The treatment of the remainder is a DECISION for Lilian**, priced both ways |
-| **Amazon, Temu, online marketplaces** | Tseretsian R4: **personal** *(the client's own rule, with Lilian)* | Atman Parts D5: **business supplies** on a repair shop's business account *(session default, awaiting Lilian)* | **The description proves nothing either way.** Default follows the account (personal account → personal; a goods or repair business's own account → provisional business) and it is a `DECIDE` row for Lilian |
-| **Telephone / internet business %** | 50% — a SESSION default (Tseretsian J5) | 70% — Lilian for one spouse's phone (Kliauzov, 2026-10-08) | **No firm percentage.** ⛔ **And never cite another client's SESSION default as precedent** — Atman Parts D6 did exactly that |
+| **Deposits with no payer** — cash, ATM, checks, Zelle from individuals | Tseretsian R7: cash, ATM and check deposits are **not income until he explains them** *(Lilian, 2026-07-30)*. ⚠️ **R7 does not reach Zelle:** on Tseretsian, Zelle received was **business income** under R1, unreviewed senders included, *"until he says otherwise"* *(client with Lilian, 2026-07-30)* — the same side as Atman Parts D2 | Atman Parts D2: **sales until he says otherwise**, cash, checks and Zelle alike *(session default, 2026-10-09, awaiting Lilian)* | **First identify every deposit the firm can** — a payroll deposit, an own-account transfer, a refund, a rebate, the client's own label. **The treatment of the remainder is a DECISION for Lilian**, priced both ways |
+| **Amazon, Temu, online marketplaces** | Tseretsian R4: **Amazon and AliExpress personal — but eBay BUSINESS** *(supplies)*, under the same rule *(the client's own rule, with Lilian, 2026-07-30)* | Atman Parts D5: **business supplies** on a repair shop's business account *(session default, awaiting Lilian)* | **The description proves nothing either way.** Default follows the account (personal account → personal; a goods or repair business's own account → provisional business) and it is a `DECIDE` row for Lilian |
+| **Telephone / internet business %** | A SESSION default for one client's phone (Tseretsian J5) | Lilian's own ruling for one spouse's phone (Kliauzov, 2026-10-08) — a different % | **No firm percentage.** ⛔ **And never cite another client's SESSION default as precedent** — Atman Parts D6 did exactly that |
 | **Cash withdrawn from a BUSINESS account** | Atman Parts: owner draw *(session default)* | [`bookkeeping-sop`](../bookkeeping-sop/) firm-wide principle: **investigated, never a blanket draw** — cash can pay subcontractors | **Where the business pays people, a withdrawal is a QUESTION, not a draw** — unless the client says it was his own cash |
 | **Local parking and tolls** | Tseretsian R6: personal under the client's catch-all | Kliauzov D15: claimed *(session default, Lilian decides)* | The IRS part is fixed — business parking and tolls go on line 9 on top of the mileage amount. **Whether a given charge is business is the client's** |
 
@@ -436,23 +442,29 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
 1. **Read the account TYPE off the statement's product name, not its footer.** *(Tseretsian: "Business Fundamentals
    Checking" was an advertisement; both accounts were personal.)* ⚠️ **It sets the default for every line:** on a
    personal account a line is personal until a business purpose is stated *([`personal-card-reimbursement`](../personal-card-reimbursement/)
-   §0)*; on the business's own account a line is the business's until it is a personal marker from ②.
+   §0)*; on the business's own account an ordinary vendor charge is the business's until it is a personal marker from
+   ② or plainly personal on its face. ⛔ **That default does NOT reach a payment to a person, a cash withdrawal or a
+   deposit with no payer** — ④ and point 4 govern those *(a question or a `DECIDE` row; Atman Parts D2, D3)*.
 2. **Every line of the year in exactly ONE bucket**, with **the rule that put it there written on the line** and its
    source *(§4D's `Source` column)*. ✅ **Tie each statement to its own printed totals, and prove opening + credits −
    debits = closing.** **The December tail comes from the January statement**, keeping only lines dated in the year.
 3. ✅ **Run the mirror scan** *(§4A-M)* — refunds, reversals and bounced pairs net inside their own line.
-4. 🔑 **The client's OWN label on a payment is his statement, and it classifies the line without a question** — a
-   Zelle memo, a payee nickname, **even the same payee's label on a LATER month's statement** *(Atman Parts: January
-   2026 labels "Silvia Atman" and "Taras Noma · Packaging" settled two 2025 payees)*. ⛔ **The BANK's description is
-   not a purpose, and a payee with only a first name is a question** — not a draw dressed as a decision, not a
-   deduction.
+4. 🔑 **The client's OWN label on a payment is his statement, and a label that says what the payment was FOR
+   classifies the line without a question** — a Zelle memo, a payee nickname that names the work or the business,
+   **even the same payee's label on a LATER month's statement** *(Atman Parts: the client's own labels on the January
+   2026 statement settled two 2025 contract-labor payees — the names are in that client's working paper, D7)*.
+   ⛔ **The BANK's description is not a purpose, and neither is a label that only names the person** — first name or
+   full name. **That line is a question**, on the business's account as much as on a personal one — not a draw
+   dressed as a decision, not a deduction. ⚠️ **On a PERSONAL account the label must state the business reason**
+   *([`personal-card-reimbursement`](../personal-card-reimbursement/) §0)*.
 5. 🛑 **A source the FIRM can reach is not a client question** *(§1B.6)* — a marketplace report on an account the firm
    is a team member of, a platform's own totals. **Pull it.**
 6. ✅ **The client gets ONE message**, and the lines he must mark travel as **lists, not prose**: payments with no
    stated purpose, and deposits with no payer. **The vehicle and the home office come through the organizer he is
    already filling in**, not a separate question.
 7. ⚠️ **Spot a co-owner.** A client's own label like *"Partner"* on a regular payee is a question about **which
-   return this is** — a multi-member LLC files Form 1065, not Schedule C. **Ask it first.**
+   return this is** — a multi-member LLC files Form 1065 by default *(1120-S if it elected S status)*, not Schedule C.
+   **Ask it first.**
 
 #### ⑥ 📊 HER TWO TEMPLATES — fill a copy, and fix the known defects in the copy
 
@@ -476,8 +488,9 @@ looks like an answer. **Blank until the client gives his figures.**
 ⚠️ **A check that the filled template agrees with the evidence workbook is a FORMULA check, not corroboration** —
 both read the same transactions *(§1B.8)*. Say *"the formulas agree"*, never *"confirms"*.
 
-☑️ **The masters themselves are still uncorrected** — FOLLOW-UPS row 102. Until they are, every copy needs these
-fixes.
+☑️ **The masters themselves are still uncorrected.** [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) **row 102 tracks
+defect 2 only**, in the Double master `Home office.xlsx`; **row 205 tracks defects 1 and 3.** Until each is fixed in
+its own master, every copy needs its fix.
 
 
 ---
@@ -4019,7 +4032,7 @@ is how an SOP becomes confidently wrong.**
 
 ## Update this skill when…
 
-- 🏦 🆕 **LILIAN SETS OR CHANGES A RULE FOR SORTING BANK LINES** — **§1B.10**, added 2026-10-10 from Atman Parts *("Sí, guarda esas reglas en el skill")*. 🔑 **Write her words in, with the date.** ⛔ **A ruling for ONE client stays in that client's working paper** and reaches §1B.10 ④ only as one side of a contested topic — **never as the default.** ☑️ **When the master templates are fixed** *(FOLLOW-UPS row 102)*, **strike §1B.10 ⑥'s defects table** instead of leaving it to be applied to a correct file.
+- 🏦 🆕 **LILIAN SETS OR CHANGES A RULE FOR SORTING BANK LINES** — **§1B.10**, added 2026-10-10 from Atman Parts *("Sí, guarda esas reglas en el skill")*. 🔑 **Write her words in, with the date.** ⛔ **A ruling for ONE client stays in that client's working paper** and reaches §1B.10 ④ only as one side of a contested topic — **never as the default.** ☑️ **When a master template is fixed, strike THAT defect's row from §1B.10 ⑥** — only after reading the formula in the file Lilian actually hands over. FOLLOW-UPS row 102 is defect 2 (the Double master `Home office.xlsx`); row 205 is defects 1 and 3. ⛔ **Closing one row does not clear the others.**
 
 - 🔴 **A PREPARER HANDS YOU HER OWN KEYED DRAFT AND ASKS *"¿hay errores?"*** — **§4F**, added 2026-09-27 from
   the Zakom 1120-S. 🔑 **Write in every check that actually FOUND something and every one that produced a false
