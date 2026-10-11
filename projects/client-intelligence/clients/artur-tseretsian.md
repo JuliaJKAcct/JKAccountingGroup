@@ -1,6 +1,6 @@
 # Artur Tseretsian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-11
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -120,6 +120,18 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   start of the year to the sale date, with his business miles. ⚠️ **Lendbuzz was still debiting the payment in January
   2026** (that debit came back unpaid), so the loan was still open and the sale date has to come from him. Loan terms are in the working paper (§1.4), never here; the VIN is on
   the loan document and is not copied anywhere.
+  🆕 **Lilian, later on 2026-10-11:** if it was sold in 2026, **all the interest paid in 2025 counts** — the 2025
+  return needs only the year of the sale, not the date or the sale document. Until the lender's statement arrives, the
+  2025 return uses an **estimate built from the loan approval's terms** (working paper §1.4).
+- 🆕 **What else is business (Lilian, 2026-10-11):** **Steam** — the wallet top-ups (skins he buys to resell) and the
+  store purchases, *"porque ese es su trabajo"*; **car tags, titles, service and storage**; **BeenVerified**; the
+  **county tax office and the court** (licenses and fees); the **shipping stores**; the **lawyer** (professional
+  services); and **Adobe Illustrator and the website domain**, split between the car business and CS Float (the
+  session's proposal: mostly the car business — Adobe predates CS Float, and his Drive folder and his 2026 company are
+  named "Rewhip"). **Still personal:** local parking and tolls. ⚠️ **Never deductible whatever the ruling:** a ticket or
+  fine paid to a government, and the registration, service or storage of the car whose miles are claimed (inside the
+  mileage rate) — the client is asked which the county, court, tag, service and storage payments were. **Airfare,
+  hotels and trips not in these accounts:** kept as a note, to ask him for only if more expenses are needed.
 - **Vehicle** = the client **bought and later sold a car** during the period. 🔒 **Lilian, 2026-10-08:
   the purchase and the sale are omitted from the return completely** — no documents are being chased
   for them. She asks the client instead whether he wants to include **a car he had in 2025** as a
@@ -435,6 +447,18 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   debiting his checking in January 2026 (the debit came back unpaid), so the car does not look sold during 2025 — to confirm with him. She
   also made it a firm rule that, when no prior return gives a business code, the session proposes one with its reasons
   (`tax-return-sop` §4J).
+
+- _(2026-10-11 — Lilian: draft 5 of the 2025 return)_ Lilian ruled eleven of the possible business costs found by the
+  re-audit **business** (listed under the business-expense rules above), and asked the session to propose how to split
+  Adobe and the domain between the two activities. She asked whether the 2025 car-loan interest can be deducted if the
+  car was sold in 2026 with no date or document: **yes, all of it**, and the session estimated it from the loan
+  approval until the lender's statement arrives. Two points went to the reviewer: the domain may be an asset rather than
+  an expense (Julia), and a ticket, or his own car's costs, cannot be deducted whatever the ruling (asked of the
+  client). Figures are in the working paper (§1.4, §3E), never here.
+  The review of that draft added one consequence: with the lawyer's fee now a business expense, the return's line I
+  ("payments that require a Form 1099?") becomes **Yes** — a lawyer paid over the threshold needs a Form 1099-NEC — which
+  supersedes the "No" recorded on 2026-10-08 above. Julia decides whether the firm files a late one (it needs the
+  lawyer's W-9). In ATX the car-loan interest goes through the vehicle worksheet, never on its own line.
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
