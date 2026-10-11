@@ -65,6 +65,10 @@ must_keep("Name after a wrapped acct", "Account number 1234\n5678 9012\nJANEFAKE
 # … and a DATE on the next line is not eaten as a continuation.
 must_hide("Acct before a dated line", "Account number: 1234 5678 9012\n07/31/24 Deposit 100.00", "1234 5678 9012")
 must_keep("Date after an acct", "Account number: 1234 5678 9012\n07/31/24 Deposit 100.00", "07/31/24")
+# Review round 2 of #558: a WINDOWS line break (\r\n) or a bare \r between the halves.
+must_hide("Wrapped acct over \\r\\n", "Account number 1234\r\n5678 9012\r\nJANEFAKE", "5678 9012")
+must_hide("Wrapped acct over \\r", "Account number 1234\r5678 9012\rJANEFAKE", "5678 9012")
+must_keep("Name after a \\r\\n-wrapped acct", "Account number 1234\r\n5678 9012\r\nJANEFAKE", "JANEFAKE")
 
 # ── Must survive — losing these costs the analysis ────────────────────────────
 must_keep("EIN", "Employer ID Number 45-6789012 Trucking LLC", "45-6789012")

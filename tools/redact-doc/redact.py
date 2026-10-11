@@ -438,7 +438,8 @@ LICENCE_CONTEXT = re.compile(
 # A value may continue onto the next line ONLY when that whole line is more digits
 # ("Account number 1234" / "5678 9012"), so a wrapped number is masked in full while
 # a date or a name on the next line is left alone.
-_ACCT_WRAP = r"\n(?=[0-9][0-9 \t-]*(?:\n|$))"
+_ACCT_BREAK = r"(?:\r\n|[\n\r\f\v\x85\u2028\u2029])"
+_ACCT_WRAP = _ACCT_BREAK + r"(?=[0-9][0-9 \t-]*(?:[\n\r\f\v\x85\u2028\u2029]|$))"
 ACCOUNT_CONTEXT = re.compile(
     r"(routing|account\s*(?:no|num|number|#)|acct)"
     r"[^\S\n]{0,4}\W{0,6}([A-Z]{0,4}[0-9](?:[A-Z0-9 \t-]|" + _ACCT_WRAP + r"){2,30}?)"
