@@ -455,6 +455,10 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   approval until the lender's statement arrives. Two points went to the reviewer: the domain may be an asset rather than
   an expense (Julia), and a ticket, or his own car's costs, cannot be deducted whatever the ruling (asked of the
   client). Figures are in the working paper (§1.4, §3E), never here.
+  The review of that draft added one consequence: with the lawyer's fee now a business expense, the return's line I
+  ("payments that require a Form 1099?") becomes **Yes** — a lawyer paid over the threshold needs a Form 1099-NEC — which
+  supersedes the "No" recorded on 2026-10-08 above. Julia decides whether the firm files a late one (it needs the
+  lawyer's W-9). In ATX the car-loan interest goes through the vehicle worksheet, never on its own line.
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
