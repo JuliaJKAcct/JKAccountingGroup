@@ -431,7 +431,7 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
 |---|---|---|---|
 | **Deposits with no payer** — cash, ATM, checks, Zelle from individuals | Tseretsian R7: cash, ATM and check deposits are **not income until he explains them** *(Lilian, 2026-07-30)*. ⚠️ **R7 does not reach Zelle:** on Tseretsian, Zelle received was **business income** under R1 *(client with Lilian, 2026-07-30)*, counted as income until he says otherwise — unreviewed senders included, as that paper's Q13 applies it *(Julia's Q3 on that income is still open)* — the same side as Atman Parts D2 | Atman Parts D2: **sales until he says otherwise**, cash, checks and Zelle alike *(session default, 2026-10-09, awaiting Lilian)* | **First identify every deposit the firm can** — a payroll deposit, an own-account transfer, a refund, a rebate, the client's own label. **The treatment of the remainder is a DECISION for Lilian**, priced both ways |
 | **Amazon, Temu, online marketplaces** | Tseretsian R4: **Amazon and AliExpress personal — but eBay BUSINESS** *(supplies)*, under the same rule *(the client's own rule, with Lilian, 2026-07-30)* | Atman Parts D5: **business supplies** on a repair shop's business account *(session default, awaiting Lilian)* | **The description proves nothing either way.** Default follows the account (personal account → personal; a goods or repair business's own account → provisional business) and it is a `DECIDE` row for Lilian |
-| **Telephone / internet business %** | A SESSION default for one client's phone (Tseretsian J5) | Lilian's own ruling for one spouse's phone (Kliauzov, 2026-10-08) — a different % | **No firm percentage.** ⛔ **And never cite another client's SESSION default as precedent** — Atman Parts D6 did exactly that |
+| **Telephone / internet business %** | Lilian's ruling for one client's phone and internet: 80%, split 50% / 30% between his two businesses (Tseretsian L5, 2026-10-10). It replaced the session's 50% default, J5 | Lilian's own ruling for one spouse's phone (Kliauzov, 2026-10-08) — a different % | **No firm percentage.** ⛔ **And never cite another client's SESSION default as precedent** — Atman Parts D6 did exactly that |
 | **Cash withdrawn from a BUSINESS account** | Atman Parts: owner draw *(session default)* | [`bookkeeping-sop`](../bookkeeping-sop/) firm-wide principle: **investigated, never a blanket draw** — cash can pay subcontractors | **Where the business pays people, a withdrawal is a QUESTION, not a draw** — unless the client says it was his own cash |
 | **Local parking and tolls** | Tseretsian R6: personal under the client's catch-all | Kliauzov D15: claimed *(session default, Lilian decides)* | The IRS part is fixed — business parking and tolls go on line 9 on top of the mileage amount. **Whether a given charge is business is the client's** |
 
@@ -3991,6 +3991,60 @@ it the whole document would have pointed one page early, consistently and invisi
 ⛔ **AND IT IS NOT AN ARTIFACT** — **an artifact is a URL that travels onward with no further act by the firm**
 *(§4B)*.
 
+
+### 4J · 🏷️ THE BUSINESS CODE — when no prior return gives it, the session PROPOSES one
+
+> **Lilian, 2026-10-11:** *"cuando no tengamos información del código del negocio, necesito que me la des tú según
+> tu análisis. Si no estás seguro, me haces la aclaración de que no estás seguro, pero necesito que lo propongas.
+> Esto es algo que tenemos que entrar sí o sí en la declaración. Guarda esto en la skill de preparación de taxes:
+> cuando no esté el código de negocio por una declaración previa, tienes que analizar toda la situación y proponerme
+> uno, explicándome en qué te pasaste para escoger ese."* *(Dictated: "en qué te pasaste" is "en qué te basaste" — on
+> what you based it.)*
+
+🔑 **The code is a required entry** — Schedule C line B, or an entity return's principal business activity code. ⛔
+**So a session never leaves it blank, and never hands the question back to the client**, who does not know the
+code list. **It proposes one.**
+
+**① Where it comes from, in this order:**
+1. **The prior-year return** for the same activity. Keep its code unless the activity changed. Year-to-year
+   consistency is the default.
+2. **What the firm already filed for the business**, such as an SS-4's lines 16–17. That is an indicator, not the
+   code.
+3. **Otherwise the session's own analysis**, by ② below.
+
+**② How the session chooses:**
+- **Read the code list off the current-year IRS instructions** (§3): the Schedule C instructions for a 1040, and the
+  entity form's instructions for an 1120, 1120-S or 1065. Never from memory: the IRS renumbered the retail codes
+  when it moved to NAICS 2022.
+- **Apply the instructions' own rules for line A.** Give the general field and the product or service. 📖 *"If your
+  general field or activity is wholesale trade, retail trade, … also give the type of customer or client."*
+- 📖 **For a seller with no store,** *"select the PBA code by the primary product that your establishment sells"*.
+- **Read the books or the bank for the facts that decide it:**
+  - who pays: businesses or people;
+  - the size of the payments: fees or prices;
+  - whether he buys the goods he sells, which means a cost of goods sold;
+  - what the costs are.
+- 🔑 **An agent and a dealer are different codes.** An agent or broker earns a fee and never owns the goods. A dealer
+  or merchant owns its inventory, and then the cost of what it bought belongs on Part III.
+
+**③ What the proposal carries — every time:**
+1. **The code and the line-A text**, in English and plain ASCII, ready to paste.
+2. **The evidence it rests on**: the facts from the books or bank, with figures.
+3. **The alternatives considered**, each with **the fact that would switch to it**.
+4. 🛑 **How sure the session is, said plainly.** *"No estoy seguro"* when it is not, **and the code is still
+   proposed.**
+5. **A decision row in the working paper** (who, when, the alternative). Where a fact is uncertain, **one question to
+   the client that would settle it**. The proposed code stays on the return meanwhile.
+
+**④ The precedent** *(Tseretsian 2025, 2026-10-10)*:
+- **Used cars.** The proposal is **425120**, Wholesale trade agents & brokers. No car purchase appears in the bank,
+  the named business payer is a dealer, and its payments are fee-sized.
+- **The alternatives**, depending on whether the cars are his and who buys them:
+  - **441120** if the cars are his and he sells to people;
+  - **423100** if the cars are his and he sells to dealers.
+- **CS2 game items sold online:** **459120**, by the no-store rule. The alternatives considered were 459510 and 449210.
+- ⓘ **Census's NAICS pages were not reachable from the cloud session.** The IRS chart is the authority for the code
+  itself; third-party copies served for the agent-versus-dealer definitions.
 
 ## §5 · Every prepared return leaves a working paper
 
