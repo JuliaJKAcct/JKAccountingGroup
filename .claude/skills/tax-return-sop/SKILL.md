@@ -702,7 +702,7 @@ Follow it in this order; a preparer works the document top-down.
 | 🔗 **The HANDOFF — what flows to another return** | **Any form that FEEDS another return owes this** — an 1120-S or 1065 to its owners' 1040s, a 1041 to its beneficiaries. **Walk every box that can carry a figure**, say where each is TYPED on the receiving return, name what this side **cannot** supply *(the recipient's own carryovers and basis history — they are on THEIR return, not this one)*, and what must **match** on both. ⛔ **Preparing this return is not preparing theirs** (part 10) |
 | **Tie-out checks** | Every equality that must hold before filing. **A check that fails is a mapping error, not a rounding difference** |
 | **Common pitfalls** | Each one that has bitten a real return |
-| **Working-paper archive** | §5 below |
+| **Working-paper archive** | §5 below — and the client's **tax-preparation playbook**, §5B |
 | **Where things live** | The map back to Double, the skills, the tools |
 | **Appendices** | Intake sheet · the accounts→lines map · every formula in one place |
 
@@ -971,7 +971,7 @@ would add** — and phase 1 now reads them too, as its source 10, because the ga
 
 | # | What | Where | If it is missing |
 |---|---|---|---|
-| **0** | 🔑 **THE [CLIENT INTELLIGENCE FILE](../../../projects/client-intelligence/clients/)** — the firm's memory of every prior session on this client, including the **prior years' working papers** in [`projects/tax-returns/`](../../../projects/tax-returns/) | the repo, no API call | ⚠️ **Read it before anything else.** Sessions get deleted; this file is why the last one's work is not lost. **If the client has no file, create it** *(CLAUDE.md)* |
+| **0** | 🔑 **THE [CLIENT INTELLIGENCE FILE](../../../projects/client-intelligence/clients/)** — the firm's memory of every prior session on this client, including the **prior years' working papers** in [`projects/tax-returns/`](../../../projects/tax-returns/) | the repo, no API call | ⚠️ **Read it before anything else.** Sessions get deleted; this file is why the last one's work is not lost. **If the client has no file, create it** *(CLAUDE.md)*. 🧭 **If it holds a `Tax-preparation playbook` (§4, Income tax), read THAT first — it is how this client's returns are prepared (§5B)** |
 | **1** | 🔴 **THE CLIENT'S BOOKS** — general ledger for the year, **both years' balance sheets**, this year's and **last year's P&L**, the depreciation schedule, payroll | QuickBooks, or Double's reports. ⛔ **The form SOP's §1 is the authoritative list** | 🛑 **For a company return this is the blocker, not the organizer.** Say what is missing and stop — a return computed off a partial ledger is worse than no return |
 | **2** | 🔴 **The TAX ORGANIZER the client completed** | `list_organizers` → `get_organizer_responses` for the year. ⓘ **Older clients' organizers are TaxDome-era PDFs**, not Double organizers — look in `TaxDome/[Client]/1. Completed Tax organizers/` | **Say so, and say what it costs.** ⓘ **Bookkeeping and Schedule-C clients are not owed one** *(see [`tax-season-readiness`](../tax-season-readiness/))*; for anyone else its absence closes whole branches of income |
 | **3** | 🔴 **EVERY FILE THE CLIENT UPLOADED FOR THIS RETURN** — the home-office worksheet, the P&L, the 1095-A, a lease, brokerage statements, **anything at all** | `list_file_library` → `list_files`. Look in **`JK Accounting Group/Others/{year}`**, **`Tax Return Filed/{year}`**, **`1099/{year}`**, and the TaxDome tree — especially **`Client uploaded documents/`** and **`Taxes/{year}/`** | ⚠️ **Look in ALL of them before concluding anything is absent** — the two structures coexist *([`method.md`](../../../projects/pre-return-review/method.md) rule 1)* |
@@ -1028,7 +1028,7 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
   logins.** A business EIN is the one exception.
 - 📌 **The work is not finished until it is written down** — the working paper in
   [`projects/tax-returns/`](../../../projects/tax-returns/) (§5), the client's Client Intelligence
-  file, and any open action in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md). **The session will be
+  file **with its tax-preparation playbook (§5B)**, and any open action in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md). **The session will be
   deleted; those three are what survive it.**
 
 #### 🔄 4A-M · THE MIRROR SCAN — money that goes out and comes back, and why nobody spots it by reading
@@ -3867,6 +3867,10 @@ never seen any earlier version of this file?*** **If it needs one, it does not g
 | **7 · What is assumed, and what would change it** | **Every position resting on an assumption rather than a document, with the consequence if the assumption is wrong** |
 | **8 · What carries forward** | 🔑 **What next year needs: basis, carryovers, elections made, replacement periods running, balances, unfinished items** |
 
+🧭 **Building it is also when the client's playbook is refreshed (§5B):** the decisions in §6 that will apply
+again and the items in §8 become playbook rules. **The worksheet tells THIS year in full; the playbook keeps only
+the rules for the next.**
+
 #### 🔴 THE ACCEPTANCE TEST — IT MUST BE ENOUGH TO **REPLICATE** THE RETURN FROM NOTHING ELSE
 
 > 🗣️ **LILIAN, 2026-10-04, and this is the bar the eight sections exist to clear:** *"el objetivo es que
@@ -4066,6 +4070,83 @@ no 'just this once'."* Read it first.
 
 ---
 
+## §5B · 🧭 What a preparation TEACHES about the client goes into their Client Intelligence file — the tax-preparation playbook
+
+> 🗣️ **LILIAN, 2026-10-11:** *"cada vez que preparemos las declaraciones de impuestos de algún cliente, todo lo
+> que se pueda aprender acerca de ese cliente, de su negocio, de cómo se tratan ciertas transacciones, etcétera,
+> todo eso, además de alimentar obviamente las skills de tax preparation, también vaya a el client intelligence…
+> lo que quiero es que no se pierda nada, que vayas aprendiendo junto conmigo y que todo quede en tu memoria para
+> ser más productivos en cada preparación."*
+
+🔑 **The working paper (§5) records ONE year, in the order it happened, with every figure. Nobody preparing next
+year's return should have to read it end to end to learn how this client works.** So what the preparation taught
+about the client is ALSO written as standing rules, in the place the next preparation reads first (§4A row 0): a
+**playbook** in the client's Client Intelligence file.
+
+#### ① Where each thing learned goes
+
+| What the preparation taught | Where it goes |
+|---|---|
+| **A rule that would hold for ANY client** — how a kind of transaction is treated, a form trap, a software route | **This skill, or the form's SOP** — and **ALSO** the client's playbook, as the rule *for him* |
+| **A rule, decision or fact about THIS client** — what the business does, which account or activity is whose, how his recurring transactions are treated, where each document is, who rules on what, the traps already met | 🧭 **The client's playbook** — `#### 🧭 Tax-preparation playbook` under `### Income tax` in his [Client Intelligence file](../../../projects/client-intelligence/clients/) |
+| **A figure** | **The working paper only** (§5) — never the playbook |
+| **What happened, and when** — a document arriving, an answer given, a draft delivered | **The working paper**; the client file's §6 log gets the dated line |
+| **The finished account of one return, start to end** | **The final worksheet** (§4I), saved in Double |
+
+⚠️ **Both, not either:** a lesson that generalises still goes into the client's playbook, because next year's
+preparer reads his file, not this skill's history.
+
+#### ② The shape of a playbook
+
+- **Where:** inside `### Income tax` of the client file's §4, **after the template's bullets** — `- **Applies?**`
+  stays the first line. ⛔ **Never rename `### Income tax`:** the review dashboard and the Hub find that subsection
+  by its exact name and take the service pill from its first `Applies?` line. A `####` heading stays inside it.
+- **One playbook per RETURN.** A disregarded LLC's rules live in the file of the person whose 1040 carries it,
+  with a pointer from the LLC's own file; an entity return's rules live in the entity's file.
+- **The blocks, in this order** *(leave out one that does not apply)*: ① What to prepare · ② Where everything is ·
+  ③ Which money belongs to which activity · ④ How the client's transactions are treated · ⑤ Information returns,
+  owed and received · ⑥ Obligations beside the return · ⑦ Traps already met · ⑧ Next year, start here.
+- **Each rule carries:** the instruction · why, in one clause · **who decided and when** — `_(Lilian, 2026-10-11)_`,
+  or `_(session; Julia confirms)_` for a proposal nobody has ruled on · where its figures are (the working paper's
+  section).
+- 🛑 **CURRENT RULES ONLY — rewritten in place.** When a rule changes, the playbook says the new rule; the change
+  and its date go to the §6 log. *(The reason is §4I's: a reader next year has no history to place a superseded
+  rule against.)*
+- ⛔ **No figures** — a client file is not a home for them *(CLAUDE.md)*. **A rule's own threshold is not a client
+  figure:** *"gas-station charges under 25.00 are draws"* is a convention and is written as one. ⛔ **No
+  identifiers, ever** (§5's list).
+- **Pilot:** [`vitalii-piliushin.md`](../../../projects/client-intelligence/clients/vitalii-piliushin.md), 2026-10-11.
+
+#### ③ When it is written
+
+- 🔑 **As each rule is set** — the day Lilian rules, not at the end. **At the latest:** when a draft is delivered,
+  and when the final worksheet is built (§4I).
+- **Next year's preparation starts by reading it** (§4A row 0) **and ends by refreshing it.**
+
+#### ④ Why not a SKILL per client — and when a client outgrows the playbook
+
+> *Lilian asked, 2026-10-11: "cuando haya algunas reglas muy específicas para un cliente que no se puedan
+> generalizar para todos, sería buena idea crear un skill de tax preparation para ese cliente en específico.
+> ¿Qué crees tú?"* — ⓘ **What follows is the session's recommendation, put to her that day. It stands until she
+> rules otherwise.**
+
+⛔ **No skill per client.** ① **A skill is found by its description matching the request; a client's rules are
+found by the client's NAME** — which is exactly how his file is found, and §4A row 0 already reads it first.
+② **Two homes for one client's knowledge drift apart**, and the client file already has the slot, the
+published-page gate and the coverage audit. ③ **A skill per client turns the [skills index](../README.md) into a
+client list**, and *"check the index first"* stops working. ⓘ *The one exception is CODE: a parser for one
+client's unusual export belongs in [`tools/`](../../../tools/), not in a skill.*
+
+📈 **Promotion, when it happens:**
+- **A client rule that turns up at a SECOND client** is a firm rule: move it here or into the form's SOP, and
+  leave a one-line pointer in each playbook.
+- **A client SOP** *(through [`sop-authoring`](../sop-authoring/), into `projects/sops/`)* — only when ALL three
+  hold: the preparation has been **stable across two filed years**; the playbook is **still large once the general
+  rules have moved up** *(roughly 40 rules or 150 lines, or a dozen rules spanning several forms)*; and it reads as
+  a **step-by-step procedure**, not a list of rulings.
+
+---
+
 ## §6 · Starting a new form's SOP
 
 1. **Name it** `projects/sops/form-<form>-preparation.md`.
@@ -4087,7 +4168,12 @@ is how an SOP becomes confidently wrong.**
 
 ## Update this skill when…
 
-- 🏦 🆕 **LILIAN SETS OR CHANGES A RULE FOR SORTING BANK LINES** — **§1B.10**, added 2026-10-10 from Atman Parts *("Sí, guarda esas reglas en el skill")*. 🔑 **Write her words in, with the date.** ⛔ **A ruling for ONE client stays in that client's working paper** and reaches §1B.10 ④ only as one side of a contested topic — **never as the default.** ☑️ **When a master template is fixed, strike THAT defect's row from §1B.10 ⑥** — only after reading the formula in the file Lilian actually hands over. FOLLOW-UPS row 102 is defect 2 (the Double master `Home office.xlsx`); row 205 is defects 1 and 3. ⛔ **Closing one row does not clear the others.**
+- 🧭 🆕 **A PREPARATION TEACHES SOMETHING ABOUT THE CLIENT** — **§5B**, added 2026-10-11 *(Lilian: "que no se
+  pierda nada")*. 🔑 **Route it by §5B ①:** the client's rule into his playbook, a lesson that holds for any client
+  into this skill or the form's SOP — **both when both apply.** 📈 **A playbook rule that turns up at a SECOND
+  client is promoted here** (§5B ④), with a pointer left in each playbook.
+
+- 🏦 🆕 **LILIAN SETS OR CHANGES A RULE FOR SORTING BANK LINES** — **§1B.10**, added 2026-10-10 from Atman Parts *("Sí, guarda esas reglas en el skill")*. 🔑 **Write her words in, with the date.** ⛔ **A ruling for ONE client stays in that client's working paper and its playbook (§5B)** and reaches §1B.10 ④ only as one side of a contested topic — **never as the default.** ☑️ **When a master template is fixed, strike THAT defect's row from §1B.10 ⑥** — only after reading the formula in the file Lilian actually hands over. FOLLOW-UPS row 102 is defect 2 (the Double master `Home office.xlsx`); row 205 is defects 1 and 3. ⛔ **Closing one row does not clear the others.**
 
 - 🔴 **A PREPARER HANDS YOU HER OWN KEYED DRAFT AND ASKS *"¿hay errores?"*** — **§4F**, added 2026-09-27 from
   the Zakom 1120-S. 🔑 **Write in every check that actually FOUND something and every one that produced a false

@@ -275,6 +275,18 @@ overrides — as a decision, never to get past the error). It scans **client fil
 misses a passport or licence number, a date of birth, an address in prose, and an SSN written with
 spaces or dots instead of hyphens — **rule 1 is still the real control.** See [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
 
+### 🧭 The tax-preparation playbook — how THIS client's returns are prepared
+
+Lilian, 2026-10-11: everything a return preparation teaches about a client — what the business does, how his
+transactions are treated, which money is whose, where the documents are, the rules set and who set them — **also
+comes here**, *"para que el año próximo ya tengas un contexto."* It is written as a **`#### 🧭 Tax-preparation
+playbook`** inside **`### Income tax`** (§4), after the template's bullets: **current rules only, each with who
+decided and when, no figures** (those stay in the working paper). The rules for it — what goes in it versus the
+skill or the working paper, its blocks, and when a client outgrows it — are
+[`tax-return-sop`](../tax-return-sop/) **§5B**, the authority. ⛔ **Never rename `### Income tax`** to make room
+for it — the dashboard reads that subsection by name. Pilot:
+[`vitalii-piliushin.md`](../../../projects/client-intelligence/clients/vitalii-piliushin.md).
+
 Seeding a file from Double alone is fine — do it now and let the weekend sweep enrich it later.
 Record what it was seeded from in `sweep-state.md`'s coverage-gap column so the owed sources are
 visible rather than assumed done.
@@ -502,7 +514,8 @@ run.** Advance baselines **in the same commit** as the file updates. Full rules 
 ## Consistency + gap audit
 
 When asked "what's missing" (or on the weekly repo audit), sweep all of `clients/` and
-check, per client: every section present and in order; `_(pending)_` on unknown fields;
+check, per client: every section present and in order (a `####` block inside a section — the tax-preparation
+playbook is one — is **optional**: its absence is not drift, and it is never added empty); `_(pending)_` on unknown fields;
 the Double + Drive links present in §7; owner-group cross-links **bidirectional**
 (A links B ⇒ B links A); and the client present + consistent across the README index and `weekend-ci-sweep.md`'s **scope table** (or its **exclusion table**, for archived clients).
   🛑 **A client must NOT be required to have a `sweep-state.md` row, and the audit must never "fix" a missing one.** A row is a search **bound** written *after* a first full pass, so adding one for a never-swept client erases their history. **20 of 48 files legitimately have no row** (measured 2026-08-18). Report a missing row as *"first full pass owed"*, never as index drift. ⚠️ **The `CLIENTS list` this line used to name no longer exists** — the 2026-08-18 prompt rewrite removed it; the scope table is the only client list.

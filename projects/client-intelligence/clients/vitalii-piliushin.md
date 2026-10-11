@@ -68,27 +68,125 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Income tax
 - **Applies?** **Yes.** Form 1040 with **two Schedules C** (Project Atman, Atman Parts). Tax project **2025 Taxes** in Double, status `inProgress`, preparer Lilian _(read 2026-10-09)_.
-- **Return type(s) & deadlines:** **First return ever** — he has never filed a US return _(Lilian, 2026-10-09)_. ⚠️ **His 2024 bank shows a TurboTax purchase on 2024-10-31** — that does not prove a filing, but an IRS account transcript (once the Form 2848 is signed) should confirm "never filed" (working paper O10). A file named `2025 4868 Ext.pdf` is in his Double library (an extension; not opened). Extensions are not a gate to preparing the return (firm rule, 2026-10-08).
+- **Return type(s) & deadlines:** **First return ever** — he has never filed a US return _(Lilian, 2026-10-09)_. ✅ **2024 was never filed either and is prepared after 2025** _(Lilian, 2026-10-11)_ — the 2024 TurboTax purchase (2024-10-31) did not become a filing. A file named `2025 4868 Ext.pdf` is in his Double library (an extension; not opened). Extensions are not a gate to preparing the return (firm rule, 2026-10-08). ⚠️ **No IRS transcripts yet:** the Form 2848 signed in March 2026 has line 4 ticked, so it is not on the CAF — Julia to replace it (working paper §1.7, O15).
 - **Our role:** We prepare.
-- **Process notes (→ future SOP):** The two 2025 Schedule C P&Ls are built from the bank statements — [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) (DRAFT 2: every line split by LLC by a written rule, §2.1). A **2024** organizer was also published to him; 🆕 **his 2024 records show what looks like paid driving work** (Cash App, Jan–Sep 2024), so **whether 2024 needs a return is now a real question** for Lilian and Julia (O10).
+- **Process notes (→ future SOP):** The two 2025 Schedule C P&Ls are built from the bank statements — [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) (DRAFT 2: every line split by LLC by a written rule, §2.1). **2024 comes next** — his 2024 records show paid driving work (Cash App, Jan–Sep 2024); the working paper's §1.3 is its starting point. **The playbook below is the standing summary of how his returns are prepared.**
+
+#### 🧭 Tax-preparation playbook — READ THIS FIRST next year
+
+> What the firm learned preparing his returns, written as the rule for next time *(Lilian, 2026-10-11: "que todo lo
+> que se pueda aprender… vaya al client intelligence… para que el año próximo ya tengas un contexto")*. **Rules and
+> decisions only — every figure is in the yearly working paper**
+> ([2025](../../tax-returns/vitalii-piliushin/2025-form-1040.md)). Each item says who decided and when; a "Session"
+> item is a proposal until Lilian or Julia confirms it.
+
+**① What to prepare**
+- **Form 1040 with TWO Schedules C** — **PROJECT ATMAN LLC** (vehicle export) and **ATMAN PARTS LLC** (online auto
+  parts, and the Kaufman shop). Both single-member and disregarded _(Lilian, 2026-10-11)_. SE tax runs on the combined
+  net; QBI is per activity — **tick "qualified business" on EACH Schedule C** and check Form 8995 prints two rows.
+- **Business codes, proposed 2025** ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §4J): Project Atman **423100** (not fully sure — the open question is whose name is
+  on a car's title before it ships); Atman Parts **441300**. Keep them unless the activity changes.
+- **He had never filed a US return** _(Lilian, 2026-10-09)_. 2025 is prepared first; **2024 was never filed either
+  and is prepared after 2025** _(Lilian, 2026-10-11)_. **No books in 2025** — the P&L was rebuilt from the bank
+  ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B.10). From 2026 check first whether
+  QuickBooks holds the year (Julia planned to connect eBay to it).
+
+**② Where everything is**
+- **Bank statements:** Double › VITALII PILIUSHIN › JK Accounting Group › Others › *year* › Docs for tax prep › *Wells
+  Fargo* / *American National Bank of Texas*. **Wells Fargo's own CSV export** is in Julia's Drive › *Atman Parts* ›
+  Taxes › *year* taxes — a full, line-by-line check of the PDFs.
+- **Julia's Drive › "Atman Parts"** (was "Atman Products"): Taxes (yearly folders), Sales tax (filed returns by year),
+  Docs sent by client. ⛔ **Never open** the password files there.
+- **The eBay seller account** ("atman.autoparts"): the firm is on the seller's eBay team — **pull the year's report
+  yourself; never ask him for it.**
+- **A 1099-NEC he RECEIVES:** Candramas LLC (a firm client) issues him one — Double › CANDRAMAS LLC › JK Accounting
+  Group › 1099 › *year*. **Look for it every year.**
+- **Scans and photos cannot be read by the redactor** — ask Lilian to paste them into the chat, and **transcribe each in
+  full the same day: a picture cannot be reopened by a later session.**
+
+**③ Which money belongs to which LLC**
+- **Wells Fargo = PROJECT ATMAN · American National Bank of Texas = ATMAN PARTS** _(Lilian, 2026-10-11)_.
+- **2025 exception:** ANBT opened only on 2025-12-04, so the online store ran through Wells Fargo. The split rules
+  (working paper 2025 §2.1): by account, **except** lines whose own text ties them to the store — eBay as a seller,
+  the atmanparts website and email, parcel shipping, the Kaufman shop (rent, bills, gates, shelving, fire protection,
+  permits, hardware from the first shop permit) and the LLC's formation fee. 🔑 **From 2026 check that eBay and the
+  shop really moved to ANBT; if they did, the exceptions are no longer needed.**
+
+**④ How his transactions are treated** _(apply again unless the facts change)_
+- **Personal markers** _(Lilian, 2026-10-09)_: groceries, restaurants, fast food, and gas-station charges **under
+  25.00** are owner draws; **25.00 or more** at a gas station is fuel; QT "Inside" is a draw.
+- **Vehicle and home office are kept apart** — they wait for the organizer's business-use figures. The car's miles must
+  be **split between the two LLCs**. On the standard rate only parking, tolls and the business share of car-loan
+  interest are added (interest through the Vehicle Expenses worksheet line 9c, never line 16b).
+- 🔑 **His Zelle payee LABELS are the evidence** — read them before asking: *"Rent Kaufman"* = the shop (Atman Parts,
+  rent); *"Rent … Rockwall"* = his home (Project Atman's home office); *"Bills Kaufman"* = shop utilities; *"Gates for
+  Shop"*; *"… Remont"* / *"… Mechanical"* = repair subcontractors (cost of goods sold); *"Delivery"*, *"Towing"*,
+  *"Broker"* = freight; family labels = draws. **A payee with only a first name goes on the client list.**
+- **Anton ("Anton Partner") is a SUBCONTRACTOR** of Project Atman, contract labor — not a co-owner _(Lilian,
+  2026-10-11)_. Still open after 2025: does he live in the US (1099-NEC) or abroad (W-8BEN)?
+- **Taras** (*"Taras Noma | Packaging"*) and **Silvia** (*"Silvia Atman"*) are contract labor.
+- **Vehicle sales are shown GROSS** — the customer's money on line 1, the car in cost of goods sold — and are bought to
+  order, so ending inventory is nil _(session; Julia confirms the gross presentation)_.
+- **eBay income is GROSS from the eBay report**, never the net payouts the bank shows; eBay's fees go on line 10.
+- **Deposits with no payer named** (ATM cash, deposited checks) and Zelle from individuals are counted as sales until he
+  says otherwise _(Lilian decides — 2025 D2)_. Several Zelle senders are friends or family he also pays.
+- **Amazon / Temu** on the business account: business supplies by default — **Lilian has not ruled yet** (2025 D5).
+- **Phone:** 50% business _(session; Lilian may change)_.
+- **Shop gates and shelving:** expensed under the de minimis safe harbor in Part V, **with the election statement**
+  _(session; Julia confirms)_. **State and formation fees:** an ordinary expense on line 23 (§248 is corporate only).
+- **Meals are never deducted** — food is a draw. **Personal purchases a business could own** (electronics, furniture,
+  Apple.com) are draws unless he explains them. **Marketplace health premiums** belong to the 1040 (Forms 1095-A),
+  not to either Schedule C.
+
+**⑤ Information returns**
+- **He owes, every year:** 1099-NEC to repair subcontractors and contractors he pays **by Zelle** (600 or more); 1099-MISC
+  box 1 to the **Kaufman landlord**. Card and Cash App payments are reported by the network; freight is excluded.
+  **None was filed for 2025** — Julia decides on late filing. **Collect W-9s up front.**
+- **He receives:** Candramas LLC's 1099-NEC — part of his income even when the money did not reach the accounts held.
+
+**⑥ Texas obligations of Atman Parts that sit beside the return** — see [`atman-parts.md`](./atman-parts.md) §4
+- Monthly sales tax (the eBay marketplace rule); **nine Jeopardy Determinations for January–September 2025**, caused by
+  the first-sales date being read as January — status to confirm in WebFile; the annual franchise **Public Information
+  Report, due 15 May** (first one 2026). **None of it touches the income tax unless paid** — and penalties are never
+  deductible.
+
+**⑦ Traps already met**
+- **He reads Russian only** — client messages from Lilian go in simple Russian.
+- **Several addresses:** New Hampshire in 2024 (his bank, Candramas's 1099, his licence), Texas from about September
+  2024 (the Rockwall home), **a Rosemead, California address on the March 2026 Form 2848**, and the shop in Kaufman. The 1040
+  page-1 address comes from the organizer.
+- **The Form 2848 on file (signed March 2026) does not work.** Line 4 (*specific use, not recorded on the CAF*) is
+  ticked, so it gives **no transcript access**; and it names Lilian, who cannot be on a 2848
+  ([`firm-identity.md`](../../sops/firm-identity.md) §4). Julia replaces it — a 2848 naming Julia only, line 4 blank,
+  plus a **Form 8821 for Lilian** (2025 working paper §1.7, O15).
+- **The redactor missed a spaced account number on a Bank of America page 1** (fixed 2026-10-11) — grep extracts of any
+  new bank layout for spaced digit groups.
+
+**⑧ Next year, start here**
+1. Read this playbook and the last working paper's §6 (open items) and §7 (carry forward).
+2. Does QuickBooks hold the year? If not, rebuild from the bank again — statements **and** the Wells Fargo CSV.
+3. Pull the eBay report yourself; look for Candramas's 1099-NEC; once the 2848 / 8821 are fixed, pull his **Wage &
+   Income transcript** — it lists every 1099 reported to him.
+4. Ask the client only what §6 of the last working paper still leaves open — in one message, in simple Russian.
 
 ### Licenses & other filings
 - **Applies?** Not to him personally.
 
 ## 5. Key facts & quirks
 
-- **He has never filed a US return** (Lilian) — nothing carries in from a prior year, so the conventions are being set now ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §4). ⚠️ But see the 2024 TurboTax purchase (§4, Income tax).
+- **He has never filed a US return** (Lilian) — nothing carries in from a prior year, so the conventions are being set now ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §4) and kept in the **playbook** (§4, Income tax). **2024 was never filed either** (Lilian, 2026-10-11) — the 2024 TurboTax purchase did not become a filing.
 - 🆕 **Two LLCs, and in 2025 they shared ONE bank account.** Atman Parts' own account (ANBT) opened only on 2025-12-04, so its eBay payouts, seller fees, website and shop costs ran through Project Atman's Wells Fargo account. **Split by the activity, not the bank** — the working paper's rules E1–E7. From 2026 each should have its own account.
 - 🆕 **2024: New Hampshire, then Texas, and driving work.** His 2024 Bank of America statements carry a Manchester, NH address and NH spending in August, then Austin / Cedar Park / Dallas from September 2024. His 2024 Cash App shows regular payments from one payer with notes counting jobs and naming a van, and money he sent on to another person with notes naming passengers and "SUV hourly" — he appears to have worked as a paid driver. Two tiny card charges at an "ATMAN LIMO" merchant (an NH website) in August 2024 suggest the "Atman" name predates both LLCs. He was paying an **Ally auto loan** in his own name in 2024.
 - 🆕 **He receives Forms 1099-NEC as an individual.** **Candramas LLC** (a firm client) issued him a 2025 Form 1099-NEC — still to his old NH address; most of it did not reach the accounts we hold (working paper §1.4, D28, O12). Candramas, Sattva Movers LLC and Miami Limo Car LLC also paid his personal account in 2024.
 - **The business account is commingled.** Groceries, restaurants, family transfers and transfers to his own personal account all run through the Wells Fargo business account (Project Atman's); the 2025 P&L separates them line by line. Expect the same in 2026 unless the QuickBooks setup changes it.
 - **He labels his Zelle payees, and the labels are evidence.** "Anton Partner", "Rent Kaufman", "Gates for Shop", "Taras Noma Packaging", "Silvia Atman" — reading the label is what classified most payments without a question. A payee with only a first name is the one that has to be asked.
 - **Russian only** on his own record — client messages from Lilian go in simple Russian (CLAUDE.md).
+- 🆕 **A third address: Rosemead, California** — on the Form 2848 he signed in March 2026, beside New Hampshire (2024) and Texas (from about September 2024). Which one is current is for the organizer; the 1040's page-1 address comes from there.
 
 ## 6. History & open questions
 
 ### Log
-- 2026-03-24/28 — **The firm's relationship with him starts earlier than the Double record.** On 2026-03-24 a Form 2848 for him was prepared (template and "for signature" versions in Drive); the signed copy is in Drive dated 2026-03-28, and a MyFax notice shows a 2-page fax of "Form 2848 - Vitalii Piliushin" sent 2026-03-28 (to the IRS fax line; which tax matters/years the 2848 covers was not opened). On 2026-03-26 TaxDome reported that his email address had **activated his TaxDome account** (the legacy portal). _(Drive, Gmail, found in the 2026-10-10 full pass)_
+- 2026-03-24/28 — **The firm's relationship with him starts earlier than the Double record.** On 2026-03-24 a Form 2848 for him was prepared (template and "for signature" versions in Drive); the signed copy is in Drive dated 2026-03-28, and a MyFax notice shows a 2-page fax of "Form 2848 - Vitalii Piliushin" sent 2026-03-28 (to the IRS fax line; which tax matters/years the 2848 covers was not opened — ✅ **read 2026-10-11, see below**). On 2026-03-26 TaxDome reported that his email address had **activated his TaxDome account** (the legacy portal). _(Drive, Gmail, found in the 2026-10-10 full pass)_
 - 2026-05-09 — A Drive client folder "VITALII PILIUSHIN" (standard subfolders: Client uploaded documents, Firm docs shared with client, Private) was created in the migration; Double individual client followed on 2026-05-19. A **2025 extension file (`2025 4868 Ext.pdf`) and a 1095-A and ID were migrated from TaxDome into Double on 2026-06-02** _(Drive, Double activity log)_.
 - 2026-05-19 — Double individual client created _(Double)_.
 - 2026-07-20 — 2024 and 2025 Form 1040 organizers published to him; onboarding follow-up call with Julia (Double note 471135 — PayPal Business and eBay named as the platforms, American National Bank of Texas named; the Ping transcript of the call is illegible).
@@ -102,7 +200,14 @@ the actual details (and Claude can pull them live when a task needs them).
   - **Ping:** one client record (his), one meeting (2026-07-20, already summarised in the Double note); the transcript is illegible Russian/English/Spanish mix — only the topics on the note (PayPal Business, eBay, American National Bank of Texas, sales/franchise tax, QuickBooks intake) are usable.
   - ⚠️ **Not him:** the "Vitaliy's companies - 2025 tax return status" email thread (Sept 2026; Zumfi, Fizum, Nika Realty and similar LLCs) and the Drive folders for "Vitalii Ivanov" / "Vitalii Khomiakov" belong to different people — they matched the first-name search and are **not folded in here**.
 
-- 2026-10-11 — **Lilian: the owner has TWO LLCs** — PROJECT ATMAN LLC (vehicle export, Wells Fargo) and ATMAN PARTS LLC (online parts, ANBT), both disregarded, two Schedules C; **Anton is a subcontractor**. She uploaded new documents to Julia's Drive (folder "Atman Parts" › Taxes) and asked for everything to be re-read. **DRAFT 2 delivered:** the P&L split by LLC with an ATX entry route for every line, business codes proposed (423100 / 441300), and four workbooks (not committed). **Read:** Wells Fargo's CSV (every line matched the PDFs), the 2025 sales-tax returns, his 2024 Bank of America statements and 2024 Cash App report, and — following the 2026-10-10 lead — **Candramas LLC's 2025 Form 1099-NEC to him, confirmed to be him** (his name, and the same Manchester, NH address as his 2024 bank). **Could not read** (scans / images — Lilian to upload in the chat): a 1-page scan in the folder's root (two copies, a 9-digit file name), two `File_000.png`, `Document_2026-03-25_172251.pdf`, the eleven older images. **Not opened:** the three password / login files. While reading the 2024 statements the redactor let a spaced account number through; the tool was fixed the same day and the number is recorded nowhere.
+- 2026-10-11 (1) — **Lilian: the owner has TWO LLCs** — PROJECT ATMAN LLC (vehicle export, Wells Fargo) and ATMAN PARTS LLC (online parts, ANBT), both disregarded, two Schedules C; **Anton is a subcontractor**. She uploaded new documents to Julia's Drive (folder "Atman Parts" › Taxes) and asked for everything to be re-read. **DRAFT 2 delivered:** the P&L split by LLC with an ATX entry route for every line, business codes proposed (423100 / 441300), and four workbooks (not committed). **Read:** Wells Fargo's CSV (every line matched the PDFs), the 2025 sales-tax returns, his 2024 Bank of America statements and 2024 Cash App report, and — following the 2026-10-10 lead — **Candramas LLC's 2025 Form 1099-NEC to him, confirmed to be him** (his name, and the same Manchester, NH address as his 2024 bank). **Could not read** (scans / images — Lilian to upload in the chat): a 1-page scan in the folder's root (two copies, a 9-digit file name), two `File_000.png`, `Document_2026-03-25_172251.pdf`, the eleven older images. **Not opened:** the three password / login files. While reading the 2024 statements the redactor let a spaced account number through; the tool was fixed the same day and the number is recorded nowhere.
+
+- 2026-10-11 (2) — **Lilian pasted the unreadable documents into the chat, and asked for a tax-preparation playbook.**
+  - **The signed Form 2848** (`Document_2026-03-25_172251.pdf`): Rev. January 2021; Julia (EA, designation c) and Lilian (designation h); line 3 Income and Penalties, Form 1040, 2022–2028; **line 4 ticked**; signed by him 2026-03-26. **Two defects** — line 4 keeps it off the CAF (no transcripts), and Lilian cannot be on a 2848 (`firm-identity.md` §4). Julia to send a corrected 2848 and a Form 8821 for Lilian (working paper §1.7, O15). It also carries a **Rosemead, California** address.
+  - **Nine Texas Comptroller Jeopardy Determinations and the 2026 franchise letter** — they belong to Atman Parts; see [`atman-parts.md`](./atman-parts.md) §4 (working paper §1.5, §1.6).
+  - **His New Hampshire driver licence** — an identity document; nothing transcribed.
+  - **Lilian: 2024 was never filed; it is prepared after 2025** (working paper O10, closed).
+  - **She asked that everything learned while preparing his taxes be kept here, so next year starts with the context** — written as the **tax-preparation playbook** in §4 (Income tax), and made a firm rule for every client ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §5B).
 
 ### Tax year 2025 — the review
 - **Gate:** the P&L stands on the bank; the 1040 waits for the organizer he is filling in.
@@ -112,17 +217,18 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Outstanding items (CI-only — never in the SOP)
 - ✅ ~~**"Anton Partner" — co-owner or contractor?**~~ **A subcontractor (Lilian, 2026-10-11).** Open: does he live in the US — 1099-NEC or W-8BEN (O1).
-- 🟠 **2024 — a return owed? ever filed?** (O10) — found 2026-10-11.
+- ✅ ~~**2024 — a return owed? ever filed?**~~ **Never filed; the firm prepares it after 2025** (Lilian, 2026-10-11 — O10).
 - 🟠 **The client list (O2, O3), the Noma cluster (O8, O9), other accounts (O5), Anton's residence (O1)** — one message from Lilian, in simple Russian.
 - 🔴 **eBay 2025 report** — Lilian pulls it (O4); it is the whole of Atman Parts' 2025 income.
 - ✅ ~~**Candramas LLC 2025 Form 1099 naming a "Vitalii Piliushin"**~~ — **opened 2026-10-11: it is him**, and it is now in the working paper's income (D28). Open: how and when the rest was paid (O12).
-- 🟠 **Whether the firm filed a 2025 extension / what the 2848 covers** — the migrated `2025 4868 Ext.pdf` (moved 2026-06-02) and the 2026-03-28 Form 2848 fax exist; neither was opened. Not a gate (firm rule), pending since unknown.
+- 🔴 **The Form 2848 must be replaced — Julia** (O15, opened 2026-10-11): line 4 is ticked and it names Lilian; a corrected 2848 (Julia only, line 4 blank) and a Form 8821 for Lilian. Without it, no transcripts.
+- 🟠 **Whether the firm filed a 2025 extension** — the migrated `2025 4868 Ext.pdf` (moved 2026-06-02) exists and was not opened. Not a gate (firm rule), pending since unknown.
 - **Texas franchise/sales-tax and the Atman Parts password file** belong to [`atman-parts.md`](./atman-parts.md).
-- **Documents the session cannot read** (scans / images): the eleven images of 2026-10-09, plus the 1-page scan in the Drive folder's root (a 9-digit file name), two `File_000.png` and `Document_2026-03-25_172251.pdf` — Lilian to upload them in the chat (O11).
+- **Documents the session cannot read** (scans / images): ✅ `Document_2026-03-25_172251.pdf` was read from the chat (the 2848). Still to say whether the 1-page scan in the Drive folder's root (a 9-digit file name) and the two `File_000.png` are among the photos she pasted; the eleven images of 2026-10-09 — Lilian (O11).
 
 ### Information still needed
 - [ ] The 2025 organizer (in progress)
-- [ ] Whether a 2024 return is owed (a 2024 organizer was published)
+- [x] ~~Whether a 2024 return is owed~~ — never filed; prepared after 2025 (Lilian, 2026-10-11). The 2024 organizer (published) is its intake.
 - [ ] Answers O1, O2, O3, O5, O8, O9
 
 ## 7. Links
