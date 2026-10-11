@@ -106,7 +106,9 @@ each, and next year gets its own.
    question that was never answered is information too.
 4. Cross-link: the client's [`client-intelligence`](../client-intelligence/) file gets a line in
    its §6 log saying the return was prepared and pointing here. **The knowledge goes there; the
-   figures stay here.**
+   figures stay here.** 🧭 **And the rules the preparation set for that client** — how his transactions are
+   treated, where his documents are, who decided what — go into the **tax-preparation playbook** in that
+   file (§4, Income tax), so next year starts from them ([`tax-return-sop`](../../.claude/skills/tax-return-sop/) §5B).
 
 ## Brand & design
 

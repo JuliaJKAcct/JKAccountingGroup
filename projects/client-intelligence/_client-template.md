@@ -107,6 +107,9 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Return type(s) & deadlines:** _(pending)_
 - **Our role:** _(pending)_
 - **Process notes (→ future SOP):** _(pending)_
+<!-- 🧭 Tax-preparation playbook: add `#### 🧭 Tax-preparation playbook` HERE, below these bullets, the first time
+     the firm prepares this client's return — the rules that preparation set, current only, no figures.
+     tax-return-sop §5B says what goes in it. Until then leave it out: its absence is not drift. -->
 
 ### Licenses & other filings
 - **Applies?** _(pending)_ <!-- Business Tax Receipt, annual report, BOI, etc. -->
