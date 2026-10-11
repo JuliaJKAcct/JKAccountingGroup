@@ -495,6 +495,16 @@ masked` on a document that carried one.)_
   document made entirely of them still trips the diversity gate.
 - **Unlabelled bank accounts of 4–8 digits are not masked.** Only labelled ones (`Account no…`,
   `Routing…`) and bare runs of 9+ digits are. `Chase ending 45566778` survives.
+- ✅ **A LABELLED, SPACED account number that ENDS ITS LINE is masked — since 2026-10-11, and not
+  before.** _(Found on page 1 of a Bank of America statement: `Account number: NNNN NNNN NNNN`, with
+  the holder's name on the next line.)_ The value pattern allowed newlines and its `$` meant the end
+  of the TEXT, so the match ran on looking for a terminator, failed, and the number came through in
+  clear while the report still counted the page-2 copy as masked. The value now stops at ANY line
+  end (`\n`, `\r`, `\f`…), and continues onto the next line only when that whole line is more
+  digits — so a number wrapped across two lines is masked whole, and a date on the next line is
+  left alone. `test_redact.py` carries all of these cases. ⚠️ **An UNLABELLED spaced group
+  (`NNNN NNNN NNNN` with no "Account" beside it) is still not caught** — grep the output for it on
+  any new bank layout.
 - **It reads PDFs only.** A `.docx` or an image is not handled.
 - ✅ **FILLABLE FORM FIELDS ARE READ — since 2026-09-29, and not before.** _(Found that day on
   two W-9s in a client's `TaxDome > Client uploaded documents > W9s` folder.)_ A payee who fills a

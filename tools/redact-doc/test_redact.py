@@ -48,6 +48,27 @@ must_hide("Licence labelled", "Driver's License G4471938820114", "G4471938820114
 must_hide("Licence, state format", "Driver's License D123-4567-8901", "D123-4567-8901")
 must_hide("Licence, DL abbrev", "DL: S530-1122-3344 exp 2029", "S530-1122-3344")
 must_hide("Long card run", "Card 4111111111111111 on file", "4111111111111111")
+# A spaced account number that ENDS ITS LINE, with a name on the next line — the
+# Bank of America page-1 layout. Leaked in clear until 2026-10-11: the value class
+# crossed newlines and `$` meant end of text, so no terminator was ever found.
+must_hide("Spaced acct at line end",
+          "Your Adv Plus Banking\nAccount number: 1234 5678 9012\nJANEFAKE TESTNAME\nAccount summary",
+          "1234 5678 9012")
+must_hide("Spaced acct, last line of text", "Account number: 1234 5678 9012", "1234 5678 9012")
+must_keep("Line after a spaced acct", "Account number: 1234 5678 9012\nJANEFAKE TESTNAME", "JANEFAKE TESTNAME")
+# Review of PR #558: any line-ending whitespace ends the value, not only \n …
+must_hide("Spaced acct before \\r", "Account number: 1234 5678 9012\rJANEFAKE", "1234 5678 9012")
+must_hide("Spaced acct before \\f", "Account number: 1234 5678 9012\fJANEFAKE", "1234 5678 9012")
+# … a number wrapped onto a digits-only next line is masked whole …
+must_hide("Wrapped acct, second half", "Account number 1234\n5678 9012\nJANEFAKE TESTNAME", "5678 9012")
+must_keep("Name after a wrapped acct", "Account number 1234\n5678 9012\nJANEFAKE TESTNAME", "JANEFAKE TESTNAME")
+# … and a DATE on the next line is not eaten as a continuation.
+must_hide("Acct before a dated line", "Account number: 1234 5678 9012\n07/31/24 Deposit 100.00", "1234 5678 9012")
+must_keep("Date after an acct", "Account number: 1234 5678 9012\n07/31/24 Deposit 100.00", "07/31/24")
+# Review round 2 of #558: a WINDOWS line break (\r\n) or a bare \r between the halves.
+must_hide("Wrapped acct over \\r\\n", "Account number 1234\r\n5678 9012\r\nJANEFAKE", "5678 9012")
+must_hide("Wrapped acct over \\r", "Account number 1234\r5678 9012\rJANEFAKE", "5678 9012")
+must_keep("Name after a \\r\\n-wrapped acct", "Account number 1234\r\n5678 9012\r\nJANEFAKE", "JANEFAKE")
 
 # ── Must survive — losing these costs the analysis ────────────────────────────
 must_keep("EIN", "Employer ID Number 45-6789012 Trucking LLC", "45-6789012")

@@ -435,9 +435,21 @@ LICENCE_CONTEXT = re.compile(
 
 # Bank account / routing, when labelled — catches the short account numbers the
 # nine-digit rule cannot see.
+# A value may continue onto the next line ONLY when that whole line is more digits
+# ("Account number 1234" / "5678 9012"), so a wrapped number is masked in full while
+# a date or a name on the next line is left alone.
+_ACCT_BREAK = r"(?:\r\n|[\n\r\f\v\x85\u2028\u2029])"
+_ACCT_WRAP = _ACCT_BREAK + r"(?=[0-9][0-9 \t-]*(?:[\n\r\f\v\x85\u2028\u2029]|$))"
 ACCOUNT_CONTEXT = re.compile(
     r"(routing|account\s*(?:no|num|number|#)|acct)"
-    r"[^\S\n]{0,4}\W{0,6}([A-Z]{0,4}[0-9][A-Z0-9\s-]{2,30}?)(?=\s{2,}|[^\w\s-]|$)",
+    r"[^\S\n]{0,4}\W{0,6}([A-Z]{0,4}[0-9](?:[A-Z0-9 \t-]|" + _ACCT_WRAP + r"){2,30}?)"
+    # The value may END THE LINE — at a newline, or at any other line-ending whitespace
+    # (\r, \f, \v, U+2028…). Before 2026-10-11 the class allowed every newline and `$`
+    # meant end of TEXT, so a spaced number closing its line ("Account number:
+    # 1234 5678 9012" then a name on the next line) ran past 30 characters looking for
+    # a terminator, the match failed, and the number came through in clear — on every
+    # page 1 of a Bank of America statement.
+    r"(?=[^\S\n]{2,}|[^\w\s-]|[ \t]*(?:(?!" + _ACCT_WRAP + r")[^\S \t]|$))",
     re.IGNORECASE,
 )
 
