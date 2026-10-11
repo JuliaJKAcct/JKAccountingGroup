@@ -141,7 +141,7 @@ the actual details (and Claude can pull them live when a task needs them).
   _(session; Julia confirms)_. **State and formation fees:** an ordinary expense on line 23 (§248 is corporate only) _(session — 2025 D26)_.
 - **Food on the bank is a draw** _(Lilian — L2)_: no meal deduction unless he states a meal was business
   ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B.1). **Personal purchases a business could own** (electronics, furniture,
-  Apple.com) are draws unless he explains them. **Marketplace health premiums** belong to the 1040 (Forms 1095-A),
+  Apple.com) are draws unless he explains them _(session — 2025 D17)_. **Marketplace health premiums** belong to the 1040 (Forms 1095-A),
   not to either Schedule C.
 
 **⑤ Information returns**
