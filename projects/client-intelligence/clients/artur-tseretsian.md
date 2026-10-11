@@ -112,6 +112,9 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   searching all three Double organizers (the 2023 one's home-office slide and template upload are
   unanswered; 2024 and 2025 are at 0%), the July working-copy organizers in Drive, Double note 479443,
   Gmail and Drive. The question goes to the client as Q6 in the 2025 working paper.
+- **AT&T (phone + internet)** = **80% business — 50% to the car business, 30% to CS Float** (Lilian, 2026-10-10).
+- **His wife** = **everything in or out of the accounts related to her is personal** (Lilian, 2026-10-10). Her
+  employer pay is her W-2 wages, never Schedule C.
 - **Vehicle** = the client **bought and later sold a car** during the period. 🔒 **Lilian, 2026-10-08:
   the purchase and the sale are omitted from the return completely** — no documents are being chased
   for them. She asks the client instead whether he wants to include **a car he had in 2025** as a
@@ -409,6 +412,17 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
     - whether her employer (Markstar) offered her health insurance.
 
 - 2026-10-10 — **Incremental sweep (baseline 2026-10-03, inclusive; the manual 2026-10-08/09 work is already above).** Double: `list_notes` 2 (479443 `updatedAt` 2026-09-03, 479444 `updatedAt` 2026-07-30 — neither moved since baseline); activity log from 2026-10-03 shows only the **2025 Taxes project moved Not Started → In Progress (Lilian, 2026-10-08)**; the tax-project tasks themselves are all still Not Started. Gmail (a search of Julia's mailbox, `after:2026/10/03`, on 2026-10-10, by client, Rewhip, Operex, Stripe, 1095, Sunbiz and SSA terms) found only the 2026-10-05 Rewhip invoice-paid notice already on file. Drive (modified after 2026-10-03): only the 2023 and 2024 Form 1095-A files filed 2026-10-08, already on file. Ping: org-wide search returned only the 2026-07-06 consultation already known; nothing new legible.
+
+- _(2026-10-10/11 — Lilian, draft 4 of the 2025 return)_ Lilian ruled AT&T 80% business (50% cars, 30% CS Float) and
+  everything related to his wife personal, and asked for more real expenses and certainty that every receipt is business.
+  A full re-audit of all 2025 bank lines against the July rules and the client-reviewed examples found **nothing else that
+  moves under the client's own rules** (his rule: a merchant he never named is personal). Three things changed: the AT&T
+  split, a premium in the wife's name relabelled personal, and a duplicated card payment. What can add expenses or take
+  receipts out needs **his answers**: who sent 12 Zelle with no name; whether Steam wallet top-ups bought skins he resold;
+  a list of possible business costs (a lawyer, county offices, shipping stores, lookups, a domain, helpers); the lender's
+  interest statement for the car he includes (deductible on top of the mileage rate); and the statements of his other
+  cards (two Capital One, First Premier, Credit One, the American Express), which may hold trip and phone costs.
+  Figures are in the working paper (§3E), never here.
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
