@@ -56,6 +56,15 @@ must_hide("Spaced acct at line end",
           "1234 5678 9012")
 must_hide("Spaced acct, last line of text", "Account number: 1234 5678 9012", "1234 5678 9012")
 must_keep("Line after a spaced acct", "Account number: 1234 5678 9012\nJANEFAKE TESTNAME", "JANEFAKE TESTNAME")
+# Review of PR #558: any line-ending whitespace ends the value, not only \n …
+must_hide("Spaced acct before \\r", "Account number: 1234 5678 9012\rJANEFAKE", "1234 5678 9012")
+must_hide("Spaced acct before \\f", "Account number: 1234 5678 9012\fJANEFAKE", "1234 5678 9012")
+# … a number wrapped onto a digits-only next line is masked whole …
+must_hide("Wrapped acct, second half", "Account number 1234\n5678 9012\nJANEFAKE TESTNAME", "5678 9012")
+must_keep("Name after a wrapped acct", "Account number 1234\n5678 9012\nJANEFAKE TESTNAME", "JANEFAKE TESTNAME")
+# … and a DATE on the next line is not eaten as a continuation.
+must_hide("Acct before a dated line", "Account number: 1234 5678 9012\n07/31/24 Deposit 100.00", "1234 5678 9012")
+must_keep("Date after an acct", "Account number: 1234 5678 9012\n07/31/24 Deposit 100.00", "07/31/24")
 
 # ── Must survive — losing these costs the analysis ────────────────────────────
 must_keep("EIN", "Employer ID Number 45-6789012 Trucking LLC", "45-6789012")
