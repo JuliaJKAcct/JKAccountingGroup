@@ -48,6 +48,14 @@ must_hide("Licence labelled", "Driver's License G4471938820114", "G4471938820114
 must_hide("Licence, state format", "Driver's License D123-4567-8901", "D123-4567-8901")
 must_hide("Licence, DL abbrev", "DL: S530-1122-3344 exp 2029", "S530-1122-3344")
 must_hide("Long card run", "Card 4111111111111111 on file", "4111111111111111")
+# A spaced account number that ENDS ITS LINE, with a name on the next line — the
+# Bank of America page-1 layout. Leaked in clear until 2026-10-11: the value class
+# crossed newlines and `$` meant end of text, so no terminator was ever found.
+must_hide("Spaced acct at line end",
+          "Your Adv Plus Banking\nAccount number: 1234 5678 9012\nJANEFAKE TESTNAME\nAccount summary",
+          "1234 5678 9012")
+must_hide("Spaced acct, last line of text", "Account number: 1234 5678 9012", "1234 5678 9012")
+must_keep("Line after a spaced acct", "Account number: 1234 5678 9012\nJANEFAKE TESTNAME", "JANEFAKE TESTNAME")
 
 # ── Must survive — losing these costs the analysis ────────────────────────────
 must_keep("EIN", "Employer ID Number 45-6789012 Trucking LLC", "45-6789012")

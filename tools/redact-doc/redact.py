@@ -437,7 +437,13 @@ LICENCE_CONTEXT = re.compile(
 # nine-digit rule cannot see.
 ACCOUNT_CONTEXT = re.compile(
     r"(routing|account\s*(?:no|num|number|#)|acct)"
-    r"[^\S\n]{0,4}\W{0,6}([A-Z]{0,4}[0-9][A-Z0-9\s-]{2,30}?)(?=\s{2,}|[^\w\s-]|$)",
+    r"[^\S\n]{0,4}\W{0,6}([A-Z]{0,4}[0-9][A-Z0-9 \t-]{2,30}?)"
+    # The value may END THE LINE. Before 2026-10-11 the class allowed newlines and
+    # `$` meant end of TEXT, so a spaced number closing its line ("Account number:
+    # 1234 5678 9012" then a name on the next line) ran past 30 characters looking
+    # for a terminator, the match failed, and the number came through in clear —
+    # on every page 1 of a Bank of America statement.
+    r"(?=[^\S\n]{2,}|[^\w\s-]|[^\S\n]*(?:\n|$))",
     re.IGNORECASE,
 )
 
