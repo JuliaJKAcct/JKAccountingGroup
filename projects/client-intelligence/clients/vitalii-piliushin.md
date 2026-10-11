@@ -109,12 +109,15 @@ the actual details (and Claude can pull them live when a task needs them).
 - **2025 exception:** ANBT opened only on 2025-12-04, so the online store ran through Wells Fargo. The split rules
   (working paper 2025 §2.1): by account, **except** lines whose own text ties them to the store — eBay as a seller,
   the atmanparts website and email, parcel shipping, the Kaufman shop (rent, bills, gates, shelving, fire protection,
-  permits, hardware from the first shop permit) and the LLC's formation fee. 🔑 **From 2026 check that eBay and the
+  permits, hardware from the first shop permit) and the LLC's formation fee *(an inference from dates — E6)*
+  _(session; Lilian confirms — 2025 D22)_. 🔑 **From 2026 check that eBay and the
   shop really moved to ANBT; if they did, the exceptions are no longer needed.**
 
 **④ How his transactions are treated** _(apply again unless the facts change)_
-- **Personal markers** _(Lilian, 2026-10-09)_: groceries, restaurants, fast food, and gas-station charges **under
-  25.00** are owner draws; **25.00 or more** at a gas station is fuel; QT "Inside" is a draw.
+- **Personal markers** _(Lilian, 2026-10-09 — 2025 L2)_: groceries, restaurants, fast food and very small gas-station
+  purchases are owner draws. **Where "small" ends — 25.00 — is the firm's precedent from another client**, not a
+  figure she gave here ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B.10 ③), applied as
+  2025 D4 _(session)_: under 25.00 a draw, 25.00 or more fuel; QT "Inside" a draw.
 - **Vehicle and home office are kept apart** — they wait for the organizer's business-use figures. The car's miles must
   be **split between the two LLCs**. On the standard rate only parking, tolls and the business share of car-loan
   interest are added (interest through the Vehicle Expenses worksheet line 9c, never line 16b).
@@ -124,24 +127,29 @@ the actual details (and Claude can pull them live when a task needs them).
   *"Broker"* = freight; family labels = draws. **A payee with only a first name goes on the client list.**
 - **Anton ("Anton Partner") is a SUBCONTRACTOR** of Project Atman, contract labor — not a co-owner _(Lilian,
   2026-10-11)_. Still open after 2025: does he live in the US (1099-NEC) or abroad (W-8BEN)?
-- **Taras** (*"Taras Noma | Packaging"*) and **Silvia** (*"Silvia Atman"*) are contract labor.
+- **Taras** (*"Taras Noma | Packaging"*) and **Silvia** (*"Silvia Atman"*) are contract labor on Project Atman
+  _(session — 2025 D7; which LLC is still open, O8)_.
 - **Vehicle sales are shown GROSS** — the customer's money on line 1, the car in cost of goods sold — and are bought to
   order, so ending inventory is nil _(session; Julia confirms the gross presentation)_.
-- **eBay income is GROSS from the eBay report**, never the net payouts the bank shows; eBay's fees go on line 10.
+- **eBay income is GROSS from the eBay report**, never the net payouts the bank shows; eBay's fees go on line 10
+  (line 1 is gross receipts — 2025 O4).
 - **Deposits with no payer named** (ATM cash, deposited checks) and Zelle from individuals are counted as sales until he
-  says otherwise _(Lilian decides — 2025 D2)_. Several Zelle senders are friends or family he also pays.
+  says otherwise _(session default; ⛔ Lilian decides — 2025 D2)_. Several Zelle senders are friends or family he also pays.
 - **Amazon / Temu** on the business account: business supplies by default — **Lilian has not ruled yet** (2025 D5).
 - **Phone:** 50% business _(session; Lilian may change)_.
 - **Shop gates and shelving:** expensed under the de minimis safe harbor in Part V, **with the election statement**
-  _(session; Julia confirms)_. **State and formation fees:** an ordinary expense on line 23 (§248 is corporate only).
-- **Meals are never deducted** — food is a draw. **Personal purchases a business could own** (electronics, furniture,
+  _(session; Julia confirms)_. **State and formation fees:** an ordinary expense on line 23 (§248 is corporate only) _(session — 2025 D26)_.
+- **Food on the bank is a draw** _(Lilian — L2)_: no meal deduction unless he states a meal was business
+  ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B.1). **Personal purchases a business could own** (electronics, furniture,
   Apple.com) are draws unless he explains them. **Marketplace health premiums** belong to the 1040 (Forms 1095-A),
   not to either Schedule C.
 
 **⑤ Information returns**
-- **He owes, every year:** 1099-NEC to repair subcontractors and contractors he pays **by Zelle** (600 or more); 1099-MISC
-  box 1 to the **Kaufman landlord**. Card and Cash App payments are reported by the network; freight is excluded.
-  **None was filed for 2025** — Julia decides on late filing. **Collect W-9s up front.**
+- **He owes:** 1099-NEC to repair subcontractors and contractors he pays **by Zelle**, and 1099-MISC box 1 to the
+  **Kaufman landlord** — 🔴 **at 600 or more for 2025 payments, but 2,000 or more for payments from 2026** (raised by
+  the 2025 tax law, indexed after 2026 — read the current-year 1099 instructions). Card and Cash App payments are
+  reported by the network; freight is excluded. **None appears filed for 2025** (2025 D20) — Julia decides on late
+  filing. **Collect W-9s up front.**
 - **He receives:** Candramas LLC's 1099-NEC — part of his income even when the money did not reach the accounts held.
 
 **⑥ Texas obligations of Atman Parts that sit beside the return** — see [`atman-parts.md`](./atman-parts.md) §4

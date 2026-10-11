@@ -3868,7 +3868,8 @@ never seen any earlier version of this file?*** **If it needs one, it does not g
 | **8 · What carries forward** | 🔑 **What next year needs: basis, carryovers, elections made, replacement periods running, balances, unfinished items** |
 
 🧭 **Building it is also when the client's playbook is refreshed (§5B):** the decisions in §6 that will apply
-again and the items in §8 become playbook rules. **The worksheet tells THIS year in full; the playbook keeps only
+again and the items in §8 become playbook rules — **as the rule and a pointer to the working paper, never the
+figure** (§5B ②). **The worksheet tells THIS year in full; the playbook keeps only
 the rules for the next.**
 
 #### 🔴 THE ACCEPTANCE TEST — IT MUST BE ENOUGH TO **REPLICATE** THE RETURN FROM NOTHING ELSE
@@ -4087,7 +4088,7 @@ about the client is ALSO written as standing rules, in the place the next prepar
 
 | What the preparation taught | Where it goes |
 |---|---|
-| **A rule that would hold for ANY client** — how a kind of transaction is treated, a form trap, a software route | **This skill, or the form's SOP** — and **ALSO** the client's playbook, as the rule *for him* |
+| **A lesson about the WORK that would hold for any client** — a form trap, a software route, a check that caught something | **This skill, or the form's SOP** — and **ALSO** the client's playbook, as the rule *for him* |
 | **A rule, decision or fact about THIS client** — what the business does, which account or activity is whose, how his recurring transactions are treated, where each document is, who rules on what, the traps already met | 🧭 **The client's playbook** — `#### 🧭 Tax-preparation playbook` under `### Income tax` in his [Client Intelligence file](../../../projects/client-intelligence/clients/) |
 | **A figure** | **The working paper only** (§5) — never the playbook |
 | **What happened, and when** — a document arriving, an answer given, a draft delivered | **The working paper**; the client file's §6 log gets the dated line |
@@ -4095,6 +4096,10 @@ about the client is ALSO written as standing rules, in the place the next prepar
 
 ⚠️ **Both, not either:** a lesson that generalises still goes into the client's playbook, because next year's
 preparer reads his file, not this skill's history.
+
+⛔ **How a client's transactions are TREATED is per client** — the draws threshold, whether Zelle is income, what
+counts as a business purchase. **It goes in HIS playbook and stays there** until Lilian or Julia makes it a firm
+rule *(§1B.10 ③ and ④ say why: the same topic is decided differently client by client)*.
 
 #### ② The shape of a playbook
 
@@ -4137,13 +4142,17 @@ published-page gate and the coverage audit. ③ **A skill per client turns the [
 client list**, and *"check the index first"* stops working. ⓘ *The one exception is CODE: a parser for one
 client's unusual export belongs in [`tools/`](../../../tools/), not in a skill.*
 
-📈 **Promotion, when it happens:**
-- **A client rule that turns up at a SECOND client** is a firm rule: move it here or into the form's SOP, and
-  leave a one-line pointer in each playbook.
-- **A client SOP** *(through [`sop-authoring`](../sop-authoring/), into `projects/sops/`)* — only when ALL three
-  hold: the preparation has been **stable across two filed years**; the playbook is **still large once the general
+📈 **Promotion — always ASKED, never assumed:**
+- **A client rule that turns up at a SECOND client is the cue to ASK Lilian or Julia whether it is a firm rule** —
+  ⛔ **never to promote it on recurrence alone.** Until one of them rules, it stays in each client's playbook.
+  ⛔ **A treatment §1B.10 ③/④ lists as per-client is not promoted because it recurs** — that is what those
+  sections exist to prevent. ✅ When she makes it standing, write it here or into the form's SOP **in her words,
+  with the date**, and leave a one-line pointer in each playbook.
+- **A client SOP** *(through [`sop-authoring`](../sop-authoring/), into `projects/sops/`)* — **proposed to Lilian
+  and written only with her approval**, and only proposed when ALL three hold: the preparation has been **stable across two filed years**; the playbook is **still large once the general
   rules have moved up** *(roughly 40 rules or 150 lines, or a dozen rules spanning several forms)*; and it reads as
-  a **step-by-step procedure**, not a list of rulings.
+  a **step-by-step procedure**, not a list of rulings. *(The thresholds are the session's proposal too, with the
+  recommendation above.)*
 
 ---
 
@@ -4171,7 +4180,8 @@ is how an SOP becomes confidently wrong.**
 - 🧭 🆕 **A PREPARATION TEACHES SOMETHING ABOUT THE CLIENT** — **§5B**, added 2026-10-11 *(Lilian: "que no se
   pierda nada")*. 🔑 **Route it by §5B ①:** the client's rule into his playbook, a lesson that holds for any client
   into this skill or the form's SOP — **both when both apply.** 📈 **A playbook rule that turns up at a SECOND
-  client is promoted here** (§5B ④), with a pointer left in each playbook.
+  client is the cue to ASK Lilian or Julia** whether it is a firm rule (§5B ④) — ⛔ **never promoted on recurrence
+  alone.**
 
 - 🏦 🆕 **LILIAN SETS OR CHANGES A RULE FOR SORTING BANK LINES** — **§1B.10**, added 2026-10-10 from Atman Parts *("Sí, guarda esas reglas en el skill")*. 🔑 **Write her words in, with the date.** ⛔ **A ruling for ONE client stays in that client's working paper and its playbook (§5B)** and reaches §1B.10 ④ only as one side of a contested topic — **never as the default.** ☑️ **When a master template is fixed, strike THAT defect's row from §1B.10 ⑥** — only after reading the formula in the file Lilian actually hands over. FOLLOW-UPS row 102 is defect 2 (the Double master `Home office.xlsx`); row 205 is defects 1 and 3. ⛔ **Closing one row does not clear the others.**
 
