@@ -117,8 +117,8 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   employer pay is her W-2 wages, never Schedule C.
 - 🆕 **The car (Lilian, 2026-10-11):** a **2020 BMW M8**, financed by **Lendbuzz** (loan ending 3877), payments from
   September 2024. **Not put on the books; the business share of its loan interest will probably be deducted**, from the
-  start of the year to the sale date, with his business miles. ⚠️ **The bank shows the loan still being paid in January
-  2026**, so the sale date has to come from him. Loan terms are in the working paper (§1.4), never here; the VIN is on
+  start of the year to the sale date, with his business miles. ⚠️ **Lendbuzz was still debiting the payment in January
+  2026** (that debit came back unpaid), so the loan was still open and the sale date has to come from him. Loan terms are in the working paper (§1.4), never here; the VIN is on
   the loan document and is not copied anywhere.
 - **Vehicle** = the client **bought and later sold a car** during the period. 🔒 **Lilian, 2026-10-08:
   the purchase and the sale are omitted from the return completely** — no documents are being chased
@@ -431,8 +431,8 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
 
 - _(2026-10-11 — Lilian: the car, and the business code)_ Lilian sent the Lendbuzz loan-approval email for a **2020
   BMW M8** (the car he bought) and ruled that it stays off the books while the business share of its loan interest will
-  probably be deducted once the sale date and his business miles are known. The session found that the Lendbuzz payment
-  was still leaving his checking in January 2026, so the car does not look sold during 2025 — to confirm with him. She
+  probably be deducted once the sale date and his business miles are known. The session found that Lendbuzz was still
+  debiting his checking in January 2026 (the debit came back unpaid), so the car does not look sold during 2025 — to confirm with him. She
   also made it a firm rule that, when no prior return gives a business code, the session proposes one with its reasons
   (`tax-return-sop` §4J).
 
