@@ -108,6 +108,8 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
 - **Home office** = client gave a **2023 rent estimate** for a home office (figure kept in
   the working file / organizer, not here); 2024/2025 TBD. Julia to set the method
   (Form 8829 %); not 100% business.
+  🆕 **2026-10-11 (the client, relayed by Lilian): the home is 1,200 sq ft and the office 300 sq ft (25%).** Whether
+  the office is used **only and regularly** for the business is still to ask — without it there is no home office.
   🆕 **2026-10-09: the firm holds NO square footage, for the home or the office.** That is the result of
   searching all three Double organizers (the 2023 one's home-office slide and template upload are
   unanswered; 2024 and 2025 are at 0%), the July working-copy organizers in Drive, Double note 479443,
@@ -123,15 +125,29 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   🆕 **Lilian, later on 2026-10-11:** if it was sold in 2026, **all the interest paid in 2025 counts** — the 2025
   return needs only the year of the sale, not the date or the sale document. Until the lender's statement arrives, the
   2025 return uses an **estimate built from the loan approval's terms** (working paper §1.4).
+  🆕 **The client's answers (2026-10-11, relayed by Lilian):** **sold 2026-06-26** (the price is in the working paper);
+  the odometer read **17,000 miles at the purchase (2024)** and **44,507 at the sale**; in 2025 he drove it about
+  **13,000 miles, all for the business** — he had **two other cars** for personal use. Still to ask: the date he first
+  used it for the business (2024 or 2025) and whether he keeps a record of the trips.
+  🆕 **A second variant, for Julia (Lilian, 2026-10-11):** Julia may want to **put the car on the books** (actual
+  expenses and depreciation) instead of the standard mileage rate, for a larger deduction — *"es una segunda
+  variante… vamos a esperar por la decisión de Julia"*. Not done; the comparison is in the working paper (§1.4, L10).
 - 🆕 **What else is business (Lilian, 2026-10-11):** **Steam** — the wallet top-ups (skins he buys to resell) and the
   store purchases, *"porque ese es su trabajo"*; **car tags, titles, service and storage**; **BeenVerified**; the
   **county tax office and the court** (licenses and fees); the **shipping stores**; the **lawyer** (professional
-  services); and **Adobe Illustrator and the website domain**, split between the car business and CS Float (the
-  session's proposal: mostly the car business — Adobe predates CS Float, and his Drive folder and his 2026 company are
-  named "Rewhip"). **Still personal:** local parking and tolls. ⚠️ **Never deductible whatever the ruling:** a ticket or
+  services); and **Adobe Illustrator and the website domain** — 🆕 **all to the car business** (Lilian, later on
+  2026-10-11, replacing the session's proposed split). **Still personal:** local parking and tolls. ⚠️ **Never deductible whatever the ruling:** a ticket or
   fine paid to a government, and the registration, service or storage of the car whose miles are claimed (inside the
   mileage rate) — the client is asked which the county, court, tag, service and storage payments were. **Airfare,
   hotels and trips not in these accounts:** kept as a note, to ask him for only if more expenses are needed.
+- 🆕 **His travel, tolls and parking (analysed 2026-10-11, at Lilian's request — working paper §3F):** seven trips show
+  in the two accounts. **Two look like car business** (April: Dallas, Sacramento and the Bay Area on one-way fares,
+  with a car company paying him the next week; September: Chicago, with a towing payment during the stay); **two need
+  his explanation** (the Los Angeles days after the Pebble Beach Concours in August; Cleveland and Nashville in
+  December); **three are personal or local** (a Kissimmee resort stay in January, a Miami Beach hotel weekend in March,
+  Christmas in Texas). The family's out-of-town trips for the boys' **gymnastics meets** (Sarasota, Orlando, Estero) are
+  personal. **Tolls:** his SunPass accounts are paid from another account — only two top-ups show. Several flights
+  and hotels were paid from **another card** (the American Express). Julia decides which trips stay.
 - **Vehicle** = the client **bought and later sold a car** during the period. 🔒 **Lilian, 2026-10-08:
   the purchase and the sale are omitted from the return completely** — no documents are being chased
   for them. She asks the client instead whether he wants to include **a car he had in 2025** as a
@@ -143,6 +159,11 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   header and cover letter say 2024). 🔴 **The 2025 form is still missing, and without it the 2025 return
   cannot be e-filed.** He was asked in July (Lilian, 2026-07-30: *"nos va a enviar el formulario 1095 A
   para cada año"*).
+  ⚠️ **UNSETTLED — two sources disagree (2026-10-11).** The client says (relayed by Lilian) **there was no 1095-A for
+  2025**. The card says the policy ran into 2025: Ambetter took his premium share in December 2024 and January–March
+  2025, covering at least January–April 2025, and the same policy had advance credit in 2024. If any 2025 month had
+  advance credit, a 2025 form exists (HealthCare.gov → *Tax forms*, or Ambetter) and Form 8962 is required. Asked
+  again with the card lines (working paper Q1).
 - **Pass-through** = money received and, the same day, routed to an auto vendor (e.g.
   Autotrader) on a third party's behalf → **neither income nor expense** (one confirmed
   2023 case).
@@ -460,13 +481,20 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   supersedes the "No" recorded on 2026-10-08 above. Julia decides whether the firm files a late one (it needs the
   lawyer's W-9). In ATX the car-loan interest goes through the vehicle worksheet, never on its own line.
 
+- _(2026-10-11 — Lilian: draft 6 of the 2025 return)_ Lilian relayed **the client's answers** — the square feet, the
+  BMW (sold 2026-06-26; about 13,000 miles in 2025, all business; two other cars) and *"no 1095-A for 2025"*, which the
+  card contradicts — and ruled that Adobe and the domain go **all to the car business**. She asked the session to
+  find the tolls, hotels and trips in the statements and say which could be business (the travel bullet above), and
+  to keep **putting the car on the books** as a second variant for Julia. Figures are in the working paper (§1.4, §3C,
+  §3F), never here.
+
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
 - 🔒 **The older child's SSN — DECIDED FOR 2025 (2026-10-08): he is left off the 2025 return** (Lilian). Still worth getting for a 1040-X and for 2026. SS card was lost. On **2026-07-31** the client went to the SSA office and was told the replacement card would be **mailed by post** (allow ~1 month), so it was expected around **late August 2026**. As of **2026-10-03** we still don't have the number — a Gmail search bounded after 2026/09/26 for the client's name found nothing about it, and Double notes carry no update (**71 days pending since 2026-07-31 as of 2026-10-10** (64 at 2026-10-03; a Gmail search after 2026/10/03 on 2026-10-10 found nothing on it; the client sends by WhatsApp, unreachable); the ~1-month window ended about 2026-08-31). The client sends such items by **WhatsApp** (outside the digital sweep). **Next step:** confirm with the client that the card arrived and get the number — entered into Double, never the repo.
 - **Year-end 2024 & 2025 addresses** — 2025: the spouse's W-2 shows Plantation, FL (to confirm, 2026-10-08); 2024: the 2024 1095-A shows Dania Beach, FL.
 - ✅ **January 2026 statements (both accounts) — RECEIVED (in Drive since 2026-08-06) and PROCESSED 2026-10-08** into the 2025 return build. Double note 479443 still lists them as pending from the client; it was not edited (no instruction to write to Double).
 - CS Float purchases/expense report — not chased this run (budget).
-- **Form 1095-A: 2023 and 2024 RECEIVED 2026-10-08; 2025 MISSING** (the file named 2025 is the 2024 form). **Asked again by Lilian on WhatsApp, 2026-10-09** — he said he would send it. Car purchase/sale documents: **no longer needed** (Lilian, 2026-10-08: omitted). Home-office worksheet, Lendbuzz/Westlake amortization schedules, external-card statements (incl. the account ending 4800 and the American Express card new in June 2025), client-review items (deposits/travel/auto-transport Zelles) — not chased this run (budget).
+- **Form 1095-A: 2023 and 2024 RECEIVED 2026-10-08; 2025 MISSING** (the file named 2025 is the 2024 form). **Asked again by Lilian on WhatsApp, 2026-10-09** — he said he would send it. 🆕 **2026-10-11: he says there was none for 2025 — contradicted by the card (see Health insurance above); asked again.** Car purchase/sale documents: **no longer needed** (Lilian, 2026-10-08: omitted). Home-office worksheet, Lendbuzz/Westlake amortization schedules, external-card statements (incl. the account ending 4800 and the American Express card new in June 2025), client-review items (deposits/travel/auto-transport Zelles) — not chased this run (budget).
 - ✅ **Confirmation the client completed the QuickBooks recurring-payment setup — ARRIVED 2026-09-12.** A QuickBooks "you got paid" notice shows a REWHIP LLC recurring payment posted 2026-09-01 (figure not retained). Closed as a setup question; ⚠️ **watch-item, UPDATED 2026-10-03**: the single canceled transfer (invoice 2272, 2026-09-03) was followed by a **failed monthly run on 2026-10-01** (QuickBooks notice, Gmail) — so the 09-01 success has no confirmed successor and the October debit did not go through. **Needs a firm-side follow-up with the client** (not yet recorded as done). 🆕 **2026-10-08:** a QuickBooks *"Payment received"* notice of **2026-10-05** (invoice 2313, REWHIP LLC) shows a payment did arrive after the failure. Whether it was the October fee paid by hand or a repaired recurring setup is not established.
 - **Rewhip LLC — clarify scope** — STILL OPEN, **87 days pending since raised (2026-07-15)** as of 2026-10-10 (80 at 2026-10-03), no deadline _(the earlier "~82 days as of 09-26" did not match this start date; recomputed)_. A targeted search bounded after 2026/09/26 found nothing beyond what's already on file — only the 2026-10-02 Certificate of Status for the entity (see log).
 - **Stripe transaction data** — STILL OPEN, **96 days pending since raised (2026-07-06)** as of 2026-10-10 — past 90 since 2026-10-04 (89 at 2026-10-03) _(the earlier "~91 days as of 09-26" did not match this start date; recomputed)_, no deadline. A targeted search bounded after 2026/09/26 found nothing client-specific.
