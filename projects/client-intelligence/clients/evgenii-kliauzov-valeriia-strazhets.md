@@ -105,7 +105,7 @@ for business shares _(2026-10-12)_. **When Evgenii recounts, his new totals repl
 - **Cars:** the Kona (Evgenii) on **actual expenses with MACRS depreciation** _(Julia, 2026-10-12)_ — **the standard mileage
   rate is closed for it for good**; the Infiniti (Valeriia, leased from November 2025) on **standard mileage for the whole
   lease**; business parking and tolls in full on top.
-- **Her phone and her Apple subscriptions: 90% business** _(Valeriia, 2026-10-12)_; his phone 70% _(entered by Lilian
+- **Her phone and her Apple subscriptions: 90% business** _(Valeriia, 2026-10-12)_ — ⚠️ **the 2025 return keeps Apple at 100%** _(Lilian, D35; the firm's objection on record — the 90% is her own statement)_; his phone 70% _(entered by Lilian
   2026-10-09 — she confirms either way, D24)_.
 
 ⚠️ **AS DRAFTED IN 2025 — NOT YET RULED.** These were the 2025 return's positions; each is still open in the working paper's
