@@ -510,8 +510,9 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
       🔑 **The walk is the answer to "where is the profit?": profit is not cash.**
     - **A workbook with ONE TAB PER CATEGORY**, every line of the year in exactly one tab — **asserted by the build** —
       grouped by payee where payees repeat (people, sellers, carriers), by category elsewhere, the "may be business"
-      lines first. 🛑 **Static values only: nothing links one tab to another** *(Lilian, 2026-10-12: "mejor no
-      vincularlo por fórmulas entre páginas")*.
+      lines first. **Static values only: nothing links one tab to another** *(Lilian, 2026-10-12: "mejor no
+      vincularlo por fórmulas entre páginas" — her instruction for that pack; as a general rule, a session's reading
+      like the rest of ⑤)*. ⛔ **It does not touch the §4D working-paper workbook, which keeps its live formulas.**
     - **Two files, the client's language and English, with identical tabs and line numbers.** One tab is the **call
       agenda** — and 🛑 **look before you ask: strike any question for a document the firm already holds** *(the first
       agenda asked for a Form 1095-A; two were in Double)*.
