@@ -482,7 +482,7 @@ never an artifact.** 🇬🇧 **In English** *(CLAUDE.md)*.
 | 1 | **The P&L's net profit ignores cost of goods sold** — `C41 = C10 - C39`, revenue minus expenses. On Tseretsian that would have overstated one Schedule C by its whole purchases figure | Add a *Total Cost of Goods Sold* and *Gross Profit* row, and take the net from gross profit |
 | 2 | **The Home Office `Total` does not add every row.** In the chat copy it is `=SUM(N9:N15)`, dropping **mortgage interest, insurance, property taxes and HOA** | `=SUM(N5:N15)` and `=SUM(O5:O15)`. ⚠️ **[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 102 records the SAME defect as it showed on one client's copy of the Double master `Home office.xlsx`** — only Insurance, Rent and Utilities were filled in, so the total read as Rent + Utilities, which is what `=SUM(N9:N15)` gives; **nobody has read the formula in the master itself.** **Read the formula in the copy you were given; do not assume which defect it has** |
 | 3 | **The Home Office template has an `Internet` row** — which pushes internet into Form 8829, against M2 | **Leave it empty**; internet goes on line 25. *(It has already reached a filed Form 8829 once, on a client who filled the template himself.)* |
-| 4 | 🆕 **The P&L template's rows are NOT Schedule C lines, and she keys from the label.** *Commisions & Fees* reads like line 10, *Office Supplies* like line 18, *Auto Gas* like gas. On Tseretsian (draft of 2026-10-12) **taxes and licenses went on line 10, eBay supplies on line 18, the postage inside freight, a car service onto the vehicle worksheet — and a shipping payment already inside *Delivery/Freight* was keyed a second time as its own Part V row** | 🆕 **REBUILD THE COPY IN THE ORDER OF THE YEAR'S SCHEDULE C** *(Lilian, 2026-10-12 — see the rule below this table)*: **column A = the Schedule C line**, rows in the form's order (Part I · lines 8–31 with the Part V rows under 27b · Part III), **one line per row**, line 9 shown as the Vehicle Expenses worksheet builds it (9a miles × rate · 9b parking and tolls · 9e interest), and the derivation columns (§4D). **A Part V row's label names what is inside it**, so nothing in it is typed again |
+| 4 | 🆕 **The P&L template's rows are NOT Schedule C lines, and she keys from the label.** *Commisions & Fees* reads like line 10, *Office Supplies* like line 18, *Auto Gas* like gas. On Tseretsian (draft of 2026-10-12) **taxes and licenses went on line 10, eBay supplies on line 18, the postage inside freight, a car service onto the vehicle worksheet — and a shipping payment already inside *Delivery/Freight* was keyed a second time as its own Part V row** | 🆕 **REBUILD THE COPY IN THE ORDER OF THE YEAR'S SCHEDULE C** *(Lilian, 2026-10-12 — see the rule below this table)*: **column A = the Schedule C line**, rows in the form's order (Part I · lines 8–31 with the Part V rows under 27b · Part III), **one line per row**, line 9 shown in its Vehicle Expenses worksheet parts, **each marked TYPED or COMPUTED** — she TYPES the business miles (worksheet line 4), 9b parking and tolls and **9c the TOTAL interest**; ATX COMPUTES 9a, 9e (= 9c × business %) and line 9 *(never put the 9e figure where 9c is typed: below 100% business the % is applied twice)* — and the derivation columns (§4D). **A Part V row's label names what is inside it**, so nothing in it is typed again |
 
 ☑️ **And clear the template's SAMPLE inputs** — it ships with 1,000 and 100 square feet, which compute a 10% that
 looks like an answer. **Blank until the client gives his figures.**
@@ -3575,14 +3575,16 @@ file, not only the draft.** ⛔ **Never report a session's own mapping error as 
 - **A one- or two-dollar gap is rounding when ATX rounds each entry** — a figure typed as several rows (five trips,
   five Part V rows) rounds row by row. Say so as OK; it is not a finding.
 
-✅ **OPEN WITH HER TOTALS** *(Lilian, 2026-10-12, sending her second version: "fíjate, sobre todo, en los gastos y que
-los totales estén correctos. Esto es lo que más me interesa. Luego, si quieres, me puedes decir si quedan cosas
-puestas en sitios donde no van")*: **re-compute every total from the figures on her own pages** (line 28, 29, 31,
+✅ **OPEN WITH HER TOTALS** *(Lilian, 2026-10-12, sending her second version: "Quiero que te fijes, sobre todo, en los
+gastos y que los totales estén correctos. Esto es lo que más me interesa. Luego, si quieres, me puedes decir si quedan
+cosas puestas en sitios donde no van")*: **re-compute every total from the figures on her own pages** (line 28, 29, 31,
 Schedule 1, SE, AGI, QBI, taxable income, tax, balance due) and say whether each is right **for what she typed**;
-then **size the gap to the worksheet and name each piece of it** *(on the pilot: 35,370 against 35,172 = +199 parking
-on the vehicle worksheet − 1 for an amount cut at the dollar)*. Only then the misplaced lines — a figure on the wrong
+then **size the gap to the worksheet and name each piece of it** *(an invented illustration: her 10,400 against the worksheet's
+10,250 = +151 typed on the vehicle worksheet − 1 for an amount cut at the dollar; the real case is in the Tseretsian
+working paper §12.3)*. Only then the misplaced lines — a figure on the wrong
 line with the right total is the second question, not the first. **A second keyed version gets its own check sheet;
-the first check's record stays in the working paper.**
+the first check stays beside it as a RECORD sheet (no tick boxes, marked superseded) and is summarised in the working
+paper** — so it survives when the new workbook replaces the old one in Double.
 
 ✅ **The delivery is a `Draft check (<date>)` sheet in the workbook**: one row per difference, a tickable box first
 (only on rows she can act on), the five steps of §4G as columns, grouped by where she is working in ATX, a running
