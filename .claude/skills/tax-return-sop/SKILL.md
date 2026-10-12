@@ -468,6 +468,15 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
 6. ✅ **The client gets ONE message**, and the lines he must mark travel as **lists, not prose**: payments with no
    stated purpose, and deposits with no payer. **The vehicle and the home office come through the organizer he is
    already filling in**, not a separate question.
+   🆕 **And the file carries the WHOLE P&L for him to correct, not only the gaps** *(Lilian asked for it on one client,
+   2026-10-12 — like the rest of ⑤, a session's reading as general practice, not her ruling: "un documento
+   … con las entradas de dinero que clasificamos como income y… una explicación de por qué… lo pones al lado")*:
+   **every deposit counted as income with the firm's reason beside it**; the money in that was NOT counted; the lines
+   booked as personal that **may** be business; and the costs a business like his **normally has but the bank does not
+   show** — the sign that another card, a personal account or cash paid them, so **ask for those statements by name.**
+   🔑 **Build that last list from a checklist of the business MODEL** (public sources, no client data), then compare it
+   with his lines — a missing phone bill or title fee is only visible against what should be there. *(Piliushin 2025
+   §2.2: a Russian file of nine sheets, answer columns yellow, an English column for the firm.)*
 7. ⚠️ **Spot a co-owner.** A client's own label like *"Partner"* on a regular payee is a question about **which
    return this is** — a multi-member LLC files Form 1065 by default *(1120-S if it elected S status)*, not Schedule C.
    **Ask it first.**
