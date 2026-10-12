@@ -479,6 +479,18 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
    and a platform may issue one below it. ⛔ **So ask whether one exists — never ask for "the 1099-K he received".**
    When one exists, **line 1 must reconcile to it** *(its gross excludes the sales tax the marketplace collected)*.
    🔑 **Re-check the threshold every year from the current Instructions for Form 1099-K** (§3).
+9. 🆕 **When the client sends eBay's *Performance › Sales* screen instead of the report** *(Atman Parts, 2026-10-12)* —
+   use it as a **check and a provisional line 1, never the whole Schedule C.** **Gross receipts = *Total sales (Includes
+   taxes)* − *Taxes and fees · Collected by eBay*** — the tax eBay remitted comes out, and the shipping buyers paid stays
+   in *(per eBay's help and tooltip text, read only through search excerpts on 2026-10-12 — unverified)*. The client's
+   filed Texas returns were built exactly that way, to the dollar. ⚠️ Whether *Total sales* is already
+   net of refunds is **not settled**, and *Selling costs* is fees **and** labels in one figure.
+   🛑 **THE TRAP — DEDUCTING EBAY'S FEES TWICE.** eBay's help says it takes fees and labels **out of the seller's funds
+   first** and charges the card on file **only when the funds fall short** *(search excerpts, 2026-10-12 — unverified)*. So the
+   `Ebay Commerce` charges on the bank are **usually payments of costs eBay's *Selling costs* already counts.** Deducting
+   both deducts them twice. **Take each period's fees from ONE source**; the Transaction report's *"Charge"* lines say
+   which card charge paid what. ⚖️ **Proceeds still held by eBay on 31 December** — counted by sale date or by payout? —
+   **are the signer's decision** *(Atman Parts 2025, D29)*.
 
 #### ⑥ 📊 HER TWO TEMPLATES — fill a copy, and fix the known defects in the copy
 
