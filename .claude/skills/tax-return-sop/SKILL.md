@@ -447,7 +447,8 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
    ② or plainly personal on its face. ⛔ **That default does NOT reach a payment to a person, a cash withdrawal or a
    deposit with no payer** — ④ and point 4 govern those *(a question or a `DECIDE` row; Atman Parts D2, D3)*.
 2. **Every line of the year in exactly ONE bucket**, with **the rule that put it there written on the line** and its
-   source *(§4D's `Source` column)*. ✅ **Tie each statement to its own printed totals, and prove opening + credits −
+   source *(§4D's `Source` column)*. 🆕 **That line-by-line record is delivered — it is the workbook's `Bank
+   transactions` sheet** *(§4D; Lilian, 2026-10-12)*. ✅ **Tie each statement to its own printed totals, and prove opening + credits −
    debits = closing.** **The December tail comes from the January statement**, keeping only lines dated in the year.
 3. ✅ **Run the mirror scan** *(§4A-M)* — refunds, reversals and bounced pairs net inside their own line.
 4. 🔑 **The client's OWN label on a payment is his statement, and a label that says what the payment was FOR
@@ -2967,6 +2968,71 @@ take on trust** — and on the pilot she could not tell it was the mileage rate,
   not selected — with the reason. **Nothing the bank shows is hidden; the row says why it is not on the return.**
 - ✅ **The build checks it:** every `P&L detail` block sums to its P&L row, and the P&L equals the script.
 
+#### 🏦 EVERY WORKSHEET CARRIES A `Bank transactions` SHEET — every line the bank shows, with how it was categorized beside it
+
+> **Lilian, 2026-10-12, and it is STANDING — *"siempre"*:** *"cuando vayamos a hacer estos worksheets, quiero que
+> siempre se incluya una pestaña donde estén todas las transacciones del banco. En caso de que tengamos esa
+> información, esas transacciones bancarias, quiero que pongas una pestaña donde estén todas, porque, si en un futuro
+> necesitamos entender de dónde sale un número, la información original es buena y cómodo tenerla también en el
+> Excel como una pestaña llamada 'bank statements' o 'bank transactions'… Esta información de las transacciones,
+> junto con la categorización que hicimos al lado de estas transacciones y, en caso de que sean varias, poner a qué
+> actividad de negocio se asignó cada transacción y cómo se categorizó."*
+
+🔑 **When it applies: whenever the firm HOLDS the client's bank or card transactions for the year** — statements, a
+bank export, the client's own download — **whether or not the P&L was built from them.** ⛔ **"The return did not
+need them" is not a reason to leave them out: the sheet is there for the question nobody has asked yet.** ✅ **When
+the firm holds none, the `Read me` says so in one line** — an absence, stated. ⓘ *Whether a return built off
+QuickBooks books should carry the ledger's transaction detail instead is NOT what she ruled — ask her the first time
+it comes up.*
+
+✅ **THE SHEET:**
+- **Named `Bank transactions`, on every client.** She offered two names; one is used everywhere, so a search for it
+  finds it in any client's file. **Card lines go on the same sheet** — the `Account` column tells them apart.
+- 🛑 **EVERY line, not the ones that were used** — personal spending, transfers between his own accounts, bounced
+  payments and their reversals, deposits not counted as income, **and the lines on those statements dated outside the
+  tax year** *(marked as such)*, so that **each statement ties to its own printed totals on this sheet.**
+- **One row per transaction, in the statements' order** *(account, then date)* — a line is found from the PDF, and the
+  PDF from the line.
+- **The bank's side as printed, then the firm's side beside it:**
+
+| Column | What it holds |
+|---|---|
+| **Account** | The type and the **last four digits only** — `Checking 1234`, `Card 5678` *(invented)*. ⛔ Never the full number |
+| **Date** | As on the statement |
+| **Description** | **As printed, verbatim** — except an account or card number inside it, masked to its last four |
+| **Amount** | As on the statement, **with the sign convention stated in the sheet's subtitle** |
+| **Statement** | The **filename and page** *(the `Source` rule above)* |
+| **Business activity** | 🔑 **Which business it was assigned to** — the Schedule C by name *(`Sch C #1 · used cars`)* — or why it is none: `Personal / owner draw` · `Transfer · own accounts` · `Not income` · `Bounced pair` · `Outside the tax year`. **A line split between businesses names every share** — `Business A 50% · Business B 30% · personal 20%` *(an illustration)* |
+| **Category** | **The Schedule C line it reached** — `Line 25 · utilities`, `Part V · <the row's label>` — or the non-P&L bucket |
+| **Business %** | The share applied |
+| **On the return** | **The amount that reached the return — ONE COLUMN PER BUSINESS ACTIVITY when there are several**, so each column sums to its own Schedule C |
+| **Rule** | **What put it there, in words, with who and when** — *"R4 · Amazon is personal (the client with Lilian, 2026-07-30)"*. ⛔ **Never the ID alone** *(the derivation rule above)* |
+| **Status** | `Settled` · `ASK the client (Q4)` · `DECIDE · Julia (J1)` — **a line whose treatment is still open says so on the line** |
+
+⚖️ **THE BUILD TIES IT, AND A FAILED TIE STOPS THE BUILD:**
+- **per statement:** the sheet's lines for that statement = its printed credits and debits *(§1B.10 ⑤ point 2)*;
+- **per business activity and Schedule C line:** the `On the return` sum = the P&L row. 🔑 **Then the P&L, the
+  `P&L detail` sheet and this sheet cannot disagree.**
+
+☑️ **Mechanics.** One table, so its header row is frozen *(the freeze rule above allows it)*; **AutoFilter on that
+header**, so she can filter by activity, category, rule or status; **descriptions not wrapped** — one row per line,
+at a readable width; **declared in the fit check's `ACTIONABLE` as `set()`** — she reads it, she does not type
+from it. 🔒 **The build scans the `Description` column for any run of eight or more digits and masks it to the last
+four** — a transfer line can print a whole account number.
+
+🔑 **It does not replace `P&L detail`.** That sheet is grouped by Schedule C line, to check ONE figure; this one is
+the original record, in the bank's order and complete — **including everything that is NOT on the return.**
+
+📗 **And it goes into the FINAL worksheet as well (§4I)** — her reason, *"si en un futuro necesitamos entender de
+dónde sale un número"*, is the final worksheet's whole purpose. There it carries **the final categorization only**:
+§4I's no-version-history rule applies to every cell of it.
+
+ⓘ *Pilot: Tseretsian 2025 already carried every line of his two accounts on a `Transactions 2025` sheet — account,
+date, description, amount, the July classification, the P&L line, the Schedule C line, why, the statement. This rule
+gives it its name and adds what it lacked: **a business-activity column of its own** *(its Schedule C column named the
+business on some lines — `Sch C #2 Part III line 36` — and not on others — `Sch C line 1`)*, the business %, the amount
+on the return per business, and the status.*
+
 #### 🚗 A CAR NOT ON THE BOOKS GETS ITS OWN SHEET — because ATX's Vehicle Expenses worksheet is where it is entered
 
 > **Lilian, 2026-10-12:** *"cuando el vehículo va en el vehicle expenses worksheet, no están los libros del negocio,
@@ -3049,7 +3115,8 @@ rule, and the asset screen is the clearest case of it.
   *(live formulas **and** a separately verified value, because the container has no spreadsheet engine
   to check them)* · `Client answers` *(what was asked, what he said, in his words, and what was done
   with it — plus what has NOT been asked)* · `Sources` · `Decisions` · `Open items` · a sheet per
-  disclosure form where one is needed · `Entry order`.
+  disclosure form where one is needed · `Entry order` · 🆕 **`Bank transactions`, whenever the firm holds the
+  year's bank or card lines** *(the rule above; Lilian, 2026-10-12)*.
 - ☑️ **`Open items` is sorted by severity, actually sorted.** ⛔ *A sheet whose subtitle says "ordered by
   severity" and is not is worse than an unsorted one — it was shipped that way once, with a `Medium`
   above seven `BLOCKING` rows, because the severities were edited and the order was not.*
@@ -4079,6 +4146,7 @@ one-to-one onto sheets and guessing the mapping wastes a pass:
 | `6 Decisions` · `7 Assumptions` · `8 Carries forward` | §4I sections 6, 7 and 8 |
 | 🆕 `9 Not claimed` | **Acceptance-test addition ④ needs its own sheet.** Buried inside section 7 nobody finds it, and *"the hardest thing to replicate is an absence"* is the reason it exists |
 | 🆕 `Tie-outs` | **The cheapest sheet to write and the most used.** It lets a reader VERIFY rather than re-derive, which is what the acceptance test is really asking for |
+| 🆕 `Bank transactions` | **Added after this one was built, by Lilian's rule of 2026-10-12 (§4D):** every bank and card line the firm holds, with the business activity and category each was given — **the final ones only.** *(Ecoorganic's return ran off its QuickBooks books; whether a books-based return carries the ledger detail instead is not ruled — §4D.)* |
 
 🛑 **THE TWO THINGS THAT NEARLY WENT WRONG, and both are general:**
 
