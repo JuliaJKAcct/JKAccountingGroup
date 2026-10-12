@@ -112,7 +112,7 @@ the actual details (and Claude can pull them live when a task needs them).
   *collected by eBay*** — proven to the dollar for November and December 2025 (2025 working paper §1.2c). **Those screens
   give a month's gross, the tax eBay collected, one combined *selling costs* figure and the net — useful as a check and
   as a provisional line 1, never as the whole Schedule C:** no fee/label split, no refunds, and nothing about which costs
-  were charged to his card. **Still ask for the Transaction report** _(finding, 2026-10-12 — no ruling needed)_.
+  were charged to his card. **Still ask for the Transaction report** _(finding, 2026-10-12 — no ruling needed)_. ⚠️ **His bank shows `Ebay Commerce` card charges; eBay charges the card only when his eBay funds fall short, so those are usually payments of fees the screen's *selling costs* already counts — never deduct both** ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B.10 ⑤ rule 9). Whether eBay money still held on 31 December counts in that year is **Julia's decision (2025 working paper D29)**.
 - **A 1099-NEC he RECEIVES:** Candramas LLC (a firm client) issues him one — Double › CANDRAMAS LLC › JK Accounting
   Group › 1099 › *year*. **Look for it every year.**
 - **Scans and photos cannot be read by the redactor** — ask Lilian to paste them into the chat, and **transcribe each in
