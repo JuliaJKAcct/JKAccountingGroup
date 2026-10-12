@@ -2985,10 +2985,17 @@ need them" is not a reason to leave them out: the sheet is there for the questio
 the firm holds none, the `Read me` says so in one line** — an absence, stated. ⓘ *Whether a return built off
 QuickBooks books should carry the ledger's transaction detail instead is NOT what she ruled — ask her the first time
 it comes up.*
-⚠️ **Until she rules, on a return built from the BOOKS** *(or from the client's own figures, §1B.1)*: carry every bank
-and card line with the bank's-side columns below; put **the ledger account each line was posted to** in `Category`
-and `Posted in the books` in `Rule`; leave `Business activity`, `Business %` and `On the return` empty; and run
-**only the per-statement tie.** ⛔ **Never invent a firm ruling for a line the bookkeeping categorized.**
+⚠️ **Until she rules, on a return built from the BOOKS** *(lines categorized in a ledger — QuickBooks or other
+books)*: carry every bank and card line with the bank's-side columns below; put **the ledger account each line was
+posted to** in `Category` and `Posted in the books` in `Rule`; leave `Business activity`, `Business %` and `On the
+return` empty; and run **only the per-statement tie.** ⛔ **Never invent a firm ruling for a line the bookkeeping
+categorized.**
+✅ **On a §1B return** *(no books; the client's own figures)* **the main columns apply:** `Category` is the return line,
+`Business activity` is filled when there are several, and **the FIRM's own classification of a line** *(a lender, a
+transfer, equity — §1B.3)* **goes in `Rule` with who and when.** **A bank line whose amount his own figure replaced
+carries 0 in `On the return`, and `Rule` says `Client's own figure — <his document, date> (§1B.1)`.** Only the
+per-statement tie runs — **unless the firm built the P&L from the lines (§1B.10), and then his figure is a named
+non-bank item in the per-business tie.**
 
 ✅ **THE SHEET:**
 - **Named `Bank transactions`, on every client.** She offered two names; one is used everywhere, so a search for it
