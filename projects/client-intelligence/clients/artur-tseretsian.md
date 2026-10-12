@@ -108,7 +108,8 @@ link). Never write the credential itself here.
   Float's**: wallet top-ups are purchases (Part III), store purchases are an expense _(Lilian, 2026-10-11)_.
 - **Adobe and the website domain → all to the car trade** _(Lilian, 2026-10-11)_.
 - **AT&T → 50% cars, 30% CS Float, 20% personal** _(Lilian, 2026-10-10)_.
-- **The home office → shared 60% cars / 40% CS Float**, one Form 8829 for each Schedule C _(Lilian, 2026-10-12, as she
+- **The home office → shared 60% cars / 40% CS Float** — line 36 split between the two Schedules C (ATX: one linked
+  Form 8829 each; the dollars are the same) _(Lilian, 2026-10-12, as she
   keyed it; the basis of the split is still to be written down)_.
 
 **④ How his transactions are treated** _(apply again unless the facts change)_
@@ -121,7 +122,8 @@ link). Never write the credential itself here.
   BeenVerified; the county tax office and the court; the shipping stores; the lawyer.
 - 🆕 **Atlantic Express is a car shipping agency — business** _(Lilian, 2026-10-12)_.
 - 🆕 **Taxis (Lyft) are business** _(Lilian, 2026-10-12)_ — **against his own wish**: he prefers to report few business
-  expenses. Lilian included them because the liability was high; **Julia has the last word, every year.**
+  expenses. Lilian included them because the liability was high; **Julia has the last word, every year** — and a ride
+  is deductible only with a business purpose, so **ask him what the rides were for** _(the review's objection, J18)_.
 - 🆕 **Travel: Lilian picks the trips** from the analysed list, and Julia confirms _(2026-10-12)_. A local hotel is never
   travel; Christmas with family is personal.
 - **The car** _(2025: the 2020 BMW M8, all business, sold 2026-06-26)_: the **standard mileage rate**; gas, repairs and
