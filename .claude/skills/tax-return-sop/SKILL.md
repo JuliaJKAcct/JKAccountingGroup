@@ -401,7 +401,7 @@ stated nothing about this line".**
 | **Groceries / supermarket** | **Owner draw** *(distribution)* | — |
 | **Food — restaurants, cafés, coffee, fast food, delivery** | **Owner draw.** Meals on the P&L = **0** | **Where the client STATES a meal was business**, §1B.1: his amount, the firm's rate — ⛔ never imported from here |
 | **Very small gas-station purchases** | **Owner draw** — a store purchase, not a tank of fuel | "Very small" has no number of hers — see ③ |
-| **Vehicle costs** — fuel, parking, tolls, washes and dealer service, auto insurance | **NOT an expense line and NOT a draw.** A separate **VEHICLE** block, held at 100% and deducted only **× the business-use %** | ⚠️ **On the standard mileage rate, fuel, service and insurance are INSIDE the rate and are never deducted again; only business parking and tolls, and the business share of car-loan INTEREST and of any state or local personal-property tax on the car (Pub 463), are added.** Loan principal is never deductible. So the block is evidence and the actual-method fallback, not a deduction |
+| **Vehicle costs** — fuel, parking, tolls, washes and dealer service, auto insurance | **NOT an expense line and NOT a draw.** A separate **VEHICLE** block, held at 100% and deducted only **× the business-use %** | ⚠️ **On the standard mileage rate, fuel, service and insurance are INSIDE the rate and are never deducted again; only business parking and tolls, and the business share of car-loan INTEREST and of any state or local personal-property tax on the car (Pub 463), are added.** Loan principal is never deductible. So the block is evidence and the actual-method fallback, not a deduction. 🆕 **In the workbook it is the `Vehicle worksheet` sheet (§4D)** |
 | **Home costs** — rent, utilities, and the home's insurance, HOA, repairs | **NOT an expense line.** A separate **HOME-OFFICE** block, held at 100% → her Home Office template *(the actual-method inputs; **Form 8829** at the floor-area % if the actual method wins)* | ⚠️ **[`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) M2: compute BOTH methods and take the better** — on the simplified method these costs are not deducted and there is no Form 8829. ⛔ **Internet is NOT here** — it goes on line 25 at its own % ([`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) M2, *IN / OUT*); a cost is never in both places. ⚠️ **A SHOP or office the business rents is NOT a home cost** — its rent is line 20b at 100% |
 | **Questions to the client** | **As few as possible** | §1B.4's four groups and its *"lista mínima y justificada"* — and ④ below |
 
@@ -482,6 +482,7 @@ never an artifact.** 🇬🇧 **In English** *(CLAUDE.md)*.
 | 1 | **The P&L's net profit ignores cost of goods sold** — `C41 = C10 - C39`, revenue minus expenses. On Tseretsian that would have overstated one Schedule C by its whole purchases figure | Add a *Total Cost of Goods Sold* and *Gross Profit* row, and take the net from gross profit |
 | 2 | **The Home Office `Total` does not add every row.** In the chat copy it is `=SUM(N9:N15)`, dropping **mortgage interest, insurance, property taxes and HOA** | `=SUM(N5:N15)` and `=SUM(O5:O15)`. ⚠️ **[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 102 records the SAME defect as it showed on one client's copy of the Double master `Home office.xlsx`** — only Insurance, Rent and Utilities were filled in, so the total read as Rent + Utilities, which is what `=SUM(N9:N15)` gives; **nobody has read the formula in the master itself.** **Read the formula in the copy you were given; do not assume which defect it has** |
 | 3 | **The Home Office template has an `Internet` row** — which pushes internet into Form 8829, against M2 | **Leave it empty**; internet goes on line 25. *(It has already reached a filed Form 8829 once, on a client who filled the template himself.)* |
+| 4 | 🆕 **The P&L template's rows are NOT Schedule C lines, and she keys from the label.** *Commisions & Fees* reads like line 10, *Office Supplies* like line 18, *Auto Gas* like gas. On Tseretsian (draft of 2026-10-12) **taxes and licenses went on line 10, eBay supplies on line 18, the postage inside freight, a car service onto the vehicle worksheet — and a shipping payment already inside *Delivery/Freight* was keyed a second time as its own Part V row** | **Relabel every row in the copy with the Schedule C line it is typed on** (*"Taxes and licenses — line 23"*), **never put two Schedule C lines in one row**, repurpose a row the client does not use rather than share one, and add the derivation columns (§4D). **A Part V row's label names what is inside it**, so nothing in it is typed again |
 
 ☑️ **And clear the template's SAMPLE inputs** — it ships with 1,000 and 100 square feet, which compute a 10% that
 looks like an answer. **Blank until the client gives his figures.**
@@ -490,7 +491,8 @@ looks like an answer. **Blank until the client gives his figures.**
 both read the same transactions *(§1B.8)*. Say *"the formulas agree"*, never *"confirms"*.
 
 ☑️ **The masters themselves are still uncorrected.** [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) **row 102 tracks
-defect 2 only**, in the Double master `Home office.xlsx`; **row 205 tracks defects 1 and 3.** Until each is fixed in
+defect 2 only**, in the Double master `Home office.xlsx`; **row 205 tracks defects 1 and 3.** *(Defect 4 is fixed in
+each copy; the master's labels are hers to change.)* Until each is fixed in
 its own master, every copy needs its fix.
 
 
@@ -2904,6 +2906,61 @@ take on trust, and the session that could explain it will be deleted.**
 - ✅ **A figure the FIRM computed points at the computation, not at a conclusion** — the cell with the
   formula, or the section of the working paper that derives it.
 
+#### 🔴 AND ON A P&L BUILT FROM THE BANK, EVERY FIGURE CARRIES ITS **DERIVATION** — the total found, the lines, the %, the result
+
+> **Lilian, 2026-10-12, on the Tseretsian P&L:** *"necesito que me des una nota al lado que explique de dónde salió
+> ese número… cuál es el total que encontraste en los bank statements y a ese total le aplicaste ese porcentaje. Así
+> es como llegamos al número que está en el profit and loss… Tienes que decirme las transacciones que sumaste y el
+> total que dio… Cómo llegaste a ese número es lo que necesito también en toda la declaración."*
+
+🔑 **A `Source` column says WHERE a figure came from; on a P&L the firm built from the statements
+(§1B.10)
+she also needs HOW it was reached.** ⛔ **"Sch C line 9 — 9,100.00" with no arithmetic beside it is a number she has to
+take on trust** — and on the pilot she could not tell it was the mileage rate, not gas.
+
+✅ **So every row of the P&L sheet carries five more things, each in its own column:**
+
+| Column | What it holds |
+|---|---|
+| **Schedule C line** | Where the figure is TYPED — one line per row *(see §1B.10 ⑥, defect 4)* |
+| **Found in the bank (100%)** | The total of the bank lines behind the row, before any % |
+| **Lines** | How many bank lines |
+| **Business %** | The % applied, and whose ruling it is |
+| **How** | The arithmetic in words: *"AT&T, 10 payments = 4,008.92 × 50% = 2,004.46 to cars; × 30% = 1,202.68 to CS Float"* |
+
+- ✅ **And a `P&L detail` sheet lists EVERY transaction behind every row**, one block per row in the P&L's order, each
+  opening with *line · lines · found · % · = figure* and closing on its subtotal. **She checks a figure by reading one
+  block, never by filtering 1,470 lines.**
+- 🛑 **A figure that is NOT a bank total says so on its row**: the mileage amount (*miles × rate*), an estimated
+  interest, a platform's own report. ⛔ **Never under a label that reads like a bank category** — on the pilot the
+  mileage amount sat in the template's *Auto Gas* row, and she asked where *"ese número tan exacto"* of gas came from.
+- ✅ **Costs FOUND but not deducted stay visible at 0%** — gas, repairs and insurance inside the mileage rate, travel
+  not selected — with the reason. **Nothing the bank shows is hidden; the row says why it is not on the return.**
+- ✅ **The build checks it:** every `P&L detail` block sums to its P&L row, and the P&L equals the script.
+
+#### 🚗 A CAR NOT ON THE BOOKS GETS ITS OWN SHEET — because ATX's Vehicle Expenses worksheet is where it is entered
+
+> **Lilian, 2026-10-12:** *"cuando el vehículo va en el vehicle expenses worksheet, no están los libros del negocio,
+> sino que tiene una parte que es personal y una parte de uso del negocio. Por tanto, se pone en el worksheet."*
+
+🔑 **A car the client also uses personally is not an asset of the business here: its costs are entered in ATX's
+*Vehicle Expenses* worksheet, which applies the business share and carries the result to Schedule C line 9.** ✅ **So
+the workbook carries a `Vehicle worksheet` sheet laid out the way that worksheet asks**:
+- **the car** — description, date placed in service, total / business / commuting / other miles, the business %,
+  another vehicle, off-duty use, the evidence (→ Part IV lines 43–47);
+- **the standard mileage amount** — business miles × the year's rate, plus business parking and tolls;
+- **the car-loan interest** — the TOTAL for 9c, **with its derivation**: the lender's statement, or, if it is an
+  estimate, the inputs and a live month-by-month table *(balance, interest, principal)* so anyone can re-run it;
+  9e = 9c × the business %. ⛔ Never line 16b as well ([Melnyk](../../../projects/tax-returns/denys-melnyk/2025-form-1040.md) §4K-i);
+- **what reaches the return** — line 9, and what stays empty (16b; 13 unless the car is on the books);
+- **every car cost the bank shows**, at 0% on the standard rate — gas, repairs, insurance, parking, the loan payments —
+  with the reason. 🛑 **Nothing else goes on the Vehicle Expenses worksheet**: on the pilot draft a car-service
+  payment for cars he trades landed there, and it is line 21.
+
+⚠️ **This is not a rule about which METHOD wins** — that is §1B.9
+and Pub. 463. **It is where the car's figures LIVE in the workbook**, so the P&L row for the car only says
+*"standard mileage: miles × rate — see Vehicle worksheet"*.
+
 #### 🔴 AN ASSET IS NEVER DELIVERED AS JUST A NAME, A DATE AND A COST
 
 > **Lilian, 2026-09-27:** *"no simplemente decirme el nombre del vehículo, la fecha y el costo, sino que tienes
@@ -3484,6 +3541,26 @@ quoted on other forms and shared between a form and its AMT copy.
 
 ☑️ **The page inventory is itself a deliverable** — it belongs in the working paper beside §1C's
 transcription, because the next session reads the table instead of re-opening the client's document.
+
+#### ⑥-quater 🔑 WHEN THE DRAFT DIFFERS FROM THE WORKSHEET, LOOK FOR THE CAUSE IN WHAT SHE TYPED FROM
+
+🛑 **A preparer keys from the FIRM'S OWN files. When three of her lines are wrong in the same way, the defect is
+usually in the file, not in her.** *(Tseretsian, 2026-10-12: taxes on line 10, supplies on line 18, the postage
+inside freight, a service on the vehicle worksheet — every one traced to a label in the session's copy of her P&L
+template, §1B.10 ⑥ defect 4.)* ✅ **Say so in the finding — step 2 of §4G is "what MADE it show that" — and fix the
+file, not only the draft.** ⛔ **Never report a session's own mapping error as her keying error.**
+
+☑️ **Three checks this caught, cheap enough to run every time:**
+- **Every Part V row against the rows that already contain it.** A row named after a vendor (*Shipping 4,467*) beside
+  a category that already holds that vendor (*Delivery/Freight 5,890*) is a double count. **Subtract the draft's
+  line 28 from the worksheet's: an unexplained difference the size of one vendor is that vendor twice.**
+- **The vehicle worksheet holds only miles, parking and tolls, and the loan interest** on the standard rate.
+- **A one- or two-dollar gap is rounding when ATX rounds each entry** — a figure typed as several rows (five trips,
+  five Part V rows) rounds row by row. Say so as OK; it is not a finding.
+
+✅ **The delivery is a `Draft check (<date>)` sheet in the workbook**: one row per difference, a tickable box first
+(only on rows she can act on), the five steps of §4G as columns, grouped by where she is working in ATX, a running
+count, and the totals ATX should show once she is done.
 
 #### ⑦ ☑️ CLOSE THE REVIEW BY ANSWERING THE SECOND HALF OF HER QUESTION — *"¿qué podemos adelantar?"*
 

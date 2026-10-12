@@ -76,6 +76,86 @@ link). Never write the credential itself here.
 - **Organizer status:** Sent (Double). Client completed **~30% of the 2023** organizer (General Info only); 2024/2025 not started (**both still at 0% on 2026-10-09**). The Double tax project **`2025 Taxes` moved to `In Progress` on 2026-10-08** (Lilian, activity log). The firm prepared **working-copy organizers for 2023, 2024, 2025** (delivered to the team; sensitive IDs kept in Double).
 - **Process notes (→ future SOP):** the core of this engagement is the **categorization method** in §5 — separating business from personal on personal bank accounts to build Schedule C.
 
+#### 🧭 Tax-preparation playbook — READ THIS FIRST next year
+
+> What the firm learned preparing his returns, written as the rule for next time
+> ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §5B). **Rules and decisions only — every figure
+> is in the yearly working paper** ([2025](../../tax-returns/artur-tseretsian/2025-form-1040.md)). Each item says who
+> decided and when; a "session" item is a proposal until Lilian or Julia confirms it.
+
+**① What to prepare**
+- **Form 1040, married filing jointly, with TWO Schedules C**: the **used-car trade** and **CS Float** (online sales of
+  video-game items, code 459120). The car trade's code leans to **425120** (an agent paid a fee by a dealer) until he
+  says whether the cars are his and Julia rules on the Zelle position _(session, 2026-10-10)_.
+- **No books** — the P&L is built from his two **personal** Bank of America accounts
+  ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B.10), under the rules he agreed with Lilian
+  in July 2026 (§5 above). **2023 and 2024 are unfiled** and are separate requests; 2025 was prepared first.
+- **The older son is off the return** until his SSN arrives _(Lilian, 2026-10-08)_ — it also changes Form 8962.
+
+**② Where everything is**
+- **Statements:** Drive › *Rewhip* › *Personal taxes 2023-2025* › `CC -7104` and `Debit - 9561`, one folder per year;
+  **the December tail is in the next January's statement.** The July categorization workbook and the working-copy
+  organizers are in the same folder (§7).
+- **What Lilian told the July session is still the source for some facts** — the rules, and the younger son's date of
+  birth (her message of 2026-07-30). That session is in §7; export it before anyone deletes it.
+- **CS Float:** the client's photo of the platform's yearly report (Drive) — the figure, not the bank. **Transcribe it in
+  full.**
+- **The Lendbuzz loan approval** (the BMW's terms) was a screenshot pasted into the chat; it is transcribed in the
+  2025 working paper §1.4. **Lilian's keyed ATX drafts** are uploaded into the session — store them in Double.
+
+**③ Which money belongs to which activity**
+- **CS Float = the platform's report** (sales, purchases), never the bank payouts _(Lilian, July 2026)_. **Steam is CS
+  Float's**: wallet top-ups are purchases (Part III), store purchases are an expense _(Lilian, 2026-10-11)_.
+- **Adobe and the website domain → all to the car trade** _(Lilian, 2026-10-11)_.
+- **AT&T → 50% cars, 30% CS Float, 20% personal** _(Lilian, 2026-10-10)_.
+- **The home office → shared 60% cars / 40% CS Float**, one Form 8829 for each Schedule C _(Lilian, 2026-10-12, as she
+  keyed it; the basis of the split is still to be written down)_.
+
+**④ How his transactions are treated** _(apply again unless the facts change)_
+- **The July rules** (§5 above): Zelle received = business income except his named personal counterparties; Zelle sent =
+  personal except to auto and transport companies; eBay = business supplies; gas stations: **25.00 or more = fuel, under
+  25.00 = a draw**; a merchant he never named = personal; cash, ATM and check deposits are **not income until he
+  explains them**; Operex LLC = car-trade income.
+- **His wife: everything in or out is personal** _(Lilian, 2026-10-10)_.
+- **Business by Lilian's ruling, against the catch-all** _(2026-10-11)_: Steam; car tags, titles, service and storage;
+  BeenVerified; the county tax office and the court; the shipping stores; the lawyer.
+- 🆕 **Atlantic Express is a car shipping agency — business** _(Lilian, 2026-10-12)_.
+- 🆕 **Taxis (Lyft) are business** _(Lilian, 2026-10-12)_ — **against his own wish**: he prefers to report few business
+  expenses. Lilian included them because the liability was high; **Julia has the last word, every year.**
+- 🆕 **Travel: Lilian picks the trips** from the analysed list, and Julia confirms _(2026-10-12)_. A local hotel is never
+  travel; Christmas with family is personal.
+- **The car** _(2025: the 2020 BMW M8, all business, sold 2026-06-26)_: the **standard mileage rate**; gas, repairs and
+  insurance are **inside** the rate and never deducted again; the loan **interest × business use** is added through
+  ATX's Vehicle Expenses worksheet **9c** — never line 16b, and **nothing else goes on that worksheet** _(Lilian,
+  2026-10-11; Melnyk §4K-i)_. Putting the car on the books is a variant for Julia.
+- **Never deductible:** a ticket or fine; the registration, service or storage of the car whose miles are claimed.
+- **Bounced payments** come out on both sides — only what cleared counts.
+
+**⑤ Information returns**
+- **He owes a Form 1099-NEC to a lawyer he paid by Zelle** (2025) — so Schedule C line I is **Yes**; Julia decides a
+  late filing _(session, 2026-10-11)_. **Freight needs none.** **Received:** none found for 2025 (ask about a 1099-K,
+  1099-NEC from Operex, 1099-DA).
+
+**⑥ Obligations beside the return**
+- **Form 1095-A / Form 8962 every year** — Ambetter Marketplace coverage. In 2025 he says there was no form; his card
+  says otherwise — settle it before e-file.
+- **Form 2210:** with no 2024 return the penalty is figured on 90% of the current year; **filing the prior year first
+  may lower it** (2025 Form 2210 instructions, line 8) — Julia decides the order.
+
+**⑦ Traps already met**
+- **The July `Summary 2025` is not usable** (bounced payments counted, rent at 100%, CS Float from the bank…).
+- **The file named `Form1095a_2025` is the 2024 form.** **"Business Fundamentals Checking" on the statements is an
+  advertisement** — both accounts are personal.
+- 🆕 **Lilian's P&L template rows are not Schedule C lines.** In the 2025 draft three labels sent figures to the wrong
+  line (taxes on line 10, supplies on line 18, postage inside freight) and Atlantic Express was keyed twice. **Label
+  every P&L row with its Schedule C line, and never put two lines in one row.** The mileage amount is **not gas** — say
+  so on the row.
+
+**⑧ Next year, start here**
+- **2026: the BMW's sale** (Form 4797 — its basis is reduced by the depreciation inside the mileage rate) and its
+  interest for January to the sale date; **Rewhip LLC** may carry the car trade from 2026; Lendbuzz's statement; the
+  older son's SSN; CS Float's unsold items at year end.
+
 ### Licenses & other filings
 - **Applies?** _(pending — likely N/A for an individual)_
 
@@ -98,6 +178,8 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   companies = deductible business** (moving the cars he resells).
 - **Merchant rules.** Amazon, PlayStation, restaurants/meals, taxi/Uber/Lyft,
   AliExpress, hookah lounges ("pipa") = **personal**; **eBay = business**.
+  🆕 **Lyft overridden 2026-10-12 (Lilian):** his Lyft rides are **business** — included against his wish to report
+  few expenses, because the liability was high. **Julia has the last word.**
 - **Gas stations.** Charge **≥ $25 = fuel (business)**; **< $25 = personal** (assumed
   snacks/food/drinks at the store).
 - **Travel** (airfare / hotels) = **flagged for Julia to decide** (not auto-classified).
@@ -108,7 +190,8 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
 - **Home office** = client gave a **2023 rent estimate** for a home office (figure kept in
   the working file / organizer, not here); 2024/2025 TBD. Julia to set the method
   (Form 8829 %); not 100% business.
-  🆕 **2026-10-11 (the client, relayed by Lilian): the home is 1,200 sq ft and the office 300 sq ft (25%).** Whether
+  🆕 **2026-10-11 (the client, relayed by Lilian): the home is 1,200 sq ft and the office 300 sq ft (25%).**
+  🆕 **2026-10-12 (Lilian):** the office serves **both** businesses — shared 60% cars / 40% CS Float, one Form 8829 each. Whether
   the office is used **only and regularly** for the business is still to ask — without it there is no home office.
   🆕 **2026-10-09: the firm holds NO square footage, for the home or the office.** That is the result of
   searching all three Double organizers (the 2023 one's home-office slide and template upload are
@@ -148,6 +231,8 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   Christmas in Texas). The family's out-of-town trips for the boys' **gymnastics meets** (Sarasota, Orlando, Estero) are
   personal. **Tolls:** his SunPass accounts are paid from another account — only two top-ups show. Several flights
   and hotels were paid from **another card** (the American Express). Julia decides which trips stay.
+  🆕 **Lilian's selection (2026-10-12):** the January, April, August, September and December-Ohio trips are business;
+  March (a local Miami Beach hotel) and Christmas in Texas are not. Julia confirms.
 - **Vehicle** = the client **bought and later sold a car** during the period. 🔒 **Lilian, 2026-10-08:
   the purchase and the sale are omitted from the return completely** — no documents are being chased
   for them. She asks the client instead whether he wants to include **a car he had in 2025** as a
@@ -487,6 +572,15 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   find the tolls, hotels and trips in the statements and say which could be business (the travel bullet above), and
   to keep **putting the car on the books** as a second variant for Julia. Figures are in the working paper (§1.4, §3C,
   §3F), never here.
+
+- _(2026-10-12 — Lilian: draft 7 of the 2025 return)_ Lilian sent her **keyed ATX draft** for a check, and ruled
+  three things: **Atlantic Express is a car shipping agency, business**; his **Lyft rides are business** — against his
+  wish, because the liability is high, Julia having the last word; and **five trips** are business. She keyed the home
+  office **shared 60/40** between the two businesses. The check found Atlantic Express keyed twice and three figures on
+  the wrong line, all traced to the P&L template's row labels; she asked that every figure carry its derivation, and
+  that the briefing email to Julia explain how the car-loan interest was computed. She asked where the younger son's
+  date of birth was: in her own July-session message of 2026-07-30. Figures are in the working paper (§12, §13), never
+  here. **The playbook above was written the same day.**
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
