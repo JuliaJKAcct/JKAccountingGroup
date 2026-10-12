@@ -125,11 +125,13 @@ link). Never write the credential itself here.
 - 🆕 **Travel: Lilian picks the trips** from the analysed list, and Julia confirms _(2026-10-12)_. A local hotel is never
   travel; Christmas with family is personal.
 - **The car** _(2025: the 2020 BMW M8, all business, sold 2026-06-26)_: the **standard mileage rate**; gas, repairs and
-  insurance are **inside** the rate and never deducted again; the loan **interest × business use** is added through
-  ATX's Vehicle Expenses worksheet **9c** — never line 16b, and **nothing else goes on that worksheet** _(Lilian,
+  insurance are **inside** the rate and never deducted again; the loan interest is added through ATX's Vehicle Expenses
+  worksheet — **the TOTAL on 9c; ATX applies the business % at 9e** — never line 16b, and **nothing else goes on that worksheet** _(Lilian,
   2026-10-11; Melnyk §4K-i)_. Putting the car on the books is a variant for Julia.
-- **Never deductible:** a ticket or fine; the registration, service or storage of the car whose miles are claimed.
-- **Bounced payments** come out on both sides — only what cleared counts.
+- **Never deductible:** a ticket or fine; the registration, service or storage of the car whose miles are claimed
+  _(session, 2026-10-11, from the IRS text — J16; Julia confirms)_.
+- **Bounced payments** come out on both sides — only what cleared counts _(session, 2026-10-08, from the bank's
+  returns — J6)_.
 
 **⑤ Information returns**
 - **He owes a Form 1099-NEC to a lawyer he paid by Zelle** (2025) — so Schedule C line I is **Yes**; Julia decides a

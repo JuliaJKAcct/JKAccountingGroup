@@ -2915,7 +2915,7 @@ take on trust, and the session that could explain it will be deleted.**
 
 🔑 **A `Source` column says WHERE a figure came from; on a P&L the firm built from the statements
 (§1B.10)
-she also needs HOW it was reached.** ⛔ **"Sch C line 9 — 9,100.00" with no arithmetic beside it is a number she has to
+she also needs HOW it was reached.** ⛔ **A line-9 figure with no arithmetic beside it is a number she has to
 take on trust** — and on the pilot she could not tell it was the mileage rate, not gas.
 
 ✅ **So every row of the P&L sheet carries five more things, each in its own column:**
@@ -2926,7 +2926,7 @@ take on trust** — and on the pilot she could not tell it was the mileage rate,
 | **Found in the bank (100%)** | The total of the bank lines behind the row, before any % |
 | **Lines** | How many bank lines |
 | **Business %** | The % applied, and whose ruling it is |
-| **How** | The arithmetic in words: *"AT&T, 10 payments = 4,008.92 × 50% = 2,004.46 to cars; × 30% = 1,202.68 to CS Float"* |
+| **How** | The arithmetic in words: *"phone, 12 payments = 1,200.00 × 50% = 600.00 to business A; × 30% = 360.00 to business B"* (an illustration, not a client's figures) |
 
 - ✅ **And a `P&L detail` sheet lists EVERY transaction behind every row**, one block per row in the P&L's order, each
   opening with *line · lines · found · % · = figure* and closing on its subtotal. **She checks a figure by reading one
@@ -2943,7 +2943,7 @@ take on trust** — and on the pilot she could not tell it was the mileage rate,
 > **Lilian, 2026-10-12:** *"cuando el vehículo va en el vehicle expenses worksheet, no están los libros del negocio,
 > sino que tiene una parte que es personal y una parte de uso del negocio. Por tanto, se pone en el worksheet."*
 
-🔑 **A car the client also uses personally is not an asset of the business here: its costs are entered in ATX's
+🔑 **A car the client also uses personally, and that is NOT on the business's books: its costs are entered in ATX's
 *Vehicle Expenses* worksheet, which applies the business share and carries the result to Schedule C line 9.** ✅ **So
 the workbook carries a `Vehicle worksheet` sheet laid out the way that worksheet asks**:
 - **the car** — description, date placed in service, total / business / commuting / other miles, the business %,
@@ -3551,8 +3551,8 @@ template, §1B.10 ⑥ defect 4.)* ✅ **Say so in the finding — step 2 of §4G
 file, not only the draft.** ⛔ **Never report a session's own mapping error as her keying error.**
 
 ☑️ **Three checks this caught, cheap enough to run every time:**
-- **Every Part V row against the rows that already contain it.** A row named after a vendor (*Shipping 4,467*) beside
-  a category that already holds that vendor (*Delivery/Freight 5,890*) is a double count. **Subtract the draft's
+- **Every Part V row against the rows that already contain it.** A row named after a vendor (*Shipping*) beside
+  a category that already holds that vendor (*Delivery/Freight*) is a double count. **Subtract the draft's
   line 28 from the worksheet's: an unexplained difference the size of one vendor is that vendor twice.**
 - **The vehicle worksheet holds only miles, parking and tolls, and the loan interest** on the standard rate.
 - **A one- or two-dollar gap is rounding when ATX rounds each entry** — a figure typed as several rows (five trips,
@@ -3560,7 +3560,10 @@ file, not only the draft.** ⛔ **Never report a session's own mapping error as 
 
 ✅ **The delivery is a `Draft check (<date>)` sheet in the workbook**: one row per difference, a tickable box first
 (only on rows she can act on), the five steps of §4G as columns, grouped by where she is working in ATX, a running
-count, and the totals ATX should show once she is done.
+count, and the totals ATX should show once she is done. ⓘ **It does not break §4D's "no what-it-used-to-say
+column":** this sheet is the §4F findings register, where §4G's step 1 *(what the draft shows today)* is required so
+she can find the row on her screen; its **`WHAT TO ENTER` column (step 4) is still the one she types from**, and the
+line-by-line `The return` sheet keeps the §4D shape with the final values only.
 
 #### ⑦ ☑️ CLOSE THE REVIEW BY ANSWERING THE SECOND HALF OF HER QUESTION — *"¿qué podemos adelantar?"*
 
