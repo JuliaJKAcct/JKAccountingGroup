@@ -2976,7 +2976,8 @@ take on trust** — and on the pilot she could not tell it was the mileage rate,
 > necesitamos entender de dónde sale un número, la información original es buena y cómodo tenerla también en el
 > Excel como una pestaña llamada 'bank statements' o 'bank transactions'… Esta información de las transacciones,
 > junto con la categorización que hicimos al lado de estas transacciones y, en caso de que sean varias, poner a qué
-> actividad de negocio se asignó cada transacción y cómo se categorizó."*
+> actividad de negocio se asignó cada transacción y cómo se categorizó, creo que sería una buena idea. Así que
+> quisiera que actualizaras el skill de tax preparation para que las worksheets siempre incluyan eso."*
 
 🔑 **When it applies: whenever the firm HOLDS the client's bank or card transactions for the year** — statements, a
 bank export, the client's own download — **whether or not the P&L was built from them.** ⛔ **"The return did not
@@ -2984,13 +2985,19 @@ need them" is not a reason to leave them out: the sheet is there for the questio
 the firm holds none, the `Read me` says so in one line** — an absence, stated. ⓘ *Whether a return built off
 QuickBooks books should carry the ledger's transaction detail instead is NOT what she ruled — ask her the first time
 it comes up.*
+⚠️ **Until she rules, on a return built from the BOOKS** *(or from the client's own figures, §1B.1)*: carry every bank
+and card line with the bank's-side columns below; put **the ledger account each line was posted to** in `Category`
+and `Posted in the books` in `Rule`; leave `Business activity`, `Business %` and `On the return` empty; and run
+**only the per-statement tie.** ⛔ **Never invent a firm ruling for a line the bookkeeping categorized.**
 
 ✅ **THE SHEET:**
 - **Named `Bank transactions`, on every client.** She offered two names; one is used everywhere, so a search for it
   finds it in any client's file. **Card lines go on the same sheet** — the `Account` column tells them apart.
+  ⓘ *She said "del banco"; including the CARD statements is the session's reading (2026-10-12) — a card is where
+  much of a Schedule C's spending sits. Put to her; change it if she says otherwise.*
 - 🛑 **EVERY line, not the ones that were used** — personal spending, transfers between his own accounts, bounced
   payments and their reversals, deposits not counted as income, **and the lines on those statements dated outside the
-  tax year** *(marked as such)*, so that **each statement ties to its own printed totals on this sheet.**
+  tax year** *(marked as such)*, so that **each statement ties to its own totals on this sheet.**
 - **One row per transaction, in the statements' order** *(account, then date)* — a line is found from the PDF, and the
   PDF from the line.
 - **The bank's side as printed, then the firm's side beside it:**
@@ -3001,31 +3008,41 @@ it comes up.*
 | **Date** | As on the statement |
 | **Description** | **As printed, verbatim** — except an account or card number inside it, masked to its last four |
 | **Amount** | As on the statement, **with the sign convention stated in the sheet's subtitle** |
-| **Statement** | The **filename and page** *(the `Source` rule above)* |
+| **Statement** | The **filename, where it lives** *(the folder path — "it is in Double" is not a location)* **and the page** — the `Source` rule above |
 | **Business activity** | 🔑 **Which business it was assigned to** — the Schedule C by name *(`Sch C #1 · used cars`)* — or why it is none: `Personal / owner draw` · `Transfer · own accounts` · `Not income` · `Bounced pair` · `Outside the tax year`. **A line split between businesses names every share** — `Business A 50% · Business B 30% · personal 20%` *(an illustration)* |
-| **Category** | **The Schedule C line it reached** — `Line 25 · utilities`, `Part V · <the row's label>` — or the non-P&L bucket |
+| **Category** | **The return line it reached** — on a Schedule C `Line 25 · utilities`, `Part V · <the row's label>`; the Form 1120-S / 1065 line on an entity return — or the non-P&L bucket |
 | **Business %** | The share applied |
-| **On the return** | **The amount that reached the return — ONE COLUMN PER BUSINESS ACTIVITY when there are several**, so each column sums to its own Schedule C |
+| **On the return** | **The amount that reached the return — ONE COLUMN PER BUSINESS ACTIVITY when there are several.** Filtered by `Category`, a column gives **the bank-sourced part** of that line — not always the whole line *(the tie below)*. ⚠️ **A bank line whose amount was REPLACED by another source** *(a platform's report, the mileage rate)* **carries 0 here, and `Rule` says what replaced it** |
 | **Rule** | **What put it there, in words, with who and when** — *"R4 · Amazon is personal (the client with Lilian, 2026-07-30)"*. ⛔ **Never the ID alone** *(the derivation rule above)* |
 | **Status** | `Settled` · `ASK the client (Q4)` · `DECIDE · Julia (J1)` — **a line whose treatment is still open says so on the line** |
 
 ⚖️ **THE BUILD TIES IT, AND A FAILED TIE STOPS THE BUILD:**
-- **per statement:** the sheet's lines for that statement = its printed credits and debits *(§1B.10 ⑤ point 2)*;
-- **per business activity and Schedule C line:** the `On the return` sum = the P&L row. 🔑 **Then the P&L, the
-  `P&L detail` sheet and this sheet cannot disagree.**
+- **per statement:** the sheet's lines for that statement = its printed credits and debits *(§1B.10 ⑤ point 2)*.
+  **A bank export or a download with no printed totals ties to the file itself** — its row count and its sum — **and
+  the sheet's subtitle says which kind each source was;**
+- **per business activity and return line, ONLY where the firm built the P&L from these lines (§1B.10):** the
+  `On the return` sum of that line's bank rows **+ every non-bank item named on that P&L row** — the mileage amount
+  *(miles × rate)*, an estimated interest, a platform's own report, money orders or cash the bank never shows, the
+  home office, depreciation — **each listed in the tie as its own reconciling line, with its source, = the P&L row, to
+  the cent.** ⛔ **A row that does not tie is never "fixed" by bending a bank line's amount** — the non-bank item is
+  named instead, as the derivation rule above already requires. 🔑 **Then the P&L, the `P&L detail` sheet and this
+  sheet cannot disagree.**
 
 ☑️ **Mechanics.** One table, so its header row is frozen *(the freeze rule above allows it)*; **AutoFilter on that
 header**, so she can filter by activity, category, rule or status; **descriptions not wrapped** — one row per line,
-at a readable width; **declared in the fit check's `ACTIONABLE` as `set()`** — she reads it, she does not type
-from it. 🔒 **The build scans the `Description` column for any run of eight or more digits and masks it to the last
+at a readable width; **in the WORKING workbook, declared in the fit check's `ACTIONABLE` as `set()`** — she reads
+it, she does not type from it *(in the final worksheet, §4I-a ②'s convention governs instead)*. 🔒 **The build scans the `Description` column for any run of eight or more digits and masks it to the last
 four** — a transfer line can print a whole account number.
 
 🔑 **It does not replace `P&L detail`.** That sheet is grouped by Schedule C line, to check ONE figure; this one is
 the original record, in the bank's order and complete — **including everything that is NOT on the return.**
 
 📗 **And it goes into the FINAL worksheet as well (§4I)** — her reason, *"si en un futuro necesitamos entender de
-dónde sale un número"*, is the final worksheet's whole purpose. There it carries **the final categorization only**:
-§4I's no-version-history rule applies to every cell of it.
+dónde sale un número"*, is the final worksheet's whole purpose. ⓘ *That it covers the final worksheet is the
+session's reading of "estos worksheets" (2026-10-12), put to her.* There it carries **the final categorization
+only**: §4I's no-version-history rule applies to every cell of it; **`Status` holds no to-do** *(a line still open at
+filing is a §4I section 7 or 8 carry-forward, and says so)*; **and `Rule` cites the decision by the final worksheet's
+own numbering.**
 
 ⓘ *Pilot: Tseretsian 2025 already carried every line of his two accounts on a `Transactions 2025` sheet — account,
 date, description, amount, the July classification, the P&L line, the Schedule C line, why, the statement. This rule
