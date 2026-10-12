@@ -118,7 +118,7 @@ the actual details (and Claude can pull them live when a task needs them).
   (working paper 2025 §2.1): by account, **except** lines whose own text ties them to the store — eBay as a seller,
   the atmanparts website and email, parcel shipping, the Kaufman shop (rent, bills, gates, shelving, fire protection,
   permits, hardware from the first shop permit) and the LLC's formation fee *(an inference from dates — E6)*
-  _(session; Lilian confirms — 2025 D22)_. 🔑 **From 2026 check that eBay and the
+  _(✅ Lilian, 2026-10-12 — 2025 D22: asked after reminding the session that Wells Fargo is Project Atman's account, she chose "Mantener la división": the store and shop lines on Wells Fargo stay with Atman Parts, so the sales-tax filings agree and eBay income is not counted twice — her words are in the working paper's D22)_. 🔑 **From 2026 check that eBay and the
   shop really moved to ANBT; if they did, the exceptions are no longer needed.**
 
 **④ How his transactions are treated** _(apply again unless the facts change)_
@@ -230,6 +230,8 @@ the actual details (and Claude can pull them live when a task needs them).
   - **She asked that everything learned while preparing his taxes be kept here, so next year starts with the context** — written as the **tax-preparation playbook** in §4 (Income tax), and made a firm rule for every client ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §5B).
 
 - 2026-10-12 — **Lilian's follow-up questions, answered and recorded** (working paper §1.8, §1.9, O4, O13, O16): when each business started, read from the bank (above); the Nov–Dec sales figure she asked about is the **Total Texas Sales** on the two sales-tax returns the firm filed 2026-07-16 — for a Texas-based seller that is every sale made from Texas, interstate included, so the eBay report should come close to it (O17; the figure is in the working paper); **the first-sales date `01/11/2025` was written by the owner himself**; sales before the LLC are the same Schedule C but, for Texas sales tax, his as an individual; **a 2025 Form 1099-K is not certain**; and **eBay team access does not reach Payments**, so the eBay report is asked of him — message drafted in simple Russian. She believed Atman Parts started at the end of 2025: right for the LLC, its shop and its bank; the eBay selling started in September.
+
+- 2026-10-12 (2) — **Lilian asked for a review pack for Julia**, and ruled on the split. She first reminded the session *"recuerda que wells fargo es solo para Project Atman. No tiene nada que ver con Atman Parts"*; asked then whether the 106 Wells Fargo lines of the online store and the Kaufman shop should move to Project Atman, she chose **"Mantener la división" — keep them on Atman Parts** (working paper D22, her words there; now closed). Delivered (not committed, for Double): **every Wells Fargo transaction with its treatment**, and **the Project Atman P&L with every transaction under its line** — same figures as DRAFT 2, every printed balance and statement total tied (working paper §9).
 
 ### Tax year 2025 — the review
 - **Gate:** the P&L stands on the bank; the 1040 waits for the organizer he is filling in.
