@@ -107,6 +107,12 @@ the actual details (and Claude can pull them live when a task needs them).
   2026-10-12). ⇒ **Ask HIM each year for the *Transaction report* for the whole year (CSV)** — Seller Hub › Payments ›
   Reports › Transaction report — **and for a Form 1099-K only if one exists.** The message, in simple Russian, is in the
   2025 working paper O4 — reuse it.
+  🆕 **He keeps monthly screenshots of Seller Hub › Performance › Sales (*"Review your sales"*)** in his own Drive folder
+  `Tax Return` › `Ebay Stats`, and **he built his Texas sales-tax returns from them: Item 1 = *Total sales* less the tax
+  *collected by eBay*** — proven to the dollar for November and December 2025 (2025 working paper §1.2c). **Those screens
+  give a month's gross, the tax eBay collected, one combined *selling costs* figure and the net — useful as a check and
+  as a provisional line 1, never as the whole Schedule C:** no fee/label split, no refunds, and nothing about which costs
+  were charged to his card. **Still ask for the Transaction report** _(finding, 2026-10-12 — no ruling needed)_.
 - **A 1099-NEC he RECEIVES:** Candramas LLC (a firm client) issues him one — Double › CANDRAMAS LLC › JK Accounting
   Group › 1099 › *year*. **Look for it every year.**
 - **Scans and photos cannot be read by the redactor** — ask Lilian to paste them into the chat, and **transcribe each in
@@ -235,6 +241,7 @@ the actual details (and Claude can pull them live when a task needs them).
 
 - 2026-10-12 (3) — **The second client message drafted** (simple Russian, with a file of three lists — payments, deposits, the Noma / Taras / Silvia cluster): O1, O2, O3, O5, O8, O9 in one message, plus a request to finish the 2025 organizer (O6). The eBay report goes as its own message. Text in the working paper §6.
 - 2026-10-12 (4) — **He shared his own Drive folder `Tax Return` with the firm** (Lilian: *"el cliente nos envió los reportes de ebay"*). **It is not the eBay Transaction report:** it holds his copies of the Texas sales-tax confirmations (Nov 2025 → Aug 2026), seven Comptroller *"Amended Return"* summary screens printed 2026-07-15 — **the day before** the first returns were filed, so they are not a correction of them — and an `Ebay Stats` subfolder of **monthly screenshots (JPEG) from November 2025**, none for September–October 2025. The images cannot go through the redactor; Lilian pastes the November and December 2025 ones in the chat. **The Transaction-report request (O4) stands.** Details and every field: [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §1.2b. Sales-tax side: [`atman-parts.md`](./atman-parts.md).
+- 2026-10-12 (5) — **Lilian pasted the November and December 2025 eBay screens** (Seller Hub › Performance › Sales) — transcribed in full in the [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §1.2c. Three things they settle: **his November and December sales-tax returns were built from these screens** (total sales less the tax eBay collected — exact to the dollar); **Atman Parts' two-month gross is far above what the bank shows**, so the Schedule C's line 1 changes (working paper 3B-bis — provisional, not yet in the workbook, Lilian decides); and **the store already sold in October 2025** (derived from the screen's comparison period), which no bank account the firm holds and no Texas return shows. **The Transaction report is still needed** — September–October, the fee split, refunds (O4).
 
 ### Tax year 2025 — the review
 - **Gate:** the P&L stands on the bank; the 1040 waits for the organizer he is filling in.
@@ -246,7 +253,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - ✅ ~~**"Anton Partner" — co-owner or contractor?**~~ **A subcontractor (Lilian, 2026-10-11).** Open: does he live in the US — 1099-NEC or W-8BEN (O1).
 - ✅ ~~**2024 — a return owed? ever filed?**~~ **Never filed; the firm prepares it after 2025** (Lilian, 2026-10-11 — O10).
 - 🟠 **The client list (O2, O3), the Noma cluster (O8, O9), other accounts (O5), Anton's residence (O1)** — one message from Lilian, in simple Russian.
-- 🔴 **eBay 2025 Transaction report** — 🆕 **from the client** (the firm's team access does not reach Payments); Lilian sends the Russian message drafted 2026-10-12 (O4). 🆕 **What he sent on 2026-10-12 is monthly screenshots, not the report** — still needed. It is the whole of Atman Parts' 2025 income. A 1099-K only if one exists.
+- 🔴 **eBay 2025 Transaction report** — 🆕 **from the client** (the firm's team access does not reach Payments); Lilian sends the Russian message drafted 2026-10-12 (O4). 🆕 **What he sent on 2026-10-12 is monthly screenshots, not the report** — still needed. 🆕 *The November–December screens are transcribed (working paper §1.2c) and give a provisional line 1; September–October, the fee split and refunds still need the report.* It is the whole of Atman Parts' 2025 income. A 1099-K only if one exists.
 - ✅ ~~**Candramas LLC 2025 Form 1099 naming a "Vitalii Piliushin"**~~ — **opened 2026-10-11: it is him**, and it is now in the working paper's income (D28). Open: how and when the rest was paid (O12).
 - 🔴 **The Form 2848 must be replaced — Julia** (O15, opened 2026-10-11): line 4 is ticked and it names Lilian; a corrected 2848 (Julia only, line 4 blank) and a Form 8821 for Lilian. Without it, no transcripts.
 - 🟠 **Whether the firm filed a 2025 extension** — the migrated `2025 4868 Ext.pdf` (moved 2026-06-02) exists and was not opened. Not a gate (firm rule), pending since unknown.
