@@ -233,6 +233,8 @@ the actual details (and Claude can pull them live when a task needs them).
 
 - 2026-10-12 (2) — **Lilian asked for a review pack for Julia**, and ruled on the split. She first reminded the session *"recuerda que wells fargo es solo para Project Atman. No tiene nada que ver con Atman Parts"*; asked then whether the 106 Wells Fargo lines of the online store and the Kaufman shop should move to Project Atman, she chose **"Mantener la división" — keep them on Atman Parts** (working paper D22, her words there; now closed). Delivered (not committed, for Double): **every Wells Fargo transaction with its treatment**, and **the Project Atman P&L with every transaction under its line** — same figures as DRAFT 2, every printed balance and statement total tied (working paper §9).
 
+- 2026-10-12 (3) — **The second client message drafted** (simple Russian, with a file of three lists — payments, deposits, the Noma / Taras / Silvia cluster): O1, O2, O3, O5, O8, O9 in one message, plus a request to finish the 2025 organizer (O6). The eBay report goes as its own message. Text in the working paper §6.
+
 ### Tax year 2025 — the review
 - **Gate:** the P&L stands on the bank; the 1040 waits for the organizer he is filling in.
 - **What only he can answer** (one message in simple Russian, see the working paper §6): fifty payments to people with no stated purpose (O2); whether any cash/check deposits or Zelle receipts were not customer payments (O3); the Nov–Dec Noma parts and Taras / Silvia — which LLC (O8) and parts on hand at year-end (O9); any other account, such as PayPal Business (O5); where Anton lives (O1). The car (miles split between the two LLCs) and the home office come through the organizer.
