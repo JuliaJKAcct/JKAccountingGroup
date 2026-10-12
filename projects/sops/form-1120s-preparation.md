@@ -3,7 +3,7 @@
 > **Status:** 🟡 **DRAFT — in review with Lilian.** Written 2026-08-14 while preparing the
 > firm's first 1120-S with a session assisting, and shaped by what a first-time preparer
 > actually needed to be told. **Remove this note when Lilian signs it off.** ·
-> **Owner:** Lilian · **Last updated:** 2026-09-06
+> **Owner:** Lilian · **Last updated:** 2026-10-12 *(the 1099 thresholds — $2,000 from 2026 payments, at Lilian's request)*
 >
 > ⚠️ **The Atlas render beside this file (`.html`) is a CURATED view and is dated 2026-09-05 — it does
 > NOT yet carry §11F.** 🛑 **Its date is deliberately left behind rather than bumped**, because a generated
@@ -2137,11 +2137,12 @@ wrong more often than any other question on Schedule B.** Four mistakes cause al
 
 🔑 **The test is per PAYEE for the year, not per account and not per payment.** Group the ledger's
 transactions by the **`Name` / vendor column** and total each payee across the whole year. **Four
-$200 payments to one person is a 1099; one $500 payment to each of four people is not.** An
+$550 payments to one person (2,200) is a 1099; one $500 payment to each of four people is not** — true at
+either threshold. An
 account total tells you nothing either way.
 
 ⛔ **Mistake 1 — looking only at `Contract Labor`.** The question is about **all** Forms 1099. The
-biggest exposure is usually **RENT**, which is **1099-MISC box 1** at $600+ paid in a trade or
+biggest exposure is usually **RENT**, which is **1099-MISC box 1** at **$2,000+ for payments from 2026** ($600+ through 2025) paid in a trade or
 business, and people skip it because they think "1099 = contractors". Sweep **every** account that
 can carry a reportable payment: contract labor, professional fees, rent, commissions, and any
 "other/uncategorized" bucket.
@@ -2149,7 +2150,7 @@ can carry a reportable payment: contract labor, professional fees, rent, commiss
 ⛔ **Mistake 2 — asking what the payment WAS instead of who RECEIVED it.** The exemption is about
 the **payee's tax classification**, never the kind of service. **Professional fees are among the
 most commonly reportable payments there are** — an accountant, a consultant, a designer, a
-bookkeeper all get a 1099-NEC at $600+ **unless the payee is a corporation.** So "it's professional
+bookkeeper all get a 1099-NEC at **$2,000+ for payments from 2026** ($600+ through 2025) **unless the payee is a corporation.** So "it's professional
 fees, it doesn't need one" is backwards reasoning that happens to land right only when the payee
 happens to be incorporated.
 ⛔ **And an LLC is not a corporation.** It may be taxed as a sole proprietorship, partnership
@@ -2164,7 +2165,7 @@ full of live 1099 duties.
 
 ⛔ **Mistake 4 — reading the account NAME instead of the arrangement.** The instructions except
 *"payments for **merchandise, telegrams, telephone, freight, storage, and similar items**"*, and
-they also make **rent** of $600+ reportable in box 1. **So an account called `Storage Rent` sits on
+they also make **rent** of **$2,000+ for payments from 2026** ($600+ through 2025) reportable in box 1. **So an account called `Storage Rent` sits on
 top of a genuine fork, and it has more than two branches.** Storing the client's **inventory** — no
 identified space, a bill that moves with volume — is **excepted**. A **lease of identified space**
 is **box 1 rent**. **Predominantly fulfilment work** (pick/pack, kitting, returns) is on **neither**
