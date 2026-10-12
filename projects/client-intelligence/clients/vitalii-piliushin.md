@@ -92,7 +92,7 @@ the actual details (and Claude can pull them live when a task needs them).
   QuickBooks holds the year (Julia planned to connect eBay to it).
 - **When each business started** (read from the bank, 2026-10-12 — 2025 working paper §1.8): **Project Atman trades
   from the end of April 2025** (its account opened 2025-04-24). **Atman Parts' eBay store was active by 2025-09-12**
-  (first seller fee) — **before the LLC was formed on 2025-09-23** (E6) — its shop from mid-October, its own bank from
+  (first seller fee) — **before the LLC was formed on 2025-09-23** (the SOS fee date — E6, to confirm on the SOS record) — its shop from mid-October, its own bank from
   2025-12-04. ✅ **For the income tax the weeks before the LLC are the same Schedule C**; for Texas sales tax they were
   his as an individual (§1.9, Julia — O16).
 
@@ -229,7 +229,7 @@ the actual details (and Claude can pull them live when a task needs them).
   - **Lilian: 2024 was never filed; it is prepared after 2025** (working paper O10, closed).
   - **She asked that everything learned while preparing his taxes be kept here, so next year starts with the context** — written as the **tax-preparation playbook** in §4 (Income tax), and made a firm rule for every client ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §5B).
 
-- 2026-10-12 — **Lilian's follow-up questions, answered and recorded** (working paper §1.8, §1.9, O4, O13, O16): when each business started, read from the bank (above); the Nov–Dec sales figure she asked about is the **Total Texas Sales** on the two sales-tax returns the firm filed 2026-07-16 (Texas-delivered sales only — the figure is in the working paper); **the first-sales date `01/11/2025` was written by the owner himself**; sales before the LLC are the same Schedule C but, for Texas sales tax, his as an individual; **a 2025 Form 1099-K is not certain**; and **eBay team access does not reach Payments**, so the eBay report is asked of him — message drafted in simple Russian. She believed Atman Parts started at the end of 2025: right for the LLC, its shop and its bank; the eBay selling started in September.
+- 2026-10-12 — **Lilian's follow-up questions, answered and recorded** (working paper §1.8, §1.9, O4, O13, O16): when each business started, read from the bank (above); the Nov–Dec sales figure she asked about is the **Total Texas Sales** on the two sales-tax returns the firm filed 2026-07-16 — for a Texas-based seller that is every sale made from Texas, interstate included, so the eBay report should come close to it (O17; the figure is in the working paper); **the first-sales date `01/11/2025` was written by the owner himself**; sales before the LLC are the same Schedule C but, for Texas sales tax, his as an individual; **a 2025 Form 1099-K is not certain**; and **eBay team access does not reach Payments**, so the eBay report is asked of him — message drafted in simple Russian. She believed Atman Parts started at the end of 2025: right for the LLC, its shop and its bank; the eBay selling started in September.
 
 ### Tax year 2025 — the review
 - **Gate:** the P&L stands on the bank; the 1040 waits for the organizer he is filling in.
