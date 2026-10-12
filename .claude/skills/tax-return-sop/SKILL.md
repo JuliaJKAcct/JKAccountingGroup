@@ -500,6 +500,24 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
    both deducts them twice. **Take each period's fees from ONE source**; the Transaction report's *"Charge"* lines say
    which card charge paid what. ⚖️ **Proceeds still held by eBay on 31 December** — counted by sale date or by payout? —
    **are the signer's decision** *(Atman Parts 2025, D29)*.
+10. 🆕 **When the reviewer or the client cannot see where the money went** — a profit built from the bank that the
+    owner plainly does not have — **build a money-flow pack** *(Piliushin 2025 §2.4: Lilian asked for "algo visual para
+    Julia y para el cliente" before a call)*:
+    - **Two pictures** — the FLOW (money in by source → the accounts → money out by category, coloured by status:
+      on the return · to discuss · personal or not income · left in the bank; every block labelled with its amount and
+      its tab) and the PROFIT WALK (profit → + owner money → − to his own account → − personal spending → − items not
+      yet deducted → − income that never reached these accounts → **= the statements' closing balance, to the cent**).
+      🔑 **The walk is the answer to "where is the profit?": profit is not cash.**
+    - **A workbook with ONE TAB PER CATEGORY**, every line of the year in exactly one tab — **asserted by the build** —
+      grouped by payee where payees repeat (people, sellers, carriers), by category elsewhere, the "may be business"
+      lines first. **Static values only: nothing links one tab to another** *(Lilian, 2026-10-12: "mejor no
+      vincularlo por fórmulas entre páginas" — her instruction for that pack; as a general rule, a session's reading
+      like the rest of ⑤)*. ⛔ **It does not touch the §4D working-paper workbook, which keeps its live formulas.**
+    - **Two files, the client's language and English, with identical tabs and line numbers.** One tab is the **call
+      agenda** — and 🛑 **look before you ask: strike any question for a document the firm already holds** *(the first
+      agenda asked for a Form 1095-A; two were in Double)*.
+    - ⛔ **Firm-only items stay out of the client's copy** — a filing exposure (Form 8300), a planning idea (a SEP),
+      the signer's alternative readings, the far end of the profit range.
 
 #### ⑥ 📊 HER TWO TEMPLATES — fill a copy, and fix the known defects in the copy
 
