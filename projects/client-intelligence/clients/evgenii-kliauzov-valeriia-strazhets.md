@@ -82,6 +82,51 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Our role:** We prepare. The P&Ls come from the clients' side.
 - **Process notes (→ future SOP):** When the workbooks arrive: read `Summary` first (both reconciliations must close to the cent), then `To confirm` for what is still unanswered, then the **`Group B` block under the P&L** — meals, equipment and the like are deliberately kept off the P&L lines and would otherwise be missed. **The firm then does three things the clients' side was told NOT to do:** split the `Home Office` totals between the two activities by each spouse's work area (Form 8829 per Schedule C, full amounts in, the form applies the percentage); assign **one car to each Schedule C** and decide how the combined car totals are divided, and the vehicle method (actual vs standard mileage) from the odometer readings and any business-mile record; and decide the business share of the phones. _(Lilian, 2026-10-06)_ ✅ **The home-office split was ruled 2026-10-08:** keep ONE household total per cost and per home, whoever paid or listed it, and apply each spouse's own office area ÷ the home's area — a Form 8829 per spouse per home. **With two homes in a year, the office area is asked for EACH home.** _(Lilian, 2026-10-08)_
 
+#### 🧭 Tax-preparation playbook — READ THIS FIRST next year
+
+> What the firm learned preparing their returns, written as the rule for next time *(the standing rule of 2026-10-11: what a
+> preparation teaches about the client goes here)*. **Rules and decisions only — every figure is in the yearly working paper**
+> ([2025](../../tax-returns/evgenii-kliauzov-valeriia-strazhets/2025-form-1040.md)). Each item says who decided and when.
+
+**① What to prepare** — Form 1040 married filing jointly; **one Schedule C per spouse** (AMAZ MG LLC — Evgenii; THE VS CLUB
+LLC — Valeriia); Schedule SE each; **a Form 8829 per spouse per home**; **Form 8962** (Marketplace with advance credit); Form
+4562 for the Kona; the NOL statement while a carryover remains. **No books, no QuickBooks** — each P&L is built from what the
+client gives ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B).
+
+**② Whose figures govern** — **the client's own figures, where the firm holds no document stating one** _(Lilian, 2026-10-08)_:
+Evgenii's category totals by WhatsApp; Valeriia's own classification of every bank line in her workbook, and her own answers
+for business shares _(2026-10-12)_. **When Evgenii recounts, his new totals replace the old ones line by line** _(Lilian,
+2026-10-12)_.
+
+**③ How their transactions are treated**
+- **Home office:** the household's costs for the home, from the statements (not his rounded figures), **× each spouse's own
+  area on their own Form 8829**; the work area is **split half each** _(Lilian, 2026-10-09)_; **2025: only the first home**
+  _(Lilian, 2026-10-09)_.
+- **Cars:** the Kona (Evgenii) on **actual expenses with MACRS depreciation** _(Julia, 2026-10-12)_ — **the standard mileage
+  rate is closed for it for good**; the Infiniti (Valeriia, leased from November 2025) on **standard mileage for the whole
+  lease**; business parking and tolls in full on top.
+- **Her phone and her Apple subscriptions: 90% business** _(Valeriia, 2026-10-12)_; his phone 70% _(Lilian, 2026-10-09)_.
+- **The two LLCs' payments to each other are kept on both sides** as the clients gave them _(preparer, 2026-10-08)_.
+- **Overdraft fees on her business account are deducted** _(Lilian, 2026-10-08; Julia to confirm)_; **café visits at 50% as
+  client meetings**; **gyms and studios as places she trains clients**; **Amazon Prime and English lessons excluded** _(Lilian,
+  2026-10-08 — Prime re-asked 2026-10-12)_.
+- **Cash he deposits himself is not income** (his own classification).
+
+**④ Rules of the return**
+- **The NOL carries forward** (statement attached; the 80% limit each year; nothing used in a year whose taxable income before
+  it is zero).
+- **Form 2210:** enter **the prior year's tax** — the smaller required payment is the law's.
+- **Form 8962:** when household income falls **below 100% of the poverty line**, use ATX's **"HI below FPL"** exception (both
+  2024 and 2025).
+- **Self-employed health insurance:** **not claimed for 2025** _(Lilian, 2026-10-10 and 2026-10-12)_. If ever claimed: ATX
+  does **not** compute it — the Pub 974 figure is computed by hand and typed in **ATX's Worksheet W field below line 17**
+  (ATX support, case `04831621`, 2026-10-12; [`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §4H ⑥).
+- **The earned income credit** — Julia's decision each year (the preparer's due diligence, Form 8867).
+
+**⑤ Where everything is** — Double client `825437`, folder *JK Accounting Group/Others/<year>/Docs for tax prep* (her
+workbook, his screenshots, the 1095-A); the prior-year return in *Tax Return Filed/<year>*; **the final worksheet of each year
+in Double**. Evgenii answers by **WhatsApp** to Lilian.
+
 ### Licenses & other filings
 - **Applies?** _(pending)_
 
@@ -141,6 +186,7 @@ the actual details (and Claude can pull them live when a task needs them).
   - **Why last year owed almost nothing and this year owes much more:** in 2024 two of the three businesses lost money; in 2025 both are profitable, and most of the tax is self-employment tax, which the NOL cannot reduce. About three quarters of the change is fewer expenses than the 2024 return deducted — chiefly vehicle leases, rent of business property, legal and professional fees and outside services — and one quarter more gross profit. Working paper §3I, with both years side by side.
   - **The open question that matters in money: the car Valeriia drove for work from January to October.** Her business account bought fuel every month and paid parking all year, but the return claims her car only from November (the Infiniti). It may be the car whose lease her LLC deducted in 2024. The rest of her Excel's open questions are worth little each (working paper §3J-bis). Eight new questions for Lilian's email (§6 items 17–24).
   - The mileage figures keyed in the draft are not the client's round estimates — where they come from is a question for Lilian (working paper D27). _(Lilian; session review)_
+- **2026-10-12 (later)** — 🔑 **ATX support answered Lilian's case on the self-employed health insurance (case `04831621`):** ATX does not compute the deduction when the Marketplace credit is involved; the figure from the IRS's Pub 974 is computed by hand and typed in a field below line 17 of ATX's Worksheet W. **Lilian: "No lo vamos a hacer"** — it stays off the 2025 return; the answer is kept in case it is wanted later. Checked against the 2025 IRS publications (the agent's line and page references were from 2017) and recomputed: **on the revised figures it would change no tax.** The route is now in the firm's tax-return skill for every client. A tax-preparation playbook was added to this file (§4, Income tax). Working paper §1.16 and §3R. _(Lilian; session review)_
 - **2026-10-12** — 🔑 **Julia reviewed the return, and the clients sent revised figures.** **Julia's version** moved Evgenii's Hyundai Kona from the mileage rate to **actual expenses with depreciation** (Form 4562, bonus to the first-year cap) and checked *do not claim the earned income credit*. **Evgenii recounted his categories** by WhatsApp (training and goods receipts, goods bought, warehouse consumables, software, events and courses he paid for, the rent; and *the car repair with a minus sign*, read as take the repair out — to confirm). **Valeriia sent her Excel back with every question answered:** phone and Apple **90% for work**; her car by mileage, **about 8,000 business miles** for the year (8 trips to clients a week, from home — her workplace is at home); the home work area **about 300 of 800 sq ft, used only for work** (video and photo shooting, mats, a desk); each doubtful group marked business or personal (Amazon Prime "for work purchases"; the phone-deposited cheques are client payments). **Effect:** the tax falls sharply and **the net operating loss can no longer be used in 2025 — all of it carries to 2026**. **Open before filing:** for Julia — what makes up the Kona's actual costs, the document behind its cost basis (a car converted from personal use takes the lower of its value and its cost) and whether it was a business car in 2024, and **whether to claim the earned income credit** (the couple now qualifies, if the preparer's due diligence is done); for **Valeriia — which car she drove January–October, owned or leased, and its total miles** (if it was the car leased on her LLC in 2024, the mileage rate is not allowed for it); for Evgenii — the repair and whether the Apple software is inside his new software total. The final worksheet was rebuilt with two new sheets (every bank line of her LLC; the cars). Figures in the working paper §1.13–§1.15 and §3Q. _(Lilian; session review)_
 - **2026-10-10 (evening)** — 🔑 **Fourth ATX draft reviewed; the final worksheet rebuilt on it.** The NOL statement is now attached. The estimated-tax penalty went up rather than down — the missing interest rate was filled in, but the prior-year safe harbor (last year's tax) is still not entered, and with it the penalty is almost nothing. A few boxes and the NOL form's line 23 remain; Lilian kept her own placement of three expense lines (tax-neutral). Figures in the working paper §1.12 and §3P. _(Lilian; session review)_
 - **2026-10-10 (later)** — 🔑 **The Kona's loan interest: asked, and the client does not have it.** Lilian asked Evgenii for the 2025 interest on the car loan; **he does not have the information and could not provide it.** Only the business share of the interest is deductible, and in ATX it goes through the vehicle worksheet. Whether to press him to find the lender's statement is now **Julia's call** — it would lower the tax a little. **Schedule C line D (the LLCs' EINs):** Lilian will read the IRS instructions herself and remove the EINs if the paper's reading is right; it is not in the email to Julia. **The email to Julia** is final (numbered, also as a Word file, and it states that Lilian contacted ATX support about the health-insurance deduction and a case is open). Figures in the working paper §3N-f and §3O. _(Lilian; session review)_

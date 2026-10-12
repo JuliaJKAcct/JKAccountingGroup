@@ -4050,6 +4050,37 @@ tab that shows them all at once.**
 | **A disposal with no depreciation history** *(an asset the books never capitalized)* | **straight onto Form 4797 Part II line 10 as its own row** — ⛔ **never added to the depreciation schedule** |
 | **The §448(c) gross-receipts figure** *(K-1 box 17 code AC)* | **the K-1 line 17 input / the §448(c) worksheet.** ⚠️ **ATX computes it; find out what it computed before overwriting** |
 
+#### ⑥ 🩺 THE SELF-EMPLOYED HEALTH INSURANCE DEDUCTION WITH A MARKETPLACE PLAN — ATX DOES NOT COMPUTE IT
+
+> **ATX support, case `04831621`, 2026-10-12** *(Lilian's question, on Kliauzov / Strazhets — working paper §1.16, §3R)*:
+> *"you will need to complete manually… Below line 17 on worksheet W – enter the amount in the simplified method… This amount
+> will flow"* to the deduction line.
+
+🔑 **When it applies:** the plan is established under the business **and** came through the Marketplace **and** (APTC was paid
+**or** the PTC is claimed) — then the deduction comes from **Pub 974**, not the Form 1040 instructions' worksheet *(2025
+Instructions for Form 1040, Schedule 1 line 17, p. 95)*.
+
+| Step | Where in ATX | Status |
+|---|---|---|
+| Specified premiums and the APTC (1095-A column C) | **ATX's `Pub 974 Worksheet W`, lines 1 and 2** — ATX fills Worksheets W and X from them | ✅ seen on screen (Kliauzov §1.10) |
+| **The deduction itself** | ⛔ **ATX computes NOTHING here: Schedule 1 line 17 reads 0** until a figure is typed in **the block below line 17 of ATX's Worksheet W** — three input fields, *Iterative / **Simplified** / other — "Choose only one method"* | ✅ **vendor-confirmed and seen on screen**; ⚠️ **the typed figure reaching Schedule 1 line 17 has not yet been seen on a print — check it the first time** |
+| `Ln 17, Sch 1 - Health Ins` | **only for NONSPECIFIED premiums** (a separate dental plan; months with no PTC) — ⛔ never the Marketplace premium too, or it counts twice | ✅ |
+
+**The figure, computed by hand** — Pub 974 (2025) Simplified method pp. 55–56 or Iterative pp. 52–55 (Worksheet W p. 50, X
+pp. 51–52): **premiums − the PTC ALLOWED** (Form 8962 line 24 figured *with* the deduction), **capped at Worksheet X line 30**
+and at the business's earned income (Worksheet W line 15). ⛔ **Never Worksheet X line 31** (the ceiling) and ⛔ **not simply
+premium − APTC** (Worksheet W line 3 — one cap only; ATX's own note says it loosely). 🔑 **At or below 150% of the poverty
+line the PTC is the benchmark premium whatever the AGI, so both methods stop at once: premiums − benchmark.**
+
+**What it does and does not move:** ⛔ never self-employment tax; ⛔ not the EIC's earned income; it lowers AGI → household
+income on Form 8962, and **Form 8962 line 28 then comes from Worksheet X line 25, not Table 5**; ⚠️ **where the NOL's 80% limit
+binds it moves Schedule 1 line 8a, so type both in the same sitting** (Kliauzov §3M); any statement that prints the AGI (the
+NOL statement) must be retyped. If the taxpayer cannot take the PTC at all, Pub 974's Step 2 says stop — use the ordinary
+worksheet or Form 7206.
+
+⚠️ **ATX's help material cites 2017 forms** — *"1040, line 29"* is **Schedule 1 line 17**; *"1040 instructions p. 33"* is **p.
+95**; *"Pub 974 p. 67"* is **pp. 55–56** (2025). **Read every reference off the current-year PDF.**
+
 ### 4I · 📗 THE FINAL WORKSHEET — the one that is KEPT, and the only rule about it that is absolute
 
 > 🗣️ **LILIAN, 2026-09-30:** *"cuando terminemos todo y la declaración esté ya a punto de ser enviada y
