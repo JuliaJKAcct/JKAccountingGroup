@@ -90,6 +90,11 @@ the actual details (and Claude can pull them live when a task needs them).
   and is prepared after 2025** _(Lilian, 2026-10-11)_. **No books in 2025** — the P&L was rebuilt from the bank
   ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B.10). From 2026 check first whether
   QuickBooks holds the year (Julia planned to connect eBay to it).
+- **When each business started** (read from the bank, 2026-10-12 — 2025 working paper §1.8): **Project Atman trades
+  from the end of April 2025** (its account opened 2025-04-24). **Atman Parts' eBay store was active by 2025-09-12**
+  (first seller fee) — **before the LLC was formed on 2025-09-23** (the SOS fee date — E6, to confirm on the SOS record) — its shop from mid-October, its own bank from
+  2025-12-04. ✅ **For the income tax the weeks before the LLC are the same Schedule C**; for Texas sales tax they were
+  his as an individual (§1.9, Julia — O16).
 
 **② Where everything is**
 - **Bank statements:** Double › VITALII PILIUSHIN › JK Accounting Group › Others › *year* › Docs for tax prep › *Wells
@@ -97,8 +102,11 @@ the actual details (and Claude can pull them live when a task needs them).
   Taxes › *year* taxes — a full, line-by-line check of the PDFs.
 - **Julia's Drive › "Atman Parts"** (was "Atman Products"): Taxes (yearly folders), Sales tax (filed returns by year),
   Docs sent by client. ⛔ **Never open** the password files there.
-- **The eBay seller account** ("atman.autoparts"): the firm is on the seller's eBay team — **pull the year's report
-  yourself; never ask him for it.**
+- **The eBay seller account** ("atman.autoparts"): the firm is on the seller's eBay **team** (since 2026-03-24), but
+  🔴 **team access reaches the SELLING sections only — never Payments reports or tax documents** (eBay help, checked
+  2026-10-12). ⇒ **Ask HIM each year for the *Transaction report* for the whole year (CSV)** — Seller Hub › Payments ›
+  Reports › Transaction report — **and for a Form 1099-K only if one exists.** The message, in simple Russian, is in the
+  2025 working paper O4 — reuse it.
 - **A 1099-NEC he RECEIVES:** Candramas LLC (a firm client) issues him one — Double › CANDRAMAS LLC › JK Accounting
   Group › 1099 › *year*. **Look for it every year.**
 - **Scans and photos cannot be read by the redactor** — ask Lilian to paste them into the chat, and **transcribe each in
@@ -151,6 +159,10 @@ the actual details (and Claude can pull them live when a task needs them).
   reported by the network; freight is excluded. **None appears filed for 2025** (2025 D20) — Julia decides on late
   filing. **Collect W-9s up front.**
 - **He receives:** Candramas LLC's 1099-NEC — part of his income even when the money did not reach the accounts held.
+- **A Form 1099-K from eBay is NOT certain — check, never assume.** For 2025 eBay issues one only above **$20,000 of
+  gross AND more than 200 transactions** (restored retroactively by the 2025 tax law; Texas has no lower threshold —
+  re-check the threshold each year). If one exists it is in **his** name and SSN, gross before fees and refunds — and
+  line 1 must reconcile to it.
 
 **⑥ Texas obligations of Atman Parts that sit beside the return** — see [`atman-parts.md`](./atman-parts.md) §4
 - Monthly sales tax (the eBay marketplace rule); **nine Jeopardy Determinations for January–September 2025**, caused by
@@ -173,7 +185,7 @@ the actual details (and Claude can pull them live when a task needs them).
 **⑧ Next year, start here**
 1. Read this playbook and the last working paper's §6 (open items) and §7 (carry forward).
 2. Does QuickBooks hold the year? If not, rebuild from the bank again — statements **and** the Wells Fargo CSV.
-3. Pull the eBay report yourself; look for Candramas's 1099-NEC; once the 2848 / 8821 are fixed, pull his **Wage &
+3. Ask him for the eBay Transaction report (and the 1099-K, if any — §②); look for Candramas's 1099-NEC; once the 2848 / 8821 are fixed, pull his **Wage &
    Income transcript** — it lists every 1099 reported to him.
 4. Ask the client only what §6 of the last working paper still leaves open — in one message, in simple Russian.
 
@@ -217,17 +229,19 @@ the actual details (and Claude can pull them live when a task needs them).
   - **Lilian: 2024 was never filed; it is prepared after 2025** (working paper O10, closed).
   - **She asked that everything learned while preparing his taxes be kept here, so next year starts with the context** — written as the **tax-preparation playbook** in §4 (Income tax), and made a firm rule for every client ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §5B).
 
+- 2026-10-12 — **Lilian's follow-up questions, answered and recorded** (working paper §1.8, §1.9, O4, O13, O16): when each business started, read from the bank (above); the Nov–Dec sales figure she asked about is the **Total Texas Sales** on the two sales-tax returns the firm filed 2026-07-16 — for a Texas-based seller that is every sale made from Texas, interstate included, so the eBay report should come close to it (O17; the figure is in the working paper); **the first-sales date `01/11/2025` was written by the owner himself**; sales before the LLC are the same Schedule C but, for Texas sales tax, his as an individual; **a 2025 Form 1099-K is not certain**; and **eBay team access does not reach Payments**, so the eBay report is asked of him — message drafted in simple Russian. She believed Atman Parts started at the end of 2025: right for the LLC, its shop and its bank; the eBay selling started in September.
+
 ### Tax year 2025 — the review
 - **Gate:** the P&L stands on the bank; the 1040 waits for the organizer he is filling in.
 - **What only he can answer** (one message in simple Russian, see the working paper §6): fifty payments to people with no stated purpose (O2); whether any cash/check deposits or Zelle receipts were not customer payments (O3); the Nov–Dec Noma parts and Taras / Silvia — which LLC (O8) and parts on hand at year-end (O9); any other account, such as PayPal Business (O5); where Anton lives (O1). The car (miles split between the two LLCs) and the home office come through the organizer.
-- **What the firm can get itself:** the 2025 eBay seller report — the firm is on the seller's eBay team (O4); how and when Candramas LLC paid him (its books are the firm's — O12, needs Lilian or Julia to ask).
+- **The eBay report comes from HIM** (O4 — the firm's team access does not reach Payments; Lilian's message drafted 2026-10-12). **What the firm can get itself:** how and when Candramas LLC paid him (its books are the firm's — O12, needs Lilian or Julia to ask).
 - **Health coverage:** two 2025 Forms 1095-A are in his Double library (not opened) — Form 8962 will be needed on the 1040.
 
 ### Outstanding items (CI-only — never in the SOP)
 - ✅ ~~**"Anton Partner" — co-owner or contractor?**~~ **A subcontractor (Lilian, 2026-10-11).** Open: does he live in the US — 1099-NEC or W-8BEN (O1).
 - ✅ ~~**2024 — a return owed? ever filed?**~~ **Never filed; the firm prepares it after 2025** (Lilian, 2026-10-11 — O10).
 - 🟠 **The client list (O2, O3), the Noma cluster (O8, O9), other accounts (O5), Anton's residence (O1)** — one message from Lilian, in simple Russian.
-- 🔴 **eBay 2025 report** — Lilian pulls it (O4); it is the whole of Atman Parts' 2025 income.
+- 🔴 **eBay 2025 Transaction report** — 🆕 **from the client** (the firm's team access does not reach Payments); Lilian sends the Russian message drafted 2026-10-12 (O4). It is the whole of Atman Parts' 2025 income. A 1099-K only if one exists.
 - ✅ ~~**Candramas LLC 2025 Form 1099 naming a "Vitalii Piliushin"**~~ — **opened 2026-10-11: it is him**, and it is now in the working paper's income (D28). Open: how and when the rest was paid (O12).
 - 🔴 **The Form 2848 must be replaced — Julia** (O15, opened 2026-10-11): line 4 is ticked and it names Lilian; a corrected 2848 (Julia only, line 4 blank) and a Form 8821 for Lilian. Without it, no transcripts.
 - 🟠 **Whether the firm filed a 2025 extension** — the migrated `2025 4868 Ext.pdf` (moved 2026-06-02) exists and was not opened. Not a gate (firm rule), pending since unknown.

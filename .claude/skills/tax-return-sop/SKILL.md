@@ -459,13 +459,25 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
    dressed as a decision, not a deduction. ⚠️ **On a PERSONAL account the label must state the business reason**
    *([`personal-card-reimbursement`](../personal-card-reimbursement/) §0)*.
 5. 🛑 **A source the FIRM can reach is not a client question** *(§1B.6)* — a marketplace report on an account the firm
-   is a team member of, a platform's own totals. **Pull it.**
+   is a team member of, a platform's own totals. **Pull it.** ⚠️ **But check what the access REACHES before calling it
+   firm-reachable:** 🆕 **eBay's team access is SELLING permissions only** — listings, orders, labels, messages — and
+   *"team members… will never have access to personal, business or bank information"*; **no permission found reaches
+   Payments › Reports or Taxes** *(eBay help, checked 2026-10-12)*. ⇒ **the Transaction report and the Form 1099-K come
+   from the OWNER.** *(Atman Parts: the client file said "pull it yourself"; eBay's own help says the team access does not reach it.)*
 6. ✅ **The client gets ONE message**, and the lines he must mark travel as **lists, not prose**: payments with no
    stated purpose, and deposits with no payer. **The vehicle and the home office come through the organizer he is
    already filling in**, not a separate question.
 7. ⚠️ **Spot a co-owner.** A client's own label like *"Partner"* on a regular payee is a question about **which
    return this is** — a multi-member LLC files Form 1065 by default *(1120-S if it elected S status)*, not Schedule C.
    **Ask it first.**
+8. 🆕 **A marketplace seller's line 1 is the GROSS from the marketplace's own transaction report** — item price plus
+   shipping charged, before fees and refunds; **the bank holds net payouts, and late** *(Atman Parts: eBay paid into a
+   held account only from December, against sales from September)*. **A Form 1099-K is NOT certain:** for 2025 a
+   marketplace issues one only above **$20,000 AND 200 transactions** — the One Big Beautiful Bill Act restored that test
+   **retroactively** *(IRS IR-2025-107; Instructions for Form 1099-K)*; a state may set a lower one *(Texas does not)*,
+   and a platform may issue one below it. ⛔ **So ask whether one exists — never ask for "the 1099-K he received".**
+   When one exists, **line 1 must reconcile to it** *(its gross excludes the sales tax the marketplace collected)*.
+   🔑 **Re-check the threshold every year from the current Instructions for Form 1099-K** (§3).
 
 #### ⑥ 📊 HER TWO TEMPLATES — fill a copy, and fix the known defects in the copy
 
