@@ -150,10 +150,11 @@ link). Never write the credential itself here.
 - **The July `Summary 2025` is not usable** (bounced payments counted, rent at 100%, CS Float from the bank…).
 - **The file named `Form1095a_2025` is the 2024 form.** **"Business Fundamentals Checking" on the statements is an
   advertisement** — both accounts are personal.
-- 🆕 **Lilian's P&L template rows are not Schedule C lines.** In the 2025 draft three labels sent figures to the wrong
-  line (taxes on line 10, supplies on line 18, postage inside freight) and Atlantic Express was keyed twice. **Label
-  every P&L row with its Schedule C line, and never put two lines in one row.** The mileage amount is **not gas** — say
-  so on the row.
+- 🆕 **Build his P&L in the order of the year's Schedule C, line number first** _(Lilian, 2026-10-12)_ — her template's
+  category names sent three 2025 figures to the wrong line and Atlantic Express was keyed twice. One function builds the
+  workbook's P&L and the template copy, so they match cell for cell. The mileage amount is **not gas** — say so on the row.
+- 🆕 **Local parking and SunPass are personal under his rule R6** — in the second 2025 version they reached the vehicle
+  worksheet's parking line (9b); Lilian decides whether that was meant _(open, 2026-10-12)_.
 
 **⑧ Next year, start here**
 - **2026: the BMW's sale** (Form 4797 — its basis is reduced by the depreciation inside the mileage rate) and its
@@ -585,6 +586,13 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   that the briefing email to Julia explain how the car-loan interest was computed. She asked where the younger son's
   date of birth was: in her own July-session message of 2026-07-30. Figures are in the working paper (§12, §13), never
   here. **The playbook above was written the same day.**
+
+- _(2026-10-12, later — Lilian: draft 7b)_ She sent her **second keyed version** with the corrections and a screenshot
+  of the vehicle worksheet, asking first whether the **totals** were right: they are, for what she typed. One money
+  difference is left — local parking typed on the vehicle worksheet, which his rule keeps personal (her call) — plus
+  one dollar of rounding and three descriptions. She asked that **every P&L follow the IRS Schedule C of the year**,
+  line number first, and that the explanations say more specifically where each figure came from; both are now the
+  firm's rule in `tax-return-sop`. Figures: working paper §12.3.
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:

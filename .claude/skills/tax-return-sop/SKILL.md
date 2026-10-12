@@ -482,13 +482,26 @@ never an artifact.** 🇬🇧 **In English** *(CLAUDE.md)*.
 | 1 | **The P&L's net profit ignores cost of goods sold** — `C41 = C10 - C39`, revenue minus expenses. On Tseretsian that would have overstated one Schedule C by its whole purchases figure | Add a *Total Cost of Goods Sold* and *Gross Profit* row, and take the net from gross profit |
 | 2 | **The Home Office `Total` does not add every row.** In the chat copy it is `=SUM(N9:N15)`, dropping **mortgage interest, insurance, property taxes and HOA** | `=SUM(N5:N15)` and `=SUM(O5:O15)`. ⚠️ **[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 102 records the SAME defect as it showed on one client's copy of the Double master `Home office.xlsx`** — only Insurance, Rent and Utilities were filled in, so the total read as Rent + Utilities, which is what `=SUM(N9:N15)` gives; **nobody has read the formula in the master itself.** **Read the formula in the copy you were given; do not assume which defect it has** |
 | 3 | **The Home Office template has an `Internet` row** — which pushes internet into Form 8829, against M2 | **Leave it empty**; internet goes on line 25. *(It has already reached a filed Form 8829 once, on a client who filled the template himself.)* |
-| 4 | 🆕 **The P&L template's rows are NOT Schedule C lines, and she keys from the label.** *Commisions & Fees* reads like line 10, *Office Supplies* like line 18, *Auto Gas* like gas. On Tseretsian (draft of 2026-10-12) **taxes and licenses went on line 10, eBay supplies on line 18, the postage inside freight, a car service onto the vehicle worksheet — and a shipping payment already inside *Delivery/Freight* was keyed a second time as its own Part V row** | **Relabel every row in the copy with the Schedule C line it is typed on** (*"Taxes and licenses — line 23"*), **never put two Schedule C lines in one row**, repurpose a row the client does not use rather than share one, and add the derivation columns (§4D). **A Part V row's label names what is inside it**, so nothing in it is typed again |
+| 4 | 🆕 **The P&L template's rows are NOT Schedule C lines, and she keys from the label.** *Commisions & Fees* reads like line 10, *Office Supplies* like line 18, *Auto Gas* like gas. On Tseretsian (draft of 2026-10-12) **taxes and licenses went on line 10, eBay supplies on line 18, the postage inside freight, a car service onto the vehicle worksheet — and a shipping payment already inside *Delivery/Freight* was keyed a second time as its own Part V row** | 🆕 **REBUILD THE COPY IN THE ORDER OF THE YEAR'S SCHEDULE C** *(Lilian, 2026-10-12 — see the rule below this table)*: **column A = the Schedule C line**, rows in the form's order (Part I · lines 8–31 with the Part V rows under 27b · Part III), **one line per row**, line 9 shown in its Vehicle Expenses worksheet parts, **each marked TYPED or COMPUTED** — she TYPES the business miles (worksheet line 4), 9b parking and tolls and **9c the TOTAL interest**; ATX COMPUTES 9a, 9e (= 9c × business %) and line 9 *(never put the 9e figure where 9c is typed: below 100% business the % is applied twice)* — and the derivation columns (§4D). **A Part V row's label names what is inside it**, so nothing in it is typed again |
 
 ☑️ **And clear the template's SAMPLE inputs** — it ships with 1,000 and 100 square feet, which compute a 10% that
 looks like an answer. **Blank until the client gives his figures.**
 
 ⚠️ **A check that the filled template agrees with the evidence workbook is a FORMULA check, not corroboration** —
 both read the same transactions *(§1B.8)*. Say *"the formulas agree"*, never *"confirms"*.
+
+🛑 **THE P&L ALWAYS FOLLOWS THE IRS FORM OF THE YEAR — the template is only a template.** *(Lilian, 2026-10-12, after
+keying the first Tseretsian draft from the template's category names:* *"para facilitar la entrada en ATX, que siempre
+adaptes el profit and loss al formulario de IRS… puedes añadir una línea junto a la columna de profit and loss donde
+diga a qué línea pertenece en el schedule oficial de la IRS. Recuerda que este profit and loss que te di es un
+template. Puedes modificarlo de manera que coincida lo mejor posible con la forma del año correspondiente… Que no
+suceda lo que sucedió esta vez, que lo entré en sitios diferentes, fijándome en el nombre de la categoría."*)
+✅ **So, on every client:** read the current year's Schedule C *(§3: from irs.gov, never from memory — lines get
+renumbered)*, lay the P&L out in its order with the line number in the first column, and keep **the workbook's P&L
+sheet and the template copy identical, built by ONE function** so they cannot drift. **The categories she keys from
+are the FORM's lines; a bank category that does not map to one line is split before it reaches the P&L.** *(Pilot:
+Tseretsian draft 7b — the template copy and the workbook's `P&L 2025` built by the same builder, compared cell for
+cell.)*
 
 ☑️ **The masters themselves are still uncorrected.** [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) **row 102 tracks
 defect 2 only**, in the Double master `Home office.xlsx`; **row 205 tracks defects 1 and 3.** *(Defect 4 is fixed in
@@ -2928,8 +2941,12 @@ take on trust** — and on the pilot she could not tell it was the mileage rate,
 | **Business %** | The % applied, and whose ruling it is |
 | **How** | The arithmetic in words: *"phone, 12 payments = 1,200.00 × 50% = 600.00 to business A; × 30% = 360.00 to business B"* (an illustration, not a client's figures) |
 
-- ✅ **And a `P&L detail` sheet lists EVERY transaction behind every row**, one block per row in the P&L's order, each
-  opening with *line · lines · found · % · = figure* and closing on its subtotal. **She checks a figure by reading one
+- ✅ **AND THE TRANSACTIONS THEMSELVES, ON THE ROW** *(Lilian, 2026-10-12, a second time: "se más específico y
+  detallado en las explicaciones de dónde salió cada cosa")*: a column listing what was summed — **each line (date ·
+  account · merchant · amount) when there are 12 or fewer; month by month with the main merchants when there are
+  more.** ⛔ **A rule name alone (`L8`, `R4`) is not an explanation** — say what it ruled, who and when.
+- ✅ **And a `P&L detail` sheet lists EVERY transaction behind every row**, one block per Schedule C line in the form's
+  order, each opening with *line · lines · found · % · = figure* and closing on its subtotal. **She checks a figure by reading one
   block, never by filtering 1,470 lines.**
 - 🛑 **A figure that is NOT a bank total says so on its row**: the mileage amount (*miles × rate*), an estimated
   interest, a platform's own report. ⛔ **Never under a label that reads like a bank category** — on the pilot the
@@ -3557,6 +3574,17 @@ file, not only the draft.** ⛔ **Never report a session's own mapping error as 
 - **The vehicle worksheet holds only miles, parking and tolls, and the loan interest** on the standard rate.
 - **A one- or two-dollar gap is rounding when ATX rounds each entry** — a figure typed as several rows (five trips,
   five Part V rows) rounds row by row. Say so as OK; it is not a finding.
+
+✅ **OPEN WITH HER TOTALS** *(Lilian, 2026-10-12, sending her second version: "Quiero que te fijes, sobre todo, en los
+gastos y que los totales estén correctos. Esto es lo que más me interesa. Luego, si quieres, me puedes decir si quedan
+cosas puestas en sitios donde no van")*: **re-compute every total from the figures on her own pages** (line 28, 29, 31,
+Schedule 1, SE, AGI, QBI, taxable income, tax, balance due) and say whether each is right **for what she typed**;
+then **size the gap to the worksheet and name each piece of it** *(an invented illustration: her 10,400 against the worksheet's
+10,250 = +151 typed on the vehicle worksheet − 1 for an amount cut at the dollar; the real case is in the Tseretsian
+working paper §12.3)*. Only then the misplaced lines — a figure on the wrong
+line with the right total is the second question, not the first. **A second keyed version gets its own check sheet;
+the first check stays beside it as a RECORD sheet (no tick boxes, marked superseded) and is summarised in the working
+paper** — so it survives when the new workbook replaces the old one in Double.
 
 ✅ **The delivery is a `Draft check (<date>)` sheet in the workbook**: one row per difference, a tickable box first
 (only on rows she can act on), the five steps of §4G as columns, grouped by where she is working in ATX, a running
