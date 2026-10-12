@@ -100,8 +100,11 @@ link). Never write the credential itself here.
   birth (her message of 2026-07-30). That session is in §7; export it before anyone deletes it.
 - **CS Float:** the client's photo of the platform's yearly report (Drive) — the figure, not the bank. **Transcribe it in
   full.**
-- 🆕 **Rent paid by MONEY ORDER does not show in his bank** — in 2025 seven months went that way _(the client, 2026-10-12)_.
-  Ask for the money-order receipts or the landlord's ledger at the start of the year; the bank alone understates the rent.
+- 🆕 **Rent paid by MONEY ORDER does not show in his bank** — in 2025 the months missing from the bank went that way
+  _(the client, 2026-10-12; seven by the session's count, which reads October's partial ACH and December's bounced one as
+  money-order months)_. Ask for the money-order receipts or the landlord's ledger at the start of the year; the bank
+  alone understates the rent. **Read each receipt's DATE:** on the cash method a money order bought after year-end is
+  next year's rent.
 - **The Lendbuzz loan approval** (the BMW's terms) was a screenshot pasted into the chat; it is transcribed in the
   2025 working paper §1.4. **Lilian's keyed ATX drafts** are uploaded into the session — store them in Double.
 
