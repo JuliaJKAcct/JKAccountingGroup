@@ -100,6 +100,11 @@ link). Never write the credential itself here.
   birth (her message of 2026-07-30). That session is in §7; export it before anyone deletes it.
 - **CS Float:** the client's photo of the platform's yearly report (Drive) — the figure, not the bank. **Transcribe it in
   full.**
+- 🆕 **Rent paid by MONEY ORDER does not show in his bank** — in 2025 the months missing from the bank went that way
+  _(the client, 2026-10-12; seven by the session's count, which reads October's partial ACH and December's bounced one as
+  money-order months)_. Ask for the money-order receipts or the landlord's ledger at the start of the year; the bank
+  alone understates the rent. **Read each receipt's DATE:** on the cash method a money order bought after year-end is
+  next year's rent.
 - **The Lendbuzz loan approval** (the BMW's terms) was a screenshot pasted into the chat; it is transcribed in the
   2025 working paper §1.4. **Lilian's keyed ATX drafts** are uploaded into the session — store them in Double.
 
@@ -196,7 +201,9 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   the working file / organizer, not here); 2024/2025 TBD. Julia to set the method
   (Form 8829 %); not 100% business.
   🆕 **2026-10-11 (the client, relayed by Lilian): the home is 1,200 sq ft and the office 300 sq ft (25%).**
-  🆕 **2026-10-12 (Lilian):** the office serves **both** businesses — shared 60% cars / 40% CS Float, one Form 8829 each. Whether
+  🆕 **2026-10-12 (Lilian):** the office serves **both** businesses — shared 60% cars / 40% CS Float, one Form 8829 each.
+  🆕 **2026-10-12 (the client, via Lilian): the rent months missing from his bank were paid by MONEY ORDER, the same sum
+  each month.** The 2025 return counts the whole year, with the money-order sum estimated until he sends the receipts. Whether
   the office is used **only and regularly** for the business is still to ask — without it there is no home office.
   🆕 **2026-10-09: the firm holds NO square footage, for the home or the office.** That is the result of
   searching all three Double organizers (the 2023 one's home-office slide and template upload are
@@ -586,6 +593,11 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   that the briefing email to Julia explain how the car-loan interest was computed. She asked where the younger son's
   date of birth was: in her own July-session message of 2026-07-30. Figures are in the working paper (§12, §13), never
   here. **The playbook above was written the same day.**
+
+- _(2026-10-12, evening — Lilian: draft 7c)_ The client answered the rent question: the months missing from the bank were
+  paid by **money order, the same sum each month**; Lilian asked for the whole year's rent on the return. She also asked
+  how to ask him **when the game-items activity began** (it decides whether the second Schedule C is marked as started
+  in 2025) — everything the firm holds points to 2025. Figures: working paper §3C.
 
 - _(2026-10-12, later — Lilian: draft 7b)_ She sent her **second keyed version** with the corrections and a screenshot
   of the vehicle worksheet, asking first whether the **totals** were right: they are, for what she typed. One money
