@@ -4069,8 +4069,9 @@ Instructions for Form 1040, Schedule 1 line 17, p. 95)*.
 **The figure, computed by hand** — Pub 974 (2025) Simplified method pp. 55–56 or Iterative pp. 52–55 (Worksheet W p. 50, X
 pp. 51–52): **premiums − the PTC ALLOWED** (Form 8962 line 24 figured *with* the deduction), **capped at Worksheet X line 30**
 and at the business's earned income (Worksheet W line 15). ⛔ **Never Worksheet X line 31** (the ceiling) and ⛔ **not simply
-premium − APTC** (Worksheet W line 3 — one cap only; ATX's own note says it loosely). 🔑 **At or below 150% of the poverty
-line the PTC is the benchmark premium whatever the AGI, so both methods stop at once: premiums − benchmark.**
+premium − APTC** (Worksheet W line 3 — one cap only; ATX's own note says it loosely). 🔑 **In 2025, at or below 150% of the poverty line the applicable figure is 0.0000, so the PTC is the benchmark premium
+whatever the AGI and both methods stop at once: premiums − benchmark.** *(Read the year's Form 8962 Table 2 — the 0% band
+is the enhanced credit's, and later years differ.)*
 
 **What it does and does not move:** ⛔ never self-employment tax; ⛔ not the EIC's earned income; it lowers AGI → household
 income on Form 8962, and **Form 8962 line 28 then comes from Worksheet X line 25, not Table 5**; ⚠️ **where the NOL's 80% limit
