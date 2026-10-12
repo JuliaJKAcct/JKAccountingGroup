@@ -468,7 +468,8 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
 6. ✅ **The client gets ONE message**, and the lines he must mark travel as **lists, not prose**: payments with no
    stated purpose, and deposits with no payer. **The vehicle and the home office come through the organizer he is
    already filling in**, not a separate question.
-   🆕 **And the file carries the WHOLE P&L for him to correct, not only the gaps** *(Lilian, 2026-10-12: "un documento
+   🆕 **And the file carries the WHOLE P&L for him to correct, not only the gaps** *(Lilian asked for it on one client,
+   2026-10-12 — like the rest of ⑤, a session's reading as general practice, not her ruling: "un documento
    … con las entradas de dinero que clasificamos como income y… una explicación de por qué… lo pones al lado")*:
    **every deposit counted as income with the firm's reason beside it**; the money in that was NOT counted; the lines
    booked as personal that **may** be business; and the costs a business like his **normally has but the bank does not

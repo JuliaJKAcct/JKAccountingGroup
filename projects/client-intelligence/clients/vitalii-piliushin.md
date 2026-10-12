@@ -154,12 +154,13 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Phone:** 50% business _(session; Lilian may change)_.
 - **Shop gates and shelving:** expensed under the de minimis safe harbor in Part V, **with the election statement**
   _(session; Julia confirms)_. **State and formation fees:** an ordinary expense on line 23 (§248 is corporate only) _(session — 2025 D26)_.
-- 🆕 **Each year he gets ONE file to correct the whole P&L** _(Lilian, 2026-10-12)_: every deposit counted as income
-  **with our reason beside it**, what was not counted, the lines booked as personal that may be business, and the costs a
-  business like his normally has that the account does not show (2025 working paper §2.2). 🔑 **His business money also
-  runs through his Apple Card and a personal account** (Wells Fargo paid the card; 39 transfers to "Vitaly") — **ask for
-  both statements at the start of the year's work**, not after the P&L is built. ⚖️ **Cash from one buyer above 10,000
-  for one vehicle means a Form 8300** — ask where cash deposits came from _(2025 O22 — Julia)_.
+- 🆕 **For 2025 he got ONE file to correct the whole P&L** _(Lilian asked for it, 2026-10-12)_: every deposit counted as
+  income **with our reason beside it**, what was not counted, the lines booked as personal that may be business, and the
+  costs a business like his normally has that the account does not show (2025 working paper §2.2). **Do the same next
+  year** _(the session's recommendation — Lilian's request was for 2025)_. 🔑 **His Apple Card and a personal
+  account may carry business costs** (Wells Fargo paid the card; 39 transfers to "Vitaly"; neither statement is held) —
+  **ask for both at the start of the year's work**, not after the P&L is built. ⚖️ **Cash from one payer above 10,000,
+  in one or related transactions, means a Form 8300** — ask where cash deposits came from _(2025 O22 — for Julia to decide)_.
 - **Food on the bank is a draw** _(Lilian — L2)_: no meal deduction unless he states a meal was business
   ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B.1). **Personal purchases a business could own** (electronics, furniture,
   Apple.com) are draws unless he explains them _(session — 2025 D17)_. **Marketplace health premiums** belong to the 1040 (Forms 1095-A),
@@ -253,6 +254,7 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Tax year 2025 — the review
 - **Gate:** the P&L stands on the bank; the 1040 waits for the organizer he is filling in.
+- 🆕 **DRAFT 3 (2026-10-12): ONE file in Russian and ONE message now carry every question** — every deposit counted as income with our reason, what was not counted, payments to people, lines that may be business, costs the account does not show, Noma / Taras / Silvia, eBay September–October, and the Apple Card and personal-account statements (working paper §2.2, §6; O18–O21). The earlier plan, kept as the record:
 - **What only he can answer** (one message in simple Russian, see the working paper §6): fifty payments to people with no stated purpose (O2); whether any cash/check deposits or Zelle receipts were not customer payments (O3); the Nov–Dec Noma parts and Taras / Silvia — which LLC (O8) and parts on hand at year-end (O9); any other account, such as PayPal Business (O5); where Anton lives (O1). The car (miles split between the two LLCs) and the home office come through the organizer.
 - **The eBay report comes from HIM** (O4 — the firm's team access does not reach Payments; Lilian's message drafted 2026-10-12). **What the firm can get itself:** how and when Candramas LLC paid him (its books are the firm's — O12, needs Lilian or Julia to ask).
 - **Health coverage:** two 2025 Forms 1095-A are in his Double library (not opened) — Form 8962 will be needed on the 1040.
