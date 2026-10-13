@@ -134,6 +134,22 @@ so the decision gets made rather than inherited.
 
 ---
 
+## ➕ Not a logic defect — a question the organizer never asks: is the client a student?
+
+**Lilian, 2026-10-13:** the organizer never asks whether the person filling it in is a
+**(full-time) student**, so the firm has no way of knowing to ask for a **Form 1098-T** — and clients
+often do not know it matters, so they do not send it. In this organizer the 1098-T appears only as an
+option on `1742686`, *"Did YOU pay for any of the following?"* — the **non-required** chokepoint
+above, and framed around *paying*, which a student whose tuition someone else covered will not tick.
+⚠️ This file records the logic, not every slide's wording, so **confirm the absence against the full
+slide list when the organizer is rebuilt.**
+
+It is parked, with her review-and-improve pass and the organizer's **English and Russian versions**,
+as [`BACKLOG.md`](../../../../BACKLOG.md) **IDEA-19** — ⏰ **build it in the same rebuild as the
+defects above, and remind Lilian of IDEA-19 when that rebuild starts** (she asked to be reminded).
+
+---
+
 ## Fixing this is not a simple edit — read before promising anything
 
 Per the [`double-mcp`](../../double-mcp/references/capability-map.md) capability map:

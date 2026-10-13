@@ -70,6 +70,11 @@ are not duplicates of each other.
 > it, which is correct (it keeps the organizer short), but it means **one wrong answer at a
 > chokepoint silently removes everything downstream while the organizer still reports 100%
 > complete**. Fixing any of it is a Double-UI job, not an API one — the file says why.
+>
+> ⏰ **And before anyone reviews, rebuilds or improves the 1040 organizer, remind Lilian of
+> [`BACKLOG.md`](../../../BACKLOG.md) IDEA-19** (2026-10-13): her review-and-improve pass, an
+> **English and a Russian version**, and a question the organizer never asks — **whether the client
+> is a student** — without which the firm cannot know to ask for the **Form 1098-T**.
 
 > **The organizer's actual questions** — what we ask an individual client — are kept in
 > [`references/individual-organizer-questions.md`](./references/individual-organizer-questions.md).
