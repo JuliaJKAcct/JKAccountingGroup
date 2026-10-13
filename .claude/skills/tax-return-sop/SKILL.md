@@ -527,8 +527,9 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
     - **Propose only a payee or vendor that is ALREADY a business line on the business account**; everything else is a
       question for the client, never a deduction. **Nothing from a personal account is deducted until he confirms.**
     - 🛑 **A purchase and the deposit that funded it are ONE question.** A vehicle bought from the personal account
-      weeks after a company paid the same amount into it is either a sale (income and cost) or neither —
-      **deducting the purchase alone takes a cost off income nobody counted.**
+      weeks after a company paid the same amount into it: if it was a sale, BOTH are on the return (income and cost);
+      if the purchase was personal, the deposit is still its own income question. **Never deduct the purchase alone —
+      that takes a cost off income nobody counted.**
     - **Group trips by date window** (out-of-state fuel, hotels, flights) and ask once per trip; **name the account on
       every tab of the client's file** — two accounts in one file are confused otherwise *(Lilian, 2026-10-13: "que
       quede bien claro cuando es Bank of America o cuando es Wells Fargo")*.
