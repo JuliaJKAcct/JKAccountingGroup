@@ -59,7 +59,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | Role | Where to find them |
 |---|---|
 | Owner / primary contact for all ten companies | Double contact `567527` — **one portal contact is linked to all ten company records and to his own** (`hasClientAdminAccess`, tax + financial + files access) |
-| Related individuals with their own Double client records | **Veronika Vasiutyk** (`710664`) and **Vladyslav Vasiutyk** (`710670`) — same surname, separate records; **the relationship is not confirmed in writing.** What is established: the firm billed a 1040 for Veronika on a **Nika Realty** invoice (Sept 2025), and Vladyslav's 2025 return was e-signed 2026-04-02 |
+| Related individuals with their own Double client records | **Veronika Vasiutyk** (`710664`) and **Vladyslav Vasiutyk** (`710670`) — same surname, separate records; ✅ **his daughter and his son — the 2025 organizer lists both as dependants (read 2026-10-13); a third child, Anton, has no Double record of his own.** What is established: the firm billed a 1040 for Veronika on a **Nika Realty** invoice (Sept 2025), and Vladyslav's 2025 return was e-signed 2026-04-02 |
 | Partner in Zumfi 2 LLC — **and in Zumfi 1 and Fizum 1** — **Bahruz Naghiyev** | the same person is a partner in all three _(Lilian, from Vitaliy, 2026-09-07; named on the filed 2025 Zumfi 2 and Fizum 1 returns, read 2026-10-13)_; named in the 2025 organizer, and his details are already on the Zumfi 1 and Fizum 1 records — see §6 |
 | **Iryna Vasyutyk** — **his wife** _(established 2026-10-13: Double holds the couple's 2022, 2023 and 2024 Forms 1040 as joint returns titled "Vitaliy and Iryna"; the 2024 one was read that day)_. Also in Ping's contact index (2026-09-19), associated there with **NIKA REALTY LLC**; not in Double's contact list for that record | **Not a partner in any of the seven 2025 company returns read 2026-10-13**; Nika, SYS 1 and Zumfi 1's 2025 returns are not in Double, so those three are unchecked. Nika Realty's file library holds a "P&L … Iryna cash 2025" workbook and two personal-loan-agreement documents from Vitaliy to the company (filenames carry dollar amounts — not repeated here; see §6) |
 
@@ -142,14 +142,15 @@ Remodel Master and Fastighet. That was **not** verified on 2026-10-13 (Nika's 20
   **The 2025 Form 4868:** `Tax Return Filed / 2025`.
 - **His organizer is a TaxDome-generation PDF**, not a Double organizer: `TaxDome / Vitaliy Vasyutyk / 2. Completed
   organizers`. His uploads are in `TaxDome / … / Client uploaded documents / 2025`.
-- ⚠️ **`Client uploaded documents / ID documents` holds two scans the organizer names as his P&L, car agreement and
-  home-office template.** Check what they are before treating those three as received.
+- ⚠️ **`Client uploaded documents / ID documents` holds two scans — the organizer names ONE of them
+  (`scan_Mar-25-2026_21-24-53.pdf`) as his P&L, car agreement and home-office template; the other is unidentified.**
+  Check what they are before treating those three as received.
 - **The children's own returns** (prepared by the firm) and some of the family's documents are in **Julia's Drive**
   (TaxDome mirror), not in Double.
 
 **③ Household facts each preparation must settle first** _(session, 2026-10-13; Lilian confirms)_
-- **Filing status is re-established every year, never carried forward** — 2022–2024 were joint. The 2025 organizer
-  reopened it.
+- **Filing status is re-established every year, never carried forward** — 2022–2024 were joint; for 2025 it is being
+  confirmed with the client before preparing (working paper §2).
 - **Two of the three children file returns of their own, prepared by the firm.** Whether each is still a dependant is
   read off **their** return first (the *"someone can claim you"* box), before anyone asks him.
 - **One Marketplace policy (Oscar) covers the whole household.** If anyone on it is not in the tax family, Form 8962
@@ -300,9 +301,9 @@ A running, dated record as we build this profile.
   1095-A, the 2024 joint return (comparison base), the seven company returns in Double (partners only), Double notes
   (none), Gmail (TaxDome upload notices of 2026-04-02 and invoices only), Drive, Ping (no meetings). **Questions put
   (to send in simple Russian, under Lilian's name):** ① how things stood at home at year end and where the children
-  lived July–December; ② Vladyslav's own support — **only if his own return does not settle it**; ③ the 2025 estimated
-  payments, each date and amount (the organizer says yes and lists none); ④ whether the foreign account on the 2024
-  return is still open. **Internal:** upload the Nika, SYS 1 and Zumfi 1 2025 returns from ATX; Lilian's ask to open
+  lived; ② Vladyslav's own support — **only if his own return does not settle it**; ③ the 2025 estimated
+  payments, each date and amount (the organizer says yes and lists none); ④ a 2024 carryover item to confirm (working
+  paper §6 Q4). **Internal:** upload the Nika, SYS 1 and Zumfi 1 2025 returns from ATX; Lilian's ask to open
   Vladyslav's and Veronika's 2025 returns; read the W-2 scan (no text layer); confirm the 4868 was accepted; check the two
   scans in `ID documents`. Full list: [working paper](../../tax-returns/vitaliy-vasyutyk/2025-form-1040.md) §6.
 
@@ -352,7 +353,7 @@ reports for this client.
 - [x] **`Tax Return Type` for all ten companies** — **read from Double on 2026-09-07: nine × `1065`, and `1120-S` for Nika Realty** (§4 Income tax). ⓘ Written up first as seven unknowns; the pre-merge review caught that the field was set on every record and had simply not been read.
 - [ ] **EINs** for the ten companies (public on Sunbiz — and on the TN register for Zumfi 2 — and they may be written here).
 - [ ] **Why Zumfi 2 was formed in Tennessee** when the other nine are Florida, and whether it also owes a Florida foreign-LLC registration for the land it bought.
-- [ ] **How Veronika and Vladyslav Vasiutyk relate to Vitaliy** — surname and shared billing are not a stated relationship.
+- [x] **How Veronika and Vladyslav Vasiutyk relate to Vitaliy** — **his daughter and his son**, per his 2025 organizer (read 2026-10-13).
 - [x] **Whether any other company has a partner** — **yes: the same person is a partner in Zumfi 2, Zumfi 1 and Fizum 1** _(Lilian, from Vitaliy, 2026-09-07)_. **He is Bahruz Naghiyev** — named on the filed 2025 Zumfi 2 and Fizum 1 returns (read 2026-10-13).
 - [ ] Whether any company in the group has **sales tax or payroll** obligations. Nothing has ever been billed for either.
 - [x] Whether the firm holds a **Google Drive folder** for this group — **yes, established 2026-09-19**: at least three separate "Vitaliy Vasyutyk" folders under different Drive parents, plus a "Nika Realty" subfolder. Which is canonical is still open.
