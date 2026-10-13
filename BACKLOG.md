@@ -44,7 +44,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-16](#idea-16--redesign-the-business-tax-organizer-around-a-quickbooks-access-filter-question) | Redesign the Business Tax Organizer with a QuickBooks-access filter question up front, so clients we already have QuickBooks access to skip the transaction questions | [`tax-season-readiness`](./.claude/skills/tax-season-readiness/) skill + Double's live organizer template | Medium | Not started |
 | [IDEA-17](#idea-17--repair-the-1040-organizers-broken-conditional-logic) | Repair the **1040** organizer's conditional logic — seven income options lead nowhere and the rental branch is unreachable, so those clients are never asked for a document | [`tax-season-readiness`](./.claude/skills/tax-season-readiness/references/individual-organizer-logic-defects.md) + Double's live organizer template | **High** | Not started — defects audited 2026-08-11 on **one** client's organizer; confirm they repeat in a second one before planning the fix |
 | [IDEA-18](#idea-18--improved-home-office-deduction-template) | Improved **Home Office Deduction template** — a better version of the one the firm currently sends clients | Firm templates (Drive/Double) + the [`knowledge-hub`](./projects/knowledge-hub/) Templates band | Medium (proposed) | Not started — captured (Lilian, 2026-08-21) |
-| [IDEA-19](#idea-19--review-and-improve-the-1040-tax-organizer-in-english-and-russian) | Review and improve the **1040** tax organizer and ship it in **English and Russian** — it must gain a **student** question, so we know to ask for the **Form 1098-T** | [`tax-season-readiness`](./.claude/skills/tax-season-readiness/) + Double's live organizer template | Medium (proposed) | Not started — parked on purpose (Lilian, 2026-10-13). ⏰ **Remind her of it whenever the organizer is opened** |
+| [IDEA-19](#idea-19--review-and-improve-the-1040-tax-organizer-in-english-and-russian) | Review and improve the **1040** tax organizer and ship it in **English and Russian** — it must gain a **student** question, so we know to ask for the **Form 1098-T** | [`tax-season-readiness`](./.claude/skills/tax-season-readiness/) + Double's live organizer template | **High** (Lilian: *"muy importante"*) | Not started — parked on purpose (Lilian, 2026-10-13); the *how* is deferred to her. ⏰ **Remind her of it whenever the organizer is opened** |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -974,7 +974,12 @@ por tanto, no tenemos forma de saber si la persona lo es o no. No podemos pedirl
   and any client can skip the slide entirely. ⚠️ The audit recorded the logic, not every slide's
   wording — **confirm the absence against the full slide list at step 0.**
 
-**Design points for the build — for Lilian to decide, NOT decided:**
+**Design points for the build — DEFERRED BY LILIAN, NOT decided.** Her ruling, 2026-10-13, the same
+day: *"El cómo lo vamos a hacer lo decidimos luego cuando estemos preparando los análisis. Eso lo
+quiero que recuerdes para que no se nos pase por alto, porque es muy importante."* ⛔ **So no session
+settles any of the points below on its own, and none of them is a reason to start early** — they
+are the agenda for that later conversation, to be put to her when the work is picked up. What must
+not slip is the item itself: **the organizer has no student question, and the 1098-T goes unasked.**
 
 - **"Full-time" may be narrower than the credits it feeds.** As generally understood, the
   American Opportunity Credit needs the student enrolled **at least half-time**, and the Lifetime
@@ -1005,7 +1010,7 @@ Sibling of [IDEA-16](#idea-16--redesign-the-business-tax-organizer-around-a-quic
 (never the responses — [`double-mcp`](./.claude/skills/double-mcp/) §2.2) and confirm where the
 1098-T and student status appear today; (1) settle **where new organizers are created from** — the
 same unknown blocking IDEA-16 and IDEA-17; (2) Lilian's improvement list, starting with the student
-question; (3) settle what *"an English and a Russian version"* means in Double — two organizers, a
+question, and her decisions on the deferred design points above; (3) settle what *"an English and a Russian version"* means in Double — two organizers, a
 client receiving the one in their language, or one bilingual organizer — and whether the
 **business** organizer gets the same treatment (not asked yet); (4) who reviews the Russian text
 before it ships. Form and system names (`Form 1098-T`, `W-2`) stay in English inside the Russian,
@@ -1016,7 +1021,8 @@ as in the firm's other Russian client material.
 and logic are editable **only on a draft**, `update_organizer` deletes by omission, and publishing
 is not exposed to the API. The API can author a draft; a person ships it in the Double UI.
 
-**Priority:** Medium (proposed — the student question itself she called *"muy importante"*) ·
+**Priority:** **High** — Lilian called it *"muy importante"* twice on 2026-10-13, the second time
+asking that it not be overlooked ·
 **Status:** Not started — parked on purpose (Lilian, 2026-10-13); **a reminder is owed to her the
 moment the organizer is opened.**
 
