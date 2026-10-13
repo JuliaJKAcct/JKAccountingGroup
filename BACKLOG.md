@@ -973,6 +973,11 @@ por tanto, no tenemos forma de saber si la persona lo es o no. No podemos pedirl
   whose tuition was covered by a scholarship, an employer or a parent has no reason to tick it,
   and any client can skip the slide entirely. ⚠️ The audit recorded the logic, not every slide's
   wording — **confirm the absence against the full slide list at step 0.**
+- ✅ 🆕 **2026-10-13 — a full slide list WAS read, on a second client's 1040 organizer (`140670`, structure
+  only):** **no question asks whether the TAXPAYER is a student**, and the 1098-T is reachable only through the
+  *Tuition* option of the non-required *"Did YOU pay…"* slide. ⚠️ **One student question does exist — about a
+  DEPENDANT aged 19–23 — and no client can see it:** it sits on a hidden slide no rule reveals (logic-defects audit,
+  **Defect 8**). **Both belong in this rebuild.**
 
 **Design points for the build — DEFERRED BY LILIAN, NOT decided.** Her ruling, 2026-10-13, the same
 day: *"El cómo lo vamos a hacer lo decidimos luego cuando estemos preparando los análisis. Eso lo

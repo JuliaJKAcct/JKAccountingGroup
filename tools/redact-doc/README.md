@@ -10,6 +10,15 @@ here — it is automated.**
 python3 tools/redact-doc/redact.py "<url-or-path>" /path/to/scratchpad/redacted.txt
 ```
 
+**From Google Drive** _(the route used 2026-10-13, Kuznetsov 2025 review — four bank statements in Julia's Drive)_: the
+Drive connector has no download link, only `download_file_content`, which returns the file **base64-encoded inside a
+JSON result**. A statement-sized PDF is far over the result limit, so the harness **writes the result to a file**
+(`…/tool-results/mcp-Google_Drive-download_file_content-<n>.txt`) and only the path enters the conversation. Then, in
+the scratchpad: decode `content` to a PDF in its own directory (`python3 -I`), run this tool on the **local path**, and
+**delete both the PDF and the spilled JSON** in the same command. ⚠️ **Two cautions:** a *small* file (a one-page
+form) may come back **inline**, putting its base64 into the transcript — encoded, not readable, but still the
+document; and **never** use `read_file_content` on a client document — it prints the text with no masking at all.
+
 ## The one property that matters
 
 **This tool never prints the document's text.** It writes the redacted text to a file and
