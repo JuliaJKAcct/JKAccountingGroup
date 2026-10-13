@@ -12,6 +12,17 @@
 > these organizers appear to be cloned from a common starting point, but nobody has checked a
 > second one. **Before a fix is planned around this list, read one more client's 1040 organizer
 > and record whether it matches.**
+>
+> ✅ **A SECOND ORGANIZER WAS READ ON 2026-10-13 — and Defects 1–7 are ALL in it.** `JK 2025 1040 Organizer`
+> (organizer `140670`, a different client, structure read with `get_organizer` during that client's phase 1 —
+> **structure only; nothing from the answers is used here**) carries its **own slide and rule IDs** (`17136xx`,
+> rules `1864xx` — a separate copy, not the same object) and **every defect above reproduces in it**: the seven dead
+> income options, the unreachable rental yes/no, the `"Income from banks (1099-INT or other)"` condition against an
+> `"Interest (1099-INT)"` option, the rental slide headed *"Foreign Income template"*, no Widowed option and an empty
+> *"Qualifying surviving spouse"* rule, alimony received only, and both housekeeping oddities. Both chokepoints
+> (`Did YOU pay…` and the tax-year dropdown) are `required: false` there too. 🔑 **So "assumed shared" is now
+> corroborated by two copies** — still not proof of where new organizers come from, but the fix will have to be
+> made in whatever both were cloned from. ⚠️ **That read also found Defect 8 below — verified in `140670` only.**
 
 Lilian asked for this after the organizer-review pilot surfaced the first defect
 ("Necesito que me ayudes con eso también"). Every finding below is derived from the payload,
@@ -132,6 +143,25 @@ so the decision gets made rather than inherited.
   `192307` regardless, so nothing is broken; the rule is just unclear and should be removed or
   given a real condition.
 
+## 🔴 Defect 8 — two dependant slides are unreachable: childcare, and the dependant documentation (with the student question)
+
+_(Found 2026-10-13 in organizer `140670`; **not yet checked in `146070`**.)_
+
+- Slide `1713690` — *"Did you pay for childcare or dependent care services during the year?"* — is **`hidden: true`
+  and `required: true`, and no rule reveals it.** Rule `186490` (*"Dependent info"*) is wired **from** it
+  (`1713690 = yes` → show `1713691`, *"Upload childcare tuition statements"*), but the trigger never fires. **So the
+  childcare statements — the provider's name, address and taxpayer number that Form 2441 needs — are never requested
+  from anyone.** What survives is the **"Amount paid for CHILDCARE"** column in the dependant table (`1713693`), so a
+  client can report an amount and still never be asked who was paid.
+- Slide `1713695` — *"General dependent information"* — is also **hidden with no rule revealing it**. It carries the
+  three questions on **what documentation proves the relationship and the months lived together**, and **the only
+  student question in the organizer: a child aged 19–23 who was a full-time student for more than five months.** 🔑 **So
+  the student question this file's ➕ section says the organizer "never asks" does exist — about a dependant, and
+  unreachable.** The ➕ section's point about the **taxpayer** being a student stands.
+
+The likely intent: `1713686 = yes` (has dependants) → show `1713690` and `1713695`, the way it already shows
+`1713693`, `1713689`, `1713696` and `1713700`. **Two missing links in one rule.**
+
 ---
 
 ## ➕ Not a logic defect — a question the organizer never asks: is the client a student?
@@ -185,6 +215,7 @@ convenience, not the route.
 4. **Defect 5** — add Widowed, and build or delete rule `192299`.
 5. **Defect 6** — a decision, not a repair.
 6. **Defect 7** — tidy while the logic is already open.
+7. **Defect 8** — two links added to rule `186490`'s equivalent in the template; small, and it restores the Form 2441 provider request and the dependant-student question.
 
 ## Re-run this audit when…
 

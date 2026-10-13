@@ -240,6 +240,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | Kolo Florida Inc | 706626 |
 | Pro Title Agency | 706716 |
 | NEVER GIVE UP KK LLC | 742803 |
+| Kyrylo Kuznetsov (individual) | 710641 |
 | YES TEAM CORP | 706718 |
 | MASCIAVE DESIGN STUDIO LLC | 706696 |
 | iKids Group LLC | 706689 |
