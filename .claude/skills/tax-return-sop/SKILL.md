@@ -533,6 +533,14 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
     - **Group trips by date window** (out-of-state fuel, hotels, flights) and ask once per trip; **name the account on
       every tab of the client's file** — two accounts in one file are confused otherwise *(Lilian, 2026-10-13: "que
       quede bien claro cuando es Bank of America o cuando es Wells Fargo")*.
+    - 🆕 **Fuel: lay the two accounts side by side, month by month** *(Piliushin 2025 §2.6a — Lilian asked whether the
+      personal account also held business fuel)*. When the business account opens late, the business's fuel sits on the
+      personal card until it does, and the hand-off shows (the same stations, one account fading as the other starts).
+      🔑 **Then say what it changes before anyone hunts further: under the standard mileage rate, NO fuel is deducted
+      from either account** — the rate replaces it; the fuel is evidence for the miles. Under actual costs it is the
+      car's fuel from every account × the business share. **Fuel put into a car bought for resale is that car's cost**
+      — the one part that counts whatever the method. ⚠️ **Test trip windows by date, not by state** — an in-state fill
+      on the drive home *(Marshall, TX)* was misfiled as car fuel.
 
 #### ⑥ 📊 HER TWO TEMPLATES — fill a copy, and fix the known defects in the copy
 
