@@ -536,11 +536,18 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
     - 🆕 **Fuel: lay the two accounts side by side, month by month** *(Piliushin 2025 §2.6a — Lilian asked whether the
       personal account also held business fuel)*. When the business account opens late, the business's fuel sits on the
       personal card until it does, and the hand-off shows (the same stations, one account fading as the other starts).
-      🔑 **Then say what it changes before anyone hunts further: under the standard mileage rate, NO fuel is deducted
-      from either account** — the rate replaces it; the fuel is evidence for the miles. Under actual costs it is the
-      car's fuel from every account × the business share. **Fuel put into a car bought for resale is that car's cost**
-      — the one part that counts whatever the method. ⚠️ **Test trip windows by date, not by state** — an in-state fill
-      on the drive home *(Marshall, TX)* was misfiled as car fuel.
+      🔑 **Then say what it changes, by METHOD:** on the standard mileage rate **no fuel is deducted from any account**
+      (Pub. 463: *"you can't deduct … gasoline"*); under actual costs it is **that car's fuel from every account ×
+      business miles ÷ total miles**. ⛔ **Never call the method a free choice** — for an owned car it is fixed in the
+      car's first business year (irrevocable; barred for good after MACRS, §179 or bonus on it), and the standard rate
+      closes for every car if five or more were driven for the business at once (a dealer's stock cars are a question
+      of fact). Where both are open, **figure both** — and the fuel from both accounts is the input. **The fuel checks
+      the plausibility of the total miles; it never proves business miles** (the mileage record does). **Fuel put into a
+      car bought for resale is that car's cost — Part III, never line 9** (Reg. §1.471-3(b), freight-in). ⚠️ **Test trip
+      windows by date, not by state** — an in-state fill on the drive home *(Marshall, TX)* was misfiled as car fuel.
+      *(Rules verified 2026-10-13 against Pub. 463 (2025), Rev. Proc. 2019-46, Notice 2025-5, Pub. 334 and the 2025
+      Schedule C instructions — the first answer had called the method a free choice, and had not said that inventory
+      fuel is cost of goods sold, recovered when the car sells.)*
 
 #### ⑥ 📊 HER TWO TEMPLATES — fill a copy, and fix the known defects in the copy
 
