@@ -160,7 +160,7 @@ Remodel Master and Fastighet. That was **not** verified on 2026-10-13 (Nika's 20
 - **Carryovers into 2025:** a **QBI loss carryforward** (Form 8995 line 3) and **Nika's beginning stock basis** (Form
   7203 line 1) — both figures in the working paper §1C. **No NOL** (2024's Form 172 computed zero).
 
-**④ Gig driving (Uber, Lyft, DoorDash) — how it is treated** _(session, 2026-10-13, from the 2025 Instructions for Form 1040; Lilian confirms)_
+**④ Gig driving (Uber, Lyft, DoorDash) — how it is treated** _(session, 2026-10-13, from the 2025 Instructions for Form 1040; pending Lilian's confirmation)_
 - **Tips:** the source is **Uber's annual Tax Summary, Table 3 (`Tips`)** — the 1099-K includes them in box 1a and does
   not separate them, and the IRS's own 2025 example lets a rideshare driver use the app's earnings statement. **They stay
   in Schedule C gross receipts** (SE tax applies) and are deducted separately on **Schedule 1-A Part II** → Form 1040
