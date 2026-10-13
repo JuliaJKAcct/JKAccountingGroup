@@ -160,6 +160,16 @@ Remodel Master and Fastighet. That was **not** verified on 2026-10-13 (Nika's 20
 - **Carryovers into 2025:** a **QBI loss carryforward** (Form 8995 line 3) and **Nika's beginning stock basis** (Form
   7203 line 1) — both figures in the working paper §1C. **No NOL** (2024's Form 172 computed zero).
 
+**④ Gig driving (Uber, Lyft, DoorDash) — how it is treated** _(session, 2026-10-13, from the 2025 Instructions for Form 1040; pending Lilian's confirmation)_
+- **Tips:** the source is **Uber's annual Tax Summary, Table 3 (`Tips`)** — the 1099-K includes them in box 1a and does
+  not separate them, and the IRS's own 2025 example lets a rideshare driver use the app's earnings statement. **They stay
+  in Schedule C gross receipts** (SE tax applies) and are deducted separately on **Schedule 1-A Part II** → Form 1040
+  line 13b, **limited to the gig business's net income**, and **not available to a married person filing separately**.
+  Rideshare (TTOC 802) and app delivery (TTOC 804) are listed tipped occupations. **Tips from a platform count only if
+  they are inside a 1099 from that platform.** Figures: working paper §1E–§1F.
+- **The car:** the client's own P&L deducts **actual** costs, while the organizer asks for **miles** — the method is a
+  decision, not something to copy from his P&L. Check what the prior year used for the same car first.
+
 
 ### Licenses & other filings
 - **Applies?** Yes — this is the bulk of the work.
