@@ -978,8 +978,13 @@ por tanto, no tenemos forma de saber si la persona lo es o no. No podemos pedirl
 day: *"El cómo lo vamos a hacer lo decidimos luego cuando estemos preparando los análisis. Eso lo
 quiero que recuerdes para que no se nos pase por alto, porque es muy importante."* ⛔ **So no session
 settles any of the points below on its own, and none of them is a reason to start early** — they
-are the agenda for that later conversation, to be put to her when the work is picked up. What must
-not slip is the item itself: **the organizer has no student question, and the 1098-T goes unasked.**
+are the agenda for that later conversation, at the moment she named: *"cuando estemos preparando los
+análisis"*. ❓ **Which analyses she meant is NOT settled** — the organizer rebuild itself, or the
+pre-return analyses of tax season ([`organizer-review`](./.claude/skills/organizer-review/)), which
+is a different moment. It was put to her on 2026-10-13; **until she answers, the reminder fires only
+where the organizer is opened** (the pointers listed above), and no session wires one into
+`organizer-review` on a guess. Whatever her *"Eso"* refers to, the gap behind it stands: **the
+organizer has no student question, and the 1098-T goes unasked.**
 
 - **"Full-time" may be narrower than the credits it feeds.** As generally understood, the
   American Opportunity Credit needs the student enrolled **at least half-time**, and the Lifetime
