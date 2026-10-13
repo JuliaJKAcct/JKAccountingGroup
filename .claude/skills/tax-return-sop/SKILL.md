@@ -538,16 +538,21 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
       personal card until it does, and the hand-off shows (the same stations, one account fading as the other starts).
       🔑 **Then say what it changes, by METHOD:** on the standard mileage rate **no fuel is deducted from any account**
       (Pub. 463: *"you can't deduct … gasoline"*); under actual costs it is **that car's fuel from every account ×
-      business miles ÷ total miles**. ⛔ **Never call the method a free choice** — for an owned car it is fixed in the
-      car's first business year (irrevocable; barred for good after MACRS, §179 or bonus on it), and the standard rate
-      closes for every car if five or more were driven for the business at once (a dealer's stock cars are a question
-      of fact). Where both are open, **figure both** — and the fuel from both accounts is the input. **The fuel checks
+      business miles ÷ total miles**. ⛔ **Never call the method a free choice — and never call it fixed either.** For an
+      owned car the standard rate is open only if chosen in the car's FIRST business year, **on that year's return filed
+      by its due date including extensions** (Pub. 463; a §168(f)(1) election). A first year on the standard rate leaves
+      both methods open later (actual costs then with straight-line depreciation); a first year on actual costs, or
+      MACRS, §179 or bonus on the car, closes the standard rate for good; and it closes for every car if five or more
+      were driven for the business at once (a dealer's stock cars are a question of fact). ⚠️ **A non-filer's first
+      year may be a past-due return — the standard rate may already be gone; that is the signer's decision.** Where both are open, **figure both** — and the fuel from both accounts is the input. **The fuel checks
       the plausibility of the total miles; it never proves business miles** (the mileage record does). **Fuel put into a
-      car bought for resale is that car's cost — Part III, never line 9** (Reg. §1.471-3(b), freight-in). ⚠️ **Test trip
+      car bought for resale is that car's cost — Part III, never line 9** (Reg. §1.471-3(b), freight-in); **fuel and
+      service on a business trip in his own car follow that car's method — never line 24a** (Pub. 463 Table 1-1). ⚠️ **Test trip
       windows by date, not by state** — an in-state fill on the drive home *(Marshall, TX)* was misfiled as car fuel.
       *(Rules verified 2026-10-13 against Pub. 463 (2025), Rev. Proc. 2019-46, Notice 2025-5, Pub. 334 and the 2025
       Schedule C instructions — the first answer had called the method a free choice, and had not said that inventory
-      fuel is cost of goods sold, recovered when the car sells.)*
+      fuel is cost of goods sold, recovered when the car sells; review then caught that the rule binds one way only and
+      has a filing deadline.)*
 
 #### ⑥ 📊 HER TWO TEMPLATES — fill a copy, and fix the known defects in the copy
 
