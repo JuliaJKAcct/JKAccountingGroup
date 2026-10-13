@@ -5,6 +5,10 @@
 > 🔵 **2026-10-13 — LILIAN IS PREPARING HIS 2025 FORM 1040.** It should carry **seven K-1s** *(two open checks — playbook)*; three of his companies
 > issue theirs to **Nika Realty**, not to him (§4 → *Tax-preparation playbook*). A `2025 4868 Ext.pdf` is in his
 > Double library, so the return is likely due **2026-10-15** — acceptance not verified.
+> ⛔ **PHASE 1 (the review) ran 2026-10-13 and the gate is CLOSED: the return cannot be prepared until the 2025
+> FILING STATUS and the DEPENDANTS are settled** — the answers move the premium-tax-credit reconciliation, the EIC,
+> the child credits and which income belongs on the return. Questions and figures: the
+> [working paper](../../tax-returns/vitaliy-vasyutyk/2025-form-1040.md) §2 and §6.
 
 > 🔴 **2026-09-26 SWEEP: THE OWNER'S OWN 2025 FORM 1040 IS STILL `Not Started`**, one week after the
 > 2026-09-19 finding, while all nine of his companies' 2025 returns remain `Filed`. No email,
@@ -133,6 +137,28 @@ SYS 1, Tropical Coast 1) plus the three companies formed in 2025 that he holds d
 ⚠️ **The tiering is also a check on Nika's own return:** Nika's 1120-S must pick up the K-1s it received from 2 Romans,
 Remodel Master and Fastighet. That was **not** verified on 2026-10-13 (Nika's 2025 filed copy is not in Double).
 
+**② Where everything is** _(read 2026-10-13)_
+- **Prior returns (joint, Vitaliy and Iryna, 2022–2024):** Double › `JK Accounting Group / Tax Return Filed / <year>`.
+  **The 2025 Form 4868:** `Tax Return Filed / 2025`.
+- **His organizer is a TaxDome-generation PDF**, not a Double organizer: `TaxDome / Vitaliy Vasyutyk / 2. Completed
+  organizers`. His uploads are in `TaxDome / … / Client uploaded documents / 2025`.
+- ⚠️ **`Client uploaded documents / ID documents` holds two scans the organizer names as his P&L, car agreement and
+  home-office template.** Check what they are before treating those three as received.
+- **The children's own returns** (prepared by the firm) and some of the family's documents are in **Julia's Drive**
+  (TaxDome mirror), not in Double.
+
+**③ Household facts each preparation must settle first** _(session, 2026-10-13; Lilian confirms)_
+- **Filing status is re-established every year, never carried forward** — 2022–2024 were joint. The 2025 organizer
+  reopened it.
+- **Two of the three children file returns of their own, prepared by the firm.** Whether each is still a dependant is
+  read off **their** return first (the *"someone can claim you"* box), before anyone asks him.
+- **One Marketplace policy (Oscar) covers the whole household.** If anyone on it is not in the tax family, Form 8962
+  needs a **shared-policy allocation**.
+- **The spouse is the children's carer** — so there is **no dependent-care credit**, whatever amounts the organizer
+  shows for childcare.
+- **Carryovers into 2025:** a **QBI loss carryforward** (Form 8995 line 3) and **Nika's beginning stock basis** (Form
+  7203 line 1) — both figures in the working paper §1C. **No NOL** (2024's Form 172 computed zero).
+
 
 ### Licenses & other filings
 - **Applies?** Yes — this is the bulk of the work.
@@ -177,6 +203,8 @@ watch-outs, one-off arrangements, history that affects the work.
 
 ### Log
 A running, dated record as we build this profile.
+
+- _(2026-10-13, later)_ — **Phase 1 of his 2025 Form 1040, at Lilian's request — verdict ⛔ not until the filing status and the dependants are settled** (§6 *Tax year 2025 — the review*). Also learned: **Iryna works as a cashier (W-2 likely) and babysits (cash; a Schedule C in 2024)**; **Vitaliy drove for Uber, Lyft and DoorDash and has a new real-estate activity in 2025**; the household's Marketplace policy is **Oscar**, covering all five; Vladyslav has a W-2 of his own (Euroland 3 LLC) and **Veronika and Vladyslav each filed a 2025 return prepared by the firm**. ⚠️ **During the read, the redactor let a street line, the preparer's PTIN and two Form 8995 TINs through to the session's own output** (known gaps — FOLLOW-UPS rows 82 and 111); **nothing was written anywhere**, and the session is to be deleted. _(Double, Drive, Gmail, Ping; the documents named in the working paper §1.)_
 
 - _(2026-10-13)_ — **Lilian, preparing his 2025 Form 1040, asked which of his companies should have issued him a K-1 for 2025.** At her request the session opened, through `tools/redact-doc/` (identifiers masked, text never printed, files deleted afterwards): the couple's **2024 joint Form 1040** (owner's record › `Tax Return Filed/2024`), the **filed 2025 returns of seven companies** (2 Romans, Sunshine Renovations 1, Remodel Master, Fastighet, Tropical Coast 1, Fizum 1, Zumfi 2 — each in its own record › `Tax Return Filed/2025`) and Nika's 2024 1120-S, which came through **only partially** (5 pages, no EIN read) and was **not relied on**. **Answer: seven K-1s — Nika (1120-S) plus Sunshine, SYS 1, Tropical Coast 1, Zumfi 1, Fizum 1 and Zumfi 2 (1065)**; 2 Romans, Remodel Master and Fastighet issue theirs to **Nika Realty LLC** (§4 playbook, §5). Cross-check: the 2024 Schedule E page 2 Part II lists exactly four entities — Nika (`S`), Sunshine, SYS 1 and Tropical Coast 1 (`P`) — and neither 2 Romans nor Remodel Master, consistent with Nika holding them already in 2024. ⚠️ **Not in Double, so not read:** the 2025 filed returns of **Nika Realty, SYS 1 Realty and Zumfi 1** (SYS 1's project shows `Filed` 2026-09-13 in the activity log; none of the three has a 2025 return PDF in its library). The Zumfi 1 split (30/70) comes from the client via Julia, 2026-09-13, **recorded only on the unmerged branch `claude/determined-galileo-t04t7p`** — that branch carries a whole day of Zumfi 1 findings that never reached `main`. 🔵 **Also found: `2025 4868 Ext.pdf` is in the owner's own file library** (uploaded 2026-06-02 with the TaxDome migration) — so an extension for his 2025 1040 appears to exist, which puts its due date at **2026-10-15**; the file was not opened and **acceptance is not verified**. Gmail since 2026-10-09: nothing new about the group. _(Double, the returns named above, Gmail; session of 2026-10-13, Lilian.)_
 
@@ -267,13 +295,23 @@ A running, dated record as we build this profile.
 - 🔴 **CLOSED for the nine companies, established 2026-09-19: all nine 2025 company returns are `Filed`** (dates in §4 Income tax above). The internal status trail (Gmail, 09-10 → 09-13) shows the last two hold-ups — Fastighet's missing P&L and Tropical Coast 1's missing P&L/organizer — cleared between 09-13 and the 09-15/09-16 filings. **NOT closed:** the owner's own 2025 1040 (`Not Started`, §4) and Zumfi 2 (tracked in its own file, not filed as of that file's last update).
 - 🔴 **RECONFIRMED 2026-09-26 — the owner's own 2025 1040 is STILL `Not Started`.** Unchanged across
   two consecutive weekly sweeps; no extension evidence found either week. See §6 log entry.
+- 🔴 **THE OWNER'S 1040 — PHASE 1 RAN 2026-10-13 (Lilian asked for his organizer to be reviewed for the return):
+  ⛔ NOT UNTIL the filing status and the dependants are settled.** Sources read: his TaxDome 2025 organizer, the Oscar
+  1095-A, the 2024 joint return (comparison base), the seven company returns in Double (partners only), Double notes
+  (none), Gmail (TaxDome upload notices of 2026-04-02 and invoices only), Drive, Ping (no meetings). **Questions put
+  (to send in simple Russian, under Lilian's name):** ① how things stood at home at year end and where the children
+  lived July–December; ② Vladyslav's own support — **only if his own return does not settle it**; ③ the 2025 estimated
+  payments, each date and amount (the organizer says yes and lists none); ④ whether the foreign account on the 2024
+  return is still open. **Internal:** upload the Nika, SYS 1 and Zumfi 1 2025 returns from ATX; Lilian's ask to open
+  Vladyslav's and Veronika's 2025 returns; read the W-2 scan (no text layer); confirm the 4868 was accepted; check the two
+  scans in `ID documents`. Full list: [working paper](../../tax-returns/vitaliy-vasyutyk/2025-form-1040.md) §6.
 
 ### Outstanding items (CI-only — never in the SOP)
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- 🔴 **The owner's OWN 2025 Form 1040 is `Not Started`** in Double, while all nine of his companies' 2025 returns are now filed (first found 2026-09-19). The project's `dueDate` field shows 2026-04-15 (157 days past as of 2026-09-19) — but that field is known elsewhere in this repo to not reliably reflect an actual extended deadline, so whether an extension was filed is an **open question**, not an established lateness. No email or activity-log trace of an extension was found on 2026-09-19.
+- 🔴 **The owner's OWN 2025 Form 1040 — 🆕 2026-10-13: Lilian is preparing it, and phase 1 CLOSED THE GATE: the filing status and the dependants must be settled first; due 2026-10-15 if the extension was accepted** (questions and internal checks: [working paper](../../tax-returns/vitaliy-vasyutyk/2025-form-1040.md) §6). _History:_ it read `Not Started` in Double while all nine of his companies' 2025 returns were filed (first found 2026-09-19). The project's `dueDate` field shows 2026-04-15 (157 days past as of 2026-09-19) — but that field is known elsewhere in this repo to not reliably reflect an actual extended deadline, so whether an extension was filed is an **open question**, not an established lateness. No email or activity-log trace of an extension was found on 2026-09-19.
   🔄 **CHASED 2026-09-26 — STILL `Not Started`, now 164 days past the on-file (possibly stale) due
   date.** Second consecutive weekly sweep with zero movement — no extension evidence, no activity,
   no email, no Ping meeting. **This is now the group's single largest open item.**
