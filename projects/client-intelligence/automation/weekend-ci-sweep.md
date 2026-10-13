@@ -241,6 +241,9 @@ was said). Better a sourced, low-confidence note than nothing.
 | Pro Title Agency | 706716 |
 | NEVER GIVE UP KK LLC | 742803 |
 | Kyrylo Kuznetsov (individual) | 710641 |
+| BOOST YOU LLC | 710568 |
+| GOSHAKES LLC | 710576 |
+| THE ROADSIDE PROJECT LLC | 710602 |
 | YES TEAM CORP | 706718 |
 | MASCIAVE DESIGN STUDIO LLC | 706696 |
 | iKids Group LLC | 706689 |

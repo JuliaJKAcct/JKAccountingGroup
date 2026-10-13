@@ -109,9 +109,9 @@ the actual details.
 ### Outstanding items (CI-only — never in the SOP)
 - 🔴 **The 2025 Schedule C for this company has never been prepared** — the firm's books start June 2026, but the company was active from September 2025 (its 2025 statements are in the Drive folder). It goes on the **owner's 2025 Form 1040** — open there: what the two October 2025 wires paid for, and whose the October cash deposit was. _(2026-10-13 — [`kyrylo-kuznetsov.md`](./kyrylo-kuznetsov.md))_
 - **Entity-structure recommendation** (LLC vs S-corp vs C-corp) — Julia to deliver. STILL OPEN, **88 days** pending since the 2026-07-14 meeting (as of 2026-10-10), no deadline recorded. _(Double note 2026-07-14; checked 2026-10-10)_
-- 🟢 **Sales-tax nexus / registration analysis** — **likely resolved 2026-09-02** (Double property changed N/A → Quarterly, recurring task created), still **not corroborated** by any note or correspondence explaining the decision or jurisdiction after a THIRD sweep (2026-09-12, 2026-09-19 and 2026-09-26) searched for one. See §4. _(Double, checked 2026-09-26)_
 - **BOI report** to be filed. STILL OPEN, **88 days** since 2026-07-14 (as of 2026-10-10), no update, no deadline recorded — worth Lilian/Julia confirming the actual FinCEN due date given the entity's formation date. _(Double note 2026-07-14; checked 2026-09-26)_
 - **Business-licensing / export-control** (ITAR/EAR) determination for the optics trade. Not chased this run (budget; requires legal research, not a records search). _(Gmail)_
+- 🟢 **Sales-tax nexus / registration analysis** — **likely resolved 2026-09-02** (Double property changed N/A → Quarterly, recurring task created), still **not corroborated** by any note or correspondence explaining the decision or jurisdiction after a THIRD sweep (2026-09-12, 2026-09-19 and 2026-09-26) searched for one. See §4. _(Double, checked 2026-09-26)_
 - Client **document upload** requested for tax review; **payroll provider** shortlist for the future; **vehicle-into-company** decision pending advice.
 
 ### Information still needed
@@ -122,5 +122,5 @@ the actual details.
 
 - **Double client:** [app.doublehq.com/close?cid=742803](https://app.doublehq.com/close?cid=742803)
 - **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/1Xy9x6ClYVmjZ207i4YwTUf-NJKuojbeY)
-- **Related clients:** [Kyrylo Kuznetsov](./kyrylo-kuznetsov.md) (the owner — his 1040 carries this company's Schedule C) · [Deep Tech Development Group](./deep-tech-development.md)
+- **Related clients:** [`kyrylo-kuznetsov.md`](./kyrylo-kuznetsov.md) (the owner — his 1040 carries this company's Schedule C) · [`boost-you.md`](./boost-you.md) · [`goshakes.md`](./goshakes.md) · [`the-roadside-project.md`](./the-roadside-project.md) (the owner's three partnerships) · [Deep Tech Development Group](./deep-tech-development.md) (the owner's employer from late 2025 — not an owner-group link)
 - **Related SOPs:** _(pending — links into ../sops/ once written)_

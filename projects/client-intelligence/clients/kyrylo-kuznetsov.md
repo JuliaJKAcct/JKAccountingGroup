@@ -5,8 +5,9 @@
 > 🔴 **2026-10-13 — PHASE 1 OF HIS 2025 FORM 1040 RAN, AND THE GATE IS CLOSED.** The organizer (completed that morning)
 > reports **wages only**, but his own note, his bank statements and the firm's records show **cash deposits and "small
 > side jobs" with no 1099s**, a **second W-2 (Deep Tech, from November)**, **three partnership K-1s** the firm itself
-> prepared, and **2025 activity in Never Give Up KK LLC**. Whether **Viktoriia already filed on her own** decides the
-> filing status. ⚠️ **If the extension holds, the return is due 2026-10-15.** Questions, figures and the full review:
+> prepared, and **2025 activity in Never Give Up KK LLC**. The **filing status** is open — whether and how **Viktoriia**
+> has already filed; ⓘ **a separate return of hers would not lock him into filing separately** (a joint return can
+> still replace it). ⚠️ **If the extension holds, the return is due 2026-10-15.** Questions, figures and the full review:
 > the [working paper](../../tax-returns/kyrylo-kuznetsov/2025-form-1040.md) §2 and §6.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
@@ -118,10 +119,11 @@ the actual details (and Claude can pull them live when a task needs them).
   taxed as a C corporation** (VIKTORIIA KUZNIETSOVA LLC, EIN 33-2923874, formed 2025-01-10 — Form 1120, **no officer
   compensation**) and her **professional association is an S corporation formed 2025-11-17** (KUZNIETSOVA VIKTORIIA PA,
   EIN 41-3034101 — a zero year in 2025); both 2025 returns were prepared by another firm and signed 2026-03-08. **Whether
-  she has already filed a personal 2025 return decides joint vs separate** — and separate generally loses the premium
-  tax credit, the EIC and the dependent-care credit. **Julia owes a filing-status recommendation (from 2026-06-23).**
-- 🟢 **His "EV" is a LEASE** — a 2024 Volkswagen ID.4 leased **2024-07-15**, the 7,500 credit already taken by the lessor
-  as a price reduction. **No clean-vehicle credit, any year.** ⚠️ He has talked (2025-10-31, 2026-06-23) about selling or
+  she has already filed a personal 2025 return, and on what status, is unknown** — ⓘ **a separate return does NOT lock
+  them into separate filing: a joint return can still replace it** (§6013(b), generally within three years of the
+  original due date). Staying separate generally loses the premium tax credit, the EIC and the dependent-care credit. **Julia owes a filing-status recommendation (from 2026-06-23).**
+- 🟢 **His "EV" is a LEASE** — a 2024 Volkswagen ID.4 leased **2024-07-15**; the lessor already applied the clean-vehicle
+  credit as a price reduction (figures in the working paper §1G). **No clean-vehicle credit, any year.** ⚠️ He has talked (2025-10-31, 2026-06-23) about selling or
   transferring "his car" to a company — a leased car is not his to sell without a buyout; raise it if it comes up.
 - **Employer reimbursements are not income, and he documents them.** United Equity reimbursed him by Zelle with memos
   ("REIMBURSEMENT", "BUSINESS TRIP", "PERMITS"); Deep Tech by bank transfer, with receipts in Deep Tech's Drive folders
@@ -162,8 +164,9 @@ the actual details (and Claude can pull them live when a task needs them).
   session is to be deleted. _(Working paper §1–§2)_
 
 ### Tax year 2025 — the review
-- **Gate (2026-10-13): ⛔ NOT READY.** It turns on four things: the **income outside the W-2** (the cash and the side
-  jobs); the **Deep Tech W-2**; the **three partnership K-1s**; and **whether Viktoriia filed separately**.
+- **Gate (2026-10-13): ⛔ NOT READY.** It turns on five things: the **income outside the W-2** (the cash and the side
+  jobs); the **Deep Tech W-2**; the **three partnership K-1s**; **Never Give Up KK's 2025 activity**; and the **filing
+  status** (whether and how Viktoriia already filed — a joint return remains possible either way).
 - **Asked of the client** *(prepared 2026-10-13, not yet sent — Lilian decides)*:
   - [ ] Where the 2025 cash deposits came from.
   - [ ] What the "small side jobs" were and for whom; whether any payer sent a Form 1099-NEC; their expenses.
@@ -195,15 +198,16 @@ the actual details (and Claude can pull them live when a task needs them).
 ### Information still needed
 - [ ] The 2025 Form 4868: accepted? any payment sent with it?
 - [ ] His ownership percentage in each of the three partnerships.
+- [ ] Which LLC of his filed a **late** 2025 Florida annual report in July 2025 (an LLC older than 2025 — working paper §6 I7).
 - [ ] Viktoriia's personal 2025 return (if one exists) and who prepares it.
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710641](https://app.doublehq.com/close?cid=710641)
 - **Working paper — 2025 Form 1040:** [`tax-returns/kyrylo-kuznetsov/2025-form-1040.md`](../../tax-returns/kyrylo-kuznetsov/2025-form-1040.md)
-- **Related clients:** [Never Give Up KK LLC](./never-give-up-kk.md) (his company) · [Deep Tech Development Group](./deep-tech-development.md)
-  (his employer from late 2025) · Boost You LLC (710568), Goshakes LLC (710576), The Roadside Project LLC (710602) — **no
-  Client Intelligence file yet**
+- **Related clients:** [`never-give-up-kk.md`](./never-give-up-kk.md) (his company) · [`boost-you.md`](./boost-you.md) ·
+  [`goshakes.md`](./goshakes.md) · [`the-roadside-project.md`](./the-roadside-project.md) (his three partnerships) ·
+  [Deep Tech Development Group](./deep-tech-development.md) (his employer from late 2025 — not an owner-group link)
 - **Google Drive:** his TaxDome export folder (*Migration to Double › 4. Documents › KYRYLO KUZNETSOV*) — the 2024 return
   and the 2025 Form 4868; and [Never Give Up KK's folder](https://drive.google.com/drive/folders/1Xy9x6ClYVmjZ207i4YwTUf-NJKuojbeY)
 - **Related SOPs:** [`form-1040-preparation.md`](../../sops/form-1040-preparation.md)
