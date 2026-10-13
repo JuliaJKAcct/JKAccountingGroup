@@ -1,6 +1,10 @@
 # Vitaliy Vasyutyk — property & renovation LLC group
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-13
+
+> 🔵 **2026-10-13 — LILIAN IS PREPARING HIS 2025 FORM 1040.** It should carry **seven K-1s**; three of his companies
+> issue theirs to **Nika Realty**, not to him (§4 → *Tax-preparation playbook*). A `2025 4868 Ext.pdf` is in his
+> Double library, so the return is likely due **2026-10-15** — acceptance not verified.
 
 > 🔴 **2026-09-26 SWEEP: THE OWNER'S OWN 2025 FORM 1040 IS STILL `Not Started`**, one week after the
 > 2026-09-19 finding, while all nine of his companies' 2025 returns remain `Filed`. No email,
@@ -53,7 +57,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | Owner / primary contact for all ten companies | Double contact `567527` — **one portal contact is linked to all ten company records and to his own** (`hasClientAdminAccess`, tax + financial + files access) |
 | Related individuals with their own Double client records | **Veronika Vasiutyk** (`710664`) and **Vladyslav Vasiutyk** (`710670`) — same surname, separate records; **the relationship is not confirmed in writing.** What is established: the firm billed a 1040 for Veronika on a **Nika Realty** invoice (Sept 2025), and Vladyslav's 2025 return was e-signed 2026-04-02 |
 | Partner in Zumfi 2 LLC — **and in Zumfi 1 and Fizum 1** | the same person is a partner in all three _(Lilian, from Vitaliy, 2026-09-07)_; named in the 2025 organizer, and his details are already on the Zumfi 1 and Fizum 1 records — see §6 |
-| **Iryna Vasyutyk** — found in Ping's contact index (2026-09-19), associated there with **NIKA REALTY LLC**, not in Double's contact list for that record | relationship to Vitaliy **not established**. Nika Realty's file library holds a "P&L … Iryna cash 2025" workbook and two personal-loan-agreement documents from Vitaliy to the company (filenames carry dollar amounts — not repeated here; see §6) |
+| **Iryna Vasyutyk** — **his wife** _(established 2026-10-13: Double holds the couple's 2022, 2023 and 2024 Forms 1040 as joint returns titled "Vitaliy and Iryna"; the 2024 one was read that day)_. Also in Ping's contact index (2026-09-19), associated there with **NIKA REALTY LLC**; not in Double's contact list for that record | **Not a partner or shareholder in any of the ten companies** on the 2025 company returns read 2026-10-13 (Nika's 2025 copy was not available). Nika Realty's file library holds a "P&L … Iryna cash 2025" workbook and two personal-loan-agreement documents from Vitaliy to the company (filenames carry dollar amounts — not repeated here; see §6) |
 
 - **Double client (the person):** [Vitaliy Vasyutyk `710668`](https://app.doublehq.com/close?cid=710668)
 - **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ none
@@ -93,6 +97,40 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Our role:** we prepare and file.
 - 🔴 **2025 RETURN STATUS (established 2026-09-19, from Double's `list_projects`/activity log): ALL NINE company returns are now `Filed`** — 2 Romans Realty (2026-09-15), Sunshine Renovations 1 (2026-09-15), SYS 1 Realty (2026-09-13), Remodel Master Realty (2026-09-13), NIKA REALTY LLC (2026-09-16), Fastighet (2026-09-16), Tropical Coast 1 (2026-09-15), Zumfi 1 (2026-09-15), FIZUM 1 (2026-09-15). ⚠️ **Zumfi 2 is NOT included in this count** — it has its own file ([`zumfi-2.md`](./zumfi-2.md)) and was not yet filed as of that file's last update. ⚠️ **Two of the nine (NIKA, Fastighet) filed 2026-09-16** — one day after the ordinary extended due date (Sept 15) for a calendar-year 1065/1120-S — **assuming** each filed a timely Form 7004 in March; that extension is **not independently confirmed this session**, so this is flagged, not asserted, as a possible one-day-late filing.
 - 🔴 **THE OWNER'S OWN 2025 Form 1040 IS `Not Started`** (Double `list_projects`, 2026-09-19) — the project's `dueDate` field reads **2026-04-15** (the original, unextended date). No email, comment or activity-log entry found this session about an extension for his individual return, and elsewhere in this repo Double's project `dueDate` field is known to not always reflect the real/extended deadline (see e.g. the Zakom Incorporated file) — so this is reported as an **open gap**, not a confirmed missed deadline. His return depends on K-1s from Nika Realty (1120-S) and the nine 1065s, all of which are now filed.
+
+#### 🧭 Tax-preparation playbook — READ THIS FIRST before his Form 1040
+
+> What preparing his returns has taught the firm, written as the rule for next time. **Rules and structure only — no
+> dollar figures** (those belong in a working paper under [`projects/tax-returns/`](../../tax-returns/)). Each item
+> says where it came from.
+
+**① Which K-1s land on HIS 1040 — and which do NOT** _(established 2026-10-13 from the filed 2025 company returns in
+Double, cross-checked against his filed 2024 joint 1040, Schedule E page 2 Part II)_
+
+🔴 **The group is TIERED. NIKA REALTY LLC (his S corporation) is a 50% partner in three of the partnerships**, so
+those three issue their K-1 **to Nika Realty LLC, not to him** — their income reaches his 1040 **inside Nika's
+1120-S K-1**. ⛔ **Never enter a 2 Romans, Remodel Master or Fastighet K-1 on his 1040** — it would count that income
+twice.
+
+| Company | Return | Partners / shareholders (2025) | K-1 to Vitaliy? | How established |
+|---|---|---|---|---|
+| NIKA REALTY LLC | 1120-S | Vitaliy (shareholder) | ✅ **Yes — K-1 (1120-S)** | 2024 joint 1040 (Schedule E row `S`, his Form 7203). ⚠️ **2025 filed copy is NOT in Double** — confirm the shareholder list in ATX |
+| Sunshine Renovations 1 LLC | 1065 | Vitaliy 50% · Roman Ozimko 50% | ✅ **Yes** | 2025 filed return |
+| SYS 1 Realty LLC | 1065 | Vitaliy + at least one other partner | ✅ **Yes** (2025 is a no-activity return) | 2024 joint 1040 (Schedule E row `P`). ⚠️ **2025 filed copy is NOT in Double** — the % is unconfirmed |
+| Tropical Coast 1 LLC | 1065 | Vitaliy 50% · Volodymyr Petrushkevych 50% | ✅ **Yes** — 2025 is **not** its final year (dissolved 2026-03-31; the final K-1 is 2026) | 2025 filed return |
+| Zumfi 1 LLC | 1065 | Vitaliy 30% · Bahruz Naghiyev 70% | ✅ **Yes** | the client, via Julia, 2026-09-13 (recorded on the unmerged branch `claude/determined-galileo-t04t7p`). ⚠️ **2025 filed copy is NOT in Double** |
+| FIZUM 1 LLC | 1065 | Vitaliy 30% · Bahruz Naghiyev 70% | ✅ **Yes** | 2025 filed return |
+| Zumfi 2 LLC (TN) | 1065 | Vitaliy 35% · Bahruz Naghiyev 65% | ✅ **Yes — every amount zero** | 2025 filed return; [working paper](../../tax-returns/zumfi-2-llc/2025-form-1065.md) §8 |
+| 2 Romans Realty LLC | 1065 | **Nika Realty LLC 50%** · MYZO Chocolate Inc. 50% | ⛔ **No — to Nika** | 2025 filed return; also absent from his 2024 Schedule E |
+| Remodel Master Realty LLC | 1065 | **Nika Realty LLC 50%** · Iurii Systrenskyi 25% · Olena Systrenska 25% | ⛔ **No — to Nika** | 2025 filed return; also absent from his 2024 Schedule E |
+| Fastighet LLC | 1065 | **Nika Realty LLC 50%** · Volodymyr Petrushkevych 50% | ⛔ **No — to Nika** | 2025 filed return |
+
+🔑 **So his 2025 1040 should carry SEVEN K-1s: one 1120-S (Nika) and six 1065s** — the four of 2024 (Nika, Sunshine,
+SYS 1, Tropical Coast 1) plus the three companies formed in 2025 that he holds directly (Zumfi 1, Fizum 1, Zumfi 2).
+**Iryna is not a partner in any of the ten**, so a joint return does not add K-1s of hers from this group.
+⚠️ **The tiering is also a check on Nika's own return:** Nika's 1120-S must pick up the K-1s it received from 2 Romans,
+Remodel Master and Fastighet. That was **not** verified on 2026-10-13 (Nika's 2025 filed copy is not in Double).
+
 - **Process notes (→ future SOP):** the **owner's individual 1040 carries gig income** — he uploaded Uber (1099-NEC + 1099-K), Lyft and DoorDash summaries with his 2025 organizer (Apr 2026), so his personal return is not just K-1s. 🔑 **Firm convention for this client's organizers, stated by Lilian to Julia by email (2026-09-10/13): "unanswered questions in the tax organizer mean the information is the same as last year."**
 
 ### Licenses & other filings
@@ -126,6 +164,7 @@ watch-outs, one-off arrangements, history that affects the work.
   *"our return"*. 🔑 **The lesson is neither of those:** the state question belongs to **every
   filing this company makes**, not just its annual report. **The next steps are in Zumfi 2's own
   client file, §4.**
+- 🔴 **THE GROUP IS TIERED — THREE PARTNERSHIPS ARE HALF-OWNED BY NIKA REALTY, NOT BY HIM.** 2 Romans Realty, Remodel Master Realty and Fastighet each have **Nika Realty LLC as their 50% partner**, so their K-1s go to **Nika**, and their income reaches Vitaliy only inside **Nika's 1120-S K-1**. **His 1040 carries seven K-1s, not ten** — and entering one of those three on it counts the income twice. Every company's partners are mapped in §4 → *Tax-preparation playbook* _(established 2026-10-13 from the filed 2025 company returns)_.
 - 🔴 **An invoice's CUSTOMER is not the company the work was done for — read the line descriptions.** In the firm's own A/R ledger the group is billed through only **six** customer records (Nika Realty, 2 Romans Realty, SYS 1 Realty, Zumfi 2, Fastighet, Tropical Coast) while **ten** companies generate the work. Nika Realty and Fastighet in particular act as **umbrella billing accounts**: Remodel Master, Sunshine Renovations 1, Zumfi 1, Fizum 1 and Tropical Coast 1 have all appeared as *lines* on another company's invoice. Any "has this been billed?" question must be answered on **line descriptions across all six records**, never on the customer name.
 - 🔴 **The 2026 cycle was re-cut twice, so old invoice numbers in email no longer exist in the firm's ledger.** March 2026's group 1099 invoice was cancelled and re-issued split per company; April 2026's Fastighet/Tropical Coast invoices were cancelled and consolidated into one. Deleted invoice numbers still appear in Julia's Gmail with amounts and reminders — **an email is not evidence that an invoice exists.** The full trail is in §6 (2026-09-07).
 - ⚠️ **Tropical Coast 1 LLC is DISSOLVED** — Articles of Dissolution filed **2026-03-31** (Sunbiz doc `L24000400203`, confirmation to Julia 2026-04-02). Its final annual report and 1099 were billed on the **Fastighet** invoice, together with the dissolution state fee. No further annual report is due for it, and the third-party "renewal due" emails that keep arriving for it are advertising, not a state notice.
@@ -137,6 +176,8 @@ watch-outs, one-off arrangements, history that affects the work.
 
 ### Log
 A running, dated record as we build this profile.
+
+- _(2026-10-13)_ — **Lilian, preparing his 2025 Form 1040, asked which of his companies should have issued him a K-1 for 2025.** At her request the session opened, through `tools/redact-doc/` (identifiers masked, text never printed, files deleted afterwards): the couple's **2024 joint Form 1040** (owner's record › `Tax Return Filed/2024`), the **filed 2025 returns of seven companies** (2 Romans, Sunshine Renovations 1, Remodel Master, Fastighet, Tropical Coast 1, Fizum 1, Zumfi 2 — each in its own record › `Tax Return Filed/2025`) and Nika's 2024 1120-S, which came through **only partially** (5 pages, no EIN read) and was **not relied on**. **Answer: seven K-1s — Nika (1120-S) plus Sunshine, SYS 1, Tropical Coast 1, Zumfi 1, Fizum 1 and Zumfi 2 (1065)**; 2 Romans, Remodel Master and Fastighet issue theirs to **Nika Realty LLC** (§4 playbook, §5). Cross-check: the 2024 Schedule E page 2 Part II lists exactly four entities — Nika (`S`), Sunshine, SYS 1 and Tropical Coast 1 (`P`) — and neither 2 Romans nor Remodel Master, consistent with Nika holding them already in 2024. ⚠️ **Not in Double, so not read:** the 2025 filed returns of **Nika Realty, SYS 1 Realty and Zumfi 1** (SYS 1's project shows `Filed` 2026-09-13 in the activity log; none of the three has a 2025 return PDF in its library). The Zumfi 1 split (30/70) comes from the client via Julia, 2026-09-13, **recorded only on the unmerged branch `claude/determined-galileo-t04t7p`** — that branch carries a whole day of Zumfi 1 findings that never reached `main`. 🔵 **Also found: `2025 4868 Ext.pdf` is in the owner's own file library** (uploaded 2026-06-02 with the TaxDome migration) — so an extension for his 2025 1040 appears to exist, which puts its due date at **2026-10-15**; the file was not opened and **acceptance is not verified**. Gmail since 2026-10-09: nothing new about the group. _(Double, the returns named above, Gmail; session of 2026-10-13, Lilian.)_
 
 - _(2026-10-10)_ — **Incremental sweep, baseline 2026-10-03 — owner-level, ALL TEN companies' activity logs read this time.** Sources: Double (`list_activity_log` bounded from 2026-10-03 on the owner AND on each of the ten companies — Nika Realty, 2 Romans, Sunshine, SYS 1, Remodel Master, Fastighet, Tropical Coast 1, Zumfi 1, Zumfi 2, Fizum 1 — **0 entries on every one**; `list_client_properties` batched across all eleven records; `list_projects` and `list_notes` and `list_contacts` on the owner); Gmail (`in:anywhere` and `in:sent`, bounded `after:2026/10/03`, for the owner's names, all ten company names, the five invoice numbers, and dissolution/address-change/4868/extension/annual-report terms); Ping (org-wide `search_meetings`, one query); Google Drive (title searches on Vasyutyk / Nika Realty / Zumfi / Fizum, `modifiedTime > 2026-10-03`).
   - **Nothing moved.** The owner's 2025 Form 1040 project is still `notStarted` (due date field still the original 2026-04-15, **178 days** past; no extension evidence anywhere — 4th consecutive quiet sweep). The ten companies' properties are unchanged from the 2026-09-19 reading (Organizer Status still `Sent` on Fastighet, Remodel Master, Sunshine and Tropical Coast 1; `Completed` on the rest). Zero notes on the owner. Shared portal contact `567527` `updatedAt` is still 2026-09-23 (did not move again).
@@ -236,6 +277,7 @@ it here; these never go into the client SOP.
   date.** Second consecutive weekly sweep with zero movement — no extension evidence, no activity,
   no email, no Ping meeting. **This is now the group's single largest open item.**
   🔄 **CHASED 2026-10-10 — STILL `Not Started`, 178 days past the on-file date; 4th quiet sweep.** Double project, activity log, Gmail and Ping, bounded after 2026-10-03: nothing.
+  🔵 **2026-10-13 — Lilian is now preparing it, and an extension file EXISTS:** `2025 4868 Ext.pdf` sits in the owner's Double library (uploaded 2026-06-02 with the TaxDome migration; not opened). **If it was accepted, the return is due 2026-10-15** — acceptance not verified. The earlier sweeps searched email and the activity log for an extension, not the file library, which is why they never saw it.
 - 🔴 **Three invoices from 2026-03-25 are still unpaid** (`2097`, `2101`, `2104`) — now **SEVEN** rounds of reminders (last confirmed 2026-09-08), **178 days outstanding as of 2026-09-19**, no deadline (collection matter). The work was delivered and the charges are clean — **so this is a collection question, not a billing question.** Two new invoices (`2293` SYS 1, `2294` Remodel Master, both issued 2026-09-08) are too recent to call late.
   🔄 **CHASED 2026-09-26 — UNCHANGED.** No new reminder round or payment-received email found
   (Gmail searched for the three invoice numbers plus the two new ones, bounded after 2026-09-19).
@@ -275,9 +317,10 @@ reports for this client.
 - [x] **Whether any other company has a partner** — **yes: the same person is a partner in Zumfi 2, Zumfi 1 and Fizum 1** _(Lilian, from Vitaliy, 2026-09-07)_. Who he is, by name, is still not recorded here.
 - [ ] Whether any company in the group has **sales tax or payroll** obligations. Nothing has ever been billed for either.
 - [x] Whether the firm holds a **Google Drive folder** for this group — **yes, established 2026-09-19**: at least three separate "Vitaliy Vasyutyk" folders under different Drive parents, plus a "Nika Realty" subfolder. Which is canonical is still open.
-- [ ] Whether an extension was filed for the owner's own 2025 Form 1040, given the project reads `Not Started` with an unconfirmed due date (2026-09-19). **Still open 2026-09-26 — unchanged.**
+- [ ] Whether an extension was filed for the owner's own 2025 Form 1040, given the project reads `Not Started` with an unconfirmed due date (2026-09-19). **Still open 2026-09-26 — unchanged.** 🔵 **2026-10-13: a `2025 4868 Ext.pdf` is in his Double file library** — prepared at least; **acceptance still to confirm.**
+- [ ] **The 2025 filed returns of Nika Realty, SYS 1 Realty and Zumfi 1 are not in Double** (all three projects read `Filed`). Upload them from ATX — they are what confirms Nika's shareholder list, SYS 1's partner split and Zumfi 1's 30/70 (§4 playbook).
 - [ ] Whether the 2026-09-12 group-wide address change (all companies except Zumfi 2) has been filed with Sunbiz, or is only on the firm's internal record. **Still open 2026-09-26 — unchanged.**
-- [ ] Who "Iryna Vasyutyk" (found in Ping, linked to Nika Realty LLC) is in relation to Vitaliy.
+- [x] Who "Iryna Vasyutyk" (found in Ping, linked to Nika Realty LLC) is in relation to Vitaliy — **his wife**: the 2022–2024 returns in Double are joint returns of Vitaliy and Iryna (2026-10-13, §2).
 
 ## 7. Links
 
