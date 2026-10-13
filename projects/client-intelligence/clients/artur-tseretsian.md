@@ -1,6 +1,6 @@
 # Artur Tseretsian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-11
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-13
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -606,6 +606,21 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   line number first, and that the explanations say more specifically where each figure came from; both are now the
   firm's rule in `tax-return-sop`. Figures: working paper §12.3.
 
+- _(2026-10-13 — Lilian: "have we billed him for the tax preparation?")_ Searched the **firm's own QuickBooks**
+  (JK Accounting Group) for every invoice, estimate and recurring template under both customers that carry his email:
+  **`Artur Tseretsian`** and **`REWHIP LLC`**, all dates. **Three invoices, all paid; none carries the `Tax Preparation`
+  item or mentions a return:**
+  - **2232** (2026-07-09, Artur) — *Incorporation Services – Rewhip LLC* + *State Registration Fees*.
+  - **2238** (2026-07-27, Artur) — *Historical Accounting Clean-up* (most likely the July 2023–2025 statement
+    categorization, not confirmed).
+  - **2313** (2026-10-01, REWHIP LLC, paid 2026-10-05) — one line, *Services provided in Proposal #JKA-2026-08*. **What that
+    proposal covers is not established**: the signed copy exists only as an Adobe Sign attachment in Gmail (2026-07-29),
+    which no connector can open, and it is not in Drive.
+  - No estimates; **no recurring-invoice template** for either customer. ⚠️ **Invoice 2272** (the canceled transfer of
+    2026-09-03) **is no longer in QuickBooks** — a doc-number search returns nothing, so it was most likely deleted.
+  - **Conclusion as far as QuickBooks goes:** no invoice bills the 2023–2025 returns by name. Whether the proposal behind
+    2313 includes them is Julia's to answer. Amounts are in QuickBooks, not here.
+
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
 - 🔒 **The older child's SSN — DECIDED FOR 2025 (2026-10-08): he is left off the 2025 return** (Lilian). Still worth getting for a 1040-X and for 2026. SS card was lost. On **2026-07-31** the client went to the SSA office and was told the replacement card would be **mailed by post** (allow ~1 month), so it was expected around **late August 2026**. As of **2026-10-03** we still don't have the number — a Gmail search bounded after 2026/09/26 for the client's name found nothing about it, and Double notes carry no update (**71 days pending since 2026-07-31 as of 2026-10-10** (64 at 2026-10-03; a Gmail search after 2026/10/03 on 2026-10-10 found nothing on it; the client sends by WhatsApp, unreachable); the ~1-month window ended about 2026-08-31). The client sends such items by **WhatsApp** (outside the digital sweep). **Next step:** confirm with the client that the card arrived and get the number — entered into Double, never the repo.
@@ -614,6 +629,10 @@ Live list lives in Double; mirrored here for context:
 - CS Float purchases/expense report — not chased this run (budget).
 - **Form 1095-A: 2023 and 2024 RECEIVED 2026-10-08; 2025 MISSING** (the file named 2025 is the 2024 form). **Asked again by Lilian on WhatsApp, 2026-10-09** — he said he would send it. 🆕 **2026-10-11: he says there was none for 2025 — contradicted by the card (see Health insurance above); asked again.** Car purchase/sale documents: **no longer needed** (Lilian, 2026-10-08: omitted). Home-office worksheet, Lendbuzz/Westlake amortization schedules, external-card statements (incl. the account ending 4800 and the American Express card new in June 2025), client-review items (deposits/travel/auto-transport Zelles) — not chased this run (budget).
 - ✅ **Confirmation the client completed the QuickBooks recurring-payment setup — ARRIVED 2026-09-12.** A QuickBooks "you got paid" notice shows a REWHIP LLC recurring payment posted 2026-09-01 (figure not retained). Closed as a setup question; ⚠️ **watch-item, UPDATED 2026-10-03**: the single canceled transfer (invoice 2272, 2026-09-03) was followed by a **failed monthly run on 2026-10-01** (QuickBooks notice, Gmail) — so the 09-01 success has no confirmed successor and the October debit did not go through. **Needs a firm-side follow-up with the client** (not yet recorded as done). 🆕 **2026-10-08:** a QuickBooks *"Payment received"* notice of **2026-10-05** (invoice 2313, REWHIP LLC) shows a payment did arrive after the failure. Whether it was the October fee paid by hand or a repaired recurring setup is not established.
+- 🆕 **Fee for the 2023–2025 returns — NOT INVOICED BY NAME (2026-10-13).** The firm's QuickBooks has no invoice with
+  the `Tax Preparation` item for him or for REWHIP LLC (log, 2026-10-13). **Ask Julia** whether Proposal #JKA-2026-08
+  (signed 2026-07-29, billed on invoice 2313) includes the personal returns, or whether a tax-preparation invoice is
+  still to be issued.
 - **Rewhip LLC — clarify scope** — STILL OPEN, **87 days pending since raised (2026-07-15)** as of 2026-10-10 (80 at 2026-10-03), no deadline _(the earlier "~82 days as of 09-26" did not match this start date; recomputed)_. A targeted search bounded after 2026/09/26 found nothing beyond what's already on file — only the 2026-10-02 Certificate of Status for the entity (see log).
 - **Stripe transaction data** — STILL OPEN, **96 days pending since raised (2026-07-06)** as of 2026-10-10 — past 90 since 2026-10-04 (89 at 2026-10-03) _(the earlier "~91 days as of 09-26" did not match this start date; recomputed)_, no deadline. A targeted search bounded after 2026/09/26 found nothing client-specific.
 
