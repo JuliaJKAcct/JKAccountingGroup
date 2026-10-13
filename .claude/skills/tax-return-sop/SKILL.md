@@ -519,6 +519,20 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
     - ⛔ **Firm-only items stay out of the client's copy** — a filing exposure (Form 8300), a planning idea (a SEP),
       the signer's alternative readings, the far end of the profit range.
 
+11. 🆕 **When the owner's PERSONAL account is read for the business's costs** *(Piliushin 2025 §2.6 — Lilian asked for
+    expenses only, L7; the method below is the session's)*:
+    - **Match the owner's own transfers FIRST** — every business-account draw to the person, and every contribution
+      from him, found on the personal account by amount and date. It proves the two accounts, shows which statements
+      are missing (the draws that land after the last one held), and takes those lines out of the question.
+    - **Propose only a payee or vendor that is ALREADY a business line on the business account**; everything else is a
+      question for the client, never a deduction. **Nothing from a personal account is deducted until he confirms.**
+    - 🛑 **A purchase and the deposit that funded it are ONE question.** A vehicle bought from the personal account
+      weeks after a company paid the same amount into it is either a sale (income and cost) or neither —
+      **deducting the purchase alone takes a cost off income nobody counted.**
+    - **Group trips by date window** (out-of-state fuel, hotels, flights) and ask once per trip; **name the account on
+      every tab of the client's file** — two accounts in one file are confused otherwise *(Lilian, 2026-10-13: "que
+      quede bien claro cuando es Bank of America o cuando es Wells Fargo")*.
+
 #### ⑥ 📊 HER TWO TEMPLATES — fill a copy, and fix the known defects in the copy
 
 🔑 **Lilian's `PL_Statement` and `Home_Office_Deduction` workbooks** *(supplied in the chat as

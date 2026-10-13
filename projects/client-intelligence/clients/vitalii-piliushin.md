@@ -27,7 +27,7 @@
 ## 1. Snapshot
 
 - **Business name:** _(an individual)_ — the owner of **TWO single-member Texas LLCs** _(Lilian, 2026-10-11)_: **ATMAN PARTS LLC** (online auto parts — its own file is [`atman-parts.md`](./atman-parts.md)) and **PROJECT ATMAN LLC** (vehicle export — no Double client of its own; it lives in this file). Both are reported on **his** return.
-- **Entity type:** Individual — **Form 1040 with TWO Schedules C**, one per LLC: both LLCs are disregarded _(Lilian, 2026-10-11)_. Double's `Tax Return Type` = `1040-SCH C` _(read 2026-10-09)_. ✅ **"Anton Partner" is a subcontractor, not a co-owner** _(Lilian, 2026-10-11)_ — the partnership question is closed; whether Anton lives in the US is not ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) O1).
+- **Entity type:** Individual — 🆕 **Form 1040 with ONE Schedule C (PROJECT ATMAN)**: ATMAN PARTS LLC is a **partnership** (Form 1065, a K-1 to him) _(Lilian, 2026-10-13)_. *(2026-10-11 → 13: both LLCs were taken as disregarded, two Schedules C.)* Double's `Tax Return Type` = `1040-SCH C` _(read 2026-10-09)_. ✅ **"Anton Partner" is a subcontractor, not a co-owner** _(Lilian, 2026-10-11)_ — the partnership question is closed; whether Anton lives in the US is not ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) O1).
 - **Home state:** Texas (Dallas area).
 - **Industry / what they do:** **PROJECT ATMAN LLC exports vehicles** — buyers abroad (and some US companies) pay, it buys the car or powersports vehicle from a US dealer or auction and ships it to the buyer's country. **ATMAN PARTS LLC sells auto parts online** (mainly eBay, and its website) and from November 2025 rents a shop in Terrell, Kaufman County, TX. See [`atman-parts.md`](./atman-parts.md) §1.
 - **Primary language:** **Russian only** — Double's `Preferred language` = `Only Russian` on this individual record _(read 2026-10-09; the company record reads `Bilingual (EN/RU)`)_.
@@ -67,7 +67,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Applies?** Not applicable to the individual (`Bookkeeping` = N/A). The company's books are on [`atman-parts.md`](./atman-parts.md).
 
 ### Income tax
-- **Applies?** **Yes.** Form 1040 with **two Schedules C** (Project Atman, Atman Parts). Tax project **2025 Taxes** in Double, status `inProgress`, preparer Lilian _(read 2026-10-09)_.
+- **Applies?** **Yes.** Form 1040 with 🆕 **ONE Schedule C — PROJECT ATMAN** _(Lilian, 2026-10-13: Atman Parts is a partnership — its own Form 1065, and a K-1 that comes back into this 1040; excluded from his return for now)_. *(Until 2026-10-13: two Schedules C, Project Atman and Atman Parts.)* Tax project **2025 Taxes** in Double, status `inProgress`, preparer Lilian _(read 2026-10-09)_.
 - **Return type(s) & deadlines:** **First return ever** — he has never filed a US return _(Lilian, 2026-10-09)_. ✅ **2024 was never filed either and is prepared after 2025** _(Lilian, 2026-10-11)_ — the 2024 TurboTax purchase (2024-10-31) did not become a filing. A file named `2025 4868 Ext.pdf` is in his Double library (an extension; not opened). Extensions are not a gate to preparing the return (firm rule, 2026-10-08). ⚠️ **No IRS transcripts yet:** the Form 2848 signed in March 2026 has line 4 ticked, so it is not on the CAF — Julia to replace it (working paper §1.7, O15).
 - **Our role:** We prepare.
 - **Process notes (→ future SOP):** The two 2025 Schedule C P&Ls are built from the bank statements — [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) (DRAFT 2: every line split by LLC by a written rule, §2.1). **2024 comes next** — his 2024 records show paid driving work (Cash App, Jan–Sep 2024); the working paper's §1.3 is its starting point. **The playbook below is the standing summary of how his returns are prepared.**
@@ -81,11 +81,14 @@ the actual details (and Claude can pull them live when a task needs them).
 > item is a proposal until Lilian or Julia confirms it.
 
 **① What to prepare**
-- **Form 1040 with TWO Schedules C** — **PROJECT ATMAN LLC** (vehicle export) and **ATMAN PARTS LLC** (online auto
-  parts, and the Kaufman shop). Both single-member and disregarded _(Lilian, 2026-10-11)_. SE tax runs on the combined
-  net; QBI is per activity — **tick "qualified business" on EACH Schedule C** and check Form 8995 prints two rows.
+- 🆕 **Form 1040 with ONE Schedule C — PROJECT ATMAN LLC** (vehicle export) _(Lilian, 2026-10-13 — 2025 L6)_.
+  🔴 **ATMAN PARTS LLC is a PARTNERSHIP** — **not a Schedule C**: it files its own **Form 1065**, and **its K-1 is a
+  line on his 1040** (Schedule E Part II). Who the other partners are is not recorded yet. **Prepare the 1065 as its own
+  request, and keep its money in ONE place** — 2025 put the online store's and the shop's Wells Fargo lines on Project
+  Atman (L6), so the 1065 must not report them again (2025 O29). *(Until 2026-10-13 the firm treated both LLCs as
+  single-member and disregarded — two Schedules C, 2025 DRAFT 2–3.)*
 - **Business codes, proposed 2025** ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §4J): Project Atman **423100** (not fully sure — the open question is whose name is
-  on a car's title before it ships); Atman Parts **441300**. Keep them unless the activity changes.
+  on a car's title before it ships). *(Atman Parts' 441300 was for a Schedule C it no longer has.)* Keep it unless the activity changes.
 - **He had never filed a US return** _(Lilian, 2026-10-09)_. 2025 is prepared first; **2024 was never filed either
   and is prepared after 2025** _(Lilian, 2026-10-11)_. **No books in 2025** — the P&L was rebuilt from the bank
   ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B.10). From 2026 check first whether
@@ -98,7 +101,9 @@ the actual details (and Claude can pull them live when a task needs them).
 
 **② Where everything is**
 - **Bank statements:** Double › VITALII PILIUSHIN › JK Accounting Group › Others › *year* › Docs for tax prep › *Wells
-  Fargo* / *American National Bank of Texas*. **Wells Fargo's own CSV export** is in Julia's Drive › *Atman Parts* ›
+  Fargo-Project Atman* / *American National Bank of Texas-Atman Parts* / 🆕 ***BofA - personal account*** *(his own
+  account — 12 monthly statements for 2025, each closing on about the 17th, so **the year needs the January statement
+  too**)*. **Wells Fargo's own CSV export** is in Julia's Drive › *Atman Parts* ›
   Taxes › *year* taxes — a full, line-by-line check of the PDFs.
 - **Julia's Drive › "Atman Parts"** (was "Atman Products"): Taxes (yearly folders), Sales tax (filed returns by year),
   Docs sent by client. ⛔ **Never open** the password files there.
@@ -120,7 +125,16 @@ the actual details (and Claude can pull them live when a task needs them).
   full the same day: a picture cannot be reopened by a later session.**
 
 **③ Which money belongs to which LLC**
-- **Wells Fargo = PROJECT ATMAN · American National Bank of Texas = ATMAN PARTS** _(Lilian, 2026-10-11)_.
+- 🆕 **Wells Fargo = PROJECT ATMAN — EVERYTHING on it**, the online store's and the Kaufman shop's lines included,
+  as its income or expense · **American National Bank of Texas = ATMAN PARTS only** _(Lilian, 2026-10-13 — 2025 L6;
+  it replaces the split below)_.
+- 🆕 **His Bank of America personal account carries Project Atman costs** — the LLC was formed from it (Texas SOS fees,
+  April 2025), and Anton, a repair shop, eBay parts, vehicle transport, Copart and vehicle-history services were paid
+  from it; so were vehicle-like payments funded by money that came in the same weeks. **Read it every year for
+  EXPENSES** — *"No busques ahí income del negocio porque no hay"* _(Lilian, 2026-10-13 — 2025 L7)_; propose only
+  payees already business on Wells Fargo, the client confirms each, and **a purchase and the deposit that funded it are
+  ONE question** _(session — 2025 D32, D33)_. Project Atman's owner draws land there (every one matched in 2025).
+- *The rest of ③ is the 2025 DRAFT 3 rule, ⛔ superseded by L6 — kept as the record:*
 - **2025 exception:** ANBT opened only on 2025-12-04, so the online store ran through Wells Fargo. The split rules
   (working paper 2025 §2.1): by account, **except** lines whose own text ties them to the store — eBay as a seller,
   the atmanparts website and email, parcel shipping, the Kaufman shop (rent, bills, gates, shelving, fire protection,
@@ -133,8 +147,9 @@ the actual details (and Claude can pull them live when a task needs them).
   purchases are owner draws. **Where "small" ends — 25.00 — is the firm's precedent from another client**, not a
   figure she gave here ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B.10 ③), applied as
   2025 D4 _(session)_: under 25.00 a draw, 25.00 or more fuel; QT "Inside" a draw.
-- **Vehicle and home office are kept apart** — they wait for the organizer's business-use figures. The car's miles must
-  be **split between the two LLCs**. On the standard rate only parking, tolls and the business share of car-loan
+- **Vehicle and home office are kept apart** — they wait for the client's figures. 🆕 *(One Schedule C now — no split of
+  the miles.)* **His car is on an Ally loan paid from his Bank of America account** — ask for the Ally year-end
+  statement (interest) and the car insurance (none appears on that account). On the standard rate only parking, tolls and the business share of car-loan
   interest are added (interest through the Vehicle Expenses worksheet line 9c, never line 16b).
 - 🔑 **His Zelle payee LABELS are the evidence** — read them before asking: *"Rent Kaufman"* = the shop (Atman Parts,
   rent); *"Rent … Rockwall"* = his home (Project Atman's home office); *"Bills Kaufman"* = shop utilities; *"Gates for
@@ -146,8 +161,9 @@ the actual details (and Claude can pull them live when a task needs them).
   _(session — 2025 D7; which LLC is still open, O8)_.
 - **Vehicle sales are shown GROSS** — the customer's money on line 1, the car in cost of goods sold — and are bought to
   order, so ending inventory is nil _(session; Julia confirms the gross presentation)_.
-- **eBay income is GROSS from the eBay report**, never the net payouts the bank shows; eBay's fees go on line 10
-  (line 1 is gross receipts — 2025 O4).
+- **eBay:** 🆕 **for 2025, Project Atman reports what reached Wells Fargo — the payouts on line 1, eBay's card charges on
+  line 10** _(session — 2025 D31, following L6)_; **eBay's own gross belongs to Atman Parts' 1065.** *(The DRAFT 3 rule —
+  eBay income gross from the eBay report — now applies to the partnership.)*
 - **Deposits with no payer named** (ATM cash, deposited checks) and Zelle from individuals are counted as sales until he
   says otherwise _(session default; ⛔ Lilian decides — 2025 D2)_. Several Zelle senders are friends or family he also pays.
 - **Amazon / Temu** on the business account: business supplies by default — **Lilian has not ruled yet** (2025 D5).
@@ -157,9 +173,9 @@ the actual details (and Claude can pull them live when a task needs them).
 - 🆕 **For 2025 he got ONE file to correct the whole P&L** _(Lilian asked for it, 2026-10-12)_: every deposit counted as
   income **with our reason beside it**, what was not counted, the lines booked as personal that may be business, and the
   costs a business like his normally has that the account does not show (2025 working paper §2.2). **Do the same next
-  year** _(the session's recommendation — Lilian's request was for 2025)_. 🔑 **His Apple Card and a personal
-  account may carry business costs** (Wells Fargo paid the card; 39 transfers to "Vitaly"; neither statement is held) —
-  **ask for both at the start of the year's work**, not after the P&L is built. ⚖️ **Cash from one payer above 10,000,
+  year** _(the session's recommendation — Lilian's request was for 2025)_. 🔑 **His Apple Card and his personal
+  account carry business costs** (Wells Fargo paid the card; the 39 transfers to "Vitaly" land in his Bank of America
+  account — 🆕 now read for 2025, §③) — **ask for both at the start of the year's work**, not after the P&L is built. ⚖️ **Cash from one payer above 10,000,
   in one or related transactions, means a Form 8300** — ask where cash deposits came from _(2025 O22 — for Julia to decide)_.
 - **Food on the bank is a draw** _(Lilian — L2)_: no meal deduction unless he states a meal was business
   ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B.1). **Personal purchases a business could own** (electronics, furniture,
@@ -216,7 +232,7 @@ the actual details (and Claude can pull them live when a task needs them).
 ## 5. Key facts & quirks
 
 - **He has never filed a US return** (Lilian) — nothing carries in from a prior year, so the conventions are being set now ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §4) and kept in the **playbook** (§4, Income tax). **2024 was never filed either** (Lilian, 2026-10-11) — the 2024 TurboTax purchase did not become a filing.
-- 🆕 **Two LLCs, and in 2025 they shared ONE bank account.** Atman Parts' own account (ANBT) opened only on 2025-12-04, so its eBay payouts, seller fees, website and shop costs ran through Project Atman's Wells Fargo account. **Split by the activity, not the bank** — the working paper's rules E1–E7. From 2026 each should have its own account.
+- 🆕 **Two LLCs, and in 2025 they shared ONE bank account.** Atman Parts' own account (ANBT) opened only on 2025-12-04, so its eBay payouts, seller fees, website and shop costs ran through Project Atman's Wells Fargo account. **Split by the activity, not the bank** — the working paper's rules E1–E7. From 2026 each should have its own account. 🆕 *(2026-10-13, L6: every one of those Wells Fargo lines is now on Project Atman's Schedule C; Atman Parts is a partnership — its 1065 must not report them again.)*
 - 🆕 **2024: New Hampshire, then Texas, and driving work.** His 2024 Bank of America statements carry a Manchester, NH address and NH spending in August, then Austin / Cedar Park / Dallas from September 2024. His 2024 Cash App shows regular payments from one payer with notes counting jobs and naming a van, and money he sent on to another person with notes naming passengers and "SUV hourly" — he appears to have worked as a paid driver. Two tiny card charges at an "ATMAN LIMO" merchant (an NH website) in August 2024 suggest the "Atman" name predates both LLCs. He was paying an **Ally auto loan** in his own name in 2024.
 - 🆕 **He receives Forms 1099-NEC as an individual.** **Candramas LLC** (a firm client) issued him a 2025 Form 1099-NEC — still to his old NH address; most of it did not reach the accounts we hold (working paper §1.4, D28, O12). Candramas, Sattva Movers LLC and Miami Limo Car LLC also paid his personal account in 2024.
 - **The business account is commingled.** Groceries, restaurants, family transfers and transfers to his own personal account all run through the Wells Fargo business account (Project Atman's); the 2025 P&L separates them line by line. Expect the same in 2026 unless the QuickBooks setup changes it.
@@ -260,6 +276,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - 2026-10-12 (6) — **DRAFT 3 and the client file** ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §2.2, 3B-bis, §6). Lilian: *"Sí, pásalas al Excel ya"* — eBay's own November–December figures are now on Atman Parts' Schedule C in the workbook (D14, D30). She then asked for the P&L to be *"lo más fiel posible a la realidad"* and for a document in Russian where he confirms every deposit with our reason beside it: built as `Piliushin_2025_Voprosy_klientu.xlsx` (nine sheets — income with reasons, not income, payments to people, maybe-business, not in the bank, Noma / Taras / Silvia, eBay, other) with one message in simple Russian. **What the re-read found:** deposits worth confirming (a wire from a private individual, wires from companies outside the car trade, the checks, the cash); lines booked as personal that may be business (a pre-purchase inspection, dealer service, the Houston trip, a flight, hotels); costs the account does not show (the phone before October, title and auction fees, shop insurance, the car loan) — **most likely on his Apple Card or personal account, whose statements the firm does not hold** (O19). A Form 8300 question for Julia if one buyer paid over 10,000 in cash (O22). She asked how to get the eBay figures: the simplest is the same Sales screen with September–October dates; the Transaction report has everything (O4).
 - 2026-10-12 (7) — **Julia's question, relayed by Lilian (WhatsApp): if the P&L shows far more profit than he moved to his personal account, where did the rest go — and were business costs paid from his personal account, since services such as MoneyGram will not take a business account for payments abroad?** Answered in the [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §2.3 and a new workbook sheet, *Where the money went*: every dollar of the two business accounts is placed — the largest part of the gap is personal spending paid straight from the business account, then payments to people with no stated purpose, the year-end balance, car and home costs not yet deducted, and eBay money owed to him on 31 December that had not reached these accounts (figures in §2.3). **The profit itself still rests on his answers** (deposits that may not be income, payments that may be business, and costs paid from his personal account or abroad). The client file now asks for **payments abroad (MoneyGram, Western Union, Wise) with receipts** (O19).
 - 2026-10-12 (8) — **For the call with him on 2026-10-13, Lilian asked for "algo visual para Julia y para el cliente"**: built a money-flow pack ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §2.4) — a picture of all the money in and out of the two business accounts, a picture walking the profit down to the year-end balance, and a workbook with one tab per category (payments to people with no stated purpose on their own tab, by person), in Russian for him and English for the firm, same tabs and line numbers, no formulas between tabs (her instruction). **New questions for the call** (O24): every 2025 address and **whether he lived or worked in California** (a March 2026 form carries a California address), **marital status** (a family Zelle payee carries his own spouse label — unconfirmed), dependents, other income, accounts abroad, and Forms 1099 — **a 1099-K from eBay is not expected for 2025** (the eBay screens seen show far fewer than 200 sales; September is unseen — so we only ask whether one exists). **The firm already holds his two Forms 1095-A** — not asked again.
+- 2026-10-13 (2) — **DRAFT 4: Atman Parts is a partnership; Project Atman alone; his Bank of America account read** ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §1.10, §2.5, §2.6). Lilian: everything on Wells Fargo is Project Atman's, ANBT is Atman Parts' only, and Atman Parts — *"supimos que es una partnership"* — is excluded from his return for now (L6); read his Bank of America personal account for Project Atman's EXPENSES, not income (L7). **Read 2026-10-13 (redactor, in the session):** the 12 statements in Double › … › *BofA - personal account* — 18 Dec 2024 to 17 Dec 2025, no checks written, every Project Atman owner draw found there; the LLC was formed from it (Texas SOS, 21–24 Apr 2025); business payees it shares with Wells Fargo (Anton, a repair shop, eBay parts, transport, Copart, vehicle-history services); vehicle-like payments funded by money from two trucking companies (Feb–Mar) and a Wells Fargo transfer marked *"DEPOSIT FOR RR"*; two Florida trips driven back to Texas (May, September) and two to Boston; an **Ally car loan**; a room in Dallas (his label *"Dallas Room"*) Jan–Jun 2025, no rent seen Jul–Sep, Rockwall from October; the statements mail to Garland, TX; **a payee he labels as his wife from October 2025** (bears on the filing-status question already put to him). Money in from companies (trucking and logistics, Mar–Apr) was **not reviewed for income** per L7 — for Lilian and Julia (O28). **Built:** the DRAFT 4 worksheet (one Schedule C), a Russian client file with only the lines not yet business (Wells Fargo tabs 1–11, Bank of America 12–14) and the money picture. **Asked of him:** the Bank of America statement from 2025-12-18, the 2025 Cash App statement, the car and the homes.
 - 2026-10-13 — **Lilian noticed that the taxpayer number on Candramas LLC's 2025 Form 1099-NEC to him matches neither his SSN nor either LLC's EIN, and asked whether a third company exists. His helper said it may be his "personal EIN" and sent a W-9 (`FW9-Sole proprietor.pdf`: Individual/sole proprietor, his own name, a New Hampshire address, the EIN box filled, unsigned).** The session checked, digit for digit and without printing either number, that the 1099's number IS that EIN ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §1.4b). **No third company: it is his own sole-proprietor EIN from his New Hampshire period.** Still open (O25): the IRS letter that issued it, what the Candramas work was (which decides the Schedule C and its line D), and which W-9 he gives payers now. ⓘ Boris Zakopko (Candramas's owner) keeps a shared Drive folder named `ATMAN`; **opened at Lilian's request the same day — it is not about him** (a CRM consultant's 2024 invoice to Candramas and a payment receipt; the name is a coincidence).
 
 ### Tax year 2025 — the review
