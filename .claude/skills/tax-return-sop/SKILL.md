@@ -420,7 +420,11 @@ stated nothing about this line".**
 **It is not a firm-wide rule** — [`bookkeeping-sop`](../bookkeeping-sop/) says outright that Ecoorganic's 25.00 is
 client-specific — so **a client's own rule or figure always wins.** ☑️ **An in-store or counter charge is a draw
 whatever the amount** *(a QT receipt marked `Inside` is the store, not the pump; a charge that is plainly food is
-food)*.
+food)*. 🆕 ⚠️ **A SUPERMARKET WITH A FUEL CENTER IS NOT A GAS STATION** — look the merchant up before the 25.00 line is
+applied to it. *(Piliushin 2025 D35: "FRESH 802 · 5100 E INTERSTATE" is Fresh by Brookshire's #802 in Fate, TX — a grocery
+store with a fuel center. One account's classifier had it as groceries, the other's as fuel, and 36 lines sat in "fuel"
+until a cross-check of the two accounts caught it.)* **A bank line cannot show which counter was used, so classify such a
+store with the groceries rule unless the client says otherwise.**
 
 #### ④ 🛑 WHAT THESE RULES DO NOT SETTLE — a DECISION per client, never imported from another client
 
@@ -533,6 +537,43 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
     - **Group trips by date window** (out-of-state fuel, hotels, flights) and ask once per trip; **name the account on
       every tab of the client's file** — two accounts in one file are confused otherwise *(Lilian, 2026-10-13: "que
       quede bien claro cuando es Bank of America o cuando es Wells Fargo")*.
+    - 🆕 **Fuel: lay the two accounts side by side, month by month** *(Piliushin 2025 §2.6a — Lilian asked whether the
+      personal account also held business fuel)*. When the business account opens late, the business's fuel sits on the
+      personal card until it does, and the hand-off shows (the same stations, one account fading as the other starts).
+      🔑 **Then say what it changes, by METHOD:** on the standard mileage rate **no fuel is deducted from any account**
+      (Pub. 463: *"you can't deduct … gasoline"*); under actual costs it is **that car's fuel from every account ×
+      business miles ÷ total miles**. ⛔ **Never call the method a free choice — and never call it fixed either.** For an
+      owned car the standard rate is open only if chosen in the car's FIRST business year, **on that year's return filed
+      by its due date including extensions** (Pub. 463; a §168(f)(1) election). A first year on the standard rate leaves
+      both methods open later (actual costs then with straight-line depreciation); a first year on actual costs, or
+      MACRS, §179 or bonus on the car, closes the standard rate for good; and it closes for every car if five or more
+      were driven for the business at once (a dealer's stock cars are a question of fact). ⚠️ **A non-filer's first
+      year may be a past-due return — the standard rate may already be gone; that is the signer's decision.** Where both are open, **figure both** — and the fuel from both accounts is the input. **The fuel checks
+      the plausibility of the total miles; it never proves business miles** (the mileage record does). **Fuel put into a
+      car bought for resale is that car's cost — Part III, never line 9** (Reg. §1.471-3(b), freight-in); **fuel and
+      service on a business trip in his own car follow that car's method — never line 24a** (Pub. 463 Table 1-1). ⚠️ **Test trip
+      windows by date, not by state** — an in-state fill on the drive home *(Marshall, TX)* was misfiled as car fuel.
+      🆕 **A car not in the client's name** *(Piliushin 2025 O31 — "he makes the payments, but the vehicle is not registered
+      in his name")*: the standard mileage rate is only for a car he **owns or leases** (Rev. Proc. 2019-46 §4.01 — "owns"
+      is undefined; the defensible reading is tax ownership, and payments alone do not make it); if not his, **actual costs
+      he paid × business use**, business parking and tolls in full, **no depreciation, and no loan interest unless he is
+      liable on the loan** (Pub. 334). A spouse's car that is community property may make him a part-owner. **Ask whose
+      name the car and the loan are in before choosing a method — and the signer decides.**
+    - 🆕 **How Lilian wants the client's question file** *(Piliushin 2025, 2026-10-13 — her review of the first one)*:
+      **a short, simple "how to use this file" on the FIRST page** (which tabs are which account, what to write in the
+      yellow column, what needs no answer, send it back) — *"para que no se agobie leyendo"*; **never ask the same money
+      twice** — a transfer from the business account to the owner's own account is a draw, not a cost, so its business use
+      is asked once, on the personal-account line that spent it; **no tab for what is settled by rule** (groceries,
+      Marketplace health insurance, what she has ruled business); a meal question asks only *business or personal* — not
+      the date, the place and the guest (the record a business meal needs — who and why, Pub. 463 — is asked later, only for
+      the ones he marks business); **repairs ask "your car or a car for sale?"**; and **the email that sends the file
+      reminds the client that every contractor paid at or above the year's 1099 threshold must send a W-9 for the 1099**
+      — **600.00 for 2025 payments, 2,000.00 for payments made from 2026** (indexed after 2026 — read the current-year 1099
+      instructions).
+      *(Rules verified 2026-10-13 against Pub. 463 (2025), Rev. Proc. 2019-46, Notice 2025-5, Pub. 334 and the 2025
+      Schedule C instructions — the first answer had called the method a free choice, and had not said that inventory
+      fuel is cost of goods sold, recovered when the car sells; review then caught that the rule binds one way only and
+      has a filing deadline.)*
 
 #### ⑥ 📊 HER TWO TEMPLATES — fill a copy, and fix the known defects in the copy
 
