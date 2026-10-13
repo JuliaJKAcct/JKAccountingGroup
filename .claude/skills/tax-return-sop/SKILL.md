@@ -567,7 +567,9 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
       Marketplace health insurance, what she has ruled business); a meal question asks only *business or personal* — not
       the date, the place and the guest (the record a business meal needs — who and why, Pub. 463 — is asked later, only for
       the ones he marks business); **repairs ask "your car or a car for sale?"**; and **the email that sends the file
-      reminds the client that every contractor paid 600.00 or more in the year must send a W-9 for the 1099**.
+      reminds the client that every contractor paid at or above the year's 1099 threshold must send a W-9 for the 1099**
+      — **600.00 for 2025 payments, 2,000.00 for payments made from 2026** (indexed after 2026 — read the current-year 1099
+      instructions).
       *(Rules verified 2026-10-13 against Pub. 463 (2025), Rev. Proc. 2019-46, Notice 2025-5, Pub. 334 and the 2025
       Schedule C instructions — the first answer had called the method a free choice, and had not said that inventory
       fuel is cost of goods sold, recovered when the car sells; review then caught that the rule binds one way only and
