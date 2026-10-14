@@ -559,6 +559,14 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
       he paid × business use**, business parking and tolls in full, **no depreciation, and no loan interest unless he is
       liable on the loan** (Pub. 334). A spouse's car that is community property may make him a part-owner. **Ask whose
       name the car and the loan are in before choosing a method — and the signer decides.**
+      🆕 **When the loan statements arrive and name SOMEONE ELSE as the borrower** *(Piliushin 2025, 2026-10-14 — an Ally
+      loan in another person's name, paid by the client "from the first day")*: **no payment on that loan reaches the client's
+      return under any reading** — principal never, interest only for a person liable on the debt (the equitable-owner
+      exception, Treas. Reg. 1.163-1(b), is for a mortgage on real estate), late charges never. **What is left after the
+      statements is only WHOSE CAR it is**, and that needs the **contract** (a co-buyer changes the interest answer) and the title.
+      ⚠️ **If the named borrower is also a firm client, check — with Lilian's or Julia's leave, it is another client's
+      record — whether their books or return already treat the car as theirs** before arguing the client owns it: one car
+      cannot be two people's. Statements carry only the last payment's split, so **the year's interest is not on Ally's.**
     - 🆕 **How Lilian wants the client's question file** *(Piliushin 2025, 2026-10-13 — her review of the first one)*:
       **a short, simple "how to use this file" on the FIRST page** (which tabs are which account, what to write in the
       yellow column, what needs no answer, send it back) — *"para que no se agobie leyendo"*; **never ask the same money
