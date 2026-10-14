@@ -1,6 +1,16 @@
 # Mikayel Shakhyan
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-14
+
+> 🔴⏰ **2026-10-14 — THE DEADLINE HAS NOT PASSED. IT IS 15 OCTOBER 2026: TOMORROW.** ⛔ **The banner below,
+> §5's first bullet and every sweep since 2026-09-19 said the return went overdue on 2026-09-15 — that was
+> an arithmetic error.** The pro forma 1120 is due **15 Apr 2026**; a Form 7004 adds **six months** →
+> **15 Oct 2026** (the working paper's header has said so since 2026-09-05). **2026-09-15 is only the date
+> typed on Double's own tasks.** ⚠️ **It holds only if the 7004 actually went in** — still unverified (§6
+> Information still needed). 🆕 **And the same day the client sent two documents that open a SECOND
+> company — Fun Park USA, LLC** (§1, §4, §6 Log 2026-10-14).
+
+> ⛔ **SUPERSEDED 2026-10-14 — the "overdue" framing in the banner below is wrong (see above); kept for history.**
 
 > 🔴🚨 **2026-09-26 SWEEP: THE DEADLINE IS NOW 11 DAYS OVERDUE AND NOTHING HAS MOVED AT ALL SINCE
 > 2026-09-19.** `Prepare tax return` is still `wip`; every downstream task (`Review`, `Send draft`,
@@ -39,6 +49,13 @@
   the filing date and the status)_. **It matters on the return twice over**: the mark is not
   an asset of the company, and a legal fee the company paid for it would be a **distribution to
   him** rather than a company cost — §6.
+- 🆕 **A SECOND FLORIDA LLC — Fun Park USA, LLC** _(learned 2026-10-14, from Articles of Amendment the
+  client sent)_. **A separate company, not an earlier name of Lum and Ari LLC** — the amendment changes no
+  name. **Articles of Organization filed 17 Jan 2025**; on **15 Jul 2025** Mikayel signed an amendment *as a
+  member or authorized representative of a member* making **himself** its registered agent and moving its
+  address to Boca Raton, FL. ⚠️ **Who its members are is not on the document.** ⛔ **The firm held nothing
+  on it** — no Double client, nothing in the repo, nothing in Julia's Gmail (searched 2026-10-14). Its
+  Sunbiz document number is in the working paper §1A ②. **Why it matters is §4 Income tax item 3.**
 - **Primary language:** RU — Double's `Preferred language` reads **"Only Russian"**
 - **Our engagement:** Income tax only. Double: `Income Tax: true` · `Bookkeeping: N/A` ·
   `1099 Preparation: false` · `Annual Report: false`
@@ -54,6 +71,7 @@
 |---|---|
 | Owner / primary contact | Double client 710648 — one portal contact, with full admin/tax/financial/files access |
 | The company's attorney | **Pivniak Law** — correspondent on the LUMARI trademark application, and paid out of the LLC's account in Nov 2025 |
+| 🆕 Paid the LLC's Florida filing fee | **Anastasia White** — the State's receipt for the new-LLC filing (24 Jun 2025) is in her name, on her card, billed to a suite in Hallandale, FL. ⚠️ **Her role is not established** — a formation service, a friend, or someone at Pivniak Law; it decides two questions (working paper §4K ①) |
 
 - **Double client:** https://app.doublehq.com/clients/710648/info/properties
 - **Double case note:** none — `list_notes(710648)` returned **0 notes** on 2026-09-05, **reconfirmed 0 notes on 2026-09-19.**
@@ -79,7 +97,8 @@
 - **Applies?** No — Double `Bookkeeping` reads **N/A**, and there is no accounting system.
 
 ### Income tax
-- **Applies?** Yes. 🔴 **TWO separate filings, and they are not the same taxpayer.**
+- **Applies?** Yes. 🔴 **TWO separate filings, and they are not the same taxpayer.** 🆕 *(Possibly a
+  **third** since 2026-10-14 — item 3, his other company.)*
 1. 🔴 **The LLC — pro forma Form 1120 with Form 5472 attached.** A domestic entity wholly owned by
    one foreign person is a corporation **for the limited purposes of §6038A**
    (Reg. §301.7701-2(c)(2)(vi); §1.6038A-1(c)(1), added by **TD 9796**). No income-tax return of
@@ -102,12 +121,21 @@
    flagged below for Lilian, but **does not by itself confirm whether his personal return should
    be 1040-NR or nothing at all** — that question, and whether the change was a deliberate fix or
    just relabels the entity side of this shared record, is still worth a word with her.
+3. 🆕 🔴 **Fun Park USA, LLC — a POSSIBLE second pro forma 1120 + Form 5472 for 2025** _(raised
+   2026-10-14)_. **If Mikayel is its only member**, it is a foreign-owned U.S. DE exactly like Lum and Ari
+   LLC, it existed in 2025, and its own formation is a reportable transaction — so it would owe the same
+   filing, **due 15 Apr 2026, with no Form 7004 known to the firm**, and the same $25,000 exposure. If it has
+   other members it is by default a partnership — a different question. ⛔ **Not a finding that a return is
+   missing: nobody has yet looked at its position**, and **whether the firm takes it on is Lilian's and
+   Julia's decision.** It is also very likely a **related party** of Lum and Ari LLC, which can add a Form
+   5472 to **this** return (working paper §4K ②).
 - **Current status (2026-09-05):** 🟠 **NOT FILED.** Lilian confirmed the 5472 has not gone in.
   Double's tax project *"2025 Taxes"* reads `notStarted`, `filedAt` null. A complete package was
   prepared (7004 + pro forma 1120 + 5472, in `JK Accounting Group > Tax Return Filed > 2025`,
   file `2025 7004 Ext LumandAriLLC.pdf`) — ⚠️ **but the 5472 in it MAY be a shell, and may equally be complete; nobody has looked at it on screen** — §5.
   🔴 **STILL NOT FILED as of 2026-09-19** _(Double `list_tasks`/`list_activity_log`, read this date)_ —
-  see the new §5 bullet: the project's own due date has now passed.
+  see the new §5 bullet: the project's own due date has now passed. ⛔ *(Corrected 2026-10-14: it had
+  not — the extended due date is **15 Oct 2026**; see the banner at the top.)*
 
 ### Licenses & other filings
 - **Forms 8843 — four, one per household member** (`JK Accounting Group > Others > 2025 >
@@ -132,6 +160,9 @@
 
 ## 5. Key facts & quirks
 
+- ⛔ **CORRECTED 2026-10-14 — the bullet below is WRONG on its central claim.** 15 Apr + six months is
+  **15 Oct**, not 15 Sep. **The extended IRS due date is 15 Oct 2026** (if the 7004 went in); **2026-09-15 is
+  an internal date on Double's tasks, not a deadline.** Kept as written for history. _(As written:)_
 - 🔴🚨 **THE PROJECT'S OWN DUE DATE HAS PASSED, AND NOTHING HAS MOVED SINCE.** Double's tax
   project (`Prepare tax return`) carries **2026-09-15** as the due date on every remaining task
   (`list_tasks`, read 2026-09-19). That date is consistent with the short-year Form 1120's regular
@@ -165,6 +196,12 @@
   names no payer, so this is an inference to confirm with him**, not something read off the
   statement — the working paper sets out the evidence and the alternative. **And there is no way out:** the only exception to *filing* is having **no** reportable
   transaction in Parts IV, V and VI at all, which §4B alone rules out.
+- 🆕 **THE FIRST FORMATION COST HAS SURFACED, AND IT WAS NOT PAID BY HIM** _(2026-10-14)_. The State of
+  Florida's receipt for the new-LLC filing fee is dated **24 Jun 2025** and paid on **Anastasia White's**
+  card. Two consequences: what Part V reports is what **he** paid — so what he paid **her** is the figure,
+  not the state fee; and **24 Jun is before the 8 Aug formation date** the return uses, so that date needs
+  checking on Sunbiz. ⚠️ **The receipt never names the company** — the link to Lum and Ari LLC is the file
+  name alone. Figures and the three readings: working paper §4K ①.
 - 🔴 **THE MOST CERTAIN REPORTABLE TRANSACTIONS ARE NOT IN THE BANK STATEMENTS.** The LLC existed
   from **8 Aug 2025** and had no bank account until **27 Oct 2025** — eighty days in which the
   Sunbiz fee, the registered agent and the EIN were paid by somebody, and it was not the company.
@@ -196,6 +233,26 @@
 ## 6. History & open questions
 
 ### Log
+
+- _(2026-10-14)_ — **Lilian asked where the reportable-transactions work stood, and sent two documents the
+  client had just sent her.** _(Her recollection was a payment to a lawyer or to a company that helped
+  register the LLC — that is the **Pivniak Law payment** of 14 Nov 2025, out of the company's own account
+  (figure in working paper §4D);
+  the receipt she sent is a different payment.)_ Both read in this session and **transcribed in full in the
+  working paper §1A**: ① the **Florida new-LLC filing receipt** — through the redactor (masked 3 long
+  number runs and 2 street lines, nothing else); ② **Articles of Amendment of Fun Park USA, LLC** — a
+  six-page scan the redactor refused, read page by page at her request, street, e-mail and phone withheld.
+  **What they did** — working paper §4K: the receipt is a formation cost **paid by a third party, Anastasia
+  White**, on **24 Jun 2025**, which puts the 8 Aug formation date in question and **widens Q2's window**;
+  it does **not** answer the Pivniak Law question. The amendment reveals **a second LLC, Fun Park USA,
+  LLC**, that may owe its own 2025 pro forma 1120 + 5472 and is very likely a related party of Lum and Ari
+  LLC (**new Q6**). **Gap since the 2026-10-10 sweep closed:** Double (cid 710648) — `list_files` from
+  2026-10-03 **0**, `list_notes` **0**, `list_activity_log` from 2026-10-03 **0**, project still
+  `inProgress`, `filedAt` null; `list_clients` "Fun Park" **0**; Julia's Gmail from 2026-10-09 on his name,
+  the company, the brand, Fun Park, Anastasia White and Pivniak — only the firm's own 2026-10-10 sweep
+  e-mail. ⚠️ **Not checked this pass: Ping and Drive.** ⚠️ **The two documents are not in Double** — they
+  should be uploaded there. 🔴 **And the deadline arithmetic in this file was wrong for a month** — see the
+  banner at the top.
 
 - _(2026-09-26)_ — **Weekly CI sweep, baseline 2026-09-19 — TOP-PRIORITY CHASE, exhaustive, nothing
   moved.** Sources and what each showed:
@@ -360,16 +417,26 @@
 
 ### Tax year 2025 — the review
 
-- **In preparation, blocked on the client's five questions below.** 🔴 **And if those answers do not come, two positions fall to Julia** (working paper §6D) — ⓘ *conditional, not parallel: answer the five and they mostly dissolve.* The
+- **In preparation, blocked on the client's questions below** *(five until 2026-10-14; Fun Park made it six)*. 🔴 **And if those answers do not come, two positions fall to Julia** (working paper §6D) — ⓘ *conditional, not parallel: answer the five and they mostly dissolve.* 🆕 ⏰ **2026-10-14: no longer conditional if the 7004 went in — the extension ends 15 Oct 2026, so they are live now** (Outstanding items). The
   return itself, its tie-outs and its decisions are in the working paper.
 
 ### Outstanding items (CI-only — never in the SOP)
+
+- 🔴⏰ 🆕 **2026-10-14 — the extended due date is 15 Oct 2026, the next day.** **First: did the Form 7004
+  go in?** `2025 7004 Ext confirmation.pdf` is a scan; a session can now read it by rendering it **when
+  Lilian or Julia asks**. **If it did**, the two positions in working paper §6D are **live now**, not
+  conditional, and are **Julia's** — they have to be put to her today. **If it did not**, the return has
+  been late since 15 Apr 2026 and should go as soon as it can.
+- 🆕 **Upload the two documents of 2026-10-14 to Double** — the formation receipt and the Fun Park
+  amendment came in through Lilian, not the portal, and are not in the file library.
+- 🆕 🔴 **Fun Park USA, LLC — decide whether the firm looks at its 2025 position** (Lilian / Julia), and ask
+  him Q6 below. [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 209.
 
 - 🔴 **Forward the transaction summary to Julia** — prepared 2026-09-06, **still with Lilian** as
   of 2026-09-07. 🔄 **CHASED 2026-09-19 — UNCHANGED, now 13 days old (12 since the last file
   update).** No confirmation of receipt in Julia's Gmail (searched, found nothing); `FOLLOW-UPS.md`
   row 85 itself reads unchanged since 2026-09-07. Then put the two signer positions to her **only
-  if the client's answers do not come** (working paper §6D). `FOLLOW-UPS.md` row 85.
+  if the client's answers do not come** (working paper §6D). `FOLLOW-UPS.md` row 85. *(⛔ superseded 2026-10-14: live now — first bullet of this list)*
   🔄 **CHASED 2026-10-03 — STILL UNCHANGED, now 27 days old** (Gmail/Double bounded after 2026-09-26; extended due date now 18 days overdue).
   🔄 **CHASED AGAIN 2026-09-26 — STILL UNCHANGED, now 20 days old.** Still no receipt confirmation
   found in Gmail. Unchecked directly: `FOLLOW-UPS.md` row 85 itself (out of this sweep's scope to
@@ -386,10 +453,10 @@
   old with no evidence it reached him — no client email exists in Julia's Gmail at all (searched
   unbounded on his address), no Ping meeting/call for him exists (searched, none found), no Double
   note recording it (0 notes). **No deadline of its own**, but it gates the return, whose own
-  extended due date (2026-09-15) has now passed — see §5.
+  extended due date (2026-09-15) has now passed — see §5. *(⛔ wrong — see the 2026-10-14 banner)*
   🔄 **CHASED AGAIN 2026-09-26 — STILL UNCHANGED.** Now **20 days** since first raised (2026-09-06),
   Q2 draft **19 days** old. Same exhaustive search (Gmail, Ping, Double) found nothing new. The
-  return's extended due date is now **11 days** overdue.
+  return's extended due date is now **11 days** overdue. *(⛔ wrong — see the 2026-10-14 banner)*
 - ✅ **`Tax Return Type` mismatch — RESOLVED (or at least changed) as of 2026-09-19.** Was `1040` for
   a nonresident; now reads **`1120 Proforma`** (Double `list_client_properties`, read 2026-09-19).
   No activity-log entry for the change was found (bounded search from 2026-09-05), so who changed it
@@ -425,19 +492,28 @@
       set out in working paper §6D ①.
 - [ ] 🔴 **What he paid personally between 8 Aug and 27 Oct 2025**, the 80 days before the company
       had an account — and whether any of it was property rather than money.
+      🆕 **2026-10-14 — partly answered, and redrawn:** he sent the Florida filing-fee receipt (24 Jun
+      2025, **paid by Anastasia White**). So the window starts **when the formation started**, not on
+      8 Aug, and the live question is **who Anastasia White is and what HE paid her** — that, not the state
+      fee, is what Part V reports. Registered agent and EIN still unaccounted for.
 - [ ] 🔴 **Who are AXY Company LLC and Oxana Martox LLC to him?** This decides **how many Forms
       5472 are filed**, not just a line. ⚠️ **And if no answer comes, what to do about it is
       Julia's** — working paper §6D ②. ⓘ *The separate-form rule covers a **foreign or U.S.**
       related party, not only a U.S. one.*
 - [ ] 🟠 **Did the company pay anything that was really his personally?** Each one is a
-      distribution, even when the money went to an unrelated payee.
+      distribution, even when the money went to an unrelated payee. 🆕 *(2026-10-14: ask in the same
+      breath whether **Anastasia White works for Pivniak Law** — if so, that payment may be formation work.)*
 - [ ] ⏸ **In which country does he file a tax return as a resident — and does he have a tax
       identification number there?** **Four** fields on the 5472 depend on those two facts, and
       nothing on file answers either.
+- [ ] 🔴 🆕 **Fun Park USA, LLC** _(2026-10-14)_ — **is he its only member, is it still active, did it have
+      a bank account or any 2025 transactions, and did it ever pay or receive anything from Lum and Ari
+      LLC?** Decides whether it owes its own filing **and** whether it adds a Form 5472 to Lum and Ari's.
+      ⓘ *Q1 widens with it: did any of the counter deposits come from Fun Park rather than from him?*
 
 🔄 **Chase pass, 2026-09-19 — all FIVE of the above are still unanswered, ages 13–14 days from
 first being raised, no deadline of their own but gating a return whose own extended due date
-(2026-09-15) has passed.** Checked against Gmail (client's address, unbounded — no message from
+(2026-09-15) has passed.** *(⛔ wrong — see the 2026-10-14 banner)* Checked against Gmail (client's address, unbounded — no message from
 him, ever), Ping (his resolved client record — 0 meetings), and Double (0 notes, no activity since
 2026-09-07). None of these five is answerable from the sources this sweep can reach; only he can
 close them.
@@ -445,7 +521,7 @@ close them.
 🔄 **Chase pass, 2026-09-26 — all FIVE still unanswered, now ages 20–21 days.** Same sources
 re-checked (Gmail unbounded on his address, Ping client-scoped search + action items, Double notes/
 tasks/activity from 2026-09-19) — nothing new from him. The return's extended due date is now
-**11 days overdue** with `Prepare tax return` still `wip`.
+**11 days overdue** with `Prepare tax return` still `wip`. *(⛔ wrong — see the 2026-10-14 banner)*
 
 **Ours to settle, without asking him** _(§6B)_:
 
@@ -453,6 +529,9 @@ tasks/activity from 2026-09-19) — nothing new from him. The return's extended 
       2026-09-19 — still open, 14 days; none of this sweep's sources can settle it, it needs an
       actual on-screen read. Chased again 2026-09-26 — still open, 21 days; still needs an on-screen
       read, which this sweep cannot perform.)_
+- [ ] 🔍 🆕 **Sunbiz, two more lookups** _(2026-10-14)_: Lum and Ari LLC's **Date Filed vs Effective Date**
+      (does 8 Aug 2025 stand?) and **Fun Park USA, LLC's** status. ⚠️ **And the FDOR "company was
+      dissolved" letter may concern Fun Park, not Lum and Ari** — nobody has read it.
 - [ ] 🔴 **The dissolution date** — on **sunbiz.org**, where it is public and readable; the Sunbiz PDF in Double is one of the six unreadable scans, so it is only the fallback. _(Chased 2026-09-19 —
       still open, 14 days; sunbiz.org remains outside this session's reachable sources. Chased again
       2026-09-26 — still open, 21 days; sunbiz.org still unreachable from this session.)_
