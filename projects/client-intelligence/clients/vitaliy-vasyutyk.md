@@ -78,7 +78,7 @@ link). Never write the credential itself here.
 | Tax1099 | The group's 1099 filings — its platform fee is re-billed to the client as a separate line | firm-level | invoice item `Tax1099 Reimbursement Fees` |
 | TaxDome → Double portal | Organizers, document upload, e-signature | firm-level | he still filed the **2025 individual organizer through TaxDome** (Apr 2026) |
 | The firm's own A/R ledger | Where the group's invoices and open balances live | firm-level | six billing customer records — see §5. ⚠️ **This is OUR ledger, not the client's** — no company in this group has any accounting platform connected |
-| Google Drive | The sensitive vault | **Confirmed to exist, 2026-09-19** — a search for "Vasyutyk"/"Nika Realty"/"Zumfi" found a **"Vitaliy Vasyutyk" folder under at least three different Drive parent folders**, plus a **"Nika Realty" subfolder** (current P&L workbook). ⚠️ Which of the three is the canonical vault is **not established** — treat as candidates, not a confirmed single link (see §7) |
+| Google Drive | The sensitive vault | — | **Confirmed to exist, 2026-09-19** — a search for "Vasyutyk"/"Nika Realty"/"Zumfi" found a **"Vitaliy Vasyutyk" folder under at least three different Drive parent folders**, plus a **"Nika Realty" subfolder** (current P&L workbook). ⚠️ Which of the three is the canonical vault is **not established** — treat as candidates, not a confirmed single link (see §7) |
 
 ## 4. Obligations & recurring processes
 

@@ -644,10 +644,13 @@ the total amount … reported to you on one or more of these Forms."* So a tip q
 | **① It is INSIDE the total of a 1099** | the platform's 1099 includes it | 🛑 *"Only amounts that appear in the aggregate on Forms 1099 can be considered qualified tips."* **No 1099 from that platform → no deduction, however real the tips** — they are still income |
 | **② It is DOCUMENTED** | the platform's own earnings statement naming the tips *(the instructions' Example 1 is a rideshare driver)*; receipts; POS reports; a **contemporaneous** tip log *(Example 2)* | a year-end figure on the client's summary sheet with nothing behind it |
 
-🔑 **Which 1099 holds a rideshare driver's tips — the 1099-K, not the 1099-NEC.** The **1099-K** reports what the **riders**
-paid through the app (the platform as payment network) — fares **and** tips. The **1099-NEC** reports what the **platform
-itself** paid — incentives, bonuses. ✅ **Prove it by arithmetic before relying on it:** the statement's fares + tips must
-equal the 1099-K box 1a exactly. ⓘ *For 2025 a 1099-K is required only above 20,000 **and** more than 200 transactions,
+🔑 **Find WHICH 1099 holds the tips — platforms differ, so prove it, never assume it.** For **Uber (2025)** it is the
+**1099-K**: that form reports what the **riders** paid through the app — fares **and** tips — while Uber's **1099-NEC**
+carried only its own incentives. ⚠️ **But the instructions' own line-5 Example 2 is a rideshare driver whose tips were
+reported on a 1099-NEC**, and delivery apps commonly pay tips through the 1099-NEC — so the Uber answer is not a rule.
+✅ **Prove it by arithmetic before relying on it:** the statement's components must add up to the box exactly
+(on the pilot, fares + tips = the 1099-K box 1a to the cent). **The tips go in the qualified-tips column of whichever 1099
+detail holds them.** ⓘ *For 2025 a 1099-K is required only above 20,000 **and** more than 200 transactions,
 so a small second platform usually issues none — and its tips then fail test ①.*
 
 **The net-income limit, per business:** the deduction cannot exceed that Schedule C's **line 31, less the deductible half of
