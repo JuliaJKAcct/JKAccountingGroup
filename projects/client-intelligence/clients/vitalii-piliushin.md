@@ -150,6 +150,8 @@ the actual details (and Claude can pull them live when a task needs them).
   purchases are owner draws. **Where "small" ends — 25.00 — is the firm's precedent from another client**, not a
   figure she gave here ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B.10 ③), applied as
   2025 D4 _(session)_: under 25.00 a draw, 25.00 or more fuel; QT "Inside" a draw.
+  🆕 ⛔ **Restaurants: superseded for this client by L15** — the restaurants he calls business are business at 50% (④ *How he
+  answers a question file*, below).
 - 🆕 **Wells Fargo fuel is ALL business — gas & fuel, line 9 — and the client is NOT asked which car** _(Lilian,
   2026-10-13 — 2025 L8)_. **Repairs keep their question: his car or a car for sale** _(same ruling)_. Whether the
   personal-account fuel of the months before Wells Fargo had any (April–June) counts too is open (2025 O33).
@@ -172,9 +174,16 @@ the actual details (and Claude can pull them live when a task needs them).
   title holder is his wife and the car is community property, he may count as a part-owner. **His car loan (Ally) is paid
   from his Bank of America account** — 🆕 ✅ **it IS the Audi's (a 2018 Q7), and the loan is in BORIS ZAKOPKO's name**, contract
   January 2024 _(the Ally statements, read 2026-10-14; the client on the call: "the contract is in Boris's name, but I have paid it
-  from the first day")_. ⛔ **No Ally payment ever goes on his return** — principal never; interest only for a person liable on
-  the loan (he is not, unless the contract names him co-buyer); late charges never. **What the loan decides is whose car it is
-  for tax purposes — Julia (2025 O31)**, and the firm's own records on Boris and Candramas must be checked first (2025 O35).
+  from the first day")_.
+  🆕 ✅ **DECIDED — Julia, 2026-10-14 (relayed by Lilian): the Audi goes on his return as HIS car** (2025 D44) — *"No lo
+  cuestiones… Es una decisión de Julia."* Apply it; do not re-argue whose name is on the loan. So: **the principal of the
+  payments is never deducted; the business share of the interest goes on line 9** (ATX Vehicle Expenses worksheet, 9c);
+  **the purchase price is depreciated on actual costs**, or the standard rate is used if the car's first business year
+  allows it. **What it needs from him every year:** the miles (odometer at the start and end, and a list of business trips),
+  the contract (once), **the lender's payment history for the year** — the monthly statements split only the last payment —
+  the insurance, the repairs, and since when the car is used for the business. *(Before her decision the firm read the car
+  as Boris's and the payments as off the return, and Lilian asked about treating them as rent — 2025 §2.8, kept as the
+  record.)*
   🆕 **He drives it since November 2024 and keeps NO mileage record** _(the client, 2026-10-14)_ — driving is not business use, so whether 2024 or 2025 is the car's first BUSINESS year depends on whether he used it
   for paid work in 2024 (Julia, 2025 O31); and the business share has nothing written under it.
   **Ask him to start a log now.** The Range Rover of 2025 was a car **for sale** (its insurance is a business insurance
@@ -200,9 +209,21 @@ the actual details (and Claude can pull them live when a task needs them).
 - 🆕 **How he answers a question file** _(2025 DRAFT 6, 2026-10-14)_: **once per payee, on the first line** — apply it to that
   payee's lines; short answers ("для шапа", "рабочий зарплата", "доставка машины") that name a purpose are enough to apply.
   ⚠️ **He also gives BLANKET answers** — *"all restaurants are business"*, *"all trips and hotels were work — write the reason
-  yourselves"* — **those go to Lilian, never applied by a session, and the reason is never written for him.** Several of his
-  friends lend him money and he repays them in small Zelle amounts (Stas, Tima, Zhenya, others): **money from those people may not be
-  sales** — where he has said so it came out (2025 D41); where he has not, Lilian decides (2025 D42). Workers at the shop are paid by Zelle and Cash App with nicknames as labels.
+  yourselves"* — **those go to Lilian, never applied by a session, and the reason is never written for him.**
+  🆕 **For 2025 Lilian ruled on both, and the rulings are the rule here** _(2026-10-14 — 2025 L15, L16)_:
+  - **Restaurants he calls business ARE business, at 50%** — *"Él es el que sabe la verdad."* **Only the account he
+    answered on:** a blanket answer on one account's tab does not reach the other (2025: Wells Fargo applied, Bank of
+    America asked — D43).
+  - **Trips: out of town = business on his word; local lodging is NOT, and neither is a trip for his own affairs** (2025:
+    a DMV visit for his own documents). **Read his notes to tell which trip was which — and write NO reason for him**
+    (*"no vamos a escribir motivo nosotros"*). A month's apartment is **living, not a trip** (session's reading — Lilian
+    may reverse). A trip where he **flies out and drives a car back** is a car-buying trip: flights and hotels are travel,
+    the road fuel and the car service follow the car (Part III). **A meal on a business trip is a travel meal — 24b at
+    50%, whichever account paid it** (session's reading of L16, 2025 — Lilian may reverse); a barber is never a meal.
+  - **Money from friends is not always sales:** several of his friends lend him money and he repays them in small Zelle
+    amounts (Stas, Tima, Zhenya, others) — **money from those people may not be sales**; where he has said so it came out
+    (2025 D41); where he has not, Lilian decides (2025 D42). Workers at the shop are paid by Zelle and Cash App with
+    nicknames as labels.
 - 🆕 **Every contractor paid at or above the year's 1099 threshold must send a W-9 so the 1099 can be issued (600.00 for 2025
   payments, 2,000.00 from 2026 — ⑤ below) — say it in the email that
   sends him the year's file** _(Lilian, 2026-10-13)_.
@@ -237,7 +258,8 @@ the actual details (and Claude can pull them live when a task needs them).
   account carry business costs** (Wells Fargo paid the card; the 39 transfers to "Vitaly" land in his Bank of America
   account — 🆕 now read for 2025, §③) — **ask for both at the start of the year's work**, not after the P&L is built. ⚖️ **Cash from one payer above 10,000,
   in one or related transactions, means a Form 8300** — ask where cash deposits came from _(2025 O22 — for Julia to decide)_.
-- **Food on the bank is a draw** _(Lilian — L2)_: no meal deduction unless he states a meal was business
+- **Food on the bank is a draw** _(Lilian — L2)_: no meal deduction unless he states a meal was business — 🆕 **and he
+  did: his restaurants are business at 50% on his word (L15, above — ④ "How he answers a question file")**
   ([`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §1B.1). **Personal purchases a business could own** (electronics, furniture,
   Apple.com) are draws unless he explains them _(session — 2025 D17)_. **Marketplace health premiums** belong to the 1040 (Forms 1095-A),
   not to either Schedule C.
@@ -285,6 +307,15 @@ the actual details (and Claude can pull them live when a task needs them).
 3. Ask him for the eBay Transaction report (and the 1099-K, if any — §②); look for Candramas's 1099-NEC; once the 2848 / 8821 are fixed, pull his **Wage &
    Income transcript** — it lists every 1099 reported to him.
 4. Ask the client only what §6 of the last working paper still leaves open — in one message, in simple Russian.
+
+**⑨ How his worksheet is built** _(Lilian, 2026-10-14 — 2025 L18: "Ahora quiero mantener eso para este cliente")_
+- **One transactions tab per account** — Wells Fargo, Bank of America (and any other account the year has, marked
+  outside the return if it is) — **every line with its category and a BASIS column saying who decided it and on what:
+  CLIENT · LILIAN · JULIA · FIRM.** A FIRM line is a default someone can overrule, not a decision — and **a session's
+  READING of a ruling is FIRM too**, naming the ruling (*"FIRM (reading of L16)"*).
+- **The first page carries the pictures — the money flow and the profit walk — updated every draft and shown NOW beside
+  the LAST draft's**, with a small table of how each category moved, so she sees what changed since the last time.
+- **When she asks for "the worksheet", deliver the worksheet only** — no client file unless she asks for one (2025 DRAFT 7).
 
 ### Licenses & other filings
 - **Applies?** Not to him personally.
@@ -336,6 +367,8 @@ the actual details (and Claude can pull them live when a task needs them).
 - 2026-10-12 (6) — **DRAFT 3 and the client file** ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §2.2, 3B-bis, §6). Lilian: *"Sí, pásalas al Excel ya"* — eBay's own November–December figures are now on Atman Parts' Schedule C in the workbook (D14, D30). She then asked for the P&L to be *"lo más fiel posible a la realidad"* and for a document in Russian where he confirms every deposit with our reason beside it: built as `Piliushin_2025_Voprosy_klientu.xlsx` (nine sheets — income with reasons, not income, payments to people, maybe-business, not in the bank, Noma / Taras / Silvia, eBay, other) with one message in simple Russian. **What the re-read found:** deposits worth confirming (a wire from a private individual, wires from companies outside the car trade, the checks, the cash); lines booked as personal that may be business (a pre-purchase inspection, dealer service, the Houston trip, a flight, hotels); costs the account does not show (the phone before October, title and auction fees, shop insurance, the car loan) — **most likely on his Apple Card or personal account, whose statements the firm does not hold** (O19). A Form 8300 question for Julia if one buyer paid over 10,000 in cash (O22). She asked how to get the eBay figures: the simplest is the same Sales screen with September–October dates; the Transaction report has everything (O4).
 - 2026-10-12 (7) — **Julia's question, relayed by Lilian (WhatsApp): if the P&L shows far more profit than he moved to his personal account, where did the rest go — and were business costs paid from his personal account, since services such as MoneyGram will not take a business account for payments abroad?** Answered in the [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §2.3 and a new workbook sheet, *Where the money went*: every dollar of the two business accounts is placed — the largest part of the gap is personal spending paid straight from the business account, then payments to people with no stated purpose, the year-end balance, car and home costs not yet deducted, and eBay money owed to him on 31 December that had not reached these accounts (figures in §2.3). **The profit itself still rests on his answers** (deposits that may not be income, payments that may be business, and costs paid from his personal account or abroad). The client file now asks for **payments abroad (MoneyGram, Western Union, Wise) with receipts** (O19).
 - 2026-10-12 (8) — **For the call with him on 2026-10-13, Lilian asked for "algo visual para Julia y para el cliente"**: built a money-flow pack ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §2.4) — a picture of all the money in and out of the two business accounts, a picture walking the profit down to the year-end balance, and a workbook with one tab per category (payments to people with no stated purpose on their own tab, by person), in Russian for him and English for the firm, same tabs and line numbers, no formulas between tabs (her instruction). **New questions for the call** (O24): every 2025 address and **whether he lived or worked in California** (a March 2026 form carries a California address), **marital status** (a family Zelle payee carries his own spouse label — unconfirmed), dependents, other income, accounts abroad, and Forms 1099 — **a 1099-K from eBay is not expected for 2025** (the eBay screens seen show far fewer than 200 sales; September is unseen — so we only ask whether one exists). **The firm already holds his two Forms 1095-A** — not asked again.
+- 2026-10-14 (4) — **Julia decided the Audi goes on his 2025 return as his car** (relayed by Lilian; [working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §2.11, D44). The worksheet gained a sheet for the car: the two payments Ally's statements split, input cells for what he must send, both methods computed. **Asked of him:** the 2025 miles and a trip list, since when the car is used for the business, the contract, Ally's 2025 payment history and which account paid in late December, the weight rating, insurance and repairs. Line 9 waits on the miles. The independent review of the DRAFT 7 record also moved his Bank of America meals on the business trips in as travel meals and took three barbers out of the restaurant group.
+- 2026-10-14 (3) — **DRAFT 7: Lilian ruled on his blanket answers and on the worksheet** ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §2.10, §3-D7). **L15:** his restaurants are business at 50%, on his word — the account he answered on; the other account's restaurants are asked (D43). **L16:** out-of-town trips are business on his word, local lodging and the DMV trip are not, and the firm writes no reason; the session read his notes — Houston (October), Boston (August) and Florida (September, where he drove a car back) business; the Boston apartment read as living (Lilian may reverse). **L17:** the late 1099s wait. **L18:** the worksheet only; one transactions tab per account with who decided each line; the money pictures on the first page, now beside the last draft's — his standing format (playbook ⑨). Revenue unchanged; the profit fell. **Lilian also asked whether his payments on Boris's Audi loan could be deducted as rent** — only if Boris owns the car and he never will; his words describe buying; a third reading for Julia (O31). **Built:** the DRAFT 7 worksheet only.
 - 2026-10-14 (2) — **He returned the Russian cost file with his answers** ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §2.9, §3-D6; DRAFT 6). Lilian uploaded it and asked how the revenue changes. **Answered:** about two-thirds of the payees — shop repair work and workers, car deliveries and shipping to Rotterdam, document couriers, repairs and deposits of cars he sold, the Range Rover's insurance (a car for sale), shop furniture and a camera, three trips to buy cars, tolls, washes ("all for export cars"), the business phone on his personal account; several friends he borrows from and repays; family and personal items. **On the car and home:** the Audi is registered to Boris Zakopko and he drives it since November 2024, with no mileage record; the rent is the same every month from a lease of 15 October 2025; AT&T was the home internet. **Not applied — Lilian decides:** his blanket answers (all restaurants and all trips "for business"), an apartment in Boston, a trip to a DMV for his own documents, car service without saying which car. **Revenue fell slightly** (two friends' Zelle are loans, not sales); one more friend's December money and the BMW pair are still open. **Built:** DRAFT 6 worksheet with a Client answers sheet, both templates refilled.
 - 2026-10-14 — **The Ally reports and the call of 2026-10-13** ([working paper](../../tax-returns/vitalii-piliushin/2025-form-1040.md) §1.12, §1.13, §2.8). Lilian pointed to a new Double folder, `Ally reports`, and to the Zoom call the firm held with him the day before.
   - **The Ally statements** (twelve, November 2025 → October 2026, read through the redactor in the session): the loan is **Boris Zakopko's**, on a **2018 Audi Q7**, contract January 2024; Ally's own payment records name **him** as the payer, and his Bank of America account matches every 2025 payment. The loan was behind most months and brought current twice. **Nothing on it reaches his return** — whose car it is for tax purposes is Julia's (O31), after the firm's own records on Boris and Candramas are checked (O35 — another client's, so only Lilian or Julia can ask).
