@@ -4,11 +4,13 @@
 
 > 🔴 **2026-10-13 — PHASE 1 OF HIS 2025 FORM 1040 RAN, AND THE GATE IS CLOSED.** The organizer (completed that morning)
 > reports **wages only**, but his own note, his bank statements and the firm's records show **cash deposits and "small
-> side jobs" with no 1099s**, a **second W-2 (Deep Tech, from November)**, **three partnership K-1s** the firm itself
-> prepared, and **2025 activity in Never Give Up KK LLC**. The **filing status** is open — whether and how **Viktoriia**
-> has already filed; ⓘ **a separate return of hers would not lock him into filing separately** (a joint return can
-> still replace it). ⚠️ **If the extension holds, the return is due 2026-10-15.** Questions, figures and the full review:
-> the [working paper](../../tax-returns/kyrylo-kuznetsov/2025-form-1040.md) §2 and §6.
+> side jobs" with no 1099s**, a **second W-2 (Deep Tech, from November)** and **2025 activity in Never Give Up KK
+> LLC**. 🆕 **2026-10-14:** ⭕ **his three partnership K-1s are all ZERO** (read on Lilian's authorization) · ✅ **the
+> extension is settled — Lilian: do not raise it again** · **Viktoriia has already filed her 2025 return** (Lilian's
+> understanding) — **a copy of it is what we need**: it sets his filing status, who claims Sofiia and how the Marketplace
+> policy is split. ⓘ **A separate return of hers would not lock him into filing separately** (a joint return can still
+> replace it). Questions, figures and the full review: the
+> [working paper](../../tax-returns/kyrylo-kuznetsov/2025-form-1040.md) §2 and §6.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -94,10 +96,10 @@ the actual details (and Claude can pull them live when a task needs them).
   Services) as **married filing jointly**, with Sofiia as the dependant, the EIC, the child tax credit and a
   premium-tax-credit reconciliation; **nothing carries forward** from it (no Schedule 1, no NOL, no capital loss, no QBI
   loss).
-- **Return type(s) & deadlines:** 2025 — **extension on file** (a `2025 4868 Ext.pdf` in Double, a scan; acceptance not
-  verified) → **due 2026-10-15** if it holds.
+- **Return type(s) & deadlines:** 2025 — **extension filed; settled** _(Lilian, 2026-10-14: "la extensión se hizo, todo
+  está bien. No me preguntes más por eso")_. ⛔ **Do not raise the extension again.**
 - **What his return is made of** _(2025 review)_: his W-2s, **Schedules C** (Never Give Up KK; the side jobs if they are
-  his business income), **three Schedules K-1 from the partnerships**, the **Form 1095-A → Form 8962** (Marketplace,
+  his business income), **three Schedules K-1 from the partnerships** _(zero for 2025)_, the **Form 1095-A → Form 8962** (Marketplace,
   Oscar, the whole household on one policy — Sofiia covered January–August 2025), the child tax credit, possibly the EIC,
   and — only if both spouses had earned income — the dependent-care credit.
 - **Our role:** we prepare it (Lilian, with Julia signing).
@@ -113,13 +115,15 @@ the actual details (and Claude can pull them live when a task needs them).
   **"salary and cash received"**. Every year, reconcile his deposits before believing the organizer.
 - 🔴 **The firm itself prepares returns that feed his 1040 — the organizer will not mention them.** The **three
   partnerships' K-1s** (Boost You, Goshakes, The Roadside Project — 2025 returns filed by Lilian in September 2026) and
-  **Never Give Up KK's Schedule C** are the firm's own work; **never ask him for them**. Vitali Yakubuk reportedly filed
-  his own personal return already — Julia's view (2026-07-23): fine only if the K-1s are zero, otherwise he amends.
+  **Never Give Up KK's Schedule C** are the firm's own work; **never ask him for them**. ⭕ **For 2025 all three K-1s are
+  ZERO** — he holds **50% of Boost You, 50% of The Roadside Project and 25% of Goshakes** (read 2026-10-14). So Julia's
+  condition for Vitali Yakubuk's own return (zero K-1s, 2026-07-23) is met.
 - 🔴 **Viktoriia files her company returns elsewhere, and her personal return is unaccounted for.** Her **realtor LLC is
   taxed as a C corporation** (VIKTORIIA KUZNIETSOVA LLC, EIN 33-2923874, formed 2025-01-10 — Form 1120, **no officer
   compensation**) and her **professional association is an S corporation formed 2025-11-17** (KUZNIETSOVA VIKTORIIA PA,
-  EIN 41-3034101 — a zero year in 2025); both 2025 returns were prepared by another firm and signed 2026-03-08. **Whether
-  she has already filed a personal 2025 return, and on what status, is unknown** — ⓘ **a separate return does NOT lock
+  EIN 41-3034101 — a zero year in 2025); both 2025 returns were prepared by another firm and signed 2026-03-08. 🆕 **She has
+  already filed her 2025 personal return** (Lilian's understanding, 2026-10-14 — **not yet seen**); **on what status is
+  unknown, and a copy is what the firm needs** — ⓘ **a separate return does NOT lock
   them into separate filing: a joint return can still replace it** (§6013(b), generally within three years of the
   original due date). Staying separate generally loses the premium tax credit, the EIC and the dependent-care credit. **Julia owes a filing-status recommendation (from 2026-06-23).**
 - 🟢 **His "EV" is a LEASE** — a 2024 Volkswagen ID.4 leased **2024-07-15**; the lessor already applied the clean-vehicle
@@ -163,23 +167,34 @@ the actual details (and Claude can pull them live when a task needs them).
   on the 2024 return's direct-deposit line** (FOLLOW-UPS row 101's known gap) — **nothing was written anywhere**, and the
   session is to be deleted. _(Working paper §1–§2)_
 
+- **2026-10-14 — Lilian's answers and the K-1s.** ① **She authorized opening the three 2025 Forms 1065** for his
+  K-1s: **all three are zero years** — Boost You (EIN 39-3933941, started 2025-08-18) and The Roadside Project (EIN
+  39-3812195, started 2025-08-18), each **50% Kyrylo / 50% Vitali Yakubuk**; Goshakes (EIN 41-2509741, started
+  2025-11-10), **25% each to Kyrylo, Vitali Yakubuk, Siarhei Tsehliankou and Galyna Vasylieva**. Every K-1 box blank.
+  ② **The extension: settled** — *"la extensión se hizo, todo está bien. No me preguntes más por eso."* ③ **Viktoriia
+  has already filed her 2025 return** (Lilian's understanding); she asked why the firm needs her information — the
+  answer (her return sets his filing status, shows who claimed Sofiia and how the 1095-A in her name was split) is in the
+  working paper, finding 5. A **phase-1 workbook** (every bank line, the 1095-A, the K-1s, open items) was delivered to
+  her — not committed. _(Lilian, chat; Double)_
 ### Tax year 2025 — the review
-- **Gate (2026-10-13): ⛔ NOT READY.** It turns on five things: the **income outside the W-2** (the cash and the side
-  jobs); the **Deep Tech W-2**; the **three partnership K-1s**; **Never Give Up KK's 2025 activity**; and the **filing
-  status** (whether and how Viktoriia already filed — a joint return remains possible either way).
+- **Gate (2026-10-13, updated 2026-10-14): ⛔ NOT READY.** It turns on four things: the **income outside the W-2** (the
+  cash and the side jobs); the **Deep Tech W-2**; **Never Give Up KK's 2025 activity**; and the **filing status** — a copy
+  of the return Viktoriia already filed (a joint return remains possible either way). ⭕ **The three partnership K-1s
+  are settled — all zero (2026-10-14).**
 - **Asked of the client** *(prepared 2026-10-13, not yet sent — Lilian decides)*:
   - [ ] Where the 2025 cash deposits came from.
   - [ ] What the "small side jobs" were and for whom; whether any payer sent a Form 1099-NEC; their expenses.
   - [ ] Never Give Up KK: what its two October 2025 wire transfers paid for, and whose the cash deposit was.
-  - [ ] Whether Viktoriia has already filed her own 2025 personal return; any income in her own name in 2025.
+  - [ ] A complete copy of the 2025 personal return Viktoriia already filed. _(Reworded 2026-10-14; the separate ask
+        about her income was withdrawn — her return answers it.)_
   - [ ] The childcare providers for Sofiia (name, address, taxpayer number, amount each).
   - [ ] Any property bought or sold in 2025, in the US or abroad (apartment contracts came up in June).
   - [ ] Any investment/brokerage accounts; any bank accounts outside the US.
   - [ ] Two United Equity payments with no reimbursement memo (an "ADVANCE" and one other).
   - [ ] *(only if Gusto fails)* the Deep Tech W-2.
-- **Internal:** Julia downloads the Deep Tech W-2 from Gusto · Lilian says whether the three 1065s may be opened for his
-  K-1s · Lilian reads the 4868 scan (acceptance, payment) · Julia's filing-status recommendation once Viktoriia's position
-  is known.
+- **Internal:** Julia downloads the Deep Tech W-2 from Gusto · Julia's filing-status recommendation once Viktoriia's
+  return is in hand. ✅ **Done 2026-10-14:** the three 1065s opened for his K-1s (Lilian authorized — all zero); the
+  extension settled by Lilian.
 - **Established from the prior year (2024, prepared by Strand Tax & Accounting Services):** married filing jointly;
   Florida; one dependant; W-2 wages only; Marketplace coverage reconciled on Form 8962; EIC and the child tax credit;
   **no carryovers of any kind**.
@@ -189,17 +204,15 @@ the actual details (and Claude can pull them live when a task needs them).
   large gifts; medical expenses too small to matter on the standard deduction.
 
 ### Outstanding items (CI-only — never in the SOP)
-- 🔴 **The 2025 return: the questions above are unsent and the extended deadline is 2026-10-15** (if the extension
-  holds). Working paper §6.
+- 🔴 **The 2025 return: the questions above are unsent** — working paper §6; a phase-1 workbook was delivered to Lilian
+  2026-10-14 (not committed).
 - 🔴 **Julia: download his 2025 W-2 from Deep Tech's Gusto.**
-- 🔴 **Lilian: may the three 2025 partnership returns be opened for his K-1s?**
 - **Engagement letter / invoice for the personal 1040** — none found; confirm whether one is needed.
 
 ### Information still needed
-- [ ] The 2025 Form 4868: accepted? any payment sent with it?
-- [ ] His ownership percentage in each of the three partnerships.
+- [x] His ownership percentage in each of the three partnerships — ✅ Boost You 50%, The Roadside Project 50%, Goshakes 25% (2026-10-14).
 - [ ] Which LLC of his filed a **late** 2025 Florida annual report in July 2025 (an LLC older than 2025 — working paper §6 I7).
-- [ ] Viktoriia's personal 2025 return (if one exists) and who prepares it.
+- [ ] A copy of Viktoriia's filed 2025 personal return, and who prepared it.
 
 ## 7. Links
 

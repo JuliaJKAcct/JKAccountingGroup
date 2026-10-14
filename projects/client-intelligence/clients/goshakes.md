@@ -1,6 +1,6 @@
 # GOSHAKES LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-13
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-14
 
 > 🔵 **Created 2026-10-13** during phase 1 of the owner's 2025 Form 1040 ([`kyrylo-kuznetsov.md`](./kyrylo-kuznetsov.md)).
 > **Its 2025 Form 1065 was filed by the firm (2026-09-14)** — the partners' K-1s come from it, and the owner's
@@ -34,7 +34,7 @@
 - **Business name:** GOSHAKES LLC
 - **Entity type:** **LLC taxed as a partnership** — Double `Tax Return Type` **1065**. **Partners: Kyrylo Kuznetsov and
   Vitali Yakubuk** (Vitali to Lilian, 2026-07-23: he has *"three partnership[s] with Kirill"*; Kyrylo's own Zelle label
-  for Vitali reads *"Partner BoostU"*; a copy of Vitali's ID sits in each of the three companies' Double files). ⚠️ **A member or manager named Galina was removed by a 2026 amended Florida annual report** (filed 2026-09-21) — **Galyna Vasylieva** in the firm's other records; whether she was ever a partner for tax purposes is not established. **Percentages: not recorded here** — read them off the filed 1065.
+  for Vitali reads *"Partner BoostU"*; a copy of Vitali's ID sits in each of the three companies' Double files). ⚠️ **A member or manager named Galina was removed by a 2026 amended Florida annual report** (filed 2026-09-21) — **Galyna Vasylieva** in the firm's other records; she **held a 25% K-1 for 2025**. **2025 K-1s: four partners at 25% each — Kyrylo Kuznetsov, Vitali Yakubuk, Siarhei Tsehliankou and Galyna Vasylieva** (read off the filed 1065, 2026-10-14). **EIN 41-2509741.**
 - **Home state:** Florida _(the firm files its Florida annual reports/sales tax — see §4)_
 - **Industry / what they do:** _(pending)_ — the 2026-07-14 meeting treated it as one of two companies filing **zero** returns.
 - **Primary language:** Russian — Double `Preferred language` not set; the owners work in Russian.
@@ -89,7 +89,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - 🔴 **The partners' K-1s are the firm's own work — never ask a partner for them.** The 2025 return was filed
   2026-09-14; its K-1s go on Kyrylo's and Vitali's 1040s.
 - **One of three sister partnerships** with the same two partners: [`boost-you.md`](./boost-you.md) · [`the-roadside-project.md`](./the-roadside-project.md). Kyrylo also owns [`never-give-up-kk.md`](./never-give-up-kk.md).
-- ⚠️ **A 2026 amended annual report removed "Galina" (Galyna Vasylieva).** If she was a member during 2025, she may be owed a 2025 K-1 too — check the filed 1065's partner list.
+- ⚠️ **A 2026 amended annual report removed "Galina" (Galyna Vasylieva).** ✅ **She WAS a 2025 partner: the filed 1065 gives her a 25% K-1 (zero, like all four).**
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -100,22 +100,19 @@ the actual details (and Claude can pull them live when a task needs them).
 - 2026-07-16 — Q2 2026 sales tax filed as a zero return (Lilian).
 - 2026-09-14 — **2025 Form 1065 filed** (Lilian).
 - 2026-09-21 — **2026 Amended Annual Report** filed with Sunbiz, removing "Galina".
-- 2026-10-13 — **File created** during phase 1 of Kyrylo Kuznetsov's 2025 Form 1040. ⛔ **The filed 1065 was NOT opened**
-  (another client's record; Lilian to say — working paper §6 I2), so the partners' percentages and the K-1 boxes are not
-  recorded here. _(Double, Drive names, Gmail, Ping — 2026-10-13)_
+- 2026-10-13 — **File created** during phase 1 of Kyrylo Kuznetsov's 2025 Form 1040. _(Double, Drive names, Gmail, Ping)_
+- 2026-10-14 — **The filed 2025 Form 1065 was read for the K-1s, on Lilian's authorization:** a **ZERO year** — no amount on
+  page 1, every K-1 box blank, no capital-account amounts; date on page 1 (most likely *date business started*) **2025-11-10**.
+  ([Kyrylo's working paper](../../tax-returns/kyrylo-kuznetsov/2025-form-1040.md) §1L)
 
 ### Tax year 2025 — the review
-- Filed 2026-09-14 (Lilian). ⚠️ **Whether 2025 was the company's first year is not recorded** — Florida Division of
-  Corporations charges on Kyrylo's card in July–August 2025 are consistent with three formations that summer (not
-  established).
+- Filed 2026-09-14 (Lilian). **A zero year** — most likely the first (page 1 dates the business from **2025-11-10**). Every partner's K-1 is blank, so nothing reaches any partner's 1040.
 
 ### Outstanding items (CI-only — never in the SOP)
-- 🔴 **Kyrylo's 2025 Form 1040 needs this company's K-1** — Lilian to confirm it may be read from the filed 1065
-  ([working paper](../../tax-returns/kyrylo-kuznetsov/2025-form-1040.md) §6 I2).
-- Was Galina a member in 2025? If so, does the filed 1065 carry her K-1?
+- _(none open — 2026-10-14)_
 
 ### Information still needed
-- [ ] Formation date and the partners' percentages (read off the filed 1065 / Sunbiz).
+- [x] The partners' percentages — ✅ read off the filed 1065 (2026-10-14). _(Sunbiz formation date still unchecked.)_
 - [ ] What the company does.
 
 ## 7. Links
