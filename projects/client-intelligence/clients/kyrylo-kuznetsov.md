@@ -188,6 +188,11 @@ the actual details (and Claude can pull them live when a task needs them).
   net pay ties to his bank to the cent. No regular payroll ran after the 12-08 payday. Figures: working paper §1M.
   **The W-2 is still to download** — in Gusto under **Documents › Tax documents › W-2**. _(Gusto journal + Gmail, read
   for his lines only)_
+
+- **2026-10-14 — Lilian keyed both W-2s in ATX** (United Equity and Deep Tech). **Filing status: a joint return is
+  likely** — Lilian expects Viktoriia to agree to file together, with Sofiia on the return; **not decided yet**. A copy of
+  the return Viktoriia already filed is still needed: on a joint return her income joins his, and what she paid or was
+  refunded on her own return is accounted for on the joint one. _(Lilian, chat)_
 ### Tax year 2025 — the review
 - **Gate (2026-10-13, updated 2026-10-14): ⛔ NOT READY.** It turns on three things: the **income outside the W-2** (the
   cash and the side jobs); **Never Give Up KK's 2025 activity**; and the **filing status** — a copy
