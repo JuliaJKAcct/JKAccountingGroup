@@ -100,8 +100,9 @@ the actual details (and Claude can pull them live when a task needs them).
   loss).
 - **Return type(s) & deadlines:** 2025 — **extension filed; settled** _(Lilian, 2026-10-14: "la extensión se hizo, todo
   está bien. No me preguntes más por eso")_. ⛔ **Do not raise the extension again.** Extended due date: 2026-10-15.
-- **What his return is made of** _(2025 review)_: his W-2s, **Schedules C** (Never Give Up KK; the side jobs if they are
-  his business income), **three Schedules K-1 from the partnerships** _(zero for 2025)_, the **Form 1095-A → Form 8962** (Marketplace,
+- **What his return is made of** _(2025 — as decided 2026-10-14)_: a **joint return** with Viktoriia and Sofia; his
+  **two W-2s only** _(Julia: the bank statements are not used — so no Schedule C for the side jobs; Never Give Up KK's
+  Schedule C pending her confirmation)_, **three Schedules K-1 from the partnerships** _(zero for 2025)_, the **Form 1095-A → Form 8962** (Marketplace,
   Oscar, the whole household on one policy — Sofiia covered January–August 2025), the child tax credit, possibly the EIC,
   and — only if both spouses had earned income — the dependent-care credit.
 - **Our role:** we prepare it (Lilian, with Julia signing).
@@ -240,9 +241,13 @@ the actual details (and Claude can pull them live when a task needs them).
   - [ ] Any investment/brokerage accounts; any bank accounts outside the US.
   - [ ] Two United Equity payments with no reimbursement memo (an "ADVANCE" and one other).
   - [ ] *(only if Gusto fails)* the Deep Tech W-2.
-- **Internal:** Julia downloads the Deep Tech W-2 from Gusto *(to confirm — the figures are known)* · Julia's filing-status recommendation once Viktoriia's
-  return is in hand. ✅ **Done 2026-10-14:** the three 1065s opened for his K-1s (Lilian authorized — all zero); the
-  extension settled by Lilian.
+- **Internal:** confirm **whether Viktoriia filed her 2025 return** (original 1040 or a 1040-X on hers) · the **EIC** left
+  blank by ATX · **Form 8867** · Julia to confirm the W-2-only decision covers Never Give Up KK. ✅ **Done 2026-10-14:** the
+  three 1065s opened for his K-1s (Lilian authorized — all zero); the extension settled by Lilian; the Deep Tech W-2 in
+  Double and matching; the filing status — joint (Lilian). ⓘ *The client asks above that came from his bank statements
+  (cash, side jobs, 1099s, their costs, the two United Equity payments) and the childcare-provider ask are set aside by
+  the W-2-only decision; still live: a copy of Viktoriia's return if she filed, and property / investments / foreign
+  accounts unless set aside too.*
 - **Established from the prior year (2024, prepared by Strand Tax & Accounting Services):** married filing jointly;
   Florida; one dependant; W-2 wages only; Marketplace coverage reconciled on Form 8962; EIC and the child tax credit;
   **no carryovers of any kind**.
@@ -252,10 +257,9 @@ the actual details (and Claude can pull them live when a task needs them).
   large gifts; medical expenses too small to matter on the standard deduction.
 
 ### Outstanding items (CI-only — never in the SOP)
-- 🔴 **The 2025 return: the questions above are unsent** — working paper §6; a phase-1 workbook was delivered to Lilian
-  2026-10-14 (not committed).
-- 🟡 **Julia: download his 2025 W-2 from Deep Tech's Gusto** (Documents › Tax documents › W-2) — to confirm the figures
-  already read off the payroll journal, and for the EIN.
+- 🟠 **The 2025 return: ATX draft 1 keyed and reviewed (2026-10-14)** — before filing: whether Viktoriia filed (1040 or
+  1040-X), the blank EIC, Form 8867, the direct-deposit block and the name spellings (working paper §8, §6).
+- ✅ ~~Julia: download his 2025 W-2 from Deep Tech's Gusto~~ — done 2026-10-14; in Double and matching the payroll journal.
 - **Engagement letter / invoice for the personal 1040** — none found; confirm whether one is needed.
 
 ### Information still needed
