@@ -106,6 +106,22 @@ the actual details (and Claude can pull them live when a task needs them).
   and — only if both spouses had earned income — the dependent-care credit.
 - **Our role:** we prepare it (Lilian, with Julia signing).
 
+#### 🧭 Tax-preparation playbook — READ THIS FIRST next year
+
+> What the firm learned preparing his return, written as the rule for next time *(tax-return-sop §5B)*. **Rules and
+> decisions only — every figure is in the yearly working paper**
+> ([2025](../../tax-returns/kyrylo-kuznetsov/2025-form-1040.md)). Each item says who decided and when.
+
+- **Filing status: joint, with Sofia** _(Lilian, 2026-10-14)_. ⚠️ **If Viktoriia files her own return first, a joint
+  return becomes a Form 1040-X on hers** (IRS Form 1040-X instructions) — ask early whether she has filed.
+- **Income: his W-2s only for 2025; his bank deposits were not used** _(Julia, 2026-10-14)_. His organizer note mentions
+  cash put on his card besides his salary, with no 1099 — **next year, ask about it in the organizer stage, not at the
+  keyboard**.
+- **His partnerships' K-1s are the firm's own work** — Boost You, Goshakes, The Roadside Project (zero for 2025): read
+  them from the filed 1065s in Double, **never ask him** _(Lilian authorized, 2026-10-14)_.
+- **A second employer may not reach the organizer**: Deep Tech's W-2 came from Gusto, not from him _(2026-10-14)_.
+- **The extension is the firm's job and is not raised with Lilian** _(Lilian, 2026-10-14)_.
+
 ### Licenses & other filings
 - **Applies?** Not to him personally — the companies carry their own (see their records).
 
@@ -195,7 +211,19 @@ the actual details (and Claude can pull them live when a task needs them).
   refunded on her own return is accounted for on the joint one. 🔑 **If joint, it is filed as a Form 1040-X amending
   Viktoriia's return** — her return as filed in column A, his items added in column B, both sign (IRS Form 1040-X
   instructions, "changing from a separate to a joint return"). _(Lilian, chat; irs.gov)_
+
+- **2026-10-14 (evening) — the return is being keyed as a JOINT return, and the first ATX draft was reviewed.** Two
+  rulings, relayed by Lilian: **a joint return with Sofia** (Lilian); and **income = his two W-2s only — the bank
+  statements are not used** (*"por decisión de Julia"*). Deep Tech's 2025 W-2 is now in his Double library
+  (`JK Accounting Group / Others / 2025`) and matches Gusto's payroll journal; **no Form 1099 was uploaded** anywhere.
+  The review found the **1095-A and the three partnership K-1s entered correctly**, but the **earned income credit
+  blank** although the family appears to qualify, **Form 8867 almost empty**, a direct-deposit block half-filled, and
+  name spellings to match to the Social Security cards (her surname is keyed **KUZNIETSVA**; her own company returns read
+  **KUZNIETSOVA**). 🔑 **Whether Viktoriia actually filed her own 2025 return decides the form**: if she did, the joint
+  return is a Form 1040-X on hers. Figures: working paper §8. _(Lilian, chat; the draft; Double)_
 ### Tax year 2025 — the review
+- 🆕 **2026-10-14 (evening): opened by decision** — income = the two W-2s only (Julia), a joint return (Lilian); ATX
+  draft 1 reviewed (working paper §8). *The earlier gate, as it stood:*
 - **Gate (2026-10-13, updated 2026-10-14): ⛔ NOT READY.** It turns on three things: the **income outside the W-2** (the
   cash and the side jobs); **Never Give Up KK's 2025 activity**; and the **filing status** — a copy
   of the return Viktoriia already filed (a joint return remains possible either way). ⭕ **The three partnership K-1s
