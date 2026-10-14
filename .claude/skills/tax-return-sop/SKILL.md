@@ -566,7 +566,13 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
       statements is only WHOSE CAR it is**, and that needs the **contract** (a co-buyer changes the interest answer) and the title.
       ⚠️ **If the named borrower is also a firm client, check — with Lilian's or Julia's leave, it is another client's
       record — whether their books or return already treat the car as theirs** before arguing the client owns it: one car
-      cannot be two people's. Statements carry only the last payment's split, so **the year's interest is not on Ally's.**
+      cannot be two people's. Statements carry only the last payment's split, so **the year's interest is not on Ally's** —
+      ask for the year's **payment history** (each payment's principal and interest) or the lender's year-end interest summary.
+      🆕 **And when the SIGNER rules the car is the client's anyway, apply it** *(Piliushin 2025 D44 — Julia, relayed by
+      Lilian, 2026-10-14: "No lo cuestiones… Es una decisión de Julia")*: record it as her decision with her words and the
+      date, **keep the earlier analysis in the paper as the record, and do not re-argue it in chat** — then the car is his
+      asset (depreciation on actual costs, or the standard rate if its first business year allows), the principal is still
+      never deducted, and the business share of the interest goes on line 9. **The miles are still the gate on every method.**
     - 🆕 **When the question file COMES BACK** *(Piliushin 2025, DRAFT 6, 2026-10-14)*: diff it against the file that was
       sent (only the answer column should change), **match every answered row to its bank line by date, bank text and amount**,
       and apply in three ways only — **APPLY** a business purpose he names for that line or payee (an answer on a payee's first
@@ -3110,7 +3116,8 @@ per-statement tie runs — **unless the firm built the P&L from the lines (§1B.
 non-bank item in the per-business tie.**
 
 ✅ **THE SHEET:**
-- **Named `Bank transactions`, on every client.** She offered two names; one is used everywhere, so a search for it
+- **Named `Bank transactions`, on every client** — 🆕 *or one `<Account> transactions` sheet per account (Lilian's offer
+  of 2026-10-14, below the column table).* She offered two names; one is used everywhere, so a search for it
   finds it in any client's file. **Card lines go on the same sheet** — the `Account` column tells them apart.
   ⓘ *She said "del banco"; including the CARD statements is the session's reading (2026-10-12) — a card is where
   much of a Schedule C's spending sits. Put to her; change it if she says otherwise.*
@@ -3140,7 +3147,10 @@ con la categorización que se le dio a esa transacción y la fuente, el basament
 fue algo de cliente, si fue nuestro, etcétera"*)_: **`CLIENT` · `LILIAN` · `JULIA` · `FIRM`**, then the words. `CLIENT` —
 his answer moved the line; `LILIAN` / `JULIA` — one of their rulings did *(a ruling made **on the client's word** says so —
 *"LILIAN (on the client's word)"*)*; **`FIRM` — a session rule or the bank's own text placed it, and that is a DEFAULT
-anyone can overrule, not a decision.** 🔑 **The tag is what lets her filter to "everything we decided ourselves" in one
+anyone can overrule, not a decision.** **A session's READING of a ruling** *(which trip a line belongs to, which hotel was
+local, which meal was on a trip)* **is FIRM as well, naming the ruling — `FIRM (reading of L16)`; `LILIAN` / `JULIA` only
+where their own words place the line** *(review of the pilot, 2026-10-14: the session's own trip readings had first been
+tagged as hers)*. 🔑 **The tag is what lets her filter to "everything we decided ourselves" in one
 click.** Name the column for what it holds — e.g. *"BASIS — who decided (CLIENT · LILIAN · JULIA · FIRM) and on what"*.
 🆕 **ONE SHEET PER ACCOUNT is allowed** _(same day: *"si quieres, puedes incluir dos pestañas: una para Wells Fargo y la
 otra para la cuenta personal de Bank of America, para que todo esto nos quede en récord"*)_ — her offer, not a
@@ -3265,7 +3275,7 @@ rule, and the asset screen is the clearest case of it.
   *(live formulas **and** a separately verified value, because the container has no spreadsheet engine
   to check them)* · `Client answers` *(what was asked, what he said, in his words, and what was done
   with it — plus what has NOT been asked)* · `Sources` · `Decisions` · `Open items` · a sheet per
-  disclosure form where one is needed · `Entry order` · 🆕 **`Bank transactions`, whenever the firm holds the
+  disclosure form where one is needed · `Entry order` · 🆕 **`Bank transactions`** *(or one `<Account> transactions` per account)*, **whenever the firm holds the
   year's bank or card lines** *(the rule above; Lilian, 2026-10-12)*.
 - ☑️ **`Open items` is sorted by severity, actually sorted.** ⛔ *A sheet whose subtitle says "ordered by
   severity" and is not is worse than an unsorted one — it was shipped that way once, with a `Medium`
