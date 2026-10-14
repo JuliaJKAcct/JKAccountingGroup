@@ -8,10 +8,9 @@
 > LLC**. 🆕 **2026-10-14:** ⭕ **his three partnership K-1s are all ZERO** (read on Lilian's authorization) · ⭕ **the
 > Deep Tech payroll is confirmed** — three Gusto paychecks in Nov–Dec 2025, read off Gusto's payroll journal at Lilian's
 > request; only the W-2 document is still to download · ✅ **the
-> extension is settled — Lilian: do not raise it again** · **Viktoriia has already filed her 2025 return** (Lilian's
-> understanding) — **a copy of it is what we need**: it sets his filing status, who claims Sofiia and how the Marketplace
-> policy is split. ⓘ **A separate return of hers would not lock him into filing separately** (a joint return can still
-> replace it). Questions, figures and the full review: the
+> extension is settled — Lilian: do not raise it again** · ✅ **Viktoriia has NOT filed any 2025 return** (Lilian,
+> 2026-10-14, correcting her earlier understanding that she had) — **the return is an original joint 1040**, Sofia on it,
+> and no copy of a return of hers is needed. Questions, figures and the full review: the
 > [working paper](../../tax-returns/kyrylo-kuznetsov/2025-form-1040.md) §2 and §6.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
@@ -144,11 +143,9 @@ the actual details (and Claude can pull them live when a task needs them).
 - 🔴 **Viktoriia files her company returns elsewhere, and her personal return is unaccounted for.** Her **realtor LLC is
   taxed as a C corporation** (VIKTORIIA KUZNIETSOVA LLC, EIN 33-2923874, formed 2025-01-10 — Form 1120, **no officer
   compensation**) and her **professional association is an S corporation formed 2025-11-17** (KUZNIETSOVA VIKTORIIA PA,
-  EIN 41-3034101 — a zero year in 2025); both 2025 returns were prepared by another firm and signed 2026-03-08. 🆕 **She has
-  already filed her 2025 personal return** (Lilian's understanding, 2026-10-14 — **not yet seen**); **on what status is
-  unknown, and a copy is what the firm needs** — ⓘ **a separate return does NOT lock
-  them into separate filing: a joint return can still replace it** (§6013(b), generally within three years of the
-  original due date). Staying separate generally loses the premium tax credit, the EIC and the dependent-care credit. **Julia owes a filing-status recommendation (from 2026-06-23).**
+  EIN 41-3034101 — a zero year in 2025); both 2025 returns were prepared by another firm and signed 2026-03-08. ✅ **She has
+  NOT filed any 2025 personal return** (Lilian, 2026-10-14 — correcting her understanding of earlier that day): **the
+  couple files an original joint 1040**, with Sofia (Lilian). *(Superseded: "she has already filed; a copy is needed".)*
 - 🟢 **His "EV" is a LEASE** — a 2024 Volkswagen ID.4 leased **2024-07-15**; the lessor already applied the clean-vehicle
   credit as a price reduction (figures in the working paper §1G). **No clean-vehicle credit, any year.** ⚠️ He has talked (2025-10-31, 2026-06-23) about selling or
   transferring "his car" to a company — a leased car is not his to sell without a buyout; raise it if it comes up.
@@ -245,8 +242,9 @@ the actual details (and Claude can pull them live when a task needs them).
   - [ ] Where the 2025 cash deposits came from.
   - [ ] What the "small side jobs" were and for whom; whether any payer sent a Form 1099-NEC; their expenses.
   - [ ] Never Give Up KK: what its two October 2025 wire transfers paid for, and whose the cash deposit was.
-  - [ ] A complete copy of the 2025 personal return Viktoriia already filed. _(Reworded 2026-10-14; the separate ask
-        about her income was withdrawn — her return answers it.)_
+  - ~~A complete copy of the 2025 personal return Viktoriia already filed.~~ — ✅ **closed 2026-10-14: she has not filed.**
+  - [ ] *(reinstated 2026-10-14, as a confirm)* Did Viktoriia have **any income of her own** in 2025 — a job, a 1099,
+        money taken out of her LLC? _(The organizer shows his W-2s only; her C corporation paid her no wages.)_
   - [ ] The childcare providers for Sofiia (name, address, taxpayer number, amount each).
   - [ ] Any property bought or sold in 2025, in the US or abroad (apartment contracts came up in June).
   - [ ] Any investment/brokerage accounts; any bank accounts outside the US.
@@ -257,8 +255,8 @@ the actual details (and Claude can pull them live when a task needs them).
   three 1065s opened for his K-1s (Lilian authorized — all zero); the extension settled by Lilian; the Deep Tech W-2 in
   Double and matching; the filing status — joint (Lilian). ⓘ *The client asks above that came from his bank statements
   (cash, side jobs, 1099s, their costs, the two United Equity payments) and the childcare-provider ask are set aside by
-  the W-2-only decision; still live: a copy of Viktoriia's return if she filed, and property / investments / foreign
-  accounts unless set aside too.*
+  the W-2-only decision; still live: property / investments / foreign accounts, and whether Viktoriia had any
+  income of her own — unless set aside too.*
 - **Established from the prior year (2024, prepared by Strand Tax & Accounting Services):** married filing jointly;
   Florida; one dependant; W-2 wages only; Marketplace coverage reconciled on Form 8962; EIC and the child tax credit;
   **no carryovers of any kind**.
