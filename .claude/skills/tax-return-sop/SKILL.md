@@ -4164,6 +4164,48 @@ worksheet or Form 7206.
 ⚠️ **ATX's help material cites 2017 forms** — *"1040, line 29"* is **Schedule 1 line 17**; *"1040 instructions p. 33"* is **p.
 95**; *"Pub 974 p. 67"* is **pp. 55–56** (2025). **Read every reference off the current-year PDF.**
 
+#### ⑦ 💵 TIPS ON A GIG SCHEDULE C (2025) — **NO 1099 FROM THAT PLATFORM, NO TIPS DEDUCTION**
+
+> **Lilian, 2026-10-14:** *"Quiero que guardes en el skill de tax preparation que, cuando tengamos este tipo de actividades
+> en las cuales se dan tips, pero no se tiene un 1099… no es posible deducir los tips… para que me lo recuerde la próxima
+> vez que tengamos esta situación, porque estuve perdiendo tiempo tratando de entender dónde poner esos tips."*
+
+🛑 **THE RULE, read off the 2025 Instructions for Form 1040 (Schedule 1-A, lines 4c–5):** for 2025 the 1099s were **not**
+changed to show tips, so a self-employed person's tip counts only if it is **INSIDE THE TOTAL OF A 1099** from that
+platform — *"Only amounts that appear in the aggregate on Forms 1099 can be considered qualified tips"* — **and** something
+other than his word documents the amount (the platform's earnings statement is the strongest). 🔑 **So when a platform
+issued NO 1099** *(common for a small second app: for 2025 a 1099-K is due only above 20,000 and more than 200
+transactions)*, **its tips are NOT deductible — however real they are. There is NOWHERE to type them, and that is
+correct: stop looking.** ⛔ **And never create a 1099 record for that platform just to reach the tips column** — it reports
+an information return that does not exist.
+
+✅ **What still happens to those tips: they are INCOME.** They go into Schedule C line 1 with the rest of that platform's
+receipts *(as receipts with no 1099)* and they **pay self-employment tax**. ⛔ **Leaving them out of income is an error** —
+the deduction is from **income tax only**, never from SE tax.
+
+🛠️ **Where tips ARE typed, when a 1099 holds them** *(established on screen 2026-10-14)*: the **1099 detail record** of the
+platform › column **`Qualified tips (included in Box 1a)`** on the `1099-K Detail Schedule` *(the 1099-NEC detail has its
+own)*. ⚠️ **Which 1099 holds them differs by platform — prove it by arithmetic** *(Uber 2025: fares + tips = 1099-K box 1a
+to the cent; the IRS's own Example 2 is a driver whose tips were on a 1099-NEC)*. ✅ **Then check Schedule 1-A line 5**:
+it may not exceed the business's net profit less its share of the SE-tax deduction, and **a Schedule C LOSS takes it to
+0** — ⚠️ **whether ATX applies that limit by itself is not yet established**, so look. 🔑 **On a driver, the car method
+decides it** — the standard mileage rate can turn the business into a loss.
+
+📖 **The full module, with the IRS text:** [`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) M2 →
+*Tips on a gig Schedule C*. **Pilot:** [Vasyutyk 2025](../../../projects/tax-returns/vitaliy-vasyutyk/2025-form-1040.md) §2A,
+§2B R1–R2 — where the Uber fees, once deducted, turned the gig business into a loss and the whole tips deduction with it.
+ⓘ **From 2026 the 1099s are to separate tips** — re-read the instructions before carrying this rule into 2026.
+
+#### ⑧ 🔴 AN S-CORPORATION DISTRIBUTION IN EXCESS OF BASIS — ATX WROTE IT AS **SHORT-TERM**; THE TERM FOLLOWS THE **STOCK**
+
+**Seen once (Vasyutyk draft 1, 2026-10-14):** Form 7203 line 6 exceeded line 5, and ATX itself generated the Form 8949
+row `Excess Distributions (K-1 (1120S): 01)` in **Part I, box C — short-term**. 🛑 **The 2025 Instructions for Form 8949
+(*Nondividend distributions*) put it in Part I box C/I *or* Part II box F/L *"depending on how long you held the stock"*.**
+A shareholder since the company was formed two years earlier holds it **long-term** → **Part II, box F → Schedule D line
+10** — and at a low taxable income that gain is taxed at **0%** instead of the ordinary rate. ✅ **Every time Form 7203 line
+6 > line 5: find the stock's acquisition date and check the 8949 row's term.** ⚠️ **The ATX field that sets the term for
+that generated row is NOT established yet** — whoever finds it writes it here.
+
 ### 4I · 📗 THE FINAL WORKSHEET — the one that is KEPT, and the only rule about it that is absolute
 
 > 🗣️ **LILIAN, 2026-09-30:** *"cuando terminemos todo y la declaración esté ya a punto de ser enviada y
