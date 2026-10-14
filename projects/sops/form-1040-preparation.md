@@ -620,6 +620,55 @@ would have changed a return.)_
    out of a family home is exactly what gets examined. **Establish how the space is used before
    claiming it.**
 
+### 💵 Tips on a gig Schedule C — the 2025 *No tax on tips* deduction
+
+_(Added 2026-10-14 at Lilian's request, from the first gig-driver return that claimed it —
+[Vasyutyk working paper](../tax-returns/vitaliy-vasyutyk/2025-form-1040.md) §2A. Rules read off the **2025
+Instructions for Form 1040, Schedule 1-A, lines 4c–5, pp. 103–105** on irs.gov — re-read them every year.)_
+
+🔑 **What it is — and what it is NOT.** A deduction from **income tax only**, new for 2025. The tips **stay in Schedule C
+line 1** and **still pay self-employment tax**; the instructions say so in terms: *"tips received as an employee or from
+self-employment must be included in your gross income and are subject to income tax and social security and Medicare
+tax."* ⛔ **Leaving the tips out of gross receipts is an error, not a shortcut.** The deduction is **below the line**: Schedule
+1-A Part II **line 5** → line 13 → line 38 → **Form 1040 line 13b**. It does **not** change AGI. Limits: **25,000**,
+phased out above **150,000** of modified AGI (**300,000** joint); a **valid SSN**; ⛔ **a married taxpayer must file
+JOINTLY**; the occupation must be on the IRS tipped-occupations list (rideshare = TTOC **802**, app delivery = **804**).
+
+🛑 **2025 is a transition year, and this is the whole question.** *"Because no changes have been made to Form 1099-NEC, Form
+1099-MISC, or Form 1099-K for 2025, a separate accounting for cash tips received by you as a non-employee won't appear on
+these Forms. For 2025, the separate accounting requirement is treated as satisfied if your qualified tips are included in
+the total amount … reported to you on one or more of these Forms."* So a tip qualifies when **both**:
+
+| Test | What satisfies it | ⛔ What does not |
+|---|---|---|
+| **① It is INSIDE the total of a 1099** | the platform's 1099 includes it | 🛑 *"Only amounts that appear in the aggregate on Forms 1099 can be considered qualified tips."* **No 1099 from that platform → no deduction, however real the tips** — they are still income |
+| **② It is DOCUMENTED** | the platform's own earnings statement naming the tips *(the instructions' Example 1 is a rideshare driver)*; receipts; POS reports; a **contemporaneous** tip log *(Example 2)* | a year-end figure on the client's summary sheet with nothing behind it |
+
+🔑 **Find WHICH 1099 holds the tips — platforms differ, so prove it, never assume it.** For **Uber (2025)** it is the
+**1099-K**: that form reports what the **riders** paid through the app — fares **and** tips — while Uber's **1099-NEC**
+carried only its own incentives. ⚠️ **But the instructions' own line-5 Example 2 is a rideshare driver whose tips were
+reported on a 1099-NEC**, and delivery apps commonly pay tips through the 1099-NEC — so the Uber answer is not a rule.
+✅ **Prove it by arithmetic before relying on it:** the statement's components must add up to the box exactly
+(on the pilot, fares + tips = the 1099-K box 1a to the cent). **The tips go in the qualified-tips column of whichever 1099
+detail holds them.** ⓘ *For 2025 a 1099-K is required only above 20,000 **and** more than 200 transactions,
+so a small second platform usually issues none — and its tips then fail test ①.*
+
+**The net-income limit, per business:** the deduction cannot exceed that Schedule C's **line 31, less the deductible half of
+SE tax** (and any self-employed health insurance or retirement deduction allocable to it). *"If the business shows a net
+loss on Schedule C, then the sole proprietor would not include any qualified tips."* 🔴 **On a driver's return the CAR
+METHOD decides this** — the standard mileage rate can turn the business into a loss and take the whole deduction with it.
+**Decide the car method and the tips together.** ⚠️ And it is worth something only if taxable income is above zero.
+
+🛠️ **In ATX — where the tips are typed** _(established 2026-10-14 from Lilian's screen)_: **`1099-K Detail Schedule` → the
+platform's row → column `Qualified tips (included in Box 1a)`** — beside *Box 1a*, *Select Form to link Box 1a to* and *Box
+1b*. ✅ **Check:** the column total, then **Schedule 1-A line 5**, which must equal the lesser of the tips and the net-income
+limit. ⚠️ **Whether ATX applies that limit by itself is NOT established** — if line 5 shows the full tips on a business with
+a loss, it does not. ⛔ **Never add a 1099 record for a platform that issued none, just to reach this column** — it would
+report an information return that does not exist.
+
+ⓘ **From 2026 the forms are to separate tips** (*"For 2026, these Forms will be updated…"*), so this transition-year
+reasoning should not be needed again — re-read the instructions before assuming.
+
 ### Schedule SE — the tax people forget
 
 | Line | Computation |

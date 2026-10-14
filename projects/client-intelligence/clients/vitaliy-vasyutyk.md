@@ -78,7 +78,7 @@ link). Never write the credential itself here.
 | Tax1099 | The group's 1099 filings — its platform fee is re-billed to the client as a separate line | firm-level | invoice item `Tax1099 Reimbursement Fees` |
 | TaxDome → Double portal | Organizers, document upload, e-signature | firm-level | he still filed the **2025 individual organizer through TaxDome** (Apr 2026) |
 | The firm's own A/R ledger | Where the group's invoices and open balances live | firm-level | six billing customer records — see §5. ⚠️ **This is OUR ledger, not the client's** — no company in this group has any accounting platform connected |
-| Google Drive | The sensitive vault | **Confirmed to exist, 2026-09-19** — a search for "Vasyutyk"/"Nika Realty"/"Zumfi" found a **"Vitaliy Vasyutyk" folder under at least three different Drive parent folders**, plus a **"Nika Realty" subfolder** (current P&L workbook). ⚠️ Which of the three is the canonical vault is **not established** — treat as candidates, not a confirmed single link (see §7) |
+| Google Drive | The sensitive vault | — | **Confirmed to exist, 2026-09-19** — a search for "Vasyutyk"/"Nika Realty"/"Zumfi" found a **"Vitaliy Vasyutyk" folder under at least three different Drive parent folders**, plus a **"Nika Realty" subfolder** (current P&L workbook). ⚠️ Which of the three is the canonical vault is **not established** — treat as candidates, not a confirmed single link (see §7) |
 
 ## 4. Obligations & recurring processes
 
@@ -153,8 +153,13 @@ Remodel Master and Fastighet. That was **not** verified on 2026-10-13 (Nika's 20
   confirmed with the client before preparing (working paper §2).
 - **Two of the three children file returns of their own, prepared by the firm.** Whether each is still a dependant is
   read off **their** return first (the *"someone can claim you"* box), before anyone asks him.
+  🆕 **2025, settled by Lilian (2026-10-14): ANTON IS THE ONLY DEPENDANT.** Veronika (university student, W-2) and Vladyslav
+  (W-2, not a student) each filed their own 2025 return and are not on his. *(Lilian said "Victoria" for the daughter;
+  Double and the organizer have Veronika — the same person is assumed, to confirm.)*
 - **One Marketplace policy (Oscar) covers the whole household.** If anyone on it is not in the tax family, Form 8962
-  needs a **shared-policy allocation**.
+  needs a **shared-policy allocation**. 🆕 **2025 is that case** — two of the five on the policy are in their own tax
+  families → Form 8962 Part IV, Allocation Situation 4, **one row per child**. The session recommends **100% to his return
+  and 0% to each child**, which keeps the children's already-filed returns right as they stand *(pending Lilian or Julia)*.
 - **The spouse is the children's carer** — so there is **no dependent-care credit**, whatever amounts the organizer
   shows for childcare.
 - **Carryovers into 2025:** a **QBI loss carryforward** (Form 8995 line 3) and **Nika's beginning stock basis** (Form
@@ -182,6 +187,15 @@ Remodel Master and Fastighet. That was **not** verified on 2026-10-13 (Nika's 20
   which leaves **no** tips deduction at all. **Decide the car method and the tips together.** Working paper §2A.
 - **The car:** the client's own P&L deducts **actual** costs, while the organizer asks for **miles** — the method is a
   decision, not something to copy from his P&L. Check what the prior year used for the same car first.
+  🆕 **Checked 2026-10-14: the 2024 return used the STANDARD MILEAGE rate for this car**, placed in service in 2024 — so
+  either method is open in later years (actual costs then need straight-line depreciation, and its basis is in a car
+  finance agreement the firm has never received).
+- 🆕 **The home office** _(2024 return, read 2026-10-14)_: 2024 had **two homes** in one year, each with a Form 8829, both on
+  the gig Schedule C — and **unallowed home-office expenses carried into 2025**, usable only with the regular method
+  (Form 8829), which needs the year's rent and utilities. The simplified method leaves the carryover for a later year.
+- 🆕 **A realtor activity began in 2025** ("Vera Realty" on his own P&L sheet; the organizer calls it a real-estate/consulting
+  LLC with an EIN owned by him). **Whose licence it is, the LLC and any broker 1099 are not in Double** — asked of the client
+  (working paper §6 Q5). If it shares the gig car, the miles split between the two Schedule Cs.
 
 
 ### Licenses & other filings
@@ -228,6 +242,7 @@ watch-outs, one-off arrangements, history that affects the work.
 ### Log
 A running, dated record as we build this profile.
 
+- _(2026-10-14, later)_ — **Lilian settled the dependants and asked for the working workbook.** Her ruling: **Anton is the only dependant on the 2025 return**; Veronika (university student, W-2) and Vladyslav (W-2, not a student) each filed their own 2025 return. At her ask the session **re-read the couple's 2024 joint return** (through the redactor) for the car, the home office and the dependants: the car is on the **standard mileage rate** since 2024; 2024 had **two homes**, both Forms 8829 on the gig Schedule C, with a **carryover of unallowed home-office expenses into 2025**; and 2024's EIC carried all three children. It also read the client's **realtor** and **Iryna's babysitting** P&L sheets — a realtor activity is **new in 2025**. Consequences now open: the **Form 8962 shared-policy allocation** (two children on the policy are in their own tax families), the car method, the home-office method, and four new client questions (working paper §6 Q5–Q8). The **filing status is still open**; the workbook (16 sheets, never committed) was built for a joint return with every dependent row marked. _(Double; the documents in working paper §1; session of 2026-10-14, Lilian.)_
 - _(2026-10-14)_ — **Lilian asked how to report his tips, worried that no 1099 shows any.** The session read his own **Lyft and DoorDash P&L sheets** in Double (tips on Lyft, none on DoorDash) and the same **Uber** sheet she had pasted (identical to the image), and tried the two unnamed `image_….pdf` uploads in the 2025 folder — **both are scans with no text layer, not readable by a session; what they are is unknown** (working paper §6 I10). Answer, from the 2025 Instructions for Form 1040 read on irs.gov: **for 2025 no 1099 separates tips, by design**; a tip qualifies if it is **inside a 1099's total AND documented** (the platform's own statement is the strongest record; his own contemporaneous tip log also counts; a year-end figure on a summary sheet does not). **Uber's tips qualify** (Uber's Tax Summary names them and they add up exactly to the 1099-K box 1a); **Lyft's do not** (no Lyft 1099 or statement in Double); DoorDash claimed none. **How much of Uber's survives depends on the car method** — on the standard mileage rate with the organizer's miles the gig business shows a loss and the deduction is zero. Figures: working paper §2A. _(Double; irs.gov; session of 2026-10-14, Lilian.)_
 - _(2026-10-13, later)_ — **Phase 1 of his 2025 Form 1040, at Lilian's request — verdict ⛔ not until the filing status and the dependants are settled** (§6 *Tax year 2025 — the review*). Also learned: **Iryna works as a cashier (W-2 likely) and babysits (cash; a Schedule C in 2024)**; **Vitaliy drove for Uber, Lyft and DoorDash and has a new real-estate activity in 2025**; the household's Marketplace policy is **Oscar**, covering all five; Vladyslav has a W-2 of his own (Euroland 3 LLC) and **Veronika and Vladyslav each filed a 2025 return prepared by the firm**. ⚠️ **During the read, the redactor let a street line, the preparer's PTIN and two Form 8995 TINs through to the session's own output** (known gaps — FOLLOW-UPS rows 82 and 111); **nothing was written anywhere**, and the session is to be deleted. _(Double, Drive, Gmail, Ping; the documents named in the working paper §1.)_
 
