@@ -97,7 +97,7 @@ the actual details (and Claude can pull them live when a task needs them).
   premium-tax-credit reconciliation; **nothing carries forward** from it (no Schedule 1, no NOL, no capital loss, no QBI
   loss).
 - **Return type(s) & deadlines:** 2025 — **extension filed; settled** _(Lilian, 2026-10-14: "la extensión se hizo, todo
-  está bien. No me preguntes más por eso")_. ⛔ **Do not raise the extension again.**
+  está bien. No me preguntes más por eso")_. ⛔ **Do not raise the extension again.** Extended due date: 2026-10-15.
 - **What his return is made of** _(2025 review)_: his W-2s, **Schedules C** (Never Give Up KK; the side jobs if they are
   his business income), **three Schedules K-1 from the partnerships** _(zero for 2025)_, the **Form 1095-A → Form 8962** (Marketplace,
   Oscar, the whole household on one policy — Sofiia covered January–August 2025), the child tax credit, possibly the EIC,

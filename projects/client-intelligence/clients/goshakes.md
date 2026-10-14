@@ -32,8 +32,8 @@
 ## 1. Snapshot
 
 - **Business name:** GOSHAKES LLC
-- **Entity type:** **LLC taxed as a partnership** — Double `Tax Return Type` **1065**. **Partners: Kyrylo Kuznetsov and
-  Vitali Yakubuk** (Vitali to Lilian, 2026-07-23: he has *"three partnership[s] with Kirill"*; Kyrylo's own Zelle label
+- **Entity type:** **LLC taxed as a partnership** — Double `Tax Return Type` **1065**. **Partners (2025): Kyrylo Kuznetsov,
+  Vitali Yakubuk, Siarhei Tsehliankou and Galyna Vasylieva** (for Kyrylo and Vitali: Vitali to Lilian, 2026-07-23: he has *"three partnership[s] with Kirill"*; Kyrylo's own Zelle label
   for Vitali reads *"Partner BoostU"*; a copy of Vitali's ID sits in each of the three companies' Double files). ⚠️ **A member or manager named Galina was removed by a 2026 amended Florida annual report** (filed 2026-09-21) — **Galyna Vasylieva** in the firm's other records; she **held a 25% K-1 for 2025**. **2025 K-1s: four partners at 25% each — Kyrylo Kuznetsov, Vitali Yakubuk, Siarhei Tsehliankou and Galyna Vasylieva** (read off the filed 1065, 2026-10-14). **EIN 41-2509741.**
 - **Home state:** Florida _(the firm files its Florida annual reports/sales tax — see §4)_
 - **Industry / what they do:** _(pending)_ — the 2026-07-14 meeting treated it as one of two companies filing **zero** returns.
@@ -87,8 +87,8 @@ the actual details (and Claude can pull them live when a task needs them).
 ## 5. Key facts & quirks
 
 - 🔴 **The partners' K-1s are the firm's own work — never ask a partner for them.** The 2025 return was filed
-  2026-09-14; its K-1s go on Kyrylo's and Vitali's 1040s.
-- **One of three sister partnerships** with the same two partners: [`boost-you.md`](./boost-you.md) · [`the-roadside-project.md`](./the-roadside-project.md). Kyrylo also owns [`never-give-up-kk.md`](./never-give-up-kk.md).
+  2026-09-14; its K-1s go on all four partners' 1040s.
+- **One of three sister partnerships** with two of the same partners (Kyrylo and Vitali): [`boost-you.md`](./boost-you.md) · [`the-roadside-project.md`](./the-roadside-project.md). Kyrylo also owns [`never-give-up-kk.md`](./never-give-up-kk.md).
 - ⚠️ **A 2026 amended annual report removed "Galina" (Galyna Vasylieva).** ✅ **She WAS a 2025 partner: the filed 1065 gives her a 25% K-1 (zero, like all four).**
 
 ## 6. History & open questions
