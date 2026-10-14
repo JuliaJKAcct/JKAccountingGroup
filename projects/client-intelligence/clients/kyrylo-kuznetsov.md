@@ -100,11 +100,28 @@ the actual details (and Claude can pull them live when a task needs them).
   loss).
 - **Return type(s) & deadlines:** 2025 — **extension filed; settled** _(Lilian, 2026-10-14: "la extensión se hizo, todo
   está bien. No me preguntes más por eso")_. ⛔ **Do not raise the extension again.** Extended due date: 2026-10-15.
-- **What his return is made of** _(2025 review)_: his W-2s, **Schedules C** (Never Give Up KK; the side jobs if they are
-  his business income), **three Schedules K-1 from the partnerships** _(zero for 2025)_, the **Form 1095-A → Form 8962** (Marketplace,
+- **What his return is made of** _(2025 — as decided 2026-10-14)_: a **joint return** with Viktoriia and Sofia; his
+  **two W-2s only** _(Julia: the bank statements are not used — so no Schedule C for the side jobs; Never Give Up KK's
+  Schedule C pending her confirmation)_, **three Schedules K-1 from the partnerships** _(zero for 2025)_, the **Form 1095-A → Form 8962** (Marketplace,
   Oscar, the whole household on one policy — Sofiia covered January–August 2025), the child tax credit, possibly the EIC,
   and — only if both spouses had earned income — the dependent-care credit.
 - **Our role:** we prepare it (Lilian, with Julia signing).
+
+#### 🧭 Tax-preparation playbook — READ THIS FIRST next year
+
+> What the firm learned preparing his return, written as the rule for next time *(tax-return-sop §5B)*. **Rules and
+> decisions only — every figure is in the yearly working paper**
+> ([2025](../../tax-returns/kyrylo-kuznetsov/2025-form-1040.md)). Each item says who decided and when.
+
+- **Filing status: joint, with Sofia** _(Lilian, 2026-10-14)_. ⚠️ **If Viktoriia files her own return first, a joint
+  return becomes a Form 1040-X on hers** (IRS Form 1040-X instructions) — ask early whether she has filed.
+- **Income: his W-2s only for 2025; his bank deposits were not used** _(Julia, 2026-10-14)_. His organizer note mentions
+  cash put on his card besides his salary, with no 1099 — **next year, ask about it in the organizer stage, not at the
+  keyboard**.
+- **His partnerships' K-1s are the firm's own work** — Boost You, Goshakes, The Roadside Project (zero for 2025): read
+  them from the filed 1065s in Double, **never ask him** _(Lilian authorized, 2026-10-14)_.
+- **A second employer may not reach the organizer**: Deep Tech's W-2 came from Gusto, not from him _(2026-10-14)_.
+- **The extension is the firm's job and is not raised with Lilian** _(Lilian, 2026-10-14)_.
 
 ### Licenses & other filings
 - **Applies?** Not to him personally — the companies carry their own (see their records).
@@ -195,7 +212,19 @@ the actual details (and Claude can pull them live when a task needs them).
   refunded on her own return is accounted for on the joint one. 🔑 **If joint, it is filed as a Form 1040-X amending
   Viktoriia's return** — her return as filed in column A, his items added in column B, both sign (IRS Form 1040-X
   instructions, "changing from a separate to a joint return"). _(Lilian, chat; irs.gov)_
+
+- **2026-10-14 (evening) — the return is being keyed as a JOINT return, and the first ATX draft was reviewed.** Two
+  rulings, relayed by Lilian: **a joint return with Sofia** (Lilian); and **income = his two W-2s only — the bank
+  statements are not used** (*"por decisión de Julia"*). Deep Tech's 2025 W-2 is now in his Double library
+  (`JK Accounting Group / Others / 2025`) and matches Gusto's payroll journal; **no Form 1099 was uploaded** anywhere.
+  The review found the **1095-A and the three partnership K-1s entered correctly**, but the **earned income credit
+  blank** although the family appears to qualify, **Form 8867 almost empty**, a direct-deposit block half-filled, and
+  name spellings to match to the Social Security cards (her surname is keyed **KUZNIETSVA**; her own company returns read
+  **KUZNIETSOVA**). 🔑 **Whether Viktoriia actually filed her own 2025 return decides the form**: if she did, the joint
+  return is a Form 1040-X on hers. Figures: working paper §8. _(Lilian, chat; the draft; Double)_
 ### Tax year 2025 — the review
+- 🆕 **2026-10-14 (evening): opened by decision** — income = the two W-2s only (Julia), a joint return (Lilian); ATX
+  draft 1 reviewed (working paper §8). *The earlier gate, as it stood:*
 - **Gate (2026-10-13, updated 2026-10-14): ⛔ NOT READY.** It turns on three things: the **income outside the W-2** (the
   cash and the side jobs); **Never Give Up KK's 2025 activity**; and the **filing status** — a copy
   of the return Viktoriia already filed (a joint return remains possible either way). ⭕ **The three partnership K-1s
@@ -212,9 +241,13 @@ the actual details (and Claude can pull them live when a task needs them).
   - [ ] Any investment/brokerage accounts; any bank accounts outside the US.
   - [ ] Two United Equity payments with no reimbursement memo (an "ADVANCE" and one other).
   - [ ] *(only if Gusto fails)* the Deep Tech W-2.
-- **Internal:** Julia downloads the Deep Tech W-2 from Gusto *(to confirm — the figures are known)* · Julia's filing-status recommendation once Viktoriia's
-  return is in hand. ✅ **Done 2026-10-14:** the three 1065s opened for his K-1s (Lilian authorized — all zero); the
-  extension settled by Lilian.
+- **Internal:** confirm **whether Viktoriia filed her 2025 return** (original 1040 or a 1040-X on hers) · the **EIC** left
+  blank by ATX · **Form 8867** · Julia to confirm the W-2-only decision covers Never Give Up KK. ✅ **Done 2026-10-14:** the
+  three 1065s opened for his K-1s (Lilian authorized — all zero); the extension settled by Lilian; the Deep Tech W-2 in
+  Double and matching; the filing status — joint (Lilian). ⓘ *The client asks above that came from his bank statements
+  (cash, side jobs, 1099s, their costs, the two United Equity payments) and the childcare-provider ask are set aside by
+  the W-2-only decision; still live: a copy of Viktoriia's return if she filed, and property / investments / foreign
+  accounts unless set aside too.*
 - **Established from the prior year (2024, prepared by Strand Tax & Accounting Services):** married filing jointly;
   Florida; one dependant; W-2 wages only; Marketplace coverage reconciled on Form 8962; EIC and the child tax credit;
   **no carryovers of any kind**.
@@ -224,10 +257,9 @@ the actual details (and Claude can pull them live when a task needs them).
   large gifts; medical expenses too small to matter on the standard deduction.
 
 ### Outstanding items (CI-only — never in the SOP)
-- 🔴 **The 2025 return: the questions above are unsent** — working paper §6; a phase-1 workbook was delivered to Lilian
-  2026-10-14 (not committed).
-- 🟡 **Julia: download his 2025 W-2 from Deep Tech's Gusto** (Documents › Tax documents › W-2) — to confirm the figures
-  already read off the payroll journal, and for the EIN.
+- 🟠 **The 2025 return: ATX draft 1 keyed and reviewed (2026-10-14)** — before filing: whether Viktoriia filed (1040 or
+  1040-X), the blank EIC, Form 8867, the direct-deposit block and the name spellings (working paper §8, §6).
+- ✅ ~~Julia: download his 2025 W-2 from Deep Tech's Gusto~~ — done 2026-10-14; in Double and matching the payroll journal.
 - **Engagement letter / invoice for the personal 1040** — none found; confirm whether one is needed.
 
 ### Information still needed
