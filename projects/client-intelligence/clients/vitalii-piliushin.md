@@ -220,9 +220,10 @@ the actual details (and Claude can pull them live when a task needs them).
     may reverse). A trip where he **flies out and drives a car back** is a car-buying trip: flights and hotels are travel,
     the road fuel and the car service follow the car (Part III). **A meal on a business trip is a travel meal — 24b at
     50%, whichever account paid it** (session's reading of L16, 2025 — Lilian may reverse); a barber is never a meal.
-  Several of his friends lend him money and he repays them in small Zelle amounts (Stas, Tima, Zhenya, others): **money
-  from those people may not be sales** — where he has said so it came out (2025 D41); where he has not, Lilian decides
-  (2025 D42). Workers at the shop are paid by Zelle and Cash App with nicknames as labels.
+  - **Money from friends is not always sales:** several of his friends lend him money and he repays them in small Zelle
+    amounts (Stas, Tima, Zhenya, others) — **money from those people may not be sales**; where he has said so it came out
+    (2025 D41); where he has not, Lilian decides (2025 D42). Workers at the shop are paid by Zelle and Cash App with
+    nicknames as labels.
 - 🆕 **Every contractor paid at or above the year's 1099 threshold must send a W-9 so the 1099 can be issued (600.00 for 2025
   payments, 2,000.00 from 2026 — ⑤ below) — say it in the email that
   sends him the year's file** _(Lilian, 2026-10-13)_.

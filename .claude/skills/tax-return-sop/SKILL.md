@@ -568,11 +568,13 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
       record — whether their books or return already treat the car as theirs** before arguing the client owns it: one car
       cannot be two people's. Statements carry only the last payment's split, so **the year's interest is not on Ally's** —
       ask for the year's **payment history** (each payment's principal and interest) or the lender's year-end interest summary.
-      🆕 **And when the SIGNER rules the car is the client's anyway, apply it** *(Piliushin 2025 D44 — Julia, relayed by
-      Lilian, 2026-10-14: "No lo cuestiones… Es una decisión de Julia")*: record it as her decision with her words and the
-      date, **keep the earlier analysis in the paper as the record, and do not re-argue it in chat** — then the car is his
-      asset (depreciation on actual costs, or the standard rate if its first business year allows), the principal is still
-      never deducted, and the business share of the interest goes on line 9. **The miles are still the gate on every method.**
+      🆕 **And when the SIGNER rules that the car AND ITS LOAN are the client's anyway, apply it** *(Piliushin 2025 D44 —
+      Julia, relayed by Lilian, 2026-10-14: "Asume que es a nombre de Vitaly… No lo cuestiones… Es una decisión de Julia")*:
+      record it as her decision with her words and the date, **keep the earlier analysis in the paper as the record, and do
+      not re-argue it in chat** — then the car is his asset (depreciation on actual costs, or the standard rate if its first
+      business year allows), the principal is still never deducted, and the business share of the interest goes on line 9.
+      ⚠️ **A ruling on the CAR alone** *(route B — the loan still someone else's)* **leaves the interest under the liability
+      rule above.** If her words do not say which, ask her. **The miles are still the gate on every method.**
     - 🆕 **When the question file COMES BACK** *(Piliushin 2025, DRAFT 6, 2026-10-14)*: diff it against the file that was
       sent (only the answer column should change), **match every answered row to its bank line by date, bank text and amount**,
       and apply in three ways only — **APPLY** a business purpose he names for that line or payee (an answer on a payee's first
