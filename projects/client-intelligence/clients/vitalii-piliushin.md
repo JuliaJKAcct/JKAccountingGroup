@@ -175,15 +175,15 @@ the actual details (and Claude can pull them live when a task needs them).
   from the first day")_. ⛔ **No Ally payment ever goes on his return** — principal never; interest only for a person liable on
   the loan (he is not, unless the contract names him co-buyer); late charges never. **What the loan decides is whose car it is
   for tax purposes — Julia (2025 O31)**, and the firm's own records on Boris and Candramas must be checked first (2025 O35).
-  🆕 **He drives it since November 2024 and keeps NO mileage record** _(the client, 2026-10-14)_ — so 2024 is the car's first
-  business year (the standard rate needed a timely 2024 return) and the business share has nothing written under it.
+  🆕 **He drives it since November 2024 and keeps NO mileage record** _(the client, 2026-10-14)_ — driving is not business use, so whether 2024 or 2025 is the car's first BUSINESS year depends on whether he used it
+  for paid work in 2024 (Julia, 2025 O31); and the business share has nothing written under it.
   **Ask him to start a log now.** The Range Rover of 2025 was a car **for sale** (its insurance is a business insurance
   cost, not a car expense); the other car he drove was **rented**.
 - 🆕 **The home office is in the Rockwall home from October 2025: an office of about 200 sq ft in about 1,874 sq ft of
   living area** _(Artiom; garage excluded)_. **The rent is paid to "Sasha" by Zelle or wire** _(the client, via Lilian —
   2025 L14)_. ✅ **Settled by the client (2026-10-14): the rent is the same every month from a lease that started 15 October 2025;
   the smaller November payment squared the first, short month to the calendar** — every Rockwall payment of 2025 is 2025
-  rent (figures in the working paper). Home internet was AT&T in 2025 (Spectrum now); no renter's insurance. Ask at the point of use; Lilian decides (2025 O34). **Lilian rules whether it qualifies beside the Kaufman shop** (2025 D9). Utilities found only on Wells Fargo
+  rent (figures in the working paper). Home internet was AT&T in 2025 (Spectrum now); no renter's insurance. **Lilian rules whether it qualifies beside the Kaufman shop** (2025 D9). Utilities found only on Wells Fargo
   (TXU, Atmos); none on his personal account.
 - 🆕 **What is NOT asked of him** _(Lilian, 2026-10-13 — 2025 L9–L13)_: groceries (on either account — personal); the
   Marketplace health insurance (a 1040 matter); the Wells Fargo transfers to his own Bank of America account (the business
@@ -201,8 +201,8 @@ the actual details (and Claude can pull them live when a task needs them).
   payee's lines; short answers ("для шапа", "рабочий зарплата", "доставка машины") that name a purpose are enough to apply.
   ⚠️ **He also gives BLANKET answers** — *"all restaurants are business"*, *"all trips and hotels were work — write the reason
   yourselves"* — **those go to Lilian, never applied by a session, and the reason is never written for him.** Several of his
-  friends lend him money and he repays them in small Zelle amounts (Stas, Tima, Zhenya, others): **money from those people is
-  not sales** once he says so (2025 D41–D42). Workers at the shop are paid by Zelle and Cash App with nicknames as labels.
+  friends lend him money and he repays them in small Zelle amounts (Stas, Tima, Zhenya, others): **money from those people may not be
+  sales** — where he has said so it came out (2025 D41); where he has not, Lilian decides (2025 D42). Workers at the shop are paid by Zelle and Cash App with nicknames as labels.
 - 🆕 **Every contractor paid at or above the year's 1099 threshold must send a W-9 so the 1099 can be issued (600.00 for 2025
   payments, 2,000.00 from 2026 — ⑤ below) — say it in the email that
   sends him the year's file** _(Lilian, 2026-10-13)_.
