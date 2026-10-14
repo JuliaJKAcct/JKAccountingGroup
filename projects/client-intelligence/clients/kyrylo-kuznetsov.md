@@ -192,7 +192,9 @@ the actual details (and Claude can pull them live when a task needs them).
 - **2026-10-14 — Lilian keyed both W-2s in ATX** (United Equity and Deep Tech). **Filing status: a joint return is
   likely** — Lilian expects Viktoriia to agree to file together, with Sofiia on the return; **not decided yet**. A copy of
   the return Viktoriia already filed is still needed: on a joint return her income joins his, and what she paid or was
-  refunded on her own return is accounted for on the joint one. _(Lilian, chat)_
+  refunded on her own return is accounted for on the joint one. 🔑 **If joint, it is filed as a Form 1040-X amending
+  Viktoriia's return** — her return as filed in column A, his items added in column B, both sign (IRS Form 1040-X
+  instructions, "changing from a separate to a joint return"). _(Lilian, chat; irs.gov)_
 ### Tax year 2025 — the review
 - **Gate (2026-10-13, updated 2026-10-14): ⛔ NOT READY.** It turns on three things: the **income outside the W-2** (the
   cash and the side jobs); **Never Give Up KK's 2025 activity**; and the **filing status** — a copy
