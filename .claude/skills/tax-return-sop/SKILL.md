@@ -3135,6 +3135,20 @@ non-bank item in the per-business tie.**
 | **Rule** | **What put it there, in words, with who and when** — *"R4 · Amazon is personal (the client with Lilian, 2026-07-30)"*. ⛔ **Never the ID alone** *(the derivation rule above)* |
 | **Status** | `Settled` · `ASK the client (Q4)` · `DECIDE · Julia (J1)` — **a line whose treatment is still open says so on the line** |
 
+🆕 **WHO DECIDED IT — the `Rule` column opens with a tag** _(Lilian, 2026-10-14, on Piliushin 2025: *"incluye una columna
+con la categorización que se le dio a esa transacción y la fuente, el basamento, el fundamento para esa categorización: si
+fue algo de cliente, si fue nuestro, etcétera"*)_: **`CLIENT` · `LILIAN` · `JULIA` · `FIRM`**, then the words. `CLIENT` —
+his answer moved the line; `LILIAN` / `JULIA` — one of their rulings did *(a ruling made **on the client's word** says so —
+*"LILIAN (on the client's word)"*)*; **`FIRM` — a session rule or the bank's own text placed it, and that is a DEFAULT
+anyone can overrule, not a decision.** 🔑 **The tag is what lets her filter to "everything we decided ourselves" in one
+click.** Name the column for what it holds — e.g. *"BASIS — who decided (CLIENT · LILIAN · JULIA · FIRM) and on what"*.
+🆕 **ONE SHEET PER ACCOUNT is allowed** _(same day: *"si quieres, puedes incluir dos pestañas: una para Wells Fargo y la
+otra para la cuenta personal de Bank of America, para que todo esto nos quede en récord"*)_ — her offer, not a
+requirement: `<Account> transactions` *(e.g. `Wells Fargo transactions`)*, **every sheet with the same columns**, an
+account outside the return marked as such in its own name. ⚠️ **It relaxes the one-name rule above: search for
+"transactions", not for `Bank transactions`.** Split when a business account and a personal account sit side by side —
+the personal one is read for a different purpose, and one sheet mixes the two.
+
 ⚖️ **THE BUILD TIES IT, AND A FAILED TIE STOPS THE BUILD:**
 - **per statement:** the sheet's lines for that statement = its printed credits and debits *(§1B.10 ⑤ point 2)*.
   **A bank export or a download with no printed totals ties to the file itself** — its row count and its sum — **and
