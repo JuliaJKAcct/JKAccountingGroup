@@ -349,6 +349,15 @@ the actual details.
 - 2026-10-10 — **Incremental sweep (baseline 2026-10-03→2026-10-10).** Double: `list_client_properties` unchanged; `list_notes` — both notes re-read: **491845 (FDOR) unchanged since 2026-08-13; 503544 (Shopify) unchanged since 2026-09-22 (stale)**; `list_activity_log` (from 2026-10-03) zero entries. Gmail (business names, Ivanov, Go Robots, Shopify, Gusto, Safe Guard, Penn Credit, FDOR, bounded after:2026/10/03): Gusto payroll-late reminder 2026-10-08 (Sep 28–Oct 11 period, addressed to the firm and the owner) and 2026-10-06; Shopify "Conversation closed" with Alex L 2026-10-05 (store not named — see outstanding items); USPS digests continuing; everything else was other clients' notices (many Gusto/Shopify/FDOR hits belong to other companies). Google Drive (full-text "Deep Tech", modified after 2026-10-03): only the internal hours sheet. Ping not separately re-run this week for this client beyond the org-wide pass done for the first client in this batch (no on-topic hits).
 
 - 2026-10-13 — **Learned during phase 1 of Kyrylo Kuznetsov's 2025 Form 1040** ([`kyrylo-kuznetsov.md`](./kyrylo-kuznetsov.md)): **this company had an employee on its Gusto payroll in late 2025** — Kyrylo Kuznetsov, Sales Manager, contract signed **2025-10-27** (Drive › `4-Payroll/KYRYLO KUZNETSOV`), paid by Gusto on 2025-11-03, 11-24 and 12-08 (his bank). Before that it **reimbursed him by bank transfer** for costs he paid (storage, Home Depot, name.com, supplies, meals — receipts in its Sep–Dec 2025 folders marked *"paid by Kyryll – reimbursed"*), and it **paid NEVER GIVE UP KK LLC a consultation invoice** (invoiced 2025-09-22, paid 2025-10-03). 🔑 **Gusto generated this company's 2025 W-2 packet on 2026-01-30** (email to Julia) — his W-2 is needed for his 1040, and Julia is a Gusto admin. ⓘ Bears on the Gusto-cancellation question above: the company had at least one employee in Q4 2025. _(Gmail, Drive names, his bank statements — 2026-10-13)_
+- 2026-10-14 — **Gusto's payroll journal read, for Kyrylo's lines only** (Lilian asked whether this company ever paid him
+  through payroll; working paper [`kyrylo-kuznetsov/2025-form-1040.md`](../../tax-returns/kyrylo-kuznetsov/2025-form-1040.md)
+  §1M). The journal is saved in Julia's Drive under **`3-Docs for Visa application - Vitalii Ivanov` › `Payroll documents -
+  12.08.2025`** (a copy in a `Payroll` folder) — *"All Time"*, created 2025-12-08. **He is on three regular payrolls
+  (paydays 2025-11-03, 11-24, 12-08)**, a Sales manager paid by the hour. 🔑 **For this company:** Gusto's confirmations
+  to Julia show **no regular payroll run after the 2025-12-08 payday** — only *"payroll is late"* reminders from
+  2025-12-18 onward, plus a 2026-02-03 off-cycle reimbursement — which fits the owner's 2026-08-05 statement that the
+  company has **no employees**: the reminders are for a schedule nobody runs. ⓘ The 2025 W-2 packet sits in Gusto under
+  **Documents › Tax documents › W-2**. _(Gusto journal via Drive, through the redactor; Gmail — 2026-10-14)_
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm sales-tax state / registration
