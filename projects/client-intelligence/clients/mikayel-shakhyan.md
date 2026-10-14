@@ -236,7 +236,8 @@
 
 - _(2026-10-14)_ — **Lilian asked where the reportable-transactions work stood, and sent two documents the
   client had just sent her.** _(Her recollection was a payment to a lawyer or to a company that helped
-  register the LLC — that is the **$850 to Pivniak Law** of 14 Nov 2025, out of the company's own account;
+  register the LLC — that is the **Pivniak Law payment** of 14 Nov 2025, out of the company's own account
+  (figure in working paper §4D);
   the receipt she sent is a different payment.)_ Both read in this session and **transcribed in full in the
   working paper §1A**: ① the **Florida new-LLC filing receipt** — through the redactor (masked 3 long
   number runs and 2 street lines, nothing else); ② **Articles of Amendment of Fun Park USA, LLC** — a
@@ -416,7 +417,7 @@
 
 ### Tax year 2025 — the review
 
-- **In preparation, blocked on the client's questions below** *(five until 2026-10-14; Fun Park made it six)*. 🔴 **And if those answers do not come, two positions fall to Julia** (working paper §6D) — ⓘ *conditional, not parallel: answer the five and they mostly dissolve.* The
+- **In preparation, blocked on the client's questions below** *(five until 2026-10-14; Fun Park made it six)*. 🔴 **And if those answers do not come, two positions fall to Julia** (working paper §6D) — ⓘ *conditional, not parallel: answer the five and they mostly dissolve.* 🆕 ⏰ **2026-10-14: no longer conditional if the 7004 went in — the extension ends 15 Oct 2026, so they are live now** (Outstanding items). The
   return itself, its tie-outs and its decisions are in the working paper.
 
 ### Outstanding items (CI-only — never in the SOP)
@@ -435,7 +436,7 @@
   of 2026-09-07. 🔄 **CHASED 2026-09-19 — UNCHANGED, now 13 days old (12 since the last file
   update).** No confirmation of receipt in Julia's Gmail (searched, found nothing); `FOLLOW-UPS.md`
   row 85 itself reads unchanged since 2026-09-07. Then put the two signer positions to her **only
-  if the client's answers do not come** (working paper §6D). `FOLLOW-UPS.md` row 85.
+  if the client's answers do not come** (working paper §6D). `FOLLOW-UPS.md` row 85. *(⛔ superseded 2026-10-14: live now — first bullet of this list)*
   🔄 **CHASED 2026-10-03 — STILL UNCHANGED, now 27 days old** (Gmail/Double bounded after 2026-09-26; extended due date now 18 days overdue).
   🔄 **CHASED AGAIN 2026-09-26 — STILL UNCHANGED, now 20 days old.** Still no receipt confirmation
   found in Gmail. Unchecked directly: `FOLLOW-UPS.md` row 85 itself (out of this sweep's scope to
@@ -452,10 +453,10 @@
   old with no evidence it reached him — no client email exists in Julia's Gmail at all (searched
   unbounded on his address), no Ping meeting/call for him exists (searched, none found), no Double
   note recording it (0 notes). **No deadline of its own**, but it gates the return, whose own
-  extended due date (2026-09-15) has now passed — see §5.
+  extended due date (2026-09-15) has now passed — see §5. *(⛔ wrong — see the 2026-10-14 banner)*
   🔄 **CHASED AGAIN 2026-09-26 — STILL UNCHANGED.** Now **20 days** since first raised (2026-09-06),
   Q2 draft **19 days** old. Same exhaustive search (Gmail, Ping, Double) found nothing new. The
-  return's extended due date is now **11 days** overdue.
+  return's extended due date is now **11 days** overdue. *(⛔ wrong — see the 2026-10-14 banner)*
 - ✅ **`Tax Return Type` mismatch — RESOLVED (or at least changed) as of 2026-09-19.** Was `1040` for
   a nonresident; now reads **`1120 Proforma`** (Double `list_client_properties`, read 2026-09-19).
   No activity-log entry for the change was found (bounded search from 2026-09-05), so who changed it
@@ -501,7 +502,7 @@
       related party, not only a U.S. one.*
 - [ ] 🟠 **Did the company pay anything that was really his personally?** Each one is a
       distribution, even when the money went to an unrelated payee. 🆕 *(2026-10-14: ask in the same
-      breath whether **Anastasia White works for Pivniak Law** — if so, the $850 may be formation work.)*
+      breath whether **Anastasia White works for Pivniak Law** — if so, that payment may be formation work.)*
 - [ ] ⏸ **In which country does he file a tax return as a resident — and does he have a tax
       identification number there?** **Four** fields on the 5472 depend on those two facts, and
       nothing on file answers either.
@@ -512,7 +513,7 @@
 
 🔄 **Chase pass, 2026-09-19 — all FIVE of the above are still unanswered, ages 13–14 days from
 first being raised, no deadline of their own but gating a return whose own extended due date
-(2026-09-15) has passed.** Checked against Gmail (client's address, unbounded — no message from
+(2026-09-15) has passed.** *(⛔ wrong — see the 2026-10-14 banner)* Checked against Gmail (client's address, unbounded — no message from
 him, ever), Ping (his resolved client record — 0 meetings), and Double (0 notes, no activity since
 2026-09-07). None of these five is answerable from the sources this sweep can reach; only he can
 close them.
@@ -520,7 +521,7 @@ close them.
 🔄 **Chase pass, 2026-09-26 — all FIVE still unanswered, now ages 20–21 days.** Same sources
 re-checked (Gmail unbounded on his address, Ping client-scoped search + action items, Double notes/
 tasks/activity from 2026-09-19) — nothing new from him. The return's extended due date is now
-**11 days overdue** with `Prepare tax return` still `wip`.
+**11 days overdue** with `Prepare tax return` still `wip`. *(⛔ wrong — see the 2026-10-14 banner)*
 
 **Ours to settle, without asking him** _(§6B)_:
 
