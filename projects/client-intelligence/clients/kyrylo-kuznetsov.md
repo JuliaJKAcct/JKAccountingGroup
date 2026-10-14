@@ -1,11 +1,13 @@
 # Kyrylo Kuznetsov — individual (and owner of Never Give Up KK, partner in three LLCs)
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-13
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-14
 
 > 🔴 **2026-10-13 — PHASE 1 OF HIS 2025 FORM 1040 RAN, AND THE GATE IS CLOSED.** The organizer (completed that morning)
 > reports **wages only**, but his own note, his bank statements and the firm's records show **cash deposits and "small
 > side jobs" with no 1099s**, a **second W-2 (Deep Tech, from November)** and **2025 activity in Never Give Up KK
-> LLC**. 🆕 **2026-10-14:** ⭕ **his three partnership K-1s are all ZERO** (read on Lilian's authorization) · ✅ **the
+> LLC**. 🆕 **2026-10-14:** ⭕ **his three partnership K-1s are all ZERO** (read on Lilian's authorization) · ⭕ **the
+> Deep Tech payroll is confirmed** — three Gusto paychecks in Nov–Dec 2025, read off Gusto's payroll journal at Lilian's
+> request; only the W-2 document is still to download · ✅ **the
 > extension is settled — Lilian: do not raise it again** · **Viktoriia has already filed her 2025 return** (Lilian's
 > understanding) — **a copy of it is what we need**: it sets his filing status, who claims Sofiia and how the Marketplace
 > policy is split. ⓘ **A separate return of hers would not lock him into filing separately** (a joint return can still
@@ -176,11 +178,22 @@ the actual details (and Claude can pull them live when a task needs them).
   answer (her return sets his filing status, shows who claimed Sofiia and how the 1095-A in her name was split) is in the
   working paper, finding 5. A **phase-1 workbook** (every bank line, the 1095-A, the K-1s, open items) was delivered to
   her — not committed. _(Lilian, chat; Double)_
+
+- **2026-10-14 — Did Deep Tech ever pay him through payroll? Yes.** Lilian asked (*"yo tenía entendido que sí, pero no
+  logro encontrar esto dentro de los documentos en Gusto"*). Gusto itself was not reachable from the session and Deep
+  Tech's QuickBooks is not connected in Double, so the answer came from **Gusto's own payroll journal** saved in Julia's
+  Drive (`3-Docs for Visa application - Vitalii Ivanov` › `Payroll documents - 12.08.2025`, *"All Time"* to 2025-12-08)
+  and Gusto's payroll-confirmation emails: **he is on three regular payrolls — paydays 2025-11-03, 11-24 and 12-08** —
+  as a **Sales manager, paid by the hour, by direct deposit, with tax withheld** (an employee, not a contractor). His
+  net pay ties to his bank to the cent. No regular payroll ran after the 12-08 payday. Figures: working paper §1M.
+  **The W-2 is still to download** — in Gusto under **Documents › Tax documents › W-2**. _(Gusto journal + Gmail, read
+  for his lines only)_
 ### Tax year 2025 — the review
-- **Gate (2026-10-13, updated 2026-10-14): ⛔ NOT READY.** It turns on four things: the **income outside the W-2** (the
-  cash and the side jobs); the **Deep Tech W-2**; **Never Give Up KK's 2025 activity**; and the **filing status** — a copy
+- **Gate (2026-10-13, updated 2026-10-14): ⛔ NOT READY.** It turns on three things: the **income outside the W-2** (the
+  cash and the side jobs); **Never Give Up KK's 2025 activity**; and the **filing status** — a copy
   of the return Viktoriia already filed (a joint return remains possible either way). ⭕ **The three partnership K-1s
-  are settled — all zero (2026-10-14).**
+  are settled — all zero (2026-10-14).** ⭕ **The Deep Tech W-2 no longer blocks** — its figures come from Gusto's payroll
+  journal (2026-10-14); the document only confirms them.
 - **Asked of the client** *(prepared 2026-10-13, not yet sent — Lilian decides)*:
   - [ ] Where the 2025 cash deposits came from.
   - [ ] What the "small side jobs" were and for whom; whether any payer sent a Form 1099-NEC; their expenses.
@@ -192,7 +205,7 @@ the actual details (and Claude can pull them live when a task needs them).
   - [ ] Any investment/brokerage accounts; any bank accounts outside the US.
   - [ ] Two United Equity payments with no reimbursement memo (an "ADVANCE" and one other).
   - [ ] *(only if Gusto fails)* the Deep Tech W-2.
-- **Internal:** Julia downloads the Deep Tech W-2 from Gusto · Julia's filing-status recommendation once Viktoriia's
+- **Internal:** Julia downloads the Deep Tech W-2 from Gusto *(to confirm — the figures are known)* · Julia's filing-status recommendation once Viktoriia's
   return is in hand. ✅ **Done 2026-10-14:** the three 1065s opened for his K-1s (Lilian authorized — all zero); the
   extension settled by Lilian.
 - **Established from the prior year (2024, prepared by Strand Tax & Accounting Services):** married filing jointly;
@@ -206,7 +219,8 @@ the actual details (and Claude can pull them live when a task needs them).
 ### Outstanding items (CI-only — never in the SOP)
 - 🔴 **The 2025 return: the questions above are unsent** — working paper §6; a phase-1 workbook was delivered to Lilian
   2026-10-14 (not committed).
-- 🔴 **Julia: download his 2025 W-2 from Deep Tech's Gusto.**
+- 🟡 **Julia: download his 2025 W-2 from Deep Tech's Gusto** (Documents › Tax documents › W-2) — to confirm the figures
+  already read off the payroll journal, and for the EIN.
 - **Engagement letter / invoice for the personal 1040** — none found; confirm whether one is needed.
 
 ### Information still needed
