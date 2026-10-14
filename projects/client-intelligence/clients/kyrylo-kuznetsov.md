@@ -275,7 +275,7 @@ the actual details (and Claude can pull them live when a task needs them).
 ### Information still needed
 - [x] His ownership percentage in each of the three partnerships — ✅ Boost You 50%, The Roadside Project 50%, Goshakes 25% (2026-10-14).
 - [ ] Which LLC of his filed a **late** 2025 Florida annual report in July 2025 (an LLC older than 2025 — working paper §6 I7).
-- [ ] A copy of Viktoriia's filed 2025 personal return, and who prepared it.
+- [x] ~~A copy of Viktoriia's filed 2025 personal return, and who prepared it.~~ — ✅ closed 2026-10-14: she has not filed (Lilian).
 
 ## 7. Links
 
