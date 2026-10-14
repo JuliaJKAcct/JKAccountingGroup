@@ -567,6 +567,15 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
       ⚠️ **If the named borrower is also a firm client, check — with Lilian's or Julia's leave, it is another client's
       record — whether their books or return already treat the car as theirs** before arguing the client owns it: one car
       cannot be two people's. Statements carry only the last payment's split, so **the year's interest is not on Ally's.**
+    - 🆕 **When the question file COMES BACK** *(Piliushin 2025, DRAFT 6, 2026-10-14)*: diff it against the file that was
+      sent (only the answer column should change), **match every answered row to its bank line by date, bank text and amount**,
+      and apply in three ways only — **APPLY** a business purpose he names for that line or payee (an answer on a payee's first
+      line covers that payee), **PERSONAL** what he calls personal or a loan, or what a rule forbids whatever he says
+      (grooming; entertainment — §274(a); his own housing), and **the preparer DECIDES** everything else. ⛔ **A blanket answer
+      is not a business purpose** — *"all restaurants are business"*, *"all trips were work — write the reason yourselves"* — it
+      goes to the preparer, and **the firm never writes the reason for him.** 🔑 **Read the answers for the INCOME side too:** a
+      payee he calls a friend he borrows from and repays turns that person's Zelle IN from sales into a loan. **Ship the answers
+      as their own sheet in the worksheet** (tab · row, his words, what they mean, what was done, the amount).
     - 🆕 **How Lilian wants the client's question file** *(Piliushin 2025, 2026-10-13 — her review of the first one)*:
       **a short, simple "how to use this file" on the FIRST page** (which tabs are which account, what to write in the
       yellow column, what needs no answer, send it back) — *"para que no se agobie leyendo"*; **never ask the same money
