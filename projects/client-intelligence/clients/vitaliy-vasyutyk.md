@@ -172,6 +172,11 @@ Remodel Master and Fastighet. That was **not** verified on 2026-10-13 (Nika's 20
   **A year-end figure on his summary sheet is not documentation** (his own trip-by-trip tip log would be), and with no
   1099 from that platform the tips are **not** in any 1099 total, so **they are not deducted**; the income itself is still reported in full. For 2025 he showed tips on Lyft and
   none on DoorDash. Working paper §1G–§1H, §2A.
+- 🛠️ **Where the tips are typed in ATX** _(established 2026-10-14 from Lilian's screen)_: **`1099-K Detail Schedule` ›
+  the Uber row › column `Qualified tips (included in Box 1a)`**. Uber's tips are inside the **1099-K** (riders' money),
+  never the **1099-NEC** (Uber's own incentives). A platform with no 1099 gets **no** record — never create one to reach
+  that column. All three platforms go on **one** Schedule C (`Sch C (1040):Uber`) — the session's recommendation, as in 2024; Lilian
+  confirms.
 - 🔴 **The car method decides the tips deduction too** _(session, 2026-10-14)_: the deduction is capped at the gig
   business's net income, and on the standard mileage rate with the organizer's miles that business shows a **loss** —
   which leaves **no** tips deduction at all. **Decide the car method and the tips together.** Working paper §2A.
