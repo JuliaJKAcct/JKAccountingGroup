@@ -234,6 +234,11 @@
 
 ### Log
 
+- _(2026-10-15, final)_ — **JULIA NARROWED THE RULING (relayed by Lilian): the ONLY reportable transaction on
+  the 2025 Form 5472 is the $125 Florida formation fee**, which the client paid out of his own pocket before the
+  company existed. **The $850 to Pivniak Law is a business expense — not reportable.** Part V = $125, 1f/1h = 125,
+  one Form 5472. ⚠️ The state receipt shows **Anastasia White's** card — confirm he paid or reimbursed her. The
+  $2,700-deposits objection still stands for Julia (now A $125 · B $2,825). Worksheet rebuilt and re-sent.
 - _(2026-10-15, later)_ — **JULIA RULED THE 2025 SCOPE (relayed by Lilian):** the only reportable
   transactions on Lum and Ari LLC's Form 5472 are the **$850 to Pivniak Law** and the **$125 Florida formation
   fee** — Part V $975, one Form 5472, AXY and Oxana Martox treated as unrelated. The session objected in writing
