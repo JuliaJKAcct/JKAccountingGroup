@@ -270,8 +270,8 @@ watch-outs, one-off arrangements, history that affects the work.
 ### Log
 A running, dated record as we build this profile.
 
-- _(2026-10-15, after draft 3)_ — **Lilian decided where the platform fees sit on the gig Schedule C, as in 2024: Uber's in
-  Part V, Lyft's on line 10** (DoorDash charges the driver none) — recorded in the §4 playbook as a 2026 reminder. She also
+- _(2026-10-15, after draft 3)_ — **Lilian decided where the platform fees sit on the gig Schedule C: Uber's in Part V (as on
+  the 2024 return), Lyft's on line 10** (DoorDash charges the driver none) — recorded in the §4 playbook as a 2026 reminder. She also
   asked about the foreign bank account (in Georgia, the country) on the 2024 Form 8938: it carried a maximum value of zero, no
   income was reported from it, and Form 8938 is not needed for 2025 — whether it still existed in 2025 decides only
   Schedule B Part III. _(Session of 2026-10-15, Lilian.)_
