@@ -215,7 +215,7 @@ Remodel Master and Fastighet. That was **not** verified on 2026-10-13 (Nika's 20
 - 🆕 **His office serves TWO businesses** _(Lilian, keyed 2026-10-15)_: split 70% gig / 30% realtor, one Form 8829 each. The
   2024 home-office carryover belongs to the **gig** business's Form 8829 (line 25) and follows the business, not the home.
 - 🆕 **On the standard mileage rate, car washes and cleaning products are inside the rate** — not a separate deduction for either
-  car _(IRS volunteer alert VTA-2019-01; session, 2026-10-15)_.
+  car _(IRS volunteer alert VTA-2019-01, irs.gov, read 2026-10-15: car washes are inside the rate; cleaning products follow the same reasoning)_.
 - 🆕 **His business miles need his log** _(2025)_: the organizer gives the whole year's odometer as business; Uber's own Tax Summary
   shows fewer online miles. Ask for the log every year before relying on the organizer's miles.
 
@@ -385,7 +385,7 @@ it here; these never go into the client SOP.
   no email, no Ping meeting. **This is now the group's single largest open item.**
   🔄 **CHASED 2026-10-10 — STILL `Not Started`, 178 days past the on-file date; 4th quiet sweep.** Double project, activity log, Gmail and Ping, bounded after 2026-10-03: nothing.
   🔵 **2026-10-13 — Lilian is now preparing it, and an extension file EXISTS:** `2025 4868 Ext.pdf` sits in the owner's Double library (uploaded 2026-06-02 with the TaxDome migration; not opened). **If it was accepted, the return is due 2026-10-15** — acceptance not verified. The earlier sweeps searched email and the activity log for an extension, not the file library, which is why they never saw it.
-  🆕 **2026-10-15 — ATX draft 2 reviewed; the dependants (Anton only) and the filing status (joint, as keyed) are settled.** One defect left on the draft (the Uber fees) plus small fixes; client questions out 2026-10-16; the final worksheet is built and will be rebuilt after the answers ([working paper](../../tax-returns/vitaliy-vasyutyk/2025-form-1040.md) §2E, §6).
+  🆕 **2026-10-15 — ATX draft 2 reviewed; the dependants are settled (Anton only); the filing status is keyed as joint — Lilian to confirm the client need not be asked.** One defect left on the draft (the Uber fees) plus small fixes; client questions out 2026-10-16; the final worksheet is built and will be rebuilt after the answers ([working paper](../../tax-returns/vitaliy-vasyutyk/2025-form-1040.md) §2E, §6).
 - 🔴 **Three invoices from 2026-03-25 are still unpaid** (`2097`, `2101`, `2104`) — now **SEVEN** rounds of reminders (last confirmed 2026-09-08), **178 days outstanding as of 2026-09-19**, no deadline (collection matter). The work was delivered and the charges are clean — **so this is a collection question, not a billing question.** Two new invoices (`2293` SYS 1, `2294` Remodel Master, both issued 2026-09-08) are too recent to call late.
   🔄 **CHASED 2026-09-26 — UNCHANGED.** No new reminder round or payment-received email found
   (Gmail searched for the three invoice numbers plus the two new ones, bounded after 2026-09-19).
