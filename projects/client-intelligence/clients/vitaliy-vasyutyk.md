@@ -212,6 +212,12 @@ Remodel Master and Fastighet. That was **not** verified on 2026-10-13 (Nika's 20
 - 🆕 **Uber's fees go in Part V every year** _(2024 convention; missed on two 2025 drafts)_: line 1 carries Uber's GROSS (1099-K +
   1099-NEC), so the fees Uber kept — the Tax Summary's Table 1 — must be deducted as a Part V row `Uber fees`. **Without it
   the gig business is overstated by the whole commission.** The tolls in the same table go on line 9, not in the fees row.
+  ⏰ **2026 REMINDER — WHERE EACH PLATFORM'S FEE GOES (Lilian's decision, 2026-10-15):** *"Te voy a dejar así como estuvo en el
+  año 2024, con Lyft en la línea 10 y Uber en la parte 5… anota esto en el archivo de cliente para que me lo recuerdes en el
+  2026 cuando estemos preparando sus taxes."* → **Uber's fees: Part V, row `Uber Fees`** · **Lyft's fee: line 10 (Commissions
+  and fees)** · **DoorDash: no fee** (DoorDash charges the restaurant and the customer, not the driver; only an instant-pay
+  fee would count). ⓘ The line does not change the tax — both are deducted in full; the rule is for year-to-year
+  consistency. 🔔 **Whoever prepares his 2026 return: tell Lilian this when the gig Schedule C is keyed.**
 - 🆕 **His office serves TWO businesses** _(Lilian, keyed 2026-10-15)_: split 70% gig / 30% realtor, one Form 8829 each. The
   2024 home-office carryover belongs to the **gig** business's Form 8829 (line 25) and follows the business, not the home.
 - 🆕 **On the standard mileage rate, car washes and cleaning products are inside the rate** — not a separate deduction for either
@@ -264,6 +270,11 @@ watch-outs, one-off arrangements, history that affects the work.
 ### Log
 A running, dated record as we build this profile.
 
+- _(2026-10-15, after draft 3)_ — **Lilian decided where the platform fees sit on the gig Schedule C, as in 2024: Uber's in
+  Part V, Lyft's on line 10** (DoorDash charges the driver none) — recorded in the §4 playbook as a 2026 reminder. She also
+  asked about the foreign bank account (in Georgia, the country) on the 2024 Form 8938: it carried a maximum value of zero, no
+  income was reported from it, and Form 8938 is not needed for 2025 — whether it still existed in 2025 decides only
+  Schedule B Part III. _(Session of 2026-10-15, Lilian.)_
 - _(2026-10-15, after draft 2)_ — **ATX draft 3 reviewed: the Uber fees are now deducted and the return shows a refund.** Two fixes still open before the final worksheet is rebuilt — the prior-year home-office carryover on the gig business's Form 8829 and the shared-policy allocation on Form 8962 (which waits on Lilian's or Julia's choice of percentage) — plus three small clean-ups. The client questions sent for 2026-10-16 are still unanswered. Working paper §1O, §2F. _(Session of 2026-10-15, Lilian.)_
 - _(2026-10-15, evening)_ — **ATX draft 2 of his 2025 Form 1040 reviewed, and the FINAL WORKSHEET built.** **Julia made Nika's excess distribution LONG-term** (Lilian relaying: *"asume esto como correcto porque fue una decisión de Julia"*). One defect still on the draft — **the Uber platform fees are not deducted** — and once fixed the return turns from a balance due into a **refund**, because the gig business shows a loss, which also takes the tips deduction to zero. Smaller fixes: the 2024 home-office carryover missing from the gig business's Form 8829, the shared-policy allocation on Form 8962, two checkboxes, and five empty forms to delete. Lilian split **his** office between his two businesses (70% gig, 30% realtor) — the basis is to be recorded. Questions for the client on 2026-10-16: car-cleaning products (not deductible on the standard rate), his phone and internet, **his mileage log** (the return claims the whole year's odometer as business; Uber's own record is lower), and whether Iryna's first-sheet office supplies are inside her later total; plus the bank account for the refund. 🗂️ **The final worksheet (`Vasyutyk 2025 Form 1040 - Final worksheet.xlsx`) is built from the CORRECTED return and will be rebuilt after those answers; then Lilian saves it in Double.** Figures: working paper §1N, §2E. _(Session of 2026-10-15, Lilian.)_
 - _(2026-10-15, later)_ — **Lilian confirmed the WhatsApp figures are Iryna's** ("es del sch c de iryna") and passed one more: a **glass replacement on Iryna's car** (parts and labour). She also **took the internet out of the home-office template herself** — her reasoning: the internet's business use follows the hours and volume of use, not the office's floor area — so each Form 8829 carries **rent and electricity only**. 🗂️ **The LIVE workbook is now `… - Worksheet v5.xlsx`; discard v1–v4.** _(Session of 2026-10-15, Lilian.)_
