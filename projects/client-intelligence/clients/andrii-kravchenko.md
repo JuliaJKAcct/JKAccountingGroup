@@ -72,7 +72,7 @@
 
 ### Income tax
 - **Applies?** **Yes**
-- **Return type(s) & deadlines:** **Form 1040, married filing separately** _(Julia's 2026-09-07 meeting summary, Double note `517737`: his wife filed her own return; not yet checked against the return itself, whose file name carries both names)_, calendar year, extended to 2026-10-15. Carries Forms 5471 for his foreign companies (§5) and — per Julia's review — **needs a Form 8938** (§6).
+- **Return type(s) & deadlines:** **Form 1040, married filing separately** _(Julia's 2026-09-07 meeting summary, Double note `517737`, and her 2025 workbook, which is built on MFS — his wife filed MFS in February 2026; MFJ would need her 1040-X)_, calendar year, extended to 2026-10-15. Carries Forms 5471 for his foreign companies (§5) and — per Julia's review — **needs a Form 8938** (§6).
 - **Our role:** the firm prepares and files. 2025 project: preparer Irina Jandieri, reviewer Julia.
 - **Current status (Double, 2026-10-15):** "2025 Taxes" is **`readyForFiling`**, `filedAt` empty; the return PDF `KRAVCHENKOANDRIIandMARGARYTA2025.pdf` sits in `JK Accounting Group > Tax Return Filed > 2025` (uploaded 2026-10-14).
 - **Process notes (→ future SOP):** _(pending)_
@@ -81,6 +81,7 @@
 - **Applies?** **Yes** — he holds foreign financial accounts. Julia's meeting note (2026-09-07) records **13 foreign accounts reported for 2024** by his previous preparer; whether an FBAR was filed for 2024 is **unknown** (he was asked for a copy).
 - **2025 FBAR due 2026-10-15** (the automatic extension date — it does not move again). **Not filed as of 2026-10-15** by the only test available: no FinCEN acknowledgement in Julia's Gmail since 2025-09-21.
 - **Where the account list is:** his own `Andrii Kravchenko 2025 Foreign income.xlsx` (the firm's Foreign Income Template, filled by him; Drive, saved 2026-10-06). 🔴 **It lists only two foreign bank accounts, with NO account numbers and round maximum values**, against 13 accounts in 2024 — so it cannot be filed from as it stands (§6).
+- 🔑 **The firm's FBAR worksheet for him ALREADY EXISTS — Julia's tab `8938 & FBAR`** in `Andrii Kravchenko 2025 Form 1040 - Consolidated by Schedule_6.xlsx` (Drive, Julia's folder `Personal`). It lists the two accounts, the **ten 2024 accounts missing from his 2025 list** (to be asked: closed when, personal or company), what is NOT reportable, and that the **Polish company's accounts go on his FBAR** (financial interest over 50%). Her Open Items tab marks the FBAR **HIGH, owner: the client** — account numbers, statements for maximum values, the ten accounts. **Start there next year.**
 - **Our role:** the firm prepares and files through its BSA E-Filing account.
 
 ### Licenses & other filings
@@ -90,8 +91,8 @@
 
 - 🔴 **His foreign-account list is incomplete, and the FBAR cannot be filed from it.** 2024: 13 accounts; his 2025 template: 2, with no account numbers. Julia told him on 2026-09-07 that the same accounts must be reported every year unless closed, and that the amounts must be exact, not estimated. **Get the full list before filing** — sources in §6.
 - 🔴 **The 2025 return was missing Form 8938 when Julia reviewed it** (`Kravchenko_2025_Preparer_Review.xlsx`, 2026-10-10/11: "Forms missing from return — add to filing"). Whether the final PDF of 2026-10-14 includes it was not checked this session.
-- **A large group of companies, set up for asset protection.** US: Avirock LLC (operations), Rock Wealth LLC (the one partnership), AVK Holding LLC, Wealth Bay, and holding/land-trust entities. Foreign: Forms 5471 are being prepared for a Polish company (Avirock, 99%) and two Ukrainian companies transferred to AVK Holding LLC on 2025-03-05. **Whether the foreign companies' own bank accounts belong on his FBAR is a question for Julia** (an owner of more than 50% of a company has a financial interest in its accounts).
-- **His foreign-income template also lists crypto, cash and land.** Cash and real estate are not financial accounts; virtual currency on its own has not been reportable on the FBAR under FinCEN's position to date (Notice 2020-2) — **confirm before relying on it.** Julia noted on 2026-09-07 that the crypto value he declared in prior years is far above the real balance; she advised consistency with prior filings.
+- **A large group of companies, set up for asset protection.** US: Avirock LLC (operations), Rock Wealth LLC (the one partnership), AVK Holding LLC, Wealth Bay, and holding/land-trust entities. Foreign: eight Forms 5471 — a Polish company (Avirock Sp. z o.o., 99%) and seven Ukrainian interests contributed to AVK Holding LLC on 2025-03-05 (protective filings). **Julia's workbook puts the Polish company's accounts on his FBAR** (financial interest over 50%).
+- **His foreign-income template also lists crypto, cash and land.** Julia's `8938 & FBAR` tab: cash, land and the house are not reportable; the crypto goes on **Form 8938, not the FBAR**, unless it is held on an exchange. Julia noted on 2026-09-07 that the crypto value he declared in prior years is far above the real balance; she advised consistency with prior filings.
 
 ## 6. History & open questions
 
@@ -104,13 +105,12 @@
 - 2026-10-06 — his `Andrii Kravchenko 2025 Foreign income.xlsx` saved in Drive.
 - 2026-10-10/11 — Julia's preparer review of the 2025 return (`Kravchenko_2025_Preparer_Review.xlsx`): corrections across Forms 8962, 1116, Schedules C/E, the three Forms 5471 and Form 8275, and **Form 8938 missing**.
 - 2026-10-14 — the 2025 return PDF uploaded to Double (`Tax Return Filed > 2025`); project `readyForFiling`.
-- 2026-10-15 — **FBAR 2025 started by Lilian, at Julia's request** (this session). Found his template; it has no account numbers. Lilian authorised opening the template, Julia's review workbook, his 2025 return and his 2024 return to complete the list. The template and the review workbook were read; **the return PDF could not be opened from this session** (the download was refused by the session's safety layer), so the account numbers are still missing. A working FBAR sheet (account rows, bank addresses, status) was handed to Lilian as a file — **not committed**.
+- 2026-10-15 — **FBAR 2025 started by Lilian, at Julia's request** (this session). Found his template; it has no account numbers. Lilian authorised opening the template, Julia's review workbook, his 2025 return and his 2024 return to complete the list. The template and the review workbook were read; **the return PDF could not be opened from this session** (the download was refused by the session's safety layer), so the account numbers are still missing. A working FBAR sheet (account rows, bank addresses, status) was handed to Lilian as a file — **not committed**. Later the same day, asked whether a per-client worksheet existed, the session found **Julia's `8938 & FBAR` tab** (§4) and rebuilt his sheet from it: the FBAR is blocked on the client, as Julia had already recorded.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **FBAR 2025 — get every account number and the full account list, then file.** Sources, in order: Form 8938 / Schedule B in `KRAVCHENKOANDRIIandMARGARYTA2025.pdf` (Double), his 2024 return `2024 Kravchenko Andrii.pdf` (Drive, prior preparer — the 13 accounts), any 2024 FBAR he sends. **Julia decides** whether to file tonight with what is known or file complete and late (the BSA form asks for a late-filing reason).
+- 🔴 **FBAR 2025 — blocked on the client** (Julia's Open Items): account numbers, statements for maximum values, the ten 2024 accounts, the Polish company's accounts. Other places to look: Form 8938 in `KRAVCHENKOANDRIIandMARGARYTA2025.pdf` (Double), his 2024 return `2024 Kravchenko Andrii.pdf` (Drive — the 13 accounts), and the detailed `Andrii Kravchenko 2025 Form 1040 – Preparer Handoff.xlsx` (8938 reconciliation; not opened). **Julia decides** whether to file tonight with what is known or file complete and late (the BSA form asks for a late-filing reason).
 - 🔴 **Confirm Form 8938 is on the 2025 return before it is filed** (Julia's review flagged it missing).
-- **Ask Julia:** do the foreign companies' accounts go on his FBAR (§5)?
 - Owed: a full first sweep (Ping, unbounded Gmail and Drive).
 
 ### Information still needed
