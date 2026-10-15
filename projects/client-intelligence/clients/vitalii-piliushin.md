@@ -182,7 +182,7 @@ the actual details (and Claude can pull them live when a task needs them).
   allows it. **What it needs from him every year:** the miles (odometer at the start and end, and a list of business trips),
   the contract (once), the lender's monthly statements — 🆕 **do not ask him for the payment history: Ally charges daily simple
   interest, so the rate comes from one split on the statements and the year's interest is rebuilt from the bank's debits** —
-  as long as the debits that paid Ally are held and the rate reproduces a second printed split (tax-return-sop §1B.9)
+  as long as the debits that paid Ally are held and the rate reproduces a second printed split (tax-return-sop §1B.10 ⑤ item 11)
   _(Lilian, 2026-10-15: "esto te lo di… ¿por qué preguntas?" — 2025 §2.11)_ — the insurance **(only on actual costs; in 2025
   none found on the Wells Fargo and Bank of America lines held — Bank of America through 12/17)**, the repairs, and since when the car is used for the business. *(Before her decision the firm read the car
   as Boris's and the payments as off the return, and Lilian asked about treating them as rent — 2025 §2.8, kept as the
