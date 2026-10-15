@@ -4329,8 +4329,8 @@ long-term (relayed 2026-10-15) — the ruling, not the route.*
 
 > **Lilian, 2026-10-15:** *"Sí, añádelo al skill de preparación de taxes"* — after the review of Vasyutyk draft 2.
 
-**Missed on two drafts in a row (Vasyutyk 2025), and it was the largest figure on the return:** 17,477.66 of Uber fees —
-**fixing it turned 2,455 owed into a refund of about 519.**
+**Missed on two drafts in a row (Vasyutyk 2025 — working paper §2B R1, §2E E1), and it was the largest correction on the
+return:** deducting the fees turned a balance due into a refund.
 
 🔑 **Why it happens:** the platform's **Form 1099-K box 1a is the GROSS the riders paid** — fares plus tips, **before** the
 platform takes its commission — and that gross goes on Schedule C line 1 *(with the 1099-NEC, which is the platform's own
@@ -4356,10 +4356,15 @@ fixing it** — the fees can turn the business into a loss, which takes the tips
 maintaining the car… if a taxpayer is taking the standard mileage rate, he or she cannot also deduct the car wash
 expense. There is no authority that would allow a taxpayer claiming the standard mileage rate to also deduct the expense
 of car washes as they would tolls and parking."* *(irs.gov/pub/irs-wi/Tax-Alert-for-Car-Washes2.pdf, read 2026-10-15.)*
-🔑 **Cleaning products for the car follow the same reasoning.** ✅ **Only parking and tolls** (business share) ride on top of
-the standard rate; **passenger amenities** (water, mints, chargers) are supplies, not car costs.
-⇒ ⛔ **When the car is on the standard rate, do not send the client a question about car washes or cleaning products** —
-the answer cannot change the return. *(Seen at Vasyutyk 2025; the firm's earlier Tseretsian paper applied the same rule.)*
+🔑 **Cleaning products for the car follow the same reasoning.** ✅ **Only business parking and tolls — and, for the
+self-employed, the business share of car-loan interest and of personal-property tax on the car (Pub 463; see the
+vehicle-costs rules above)** — ride on top of the standard rate; **passenger amenities** (water, mints, chargers) are
+supplies, not car costs.
+⇒ ⛔ **Washes and cleaning of THE CAR WHOSE COSTS ARE ON THE STANDARD RATE: do not send the client a question about them** —
+the answer cannot change the return. ⚠️ **But when the washes may be for ANOTHER vehicle** — inventory, cars sold for
+export, a car on actual costs — **the question can change the return and is still asked.** *(Vasyutyk 2025: the gig car,
+so not asked. Tseretsian applied the rule to his BMW and still asked whether the washes were for the cars he sells — Q22;
+Piliushin deducts washes in Part V because they were for cars sold for export.)*
 
 ### 4I · 📗 THE FINAL WORKSHEET — the one that is KEPT, and the only rule about it that is absolute
 
