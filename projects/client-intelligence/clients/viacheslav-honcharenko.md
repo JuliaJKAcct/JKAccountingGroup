@@ -92,7 +92,7 @@ the actual details (and Claude can pull them live when a task needs them).
   - **A dependent daughter was added for 2025** _(Lilian, 2026-04-07)_ — first dependant on record, so filing status and credits may both move.
 
 ### FBAR (FinCEN Form 114)
-- **Applies?** 🔴 **Julia says yes — she put him on the 2025 FBAR list she gave Lilian on 2026-10-15.** It is the first time a foreign account appears for him in the firm's record. The likely link is the foreign company Julia is reporting for him on Form 5471 (`Honcharenko_5471_01_BEST_BROKER.xlsx`, Drive, 2026-10-15, built from a Spanish tax document in his 2025 folder) — **unconfirmed**.
+- **Applies?** 🔴 **Julia says yes — she put him on the 2025 FBAR list she gave Lilian on 2026-10-15.** It is the first time a foreign account appears for him in the firm's record. The likely link is a foreign company: Julia started a Form 5471 workbook for him on 2026-10-15 (`Honcharenko_5471_01_BEST_BROKER.xlsx`, Drive), and his 2025 folder holds a Spanish tax document naming "Best Broker". **Which entity that 5471 covers is unconfirmed** — it is NOT the Florida [Best Broker Realty LLC](./best-broker-realty.md) (a Form 1065 filer) unless shown otherwise.
 - **2025 FBAR due 2026-10-15** (the automatic extension date). No FinCEN acknowledgement in Julia's Gmail since 2025-09-21.
 - 🔴 **No list of his foreign accounts was found** (2026-10-15): not in his Drive 2025 folder (5 files), not in Double (19 files), not under his name in Drive or in Julia's Gmail (21 threads). **Ask Julia where the list is, or ask him** — and whether the accounts are his own or the foreign company's.
 

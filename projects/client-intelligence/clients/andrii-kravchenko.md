@@ -72,7 +72,7 @@
 
 ### Income tax
 - **Applies?** **Yes**
-- **Return type(s) & deadlines:** **Form 1040, married filing separately**, calendar year, extended to 2026-10-15. Carries Forms 5471 for his foreign companies (§5) and — per Julia's review — **needs a Form 8938** (§6).
+- **Return type(s) & deadlines:** **Form 1040, married filing separately** _(Julia's 2026-09-07 meeting summary, Double note `517737`: his wife filed her own return; not yet checked against the return itself, whose file name carries both names)_, calendar year, extended to 2026-10-15. Carries Forms 5471 for his foreign companies (§5) and — per Julia's review — **needs a Form 8938** (§6).
 - **Our role:** the firm prepares and files. 2025 project: preparer Irina Jandieri, reviewer Julia.
 - **Current status (Double, 2026-10-15):** "2025 Taxes" is **`readyForFiling`**, `filedAt` empty; the return PDF `KRAVCHENKOANDRIIandMARGARYTA2025.pdf` sits in `JK Accounting Group > Tax Return Filed > 2025` (uploaded 2026-10-14).
 - **Process notes (→ future SOP):** _(pending)_
@@ -112,6 +112,15 @@
 - 🔴 **Confirm Form 8938 is on the 2025 return before it is filed** (Julia's review flagged it missing).
 - **Ask Julia:** do the foreign companies' accounts go on his FBAR (§5)?
 - Owed: a full first sweep (Ping, unbounded Gmail and Drive).
+
+### Information still needed
+
+- [ ] Account number of every foreign account, and the full 2025 list (13 accounts in 2024)
+- [ ] Exact 2025 maximum of each account
+- [ ] Copy of any 2024 FBAR from the prior preparer
+- [ ] Whether Form 8938 is on the final 2025 return
+- [ ] Signed Form 114a
+- [ ] Ping meetings; unbounded Gmail and Drive
 
 ## 7. Links
 

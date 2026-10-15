@@ -56,7 +56,7 @@
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| BSA E-Filing (FinCEN) | Their FBARs, filed by the firm | Firm account `jkaccountinggroup` (Julia's Login.gov) | 2024 FBARs signed 2025-09-18 |
+| BSA E-Filing (FinCEN) | Their FBARs, filed by the firm | Firm BSA E-Filing account (Julia's Login.gov) — credentials in Drive | 2024 FBARs signed 2025-09-18 |
 | Double portal | Organizer, uploads, signatures | — | Organizer Status `Sent`, Signature `Signed` |
 
 ## 4. Obligations & recurring processes
@@ -89,7 +89,7 @@
 ## 5. Key facts & quirks
 
 - 🔴 **Use the 2026-09-09 e-mailed lists, not the Drive copies, for the Raiffeisen accounts.** Andrey wrote that he changed those amounts; the Drive copies still carry the 2024 figures for them.
-- 🔴 **Galina's 2024 FBAR has two errors to fix on the 2025 one:** item 3a "TIN type" is marked **EIN** (an individual normally files under her SSN/ITIN — check), and one Raiffeisen account number was typed with **19 digits** instead of 20.
+- 🔴 **Two things on Galina's 2024 FBAR to check before the 2025 one:** item 3a "TIN type" is marked **EIN** (an individual normally files under her SSN/ITIN — to check, not settled), and one Raiffeisen account number was typed with **19 digits** where her own list has 20.
 - 🔴 **Galina's 2025 list still says "2024 год" at the top**, and two of its amounts differ tenfold from the 2024 FBAR (one up, one down). **Confirm with the client that the figures are 2025 maximums** before filing.
 - **Andrey said on 2026-09-10 that he did not see HIS foreign accounts on the 2025 return, only Galina's** — the same day the return was filed. Whether Julia fixed it before filing is not on record. **Check the foreign-assets report on the filed return; if his accounts are missing, an amendment is the question for Julia.** And: **do the accounts of Galina's Russian companies belong on her FBAR?** (she reports them on Forms 5471; another person owns 33% of VERCIA).
 
@@ -110,11 +110,19 @@
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **File both 2025 FBARs — due 2026-10-15.** Before filing: open the 2026-09-09 e-mail attachments for the Raiffeisen amounts; confirm Galina's figures are 2025; fix her TIN type; verify the Treasury rates.
+- 🔴 **File both 2025 FBARs — due 2026-10-15.** Before filing: open the 2026-09-09 e-mail attachments for the Raiffeisen amounts; confirm Galina's figures are 2025; check her TIN type; verify the Treasury rates.
 - **Check that Andrey's foreign accounts are on the filed 2025 return** (his 2026-09-10 e-mail) — Julia.
 - **Ask Julia:** do the Russian companies' accounts go on Galina's FBAR?
 - **Form 114a** (the clients' authorization for the firm to e-file their FBAR): a Drive search found none — confirm one is on file.
 - Owed: a full first sweep (Ping, Gmail before 2025-12, Drive).
+
+### Information still needed
+
+- [ ] The 2026-09-09 versions of both foreign-account lists (Raiffeisen amounts)
+- [ ] Client confirmation that Galina's list is 2025 maximums
+- [ ] Galina's correct FBAR TIN type
+- [ ] Signed Form 114a for each spouse
+- [ ] Ping meetings; Gmail before 2025-12
 
 ## 7. Links
 
