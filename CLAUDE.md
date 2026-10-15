@@ -535,7 +535,8 @@ in that folder.
   organizer against prior years and flag what's missing — a K-1 that was there last year and
   isn't now). The call returns the whole organizer in one payload, SSNs and bank details
   included, so three things bind every time: **the identity block never gets written out** (chat,
-  repo, artifact, Double note, email — by existence, never by value) — **but the TAX FACTS an
+  repo, artifact, Double note, email — by existence, never by value) *(one narrow exception, granted by asking,
+  workbook by workbook: [`double-mcp` §2.2](./.claude/skills/double-mcp/SKILL.md))* — **but the TAX FACTS an
   answer establishes DO belong in the client's file**: the filing status, the states, the
   dependants position, the coverage type, the income types _(Lilian, 2026-08-12, reversing a wider
   ban that stood for one day and made a question the organizer had already **answered** unwritable;

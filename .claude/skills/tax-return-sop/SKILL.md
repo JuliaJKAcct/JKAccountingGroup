@@ -1179,7 +1179,7 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
   in an SOP or a client-intelligence file, **both of which publish to the Knowledge Hub**. *(Skills
   do not publish, but the same rule applies to them: nobody should have to check.)*
 - ⛔ **Never anywhere: SSN/ITIN, bank or card numbers, residential street addresses, dates of birth,
-  logins.** A business EIN is the one exception.
+  logins.** A business EIN is the one exception *(plus one narrow one granted by asking, workbook by workbook — §4D)*.
 - 📌 **The work is not finished until it is written down** — the working paper in
   [`projects/tax-returns/`](../../../projects/tax-returns/) (§5), the client's Client Intelligence
   file **with its tax-preparation playbook (§5B)**, and any open action in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md). **The session will be
@@ -3350,6 +3350,23 @@ rule, and the asset screen is the clearest case of it.
   form — and the **TYPED / COMPUTED** mark (§4B).
 - 🔒 **The identity block never enters it**: no SSN/ITIN, no date of birth, no home street address, no
   bank or card number. **A business EIN is fine.**
+  🔓 **The exception is asked, workbook by workbook — never assumed.** *(Lilian, 2026-10-15, Chursinov: a
+  Form 8858 row said "the address from her Raiffeisen statement"; she wanted the address itself — "Necesito que
+  estas instrucciones tengan todo: dirección, todo, todo." Asked, she authorized **for that workbook** the
+  branch's foreign registration address and the foreign account numbers for Form 8938 / FBAR.)* ✅ **So when a
+  form needs one of these and the firm holds it, ASK Lilian or Julia once, naming exactly which identifiers** — ⛔ **never
+  write one in on the strength of that precedent, and never into the repo, chat TEXT or an artifact.** The
+  workbook is handed over as a file and lives in Double only. Mirrored in [`double-mcp`](../double-mcp/) §2.2. **Scope: foreign account numbers (Form 8938, FBAR) and a branch's foreign registration address (Form 8858) — never SSN/ITIN, dates of birth or credentials, and never a Double note.** This widens what may be WRITTEN into the workbook, not how a document is READ: a document held in Double still goes through [`redact.py`](../../../tools/redact-doc/), which masks these values. ⚠️ **On Chursinov the session read the five Double-held statements with a local extractor that printed only masked values (first five, last four), wrote the full values into the workbook alone and deleted the downloads — that route is NOT established; ask before using it again** ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 211). Never `load_attachments_to_chat`. Each value is **checked against the bank's own document**, never taken
+  from the client's template alone *(there, the template's IBAN carried two extra characters)*.
+- 🛑 **A ROW THAT SENDS HER TO A DOCUMENT FOR A VALUE WE HOLD IS A DEFECT, NOT AN INSTRUCTION** *(Lilian,
+  2026-10-15: "No me los dejes así, en blanco… Revisa que no sucedan cosas como esta")*. *"Type it from the
+  statement"*, *"the address from…"*, *"same as Ekaterina"* — ⛔ **the value goes in the cell**, or the row says
+  why it cannot *(identity not authorized · not yet received)* and **exactly** where it is. ✅ **The build
+  fails on such phrases** outside that allow-list.
+- 🛑 **NO CELL TEXT MAY START WITH `=`.** openpyxl stores any string beginning with `=` as a **formula**, and
+  Excel shows **`#NAME?`** — on the Chursinov workbook every *"= same as Ekaterina"* cell in the second spouse's
+  column came out that way, so **her column was full of values and his was full of errors.** ✅ **Write
+  "Same as…" / "Equals…"; the build fails on any `=` text outside the sheet that holds real formulas.**
 
 > ### 🛑 A CELL CAN HOLD TEXT THAT THE ROW WILL NOT SHOW — AND NOTHING ANYWHERE SAYS SO
 >
