@@ -198,8 +198,8 @@ Remodel Master and Fastighet. That was **not** verified on 2026-10-13 (Nika's 20
   every year Form 7203 line 6 exceeds line 5. ⚠️ **That gain is investment income and can switch off the EIC** — and since
   **he has lent money to Nika**, first check whether any "distribution" was really a **loan repayment** (not a distribution
   at all). Settle it on Nika's return, which the firm prepares.
-- 🆕 **No NOL history** _(checked 2026-10-14 against the 2022–2024 returns)_: every year had a positive AGI and 2023 had taxable
-  income with no NOL deduction. If ATX prints a Form 172 full of zeros, it can go.
+- 🆕 **No NOL history** _(checked 2026-10-14 against the 2022–2024 returns)_: no year had a loss that survives the Form 172 add-backs, and
+  2023 had taxable income with no NOL deduction. If ATX prints a Form 172 full of zeros, it can go.
 - 🆕 **Iryna's home internet is shared by both spouses for work** — Lilian's 2025 ruling: 80% business, on Iryna's Schedule C
   together with her phone _(2026-10-14)_.
 - 🆕 **A realtor activity began in 2025** ("Vera Realty" on his own P&L sheet; the organizer calls it a real-estate/consulting
