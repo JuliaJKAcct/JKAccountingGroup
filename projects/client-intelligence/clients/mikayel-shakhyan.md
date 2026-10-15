@@ -234,6 +234,13 @@
 
 ### Log
 
+- _(2026-10-15, later)_ — **JULIA RULED THE 2025 SCOPE (relayed by Lilian):** the only reportable
+  transactions on Lum and Ari LLC's Form 5472 are the **$850 to Pivniak Law** and the **$125 Florida formation
+  fee** — Part V $975, one Form 5472, AXY and Oxana Martox treated as unrelated. The session objected in writing
+  that the $2,700 of teller deposits may be his contributions and should be reported too (working paper §4M ②) —
+  **Julia to confirm before signing.** An Excel ATX worksheet was delivered to Lilian (not committed); a firm
+  reference ID for him was proposed (`LUMANDARIMS001`, working paper §4M — reuse it every year). The receipts are
+  kept as records, not filed with the return.
 - _(2026-10-15)_ — **Lilian sent the attorney's receipt for the Pivniak Law payment** (Pivniak Law, P.A.,
   invoice 0002, issued 2026-10-15 on request, billed to Mikayel personally, service date = the payment date
   of 14 Nov 2025) and asked what to do with it and with the return. **The receipt describes the fee as
