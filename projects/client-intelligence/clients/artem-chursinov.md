@@ -1,6 +1,6 @@
 # Artem Chursinov
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -28,8 +28,8 @@
 
 - **Business name:** Artem Chursinov — an **individual** client record _(Double `Account Type: Individual`, 2026-10-01)_. Lilian writes the first name **"Artiom"**; Double, TaxDome and QuickBooks all spell it **Artem**
 - **Entity type:** n/a — individual taxpayer. **Files JOINTLY with his wife, Ekaterina Chursinova** — the 2024 return is a joint return in both names _(file name of the filed 2024 return; both spouses signed the e-file authorization in TaxDome, 2025-08-27/28)_
-- **Home state:** _(pending — not established.)_ 🆕 **The couple were OUTSIDE the United States on 2025-08-12** — the client's own words to Lilian, which is why the firm could not reach them by phone; he said they had bank access from there _(Gmail, 2025-08-12)_. Whether they are US residents living abroad, or were travelling, is not stated
-- **Industry / what they do:** _(pending)_ — what did come out: in 2025 he had a phone consultation with Julia on **organising the household's taxes in the country where they are**, so that reporting to the US is easier afterwards, and asked on 2025-08-12 whether he needed a second consultation to act on it; the Zoom of 2025-08-25 was set for exactly that _(Gmail, 2025-08-12)_
+- **Home state:** **Florida — Hallandale Beach** _(2025 organizer, read 2026-10-15)_. The organizer answers that their **main home was in the US for at least 183 days of 2025** and the spouses did not live apart. 🆕 _(Earlier note:)_ **The couple were OUTSIDE the United States on 2025-08-12** — the client's own words to Lilian, which is why the firm could not reach them by phone; he said they had bank access from there _(Gmail, 2025-08-12)_. Whether they are US residents living abroad, or were travelling, is not stated
+- **Industry / what they do:** **a family business selling ONLINE COURSES IN RUSSIA** — both spouses give the same occupation _(2025 organizer)_. It is run as a Russian **ИП (individual entrepreneur) registered in EKATERINA's name**. The revenue, before business expenses (salaries and advertising), lands in **two accounts: her ИП business account and HIS personal Sberbank account**; every other foreign account is savings, and the movements in them are expenses or transfers between accounts, mainly from hers to his _(client's own note on the organizer's Foreign Income slide, 2026-10-08)_. Earlier context: in 2025 he had a phone consultation with Julia on **organising the household's taxes in the country where they are**, so that reporting to the US is easier afterwards, and asked on 2025-08-12 whether he needed a second consultation to act on it; the Zoom of 2025-08-25 was set for exactly that _(Gmail, 2025-08-12)_
 - **Primary language:** **Russian** — the client wrote to Julia in Russian through the TaxDome chat (2025-08-15)
 - **Our engagement (services we provide):** **Income tax only — Form 1040** _(Double: `Income Tax: true`, `Tax Return Type: 1040`, `Bookkeeping: N/A`, `1099 Preparation: false`, `Annual Report: false`, 2026-10-01)_. **Plus the FBARs** (FinCEN Form 114) — the firm filed one for each spouse for 2024. **Assigned staff in Double: Lilian.** ⚠️ The 2024 return was worked by **Julia** (TaxDome era — she held the Zoom meeting and received every notification)
 - **Fiscal year-end:** calendar year
@@ -64,7 +64,7 @@ the actual details.
 - **Applies?** Yes — **Form 1040, married filing jointly**, prepared by this firm.
 - **Return type(s) & deadlines:** 🔴 **Tax year 2025 is ON EXTENSION — the extended deadline is 2026-10-15.** A `2025 4868 Ext.pdf` is filed in Double (`JK Accounting Group > … > 2025`), and the `Extension Filed` task was marked Done on 2026-05-25. ⚠️ **The Double tax project still shows `dueDate` 2026-04-15** — the original date, never moved to the extended one; read the deadline from here, not from the project.
 - **Our role:** we prepare and e-file.
-- **What feeds it:** a **Form 1095-A (Marketplace coverage) for 2025 — filed in Double 2026-10-09** _(Double, 2026-10-09)_; and a **foreign-income** component — the client filled the firm's `Foreign Income Template` for 2024 (two versions: 2025-06-12 and 2025-08-15). Whatever produced foreign income in 2024 should be asked about again for 2025.
+- **What feeds it:** 🆕 **a Schedule C for the Russian ИП business, and probably a Form 8858 with it** (see §5, 2026-10-15); a **Form 1095-A (Marketplace coverage) for 2025 — filed in Double 2026-10-09** _(Double, 2026-10-09)_; and a **foreign-income** component — the client filled the firm's `Foreign Income Template` for 2024 (two versions: 2025-06-12 and 2025-08-15). Whatever produced foreign income in 2024 should be asked about again for 2025.
 - **Process notes (→ future SOP):** _(pending)_
 
 ### FBAR (FinCEN Form 114)
@@ -75,6 +75,15 @@ the actual details.
 - **Applies?** No — `1099 Preparation: false`, `Annual Report: false`.
 
 ## 5. Key facts & quirks
+
+- 🔴 **2026-10-15 — THE 2025 REVIEW, AND THE FORM 8858 QUESTION (Julia's session).** Read: the 2025 organizer (answers), Double files and notes, and the IRS *Instructions for Form 8858* (Rev. 12/2024), read on irs.gov on 2026-10-15. ⚠️ **The prior-year return was NOT read** — the session's tool permission refused the download.
+  - **Form 8858 — the reasoning.** The ИП is **not a foreign disregarded entity (FDE)**. Under Russian law an ИП is the individual registered to trade, not a separate legal entity, so there is no entity to disregard. **But Form 8858 also covers a U.S. person who *operates a foreign branch (FB)*** (Category 1 filer), and the instructions define an FB to include **"a qualified business unit (QBU) (as defined in Regulations section 1.989(a)-1(b)(2)(ii)) that is foreign."** An individual's trade or business is a QBU when it keeps **separate books and records**. An ИП keeps a statutory income ledger and has its own business bank account. This one also has payroll and Russian customers and works in rubles. ⇒ **The firm's reading is that a Form 8858 (with Schedule M, because money moved between the ИП and the owners) is required.** The instructions themselves contemplate an individual filer ("Do not complete lines 7 and 8 if you are an individual who owns an FB or FDE"). **The decision is Julia's** — pending.
+  - **Who owns the business is NOT settled.** The ИП is in Ekaterina's name, but revenue also lands in Artem's personal account, and both name it as their occupation. Two possible treatments: a single Schedule C in her name, or a **qualified joint venture** (two Schedules C/SE, possible because they file jointly and the ИП is not a state-law entity). That turns on whether both of them materially participate. Ask the client.
+  - **Self-employment tax applies** — the US has no totalization agreement with Russia. Russian income tax on the ИП is creditable via **Form 1116** (the US partially suspended the US–Russia treaty from 2024-08-16, but the Code credit still applies). Russia's fixed insurance contributions are not income tax.
+  - **The new car-loan-interest deduction is very likely NOT available:** the organizer reports a vehicle bought in 2025 for personal use with a post-2024 loan, final assembly "not sure". **The VIN's first character shows a vehicle assembled in Mexico**, and final assembly in the US is a condition of the deduction.
+  - **Child born in 2025, a US citizen** — a dependant for the whole year. The client asked for **more information about a Trump account** (Form 4547 election).
+  - **Form 8938 is still open:** the organizer's 8938 question uses the *single* thresholds. For a joint return filed by a couple living in the US, the threshold is $100,000 at year-end or $150,000 at any time, so their "yes" does not settle it. Decide from the maximum balances.
+  - The organizer's business-income section (EIN, structure, owner, P&L) is **empty**. Julia reports a completed P&L received outside the portal (WhatsApp).
 
 - 🟡 **UPDATE 2026-10-10 — THE CLIENT HAS WOKEN UP, FIVE DAYS BEFORE THE DEADLINE.** On **2026-10-08 the client opened the 2025 organizer twice** (18:31 and 21:50 UTC) and, between those, **removed seven attachments from it** — foreign bank statements for 2025 (a Russian-bank statement and a report file; the wife's personal accounts at **two Georgian banks**, which the client's own file names say were also shown in 2024) and a PDF of the 2024 Foreign Income Template — i.e. he is **re-doing the uploads**, not abandoning them _(Double activity log, 2026-10-08)_. On **2026-10-09 Lilian saved a Form 1095-A for 2025 into the 2025 folder** — so the household had Marketplace health coverage in 2025 and the return needs the premium-tax-credit reconciliation _(Double activity log, 2026-10-09)_. The Double project is still **Not Started** and no preparer is assigned. ⬇️ _The original 2026-10-01 finding follows, kept for the record._
 - 🔴 **THE 2025 RETURN AND BOTH 2025 FBARs ARE DUE 2026-10-15, AND AS OF 2026-10-01 NOTHING HAD STARTED.** The 2025 organizer was published on 2026-06-22 and is at **0% complete** after more than three months; every task in the 2025 tax project is `notStarted`; no preparer is assigned; no document for 2025 has been uploaded; and no email from the client since August 2025 turned up in a search of Julia's Gmail.
@@ -111,6 +120,7 @@ the actual details.
 
 ### Tax year 2025 — the review
 
+- **2026-10-15 — first review run on Julia's request** (organizer answers read; prior-year return not read — tool permission refused). Findings in §5. **Verdict: not preparable as of this date** without the Schedule C P&L (received by Julia outside the portal), the Russian 2025 tax return/payment proof, who works in the business, and Julia's decision on Form 8858. ⬇️ _Earlier entry:_
 - **Not started.** No pre-return review has been run: the organizer carries no answers (0%) and no 2025 document has arrived. **Comparison base when it does:** the filed 2024 joint return, `2024 CHURSINOVandCHURSINOVAARTEMandEKATERINA.pdf`, in the Double file library — read only through the redactor, on request.
 
 ### Outstanding items (CI-only — never in the SOP)
@@ -122,8 +132,11 @@ the actual details.
 
 ### Information still needed
 
-- [ ] Home state
-- [ ] Occupation / what produces the household's income
+- [x] Home state — Florida (2026-10-15)
+- [x] Occupation — family online-courses business in Russia, ИП in Ekaterina's name (2026-10-15)
+- [ ] Who works in the ИП business (single Schedule C vs qualified joint venture)
+- [ ] Russian 2025 tax return for the ИП + proof of payment
+- [ ] Whether a Form 8858 was filed with the 2024 return (read the 2024 return)
 - [ ] Where the foreign income and the foreign accounts are (country, type) — the 2024 Foreign Income Template would answer part of it; not opened
 - [ ] IRS acceptance of the 2024 return
 
