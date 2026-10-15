@@ -200,6 +200,7 @@ note, not in an artifact, not in an email or a report:
 > handed over as a file and saved in Double, **never typed into chat text, never into the repo, an artifact or a
 > Double note**, and **not a standing grant: the next workbook asks again.** SSNs, ITINs, dates of birth and
 > credentials were not part of it. The workbook rules are [`tax-return-sop`](../tax-return-sop/) §4D.
+> This widens what may be WRITTEN into the workbook, not how a document is READ: a document held in Double still goes through [`redact.py`](../../../tools/redact-doc/), which masks these values. ⚠️ **On Chursinov the session read the five Double-held statements with a local extractor that printed only masked values (first five, last four), wrote the full values into the workbook alone and deleted the downloads — that route is NOT established; ask before using it again** ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 211). Never `load_attachments_to_chat`.
 
 - **SSN / ITIN numbers**
 - **Driver's licence numbers**
@@ -667,7 +668,7 @@ another purpose. **The ask IS the authority.**
 | **Limits 5, 6 and 7 stand, absolutely** | ⛔ **Never from a subagent. Never from a scheduled or unattended session. Never into the repo working tree. Never committed, never into an artifact, never into a Double note.** She did not touch these and no session may. |
 | **The redactor is still the only route** | 🔴 `get_file` → presigned URL → [`redact.py`](../../../tools/redact-doc/) → a file in the scratchpad. **Never read the PDF directly, never print its text into the chat** — not a page, not a heading, not a sample. **Computed values only.** |
 | **The three reporting duties still bind** | **Say what the redactor masked** *(counts, never values)* · **delete the redacted files when the review is delivered** · **remind them to delete the session**, calmly, as the routine last step. |
-| **The two-data-homes rule still governs what may be WRITTEN** | Client dollar figures go **only** to `projects/tax-returns/`; the identity block goes nowhere at all. **A wider read is not a wider write.** |
+| **The two-data-homes rule still governs what may be WRITTEN** | Client dollar figures go **only** to `projects/tax-returns/`; the identity block goes nowhere at all *(one narrow exception, granted by asking, workbook by workbook — the box under the identity-block list above)*. **A wider read is not a wider write.** |
 
 🔑 **Why this is recorded as a ruling and not as reasoning.** The session that did the Masciave read
 had a sound argument that the request implied the permission. **It put the question anyway, and the

@@ -1179,7 +1179,7 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
   in an SOP or a client-intelligence file, **both of which publish to the Knowledge Hub**. *(Skills
   do not publish, but the same rule applies to them: nobody should have to check.)*
 - ⛔ **Never anywhere: SSN/ITIN, bank or card numbers, residential street addresses, dates of birth,
-  logins.** A business EIN is the one exception.
+  logins.** A business EIN is the one exception *(plus one narrow one granted by asking, workbook by workbook — §4D)*.
 - 📌 **The work is not finished until it is written down** — the working paper in
   [`projects/tax-returns/`](../../../projects/tax-returns/) (§5), the client's Client Intelligence
   file **with its tax-preparation playbook (§5B)**, and any open action in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md). **The session will be
@@ -3356,7 +3356,7 @@ rule, and the asset screen is the clearest case of it.
   branch's foreign registration address and the foreign account numbers for Form 8938 / FBAR.)* ✅ **So when a
   form needs one of these and the firm holds it, ASK Lilian or Julia once, naming exactly which identifiers** — ⛔ **never
   write one in on the strength of that precedent, and never into the repo, chat TEXT or an artifact.** The
-  workbook is handed over as a file and lives in Double only. Mirrored in [`double-mcp`](../double-mcp/) §2.2. Each value is **checked against the bank's own document**, never taken
+  workbook is handed over as a file and lives in Double only. Mirrored in [`double-mcp`](../double-mcp/) §2.2. **Scope: foreign account numbers (Form 8938, FBAR) and a branch's foreign registration address (Form 8858) — never SSN/ITIN, dates of birth or credentials, and never a Double note.** This widens what may be WRITTEN into the workbook, not how a document is READ: a document held in Double still goes through [`redact.py`](../../../tools/redact-doc/), which masks these values. ⚠️ **On Chursinov the session read the five Double-held statements with a local extractor that printed only masked values (first five, last four), wrote the full values into the workbook alone and deleted the downloads — that route is NOT established; ask before using it again** ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 211). Never `load_attachments_to_chat`. Each value is **checked against the bank's own document**, never taken
   from the client's template alone *(there, the template's IBAN carried two extra characters)*.
 - 🛑 **A ROW THAT SENDS HER TO A DOCUMENT FOR A VALUE WE HOLD IS A DEFECT, NOT AN INSTRUCTION** *(Lilian,
   2026-10-15: "No me los dejes así, en blanco… Revisa que no sucedan cosas como esta")*. *"Type it from the
