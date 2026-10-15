@@ -236,12 +236,13 @@
 
 ### Log
 
-- _(2026-10-15, final ruling)_ — **JULIA (via Lilian): Lum and Ari LLC's 2025 Form 5472 reports his three
-  deposits ($2,700) as capital CONTRIBUTIONS, the $125 formation fee he paid, and the $21 farmers-market charge as
-  a DISTRIBUTION — Part V $2,846.** The $850 legal fee, AXY ($600), Oxana Martox ($1,199) and the $30 wire fee are
-  business expenses, not reportable. No income. The four bank statements were re-read at Lilian's request: 8
-  transactions, all tie. **Still worth getting from him: a written line that the deposits were his own money,
-  capital not a loan, and that the $21 was personal** — kept as the company's record, not filed.
+- _(2026-10-15, final ruling)_ — **JULIA (via Lilian): Lum and Ari LLC's 2025 Form 5472 reports, in Part V, his
+  three cash deposits as capital CONTRIBUTIONS, the state formation fee he paid, and the farmers-market card charge as
+  a DISTRIBUTION.** The legal fee, the two vendor payments (AXY, Oxana Martox) and the wire fee are business
+  expenses, not reportable. No income. The four bank statements were re-read at Lilian's request: 8 transactions,
+  all tie. Figures: working paper §4M ⓪-ter. **Still worth getting from him: a written line that the deposits were
+  his own money, capital not a loan, and that the farmers-market purchase was personal** — kept as the company's
+  record, not filed.
 - _(2026-10-15, last)_ — **Sunbiz (screenshot from Lilian): Lum and Ari LLC, document L25000325767, filed and
   effective 07/15/2025 — NOT 08/08/2025 as the prepared return had it — ACTIVE, 2026 annual report filed
   04/14/2026, Mikayel sole authorized person and registered agent.** So the 2025 return is not final and a **2026
