@@ -244,7 +244,7 @@
   a DISTRIBUTION.** The legal fee, the two vendor payments (AXY, Oxana Martox) and the wire fee are business
   expenses, not reportable. No income. The four bank statements were re-read at Lilian's request: 8 transactions,
   all tie. Figures: working paper §4M ⓪-ter. **Still worth getting from him: a written line that the deposits were
-  his own money, capital not a loan, ** — kept as the company's
+  his own money, capital not a loan** — kept as the company's
   record, not filed.
 - _(2026-10-15, last)_ — **Sunbiz (screenshot from Lilian): Lum and Ari LLC, document L25000325767, filed and
   effective 07/15/2025 — NOT 08/08/2025 as the prepared return had it — ACTIVE, 2026 annual report filed
@@ -543,7 +543,7 @@
       5472 are filed**, not just a line. ⚠️ **And if no answer comes, what to do about it is
       Julia's** — working paper §6D ②. ⓘ *The separate-form rule covers a **foreign or U.S.**
       related party, not only a U.S. one.*
-- [ ] 🟠 ✅ *(2026-10-15: the **$850 is answered** — vendor due diligence for the business, not his; only the **$21** card charge is left.)* **Did the company pay anything that was really his personally?** Each one is a
+- [x] ✅ *(2026-10-15: **CLOSED — do not ask him.** The $850 is vendor due diligence for the business, and Julia ruled the $21 card charge a business expense too.)* **Did the company pay anything that was really his personally?** Each one is a
       distribution, even when the money went to an unrelated payee. 🆕 *(2026-10-14: ask in the same
       breath whether **Anastasia White works for Pivniak Law** — if so, that payment may be formation work.)*
 - [ ] ⏸ **In which country does he file a tax return as a resident — and does he have a tax
