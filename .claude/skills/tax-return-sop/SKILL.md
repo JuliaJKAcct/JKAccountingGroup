@@ -3350,6 +3350,23 @@ rule, and the asset screen is the clearest case of it.
   form — and the **TYPED / COMPUTED** mark (§4B).
 - 🔒 **The identity block never enters it**: no SSN/ITIN, no date of birth, no home street address, no
   bank or card number. **A business EIN is fine.**
+  🔓 **The exception is asked, workbook by workbook — never assumed.** *(Lilian, 2026-10-15, Chursinov: a
+  Form 8858 row said "the address from her Raiffeisen statement"; she wanted the address itself — "Necesito que
+  estas instrucciones tengan todo: dirección, todo, todo." Asked, she authorized **for that workbook** the
+  branch's foreign registration address and the foreign account numbers for Form 8938 / FBAR.)* ✅ **So when a
+  form needs one of these and the firm holds it, ASK her once, naming exactly which identifiers** — ⛔ **never
+  write one in on the strength of that precedent, and never into the repo, the chat or an artifact.** The
+  workbook then lives in Double only. Each value is **checked against the bank's own document**, never taken
+  from the client's template alone *(there, the template's IBAN carried two extra characters)*.
+- 🛑 **A ROW THAT SENDS HER TO A DOCUMENT FOR A VALUE WE HOLD IS A DEFECT, NOT AN INSTRUCTION** *(Lilian,
+  2026-10-15: "No me los dejes así, en blanco… Revisa que no sucedan cosas como esta")*. *"Type it from the
+  statement"*, *"the address from…"*, *"same as Ekaterina"* — ⛔ **the value goes in the cell**, or the row says
+  why it cannot *(identity not authorized · not yet received)* and **exactly** where it is. ✅ **The build
+  fails on such phrases** outside that allow-list.
+- 🛑 **NO CELL TEXT MAY START WITH `=`.** openpyxl stores any string beginning with `=` as a **formula**, and
+  Excel shows **`#NAME?`** — on the Chursinov workbook every *"= same as Ekaterina"* cell in the second spouse's
+  column came out that way, so **her column was full of values and his was full of errors.** ✅ **Write
+  "Same as…" / "Equals…"; the build fails on any `=` text outside the sheet that holds real formulas.**
 
 > ### 🛑 A CELL CAN HOLD TEXT THAT THE ROW WILL NOT SHOW — AND NOTHING ANYWHERE SAYS SO
 >
