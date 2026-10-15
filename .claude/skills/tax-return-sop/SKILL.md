@@ -3893,7 +3893,7 @@ in a form XObject): **render ONLY the box area, and never the page's top band** 
 the full SSN, which the redactor masks in text but a picture does not. *(2026-10-15: a crop taken from the top of a Schedule
 C page 2 to read line 33 carried the header's SSN into the session. Nothing was written out; the crop should have started
 below the header.)* ⏳ **Whether rendering a client PDF's box areas is a sanctioned route at all — it is outside
-[`tools/redact-doc/`](../../../tools/redact-doc/) — is Lilian's to rule** ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md));
+[`tools/redact-doc/`](../../../tools/redact-doc/) — is Lilian's to rule** ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 210);
 until she does, this constraint applies whenever it is used, and the redactor's text with the checkbox's position stays
 the first route.
 

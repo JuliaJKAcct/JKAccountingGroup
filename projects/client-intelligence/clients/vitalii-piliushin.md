@@ -323,7 +323,7 @@ the actual details (and Claude can pull them live when a task needs them).
   internet** — on line 25, NOT in the home office _(Lilian, 2026-10-15 — 2025 L20)_.
 - **The P&L: one block per return line** — the line's total first, its parts right under it (a firm-wide rule since 2026-10-15 — [`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §4D).
 - 🆕 **Every working AND final worksheet carries the ATX-format tabs** — the P&L, ***Vehicle Expense Wkst (ATX)*** and ***Home
-  Office Exp Wkst (ATX)***, each laid out line for line as ATX's screen, with what to type on every line _(Lilian, 2026-10-15:
+  Office Exp Wkst (ATX)***, each laid out line for line as ATX's screen — with what to type on every line in the working workbook, final values only in the final worksheet (§4D, §4I) _(Lilian, 2026-10-15:
   "cada vez que hagamos un worksheet de trabajo o un worksheet final, tiene que tener estas pestañas con este formato de ATX"
   — a firm-wide rule: [`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §4D)_. **Hers keys several of our
   categories into one ATX row** (shipping, software, the de minimis items) — compare her draft by sums, not row by row.
