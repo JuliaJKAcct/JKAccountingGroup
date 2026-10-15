@@ -3240,6 +3240,29 @@ the workbook carries a `Vehicle worksheet` sheet laid out the way that worksheet
 and Pub. 463. **It is where the car's figures LIVE in the workbook**, so the P&L row for the car only says
 *"standard mileage: miles × rate — see Vehicle worksheet"*.
 
+#### 🖥️ AND THE CAR AND THE HOME OFFICE ARE LAID OUT **AS ATX'S OWN SCREENS** — in every working AND final worksheet
+
+> **Lilian, 2026-10-15:** *"La de Profit & Loss está bastante bien… necesito algo muy similar para el home office y para el
+> [vehicle] expenses worksheet… Cada vez que hagamos un worksheet de trabajo o un worksheet final, tiene que tener estas
+> pestañas con este formato de ATX."* She sent screenshots of the two ATX screens so they could be copied.
+
+✅ **Three tabs, always: the P&L, `Vehicle Expense Wkst (ATX)` and `Home Office Exp Wkst (ATX)`** — in the working
+workbook **and** in the §4I final worksheet. 🔑 **"With this ATX format" means LINE FOR LINE:** the screen's own line
+numbers, its labels as printed, and — on the home office — its four columns (*Total Indirect · (a) Direct · (b) Indirect ·
+Sch C: 01 (Filer)*). She works down the tab and the screen side by side; a tab in our own order makes her translate.
+
+| Tab | ATX screen | What each row carries |
+|---|---|---|
+| `Vehicle Expense Wkst (ATX)` | *Line 9 (Sch C (1040)) – Vehicle Expenses*, one column per vehicle: 1–7 the car and the miles · 8a–8d the Yes/No · 9a–9f standard · 10–23 actual · the method box · 24–25 | the value to type, TYPED / COMPUTED, an action word, and where it comes from. ⚠️ **ATX's 8a is "another vehicle" = Schedule C line 46, and 8b "off-duty" = line 45 — the order is swapped**; say which Schedule C line each prints on |
+| `Home Office Exp Wkst (ATX)` | *Expense Input (Home Office Exp Wkst)*: business-use % · 8 · 9–15 · 16–24 · 25–36 · 37–42b · 43–44b | the same, in the screen's columns — **plus Form 8829 lines 1–2, the square feet**, which are typed elsewhere in ATX and drive the % at the top |
+
+☑️ **Make the computed lines LIVE formulas over yellow input cells** (miles, square feet), so the tab gives both vehicle
+methods the moment the client's figures are typed. 🔑 **On the vehicle tab: the loan interest goes on 9c as the TOTAL — ATX
+derives line 12 from it.** *(On the pilot draft it was typed straight onto line 12 with 9c empty, so the standard method
+silently lost it — a typed number on a computed line replaces the computation.)* ⓘ **When an item does not apply** (no car,
+no home office), the tab still ships and says so in its first row — the session's reading of "tiene que tener estas
+pestañas", until she says otherwise. *(Pilot: [Piliushin 2025](../../../projects/tax-returns/vitalii-piliushin/2025-form-1040.md) §1.15.)*
+
 #### 🔴 AN ASSET IS NEVER DELIVERED AS JUST A NAME, A DATE AND A COST
 
 > **Lilian, 2026-09-27:** *"no simplemente decirme el nombre del vehículo, la fecha y el costo, sino que tienes
@@ -3849,6 +3872,23 @@ line with the right total is the second question, not the first. **A second keye
 the first check stays beside it as a RECORD sheet (no tick boxes, marked superseded) and is summarised in the working
 paper** — so it survives when the new workbook replaces the old one in Double.
 
+✅ **She often keys several of the worksheet's categories into ONE ATX row** *(Lilian, 2026-10-15: "sumé varias categorías en
+una sola… no es un error")* — shipping, software, the de minimis items. **Compare those rows by sums before calling any of
+them a finding;** what is still a finding is a Part V row whose NAME says nothing (*"Other expenses"*) — Part V must say what
+each expense is.
+
+🔒 **When a checkbox has to be read from an IMAGE** (the PDF's text coordinates are broken — common on ATX prints, where the
+X sits in a form XObject): **render ONLY the box area, and never the page's top band** — every ATX page header repeats the
+name and the full SSN, which the redactor masks in text but a picture does not. *(2026-10-15: a crop taken from the top of a
+Schedule C page 2 to read line 33 carried the header's SSN into the session. Nothing was written out; the crop should have
+started below the header.)*
+
+🛑 **A keyed 1040 draft is the moment every document the ledger deferred to "the 1040 stage" gets opened** — before the
+check is delivered, not after. *(Piliushin 2025: two Forms 1095-A sat in the ledger as "NOT OPENED — the 1040 stage" through
+seven drafts; read on the day of the first keyed draft, they showed an advance premium credit that is repaid in full — the
+largest change to the balance due that day. ☑️ The free cross-check: what he paid on the bank = column A − column C, month by
+month.)*
+
 ✅ **The delivery is a `Draft check (<date>)` sheet in the workbook**: one row per difference, a tickable box first
 (only on rows she can act on), the five steps of §4G as columns, grouped by where she is working in ATX, a running
 count, and the totals ATX should show once she is done. ⓘ **It does not break §4D's "no what-it-used-to-say
@@ -4307,7 +4347,7 @@ never seen any earlier version of this file?*** **If it needs one, it does not g
 | **2 · Where their numbers came from** | 🔑 **WHERE THEIR PROFIT AND LOSS IS AND WHERE THEIR BALANCE SHEET IS** — **named files, named folders, named dates. She asked for this by name and it is the single most useful line in the document a year later** |
 | **3 · Every document used** | **One row per document: what it is, where it is, what it STATED, and what it settled.** ⛔ **Not a file list — a list of what each one CONTRIBUTED** |
 | **4 · What the client told us outside the documents** | **By email, by portal message, by voice, in a meeting — with the date and the words. This is the material that disappears first** |
-| **5 · The return, form by form** | **Every figure with its form, page, part and line, and the arithmetic that produced it** |
+| **5 · The return, form by form** | **Every figure with its form, page, part and line, and the arithmetic that produced it** — 🆕 **with the P&L, `Vehicle Expense Wkst (ATX)` and `Home Office Exp Wkst (ATX)` tabs laid out as ATX's screens (§4D, Lilian 2026-10-15)** |
 | **6 · The decisions** | **Each one: what was decided, WHO decided it, when, and what the alternative was.** ⚠️ **Including the ones overruled — the objection travels with the decision** *(§4C)* |
 | **7 · What is assumed, and what would change it** | **Every position resting on an assumption rather than a document, with the consequence if the assumption is wrong** |
 | **8 · What carries forward** | 🔑 **What next year needs: basis, carryovers, elections made, replacement periods running, balances, unfinished items** |
