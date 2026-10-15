@@ -316,6 +316,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - **The first page carries the pictures — the money flow and the profit walk — updated every draft and shown NOW beside
   the LAST draft's**, with a small table of how each category moved, so she sees what changed since the last time.
 - **When she asks for "the worksheet", deliver the worksheet only** — no client file unless she asks for one (2025 DRAFT 7).
+- **The P&L: one block per return line** — the line's total first, its parts right under it (a firm-wide rule since 2026-10-15 — [`tax-return-sop`](../../../.claude/skills/tax-return-sop/SKILL.md) §4D).
 
 ### Licenses & other filings
 - **Applies?** Not to him personally.
