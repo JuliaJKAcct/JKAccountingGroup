@@ -119,7 +119,7 @@
 ### Information still needed
 
 - [x] The 2026-09-09 versions of both foreign-account lists — received 2026-10-15 (still to be saved in Drive/Double)
-- [ ] Client confirmation that the Raiffeisen amounts are 2025 maximums, and that Alfa-Bank USD is 450,000 rather than the 2024 figure
+- [ ] Client confirmation that the Raiffeisen amounts are 2025 maximums, and that the Alfa-Bank USD amount on Galina's 2025 list (ten times the 2024 figure — §5) is correct
 - [ ] Galina's correct FBAR TIN type
 - [ ] Signed Form 114a for each spouse
 - [ ] Ping meetings; Gmail before 2025-12
