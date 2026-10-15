@@ -234,6 +234,12 @@
 
 ### Log
 
+- _(2026-10-15, last)_ — **Sunbiz (screenshot from Lilian): Lum and Ari LLC, document L25000325767, filed and
+  effective 07/15/2025 — NOT 08/08/2025 as the prepared return had it — ACTIVE, 2026 annual report filed
+  04/14/2026, Mikayel sole authorized person and registered agent.** So the 2025 return is not final and a **2026
+  pro forma 1120 + 5472 will be owed**. Lilian confirmed **the 7004 was transmitted**, the 5472 sent with it was only
+  a shell, and his reimbursing Anastasia White for the $125 is fine. Open: whether Julia adds the $2,700 of cash
+  deposits as contributions (option B) — if so, get his written confirmation that the money was his and not a loan.
 - _(2026-10-15, final)_ — **JULIA NARROWED THE RULING (relayed by Lilian): the ONLY reportable transaction on
   the 2025 Form 5472 is the $125 Florida formation fee**, which the client paid out of his own pocket before the
   company existed. **The $850 to Pivniak Law is a business expense — not reportable.** Part V = $125, 1f/1h = 125,
