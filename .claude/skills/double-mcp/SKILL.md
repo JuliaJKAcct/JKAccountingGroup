@@ -193,6 +193,14 @@ years, and report what looks wrong, missing or inconsistent.
 **The identity block NEVER leaves the session** — not in chat, not in the repo, not in a Double
 note, not in an artifact, not in an email or a report:
 
+> 🔓 **ONE NARROW EXCEPTION, GRANTED BY ASKING — a tax-return WORKBOOK.** *(Lilian, 2026-10-15, Chursinov
+> 2025, working paper D24.)* When a form being prepared needs a **foreign account number** (Form 8938, FBAR)
+> or the **foreign registration address** of a branch (Form 8858), and the firm holds the document, the session
+> **asks Lilian or Julia, naming exactly which identifiers**; on a yes they go **into that workbook only** —
+> handed over as a file and saved in Double, **never typed into chat text, never into the repo, an artifact or a
+> Double note**, and **not a standing grant: the next workbook asks again.** SSNs, ITINs, dates of birth and
+> credentials were not part of it. The workbook rules are [`tax-return-sop`](../tax-return-sop/) §4D.
+
 - **SSN / ITIN numbers**
 - **Driver's licence numbers**
 - **Bank routing and account numbers**
