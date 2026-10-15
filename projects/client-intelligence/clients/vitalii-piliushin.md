@@ -248,7 +248,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Deposits with no payer named** (ATM cash, deposited checks) and Zelle from individuals are counted as sales until he
   says otherwise _(session default; ⛔ Lilian decides — 2025 D2)_. Several Zelle senders are friends or family he also pays.
 - **Amazon / Temu** on the business account: business supplies by default — **Lilian has not ruled yet** (2025 D5).
-- **Phone:** 50% business _(session; Lilian may change)_.
+- **Phone:** 🆕 **80% business** _(Lilian, 2026-10-15 — 2025 L19; it was 50%, the session's default)_ — see ⑨.
 - **Shop gates and shelving:** expensed under the de minimis safe harbor in Part V, **with the election statement**
   _(session; Julia confirms)_. **State and formation fees:** an ordinary expense on line 23 (§248 is corporate only) _(session — 2025 D26)_.
 - 🆕 **For 2025 he got ONE file to correct the whole P&L** _(Lilian asked for it, 2026-10-12)_: every deposit counted as
