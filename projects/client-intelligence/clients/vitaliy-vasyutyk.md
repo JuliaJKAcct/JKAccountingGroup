@@ -217,7 +217,8 @@ Remodel Master and Fastighet. That was **not** verified on 2026-10-13 (Nika's 20
   2026 cuando estemos preparando sus taxes."* → **Uber's fees: Part V, row `Uber Fees`** · **Lyft's fee: line 10 (Commissions
   and fees)** · **DoorDash: no fee** (DoorDash charges the restaurant and the customer, not the driver; only an instant-pay
   fee would count). ⓘ The line does not change the tax — both are deducted in full; the rule is for year-to-year
-  consistency. 🔔 **Whoever prepares his 2026 return: tell Lilian this when the gig Schedule C is keyed.**
+  consistency. ⓘ *The 2024 return shows only the Uber row (Part V); its gig line 10 was empty, so the Lyft placement is
+  2025's own.* 🔔 **Whoever prepares his 2026 return: tell Lilian this when the gig Schedule C is keyed.**
 - 🆕 **His office serves TWO businesses** _(Lilian, keyed 2026-10-15)_: split 70% gig / 30% realtor, one Form 8829 each. The
   2024 home-office carryover belongs to the **gig** business's Form 8829 (line 25) and follows the business, not the home.
 - 🆕 **On the standard mileage rate, car washes and cleaning products are inside the rate** — not a separate deduction for either
