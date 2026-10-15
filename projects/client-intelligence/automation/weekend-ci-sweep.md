@@ -265,6 +265,8 @@ was said). Better a sourced, low-confidence note than nothing.
 | Andrii Tymchenko | 710619 |
 | Artem Markarian | 710623 |
 | Artem Chursinov | 710622 |
+| Andrii Kravchenko | 769503 |
+| Andrey Popov & Galina Bogina | 710617 |
 | Ishkhan Markarian | (none recorded — look up) |
 | VOICECAPITAL INC | 710725 |
 | VOXAGO LLC | 710606 |
