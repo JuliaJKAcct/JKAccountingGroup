@@ -566,8 +566,14 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
       statements is only WHOSE CAR it is**, and that needs the **contract** (a co-buyer changes the interest answer) and the title.
       ⚠️ **If the named borrower is also a firm client, check — with Lilian's or Julia's leave, it is another client's
       record — whether their books or return already treat the car as theirs** before arguing the client owns it: one car
-      cannot be two people's. Statements carry only the last payment's split, so **the year's interest is not on Ally's** —
-      ask for the year's **payment history** (each payment's principal and interest) or the lender's year-end interest summary.
+      cannot be two people's. Statements carry only the last payment's split — 🆕 **and on a DAILY-SIMPLE-INTEREST loan
+      (Ally's retail contracts) that is ENOUGH: do not ask anyone for the payment history.** Derive the daily rate from one
+      printed split (finance charge ÷ (the balance BEFORE that payment — the previous statement's remaining balance — × days since
+      the previous payment)), **prove it reproduces a SECOND printed split
+      to the cent**, then rebuild the year from the bank's debits — backward from a printed balance, one row per payment that
+      was not returned — and ship the table as live formulas *(Piliushin 2025 §2.11; Lilian, 2026-10-15: "esto te lo di…
+      tienes todos los statements… ¿por qué preguntas?")*. ⚠️ **Ask for the payment history only when the rate does NOT
+      reproduce** (a precomputed-interest loan) **or the debits are not held.**
       🆕 **And when the SIGNER rules that the car AND ITS LOAN are the client's anyway, apply it** *(Piliushin 2025 D44 —
       Julia, relayed by Lilian, 2026-10-14: "Asume que es a nombre de Vitaly… No lo cuestiones… Es una decisión de Julia")*:
       record it as her decision with her words and the date, **keep the earlier analysis in the paper as the record, and do
@@ -3266,8 +3272,8 @@ Sch C: 01 (Filer)*). She works down the tab and the screen side by side; a tab i
 ☑️ **Make the computed lines LIVE formulas over yellow input cells** (miles, square feet), so the tab gives both vehicle
 methods the moment the client's figures are typed. 🔑 **While the method is undecided, lines 10–23 (actual) carry the car's
 costs so ATX can compare the two; once Standard is chosen they never reach line 9** — the fuel is inside the rate (§1B.10).
-⚠️ **And the interest on 9c is the YEAR's total from the lender's history** — a partial figure typed there is a floor, and
-the row says so. 🔑 **On the vehicle tab: the loan interest goes on 9c as the TOTAL — ATX
+⚠️ **And the interest on 9c is the YEAR's total — from the lender's history or, on a daily-simple-interest loan, rebuilt
+from the statements' rate and the bank's debits (§1B.10 ⑤ item 11)** — a partial figure typed there is a floor, and the row says so. 🔑 **On the vehicle tab: the loan interest goes on 9c as the TOTAL — ATX
 derives line 12 from it.** *(On the pilot draft it was typed straight onto line 12 with 9c empty, so the standard method
 silently lost it — a typed number on a computed line replaces the computation.)* ⓘ **When an item does not apply** (no car,
 no home office), the tab still ships and says so in its first row — the session's reading of "tiene que tener estas
