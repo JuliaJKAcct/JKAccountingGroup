@@ -79,7 +79,7 @@
 
 ### FBAR (FinCEN Form 114)
 - **Applies?** **Yes — every year, one FBAR PER SPOUSE** (most accounts are in one name only, so they are not filed jointly). The firm filed both 2024 FBARs, signed 2025-09-18.
-- **Where the account lists are:** each spouse sends a Word list every year — `Andrey Popov Foreign accounts 2025(RUS).docx` and `Bogina.G. Зарубежные счета(RUS) 2025.docx` (Drive, 2025 return folder; also in the Double Uploads Inbox, 2026-08-08). **Updated versions were e-mailed to Julia on 2026-09-09** (Andrey changed the Raiffeisen amounts) — the Drive copies predate that e-mail.
+- **Where the account lists are:** each spouse sends a Word list every year — `Andrey Popov Foreign accounts 2025(RUS).docx` and `Bogina.G. Зарубежные счета(RUS) 2025.docx` (Drive, 2025 return folder; also in the Double Uploads Inbox, 2026-08-08). **Updated versions were e-mailed to Julia on 2026-09-09** (Andrey changed the Raiffeisen amounts) — the Drive copies predate that e-mail. ⚠️ **The 09-09 versions live ONLY in that e-mail** (Lilian uploaded them to the 2026-10-15 session) — save them to the client's folder.
 - **2025 FBARs due 2026-10-15.** Not filed as of 2026-10-15 by the only test available: no FinCEN acknowledgement in Julia's Gmail since 2025-09-21. Andrey: 3 accounts; Galina: 8 — the same accounts as 2024.
 - **Bank addresses** for the filing are on the 2024 FBARs (Drive: `ANDREY POPOV FBAR 2024.pdf`, `GALINA BOGINA FBAR 2024.pdf`).
 
@@ -88,9 +88,9 @@
 
 ## 5. Key facts & quirks
 
-- 🔴 **Use the 2026-09-09 e-mailed lists, not the Drive copies, for the Raiffeisen accounts.** Andrey wrote that he changed those amounts; the Drive copies still carry the 2024 figures for them.
+- 🔴 **Use the 2026-09-09 e-mailed lists, not the Drive copies.** They lower all four Raiffeisen amounts sharply (both spouses); everything else, account numbers included, is unchanged. **Ask whether the new figures are the HIGHEST 2025 balance or the 31 December one** — the FBAR needs the highest, and in 2024 these accounts held far more.
 - 🔴 **Two things on Galina's 2024 FBAR to check before the 2025 one:** item 3a "TIN type" is marked **EIN** (an individual normally files under her SSN/ITIN — to check, not settled), and one Raiffeisen account number was typed with **19 digits** where her own list has 20.
-- 🔴 **Galina's 2025 list still says "2024 год" at the top**, and two of its amounts differ tenfold from the 2024 FBAR (one up, one down). **Confirm with the client that the figures are 2025 maximums** before filing.
+- **Galina's list: two amounts differ tenfold from the 2024 FBAR** (Alfa-Bank USD up, Bakai USD down). She re-sent them unchanged on 09-09; the Alfa-Bank one is worth a one-line confirmation.
 - **Andrey said on 2026-09-10 that he did not see HIS foreign accounts on the 2025 return, only Galina's** — the same day the return was filed. Whether Julia fixed it before filing is not on record. **Check the foreign-assets report on the filed return; if his accounts are missing, an amendment is the question for Julia.** And: **do the accounts of Galina's Russian companies belong on her FBAR?** (she reports them on Forms 5471; another person owns 33% of VERCIA).
 
 ## 6. History & open questions
@@ -106,11 +106,11 @@
 - 2026-09-09 — Julia sent the 2025 tax-return overview (vehicle depreciation corrected on SARAFAN); Andrey e-mailed **updated foreign-account lists (Raiffeisen amounts changed)**.
 - 2026-09-10 — Andrey: *he did not see his own foreign accounts on the return, only Galina's.* **2025 return filed** the same day (Double).
 - 2026-10-05/07 — IRS notices: the penalty was removed, interest remained; Andrey paid it from his IRS account and Julia confirmed it looked right.
-- 2026-10-15 — **FBAR 2025 started by Lilian, at Julia's request** (this session). Found both lists and both 2024 FBARs; built a working FBAR sheet per spouse (accounts, bank addresses, Treasury 12/31/2025 conversion, what to verify) and handed it to Lilian as a file — **not committed**.
+- 2026-10-15 — **FBAR 2025 started by Lilian, at Julia's request** (this session). Found both lists and both 2024 FBARs; built a working FBAR sheet per spouse (accounts, bank addresses, Treasury 12/31/2025 conversion, what to verify) and handed it to Lilian as a file — **not committed**. Lilian then uploaded the 2026-09-09 lists from Julia's e-mail; the sheet was updated from them (version 2). Asked whether a firm worksheet per client existed: **none was found for this couple** — each spouse's own Word list is the per-person source, and the bank addresses come from the 2024 FBARs.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **File both 2025 FBARs — due 2026-10-15.** Before filing: open the 2026-09-09 e-mail attachments for the Raiffeisen amounts; confirm Galina's figures are 2025; check her TIN type; verify the Treasury rates.
+- 🔴 **File both 2025 FBARs — due 2026-10-15.** Before filing: ask whether the Raiffeisen figures are 2025 maximums; check Galina's TIN type; verify the Treasury rates.
 - **Check that Andrey's foreign accounts are on the filed 2025 return** (his 2026-09-10 e-mail) — Julia.
 - **Ask Julia:** do the Russian companies' accounts go on Galina's FBAR?
 - **Form 114a** (the clients' authorization for the firm to e-file their FBAR): a Drive search found none — confirm one is on file.
@@ -118,8 +118,8 @@
 
 ### Information still needed
 
-- [ ] The 2026-09-09 versions of both foreign-account lists (Raiffeisen amounts)
-- [ ] Client confirmation that Galina's list is 2025 maximums
+- [x] The 2026-09-09 versions of both foreign-account lists — received 2026-10-15 (still to be saved in Drive/Double)
+- [ ] Client confirmation that the Raiffeisen amounts are 2025 maximums, and that the Alfa-Bank USD amount on Galina's 2025 list (ten times the 2024 figure — §5) is correct
 - [ ] Galina's correct FBAR TIN type
 - [ ] Signed Form 114a for each spouse
 - [ ] Ping meetings; Gmail before 2025-12
