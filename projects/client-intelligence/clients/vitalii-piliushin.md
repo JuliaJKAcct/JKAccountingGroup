@@ -180,8 +180,10 @@ the actual details (and Claude can pull them live when a task needs them).
   payments is never deducted; the business share of the interest goes on line 9** (ATX Vehicle Expenses worksheet, 9c);
   **the purchase price is depreciated on actual costs**, or the standard rate is used if the car's first business year
   allows it. **What it needs from him every year:** the miles (odometer at the start and end, and a list of business trips),
-  the contract (once), **the lender's payment history for the year** — the monthly statements split only the last payment —
-  the insurance, the repairs, and since when the car is used for the business. *(Before her decision the firm read the car
+  the contract (once), the lender's monthly statements — 🆕 **never ask him for the payment history: Ally charges daily simple
+  interest, so the rate comes from one split on the statements and the year's interest is rebuilt from the bank's debits**
+  _(Lilian, 2026-10-15: "esto te lo di… ¿por qué preguntas?" — 2025 §2.11)_ — the insurance **(only on actual costs; in 2025
+  none was paid from either account)**, the repairs, and since when the car is used for the business. *(Before her decision the firm read the car
   as Boris's and the payments as off the return, and Lilian asked about treating them as rent — 2025 §2.8, kept as the
   record.)*
   🆕 **He drives it since November 2024 and keeps NO mileage record** _(the client, 2026-10-14)_ — driving is not business use, so whether 2024 or 2025 is the car's first BUSINESS year depends on whether he used it
