@@ -198,10 +198,10 @@ Remodel Master and Fastighet. That was **not** verified on 2026-10-13 (Nika's 20
   every year Form 7203 line 6 exceeds line 5. ⚠️ **That gain is investment income and can switch off the EIC** — and since
   **he has lent money to Nika**, first check whether any "distribution" was really a **loan repayment** (not a distribution
   at all). Settle it on Nika's return, which the firm prepares.
-- 🆕 **The household's home office** _(2026-10-15)_: the home is **rented**; **both spouses have an office in it** (Iryna's
-  larger than his), each on its own Form 8829 with the same rent and utilities. **The internet is not on the 8829** — it is
+- 🆕 **The household's home office** _(2026-10-15; the attribution of the larger office to Iryna is pending Lilian's
+  confirmation — working paper D9)_: the home is **rented**; **both spouses have an office in it** (Iryna's larger than his), each on its own Form 8829 with the same rent and utilities. **The internet is not on the 8829** — it is
   a utility on Iryna's Schedule C. Which of HIS businesses uses his office decides whether it is deducted now or carried.
-- 🆕 **Iryna drives her own car for the babysitting** — a 2007 Toyota RAV4, with odometer readings for the year. Its method
+- 🆕 **Iryna drives her own car for the babysitting** _(attributed pending Lilian's confirmation — D9)_ — a 2007 Toyota RAV4, with odometer readings for the year. Its method
   (standard vs actual) is fixed by what her FIRST business year used — check that before choosing.
 - 🆕 **No NOL history** _(checked 2026-10-14 against the 2022–2024 returns)_: no year had a loss that survives the Form 172 add-backs, and
   2023 had taxable income with no NOL deduction. If ATX prints a Form 172 full of zeros, it can go.
