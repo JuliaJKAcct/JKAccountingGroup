@@ -3074,6 +3074,15 @@ take on trust** — and on the pilot she could not tell it was the mileage rate,
 | **Business %** | The % applied, and whose ruling it is |
 | **How** | The arithmetic in words: *"phone, 12 payments = 1,200.00 × 50% = 600.00 to business A; × 30% = 360.00 to business B"* (an illustration, not a client's figures) |
 
+🛑 **AND WHY IT IS ON THIS LINE** *(Lilian, 2026-10-15, on Piliushin 2025's line 20b: "Dime de dónde salieron esos
+$[…]… Tienes que explicar por qué pusiste esa categoría. Tiene que haber un motivo… No tengo ninguna información")*.
+The row's note names **the evidence that put it in this category** (the bank memo, the client's answer, the ruling —
+quoted), **why this line rather than its neighbour** when two are plausible (rent of a building → 20b; a vehicle or a
+machine → 20a), **the ruling that put it on this return at all**, and **what is still open on it**. ⛔ **A note that names
+only a decision ID (`D11`, `O29`) is not an explanation.** ⚠️ **The pilot shipped WITHOUT the five columns above for
+seven drafts** — the notes looked full, and the one row she asked about could not answer her. **The build now fails when a
+row's derivation does not reproduce its figure** — and it must also fail when the columns are missing.
+
 - ✅ **AND THE TRANSACTIONS THEMSELVES, ON THE ROW** *(Lilian, 2026-10-12, a second time: "se más específico y
   detallado en las explicaciones de dónde salió cada cosa")*: a column listing what was summed — **each line (date ·
   account · merchant · amount) when there are 12 or fewer; month by month with the main merchants when there are
@@ -3087,6 +3096,19 @@ take on trust** — and on the pilot she could not tell it was the mileage rate,
 - ✅ **Costs FOUND but not deducted stay visible at 0%** — gas, repairs and insurance inside the mileage rate, travel
   not selected — with the reason. **Nothing the bank shows is hidden; the row says why it is not on the return.**
 - ✅ **The build checks it:** every `P&L detail` block sums to its P&L row, and the P&L equals the script.
+- 🛑 **ONE BLOCK PER RETURN LINE — its parts CONSECUTIVE, right under the line's TOTAL** *(Lilian, 2026-10-15, on
+  Piliushin 2025: "lo que no me gusta es que los separaste y no los pusiste consecutivos uno con otro… cuando quiero hallar
+  el total de esa cuenta de cost of labor… tengo que buscar por toda la hoja… si los pones todos consecutivos, puedo
+  marcarlos todos y ver cuánto es el total, porque al final lo que tengo que entrar en AT es el total de cada cuenta")*.
+  When a return line is split into parts on the P&L — by bank, by vendor, by ruling (*cost of labor* from two accounts,
+  *travel* from five rulings) — **the line's own row comes FIRST: its name and its TOTAL, the figure she types; every part
+  follows it, consecutive and indented; and nothing of that line sits anywhere else on the sheet.** ⛔ **Never place a part
+  where the build happened to produce it** — a draft's new rows appended at the end, a second bank's rows in a section of
+  their own: *she has to search the whole sheet for the pieces before she can trust a total.* **Part V:** one sub-block
+  per Part V description *(the row she types)*, all under one **line-27b** block *(Other expenses, from line 48 — ⚠️ NOT 27a: on the 2025 form 27a is the Form 7205 energy deduction; the pilot's P&L first labelled it 27a, caught in review — read the line off the current-year PDF)*. A memo row inside a block *(a total on the
+  account, an input %)* says it is **not added**. **The return sheet's line reads the block's total cell**, and **the build
+  FAILS if any P&L row is left outside a block** or a block total differs from its return line. *(Rows that are NOT on the
+  return — kept-apart memos, pending items, owner draws — stay in their own sections below the net profit.)*
 
 #### 🏦 EVERY WORKSHEET CARRIES A `Bank transactions` SHEET — every line the bank shows, with how it was categorized beside it
 
