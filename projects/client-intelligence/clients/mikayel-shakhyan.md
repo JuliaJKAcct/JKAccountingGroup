@@ -1,12 +1,13 @@
 # Mikayel Shakhyan
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-14
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-15
 
 > 🔴⏰ **2026-10-14 — THE DEADLINE HAS NOT PASSED. IT IS 15 OCTOBER 2026: TOMORROW.** ⛔ **The banner below,
 > §5's first bullet and every sweep since 2026-09-19 said the return went overdue on 2026-09-15 — that was
 > an arithmetic error.** The pro forma 1120 is due **15 Apr 2026**; a Form 7004 adds **six months** →
 > **15 Oct 2026** (the working paper's header has said so since 2026-09-05). **2026-09-15 is only the date
-> typed on Double's own tasks.** ⚠️ **It holds only if the 7004 actually went in** — still unverified (§6
+> typed on Double's own tasks.** ⚠️ **It holds only if the 7004 actually went in** — 🆕 *2026-10-15: Lilian says it
+> was transmitted; the DATE is still unrecorded (the preparer signed it 6/25/2026)* (§6
 > Information still needed). 🆕 **And the same day the client sent two documents that open a SECOND
 > company — Fun Park USA, LLC** (§1, §4, §6 Log 2026-10-14).
 
@@ -36,7 +37,8 @@
 
 - **Business name:** **Lum and Ari LLC** — **EIN 36-5147055**. The LLC has no separate Double
   client; everything about it sits on the owner's individual record (710648).
-- **Entity type:** Florida LLC, **formed 8 August 2025**, ✅ **single member** _(confirmed by
+- **Entity type:** Florida LLC, **formed 15 July 2025** _(Sunbiz: filed and effective 07/15/2025, document
+  L25000325767, ACTIVE — read 2026-10-15; the `8 August 2025` this file carried until then was wrong)_, ✅ **single member** _(confirmed by
   Lilian, 2026-09-05)_. 🔴 So it is a **foreign-owned U.S. disregarded entity** — see §4 Income tax.
 - **Home state:** Florida. The company's address on its return is **the owner's home**, so it is
   not written here.
@@ -59,7 +61,7 @@
 - **Primary language:** RU — Double's `Preferred language` reads **"Only Russian"**
 - **Our engagement:** Income tax only. Double: `Income Tax: true` · `Bookkeeping: N/A` ·
   `1099 Preparation: false` · `Annual Report: false`
-- **Fiscal year-end:** Calendar. 2025 is a **short first year, 8 Aug → 31 Dec 2025**.
+- **Fiscal year-end:** Calendar. 2025 is a **short first year, 15 Jul → 31 Dec 2025** _(corrected 2026-10-15 from Sunbiz)_.
 - **Accounting platform:** None — Double `platform: none`, no QuickBooks. **There are no books.**
   The bank account is the only ledger.
 - **Double `Account Type`:** **Individual** _(Double `list_client_properties`, read 2026-09-19)_ —
@@ -234,6 +236,47 @@
 
 ### Log
 
+- _(2026-10-15, last word)_ — **Julia confirmed the farmers-market card charge is a BUSINESS expense, not
+  personal** — so Lum and Ari LLC's 2025 Part V carries only the formation fee and his three deposits as
+  contributions; **distributions: none**. Figures: working paper §4M ⓪-quater.
+- _(2026-10-15, superseded on the farmers-market line by the entry above)_ — **JULIA (via Lilian): Lum and Ari LLC's 2025 Form 5472 reports, in Part V, his
+  three cash deposits as capital CONTRIBUTIONS, the state formation fee he paid, and the farmers-market card charge as
+  a DISTRIBUTION.** The legal fee, the two vendor payments (AXY, Oxana Martox) and the wire fee are business
+  expenses, not reportable. No income. The four bank statements were re-read at Lilian's request: 8 transactions,
+  all tie. Figures: working paper §4M ⓪-ter. **Still worth getting from him: a written line that the deposits were
+  his own money, capital not a loan** — kept as the company's
+  record, not filed.
+- _(2026-10-15, last)_ — **Sunbiz (screenshot from Lilian): Lum and Ari LLC, document L25000325767, filed and
+  effective 07/15/2025 — NOT 08/08/2025 as the prepared return had it — ACTIVE, 2026 annual report filed
+  04/14/2026, Mikayel sole authorized person and registered agent.** So the 2025 return is not final and a **2026
+  pro forma 1120 + 5472 will be owed**. Lilian confirmed **the 7004 was transmitted** _(date not recorded — the preparer signed it 6/25/2026; if after
+  4/15/2026 the extension is void)_, the 5472 sent with it was only
+  a shell, and his reimbursing Anastasia White for the $125 is fine. Open: whether Julia adds the $2,700 of cash
+  deposits as contributions (option B) — if so, get his written confirmation that the money was his and not a loan.
+- _(2026-10-15, final)_ — **JULIA NARROWED THE RULING (relayed by Lilian): the ONLY reportable transaction on
+  the 2025 Form 5472 is the $125 Florida formation fee**, which the client paid out of his own pocket before the
+  company existed. **The $850 to Pivniak Law is a business expense — not reportable.** Part V = $125, 1f/1h = 125,
+  one Form 5472. ⚠️ The state receipt shows **Anastasia White's** card — confirm he paid or reimbursed her. The
+  $2,700-deposits objection still stands for Julia (now A $125 · B $2,825). Worksheet rebuilt and re-sent.
+- _(2026-10-15, later)_ — **JULIA RULED THE 2025 SCOPE (relayed by Lilian):** the only reportable
+  transactions on Lum and Ari LLC's Form 5472 are the **$850 to Pivniak Law** and the **$125 Florida formation
+  fee** — Part V $975, one Form 5472, AXY and Oxana Martox treated as unrelated. The session objected in writing
+  that the $2,700 of teller deposits may be his contributions and should be reported too (working paper §4M ②) —
+  **Julia to confirm before signing.** An Excel ATX worksheet was delivered to Lilian (not committed); a firm
+  reference ID for him was proposed (`LUMANDARIMS001`, working paper §4M — reuse it every year). The receipts are
+  kept as records, not filed with the return.
+- _(2026-10-15)_ — **Lilian sent the attorney's receipt for the Pivniak Law payment** (Pivniak Law, P.A.,
+  invoice 0002, issued 2026-10-15 on request, billed to Mikayel personally, service date = the payment date
+  of 14 Nov 2025) and asked what to do with it and with the return. **The receipt describes the fee as
+  verification of a company that was meant to provide a sales service on Amazon — vendor due diligence for
+  the LLC's business, NOT the LUMARI trademark.** ⇒ **Not a distribution and not a related-party
+  transaction: it comes off Form 5472 entirely** (working paper §4L, transcription §1A ③). It also
+  closes Q4's half of the item-D question. **Still open:** the $21 farmers'-market card charge (Q4's
+  other half), which counterparty the lawyer vetted (most likely AXY Company LLC, paid 10 days later —
+  evidence toward "unrelated", not proof), and Q1 / Q2 / Q3 / Q5 / Q6. ⏰ **Today is the extended due
+  date** — whether the 7004 actually went in is still unverified. **Upload the receipt to Double.**
+  Checked Julia's Gmail since 2026-10-01 for the client, the LLC, Pivniak, AXY and Oxana Martox: only the
+  two weekly-sweep digests, nothing from him.
 - _(2026-10-14)_ — **Lilian asked where the reportable-transactions work stood, and sent two documents the
   client had just sent her.** _(Her recollection was a payment to a lawyer or to a company that helped
   register the LLC — that is the **Pivniak Law payment** of 14 Nov 2025, out of the company's own account
@@ -500,7 +543,7 @@
       5472 are filed**, not just a line. ⚠️ **And if no answer comes, what to do about it is
       Julia's** — working paper §6D ②. ⓘ *The separate-form rule covers a **foreign or U.S.**
       related party, not only a U.S. one.*
-- [ ] 🟠 **Did the company pay anything that was really his personally?** Each one is a
+- [x] ✅ *(2026-10-15: **CLOSED — do not ask him.** The $850 is vendor due diligence for the business, and Julia ruled the $21 card charge a business expense too.)* **Did the company pay anything that was really his personally?** Each one is a
       distribution, even when the money went to an unrelated payee. 🆕 *(2026-10-14: ask in the same
       breath whether **Anastasia White works for Pivniak Law** — if so, that payment may be formation work.)*
 - [ ] ⏸ **In which country does he file a tax return as a resident — and does he have a tax

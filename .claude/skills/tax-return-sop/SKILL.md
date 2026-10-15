@@ -401,7 +401,7 @@ stated nothing about this line".**
 | **Groceries / supermarket** | **Owner draw** *(distribution)* | — |
 | **Food — restaurants, cafés, coffee, fast food, delivery** | **Owner draw.** Meals on the P&L = **0** | **Where the client STATES a meal was business**, §1B.1: his amount, the firm's rate — ⛔ never imported from here |
 | **Very small gas-station purchases** | **Owner draw** — a store purchase, not a tank of fuel | "Very small" has no number of hers — see ③ |
-| **Vehicle costs** — fuel, parking, tolls, washes and dealer service, auto insurance | **NOT an expense line and NOT a draw.** A separate **VEHICLE** block, held at 100% and deducted only **× the business-use %** | ⚠️ **On the standard mileage rate, fuel, service and insurance are INSIDE the rate and are never deducted again; only business parking and tolls, and the business share of car-loan INTEREST and of any state or local personal-property tax on the car (Pub 463), are added.** Loan principal is never deductible. So the block is evidence and the actual-method fallback, not a deduction. 🆕 **In the workbook it is the `Vehicle worksheet` sheet (§4D)** |
+| **Vehicle costs** — fuel, parking, tolls, washes and dealer service, auto insurance | **NOT an expense line and NOT a draw.** A separate **VEHICLE** block, held at 100% and deducted only **× the business-use %** | ⚠️ **On the standard mileage rate, fuel, service and insurance are INSIDE the rate and are never deducted again; only business parking and tolls, and the business share of car-loan INTEREST and of any state or local personal-property tax on the car (Pub 463), are added.** Loan principal is never deductible. So the block is evidence and the actual-method fallback, not a deduction. 🆕 **In the workbook it is the `Vehicle Expense Wkst (ATX)` tab (§4D)** |
 | **Home costs** — rent, utilities, and the home's insurance, HOA, repairs | **NOT an expense line.** A separate **HOME-OFFICE** block, held at 100% → her Home Office template *(the actual-method inputs; **Form 8829** at the floor-area % if the actual method wins)* | ⚠️ **[`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) M2: compute BOTH methods and take the better** — on the simplified method these costs are not deducted and there is no Form 8829. ⛔ **Internet is NOT here** — it goes on line 25 at its own % ([`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) M2, *IN / OUT*); a cost is never in both places. ⚠️ **A SHOP or office the business rents is NOT a home cost** — its rent is line 20b at 100% |
 | **Questions to the client** | **As few as possible** | §1B.4's four groups and its *"lista mínima y justificada"* — and ④ below |
 
@@ -566,8 +566,14 @@ a `DECIDE` row naming who answers, with both alternatives priced** *(§4D)*.
       statements is only WHOSE CAR it is**, and that needs the **contract** (a co-buyer changes the interest answer) and the title.
       ⚠️ **If the named borrower is also a firm client, check — with Lilian's or Julia's leave, it is another client's
       record — whether their books or return already treat the car as theirs** before arguing the client owns it: one car
-      cannot be two people's. Statements carry only the last payment's split, so **the year's interest is not on Ally's** —
-      ask for the year's **payment history** (each payment's principal and interest) or the lender's year-end interest summary.
+      cannot be two people's. Statements carry only the last payment's split — 🆕 **and on a DAILY-SIMPLE-INTEREST loan
+      (Ally's retail contracts) that is ENOUGH: do not ask anyone for the payment history.** Derive the daily rate from one
+      printed split (finance charge ÷ (the balance BEFORE that payment — the previous statement's remaining balance — × days since
+      the previous payment)), **prove it reproduces a SECOND printed split
+      to the cent**, then rebuild the year from the bank's debits — backward from a printed balance, one row per payment that
+      was not returned — and ship the table as live formulas *(Piliushin 2025 §2.11; Lilian, 2026-10-15: "esto te lo di…
+      tienes todos los statements… ¿por qué preguntas?")*. ⚠️ **Ask for the payment history only when the rate does NOT
+      reproduce** (a precomputed-interest loan) **or the debits are not held.**
       🆕 **And when the SIGNER rules that the car AND ITS LOAN are the client's anyway, apply it** *(Piliushin 2025 D44 —
       Julia, relayed by Lilian, 2026-10-14: "Asume que es a nombre de Vitaly… No lo cuestiones… Es una decisión de Julia")*:
       record it as her decision with her words and the date, **keep the earlier analysis in the paper as the record, and do
@@ -1173,7 +1179,7 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
   in an SOP or a client-intelligence file, **both of which publish to the Knowledge Hub**. *(Skills
   do not publish, but the same rule applies to them: nobody should have to check.)*
 - ⛔ **Never anywhere: SSN/ITIN, bank or card numbers, residential street addresses, dates of birth,
-  logins.** A business EIN is the one exception.
+  logins.** A business EIN is the one exception *(plus one narrow one granted by asking, workbook by workbook — §4D)*.
 - 📌 **The work is not finished until it is written down** — the working paper in
   [`projects/tax-returns/`](../../../projects/tax-returns/) (§5), the client's Client Intelligence
   file **with its tax-preparation playbook (§5B)**, and any open action in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md). **The session will be
@@ -3074,6 +3080,15 @@ take on trust** — and on the pilot she could not tell it was the mileage rate,
 | **Business %** | The % applied, and whose ruling it is |
 | **How** | The arithmetic in words: *"phone, 12 payments = 1,200.00 × 50% = 600.00 to business A; × 30% = 360.00 to business B"* (an illustration, not a client's figures) |
 
+🛑 **AND WHY IT IS ON THIS LINE** *(Lilian, 2026-10-15, on Piliushin 2025's line 20b: "Dime de dónde salieron esos
+$[…]… Tienes que explicar por qué pusiste esa categoría. Tiene que haber un motivo… No tengo ninguna información")*.
+The row's note names **the evidence that put it in this category** (the bank memo, the client's answer, the ruling —
+quoted), **why this line rather than its neighbour** when two are plausible (rent of a building → 20b; a vehicle or a
+machine → 20a), **the ruling that put it on this return at all**, and **what is still open on it**. ⛔ **A note that names
+only a decision ID (`D11`, `O29`) is not an explanation.** ⚠️ **The pilot shipped WITHOUT the five columns above for
+seven drafts** — the notes looked full, and the one row she asked about could not answer her. **The build now fails when a
+row's derivation does not reproduce its figure** — and it must also fail when the columns are missing.
+
 - ✅ **AND THE TRANSACTIONS THEMSELVES, ON THE ROW** *(Lilian, 2026-10-12, a second time: "se más específico y
   detallado en las explicaciones de dónde salió cada cosa")*: a column listing what was summed — **each line (date ·
   account · merchant · amount) when there are 12 or fewer; month by month with the main merchants when there are
@@ -3087,6 +3102,19 @@ take on trust** — and on the pilot she could not tell it was the mileage rate,
 - ✅ **Costs FOUND but not deducted stay visible at 0%** — gas, repairs and insurance inside the mileage rate, travel
   not selected — with the reason. **Nothing the bank shows is hidden; the row says why it is not on the return.**
 - ✅ **The build checks it:** every `P&L detail` block sums to its P&L row, and the P&L equals the script.
+- 🛑 **ONE BLOCK PER RETURN LINE — its parts CONSECUTIVE, right under the line's TOTAL** *(Lilian, 2026-10-15, on
+  Piliushin 2025: "lo que no me gusta es que los separaste y no los pusiste consecutivos uno con otro… cuando quiero hallar
+  el total de esa cuenta de cost of labor… tengo que buscar por toda la hoja… si los pones todos consecutivos, puedo
+  marcarlos todos y ver cuánto es el total, porque al final lo que tengo que entrar en AT es el total de cada cuenta")*.
+  When a return line is split into parts on the P&L — by bank, by vendor, by ruling (*cost of labor* from two accounts,
+  *travel* from five rulings) — **the line's own row comes FIRST: its name and its TOTAL, the figure she types; every part
+  follows it, consecutive and indented; and nothing of that line sits anywhere else on the sheet.** ⛔ **Never place a part
+  where the build happened to produce it** — a draft's new rows appended at the end, a second bank's rows in a section of
+  their own: *she has to search the whole sheet for the pieces before she can trust a total.* **Part V:** one sub-block
+  per Part V description *(the row she types)*, all under one **line-27b** block *(Other expenses, from line 48 — ⚠️ NOT 27a: on the 2025 form 27a is the Form 7205 energy deduction; the pilot's P&L first labelled it 27a, caught in review — read the line off the current-year PDF)*. A memo row inside a block *(a total on the
+  account, an input %)* says it is **not added**. **The return sheet's line reads the block's total cell**, and **the build
+  FAILS if any P&L row is left outside a block** or a block total differs from its return line. *(Rows that are NOT on the
+  return — kept-apart memos, pending items, owner draws — stay in their own sections below the net profit.)*
 
 #### 🏦 EVERY WORKSHEET CARRIES A `Bank transactions` SHEET — every line the bank shows, with how it was categorized beside it
 
@@ -3202,7 +3230,10 @@ on the return per business, and the status.*
 
 🔑 **A car the client also uses personally, and that is NOT on the business's books: its costs are entered in ATX's
 *Vehicle Expenses* worksheet, which applies the business share and carries the result to Schedule C line 9.** ✅ **So
-the workbook carries a `Vehicle worksheet` sheet laid out the way that worksheet asks**:
+the workbook carries a vehicle sheet laid out the way that worksheet asks** — 🆕 **since 2026-10-15 it is the
+`Vehicle Expense Wkst (ATX)` tab below, ATX's screen line for line, and the blocks of this list that the screen has no
+place for (the interest's derivation, every bank car cost at 0% with its reason) sit UNDER the screen lines on the same
+tab**:
 - **the car** — description, date placed in service, total / business / commuting / other miles, the business %,
   another vehicle, off-duty use, the evidence (→ Part IV lines 43–47);
 - **the standard mileage amount** — business miles × the year's rate, plus business parking and tolls;
@@ -3216,7 +3247,37 @@ the workbook carries a `Vehicle worksheet` sheet laid out the way that worksheet
 
 ⚠️ **This is not a rule about which METHOD wins** — that is §1B.9
 and Pub. 463. **It is where the car's figures LIVE in the workbook**, so the P&L row for the car only says
-*"standard mileage: miles × rate — see Vehicle worksheet"*.
+*"standard mileage: miles × rate — see Vehicle Expense Wkst (ATX)"*.
+
+#### 🖥️ AND THE CAR AND THE HOME OFFICE ARE LAID OUT **AS ATX'S OWN SCREENS** — in every working AND final worksheet
+
+> **Lilian, 2026-10-15:** *"La de Profit & Loss está bastante bien… necesito algo muy similar para el home office y para el
+> [vehicle] expenses worksheet… Cada vez que hagamos un worksheet de trabajo o un worksheet final, tiene que tener estas
+> pestañas con este formato de ATX."* She sent screenshots of the two ATX screens so they could be copied.
+
+✅ **Three tabs, always, on a return with a Schedule C (Form 1040): the P&L, `Vehicle Expense Wkst (ATX)` and `Home
+Office Exp Wkst (ATX)`** — in the working workbook **and** in the §4I final worksheet. ⓘ *Her words were said about a
+Schedule C client; an 1120-S or 1065 workbook has neither screen, and whether it gets an equivalent has not been ruled.*
+🛑 **In the FINAL worksheet the same tabs carry FINAL values only** — the screen's lines and the figure on each, with its
+provenance (§4I), and **no** action words, no value-to-type column, no open input cells: those belong to the working
+workbook (§4I's no-version-history rule). 🔑 **"With this ATX format" means LINE FOR LINE:** the screen's own line
+numbers, its labels as printed, and — on the home office — its four columns (*Total Indirect · (a) Direct · (b) Indirect ·
+Sch C: 01 (Filer)*). She works down the tab and the screen side by side; a tab in our own order makes her translate.
+
+| Tab | ATX screen | What each row carries |
+|---|---|---|
+| `Vehicle Expense Wkst (ATX)` | *Line 9 (Sch C (1040)) – Vehicle Expenses*, one column per vehicle: 1–7 the car and the miles · 8a–8d the Yes/No · 9a–9f standard · 10–23 actual · the method box · 24–25 | the value to type, TYPED / COMPUTED, an action word, and where it comes from. ⚠️ **ATX's 8a is "another vehicle" = Schedule C line 46, and 8b "off-duty" = line 45 — the order is swapped**; say which Schedule C line each prints on |
+| `Home Office Exp Wkst (ATX)` | *Expense Input (Home Office Exp Wkst)*: business-use % · 8 · 9–15 · 16–24 · 25–36 · 37–42b · 43–44b | the same, in the screen's columns — **plus Form 8829 lines 1–2, the square feet**, which are typed elsewhere in ATX and drive the % at the top |
+
+☑️ **Make the computed lines LIVE formulas over yellow input cells** (miles, square feet), so the tab gives both vehicle
+methods the moment the client's figures are typed. 🔑 **While the method is undecided, lines 10–23 (actual) carry the car's
+costs so ATX can compare the two; once Standard is chosen they never reach line 9** — the fuel is inside the rate (§1B.10).
+⚠️ **And the interest on 9c is the YEAR's total — from the lender's history or, on a daily-simple-interest loan, rebuilt
+from the statements' rate and the bank's debits (§1B.10 ⑤ item 11)** — a partial figure typed there is a floor, and the row says so. 🔑 **On the vehicle tab: the loan interest goes on 9c as the TOTAL — ATX
+derives line 12 from it.** *(On the pilot draft it was typed straight onto line 12 with 9c empty, so the standard method
+silently lost it — a typed number on a computed line replaces the computation.)* ⓘ **When an item does not apply** (no car,
+no home office), the tab still ships and says so in its first row — the session's reading of "tiene que tener estas
+pestañas", until she says otherwise. *(Pilot: [Piliushin 2025](../../../projects/tax-returns/vitalii-piliushin/2025-form-1040.md) §1.15.)*
 
 #### 🔴 AN ASSET IS NEVER DELIVERED AS JUST A NAME, A DATE AND A COST
 
@@ -3289,6 +3350,23 @@ rule, and the asset screen is the clearest case of it.
   form — and the **TYPED / COMPUTED** mark (§4B).
 - 🔒 **The identity block never enters it**: no SSN/ITIN, no date of birth, no home street address, no
   bank or card number. **A business EIN is fine.**
+  🔓 **The exception is asked, workbook by workbook — never assumed.** *(Lilian, 2026-10-15, Chursinov: a
+  Form 8858 row said "the address from her Raiffeisen statement"; she wanted the address itself — "Necesito que
+  estas instrucciones tengan todo: dirección, todo, todo." Asked, she authorized **for that workbook** the
+  branch's foreign registration address and the foreign account numbers for Form 8938 / FBAR.)* ✅ **So when a
+  form needs one of these and the firm holds it, ASK Lilian or Julia once, naming exactly which identifiers** — ⛔ **never
+  write one in on the strength of that precedent, and never into the repo, chat TEXT or an artifact.** The
+  workbook is handed over as a file and lives in Double only. Mirrored in [`double-mcp`](../double-mcp/) §2.2. **Scope: foreign account numbers (Form 8938, FBAR) and a branch's foreign registration address (Form 8858) — never SSN/ITIN, dates of birth or credentials, and never a Double note.** This widens what may be WRITTEN into the workbook, not how a document is READ: a document held in Double still goes through [`redact.py`](../../../tools/redact-doc/), which masks these values. ⚠️ **On Chursinov the session read the five Double-held statements with a local extractor that printed only masked values (first five, last four), wrote the full values into the workbook alone and deleted the downloads — that route is NOT established; ask before using it again** ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 211). Never `load_attachments_to_chat`. Each value is **checked against the bank's own document**, never taken
+  from the client's template alone *(there, the template's IBAN carried two extra characters)*.
+- 🛑 **A ROW THAT SENDS HER TO A DOCUMENT FOR A VALUE WE HOLD IS A DEFECT, NOT AN INSTRUCTION** *(Lilian,
+  2026-10-15: "No me los dejes así, en blanco… Revisa que no sucedan cosas como esta")*. *"Type it from the
+  statement"*, *"the address from…"*, *"same as Ekaterina"* — ⛔ **the value goes in the cell**, or the row says
+  why it cannot *(identity not authorized · not yet received)* and **exactly** where it is. ✅ **The build
+  fails on such phrases** outside that allow-list.
+- 🛑 **NO CELL TEXT MAY START WITH `=`.** openpyxl stores any string beginning with `=` as a **formula**, and
+  Excel shows **`#NAME?`** — on the Chursinov workbook every *"= same as Ekaterina"* cell in the second spouse's
+  column came out that way, so **her column was full of values and his was full of errors.** ✅ **Write
+  "Same as…" / "Equals…"; the build fails on any `=` text outside the sheet that holds real formulas.**
 
 > ### 🛑 A CELL CAN HOLD TEXT THAT THE ROW WILL NOT SHOW — AND NOTHING ANYWHERE SAYS SO
 >
@@ -3812,7 +3890,8 @@ file, not only the draft.** ⛔ **Never report a session's own mapping error as 
 - **Every Part V row against the rows that already contain it.** A row named after a vendor (*Shipping*) beside
   a category that already holds that vendor (*Delivery/Freight*) is a double count. **Subtract the draft's
   line 28 from the worksheet's: an unexplained difference the size of one vendor is that vendor twice.**
-- **The vehicle worksheet holds only miles, parking and tolls, and the loan interest** on the standard rate.
+- **The vehicle worksheet holds only miles, parking and tolls, and the loan interest** on the standard rate — 🆕 **once the
+  method is decided.** While it is undecided, costs on ATX's actual lines (10–23) are how ATX compares the two, not a finding.
 - **A one- or two-dollar gap is rounding when ATX rounds each entry** — a figure typed as several rows (five trips,
   five Part V rows) rounds row by row. Say so as OK; it is not a finding.
 
@@ -3826,6 +3905,27 @@ working paper §12.3)*. Only then the misplaced lines — a figure on the wrong
 line with the right total is the second question, not the first. **A second keyed version gets its own check sheet;
 the first check stays beside it as a RECORD sheet (no tick boxes, marked superseded) and is summarised in the working
 paper** — so it survives when the new workbook replaces the old one in Double.
+
+✅ **She often keys several of the worksheet's categories into ONE ATX row** *(Lilian, 2026-10-15: "sumé varias categorías en
+una sola… no es un error")* — shipping, software, the de minimis items. **Compare those rows by sums before calling any of
+them a finding;** what is still a finding is a Part V row whose NAME says nothing (*"Other expenses"*) — Part V must say what
+each expense is.
+
+🔒 **IF a checkbox is read from an IMAGE** (the PDF's text coordinates are broken — common on ATX prints, where the X sits
+in a form XObject): **render ONLY the box area, and never the page's top band** — every ATX page header repeats the name and
+the full SSN, which the redactor masks in text but a picture does not. *(2026-10-15: a crop taken from the top of a Schedule
+C page 2 to read line 33 carried the header's SSN into the session. Nothing was written out; the crop should have started
+below the header.)* ⏳ **Whether rendering a client PDF's box areas is a sanctioned route at all — it is outside
+[`tools/redact-doc/`](../../../tools/redact-doc/) — is Lilian's to rule** ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 210);
+until she does, this constraint applies whenever it is used, and the redactor's text with the checkbox's position stays
+the first route.
+
+🛑 **A BACKSTOP, not a schedule: on a 1040 there is no later "1040 stage"** — §4A item 3 puts the 1095-A (and every
+document the client uploaded) in phase 1, before anything is computed. **Any document the ledger nevertheless deferred is
+opened at the latest before a draft check is delivered.** *(Piliushin 2025: two Forms 1095-A sat in the ledger as "NOT OPENED — the 1040 stage" through
+seven drafts; read on the day of the first keyed draft, they showed an advance premium credit that is repaid in full — the
+largest change to the balance due that day. ☑️ The free cross-check: what he paid on the bank = column A − column C, month by
+month.)*
 
 ✅ **The delivery is a `Draft check (<date>)` sheet in the workbook**: one row per difference, a tickable box first
 (only on rows she can act on), the five steps of §4G as columns, grouped by where she is working in ATX, a running
@@ -4239,7 +4339,49 @@ row `Excess Distributions (K-1 (1120S): 01)` in **Part I, box C — short-term**
 A shareholder since the company was formed two years earlier holds it **long-term** → **Part II, box F → Schedule D line
 10** — and at a low taxable income that gain is taxed at **0%** instead of the ordinary rate. ✅ **Every time Form 7203 line
 6 > line 5: find the stock's acquisition date and check the 8949 row's term.** ⚠️ **The ATX field that sets the term for
-that generated row is NOT established yet** — whoever finds it writes it here.
+that generated row is NOT established yet** — whoever finds it writes it here. ✅ *At Vasyutyk 2025 Julia made it
+long-term (relayed 2026-10-15) — the ruling, not the route.*
+
+#### ⑨ 🔴 A GIG PLATFORM'S FEES — **LINE 1 CARRIES THE GROSS, SO THE FEES MUST BE DEDUCTED**
+
+> **Lilian, 2026-10-15:** *"Sí, añádelo al skill de preparación de taxes"* — after the review of Vasyutyk draft 2.
+
+**Missed on two drafts in a row (Vasyutyk 2025 — working paper §2B R1, §2E E1), and it was the largest correction on the
+return:** deducting the fees turned a balance due into a refund.
+
+🔑 **Why it happens:** the platform's **Form 1099-K box 1a is the GROSS the riders paid** — fares plus tips, **before** the
+platform takes its commission — and that gross goes on Schedule C line 1 *(with the 1099-NEC, which is the platform's own
+incentives)*. **The driver never received the commission**, so if it is not deducted he pays income tax and SE tax on
+money he never had.
+
+✅ **Where the figure comes from:** the platform's **annual tax summary** — Uber's *"Tax Summary"*, page 1 *"Expenses, fees
+and tax"* and its **Table 1** (service fee, booking fee, split fare fee, airport and city fees, instant pay charges, other).
+⚠️ **The same table lists tolls** — those go on **line 9** with the car, **not** in the fees row; take them out or they are
+counted twice. 🧮 **Tie it:** reportable payments − fees = the summary's **net payout**.
+
+✅ **Where it is typed:** a **Part V** row `Uber fees` (the firm's 2024 convention for this client) **or line 10**
+(commissions and fees) — the result is identical; keep to whatever the prior year did. **Each platform on its own row**
+(a Lyft fee from the client's own sheet sat correctly on line 10).
+
+☑️ **In every draft review (§4F):** if Schedule C line 1 holds a **1099-K gross**, find the platform's fees on line 10 or
+in Part V. **If neither has them, it is a DEFECT**, never a judgement call. ⚠️ **And re-check the tips limit (⑦) after
+fixing it** — the fees can turn the business into a loss, which takes the tips deduction to 0.
+
+#### ⑩ 🚗 ON THE STANDARD MILEAGE RATE, CAR WASHES AND CLEANING ARE **INSIDE** THE RATE — DON'T ASK FOR THEM
+
+🛑 **IRS Volunteer Tax Alert VTA-2019-01 (2019-02-14):** *"IRS Counsel considers car washes as part of the expense of
+maintaining the car… if a taxpayer is taking the standard mileage rate, he or she cannot also deduct the car wash
+expense. There is no authority that would allow a taxpayer claiming the standard mileage rate to also deduct the expense
+of car washes as they would tolls and parking."* *(irs.gov/pub/irs-wi/Tax-Alert-for-Car-Washes2.pdf, read 2026-10-15.)*
+🔑 **Cleaning products for the car follow the same reasoning.** ✅ **Only business parking and tolls — and, for the
+self-employed, the business share of car-loan interest and of personal-property tax on the car (Pub 463; see the
+vehicle-costs rules above)** — ride on top of the standard rate; **passenger amenities** (water, mints, chargers) are
+supplies, not car costs.
+⇒ ⛔ **Washes and cleaning of THE CAR WHOSE COSTS ARE ON THE STANDARD RATE: do not send the client a question about them** —
+the answer cannot change the return. ⚠️ **But when the washes may be for ANOTHER vehicle** — inventory, cars sold for
+export, a car on actual costs — **the question can change the return and is still asked.** *(Vasyutyk 2025: the gig car,
+so not asked. Tseretsian applied the rule to his BMW and still asked whether the washes were for the cars he sells — Q22;
+Piliushin deducts washes in Part V because they were for cars sold for export.)*
 
 ### 4I · 📗 THE FINAL WORKSHEET — the one that is KEPT, and the only rule about it that is absolute
 
@@ -4285,7 +4427,7 @@ never seen any earlier version of this file?*** **If it needs one, it does not g
 | **2 · Where their numbers came from** | 🔑 **WHERE THEIR PROFIT AND LOSS IS AND WHERE THEIR BALANCE SHEET IS** — **named files, named folders, named dates. She asked for this by name and it is the single most useful line in the document a year later** |
 | **3 · Every document used** | **One row per document: what it is, where it is, what it STATED, and what it settled.** ⛔ **Not a file list — a list of what each one CONTRIBUTED** |
 | **4 · What the client told us outside the documents** | **By email, by portal message, by voice, in a meeting — with the date and the words. This is the material that disappears first** |
-| **5 · The return, form by form** | **Every figure with its form, page, part and line, and the arithmetic that produced it** |
+| **5 · The return, form by form** | **Every figure with its form, page, part and line, and the arithmetic that produced it** — 🆕 **on a Schedule C return, with the P&L, `Vehicle Expense Wkst (ATX)` and `Home Office Exp Wkst (ATX)` tabs laid out as ATX's screens, FINAL values only (§4D, Lilian 2026-10-15)** |
 | **6 · The decisions** | **Each one: what was decided, WHO decided it, when, and what the alternative was.** ⚠️ **Including the ones overruled — the objection travels with the decision** *(§4C)* |
 | **7 · What is assumed, and what would change it** | **Every position resting on an assumption rather than a document, with the consequence if the assumption is wrong** |
 | **8 · What carries forward** | 🔑 **What next year needs: basis, carryovers, elections made, replacement periods running, balances, unfinished items** |
