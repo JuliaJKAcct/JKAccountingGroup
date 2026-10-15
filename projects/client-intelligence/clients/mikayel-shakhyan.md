@@ -6,7 +6,8 @@
 > §5's first bullet and every sweep since 2026-09-19 said the return went overdue on 2026-09-15 — that was
 > an arithmetic error.** The pro forma 1120 is due **15 Apr 2026**; a Form 7004 adds **six months** →
 > **15 Oct 2026** (the working paper's header has said so since 2026-09-05). **2026-09-15 is only the date
-> typed on Double's own tasks.** ⚠️ **It holds only if the 7004 actually went in** — still unverified (§6
+> typed on Double's own tasks.** ⚠️ **It holds only if the 7004 actually went in** — 🆕 *2026-10-15: Lilian says it
+> was transmitted; the DATE is still unrecorded (the preparer signed it 6/25/2026)* (§6
 > Information still needed). 🆕 **And the same day the client sent two documents that open a SECOND
 > company — Fun Park USA, LLC** (§1, §4, §6 Log 2026-10-14).
 
@@ -36,7 +37,8 @@
 
 - **Business name:** **Lum and Ari LLC** — **EIN 36-5147055**. The LLC has no separate Double
   client; everything about it sits on the owner's individual record (710648).
-- **Entity type:** Florida LLC, **formed 8 August 2025**, ✅ **single member** _(confirmed by
+- **Entity type:** Florida LLC, **formed 15 July 2025** _(Sunbiz: filed and effective 07/15/2025, document
+  L25000325767, ACTIVE — read 2026-10-15; the `8 August 2025` this file carried until then was wrong)_, ✅ **single member** _(confirmed by
   Lilian, 2026-09-05)_. 🔴 So it is a **foreign-owned U.S. disregarded entity** — see §4 Income tax.
 - **Home state:** Florida. The company's address on its return is **the owner's home**, so it is
   not written here.
@@ -59,7 +61,7 @@
 - **Primary language:** RU — Double's `Preferred language` reads **"Only Russian"**
 - **Our engagement:** Income tax only. Double: `Income Tax: true` · `Bookkeeping: N/A` ·
   `1099 Preparation: false` · `Annual Report: false`
-- **Fiscal year-end:** Calendar. 2025 is a **short first year, 8 Aug → 31 Dec 2025**.
+- **Fiscal year-end:** Calendar. 2025 is a **short first year, 15 Jul → 31 Dec 2025** _(corrected 2026-10-15 from Sunbiz)_.
 - **Accounting platform:** None — Double `platform: none`, no QuickBooks. **There are no books.**
   The bank account is the only ledger.
 - **Double `Account Type`:** **Individual** _(Double `list_client_properties`, read 2026-09-19)_ —
@@ -234,6 +236,13 @@
 
 ### Log
 
+- _(2026-10-15, last)_ — **Sunbiz (screenshot from Lilian): Lum and Ari LLC, document L25000325767, filed and
+  effective 07/15/2025 — NOT 08/08/2025 as the prepared return had it — ACTIVE, 2026 annual report filed
+  04/14/2026, Mikayel sole authorized person and registered agent.** So the 2025 return is not final and a **2026
+  pro forma 1120 + 5472 will be owed**. Lilian confirmed **the 7004 was transmitted** _(date not recorded — the preparer signed it 6/25/2026; if after
+  4/15/2026 the extension is void)_, the 5472 sent with it was only
+  a shell, and his reimbursing Anastasia White for the $125 is fine. Open: whether Julia adds the $2,700 of cash
+  deposits as contributions (option B) — if so, get his written confirmation that the money was his and not a loan.
 - _(2026-10-15, final)_ — **JULIA NARROWED THE RULING (relayed by Lilian): the ONLY reportable transaction on
   the 2025 Form 5472 is the $125 Florida formation fee**, which the client paid out of his own pocket before the
   company existed. **The $850 to Pivniak Law is a business expense — not reportable.** Part V = $125, 1f/1h = 125,
