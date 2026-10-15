@@ -1,6 +1,6 @@
 # Mikayel Shakhyan
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-14
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-15
 
 > 🔴⏰ **2026-10-14 — THE DEADLINE HAS NOT PASSED. IT IS 15 OCTOBER 2026: TOMORROW.** ⛔ **The banner below,
 > §5's first bullet and every sweep since 2026-09-19 said the return went overdue on 2026-09-15 — that was
@@ -234,6 +234,18 @@
 
 ### Log
 
+- _(2026-10-15)_ — **Lilian sent the attorney's receipt for the Pivniak Law payment** (Pivniak Law, P.A.,
+  invoice 0002, issued 2026-10-15 on request, billed to Mikayel personally, service date = the payment date
+  of 14 Nov 2025) and asked what to do with it and with the return. **The receipt describes the fee as
+  verification of a company that was meant to provide a sales service on Amazon — vendor due diligence for
+  the LLC's business, NOT the LUMARI trademark.** ⇒ **Not a distribution and not a related-party
+  transaction: it comes off Form 5472 entirely** (working paper §4L, transcription §1A ③). It also
+  closes Q4's half of the item-D question. **Still open:** the $21 farmers'-market card charge (Q4's
+  other half), which counterparty the lawyer vetted (most likely AXY Company LLC, paid 10 days later —
+  evidence toward "unrelated", not proof), and Q1 / Q2 / Q3 / Q5 / Q6. ⏰ **Today is the extended due
+  date** — whether the 7004 actually went in is still unverified. **Upload the receipt to Double.**
+  Checked Julia's Gmail since 2026-10-01 for the client, the LLC, Pivniak, AXY and Oxana Martox: only the
+  two weekly-sweep digests, nothing from him.
 - _(2026-10-14)_ — **Lilian asked where the reportable-transactions work stood, and sent two documents the
   client had just sent her.** _(Her recollection was a payment to a lawyer or to a company that helped
   register the LLC — that is the **Pivniak Law payment** of 14 Nov 2025, out of the company's own account
@@ -500,7 +512,7 @@
       5472 are filed**, not just a line. ⚠️ **And if no answer comes, what to do about it is
       Julia's** — working paper §6D ②. ⓘ *The separate-form rule covers a **foreign or U.S.**
       related party, not only a U.S. one.*
-- [ ] 🟠 **Did the company pay anything that was really his personally?** Each one is a
+- [ ] 🟠 ✅ *(2026-10-15: the **$850 is answered** — vendor due diligence for the business, not his; only the **$21** card charge is left.)* **Did the company pay anything that was really his personally?** Each one is a
       distribution, even when the money went to an unrelated payee. 🆕 *(2026-10-14: ask in the same
       breath whether **Anastasia White works for Pivniak Law** — if so, that payment may be formation work.)*
 - [ ] ⏸ **In which country does he file a tax return as a resident — and does he have a tax
