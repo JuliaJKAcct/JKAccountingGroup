@@ -4322,7 +4322,49 @@ row `Excess Distributions (K-1 (1120S): 01)` in **Part I, box C — short-term**
 A shareholder since the company was formed two years earlier holds it **long-term** → **Part II, box F → Schedule D line
 10** — and at a low taxable income that gain is taxed at **0%** instead of the ordinary rate. ✅ **Every time Form 7203 line
 6 > line 5: find the stock's acquisition date and check the 8949 row's term.** ⚠️ **The ATX field that sets the term for
-that generated row is NOT established yet** — whoever finds it writes it here.
+that generated row is NOT established yet** — whoever finds it writes it here. ✅ *At Vasyutyk 2025 Julia made it
+long-term (relayed 2026-10-15) — the ruling, not the route.*
+
+#### ⑨ 🔴 A GIG PLATFORM'S FEES — **LINE 1 CARRIES THE GROSS, SO THE FEES MUST BE DEDUCTED**
+
+> **Lilian, 2026-10-15:** *"Sí, añádelo al skill de preparación de taxes"* — after the review of Vasyutyk draft 2.
+
+**Missed on two drafts in a row (Vasyutyk 2025 — working paper §2B R1, §2E E1), and it was the largest correction on the
+return:** deducting the fees turned a balance due into a refund.
+
+🔑 **Why it happens:** the platform's **Form 1099-K box 1a is the GROSS the riders paid** — fares plus tips, **before** the
+platform takes its commission — and that gross goes on Schedule C line 1 *(with the 1099-NEC, which is the platform's own
+incentives)*. **The driver never received the commission**, so if it is not deducted he pays income tax and SE tax on
+money he never had.
+
+✅ **Where the figure comes from:** the platform's **annual tax summary** — Uber's *"Tax Summary"*, page 1 *"Expenses, fees
+and tax"* and its **Table 1** (service fee, booking fee, split fare fee, airport and city fees, instant pay charges, other).
+⚠️ **The same table lists tolls** — those go on **line 9** with the car, **not** in the fees row; take them out or they are
+counted twice. 🧮 **Tie it:** reportable payments − fees = the summary's **net payout**.
+
+✅ **Where it is typed:** a **Part V** row `Uber fees` (the firm's 2024 convention for this client) **or line 10**
+(commissions and fees) — the result is identical; keep to whatever the prior year did. **Each platform on its own row**
+(a Lyft fee from the client's own sheet sat correctly on line 10).
+
+☑️ **In every draft review (§4F):** if Schedule C line 1 holds a **1099-K gross**, find the platform's fees on line 10 or
+in Part V. **If neither has them, it is a DEFECT**, never a judgement call. ⚠️ **And re-check the tips limit (⑦) after
+fixing it** — the fees can turn the business into a loss, which takes the tips deduction to 0.
+
+#### ⑩ 🚗 ON THE STANDARD MILEAGE RATE, CAR WASHES AND CLEANING ARE **INSIDE** THE RATE — DON'T ASK FOR THEM
+
+🛑 **IRS Volunteer Tax Alert VTA-2019-01 (2019-02-14):** *"IRS Counsel considers car washes as part of the expense of
+maintaining the car… if a taxpayer is taking the standard mileage rate, he or she cannot also deduct the car wash
+expense. There is no authority that would allow a taxpayer claiming the standard mileage rate to also deduct the expense
+of car washes as they would tolls and parking."* *(irs.gov/pub/irs-wi/Tax-Alert-for-Car-Washes2.pdf, read 2026-10-15.)*
+🔑 **Cleaning products for the car follow the same reasoning.** ✅ **Only business parking and tolls — and, for the
+self-employed, the business share of car-loan interest and of personal-property tax on the car (Pub 463; see the
+vehicle-costs rules above)** — ride on top of the standard rate; **passenger amenities** (water, mints, chargers) are
+supplies, not car costs.
+⇒ ⛔ **Washes and cleaning of THE CAR WHOSE COSTS ARE ON THE STANDARD RATE: do not send the client a question about them** —
+the answer cannot change the return. ⚠️ **But when the washes may be for ANOTHER vehicle** — inventory, cars sold for
+export, a car on actual costs — **the question can change the return and is still asked.** *(Vasyutyk 2025: the gig car,
+so not asked. Tseretsian applied the rule to his BMW and still asked whether the washes were for the cars he sells — Q22;
+Piliushin deducts washes in Part V because they were for cars sold for export.)*
 
 ### 4I · 📗 THE FINAL WORKSHEET — the one that is KEPT, and the only rule about it that is absolute
 
