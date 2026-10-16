@@ -111,7 +111,7 @@
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **File both 2025 FBARs — due 2026-10-15.** Before filing: ask whether the Raiffeisen figures are 2025 maximums; check Galina's TIN type; verify the Treasury rates.
+- 🔴 **File both 2025 FBARs — due 2026-10-15, so now LATE (pick a late-filing reason in the BSA form).** Before filing: ask whether the Raiffeisen figures are 2025 maximums; check Galina's TIN type; verify the Treasury rates.
 - **Julia:** the filed 2025 Form 8938 names the wrong bank for the account ending 5569 (Bakai instead of Raiffeisen) and converts at the yearly-average rate — amend or leave? _(2026-10-16)_
 - **Ask Julia:** do the Russian companies' accounts go on Galina's FBAR?
 - **Form 114a** (the clients' authorization for the firm to e-file their FBAR): a Drive search found none — confirm one is on file.
