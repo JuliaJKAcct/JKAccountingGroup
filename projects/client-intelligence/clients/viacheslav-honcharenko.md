@@ -1,6 +1,6 @@
 # Viacheslav Honcharenko
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-10-10
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-10-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -90,6 +90,11 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Organizer status:** **Completed 2026-03-31 in TaxDome.**
 - **Process notes (→ future SOP):**
   - **A dependent daughter was added for 2025** _(Lilian, 2026-04-07)_ — first dependant on record, so filing status and credits may both move.
+
+### FBAR (FinCEN Form 114)
+- **Applies?** 🔴 **Julia says yes — she put him on the 2025 FBAR list she gave Lilian on 2026-10-15.** It is the first time a foreign account appears for him in the firm's record. The link is a **Spanish company, Best Broker Real Estate SL** — his own note in the Double organizer names it, and Julia started its Form 5471 workbook on 2026-10-15 (`Honcharenko_5471_01_BEST_BROKER.xlsx`, Drive). It is NOT the Florida [Best Broker Realty LLC](./best-broker-realty.md) (a Form 1065 filer).
+- **2025 FBAR due 2026-10-15** (the automatic extension date). No FinCEN acknowledgement in Julia's Gmail since 2025-09-21.
+- ✅ **His foreign-account information IS in Double — inside the organizer, not in the file library.** He completed the Double organizer `JK 2025 1040 Organizer` on **2026-10-14** and, on its foreign-accounts slide, answered **yes** to the over-$10,000 question (and **no** to the Form 8938 threshold question), then uploaded **`Foreign income template.xlsx`** and **`Constancia_saldo_maximo_2025_Best_Broker.pdf`** (a certificate of the 2025 maximum balance). _(Read 2026-10-15 from the organizer answers; the two files themselves were not opened — they are reached from the organizer's page in Double.)_ ⚠️ A search of his Drive folder, Double's file list and Julia's Gmail found nothing, because organizer uploads do not appear there. **Whether the account is his or the company's** decides how it goes on the FBAR — open the template.
 
 ### Licenses & other filings
 - **Applies?** ⚠️ **Yes — a Broward County business tax receipt**, approved 2026-07-07. County BTRs **renew annually (Florida's run to 30 September)**, so this is a recurring obligation, not a one-off.
@@ -185,6 +190,8 @@ the actual details (and Claude can pull them live when a task needs them).
   4868 extension (deadline 2026-10-15) is unaffected and now ~19 days away.
 - 2026-10-10 — **Incremental sweep (baseline 2026-10-03, inclusive; the file's last sweep entry was 2026-09-26).** 🆕 **Double: Julia PUBLISHED a Double-native organizer, "JK 2025 1040 Organizer", for him on 2026-10-09 (17:32 UTC)** — the only activity-log entry since 2026-10-03 (Double `list_activity_log`, 2026-10-10). The property `Organizer Status` still reads Completed (the TaxDome-era completion of 2026-03-31) — so he now has a second, Double-side organizer to complete, **5 days before the 2026-10-15 extension deadline**. Whether he has opened it is not visible (the log shows publishing only for this window). Project "2025 Taxes" still `waitingOnClient`, `filedAt` empty; `list_notes` 0; `list_files` from 2026-10-03: none. A search of Gmail (all surname spellings, Karpenko, Pro Title/Optic Gold/Best Broker), bounded after 2026/10/03, found no client correspondence — only solicitation mail addressed to Pro Title Agency LLC. A solicitation from a Florida filing service dated 2026-10-06 lists **"MAXRATINGS LLC"** as a Florida LLC (2027 annual-report offer) — this is the spelling with an `s`, matching Valentin Volzhanskiy's records and not the `Maxrating` spelling above; **it shows a Florida entity of that name exists, it does not establish that it is the payer on his 1099** (Gmail, 2026-10-06). Drive full-text for his surname, modified since 2026-10-03: nothing. Ping: org-wide search (Schedule C / Karpenko / business tax receipt) — garbled unrelated hits, discarded. ⚠️ **BTR renewal:** the file notes county BTRs run to 30 September; the receipt approved 2026-07-07 would therefore have lapsed 2026-09-30, 10 days ago — a search of Gmail bounded after 2026-10-03 found no renewal; nothing earlier was searched for it. Inference only; a person should check BTExpress.
 
+- 2026-10-15 — **FBAR 2025 asked for by Julia** (Lilian's session). Searched Drive (his 2025 folder and his name), Double files and Julia's Gmail for a list of his foreign accounts: none found there. Then, at Lilian's request, read his Double organizer answers: **the foreign-income template and a 2025 maximum-balance certificate are uploaded inside the organizer** (completed 2026-10-14). Julia built his first Form 5471 workbook the same day (`Honcharenko_5471_01_BEST_BROKER.xlsx`).
+
 ### Tax year 2025 — the review
 
 - **Filing position:** Form 1040, **with a dependant for the first time on record**, and **with 1099 income** whose treatment is unsettled.
@@ -194,6 +201,7 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Outstanding items (CI-only — never in the SOP)
 
+- 🔴 **FBAR 2025 — due 2026-10-15.** Open the two files he uploaded in the Double organizer (`Foreign income template.xlsx`, `Constancia_saldo_maximo_2025_Best_Broker.pdf`) and build his FBAR from them; settle whether the account is his or Best Broker Real Estate SL's. _(2026-10-15)_
 - 🔴 **Read the TaxDome thread from 2026-04-13/14 before contacting him.** The firm asked, he answered, and nobody recorded the outcome. Asking again is the failure `method.md` rule 1 exists to prevent.
 - 🔴 **Settle the Schedule C position** — 1099s from THREE payers (see §5) and a county business tax receipt, against a Double column that says plain `1040`.
 - 🔴 **Find out who Sergey Karpenko is to this client** (2026-09-12) — the evidence points at his business activity being connected to Karpenko's group (Best Broker Realty, Pro Title Agency, Optic Gold, VoiceCapital, the now-dissolved Pro Management Agency), but the nature of the relationship (contractor, employee, colleague) is unconfirmed. This likely settles the Schedule C question above once known. 🆕 **2026-09-18 — ADVANCED, from Valentin Volzhanskiy's file: a THIRD firm client sits in the same network, is paid by the same three payers, exchanges money with Karpenko as work, and PAYS THIS CLIENT referral and lead-generation commissions.** 🔑 **That reframes the question from *what is Karpenko to him* to *what is this network, and what work does it actually sell* — the answer on Valentin's side is credit repair and, newly, real estate.** ⛔ **Inferred from one client's bank records and his own labels — put it to someone, do not file it as fact.**

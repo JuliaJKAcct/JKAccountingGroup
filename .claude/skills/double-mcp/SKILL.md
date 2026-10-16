@@ -198,8 +198,9 @@ note, not in an artifact, not in an email or a report:
 > or the **foreign registration address** of a branch (Form 8858), and the firm holds the document, the session
 > **asks Lilian or Julia, naming exactly which identifiers**; on a yes they go **into that workbook only** —
 > handed over as a file and saved in Double, **never typed into chat text, never into the repo, an artifact or a
-> Double note**, and **not a standing grant: the next workbook asks again.** SSNs, ITINs, dates of birth and
-> credentials were not part of it. The workbook rules are [`tax-return-sop`](../tax-return-sop/) §4D.
+> Double note**, and **not a standing grant: the next workbook asks again.** ⓪ **Scope is whatever she names when asked** — on Chursinov it began with the foreign address and account
+> numbers, and the same evening she widened it to *everything typed into ATX or the FBAR*, **SSNs and dates of birth
+> included, confirmed when asked about them specifically**. Credentials never. The workbook rules are [`tax-return-sop`](../tax-return-sop/) §4D.
 > This widens what may be WRITTEN into the workbook, not how a document is READ: a document held in Double still goes through [`redact.py`](../../../tools/redact-doc/), which masks these values. ⚠️ **On Chursinov the session read the five Double-held statements with a local extractor that printed only masked values (first five, last four), wrote the full values into the workbook alone and deleted the downloads — that route is NOT established; ask before using it again** ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 211). Never `load_attachments_to_chat`.
 
 - **SSN / ITIN numbers**
