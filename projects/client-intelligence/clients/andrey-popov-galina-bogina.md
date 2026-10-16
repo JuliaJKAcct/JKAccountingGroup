@@ -91,7 +91,7 @@
 - 🔴 **Use the 2026-09-09 e-mailed lists, not the Drive copies.** They lower all four Raiffeisen amounts sharply (both spouses); everything else, account numbers included, is unchanged. **Ask whether the new figures are the HIGHEST 2025 balance or the 31 December one** — the FBAR needs the highest, and in 2024 these accounts held far more.
 - 🔴 **Two things on Galina's 2024 FBAR to check before the 2025 one:** item 3a "TIN type" is marked **EIN** (an individual normally files under her SSN/ITIN — to check, not settled), and one Raiffeisen account number was typed with **19 digits** where her own list has 20.
 - **Galina's list: two amounts differ tenfold from the 2024 FBAR** (Alfa-Bank USD up, Bakai USD down). She re-sent them unchanged on 09-09; the Alfa-Bank one is worth a one-line confirmation.
-- **Andrey said on 2026-09-10 that he did not see HIS foreign accounts on the 2025 return, only Galina's** — the same day the return was filed. Whether Julia fixed it before filing is not on record. **Check the foreign-assets report on the filed return; if his accounts are missing, an amendment is the question for Julia.** And: **do the accounts of Galina's Russian companies belong on her FBAR?** (she reports them on Forms 5471; another person owns 33% of VERCIA).
+- ✅ **The FBAR data is on the filed 2025 return — Form 8938, Part V (PDF pages 48–58, one page per account, all 11 accounts of both spouses)**, `POPOVandBOGINAANDREYandGALINA2025.pdf` in Double › Tax Return Filed › 2025 _(read 2026-10-16 through the redactor, at Lilian's request)_. Andrey's three accounts are there, so his 2026-09-10 complaint was resolved before filing; the amounts are the 09-09 ones. ⚠️ **Two things on that 8938 do NOT carry to the FBAR:** it converts at the **IRS yearly-average rate**, while the FBAR needs the Treasury 31-Dec rate (whether the 8938 itself should have used the year-end rate is Julia's call), and it labels the Raiffeisen EUR account ending **5569 as "Bakai bank"** — the client's list and the 2024 FBAR say Raiffeisen. And: **do the accounts of Galina's Russian companies belong on her FBAR?** (she reports them on Forms 5471; another person owns 33% of VERCIA).
 
 ## 6. History & open questions
 
@@ -107,11 +107,12 @@
 - 2026-09-10 — Andrey: *he did not see his own foreign accounts on the return, only Galina's.* **2025 return filed** the same day (Double).
 - 2026-10-05/07 — IRS notices: the penalty was removed, interest remained; Andrey paid it from his IRS account and Julia confirmed it looked right.
 - 2026-10-15 — **FBAR 2025 started by Lilian, at Julia's request** (this session). Found both lists and both 2024 FBARs; built a working FBAR sheet per spouse (accounts, bank addresses, Treasury 12/31/2025 conversion, what to verify) and handed it to Lilian as a file — **not committed**. Lilian then uploaded the 2026-09-09 lists from Julia's e-mail; the sheet was updated from them (version 2). Asked whether a firm worksheet per client existed: **none was found for this couple** — each spouse's own Word list is the per-person source, and the bank addresses come from the 2024 FBARs.
+- 2026-10-16 — At Lilian's request, read the filed 2025 return through the redactor: **the FBAR data is Form 8938 Part V, pages 48–58** (11 accounts, both spouses, the 09-09 amounts). Found the 5569 bank-name error and the yearly-average conversion. The 2025 FBARs are now **late** (due 2026-10-15) — the BSA form asks for a late-filing reason.
 
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **File both 2025 FBARs — due 2026-10-15.** Before filing: ask whether the Raiffeisen figures are 2025 maximums; check Galina's TIN type; verify the Treasury rates.
-- **Check that Andrey's foreign accounts are on the filed 2025 return** (his 2026-09-10 e-mail) — Julia.
+- **Julia:** the filed 2025 Form 8938 names the wrong bank for the account ending 5569 (Bakai instead of Raiffeisen) and converts at the yearly-average rate — amend or leave? _(2026-10-16)_
 - **Ask Julia:** do the Russian companies' accounts go on Galina's FBAR?
 - **Form 114a** (the clients' authorization for the firm to e-file their FBAR): a Drive search found none — confirm one is on file.
 - Owed: a full first sweep (Ping, Gmail before 2025-12, Drive).
