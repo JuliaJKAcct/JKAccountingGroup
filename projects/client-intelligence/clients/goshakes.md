@@ -1,11 +1,11 @@
 # GOSHAKES LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-14
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-17
 
 > 🔵 **Created 2026-10-13** during phase 1 of the owner's 2025 Form 1040 ([`kyrylo-kuznetsov.md`](./kyrylo-kuznetsov.md)).
 > **Its 2025 Form 1065 was filed by the firm (2026-09-14)** — the partners' K-1s come from it, and the owner's
-> organizer did not mention them. Seeded from Double's record, Julia's Drive (file names only), Gmail and Ping; a
-> full historical sweep is still owed.
+> organizer did not mention them. Seeded from Double's record, Julia's Drive (file names only), Gmail and Ping.
+> ✅ **First full historical sweep completed 2026-10-17** (Double, Gmail paged to the end, Drive, Ping).
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -53,6 +53,9 @@ the actual details (and Claude can pull them live when a task needs them).
 | Kyrylo Kuznetsov — partner; the Double portal contact (one contact for all five of his records) | Double client (link below) |
 | Vitali Yakubuk — partner; most likely the associate who attends the firm's meetings and pays its sales-tax fees | Double / Gmail |
 
+- **Double portal contacts (roles only, 2026-10-17):** Kyrylo (admin; one contact across his five records) and **Vitali
+  Yakubuk** (admin; added 2026-07-16, on the three partnerships only). Vitali is the person who completed the 2025
+  business organizer (2026-09-03) and who is sent the sales-tax confirmations. _(Double `list_contacts` + activity log)_
 - **Double client:** [app.doublehq.com/close?cid=710576](https://app.doublehq.com/close?cid=710576)
 
 ## 3. Systems & access
@@ -65,7 +68,10 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Sales tax
 - **Applies?** Yes — Double `Sales Tax` **Quarterly**. **Q2 2026 filed as a ZERO return on 2026-07-16** (Lilian), together
-  with Boost You.
+  with Boost You. The firm's Double task for the **next quarter's return** (Q3, Jul–Sep) was due 2026-10-05 and **still reads Not Started on 2026-10-17**.
+  For Q2 the associate sent the fee by Zelle (memo "Sales tax") on 2026-07-16 shortly before Lilian filed and emailed the confirmation
+  (Gmail). The 2026-07-14 Zoom summary describes these quarterly zero returns as due **on the 20th** (AI summary — verify against
+  the DOR calendar).
 
 ### Payroll
 - **Applies?** Not applicable — Double `Payroll` not set; no payroll seen.
@@ -82,13 +88,17 @@ the actual details (and Claude can pull them live when a task needs them).
   amends.
 
 ### Licenses & other filings
-- **Annual report:** **2026 Amended Annual Report** filed 2026-09-21 — **removed a member/manager named Galina** (Drive › Annual Reports › 2026).
+- **Annual report:** **2026 Amended Annual Report** filed 2026-09-21 — **removed a member/manager named Galina** (Drive › Annual Reports › 2026). The firm invoiced it separately (invoice sent and paid the same day, 2026-09-21; amount withheld).
 
 ## 5. Key facts & quirks
 
 - 🔴 **The partners' K-1s are the firm's own work — never ask a partner for them.** The 2025 return was filed
   2026-09-14; its K-1s go on all four partners' 1040s.
 - **One of three sister partnerships** with two of the same partners (Kyrylo and Vitali): [`boost-you.md`](./boost-you.md) · [`the-roadside-project.md`](./the-roadside-project.md). Kyrylo also owns [`never-give-up-kk.md`](./never-give-up-kk.md).
+- **The two Double notes on this record (2026-06-23 onboarding, 2026-07-14 Zoom) are copies of Never Give Up KK meeting notes** — meeting context, not facts specific to this company. _(Double notes, 2026-10-17)_
+- **Double hand-maintained columns (2026-10-17):** `Signature` Signed · `Invoice` Paid · `Organizer Status` Sent (the organizer was completed 2026-09-03 — the column lags). _(Double properties)_
+- **2025 return mechanics (Double):** organizer completed 2026-09-03 → Waiting on Client Approval 2026-09-12 → **Filed 2026-09-14**; the signed e-file authorization was saved to the 2025 folder on 2026-09-21. The 1065 fee invoice went to Kyrylo's email 2026-09-12 and was paid 2026-09-14 (plus one separate payment request paid the same day). _(Double; Gmail; amounts withheld)_
+- **Galyna Vasylieva also appears in Deep Tech's 2025 purchasing/shipping correspondence** (a robot import and an invoice she sent to the firm and Kyrylo, Sept 2025), and Siarhei Tsehliankou appears as a Deep Tech employee-approval request in Gusto (Oct 2025) — two of Goshakes' four 2025 partners connect to Deep Tech. Observation only; no conclusion drawn. _(Gmail subjects/senders; contents not copied)_
 - ⚠️ **A 2026 amended annual report removed "Galina" (Galyna Vasylieva).** ✅ **She WAS a 2025 partner: the filed 1065 gives her a 25% K-1 (zero, like all four).**
 
 ## 6. History & open questions
@@ -101,6 +111,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - 2026-09-14 — **2025 Form 1065 filed** (Lilian).
 - 2026-09-21 — **2026 Amended Annual Report** filed with Sunbiz, removing "Galina".
 - 2026-10-13 — **File created** during phase 1 of Kyrylo Kuznetsov's 2025 Form 1040. _(Double, Drive names, Gmail, Ping)_
+- 2026-10-17 — First full historical sweep: Gmail (paged to the end), Drive, Ping and Double show no new facts after 2026-09-21 beyond those recorded; no Q3 sales-tax filing evidence found.
 - 2026-10-14 — **The filed 2025 Form 1065 was read for the K-1s, on Lilian's authorization:** a **ZERO year** — no amount on
   page 1, every K-1 box blank, no capital-account amounts; date on page 1 (most likely *date business started*) **2025-11-10**.
   ([Kyrylo's working paper](../../tax-returns/kyrylo-kuznetsov/2025-form-1040.md) §1L)
@@ -109,11 +120,12 @@ the actual details (and Claude can pull them live when a task needs them).
 - Filed 2026-09-14 (Lilian). **A zero year** — most likely the first (page 1 dates the business from **2025-11-10**). Every partner's K-1 is blank, so nothing reaches any partner's 1040.
 
 ### Outstanding items (CI-only — never in the SOP)
-- _(none open — 2026-10-14)_
+- 🟠 **Q3 2026 sales-tax return** — Double task due 2026-10-05, **Not Started on 2026-10-17 = 12 days past the task date**; a search of Gmail (unbounded), Drive (names) and Double on 2026-10-17 did not find a Q3 filing confirmation or the associate's fee Zelle. **If the DOR's 20th-of-the-month rule applies, the cut-off is 2026-10-20 = 3 days** (verify). _(The earlier "none open" line was wrong: this recurring task existed from 2026-07-20.)_
+- 🟠 Double project tasks ("File tax return", "Follow up on tax payments", "Send final returns to client") all read Not Started although the project status is Filed — pending since 2026-09-14 (33 days); no email delivering the filed return/K-1s was found.
 
 ### Information still needed
 - [x] The partners' percentages — ✅ read off the filed 1065 (2026-10-14). _(Sunbiz formation date still unchecked.)_
-- [ ] What the company does.
+- [ ] What the company does. **Pending since 2026-10-13 (4 days).** 2026-10-17: Gmail (unbounded), Drive names and Ping did not find a description; the business organizer (completed 2026-09-03, not opened by this sweep) is the likely source.
 
 ## 7. Links
 

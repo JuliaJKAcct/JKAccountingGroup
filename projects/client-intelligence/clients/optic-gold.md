@@ -1,6 +1,6 @@
 # OPTIC GOLD INC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-10-10
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-10-17
 >
 > ✅ **First full historical sweep completed 2026-08-15** — Gmail (inbox + sent, full history),
 > Double (client record, notes, contacts, properties), Google Drive (folder + file listing) and
@@ -82,7 +82,7 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Agency & portal:** _(pending)_
 - **Form:** _(pending)_
 - **Our role:** _(pending)_ <!-- we file / we prepare, client files / client handles -->
-- **Current status:** July 2026 sales-tax report filed and paid _(Gmail + Google Drive, 2026-08-18/19)_.
+- **Current status:** July 2026 sales-tax report filed and paid _(Gmail + Google Drive, 2026-08-18/19)_. **September 2026 report prepared 2026-10-16 and sent to the client with the payment scheduled for 2026-10-20** (amount withheld) _(Gmail + Google Drive, 2026-10-16)_. September financials sent to the client 2026-10-12; the September close tasks were marked Done 2026-10-12 _(Gmail + Double activity log, 2026-10-12)_.
 - **Process notes (→ future SOP):** _(pending)_
 
 ### Payroll
@@ -161,7 +161,7 @@ A running, dated record as we build this profile.
      contact details and dollar figures never do (double-mcp §2.2). See the organizer-review skill. -->
 
 - _(pending)_
-
+- 2026-10-17 — **Weekend sweep (incremental, baseline 2026-10-10, inclusive).** Double: `list_activity_log` from 2026-10-10 = the September close tasks (A/R and A/P aging, cash flow, balance sheet, P&L, bank-feed tasks) marked Done 2026-10-12; case note 491051 `updatedAt` still 2026-08-12 (body re-read, unchanged); `list_client_properties` unchanged (Payroll still `TBD`, Sales Tax Monthly). Gmail (Julia's mailbox, `after:2026/10/10`, by business name, the Sunbiz document number, 8822 and 7004): September financials sent 2026-10-12 and the September sales-tax report/payment notice sent 2026-10-16 (payment scheduled 2026-10-20; amount withheld) — **no reply, forward or filing on the address correction, the Sunbiz notice or the Form 7004.** Drive (full-text "Optic Gold", modified after 2026-10-10): the September sales-tax report and its payment confirmation (2026-10-16) and a September bank statement (2026-10-12), nothing else. Ping: org-wide `search_meetings` returned nothing legible for this client. Chase pass: 3 items chased (8822-B, Sunbiz notice, paper 7004), all still open; 1 unchased (business activity / home state — no search target).
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** July sales tax filed and paid (Gmail + Drive, 2026-08-18/19). August month-end close moved Not Started → In Progress; "Monthly Sales Taxes" task marked Done. Chase pass on all four outstanding items — results above; context found on the Sunbiz notice pattern but the 2026-08-07 notice itself remains unopened.
 - 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: case note 491051 unchanged (`updatedAt` still 2026-08-12); one activity-log entry — a client-portal transaction question resolved by Liudmyla, 2026-08-28 (routine bookkeeping, not the tracked matter). Gmail: two invoice-payment confirmations and a Bank of America statement notice, none touching the tracked items. Chase pass on all three outstanding items — results below; all remain open with no new correspondence found.
 - 2026-09-12 — **Weekend sweep (incremental, baseline 2026-08-29→2026-09-12; the 2026-09-05 run never completed — see `sweep-state.md`).** Double: case note 491051 still unchanged (`updatedAt` still 2026-08-12); activity log this window is routine August-close task rescheduling/completion and one 1099-prep task moved In Progress, nothing touching the tracked items; `list_projects` read for the first time — 2025 Taxes `filed` 2026-06-29 (§4). Gmail: three threads this window (financials sent, an invoice/payment cycle) — none on the Form 8822-B address correction, the Sunbiz notice, or the Form 7004 confirmation. Ping: `search_meetings` scoped to "Optic Gold" returned only pre-baseline (June/July 2026) garbled content — nothing new or legible this window. Chase pass on all three outstanding items — results below; all remain open, ages updated.
@@ -175,9 +175,9 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- 🔴 **Correct the company's address with the IRS (Form 8822-B).** STILL OPEN, **≈208 days** as of 2026-10-10, pending since 2026-03-16 (chased hard for weeks running — no filing or correspondence found in any search since). A targeted Gmail + Drive search (2026-10-10), bounded after 2026-10-03, again found no filing, reply, or draft. **This is now well past six months unactioned — a person needs to file the 8822-B or say why not, rather than another sweep re-confirming the same silence.**
-- 🔴 **Open and read the 2026-08-07 Sunbiz "Notice of Change or Filing"** (document P23000053978) — **READ-STATUS CHANGED, CONTENT STILL NOT RECORDED:** **≈64 days** as of 2026-10-10, pending since 2026-08-07. Gmail shows the 2026-08-07 message as no longer unread (since 2026-10-03; re-checked 2026-10-10), but a search bounded after 2026-10-03 found no reply, forward or note saying what it says or whether it bears on the address matter. **Whoever opened it should write down what changed; no search will surface that.**
-- **Confirm the IRS processed the paper Form 7004 for 2025** — STILL OPEN, **≈208 days** pending since 2026-03-16; the 2026-10-10 search (Gmail + Drive title search, bounded after 2026-10-03) found no confirmation either.
+- 🔴 **Correct the company's address with the IRS (Form 8822-B).** STILL OPEN, **≈215 days** as of 2026-10-17, pending since 2026-03-16 (chased hard for weeks running — no filing or correspondence found in any search since). A targeted Gmail + Drive search (2026-10-17), bounded after 2026-10-10, again found no filing, reply, or draft. **This is now well past six months unactioned — a person needs to file the 8822-B or say why not, rather than another sweep re-confirming the same silence.**
+- 🔴 **Open and read the 2026-08-07 Sunbiz "Notice of Change or Filing"** (document P23000053978) — **READ-STATUS CHANGED, CONTENT STILL NOT RECORDED:** **≈71 days** as of 2026-10-17, pending since 2026-08-07. Gmail shows the 2026-08-07 message as no longer unread (since 2026-10-03; re-checked 2026-10-10), but a search bounded after 2026-10-10 found no reply, forward or note saying what it says or whether it bears on the address matter. **Whoever opened it should write down what changed; no search will surface that.**
+- **Confirm the IRS processed the paper Form 7004 for 2025** — STILL OPEN, **≈215 days** pending since 2026-03-16; the 2026-10-17 search (Gmail + Drive full-text, bounded after 2026-10-10) found no confirmation either.
 - **What the business actually does, and its home state** — not chased this pass (deferred to prioritize the three named items above; no natural search target). Payroll also remains **TBD** in Double.
 
 ### Information still needed
@@ -190,7 +190,7 @@ reports for this client.
 - [ ] Fiscal year-end
 - [x] Whether the client belongs to a known owner-group already profiled here — yes, the `best-broker-realty.md` serial-entity group (§5)
 - [ ] Whether Liudmyla keeps working notes for this client that should feed this file
-- [ ] What changed in the 2026-08-07 Sunbiz notice — still open 64 days on; Gmail shows it opened since 2026-09-26 but nothing records its content
+- [ ] What changed in the 2026-08-07 Sunbiz notice — still open 71 days on; Gmail shows it opened since 2026-09-26 but nothing records its content
 
 ## 7. Links
 
@@ -198,4 +198,5 @@ reports for this client.
 - **Double case note:** `CASE · IRS Form 2553 — S-election on file` — note **491051**. The IRS calls in full: dates, fax numbers, what each agent said, and what is still owed.
 - **Migrated TaxDome notes (Drive):** [`*QBO Clients and Individuals` → Optic Gold Inc → `1. Notes`](https://drive.google.com/drive/folders/13bGBpdYxjlbOCpbUUNEZryWRgZTunu21) — holds `1.1 - IRS call 02.04.2026 - Form 2553 not received` and `1.2 - IRS call 03.16.2026 - Form 2553 accepted`, the same two calls written up above. Mirrored in Double at `TaxDome > Optic Gold Inc > 1. Notes`.
 - **Google Drive folder (sensitive vault):** _(pending — link)_
+- **September 2026 sales-tax report (Drive, 2026-10-16):** [09-2026 SALES TAX REPORT.pdf](https://drive.google.com/file/d/12Bdmu-tJPlRLikuK0qAWUOGa1Gfh2WYa/view?usp=drivesdk)
 - **Related SOPs:** _(pending — links into ../sops/ once written)_

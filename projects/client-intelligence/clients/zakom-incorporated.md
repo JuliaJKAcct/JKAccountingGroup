@@ -1,6 +1,6 @@
 # Zakom Incorporated
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-17
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1041,6 +1041,12 @@ A running, dated record as we build this profile.
   - **Working-paper file housekeeping (Double):** on 2026-10-06 Lilian removed the working-papers workbook from the company's custom folder and moved the client's organizer uploads into the "Uploaded by client" folder (names only). _(Double activity log, 2026-10-06)_
   - A search of Gmail (client replies from the owner and spouse, bounded after 2026/10/03), Drive (Zakom/Zakala titles modified after 2026-10-03) and Ping (org-wide, no client scope) on 2026-10-10 did **not** find a signed proposal, a 7004/extension confirmation, a client reply, or a new Zakom document.
 
+- _(2026-10-17)_ — **INCREMENTAL SWEEP, bounded to 2026-10-10 and later.** Sources: Double (`get_client`, properties, `list_notes`, `list_tasks`, `list_activity_log`), Gmail (`Zakom`/owner name/email, inbox and sent, `after:2026/10/10`), Ping (one org-wide semantic query), Drive (`Zakom` titles modified after 2026-10-10). What is new:
+  - 🟢 **Double: the 2025 tax project is now `Filed`** — set by Lilian **2026-10-14 14:08 UTC**, from `Waiting on Client Approval`; the 2025 return PDF (a file named for the company and year) was created in the client's `2025` folder at 13:43 UTC the same day. _(Double activity log, 2026-10-17)_ ⚠️ **This partly reconciles, and partly deepens, the unsettled item recorded on 2026-10-10:** the 2026-10-07 entry above records the 1120-S as e-filed by Julia on 2026-10-07, while Double's `Filed` status carries a **2026-10-14** date. Two sources, two dates — the transmission date and the acknowledgement are still not recorded in any reachable source; the status date may simply be when Lilian filed the signed copy in Double. **Unsettled.**
+  - 💲 **The firm's invoice 2337 was PAID on 2026-10-13** (QuickBooks payment notice to Julia's mailbox; amount withheld); Double's `Invoice` property reads `Paid`. It had been open since before the 2026-10-09 reminder. _(Gmail, Double, 2026-10-17)_ `Signature` reads `Signed`.
+  - **Client activity:** the owner **opened the 2025 Business Tax Organizer in the portal on 2026-10-14** (03:07 UTC) — after the return was e-filed; `Organizer Status` still reads `Sent`. No answers were read (organizer responses are not read by this sweep). _(Double activity log)_
+  - **Not found:** a search of Gmail (owner name and email, inbox and sent, `after:2026/10/10`) did **not** find a signed monthly-engagement proposal, a reply from the owner, or any scheduling message for the setup call (~2026-10-16); the Double note count is unchanged (one note, 2026-10-07). Ping/Drive searches (bounded after 2026-10-10) did not find anything on this client. The 2025 Form 7004 acceptance confirmation was again not found. _(2026-10-17)_
+
 ### Tax year 2025 — the review
 <!-- Add one per tax year the firm reviews for this client. -->
 
@@ -1171,6 +1177,8 @@ A running, dated record as we build this profile.
   ⛔ **Not a blocker — the balance-sheet figure is documented at both ends.**
 
 ### Outstanding items (CI-only — never in the SOP)
+
+- 🆕 **2026-10-17 status:** Double's 2025 project reads `Filed` (2026-10-14) and invoice 2337 is paid (2026-10-13). **Still open:** monthly-engagement acceptance (proposed 2026-10-07 = **10 days**, no signed copy found; setup call planned ~2026-10-16 not evidenced); 2025 7004 confirmation (never found, since 2026-03); the two filing dates (10-07 vs 10-14) unreconciled; the owner opened the organizer 2026-10-14, answers unread.
 
 ⏸️ **NOTHING ON THIS LIST IS ASKED OF THE CLIENT FOR NOW** — Lilian, 2026-09-25: *"Al cliente, por ahora, no vamos a pedirle nada. Yo necesito primero entender qué está pasando con esta declaración."* ☑️ **HELD, not closed** — the questions stay correct and unanswered; what is suspended is SENDING them. ✅ **Work continues on everything the firm can settle by itself.**
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,

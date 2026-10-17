@@ -1,6 +1,6 @@
 # Ishkhan Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-17
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -110,6 +110,10 @@ the actual details.
 
 ### Log
 
+- 2026-10-17 — **Incremental sweep (baseline 2026-10-10, bounded to ≥2026-10-10).** 🆕 **His 2025 1040 work has started on Julia's side.** Double (cid 710638): a file named *Statement of Change of Residency — Tax Year 2025* was uploaded to the Uploads inbox 2026-10-15 by Julia (Double activity log + `list_files`, 2026-10-17); **contents not opened** (residency/identity document — redaction rule). Google Drive (modified ≥2026-10-10): Julia's drive holds a 2025 Form 1040 worksheet workbook for him and a Connecticut residency-change statement PDF, both created 2026-10-15, in a shared household folder (Drive search, 2026-10-17; titles only, contents not read). **Read together:** a Connecticut part-year/residency-change position is being prepared for his 2025 return — inferred from the file titles, not confirmed; ask Lilian. The 2025 `Taxes` project still reads `notStarted`, preparer Irina Jandieri (Double `list_projects`, 2026-10-17) while `Assigned Staff` = Lilian — **the two-fields contradiction from 2026-10-10 is still unsettled**, and the project status does not reflect the work visible in Drive. Notes: 0 (still none). Gmail (≥2026-10-10, his name, Ecoorganic, residency): no reply to the transfer-mechanics email; the one Ecoorganic hit is a Ukrainian company ("ЕКООРГАНІК") dividend email to Julia, 2026-10-14 — a name collision with an unrelated entity, not this client. Ping: nothing dated ≥2026-10-10.
+  - 🔴 **Transfer mechanics (sale / gift / redemption): a search of Gmail, bounded ≥2026-10-10, on 2026-10-17 did not find a reply — 43 days pending since 2026-09-04.** No deadline.
+  - ⚠️ **QuickBooks primary-admin handover: no update found — 72 days pending since 2026-08-06.** No deadline.
+  - 2024 suspended-losses question — pending since unknown — no start date in the file.
 - 2026-09-26 — 🔎 **CORROBORATION PASS (weekly CI sweep, bound 2026-09-19→2026-09-26) — NO MOVEMENT
   FOUND.** Double `get_client` + `list_client_properties` re-read: unchanged (joint record `cid
   710638`, `Income Tax: true`, `Tax Return Type: 1040`, `Organizer Status: Sent`, `Assigned Staff:
@@ -270,3 +274,4 @@ the actual details.
 - **His son:** [`artem-markarian.md`](./artem-markarian.md) · [Double cid 710623](https://app.doublehq.com/close?cid=710623)
 - **The company:** [`ecoorganic-usa.md`](./ecoorganic-usa.md) · [Double cid 719473](https://app.doublehq.com/close?cid=719473)
 - **The company's FY2025 working paper** (figures live there, not here): [`2025-form-1120s.md`](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md)
+- **Google Drive household folder (his 2025 1040 worksheet + residency-change statement, created 2026-10-15):** [Drive folder](https://drive.google.com/drive/folders/1ZGDEwpTTrTO1a8yJnBGuJtZ4PzMKDOsq)

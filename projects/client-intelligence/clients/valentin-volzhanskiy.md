@@ -1,6 +1,6 @@
 # Valentin Volzhanskiy
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10 *(sweep: the 2025 project reached Ready for Filing on 2026-10-07; a new invoice issued; new LLC papers filed in his folders)*
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-17 *(sweep: the 2025 project was set to Filed on 2026-10-16; invoice 2338 second reminder 2026-10-14)*
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1635,9 +1635,18 @@ Sources: Double (`get_client` properties, `list_projects`, `list_notes` — both
 - 💲 **A new invoice (`2338`, amount withheld) was issued to him on 2026-10-07 and a first reminder went out 2026-10-09** (QuickBooks notices to Julia's mailbox). Double's `Invoice` property reads `Sent`. Unpaid as of 2026-10-10 (3 days).
 - **Chase of this file's own open items (named queries, Gmail/Double/Ping/Drive, bounded after 2026-10-03):** the **box-14 tips eligibility** question to Compass Group — a search found no message to or from that employer (item pending since 2026-09-13, **27 days**; the filing deadline now makes it time-critical); the **September 2025 and December 2025 bank statements** — no upload found in the activity log (File entries listed above are the only ones); the **taxpayer-signature-date check** — not verifiable from these sources. Ping: no meeting touching him since the 2026-07-16 call.
 
+### 2026-10-17 — weekly sweep, baseline 2026-10-10: the 2025 project was marked Filed
+
+Sources: Double (`get_client` properties, `list_notes` — both notes' `updatedAt` unchanged, 2026-09-13 and 2026-07-16 — `list_tasks`, `list_activity_log` bounded >=2026-10-10); Gmail (`in:anywhere`, `after:2026/10/10`, his name and email, Compass Group, Professional Concessions, Smart Lines); Ping (one org-wide semantic query, nothing relevant dated after 2026-10-10); Google Drive (`Volzhanskiy`/`Smart Lines` title search, `modifiedTime > 2026-10-10`: no results). _(2026-10-17)_
+
+- 🟢 **The 2025 tax project was moved from `Ready for Filing` to `Filed` on 2026-10-16 at 15:09 UTC, by Lilian** (Double activity log, the only entry since 2026-10-10). That is **one day after the extended due date (2026-10-15)** the file carried. ⚠️ **What this does not establish:** the date the return was actually transmitted, or that the IRS accepted it — the log records a status change, not an acknowledgement; no e-file acknowledgement was found in Gmail or Double. Whether the box-14 tips eligibility, the payment-voucher page and the signature-date check (all listed as "before filing" gates on 2026-10-10) were closed before the status change is **not recorded anywhere reachable**. _(Double activity log; Gmail, 2026-10-17)_
+- 💲 **Invoice 2338 (amount withheld) — second QuickBooks reminder sent 2026-10-14** to the client's email; Double's `Invoice` property still reads `Sent`. Issued 2026-10-07 = **10 days open** as of 2026-10-17. No payment notice found. _(Gmail, Double, 2026-10-17)_
+- **Chase of this file's own open items (named queries, bounded >=2026-10-10):** Compass Group tips-eligibility question — a Gmail search for the employer name and for the client's address did not find any message to or from the employer; open since 2026-09-13 = **34 days**, and now moot-or-unmet depending on what was filed (unrecorded). Client replies: a search of Julia's Gmail did not find any message from the client after 2026-10-10 (earlier note about replies sitting in another mailbox still applies). September/December 2025 bank statements: no File entries in the activity log since 2026-10-10. Ping: no meeting touching him found after 2026-07-16.
+
 ### Outstanding items (CI-only — never in the SOP)
 
 
+- ✅ 🆕 **2026-10-16: Double shows the 2025 project `Filed`** (see the 2026-10-17 log entry). The "before filing" gates below are now **unreconciled with the Filed status** — each should be read as *closed or consciously accepted?* by Lilian; nothing reachable records which. **If the tips claim went out unestablished, the amend route stated in Julia's note (Double note 524890) applies.**
 - 🔴 🆕 **WHOSE MILEAGE IS THE CATERING MILEAGE? — the largest figure still in play, and the question
   goes to JULIA, not the client.** **Most of his 2025 business driving was for the catering activity,
   whose schedule Julia has just removed for having no revenue.** ⚖️ **Either all of it moves onto the

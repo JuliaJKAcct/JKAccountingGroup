@@ -1,6 +1,6 @@
 # Iurii Iakovenko & Alina Yakovenko
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-10-10
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-10-17
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -82,7 +82,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Applies?** **Yes**
 - **Return type(s) & deadlines:** **Form 1040**, calendar year. ⚠️ **The plain `1040` in Double does not account for two LLC workbooks and a 1099-K.** Schedule C (or a partnership return sitting behind the 1040) is the obvious question. **Unsettled — confirm, don't assume.**
 - **Our role:** the firm prepares and files
-- **Current status:** 🔴 **2025 return not filed.** Double's "2025 Taxes" project is **`inProgress`**, `filedAt` empty, **original** due date 2026-04-15. ✅ **CONFIRMED, not just "very likely" (2026-09-12): the extension WAS filed** — Double's nonclosing task "Extension Filed" is marked `done`, completed 2026-05-27 by Lilian, assigned to Julia, with a matching recurring instance already queued for the 2026 filing season (due 2027-01-01). **With the 4868 the deadline is 2026-10-15 and he is not late.**
+- **Current status:** ✅ **2025 return recorded FILED in Double on 2026-10-16** (Lilian moved the "2025 Taxes" project from In Progress to Filed; `filedAt` 2026-10-16; Double activity log and `list_projects`, read 2026-10-17) — one day after the 2026-10-15 extension deadline by Double's timestamp; the real e-file acknowledgement/date was not seen, so whether it was filed on time is **unconfirmed**. _(Superseded: `inProgress`, unfiled.)_ Original due date 2026-04-15. ✅ **CONFIRMED, not just "very likely" (2026-09-12): the extension WAS filed** — Double's nonclosing task "Extension Filed" is marked `done`, completed 2026-05-27 by Lilian, assigned to Julia, with a matching recurring instance already queued for the 2026 filing season (due 2027-01-01). **With the 4868 the deadline is 2026-10-15 and he is not late.**
 - 🔵 **The firm has now prepared THREE consecutive returns for this client, not one** _(found 2026-09-12)_ — a **2023 return** was signed 2024-04-07 (tax liability direct-debited 4/15/24 — figure not recorded here), a **2024 return** (organizer completed 2025-03-10), and the still-open **2025 return**. Engagement traced back to at least **2023-08-17** via Zelle payments.
 - **Organizer status:** **Completed 2026-03-12 in TaxDome.** The client's side has been done for five months; **this one is waiting on us** — no email, meeting or note found anywhere explaining the delay (2026-09-12 sweep).
 - **Process notes (→ future SOP):**
@@ -159,9 +159,12 @@ the actual details (and Claude can pull them live when a task needs them).
   no source anywhere explaining the delay** — the Ukrainian PrivatBank-account lead (unchased since
   2024-03-19, now well over two years old), and who files each LLC's annual report/franchise tax —
   **none moved this window.** No 2025 Form 1095-A found (unchanged, genuine negative).
+- 2026-10-17 — **Incremental sweep (baseline 2026-10-10, inclusive).** Double (710639): `list_activity_log` from 2026-10-10 shows one entry — **2026-10-16 15:09 UTC Lilian set "2025 Taxes" to Filed**; `list_projects` confirms `filed`, `filedAt` 2026-10-16. `list_notes` returned **one note, created and edited by Julia 2026-10-15** ("2025 Tax prep"; the file previously had 0 notes): a **substantial-presence-test analysis** for a person whose US stay ran from July 2023 to 1 June 2025, concluding they **pass the test for 2025** (resident for 2024; 2023 generally nonresident) — the note does not say which spouse it concerns, so who it is about is unestablished; it bears on residency/filing status for 2025. `list_files` from 2026-10-09: none. Gmail (Julia's mailbox, after 2026/10/09, all name variants, Semalt, YourSeoBoard): a QuickBooks payment notice dated 2026-10-15 for the firm's invoice to Semalt LLC (amount withheld) — the invoice is paid; no client correspondence. Drive (modified after 2026-10-09, surname/Semalt): nothing for this client. Ping: org-wide search returned nothing specific.
 - 2026-10-10 — **Incremental sweep (baseline 2026-10-03, inclusive) — nothing moved.** Double (710639): `list_notes` 0; `list_activity_log` from 2026-10-03 0 entries; "2025 Taxes" still `inProgress`, unfiled, `filedAt` empty; properties unchanged (Organizer Status Completed); `list_files` from 2026-10-03: none. A search of Gmail (all name variants, Semalt, YourSeoBoard, CEO address), bounded after 2026/10/03, on 2026-10-10, found no client correspondence — the only name-hit ("Alina") was an unrelated prospect thread. Targeted queries for 4868 / extension / 1095-A / FBAR / annual report / franchise tax, same bound: only generic newsletters and filing-service solicitations, none about these LLCs. Drive full-text search for the surname, modified since 2026-10-03: nothing. Ping: org-wide `search_meetings` (Iakovenko / Semalt / YourSeoBoard / extension) — garbled unrelated hits, discarded. **Chase pass:** the cause of the delay on our side is still unrecorded — **~212 days since the client finished (2026-03-12), 5 days to the 2026-10-15 extension deadline**; LLC tax classification, the PrivatBank-account lead (~935 days since the 2024-03-19 submission), who files each LLC's annual report/franchise tax, and the 1095-A confirmation did not move.
 
 ### Tax year 2025 — the review
+
+- **2026-10-17:** project recorded Filed 2026-10-16 (see §4). The earlier "cause of delay on our side" is still unrecorded in any source.
 
 - **Filing position:** Form 1040, joint — **with two LLCs behind it**, treatment unsettled.
 - **Organizer:** Completed 2026-03-12.
@@ -169,6 +172,8 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Watch:** whether a 2025 Form 1095-A exists, as it did for 2024.
 
 ### Outstanding items (CI-only — never in the SOP)
+
+- 🆕 **2026-10-17 status check:** return recorded filed 2026-10-16; **confirm the real e-file acceptance date** (Double stamp is one day after the 2026-10-15 extension deadline; pending since 2026-10-16 = 1 day). The 4868/"delay" items below are now historical unless the filing date proves late.
 
 - 🔴 **Establish how `YourSeoBoard LLC` (FL) and `Semalt LLC` (DE) are taxed** — disregarded, partnership or S-corp — and which schedules the 1040 therefore carries. States are now confirmed (2026-09-12); classification is not. Everything else about this return follows.
 - 🔴 **Find out what is blocking the return on our side** and record it. The client finished in March; **now over SIX MONTHS (~198 days as of 2026-09-26) of silence, confirmed still undocumented after a full unbounded search (2026-09-12) and re-chased with no result on 2026-09-19 and 2026-09-26.**

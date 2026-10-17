@@ -1,6 +1,8 @@
 # Vitaliy Vasyutyk — property & renovation LLC group
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-14
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-17
+
+> ✅ **2026-10-17 SWEEP: HIS OWN 2025 FORM 1040 IS `FILED` IN DOUBLE** — Lilian set it 2026-10-16 15:08 UTC (In Progress since 2026-10-13); the finished joint return PDF ("Vitaliy and Iryna 2025") was saved in the owner's `2025` folder on 2026-10-15 19:29 UTC. The earlier lines below describe the open state and are kept as history. IRS acceptance not seen (a Gmail search after 2026/10/10 found none; it would be in ATX).
 
 > 🔵 **2026-10-13 — LILIAN IS PREPARING HIS 2025 FORM 1040.** It should carry **seven K-1s** *(two open checks — playbook)*; three of his companies
 > issue theirs to **Nika Realty**, not to him (§4 → *Tax-preparation playbook*). A `2025 4868 Ext.pdf` is in his
@@ -61,7 +63,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | Owner / primary contact for all ten companies | Double contact `567527` — **one portal contact is linked to all ten company records and to his own** (`hasClientAdminAccess`, tax + financial + files access) |
 | Related individuals with their own Double client records | **Veronika Vasiutyk** (`710664`) and **Vladyslav Vasiutyk** (`710670`) — same surname, separate records; ✅ **his daughter and his son — the 2025 organizer lists both as dependants (read 2026-10-13); a third child, Anton, is also listed; no Double client record for him was looked for.** What is established: the firm billed a 1040 for Veronika on a **Nika Realty** invoice (Sept 2025), and Vladyslav's 2025 return was e-signed 2026-04-02 |
 | Partner in Zumfi 2 LLC — **and in Zumfi 1 and Fizum 1** — **Bahruz Naghiyev** | the same person is a partner in all three _(Lilian, from Vitaliy, 2026-09-07; named on the filed 2025 Zumfi 2 and Fizum 1 returns, read 2026-10-13)_; named in the 2025 organizer, and his details are already on the Zumfi 1 and Fizum 1 records — see §6 |
-| **Iryna Vasyutyk** — **his wife** _(established 2026-10-13: Double holds the couple's 2022, 2023 and 2024 Forms 1040 as joint returns titled "Vitaliy and Iryna"; the 2024 one was read that day)_. Also in Ping's contact index (2026-09-19), associated there with **NIKA REALTY LLC**; not in Double's contact list for that record | **Not a partner in any of the seven 2025 company returns read 2026-10-13**; Nika, SYS 1 and Zumfi 1's 2025 returns are not in Double, so those three are unchecked. Nika Realty's file library holds a "P&L … Iryna cash 2025" workbook and two personal-loan-agreement documents from Vitaliy to the company (filenames carry dollar amounts — not repeated here; see §6) |
+| **Iryna Vasyutyk** — **his wife** _(established 2026-10-13: Double holds the couple's 2022, 2023 and 2024 Forms 1040 as joint returns titled "Vitaliy and Iryna"; the 2024 one was read that day)_. Also in Ping's contact index (2026-09-19), associated there with **NIKA REALTY LLC**; not in Double's contact list for that record | 🆕 **Also a Double portal contact since 2026-10-17's reading** — linked to the owner and Nika Realty only (full access) | **Not a partner in any of the seven 2025 company returns read 2026-10-13**; Nika, SYS 1 and Zumfi 1's 2025 returns are not in Double, so those three are unchecked. Nika Realty's file library holds a "P&L … Iryna cash 2025" workbook and two personal-loan-agreement documents from Vitaliy to the company (filenames carry dollar amounts — not repeated here; see §6) |
 
 - **Double client (the person):** [Vitaliy Vasyutyk `710668`](https://app.doublehq.com/close?cid=710668)
 - **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ none
@@ -271,6 +273,7 @@ watch-outs, one-off arrangements, history that affects the work.
 ### Log
 A running, dated record as we build this profile.
 
+- _(2026-10-17)_ — **Incremental sweep, baseline 2026-10-10 (owner level, all ten company records).** Double: owner's activity log shows `2025 Taxes` In Progress 10-13 → **Filed 10-16**, return PDF saved 10-15; the other ten records' activity logs bounded after 2026-10-10: **0 entries each**; notes: 0 on the owner, Nika, Zumfi 1, SYS 1 (the other six not re-listed this pass); properties of all eleven records: no change from the 2026-09-19/10-10 readings. **Contacts: a second portal contact now exists — Iryna (his wife), linked to the owner's record and Nika Realty only, with full tax/financial/files access; her contact and Vitaliy's shared contact both show `updatedAt` 2026-10-15** (what changed is not visible; coincides with the 1040 work). Gmail (bounded after 2026/10/10, names, company names, invoice numbers, extension/Sunbiz/dissolution terms, in:sent): nothing about the group except the firm's own weekly-sweep email — **no invoice reminder, payment, address-change or dissolution confirmation found**. Ping org-wide: nothing mentioning the owner or companies. Drive (title search on Vasyutyk/Nika Realty/Zumfi, modified since 10-10): no results. _(Double, Gmail, Ping, Drive, 2026-10-17)_
 - _(2026-10-15, after draft 3)_ — **Lilian decided where the platform fees sit on the gig Schedule C: Uber's in Part V (as on
   the 2024 return), Lyft's on line 10** (DoorDash charges the driver none) — recorded in the §4 playbook as a 2026 reminder. She also
   asked about the foreign bank account (in Georgia, the country) on the 2024 Form 8938: it carried a maximum value of zero, no
@@ -392,6 +395,7 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
+- ✅ **2026-10-17: FILED per Double (2026-10-16); acceptance unverified.** ⬇️ _Earlier:_
 - 🔴 **The owner's OWN 2025 Form 1040 — 🆕 2026-10-13: Lilian is preparing it, and phase 1 CLOSED THE GATE: the filing status and the dependants must be settled first; due 2026-10-15 if the extension was accepted** (questions and internal checks: [working paper](../../tax-returns/vitaliy-vasyutyk/2025-form-1040.md) §6). _History:_ it read `Not Started` in Double while all nine of his companies' 2025 returns were filed (first found 2026-09-19). The project's `dueDate` field shows 2026-04-15 (157 days past as of 2026-09-19) — but that field is known elsewhere in this repo to not reliably reflect an actual extended deadline, so whether an extension was filed is an **open question**, not an established lateness. No email or activity-log trace of an extension was found on 2026-09-19.
   🔄 **CHASED 2026-09-26 — STILL `Not Started`, now 164 days past the on-file (possibly stale) due
   date.** Second consecutive weekly sweep with zero movement — no extension evidence, no activity,
@@ -403,6 +407,7 @@ it here; these never go into the client SOP.
   🔄 **CHASED 2026-09-26 — UNCHANGED.** No new reminder round or payment-received email found
   (Gmail searched for the three invoice numbers plus the two new ones, bounded after 2026-09-19).
   🔄 **CHASED 2026-10-10 — UNCHANGED: 199 days since 2026-03-25** (a Gmail search bounded after 2026-10-03 found no reminder round and no payment for `2097`/`2101`/`2104`; `2293`/`2294` now 32 days old with no first reminder found).
+  🔄 **CHASED 2026-10-17 — UNCHANGED: 206 days since 2026-03-25** (Gmail bounded after 2026/10/10: no reminder, no payment; `2293`/`2294` now 39 days old, still no first reminder found).
   **185 days outstanding as of today**, still 7 rounds, still a collection question. `2293`/`2294`
   are now 18 days old — old enough to be worth a first reminder if one hasn't gone yet, but no
   reminder for either was found this session.
@@ -412,10 +417,12 @@ it here; these never go into the client SOP.
   logged this week either. Still not established whether this was ever filed with Sunbiz. (Whether
   the broader 2026-09-12 group-wide address change was filed is the same open question — 14 days
   open, unchanged.)
+  🔄 **CHASED 2026-10-17 — STILL UNCONFIRMED, 40 days since 2026-09-07 (35 since the group-wide 09-12 email):** all ten activity logs 0 entries since 10-10; Gmail nothing.
   🔄 **CHASED 2026-10-10 — STILL UNCONFIRMED, 33 days since 2026-09-07 (28 since the group-wide 09-12 email).** Activity logs of **all ten** companies bounded after 2026-10-03: 0 entries; Gmail found no change-of-address confirmation.
 - ⚠️ **Zumfi 1 LLC is to be closed** (Lilian → Julia, 2026-09-07; repeated in the 2026-09-13 status email as *"NEED TO CLOSE"*). **Still nothing filed as of 2026-09-19** (12 days open, no deadline) — its 2025 return was filed 2026-09-15 as a going concern in the meantime. Compare with Tropical Coast 1's dissolution for the route and what it costs.
   🔄 **CHASED 2026-09-26 — STILL NOTHING FILED, now 19 days open.** `list_activity_log` on Zumfi 1,
   bounded from 2026-09-19, returned zero entries. No deadline attaches, but the item is aging.
+  🔄 **CHASED 2026-10-17 — STILL NOTHING FILED, 40 days open** (activity logs 0 entries since 10-10; Gmail nothing).
   🔄 **CHASED 2026-10-10 — STILL NOTHING FILED, 33 days open.** Zumfi 1's activity log (and the other nine) bounded after 2026-10-03: 0 entries; a Gmail dissolution search found nothing.
 
 _(Below the published-card cutoff — still tracked, none of it new this week except the last line.)_

@@ -1,6 +1,6 @@
 # Artem Markarian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-17
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -144,6 +144,7 @@ the actual details.
 
 ### Log
 
+- 2026-10-17 — **Incremental sweep (baseline 2026-10-10, bounded to ≥2026-10-10).** 🟢 **HIS 2025 INDIVIDUAL RETURN WAS FILED.** Double activity log (cid 710623): the signed return PDF was saved into his `2025` folder 2026-10-13; project `2025 Taxes` moved Ready for Review → **Ready for Filing 2026-10-13** → **Filed 2026-10-14** (all Lilian) — one day before the extended 2026-10-15 due date (Double activity log, 2026-10-17). Properties now also show `Signature: Signed` (Double, 2026-10-17). Case note 510952 `updatedAt` still 2026-09-01 (body not changed). Gmail (name, Ecoorganic, Turo, ≥2026-10-10): no client or Turo correspondence. Ping org-wide: nothing dated ≥2026-10-10 about him. Drive: nothing new for him. ⚠️ **What the record does NOT show:** whether the Turo per-car breakdown, account-name, Kona/1099-MISC, mileage and Form 7203 basis items below were closed before filing — no closing record in any source searched (bounded ≥2026-10-10); the return went out with them unrecorded as answered. Ask Lilian whether they were settled outside the file.
 - 2026-09-26 (tenth pass — weekly CI sweep, corroboration, bound 2026-09-19→2026-09-26) —
   🔎 **NO MOVEMENT FOUND ON THIS RECORD.** Double `list_client_properties` re-read: unchanged
   (`Income Tax: true`, `Tax Return Type: 1040`, `Organizer Status: Sent`, `Bookkeeping: N/A`,
@@ -527,6 +528,8 @@ the actual details.
 - 2026-10-10 — **Incremental sweep (baseline 2026-10-03, bounded to ≥2026-10-03).** Double (cid 710623): case note 510952 unchanged (`updatedAt` 2026-09-01, body re-read: no change); activity log ≥2026-10-03 empty; 2025 project `readyForReview` (unchanged since 2026-09-10). **New on the company side:** Double activity log for ECOORGANIC USA LLC (cid 719473) shows Lilian saved the 2025 Form 1120-S **FINAL WORKSHEET** workbook into the company's "Docs for tax prep" folder on 2026-10-06 (Double activity log, 2026-10-10) — the company's return is now documented as finished; his own return items below are unaffected. Gmail ≥2026-10-03 (his address, Ecoorganic, Turo, name): no client reply; the only hits were Connecticut tax-agency portal alerts for the company (2026-10-06, 2026-10-08). **Open-item chase, ages as of 2026-10-10:** per-car Turo breakdown 39d (since 2026-09-01); Turo account name 39d; Kona / 1099-MISC 39d; Turo login 39d; Form 7203 basis (Lilian to Julia) 38d (since 2026-09-02); mileage records — pending since unknown, no start date in the file; residence/state — pending since unknown, no start date in the file. None arrived; none has a deadline.
 
 ### Outstanding items (CI-only — never in the SOP)
+
+> 🟢 **2026-10-17: the 2025 individual return is FILED (Double, 2026-10-14).** Ages below are counted to 2026-10-17: per-car Turo breakdown, Turo account name, Kona/1099-MISC, Turo login — **46 days** since 2026-09-01; Form 7203 basis question (Lilian to Julia) — **45 days** since 2026-09-02; mileage records and residence/state — pending since unknown, no start date in the file. None has a closing record; none has a deadline now. Treat them as post-filing substantiation / 2026 prep items until Lilian says otherwise.
 
 - 🔴 **His 1040 cannot be completed until the company's FY2025 Form 1120-S is** — the K-1 comes from it,
   ⛔ ~~**SUPERSEDED 2026-09-02 (evening): his 1040 does NOT wait on the company's return — he has no 2025
