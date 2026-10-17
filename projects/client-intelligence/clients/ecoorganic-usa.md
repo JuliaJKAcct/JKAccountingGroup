@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-17
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1513,7 +1513,12 @@ in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) 
   - **Payroll question to the client (Gusto onboarding Sept 2025 vs "nobody employed")** — pending since unknown — no start date in the file; no reply found ≥2026-10-03.
   - Not chased this run (budget): Turo payouts in books, ATM-withdrawal and cash-deposit questions to the client, Amazon store card, Ukraine same-name company, 2026 bank-feed backlog, `Artem Personal` export, bonus-depreciation class question for Julia (FOLLOW-UPS row 190), CT-PET 2026 decision (row 191).
 
+- 2026-10-17 — **Incremental sweep (baseline 2026-10-10, inclusive).** Double (cid 719473): the one note (QuickBooks handover case, 485258) is unchanged (`updatedAt` 2026-08-06; body not re-read); properties unchanged (1120-S, Sales Tax Monthly, Bookkeeping Monthly, Signature Signed); `list_activity_log` ≥2026-10-10 returned 0 entries; the June-2026 and April-2026 close tasks remain Not started (Double, 2026-10-17).
+  - 🆕 **2026-10-14 — the Ukrainian same-name company wrote to Julia again.** Its chief accountant emailed (Russian subject, translating "Payment of dividends for 2025") with one PDF attached whose name translates "Dividend payments by date". **The PDF was not opened**, and the body is only a signature, so the content and **its relevance to the US LLC remain unknown** — the relationship between the two companies is still unconfirmed (§5). _(Gmail, 2026-10-14)_
+  - **CT state items:** a Gmail search ≥2026-10-10 (`Connecticut`, `DRS`, `Department of Labor`, `myconneCT`, `ReEmployCT`, `CT-941`, owner names) found **no new state email** and nothing showing the five unopened DRS/CTDOL items were actioned. **CT-941 past-due notice: 60 days since 2026-08-18, no source shows it actioned.** QuickBooks primary-admin handover: **72 days** since 2026-08-06; a Gmail search ≥2026-10-10 for QuickBooks/the owners found no Intuit thread on this client (the Intuit/FinCEN emails matched by name belong to other clients). Turo, Ishkhan/owner names: nothing new in Gmail. Drive: no ecoorganic-titled file modified ≥2026-10-10. Ping: only pre-baseline hits.
+
 ### Outstanding items (CI-only — never in the SOP)
+- 🆕 **Chase pass 2026-10-17:** 🔴 CT-941 past-due — **60 days** (since 2026-08-18); 🔴 five unopened CT DRS/CTDOL items — oldest-recorded cluster **44 days** (since 2026-09-03), newest 2026-10-07; QuickBooks admin handover — **72 days** (since 2026-08-06; waiting on the father's ID verification); payroll question to the client — pending since unknown — no start date in the file; Turo payouts in books, ATM/cash-deposit questions, Amazon store card, bank-feed backlog, `Artem Personal` export, depreciation-class question (FU 190), CT-PET 2026 (FU 191) — **not chased this run (budget)**.
 - 🟡 **CT DRS — there IS movement, and it cuts both ways (2026-09-07).** A return was **submitted through myconneCT on 2026-09-02** (which return is unstated — see §6), and a **new DRS correspondence landed 2026-09-03 and is unread**, making three unopened. **Both need one action, and it is the same action:** open myconneCT and read what is actually there. Until someone does, the CT-941 past-due item cannot be closed *or* confirmed — the filing confirmation is not evidence about which filing.
 - ✅ **THE 2024 FILED RETURN HAS BEEN READ — 2026-09-02.** Lilian added the Double file host to the
   tax-return environment's allowed domains and the redactor went through on the first try. **It changed

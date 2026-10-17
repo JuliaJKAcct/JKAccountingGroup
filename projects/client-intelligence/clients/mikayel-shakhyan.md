@@ -1,6 +1,8 @@
 # Mikayel Shakhyan
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-15
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-17
+
+> 🟢 **2026-10-17: Double marks the 2025 project FILED (2026-10-16, Lilian) — see the Log entry of that date; what exactly was filed is not recorded in any source read.**
 
 > 🔴⏰ **2026-10-14 — THE DEADLINE HAS NOT PASSED. IT IS 15 OCTOBER 2026: TOMORROW.** ⛔ **The banner below,
 > §5's first bullet and every sweep since 2026-09-19 said the return went overdue on 2026-09-15 — that was
@@ -236,6 +238,8 @@
 
 ### Log
 
+- _(2026-10-17)_ — **Incremental sweep (baseline 2026-10-10, bounded to ≥2026-10-10).** 🟢 **Double shows the 2025 tax project FILED: `In Progress` → `Filed` on 2026-10-16 (Lilian)** — one day after the 2026-10-15 extended due date (Double activity log + `list_projects`, `filedAt` 2026-10-16, read 2026-10-17). ⚠️ **What the record does not show:** which package was filed or by what route (the pro forma 1120 + 5472 cannot be e-filed — fax or mail), whether the 7004 date was ever confirmed, and whether Julia's open signer questions (the counter-deposits contribution question, the contribution-vs-loan confirmation from him) were settled — the project's individual tasks all still read `notStarted` (Double `list_tasks`, 2026-10-17). Also unrecorded: the 2026 pro forma 1120 + 5472 that this file says is now owed (Sunbiz 15 Jul 2025 formation; due 2027-04-15, **180 days away**, 7004 route). Double: 0 notes, 0 new files, properties unchanged (`Signature: Signed` present; `Tax Return Type: 1120 Proforma`). Drive (modified ≥2026-10-10): a working-papers workbook for the LLC's 2025 Form 1120/5472, created 2026-10-15 in Julia's drive (title only; contents not read). Gmail (≥2026-10-10: his name, the company, Lumari, Fun Park, Pivniak, Anastasia White, 7004, 5472): nothing from him or the attorney — only the firm's own sweep email. Ping: org-wide semantic searches (his name, Form 5472) returned only unrelated meetings; nothing ≥2026-10-10.
+  - **Chase ages to 2026-10-17:** transaction summary to Julia — 41d since 2026-09-06 (superseded in practice: Julia's rulings were relayed 2026-10-15); client questions Q1/Q3/Q4/Q5 — 41d since 2026-09-06; Q2 draft — 40d since 2026-09-07; 'tell him to keep records' — 42d since 2026-09-05; dissolution date, image scans, citizenship/ITIN — 42d since 2026-09-05; Fun Park USA, LLC decision — 3d since 2026-10-14. **No deadline within 14 days** (the extended 2025 date has passed and the project is Filed; next is the 2026 return, 180 days).
 - _(2026-10-15, last word)_ — **Julia confirmed the farmers-market card charge is a BUSINESS expense, not
   personal** — so Lum and Ari LLC's 2025 Part V carries only the formation fee and his three deposits as
   contributions; **distributions: none**. Figures: working paper §4M ⓪-quater.

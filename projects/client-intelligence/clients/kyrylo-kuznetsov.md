@@ -1,6 +1,13 @@
 # Kyrylo Kuznetsov — individual (and owner of Never Give Up KK, partner in three LLCs)
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-14
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-17
+
+> 🆕 **2026-10-17 (first full historical sweep): Double's activity log shows the "2025 Taxes" project moved Not Started →
+> In Progress → Ready for Review → FILED between 2026-10-15 02:22 and 19:26 UTC (all Lilian) — i.e. on the extended due
+> date.** The file below was last written while ATX draft 1 was still being reviewed; **whether each pre-filing item
+> (EIC, Form 8867, direct-deposit block, name spellings, foreign accounts / property / investments confirm) was settled
+> before filing is recorded in no source this sweep could read** — the working paper is the place to close them.
+> _(Double activity log, read 2026-10-17)_
 
 > 🔴 **2026-10-13 — PHASE 1 OF HIS 2025 FORM 1040 RAN, AND THE GATE IS CLOSED.** The organizer (completed that morning)
 > reports **wages only**, but his own note, his bank statements and the firm's records show **cash deposits and "small
@@ -51,7 +58,11 @@
   written in simple Russian (CLAUDE.md).
 - **Our engagement (services we provide):** his **individual income tax** (Double `Income Tax` ✅, `Tax Return Type`
   **1040**); the firm filed his **2025 extension**. Bookkeeping N/A. ⚠️ **No engagement letter or invoice for the personal
-  1040 was found** (2026-10-13 Gmail sweep) — only Never Give Up's (signed 2026-06-17).
+  1040 was found** (2026-10-13 Gmail sweep) — only Never Give Up's (signed 2026-06-17). _(2026-10-17: Double's
+  hand-maintained columns on his record read `Signature` **Signed**, `Invoice` **Sent**, `Organizer Status` **Sent**
+  (the organizer was in fact completed 2026-10-13 — the column lags). A Gmail search, unbounded, on 2026-10-17 found no
+  QuickBooks invoice or GoProposal letter naming his personal 1040; the one invoice sent to his address in October
+  (2026-10-15) is addressed to Never Give Up KK LLC.)_
 - **Fiscal year-end:** calendar year (individual).
 - **Accounting platform:** none (an individual). His one bank account's statements arrived with the 2025 organizer.
 
@@ -67,6 +78,10 @@ the actual details (and Claude can pull them live when a task needs them).
 | Viktoriia Kuznietsova — his wife; **not a Double client**; owns VIKTORIIA KUZNIETSOVA LLC and KUZNIETSOVA VIKTORIIA PA | through Kyrylo |
 | Vitali Yakubuk — his partner in Boost You, Goshakes and The Roadside Project | the partnerships' Double records |
 
+- **Double portal contacts (roles only, 2026-10-17):** Kyrylo is the admin contact on all five of his records (tax,
+  financial and files access). **Viktoriia was added as a second portal contact on HIS individual record on 2026-10-15**
+  (tax and files access, no financial access) — the day the return was filed. **Vitali Yakubuk is a portal contact on the
+  three partnerships only** (added 2026-07-16; he is not on Kyrylo's own record). _(Double `list_contacts`)_
 - **Double client:** [app.doublehq.com/close?cid=710641](https://app.doublehq.com/close?cid=710641)
 - **Channel:** 🔑 **he has never emailed Julia's mailbox** (2026-10-13 sweep). He works through the Double portal /
   TaxDome, a **WhatsApp group** set up at the 2026-06-23 onboarding, and Zoom.
@@ -156,6 +171,14 @@ the actual details (and Claude can pull them live when a task needs them).
   **childcare paid for her**; the providers are not named.
 - **Viktoriia's LLC receives 1099-NECs from realty firms the firm also serves** (Florida Listings Real Estate Inc in the
   Best Broker Realty folder; Optic Gold Inc) — her company's income, **not** the 1040's.
+- **The Double notes on his record are about NEVER GIVE UP KK, not about him personally.** The 2026-06-23 onboarding note
+  and the 2026-07-14 Zoom note were each copied onto all of his Double records (the individual and the three
+  partnerships) — read them as meeting records, not as facts about a specific company. _(Double notes, 2026-10-17)_
+- **Employer link, Sept–Oct 2025:** he is copied on Deep Tech's 2025 purchasing and shipping correspondence (a robot
+  import and an invoice from **Galyna Vasylieva** — the same person who holds a 25% Goshakes interest) and his Deep Tech
+  **sales-manager employment contract was signed 2025-10-27** (Drive, Julia's *Docs for Visa application* tree). Deep
+  Tech is **not** an owner-group client of his; this only records that he and Goshakes' partners move in the same
+  circle. _(Gmail, Drive names — contents not copied)_
 - ⚠️ **A "Виктория" in a Gossip Miami thread (Nov 2025) is NOT established to be Viktoriia Kuznietsova** — do not link
   them without asking.
 
@@ -175,8 +198,23 @@ the actual details (and Claude can pull them live when a task needs them).
   return, an insurance policy, apartment purchase/sale contracts, bank statements, an Excel of income and expenses
   including cash). _(Double note 448853; Ping transcript)_
 - 2026-07-14 — Structure meeting for a new Florida company (Julia, Kyrylo and an associate). _(Double note 466032)_
+  🆕 **Action items from the Zoom AI summary (Russian; low confidence — AI-generated and partly garbled):** a new Florida
+  LLC with three owners including a **non-resident investor** (LLC vs S corp vs C corp discussed; an S corporation cannot
+  have a non-resident shareholder); **Julia** to send a **registration form** and a **commercial proposal for formation
+  services** by email to both attendees, help choose a bank and give guidance on the **zero-return filings for the two
+  existing companies** (Goshakes and Boost You — ✅ the Q2 2026 sales-tax zero returns were filed 2026-07-16 and sent to
+  the associate); **the two attendees** to return the registration form (promised within a week), pay the formation
+  proposal, open a bank account after registration and settle the partnership terms with the third partner. Quarterly
+  zero sales-tax returns were described as due **on the 20th**. _(Zoom assets email in Gmail, 2026-07-14)_
 - 2026-09-13/14 — The firm (Lilian) **filed the 2025 Forms 1065** of Boost You, The Roadside Project and Goshakes.
+- 2026-09-10 to 09-21 — The firm invoiced the three partnerships (1065 preparation; Goshakes also
+  paid a separate payment request and a small invoice for the 2026 amended annual report) to **his** email address; the
+  QuickBooks "payment received" notices for all three arrived 2026-09-14 and for the amended-report invoice 2026-09-21.
+  _(Gmail, QuickBooks notifications; amounts withheld)_
 - 2026-10-12/13 — He opened the organizer twice and **completed it 2026-10-13**.
+- **2026-10-15 — Return FILED** (Double project status, Lilian; draft moved to Ready for Review at 03:06 UTC and Filed at
+  19:26 UTC); **Viktoriia added as a portal contact the same day**; a QuickBooks invoice to Never Give Up KK LLC went to
+  his email. _(Double activity log + contacts; Gmail)_
 - **2026-10-13 — Phase 1 of his 2025 Form 1040, at Lilian's request** (*"revisar la información que envió Kiril Kuznetsov
   en el organizer… todo el documento que subió, lo que tenemos en el drive de Julia, todo"*). Read: the organizer and
   every PDF he uploaded through the redactor (W-2, 1095-A, the 2024 return, Viktoriia's two company returns and 8879,
@@ -266,15 +304,29 @@ the actual details (and Claude can pull them live when a task needs them).
   large gifts; medical expenses too small to matter on the standard deduction.
 
 ### Outstanding items (CI-only — never in the SOP)
-- 🟠 **The 2025 return: ATX draft 1 keyed and reviewed (2026-10-14)** — before filing: whether Viktoriia filed (1040 or
+- 🔴 **Formation proposal + registration form promised to him and his associate on 2026-07-14 — a search of Gmail
+  (to/from both addresses, unbounded, 2026-10-17) found no such email after that date** (only QuickBooks notices and the
+  Q2 sales-tax email). **Pending since 2026-07-14 = 95 days.** It may have gone through GoProposal/Double/WhatsApp, which
+  were not searched for it — confirm with Julia whether it was sent and whether the new LLC was ever formed.
+- 🟠 **2025 return — FILED per Double 2026-10-15 (2 days ago).** Still to do: record in the working paper how each
+  pre-filing item was settled (below); the Double project tasks "File tax return", "Follow up on tax payments" and "Send
+  final returns to client" still read **Not Started** (the project status is Filed) — pending since 2026-10-15; and
+  deliver the filed return to him/Viktoriia (not seen in any source).
+- 🟠 _(as it stood 2026-10-14, before filing)_ **The 2025 return: ATX draft 1 keyed and reviewed (2026-10-14)** — before filing: whether Viktoriia filed (1040 or
   1040-X — ✅ settled: original, she had not filed), the blank EIC, Form 8867, the direct-deposit block, the name
   spellings, and confirming foreign accounts / a property sale / investments with him (working paper §8, §6).
 - ✅ ~~Julia: download his 2025 W-2 from Deep Tech's Gusto~~ — done 2026-10-14; in Double and matching the payroll journal.
-- **Engagement letter / invoice for the personal 1040** — none found; confirm whether one is needed.
+- **Engagement letter / invoice for the personal 1040** — none found in Gmail (unbounded search, 2026-10-17); Double's
+  `Signature` = Signed and `Invoice` = Sent suggest something was signed and billed — **pending since 2026-10-13 (4 days)**
+  as a confirm; the document itself was not located.
 
 ### Information still needed
 - [x] His ownership percentage in each of the three partnerships — ✅ Boost You 50%, The Roadside Project 50%, Goshakes 25% (2026-10-14).
 - [ ] Which LLC of his filed a **late** 2025 Florida annual report in July 2025 (an LLC older than 2025 — working paper §6 I7).
+      **Pending since 2026-10-13 (4 days).** 2026-10-17: a Gmail search (annual report / Sunbiz × his name, the three
+      partnerships and his partner, from 2025-06-01) and a Drive name search did not find it. The three partnerships'
+      1065 page 1 dates their start at 2025-08-18 / 2025-08-18 / 2025-11-10 — after July 2025 — so, if those dates are
+      formation dates, none of the three can be it; Never Give Up KK is the candidate to check on Sunbiz.
 - [x] ~~A copy of Viktoriia's filed 2025 personal return, and who prepared it.~~ — ✅ closed 2026-10-14: she has not filed (Lilian).
 
 ## 7. Links

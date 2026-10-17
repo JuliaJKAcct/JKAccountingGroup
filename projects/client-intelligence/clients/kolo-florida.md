@@ -1,6 +1,6 @@
 # Kolo Florida Inc
 
-> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-10-10
+> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-10-17
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -644,7 +644,13 @@ the actual details.
 - [ ] **Double record** — archive it once the closures are done (and drop this client from the
       weekend sweep scope at that point, not before).
 
+- 2026-10-17 — **Incremental sweep (baseline 2026-10-10, inclusive).** Double (cid 706626): `list_notes` none; properties unchanged (1120-S, Sales Tax Monthly, Bookkeeping Quarterly, Payroll N/A, Financials Ready In Progress, Signature Signed, Invoice Paid); `list_activity_log` ≥2026-10-10 returned 0 entries; the October "Sales Tax" task (due 2026-10-05) is **still Not started — 12 days past due** (Double `list_tasks`, 2026-10-17).
+  - 🔴 **Shopify billing for KOLO HOUSE is STILL failing after the freeze was lifted (2026-10-07):** failed-payment emails from Shopify billing on **2026-10-11** (retry 10-13), **2026-10-13** (retry 10-15) and **2026-10-15** (retry **2026-10-17**), each for the same monthly bill (amount withheld). **First failure was 2026-08-23 — 55 days.** Decision still needed: pay-and-keep or close the store as part of the wind-down. _(Gmail, Shopify billing notices, 2026-10-11/13/15)_
+  - 🔴 **CONTRADICTION still live — "payroll stopped" (Lilian, 2026-08-14) vs Gusto notices addressed to Julia and the client:** Gusto sent "payroll due in 3 days" (2026-10-11), "payroll due by 10-14 7pm" (2026-10-13), and **"Action required: Payroll is late"** (2026-10-15; pay period Oct 3–9, original payday Fri 2026-10-16). **64 days since the ruling; unsettled.** Both versions are recorded; the sources do not show whether the account is merely sending automatic reminders for a payroll nobody will run or whether payroll is being run. _(Gmail Gusto notices, 2026-10-11/13/15)_
+  - Lauderhill Certificate of Use/BTR valid-through 2026-09-30: a Gmail search (`Lauderhill`, business name) ≥2026-10-10 found no closure correspondence — **17 days past the valid-through date.** Gmail for the owner's name / "final return" ≥2026-10-10: nothing. Drive: no Kolo-titled file modified ≥2026-10-10. Ping: only pre-baseline hits.
+
 ### Outstanding items (CI-only — never in the SOP)
+- 🆕 **Chase pass 2026-10-17:** 🔴 Shopify — **55 days since first failure (2026-08-23), still failing, retry 2026-10-17**; 🔴 Gusto contradiction **64 days**; Oct sales-tax task **12 days overdue**; Lauderhill receipt **17 days past valid-through**; FL DOR account closure — not confirmed (Gmail ≥2026-10-10 found nothing); workers'-comp withdrawal, warehouse lease, BAI-branded stock — **pending since unknown — no start date in the file**.
 <!-- This exact heading is what the client-card render looks up. Renaming it makes
      every row below vanish from the team's view. -->
 

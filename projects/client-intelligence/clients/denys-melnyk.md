@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-17
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -2641,6 +2641,15 @@ produced; **every figure lives in the working paper and in the Excel delivered t
 - 💳 **Firm fee collection:** a QuickBooks payment request for the firm's invoice went to the client 2026-10-06 and was paid by bank transfer the same day; **on 2026-10-08 QuickBooks reported that bank transfer as canceled because of a problem with the client's bank account.** Whether it was re-paid is not established by a search of Gmail bounded after 2026/10/03 on 2026-10-10 (amount withheld). _(Gmail, QuickBooks notices 2026-10-06/08)_
 - Notes: 485225 (`updatedAt` 2026-09-23) and 490984 (`updatedAt` 2026-08-20) — neither moved since baseline; not re-read in full beyond confirming the dates. Ping/Drive: Drive title search for Melnyk modified after 2026-10-03 returned nothing; no Ping meeting on this client found.
 - ℹ️ The long "Outstanding items" list above was **not re-walked item by item** this run: most of it was written before the return was prepared and filed, and the working paper in `projects/tax-returns/` (§4U) is the record of what was decided. Nothing in the sources searched this run answers any of them.
+
+### 2026-10-17 — weekend sweep (incremental, bounded 2026-10-10 and later): nothing new on the K-1s; fee repayment still not seen
+
+> ⛔ **No figures here on purpose** — this file renders to a hosted page.
+
+- Double: `list_notes` still 2 (485225 `updatedAt` 2026-09-23; 490984 `updatedAt` 2026-08-20 — both unchanged, so not re-read); `list_activity_log` from 2026-10-10 returned 0 entries; `list_tasks` created ≥2026-10-01 returned none; `list_files` uploaded ≥2026-10-08 returned none; Drive title search (Melnyk/Midwest) modified ≥2026-10-10 returned nothing (`excludeContentSnippets: true`).
+- **K-1s from the ex-partner:** a search of Gmail, bounded after 2026/10/10, on 2026-10-17, for the client's name, the company names and "K-1" found no message from the ex-partner and no K-1 — **~58 days since the 2026-08-20 promise.** The return was filed 2026-10-07 without them; if they arrive, the 10-06 letter says an amendment follows (separate work, billed separately).
+- **Firm fee (QuickBooks invoice, bank transfer canceled 2026-10-08):** a search of Gmail for QuickBooks payment notices bounded after 2026/10/08, on 2026-10-17, did not show a new payment received or a new payment request for this client — **repayment still not established, ~9 days since the cancellation notice.** _(Gmail, QuickBooks notices)_
+- Ping not queried this pass for this client (no new meeting expected; budget). The long legacy open-items list in §6 was again not walked item by item (see the 2026-10-10 entry): its items pre-date the filed return.
 
 ## 7. Links
 

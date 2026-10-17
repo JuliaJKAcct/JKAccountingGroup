@@ -1,6 +1,6 @@
 # Ihor Naum & Olha Levchuk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-10
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-10-17
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -189,13 +189,15 @@ Watch-outs that go with the above:
 
 - 2026-10-10 — **Incremental sweep (baseline 2026-10-03, inclusive).** Quiet. Double: `list_notes` 0; `list_activity_log` from 2026-10-03 returned 0 entries. Gmail (a search of Julia's mailbox, `after:2026/10/03`, on 2026-10-10, both name spellings, Aura Remodeling, Form 6166/8802, 2848, 4868/extension, power of attorney) found only the firm's own weekly digest. Drive title search for Naum/Levchuk modified after 2026-10-03, with `excludeContentSnippets: true`, returned zero files (no content read). Ping org-wide search returned nothing on this client.
 
+- 2026-10-17 — **Incremental sweep (baseline 2026-10-10, inclusive).** Double: `list_notes` 0; `list_activity_log` from 2026-10-10 returned 0 entries; properties unchanged; portal contacts unchanged (two: the two spouses). 🔵 **New, Gmail 2026-10-16: a Zoom AI meeting summary ("Aura's Zoom Meeting", Julia with both spouses, in Ukrainian — auto-generated, treat as low-confidence) on Q3 financial review and tax planning for the rest of 2026.** Points relevant to the couple's 1040/Schedule C: (1) **Julia is to model converting the Aura activity to an S-corporation** (to cut self-employment tax by paying Ihor a salary for Oct–Dec) and give Olha an estimate of taxes and payroll due in Oct/Nov/Dec, and to follow up the week after the call; (2) a **vehicle purchase** was discussed and whether it can be a business expense (Julia to look at the tax benefits); (3) a possible **new structure/contract arrangement** for Ihor's next project (Aura as contractor), timing undecided, possibly around year-end; (4) **health-insurance choices (Marketplace subsidies, Florida KidCare, Medicaid) must be decided before 2026-11-01**, with Olha to speak to their insurance agent. The meeting was filed under Aura; company-side detail belongs in [`aura-remodeling.md`](./aura-remodeling.md) (lead to route). _(Gmail/Zoom summary, 2026-10-16)_ Also 2026-10-16: Lilian sent the couple the Q3 2026 financial statements (apologising for the delay after the 10-15 tax deadline); they acknowledged the same day. Drive title search (Naum/Levchuk/Ihor) modified ≥2026-10-10, `excludeContentSnippets: true`, returned zero files. Ping not re-queried beyond the org-wide search done for another client this run (nothing on this couple).
+
 ### Outstanding items (CI-only — never in the SOP)
 
 - ✅ **Watch for IRS mail — ARRIVED 2026-08-19, content CONFIRMED complete 2026-09-12.** Both Form 6166 certificates (2023, 2024) are in Drive and are now confirmed to be the genuine, complete IRS certification letters (§4) — closed.
 - **Client was calling the IRS** (267-941-1000, "U.S. residency" option) — with the certificates now in hand and confirmed complete, this item is effectively moot; not chased further this run.
-- Ask the client to raise the possible duplicate from the two 2026-05-06 transmissions — STILL OPEN (a client-side action, not a searchable arrival), ~157 days pending since the 2026-05-06 transmissions (as of 2026-10-10), no deadline. A targeted Gmail search bounded `after:2026/10/03` found nothing new.
+- Ask the client to raise the possible duplicate from the two 2026-05-06 transmissions — STILL OPEN (a client-side action, not a searchable arrival), ~164 days pending since the 2026-05-06 transmissions (as of 2026-10-17), no deadline. A targeted Gmail search bounded `after:2026/10/03` found nothing new.
 - Confirm the **2023 and 2024 returns were on file** when the application was transmitted — STILL OPEN, not chased this run (budget; lower priority now the certificates have arrived and are confirmed complete).
-- Confirm a **Form 2848 for Ihor Naum as an individual** is on file — STILL OPEN/UNCONFIRMED; a targeted Gmail search bounded `after:2026/10/03` (2848/power of attorney) on 2026-10-10 found nothing relevant. A same-bounded search for Form 4868/extension also found nothing (the 4868 item itself remains unconfirmed).
+- Confirm a **Form 2848 for Ihor Naum as an individual** is on file — STILL OPEN/UNCONFIRMED; a targeted Gmail search bounded `after:2026/10/10` (2848/6166/8802/4868) on 2026-10-17 found nothing relevant (earlier: bounded `after:2026/10/03`, on 2026-10-10, also nothing). No start date in the file — pending since unknown — no start date in the file. A same-bounded search for Form 4868/extension also found nothing (the 4868 item itself remains unconfirmed).
 - Archive the filing evidence in the client's Drive folder as one PDF — not chased this run (budget; internal firm task, low priority with the certificates received and confirmed).
 
 ### Information still needed
